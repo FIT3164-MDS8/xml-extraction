@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group>
+<journal-title>PLoS ONE</journal-title></journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-14-10583</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0100795</article-id>
+<article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Cognitive science</subject><subj-group><subject>Artificial intelligence</subject><subj-group><subject>Machine learning</subject><subj-group><subject>Machine learning algorithms</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Computer and information sciences</subject><subj-group><subject>Information technology</subject><subj-group><subject>Information processing</subject></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Deep Bottleneck Features for Spoken Language Identification</article-title>
+<alt-title alt-title-type="running-head">DBF for Spoken LID</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Jiang</surname><given-names>Bing</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Song</surname><given-names>Yan</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Wei</surname><given-names>Si</given-names></name><xref ref-type="aff" rid="aff2"><sup>2</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Liu</surname><given-names>Jun-Hua</given-names></name><xref ref-type="aff" rid="aff2"><sup>2</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>McLoughlin</surname><given-names>Ian Vince</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Dai</surname><given-names>Li-Rong</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+</contrib-group>
+<aff id="aff1"><label>1</label><addr-line>National Engineering Laboratory of Speech and Language Information Processing, University of Science and Technology of China, Hefei, AnHui, China</addr-line></aff>
+<aff id="aff2"><label>2</label><addr-line>iFlytek Research, Anhui USTC iFlytek Co., Ltd., Hefei, AnHui, China</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Robin</surname><given-names>Donald A.</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>University of Texas Health Science Center at San Antonio, Research Imaging Institute, United States of America</addr-line></aff>
+<author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">songy@ustc.edu.cn</email></corresp>
+<fn fn-type="conflict"><p>Authors Si Wei and Jun-Hua Liu are employed by Anhui USTC iFlytek Co, which is a private spin-off company from the authors' university. There are no patents, products in development or marketed products to declare. This does not alter the authors' adherence to all the PLOS ONE policies on sharing data and materials.</p></fn>
+<fn fn-type="con"><p>Conceived and designed the experiments: BJ YS SW LRD. Performed the experiments: BJ JHL. Analyzed the data: BJ YS SW JHL IVM LRD. Wrote the paper: BJ YS IVM.</p></fn>
+</author-notes>
+<pub-date pub-type="collection"><year>2014</year></pub-date>
+<pub-date pub-type="epub"><day>1</day><month>7</month><year>2014</year></pub-date>
+<volume>9</volume>
+<issue>7</issue>
+<elocation-id>e100795</elocation-id>
+<history>
+<date date-type="received"><day>11</day><month>3</month><year>2014</year></date>
+<date date-type="accepted"><day>29</day><month>5</month><year>2014</year></date>
+</history>
+<permissions>
+<copyright-year>2014</copyright-year>
+<copyright-holder>Jiang et al</copyright-holder><license xlink:type="simple"><license-p>This is an open-access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions>
+<abstract>
+<p>A key problem in spoken language identification (LID) is to design effective representations which are specific to language information. For example, in recent years, representations based on both phonotactic and acoustic features have proven their effectiveness for LID. Although advances in machine learning have led to significant improvements, LID performance is still lacking, especially for short duration speech utterances. With the hypothesis that language information is weak and represented only latently in speech, and is largely dependent on the statistical properties of the speech content, existing representations may be insufficient. Furthermore they may be susceptible to the variations caused by different speakers, specific content of the speech segments, and background noise. To address this, we propose using Deep Bottleneck Features (DBF) for spoken LID, motivated by the success of Deep Neural Networks (DNN) in speech recognition. We show that DBFs can form a low-dimensional compact representation of the original inputs with a powerful descriptive and discriminative capability. To evaluate the effectiveness of this, we design two acoustic models, termed DBF-TV and parallel DBF-TV (PDBF-TV), using a DBF based i-vector representation for each speech utterance. Results on NIST language recognition evaluation 2009 (LRE09) show significant improvements over state-of-the-art systems. By fusing the output of phonotactic and acoustic approaches, we achieve an EER of 1.08%, 1.89% and 7.01% for 30 s, 10 s and 3 s test utterances respectively. Furthermore, various DBF configurations have been extensively evaluated, and an optimal system proposed.</p>
+</abstract>
+<funding-group><funding-statement>This work was partially funded by the National Nature Science Foundation of China (Grant No. 61273264), the National 973 program of China (Grant No. 2012CB326405) and Chinese Universities Scientific Fund (Grant No. Wk2100060008). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="11"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>Language identification (LID) is the task of determining the identity of the spoken language present within a speech utterance. LID is a key pre-processing technique for future multi-lingual speech processing systems, such as audio and video information retrieval, automatic machine translation, diarization, multi-lingual speech recognition, intelligent surveillance and so on.</p>
+<p>A major problem in LID is how to design a language specific and effective representation for speech utterances. It is challenging due to large variations introduced by different speech content, speakers, channels and background noises. Over the past few decades, intensive research efforts have studied the effectiveness of different representations from various research domains, such as phonotactic and acoustic information <xref ref-type="bibr" rid="pone.0100795-Sugiyama1">[1]</xref>–<xref ref-type="bibr" rid="pone.0100795-Zissman1">[3]</xref>, lexical knowledge <xref ref-type="bibr" rid="pone.0100795-Matrouf1">[4]</xref>, prosodic information <xref ref-type="bibr" rid="pone.0100795-Eady1">[5]</xref>, articulatory parameters <xref ref-type="bibr" rid="pone.0100795-Kirchhoff1">[6]</xref>, and universal attributes <xref ref-type="bibr" rid="pone.0100795-Siniscalchi1">[7]</xref>. Among existing representations, Eady <xref ref-type="bibr" rid="pone.0100795-Eady1">[5]</xref>, Matrouf et. al. <xref ref-type="bibr" rid="pone.0100795-Matrouf1">[4]</xref> and Kirchoff et. al. <xref ref-type="bibr" rid="pone.0100795-Kirchhoff1">[6]</xref> show that appropriate incorporation of extra language-related cues may help to improve the effectiveness of representation. In this paper, we mainly focus on the phonotactic and acoustic representations, which are considered to be the most common ones for LID <xref ref-type="bibr" rid="pone.0100795-Martin1">[8]</xref>, <xref ref-type="bibr" rid="pone.0100795-Martin2">[9]</xref>.</p>
+<p>Phonotactic representations focus on capturing the statistics of phonemic constraints and patterns for each language. It is known that the phonotactic representation of a given utterance is the token sequence or lattice output from a phone recognizer (PR). The corresponding approaches, such as Parallel Phone Recognizers followed by Language Models (PPR-LM) <xref ref-type="bibr" rid="pone.0100795-Zissman1">[3]</xref> and Parallel Phone Recognizers followed by Support Vector Machines (PPR-SVM) <xref ref-type="bibr" rid="pone.0100795-Campbell1">[10]</xref>, <xref ref-type="bibr" rid="pone.0100795-Campbell2">[11]</xref> have achieved the state-of-the-art performance. However, the effectiveness of such representations relies heavily on the performance of the phone recognizer (PR) <xref ref-type="bibr" rid="pone.0100795-Matejka1">[12]</xref>. When the labelled dataset size is limited, it is difficult to achieve good PR results. Furthermore, the recognizing stage is time consuming, which constrains the wide applicability of the phonotactic approaches.</p>
+<p>By contrast, acoustic representations mainly capture the spectral feature distribution for each language, which is more efficient and does not require prior linguistic knowledge. Two important factors for effective acoustic representation are, (1) a front-end feature extractor which forms the frame level representation based on spectral features, and (2) a back-end model which constructs the acoustic representation for spoken LID. A popular feature is Shift Delta Cepstra (SDC), which is effectively an extension of traditional MFCC or PLP features <xref ref-type="bibr" rid="pone.0100795-Bielefeld1">[13]</xref>–<xref ref-type="bibr" rid="pone.0100795-TorresCarrasquillo1">[15]</xref>. Typical back-end models include Gaussian Mixture Model-Universal Background Model (GMM-UBM) <xref ref-type="bibr" rid="pone.0100795-TorresCarrasquillo1">[15]</xref> and Gaussian Mixture Model-Support Vector Machine (GMM-SVM) <xref ref-type="bibr" rid="pone.0100795-Campbell3">[16]</xref>, <xref ref-type="bibr" rid="pone.0100795-Campbell4">[17]</xref>. With the help of modern machine learning techniques, such as discriminative training <xref ref-type="bibr" rid="pone.0100795-Qu1">[18]</xref>–<xref ref-type="bibr" rid="pone.0100795-Castaldo1">[20]</xref>, Factor Analysis (FA) <xref ref-type="bibr" rid="pone.0100795-Vair1">[21]</xref>–<xref ref-type="bibr" rid="pone.0100795-Hubeika1">[23]</xref> and Total Variability (TV) modeling <xref ref-type="bibr" rid="pone.0100795-Dehak1">[24]</xref>, <xref ref-type="bibr" rid="pone.0100795-Dehak2">[25]</xref>, the performance of acoustic approaches tends to be comparable to or even exceed that of phonotactic ones. In fact, even greater performance improvement can be achieved by exploiting both phonotactic and acoustic approaches, through fusing their results <xref ref-type="bibr" rid="pone.0100795-TorresCarrasquillo2">[26]</xref>–<xref ref-type="bibr" rid="pone.0100795-Singer1">[28]</xref>.</p>
+<p>Despite significant recent advances in LID techniques, performance is still far from satisfactory, especially for short duration utterances <xref ref-type="bibr" rid="pone.0100795-Martin2">[9]</xref>. This may be because language characteristics are a kind of weak information latently contained in the speech signal and largely dependent on its statistical properties. For short duration utterances especially, existing representations are deficient by being overly susceptible to variations caused by different speakers, channels, speech content and background noises. To address this, more powerful features, having higher discriminative and descriptive capabilities, are preferred.</p>
+<p>Recently, deep learning techniques have achieved significant performance gains in a number of applications, including large scale speech recognition and image classification <xref ref-type="bibr" rid="pone.0100795-Dahl1">[29]</xref>, <xref ref-type="bibr" rid="pone.0100795-Hinton1">[30]</xref>, largely due to their powerful modeling capabilities, aided by the availability of the large scale datasets. In this paper, we aim to apply deep learning techniques to the spoken LID task. Our preliminary work demonstrated that an acoustic system based on deep bottleneck features (DBF) can effectively mine the contextual information embedded in speech frames <xref ref-type="bibr" rid="pone.0100795-Song1">[31]</xref>. Specially, DBFs were generated by a structured Deep Neural Network (DNN) containing a narrow internal bottleneck layer. Since the number of hidden nodes in the bottleneck layer is much smaller than those in other layers, DNN training forces the activation signals in the bottleneck layer to form a low-dimensional compact representation of the original inputs. It should be noted that this is unlike work by Diez et. al. <xref ref-type="bibr" rid="pone.0100795-Diez1">[32]</xref>, <xref ref-type="bibr" rid="pone.0100795-Diez2">[33]</xref>, in which the log-likelihood ratios of posterior probabilities, called Phone Log-Likelihood Ratios (PLLR), output from the multi-layered perceptron(MLP), were used as frame level features for LID. We will present a more detailed discussion and comparison later in this article.</p>
+<p>This paper extends our preliminary work in five main ways:</p>
+<list list-type="bullet"><list-item>
+<p>The DBF extractor and DNN structure are analyzed and evaluated together with the crucial DBF training and extraction process (including assessing two alternative training corpuses and their configurations). In addition, the relationship to the conventional SDC <xref ref-type="bibr" rid="pone.0100795-Bielefeld1">[13]</xref>–<xref ref-type="bibr" rid="pone.0100795-TorresCarrasquillo1">[15]</xref> and recently proposed PLLR <xref ref-type="bibr" rid="pone.0100795-Diez1">[32]</xref>, <xref ref-type="bibr" rid="pone.0100795-Diez2">[33]</xref> approaches are explored;</p>
+</list-item><list-item>
+<p>Two new acoustical systems are presented, i.e. DBF-TV and parallel DBF-TV (PDBF-TV), and systematically evaluated across various configurations of DBF extractor. The systems are evaluated for a range of input feature temporal window sizes, and number of bottleneck layer hidden nodes;</p>
+</list-item><list-item>
+<p>The relationship is explored between DBF and different test conditions, based on analysis of evaluation results;</p>
+</list-item><list-item>
+<p>An optimal LID system configuration is proposed based on the NIST language recognition evaluation 2009 (LRE09) dataset, and compared to other high performance published approaches;</p>
+</list-item><list-item>
+<p>A phonotactic representation is constructed, using a GMM-HMM based phone recognizer (PR) trained with DBF. The output is fused with that of the acoustic representation (using two alternative fusion methods) to achieve extremely good performance.</p>
+</list-item></list>
+<p>Experimental results will demonstrate that an acoustic representation based on DBF significantly improves on state-of-the-art performance, especially for short duration utterances. The proposed phonotactic and acoustic fusion achieves equal error rate (EER) figures of 1.08%, 1.89% and 7.01% for 30 s, 10 s and 3 s test utterances respectively. This clearly exceeds the performance of the best currently reported LID system <xref ref-type="bibr" rid="pone.0100795-Martin2">[9]</xref>, as well as our own previous work <xref ref-type="bibr" rid="pone.0100795-Song1">[31]</xref> (in which the EER for 30 s, 10 s and 3 s test utterances is 1.98%, 3.47% and 9.71%).</p>
+<p>The paper is organized as follows. How to generate the DBF from a DNN is first briefly introduced, including the two main categories, generative pre-training and discriminative fine-tuning. Then, our proposed LID systems is presented in detail. Finally, the experimental setup and results are presented and analyzed, followed by the conclusion and future work.</p>
+</sec><sec id="s2" sec-type="methods">
+<title>Methods</title>
+<sec id="s2a">
+<title>Deep Bottleneck Features</title>
+<p>In this section, we discuss the DBF extraction procedure and structure as shown in <xref ref-type="fig" rid="pone-0100795-g001">Figure 1</xref>, used as an acoustic frontend for the spoken LID task. We first describe the DNN training process, including generative pre-training and discriminative fine-tuning phases, followed by the DBF extraction process. We then detail the configuration of DBF extraction for LID. Finally, we discuss the relation to several existing frame level features, e.g. SDC and PLLR.</p>
+<fig id="pone-0100795-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0100795.g001</object-id><label>Figure 1</label><caption>
+<title>An illustration of the DNN training and DBF extraction procedure.</title>
+<p>Left: Pre-training of a stack of RBMs with the first layer hosting a Gaussian-Bernoulli RBM and all other layers being Bernoulli-Bernoulli RBMs. The inputs to each RBM are from the outputs of the lower layer RBM. Middle: The generative model DBN constructed from a stack of RBMs. Right: The corresponding DNN and DBF extractor. The DNN is created by adding a randomly initialized softmax output layer on top of the DBN, and the parameters of DNN are obtained in a fine-tuning phase. The final DBF extractor in the bottom right dashed rectangle is obtained by removing the layers above the bottleneck layer.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0100795.g001" position="float" xlink:type="simple"/></fig></sec><sec id="s2b">
+<title>DNN Training</title>
+<p>The DNN training process includes pre-training and fine-tuning phases <xref ref-type="bibr" rid="pone.0100795-Hinton2">[34]</xref>. During the pre-training phase, a generative Deep Belief Net (DBN) with stacked Restricted Boltzmann Machines (RBM) is trained in an unsupervised way. During the discriminative fine-tuning phase, a randomly initialized softmax layer is added on top of the DBN, and all the parameters are fine-tuned jointly using back-propagation (BP). Generally, the pre-training phase provides a region of the weight space that allows the fine-tuning phase to converge to a better local optimum, and reduce overfitting <xref ref-type="bibr" rid="pone.0100795-Yu1">[35]</xref>.</p>
+<sec id="s2b1">
+<title>Pre-Training Phase</title>
+<p>The basic idea of pre-training is to fit a generative DBN model to the input data. Conceptually, the DBN can be trained greedily in a layer-by-layer manner, by treating each pair of layers as a RBM <xref ref-type="bibr" rid="pone.0100795-Hinton3">[36]</xref>, as shown in the left part of <xref ref-type="fig" rid="pone-0100795-g001">Figure 1</xref>. An RBM is a bipartite graph model in which the visible stochastic units are only connected to the hidden stochastic units <xref ref-type="bibr" rid="pone.0100795-Freund1">[37]</xref>.</p>
+<p>The RBM is a two-layer structure with <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e001" xlink:type="simple"/></inline-formula> visible stochastic units <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e002" xlink:type="simple"/></inline-formula>, and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e003" xlink:type="simple"/></inline-formula> hidden stochastic units <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e004" xlink:type="simple"/></inline-formula>. The most frequently used RBMs are the Gaussian-Bernoulli RBM and Bernoulli-Bernoulli RBM. In Bernoulli-Bernoulli RBM, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e005" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e006" xlink:type="simple"/></inline-formula> are assumed to be binary, the energy function of the state <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e007" xlink:type="simple"/></inline-formula> is defined as:<disp-formula id="pone.0100795.e008"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e008" xlink:type="simple"/><label>(1)</label></disp-formula></p>
+<p>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e009" xlink:type="simple"/></inline-formula> represents the weight between visible unit <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e010" xlink:type="simple"/></inline-formula> and hidden unit <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e011" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e012" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e013" xlink:type="simple"/></inline-formula> denote the real-valued biases of visible unit <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e014" xlink:type="simple"/></inline-formula> and hidden unit <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e015" xlink:type="simple"/></inline-formula> respectively. The Bernoulli-Bernoulli RBM model parameters can be defined as <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e016" xlink:type="simple"/></inline-formula>, where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e017" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e018" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e019" xlink:type="simple"/></inline-formula>. For a Gaussian-Bernoulli RBM, the visible units are real-valued which means <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e020" xlink:type="simple"/></inline-formula>, and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e021" xlink:type="simple"/></inline-formula> are binary. Thus, the energy function is defined as follows:<disp-formula id="pone.0100795.e022"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e022" xlink:type="simple"/><label>(2)</label></disp-formula></p>
+<p>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e023" xlink:type="simple"/></inline-formula> is a real-valued activity of visible unit <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e024" xlink:type="simple"/></inline-formula>. Each visible unit adds a parabolic offset to the energy function which is governed by <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e025" xlink:type="simple"/></inline-formula>. The Gaussian-Bernoulli RBM model parameter set can be defined as <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e026" xlink:type="simple"/></inline-formula> similarly, where the variance parameters <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e027" xlink:type="simple"/></inline-formula> are commonly fixed to a pre-determined value instead of being learnt.</p>
+<p>According to the energy function <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e028" xlink:type="simple"/></inline-formula> in Eq. (1)&amp;(2), the joint probability associated with configuration <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e029" xlink:type="simple"/></inline-formula> is defined as follows:<disp-formula id="pone.0100795.e030"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e030" xlink:type="simple"/><label>(3)</label></disp-formula></p>
+<p>where <disp-formula id="pone.0100795.e031"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e031" xlink:type="simple"/><label>(4)</label></disp-formula></p>
+<p>is a partition function. Given a training set, the RBM model parameters <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e032" xlink:type="simple"/></inline-formula> can be estimated by maximum likelihood learning via the contrastive divergence (CD) algorithm <xref ref-type="bibr" rid="pone.0100795-Hinton4">[38]</xref>. After the RBM of a lower layer is trained, the inferred states of the hidden units can be used as the visible data for training the RBM of a higher layer. This process is repeated to produce multiple layers of RBMs. Finally, the RBMs can be stacked to produce the DBN, as shown in the middle part of <xref ref-type="fig" rid="pone-0100795-g001">Figure 1</xref>.</p>
+</sec><sec id="s2b2">
+<title>Fine-Tuning Phase</title>
+<p>The fine-tuning phase is shown in the right part of <xref ref-type="fig" rid="pone-0100795-g001">Figure 1</xref>, in which an output labelling layer is added on top of the pre-trained DBN. For a multiclass classification problem, there are <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e033" xlink:type="simple"/></inline-formula> units in the output layers. In our work, these units correspond to the language-specific phonemes. Each unit corresponds to the label of input features, which converts a number of Bernoulli distributed units <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e034" xlink:type="simple"/></inline-formula> into a multinomial distribution through the following softmax function, <disp-formula id="pone.0100795.e035"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e035" xlink:type="simple"/><label>(5)</label></disp-formula></p>
+<p>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e036" xlink:type="simple"/></inline-formula> is an index over all classes, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e037" xlink:type="simple"/></inline-formula> are the DNN model parameters, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e038" xlink:type="simple"/></inline-formula> denotes the probability that the input is classified into the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e039" xlink:type="simple"/></inline-formula>-th class.</p>
+<p>The cost function C defines the cross-entropy error between the true class label <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e040" xlink:type="simple"/></inline-formula> and the predicted label from the softmax operation; <disp-formula id="pone.0100795.e041"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e041" xlink:type="simple"/><label>(6)</label></disp-formula></p>
+<p>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e042" xlink:type="simple"/></inline-formula> is the total number of classes, and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e043" xlink:type="simple"/></inline-formula> are the target variables indicating the class label with a 1-of-<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e044" xlink:type="simple"/></inline-formula> coding scheme. The BP algorithm is used to jointly tune all model parameters by minimizing the cross entropy function in Eq. (6).</p>
+</sec></sec><sec id="s2c">
+<title>DBF Extraction</title>
+<p>Given a trained DNN, each hidden layer proposes an internal representation of the input features. These layers can be further used to predict the phonemes or phoneme states. The DBF extractor removes the layers above the bottleneck layer, shown by the bottom right dashed rectangle in <xref ref-type="fig" rid="pone-0100795-g001">Figure 1</xref>. The advantage of a bottleneck layer is that, being smaller, it reduces the redundancy of input features and effectively reflects the relevant class label information <xref ref-type="bibr" rid="pone.0100795-Fontaine1">[39]</xref>–<xref ref-type="bibr" rid="pone.0100795-Bao1">[41]</xref>.</p>
+<p>The corresponding DBF is a vector <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e045" xlink:type="simple"/></inline-formula>, where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e046" xlink:type="simple"/></inline-formula> denotes the number of hidden units in the 3-rd hidden layer and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e047" xlink:type="simple"/></inline-formula> can be extracted using <disp-formula id="pone.0100795.e048"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e048" xlink:type="simple"/><label>(7)</label></disp-formula></p>
+<p>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e049" xlink:type="simple"/></inline-formula> represents the logistic sigmoid function. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e050" xlink:type="simple"/></inline-formula> is the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e051" xlink:type="simple"/></inline-formula> -dimensional input feature, concatenated from multiple frames of MFCC and prosodic features. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e052" xlink:type="simple"/></inline-formula> is the weight on a connection to unit <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e053" xlink:type="simple"/></inline-formula> in the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e054" xlink:type="simple"/></inline-formula>-th hidden layer from unit <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e055" xlink:type="simple"/></inline-formula> in the layer below. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e056" xlink:type="simple"/></inline-formula> is the bias of unit <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e057" xlink:type="simple"/></inline-formula> in the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e058" xlink:type="simple"/></inline-formula>-th hidden layer.</p>
+</sec><sec id="s2d">
+<title>DNN Training Settings</title>
+<sec id="s2d1">
+<title>Corpus</title>
+<p>Two separate DNNs, used for forming DBF extractors, are evaluated in this paper. The Mandarin DNN (MA-DNN) is trained from conversational telephone speech, consisting of more than 1,600,000 utterances of about 1,000 hours duration, recorded from 32,950 Mandarin speakers. The English DNN (EN-DNN) uses the well-known Switchboard corpus, consisting of the Switchboard-I training set and 20-hour Call Home English data, having about 300-hours duration.</p>
+<p>This data will only be used to train and construct two DBF feature extractors (MA-DBF and EN-DBF). Each feature extractor will later be evaluated for LID, using completely different multilingual training and test data.</p>
+</sec><sec id="s2d2">
+<title>DNN Configuration</title>
+<p>The DNN configuration is similar to that used for ASR <xref ref-type="bibr" rid="pone.0100795-Dahl1">[29]</xref>, <xref ref-type="bibr" rid="pone.0100795-Bao1">[41]</xref>, <xref ref-type="bibr" rid="pone.0100795-Seide1">[42]</xref>. Specifically, the feature dimension of each frame is 43, consisting of 39-dimensional MFCC+Δ MFCC+ΔΔ MFCC, and 4-dimensional pitch features corresponding to the static pitch, 1st and 2nd derivatives and voiced speech confidence respectively. The frame feature is pre-processed with Cepstral Mean Variance Normalization (CMVN). The detailed DNN structure has 1 input layer, 5 hidden layers and 1 output layer, configured as <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e059" xlink:type="simple"/></inline-formula> -2048 -2048 - <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e060" xlink:type="simple"/></inline-formula> -2048 -2048 - <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e061" xlink:type="simple"/></inline-formula>. The input feature is constructed in a frame by frame manner. For each fame, the corresponding DNN input is a concatenation of the current frame with the preceding and following <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e062" xlink:type="simple"/></inline-formula> neighbouring frames. For example, if we set <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e063" xlink:type="simple"/></inline-formula>, the input comprises 5 neighbouring frames before and after the center frame. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e064" xlink:type="simple"/></inline-formula> is the number of units in the bottleneck layer, which is empirically set to 43 as mentioned above. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e065" xlink:type="simple"/></inline-formula> is the number of units in the output layer. In practice, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e066" xlink:type="simple"/></inline-formula> is set to 6004 and 9004 according to tri-phone tied states of Mandarin and English separately <xref ref-type="bibr" rid="pone.0100795-Bao1">[41]</xref>. This configuration is the baseline for training the DBF extractor.</p>
+<p>The training process is similar as that used in speech recognition <xref ref-type="bibr" rid="pone.0100795-Bao1">[41]</xref>. During pre-training, we use 6 full sweeps through all training data for the Gaussian-Bernoulli RBM and 5 full sweeps for 4 other Bernoulli-Bernoulli RBMs. Each RBM training is implemented using CD learning with 1-step Gibbs sampling. In the fine-tuning step, we set the learning rate to a small value, i.e. 0.002, for all layers. In the fine-tuning phase, the parameters of all layers are jointly tuned using the BP algorithm according to tied-state labels obtained by a forced-alignment process using pre-trained GMM-HMMs. The fine-tuning process is iteratively executed using the following settings: 10 epochs are used for BP fine-tuning. The learning rate is fixed for the first 3 epochs, then halve for the remaining epochs. It is worthwhile to emphasize the difference between ASR and LID tasks, so we experimented extensively with different DNN configuration to find the optimal configuration of DBF extractor for performing LID.</p>
+</sec></sec><sec id="s2e">
+<title>Relation to Existing Features</title>
+<sec id="s2e1">
+<title>Relation to SDC</title>
+<p>SDC, one of the most common acoustic features for spoken LID, is considered an extension of MFCC and PLP, which aims to capture phonemic information over a longer time-span. This extension is achieved by a simple linear transformation of several concatenated delta cepstral blocks. It is a matter of trial and error to set optimal SDC parameters, and these may vary with different LID tasks <xref ref-type="bibr" rid="pone.0100795-Kohler1">[14]</xref>. In addition, SDC is generally prone to distortion by language independent nuisance, such as speaker and channel variabilities, and specific content for a given utterance.</p>
+<p>Similar to SDC, the DBF extractor takes the features extracted from concatenated frames as input. However, DBF exploits long-term temporal information in input features through a non-linear transformation. Futhermore, by taking into consideration the labeling information contained in the training corpus, the DBF is extracted with discriminative training, which is more robust to language-independent nuisance. Finally, DBF can be considered as a fusion of the middle-level representation between the high-level phonetic and low-level acoustic features.</p>
+</sec></sec><sec id="s2f">
+<title>Proposed LID Systems Using DBF</title>
+<p>In this section, we present two TV based acoustic systems to evaluate the effectiveness of the DBF for spoken LID, termed DBF-TV and PDBF-TV. The TV approach was first introduced in the context of speaker verification <xref ref-type="bibr" rid="pone.0100795-Dehak1">[24]</xref> and has become the state-of-the-art modeling technique both in speaker and language communities <xref ref-type="bibr" rid="pone.0100795-Dehak2">[25]</xref>.</p>
+</sec><sec id="s2g">
+<title>DBF-TV</title>
+<p>The basic DBF-TV framework is derived from our previous work <xref ref-type="bibr" rid="pone.0100795-Song1">[31]</xref>, and consists of two main parts, the acoustic frontend and TV modeling back-end, as shown in <xref ref-type="fig" rid="pone-0100795-g002">Figure 2</xref>. The acoustic frontend mainly consists of acoustic preprocessing and DBF extraction, as illustrated in the previous section, which transforms the multiple frames of MFCC and prosodic features into DBFs. The TV modeling back-end consists of the following phases, i-vector extraction, intersession compensation, and cosine scoring, which are described in the following paragraphs.</p>
+<fig id="pone-0100795-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0100795.g002</object-id><label>Figure 2</label><caption>
+<title>Block diagram of our proposed DBF-TV LID system.</title>
+<p>This system consists of two main phases, the acoustic frontend and TV modeling back-end.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0100795.g002" position="float" xlink:type="simple"/></fig><sec id="s2g1">
+<title>I-Vector Extraction</title>
+<p>I-vectors are extracted via TV modeling approach, which is motivated by the success of Joint Factor Analysis (JFA) for speaker recognition task <xref ref-type="bibr" rid="pone.0100795-Kenny1">[43]</xref>. The classical JFA technique models both speaker and channel subspaces separately. However, the channel and speaker informations are difficult to separate <xref ref-type="bibr" rid="pone.0100795-Dehak3">[44]</xref>. To address this issue, TV approach was proposed to cover the total variability in an utterance using only one subspace <xref ref-type="bibr" rid="pone.0100795-Dehak1">[24]</xref>. Specifically, given an utterance, the GMM super-vector <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e067" xlink:type="simple"/></inline-formula>, which is created by stacking the mean vectors of a GMM adapted to that utterance, can be modeled as follows <disp-formula id="pone.0100795.e068"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e068" xlink:type="simple"/><label>(8)</label></disp-formula></p>
+<p>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e069" xlink:type="simple"/></inline-formula> is the UBM super-vector, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e070" xlink:type="simple"/></inline-formula> is a low rank rectangular matrix. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e071" xlink:type="simple"/></inline-formula> is the required low-dimensional i-vector with normal distribution <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e072" xlink:type="simple"/></inline-formula>.</p>
+<p>The training process of loading matrix <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e073" xlink:type="simple"/></inline-formula> is similar to the eigenvoice method <xref ref-type="bibr" rid="pone.0100795-Kenny2">[45]</xref>. The difference is that in TV modeling, the loading matrix <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e074" xlink:type="simple"/></inline-formula> is estimated based on the variance information derived from all utterances.</p>
+</sec><sec id="s2g2">
+<title>Intersession Compensation</title>
+<p>After i-vector extraction, two intersession compensation techniques are applied to remove the nuisance in i-vectors. The first is linear discriminant analysis (LDA) which is a popular dimension reduction method in the machine learning community. Generally, LDA is based on the discriminative criterion that attempts to define new axes minimizing the within-class variance, while maximizing the between-class variance. The LDA projection matrix <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e075" xlink:type="simple"/></inline-formula> contains the eigenvectors with respect to the decreasing order of corresponding eigenvalues in decomposition. This is obtained by solving the following generalized eigenvalue problem <disp-formula id="pone.0100795.e076"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e076" xlink:type="simple"/><label>(9)</label></disp-formula></p>
+<p>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e077" xlink:type="simple"/></inline-formula> is the diagonal matrix of eigenvalues. The matrices <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e078" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e079" xlink:type="simple"/></inline-formula> denote the between-class variance and within-class variance, respectively.<disp-formula id="pone.0100795.e080"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e080" xlink:type="simple"/><label>(10)</label></disp-formula><disp-formula id="pone.0100795.e081"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e081" xlink:type="simple"/><label>(11)</label></disp-formula></p>
+<p>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e082" xlink:type="simple"/></inline-formula> is the number of target languages, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e083" xlink:type="simple"/></inline-formula> is the number of utterances for each language <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e084" xlink:type="simple"/></inline-formula>. is the mean of i-vectors for each language and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e085" xlink:type="simple"/></inline-formula> represents the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e086" xlink:type="simple"/></inline-formula>-th sample of language <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e087" xlink:type="simple"/></inline-formula>.</p>
+<p>The second intersession compensation technique we used is within-class covariance normalization (WCCN), which normalizes the cosine kernel between utterances with an inverse of the within-class covariance <xref ref-type="bibr" rid="pone.0100795-Dehak1">[24]</xref>. The within class covariance matrix <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e088" xlink:type="simple"/></inline-formula> is estimated as follows: <disp-formula id="pone.0100795.e089"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e089" xlink:type="simple"/><label>(12)</label></disp-formula></p>
+<p>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e090" xlink:type="simple"/></inline-formula> is the mean of the LDA projected i-vectors for each language. The projection matrix <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e091" xlink:type="simple"/></inline-formula> is obtained through Cholesky decomposition of matrix <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e092" xlink:type="simple"/></inline-formula>. With the matrix <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e093" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e094" xlink:type="simple"/></inline-formula>, the compensated i-vector <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e095" xlink:type="simple"/></inline-formula> can be obtained as<disp-formula id="pone.0100795.e096"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e096" xlink:type="simple"/><label>(13)</label></disp-formula></p>
+</sec><sec id="s2g3">
+<title>Cosine Scoring</title>
+<p>After obtaining intersession compensated i-vectors, the representation of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e097" xlink:type="simple"/></inline-formula>-th target language <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e098" xlink:type="simple"/></inline-formula> can be simply obtained by taking the mean of the corresponding i-vectors.<disp-formula id="pone.0100795.e099"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e099" xlink:type="simple"/><label>(14)</label></disp-formula></p>
+<p>Given a test utterances, the detection score for a target language <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e100" xlink:type="simple"/></inline-formula> can be estimated using the cosine similarity measure between the target i-vector <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e101" xlink:type="simple"/></inline-formula> and the test i-vector <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e102" xlink:type="simple"/></inline-formula>: <disp-formula id="pone.0100795.e103"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0100795.e103" xlink:type="simple"/><label>(15)</label></disp-formula></p>
+</sec></sec><sec id="s2h">
+<title>PDBF-TV</title>
+<p>As aforementioned, the DBF extractor is a part of the specially structured DNN, which is trained on the corpus with phonemes or phoneme states information. This labeling information may not be sufficient to cover all LID corpus due to the limited phoneme set for a special language. To address this, we propose a PDBF-TV system to further improve the LID performance.</p>
+<p>The concept of PDBF-TV is similar to PPRLM, which aims to take advantage of complementary acoustic models. Two different PDBF-TV systems based on having different DBF extractors as parallel acoustic front ends, are proposed using two different fusion schemes: early fusion and late fusion. The early scheme conducts fusion at feature-level, where the feature from both DBF-TV systems are combined before classification. The late fusion scheme acts at a decision-level, where the outputs of the mono DBF-TV systems are integrated by the use of an averaging criteria.</p>
+<p>As shown in <xref ref-type="fig" rid="pone-0100795-g003">Figure 3</xref>, in the early fusion scheme, the features (i.e. i-vectors from different DBFs) are concatenated as the input to the TV-modeling backend. After concatenation, the following process is used in the same way as in DBF-TV, including intersession compensation and cosine scoring. In the late fusion scheme, the similarities estimated from different DBF-TV systems are averaged to form the final decision.</p>
+<fig id="pone-0100795-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0100795.g003</object-id><label>Figure 3</label><caption>
+<title>Block diagrams of two PDBF-TV LID systems.</title>
+<p>The diagram above the dashed line is PDBF-TV with later fusion. The diagram below the dashed line is the PDBF-TV with early fusion.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0100795.g003" position="float" xlink:type="simple"/></fig></sec></sec><sec id="s3">
+<title>Results and Discussion</title>
+<sec id="s3a">
+<title>Experimental Setup</title>
+<sec id="s3a1">
+<title>LID Database</title>
+<p>To evaluate the effectiveness of the proposed DBF-based systems, we conducted extensive experiments using the LRE09 dataset, comprising 23 target languages, i.e. Amharic, Bosnian, Cantonese, Creole, Croatian, Dari, English-American, English-Indian, Farsi, French, Georgian, Hausa, Hindi, Korean, Mandarin, Pashto, Portuguese, Russian, Spanish, Turkish, Ukrainian, Urdu and Vietnamese. The training utterances for each language came from two different channels, i.e. the dataset of Conversational Telephone Speech (CTS) and narrow band Voice of America (VOA) radio broadcasts.</p>
+<list list-type="bullet"><list-item>
+<p>CTS partition: Data from the previous evaluations conducted by NIST, including LRE 1996, LRE 2003, LRE 2005 and LRE 2007. These utterance are mainly collected from CallFriend, CallHome and Mixer databases</p>
+</list-item><list-item>
+<p>VOA partition: Most of the utterances are from the NIST-provided datasets: VOA2 and VOA3.</p>
+</list-item></list>
+<p>It should be noted that the training data for each language is imbalanced. Languages such as English and Mandarin enjoy more than 100 hours of data while languages such as English-Indian are represented by less than 5 hours of data. In addition, some language data is collected from only one channel source. In implementation, we limit the training data set to at most 15 hours for each target language and divide the LID corpus into two parts: a training dataset and a development dataset. For each target language, around 80 audited segments of approximately 30 s duration are used as the development dataset, the rest are used as training.</p>
+<p>The test utterances are also divided into three duration groups, i.e. 30 s, 10 s and 3 s, comprising 10,376, 10,427 and 10,375 speech utterances respectively.</p>
+<p>The LRE09 dataset is very challenging in that 1) There are 23 languages, far more than in the previous evaluations. 2) Some language pairs are highly confused, such as Hindi and Urdu, Russian and Ukrainian. 3) The data is collected from different channel sources, and is highly imbalanced.</p>
+</sec><sec id="s3a2">
+<title>Performance Measurement</title>
+<p>The core test of LRE09 is the language detection task: Given a segment of speech and a hypothesized target language, determine whether the target language is spoken in the test segment or not <xref ref-type="bibr" rid="pone.0100795-Martin2">[9]</xref>. According to the duration of the test utterance, the performance is evaluated on 30 s, 10 s and 3 s of data respectively.</p>
+<p>Three different metrics are used to assess the performance of LID, all evaluating the capabilities of one-versus-all language detection. The first metric is the average decision cost function (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e104" xlink:type="simple"/></inline-formula>) <xref ref-type="bibr" rid="pone.0100795-Martin2">[9]</xref>, which is a measure of the cost of taking bad decisions. The second one is the DET curves <xref ref-type="bibr" rid="pone.0100795-Martin3">[46]</xref>, which are used to represent the range of possible system operating points of detection systems and measure the system discrimination capability. We also compute the classical equal error rate (EER) as the performance measure.</p>
+</sec><sec id="s3a3">
+<title>LID Systems</title>
+<p>The LID systems used for comparison are SDC-TV and PPR-LM, which rely on conventional acoustic and phonotactic features respectively.</p>
+<p>In the SDC-TV baseline system, the SDC are extracted as follows: 1) MFCC features are extracted for each 20 ms analysis frame, with 10 ms frame shift. 2) The SDC features comprise the static and stacked MFCCs with parameter 7-1-3-7 <xref ref-type="bibr" rid="pone.0100795-TorresCarrasquillo1">[15]</xref>. 3) The non-speech frames are gated out by using voice activity detection (VAD). 4) SDC features are normalized to a standard distribution. The TV space is estimated using a GMM-UBM with 2048 Gaussian components and with the dimension of the i-vector set to 400 <xref ref-type="bibr" rid="pone.0100795-Dehak2">[25]</xref>.</p>
+<p>The PPRLM baseline system is implemented as described in Xu et.al. <xref ref-type="bibr" rid="pone.0100795-Xu1">[27]</xref>, with different PR frontends, i.e. BUT TRAPs/NN phone decoders for Hungarian (HU) and Russian (RU) <xref ref-type="bibr" rid="pone.0100795-Schwarz1">[47]</xref>.</p>
+<p>Using the proposed DBF extractor for front end feature vector formation, we implemented the two DBF-based acoustic systems, i.e. DBF-TV and PDBF-TV. Furthermore, we built a phonotactic representation using the GMM-HMM based PR, trained using the DBF which will be compared against published PPRLM systems.</p>
+<p>These systems will now be evaluated and compared in the following section.</p>
+</sec></sec><sec id="s3b">
+<title>Comparison with Baseline</title>
+<p>The proposed MA DBF-TV and EN DBF-TV systems (i.e. with DBF extractors tuned on Mandarin and English speech respectively) are now compared with the baseline SDC-TV system. The DBF extractor in each DBF-TV system is configured to be 5-1-5 for inputs, which consists of 11 frames of 43-dimension MFCC and prosodic features, and 43 hidden nodes for output. In addition, we also compare against the MIT SDC-TV setup having state-of-the-art performance. The performance published in <xref ref-type="bibr" rid="pone.0100795-Dehak2">[25]</xref> was tested on exactly the same evaluation data set. Results are shown in <xref ref-type="table" rid="pone-0100795-t001">Table 1</xref>, where it is evident that our SDC-TV implementation is comparable to the MIT SDC-TV system. This implies that, since they having the same acoustic frontend (i.e. SDC), their back-end TV modelling implementations are also similar.</p>
+<table-wrap id="pone-0100795-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0100795.t001</object-id><label>Table 1</label><caption>
+<title>Comparison of Performances between DBF-TV system and SDC-TV system on LRE09.</title>
+</caption><alternatives><graphic id="pone-0100795-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0100795.t001" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td colspan="2" align="left" rowspan="1">30 s</td>
+<td colspan="2" align="left" rowspan="1">10 s</td>
+<td colspan="2" align="left" rowspan="1">3 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">system</td>
+<td align="left" rowspan="1" colspan="1">EER</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e105" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">EER</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e106" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">EER</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e107" xlink:type="simple"/></inline-formula></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">SDC-TV</td>
+<td align="left" rowspan="1" colspan="1">2.08</td>
+<td align="left" rowspan="1" colspan="1">2.07</td>
+<td align="left" rowspan="1" colspan="1">5.35</td>
+<td align="left" rowspan="1" colspan="1">5.32</td>
+<td align="left" rowspan="1" colspan="1">16.74</td>
+<td align="left" rowspan="1" colspan="1">16.70</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">MIT SDC-TV <xref ref-type="bibr" rid="pone.0100795-Dehak2">[25]</xref></td>
+<td align="left" rowspan="1" colspan="1">2.40</td>
+<td align="left" rowspan="1" colspan="1">N/A</td>
+<td align="left" rowspan="1" colspan="1">4.80</td>
+<td align="left" rowspan="1" colspan="1">N/A</td>
+<td align="left" rowspan="1" colspan="1">14.20</td>
+<td align="left" rowspan="1" colspan="1">N/A</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">MA DBF-TV</td>
+<td align="left" rowspan="1" colspan="1">1.51</td>
+<td align="left" rowspan="1" colspan="1">1.37</td>
+<td align="left" rowspan="1" colspan="1">2.62</td>
+<td align="left" rowspan="1" colspan="1">2.59</td>
+<td align="left" rowspan="1" colspan="1">9.28</td>
+<td align="left" rowspan="1" colspan="1">9.18</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">EN DBF-TV</td>
+<td align="left" rowspan="1" colspan="1">1.42</td>
+<td align="left" rowspan="1" colspan="1">1.41</td>
+<td align="left" rowspan="1" colspan="1">2.67</td>
+<td align="left" rowspan="1" colspan="1">2.61</td>
+<td align="left" rowspan="1" colspan="1">10.14</td>
+<td align="left" rowspan="1" colspan="1">10.04</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>Most importantly, we can see clearly in <xref ref-type="table" rid="pone-0100795-t001">Table 1</xref> that the performances of the DBF-TV systems is very promising. For the MA DBF-TV system, the EERs of 30 s, 10 s and 3 s test utterances are 1.51%, 2.62% and 9.28% respectively, whereas for the EN DBF-TV system, they are 1.42%, 2.67% and 10.14%. The relative improvements of DBF-TV over the baseline range from 62.7% to 82.7%, with the highest improvements seen for 10 s test utterances.</p>
+<p>Since we have established that the back-end TV modelling is similar in each case, this significant performance improvement is mainly due to ability of the DBF frontends. It demonstrates that the DBF features are powerful and have good discriminative and descriptive capabilities for the LID. To explore further, <xref ref-type="fig" rid="pone-0100795-g004">Figure 4</xref> shows a DET curve comparison between the SDC-TV and MA DBF-TV systems.</p>
+<fig id="pone-0100795-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0100795.g004</object-id><label>Figure 4</label><caption>
+<title>DET curves comparison between MA DBF-TV and SDC-TV.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0100795.g004" position="float" xlink:type="simple"/></fig>
+<p>In the DBF-TV systems, the configuration of the DBF extractor is fixed. Despite the significant performance improvement seen, this configuration may not be optimal. In the following subsection, we therefore compare the performance of different DBF extractor configurations, and propose an optimal configuration for the LRE09 dataset.</p>
+</sec><sec id="s3c">
+<title>DBF Configurations</title>
+<p>In this section we construct experiments to evaluate the effect of DBF extractor configurations, using the MA DBF-TV system as baseline. The experiments separately assess different input temporal window sizes as well as the number of hidden nodes for the DBF extractor output, in order to find an optimal configuration for the LRE09 dataset.</p>
+<sec id="s3c1">
+<title>Temporal Window Size Investigation</title>
+<p>It is known that temporal context information plays an important role for LID performance. For SDC, extensive trials have been conducted <xref ref-type="bibr" rid="pone.0100795-Kohler1">[14]</xref>, leading to a relatively stable and optimal configuration. Taking a similar approach, we experimentally assess the performance of different temporal window size configurations for DBF extraction. The resulting LRE09 performance is evaluated for four different DBF extractor configurations, i.e. 5-1-5, 10-1-10, 15-1-15 and 20-1-20, and shown in <xref ref-type="table" rid="pone-0100795-t002">Table 2</xref> with best results shown in bold text. We can see that, for 30 s and 10 s test utterances, the 10-1-10 DBF extractor configuration (i.e. a temporal window size of 21) performs best whereas for 3 s test utterances, the 5-1-5 DBF extractor configuration performs slightly better. Taken overall, the 10-1-10 configuration with window size 21 is optimal. In fact, this result coincides with the configuration of conventional SDC, i.e. 7-1-3-7 with window size 21.</p>
+<table-wrap id="pone-0100795-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0100795.t002</object-id><label>Table 2</label><caption>
+<title>Comparison of Performances between different temporal context sizes using 43-dimensional DBF on LRE09.</title>
+</caption><alternatives><graphic id="pone-0100795-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0100795.t002" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td colspan="2" align="left" rowspan="1">30 s</td>
+<td colspan="2" align="left" rowspan="1">10 s</td>
+<td colspan="2" align="left" rowspan="1">3 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Temporal Window Size</td>
+<td align="left" rowspan="1" colspan="1">EER</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e108" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">EER</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e109" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">EER</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e110" xlink:type="simple"/></inline-formula></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">5-1-5</td>
+<td align="left" rowspan="1" colspan="1">1.51</td>
+<td align="left" rowspan="1" colspan="1">1.37</td>
+<td align="left" rowspan="1" colspan="1">2.62</td>
+<td align="left" rowspan="1" colspan="1">2.59</td>
+<td align="left" rowspan="1" colspan="1">9.28</td>
+<td align="left" rowspan="1" colspan="1">9.18</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">10-1-10</td>
+<td align="left" rowspan="1" colspan="1">1.31</td>
+<td align="left" rowspan="1" colspan="1">1.22</td>
+<td align="left" rowspan="1" colspan="1">2.36</td>
+<td align="left" rowspan="1" colspan="1">2.34</td>
+<td align="left" rowspan="1" colspan="1">9.64</td>
+<td align="left" rowspan="1" colspan="1">9.60</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">15-1-15</td>
+<td align="left" rowspan="1" colspan="1">1.39</td>
+<td align="left" rowspan="1" colspan="1">1.29</td>
+<td align="left" rowspan="1" colspan="1">2.47</td>
+<td align="left" rowspan="1" colspan="1">2.43</td>
+<td align="left" rowspan="1" colspan="1">9.72</td>
+<td align="left" rowspan="1" colspan="1">9.69</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">20-1-20</td>
+<td align="left" rowspan="1" colspan="1">1.34</td>
+<td align="left" rowspan="1" colspan="1">1.23</td>
+<td align="left" rowspan="1" colspan="1">2.49</td>
+<td align="left" rowspan="1" colspan="1">2.44</td>
+<td align="left" rowspan="1" colspan="1">10.03</td>
+<td align="left" rowspan="1" colspan="1">10.00</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap></sec><sec id="s3c2">
+<title>DBF Extractor Output Hidden Nodes Investigation</title>
+<p>In order to assess the effect of the number of hidden nodes at the output of the DBF extractor, we construct several experiments. Two baseline DBF extractor configurations are used, having 10-1-10 and 5-1-5 temporal input windows respectively (since these yielded best performance for the 30 s, 10 s, and 3 s test utterances in the previous subsection). The EER of 30 s, 10 s and 3 s test utterances are determined for each for hidden node numbers ranging from 20 to 60 (with 43 being the nominal value, set to match the dimension of the input vector). The results are plotted in <xref ref-type="fig" rid="pone-0100795-g005">Figure 5</xref>. We can conclude that, for 30 s utterances, the number of hidden nodes in the test does not directly affect LID performance. For 10 s and 3 s test utterances, performance tends to improve as the number of hidden nodes increases. Performance improvement in those cases appears to saturate around dimension 50. Therefore an optimal configuration is chosen: an input of 10-1-10 with temporal window size 21, and 50 hidden nodes in the DBF output layer. This configuration can achieve an EER performance of 1.33%, 2.29% and 9.22% on 30 s, 10 s, 3 s test utterances respectively.</p>
+<fig id="pone-0100795-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0100795.g005</object-id><label>Figure 5</label><caption>
+<title>EER obtained from the MA DBF-TV system based on different dimensions of DBF on LRE09.</title>
+<p>Left panel shows the results of 30 s. Middle panel shows the results of 10s. Right panel shows the results of 3 s.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0100795.g005" position="float" xlink:type="simple"/></fig>
+<p>With longer test utterances, the statistics of speech content may already be sufficient for LID. However for shorter utterances, with insufficient statistics, the additional ability of the DBF extractor appears to be more effective at improving system performance.</p>
+<p>As a summary, our study on the input and output of DBF extractor is consistent with previous studies, such as the configuration of SDC. And with powerful modelling capability of DNN, the system performance can be significantly improved with optimal configuration.</p>
+</sec></sec><sec id="s3d">
+<title>Performance of the Proposed PDBF-TV System</title>
+<p>This section presents the results of the proposed PDBF-TV system which combines both the MA and EN DBF extractors in parallel. Both use the optimal configuration obtained in the experiments of the previous subsections. Two schemes are used for fusion, one is early-fusion where the i-vectors are concatenated for the final LID feature vector, and the other is later-fusion which performs a weighted mean of the output scores. Results from these two schemes are given in <xref ref-type="table" rid="pone-0100795-t003">Table 3</xref>, with best scores for each test given in bold text. From this, we can see that both early fusion and later fusion schemes achieve an improvement over the baseline DBF-TV system, however early fusion performs slightly better – although at the cost of a slightly increased computational complexity.</p>
+<table-wrap id="pone-0100795-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0100795.t003</object-id><label>Table 3</label><caption>
+<title>Comparison of Performance between two different PDBF-TV systems on LRE09.</title>
+</caption><alternatives><graphic id="pone-0100795-t003-3" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0100795.t003" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td colspan="2" align="left" rowspan="1">30 s</td>
+<td colspan="2" align="left" rowspan="1">10 s</td>
+<td colspan="2" align="left" rowspan="1">3 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">System</td>
+<td align="left" rowspan="1" colspan="1">EER</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e111" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">EER</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e112" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">EER</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e113" xlink:type="simple"/></inline-formula></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">MA DBF-TV</td>
+<td align="left" rowspan="1" colspan="1">1.33</td>
+<td align="left" rowspan="1" colspan="1">1.25</td>
+<td align="left" rowspan="1" colspan="1">2.29</td>
+<td align="left" rowspan="1" colspan="1">2.27</td>
+<td align="left" rowspan="1" colspan="1">9.22</td>
+<td align="left" rowspan="1" colspan="1">9.17</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">EN DBF-TV</td>
+<td align="left" rowspan="1" colspan="1">1.38</td>
+<td align="left" rowspan="1" colspan="1">1.27</td>
+<td align="left" rowspan="1" colspan="1">2.58</td>
+<td align="left" rowspan="1" colspan="1">2.56</td>
+<td align="left" rowspan="1" colspan="1">9.98</td>
+<td align="left" rowspan="1" colspan="1">9.91</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PDBF-TV1 (later)</td>
+<td align="left" rowspan="1" colspan="1">1.31</td>
+<td align="left" rowspan="1" colspan="1">1.28</td>
+<td align="left" rowspan="1" colspan="1">2.24</td>
+<td align="left" rowspan="1" colspan="1">2.20</td>
+<td align="left" rowspan="1" colspan="1">7.45</td>
+<td align="left" rowspan="1" colspan="1">7.45</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PDBF-TV2 (early)</td>
+<td align="left" rowspan="1" colspan="1">1.22</td>
+<td align="left" rowspan="1" colspan="1">1.16</td>
+<td align="left" rowspan="1" colspan="1">2.09</td>
+<td align="left" rowspan="1" colspan="1">2.05</td>
+<td align="left" rowspan="1" colspan="1">7.93</td>
+<td align="left" rowspan="1" colspan="1">7.87</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap></sec><sec id="s3e">
+<title>Performance Comparison with State-of-the-Art</title>
+<p>To further demonstrate the effectiveness of the proposed DBF, we now investigate fusing the acoustic and phonotactic approaches. The acoustic approach is the PDBF-TV2 system as defined in the previous subsection. The phonotactic representation is constructed using 4 PRs, i.e. RU, HU, MA and EN.</p>
+<p>The RU and HU phone recognizers are from Brno University of Technology (BUT), trained using TRAP features and a NN method <xref ref-type="bibr" rid="pone.0100795-Schwarz1">[47]</xref>. The MA and EN recognizers are trained with the corresponding DBFs using classical GMM-HMM training. The experimental results are shown in <xref ref-type="table" rid="pone-0100795-t004">Table 4</xref>, with best scores shown in bold text. From this we can see that the performance of DBF/GMM-HMM based PRLM, P3 and P4, is comparable to the TRAPs/NN based PRLM, P1 and P2. The performance of both F1 and F2 PPRLM systems is inferior to the DBF-TV and PDBF-TV systems. By fusing the outputs of all these acoustic and phonotactic systems, EERs of 1.08%, 1.89% and 7.01% can be achieved. We also list the results from the MITLL <xref ref-type="bibr" rid="pone.0100795-TorresCarrasquillo2">[26]</xref> and BUT-AGNITIO <xref ref-type="bibr" rid="pone.0100795-Jancik1">[48]</xref> systems, both of which similarly fuse acoustic and phonotactic methods. It is evident that the fusion results from the proposed system significantly exceed the performance of these reported state-of-the-art LID systems, especially for short duration test utterances. In <xref ref-type="fig" rid="pone-0100795-g006">Figure 6</xref>, DET plots of the PPRLM, PDBF-TV2 and fusion systems are shown, again highlighting the effectiveness of the proposed DBF.</p>
+<fig id="pone-0100795-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0100795.g006</object-id><label>Figure 6</label><caption>
+<title>DET curves comparison between PPRLM, PDBF-TV (MA+EN) and their fusion on LRE09.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0100795.g006" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0100795-t004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0100795.t004</object-id><label>Table 4</label><caption>
+<title>Fusion results between PDBF-TV system with PPRLM system on LRE09.</title>
+</caption><alternatives><graphic id="pone-0100795-t004-4" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0100795.t004" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td colspan="2" align="left" rowspan="1">30 s</td>
+<td colspan="2" align="left" rowspan="1">10 s</td>
+<td colspan="2" align="left" rowspan="1">3 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">System</td>
+<td align="left" rowspan="1" colspan="1">EER</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e114" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">EER</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e115" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">EER</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0100795.e116" xlink:type="simple"/></inline-formula></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">P1: PRLM with RU</td>
+<td align="left" rowspan="1" colspan="1">2.42</td>
+<td align="left" rowspan="1" colspan="1">2.40</td>
+<td align="left" rowspan="1" colspan="1">6.42</td>
+<td align="left" rowspan="1" colspan="1">6.38</td>
+<td align="left" rowspan="1" colspan="1">18.92</td>
+<td align="left" rowspan="1" colspan="1">18.70</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">P2: PRLM with HU</td>
+<td align="left" rowspan="1" colspan="1">2.62</td>
+<td align="left" rowspan="1" colspan="1">2.62</td>
+<td align="left" rowspan="1" colspan="1">6.65</td>
+<td align="left" rowspan="1" colspan="1">6.62</td>
+<td align="left" rowspan="1" colspan="1">18.88</td>
+<td align="left" rowspan="1" colspan="1">18.82</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">F1: PPRLM(P1+P2)</td>
+<td align="left" rowspan="1" colspan="1">1.78</td>
+<td align="left" rowspan="1" colspan="1">1.78</td>
+<td align="left" rowspan="1" colspan="1">4.70</td>
+<td align="left" rowspan="1" colspan="1">4.65</td>
+<td align="left" rowspan="1" colspan="1">15.24</td>
+<td align="left" rowspan="1" colspan="1">15.15</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">P3: PRLM with MA</td>
+<td align="left" rowspan="1" colspan="1">3.08</td>
+<td align="left" rowspan="1" colspan="1">3.03</td>
+<td align="left" rowspan="1" colspan="1">7.79</td>
+<td align="left" rowspan="1" colspan="1">7.78</td>
+<td align="left" rowspan="1" colspan="1">21.93</td>
+<td align="left" rowspan="1" colspan="1">21.65</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">P4: PRLM with EN</td>
+<td align="left" rowspan="1" colspan="1">2.58</td>
+<td align="left" rowspan="1" colspan="1">2.58</td>
+<td align="left" rowspan="1" colspan="1">6.09</td>
+<td align="left" rowspan="1" colspan="1">6.07</td>
+<td align="left" rowspan="1" colspan="1">17.30</td>
+<td align="left" rowspan="1" colspan="1">17.29</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">F2: PPRLM(P3+P4)</td>
+<td align="left" rowspan="1" colspan="1">2.13</td>
+<td align="left" rowspan="1" colspan="1">2.10</td>
+<td align="left" rowspan="1" colspan="1">4.51</td>
+<td align="left" rowspan="1" colspan="1">4.46</td>
+<td align="left" rowspan="1" colspan="1">13.50</td>
+<td align="left" rowspan="1" colspan="1">13.45</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">F3: PPRLM(F1+F2)</td>
+<td align="left" rowspan="1" colspan="1">1.53</td>
+<td align="left" rowspan="1" colspan="1">1.49</td>
+<td align="left" rowspan="1" colspan="1">3.31</td>
+<td align="left" rowspan="1" colspan="1">3.29</td>
+<td align="left" rowspan="1" colspan="1">10.71</td>
+<td align="left" rowspan="1" colspan="1">10.65</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">F4: PDBF-TV2</td>
+<td align="left" rowspan="1" colspan="1">1.22</td>
+<td align="left" rowspan="1" colspan="1">1.16</td>
+<td align="left" rowspan="1" colspan="1">2.09</td>
+<td align="left" rowspan="1" colspan="1">2.05</td>
+<td align="left" rowspan="1" colspan="1">7.93</td>
+<td align="left" rowspan="1" colspan="1">7.87</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Fusion:(F3+F4)</td>
+<td align="left" rowspan="1" colspan="1">1.08</td>
+<td align="left" rowspan="1" colspan="1">1.05</td>
+<td align="left" rowspan="1" colspan="1">1.89</td>
+<td align="left" rowspan="1" colspan="1">1.85</td>
+<td align="left" rowspan="1" colspan="1">7.01</td>
+<td align="left" rowspan="1" colspan="1">6.96</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">MITLL LRE09 <xref ref-type="bibr" rid="pone.0100795-TorresCarrasquillo2">[26]</xref></td>
+<td align="left" rowspan="1" colspan="1">N/A</td>
+<td align="left" rowspan="1" colspan="1">1.64</td>
+<td align="left" rowspan="1" colspan="1">N/A</td>
+<td align="left" rowspan="1" colspan="1">3.14</td>
+<td align="left" rowspan="1" colspan="1">N/A</td>
+<td align="left" rowspan="1" colspan="1">10.50</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">BUT-AGNITIO LRE09 <xref ref-type="bibr" rid="pone.0100795-Jancik1">[48]</xref></td>
+<td align="left" rowspan="1" colspan="1">N/A</td>
+<td align="left" rowspan="1" colspan="1">1.57</td>
+<td align="left" rowspan="1" colspan="1">N/A</td>
+<td align="left" rowspan="1" colspan="1">2.76</td>
+<td align="left" rowspan="1" colspan="1">N/A</td>
+<td align="left" rowspan="1" colspan="1">10.22</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap></sec></sec><sec id="s4">
+<title>Conclusions</title>
+<p>In this paper, we have proposed and evaluated the use of DBF for spoken LID. The DBF extractor is generated from a structured DNN having a narrow internal bottleneck layer. It has been shown that DBFs can form a low-dimensional compact representation of the original inputs, and have a powerful descriptive and discriminative capability, when the DNN is carefully constructed and trained. Two acoustic approaches, i.e. DBF-TV and PDBF-TV, were constructed and evaluated to demonstrate the effectiveness of the proposed DBF. Compared to conventional SDC-TV approaches, the experimental results on the challenging LRE09 core test show significant performance improvement, especially for short duration utterances. Furthermore, different configurations of DBF extractor have been studied, with an optimal system being proposed for spoken LID. By fusing the output of phonotactic and acoustic representations based on DBFs, final results are achieved which outperform existing published state-of-the-art systems.</p>
+<p>It is believed that this work is the first step towards effective representations for LID through applying the ideas of deep learning. In future, several extensions may be worthwhile. Firstly, all experiments in this paper are carried out on the LRE09 closed-set task. It is worth examining the effectiveness of DBF on even more challenging LID tasks, such as dialect recognition, and open-set tasks. Secondly, there are many parameters in the DNN structure that are empirically determined. The work presented in this paper focuses on the input and output parameters of the corresponding DBF extractor, yet it may be interesting to further investigate other configuration options effective for spoken LID, such as the number of nodes in hidden layers as well as the number of hidden layers. Thirdly, this work mainly considers acoustic approaches. For the phonotactic approach, only PPRLM systems based on DBF were evaluated. Further performance improvement may be achievable by using more powerful modelling techniques, such as SVM and Binary Tree.</p>
+</sec></body>
+<back>
+<ack>
+<p>The authors would like to thank the iFlytek Research at Anhui USTC iIflytek Co., Ltd. for their hospitality. They would also like to thank ShiFu Xiong for his assistance in training the DNN.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0100795-Sugiyama1"><label>1</label>
+<mixed-citation publication-type="other" xlink:type="simple">Sugiyama M (1991) Automatic language recognition using acoustic features. In: Proc IEEE Int Conf Acoust Speech Signal Process. pp. 813–816.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Zue1"><label>2</label>
+<mixed-citation publication-type="other" xlink:type="simple">Zue W, Hazen TJ, Hazen TJ (1993) Automatic language identification using a segment-based approach. In: Proceedings of the European Conference on Speech Communication and Technology. pp. 1303–1306.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Zissman1"><label>3</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zissman</surname><given-names>MA</given-names></name> (<year>1996</year>) <article-title>Comparison of four approaches to automatic language identification of telephone speech</article-title>. <source>IEEE Trans Speech Audio Process</source> <volume>4</volume>: <fpage>31</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Matrouf1"><label>4</label>
+<mixed-citation publication-type="other" xlink:type="simple">Matrouf D, Adda-Decker M, Lamel L, Gauvain JL (1998) Language identification incorporating lexical information. In: Proceedings of the International Conference on Spoken Language Processing. volume 98, pp. 181–184.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Eady1"><label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Eady</surname><given-names>SJ</given-names></name> (<year>1982</year>) <article-title>Differences in the F0 patterns of speech: Tone language versus stress language</article-title>. <source>Language and Speech</source> <volume>25</volume>: <fpage>29</fpage>–<lpage>42</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Kirchhoff1"><label>6</label>
+<mixed-citation publication-type="other" xlink:type="simple">Kirchhoff K, Parandekar S, Bilmes J (2002) Mixed-memory Markov models for automatic language identification. In: Proc IEEE Int Conf Acoust Speech Signal Process. volume 1, pp. 761–764.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Siniscalchi1"><label>7</label>
+<mixed-citation publication-type="other" xlink:type="simple">Siniscalchi SM, Reed J, Svendsen T, Lee CH (2009) Exploring universal attribute characterization of spoken languages for spoken language recognition. In: Proceedings of the Annual Conference of the International Speech Communication Association. pp. 168–171.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Martin1"><label>8</label>
+<mixed-citation publication-type="other" xlink:type="simple">Martin AF, Le AN (2008) NIST 2007 language recognition evaluation. In: Proceedings of Odyssey 2008: The Speaker and Language Recognition Workshop.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Martin2"><label>9</label>
+<mixed-citation publication-type="other" xlink:type="simple">Martin A, Greenberg C (2010) The 2009 NIST language recognition evaluation. In: Proceedings of Odyssey 2009: The Speaker and Language Recognition Workshop. pp. 165–171.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Campbell1"><label>10</label>
+<mixed-citation publication-type="other" xlink:type="simple">Campbell W, Campbell J, Reynolds D, Jones D, Leek T (2004) High-level speaker verification with support vector machines. In: Proc IEEE Int Conf Acoust Speech Signal Process. pp. 73–76.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Campbell2"><label>11</label>
+<mixed-citation publication-type="other" xlink:type="simple">Campbell WM, Richardson F, Reynolds D (2007) Language recognition with word lattices and support vector machines. In: Proc IEEE Int Conf Acoust Speech Signal Process. volume 4, pp. IV–989.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Matejka1"><label>12</label>
+<mixed-citation publication-type="other" xlink:type="simple">Matejka P, Schwarz P, Cernocký J, Chytil P (2005) Phonotactic language identification using high quality phoneme recognition. In: Proceedings of the Annual Conference of the International Speech Communication Association. pp. 2237–2240.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Bielefeld1"><label>13</label>
+<mixed-citation publication-type="other" xlink:type="simple">Bielefeld B (1994) Language identification using shifted delta cepstrum. In: Proceedings of the 14th Annual Speech Research Symp.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Kohler1"><label>14</label>
+<mixed-citation publication-type="other" xlink:type="simple">Kohler MA, Kennedy M (2002) Language identification using shifted delta cepstra. In: Proceedings of the 45th IEEE International Midwest Symposium on Circuits and Systems. pp. 69-72. doi:10.1109/MWSCAS.2002.1186972.</mixed-citation>
+</ref>
+<ref id="pone.0100795-TorresCarrasquillo1"><label>15</label>
+<mixed-citation publication-type="other" xlink:type="simple">Torres-Carrasquillo PA, Singer E, Kohler MA, Greene RJ, Reynolds DA, <etal>et al</etal>.. (2002) Approaches to language identification using Gaussian mixture models and shifted delta cepstral features. In: Proceedings of the Annual Conference of the International Speech Communication Association.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Campbell3"><label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Campbell</surname><given-names>WM</given-names></name>, <name name-style="western"><surname>Campbell</surname><given-names>JP</given-names></name>, <name name-style="western"><surname>Reynolds</surname><given-names>DA</given-names></name>, <name name-style="western"><surname>Singer</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Torres-Carrasquillo</surname><given-names>PA</given-names></name> (<year>2006</year>) <article-title>Support vector machines for speaker and language recognition</article-title>. <source>Comput Speech Lang</source> <volume>20</volume>: <fpage>210</fpage>–<lpage>229</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Campbell4"><label>17</label>
+<mixed-citation publication-type="other" xlink:type="simple">Campbell WM, Sturim DE, Reynolds DA, Solomonoff A (2006) SVM based speaker verification using a GMM supervector kernel and NAP variability compensation. In: Proc IEEE Int Conf Acoust Speech Signal Process. volume 1.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Qu1"><label>18</label>
+<mixed-citation publication-type="other" xlink:type="simple">Qu D, Wang B (2003) Discriminative training of GMM for language identification. In: Proceedings of ISCA &amp; IEEE Workshop on Spontaneous Speech Processing and Recognition.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Burget1"><label>19</label>
+<mixed-citation publication-type="other" xlink:type="simple">Burget L, Matejka P, Cernocky J (2006) Discriminative training techniques for acoustic language identification. In: Proc IEEE Int Conf Acoust Speech Signal Process. volume 1, pp. 209–212.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Castaldo1"><label>20</label>
+<mixed-citation publication-type="other" xlink:type="simple">Castaldo F, Colibro D, Dalmasso E, Laface P, Vair C (2007) Acoustic language identification using fast discriminative training. In: Proceedings of the Annual Conference of the International Speech Communication Association. volume 7, pp. 346–349.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Vair1"><label>21</label>
+<mixed-citation publication-type="other" xlink:type="simple">Vair C, Colibro D, Castaldo F, Dalmasso E, Laface P (2006) Channel factors compensation in model and feature domain for speaker recognition. In: Proceedings of Odyssey 2006: Speaker and Language Recognition Workshop. pp. 1–6.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Castaldo2"><label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Castaldo</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Colibro</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Dalmasso</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Laface</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Vair</surname><given-names>C</given-names></name> (<year>2007</year>) <article-title>Compensation of nuisance factors for speaker and language recognition</article-title>. <source>IEEE Trans Audio Speech Lang Processing</source> <volume>15</volume>: <fpage>1969</fpage>–<lpage>1978</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Hubeika1"><label>23</label>
+<mixed-citation publication-type="other" xlink:type="simple">Hubeika V, Burget L, Matejka P, Schwarz P (2008) Discriminative training and channel compensation for acoustic language recognition. In: Proceedings of the Annual Conference of the International Speech Communication Association. pp. 301–304.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Dehak1"><label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dehak</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Kenny</surname><given-names>PJ</given-names></name>, <name name-style="western"><surname>Dehak</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Dumouchel</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Ouellet</surname><given-names>P</given-names></name> (<year>2011</year>) <article-title>Front-end factor analysis for speaker verification</article-title>. <source>IEEE Trans Audio Speech Lang Processing</source> <volume>19</volume>: <fpage>788</fpage>–<lpage>798</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Dehak2"><label>25</label>
+<mixed-citation publication-type="other" xlink:type="simple">Dehak N, Torres-Carrasquillo PA, Reynolds DA, Dehak R (2011) Language recognition via i-vectors and dimensionality reduction. In: Proceedings of the Annual Conference of the International Speech Communication Association. pp. 857–860.</mixed-citation>
+</ref>
+<ref id="pone.0100795-TorresCarrasquillo2"><label>26</label>
+<mixed-citation publication-type="other" xlink:type="simple">Torres-Carrasquillo PA, Singer E, Gleason T, McCree A, Reynolds DA, <etal>et al</etal>.. (2010) The MITLL NIST LRE 2009 language recognition system. In: Proc IEEE Int Conf Acoust Speech Signal Process. pp. 4994–4997.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Xu1"><label>27</label>
+<mixed-citation publication-type="other" xlink:type="simple">Xu Y, Song Y, Long YH, Zhong HB, Dai LR (2010) The description of iFlyTek speech lab system for NIST2009 language recognition evaluation. In: Proceedings of the International Symposium on Chinese Spoken Language Processing. pp. 157–161.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Singer1"><label>28</label>
+<mixed-citation publication-type="other" xlink:type="simple">Singer E, Torres-Carrasquillo P, Reynolds D, McCree A, Richardson F, <etal>et al</etal>.. (2012) The MITLL NIST LRE 2011 language recognition system. In: Proceedings of Odyssey 2012: The Speaker and Language Recognition Workshop. pp. 209–215.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Dahl1"><label>29</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dahl</surname><given-names>GE</given-names></name>, <name name-style="western"><surname>Yu</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Deng</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Acero</surname><given-names>A</given-names></name> (<year>2012</year>) <article-title>Context-dependent pre-trained deep neural networks for large-vocabulary speech recognition</article-title>. <source>IEEE Trans Audio Speech Lang Processing</source> <volume>20</volume>: <fpage>30</fpage>–<lpage>42</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Hinton1"><label>30</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hinton</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Deng</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Yu</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Dahl</surname><given-names>GE</given-names></name>, <name name-style="western"><surname>Mohamed</surname><given-names>Ar</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups</article-title>. <source>IEEE Signal Processing Mag</source> <volume>29</volume>: <fpage>82</fpage>–<lpage>97</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Song1"><label>31</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Song</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Jiang</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Bao</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Wei</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Dai</surname><given-names>LR</given-names></name> (<year>2013</year>) <article-title>I-vector representation based on bottleneck features for language identification</article-title>. <source>Electron Lett</source> <volume>49</volume>: <fpage>1569</fpage>–<lpage>1570</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Diez1"><label>32</label>
+<mixed-citation publication-type="other" xlink:type="simple">Diez M, Varona A, Penagarikano M, Rodriguez-Fuentes LJ, Bordel G (2012) On the use of phone log-likelihood ratios as features in spoken language recognition. In: Proceedings of IEEE Workshop on Spoken Language Technology. pp. 274–279.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Diez2"><label>33</label>
+<mixed-citation publication-type="other" xlink:type="simple">Diez M, Varona A, Penagarikano M, Rodriguez-Fuentes L, Bordel G (2013) Dimensionality reduction of phone log-likelihood ratio features for spoken language recognition. In: Proceedings of the Annual Conference of the International Speech Communication Association.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Hinton2"><label>34</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hinton</surname><given-names>GE</given-names></name>, <name name-style="western"><surname>Salakhutdinov</surname><given-names>RR</given-names></name> (<year>2006</year>) <article-title>Reducing the dimensionality of data with neural networks</article-title>. <source>Science</source> <volume>313</volume>: <fpage>504</fpage>–<lpage>507</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Yu1"><label>35</label>
+<mixed-citation publication-type="other" xlink:type="simple">Yu D, Deng L, Dahl G (2010) Roles of pre-training and fine-tuning in context-dependent DBN-HMMs for real-world speech recognition. In: Proceedings of the Neural Information Processing Systems Workshop on Deep Learning and Unsupervised Feature Learning.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Hinton3"><label>36</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hinton</surname><given-names>GE</given-names></name>, <name name-style="western"><surname>Osindero</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Teh</surname><given-names>YW</given-names></name> (<year>2006</year>) <article-title>A fast learning algorithm for deep belief nets</article-title>. <source>Neural Comput</source> <volume>18</volume>: <fpage>1527</fpage>–<lpage>1554</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Freund1"><label>37</label>
+<mixed-citation publication-type="other" xlink:type="simple">Freund Y, Haussler D (1994) Unsupervised learning of distributions of binary vectors using two layer networks. Computer Research Laboratory, University of California, Santa Cruz.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Hinton4"><label>38</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hinton</surname><given-names>GE</given-names></name> (<year>2002</year>) <article-title>Training products of experts by minimizing contrastive divergence</article-title>. <source>Neural Comput</source> <volume>14</volume>: <fpage>1771</fpage>–<lpage>1800</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Fontaine1"><label>39</label>
+<mixed-citation publication-type="other" xlink:type="simple">Fontaine V, Ris C, Boite JM (1997) Nonlinear discriminant analysis for improved speech recognition. In: Proceedings of the European Conference on Speech Communication and Technology.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Grzl1"><label>40</label>
+<mixed-citation publication-type="other" xlink:type="simple">Grézl F, Karafiát M, Kontár S, Cernocky J (2007) Probabilistic and bottle-neck features for LVCSR of meetings. In: Proc IEEE Int Conf Acoust Speech Signal Process. volume 4, pp. IV–757.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Bao1"><label>41</label>
+<mixed-citation publication-type="other" xlink:type="simple">Bao YB, Jiang H, Liu C, Hu Y, Dai LR (2012) Investigation on dimensionality reduction of concatenated features with deep neural network for LVCSR systems. In: Proceedings of the International Conference on Signal Processing. pp. 562–566.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Seide1"><label>42</label>
+<mixed-citation publication-type="other" xlink:type="simple">Seide F, Li G, Chen X, Yu D (2011) Feature engineering in context-dependent deep neural networks for conversational speech transcription. In: Proceedings of IEEE Workshop on Automatic Speech Recognition and Understanding. pp. 24–29.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Kenny1"><label>43</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kenny</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Boulianne</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Ouellet</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Dumouchel</surname><given-names>P</given-names></name> (<year>2007</year>) <article-title>Joint factor analysis versus eigenchannels in speaker recognition</article-title>. <source>IEEE Trans Audio Speech Lang Processing</source> <volume>15</volume>: <fpage>1435</fpage>–<lpage>1447</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Dehak3"><label>44</label>
+<mixed-citation publication-type="other" xlink:type="simple">Dehak N (2009) Discriminative and generative approaches for long-and short-term speaker characteristics modeling: application to speaker verification. Ph.D. thesis, Ecole de Technologie Superieure, Montreal.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Kenny2"><label>45</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kenny</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Boulianne</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Dumouchel</surname><given-names>P</given-names></name> (<year>2005</year>) <article-title>Eigenvoice modeling with sparse training data</article-title>. <source>IEEE Trans Speech Audio Process</source> <volume>13</volume>: <fpage>345</fpage>–<lpage>354</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Martin3"><label>46</label>
+<mixed-citation publication-type="other" xlink:type="simple">Martin A, Doddington G, Kamm T, Ordowski M, Przybocki M (1997) The DET curve in assessment of detection task performance. In: Proceedings of the European Conference on Speech Communication and Technology.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Schwarz1"><label>47</label>
+<mixed-citation publication-type="other" xlink:type="simple">Schwarz P (2000) Phoneme recognition based on long temporal context. Ph.D. thesis, Brno University of Technology, Brno. Available: <ext-link ext-link-type="uri" xlink:href="http://www.fit.vutbr.cz/schwarzp/publi/thesis.pdf" xlink:type="simple">http://www.fit.vutbr.cz/schwarzp/publi/thesis.pdf</ext-link>.</mixed-citation>
+</ref>
+<ref id="pone.0100795-Jancik1"><label>48</label>
+<mixed-citation publication-type="other" xlink:type="simple">Jancik Z, Plchot O, Brummer N, Burget L, Glembek O, <etal>et al</etal>.. (2010) Data selection and calibration issues in automatic language recognition-investigation with but-agnitio NIST LRE 2009 system. In: Proceedings of Odyssey 2010: The Speaker and Language Recognition Workshop. pp. 215–221.</mixed-citation>
+</ref>
+</ref-list></back>
+</article>

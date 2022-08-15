@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" article-type="research-article" dtd-version="3.0" xml:lang="en">
+  <front>
+    <journal-meta><journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><issn pub-type="epub">1932-6203</issn><publisher>
+        <publisher-name>Public Library of Science</publisher-name>
+        <publisher-loc>San Francisco, USA</publisher-loc>
+      </publisher></journal-meta>
+    <article-meta><article-id pub-id-type="publisher-id">PONE-D-12-09423</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0042225</article-id><article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Biology</subject>
+          <subj-group>
+            <subject>Ecology</subject>
+            <subj-group>
+              <subject>Ecological metrics</subject>
+              <subj-group>
+                <subject>Species diversity</subject>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Evolutionary biology</subject>
+            <subj-group>
+              <subject>Evolutionary systematics</subject>
+              <subj-group>
+                <subject>Taxonomy</subject>
+                <subj-group>
+                  <subject>Animal taxonomy</subject>
+                </subj-group>
+              </subj-group>
+              <subj-group>
+                <subject>Phylogenetics</subject>
+              </subj-group>
+            </subj-group>
+            <subj-group>
+              <subject>Organismal evolution</subject>
+              <subj-group>
+                <subject>Animal evolution</subject>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Zoology</subject>
+            <subj-group>
+              <subject>Animal phylogenetics</subject>
+              <subject>Animal taxonomy</subject>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline">
+          <subject>Genetics and Genomics</subject>
+          <subject>Evolutionary Biology</subject>
+        </subj-group>
+      </article-categories><title-group><article-title>Coalescent Method in Conjunction with Niche Modeling Reveals Cryptic Diversity among Centipedes in the Western Ghats of South India</article-title><alt-title alt-title-type="running-head">Integrative Approach for Species Delimitation</alt-title></title-group><contrib-group>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Joshi</surname>
+            <given-names>Jahnavi</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Karanth</surname>
+            <given-names>K. Praveen</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="corresp" rid="cor1">
+            <sup>*</sup>
+          </xref>
+        </contrib>
+      </contrib-group><aff id="aff1">
+        <label>1</label>
+        <addr-line>Centre for Ecological Sciences, Indian Institute of Science, Bangalore, Karnataka, India</addr-line>
+      </aff><contrib-group>
+        <contrib contrib-type="editor" xlink:type="simple">
+          <name name-style="western">
+            <surname>Lalueza-Fox</surname>
+            <given-names>Carles</given-names>
+          </name>
+          <role>Editor</role>
+          <xref ref-type="aff" rid="edit1"/>
+        </contrib>
+      </contrib-group><aff id="edit1">
+        <addr-line>Institut de Biologia Evolutiva - Universitat Pompeu Fabra, Spain</addr-line>
+      </aff><author-notes>
+        <corresp id="cor1">* E-mail: <email xlink:type="simple">karanth@ces.iisc.ernet.in</email></corresp>
+        <fn fn-type="conflict">
+          <p>The authors have declared that no competing interests exist.</p>
+        </fn>
+        <fn fn-type="con">
+          <p>Conceived and designed the experiments: JJ PK. Performed the experiments: JJ PK. Analyzed the data: JJ PK. Contributed reagents/materials/analysis tools: JJ PK. Wrote the paper: JJ PK.</p>
+        </fn>
+      </author-notes><pub-date pub-type="collection">
+        <year>2012</year>
+      </pub-date><pub-date pub-type="epub">
+        <day>2</day>
+        <month>8</month>
+        <year>2012</year>
+      </pub-date><volume>7</volume><issue>8</issue><elocation-id>e42225</elocation-id><history>
+        <date date-type="received">
+          <day>2</day>
+          <month>4</month>
+          <year>2012</year>
+        </date>
+        <date date-type="accepted">
+          <day>3</day>
+          <month>7</month>
+          <year>2012</year>
+        </date>
+      </history><permissions>
+        
+        <copyright-holder>Joshi, Karanth</copyright-holder>
+        <license xlink:type="simple">
+          <license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+        </license>
+      </permissions><abstract>
+        <sec>
+          <title>Background</title>
+          <p>There has been growing interest in integrative taxonomy that uses data from multiple disciplines for species delimitation. Typically, in such studies, monophyly is taken as a proxy for taxonomic distinctiveness and these units are treated as potential species. However, monophyly could arise due to stochastic processes. Thus here, we have employed a recently developed tool based on coalescent approach to ascertain the taxonomic distinctiveness of various monophyletic units. Subsequently, the species status of these taxonomic units was further tested using corroborative evidence from morphology and ecology. This inter-disciplinary approach was implemented on endemic centipedes of the genus Digitipes (Attems 1930) from the Western Ghats (WG) biodiversity hotspot of India. The species of the genus Digitipes are morphologically conserved, despite their ancient late Cretaceous origin.</p>
+        </sec>
+        <sec>
+          <title>Principal Findings</title>
+          <p>Our coalescent analysis based on mitochondrial dataset indicated the presence of nine putative species. The integrative approach, which includes nuclear, morphology, and climate datasets supported distinctiveness of eight putative species, of which three represent described species and five were new species. Among the five new species, three were morphologically cryptic species, emphasizing the effectiveness of this approach in discovering cryptic diversity in less explored areas of the tropics like the WG. In addition, species pairs showed variable divergence along the molecular, morphological and climate axes.</p>
+        </sec>
+        <sec>
+          <title>Conclusions</title>
+          <p>A multidisciplinary approach illustrated here is successful in discovering cryptic diversity with an indication that the current estimates of invertebrate species richness for the WG might have been underestimated. Additionally, the importance of measuring multiple secondary properties of species while defining species boundaries was highlighted given variable divergence of each species pair across the disciplines.</p>
+        </sec>
+      </abstract><funding-group>
+        <funding-statement>This work was funded by Council for Scientific and Industrial Research, India (Grant no. 37(1346)/08/EMR-II). JJ was funded by the Indian Institute of Science, Bangalore graduate fellowship. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+      </funding-group><counts>
+        <page-count count="12"/>
+      </counts></article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Introduction</title>
+      <p>Delimiting species and reconstructing their phylogenetic histories is central to systematic biology <xref ref-type="bibr" rid="pone.0042225-Wiens1">[1]</xref>. It is essential to delineate species boundaries as they are fundamental units in biogeography, ecology and evolutionary studies <xref ref-type="bibr" rid="pone.0042225-Sites1">[2]</xref>, <xref ref-type="bibr" rid="pone.0042225-Balakrishnan1">[3]</xref>. Species are units at which micro-evolutionary processes operate and can be potentially studied <xref ref-type="bibr" rid="pone.0042225-Sites1">[2]</xref>. Traditional morphology based taxonomy is very useful and has been widely used, only failing to distinguish species in cases of closely related taxa, very recent radiations, or in taxonomic groups that exhibit morphological stasis <xref ref-type="bibr" rid="pone.0042225-SchlickSteiner1">[4]</xref>, <xref ref-type="bibr" rid="pone.0042225-Wiens2">[5]</xref>. In such cases, molecular tools provide an independent suite of characters and additional data with which one can delimit species <xref ref-type="bibr" rid="pone.0042225-Wiens2">[5]</xref>, <xref ref-type="bibr" rid="pone.0042225-Sites2">[6]</xref>, <xref ref-type="bibr" rid="pone.0042225-Pons1">[7]</xref>. In the recent years, ecological niche modelling has also been useful in species delimitation and new species discovery <xref ref-type="bibr" rid="pone.0042225-Stockman1">[8]</xref>, <xref ref-type="bibr" rid="pone.0042225-Bond1">[9]</xref>, <xref ref-type="bibr" rid="pone.0042225-Raxworthy1">[10]</xref>, <xref ref-type="bibr" rid="pone.0042225-Rissler1">[11]</xref>, <xref ref-type="bibr" rid="pone.0042225-Hawlitschek1">[12]</xref>. Thus, the contemporary approach involves integrative taxonomy that uses multiple lines of evidence to delineate species boundaries, particularly in the case of taxonomically problematic groups. This approach also provides the operational basis for de Queiroz (2005) lineage species concept which attempts to present a unified synthesis of various species concepts and recommends the use of multiple lines of evidence for species delimitation. The need for an integrated approach for species delimitation has been justified both conceptually <xref ref-type="bibr" rid="pone.0042225-Sites1">[2]</xref>, <xref ref-type="bibr" rid="pone.0042225-SchlickSteiner1">[4]</xref>, <xref ref-type="bibr" rid="pone.0042225-deQueiroz1">[13]</xref>, <xref ref-type="bibr" rid="pone.0042225-deQueiroz2">[14]</xref>, <xref ref-type="bibr" rid="pone.0042225-Edwards1">[15]</xref> as well as empirically across taxonomic groups (e.g. arthropods <xref ref-type="bibr" rid="pone.0042225-SchlickSteiner1">[4]</xref> and references therein, birds <xref ref-type="bibr" rid="pone.0042225-Cadena1">[16]</xref>, plants <xref ref-type="bibr" rid="pone.0042225-RuizSanchez1">[17]</xref>, snakes <xref ref-type="bibr" rid="pone.0042225-Sanders1">[18]</xref>).</p>
+      <p>Of the studies that have employed an integrative approach to species delimitation, and included molecular data have largely used monophyly as a proxy for taxonomic distinctiveness <xref ref-type="bibr" rid="pone.0042225-Bond1">[9]</xref>, <xref ref-type="bibr" rid="pone.0042225-Hendrixson1">[19]</xref>, <xref ref-type="bibr" rid="pone.0042225-SchlickSteiner2">[20]</xref>. An integrated approach also uses monophyly as a basic criterion, followed by diagnosis/evaluation of its uniqueness through multiple data sources. However, monophyly or lack of it, cannot be unambiguously used to assess taxonomic distinctiveness, because these patterns can be generated by stochastic processes of lineage <xref ref-type="bibr" rid="pone.0042225-Rodrigo1">[21]</xref>, <xref ref-type="bibr" rid="pone.0042225-Rosenberg1">[22]</xref>. The recent past has seen development of rigorous statistical methodologies to evaluate monophyletic units in a coalescent framework <xref ref-type="bibr" rid="pone.0042225-Rodrigo1">[21]</xref>, <xref ref-type="bibr" rid="pone.0042225-Rosenberg1">[22]</xref>, <xref ref-type="bibr" rid="pone.0042225-DeSalle1">[23]</xref>, <xref ref-type="bibr" rid="pone.0042225-Knowles1">[24]</xref>. For example, Rosenberg (2007) developed a test that calculates the probability (Rosenberg’s p) of observed monophyly being a true pattern and not a product of random branching. Nevertheless, some species might exhibit deep intraspecific divergence solely due to the stochastic process of gene coalescence. In such situations one might erroneously infer the presence of a cryptic species. Rodrigo <italic>et al.</italic> (2008) have proposed a statistical measure to address this issue of panmixis that tests whether the observed pattern could have arisen under a standard coalescent model (null model). With the help of the aforementioned tests, <italic>a priori</italic> identification of statistically supported putative species can be carried out and their species status can be further evaluated through other datasets based on morphology, behavior and ecology in an integrative framework.</p>
+      <p>The Western Ghats (WG), a chain of mountain ranges along the west coast of peninsular India (PI), provides us with an ideal setting for implementing such an integrative approach in tropical Asia. This is because the WG exhibit high levels of species richness and endemism and are one of the biodiversity hotspots of tropical Asia <xref ref-type="bibr" rid="pone.0042225-Myers1">[25]</xref>. Secondly, many new species have been described from this region in the recent past <xref ref-type="bibr" rid="pone.0042225-Biju1">[26]</xref>, <xref ref-type="bibr" rid="pone.0042225-Biju2">[27]</xref>, <xref ref-type="bibr" rid="pone.0042225-Giri1">[28]</xref>, suggesting a possibility of many more still remaining undiscovered. More importantly, most of the new species discoveries were based only on evidence from morphological data, thus this region might be harbouring many morphologically cryptic species. While the use of molecular data to describe new species has been limited in the WG <xref ref-type="bibr" rid="pone.0042225-Biju3">[29]</xref>, niche modeling has been used in only a few studies, and only to predict species distributional limits <xref ref-type="bibr" rid="pone.0042225-IrfanUllah1">[30]</xref>, <xref ref-type="bibr" rid="pone.0042225-Kumara1">[31]</xref>. However, integration of these three datasets, i.e. morphological, molecular and ecological data, for species delimitation is lacking for the WG biota. Wiens and Penkrot (2002) posed an intriguing question that is especially relevant in the WG scenario, “Will DNA sequence phylogenies give a very different picture of species diversity and patterns of speciation from that obtained from traditional morphological characters?” The invertebrate fauna of the WG are of special interest as it has been poorly studied, has a number of taxonomically challenging groups, and even basic information on species diversity and distributions is lacking. For example, in the case of centipedes (Arthropoda: Chilopoda) there have only been a few studies in the WG. Most of the studies produced species checklists for some parts of the WG <xref ref-type="bibr" rid="pone.0042225-Sureshan1">[32]</xref>, <xref ref-type="bibr" rid="pone.0042225-Sureshan2">[33]</xref>. Furthermore among centipedes, species identification based on external morphological characters has been problematic <xref ref-type="bibr" rid="pone.0042225-Edgecombe1">[34]</xref>, <xref ref-type="bibr" rid="pone.0042225-Lewis1">[35]</xref>. A recent phylogenetic study also indicated the lack of morphological variation among deeply divergent clades of Scolopendrid centipedes of peninsular India <xref ref-type="bibr" rid="pone.0042225-Joshi1">[36]</xref>. Lately, anatomical characters have also been used in the Chilopodan systematics. However, the use of these characters is limited as it involves dissections and detailed descriptions of specific internal organs of the species under consideration <xref ref-type="bibr" rid="pone.0042225-Edgecombe1">[34]</xref>. As mentioned before, in such cases where external morphological characters are not adequate for species delimitation, use of molecular and ecological datasets might be imperative. Hence, the usefulness of an integrative approach was explored in characterizing the diversity among the centipedes of the genus <italic>Digitipes</italic> (Family: Scolopendridae) in the WG.</p>
+      <p>The genus <italic>Digitipes</italic> was initially known only from central parts of the Congo Basin in Africa where three endemic species were described <xref ref-type="bibr" rid="pone.0042225-Attems1">[37]</xref>. Six new species of centipedes endemic to WG described in 1984 were also assigned to this genus <xref ref-type="bibr" rid="pone.0042225-Jangi1">[38]</xref>. These descriptions demonstrated low morphological variation within the species of the genus, i.e., very few diagnostic characters could be used to distinguish species. Furthermore, very little information about their distribution and habitat requirements was provided. Two recent surveys in southern parts of the WG have not contributed much to our understanding of their distribution <xref ref-type="bibr" rid="pone.0042225-Sureshan1">[32]</xref>, <xref ref-type="bibr" rid="pone.0042225-Sureshan2">[33]</xref>. Thus, a systematic study evaluating taxonomic status of these species and their distributional ranges encompassing the entire WG is needed. In a recent molecular phylogenetic study of Indian Scolopendrid centipedes, species of the genus <italic>Digitipes</italic> from the WG formed a distinct clade that was sister to a clade comprising the three genera – <italic>Rhysida, Ethmostigmus</italic> and <italic>Alipes</italic> <xref ref-type="bibr" rid="pone.0042225-Joshi1">[36]</xref>. Thus, the Indian members of the genus <italic>Digitipes</italic> might represent an endemic radiation that could be potentially used to study underlying mechanisms of speciation and diversification in the WG. More importantly, the divergence date estimates pointed at its Gondwanan origin with the earliest estimate within Indian <italic>Digitipes</italic> falling in the late Cretaceous. Thus, in spite of their antiquity, Indian members of the genus <italic>Digitipes</italic> are morphologically less variable and have a restricted distribution pattern in the WG. These attributes, compounded by how little is understood of the distribution of the Indian species in the genus <italic>Digitipes</italic>, makes this group an ideal candidate for exploring the integrative approach outlined above.</p>
+      <p>To evaluate molecular divergence two mitochondrial DNA markers (mtDNA) cytochrome <italic>c</italic> oxidase I (COI) and 16S ribosomal gene (16S rDNA) and one nuclear 28S ribosomal gene (28S rDNA) were sequenced for <italic>Digitipes</italic> samples collected from across their distributional range. These sequences were subjected to phylogenetic analyses to identify well supported clades. Two different coalescent approach based methods were in-turn implemented on both the mitochondrial genes, COI and 16S rDNA for <italic>a priori</italic> identification of putative species. Morphological and ecological data were then used to assess the uniqueness of these putative species independently and to delineate species boundaries. Morphological variations were evaluated by measuring 11 morphometric characters. Continuous environmental (bioclimatic) variables were used to investigate differentiation along the ecological axis.</p>
+    </sec>
+    <sec id="s2">
+      <title>Results</title>
+      <sec id="s2a">
+        <title>Summary of Molecular, Morphological and Ecological Niche Analysis</title>
+        <sec id="s2a1">
+          <title>mtDNA phylogeny</title>
+          <p>The sequences of two mitochondrial markers, COI Parsimony Informative Sites (PIS) - 213/543 and 16S rDNA (PIS - 205/455) for 97 <italic>Digitipes</italic> specimens from 42 localities across the WG were obtained (<xref ref-type="fig" rid="pone-0042225-g001">Fig. 1</xref>, <xref ref-type="supplementary-material" rid="pone.0042225.s001">Table S1</xref>). All three approaches, Bayesian, Parsimony and minimum evolution (ME) retrieved very similar tree topologies. Subsequently, topological congruence among these trees was assessed through Shimodaira-Hasegawa (SH) test which was not significant (p = 0.151). Therefore, only the ME tree is shown, along with the Bayesian posterior probabilities, Parsimony bootstrap support for various nodes (<xref ref-type="fig" rid="pone-0042225-g002">Fig. 2</xref>). Four major clades were retrieved in the ME tree, namely A, B, C and D. Among these four clades, clade D received highest posterior probability (PP) and bootstrap support (BS), while each of the remaining clades received high PP between 1.0 to 0.94 and low BS values (<xref ref-type="fig" rid="pone-0042225-g002">Fig. 2</xref>). Clade D was sister to the clades A, B and C received high PP and BS. Within the group containing the clades A, B and C, clade A and B were sister (PP of 0.94 and BS of less than 50%) and the clade C was sister to this group. In addition, a clade comprising two individuals belonging to putative species (PS) 4 was also recovered but its phylogenetic position was not resolved.</p>
+          <fig id="pone-0042225-g001" orientation="portrait" position="float">
+            <object-id pub-id-type="doi">10.1371/journal.pone.0042225.g001</object-id>
+            <label>Figure 1</label>
+            <caption>
+              <title>Sampling localities of the genus <italic>Digitipes</italic> in the Western Ghats (WG).</title>
+              <p>Boundaries of northern, central and southern WG and Nilgiris are also shown.</p>
+            </caption>
+            <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0042225.g001" xlink:type="simple"/>
+          </fig>
+          <fig id="pone-0042225-g002" orientation="portrait" position="float">
+            <object-id pub-id-type="doi">10.1371/journal.pone.0042225.g002</object-id>
+            <label>Figure 2</label>
+            <caption>
+              <title>Minimum Evolution tree based on mtDNA markers with Bayesian posterior probabilities and Parsimony Bootstrap values (only &gt;50% support values shown).</title>
+            </caption>
+            <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0042225.g002" xlink:type="simple"/>
+          </fig>
+          <p>All major clades except D contained multiple sub-clades. These sub-clades along with clade D were subjected to coalescent test where monophyly of each of these units was assessed by using genes, COI and 16S independently (<xref ref-type="supplementary-material" rid="pone.0042225.s002">Table S2</xref>). This exploratory analysis indicated presence of nine putative species, PS1 to PS9 (<xref ref-type="fig" rid="pone-0042225-g002">Fig. 2</xref>). In all the PS the probability of obtaining monophyly by chance was not significant (Rosenberg’s p&lt;0.05). Rodrigo’s p was close to 1 for all putative species, except PS2 in COI and PS1 and PS2 in 16S, indicating no cryptic species within any of these putative species.</p>
+          <p>Within clade A, three putative species (sub-clades) were recovered including PS1, PS2 and PS3 with PS1 and PS2 being sister to each other. The monophyly of PS2 and PS3 was well supported whereas PS1 received low support (<xref ref-type="fig" rid="pone-0042225-g002">Fig. 2</xref>). In clade B, PS5 and PS6 were reciprocally monophyletic receiving good support. Within group C, PS8 was monophyletic with 70% of BS and PP of 1, whereas there was no support for the monophyly of PS7 due to the ambiguous position of CES091033 and CES091039. In the Bayesian tree these two specimens branched with PS8 with poor support, but in the parsimony tree with PS7. Additionally in COI tree (not shown) they branch with PS7 with high support and in the nuclear tree CES091033 branched with PS7 (see below). Therefore, CES091033 and CES091039 were considered as part of PS7. Clade D corresponded to a single species, i.e. PS 9 with PP of 0.95 and 100% BS.</p>
+          <p>Only three putative species were assigned to previously described species based on traditional taxomony and specimens from type localities –<italic>Digitipes coonoorensis</italic> (Jangi and Dass, 1984) (PS1), <italic>D. barnabasi</italic> (Jangi and Dass, 1984) (PS8) and <italic>D. indicus</italic> (Jangi and Dass, 1984) (PS2), while the other six PS are potentially new species. Among these six species, PS4 was represented only by two individuals thus, do not discuss it further in this paper.</p>
+        </sec>
+        <sec id="s2a2">
+          <title>Nuclear phylogeny</title>
+          <p>The MP, ME and Bayesian analyses retrieved largely similar tree topology, which was confirmed by SH test (p = 0.99). The ME tree is presented with parsimony bootstrap and Bayesian posterior probability. The 28S rDNA tree retrieved six out of the nine putative species of the mtDNA tree, but the relationship among these species was different (<xref ref-type="fig" rid="pone-0042225-g003">Fig. 3</xref>). Putative species PS1, PS2 &amp; PS3 did not retrieved in the nuclear tree, nevertheless members of these three species clustered together with high PP and BS, this group corresponded to clade A of mtDNA tree. Monophyly of PS5 &amp; PS6 received BS of 65% and 63% and PP of 0.92 and 0.97 respectively, though sister-relationship among these putative species was not recovered. PS4, PS7 and PS8 were recovered as distinct clades but with low support, whereas PS9 received high support.</p>
+          <fig id="pone-0042225-g003" orientation="portrait" position="float">
+            <object-id pub-id-type="doi">10.1371/journal.pone.0042225.g003</object-id>
+            <label>Figure 3</label>
+            <caption>
+              <title>Minimum Evolution tree based on nuclear ribosomal gene with Bayesian posterior probabilities and Parsimony Bootstrap values (only &gt;50% support values shown).</title>
+            </caption>
+            <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0042225.g003" xlink:type="simple"/>
+          </fig>
+        </sec>
+        <sec id="s2a3">
+          <title>Morphological analysis</title>
+          <p>A total of 11 morphological characters were examined for 95 individuals (see <xref ref-type="sec" rid="s4">Materials and Methods</xref> for the details). Neighbor-Joining (NJ) tree retrieved six clusters and these morphotypes were numbered from 1–6 (<xref ref-type="fig" rid="pone-0042225-g004">Fig. 4</xref>). Morphotypes 1, 4, 5 and 6 corresponded to PS4, PS7, PS8 and PS3 respectively. Morphotype 2 comprised of individuals belonging to PS1, PS5 &amp; PS6 and morphotype 3 had individuals from PS2 and PS9. However, two individuals belonging to PS2, CES08990 and CES08982 were unresolved. In total the morphological analysis retrieved four out of the nine PS (subclades) of the mtDNA phylogeny. Comparison of specimens with original species descriptions and sampling of topotypical material allowed us to assign species names to PS1, PS3 and PS8 as <italic>D. coonoorensis</italic>, <italic>D. indicus</italic> and <italic>D. barnabasi</italic> respectively.</p>
+          <fig id="pone-0042225-g004" orientation="portrait" position="float">
+            <object-id pub-id-type="doi">10.1371/journal.pone.0042225.g004</object-id>
+            <label>Figure 4</label>
+            <caption>
+              <title>Neighbour-Joining (NJ) tree based on morphology with NJ bootstrap values (only &gt;50% support values shown).</title>
+            </caption>
+            <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0042225.g004" xlink:type="simple"/>
+          </fig>
+        </sec>
+        <sec id="s2a4">
+          <title>Ecological niche modeling and principle component analysis</title>
+          <p>The area of predicted distribution varied across species, some species matched the currently known distribution, for some others the predicted range extended beyond their known distribution. Sampling localities along with predicted distribution maps for each species pair are shown (<xref ref-type="fig" rid="pone-0042225-g005">Fig. 5</xref>, <xref ref-type="fig" rid="pone-0042225-g006">6</xref> and <xref ref-type="fig" rid="pone-0042225-g007">7</xref>). Overlap in the predicted distribution ranged from 19–46% across species pairs. The loadings of principle component 1 and 2 for each species pair are summarized in <xref ref-type="table" rid="pone-0042225-t001">Table 1</xref>. The results of environmental envelop (MANOVA) and geographic overlaps (predicted distributions) are discussed below.</p>
+          <list list-type="order">
+            <list-item>
+              <p>Clade A PS1, PS2 and PS3– Predicted distributions of PS2 and PS3 were similar to the current distributions with few additional areas. In case of PS1, the predicted distribution had reported more areas in the southern WG (SWG). Overlap in predicted areas between PS1 and PS2 was 19% and largely in the SWG, for PS1 and PS3 the overlap was 46%, again in the southern parts of WG. In contrast, the overlap between PS2 and PS3 was only 12%. In PCA, PC1 (51%) and PC2 (33.7%) explained 85% variation. PS1 and PS2 were well separated on PC1 and PS3 was separated from PS1 and PS2 on PC2 (<xref ref-type="fig" rid="pone-0042225-g005">Fig. 5</xref>, <xref ref-type="table" rid="pone-0042225-t001">Table 1</xref>). There were significant differences in environmental envelopes of PS1, PS2 and PS3, for both PC1 and PC2 (MANOVA, p&lt;0.001).</p>
+            </list-item>
+            <list-item>
+              <p>Clade B; PS5 and PS6– Predicted distributions of PS5 and PS6 overlapped substantially (46%) in the central parts of the WG (<xref ref-type="fig" rid="pone-0042225-g006">Fig. 6</xref>). PC1 (56.5%) and PC2 (23%) explained 89% variation in the PCA plot. In the PCA, though they responded to different sets of bioclimatic variables, the difference was not significant (MANOVA, p = 0.06).</p>
+            </list-item>
+            <list-item>
+              <p>Clade C; PS7 and PS8– There was 27% overlap in the predicted distributions of PS7 and PS8. Their ranges overlapped in the Central parts of WG (<xref ref-type="fig" rid="pone-0042225-g007">Fig. 7</xref>, <xref ref-type="table" rid="pone-0042225-t001">Table 1</xref>). PC1 (50%) and PC2 (23%) explained 73% of the variation in the distribution of PS7 and PS8. On the PCA plot 73% of the variation was explained by first two axes, PS7 and PS8 were separated on PC1 and explained 50% variation and the remaining variation was explained by PC2 i.e. 23%. In the PCA, the response to the bioclimatic variables was significantly different (MANOVA, p&lt;0.001).</p>
+            </list-item>
+          </list>
+          <fig id="pone-0042225-g005" orientation="portrait" position="float">
+            <object-id pub-id-type="doi">10.1371/journal.pone.0042225.g005</object-id>
+            <label>Figure 5</label>
+            <caption>
+              <title>mtDNA phylogeny, principal component analysis (PCA), and predicted and current distribution maps for PS1, PS2 and PS3.</title>
+              <p>(a) mtDNA phylogeny; (b) PCA - in this plot grey circles represents PS1, diamonds-PS2 and triangles-PS3 respectively; (c) Predicted and current distribution maps in the southern and central Western Ghats.</p>
+            </caption>
+            <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0042225.g005" xlink:type="simple"/>
+          </fig>
+          <fig id="pone-0042225-g006" orientation="portrait" position="float">
+            <object-id pub-id-type="doi">10.1371/journal.pone.0042225.g006</object-id>
+            <label>Figure 6</label>
+            <caption>
+              <title>mtDNA phylogeny, principal component analysis (PCA), and predicted and current distribution map for PS5 and PS6.</title>
+              <p>(a) mtDNA phylogeny; (b) PCA - in this plot grey circles represents PS 5 and diamonds PS 6 respectively; (c) Predicted and current distribution maps in the central Western Ghats.</p>
+            </caption>
+            <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0042225.g006" xlink:type="simple"/>
+          </fig>
+          <fig id="pone-0042225-g007" orientation="portrait" position="float">
+            <object-id pub-id-type="doi">10.1371/journal.pone.0042225.g007</object-id>
+            <label>Figure 7</label>
+            <caption>
+              <title>mtDNA phylogeny, principal component analysis (PCA), and predicted and current distribution maps for PS7 and PS8.</title>
+              <p>(a) mtDNA phylogeny; (b) PCA - in this plot grey circles represents PS 7 and diamonds-PS 8 respectively; (c) Predicted and current distribution maps in the Western Ghats.</p>
+            </caption>
+            <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0042225.g007" xlink:type="simple"/>
+          </fig>
+          <table-wrap id="pone-0042225-t001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0042225.t001</object-id><label>Table 1</label><caption>
+              <title>Summarized PCA loadings for each species pair.</title>
+            </caption><alternatives>
+              <graphic id="pone-0042225-t001-1" mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0042225.t001" xlink:type="simple"/>
+              <table>
+                <colgroup span="1">
+                  <col align="left" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <td align="left" colspan="2" rowspan="1">Bioclim layers</td>
+                    <td align="left" colspan="2" rowspan="1">Species 1, 2 and 3</td>
+                    <td align="left" colspan="2" rowspan="1">Species 5 and 6</td>
+                    <td align="left" colspan="2" rowspan="1">Species 7 and 8</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="2" rowspan="1"/>
+                    <td align="left" colspan="1" rowspan="1">PC1</td>
+                    <td align="left" colspan="1" rowspan="1">PC2</td>
+                    <td align="left" colspan="1" rowspan="1">PC1</td>
+                    <td align="left" colspan="1" rowspan="1">PC2</td>
+                    <td align="left" colspan="1" rowspan="1">PC1</td>
+                    <td align="left" colspan="1" rowspan="1">PC2</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Annual Mean Temperature</td>
+                    <td align="left" colspan="1" rowspan="1">bio1</td>
+                    <td align="left" colspan="1" rowspan="1">0.243485</td>
+                    <td align="left" colspan="1" rowspan="1">0.252741</td>
+                    <td align="left" colspan="1" rowspan="1">0.285926</td>
+                    <td align="left" colspan="1" rowspan="1">−0.14883</td>
+                    <td align="left" colspan="1" rowspan="1">0.263457</td>
+                    <td align="left" colspan="1" rowspan="1">−0.22186</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Mean Temperature ofWarmest Quarter</td>
+                    <td align="left" colspan="1" rowspan="1">bio10</td>
+                    <td align="left" colspan="1" rowspan="1">0.233272</td>
+                    <td align="left" colspan="1" rowspan="1">0.268578</td>
+                    <td align="left" colspan="1" rowspan="1">0.296759</td>
+                    <td align="left" colspan="1" rowspan="1">−0.08402</td>
+                    <td align="left" colspan="1" rowspan="1">0.297515</td>
+                    <td align="left" colspan="1" rowspan="1">−0.13277</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Mean Temperature ofColdest Quarter</td>
+                    <td align="left" colspan="1" rowspan="1">bio11</td>
+                    <td align="left" colspan="1" rowspan="1">0.244618</td>
+                    <td align="left" colspan="1" rowspan="1">0.250533</td>
+                    <td align="left" colspan="1" rowspan="1">0.273859</td>
+                    <td align="left" colspan="1" rowspan="1">−0.19558</td>
+                    <td align="left" colspan="1" rowspan="1">0.20523</td>
+                    <td align="left" colspan="1" rowspan="1">−0.3407</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Annual Precipitation</td>
+                    <td align="left" colspan="1" rowspan="1">bio12</td>
+                    <td align="left" colspan="1" rowspan="1">−0.21354</td>
+                    <td align="left" colspan="1" rowspan="1">0.235532</td>
+                    <td align="left" colspan="1" rowspan="1">−0.2306</td>
+                    <td align="left" colspan="1" rowspan="1">−0.29294</td>
+                    <td align="left" colspan="1" rowspan="1">0.009383</td>
+                    <td align="left" colspan="1" rowspan="1">−0.22047</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Precipitation of WettestMonth</td>
+                    <td align="left" colspan="1" rowspan="1">bio13</td>
+                    <td align="left" colspan="1" rowspan="1">−0.25383</td>
+                    <td align="left" colspan="1" rowspan="1">0.221925</td>
+                    <td align="left" colspan="1" rowspan="1">−0.21033</td>
+                    <td align="left" colspan="1" rowspan="1">−0.30665</td>
+                    <td align="left" colspan="1" rowspan="1">0.130338</td>
+                    <td align="left" colspan="1" rowspan="1">−0.12817</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Precipitation of Driest Month</td>
+                    <td align="left" colspan="1" rowspan="1">bio14</td>
+                    <td align="left" colspan="1" rowspan="1">0.155093</td>
+                    <td align="left" colspan="1" rowspan="1">−0.2892</td>
+                    <td align="left" colspan="1" rowspan="1">−0.15162</td>
+                    <td align="left" colspan="1" rowspan="1">0.04335</td>
+                    <td align="left" colspan="1" rowspan="1">−0.29766</td>
+                    <td align="left" colspan="1" rowspan="1">−0.06042</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Precipitation Seasonality</td>
+                    <td align="left" colspan="1" rowspan="1">bio15</td>
+                    <td align="left" colspan="1" rowspan="1">−0.25586</td>
+                    <td align="left" colspan="1" rowspan="1">0.228317</td>
+                    <td align="left" colspan="1" rowspan="1">−0.11018</td>
+                    <td align="left" colspan="1" rowspan="1">−0.3149</td>
+                    <td align="left" colspan="1" rowspan="1">0.265538</td>
+                    <td align="left" colspan="1" rowspan="1">0.04854</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Precipitation of WettestQuarter</td>
+                    <td align="left" colspan="1" rowspan="1">bio16</td>
+                    <td align="left" colspan="1" rowspan="1">−0.23999</td>
+                    <td align="left" colspan="1" rowspan="1">0.234138</td>
+                    <td align="left" colspan="1" rowspan="1">−0.2128</td>
+                    <td align="left" colspan="1" rowspan="1">−0.31343</td>
+                    <td align="left" colspan="1" rowspan="1">0.104951</td>
+                    <td align="left" colspan="1" rowspan="1">−0.14725</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Precipitation of Driest Quarter</td>
+                    <td align="left" colspan="1" rowspan="1">bio17</td>
+                    <td align="left" colspan="1" rowspan="1">0.197457</td>
+                    <td align="left" colspan="1" rowspan="1">−0.23771</td>
+                    <td align="left" colspan="1" rowspan="1">−0.2372</td>
+                    <td align="left" colspan="1" rowspan="1">0.219353</td>
+                    <td align="left" colspan="1" rowspan="1">−0.30057</td>
+                    <td align="left" colspan="1" rowspan="1">−0.07925</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Precipitation of WarmestQuarter</td>
+                    <td align="left" colspan="1" rowspan="1">bio18</td>
+                    <td align="left" colspan="1" rowspan="1">−0.17313</td>
+                    <td align="left" colspan="1" rowspan="1">0.01229</td>
+                    <td align="left" colspan="1" rowspan="1">−0.21057</td>
+                    <td align="left" colspan="1" rowspan="1">−0.04135</td>
+                    <td align="left" colspan="1" rowspan="1">−0.2031</td>
+                    <td align="left" colspan="1" rowspan="1">0.050122</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Precipitation of ColdestQuarter</td>
+                    <td align="left" colspan="1" rowspan="1">bio19</td>
+                    <td align="left" colspan="1" rowspan="1">0.004545</td>
+                    <td align="left" colspan="1" rowspan="1">0.341469</td>
+                    <td align="left" colspan="1" rowspan="1">−0.21752</td>
+                    <td align="left" colspan="1" rowspan="1">0.062863</td>
+                    <td align="left" colspan="1" rowspan="1">−0.14478</td>
+                    <td align="left" colspan="1" rowspan="1">−0.27939</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Mean Diurnal Range</td>
+                    <td align="left" colspan="1" rowspan="1">bio2</td>
+                    <td align="left" colspan="1" rowspan="1">−0.23347</td>
+                    <td align="left" colspan="1" rowspan="1">0.154012</td>
+                    <td align="left" colspan="1" rowspan="1">0.254126</td>
+                    <td align="left" colspan="1" rowspan="1">0.130471</td>
+                    <td align="left" colspan="1" rowspan="1">0.259663</td>
+                    <td align="left" colspan="1" rowspan="1">0.247837</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Isothermality</td>
+                    <td align="left" colspan="1" rowspan="1">bio3</td>
+                    <td align="left" colspan="1" rowspan="1">0.298745</td>
+                    <td align="left" colspan="1" rowspan="1">−0.00222</td>
+                    <td align="left" colspan="1" rowspan="1">0.098035</td>
+                    <td align="left" colspan="1" rowspan="1">−0.3267</td>
+                    <td align="left" colspan="1" rowspan="1">−0.23034</td>
+                    <td align="left" colspan="1" rowspan="1">−0.27088</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Temperature Seasonality</td>
+                    <td align="left" colspan="1" rowspan="1">bio4</td>
+                    <td align="left" colspan="1" rowspan="1">−0.2248</td>
+                    <td align="left" colspan="1" rowspan="1">0.193612</td>
+                    <td align="left" colspan="1" rowspan="1">0.087565</td>
+                    <td align="left" colspan="1" rowspan="1">0.379179</td>
+                    <td align="left" colspan="1" rowspan="1">0.234622</td>
+                    <td align="left" colspan="1" rowspan="1">0.30479</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Max Temperature ofWarmest Month</td>
+                    <td align="left" colspan="1" rowspan="1">bio5</td>
+                    <td align="left" colspan="1" rowspan="1">0.20508</td>
+                    <td align="left" colspan="1" rowspan="1">0.296498</td>
+                    <td align="left" colspan="1" rowspan="1">0.300038</td>
+                    <td align="left" colspan="1" rowspan="1">0.000383</td>
+                    <td align="left" colspan="1" rowspan="1">0.311578</td>
+                    <td align="left" colspan="1" rowspan="1">−0.03605</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Min Temperature ofColdest Month</td>
+                    <td align="left" colspan="1" rowspan="1">bio6</td>
+                    <td align="left" colspan="1" rowspan="1">0.257638</td>
+                    <td align="left" colspan="1" rowspan="1">0.232011</td>
+                    <td align="left" colspan="1" rowspan="1">0.240068</td>
+                    <td align="left" colspan="1" rowspan="1">−0.24953</td>
+                    <td align="left" colspan="1" rowspan="1">0.057688</td>
+                    <td align="left" colspan="1" rowspan="1">−0.45441</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Temperature Annual Range</td>
+                    <td align="left" colspan="1" rowspan="1">bio7</td>
+                    <td align="left" colspan="1" rowspan="1">−0.26704</td>
+                    <td align="left" colspan="1" rowspan="1">0.116835</td>
+                    <td align="left" colspan="1" rowspan="1">0.193177</td>
+                    <td align="left" colspan="1" rowspan="1">0.345706</td>
+                    <td align="left" colspan="1" rowspan="1">0.257762</td>
+                    <td align="left" colspan="1" rowspan="1">0.284314</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Mean Temperature ofWettest Quarter</td>
+                    <td align="left" colspan="1" rowspan="1">bio8</td>
+                    <td align="left" colspan="1" rowspan="1">0.268169</td>
+                    <td align="left" colspan="1" rowspan="1">0.210283</td>
+                    <td align="left" colspan="1" rowspan="1">0.281687</td>
+                    <td align="left" colspan="1" rowspan="1">−0.16948</td>
+                    <td align="left" colspan="1" rowspan="1">0.244431</td>
+                    <td align="left" colspan="1" rowspan="1">−0.19273</td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">Mean Temperature ofDriest Quarter</td>
+                    <td align="left" colspan="1" rowspan="1">bio9</td>
+                    <td align="left" colspan="1" rowspan="1">0.233189</td>
+                    <td align="left" colspan="1" rowspan="1">0.268013</td>
+                    <td align="left" colspan="1" rowspan="1">0.288547</td>
+                    <td align="left" colspan="1" rowspan="1">−0.14696</td>
+                    <td align="left" colspan="1" rowspan="1">0.240981</td>
+                    <td align="left" colspan="1" rowspan="1">−0.28987</td>
+                  </tr>
+                </tbody>
+              </table>
+            </alternatives></table-wrap>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Discussion</title>
+      <sec id="s3a">
+        <title>Review of the Systematics of the Genus Digitipes from WG</title>
+        <p>In the following section, the evidence from multiple datasets is integrated for each species group (clades) and assessed the status of PS along within these groups.</p>
+        <sec id="s3a1">
+          <title>(1) Clade A; PS1, PS2 and PS3</title>
+          <p>In the mtDNA tree, PS1, PS2 and PS3 were retrieved as distinct clades. Coalescent analysis also supported the same showing very low divergence within species and higher divergence across species. However, the nuclear tree did not retrieve these as a separate clade. This may be due to lack of variation in the nuclear marker and/or a recent speciation event. Markers which show higher resolution such as microsatellites and AFLPs (Amplified Fragment Length Polymorphism) will be useful in further clarifying this issue. The two distinct groups within PS1 were indeed interesting, however, Rodrigo’s p value for COI was not significant suggesting that there are no cryptic species within PS1. Therefore, these clades within PS1 were not considered as distinct species. The morphology-based tree retrieved these putative species as three distinct morphotypes –2, 3 and 6, falling in different parts of the tree – thus, demonstrating considerable morphological divergence between the putative species. Furthermore, they also exhibit significant differentiation in the environmental axis. The entire group was largely restricted to the southern parts of WG, specifically south of Palaghat Gap (PG) (<xref ref-type="fig" rid="pone-0042225-g001">Fig. 1</xref> and <xref ref-type="fig" rid="pone-0042225-g005">5</xref>), except for a few individuals of PS1 which were from north of PG (Nilgiri Hill range and Kudremukh hill range). In this group, traditional taxonomy recovered two species, <italic>D. coonoorensis</italic> (PS1) and <italic>D. indicus</italic> (PS3). Distinctiveness of PS2 was also established in this study, thus, PS1, PS2 and PS3 are considered three distinct species. Putative species 2 will be henceforth referred to as <italic>D. sp2</italic>.</p>
+        </sec>
+        <sec id="s3a2">
+          <title>(2) Clade B; PS5 and PS6</title>
+          <p>Within clade B, PS5 and PS6 were distinct in both mitochondrial and nuclear DNA phylogenies, and the coalescent analysis also recovered them as distinct species with low divergence within and high across the species. Nevertheless, these two PS are not differentiated on morphological and ecological axis. Therefore, morphological and ecological data did not support the splitting of clade B into two species. Interestingly in the morphological analysis, members of clade B grouped with <italic>D. coonoorensis</italic> (PS1) but this clade occupied a very distinct phylogenetic position in the molecular tree. Moreover, members of Clade B (PS5 and PS6) had restricted distribution in the central parts of WG whereas Clade A (which includes PS1) is restricted to southern parts of WG showing complete non-overlap in their distributions. Thus, members of clade B are ecologically as well as genetically distinct from members of the sister Clade (A) and therefore warrant species status (henceforth referred to as <italic>D. spB</italic>). However within Clade B, PS5 and PS6 were not retrieved as distinct species in two out of the three datasets; they have not been considered as putative distinctive species.</p>
+        </sec>
+        <sec id="s3a3">
+          <title>(3) Clade C; PS7 and PS8</title>
+          <p>Within Clade C, PS7 and PS8 were divergent on all the three axes, ecology, molecular and morphology. Coalescent analysis also supported their distinctness. PS8 (which according to traditional taxonomy was <italic>D. barnabasi</italic>) was distributed mostly in northern parts of WG whereas PS7 was distributed in the central and southern WG. Thus, it is clear that PS7 represents a new, as of yet unnamed species, referred to in the further descriptions as <italic>D. sp7</italic>.</p>
+        </sec>
+        <sec id="s3a4">
+          <title>(4) Clade D; PS9</title>
+          <p>Clade D is represented by a single species PS9, both mitochondrial and nuclear datasets supported its monophyly and the coalescent analysis also recovered it as a distinct species. Morphologically this species was very similar to PS2 (<xref ref-type="fig" rid="pone-0042225-g004">Fig. 4</xref>). The predicted distribution of this species was also similar to its current geographic spread but with additional areas. On the PCA plot, where all species were analyzed simultaneously it formed a cluster with members of clade A comprising PS1, PS2 and PS3. This species was distributed in central and southern WG showing sympatry with PS2 and PS3. Traditional taxonomic examination was not useful in assigning this taxonomic unit to any of the previously described species. PS9 shared both ecological and morphological attributes with PS2; nevertheless, it was phylogenetically distinct from members of clade A in that it was sister to all other species (<xref ref-type="fig" rid="pone-0042225-g002">Fig. 2</xref> and <xref ref-type="fig" rid="pone-0042225-g003">3</xref>). Thus, PS9 has been considered as a distinct species (<italic>D. sp9</italic>).</p>
+          <p>In this paper, <italic>a priori</italic> identification of putative species based on two genes, followed by assessing its status by other independent datasets, such as morphology and environmental data has been successfully illustrated. A new phylogenetic hypothesis, for the <italic>Digitipes</italic> species complex of the WG, with five potentially new species (<italic>D. sp2</italic>, <italic>D. sp4</italic>, <italic>D. spB</italic>, <italic>D. sp7</italic> and <italic>D. sp9</italic>) has been put forward in the current study (<xref ref-type="table" rid="pone-0042225-t002">Table 2</xref>). The actual diversity in this group appears to be twice that of the diversity based on traditional taxonomy. Among these new species at least three were morphologically cryptic species as these species could not be distinguished from either previously described species (<italic>D. spB</italic>) or other new species (<italic>D. sp2 and 9)</italic>. The presences of three morphologically cryptic species – <italic>D. sp2, D. spB</italic> and <italic>D. sp9</italic>– emphasize the need for a multi-disciplinary approach in detecting “hidden” diversity in taxonomically problematic groups. Detection of such morphological cryptic species through a multidisciplinary approach has been reported in varied taxa like bamboo <xref ref-type="bibr" rid="pone.0042225-RuizSanchez1">[17]</xref>, millipedes <xref ref-type="bibr" rid="pone.0042225-Bond2">[39]</xref>, spiders <xref ref-type="bibr" rid="pone.0042225-Bond1">[9]</xref>, birds <xref ref-type="bibr" rid="pone.0042225-Cadena1">[16]</xref>, snails <xref ref-type="bibr" rid="pone.0042225-Dpraz1">[40]</xref>, ants <xref ref-type="bibr" rid="pone.0042225-Ross1">[41]</xref> and lizards <xref ref-type="bibr" rid="pone.0042225-Leach1">[42]</xref>. Discovery of cryptic diversity and coarse scale sampling for <italic>Digitipes</italic> in the WG hinted that there is also possibility of unsampled species of <italic>Digitipes</italic> from the WG. Clearly, to attain complete understanding of species diversity in biodiversity rich areas of the tropics, such as in the WG, it is imperative to undertake a multidisciplinary and integrative approach on a range of taxonomic groups. Given the results and the lack of such integrative studies on WG taxa, the probability of species richness in poorly studied groups such as invertebrates and small vertebrates in the WG is being vastly underestimated. In addition, these species pairs show variable divergence along all three axes, highlighting the need to look at many secondary properties of species to understand the process of species formation and speciation.</p>
+          <table-wrap id="pone-0042225-t002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0042225.t002</object-id><label>Table 2</label><caption>
+              <title>Summary of each putative species and support from molecular, morphological and ecological data.</title>
+            </caption><alternatives>
+              <graphic id="pone-0042225-t002-2" mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0042225.t002" xlink:type="simple"/>
+              <table>
+                <colgroup span="1">
+                  <col align="left" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1"/>
+                    <td align="left" colspan="1" rowspan="1"/>
+                    <td align="left" colspan="1" rowspan="1">mtDNA tree(COI &amp; 16S)</td>
+                    <td align="left" colspan="1" rowspan="1">Nuclear DNA tree</td>
+                    <td align="left" colspan="1" rowspan="1">Separation on Env. Axis(PCA)</td>
+                    <td align="left" colspan="1" rowspan="1">Morphology tree</td>
+                    <td align="left" colspan="1" rowspan="1">Traditional Taxonomy</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">
+                      <bold>Group A</bold>
+                    </td>
+                    <td align="left" colspan="1" rowspan="1">PS1</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">χ</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">χ#</td>
+                    <td align="left" colspan="1" rowspan="1">
+                      <italic>D. coonoorensis</italic>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1"/>
+                    <td align="left" colspan="1" rowspan="1">PS2</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">χ</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">χ+</td>
+                    <td align="left" colspan="1" rowspan="1">
+                      <italic>D. indicus</italic>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1"/>
+                    <td align="left" colspan="1" rowspan="1">PS3</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">χ</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">
+                      <italic>–</italic>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">
+                      <bold>Group B</bold>
+                    </td>
+                    <td align="left" colspan="1" rowspan="1">PS5</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">χ</td>
+                    <td align="left" colspan="1" rowspan="1">χ#</td>
+                    <td align="left" colspan="1" rowspan="1">
+                      <italic>–</italic>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1"/>
+                    <td align="left" colspan="1" rowspan="1">PS6</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">χ</td>
+                    <td align="left" colspan="1" rowspan="1">χ#</td>
+                    <td align="left" colspan="1" rowspan="1">
+                      <italic>–</italic>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">
+                      <bold>Group C</bold>
+                    </td>
+                    <td align="left" colspan="1" rowspan="1">PS7</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">
+                      <italic>–</italic>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1"/>
+                    <td align="left" colspan="1" rowspan="1">PS8</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">
+                      <italic>D. barnabasi</italic>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" colspan="1" rowspan="1">
+                      <bold>Group D</bold>
+                    </td>
+                    <td align="left" colspan="1" rowspan="1">PS9</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">√</td>
+                    <td align="left" colspan="1" rowspan="1">NA</td>
+                    <td align="left" colspan="1" rowspan="1">χ+</td>
+                    <td align="left" colspan="1" rowspan="1">
+                      <italic>–</italic>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </alternatives><table-wrap-foot>
+              <fn id="nt101">
+                <p>√: distinct units; χ: not distinct units; NA: not applicable, χ#: Morphoclade1; χ+: Morphoclade 2.</p>
+              </fn>
+            </table-wrap-foot></table-wrap>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="s4" sec-type="materials|methods">
+      <title>Materials and Methods</title>
+      <sec id="s4a">
+        <title>Taxon Sampling</title>
+        <p>Currently six species have been described in genus <italic>Digitipes</italic> from the WG. These include <italic>D. barnabasi, D. coonoorensis, D. gravely, D. pruthii, D. chittonii</italic> and <italic>D. indicus</italic> <xref ref-type="bibr" rid="pone.0042225-Jangi1">[38]</xref>. Since most of the available published records of these species were from wet evergreen forests of the WG <xref ref-type="bibr" rid="pone.0042225-Sureshan1">[32]</xref>, <xref ref-type="bibr" rid="pone.0042225-Sureshan2">[33]</xref>, <xref ref-type="bibr" rid="pone.0042225-Jangi1">[38]</xref>, sampling was done across the wet forests of WG encompassing the rainfall and altitudinal gradients present within these forests. The specimen collection permits were obtained from Kerala (PR NO- WL12-2936/2008) and Karnataka (D/WL/CR-23/2008–2010) forest departments to sample in the protected areas. Additionally, some of the adjacent dry forest patches were also searched for the presence of <italic>Digitipes</italic> species. From each locality, only 3–4 individuals were collected. Efforts were also made to collect specimens of each described species from their type locality. A total of 97 specimens belonging to the genus <italic>Digitipes</italic> were collected from 42 localities across the WG. The geographic coordinates of each specimen were also recorded for the purpose of niche modelling. For detailed information on the distribution of sampled specimen see <xref ref-type="fig" rid="pone-0042225-g001">Figure 1</xref> and <xref ref-type="supplementary-material" rid="pone.0042225.s001">Table S1</xref>.</p>
+      </sec>
+      <sec id="s4b">
+        <title>Morphological Character Data and Analysis</title>
+        <p><italic>Digitipes</italic> species were first identified using the key provided by Jangi and Dass (1984). Furthermore, each specimen was typed for 11 binary morphological characters, also taken from Jangi and Das (1984). These characters included 1) presence (1) or absence (0) of tarsal spur on 20th leg; 2) length of coxopleural process (CP), long-1 and short-0; 3) CP reaches dorsal margin or not, yes-1 and no-0; 4) number of spines on tip of CP (presence of 4 spines-1 and &gt;4 -0 ); 5) presence or absence of lateral spine on CP; 6) number of lateral spines on CP, one-1 or zero-0; 7) to length of distomedial prefemoral process of ultimate leg, long-1 or short-0; 8) presence or absence of spines on (2–20<sup>th</sup>) legs; 9) number of antennal segments 17 (coded as 1) or 19 (coded as 0); 10) number of glabrous segment of antennae, two (coded as 1) or three (coded as 0) and 11) nature of cephalic plate, punctuate-1 and not punctuate-0. This data matrix (<xref ref-type="supplementary-material" rid="pone.0042225.s003">Table S3</xref>) was used to build a Neighbor-Joining (NJ) tree in PAUP 4.0b2, <xref ref-type="bibr" rid="pone.0042225-Swofford1">[43]</xref> with “total” distance measure and mid-point rooting. NJ bootstrapping was also carried out to evaluate the support for individual clusters.</p>
+      </sec>
+      <sec id="s4c">
+        <title>DNA Extraction, Amplification and Sequencing</title>
+        <p>Genomic DNA extraction was carried out using ethanol preserved tissue samples. In most cases leg tissue was used, but in a few cases segment tissue was also used. The extraction was carried out using standard phenol chloroform method <xref ref-type="bibr" rid="pone.0042225-Sambrook1">[44]</xref>. Partial sequences of two mitochondrial DNA markers –16S rDNA (∼450 bp) and COI (∼600 bp) were generated for 80 individuals using published primers <xref ref-type="bibr" rid="pone.0042225-Edgecombe2">[45]</xref> and protocols reported in Joshi and Karanth (2011). The nuclear 28S rDNA (∼350 bp, D3 expansion region) gene was sequenced for a subset of individuals (69 individuals) representing each putative species in mtDNA tree (<xref ref-type="supplementary-material" rid="pone.0042225.s001">Table S1</xref>).</p>
+      </sec>
+      <sec id="s4d">
+        <title>Molecular Phylogenetic Analysis</title>
+        <p>The chromatograms were visualized and edited manually using the program Chromas lite 2.01 (<ext-link ext-link-type="uri" xlink:href="http://www.technelysium.com.au/chromas_lite.html" xlink:type="simple">http://www.technelysium.com.au/chromas_lite.html</ext-link>) and then aligned in ClustalW with default settings <xref ref-type="bibr" rid="pone.0042225-Thompson1">[46]</xref>. Both mtDNA genes, COI and 16S rDNA were aligned separately. They were then concatenated to derive the combined mtDNA dataset. To check for homogeneity in the mtDNA dataset, an Incongruence Length Difference (ILD) test was carried out in WINCLADA <xref ref-type="bibr" rid="pone.0042225-Farris1">[47]</xref>, <xref ref-type="bibr" rid="pone.0042225-Nixon1">[48]</xref>. The nuclear 28S rDNA dataset had relatively few parsimony informative sites (14/316), therefore these sequences were aligned and analyzed separately. The program Modeltest <xref ref-type="bibr" rid="pone.0042225-Posada1">[49]</xref> was used on these nuclear and mitochondrial datasets for model selection. Both mitochondrial and nuclear datasets were analyzed independently using three different tree building methods, Maximum parsimony (MP), Minimum evolution (ME) and Bayesian approach. Members of genus <italic>Rhysida</italic>, a sister group of the genus <italic>Digitipes</italic> <xref ref-type="bibr" rid="pone.0042225-Joshi1">[36]</xref> were used as out-group for rooting these trees. Parsimony and Minimum Evolution analyses were carried out in PAUP 4.0b2 through heuristic searches with TBR branch swapping, 10 random-addition replicates, and a random starting tree <xref ref-type="bibr" rid="pone.0042225-Swofford1">[43]</xref>. For ME analysis, distance was set to GTR based on the Mr. Modeltest output. Parsimony bootstrap supports for the branch nodes were determined through bootstrapping with 1000 replicates and 10 random-addition option. PAUP 4.0b2 settings were the same for both, mitochondrial and nuclear genes. Bayesian analyses were performed in the program MrBayes 2 <xref ref-type="bibr" rid="pone.0042225-Huelsenbeck1">[50]</xref>. The GTR+I substitution model (as chosen by Modeltest) was chosen for 28S and GTR+I+Γ was for both the mitochondrial genes. For mtDNA analysis dataset was portioned according to the genes namely 16S and COI. The program was run for four million generations wherein sampling was done every 100 generations. The standard deviation of split frequencies was used to decide the chain length and the burn-in. For all analyses gaps were treated as missing data.</p>
+        <p>As mentioned earlier, monophyly of taxa is taken as a proxy for taxonomic distinctiveness <xref ref-type="bibr" rid="pone.0042225-Knowles1">[24]</xref>, but monophyly could arise by chance alone <xref ref-type="bibr" rid="pone.0042225-Rodrigo1">[21]</xref>, <xref ref-type="bibr" rid="pone.0042225-Rosenberg1">[22]</xref>. One can potentially eliminate this scenario by using multiple unlinked markers, wherein nuclear markers also retrieve lineages or units retrieved by mitochondrial marker, thereby confirming taxonomic distinctiveness of these units. However, nuclear markers are often non-informative for closely related and recently diverged species. Two different methods were implemented in this study, on the mitochondrial dataset to test for species monophyly. First, the probability of monophyly for each monophyletic group was evaluated using Rosenberg’s p and Rodrigo’s p <xref ref-type="bibr" rid="pone.0042225-Rosenberg1">[22]</xref>. It was done to determine if the observed monophyly was true and not a product of random branching. Secondly, to determine if the observed intra-specific divergence could have arisen solely due to the stochastic process of gene coalescence, another recently developed statistical test was implemented. In this method, a ratio (M) of coalescent intervals, between the tip and species node to between the species node and the common ancestor, is first determined. The probability of obtaining the observed ratio under a standard coalescent model is then calculated. This test assumes that the data follows two principles, a Wright-Fisher population model and strict molecular clock. Recently, ‘species delimitation’ plug-in has been made available to conduct these tests on the tree topology based on single locus data in the program GeneiousPro <xref ref-type="bibr" rid="pone.0042225-Masters1">[51]</xref>. A coalescent test for species delimitation recommends use of a one-locus dataset at a time. Therefore, the number of putative species was determined using the two approaches in the ‘species delimitation’ of GeneiousPro on the mitochondrial COI and 16S rDNA dataset respectively.</p>
+      </sec>
+      <sec id="s4e">
+        <title>Environmental Data and Analysis</title>
+        <p>For each putative species, identified using the coalescent approach, ecological niche models were developed. A total of 19 bioclimatic layers were obtained from Worldclim Global climate dataset <xref ref-type="bibr" rid="pone.0042225-Hijmans1">[52]</xref> and then extracted only for WG at 1×1 km resolution. These layers and geographic co-ordinates of species were used to predict the distribution using maximum entropy method <xref ref-type="bibr" rid="pone.0042225-Phillips1">[53]</xref>. This analysis was carried out in MaxEnt version 2.0 with default settings <xref ref-type="bibr" rid="pone.0042225-Phillips2">[54]</xref>. Model validation was done through Jack-knifing (5 replicates) and randomly splitting dataset (train and test 75∶25) species that had more than 10 localities. This method has been proved to be useful in case of sample sizes as low as 5 <xref ref-type="bibr" rid="pone.0042225-Phillips1">[53]</xref>. The predicted distribution was visualized on the geographic map using ArcView GIS 3.3. MaxEnt output ranges from 0–100%. Therefore, to make it binary prediction, the lowest presence threshold method was used <xref ref-type="bibr" rid="pone.0042225-Pearson1">[55]</xref>. In this method, the area with lowest probability value where species presence is observed gets chosen and then used as cut off to make binary predictions. This is a more conservative approach. These predicted distribution maps were created individually for each putative species.</p>
+        <p>To assess the overlap in the predicted distributions of a species pair, the ratio of overlap between sister species to the smaller species’ range was used. In addition to the geographic overlap, the environmental envelope and its overlap for each species pair was also assessed. To this end, 19 bioclimatic variables have been extracted using locality data of each species and these variables were compiled in ArcView GIS 3.3. These bioclimatic variables were normalized by log<sub>10</sub> transformation for further statistical analysis. Environmental envelope for each species pair was evaluated by performing Principal Component Analysis (PCA) on the transformed environmental data. To statistically evaluate the overlap in the environmental envelope, multivariate analysis of variance (MANOVA) was used, where species were treated as fixed units with PCA axis scores as the dependent variables. The analysis was done in R 2.1.</p>
+      </sec>
+    </sec>
+    <sec id="s5">
+      <title>Supporting Information</title>
+      <supplementary-material id="pone.0042225.s001" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0042225.s001" xlink:type="simple">
+        <label>Table S1</label>
+        <caption>
+          <p>List of specimens along with location and sequence details. Abbreviations: NP – National Park, WLS – Wildlife Sanctuary, RF – Reserve Forests Location in bold indicate the type locality/very close to type locality sampled for the species.</p>
+          <p>(DOCX)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0042225.s002" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0042225.s002" xlink:type="simple">
+        <label>Table S2</label>
+        <caption>
+          <p>Summarized coalescent analysis results for 16S rDNA and COI.</p>
+          <p>(DOCX)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0042225.s003" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0042225.s003" xlink:type="simple">
+        <label>Table S3</label>
+        <caption>
+          <p>Morphology character matrix for the <italic>Digitipes</italic> specimens. Abbreviations: 1) presence or absence of tarsal spur on 20th leg; 2) length of coxopleural process (CP), 3) CP reaches dorsal margin or not; 4) number of spines on tip of CP; 5) presence or absence of lateral spine on CP; 6) number of lateral spines on CP; 7) length of distomedial prefemoral process of ultimate leg; 8) presence or absence of spines on (2–20<sup>th</sup> ) legs; 9) number of antennal segments 17 or 19; 10) number of glabrous segment of antennae, two or three and 11) nature of cephalic plate.</p>
+          <p>(DOCX)</p>
+        </caption>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>We thank Kerala, Karnataka, and Goa Forest Departments for granting permissions for centipede collections in respective forests areas. We thank Vijaykumar S. P. for his help in the field, Rohit N and Ishan A for discussions and comments on the manuscript. We also thank members of Karanth lab for comments on the manuscript.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="pone.0042225-Wiens1">
+        <label>1</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wiens</surname><given-names>JJ</given-names></name>, <name name-style="western"><surname>Penkrot</surname><given-names>TA</given-names></name> (<year>2002</year>) <article-title>Delimiting species using DNA and morphological variation and discordant species limits in spiny lizards (Sceloporus)</article-title>. <source>Syst Biol</source> <volume>51</volume>: <fpage>69</fpage>–<lpage>91</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Sites1">
+        <label>2</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sites</surname><given-names>JWJ</given-names></name>, <name name-style="western"><surname>Marshall</surname><given-names>JC</given-names></name> (<year>2004</year>) <article-title>Operational criteria for delimiting species</article-title>. <source>Annu Rev Ecol Evol Syst</source> <volume>35</volume>: <fpage>199</fpage>–<lpage>227</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Balakrishnan1">
+        <label>3</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Balakrishnan</surname><given-names>R</given-names></name> (<year>2005</year>) <article-title>Species Concepts, Species Boundaries and Species Identification: A View from the Tropics</article-title>. <source>Syst Biol</source> <volume>54</volume>: <fpage>689</fpage>–<lpage>693</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-SchlickSteiner1">
+        <label>4</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schlick-Steiner</surname><given-names>BC</given-names></name>, <name name-style="western"><surname>Steiner</surname><given-names>FM</given-names></name>, <name name-style="western"><surname>Seifert</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Stauffer</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Christian</surname><given-names>E</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Integrative taxonomy: a multisource approach to exploring biodiversity</article-title>. <source>Annu Rev Entomol</source> <volume>55</volume>: <fpage>421</fpage>–<lpage>438</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Wiens2">
+        <label>5</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wiens</surname><given-names>JJ</given-names></name> (<year>2007</year>) <article-title>Species delimitation: new approaches for discovering diversity</article-title>. <source>Syst Biol</source> <volume>56</volume>: <fpage>875</fpage>–<lpage>878</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Sites2">
+        <label>6</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sites</surname><given-names>JW</given-names></name>, <name name-style="western"><surname>Marshall</surname><given-names>JC</given-names></name> (<year>2003</year>) <article-title>Delimiting species: a Renaissance issue in systematic biology</article-title>. <source>TREE</source> <volume>18</volume>: <fpage>462</fpage>–<lpage>470</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Pons1">
+        <label>7</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pons</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Barraclough</surname><given-names>TG</given-names></name>, <name name-style="western"><surname>Gomez-Zurita</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Cardoso</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Duran</surname><given-names>DP</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Sequence-based species delimitation for the DNA taxonomy of undescribed insects</article-title>. <source>Syst Biol</source> <volume>55</volume>: <fpage>595</fpage>–<lpage>609</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Stockman1">
+        <label>8</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Stockman</surname><given-names>AK</given-names></name>, <name name-style="western"><surname>Bond</surname><given-names>JE</given-names></name> (<year>2007</year>) <article-title>Delimiting cohesion species: extreme population structuring and the role of ecological interchangeability</article-title>. <source>Mol Ecol</source> <volume>16</volume>: <fpage>3374</fpage>–<lpage>3392</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Bond1">
+        <label>9</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bond</surname><given-names>JE</given-names></name>, <name name-style="western"><surname>Stockman</surname><given-names>AK</given-names></name> (<year>2008</year>) <article-title>An integrative method for delimiting cohesion species: finding the population-species interface in a group of Californian trapdoor spiders with extreme genetic divergence and geographic structuring</article-title>. <source>Syst Biol</source> <volume>57</volume>: <fpage>628</fpage>–<lpage>646</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Raxworthy1">
+        <label>10</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Raxworthy</surname><given-names>CJ</given-names></name>, <name name-style="western"><surname>Ingram</surname><given-names>CM</given-names></name>, <name name-style="western"><surname>Rabibisoa</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Pearson</surname><given-names>RG</given-names></name> (<year>2007</year>) <article-title>Applications of ecological niche modeling for species delimitation: a review and empirical evaluation using day geckos (Phelsuma) from Madagascar</article-title>. <source>Syst Biol</source> <volume>56</volume>: <fpage>907</fpage>–<lpage>923</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Rissler1">
+        <label>11</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rissler</surname><given-names>LJ</given-names></name>, <name name-style="western"><surname>Apodaca</surname><given-names>JJ</given-names></name> (<year>2007</year>) <article-title>Adding more ecology into species delimitation: ecological niche models and phylogeography help define cryptic species in the black salamander (Aneides flavipunctatus)</article-title>. <source>Syst Biol</source> <volume>56</volume>: <fpage>924</fpage>–<lpage>942</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Hawlitschek1">
+        <label>12</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hawlitschek</surname><given-names>O</given-names></name>, <name name-style="western"><surname>Porch</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Hendrich</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Balke</surname><given-names>M</given-names></name> (<year>2011</year>) <article-title>Ecological niche modelling and nDNA sequencing support a new, morphologically cryptic beetle species unveiled by DNA barcoding</article-title>. <source>PloS ONE</source> <volume>6</volume>: <fpage>e16662</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-deQueiroz1">
+        <label>13</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>de Queiroz</surname><given-names>K</given-names></name> (<year>2005</year>) <article-title>Different species problems and their resolution</article-title>. <source>Bioessays</source> <volume>27</volume>: <fpage>1263</fpage>–<lpage>1269</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-deQueiroz2">
+        <label>14</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>de Queiroz</surname><given-names>K</given-names></name> (<year>2005</year>) <article-title>A unified concept of species and its consequences for the future of taxonomy</article-title>. <source>Proc California Acad Sci</source> <volume>56</volume>: <fpage>196</fpage>–<lpage>215</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Edwards1">
+        <label>15</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Edwards</surname><given-names>SV</given-names></name> (<year>2009</year>) <article-title>Is a new and general theory of molecular systematics emerging</article-title>? <source>Evolution</source> <volume>63</volume>: <fpage>1</fpage>–<lpage>19</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Cadena1">
+        <label>16</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cadena</surname><given-names>CD</given-names></name>, <name name-style="western"><surname>Cuervo</surname><given-names>AM</given-names></name> (<year>2010</year>) <article-title>Molecules, ecology, morphology, and songs in concert: how many species is Arremon torquatus (Aves: Emberizidae)</article-title>? <source>Biol J Linn Soc Lond</source> <volume>99</volume>: <fpage>152</fpage>–<lpage>176</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-RuizSanchez1">
+        <label>17</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ruiz-Sanchez</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Sosa</surname><given-names>V</given-names></name> (<year>2010</year>) <article-title>Delimiting species boundaries within the Neotropical bamboo Otatea (Poaceae: Bambusoideae) using molecular, morphological and ecological data</article-title>. <source>Mol Phylogenet Evol</source> <volume>54</volume>: <fpage>344</fpage>–<lpage>356</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Sanders1">
+        <label>18</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sanders</surname><given-names>KL</given-names></name>, <name name-style="western"><surname>Malhotra</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Thorpe</surname><given-names>RS</given-names></name> (<year>2006</year>) <article-title>Combining molecular, morphological and ecological data to infer species boundaries in a cryptic tropical pitviper</article-title>. <source>Biol J Linn Soc</source> <volume>87</volume>: <fpage>343</fpage>–<lpage>364</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Hendrixson1">
+        <label>19</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hendrixson</surname><given-names>BE</given-names></name>, <name name-style="western"><surname>Bond</surname><given-names>JE</given-names></name> (<year>2005</year>) <article-title>Testing species boundaries in the Antrodiaetus unicolor complex (Araneae: Mygalomorphae: Antrodiaetidae):”Paraphyly” and cryptic diversity</article-title>. <source>Mol Phylogenet Evol</source> <volume>36</volume>: <fpage>405</fpage>–<lpage>416</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-SchlickSteiner2">
+        <label>20</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schlick-Steiner</surname><given-names>BC</given-names></name>, <name name-style="western"><surname>Steiner</surname><given-names>FM</given-names></name>, <name name-style="western"><surname>Moder</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Seifert</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Sanetra</surname><given-names>M</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>A multidisciplinary approach reveals cryptic diversity in Western Palearctic Tetramorium ants (Hymenoptera: Formicidae)</article-title>. <source>Mol Phylogenet Evol</source> <volume>40</volume>: <fpage>259</fpage>–<lpage>273</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Rodrigo1">
+        <label>21</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rodrigo</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Bertels</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Heled</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Noder</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Shearman</surname><given-names>H</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>The perils of plenty: what are we going to do with all these genes</article-title>? <source>Philos Trans R Soc London, Ser B</source> <volume>363</volume>: <fpage>3893</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Rosenberg1">
+        <label>22</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rosenberg</surname><given-names>NA</given-names></name> (<year>2007</year>) <article-title>Statistical tests for taxonomic distinctiveness from observations of monophyly</article-title>. <source>Evolution</source> <volume>61</volume>: <fpage>317</fpage>–<lpage>323</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-DeSalle1">
+        <label>23</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>DeSalle</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Egan</surname><given-names>MG</given-names></name>, <name name-style="western"><surname>Siddall</surname><given-names>M</given-names></name> (<year>2005</year>) <article-title>The unholy trinity: taxonomy, species delimitation and DNA barcoding</article-title>. <source>Phil Trans R Soc B Biol Sci</source> <volume>360</volume>: <fpage>1905</fpage>–<lpage>1916</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Knowles1">
+        <label>24</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Knowles</surname><given-names>LL</given-names></name>, <name name-style="western"><surname>Carstens</surname><given-names>BC</given-names></name> (<year>2007</year>) <article-title>Delimiting species without monophyletic gene trees</article-title>. <source>Syst Biol</source> <volume>56</volume>: <fpage>887</fpage>–<lpage>895</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Myers1">
+        <label>25</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Myers</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Mittermeier</surname><given-names>RA</given-names></name>, <name name-style="western"><surname>Mittermeier</surname><given-names>CG</given-names></name>, <name name-style="western"><surname>da Fonseca</surname><given-names>GAB</given-names></name>, <name name-style="western"><surname>Kent</surname><given-names>J</given-names></name> (<year>2000</year>) <article-title>Biodiversity hotspots for conservation priorities</article-title>. <source>Nature</source> <volume>403</volume>: <fpage>853</fpage>–<lpage>858</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Biju1">
+        <label>26</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Biju</surname><given-names>SD</given-names></name>, <name name-style="western"><surname>Bossuyt</surname><given-names>F</given-names></name> (<year>2003</year>) <article-title>New frog family from India reveals an ancient biogeographical link with the Seychelles</article-title>. <source>Nature</source> <volume>425</volume>: <fpage>711</fpage>–<lpage>714</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Biju2">
+        <label>27</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Biju</surname><given-names>SD</given-names></name>, <name name-style="western"><surname>Bossuyt</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Lannoo</surname><given-names>MM</given-names></name> (<year>2005</year>) <article-title>Two New Philautus (Anura: Ranidae: Rhacophorinae) from Ponmudi Hill in the Western Ghats of India</article-title>. <source>Copeia</source> <volume>2005</volume>: <fpage>29</fpage>–<lpage>37</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Giri1">
+        <label>28</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Giri</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Bauer</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Gaikwad</surname><given-names>K</given-names></name> (<year>2009</year>) <article-title>A new ground-dwelling species of Cnemaspis Strauch (Squamata: Gekkonidae) from the northern Western Ghats, Maharashtra, India</article-title>. <source>Zootaxa</source> <volume>2164</volume>: <fpage>49</fpage>–<lpage>60</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Biju3">
+        <label>29</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Biju</surname><given-names>SD</given-names></name>, <name name-style="western"><surname>Bossuyt</surname><given-names>F</given-names></name> (<year>2009</year>) <article-title>Systematics and phylogeny of Philautus Gistel, 1848 (Anura, Rhacophoridae) in the Western Ghats of India, with descriptions of 12 new species</article-title>. <source>Zool J Linn Soc Lond</source> <volume>155</volume>: <fpage>374</fpage>–<lpage>444</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-IrfanUllah1">
+        <label>30</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Irfan-Ullah</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Giriraj</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Murthy</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Peterson</surname><given-names>A</given-names></name> (<year>2007</year>) <article-title>Mapping the geographic distribution of Aglaia bourdillonii Gamble (Meliaceae), an endemic and threatened plant, using ecological niche modeling</article-title>. <source>Biodivers Conserv</source> <volume>16</volume>: <fpage>1917</fpage>–<lpage>1925</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Kumara1">
+        <label>31</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kumara</surname><given-names>HN</given-names></name>, <name name-style="western"><surname>Irfan-Ullah</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Kumar</surname><given-names>S</given-names></name> (<year>2009</year>) <article-title>Mapping potential distribution of slender loris subspecies in peninsular India</article-title>. <source>Endanger Spe Res</source> <volume>7</volume>: <fpage>29</fpage>–<lpage>38</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Sureshan1">
+        <label>32</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sureshan</surname><given-names>PM</given-names></name>, <name name-style="western"><surname>Khanna</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Radhakrishnan</surname><given-names>C</given-names></name> (<year>2006</year>) <article-title>Additional distributional records of solopendrid centipedes (Chilopoda: scolopendromorpha) from Kerala</article-title>. <source>Zoos Print Journal</source> <volume>21</volume>: <fpage>2285</fpage>–<lpage>2291</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Sureshan2">
+        <label>33</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sureshan</surname><given-names>PM</given-names></name>, <name name-style="western"><surname>Yadav</surname><given-names>BE</given-names></name>, <name name-style="western"><surname>Radhakrishnan</surname><given-names>C</given-names></name> (<year>2003</year>) <article-title>An illustrated key to the identification of centipedes (Chilopoda: scoolopendromorpha) of Kerala</article-title>. <source>Zoos Print Journal</source> <volume>19</volume>: <fpage>1401</fpage>–<lpage>1407</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Edgecombe1">
+        <label>34</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Edgecombe</surname><given-names>GD</given-names></name>, <name name-style="western"><surname>Giribet</surname><given-names>G</given-names></name> (<year>2007</year>) <article-title>Evolutionary Biology of Centipedes (Myriapoda:Chilopoda)</article-title>. <source>Annu Rev Entomol</source> <volume>52</volume>: <fpage>151</fpage>–<lpage>170</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Lewis1">
+        <label>35</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lewis</surname><given-names>JGE</given-names></name> (<year>2003</year>) <article-title>The problems involved in the characterisation of scolopendromorph species (Chilopoda: Scolopendromorpha)</article-title>. <source>Afr Invertebr</source> <volume>44</volume>: <fpage>61</fpage>–<lpage>69</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Joshi1">
+        <label>36</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Joshi</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Karanth</surname><given-names>KP</given-names></name> (<year>2011</year>) <article-title>Cretaceous-Tertiary diversification among select Scolopendrid centipedes of South India Mol Phylogenet Evol</article-title>. <volume>60</volume>: <fpage>287</fpage>–<lpage>294</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Attems1">
+        <label>37</label>
+        <mixed-citation publication-type="book" xlink:type="simple">Attems C (1930) Myriapoda 2. Scolopendromorpha. In: Schulze FE, Kukenthal W, editors. Das Tierreich. Berlin: Walter de Gruyter. 1–308.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Jangi1">
+        <label>38</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jangi</surname><given-names>BS</given-names></name>, <name name-style="western"><surname>Dass</surname><given-names>CMS</given-names></name> (<year>1984</year>) <article-title>Scolopendridae of the Deccan</article-title>. <source>J SciInd Res</source> <volume>43</volume>: <fpage>27</fpage>–<lpage>54</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Bond2">
+        <label>39</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bond</surname><given-names>JE</given-names></name>, <name name-style="western"><surname>Sierwald</surname><given-names>P</given-names></name> (<year>2002</year>) <article-title>Cryptic speciation in the Anadenobolus excisus millipede species complex on the Island of Jamaica</article-title>. <source>Evolution</source> <volume>56</volume>: <fpage>1123</fpage>–<lpage>1135</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Dpraz1">
+        <label>40</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dépraz</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Hausser</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Pfenninger</surname><given-names>M</given-names></name> (<year>2009</year>) <article-title>A species delimitation approach in the Trochulus sericeus/hispidus complex reveals two cryptic species within a sharp contact zone</article-title>. <source>BMC Evol Biol</source> <volume>9</volume>: <fpage>171</fpage>–<lpage>181</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Ross1">
+        <label>41</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ross</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Gotzek</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Ascunce</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Shoemaker</surname><given-names>D</given-names></name> (<year>2009</year>) <article-title>Species delimitation: A case study in a problematic ant taxon</article-title>. <source>Syst Biol</source> <volume>59</volume>: <fpage>162</fpage>–<lpage>184</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Leach1">
+        <label>42</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Leaché</surname><given-names>AD</given-names></name>, <name name-style="western"><surname>Koo</surname><given-names>MS</given-names></name>, <name name-style="western"><surname>Spencer</surname><given-names>CL</given-names></name>, <name name-style="western"><surname>Papenfuss</surname><given-names>TJ</given-names></name>, <name name-style="western"><surname>Fisher</surname><given-names>RN</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Quantifying ecological, morphological, and genetic variation to delimit species in the coast horned lizard species complex (Phrynosoma)</article-title>. <source>PNAS</source> <volume>106</volume>: <fpage>12418</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Swofford1">
+        <label>43</label>
+        <mixed-citation publication-type="book" xlink:type="simple">Swofford DL (2002) PAUP*. Phylogenetic Analysis Using Parsimony (*and other methods), version 4.b. Sunderland, MA: Sinauer Associates, Inc.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Sambrook1">
+        <label>44</label>
+        <mixed-citation publication-type="book" xlink:type="simple">Sambrook J, Russell DW (2001) Molecular cloning: a laboratory manual. Cold Spring Harbor, NY: Cold Spring Harbor Laboratory Press.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Edgecombe2">
+        <label>45</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Edgecombe</surname><given-names>GD</given-names></name>, <name name-style="western"><surname>Giribet</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Wheeler</surname><given-names>WC</given-names></name> (<year>2002</year>) <article-title>Phylogeny of Henicopidae (Chilopoda: Lithobiomorpha): a combined analysis of morphology and five molecular loci</article-title>. <source>Syst Entomol</source> <volume>27</volume>: <fpage>31</fpage>–<lpage>64</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Thompson1">
+        <label>46</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Thompson</surname><given-names>JD</given-names></name>, <name name-style="western"><surname>Higgins</surname><given-names>DG</given-names></name>, <name name-style="western"><surname>Gibson</surname><given-names>TJ</given-names></name> (<year>1994</year>) <article-title>CLUSTAL W: Improving the sensitivity of progressive multiple sequence alignment through sequence weighting, positions-specific gap penalties and weight matrix choice</article-title>. <source>Nucleic Acids Res</source> <volume>22</volume>: <fpage>4673</fpage>–<lpage>4680</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Farris1">
+        <label>47</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Farris</surname><given-names>JS</given-names></name>, <name name-style="western"><surname>Källersjö</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Kluge</surname><given-names>AG</given-names></name>, <name name-style="western"><surname>Bult</surname><given-names>C</given-names></name> (<year>1995</year>) <article-title>Testing significance of incongruence Cladistics</article-title>. <volume>10</volume>: <fpage>315</fpage>–<lpage>319</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Nixon1">
+        <label>48</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Nixon KC (1999) Winclada (BETA) ver 099. Ithaca, NY: KC Nixon.  Available: <ext-link ext-link-type="uri" xlink:href="http://www.cladistics.com/about_winc.htm" xlink:type="simple">http://www.cladistics.com/about_winc.htm</ext-link>. Accessed 2012 Jul 13.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Posada1">
+        <label>49</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Posada</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Crandall</surname><given-names>KA</given-names></name> (<year>1998</year>) <article-title>Modeltest: testing the model of DNA substitution</article-title>. <source>Bioinformatics</source> <volume>14</volume>: <fpage>817</fpage>–<lpage>818</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Huelsenbeck1">
+        <label>50</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Huelsenbeck</surname><given-names>JP</given-names></name>, <name name-style="western"><surname>Ronquist</surname><given-names>F</given-names></name> (<year>2001</year>) <article-title>MRBAYES: Bayesian inference of phylogenetic trees</article-title>. <source>Bioinformatics</source> <volume>17</volume>: <fpage>754</fpage>–<lpage>755</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Masters1">
+        <label>51</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Masters</surname><given-names>BC</given-names></name>, <name name-style="western"><surname>Fan</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Ross</surname><given-names>HA</given-names></name> (<year>2011</year>) <article-title>Species delimitation – a geneious plugin for the exploration of species boundaries</article-title>. <source>Mol Ecol Resour</source> <volume>11</volume>: <fpage>154</fpage>–<lpage>157</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Hijmans1">
+        <label>52</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hijmans</surname><given-names>RJ</given-names></name>, <name name-style="western"><surname>Cameron</surname><given-names>SE</given-names></name>, <name name-style="western"><surname>Parra</surname><given-names>JL</given-names></name>, <name name-style="western"><surname>Jones</surname><given-names>PG</given-names></name>, <name name-style="western"><surname>Jarvis</surname><given-names>A</given-names></name> (<year>2005</year>) <article-title>Very high resolution interpolated climate surfaces for global land areas</article-title>. <source>Int J Climatol</source> <volume>25</volume>: <fpage>1965</fpage>–<lpage>1978</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Phillips1">
+        <label>53</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Phillips</surname><given-names>SJ</given-names></name>, <name name-style="western"><surname>Dudík</surname><given-names>M</given-names></name> (<year>2008</year>) <article-title>Modeling of species distributions with Maxent: new extensions and a comprehensive evaluation</article-title>. <source>Ecography</source> <volume>31</volume>: <fpage>161</fpage>–<lpage>175</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Phillips2">
+        <label>54</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Phillips</surname><given-names>SJ</given-names></name>, <name name-style="western"><surname>Anderson</surname><given-names>RP</given-names></name>, <name name-style="western"><surname>Schapire</surname><given-names>RE</given-names></name> (<year>2006</year>) <article-title>Maximum entropy modeling of species geographic distributions</article-title>. <source>Ecol Model</source> <volume>190</volume>: <fpage>231</fpage>–<lpage>259</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0042225-Pearson1">
+        <label>55</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pearson</surname><given-names>RG</given-names></name>, <name name-style="western"><surname>Raxworthy</surname><given-names>CJ</given-names></name>, <name name-style="western"><surname>Nakamura</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Townsend Peterson</surname><given-names>A</given-names></name> (<year>2007</year>) <article-title>Predicting species distributions from small numbers of occurrence records: a test case using cryptic geckos in Madagascar</article-title>. <source>J Biogeo</source> <volume>34</volume>: <fpage>102</fpage>–<lpage>117</lpage>.</mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

@@ -1,0 +1,1170 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1d3" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-17-19011</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0189399</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Anthropology</subject><subj-group><subject>Cultural anthropology</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Engineering and technology</subject><subj-group><subject>Signal processing</subject><subj-group><subject>Audio signal processing</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Research facilities</subject><subj-group><subject>Information centers</subject><subj-group><subject>Archives</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>People and places</subject><subj-group><subject>Geographical locations</subject><subj-group><subject>Africa</subject><subj-group><subject>Botswana</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Cognitive science</subject><subj-group><subject>Cognitive psychology</subject><subj-group><subject>Language</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Psychology</subject><subj-group><subject>Cognitive psychology</subject><subj-group><subject>Language</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Psychology</subject><subj-group><subject>Cognitive psychology</subject><subj-group><subject>Language</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Sociology</subject><subj-group><subject>Culture</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Optimization</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Computer and information sciences</subject><subj-group><subject>Information technology</subject><subj-group><subject>Data mining</subject></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>A computational study on outliers in world music</article-title>
+<alt-title alt-title-type="running-head">Outliers in world music</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0001-5258-5643</contrib-id>
+<name name-style="western">
+<surname>Panteli</surname> <given-names>Maria</given-names></name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Formal analysis</role>
+<role content-type="http://credit.casrai.org/">Investigation</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<role content-type="http://credit.casrai.org/">Software</role>
+<role content-type="http://credit.casrai.org/">Validation</role>
+<role content-type="http://credit.casrai.org/">Visualization</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<xref ref-type="aff" rid="aff001"/>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Benetos</surname> <given-names>Emmanouil</given-names></name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<role content-type="http://credit.casrai.org/">Supervision</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Dixon</surname> <given-names>Simon</given-names></name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Supervision</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+</contrib-group>
+<aff id="aff001">
+<addr-line>Centre for Digital Music, School of Electronic Engineering and Computer Science, Queen Mary University of London, London, United Kingdom</addr-line>
+</aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Huang</surname> <given-names>Chun-Hsi</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1">
+<addr-line>University of Connecticut, UNITED STATES</addr-line>
+</aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">m.panteli@qmul.ac.uk</email></corresp>
+</author-notes>
+<pub-date pub-type="collection">
+<year>2017</year>
+</pub-date>
+<pub-date pub-type="epub">
+<day>18</day>
+<month>12</month>
+<year>2017</year>
+</pub-date>
+<volume>12</volume>
+<issue>12</issue>
+<elocation-id>e0189399</elocation-id>
+<history>
+<date date-type="received">
+<day>17</day>
+<month>5</month>
+<year>2017</year>
+</date>
+<date date-type="accepted">
+<day>26</day>
+<month>11</month>
+<year>2017</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2017</copyright-year>
+<copyright-holder>Panteli et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0189399"/>
+<abstract>
+<p>The comparative analysis of world music cultures has been the focus of several ethnomusicological studies in the last century. With the advances of Music Information Retrieval and the increased accessibility of sound archives, large-scale analysis of world music with computational tools is today feasible. We investigate music similarity in a corpus of 8200 recordings of folk and traditional music from 137 countries around the world. In particular, we aim to identify music recordings that are most distinct compared to the rest of our corpus. We refer to these recordings as ‘outliers’. We use signal processing tools to extract music information from audio recordings, data mining to quantify similarity and detect outliers, and spatial statistics to account for geographical correlation. Our findings suggest that Botswana is the country with the most distinct recordings in the corpus and China is the country with the most distinct recordings when considering spatial correlation. Our analysis includes a comparison of musical attributes and styles that contribute to the ‘uniqueness’ of the music of each country.</p>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100000287</institution-id>
+<institution>Royal Academy of Engineering</institution>
+</institution-wrap>
+</funding-source>
+<award-id>RF/128</award-id>
+<principal-award-recipient>
+<name name-style="western">
+<surname>Benetos</surname> <given-names>Emmanouil</given-names></name>
+</principal-award-recipient>
+</award-group>
+<award-group id="award002">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/100009148</institution-id>
+<institution>Queen Mary University of London</institution>
+</institution-wrap>
+</funding-source>
+<award-id>Principal’s research studentship</award-id>
+<principal-award-recipient>
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0001-5258-5643</contrib-id>
+<name name-style="western">
+<surname>Panteli</surname> <given-names>Maria</given-names></name>
+</principal-award-recipient>
+</award-group>
+<funding-statement>EB is supported by a RAEng Research Fellowship (RF/128) from the Royal Academy of Engineering (<ext-link ext-link-type="uri" xlink:href="http://raeng.org.uk/" xlink:type="simple">http://raeng.org.uk/</ext-link>). MP is supported by a Principal’s research studentship from Queen Mary University of London (<ext-link ext-link-type="uri" xlink:href="http://qmul.ac.uk" xlink:type="simple">http://qmul.ac.uk</ext-link>). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="12"/>
+<table-count count="1"/>
+<page-count count="28"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All code is available from the public repository github.com/mpanteli/music-outliers.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>With the increasing accessibility of large sound archives and advances in Music Information Retrieval (MIR) technologies [<xref ref-type="bibr" rid="pone.0189399.ref001">1</xref>] it is possible to automatically analyse vast amounts of sound recordings. This has been the target of several MIR studies, usually with a two-fold scope: first, the development of technology for the analysis of music audio, and second, the application of technology to study musical phenomena. While the development of MIR technologies has been advancing, few studies have attempted to apply it to the analysis of large corpora of folk and traditional music. We are interested in a large-scale comparison of world music with particular focus on music similarity and distinctiveness.</p>
+<p>In the field of ethnomusicology, several studies have considered the comparison of world music cultures [<xref ref-type="bibr" rid="pone.0189399.ref002">2</xref>, <xref ref-type="bibr" rid="pone.0189399.ref003">3</xref>]. Data collection and annotation for this type of research is usually done manually by ethnomusicologists, a process which limits the potential for large-scale results. In the field of MIR, large-scale comparative studies have focused mainly on Eurogenetic music [<xref ref-type="bibr" rid="pone.0189399.ref004">4</xref>, <xref ref-type="bibr" rid="pone.0189399.ref005">5</xref>], where Eurogenetic defines music styles of mainly Western traditions for example classical and popular repertoires. The study of non-Eurogenetic music using computational tools falls under the emerging field of Computational Ethnomusicology [<xref ref-type="bibr" rid="pone.0189399.ref006">6</xref>, <xref ref-type="bibr" rid="pone.0189399.ref007">7</xref>]. While several research projects have focused on the development of MIR tools for world music analysis [<xref ref-type="bibr" rid="pone.0189399.ref008">8</xref>–<xref ref-type="bibr" rid="pone.0189399.ref012">12</xref>], no study, to the best of our knowledge, has applied such computational methods in the analysis of a large world music corpus.</p>
+<p>Music similarity lies at the heart of most MIR applications, such as music classification, retrieval and recommendation [<xref ref-type="bibr" rid="pone.0189399.ref001">1</xref>]. In this study, we focus on music dissimilarity or musical distinctiveness. In particular we aim to detect music outliers. Outlier detection is a common pre-processing step in the analysis of big data collections [<xref ref-type="bibr" rid="pone.0189399.ref013">13</xref>]. In music, outlier detection can reveal recordings with outstanding musical characteristics. Tracing the geographic origin of these recordings could help identify areas of the world that have developed a unique musical character. Due to the long-lasting traditions of orally-transmitted repertoires and the lack of scores or consistent notation in world music, our music data is extracted solely from the audio. Music similarity/dissimilarity in this case is modelled by considering musical attributes captured in the audio signal.</p>
+<p>In previous work we have explored the suitability of audio features for music similarity and content description [<xref ref-type="bibr" rid="pone.0189399.ref014">14</xref>]. Audio features for the purpose of studying world music need to be agnostic to style characteristics so that they can generalise to the diversity of music styles. We found rhythmic and melodic descriptors that are invariant to tempo and pitch transformations and are fairly robust to transformations of the recording quality. We used these features in combination with feature learning to assess music similarity in a relatively small world music corpus [<xref ref-type="bibr" rid="pone.0189399.ref015">15</xref>] as well as to detect and analyse music outliers in a preliminary study [<xref ref-type="bibr" rid="pone.0189399.ref016">16</xref>].</p>
+<p>In this study we expand prior work to world music analysis using a larger corpus and evaluating additional methods. We use signal processing tools to process audio data from a collection of recorded world music. Machine learning and data embeddings are used to learn a feature space of music similarity. Data mining techniques are applied to detect outliers in this space. Results are evaluated quantitatively using metrics to assess classification accuracy and qualitatively via visualisation of the space and listening to audio examples. Our observations on music similarity comply with expected geographical and cultural links whereas outliers provide insights on the evolution of world music. This is the first study to investigate outliers in world music with such a large scale. Our developments contribute to defining concepts and methods from which future work in the study of large world music corpora can benefit.</p>
+<p>This paper is organised as follows. The Related work section provides a literature review of related studies and methods. The Methodology section describes the materials and tools used in this study. It focuses on details of the music corpus under investigation, audio feature extraction and feature learning methods for music similarity, and data mining techniques to assess music similarity and distinctiveness as well as methods for modelling spatial relations. Results are presented in the Results section and limitations of the study as well as directions for future improvement are considered in the Discussion section. Findings are summarised in the Conclusion section.</p>
+</sec>
+<sec id="sec002">
+<title>Related work</title>
+<sec id="sec003">
+<title>Comparison of world music cultures</title>
+<p>The comparison of world music cultures has been the topic of several ethnomusicological studies since the beginning of the 20th century [<xref ref-type="bibr" rid="pone.0189399.ref002">2</xref>, <xref ref-type="bibr" rid="pone.0189399.ref003">3</xref>, <xref ref-type="bibr" rid="pone.0189399.ref017">17</xref>, <xref ref-type="bibr" rid="pone.0189399.ref018">18</xref>]. Alan Lomax, one of the major comparativists, made more than 4000 recordings from around the world and annotated their performance-style characteristics based on the system of ‘Cantometrics’ [<xref ref-type="bibr" rid="pone.0189399.ref002">2</xref>, <xref ref-type="bibr" rid="pone.0189399.ref017">17</xref>]. Using a phylogenetic analysis, he formed the hypothesis that there are two music evolutionary roots, the eastern Asian and the Sub-Saharan African music cultures from which all other music styles have possibly evolved [<xref ref-type="bibr" rid="pone.0189399.ref017">17</xref>]. In a similar manner, Savage et al. [<xref ref-type="bibr" rid="pone.0189399.ref003">3</xref>] analyse 304 recordings from the Garland Encyclopedia of Music [<xref ref-type="bibr" rid="pone.0189399.ref019">19</xref>] using the annotation system of ‘Cantocore’ [<xref ref-type="bibr" rid="pone.0189399.ref020">20</xref>] in addition to the Cantometrics descriptors. In this study, Savage et al. show that there are no ‘absolute’ music universals, i.e., music properties that are shared amongst all music of the world without exceptions, but rather ‘statistical’ universals, i.e., properties that occur with exceptions but are statistically consistent in music from around the world. This supports the hypothesis of the current study, that there are outliers, pieces outside the statistical norms shared by much of the world’s music.</p>
+<p>Applications of comparative musicology have also focused on contrasting music styles to genetic and language evolution [<xref ref-type="bibr" rid="pone.0189399.ref003">3</xref>, <xref ref-type="bibr" rid="pone.0189399.ref018">18</xref>, <xref ref-type="bibr" rid="pone.0189399.ref021">21</xref>–<xref ref-type="bibr" rid="pone.0189399.ref023">23</xref>]. The study of 220 traditional songs from 9 indigenous populations from Taiwan [<xref ref-type="bibr" rid="pone.0189399.ref018">18</xref>] showed that population structure for genetics exhibits stronger parallels to music than to language. The study of 700 recordings from 58 patrimonies of rural areas in Gabon [<xref ref-type="bibr" rid="pone.0189399.ref023">23</xref>] found that there is a predominant vertical transmission of musical characteristics such as metre, rhythm, and melody, where vertical transmission refers to the inheritance from ancestors in contrast to the horizontal exchange between neighbours.</p>
+</sec>
+<sec id="sec004">
+<title>Large-scale music corpus analysis</title>
+<p>Computational approaches to music analysis enable the study of larger music corpora. Large-scale MIR studies have focused on the analysis of popular (mainly Eurogenetic) music [<xref ref-type="bibr" rid="pone.0189399.ref004">4</xref>, <xref ref-type="bibr" rid="pone.0189399.ref005">5</xref>, <xref ref-type="bibr" rid="pone.0189399.ref024">24</xref>]. For example, Serra et al. [<xref ref-type="bibr" rid="pone.0189399.ref004">4</xref>] analysed pitch, loudness and timbre characteristics in 464411 recordings of contemporary Western popular music between 1955−2010 and found that over the years music shows less variety in pitch transitions, consistent homogenisation of the timbral palette, and louder and potentially poorer volume dynamics. A related study of 24941 Western popular music recordings between 1922−2010 showed that the most influential songs were more innovative during the early 1970s and the mid 1990s [<xref ref-type="bibr" rid="pone.0189399.ref024">24</xref>]. Mauch et al. [<xref ref-type="bibr" rid="pone.0189399.ref005">5</xref>] analysed 17094 songs from the US Billboard Hot 100 between 1960−2010 and found that pop music evolved with particular rapidity during three stylistic ‘revolutions’; around 1964, 1983 and 1991. Other corpus analysis studies have focused on the automatic classification of music by genre [<xref ref-type="bibr" rid="pone.0189399.ref025">25</xref>–<xref ref-type="bibr" rid="pone.0189399.ref027">27</xref>] via the combination of different audio features.</p>
+<p>Fewer studies have considered the computational analysis of non-Western music corpora [<xref ref-type="bibr" rid="pone.0189399.ref012">12</xref>, <xref ref-type="bibr" rid="pone.0189399.ref028">28</xref>]. Moelants et al. [<xref ref-type="bibr" rid="pone.0189399.ref012">12</xref>] analysed pitch distributions of 901 recordings from Central Africa and found that recent recordings exhibit Western-influenced scales. Gómez et al. [<xref ref-type="bibr" rid="pone.0189399.ref028">28</xref>] studied aspects of timbre, rhythm, and tonality in 5905 recordings from Western and non-Western music styles and showed that Western music is more equal-tempered than non-Western music. A comparison between music features and geographical latitude and longitude showed that latitude is mostly associated with tonal features whereas longitude with rhythmic ones. A number of studies have considered automatic classification of non-Western music styles. Liu et al. [<xref ref-type="bibr" rid="pone.0189399.ref029">29</xref>] classify 1300 music recordings into six cultural styles using timbre, rhythm, wavelet coefficients and musicology-based features. Kruspe et al. [<xref ref-type="bibr" rid="pone.0189399.ref030">30</xref>] study the automatic classification of 4400 recordings from non-Western music traditions into 9 geographical areas using features of timbre, rhythm and tonality. Zhou et al. [<xref ref-type="bibr" rid="pone.0189399.ref031">31</xref>] use a corpus of 1142 non-Western music tracks from 73 countries and predict the geographical location of each track via a regression method.</p>
+</sec>
+<sec id="sec005">
+<title>Computational approaches to music similarity</title>
+<p>Music similarity is studied in several MIR application areas including automatic genre classification [<xref ref-type="bibr" rid="pone.0189399.ref032">32</xref>], cover song detection [<xref ref-type="bibr" rid="pone.0189399.ref033">33</xref>], structural segmentation [<xref ref-type="bibr" rid="pone.0189399.ref034">34</xref>], pattern recognition [<xref ref-type="bibr" rid="pone.0189399.ref035">35</xref>] and music recommendation [<xref ref-type="bibr" rid="pone.0189399.ref036">36</xref>]. In the Music Information Retrieval Evaluation eXchange (MIREX), the annual public evaluation of MIR systems and algorithms, there is a task on Audio Music Similarity [<xref ref-type="bibr" rid="pone.0189399.ref037">37</xref>]. Since music is a multifaceted concept the study of music similarity is often divided into separate aspects [<xref ref-type="bibr" rid="pone.0189399.ref038">38</xref>]. For example, studies have focused on developing tools and datasets to investigate similarity in aspects of melody [<xref ref-type="bibr" rid="pone.0189399.ref039">39</xref>–<xref ref-type="bibr" rid="pone.0189399.ref041">41</xref>], rhythm [<xref ref-type="bibr" rid="pone.0189399.ref042">42</xref>–<xref ref-type="bibr" rid="pone.0189399.ref044">44</xref>], timbre [<xref ref-type="bibr" rid="pone.0189399.ref045">45</xref>–<xref ref-type="bibr" rid="pone.0189399.ref047">47</xref>], or harmony [<xref ref-type="bibr" rid="pone.0189399.ref048">48</xref>, <xref ref-type="bibr" rid="pone.0189399.ref049">49</xref>].</p>
+<p>The assessment of music similarity is subjective. Automatic systems built for music similarity tasks often need to be trained on a ground truth obtained from human listeners. Several approaches have used genre labels as a proxy for similarity [<xref ref-type="bibr" rid="pone.0189399.ref027">27</xref>]. In this case the assumption is made that songs from the same genre exhibit similar music characteristics. Other studies have focused on the creation of a ground truth set via the collection of similarity ratings from human listeners [<xref ref-type="bibr" rid="pone.0189399.ref050">50</xref>]. Given the scarcity of ground truth data, the evaluation of music similarity systems and the suitability to generalise to all music has been challenged [<xref ref-type="bibr" rid="pone.0189399.ref051">51</xref>, <xref ref-type="bibr" rid="pone.0189399.ref052">52</xref>]. For example, music similarity systems that are evaluated based on the classification accuracy of genre labels are demonstrated to learn irrelevant music attributes [<xref ref-type="bibr" rid="pone.0189399.ref051">51</xref>]. On the other hand, music similarity systems evaluated with judgements from human listeners are limited by the inter-rater agreement [<xref ref-type="bibr" rid="pone.0189399.ref052">52</xref>]. In particular, due to the challenges in the definition of music similarity and the subjectivity of the task there is often a low inter-rater agreement. As computational models are not expected to outperform the level of human agreement there exists an upper bound beyond which the performance of the model cannot be further improved. Therefore the development and evaluation of a music similarity system still remains a challenge, especially in the yet unexplored space of world music.</p>
+</sec>
+<sec id="sec006">
+<title>Outliers in big data collections</title>
+<p>Outlier detection is an essential step in the analysis of big data collections [<xref ref-type="bibr" rid="pone.0189399.ref053">53</xref>]. Outliers denote data points that deviate significantly from the distribution and often need to be filtered out or treated in a different manner. Applications of outlier detection include, amongst others, the identification of intrusions in computer networks [<xref ref-type="bibr" rid="pone.0189399.ref054">54</xref>], fraud in credit cards [<xref ref-type="bibr" rid="pone.0189399.ref055">55</xref>] and abnormal symptoms in disease diagnosis [<xref ref-type="bibr" rid="pone.0189399.ref056">56</xref>]. The study of outliers with respect to spatial relations, as assumed in this music research, adopts concepts of spatial statistics. A spatial outlier is usually viewed as a local anomaly whose non-spatial attribute values are extreme compared to its neighbours [<xref ref-type="bibr" rid="pone.0189399.ref057">57</xref>]. Spatial outlier detection can help locate extreme meteorological events [<xref ref-type="bibr" rid="pone.0189399.ref058">58</xref>], identify disease outbreaks [<xref ref-type="bibr" rid="pone.0189399.ref059">59</xref>], and predict crime hot spot areas [<xref ref-type="bibr" rid="pone.0189399.ref060">60</xref>].</p>
+<p>The detection of outliers in music data is still a new area of research. Bountouridis et al. [<xref ref-type="bibr" rid="pone.0189399.ref061">61</xref>] investigate outlier detection in music data using multiple sequence alignment techniques. Lu et al. [<xref ref-type="bibr" rid="pone.0189399.ref062">62</xref>] compare outlier detection techniques applied on a music genre recognition dataset. Hansen et al. [<xref ref-type="bibr" rid="pone.0189399.ref063">63</xref>] apply outlier detection using probability density estimation methods to clean up large-scale datasets of mislabelled data. Livshin and Rodet [<xref ref-type="bibr" rid="pone.0189399.ref064">64</xref>] use outlier detection methods to identify badly recorded musical instrument samples. In the current study, outlier detection is used to identify geographical regions with distinct musical characteristics.</p>
+</sec>
+</sec>
+<sec id="sec007" sec-type="materials|methods">
+<title>Methodology</title>
+<p>The methodology is summarised as follows. For each audio recording in our dataset we extract music descriptors by a) filtering out speech segments as detected via a speech/music discriminator algorithm, b) extracting audio descriptors capturing aspects of music style, c) applying feature learning to reduce dimensionality and project the recordings into a similarity space. We optimise parameters and evaluate music similarity in the projected space by a classification task. The projected space is used to identify recordings that are outliers. We refer as ‘outliers’ to the recordings that stand out with respect to the whole set of recordings. Outliers are detected for different sets of features focusing on rhythm, melody, timbre, or harmony and a combination of these. We take into account spatial relations to form geographical neighbourhoods and use these to detect spatial outliers, i.e., recordings that stand out with respect to their neighbours. Lastly, we extract a feature representation for each country by summarising information of its recordings. Hierarchical clustering is used to get an overview of similarity and dissimilarity between countries. The methodology is summarised in <xref ref-type="fig" rid="pone.0189399.g001">Fig 1</xref> and explained in detail in the sections below.</p>
+<fig id="pone.0189399.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Overview of the methodology.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.g001" xlink:type="simple"/>
+</fig>
+<p>In our analyses we use the country label of a recording as a proxy for music style. We assume that recordings originating from the same country have common musical characteristics and we use this as the ground truth to train our models. However, it is often the case that a music style is not unique to a single country. Music styles may be shared across many countries and a country may exhibit several music styles. The reason for choosing country as the unit of analysis in this study is two-fold: First, country label is the most consistent information available in our music metadata compared to, for example, music genre, language, or culture information (see also Data section). Second, several studies have considered larger geographical regions (e.g., continents or cultural areas) for the comparison of music styles [<xref ref-type="bibr" rid="pone.0189399.ref028">28</xref>, <xref ref-type="bibr" rid="pone.0189399.ref030">30</xref>, <xref ref-type="bibr" rid="pone.0189399.ref065">65</xref>]. Country boundaries work in a similar way but provide a more fine-grained unit for analysis. Alternative approaches are discussed further in the Discussion section.</p>
+<sec id="sec008">
+<title>Data</title>
+<p>We aim to investigate music similarity in a world music corpus. The notion of world music is ambiguous often mixing folk, popular, and classical musics from around the world and from different eras [<xref ref-type="bibr" rid="pone.0189399.ref066">66</xref>]. In this study world music refers to recorded material from folk and traditional music styles from around the world. In particular we focus on field recordings collected by ethnomusicologists since the beginning of the 20<italic>th</italic> century. Our music dataset is drawn from two large archives, the Smithsonian Folkways Recordings [<xref ref-type="bibr" rid="pone.0189399.ref067">67</xref>] and the World &amp; Traditional music collection from the British Library Sound Archive [<xref ref-type="bibr" rid="pone.0189399.ref068">68</xref>]. Both archives include thousands of music recordings collected over decades of ethnomusicological research.</p>
+<p>Even though access to large collections of world music recordings is now feasible, the creation of a representative world music corpus is still challenging. An ideal world music corpus would include samples from all inhabited geographical regions and provide information on the spatio-temporal and cultural origins of each music piece. The samples chosen would have to be sufficient to represent the diversity of styles within each music culture and the corpus as a whole should be a balanced collection of music cultures. Given the archives available today, the challenges in corpus creation involve addressing what defines a good sample, how to balance the diverse styles represented in the collection, how to avoid the Western-music bias and how to maximize the size of the corpus. These challenges have also been the main point of criticism for several music comparative studies [<xref ref-type="bibr" rid="pone.0189399.ref069">69</xref>–<xref ref-type="bibr" rid="pone.0189399.ref072">72</xref>]. Our effort to create a world music corpus from the currently available data is described below.</p>
+<p>We use a subset of the Smithsonian Folkways Recordings collection which consists of more than 40000 audio recordings, including music as well as poetry. It has a large representation from North America (more than 21000 from the United States and around 1400 from Canada). It also includes around 7700 recordings from Eurasia (1700 from the United Kingdom, 800 from Russia, 800 from France), 4200 recordings from South America (Mexico 600, Trinidad and Tobago 400, Peru 400), 2300 from Asia (India 400, Indonesia 400, Philippines 200, China 200), 1900 from Africa (South Africa 200, Ghana 200, Kenya 100), and 400 from Oceania. Recording dates span from 1938 to 2014. We also use a subset of the World &amp; Traditional music collection of the British Library Sound Archive as curated for the purposes of the Digital Music Lab project [<xref ref-type="bibr" rid="pone.0189399.ref008">8</xref>]. This subset consists of more than 29000 audio recordings with a large representation (17000) from the United Kingdom. It also includes around 7300 recordings from Africa (mostly from Uganda 3000), 2300 from Asia (mostly from Nepal 800 and Pakistan 700), and less than 1000 recordings from Oceania, North and South America. Recording dates span from 1898 to 2014. The metadata associated with each music recording include the country where the recording was made and the year it was recorded, the language and sometimes cultural background of the performers, the subject of the music or short description of its purpose, the title, album (if any), and information of the collector or collection it was accessed from.</p>
+<p>In the above archives there is an unbalanced representation of music cultures, with the majority of recordings originating from Western-colonial areas. What is more, metadata for each recording is not always present or is inconsistent. To create a corpus we sample recordings based on the country information which in this case is more consistent than other culture-related metadata. In order to ensure geographical spread we require recordings from as many countries as possible. We set a minimum requirement of <italic>N</italic><sub><italic>min</italic></sub> = 10 recordings from each country and select a maximum of <italic>N</italic><sub><italic>max</italic></sub> = 100. Setting the minimum to 10 recordings is a trade-off between allowing under-represented areas to be included in the dataset and having a sufficient number of samples for each country. Although a sample of 10 recordings is too small to represent the diversity of music styles within a country, raising this minimum to e.g. 50 would exclude many of the countries we currently analyse and would limit the geographical scope of the study. Setting the maximum to 100 recordings prevents the over-represented areas from dominating the corpus. We sample at random <italic>N</italic> recordings from each country, where <italic>N</italic> is bounded by <italic>N</italic><sub><italic>min</italic></sub> and <italic>N</italic><sub><italic>max</italic></sub> as explained above.</p>
+<p>Since the medium of analysis is digitised audio, most of our samples are dated since the 1950<italic>s</italic>, with the exception of some recordings from the British Library collection dated around 1900 which were digitised from wax cylinders. The duration of audio recordings from the Smithsonian Folkways Recordings collection is restricted to 30 seconds since we use the publicly available 30-second audio previews. For the British Library Sound Archive data we have access to complete recordings but we only sample the first music segments up to a total duration of 30 seconds for consistency with the short audio excerpts of the Smithsonian Folkways collection.</p>
+<p>Given the above criteria, the final collection consists of a total of 8200 recordings, 6132 from the Smithsonian Folkways Recordings collection and 2068 from the British Library Sound Archive collection. The recordings originate from 137 countries with mean 59.9 and standard deviation 33.8 recordings per country (<xref ref-type="fig" rid="pone.0189399.g002">Fig 2</xref>). A total of 67 languages is represented by a minimum of 10 recordings, with a mean of 33.5 and standard deviation of 33.5 recordings per language (<xref ref-type="fig" rid="pone.0189399.g003">Fig 3</xref>). The recordings span the years between 1898−2014 with median year 1974 and standard deviation of 17.9 years (<xref ref-type="fig" rid="pone.0189399.g004">Fig 4</xref>).</p>
+<fig id="pone.0189399.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>The distribution of countries in our dataset of 8200 world music recordings.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.g002" xlink:type="simple"/>
+</fig>
+<fig id="pone.0189399.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>The languages in our world music corpus which are represented by a minimum of 10 recordings.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.g003" xlink:type="simple"/>
+</fig>
+<fig id="pone.0189399.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>The time span of recordings in our world music corpus.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.g004" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec009">
+<title>Audio content analysis</title>
+<p>Over the years several toolboxes have been developed for music content description [<xref ref-type="bibr" rid="pone.0189399.ref073">73</xref>–<xref ref-type="bibr" rid="pone.0189399.ref076">76</xref>]. Applications of these toolboxes include tasks of automatic classification and retrieval of mainly Eurogenetic music (Related work section). Audio content analysis of world music recordings has additional challenges. First, the audio material is recorded under a variety of recording conditions (live and field recordings), and is preserved to different degrees of fidelity (old and new recording media and equipment). Second, the music is very diverse and music descriptors designed primarily for Eurogenetic music might fail to capture particularities of world music styles. Our audio content analysis process includes a pre-processing step to remove speech segments from the dataset (Pre-processing section) and low-pass filtering to reflect limitations of old recording equipment (Features section). With respect to music descriptors, between specifically designing them as in other comparative music studies [<xref ref-type="bibr" rid="pone.0189399.ref028">28</xref>, <xref ref-type="bibr" rid="pone.0189399.ref030">30</xref>, <xref ref-type="bibr" rid="pone.0189399.ref031">31</xref>] and automatically deriving them from the spectrogram [<xref ref-type="bibr" rid="pone.0189399.ref077">77</xref>, <xref ref-type="bibr" rid="pone.0189399.ref078">78</xref>] we choose a middle ground. We use expert knowledge to derive low-level music representations (Features section) and combine them with feature learning methods (Feature learning section) to adapt the representation to particularities of the music we analyse. Details for each step of the audio content analysis process are provided below.</p>
+<sec id="sec010">
+<title>Pre-processing</title>
+<p>Our dataset consists of field recordings that sometimes mix speech and music segments. We are only interested in music segments but due to the lack of metadata speech segments cannot be filtered out a-priori. An essential pre-processing step is therefore the discrimination between speech and music segments. By speech/music segmentation we refer to the detection of segment boundaries and the classification of the segment as either speech or music. The task of speech/music segmentation has been the focus of several studies in the literature [<xref ref-type="bibr" rid="pone.0189399.ref079">79</xref>–<xref ref-type="bibr" rid="pone.0189399.ref081">81</xref>] and it was also identified as a challenge in the 2015 Music Information Retrieval Evaluation eXchange (MIREX) [<xref ref-type="bibr" rid="pone.0189399.ref082">82</xref>]. We select the best performing algorithm [<xref ref-type="bibr" rid="pone.0189399.ref083">83</xref>] from the MIREX 2015 evaluation. As part of the MIREX 2015 evaluation, the algorithm was tested on a non-overlapping set of British Library recordings which is very similar to the recording collection we use in this study and achieved a frame-based F-measure of 0.89. The algorithm is based on summary statistics of low-level features including Mel frequency cepstrum coefficients (MFCCs), spectral entropy, tonality, and 4 Hertz modulation, and is trained on folk music recordings [<xref ref-type="bibr" rid="pone.0189399.ref084">84</xref>]. We apply this algorithm to detect speech/music segments for all recordings in our dataset and use solely the music segments of each recording for further analysis. In case of long audio excerpts we only select the initial music segments up to a total duration of maximum 30 seconds (see also duration of recordings in Data section).</p>
+</sec>
+<sec id="sec011">
+<title>Features</title>
+<p>We are interested in descriptors capturing aspects of world music style. We adopt the notion of music style by Sadie et al. [<xref ref-type="bibr" rid="pone.0189399.ref085">85</xref>], ‘style can be recognized by characteristic uses of form, texture, harmony, melody, and rhythm’. The use of form is ignored in this study as most of our music collection is restricted to short audio excerpts rather than complete recordings. We focus on state of the art descriptors (and adaptations of them) that aim at capturing relevant rhythmic, timbral, melodic, and harmonic content. In particular, we extract onset patterns with the scale transform [<xref ref-type="bibr" rid="pone.0189399.ref086">86</xref>] for rhythm, pitch bi-histograms [<xref ref-type="bibr" rid="pone.0189399.ref087">87</xref>] for melody, average chromagrams [<xref ref-type="bibr" rid="pone.0189399.ref088">88</xref>] for harmony, and Mel frequency cepstrum coefficients (MFCCs) [<xref ref-type="bibr" rid="pone.0189399.ref089">89</xref>] for timbre content description. We choose these descriptors because they define low-level representations of the musical content, i.e., a less detailed representation but one that is more likely to be robust with respect to the diversity of the music styles we consider. In addition, these features achieved state-of-the-art performances in relevant classification and retrieval tasks [<xref ref-type="bibr" rid="pone.0189399.ref014">14</xref>], for example, onset patterns with the scale transform perform best in classifying Western and non-Western rhythms [<xref ref-type="bibr" rid="pone.0189399.ref090">90</xref>, <xref ref-type="bibr" rid="pone.0189399.ref091">91</xref>] and pitch bi-histograms have been applied successfully in (melody-based) cover song recognition [<xref ref-type="bibr" rid="pone.0189399.ref087">87</xref>].</p>
+<p>The audio features used in this study are computed with the following specifications. All recordings in our dataset have a sampling rate of 44100 Hz. For all features we compute the (first) frame decomposition using a window size of 40 ms and hop size of 5 ms. The output of the first frame decomposition is a Mel spectrogram and a chromagram. We use a second frame decomposition to extract descriptors over 8-second windows with 0.5-second hop size. This is particularly useful for rhythmic and melodic descriptors since rhythm and melody are perceived over longer time frames. Rhythmic and melodic descriptors considered in this study are derived from the second frame decomposition with overlapping 8-second windows. Timbral and harmonic descriptors are derived from the first frame decomposition with 0.04-second windows and for consistency with rhythmic and melodic features, they are summarised by their mean and standard deviation over the second frame decomposition with overlapping 8-second windows. The window of the second frame decomposition is hereby termed as ‘texture window’ [<xref ref-type="bibr" rid="pone.0189399.ref025">25</xref>]. The window size <italic>w</italic> of the texture window was set to 8 seconds after the parameter optimisation process described in the Parameter optimisation section. For all features we use a cutoff frequency at 8000 Hz since most of the older recordings do not contain higher frequencies than that. The audio content analysis process is summarised in <xref ref-type="fig" rid="pone.0189399.g005">Fig 5</xref>.</p>
+<fig id="pone.0189399.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Overview of the audio content analysis process.</title>
+<p>Mel-spectrograms and chromagrams are processed in overlapping 8-second frames to extract rhythmic, timbral, harmonic, and melodic features. Feature learning is applied to the 8-second features and average pooling across time yields the representations for further analysis.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.g005" xlink:type="simple"/>
+</fig>
+<p><bold>Rhythm and Timbre.</bold> For rhythm and timbre features we compute a Mel spectrogram with 40 Mel bands up to 8000 Hz using Librosa [<xref ref-type="bibr" rid="pone.0189399.ref076">76</xref>]. To describe rhythmic content we extract onset strength envelopes for each Mel band and compute rhythmic periodicities using a second Fourier transform with window size of 8 seconds and hop size of 0.5 seconds. We then apply the Mellin transform to achieve tempo invariance [<xref ref-type="bibr" rid="pone.0189399.ref090">90</xref>] and output rhythmic periodicities up to 960 beats per minute (bpm). The output is averaged across low and high frequency Mel bands with cutoff at 1758 Hz. The resulting rhythmic feature vector has length 400 values. Timbral aspects are characterised by 20 MFCCs and 20 first-order delta coefficients after removing the DC component [<xref ref-type="bibr" rid="pone.0189399.ref089">89</xref>]. We take the mean and standard deviation of these coefficients over 8-second windows with 0.5-second hop size. This results in a total of 80 feature values describing timbral aspects.</p>
+<p><bold>Harmony and Melody.</bold> To describe harmonic content we compute chromagrams using variable-<italic>Q</italic> transforms [<xref ref-type="bibr" rid="pone.0189399.ref092">92</xref>] up to 8000 Hz with 5 ms hop size and 20-cent pitch resolution to allow for microtonality. Chromagrams are aligned to the pitch class of the maximum magnitude per recording for key invariance. Harmonic content is described by the mean and standard deviation of chroma vectors using 8-second windows with 0.5-second hop size. The dimensionality of the harmonic feature vector results in a total of 120 values. To describe melodic content we extract pitch contours from polyphonic music signals using a method based on a time-pitch salience function [<xref ref-type="bibr" rid="pone.0189399.ref093">93</xref>]. The pitch contours are converted to 20-cent resolution binary chroma vectors with entries of 1, whenever a pitch estimate is active at a given time, and 0 otherwise. Melodic aspects are captured via pitch bi-histograms which denote counts of transitions of pitch classes [<xref ref-type="bibr" rid="pone.0189399.ref087">87</xref>]. We use a window of <italic>d</italic> = 0.5 seconds to look for pitch class transitions in the binary chroma vectors. The resulting pitch bi-histogram matrix consists of 3600 = 60 × 60 values corresponding to pitch transitions with 20-cent pitch resolution. For efficient storage and processing, the matrix is decomposed using non-negative matrix factorisation [<xref ref-type="bibr" rid="pone.0189399.ref094">94</xref>]. We keep 2 basis vectors with their corresponding activations to represent melodic content. It was estimated that keeping only 2 bases was enough to provide sufficient reconstruction for most pitch bi-histogram matrices in our dataset (average reconstruction error &lt; 25%). Pitch bi-histograms are also computed over 8-second windows with 0.5-second hop size. This results in a total of 120 feature values describing melodic aspects.</p>
+<p>Combining all features together results in a total of 840 descriptors for each recording in our dataset. A <italic>z</italic>-score standardisation of the 840 features is applied across all recordings before further processing.</p>
+</sec>
+<sec id="sec012">
+<title>Feature learning</title>
+<p>For the low-level descriptors presented in the Features section we aim to learn high-level representations that best characterise music style similarity. Feature learning is also appropriate for reducing dimensionality, an essential step for the amount of data we analyse. We learn feature representations from the 8-second frame-based descriptors. In our analysis we consider the country label of a recording as a proxy for style and use this for supervised training and cross-validating our methods.</p>
+<p>There are numerous feature learning techniques to choose from in the literature. Non-linear models such as neural networks usually require large training data sets [<xref ref-type="bibr" rid="pone.0189399.ref095">95</xref>]. We have a fairly limited number of audio recordings and our low-level descriptors partly incorporate expert knowledge of the music (section Features). In this case, simpler feature learning techniques are more suitable for the amount and type of data we have. We explore the applicability of 4 linear models trained in supervised and unsupervised fashions.</p>
+<p>The audio features are standardised using <italic>z</italic>-scores and aggregated to a single feature vector for each 8-second frame of a recording. Feature representations are learned using Principal Component Analysis (PCA), Non-Negative Matrix Factorisation (NMF), Semi-Supervised Non-Negative Matrix Factorisation (SSNMF), and Linear Discriminant Analysis (LDA) methods [<xref ref-type="bibr" rid="pone.0189399.ref094">94</xref>]. PCA and NMF are unsupervised methods and try to extract components that account for the most variance in the data without any prior information on the data classes. LDA is a supervised method and tries to identify attributes that account for the most variance between classes (in this case country labels). SSNMF works similarly to NMF with the difference that ground truth labels are taken into account in addition to the data matrix in the optimisation step [<xref ref-type="bibr" rid="pone.0189399.ref096">96</xref>].</p>
+<p>We split the 8200 recordings of our collection into training (60%), validation (20%), and testing (20%) sets. We train and test our models on the frame-based descriptors; this results in a dataset of 325435, 106632, and 107083 frames for training, validation, and testing, respectively. Frames used for training do not belong to the same recordings as frames used for testing or validation and vice versa. We use the training set to train the PCA, NMF, SSNMF, and LDA models and the validation set to optimise the parameters. In each experiment we retain components constituting to 99% of the variance. In the Results section we analyse the feature weights for the components of the best performing feature learning method.</p>
+<p>A classification task is used to assess the quality of the learned space and optimise the parameters. An ideal music similarity space separates well data points belonging to different music classes and good classification results can be achieved with simple classifiers. We are not interested to build a powerful classifier since our primary aim is to assess the learned embeddings and not to optimise the classification task itself. We therefore focus on classifiers widely used in the machine learning community [<xref ref-type="bibr" rid="pone.0189399.ref097">97</xref>]. We train 4 classifiers, K-Nearest Neighbour (KNN), Linear Discriminant Analysis (LDA), Support Vector Machines (SVM), and Random Forest (RF), to predict the country label of a recording. The purpose of the classification task is to optimise the window size <italic>w</italic> of the audio descriptors and assess the quality of the learned spaces in order to select the optimal feature learning method for our data. We use the classification F-score metric to compare the performance of the models. In the Results section we also analyse the coefficients of the best performing classifier.</p>
+<p>In order to assess the contribution of different features to the classification task we consider 5 sets of features: a) scale transform (rhythmic) b) MFCCs (timbral), c) average chroma vectors (harmonic), d) pitch bi-histograms (melodic), and e) the combination of all the above. In each case, feature learning is applied on the selected feature set and frame-based projections are aggregated using the mean prior to classification. We also tested for aggregation using the mean and standard deviation of frame-based descriptors but this did not improve results; hence it was omitted. In the case of testing the combination of all features (e), we first reduce dimensionality for each feature set separately and then concatenate the components from all feature sets before mean aggregation and classification. Results for the feature learning optimisation and classification experiments are presented in the Results section.</p>
+</sec>
+</sec>
+<sec id="sec013">
+<title>Data mining</title>
+<sec id="sec014">
+<title>Outlier recordings</title>
+<p>The feature learning and classification methods described above (Feature learning section) identify the optimal projection for the data. In the next step of the analysis we use the projected space to investigate music dissimilarity and identify outliers in the dataset. A recording is considered an outlier if it is distinct compared to the whole set of recordings. We detect outliers based on a method of squared Mahalanobis distances [<xref ref-type="bibr" rid="pone.0189399.ref013">13</xref>, <xref ref-type="bibr" rid="pone.0189399.ref098">98</xref>]. Using Mahalanobis, a high-dimensional feature vector is expressed as the distance to the mean of the distribution in standard deviation units. Let <inline-formula id="pone.0189399.e001"><alternatives><graphic id="pone.0189399.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e001" xlink:type="simple"/><mml:math display="inline" id="M1"><mml:mrow><mml:mi>X</mml:mi> <mml:mo>∈</mml:mo> <mml:msup><mml:mi mathvariant="double-struck">R</mml:mi> <mml:mrow><mml:mi>I</mml:mi> <mml:mo>×</mml:mo> <mml:mi>J</mml:mi></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> denote the set of observations for <italic>I</italic> recordings and <italic>J</italic> features. The Mahalanobis distance for observation <bold>x</bold><sub><bold>i</bold></sub> = (<italic>x</italic><sub>1</sub>, <italic>x</italic><sub>2</sub>, …, <italic>x</italic><sub><italic>J</italic></sub>)<sup><italic>T</italic></sup> for recording <italic>i</italic> from the set of observations <italic>X</italic> with mean <italic>μ</italic> = (<italic>μ</italic><sub>1</sub>, <italic>μ</italic><sub>2</sub>, …, <italic>μ</italic><sub><italic>J</italic></sub>)<sup><italic>T</italic></sup> and covariance matrix <italic>S</italic> is denoted
+<disp-formula id="pone.0189399.e002"><alternatives><graphic id="pone.0189399.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e002" xlink:type="simple"/><mml:math display="block" id="M2"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>D</mml:mi> <mml:mi>M</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi mathvariant="bold">x</mml:mi> <mml:mi mathvariant="bold">i</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:msqrt><mml:mrow><mml:msup><mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi mathvariant="bold">x</mml:mi> <mml:mi mathvariant="bold">i</mml:mi></mml:msub> <mml:mo>-</mml:mo> <mml:mi>μ</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mi>T</mml:mi></mml:msup> <mml:msup><mml:mi>S</mml:mi> <mml:mrow><mml:mo>-</mml:mo> <mml:mn>1</mml:mn></mml:mrow></mml:msup> <mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi mathvariant="bold">x</mml:mi> <mml:mi mathvariant="bold">i</mml:mi></mml:msub> <mml:mo>-</mml:mo> <mml:mi>μ</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:msqrt> <mml:mo>.</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(1)</label></disp-formula>
+Data points that lie beyond a threshold, typically set to the <italic>q</italic> = 97.5% quantile of the chi-square distribution with <italic>J</italic> degrees of freedom [<xref ref-type="bibr" rid="pone.0189399.ref099">99</xref>], are considered outliers. This is denoted
+<disp-formula id="pone.0189399.e003"><alternatives><graphic id="pone.0189399.e003g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e003" xlink:type="simple"/><mml:math display="block" id="M3"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>O</mml:mi> <mml:mo>=</mml:mo> <mml:mo>{</mml:mo> <mml:mi>i</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>H</mml:mi> <mml:mo>|</mml:mo> <mml:msub><mml:mi>D</mml:mi> <mml:mi>M</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi mathvariant="bold">x</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>&gt;</mml:mo> <mml:msqrt><mml:msubsup><mml:mi>χ</mml:mi> <mml:mrow><mml:mi>J</mml:mi> <mml:mo>,</mml:mo> <mml:mi>q</mml:mi></mml:mrow> <mml:mn>2</mml:mn></mml:msubsup></mml:msqrt> <mml:mo>}</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(2)</label></disp-formula>
+where <italic>H</italic> = {1, 2, …, <italic>I</italic>} denotes the index of the observations.</p>
+<p>Due to the high dimensionality of our feature vectors every data point can be considered far from the centre of the distribution [<xref ref-type="bibr" rid="pone.0189399.ref100">100</xref>]. To compensate for a possible large amount of outliers we consider a higher threshold based on the <italic>q</italic> = 99.9% quantile of the chi-square distribution.</p>
+<p>To gain a better understanding of the type of outliers for each country we detect outliers using a) rhythmic, b) timbral, c) harmonic, and d) melodic features. For example, for <italic>J</italic><sub><italic>R</italic></sub> the dimensionality of the rhythmic feature vector and <inline-formula id="pone.0189399.e004"><alternatives><graphic id="pone.0189399.e004g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e004" xlink:type="simple"/><mml:math display="inline" id="M4"><mml:mrow><mml:msub><mml:mi>X</mml:mi> <mml:mi>R</mml:mi></mml:msub> <mml:mo>∈</mml:mo> <mml:msup><mml:mi mathvariant="double-struck">R</mml:mi> <mml:mrow><mml:mi>I</mml:mi> <mml:mo>×</mml:mo> <mml:msub><mml:mi>J</mml:mi> <mml:mi>R</mml:mi></mml:msub></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> the set of observations, the set of outlier recordings with respect to rhythmic characteristics is denoted
+<disp-formula id="pone.0189399.e005"><alternatives><graphic id="pone.0189399.e005g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e005" xlink:type="simple"/><mml:math display="block" id="M5"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>O</mml:mi> <mml:mi>R</mml:mi></mml:msub> <mml:mo>=</mml:mo> <mml:mrow><mml:mo>{</mml:mo> <mml:mi>i</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>H</mml:mi> <mml:mo>|</mml:mo> <mml:msub><mml:mi>D</mml:mi> <mml:mi>M</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi mathvariant="bold">x</mml:mi> <mml:mrow><mml:mi>R</mml:mi> <mml:mo>,</mml:mo> <mml:mi>i</mml:mi></mml:mrow></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>&gt;</mml:mo> <mml:msqrt><mml:msubsup><mml:mi>χ</mml:mi> <mml:mrow><mml:msub><mml:mi>J</mml:mi> <mml:mi>R</mml:mi></mml:msub> <mml:mo>,</mml:mo> <mml:mn>99</mml:mn> <mml:mo>.</mml:mo> <mml:mn>9</mml:mn></mml:mrow> <mml:mn>2</mml:mn></mml:msubsup></mml:msqrt> <mml:mo>}</mml:mo></mml:mrow></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(3)</label></disp-formula>
+for observation <bold>x</bold><sub><italic>R</italic>,<italic>i</italic></sub> ∈ <italic>X</italic><sub><italic>R</italic></sub>. We detect outliers with respect to rhythmic (<italic>O</italic><sub><italic>R</italic></sub>), timbral (<italic>O</italic><sub><italic>T</italic></sub>), melodic (<italic>O</italic><sub><italic>M</italic></sub>), and harmonic (<italic>O</italic><sub><italic>H</italic></sub>) characteristics.</p>
+</sec>
+<sec id="sec015">
+<title>Spatial neighbourhoods</title>
+<p>In the previous section outliers were detected by comparing a recording to all other recordings in the dataset. Here we take into account spatial relations and compare recordings from a given country only to recordings of its neighbouring countries. In this way we are able to identify spatial outliers, i.e. recordings that are outliers compared to their spatial neighbours [<xref ref-type="bibr" rid="pone.0189399.ref057">57</xref>]. We construct spatial neighbourhoods based on contiguity and distance criteria: a) two countries are neighbours if they share a border (a vertex or an edge of their polygon shape), b) if a country doesn’t border with any other country (e.g., the country is an island) its neighbours are defined by the 3 closest countries estimated via the Euclidean distance between the geographical coordinates (latitude and longitude) of the centre of each country.</p>
+<p>Let <italic>N</italic><sub><italic>i</italic></sub> denote the set of neighbours for country <italic>i</italic> estimated via
+<disp-formula id="pone.0189399.e006"><alternatives><graphic id="pone.0189399.e006g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e006" xlink:type="simple"/><mml:math display="block" id="M6"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>N</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo>=</mml:mo> <mml:mrow><mml:mo>{</mml:mo> <mml:mi>j</mml:mi> <mml:mo>∈</mml:mo> <mml:mrow><mml:mo>{</mml:mo> <mml:mn>1</mml:mn> <mml:mo>,</mml:mo> <mml:mo>…</mml:mo> <mml:mo>,</mml:mo> <mml:mi>R</mml:mi> <mml:mo>}</mml:mo></mml:mrow> <mml:mo>|</mml:mo> <mml:mtext>j</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>is</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>neighbour</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>to</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>i</mml:mtext> <mml:mo>}</mml:mo></mml:mrow></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(4)</label></disp-formula>
+for <italic>R</italic> the number of countries. The spatial neighbourhood is represented as a weight matrix <inline-formula id="pone.0189399.e007"><alternatives><graphic id="pone.0189399.e007g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e007" xlink:type="simple"/><mml:math display="inline" id="M7"><mml:mrow><mml:mi>W</mml:mi> <mml:mo>∈</mml:mo> <mml:msup><mml:mi mathvariant="double-struck">R</mml:mi> <mml:mrow><mml:mi>R</mml:mi> <mml:mo>×</mml:mo> <mml:mi>R</mml:mi></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> where entry <italic>w</italic><sub><italic>ij</italic></sub> ∈ <italic>W</italic> is non-zero whenever country <italic>j</italic> is neighbour to country <italic>i</italic>. This is denoted
+<disp-formula id="pone.0189399.e008"><alternatives><graphic id="pone.0189399.e008g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e008" xlink:type="simple"/><mml:math display="block" id="M8"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>w</mml:mi> <mml:mrow><mml:mi>i</mml:mi> <mml:mi>j</mml:mi></mml:mrow></mml:msub> <mml:mo>=</mml:mo> <mml:mo>{</mml:mo> <mml:mtable><mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:mfrac><mml:mn>1</mml:mn> <mml:msub><mml:mi>n</mml:mi> <mml:mi>i</mml:mi></mml:msub></mml:mfrac> <mml:mo>,</mml:mo></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mtext>if</mml:mtext> <mml:mspace width="4.pt"/><mml:mi>j</mml:mi> <mml:mo>∈</mml:mo> <mml:msub><mml:mi>N</mml:mi> <mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:mn>0</mml:mn> <mml:mo>,</mml:mo></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mtext>otherwise</mml:mtext></mml:mtd></mml:mtr></mml:mtable> <mml:mo/></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(5)</label></disp-formula>
+where <italic>n</italic><sub><italic>i</italic></sub> = |<italic>N</italic><sub><italic>i</italic></sub>| denotes the total number of neighbours for country <italic>i</italic>. By definition, weight matrix W is row-standardized, <inline-formula id="pone.0189399.e009"><alternatives><graphic id="pone.0189399.e009g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e009" xlink:type="simple"/><mml:math display="inline" id="M9"><mml:mrow><mml:msubsup><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>R</mml:mi></mml:msubsup> <mml:msub><mml:mi>w</mml:mi> <mml:mrow><mml:mi>i</mml:mi> <mml:mi>j</mml:mi></mml:mrow></mml:msub> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+<p>Table in <xref ref-type="supplementary-material" rid="pone.0189399.s001">S1 Table</xref> provides the neighbours of each country as estimated via this approach. The geographical boundaries of each country are derived from spatial data available via the Natural Earth platform [<xref ref-type="bibr" rid="pone.0189399.ref101">101</xref>].</p>
+<p>The set of recordings from a given country is appended with recordings from neighbouring countries as defined by the country’s spatial neighbourhood (<xref ref-type="supplementary-material" rid="pone.0189399.s001">S1 Table</xref>). This set is used to detect outliers with the Mahalanobis distance as defined in <xref ref-type="disp-formula" rid="pone.0189399.e003">Eq 2</xref>. Spatial outliers are detected in this manner for all countries in our dataset.</p>
+</sec>
+<sec id="sec016">
+<title>Outlier countries</title>
+<p>The unit of analysis in the previous sections was the individual recordings. In this section we move one level up and place the focus at the country. We detect outlier countries in a similar manner as before where country features now summarise the information of the underlying recordings. The advantage of placing the focus at the country level is that the feature representations can now summarise the variety of styles that exist in the music of a country. Outliers are not judged by individual recordings but rather by the distribution of the whole set of recordings of each country.</p>
+<p>We use <italic>K</italic>-means clustering to map recording representations to one of <italic>K</italic> clusters. The country representation is then derived from a histogram count of the <italic>K</italic> clusters of its recordings. Let <inline-formula id="pone.0189399.e010"><alternatives><graphic id="pone.0189399.e010g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e010" xlink:type="simple"/><mml:math display="inline" id="M10"><mml:mrow><mml:mi>X</mml:mi> <mml:mo>∈</mml:mo> <mml:msup><mml:mi mathvariant="double-struck">R</mml:mi> <mml:mrow><mml:mi>I</mml:mi> <mml:mo>×</mml:mo> <mml:mi>J</mml:mi></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> denote the set of observations for <italic>I</italic> recordings and <italic>J</italic> features. We compute <italic>K</italic>-means for <italic>X</italic> and map recordings to one of <italic>K</italic> clusters. We use a linear encoding function <inline-formula id="pone.0189399.e011"><alternatives><graphic id="pone.0189399.e011g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e011" xlink:type="simple"/><mml:math display="inline" id="M11"><mml:mrow><mml:mi>f</mml:mi> <mml:mo>:</mml:mo> <mml:msup><mml:mi mathvariant="double-struck">R</mml:mi> <mml:mi>J</mml:mi></mml:msup> <mml:mo>→</mml:mo> <mml:msup><mml:mi mathvariant="double-struck">R</mml:mi> <mml:mi>K</mml:mi></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> so that each recording representation <inline-formula id="pone.0189399.e012"><alternatives><graphic id="pone.0189399.e012g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e012" xlink:type="simple"/><mml:math display="inline" id="M12"><mml:mrow><mml:msub><mml:mi mathvariant="bold">x</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo>∈</mml:mo> <mml:msup><mml:mi mathvariant="double-struck">R</mml:mi> <mml:mi>J</mml:mi></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> for <italic>i</italic> = 1, …, <italic>I</italic> is mapped to a vector <inline-formula id="pone.0189399.e013"><alternatives><graphic id="pone.0189399.e013g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e013" xlink:type="simple"/><mml:math display="inline" id="M13"><mml:mrow><mml:msub><mml:mover accent="true"><mml:mi mathvariant="bold">x</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mi>i</mml:mi></mml:msub> <mml:mo>∈</mml:mo> <mml:msup><mml:mi mathvariant="double-struck">R</mml:mi> <mml:mi>K</mml:mi></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> via the dot product between <bold>x</bold><sub><italic>i</italic></sub> and the cluster centroids <inline-formula id="pone.0189399.e014"><alternatives><graphic id="pone.0189399.e014g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e014" xlink:type="simple"/><mml:math display="inline" id="M14"><mml:mrow><mml:msub><mml:mi mathvariant="bold">m</mml:mi> <mml:mi>k</mml:mi></mml:msub> <mml:mo>∈</mml:mo> <mml:msup><mml:mi mathvariant="double-struck">R</mml:mi> <mml:mi>J</mml:mi></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> for <italic>k</italic> = 1, …, <italic>K</italic> clusters. The feature vector for a country <inline-formula id="pone.0189399.e015"><alternatives><graphic id="pone.0189399.e015g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e015" xlink:type="simple"/><mml:math display="inline" id="M15"><mml:mrow><mml:msub><mml:mi mathvariant="bold">c</mml:mi> <mml:mi>r</mml:mi></mml:msub> <mml:mo>∈</mml:mo> <mml:msup><mml:mi mathvariant="double-struck">R</mml:mi> <mml:mi>K</mml:mi></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> is the normalised histogram count of <italic>K</italic> clusters for recordings <italic>i</italic> from country <italic>r</italic>, denoted
+<disp-formula id="pone.0189399.e016"><alternatives><graphic id="pone.0189399.e016g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e016" xlink:type="simple"/><mml:math display="block" id="M16"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mi mathvariant="bold">c</mml:mi> <mml:mi>r</mml:mi> <mml:mo>′</mml:mo></mml:msubsup> <mml:mo>=</mml:mo> <mml:munder><mml:mo>∑</mml:mo> <mml:mi>i</mml:mi></mml:munder> <mml:mi>f</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi mathvariant="bold">x</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>.</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(6)</label></disp-formula>
+Each histogram is normalised to the unit norm, where <inline-formula id="pone.0189399.e017"><alternatives><graphic id="pone.0189399.e017g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e017" xlink:type="simple"/><mml:math display="inline" id="M17"><mml:mrow><mml:msub><mml:mi mathvariant="bold">c</mml:mi> <mml:mi>r</mml:mi></mml:msub> <mml:mo>=</mml:mo> <mml:mfrac><mml:msubsup><mml:mi mathvariant="bold">c</mml:mi> <mml:mi>r</mml:mi> <mml:mo>′</mml:mo></mml:msubsup> <mml:mrow><mml:mrow><mml:mo>∥</mml:mo></mml:mrow> <mml:msubsup><mml:mi mathvariant="bold">c</mml:mi> <mml:mi>r</mml:mi> <mml:mo>′</mml:mo></mml:msubsup> <mml:mrow><mml:mo>∥</mml:mo></mml:mrow></mml:mrow></mml:mfrac></mml:mrow></mml:math></alternatives></inline-formula>. Let <inline-formula id="pone.0189399.e018"><alternatives><graphic id="pone.0189399.e018g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e018" xlink:type="simple"/><mml:math display="inline" id="M18"><mml:mrow><mml:mi>C</mml:mi> <mml:mo>∈</mml:mo> <mml:msup><mml:mi mathvariant="double-struck">R</mml:mi> <mml:mrow><mml:mi>R</mml:mi> <mml:mo>×</mml:mo> <mml:mi>K</mml:mi></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> denote the feature representations for <italic>R</italic> countries and <italic>K</italic> clusters derived as explained above. The optimal number <italic>K</italic> of clusters is decided based on the silhouette score [<xref ref-type="bibr" rid="pone.0189399.ref102">102</xref>] after evaluating <italic>K</italic>-means for <italic>K</italic> between 10 and 30 clusters.</p>
+<p>We estimate similarity between countries via hierarchical clustering [<xref ref-type="bibr" rid="pone.0189399.ref103">103</xref>]. For consistency with the previous outlier detection method (section Outliers at the recording level), we use Mahalanobis distance to estimate pairwise similarity between countries. Pairwise Mahalanobis distance between countries is denoted
+<disp-formula id="pone.0189399.e019"><alternatives><graphic id="pone.0189399.e019g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e019" xlink:type="simple"/><mml:math display="block" id="M19"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>D</mml:mi> <mml:mi>M</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi mathvariant="bold">c</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo>,</mml:mo> <mml:msub><mml:mi mathvariant="bold">c</mml:mi> <mml:mi>j</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:msqrt><mml:mrow><mml:msup><mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi mathvariant="bold">c</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo>-</mml:mo> <mml:msub><mml:mi mathvariant="bold">c</mml:mi> <mml:mi>j</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mi>T</mml:mi></mml:msup> <mml:msup><mml:mover accent="true"><mml:mi>S</mml:mi> <mml:mo>¯</mml:mo></mml:mover> <mml:mrow><mml:mo>-</mml:mo> <mml:mn>1</mml:mn></mml:mrow></mml:msup> <mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi mathvariant="bold">c</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo>-</mml:mo> <mml:msub><mml:mi mathvariant="bold">c</mml:mi> <mml:mi>j</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:msqrt></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(7)</label></disp-formula>
+where <inline-formula id="pone.0189399.e020"><alternatives><graphic id="pone.0189399.e020g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0189399.e020" xlink:type="simple"/><mml:math display="inline" id="M20"><mml:mover accent="true"><mml:mi>S</mml:mi> <mml:mo>¯</mml:mo></mml:mover></mml:math></alternatives></inline-formula> is the covariance matrix and <italic>i</italic>, <italic>j</italic> ∈ {1, 2, …, <italic>R</italic>}. A hierarchy of countries is constructed using the average distance between sets of observations as the linkage criterion.</p>
+</sec>
+</sec>
+</sec>
+<sec id="sec017" sec-type="results">
+<title>Results</title>
+<sec id="sec018">
+<title>Parameter optimisation</title>
+<p>As mentioned in the Audio content analysis section, the window size <italic>w</italic> in the feature extraction process (Features section) was optimised based on a classification task. Given the feature transformed representations of each recording in the training set, we trained 4 classifiers (KNN, LDA, SVM, RF), to predict the country label of a recording. Parameter optimisation was based on the classification accuracy on the validation data. We used the weighted average of the F-measure of each class [<xref ref-type="bibr" rid="pone.0189399.ref104">104</xref>], referred to as F-score, to report classification performance in this case of unbalanced data classes. <xref ref-type="fig" rid="pone.0189399.g006">Fig 6</xref> shows the classification F-score of the best performing classifier (LDA) for a range of window sizes <italic>w</italic>. Based on this evaluation the optimal window size was <italic>w</italic> = 8 seconds with highest F-score of 0.37 for the LDA classifier in combination with the LDA-transformed features.</p>
+<fig id="pone.0189399.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>Classification F-score on the validation set for the best performing classifier (LDA) across different window sizes.</title>
+<p>Accuracies are compared for different feature learning methods (PCA, LDA, NMF, SSNMF). Combinations of window sizes are marked by ‘+’ in (a), for example ‘4+8’ represents the accuracy when combining features from the 4-second and the 8-second windows. Considering the performance of all feature learning methods, the optimal window size is 8 seconds.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.g006" xlink:type="simple"/>
+</fig>
+<p>The dimensions of the LDA-transformed features can be explained in the following way. LDA components for the rhythmic features give more weight to the periodicities of the high-frequency Mel bands (above 1758 Hz). Melodic features receive similar weights for both the bases and activations of the pitch bi-histogram. LDA components for the harmonic features assign more weight to relative pitch values (mean of chroma vectors) rather than pitch fluctuations (standard deviation of chroma vectors) over time. LDA components for timbral features focus on timbre fluctuation (mean and standard deviation of MFCC delta coefficients) over time. This is opposite to the behaviour of PCA transformation where components focus on absolute timbre qualities (mean and standard deviation of MFCC coefficients) over time. <xref ref-type="fig" rid="pone.0189399.g007">Fig 7</xref> illustrates the difference between LDA and PCA components for the timbral features.</p>
+<fig id="pone.0189399.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>LDA and PCA components weigh timbral features in opposite ways.</title>
+<p>(A) LDA components focus on timbre fluctuation (mean and standard deviation of MFCC delta coefficients) over time. (B) PCA components focus on absolute timbre qualities (mean and standard deviation of MFCC coefficients) over time.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.g007" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec019">
+<title>Classification</title>
+<p>The classification results for the different classifiers in combination with the feature learning methods are presented in <xref ref-type="table" rid="pone.0189399.t001">Table 1</xref>. Classification accuracy of the test set was assessed after fixing the window size of the feature extraction to <italic>w</italic> = 8 seconds as found optimal in section Parameter optimisation. Results suggest that the best classifier for our data when the combination of all features is considered is the LDA classifier with the LDA-transformed features (classification F-score of 0.321). Rhythmic, melodic, and harmonic features achieved best classification performance for the LDA-transformed features and the LDA classifier whereas timbral features achieved best classification performance for the LDA-transformed features and the SVM classifier. The first 10 components of the LDA classifier trained with the LDA-transformed features give more weight to the timbral and harmonic dimensions and explain 24% of the variance. The remaining components give more weight to the rhythmic and melodic dimensions. More information on the classification results and confusion matrices can be found in the published code repository (<ext-link ext-link-type="uri" xlink:href="http://github.com/mpanteli/music-outliers" xlink:type="simple">http://github.com/mpanteli/music-outliers</ext-link>).</p>
+<table-wrap id="pone.0189399.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.t001</object-id>
+<label>Table 1</label>
+<caption>
+<title>Classification F-scores of the test set for the country of recording (– denotes no transformation).</title>
+</caption>
+<alternatives>
+<graphic id="pone.0189399.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.t001" xlink:type="simple"/>
+<table border="0" frame="box" rules="all">
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="2">Transform</th>
+<th align="center" rowspan="2">Classifier</th>
+<th align="center" colspan="5">F-score</th>
+</tr>
+<tr>
+<th align="center">All</th>
+<th align="center">Rhythm</th>
+<th align="center">Melody</th>
+<th align="center">Timbre</th>
+<th align="center">Harmony</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">LDA</td>
+<td align="left">LDA</td>
+<td align="char" char=".">0.321</td>
+<td align="char" char=".">0.150</td>
+<td align="char" char=".">0.070</td>
+<td align="char" char=".">0.199</td>
+<td align="char" char=".">0.107</td>
+</tr>
+<tr>
+<td align="left">SSNMF</td>
+<td align="left">LDA</td>
+<td align="char" char=".">0.183</td>
+<td align="char" char=".">0.053</td>
+<td align="char" char=".">0.039</td>
+<td align="char" char=".">0.165</td>
+<td align="char" char=".">0.082</td>
+</tr>
+<tr>
+<td align="left">NMF</td>
+<td align="left">LDA</td>
+<td align="char" char=".">0.178</td>
+<td align="char" char=".">0.059</td>
+<td align="char" char=".">0.046</td>
+<td align="char" char=".">0.166</td>
+<td align="char" char=".">0.086</td>
+</tr>
+<tr>
+<td align="left">–</td>
+<td align="left">LDA</td>
+<td align="char" char=".">0.177</td>
+<td align="char" char=".">0.060</td>
+<td align="char" char=".">0.038</td>
+<td align="char" char=".">0.191</td>
+<td align="char" char=".">0.084</td>
+</tr>
+<tr>
+<td align="left">PCA</td>
+<td align="left">LDA</td>
+<td align="char" char=".">0.175</td>
+<td align="char" char=".">0.055</td>
+<td align="char" char=".">0.046</td>
+<td align="char" char=".">0.162</td>
+<td align="char" char=".">0.084</td>
+</tr>
+<tr>
+<td align="left">LDA</td>
+<td align="left">KNN</td>
+<td align="char" char=".">0.152</td>
+<td align="char" char=".">0.055</td>
+<td align="char" char=".">0.023</td>
+<td align="char" char=".">0.282</td>
+<td align="char" char=".">0.086</td>
+</tr>
+<tr>
+<td align="left">SSNMF</td>
+<td align="left">KNN</td>
+<td align="char" char=".">0.143</td>
+<td align="char" char=".">0.043</td>
+<td align="char" char=".">0.015</td>
+<td align="char" char=".">0.227</td>
+<td align="char" char=".">0.072</td>
+</tr>
+<tr>
+<td align="left">PCA</td>
+<td align="left">KNN</td>
+<td align="char" char=".">0.141</td>
+<td align="char" char=".">0.053</td>
+<td align="char" char=".">0.027</td>
+<td align="char" char=".">0.221</td>
+<td align="char" char=".">0.081</td>
+</tr>
+<tr>
+<td align="left">–</td>
+<td align="left">KNN</td>
+<td align="char" char=".">0.140</td>
+<td align="char" char=".">0.052</td>
+<td align="char" char=".">0.027</td>
+<td align="char" char=".">0.222</td>
+<td align="char" char=".">0.082</td>
+</tr>
+<tr>
+<td align="left">NMF</td>
+<td align="left">KNN</td>
+<td align="char" char=".">0.114</td>
+<td align="char" char=".">0.043</td>
+<td align="char" char=".">0.029</td>
+<td align="char" char=".">0.178</td>
+<td align="char" char=".">0.080</td>
+</tr>
+<tr>
+<td align="left">–</td>
+<td align="left">RF</td>
+<td align="char" char=".">0.083</td>
+<td align="char" char=".">0.040</td>
+<td align="char" char=".">0.032</td>
+<td align="char" char=".">0.114</td>
+<td align="char" char=".">0.057</td>
+</tr>
+<tr>
+<td align="left">LDA</td>
+<td align="left">RF</td>
+<td align="char" char=".">0.071</td>
+<td align="char" char=".">0.031</td>
+<td align="char" char=".">0.017</td>
+<td align="char" char=".">0.150</td>
+<td align="char" char=".">0.051</td>
+</tr>
+<tr>
+<td align="left">NMF</td>
+<td align="left">RF</td>
+<td align="char" char=".">0.063</td>
+<td align="char" char=".">0.032</td>
+<td align="char" char=".">0.020</td>
+<td align="char" char=".">0.126</td>
+<td align="char" char=".">0.042</td>
+</tr>
+<tr>
+<td align="left">PCA</td>
+<td align="left">RF</td>
+<td align="char" char=".">0.046</td>
+<td align="char" char=".">0.026</td>
+<td align="char" char=".">0.019</td>
+<td align="char" char=".">0.140</td>
+<td align="char" char=".">0.045</td>
+</tr>
+<tr>
+<td align="left">SSNMF</td>
+<td align="left">RF</td>
+<td align="char" char=".">0.045</td>
+<td align="char" char=".">0.031</td>
+<td align="char" char=".">0.018</td>
+<td align="char" char=".">0.116</td>
+<td align="char" char=".">0.035</td>
+</tr>
+<tr>
+<td align="left">LDA</td>
+<td align="left">SVM</td>
+<td align="char" char=".">0.023</td>
+<td align="char" char=".">0.079</td>
+<td align="char" char=".">0.050</td>
+<td align="char" char=".">0.296</td>
+<td align="char" char=".">0.090</td>
+</tr>
+<tr>
+<td align="left">SSNMF</td>
+<td align="left">SVM</td>
+<td align="char" char=".">0.021</td>
+<td align="char" char=".">0.011</td>
+<td align="char" char=".">0.005</td>
+<td align="char" char=".">0.019</td>
+<td align="char" char=".">0.014</td>
+</tr>
+<tr>
+<td align="left">NMF</td>
+<td align="left">SVM</td>
+<td align="char" char=".">0.016</td>
+<td align="char" char=".">0.008</td>
+<td align="char" char=".">0.008</td>
+<td align="char" char=".">0.011</td>
+<td align="char" char=".">0.012</td>
+</tr>
+<tr>
+<td align="left">–</td>
+<td align="left">SVM</td>
+<td align="char" char=".">0.015</td>
+<td align="char" char=".">0.047</td>
+<td align="char" char=".">0.038</td>
+<td align="char" char=".">0.250</td>
+<td align="char" char=".">0.088</td>
+</tr>
+<tr>
+<td align="left">PCA</td>
+<td align="left">SVM</td>
+<td align="char" char=".">0.015</td>
+<td align="char" char=".">0.048</td>
+<td align="char" char=".">0.039</td>
+<td align="char" char=".">0.246</td>
+<td align="char" char=".">0.092</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t001fn001">
+<p>The window size of the features is 8 seconds as found optimal in section Parameter optimisation. Results are sorted by highest to lowest F-score of the combination of all features (‘All’).</p>
+</fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec020">
+<title>Outliers at the recording level</title>
+<p>We found the optimal feature learning method (LDA) that best approximates music similarity in our data as defined by the classification task (Classification section). We use the LDA-projected space to investigate music dissimilarity and identify outliers in the dataset.</p>
+<p>From a total number of 8200 recordings we identify 1706 recordings as outliers. The distribution of outliers per country, normalised by the number of recordings per country in our dataset, is summarised in <xref ref-type="fig" rid="pone.0189399.g008">Fig 8</xref>. We observe that the country with the most outliers is Botswana with 61% (55 out of 90) of its recordings identified as outliers, followed by Ivory Coast (60%, 9 out of 15), Chad (55%, 6 out of 11), and Benin (54%, 14 out of 26). The percentage of outliers per country was not significantly correlated with the number of recordings sampled from that country (Pearson correlation coefficient <italic>r</italic> = −0.01 with <italic>p</italic>-value = 0.91).</p>
+<fig id="pone.0189399.g008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.g008</object-id>
+<label>Fig 8</label>
+<caption>
+<title>Distribution of outliers per country.</title>
+<p>The colour scale corresponds to the normalised number of outliers per country, where 0% indicates that none of the recordings of the country were identified as outliers and 100% indicates that all of the recordings of the country are outliers.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.g008" xlink:type="simple"/>
+</fig>
+<p>Listening to some examples we summarise the following timbral characteristics for the outliers. Outlier recordings from Botswana include solo performances of the mouthbow and dance songs featuring group singing accompanied with handclapping or other percussion. Outlier recordings from Ivory Coast feature music from the Kroo ethnic group who originated in eastern Liberia and consist of polyphonic music with singing accompanied by woodwind and guitar instruments. Outlier recordings from Chad feature mainly dance music with emphasis on percussive and wind instruments as well as examples of the singing voice in solo and group performances. Outliers from French Guiana feature solo flute performances and singing with percussive accompaniment. Outlier recordings from Gambia include examples of group singing with percussive accompaniment of drums, jingles and wooden blocks, solo performances of the gong and flute. Outlier recordings from Benin include solo performances of the Yoruba drums and music from the Fon culture including examples of group singing with gong accompaniment.</p>
+<p>To gain a deeper understanding of the type of outliers for each country we detect outliers using a) rhythmic, b) timbral, c) melodic, and d) harmonic features. Results are shown in <xref ref-type="fig" rid="pone.0189399.g009">Fig 9</xref>. With respect to rhythmic aspects the countries with the most outliers are Benin (50%, 13 out of 26), Botswana (49%, 44 out of 90), and Nepal (42%, 40 out of 95). The countries with the most outliers with respect to timbral characteristics are French Guiana (78%, 19 out of 28), Botswana (48%, 43 out of 90), and Ivory Coast (40%, 5 out of 13). The countries with the most outliers with respect to melodic aspects are Zimbabwe (53%, 8 out of 15), Uruguay (48%, 15 out of 31), and Guinea (46%, 5 out of 11) and with respect to harmonic aspects Benin (54%, 14 out of 26), Pakistan (46%, 42 out of 91), and Gambia (36%, 18 out of 50).</p>
+<fig id="pone.0189399.g009" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.g009</object-id>
+<label>Fig 9</label>
+<caption>
+<title>Distribution of outliers per country for each feature.</title>
+<p>Outliers detected for features of (A) rhythm, (B) timbre, (C) melody, and (D) harmony. The colour scale corresponds to the normalised number of outliers per country, from 0% of outliers (light colours) to 100% (dark colours).</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.g009" xlink:type="simple"/>
+</fig>
+<p>Listening to some examples we summarise the following characteristics for the outliers. Rhythmic outliers include examples from African polyrhythms as well as examples with frequent transitions between binary and ternary subdivisions. The most prominent instruments in the rhythmic outliers are pitched and non-pitched percussion. Most rhythmic outliers tend to have a ‘full’ rhythm, i.e. there are many onsets within each bar duration. Outliers with respect to timbral characteristics include solo performances of xylophones and gongs for example recordings from Botswana, Indonesia, and Gamelan recordings from the Philippines. Another category of instruments that often gives rise to timbre outliers are wind instruments such as reedpipes and flutes. Outliers with respect to melodic characteristics include polyphonic melodies performed on the accordion (e.g. recordings from Uruguay) or the mbira (e.g. recordings from Zimbabwe). With respect to harmony, outliers exhibit microtonal scales and feature instruments with distinct tuning, for example solo sitar or surnai performances from Pakistan, xylophone and gong performances from Benin and Indonesia. Listening examples can be found at the online demo (see <ext-link ext-link-type="uri" xlink:href="http://mpanteli.github.io/music-outliers/demo/outliers" xlink:type="simple">http://mpanteli.github.io/music-outliers/demo/outliers</ext-link>).</p>
+<sec id="sec021">
+<title>Spatial outliers</title>
+<p>In the previous section we detected outliers by comparing a recording to all other recordings in the dataset. Here we take into account spatial relations and we compare recordings from a given country only to recordings of its neighbouring countries (section Spatial neighbourhoods). We summarise the distribution of spatial outliers, normalised by the total number of recordings in each spatial neighbourhood, in <xref ref-type="fig" rid="pone.0189399.g010">Fig 10</xref>. Results show that China is the country with the most spatial outliers (26%, 26 out of 100), followed by Brazil (24%, 24 out of 100), Colombia (21%, 19 out of 90), and Mozambique (21%, 7 out of 34).</p>
+<fig id="pone.0189399.g010" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.g010</object-id>
+<label>Fig 10</label>
+<caption>
+<title>Distribution of outliers per country for the spatial neighbourhoods shown in <xref ref-type="supplementary-material" rid="pone.0189399.s001">S1 Table</xref>.</title>
+<p>The colour scale corresponds to the normalised number of outliers per country, from 0% of outliers (light colours) to 100% (dark colours).</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.g010" xlink:type="simple"/>
+</fig>
+<p>China is the country with most spatial neighbours in our dataset, bordering with 12 other countries for which we have music data (<xref ref-type="supplementary-material" rid="pone.0189399.s001">S1 Table</xref>). Recordings from China feature the butterfly harp string instrument and singing examples from the Han cultural group, often with a bright sound and prominent singing in relatively high frequencies. These examples are compared to various instruments and music styles from the neighbouring countries including lute performances from Kyrgyzstan, Mongolian jewish harp, Indian tala, Nepalese percussion and wind instrument performances, polyphonic singing from Vietnam and Laos, and instrumental pieces featuring the balalaika from Russia. Compared to the analysis of global outliers (<xref ref-type="fig" rid="pone.0189399.g008">Fig 8</xref>) we observe that recordings from China stand out only with respect to its spatial neighbourhoods but are not so distinct compared to the whole dataset of world music.</p>
+</sec>
+</sec>
+<sec id="sec022">
+<title>Outliers at the country level</title>
+<p>In this section we consider the country instead of the individual recordings as the unit of analysis and detect outlier countries as described in section Outlier countries.</p>
+<p>The silhouette score indicated an optimal number of <italic>K</italic> = 10 clusters. We refer to the country labels of each recording to give an overview of the music styles captured in each cluster. The 3 most frequent countries in each cluster are shown in <xref ref-type="fig" rid="pone.0189399.g011">Fig 11</xref>.</p>
+<fig id="pone.0189399.g011" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.g011</object-id>
+<label>Fig 11</label>
+<caption>
+<title>The top 3 countries for each of the 10 clusters.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.g011" xlink:type="simple"/>
+</fig>
+<p>The similarity between countries was estimated via hierarchical clustering. Results are presented in a dendrogram in <xref ref-type="fig" rid="pone.0189399.g012">Fig 12</xref>. The countries with the most distinct feature representations are South Sudan, Botswana, Ghana, Austria and Switzerland (in order of most to least distinct). The aforementioned countries were found dissimilar (with respect to a threshold) to any other country in our dataset.</p>
+<fig id="pone.0189399.g012" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0189399.g012</object-id>
+<label>Fig 12</label>
+<caption>
+<title>Hierarchical clustering of the 137 countries in our dataset.</title>
+<p>Each country was represented by the histogram of cluster mappings of its recordings (Outlier countries section). The most distinct countries are annotated with red colour.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.g012" xlink:type="simple"/>
+</fig>
+<p>Recordings from South Sudan feature mostly examples of the singing voice in solo and group performances. The use of solely the singing voice is what we believe makes the feature representation of South Sudan so different from other countries. A similar observation holds for recordings from Austria and Switzerland featuring mostly dance songs with accordion accompaniment. This might not be a unique music style across our dataset but the consistent use of this style in the recordings from Austria and Switzerland is what we think makes them most distinct from other countries. Botswana and Ghana, also detected as outlier countries with the hierarchical clustering approach, exhibit the use of a variety of music styles. Botswana was also detected as the country with the most outlier recordings compared to the global dataset (section Outliers at the recording level). We note that <xref ref-type="fig" rid="pone.0189399.g012">Fig 12</xref> also revealed some music similarity relationships between countries of geographical or cultural proximity. However, as the scope of this study is rather on music dissimilarity and outliers we leave the exploration of these relationships for future work.</p>
+</sec>
+</sec>
+<sec id="sec023" sec-type="conclusions">
+<title>Discussion</title>
+<p>We combined world music recordings from two large archives and proposed a methodology to extract music features and detect outliers in the dataset. We developed signal processing methods to process music information from the audio signal taking into account the challenges imposed by noisy and musically diverse recordings. Our analyses explored differences and similarities of world music and revealed geographical patterns of music outliers.</p>
+<p>We took into account several pre-processing steps to isolate relevant music information from the audio signal: speech segments were separated from music, frequencies above 8000 Hz were omitted for consistency with old recording equipment, and low-level music descriptors were combined with feature learning to give higher-level representations robust to diverse music characteristics. The size of the texture window was optimised and we found that longer windows (8 seconds) provide better representations for our music data than shorter ones (4,2,1 seconds). Feature learning was better in the supervised setting (LDA outperformed PCA and NMF) even though class labels (in this case countries) were not necessarily unique identifiers for the underlying musical content.</p>
+<p>We proposed a method to detect outliers and explored several ways of understanding the musical differences. We listed the countries with the most outlier recordings and expanded the analysis to explain which music features are distinct in these outlier recordings. For example, Botswana was the country with most of its recordings detected as outliers and feature analysis showed that those outliers were mostly due to rhythmic and timbral features. With respect to rhythmic features, African countries indicated the largest amount of outliers with recordings often featuring the use of polyrhythms. Harmonic outliers originated mostly from Southeast Asian countries such as Pakistan and Indonesia, and African countries such as Benin and Gambia with recordings often featuring inharmonic instruments such as the gong and bell.</p>
+<p>We ran a sensitivity experiment to check how stable our outlier findings are with respect to different datasets. We repeated the outlier analysis 10 times, each time selecting at random a stratified sample of 80% of the original dataset. The majority vote of outlier countries resulting in the top <italic>K</italic> = 10 positions of each experiment was used as the ground truth. Assessing the precision at <italic>K</italic> = 10 for each experiment assuming majority vote ground truth showed that the geographical patterns of outliers (<xref ref-type="fig" rid="pone.0189399.g008">Fig 8</xref>) were on average consistent across multiple random subsets of the original dataset (precision at <italic>K</italic> mean = 0.67, standard deviation = 0.06).</p>
+<p>Incorporating spatial information we were able to compare recordings from neighbouring countries. This gave rise to music cultures that are not distinct compared to the global dataset but are still unique compared to their spatial neighbours. For example, music from China with bright timbres was found to be unique compared to its many spatial neighbours. Music from Brazil was also distinct compared to its spatial neighbours, an observation that could be attributed to cultural differences such as the use of different languages between Brazil and its neighbouring countries. Proving historical and cultural influence is not the aim of this study but we believe our findings could provide a good starting point for further investigation.</p>
+<p>We also proposed a method to extract feature summaries for each country and estimated clusters for the whole set of recordings. We found 10 clusters to best represent the music styles in our dataset and observed recordings from geographically similar regions often clustered together. Hierarchical clustering at the country level representation revealed African countries such as South Sudan, Botswana, and Ghana as most distinct from others in the dataset.</p>
+<sec id="sec024">
+<title>Hubness</title>
+<p>This research deals with high dimensional vectors and analysis of nearest neighbour relationships. High dimensional spaces are prone to produce data points that appear in the neighbourhood of other points disproportionately often. We tested the effect of hubness in our data following the approach suggested by Schnitzer et al. [<xref ref-type="bibr" rid="pone.0189399.ref105">105</xref>]. We measured hubness as the skewness of the <italic>n</italic>-occurrence where <italic>n</italic>-occurrence defines the number of times track <italic>x</italic> occurs in the top <italic>n</italic> neighbours of other tracks. We used pairwise Mahalanobis distances and assessed the <italic>n</italic> nearest neighbours for each track in our dataset for <italic>n</italic> = 60, the average number of recordings per country. We observed a positively skewed distribution with hubness = 10.1. A total of 129 out of 8200 recordings occurred in the nearest neighbour lists of more than 1000 tracks (2% large hubs) and 3332 recordings had <italic>n</italic>-occurrence = 0 (41% orphans). Pairwise Mahalanobis distances in this study are only used for the computation of outlier countries (section Outlier countries). Future work could aim to reduce hubness via local scaling or mutual proximity [<xref ref-type="bibr" rid="pone.0189399.ref105">105</xref>].</p>
+</sec>
+<sec id="sec025">
+<title>Future work</title>
+<p>There are several steps in the overall methodology that could be implemented differently and audio excerpts and features could be expanded and improved. Numerous audio features have been proposed in the literature for describing musical content in sound recordings for various applications. We selected a small set of features from the MIR domain based on their state-of-the-art performance and relevance for world music analysis. It is clear that any such set of features does not capture all aspects of a set of musical recordings. Future work could explore the suitability of feature sets proposed by ethnomusicologists [<xref ref-type="bibr" rid="pone.0189399.ref020">20</xref>] or embeddings learned from raw audio or spectrograms [<xref ref-type="bibr" rid="pone.0189399.ref106">106</xref>].</p>
+<p>We used linear feature learning methods to learn higher-level representations from our low-level descriptors. Depending on the data and application, more powerful non-linear methods could be employed to learn meaningful feature representations [<xref ref-type="bibr" rid="pone.0189399.ref107">107</xref>]. What is more, our analysis relies on a bag-of-frames approach where temporal information of the entire music piece is lost by averaging short frames across time. Although this approach is in line with state of the art MIR research [<xref ref-type="bibr" rid="pone.0189399.ref087">87</xref>, <xref ref-type="bibr" rid="pone.0189399.ref090">90</xref>] alternative methods capturing temporal relationships such as Hidden Markov Models [<xref ref-type="bibr" rid="pone.0189399.ref108">108</xref>] could be considered.</p>
+<p>Like all studies of this nature our study is subject to sampling bias. Our observations on world music similarity are restricted to the dataset we analyse. It is difficult to gather representative samples of ‘all’ music of the world. We aimed to maximise geographical spread in the dataset by including as many countries as possible and representative samples from each country were drawn at random. This resulted in a total of 137 countries with a minimum of 10 recordings per country. Even though this is the largest and most diverse corpus of world music studied so far, there are many areas of the world and cultures that are not represented. The creation of a representative world music corpus will continue indefinitely as more music is recorded and the digitisation of archived recordings proceeds.</p>
+<p>In this study country labels have been considered a proxy to music style and have been used to train models for music similarity and dissimilarity. While countries provide a broad notion of ethnic boundaries, music styles are not homogeneous within these boundaries. A country may exhibit several music styles and a music style may spread across many countries. The ambiguity of these boundaries provides an upper limit to the performance of our models. This ambiguity could be reduced by incorporating more information, for example the culture or language of the musicians, to better approximate the music style of a recording. Extracting culture or language information from the currently available metadata requires additional manual labour and this is a task left for future work.</p>
+<p>Furthermore, a lot of information regarding the music style of a recording can be extracted from the date it was created. Music evolves over time, and two recordings from the same location but recorded with a time difference of 50 years may vary in their style. In this study we ignored temporal information and considered our dataset as a static collection of world music. Country of origin and recording date could be used together to define the music style of a recording.</p>
+<p>Our study focuses on the detection of outliers in music collections. The data we work with are numerical representations derived from a multi-step procedure of processing the audio signal. The suitability of the audio tools can be questioned with regard to their ability to capture and represent high-level musical concepts [<xref ref-type="bibr" rid="pone.0189399.ref070">70</xref>]. Likewise, the patterns we observe can sometimes be artifacts of the tools we use. We note that in this study the estimated outliers did not appear to be attributable to recording date differences or acoustic environments but quantitative and qualitative evaluation could be expanded [<xref ref-type="bibr" rid="pone.0189399.ref109">109</xref>].</p>
+</sec>
+</sec>
+<sec id="sec026" sec-type="conclusions">
+<title>Conclusion</title>
+<p>The comparison of world music cultures has been traditionally studied with non-computational tools. We investigated similarity in a large corpus of world music using signal processing and data mining tools. We analysed thousands of recordings from folk and traditional music from around the world and quantified differences and similarities. Our findings identify regions that have possibly developed unique musical characteristics such as Botswana, as well as China, which is most distinct from its neighbours. We have also explored geographical patterns of music outliers for different sets of features and found that Benin has the most outlier recordings with respect to rhythm and harmony, French Guiana with respect to timbre, and Zimbabwe with respect to melody. A categorisation into world music styles identified 10 clusters with South Sudan and Botswana exhibiting the most distinct use of these clusters. This is the first study to consider the computational analysis of such a large world music corpus. There is a lot to be explored yet and we believe continuing on this line of research will help us understand better the music cultures of the world.</p>
+</sec>
+<sec id="sec027">
+<title>Supporting information</title>
+<supplementary-material id="pone.0189399.s001" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pone.0189399.s001" xlink:type="simple">
+<label>S1 Table</label>
+<caption>
+<title>Spatial neighbours for each country in our dataset.</title>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ref-list>
+<title>References</title>
+<ref id="pone.0189399.ref001">
+<label>1</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Schedl</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Gómez</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Urbano</surname> <given-names>J</given-names></name>. <article-title>Music Information Retrieval: Recent Developments and Applications</article-title>. <source>Foundations and Trends<sup>®</sup> in Information Retrieval</source>. <year>2014</year>;<volume>8</volume>(<issue>2-3</issue>):<fpage>127</fpage>–<lpage>261</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1561/1500000042" xlink:type="simple">10.1561/1500000042</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref002">
+<label>2</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Lomax</surname> <given-names>A</given-names></name>. <source>Folk song style and culture</source>. <publisher-name>American Association for the Advancement of Science</publisher-name>; <year>1968</year>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref003">
+<label>3</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Savage</surname> <given-names>PE</given-names></name>, <name name-style="western"><surname>Brown</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Sakai</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Currie</surname> <given-names>TE</given-names></name>. <article-title>Statistical universals reveal the structures and functions of human music</article-title>. <source>Proceedings of the National Academy of Sciences of the United States of America (PNAS)</source>. <year>2015</year>;<volume>112</volume>(<issue>29</issue>):<fpage>8987</fpage>–<lpage>8992</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.1414495112" xlink:type="simple">10.1073/pnas.1414495112</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref004">
+<label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Serrà</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Corral</surname> <given-names>Á</given-names></name>, <name name-style="western"><surname>Boguñá</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Haro</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Arcos</surname> <given-names>JL</given-names></name>. <article-title>Measuring the Evolution of Contemporary Western Popular Music</article-title>. <source>Scientific Reports</source>. <year>2012</year>;<volume>2</volume>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/srep00521" xlink:type="simple">10.1038/srep00521</ext-link></comment> <object-id pub-id-type="pmid">22837813</object-id></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref005">
+<label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Mauch</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>MacCallum</surname> <given-names>RM</given-names></name>, <name name-style="western"><surname>Levy</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Leroi</surname> <given-names>AM</given-names></name>. <article-title>The evolution of popular music: USA 1960-2010</article-title>. <source>Royal Society Open Science</source>. <year>2015</year>;<volume>2</volume>(<issue>5</issue>). <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1098/rsos.150081" xlink:type="simple">10.1098/rsos.150081</ext-link></comment> <object-id pub-id-type="pmid">26064663</object-id></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref006">
+<label>6</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Tzanetakis</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Kapur</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Schloss Andrew</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Wright</surname> <given-names>M</given-names></name>. <article-title>Computational Ethnomusicology</article-title>. <source>Journal of Interdisciplinary Music Studies</source>. <year>2007</year>;<volume>1</volume>(<issue>2</issue>):<fpage>1</fpage>–<lpage>24</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref007">
+<label>7</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Gómez</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Herrera</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Gómez-Martin</surname> <given-names>F</given-names></name>. <article-title>Computational Ethnomusicology: perspectives and challenges</article-title>. <source>Journal of New Music Research</source>. <year>2013</year>;<volume>42</volume>(<issue>2</issue>):<fpage>111</fpage>–<lpage>112</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1080/09298215.2013.818038" xlink:type="simple">10.1080/09298215.2013.818038</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref008">
+<label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Abdallah</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Benetos</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Gold</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Hargreaves</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Weyde</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Wolff</surname> <given-names>D</given-names></name>. <article-title>The Digital Music Lab: A Big Data Infrastructure for Digital Musicology</article-title>. <source>ACM Journal on Computing and Cultural Heritage</source>. <year>2017</year>;<volume>10</volume>(<issue>1</issue>).</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref009">
+<label>9</label>
+<mixed-citation publication-type="other" xlink:type="simple">Serra X. A Multicultural Approach in Music Information Research. In: International Society for Music Information Retrieval Conference; 2011. p. 151–156.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref010">
+<label>10</label>
+<mixed-citation publication-type="other" xlink:type="simple">Fillon T, Simonnot J, Mifune MF, Khoury S, Pellerin G, Le Coz M, et al. Telemeta: An open-source web framework for ethnomusicological audio archives management and automatic analysis. In: 1st International Digital Libraries for Musicology workshop (DLfM 2014); 2014. p. 1–8.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref011">
+<label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Kroher</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Díaz-Báñez</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Mora</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Gómez</surname> <given-names>E</given-names></name>. <article-title>Corpus COFLA: A Research Corpus for the Computational Study of Flamenco Music</article-title>. <source>Journal on Computing and Cultural Heritage</source>. <year>2016</year>;<volume>9</volume>(<issue>2</issue>):<fpage>10:1</fpage>–<lpage>10:21</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1145/2875428" xlink:type="simple">10.1145/2875428</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref012">
+<label>12</label>
+<mixed-citation publication-type="other" xlink:type="simple">Moelants D, Cornelis O, Leman M. Exploring African Tone Scales. In: Proceedings of the International Society for Music Information Retrieval Conference; 2009. p. 489–494.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref013">
+<label>13</label>
+<mixed-citation publication-type="other" xlink:type="simple">Aggarwal CC, Yu PS. Outlier detection for high dimensional data. In: International Conference on Management of Data (ACM SIGMOD); 2001. p. 37–46.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref014">
+<label>14</label>
+<mixed-citation publication-type="other" xlink:type="simple">Panteli M, Dixon S. On the evaluation of rhythmic and melodic descriptors for music similarity. In: Proceedings of the International Society for Music Information Retrieval Conference; 2016. p. 468–474.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref015">
+<label>15</label>
+<mixed-citation publication-type="other" xlink:type="simple">Panteli M, Benetos E, Dixon S. Learning a feature space for similarity in world music. In: Proceedings of the International Society for Music Information Retrieval Conference; 2016. p. 538–544.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref016">
+<label>16</label>
+<mixed-citation publication-type="other" xlink:type="simple">Panteli M, Benetos E, Dixon S. Automatic detection of outliers in world music collections. In: Analytical Approaches to World Music; 2016. p. 1–4.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref017">
+<label>17</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Lomax</surname> <given-names>A</given-names></name>. <source>Cantometrics: An Approach to the Anthropology of Music</source>. <publisher-loc>Berkeley</publisher-loc>: <publisher-name>Uneversity of California Extension Media Center</publisher-name>; <year>1976</year>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref018">
+<label>18</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Brown</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Savage</surname> <given-names>PE</given-names></name>, <name name-style="western"><surname>Ko</surname> <given-names>AMS</given-names></name>, <name name-style="western"><surname>Stoneking</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ko</surname> <given-names>YC</given-names></name>, <name name-style="western"><surname>Loo</surname> <given-names>JH</given-names></name>, <etal>et al</etal>. <article-title>Correlations in the population structure of music, genes and language</article-title>. <source>Proceedings of the Royal Society of London B: Biological Sciences</source>. <year>2013</year>;<volume>281</volume> (<issue>1774</issue>). <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1098/rspb.2013.2072" xlink:type="simple">10.1098/rspb.2013.2072</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref019">
+<label>19</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Nettl</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Stone</surname> <given-names>RM</given-names></name>, <name name-style="western"><surname>Porter</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Rice</surname> <given-names>T</given-names></name>, editors. <source>The Garland Encyclopedia of World Music</source>. <edition>1998th ed</edition>. <publisher-loc>New York</publisher-loc>: <publisher-name>Garland Pub</publisher-name>; <year>1998</year>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref020">
+<label>20</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Savage</surname> <given-names>PE</given-names></name>, <name name-style="western"><surname>Merritt</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Rzeszutek</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Brown</surname> <given-names>S</given-names></name>. <article-title>CantoCore: A new cross-cultural song classification scheme</article-title>. <source>Analytical Approaches to World Music</source>. <year>2012</year>;<volume>2</volume>(<issue>1</issue>):<fpage>87</fpage>–<lpage>137</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref021">
+<label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Rzeszutek</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Savage</surname> <given-names>PE</given-names></name>, <name name-style="western"><surname>Brown</surname> <given-names>S</given-names></name>. <article-title>The structure of cross-cultural musical diversity</article-title>. <source>Proceedings of the Royal Society B-Biological Sciences</source>. <year>2012</year>;<volume>279</volume>(<issue>1733</issue>):<fpage>1606</fpage>–<lpage>1612</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1098/rspb.2011.1750" xlink:type="simple">10.1098/rspb.2011.1750</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref022">
+<label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Savage</surname> <given-names>PE</given-names></name>, <name name-style="western"><surname>Brown</surname> <given-names>S</given-names></name>. <article-title>Mapping Music: Cluster Analysis Of Song-Type Frequencies Within And Between Cultures</article-title>. <source>Ethnomusicology</source>. <year>2014</year>;<volume>58</volume>(<issue>1</issue>):<fpage>133</fpage>–<lpage>155</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.5406/ethnomusicology.58.1.0133" xlink:type="simple">10.5406/ethnomusicology.58.1.0133</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref023">
+<label>23</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Le Bomin</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Lecointre</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Heyer</surname> <given-names>E</given-names></name>. <article-title>The evolution of musical diversity: The key role of vertical transmission</article-title>. <source>PLoS ONE</source>. <year>2016</year>;<volume>11</volume>(<issue>3</issue>). <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pone.0151570" xlink:type="simple">10.1371/journal.pone.0151570</ext-link></comment> <object-id pub-id-type="pmid">27027305</object-id></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref024">
+<label>24</label>
+<mixed-citation publication-type="other" xlink:type="simple">Shalit U, Weinshall D, Chechik G. Modeling Musical Influence with Topic Models. In: Proceedings of the 30th International Conference on Machine Learning (ICML-13); 2013. p. 244–252.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref025">
+<label>25</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Tzanetakis</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Cook</surname> <given-names>P</given-names></name>. <article-title>Musical Genre Classification of Audio Signals</article-title>. <source>IEEE Transactions on Speech and Audio Processing</source>. <year>2002</year>;<volume>10</volume>(<issue>5</issue>):<fpage>293</fpage>–<lpage>302</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TSA.2002.800560" xlink:type="simple">10.1109/TSA.2002.800560</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref026">
+<label>26</label>
+<mixed-citation publication-type="other" xlink:type="simple">Pampalk E, Flexer A, Widmer G. Improvements of Audio-Based Music Similarity and Genre Classification. In: Proceedings of the International Symposium on Music Information Retrieval; 2005. p. 634–637.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref027">
+<label>27</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Fu</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Lu</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Ting</surname> <given-names>KM</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>D</given-names></name>. <article-title>Music classification via the bag-of-features approach</article-title>. <source>Pattern Recognition Letters</source>. <year>2011</year>;<volume>32</volume>(<issue>14</issue>):<fpage>1768</fpage>–<lpage>1777</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.patrec.2011.06.026" xlink:type="simple">10.1016/j.patrec.2011.06.026</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref028">
+<label>28</label>
+<mixed-citation publication-type="other" xlink:type="simple">Gómez E, Haro M, Herrera P. Music and geography: Content description of musical audio from different parts of the world. In: Proceedings of the International Society for Music Information Retrieval Conference; 2009. p. 753–758.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref029">
+<label>29</label>
+<mixed-citation publication-type="other" xlink:type="simple">Liu Y, Xiang Q, Wang Y, Cai L. Cultural style based music classification of audio signals. In: IEEE International Conference on Acoustics, Speech, and Signal Processing; 2009. p. 57–60.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref030">
+<label>30</label>
+<mixed-citation publication-type="other" xlink:type="simple">Kruspe A, Lukashevich H, Abeßer J, Großmann H, Dittmar C. Automatic Classification of Musical Pieces Into Global Cultural Areas. In: AES 42nd International Conference; 2011. p. 1–10.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref031">
+<label>31</label>
+<mixed-citation publication-type="other" xlink:type="simple">Zhou F, Claire Q, King RD. Predicting the Geographical Origin of Music. In: IEEE International Conference on Data Mining; 2014. p. 1115–1120.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref032">
+<label>32</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Fu</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Lu</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Ting</surname> <given-names>KM</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>D</given-names></name>. <article-title>A survey of audio-based music classification and annotation</article-title>. <source>IEEE Transactions on Multimedia</source>. <year>2011</year>;<volume>13</volume>(<issue>2</issue>):<fpage>303</fpage>–<lpage>319</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TMM.2010.2098858" xlink:type="simple">10.1109/TMM.2010.2098858</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref033">
+<label>33</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Serrà</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Gómez</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Herrera</surname> <given-names>P</given-names></name>. <chapter-title>Audio cover song identification and similarity: background, approaches, evaluation, and beyond</chapter-title>. In: <source>Advances in Music Information Retrieval</source>. <publisher-name>Springer</publisher-name> <publisher-loc>Berlin Heidelberg</publisher-loc>; <year>2010</year>. p. <fpage>307</fpage>–<lpage>332</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref034">
+<label>34</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Bello</surname> <given-names>JP</given-names></name>. <article-title>Measuring structural similarity in music</article-title>. <source>IEEE Transactions on Audio, Speech and Language Processing</source>. <year>2011</year>;<volume>19</volume>(<issue>7</issue>):<fpage>2013</fpage>–<lpage>2025</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TASL.2011.2108287" xlink:type="simple">10.1109/TASL.2011.2108287</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref035">
+<label>35</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Collins</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Arzt</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Frostel</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Widmer</surname> <given-names>G</given-names></name>. <chapter-title>Using Geometric Symbolic Fingerprinting to Discover Distinctive Patterns in Polyphonic Music Corpora</chapter-title>. In: <name name-style="western"><surname>Meredith</surname> <given-names>D</given-names></name>, editor. <source>Computational Music Analysis</source>. <publisher-name>Springer International Publishing</publisher-name>; <year>2016</year>. p. <fpage>445</fpage>–<lpage>474</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref036">
+<label>36</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Celma</surname> <given-names>Ò</given-names></name>. <chapter-title>Music Recommendation</chapter-title>. In: <source>Music Recommendation and Discovery</source>. <publisher-name>Springer</publisher-name> <publisher-loc>Berlin Heidelberg</publisher-loc>; <year>2010</year>. p. <fpage>43</fpage>–<lpage>85</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref037">
+<label>37</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Downie</surname> <given-names>JS</given-names></name>, <name name-style="western"><surname>Ehmann</surname> <given-names>AF</given-names></name>, <name name-style="western"><surname>Bay</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Jones</surname> <given-names>MC</given-names></name>. <article-title>The Music Information Retrieval Evaluation eXchange: Some Observations and Insights</article-title>. <source>Advances in Music Information Retrieval</source>. <year>2010</year>;<volume>274</volume>:<fpage>93</fpage>–<lpage>115</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref038">
+<label>38</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Honingh</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Panteli</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Brockmeier</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>López Mejía</surname> <given-names>DI</given-names></name>, <name name-style="western"><surname>Sadakata</surname> <given-names>M</given-names></name>. <article-title>Perception of Timbre and Rhythm Similarity in Electronic Dance Music</article-title>. <source>Journal of New Music Research</source>. <year>2015</year>;<volume>44</volume>(<issue>4</issue>):<fpage>373</fpage>–<lpage>390</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1080/09298215.2015.1107102" xlink:type="simple">10.1080/09298215.2015.1107102</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref039">
+<label>39</label>
+<mixed-citation publication-type="other" xlink:type="simple">Müllensiefen D, Frieler K. Melodic Similarity: Approaches and Applications. In: Proceedings of the 8th International Conference on Music Perception and Cognition; 2004. p. 1–7.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref040">
+<label>40</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Typke</surname> <given-names>R</given-names></name>. <source>Music Retrieval based on Melodic Similarity</source>. <publisher-name>Utrecht University</publisher-name>; <year>2007</year>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref041">
+<label>41</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Schmuckler</surname> <given-names>MA</given-names></name>. <article-title>Melodic Contour Similarity Using Folk Melodies</article-title>. <source>Music Perception</source>. <year>2010</year>;<volume>28</volume>(<issue>2</issue>):<fpage>169</fpage>–<lpage>194</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1525/mp.2010.28.2.169" xlink:type="simple">10.1525/mp.2010.28.2.169</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref042">
+<label>42</label>
+<mixed-citation publication-type="other" xlink:type="simple">Foote J, Cooper ML, Nam U. Audio Retrieval by Rhythmic Similarity. In: Proceedings of the International Society for Music Information Retrieval Conference; 2002. p. 265–266.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref043">
+<label>43</label>
+<mixed-citation publication-type="other" xlink:type="simple">Dixon S, Gouyon F, Widmer G. Towards Characterisation of Music via Rhythmic Patterns. In: Proceedings of the International Symposium on Music Information Retrieval; 2004. p. 509–516.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref044">
+<label>44</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Guastavino</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Gómez</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Toussaint</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Marandola</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Gómez</surname> <given-names>E</given-names></name>. <article-title>Measuring Similarity between Flamenco Rhythmic Patterns</article-title>. <source>Journal of New Music Research</source>. <year>2009</year>;<volume>38</volume>(<issue>2</issue>):<fpage>129</fpage>–<lpage>138</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1080/09298210903229968" xlink:type="simple">10.1080/09298210903229968</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref045">
+<label>45</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Toiviainen</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Tervaniemi</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Louhivuori</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Saher</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Huotilainen</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Näätänen</surname> <given-names>R</given-names></name>. <article-title>Timbre Similarity: Convergence of Neural, Behavioral, and Computational Approaches</article-title>. <source>Music Perception</source>. <year>1998</year>;<volume>16</volume>(<issue>2</issue>):<fpage>223</fpage>–<lpage>241</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2307/40285788" xlink:type="simple">10.2307/40285788</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref046">
+<label>46</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Pachet</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Aucouturier</surname> <given-names>JJ</given-names></name>. <article-title>Improving timbre similarity: How high is the sky?</article-title> <source>Journal of negative results in speech and audio sciences</source>. <year>2004</year>;<volume>1</volume>(<issue>1</issue>):<fpage>1</fpage>–<lpage>13</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref047">
+<label>47</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>McAdams</surname> <given-names>S</given-names></name>. <chapter-title>Musical Timbre Perception</chapter-title>. In: <source>The Psychology of Music</source>. <publisher-name>Elsevier Inc.</publisher-name>; <year>2013</year>. p. <fpage>35</fpage>–<lpage>67</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref048">
+<label>48</label>
+<mixed-citation publication-type="other" xlink:type="simple">Haas WBD, Rohrmeier M, Wiering F. Modeling Harmonic Similarity using a Generative Grammar of Tonal Harmony. In: Proceedings of the International Society for Music Information Retrieval Conference; 2009. p. 549–554.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref049">
+<label>49</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Müller</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ewert</surname> <given-names>S</given-names></name>. <article-title>Towards timbre-invariant audio features for harmony-based music</article-title>. <source>IEEE Transactions on Audio, Speech and Language Processing</source>. <year>2010</year>;<volume>18</volume>(<issue>3</issue>):<fpage>649</fpage>–<lpage>662</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TASL.2010.2041394" xlink:type="simple">10.1109/TASL.2010.2041394</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref050">
+<label>50</label>
+<mixed-citation publication-type="other" xlink:type="simple">Wolff D, Weyde T. Adapting Metrics for Music Similarity Using Comparative Ratings. In: Proceedings of the International Society for Music Information Retrieval Conference; 2011. p. 73–78.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref051">
+<label>51</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Sturm</surname> <given-names>BL</given-names></name>. <article-title>Classification accuracy is not enough</article-title>. <source>Journal of Intelligent Information Systems</source>. <year>2013</year>;<volume>41</volume>(<issue>3</issue>):<fpage>371</fpage>–<lpage>406</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s10844-013-0250-y" xlink:type="simple">10.1007/s10844-013-0250-y</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref052">
+<label>52</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Flexer</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Grill</surname> <given-names>T</given-names></name>. <article-title>The Problem of Limited Inter-rater Agreement in Modelling Music Similarity</article-title>. <source>Journal of New Music Research</source>. <year>2016</year>;<volume>45</volume>(<issue>3</issue>):<fpage>239</fpage>–<lpage>251</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1080/09298215.2016.1200631" xlink:type="simple">10.1080/09298215.2016.1200631</ext-link></comment> <object-id pub-id-type="pmid">28190932</object-id></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref053">
+<label>53</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Ben-Gal</surname> <given-names>I</given-names></name>. <chapter-title>Outlier Detection</chapter-title>. In: <source>Data Mining and Knowledge Discovery Handbook</source>. <publisher-loc>New York</publisher-loc>: <publisher-name>Springer-Verlag</publisher-name>; <year>2005</year>. p. <fpage>131</fpage>–<lpage>146</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref054">
+<label>54</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Casas</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Mazel</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Owezarski</surname> <given-names>P</given-names></name>. <article-title>Unsupervised Network Intrusion Detection Systems: Detecting the Unknown without Knowledge</article-title>. <source>Computer Communications</source>. <year>2012</year>;<volume>35</volume>(<issue>7</issue>):<fpage>772</fpage>–<lpage>783</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.comcom.2012.01.016" xlink:type="simple">10.1016/j.comcom.2012.01.016</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref055">
+<label>55</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Bhattacharyya</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Jha</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Tharakunnel</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Westland</surname> <given-names>JC</given-names></name>. <article-title>Data mining for credit card fraud: A comparative study</article-title>. <source>Decision Support Systems</source>. <year>2011</year>;<volume>50</volume>(<issue>3</issue>):<fpage>602</fpage>–<lpage>613</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.dss.2010.08.008" xlink:type="simple">10.1016/j.dss.2010.08.008</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref056">
+<label>56</label>
+<mixed-citation publication-type="other" xlink:type="simple">Podgorelec V, Heričko M, Rozman I. Improving mining of medical data by outliers prediction. In: Proceedings—IEEE Symposium on Computer-Based Medical Systems; 2005. p. 91–96.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref057">
+<label>57</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Chen</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Lu</surname> <given-names>CT</given-names></name>, <name name-style="western"><surname>Kou</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>F</given-names></name>. <article-title>On detecting spatial outliers</article-title>. <source>GeoInformatica</source>. <year>2008</year>;<volume>12</volume>(<issue>4</issue>):<fpage>455</fpage>–<lpage>475</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s10707-007-0038-8" xlink:type="simple">10.1007/s10707-007-0038-8</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref058">
+<label>58</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Lu</surname> <given-names>CT</given-names></name>, <name name-style="western"><surname>Kou</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Zhao</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>L</given-names></name>. <article-title>Detecting and tracking regional outliers in meteorological data</article-title>. <source>Information Sciences</source>. <year>2007</year>;<volume>177</volume>(<issue>7</issue>):<fpage>1609</fpage>–<lpage>1632</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.ins.2006.09.013" xlink:type="simple">10.1016/j.ins.2006.09.013</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref059">
+<label>59</label>
+<mixed-citation publication-type="other" xlink:type="simple">WongWK, MooreA, CooperG, WagnerM. Rule-based anomaly pattern detection for detecting disease outbreaks. Proceedings of the Eighteenth National Conference on Artificial Intelligence. 2002; p. 217–223.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref060">
+<label>60</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Grubesic</surname> <given-names>TH</given-names></name>. <article-title>On the application of fuzzy clustering for crime hot spot detection</article-title>. <source>Journal of Quantitative Criminology</source>. <year>2006</year>;<volume>22</volume>(<issue>1</issue>):<fpage>77</fpage>–<lpage>105</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s10940-005-9003-6" xlink:type="simple">10.1007/s10940-005-9003-6</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref061">
+<label>61</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Bountouridis</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Koops</surname> <given-names>HV</given-names></name>, <name name-style="western"><surname>Wiering</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Veltkamp</surname> <given-names>RC</given-names></name>. <article-title>Music Outlier Detection Using Multiple Sequence Alignment and Independent Ensembles</article-title>. In: <source>Similarity Search and Applications</source>. <volume>vol. 9939</volume>. <edition>lecture no ed</edition>. <publisher-name>Springer International Publishing</publisher-name>; <year>2016</year>. p. <fpage>286</fpage>–<lpage>300</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref062">
+<label>62</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Lu</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Lu</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Lerch</surname> <given-names>A</given-names></name>. <article-title>Automatic outlier detection in music genre datasets</article-title>. <source>International Society for Music Information Retrieval</source>. <year>2016</year>; p. <fpage>101</fpage>–<lpage>107</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref063">
+<label>63</label>
+<mixed-citation publication-type="other" xlink:type="simple">Hansen LK, Lehn-Schi T, Petersen K. Learning and clean-up in a large scale music database. In: European Signal Processing Conference; 2007. p. 946–950.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref064">
+<label>64</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Livshin</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Rodet</surname> <given-names>X</given-names></name>. <article-title>Purging musical instrument sample databases using automatic musical instrument recognition methods</article-title>. <source>IEEE Transactions on Audio, Speech and Language Processing</source>. <year>2009</year>;<volume>17</volume>(<issue>5</issue>):<fpage>1046</fpage>–<lpage>1051</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TASL.2009.2018439" xlink:type="simple">10.1109/TASL.2009.2018439</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref065">
+<label>65</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Titon</surname> <given-names>JT</given-names></name>, <name name-style="western"><surname>Cooley</surname> <given-names>TJ</given-names></name>, <name name-style="western"><surname>Locke</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>McAllester</surname> <given-names>DP</given-names></name>, <name name-style="western"><surname>Rasmussen</surname> <given-names>AK</given-names></name>. <source>Worlds of Music: An Introduction to the Music of the World’s Peoples</source>. <publisher-loc>Belmont</publisher-loc>: <publisher-name>Schirmer Cengage Learning</publisher-name>; <year>2009</year>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref066">
+<label>66</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Bohlman</surname> <given-names>PV</given-names></name>. <source>World Music: A Very Short Introduction</source>. <publisher-name>Oxford University Press</publisher-name>; <year>2002</year>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref067">
+<label>67</label>
+<mixed-citation publication-type="other" xlink:type="simple">Smithsonian Folkways Recordings. Smithsonian Institution;. Available from: <ext-link ext-link-type="uri" xlink:href="http://www.folkways.si.edu/folkways-recordings/smithsonian" xlink:type="simple">http://www.folkways.si.edu/folkways-recordings/smithsonian</ext-link>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref068">
+<label>68</label>
+<mixed-citation publication-type="other" xlink:type="simple">World and Traditional Music. British Library Sounds;. Available from: <ext-link ext-link-type="uri" xlink:href="http://sounds.bl.uk/World-and-traditional-music" xlink:type="simple">http://sounds.bl.uk/World-and-traditional-music</ext-link>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref069">
+<label>69</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Nettl</surname> <given-names>B</given-names></name>. <article-title>Review of Folk Song Style and Culture by Alan Lomax Source</article-title>. <source>American Anthropologist, New Series</source>. <year>1970</year>;<volume>72</volume>(<issue>2</issue>):<fpage>438</fpage>–<lpage>441</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1525/aa.1970.72.2.02a00600" xlink:type="simple">10.1525/aa.1970.72.2.02a00600</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref070">
+<label>70</label>
+<mixed-citation publication-type="other" xlink:type="simple">Fink R. Big (Bad) Data; 2013. Available from: <ext-link ext-link-type="uri" xlink:href="http://musicologynow.ams-net.org/2013/08/big-bad-data.html" xlink:type="simple">http://musicologynow.ams-net.org/2013/08/big-bad-data.html</ext-link>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref071">
+<label>71</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Clarke</surname> <given-names>D</given-names></name>. <article-title>On Not Losing Heart: A Response to Savage and Brown’s “Toward a New Comparative Musicology”</article-title>. <source>Analytical Approaches to World Music</source>. <year>2014</year>;<volume>3</volume>(<issue>2</issue>):<fpage>1</fpage>–<lpage>14</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref072">
+<label>72</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Trehub</surname> <given-names>SE</given-names></name>. <article-title>Cross-cultural convergence of musical features</article-title>. <source>Proceedings of the National Academy of Sciences of the United States of America</source>. <year>2015</year>;<volume>112</volume>(<issue>29</issue>):<fpage>8809</fpage>–<lpage>8810</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.1510724112" xlink:type="simple">10.1073/pnas.1510724112</ext-link></comment> <object-id pub-id-type="pmid">26157132</object-id></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref073">
+<label>73</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Tzanetakis</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Cook</surname> <given-names>P</given-names></name>. <article-title>MARSYAS: a framework for audio analysis</article-title>. <source>Organised Sound</source>. <year>2000</year>;<volume>4</volume>(<issue>3</issue>):<fpage>169</fpage>–<lpage>175</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1017/S1355771800003071" xlink:type="simple">10.1017/S1355771800003071</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref074">
+<label>74</label>
+<mixed-citation publication-type="other" xlink:type="simple">Peeters G. A large set of audio features for sound description (similarity and classification) in the CUIDADO project. Technical Report IRCAM. 2004;.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref075">
+<label>75</label>
+<mixed-citation publication-type="other" xlink:type="simple">Lartillot O, Toiviainen P. A Matlab Toolbox for Musical Feature Extraction From Audio. In: International Conference on Digital Audio Effects; 2007. p. 237–244.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref076">
+<label>76</label>
+<mixed-citation publication-type="other" xlink:type="simple">McFee B, McVicar M, Raffel C, Liang D, Nieto O, Battenberg E, et al. librosa: 0.4.1; 2015. Available from: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5281/zenodo.32193" xlink:type="simple">http://dx.doi.org/10.5281/zenodo.32193</ext-link>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref077">
+<label>77</label>
+<mixed-citation publication-type="other" xlink:type="simple">Hamel P, Eck D. Learning Features from Music Audio with Deep Belief Networks. In: International Society for Music Information Retrieval Conference. Ismir; 2010. p. 339–344.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref078">
+<label>78</label>
+<mixed-citation publication-type="other" xlink:type="simple">Choi K, Fazekas G, Sandler M. Automatic tagging using deep convolutional neural networks. In: International Society for Music Information Retrieval Conference; 2016. p. 805–811.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref079">
+<label>79</label>
+<mixed-citation publication-type="other" xlink:type="simple">Scheirer E, Slaney M. Construction and evaluation of a robust multifeature speech/music discriminator. In: IEEE International Conference on Acoustics, Speech and Signal Processing; 1997. p. 1331–1334.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref080">
+<label>80</label>
+<mixed-citation publication-type="other" xlink:type="simple">El-Maleh K, Klein M, Petrucci G, Kabal P. Speech/music discrimination for multimedia applications. In: IEEE International Conference on Acoustics, Speech and Signal Processing; 2000. p. 2445–2448.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref081">
+<label>81</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Panagiotakis</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Tziritas</surname> <given-names>G</given-names></name>. <article-title>A speech/music discriminator based on RMS and zero-crossings</article-title>. <source>IEEE Transactions on Multimedia</source>. <year>2005</year>;<volume>7</volume>(<issue>1</issue>):<fpage>155</fpage>–<lpage>166</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TMM.2004.840604" xlink:type="simple">10.1109/TMM.2004.840604</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref082">
+<label>82</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Downie</surname> <given-names>JS</given-names></name>. <article-title>The Music Information Retrieval Evaluation Exchange (2005-2007): A window into music information retrieval research</article-title>. <source>Acoustical Science and Technology</source>. <year>2008</year>;<volume>29</volume>(<issue>4</issue>):<fpage>247</fpage>–<lpage>255</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1250/ast.29.247" xlink:type="simple">10.1250/ast.29.247</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref083">
+<label>83</label>
+<mixed-citation publication-type="other" xlink:type="simple">Marolt M. Music/speech classification and detection submission for MIREX 2015. In: MIREX; 2015. p. 1.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref084">
+<label>84</label>
+<mixed-citation publication-type="other" xlink:type="simple">Marolt M. Probabilistic Segmentation and Labeling of Ethnomusicological Field Recordings. In: International Society for Music Information Retrieval Conference; 2009. p. 75–80.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref085">
+<label>85</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Sadie</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Tyrrell</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Levy</surname> <given-names>M</given-names></name>. <source>The New Grove Dictionary of Music and Musicians</source>. <publisher-name>Oxford University Press</publisher-name>; <year>2001</year>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref086">
+<label>86</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Holzapfel</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Stylianou</surname> <given-names>Y</given-names></name>. <article-title>Scale Transform in Rhythmic Similarity of Music</article-title>. <source>IEEE Transactions on Audio, Speech, and Language Processing</source>. <year>2011</year>;<volume>19</volume>(<issue>1</issue>):<fpage>176</fpage>–<lpage>185</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TASL.2010.2045782" xlink:type="simple">10.1109/TASL.2010.2045782</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref087">
+<label>87</label>
+<mixed-citation publication-type="other" xlink:type="simple">Van Balen J, Bountouridis D, Wiering F, Veltkamp R. Cognition-inspired Descriptors for Scalable Cover Song Retrieval. In: Proceedings of the International Society for Music Information Retrieval Conference; 2014. p. 379–384.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref088">
+<label>88</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Bartsch</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Wakefield</surname> <given-names>GH</given-names></name>. <article-title>Audio thumbnailing of popular music using chroma-based representations</article-title>. <source>IEEE Transactions on Multimedia</source>. <year>2005</year>;<volume>7</volume>(<issue>1</issue>):<fpage>96</fpage>–<lpage>104</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TMM.2004.840597" xlink:type="simple">10.1109/TMM.2004.840597</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref089">
+<label>89</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Aucouturier</surname> <given-names>JJ</given-names></name>, <name name-style="western"><surname>Pachet</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Sandler</surname> <given-names>M</given-names></name>. <article-title>“The way it sounds”: Timbre models for analysis and retrieval of music signals</article-title>. <source>IEEE Transactions on Multimedia</source>. <year>2005</year>;<volume>7</volume>(<issue>6</issue>):<fpage>1028</fpage>–<lpage>1035</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TMM.2005.858380" xlink:type="simple">10.1109/TMM.2005.858380</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref090">
+<label>90</label>
+<mixed-citation publication-type="other" xlink:type="simple">Holzapfel A, Flexer A, Widmer G. Improving tempo-sensitive and tempo-robust descriptors for rhythmic similarity. In: Proceedings of the Sound and Music Computing Conference; 2011. p. 247–252.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref091">
+<label>91</label>
+<mixed-citation publication-type="other" xlink:type="simple">Marchand U, Peeters G. The modulation scale spectrum and its application to rhythm-content description. In: International Conference on Difital Audio Effects; 2014. p. 167–172.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref092">
+<label>92</label>
+<mixed-citation publication-type="other" xlink:type="simple">Schörkhuber C, Klapuri A, Holighaus N, Dörfler M. A Matlab Toolbox for Efficient Perfect Reconstruction Time-Frequency Transforms with Log-Frequency Resolution. In: AES 53rd Conference on Semantic Audio; 2014. p. 1–8.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref093">
+<label>93</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Salamon</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Gómez</surname> <given-names>E</given-names></name>. <article-title>Melody Extraction From Polyphonic Music Signals Using Pitch Contour Characteristics</article-title>. <source>IEEE Transactions on Audio, Speech, and Language Processing</source>. <year>2012</year>;<volume>20</volume>(<issue>6</issue>):<fpage>1759</fpage>–<lpage>1770</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TASL.2012.2188515" xlink:type="simple">10.1109/TASL.2012.2188515</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref094">
+<label>94</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Sun</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Ji</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Ye</surname> <given-names>J</given-names></name>. <source>Multi-Label Dimensionality Reduction</source>. <publisher-name>CRC Press, Taylor &amp; Francis Group</publisher-name>; <year>2013</year>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref095">
+<label>95</label>
+<mixed-citation publication-type="other" xlink:type="simple">Chen J, Sathe S, Aggarwal C, Turaga D. Outlier Detection with Autoencoder Ensembles. In: Proceedings of the 2017 SIAM International Conference on Data Mining.; 2017. p. 90–98.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref096">
+<label>96</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Lee</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Yoo</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Choi</surname> <given-names>S</given-names></name>. <article-title>Semi-Supervised Nonnegative Matrix Factorization</article-title>. <source>IEEE Signal Processing Letters</source>. <year>2010</year>;<volume>17</volume>(<issue>1</issue>):<fpage>4</fpage>–<lpage>7</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/LSP.2009.2027163" xlink:type="simple">10.1109/LSP.2009.2027163</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref097">
+<label>97</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Bishop</surname> <given-names>CM</given-names></name>. <source>Pattern Recognition and Machine Learning</source>. <publisher-loc>New York</publisher-loc>: <publisher-name>Springer</publisher-name>; <year>2006</year>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref098">
+<label>98</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Hodge</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Austin</surname> <given-names>J</given-names></name>. <article-title>A Survey of Outlier Detection Methodologies</article-title>. <source>Artificial Intelligence Review</source>. <year>2004</year>;<volume>22</volume>(<issue>2</issue>):<fpage>85</fpage>–<lpage>126</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1023/B:AIRE.0000045502.10941.a9" xlink:type="simple">10.1023/B:AIRE.0000045502.10941.a9</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref099">
+<label>99</label>
+<mixed-citation publication-type="other" xlink:type="simple">Filzmoser P. A Multivariate Outlier Detection Method. In: International Conference on Computer Data Analysis and Modeling; 2004. p. 18–22.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref100">
+<label>100</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Filzmoser</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Maronna</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Werner</surname> <given-names>M</given-names></name>. <article-title>Outlier identification in high dimensions</article-title>. <source>Computational Statistics and Data Analysis</source>. <year>2008</year>;<volume>52</volume>(<issue>3</issue>):<fpage>1694</fpage>–<lpage>1711</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.csda.2007.05.018" xlink:type="simple">10.1016/j.csda.2007.05.018</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref101">
+<label>101</label>
+<mixed-citation publication-type="other" xlink:type="simple">Kelso NV, Patterson T. Natural Earth;. Available from: <ext-link ext-link-type="uri" xlink:href="http://www.naturalearthdata.com" xlink:type="simple">http://www.naturalearthdata.com</ext-link>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref102">
+<label>102</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Rousseeuw</surname> <given-names>PJ</given-names></name>. <article-title>Silhouettes: A graphical aid to the interpretation and validation of cluster analysis</article-title>. <source>Journal of Computational and Applied Mathematics</source>. <year>1987</year>;<volume>20</volume>(<issue>C</issue>):<fpage>53</fpage>–<lpage>65</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/0377-0427(87)90125-7" xlink:type="simple">10.1016/0377-0427(87)90125-7</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref103">
+<label>103</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Johnson</surname> <given-names>SC</given-names></name>. <article-title>Hierarchical clustering schemes</article-title>. <source>Psychometrika</source>. <year>1967</year>;<volume>32</volume>(<issue>3</issue>):<fpage>241</fpage>–<lpage>254</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/BF02289588" xlink:type="simple">10.1007/BF02289588</ext-link></comment> <object-id pub-id-type="pmid">5234703</object-id></mixed-citation>
+</ref>
+<ref id="pone.0189399.ref104">
+<label>104</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Powers</surname> <given-names>DMW</given-names></name>. <article-title>Evaluation: From Precision, Recall and F-Measure To Roc, Informedness, Markedness &amp; Correlation</article-title>. <source>Journal of Machine Learning Technologies</source>. <year>2011</year>;<volume>2</volume>(<issue>1</issue>):<fpage>37</fpage>–<lpage>63</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref105">
+<label>105</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Schnitzer</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Flexer</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Schedl</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Widmer</surname> <given-names>G</given-names></name>. <article-title>Local and Global Scaling Reduce Hubs in Space</article-title>. <source>Journal of Machine Learning Research</source>. <year>2012</year>;<volume>13</volume>:<fpage>2871</fpage>–<lpage>2902</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref106">
+<label>106</label>
+<mixed-citation publication-type="other" xlink:type="simple">Dieleman S, Schrauwen B. Multiscale Approaches To Music Audio Feature Learning. In: International Society for Music Information Retrieval Conference; 2013. p. 116–121.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref107">
+<label>107</label>
+<mixed-citation publication-type="other" xlink:type="simple">Humphrey EJ, Glennon AP, Bello JP. Non-linear semantic embedding for organizing large instrument sample libraries. In: Proceedings of the International Conference on Machine Learning and Applications. vol. 2; 2011. p. 142–147.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref108">
+<label>108</label>
+<mixed-citation publication-type="other" xlink:type="simple">Reed J, Lee CH. On the importance of modeling temporal information in music tag annotation. In: IEEE International Conference on Acoustics, Speech and Signal Processing; 2009. p. 1873–1876.</mixed-citation>
+</ref>
+<ref id="pone.0189399.ref109">
+<label>109</label>
+<mixed-citation publication-type="other" xlink:type="simple">Sturm BL. Revisiting priorities: improving MIR evaluation practices. In: Proceedings of the International Society for Music Information Retrieval Conference; 2016. p. 488–494.</mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0121635</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-14-51947</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>Quantitative Determination of Technological Improvement from Patent Data</article-title>
+<alt-title alt-title-type="running-head">Quantitative Determination of Technical Improvement from Patent Data</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Benson</surname>
+<given-names>Christopher L.</given-names>
+</name>
+<xref rid="cor001" ref-type="corresp">*</xref>
+<xref rid="aff001" ref-type="aff"/>
+</contrib>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Magee</surname>
+<given-names>Christopher L.</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"/>
+</contrib>
+</contrib-group>
+<aff id="aff001"><addr-line>Department of Mechanical Engineering, Massachusetts Institute of Technology, Cambridge, Massachusetts, United States of America</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Huy</surname>
+<given-names>Nguyen Tien</given-names>
+</name>
+<role>Academic Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Nagasaki University, JAPAN</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: CLB CLM. Performed the experiments: CLB CLM. Analyzed the data: CLB CLM. Contributed reagents/materials/analysis tools: CLB CLM. Wrote the paper: CLB CLM.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">cbenson@mit.edu</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>15</day>
+<month>4</month>
+<year>2015</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2015</year>
+</pub-date>
+<volume>10</volume>
+<issue>4</issue>
+<elocation-id>e0121635</elocation-id>
+<history>
+<date date-type="received">
+<day>18</day>
+<month>11</month>
+<year>2014</year>
+</date>
+<date date-type="accepted">
+<day>12</day>
+<month>2</month>
+<year>2015</year>
+</date>
+</history>
+<permissions>
+<license xlink:href="https://creativecommons.org/publicdomain/zero/1.0/" xlink:type="simple">
+<license-p>This is an open access article, free of all copyright, and may be freely reproduced, distributed, transmitted, modified, built upon, or otherwise used by anyone for any lawful purpose. The work is made available under the <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/publicdomain/zero/1.0/" xlink:type="simple">Creative Commons CC0</ext-link> public domain dedication</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0121635" xlink:type="simple"/>
+<abstract>
+<p>The results in this paper establish that information contained in patents in a technological domain is strongly correlated with the rate of technological progress in that domain. The importance of patents in a domain, the recency of patents in a domain and the immediacy of patents in a domain are all strongly correlated with increases in the rate of performance improvement in the domain of interest. A patent metric that combines both importance and immediacy is not only highly correlated (r = 0.76, p = 2.6*10<sup>-6</sup>) with the performance improvement rate but the correlation is also very robust to domain selection and appears to have good predictive power for more than ten years into the future. Linear regressions with all three causal concepts indicate realistic value in practical use to estimate the important performance improvement rate of a technological domain.</p>
+</abstract>
+<funding-group>
+<funding-statement>This work was funded by the Singapore University of Technology and Design through their support of the authors at the MIT International Design Center. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="1"/>
+<table-count count="4"/>
+<page-count count="23"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability" xlink:type="simple">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its Supporting Information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>It is possible to quantify the improvement of a technological domain over time, as was first introduced by Moore [<xref rid="pone.0121635.ref001" ref-type="bibr">1</xref>] and has since been explored more broadly and deeply by many others [<xref rid="pone.0121635.ref002" ref-type="bibr">2</xref>–<xref rid="pone.0121635.ref009" ref-type="bibr">9</xref>]. All of these authors find exponential relationships between performance and time or equivalently that the fractional (or percentage) change per year is constant. Specifically, if q is performance at time t and q<sub>0</sub> performance at a reference time, t<sub>0</sub>,</p>
+<disp-formula id="pone.0121635.e001">
+<alternatives>
+<graphic id="pone.0121635.e001g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e001" xlink:type="simple"/>
+<mml:math display="block" id="M1" overflow="scroll">
+<mml:mrow><mml:mi>q</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mspace width="0.15em"/><mml:mtext>exp</mml:mtext><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(1)</label>
+</disp-formula>
+<p>The exponential constant (k) is referred to here as the technological improvement rate, which represents the performance improvement over time for a specific generic function that the technological domain is accomplishing. Estimates for k are determined by first constructing a functional performance metric (FPM) that is a measure of the generic function for a technological domain and includes the factors that affect the purchasing decision for artifacts embodying the technology (for example: Watts/$ for Solar PV). Next, data points that measure the FPM are collected over a range of time: a technological improvement rate is determined by an exponential regression vs. time and is statistically analyzed to examine robustness and reliability. While there has been considerable research into finding these improvement rates for different technologies and understanding the best way to measure them [<xref rid="pone.0121635.ref004" ref-type="bibr">4</xref>,<xref rid="pone.0121635.ref005" ref-type="bibr">5</xref>], there has been relatively little work done to understand why there may be differences in improvement rates among technologies.</p>
+<p>One of the sources of data that has been widely used for understanding technological change in recent years is patent data [<xref rid="pone.0121635.ref010" ref-type="bibr">10</xref>–<xref rid="pone.0121635.ref015" ref-type="bibr">15</xref>]. Patents are an attractive choice for analyzing technological change because they are: generalizable, objective, quantitative and qualitative. Patents include many technical fields over a long period of time, and thus allow for easier generalization of the research. There are specific criteria for an invention to be patented, which creates an objective standard as to what counts as an invention (as opposed to a subjective list of innovations in a field). Each patent is well tracked and includes a wealth of meta-data, and thus allows for quantitative analysis.</p>
+<p>While many aspects of patents make it an attractive data source for innovation analyses, patents are limited in that they may not cover all inventions or discoveries due to specific patentability criteria that makes it impossible to patent some things (such as Maxwell’s equations) and not all inventions are patented for both economic (secrecy) and competitive reasons (i.e. universities could not collect royalties on patents before 1980). Additionally, the temporal nature of patents can lead to truncation issues with patent data as has been explored by [<xref rid="pone.0121635.ref016" ref-type="bibr">16</xref>–<xref rid="pone.0121635.ref018" ref-type="bibr">18</xref>]. An important aspect of the present work is testing the severity of these shortcomings relative to technological progress in a fairly wide set of technological domains—see discussion relative to <xref rid="sec013" ref-type="sec">Hypothesis 0</xref> throughout the paper.</p>
+<sec id="sec002">
+<title>Literature Review and Development of Hypotheses</title>
+<p>Although there is no existing theory that directly attempts to explain the differences between technological improvement rates in technological domains, there are a large number of useful theoretical writings on technological change. This section reviews the technical change literature in order to build upon prior work in Benson and Magee [<xref rid="pone.0121635.ref019" ref-type="bibr">19</xref>] to establish hypotheses that are testable from patent data. Since the quantitative basis for this study is linking the technological improvement rates with patent characteristics, we are (at least implicitly) making a foundational assumption. The critical assumption is that patents indeed capture enough information that is relevant to technological progress to achieve significant correlations between patent characteristics in domains and the rate of progress in the same domains. If patents do not sufficiently contain the important information distinguishing technical progress in a variety of domains, this assumption is problematic. The assumption can be represented by the following hypothesis.</p>
+<p>HYPOTHESIS 0: <italic>The differences in technological improvement rates among technological domains can be accounted for by the differences among patent characteristics of the domains</italic>.</p>
+<p>The remainder of this section develops hypotheses based upon various concepts from the literature on technological change. The concepts are operationalized by relationships to specific patent characteristics and the concepts and patent characteristics are summarized in <xref rid="pone.0121635.t001" ref-type="table">Table 1</xref>. Each of these patent metrics is treated as an independent variable with the k-value as the dependent variable whose variation across domains we will test for each hypothesis. However, the structure followed in the reasoning is that the concepts are what cause both variation in the performance improvement rate (k) and the patent metric. The equations and specific manner of measuring the patent characteristics will be discussed later in the Data and Methods section.</p>
+<table-wrap id="pone.0121635.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0121635.t001</object-id>
+<label>Table 1</label> <caption><title>Description of Independent Variables.</title></caption>
+<alternatives>
+<graphic id="pone.0121635.t001g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.t001" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1"><bold><bold>Patent characteristics</bold></bold></th>
+<th align="left" rowspan="1" colspan="1"><bold><bold>Concept</bold></bold></th>
+<th align="left" rowspan="1" colspan="1"><bold><bold>Description</bold></bold></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">(1) Simple Patent Count</td>
+<td align="left" rowspan="1" colspan="1">A: Effort</td>
+<td align="left" rowspan="1" colspan="1">number of issued US patents in a domain from 1976–2013</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(2) Average number of forward citations</td>
+<td align="left" rowspan="1" colspan="1">B: Importance of Patents</td>
+<td align="left" rowspan="1" colspan="1">average number of times each patent in a domain is cited</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(3) Ratio of important patents</td>
+<td align="left" rowspan="1" colspan="1">B: Importance of Patents</td>
+<td align="left" rowspan="1" colspan="1">ratio of patents with cited by over 20 to total patents in a domain</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(4) NPL Ratio</td>
+<td align="left" rowspan="1" colspan="1">C: Impact of Science</td>
+<td align="left" rowspan="1" colspan="1">ratio of scientific citations to total citations from the domain patents</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(5) Average publication year</td>
+<td align="left" rowspan="1" colspan="1">D: Recency</td>
+<td align="left" rowspan="1" colspan="1">the average date of publication for all patents in a domain</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(6) Average Age of backward citation</td>
+<td align="left" rowspan="1" colspan="1">E: Immediacy</td>
+<td align="left" rowspan="1" colspan="1">average age of backward citations for each patent (averaged over the domain) at the time of the citing patents publication</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(7) Price Index (3 years)</td>
+<td align="left" rowspan="1" colspan="1">E: Immediacy</td>
+<td align="left" rowspan="1" colspan="1">average proportion of citations that a domain patent receives within 3 years of publication</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(8) Ratio of Backward Citations to Other Domains</td>
+<td align="left" rowspan="1" colspan="1">F: Breadth of Knowledge</td>
+<td align="left" rowspan="1" colspan="1">ratio of citations from patents in the domain to patents in other domains</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(9) Mean publication date of backward citations</td>
+<td align="left" rowspan="1" colspan="1">D &amp; E: Recency and Immediacy</td>
+<td align="left" rowspan="1" colspan="1">average date of publication for backward citations from patents in a domain</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(10) Average City by within 3 years</td>
+<td align="left" rowspan="1" colspan="1">B &amp; E: Immediate Importance</td>
+<td align="left" rowspan="1" colspan="1">average number of citations that a domain patent receives within 3 years of publication</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<sec id="sec003">
+<title>Concept A: Effort in a Domain</title>
+<p>There are several aspects of technological evolution where the demand or usage could play an important role in the relative rate of improvement in a technological domain. Wright's [<xref rid="pone.0121635.ref020" ref-type="bibr">20</xref>] well-known paper related the cumulative production of a product with decreasing costs. Arrow, in his important 1962 paper [<xref rid="pone.0121635.ref021" ref-type="bibr">21</xref>], named this effect “learning by doing” and developed a model that showed that more highly used technologies would enable more opportunity to 'learn by doing' in production. Although Wright’s and other early efforts [<xref rid="pone.0121635.ref022" ref-type="bibr">22</xref>,<xref rid="pone.0121635.ref023" ref-type="bibr">23</xref>] focused on production of a given design in a given factory, later the concept was generalized so that cumulative production serves as a proxy for effort of any kind [<xref rid="pone.0121635.ref004" ref-type="bibr">4</xref>,<xref rid="pone.0121635.ref024" ref-type="bibr">24</xref>]. In this generalization, cumulative production is summed over the domain (or industry) of interest. The generalization is consistent with revenue and R&amp;D spending increasing with production volume [<xref rid="pone.0121635.ref025" ref-type="bibr">25</xref>].</p>
+<p>A direct relationship between R&amp;D effort and technical improvement has been discussed by many researchers of technical change. Christensen [<xref rid="pone.0121635.ref026" ref-type="bibr">26</xref>] related the technical improvement of areal density of hard disks to the increase in engineering effort, and Foster [<xref rid="pone.0121635.ref027" ref-type="bibr">27</xref>] considered R&amp;D effort the major variable in determining improvement. A relationship between R&amp;D effort and the number of patents produced in a particular domain is supported in the work of Margolis and Kammen [<xref rid="pone.0121635.ref028" ref-type="bibr">28</xref>]. Thus, our study uses patent output to test the concept that more inventive effort presumably by more R&amp;D spending (measured by patent output) results in increases in technological performance improvement. As a result, the first hypothesis is:</p>
+<p>HYPOTHESIS 1: <italic>The performance improvement rate in technological domains should be higher in domains with increased number of patents within that technological domain</italic></p>
+</sec>
+<sec id="sec004">
+<title>Concept B: Importance of patents in a domain</title>
+<p>One of the main explanations of technological change in the literature is based upon categorizing the improvements or inventions within a technology into distinct categories. Many researchers [<xref rid="pone.0121635.ref029" ref-type="bibr">29</xref>–<xref rid="pone.0121635.ref031" ref-type="bibr">31</xref>] argue the significance (perhaps even dominance) of a small set of very important inventions in technological change. In almost all cases of the innovation categorization concept, there is both a lesser and a greater classification. For example, incremental innovation achieves small changes, while radical innovation results in much more change. Similar differentiation can be made for component vs architecture and “normal” vs breakthrough while punctuated and disruptive changes are also large. Sood and Tellis [<xref rid="pone.0121635.ref032" ref-type="bibr">32</xref>] have noted that many of these terms are <italic>'intrinsically problematic because they define an innovation in terms of its effects rather than its attributes'</italic>. For our study, the impact of this concept is that we assume that technological change is faster for domains with more important inventions. Thus, we attempt to characterize the importance of innovations in different domains.</p>
+<p>The use of forward citations for estimating the importance of a single patent was first suggested on the basis of study of the economic impact of specific patents in a domain (Computed Tomography) relative to other patents in that domain [<xref rid="pone.0121635.ref010" ref-type="bibr">10</xref>,<xref rid="pone.0121635.ref033" ref-type="bibr">33</xref>]. It has been supported in a number of other studies [<xref rid="pone.0121635.ref034" ref-type="bibr">34</xref>,<xref rid="pone.0121635.ref035" ref-type="bibr">35</xref>] including one where patent citations are used to find rate-limiting components on computer improvements [<xref rid="pone.0121635.ref036" ref-type="bibr">36</xref>]. More recently, research results [<xref rid="pone.0121635.ref037" ref-type="bibr">37</xref>,<xref rid="pone.0121635.ref038" ref-type="bibr">38</xref>] have independently found significance for forward citations in value of patents from detailed statistical analysis and from actual patent auctions.</p>
+<p>Hypothesis 2 seeks to assess the influence of the average importance of patents in a particular domain, with the intuition being that a domain with patents of higher average importance should improve more rapidly than those with lower average importance.</p>
+<p>HYPOTHESIS 2: <italic>Technological domains with a higher average number of citations to patents in the domain should have higher rates of improvement of performance</italic>.</p>
+<p>Hypothesis three involves the impact of particularly important inventions on technological improvement. It is reasonable that technological domains with a larger concentration of very important inventions would improve in performance faster than those with less concentration of such inventions.</p>
+<p>HYPOTHESIS 3: <italic>Technological domains with a higher frequency of patents that are cited a large number of time should have higher rates of improvement in performance</italic>.</p>
+</sec>
+<sec id="sec005">
+<title>Concept C: The importance of science in a domain</title>
+<p>Technology change researchers recognize an essential role for science in technological development; however the complexity of the specific mechanism has continued to unfold. Schumpeter’s early contribution [<xref rid="pone.0121635.ref039" ref-type="bibr">39</xref>] and Bush’s well-known paper [<xref rid="pone.0121635.ref040" ref-type="bibr">40</xref>] are often noted as early statements about the importance of science. The short-hand name for science leading to technology—the linear model- became a straw-man for oversimplification of technology development: Freeman [<xref rid="pone.0121635.ref041" ref-type="bibr">41</xref>] claimed that at one point in time it was nearly impossible to read an article related to technological change or related policies without discussing the linear model. Many missing elements were discussed [<xref rid="pone.0121635.ref042" ref-type="bibr">42</xref>–<xref rid="pone.0121635.ref044" ref-type="bibr">44</xref>]: Godin [<xref rid="pone.0121635.ref045" ref-type="bibr">45</xref>] describes how even Bush modified his connection between basic and applied research around 1960 to include the idea of development. At present, there is arguably an emerging consensus [<xref rid="pone.0121635.ref046" ref-type="bibr">46</xref>,<xref rid="pone.0121635.ref047" ref-type="bibr">47</xref>] that science and technology are intimately connected but that the interconnection is highly complex [<xref rid="pone.0121635.ref048" ref-type="bibr">48</xref>–<xref rid="pone.0121635.ref052" ref-type="bibr">52</xref>]. As one example supporting the idea that domains more closely related to science should improve faster, the results of Klevoric et al [<xref rid="pone.0121635.ref048" ref-type="bibr">48</xref>] indicate that “opportunities” are greater for domains that are more closely related to science (they note pharmaceuticals and chemicals as two examples) than are the opportunities available to domains that are not as closely linked to science (pumps and motors are two examples they give).</p>
+<p>To test this idea through patent information, one must connect science directly to patents: some have used a patent characteristic which is the number of backward references to scientific papers [<xref rid="pone.0121635.ref049" ref-type="bibr">49</xref>] and others have used the fraction of backward references by a patent to the non-patent literature which are mostly citations to scientific articles [<xref rid="pone.0121635.ref047" ref-type="bibr">47</xref>,<xref rid="pone.0121635.ref053" ref-type="bibr">53</xref>–<xref rid="pone.0121635.ref055" ref-type="bibr">55</xref>]. For understanding differences in rates between domains, this concept suggests that <italic>domains</italic> whose patents cite more scientific articles will improve more rapidly than those who cite less such articles; the resulting hypothesis is:</p>
+<p>HYPOTHESIS 4: <italic>Technological domains with a higher frequency of citations to the scientific literature should have higher rates of improvement in performance</italic>.</p>
+</sec>
+<sec id="sec006">
+<title>Concept D: Recency of work in (or emergence of) a domain</title>
+<p>The basic intuition underlying concept D is the idea that more rapidly improving domains are newer. Schoenmakers and Duysters [<xref rid="pone.0121635.ref056" ref-type="bibr">56</xref>] showed that more important inventions tended to rely upon newer technologies and Nerkar’s [<xref rid="pone.0121635.ref012" ref-type="bibr">12</xref>] results indicate a positive impact of recency on the importance of pharmaceutical patents; however, application of recency to comparison among domains has not been previously considered. Thus, we examine whether domains that are newer improve at a more rapid pace than their older counterparts; the resulting hypothesis is:</p>
+<p>HYPOTHESIS 5: <italic>Technological domains whose patents are newer should have higher rates of improvement in performance</italic>.</p>
+</sec>
+<sec id="sec007">
+<title>Concept E: Immediacy of utilization of domain patents and immediacy of knowledge utilized by domain patents</title>
+<p>The relationship between more immediate science and more rapidly improving scientific fields provides a promising analogy for the importance of immediacy of patents in technological improvement. The connection between immediacy of science and higher scientific improvement rates was suggested by Price [<xref rid="pone.0121635.ref057" ref-type="bibr">57</xref>], who showed that fast improving scientific fields follow a 'research front' that relies mainly on very recently published papers. We should note that Price was not referring to how new a field was as discussed in concept D but instead at any time, how closely related the citations were to the time in question which we therefore label immediacy. Patents that are used more quickly indicate faster incorporation of new knowledge and we conjecture that more rapid incorporation of knowledge also results in more rapid improvement in performance.</p>
+<p>HYPOTHESIS 6: <italic>Domains whose patents are cited relatively more often earlier (as opposed to later) in their existence should have higher rates of improvement</italic></p>
+<p>There are two ways immediacy can be important. One is the tendency for patents in a domain <italic>to be cited</italic> soon after issuance as captured in hypothesis 6: the second is for patents in a domain <italic>to cite</italic> more immediate patents. Since domains in a patent typically cite patents not in the domain ~90% of the time, these relationships (backward and forward citation immediacy) need not have the same effect. Thus, a further immediacy hypothesis is:</p>
+<p>HYPOTHESIS 7: <italic>Domains that cite more immediate patents should have higher rates of technological progress</italic></p>
+</sec>
+<sec id="sec008">
+<title>Concept F: Breadth of Knowledge</title>
+<p>The breadth of knowledge concept reflects combining knowledge from different domains, assuming that the use of information from a larger variety of different sources is likely to result in improved technological outcomes. Rosenberg [<xref rid="pone.0121635.ref058" ref-type="bibr">58</xref>] showed that such “technological spillover” greatly impacted the quantity and quality of technological change in the United States in the 20th century—a result supported by others [<xref rid="pone.0121635.ref059" ref-type="bibr">59</xref>,<xref rid="pone.0121635.ref060" ref-type="bibr">60</xref>]. Indeed, a recent paper by Nemet and Johnson [<xref rid="pone.0121635.ref061" ref-type="bibr">61</xref>] state that one of the most fundamental concepts in innovation theory is that ‘important inventions involve the transfer of knowledge from one technical area to another”, a claim which is supported by many others [<xref rid="pone.0121635.ref011" ref-type="bibr">11</xref>,<xref rid="pone.0121635.ref048" ref-type="bibr">48</xref>,<xref rid="pone.0121635.ref059" ref-type="bibr">59</xref>,<xref rid="pone.0121635.ref060" ref-type="bibr">60</xref>,<xref rid="pone.0121635.ref062" ref-type="bibr">62</xref>].</p>
+<p>Trajtenberg et al [<xref rid="pone.0121635.ref047" ref-type="bibr">47</xref>] studied knowledge breadth from patent data by considering the multiple patent classes for single patents and their results indicate that the technologies with broader technological roots enable more generalizable technologies. However, in similar studies (but with emphasis on backward citations) neither Nemet and Johnson [<xref rid="pone.0121635.ref061" ref-type="bibr">61</xref>] or Benson and Magee [<xref rid="pone.0121635.ref063" ref-type="bibr">63</xref>] found any impact of knowledge breadth on importance of patents within domains. Despite the lack of clarity of impact within a domain, we test an “extension” of this concept in this work: domains that rely upon knowledge from a broader knowledge base are likely to improve more quickly.</p>
+<p>HYPOTHESIS 8: <italic>Technological domains that cite higher fractions of patents from other domains will have higher rates of improvement</italic>.</p>
+</sec>
+</sec>
+<sec id="sec009">
+<title>Hybrid Concepts</title>
+<sec id="sec010">
+<title>Recent Immediacy</title>
+<p>The concepts of recency and immediacy can work together to increase the technological improvement rate. The intuition is that the combination of two independently important drivers will lead to an even stronger effect on the rate of technological improvement through a single combined metric. A metric for recent immediacy that is tested in this paper is the average publication date of all backward citations by patents in a domain. This is directly equivalent to adding the positive linear effects of H5 (patent publication date) and H7 (backward citation age at time of patent publication)</p>
+<p>HYPOTHESIS 9: <italic>Technological domains whose patents on average cite patents that are newer will have higher rates of improvement</italic>.</p>
+</sec>
+<sec id="sec011">
+<title>Immediate Importance</title>
+<p>This hybrid concept combines immediacy and importance and thus argues that domains whose patents are more important in the <italic>early</italic> years of a patent’s existence are more dynamic. Although the concept has not previously been developed in the literature (to our knowledge), it is consistent (in a more continual way) with the disruption concepts of Christensen [<xref rid="pone.0121635.ref064" ref-type="bibr">64</xref>] and the discontinuity arguments of Anderson and Tushman [<xref rid="pone.0121635.ref065" ref-type="bibr">65</xref>] and others who support the importance of discontinuities. The specific hypothesis:</p>
+<p>HYPOTHESIS 10: <italic>Domains whose patents are highly cited in the early years of their existence should progress more rapidly</italic>.</p>
+</sec>
+</sec>
+</sec>
+<sec id="sec012">
+<title>Data and Methods</title>
+<p>We attempt to explain the variation in k-values (the dependent variable) among domains by the variation in the various patent metrics (independent variables). The objective is to determine which of the patent metrics correlate significantly with the k’s.</p>
+<p>There are three main components of the methodology. The first is selecting domains and finding their corresponding k values. For this study, we used the results for 28 domains that are covered in detail by Magee et al [<xref rid="pone.0121635.ref005" ref-type="bibr">5</xref>], these 28 domains represent over 10% of the US Patent Database and provide a sufficient sample size for generalization of results. The next major component is to locate a set of patents that represent each of the same technological domains so that the patent metrics listed earlier can be extracted from a representative set of patents. This process was done using the classification overlap method described in Benson and Magee [<xref rid="pone.0121635.ref066" ref-type="bibr">66</xref>] and later expanded [<xref rid="pone.0121635.ref067" ref-type="bibr">67</xref>,<xref rid="pone.0121635.ref068" ref-type="bibr">68</xref>]. This method takes advantage of the fact that many patents are classified in multiple International (IPCs) and/or US patent classes (UPCs) and uses the overlap of IPC and UPCs that are most closely related to a technology in order to clearly define a specific set of US issued patents to represent the technology of interest. For example, milling machine technologies are represented by the overlap of the US patent class 409 and the international patent class B23C. This set can then be downloaded easily from <ext-link ext-link-type="uri" xlink:href="http://www.patsnap.com" xlink:type="simple">www.patsnap.com</ext-link> using the search term UCL:(409) AND ICL:(B23C), which is how all of the sets of patents were collected. Due to the fact that many patents are listed in multiple IPC and/or UPCs it is possible for a patent to represent multiple domains, for example, 1.4% of the ‘Integrated Circuit Processors’ patents are also represented in ‘Solar PV’ patent set. In the latter paper (68), Benson and Magee locate sets of patents that represent each of the 28 technological domains of interest.</p>
+<p>In the third component of the methodology, the patent sets are analyzed to find the set of patent metrics for each technological domain and are then compared quantitatively with the k-value for each domain. The specifics of calculating the patent metrics for hypothesis testing are now discussed briefly below. The patent set characteristics and the k values for the 28 domains studied are given in Table A (in <xref rid="pone.0121635.s001" ref-type="supplementary-material">S1 File</xref>).</p>
+<sec id="sec013">
+<title>Hypothesis 0</title>
+<p>Hypothesis 0 is the most general and is tested by the ability of the patent data to explain the differences in technological improvement rates. This hypothesis can be supported by a patent metric that correlates highly with k and has statistical significance. The hypothesis is strongly reinforced by a set of patent metrics that correlate with k that all have statistical significance.</p>
+</sec>
+<sec id="sec014">
+<title>Hypothesis 1</title>
+<p>The <italic>Simple Patent Count</italic> is the total number of patents within a technological domain. In this research, this includes patents that were published between January 1st, 1976 and July 1st, 2013. This measure is calculated using <xref rid="pone.0121635.e001" ref-type="disp-formula">Equation 1</xref> where SPC is the simple patent count, t is the date, and Pt is the set of patents issued on that particular date, and ‘<italic>COUNT()’</italic> returns the total number of elements in a set.</p>
+<disp-formula id="pone.0121635.e002">
+<alternatives>
+<graphic id="pone.0121635.e002g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e002" xlink:type="simple"/>
+<mml:math display="block" id="M2" overflow="scroll">
+<mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi><mml:mo>=</mml:mo><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>1976</mml:mn></mml:mrow><mml:mrow><mml:mn>7</mml:mn><mml:mo>/</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2013</mml:mn></mml:mrow></mml:munderover><mml:mrow><mml:mi>C</mml:mi><mml:mi>O</mml:mi><mml:mi>U</mml:mi><mml:mi>N</mml:mi><mml:mi>T</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mi>P</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mstyle></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(2)</label>
+</disp-formula>
+<p>Two patent metrics are used to test Concept B and both are directly related to the future (or forward) citations to the patents within a domain. These attempt to measure the impact that a field has on future inventions.</p>
+</sec>
+<sec id="sec015">
+<title>Hypothesis 2</title>
+<p>The <italic>Average Number of Forward Citations per Patent</italic> is the average number of Forward citations for the patents in a technological domain. This measure is calculated using <xref rid="pone.0121635.e003" ref-type="disp-formula">Equation 3</xref> where SPC is the simple patent count, and <italic>FC</italic><sub><italic>i</italic></sub> is the number of Forward citations for patent <italic>i</italic>.</p>
+<disp-formula id="pone.0121635.e003">
+<alternatives>
+<graphic id="pone.0121635.e003g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e003" xlink:type="simple"/>
+<mml:math display="block" id="M3" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>F</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:munderover><mml:mn>1</mml:mn></mml:mstyle></mml:mrow></mml:mstyle></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:mfrac></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(3)</label>
+</disp-formula>
+</sec>
+<sec id="sec016">
+<title>Hypothesis 3</title>
+<p>A test of Hypothesis 3 (high frequency of highly cited patents) is the <italic>Total Number of Patents with more than 20 Forward Citations</italic>. The specific cutoff of 20 citations is based on work done by Schoenmakers and Duysters [<xref rid="pone.0121635.ref056" ref-type="bibr">56</xref>]. This measure is calculated using <xref rid="pone.0121635.e004" ref-type="disp-formula">Equation 4</xref> where SPC is the simple patent count, <italic>FC</italic><sub><italic>i</italic></sub> is the number of Forward citations for patent <italic>i</italic>, and the function <italic>IF(arg)</italic> only counts the values if the argument is satisfied. In this situation, <italic>IF(FC</italic><sub><italic>i</italic></sub><italic>&gt;20)</italic> will only be counted if patent <italic>i</italic> has more than 20 forward citations.</p>
+<disp-formula id="pone.0121635.e004">
+<alternatives>
+<graphic id="pone.0121635.e004g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e004" xlink:type="simple"/>
+<mml:math display="block" id="M4" overflow="scroll">
+<mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mi>I</mml:mi><mml:mi>F</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>F</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>&gt;</mml:mo><mml:mn>20</mml:mn></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mstyle></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(4)</label>
+</disp-formula>
+</sec>
+<sec id="sec017">
+<title>Hypothesis 4</title>
+<p>The <italic>Non-Patent Literature Citation Ratio</italic> is the ratio of citations in a patent to non-patent literature (NPL)—usually scientific journals—to the total citations in the patent and for our purposes is averaged over all patents in the domain. This measure is calculated using <xref rid="pone.0121635.e005" ref-type="disp-formula">Equation 5</xref> where SPC is the simple patent count, <italic>NPL</italic><sub><italic>i</italic></sub> is the number of non-patent literature citations for each patent <italic>i</italic>, and <italic>BC</italic><sub><italic>i</italic></sub> is the number of backward patent citations for each patent <italic>i</italic>. Not all patents have citations to NPL; in our data sets, 43% of the patents cited at least 1 NPL reference, ranging from 16% of patents in the ‘electrical information transmission’ patent set to 93% of patents that represent ‘genome sequencing’ citing NPL.</p>
+<disp-formula id="pone.0121635.e005">
+<alternatives>
+<graphic id="pone.0121635.e005g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e005" xlink:type="simple"/>
+<mml:math display="block" id="M5" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mfrac><mml:mrow><mml:mi>N</mml:mi><mml:mi>P</mml:mi><mml:msub><mml:mi>L</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow><mml:mrow><mml:mi>N</mml:mi><mml:mi>P</mml:mi><mml:msub><mml:mi>L</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mi>B</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:mfrac></mml:mrow></mml:mstyle></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:mfrac></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(5)</label>
+</disp-formula>
+</sec>
+<sec id="sec018">
+<title>Hypothesis 5</title>
+<p>Hypothesis 5 is evaluated using the <italic>Average Publication Year</italic> for the patents in a domain, which provides a simple and effective method of gauging the recency of a technological domain. In this research, this includes patents that were published between January 1st, 1976 and July 1st, 2013. This measure is calculated using <xref rid="pone.0121635.e007" ref-type="disp-formula">Equation 6</xref> where SPC is the simple patent count and <inline-formula id="pone.0121635.e006"><alternatives><graphic id="pone.0121635.e006g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e006" xlink:type="simple"/><mml:math display="inline" id="M6" overflow="scroll"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> is the publication year of patent <italic>i</italic>.</p>
+<disp-formula id="pone.0121635.e007">
+<alternatives>
+<graphic id="pone.0121635.e007g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e007" xlink:type="simple"/>
+<mml:math display="block" id="M7" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:mstyle></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:mfrac></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(6)</label>
+</disp-formula>
+</sec>
+<sec id="sec019">
+<title>Hypothesis 6</title>
+<p>Hypothesis 6 is tested by the <italic>Price Index (3 years) [<xref rid="pone.0121635.ref057" ref-type="bibr">57</xref>]</italic>. This metric is an immediacy metric for <italic>usage of information generated</italic> in a domain and thus involves forward citations. The measure is calculated using <xref rid="pone.0121635.e010" ref-type="disp-formula">Equation 7</xref> where SPC is the simple patent count, <italic>FC</italic><sub><italic>i</italic></sub> is the number of Forward citations for patent <italic>i</italic>, <inline-formula id="pone.0121635.e008"><alternatives><graphic id="pone.0121635.e008g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e008" xlink:type="simple"/><mml:math display="inline" id="M8" overflow="scroll"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> is the publication year of patent <italic>i</italic>, <inline-formula id="pone.0121635.e009"><alternatives><graphic id="pone.0121635.e009g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e009" xlink:type="simple"/><mml:math display="inline" id="M9" overflow="scroll"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:msub><mml:mi>j</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> is the publication date of forward citation <italic>j</italic> of patent <italic>i</italic>, and the function <italic>IF(arg)</italic> only counts the values if the argument is satisfied.</p>
+<disp-formula id="pone.0121635.e010">
+<alternatives>
+<graphic id="pone.0121635.e010g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e010" xlink:type="simple"/>
+<mml:math display="block" id="M10" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>F</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:munderover><mml:mrow><mml:mi>I</mml:mi><mml:mi>F</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:msub><mml:mi>j</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>≤</mml:mo><mml:mn>3</mml:mn><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mstyle></mml:mrow></mml:mstyle></mml:mrow><mml:mrow><mml:mfrac><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>F</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:munderover><mml:mn>1</mml:mn></mml:mstyle></mml:mrow></mml:mstyle></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:mfrac></mml:mrow></mml:mfrac></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(7)</label>
+</disp-formula>
+</sec>
+<sec id="sec020">
+<title>Hypothesis 7</title>
+<p>The immediacy concept is also tested by the <italic>Average Age of Backward Citations</italic>. This measure is calculated using <xref rid="pone.0121635.e013" ref-type="disp-formula">Equation 8</xref> where SPC is the simple patent count, <italic>BC</italic><sub><italic>i</italic></sub> is the number of backward citations for patent <italic>i</italic>, <inline-formula id="pone.0121635.e011"><alternatives><graphic id="pone.0121635.e011g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e011" xlink:type="simple"/><mml:math display="inline" id="M11" overflow="scroll"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:mi>j</mml:mi><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> is the year of publication of backward citation <italic>j</italic> of patent <italic>i</italic> and <inline-formula id="pone.0121635.e012"><alternatives><graphic id="pone.0121635.e012g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e012" xlink:type="simple"/><mml:math display="inline" id="M12" overflow="scroll"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> is the publication year of patent <italic>i</italic>. Note that this equation is the average publication date minus the average publication date of backward citations.</p>
+<disp-formula id="pone.0121635.e013">
+<alternatives>
+<graphic id="pone.0121635.e013g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e013" xlink:type="simple"/>
+<mml:math display="block" id="M13" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:mstyle></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:mfrac><mml:mo>−</mml:mo><mml:mfrac><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>B</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:munderover><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:mi>j</mml:mi><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:mstyle></mml:mrow></mml:mstyle></mml:mrow><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>B</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:munderover><mml:mn>1</mml:mn></mml:mstyle></mml:mrow></mml:mstyle></mml:mrow></mml:mfrac></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(8)</label>
+</disp-formula>
+</sec>
+<sec id="sec021">
+<title>Hypothesis 8</title>
+<p>The patent metric that is used to evaluate Hypothesis 8 is the <italic>Ratio of Backward Citations to other Domains</italic>. This measure is calculated using <xref rid="pone.0121635.e014" ref-type="disp-formula">Equation 9</xref> where SPC is the simple patent count, and <italic>BC</italic><sub><italic>i</italic></sub> is the set of backward citations for patent <italic>i, P<sub>i</sub></italic> is the total set of patents within the domain and ∪ is the union of two sets across all values of <italic>i</italic>, ∩ is the intersection between two sets and COUNT() counts the number of elements in a set.</p>
+<disp-formula id="pone.0121635.e014">
+<alternatives>
+<graphic id="pone.0121635.e014g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e014" xlink:type="simple"/>
+<mml:math display="block" id="M14" overflow="scroll">
+<mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mfrac><mml:mrow><mml:mi>C</mml:mi><mml:mi>O</mml:mi><mml:mi>U</mml:mi><mml:mi>N</mml:mi><mml:mi>T</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∪</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:msub><mml:mi>P</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mstyle displaystyle="true"><mml:mo>∩</mml:mo><mml:mrow><mml:mi>B</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mstyle></mml:mrow></mml:mstyle></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:mfrac></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(9)</label>
+</disp-formula>
+</sec>
+<sec id="sec022">
+<title>Hypothesis 9</title>
+<p>Combining the recency and immediacy concepts, it is possible to test a combination of the two using the <italic>Average Date of Publication of Backward Citations</italic>. This measure is calculated using <xref rid="pone.0121635.e017" ref-type="disp-formula">Equation 10</xref> where SPC is the simple patent count, <italic>BC</italic><sub><italic>i</italic></sub> is the number of backward citations for patent <italic>i</italic>, <inline-formula id="pone.0121635.e015"><alternatives><graphic id="pone.0121635.e015g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e015" xlink:type="simple"/><mml:math display="inline" id="M15" overflow="scroll"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:mi>j</mml:mi><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> is the year of publication of backward citation <italic>j</italic> of patent <italic>i</italic> and <inline-formula id="pone.0121635.e016"><alternatives><graphic id="pone.0121635.e016g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e016" xlink:type="simple"/><mml:math display="inline" id="M16" overflow="scroll"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> is the publication year of patent <italic>i</italic>. Note that <xref rid="pone.0121635.e017" ref-type="disp-formula">Equation 10</xref> is a linear combination of <xref rid="pone.0121635.e013" ref-type="disp-formula">Equation 8</xref> and <xref rid="pone.0121635.e007" ref-type="disp-formula">Equation 6</xref> and the expected correlation is now positive.</p>
+<disp-formula id="pone.0121635.e017">
+<alternatives>
+<graphic id="pone.0121635.e017g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e017" xlink:type="simple"/>
+<mml:math display="block" id="M17" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>B</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:munderover><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:mi>j</mml:mi><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:mstyle></mml:mrow></mml:mstyle></mml:mrow><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>B</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:munderover><mml:mn>1</mml:mn></mml:mstyle></mml:mrow></mml:mstyle></mml:mrow></mml:mfrac></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(10)</label>
+</disp-formula>
+</sec>
+<sec id="sec023">
+<title>Hypothesis 10</title>
+<p>The <italic>Average number of Forward Citations within 3 years of publication</italic> is the numerator of the price index (<xref rid="pone.0121635.e010" ref-type="disp-formula">Equation 7</xref>) and a good potential indicator of immediate importance and is used to test hypothesis 10. The metric is calculated using <xref rid="pone.0121635.e020" ref-type="disp-formula">Equation 11</xref> where SPC is the simple patent count, <italic>FC</italic><sub><italic>i</italic></sub> is the number of Forward citations for patent <italic>i</italic>, <inline-formula id="pone.0121635.e018"><alternatives><graphic id="pone.0121635.e018g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e018" xlink:type="simple"/><mml:math display="inline" id="M18" overflow="scroll"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> is the publication year of patent <italic>i</italic>, <inline-formula id="pone.0121635.e019"><alternatives><graphic id="pone.0121635.e019g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e019" xlink:type="simple"/><mml:math display="inline" id="M19" overflow="scroll"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:msub><mml:mi>j</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> is the publication date of forward citation <italic>j</italic> of patent <italic>i</italic>, and the function <italic>IF(arg)</italic> only counts the values if the argument is satisfied.</p>
+<disp-formula id="pone.0121635.e020">
+<alternatives>
+<graphic id="pone.0121635.e020g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.e020" xlink:type="simple"/>
+<mml:math display="block" id="M20" overflow="scroll">
+<mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>S</mml:mi><mml:mi>P</mml:mi><mml:mi>C</mml:mi></mml:mrow></mml:munderover><mml:mrow><mml:mstyle displaystyle="true"><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>F</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:munderover><mml:mrow><mml:mi>I</mml:mi><mml:mi>F</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:msub><mml:mi>j</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:msub><mml:mi>i</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>u</mml:mi><mml:mi>b</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>≤</mml:mo><mml:mn>3</mml:mn><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mstyle></mml:mrow></mml:mstyle></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(11)</label>
+</disp-formula>
+<p>The raw patent variables (dates, patent citations, NPL citations) for each of these metrics can be downloaded from <ext-link ext-link-type="uri" xlink:href="http://www.patsnap.com" xlink:type="simple">www.patsnap.com</ext-link> in bulk for each patent set to allow for manipulation into the final forms shown in Equations <xref rid="pone.0121635.e002" ref-type="disp-formula">2</xref>–<xref rid="pone.0121635.e020" ref-type="disp-formula">11</xref>. After each of the metrics are calculated for each domain, the k values (dependent variable) are plotted against the set of 28 data points for each patent metric (the dependent variables) for the 28 domains. A Pearson correlation coefficient and p value are also determined. A patent metric that correlates significantly in the expected direction with k is support for the related hypothesis and the concept that led to the hypothesis is thereby supported as well.</p>
+</sec>
+</sec>
+<sec id="sec024" sec-type="results">
+<title>Results</title>
+<p>The relationship between a particular patent metric and the k values for all domains was examined graphically as well as statistically. <xref rid="pone.0121635.g001" ref-type="fig">Fig 1</xref> shows examples of the three types of relationships between the k values and the patent metrics: <italic>no relationship</italic>, demonstrated in <xref rid="pone.0121635.g001" ref-type="fig">Fig 1(A)</xref> has a low correlation coefficient and high p-value, a <italic>weak relationship</italic> with a moderate correlation coefficient and p-value with an example in <xref rid="pone.0121635.g001" ref-type="fig">Fig 1(B)</xref>, and a <italic>strong relationship</italic> with a high correlation coefficient and low p-value as in <xref rid="pone.0121635.g001" ref-type="fig">Fig 1(C)</xref>.</p>
+<fig id="pone.0121635.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0121635.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Technological Improvement Rates vs Simple Patent Count (A), ratio of patents with greater than 20 citations (B), and average number of forward citations within 3 years of publication (C); the Pearson correlation coefficient (c<sub>p</sub>), the null hypothesis acceptance (cutoff at p = 0.05) and the values of the independent variable for the domains having maximum and minimum values are shown in the upper right corner.</title>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.g001" position="float" xlink:type="simple"/>
+</fig>
+<p><xref rid="pone.0121635.g001" ref-type="fig">Fig 1(A)</xref> shows a plot of the k values and simple patent count and exhibits no clear trend or relationship. The Pearson correlation coefficient between the two variables is 0.33, however the p value is a relatively high 0.085 so the correlation could easily be due to the random variation in the data. The combination of the statistical tests and the lack of a discernible trend in <xref rid="pone.0121635.g001" ref-type="fig">Fig 1(A)</xref> indicate that there is not a reliable relationship between the number of patents in a technological domain and the associated k. Thus, in this form effort in a domain surprisingly shows <italic>no statistically significant relationship</italic> with technological improvement in a domain.</p>
+<p><xref rid="pone.0121635.g001" ref-type="fig">Fig 1(B)</xref> is an example of a weak relationship between a patent metric, the % of patents with greater than 20 citations, and the k values. There seems to be a slight visual trend in the figure, the Pearson correlation is a moderate 0.39 and the p-value is slightly lower than is generally accepted for statistical significance, at 0.043. This indicates a <italic>weak relationship</italic> between the values for this patent metric and the k values for the 28 technological domains.</p>
+<p>Contrastingly, <xref rid="pone.0121635.g001" ref-type="fig">Fig 1(C)</xref> shows the relationship between k and the average number of forward citations within 3 years of publication per patent in a domain. The Pearson correlation coefficient between the two variables is 0.76, and the p value is 2.6*10–<sup>6</sup>, indicating that the correlation is quite unlikely to be due to random scattering of the data. The combination of the statistical tests and the visible trend in <xref rid="pone.0121635.g001" ref-type="fig">Fig 1(C)</xref> indicate that there is a <italic>strong relationship</italic> between the average citations in the first three years to the patents in a technological domain and the associated k value.</p>
+<p>All of patent metrics discussed in sections 2 and 3 were tested using this approach and the summary statistics and correlation coefficients are given in <xref rid="pone.0121635.t002" ref-type="table">Table 2</xref>. The last two rows give the correlation between k and each specific patent metric (shown in the first column on the left and numbered across the top row). These results show k correlations with five of the patent metrics have p values &lt; 0.01 indicating that total forward citations (column 2), average patent publication year (column 5), average age of backward citation (column 6) and especially mean publication date of backward citations (column 9) and average forward citations in the first three years (column 10) have strong correlations with k that are not at all likely due to noise in either the patent or rate data sets. We briefly note here the specific results and their relationship to the concepts and hypotheses from section 2 and interpret the results more fully in the discussion section.</p>
+<table-wrap id="pone.0121635.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0121635.t002</object-id>
+<label>Table 2</label> <caption><title>Summary Statistics and Correlation Matrix.</title></caption>
+<alternatives>
+<graphic id="pone.0121635.t002g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.t002" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Variable</th>
+<th align="left" rowspan="1" colspan="1">Mean</th>
+<th align="left" rowspan="1" colspan="1">SD</th>
+<th align="left" rowspan="1" colspan="1">Min</th>
+<th align="left" rowspan="1" colspan="1">Max</th>
+<th align="left" rowspan="1" colspan="1">(1)</th>
+<th align="left" rowspan="1" colspan="1">(2)</th>
+<th align="left" rowspan="1" colspan="1">(3)</th>
+<th align="left" rowspan="1" colspan="1">(4)</th>
+<th align="left" rowspan="1" colspan="1">(5)</th>
+<th align="left" rowspan="1" colspan="1">(6)</th>
+<th align="left" rowspan="1" colspan="1">(7)</th>
+<th align="left" rowspan="1" colspan="1">(8)</th>
+<th align="left" rowspan="1" colspan="1">(9)</th>
+<th align="left" rowspan="1" colspan="1">(10)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">(1) Simple Patent Count</td>
+<td align="left" rowspan="1" colspan="1">18259</td>
+<td align="left" rowspan="1" colspan="1">29110</td>
+<td align="left" rowspan="1" colspan="1">154</td>
+<td align="left" rowspan="1" colspan="1">149491</td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>1</italic>.</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(2) Average number of forward citations</td>
+<td align="left" rowspan="1" colspan="1">11.80</td>
+<td align="left" rowspan="1" colspan="1">3.32</td>
+<td align="left" rowspan="1" colspan="1">6.12</td>
+<td align="left" rowspan="1" colspan="1">22.08</td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>01</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>1</italic>.</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(3) Ratio of patents with cited by over 20</td>
+<td align="left" rowspan="1" colspan="1">0.17</td>
+<td align="left" rowspan="1" colspan="1">0.06</td>
+<td align="left" rowspan="1" colspan="1">0.08</td>
+<td align="left" rowspan="1" colspan="1">0.36</td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>03</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>96</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>1</italic>.</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(4) NPL Ratio</td>
+<td align="left" rowspan="1" colspan="1">0.17</td>
+<td align="left" rowspan="1" colspan="1">0.15</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+<td align="left" rowspan="1" colspan="1">0.84</td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>1</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>25</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>24</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>1</italic>.</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(5) Average publication year</td>
+<td align="left" rowspan="1" colspan="1">2000.7</td>
+<td align="left" rowspan="1" colspan="1">2.9</td>
+<td align="left" rowspan="1" colspan="1">1994.8</td>
+<td align="left" rowspan="1" colspan="1">2006.7</td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>19</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>11</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>09</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>51</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>1</italic>.</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(6) Average Age of backward Citation</td>
+<td align="left" rowspan="1" colspan="1">10.70</td>
+<td align="left" rowspan="1" colspan="1">3.44</td>
+<td align="left" rowspan="1" colspan="1">6.66</td>
+<td align="left" rowspan="1" colspan="1">18.33</td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>18</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>37</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>22</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>14</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>23</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>1</italic>.</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(7) Price Index (3 years)</td>
+<td align="left" rowspan="1" colspan="1">0.26</td>
+<td align="left" rowspan="1" colspan="1">0.05</td>
+<td align="left" rowspan="1" colspan="1">0.18</td>
+<td align="left" rowspan="1" colspan="1">0.35</td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>29</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>37</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>48</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>55</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>51</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>52</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>1</italic>.</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(8) Ratio of Backward Citations to Other Domains</td>
+<td align="left" rowspan="1" colspan="1">0.10</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">0.20</td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>55</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>03</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>04</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>39</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>2</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>28</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>13</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>1</italic>.</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(9) Mean publication date of backward citations</td>
+<td align="left" rowspan="1" colspan="1">1990.0</td>
+<td align="left" rowspan="1" colspan="1">5.0</td>
+<td align="left" rowspan="1" colspan="1">1981.1</td>
+<td align="left" rowspan="1" colspan="1">1997.8</td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>23</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>31</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>21</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>4</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>74</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>82</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>65</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>08</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>1</italic>.</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(10) Average forward citations within 3 years</td>
+<td align="left" rowspan="1" colspan="1">2.96</td>
+<td align="left" rowspan="1" colspan="1">0.77</td>
+<td align="left" rowspan="1" colspan="1">1.77</td>
+<td align="left" rowspan="1" colspan="1">4.62</td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>26</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>77</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>64</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>03</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>4</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>-0</italic>.<italic>73</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>27</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>13</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>74</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>1</italic>.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">K-Value correlation with Patent Metric</td>
+<td align="left" rowspan="1" colspan="1">0.23</td>
+<td align="left" rowspan="1" colspan="1">0.17</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+<td align="left" rowspan="1" colspan="1">0.65</td>
+<td align="left" rowspan="1" colspan="1"><italic>0</italic>.<italic>33</italic></td>
+<td align="left" rowspan="1" colspan="1"><bold><italic>0</italic>.<italic>48</italic></bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>0</italic>.<italic>38</italic></td>
+<td align="left" rowspan="1" colspan="1"><italic>0</italic>.<italic>2</italic></td>
+<td align="left" rowspan="1" colspan="1"><bold><italic>0</italic>.<italic>54</italic></bold></td>
+<td align="left" rowspan="1" colspan="1"><bold><italic>-0</italic>.<italic>59</italic></bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>0</italic>.<italic>39</italic></td>
+<td align="left" rowspan="1" colspan="1"><italic>0</italic>.<italic>11</italic></td>
+<td align="left" rowspan="1" colspan="1"><bold><italic>0</italic>.<italic>72</italic></bold></td>
+<td align="left" rowspan="1" colspan="1"><bold><italic>0</italic>.<italic>76</italic></bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>P-value</italic></td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"><italic>0</italic>.<italic>085</italic></td>
+<td align="left" rowspan="1" colspan="1"><bold><italic>0</italic>.<italic>009</italic></bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>0</italic>.<italic>043</italic></td>
+<td align="left" rowspan="1" colspan="1"><italic>0</italic>.<italic>303</italic></td>
+<td align="left" rowspan="1" colspan="1"><bold><italic>0</italic>.<italic>003</italic></bold></td>
+<td align="left" rowspan="1" colspan="1"><bold><italic>0</italic>.<italic>001</italic></bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>0</italic>.<italic>039</italic></td>
+<td align="left" rowspan="1" colspan="1"><italic>0</italic>.<italic>567</italic></td>
+<td align="left" rowspan="1" colspan="1"><bold><italic>1</italic>.<italic>7E-05</italic></bold></td>
+<td align="left" rowspan="1" colspan="1"><bold><italic>2</italic>.<italic>6E-06</italic></bold></td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>Concept A, that effort is an important determinant of relative progress rates among domains surprisingly failed to achieve statistical empirical support. The hypothesis derived from this concept is tested in column 1 above and achieves a p value of. 095: this is above the normal cutoff for statistical significance. On the other hand, Concept B that technological improvement rates are higher in domains with more important/cited patents in a domain is supported. The hypotheses derived from this concept (H2 and H3) are both supported—see columns 2 and 3. The total forward citations (column 2) correlation is 0.48 and has a p value of. 009 which is relatively strong whereas the fraction of patents with more than 20 citations has a more modest correlation of 0.38 with p value of 0.043.</p>
+<p>Concept C, which states that domains with closer connections to science improve more rapidly is surprisingly not supported statistically by the results. The test of hypothesis 4 is shown in column 4 of <xref rid="pone.0121635.t002" ref-type="table">Table 2</xref> and shows poor correlation (Cp = 0.2, p = 0.3). We were surprised enough by this result to test it again (see EC) with only the 100 most highly cited patents in the domains rather than our total set of patents (with less than 100% relevancy) but found even weaker correlation (Cp = -0.03, p = 0.86) for the clean Top100 patent sets. The essentially zero correlation between k and NPL for these clean and most important patents in a domain supports the earlier finding and will be discussed further below.</p>
+<p>Concept D—Recency- and hypothesis five that is derived from it (domains with newer patent sets should improve more rapidly) does achieve firm empirical support. The test of this hypothesis is shown in column 5 above and demonstrates strong correlation of 0.54 with a p value of 0.003. Likewise, concept E—Technology improvement is enhanced by increased immediacy of use and knowledge base- is supported strongly. The hypotheses derived from it (H6 and H7) are tested in columns 6 and 7 in <xref rid="pone.0121635.t002" ref-type="table">Table 2</xref>. Backward citation immediacy (column 6) shows strong expected (negative) correlation of -0.59 with a very strong p value (0.001) and forward citation immediacy (column 7) is supported but the correlation of 0.39 and p = 0.039 values are not as strong as for H6.</p>
+<p>Concept F breadth of knowledge led to H8: domains that cite other domains more frequently will improve more rapidly. This hypothesis is tested in column 8 and does not show any sign of correlation with Cp = 0.11 and p = 0.57. The result of testing the combined recency and immediacy hypothesis is shown in column 9 to achieve a very strong correlation (Cp = 0.72, p = 1.7 x 10<sup>−5</sup>) with excellent explanatory power. Column 10 tests the hybrid of immediacy and importance and also shows a very strong correlation (Cp = 0.76, p = 2.6x 10<sup>−6</sup>) with perhaps even more explanatory power. The immediate importance metric has the strongest correlation of any of our patent metrics with the technological improvement rate.</p>
+<p>Although seven correlations have p values less than our desired cutoff of 0.05, it is obvious that a number of them contain duplicated information and cannot be useful independently. A very clear example is seen for items 2 and 3 which both are designed as measures of importance and have a cross-correlation near 1 (Cp = 0.96). Not surprisingly, the combined/hybrid metrics have significant cross-correlations with other significant variables. The recent immediacy metric (column 9) shows cross-correlation greater than 0.6 with recency (column 5) as well as both immediacy metrics (6&amp;7) as well as with the immediate importance metric (column 10). The immediate importance (10) metric has correlations greater than 0.6 with both importance metrics (columns 2&amp;3) as well as the backward citation immediacy (column 6), and the recent immediacy metric (column 9), but not the forward citation immediacy metric (column 7). We will return to the issue of overall correlation with multiple regression models shortly but it is useful to first present results concerning robustness of the correlations.</p>
+<sec id="sec025">
+<title>Robustness Testing</title>
+<p>An important issue is whether our 28 domains contain significant selection bias. It is possible that domains we have not yet studied could change our results. Although this concern cannot be fully answered, one way to examine this issue is to look at correlations with smaller subsets of the 28 domains. We proceeded (see supporting material) with a relatively stringent test by randomly separating the set of 28 domains into 2 independent sets of 14 domains (with no domains repeated twice) and the correlation coefficients were re-calculated using only 14 domains each time. This trial was then completed 10 times for a total of 20 different sets of 14 domains and corresponding correlation coefficients. To examine each variable, the mean and standard deviation of the values were calculated, with the signal (r) to noise (sigma) values taken as a measure of robustness. <xref rid="pone.0121635.t003" ref-type="table">Table 3</xref> shows the summary of the domain selection robustness for all 10 metrics from <xref rid="pone.0121635.t002" ref-type="table">Table 2</xref>.</p>
+<table-wrap id="pone.0121635.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0121635.t003</object-id>
+<label>Table 3</label> <caption><title>Summary of Domain Robustness Analysis.</title></caption>
+<alternatives>
+<graphic id="pone.0121635.t003g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.t003" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Patent Metric</th>
+<th align="left" rowspan="1" colspan="1">Correlation for all 28 domains</th>
+<th align="left" rowspan="1" colspan="1">Standard Deviation of Correlation for 14 domains</th>
+<th align="left" rowspan="1" colspan="1">Correlation / Standard Deviation (absolute value)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>(10) Average Cited by within 3 years</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>76</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>073</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>10</italic>.<italic>368</italic></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>(9) Total mean publication date of backward citations</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>72</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>090</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>8</italic>.<italic>000</italic></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(6) Average Age of Citation</td>
+<td align="char" char="." rowspan="1" colspan="1">-0.59</td>
+<td align="char" char="." rowspan="1" colspan="1">0.103</td>
+<td align="char" char="." rowspan="1" colspan="1">5.678</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(5) Average publication year</td>
+<td align="char" char="." rowspan="1" colspan="1">0.54</td>
+<td align="char" char="." rowspan="1" colspan="1">0.128</td>
+<td align="char" char="." rowspan="1" colspan="1">4.178</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(2) Average number of forward citations</td>
+<td align="char" char="." rowspan="1" colspan="1">0.48</td>
+<td align="char" char="." rowspan="1" colspan="1">0.136</td>
+<td align="char" char="." rowspan="1" colspan="1">3.567</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(7) Price Index (3 years)</td>
+<td align="char" char="." rowspan="1" colspan="1">0.39</td>
+<td align="char" char="." rowspan="1" colspan="1">0.185</td>
+<td align="char" char="." rowspan="1" colspan="1">2.114</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(3) Ratio of patents with cited by over 20</td>
+<td align="char" char="." rowspan="1" colspan="1">0.38</td>
+<td align="char" char="." rowspan="1" colspan="1">0.200</td>
+<td align="char" char="." rowspan="1" colspan="1">1.923</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(1) Simple Patent Count</td>
+<td align="char" char="." rowspan="1" colspan="1">0.33</td>
+<td align="char" char="." rowspan="1" colspan="1">0.195</td>
+<td align="char" char="." rowspan="1" colspan="1">1.695</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(4) NPL Ratio</td>
+<td align="char" char="." rowspan="1" colspan="1">0.2</td>
+<td align="char" char="." rowspan="1" colspan="1">0.152</td>
+<td align="char" char="." rowspan="1" colspan="1">1.326</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(8) Ratio of Cites to Own Domains</td>
+<td align="char" char="." rowspan="1" colspan="1">0.11</td>
+<td align="char" char="." rowspan="1" colspan="1">0.257</td>
+<td align="char" char="." rowspan="1" colspan="1">0.440</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>Not surprisingly, the correlations with the lowest p values were the most robust to this domain selection test. Given the severity of the test in removing ½ of the domains, there is quite good consistency of the correlations of the metrics on the rate of improvement for each of the metrics with p values &lt; 0.01. In particular, the immediate importance metric of average forward citations within 3 years of publication is remarkably consistent across 20 different correlation tests, indicating that the strength of that signal is not likely to be due to the selection of these specific 28 domains. In the linear regression analysis below, we only use the 5 metrics that are shown to be strongest by this test and by their p values for the entire 28-domain correlation.</p>
+</sec>
+<sec id="sec026">
+<title>Regression Analysis</title>
+<p>The five metrics identified above as showing statistically significant and robust correlation with the k values were included in linear regression models for predicting the technological improvement rate. Numerous regression models were tested using a combination of these variables and the most informative are shown in <xref rid="pone.0121635.t004" ref-type="table">Table 4</xref>.</p>
+<table-wrap id="pone.0121635.t004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0121635.t004</object-id>
+<label>Table 4</label> <caption><title>Least Squares Linear Regression Models for Predicting Technological Improvement Rates with R<sup>2</sup> shown for each model and the coefficients shown for each metric included in the model and its p value.</title></caption>
+<alternatives>
+<graphic id="pone.0121635.t004g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0121635.t004" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Variable/Models</th>
+<th align="left" rowspan="1" colspan="1">A</th>
+<th align="left" rowspan="1" colspan="1">B</th>
+<th align="left" rowspan="1" colspan="1">C</th>
+<th align="left" rowspan="1" colspan="1">D</th>
+<th align="left" rowspan="1" colspan="1">E</th>
+<th align="left" rowspan="1" colspan="1">F</th>
+<th align="left" rowspan="1" colspan="1">G</th>
+<th align="left" rowspan="1" colspan="1">H</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">(2) Average number of forward citations</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">-0.01</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">0.014</td>
+<td align="char" char="." rowspan="1" colspan="1">0.015</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>p-value</italic></td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>34</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"><italic>0</italic>.<italic>044</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>043</italic></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(5) Average publication year</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">0.02</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">0.024</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>p-value</italic></td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>05</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>005</italic></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(6) Average Age of Citation</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">-0.003</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">0.0004</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">-0.018</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>p-value</italic></td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>704</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>969</italic></td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>013</italic></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(9) Total mean publication date of backward citations</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">0.01</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1">0.024</td>
+<td align="left" rowspan="1" colspan="1">0.020</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>p-value</italic></td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>12</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>0067</italic></td>
+<td align="left" rowspan="1" colspan="1"><italic>9E-5</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">(10) Average Cited by within 3 years</td>
+<td align="left" rowspan="1" colspan="1">0.16</td>
+<td align="char" char="." rowspan="1" colspan="1">0.11</td>
+<td align="char" char="." rowspan="1" colspan="1">0.15</td>
+<td align="char" char="." rowspan="1" colspan="1">0.14</td>
+<td align="char" char="." rowspan="1" colspan="1">0.19</td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>p-value</italic></td>
+<td align="left" rowspan="1" colspan="1"><italic>1E-5</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>02</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>009</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>4E-5</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>0003</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="char" char="." rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Intercept</td>
+<td align="left" rowspan="1" colspan="1">-0.23</td>
+<td align="char" char="." rowspan="1" colspan="1">-20.44</td>
+<td align="char" char="." rowspan="1" colspan="1">-0.19</td>
+<td align="char" char="." rowspan="1" colspan="1">-31.12</td>
+<td align="char" char="." rowspan="1" colspan="1">-0.21</td>
+<td align="char" char="." rowspan="1" colspan="1">-47.66</td>
+<td align="left" rowspan="1" colspan="1">-41.37</td>
+<td align="char" char="." rowspan="1" colspan="1">-47.1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>p-value</italic></td>
+<td align="left" rowspan="1" colspan="1"><italic>0</italic>.<italic>02</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>12</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>37</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>05</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>03</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>01</italic></td>
+<td align="left" rowspan="1" colspan="1"><italic>9E-5</italic></td>
+<td align="char" char="." rowspan="1" colspan="1"><italic>0</italic>.<italic>005</italic></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Total R2</bold></td>
+<td align="char" char="." rowspan="1" colspan="1"><bold>0.53</bold></td>
+<td align="char" char="." rowspan="1" colspan="1"><bold>0.57</bold></td>
+<td align="char" char="." rowspan="1" colspan="1"><bold>0.58</bold></td>
+<td align="char" char="." rowspan="1" colspan="1"><bold>0.64</bold></td>
+<td align="char" char="." rowspan="1" colspan="1"><bold>0.55</bold></td>
+<td align="char" char="." rowspan="1" colspan="1"><bold>0.51</bold></td>
+<td align="char" char="." rowspan="1" colspan="1"><bold>0.59</bold></td>
+<td align="char" char="." rowspan="1" colspan="1"><bold>0.59</bold></td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>Model A in <xref rid="pone.0121635.t004" ref-type="table">Table 4</xref> is for the single variable of Forward Citations within 3 years of publication and has a R<sup>2</sup> of 0.53 which indicates that this single variable can “explain” more than ½ of the variation in k across the domains. It is the most powerful of the variables tested and we use it as the basis for Models B through F in <xref rid="pone.0121635.t004" ref-type="table">Table 4</xref>. Model B combines the two variables (10 and 9) that are individually the most strongly correlated with the k values in the domains. While some improvement in R<sup>2</sup> (0.57) is seen relative to model A, the p values for the coefficient of variable 9 and the intercept indicate that the improvement could well be due to over-fitting. Model C adds the strongest immediacy metric (#6) to the immediate important metric (#10) and similarly improves R<sup>2</sup> but with p values that make over-fitting a significant concern. Note that the only p values that are strong in both models B and C are for the coefficient for the immediate important metric indicating again the strength of this variable.</p>
+<p>Model D combines immediate importance with recency (patent publication date- metric # 5). Despite this variable having the fourth highest correlation with the k-values, it is the first to add significantly to R<sup>2</sup> (0.64) and does so with p values that make over-fitting unlikely. The combination of the strongest importance metric (#2) with the immediate importance metric is model E and this (like models B and C) gives very modest improvement in R<sup>2</sup> with p values that raise significant concern about over-fitting. Models F and G leave out the strongest metric (immediate importance) and start with the second strongest (recent immediacy, #9) as the basis. Model F combines the recent immediacy metric and the strongest immediacy metric (average age of backward citation, #6): the p value for the coefficient on metric #6 indicates over-fitting for this variable is very likely. Model G, on the other hand, incorporates the strongest importance variable (forward citations, #2) with the recent immediacy metric (#9) and achieves the (tied for) second best R<sup>2</sup> along with p values that make over-fitting unlikely. Model H uses neither of the two strongest (hybrid) metrics but instead each of the strongest singular metrics for the three concepts and also achieves the (tied for) second best R<sup>2</sup> (0.59). Perhaps most interesting is that the p values for <italic>all three</italic> coefficients in Model H indicate significance.</p>
+<p>Overall, the results in <xref rid="pone.0121635.t004" ref-type="table">Table 4</xref> indicate, not surprisingly, that the best multiple regressions were those using variables that are not highly cross-correlated. Examination of <xref rid="pone.0121635.t004" ref-type="table">Table 4</xref> shows that of the multiple variable models above only Models D, G and H (which are the only models without over-fitting indications) use variables with cross-correlation &lt; 0.4 (whereas the other multiple variable models- B, C, E, and F- employ variables with cross-correlations &gt;0.6). The overall results (and the cross-correlations) also show that the three models with the best fits (D, G and H) each combine importance, recency and immediacy even though they employ different metrics. These results are evidence that <italic>all three concepts</italic> have a role in explaining variation in k among a variety of technological domains.</p>
+<p>An important issue is the ability of the correlations to work in the future not just in the past. A second robustness test examines the predictive capability of the correlations by testing how sensitive the patent metrics correlations were to variations in time. In order to do this, the patent metrics were analyzed for only patents from a variety of time frames that were less than the total time frame. The time frames were analyzed to see how far back from 2013 they could be analyzed and still find similar correlations as the patent metrics show during the entire time frame (1976–2013) and are shown in the supporting information. Ultimately the two strongest and most robust patent metrics are robust to time up to 12 years prior to the experiment reported in detail here, indicating a promising amount of predictive capability.</p>
+</sec>
+</sec>
+<sec id="sec027" sec-type="conclusions">
+<title>Discussion</title>
+<sec id="sec028">
+<title>Interpretation of results</title>
+<p>The major finding of the present study is robust, strong correlations between technological improvement rate and patent metrics for a wide variety of technological domains. An unacceptable interpretation is that the metrics that are strongly correlated with technological improvement rate <italic>cause</italic> the faster rate of improvement. However, it is reasonable to postulate (as we did in the hypotheses development) that the concepts being tested by the metric (for example importance, recency and immediacy) are causing both the increase in the metric and an increase in the rate of progress.</p>
+<p>As discussed in the literature review supporting hypothesis development, the use of forward citations for estimating importance of a single patent has been well established. The results reported here show that the <italic>average forward citation rate to patents in a domain is strongly correlated with the differing rates of progress in these domains</italic>. This represents significant additional support for the usage of patent citations to assess patent importance. Moreover, interpreting that variations in both <italic>forward citation frequency and technological progress in a domain are due to the importance of the patents in the domain</italic> receives support from these results.</p>
+<p>Average publication date correlating strongly with technological improvement rate in the variety of domains is also not surprising. Although technology overall being hyper-exponential and thus many rates might increase over time [<xref rid="pone.0121635.ref069" ref-type="bibr">69</xref>] can be part of the explanation, a Darwinian interpretation is probably also important. If there are a large number of potential domains being developed at all times, it is likely that only the domains that improve more rapidly than the current state of the art will be developed further, and thus patented, diffused and studied by technological change researchers. Thus, the recency of emergence of a technology should correlate with higher rates of improvement and such domains will automatically have a later average patent publication date accounting for the robust correlation between these parameters that was found.</p>
+<p>The concept of immediacy, first developed by Price [<xref rid="pone.0121635.ref057" ref-type="bibr">57</xref>] as a key characteristic that distinguished rapidly developing scientific fields from fields that were not developing as rapidly, was extended here to suggest an analogous effect in technology. This concept is not the same as recency since immediacy refers to the pace of knowledge use (backward and forward) at all points in time not just presently. Nonetheless, more immediate use of patents in other domains means that the knowledge base (at all times) is more current than for a less immediate domain so some of the causal benefits of recency described in the previous paragraph apply. Despite the interaction of the recency and immediacy concepts, the results indicate that they <italic>independently</italic> drive faster technological improvement. More rapid knowledge incorporation as signaled by the immediacy metrics does appear to lead to higher technological improvement rates across domains. The fact that all three concepts (importance, recency and immediacy) have independent effects on the technological improvement rates is supported by the multiple regression results in <xref rid="pone.0121635.t004" ref-type="table">Table 4</xref> and the cross-correlation results in <xref rid="pone.0121635.t002" ref-type="table">Table 2</xref>.</p>
+<p>One of the most important implications of our findings is that patents do contain much information relevant to distinguishing among technological improvement rates in the 28 domains investigated here. Hypothesis 0 is strongly confirmed by the high R<sup>2</sup> values for the regressions and the multiple strong correlations with patent variables: these findings clearly demonstrate that patents do contain information that is essential to increases in technological improvement rate.</p>
+<p>This result is much more aligned with the position that patents are the major data source for technological progress than the contrarian position that patents have very little to do with technological progress. Moreover, analysis of why the explanatory power is not even higher (the R<sup>2</sup> indicates that more than 1/3 of the variation in k is not explained by combinations of the best variables we have examined) indicates that perhaps only a small part of the issue is lack of information in patents. A Monte Carlo analysis was performed (see <xref rid="sec032" ref-type="sec">supporting information</xref>) for the correlations based upon estimating the k value standard deviation for each domain. Although the standard deviation estimates are subjective, the results suggest that R<sup>2</sup> even with a perfect theory would be reduced to 0.8 to 0.84 due to the imperfect ability to measure k. This indicates that estimating k introduces sufficient noise to account for about ½ of the imperfection found with our model fit to the data. The imperfections in our patent sets representing the domains (62) can diminish the correlations and the possibilities of inconsistent patent writing practices among domains, of better but unknown metrics, for non-linear relationships contributing to imperfect linear correlations and for real effects from textual facts contained in the patents all appear also likely to diminish correlation. Therefore, improvement contributions not captured in patents is definitely less than the contribution of k estimation noise and may not be a significant factor in understanding the imperfections in the regressions.</p>
+<p>The results did not support three of the concepts for which we developed hypotheses about their potential influence on the relative rate of performance improvement: effort within a domain, the breadth of knowledge used by a domain and the directness of the science link to a domain are the three unsupported concepts that will each be discussed now. The reasons for the failure to find correlation in each of these cases can be of two kinds: 1) that the concept in fact does not drive <italic>differences in technological progress among domains</italic> and 2) that the metric(s) we have tested do not appropriately represent the concept.</p>
+<p>It is a truism that human effort is needed to get any technological progress. However, relatively higher effort <italic>within</italic> a domain does not necessarily lead to relatively greater progress in that domain since so much work has shown the importance of “spillovers” from other domains and from science that are <italic>not</italic> dependent upon effort within the domain. Indeed, knowledge flows from citations indicate that all domains are more dependent upon developments in other domains (spillover) and scientific findings not arising from the effort within a domain than they are to effort within the domain [<xref rid="pone.0121635.ref068" ref-type="bibr">68</xref>]. Thus, the first type of reason (non-viable concept) above is quite possible for the effort in a domain concept. The second reason is also potentially operative for the effort concept at least because effort variables are prolific (revenue, R&amp;D spending, production experience and man-hours have been suggested).</p>
+<p>Although breadth of utilized knowledge is a reasonable concept to hypothesize as driving differences in performance improvement among domains, the failure of our test (no sign of correlation) is not as surprising as for the other two failed concepts. This is because a number of tests of breadth of knowledge (on importance of—citations to- individual patents) using various metrics (including number of patent classes per patent) have shown weak and sometimes contrary results [<xref rid="pone.0121635.ref061" ref-type="bibr">61</xref>,<xref rid="pone.0121635.ref063" ref-type="bibr">63</xref>,<xref rid="pone.0121635.ref070" ref-type="bibr">70</xref>,<xref rid="pone.0121635.ref071" ref-type="bibr">71</xref>]. Moreover, in the present work other metrics were tested (number of patent classes for citations, etc., see <xref rid="sec032" ref-type="sec">supporting information</xref>) and <italic>none</italic> of them showed significant correlation. It appears that broad utilization of knowledge is a primary and important feature of technological development but that <italic>knowledge breadth differences do not drive differences in performance improvement dynamics</italic> among domains {and perhaps not among important and unimportant patents. Spillover seems to be generally important in individual patents and even then it appears that an intermediate amount of breadth of knowledge may be optimal [<xref rid="pone.0121635.ref072" ref-type="bibr">72</xref>].</p>
+<p>To question whether science has any impact on technological progress is not a reasonable line of inquiry but the process by which science impacts technology is not yet fully established. Thus, it is not clear that the impact of science should have different impact on performance improvement among domains nor that the impact of science is measured well by citations in patents to scientific articles. Price argued quite early [<xref rid="pone.0121635.ref042" ref-type="bibr">42</xref>] that scientific impacts would largely come through education of inventors and that the more direct impact was in the reverse direction-of technology on scientific empirical tools. He argued for very long lags for the impact of science on technology and this might reasonably imply that our finding of no short-term effects is expected. A more recent concept for the impact of science on technology [<xref rid="pone.0121635.ref049" ref-type="bibr">49</xref>] is that science acts as a map that makes technological search by inventors more effective. Fleming and Sorenson [<xref rid="pone.0121635.ref049" ref-type="bibr">49</xref>] also developed the concept to show that science would then be more useful in problems where interactions of components is more complex (more component interactions). If we extrapolate this concept to understand differences in domains, it is appealing to think that science is more useful in more complex domains; however, qualitative [<xref rid="pone.0121635.ref009" ref-type="bibr">9</xref>] and quantitative [<xref rid="pone.0121635.ref073" ref-type="bibr">73</xref>] concepts have suggested the rate of advance should be slower in more complex domains. This reasoning leads to a possible <italic>negative</italic> correlation of scientific references with progress rate and this could negate any positive effects and thus this framework for understanding the interaction of science and technology is also potentially consistent with our findings of no effects.</p>
+<p>Some authors suggest that more heavily cited patents themselves cite more scientific articles [<xref rid="pone.0121635.ref053" ref-type="bibr">53</xref>]. More detailed study of specific cases of science and technology [<xref rid="pone.0121635.ref050" ref-type="bibr">50</xref>,<xref rid="pone.0121635.ref051" ref-type="bibr">51</xref>,<xref rid="pone.0121635.ref074" ref-type="bibr">74</xref>] has found the science/technology exchange mechanism to be deep and involve personal communication and other forms of social capital. In Murray’s cases [<xref rid="pone.0121635.ref050" ref-type="bibr">50</xref>,<xref rid="pone.0121635.ref051" ref-type="bibr">51</xref>], there were scientific papers and patents written by the same individuals but there was no indication in the patent citations that captured the intense interaction. Thus, the metric we use may not capture the effect of science on technology by domain (if one even exists).</p>
+<p>Overall, it appears that the concept-that breadth of knowledge affects differential improvement rates among domains- is not viable with any metric. On the other hand, we feel that the evidence suggests that the concept- differential science links explain some of the performance rate differential- remains quite viable as a potential explanation despite the failure of our framework to find the effect. The most we can conclude about the third concept- differential effort among domains explain some of the performance rate differential- is that our failure to find such an effect could be due to non-viability of the concept or to metric/framework shortfalls.</p>
+<sec id="sec029">
+<title>Implications to research on and theories of technical change</title>
+<p>One clear implication of the work reported here is that the patent data contains information that can be used to understand the relative rate of improvement among technological domains. The results also strongly support the current practice of using forward citation counts to represent the importance of patents while giving the first indication that importance assessed this way can be extended to entire domains by simple averages across the domains. The work reported here also suggests that little used metrics such as the average patent publication date and the average age of backward citations are quite useful in studying differences among domains. We also introduced two new fairly simple-to- calculate metrics, the average number of forward citations to a group of patents in the first three years after patent publication and the average publication date of the backward citations from a group of patents, that were shown to be particularly powerful in distinguishing among groups of patents. We believe these metrics should be useful to others interested in understanding differences between groups of patents beyond our focus here on understanding the relative rate of progress among a well-defined set of technological domains.</p>
+<p>The individual significance of importance, recency and immediacy on the relative rate of progress in technological domains is conceptually significant. Although we did not create any of these concepts, we believe we have distinguished more carefully among them: the empirical work establishes the distinction among these three concepts as meaningful. We suggest that each of these concepts can have causal implications in other technical change phenomena and might fruitfully be more widely studied in other contexts.</p>
+<p>The strong explanatory power of models that combine all three concepts also has conceptual implications. A possible connection to prior concepts is with the conceptual frameworks that attribute much of technological change to discontinuities; however, we believe it is important to make the connection with some care. Although not always clearly specified, these concepts often seem to focus on a sharp technological discontinuity whereas our results show that dynamic domains remain such. For our 28 domains, many of the more rapidly improving cases have shown such behavior for more than the 35+ years for which we were able to obtain the corresponding patents and none of these have appreciably yet slowed in performance improvement. A second reason for care is that many of the prior examples of qualitatively selected very important inventions are represented by a large set of patents in this paper- perhaps even a domain such as integrated circuits with its almost 150,000 patents.</p>
+<p>The preceding points suggest that a potentially better way to make the connection between technological discontinuities and domains with patents of high importance, recency and immediacy is to assert that the discontinuity of interest is the <italic>emergence</italic> of new dynamic domains; however, even this discontinuity focus may obscure the fact that dynamic domains (such as integrated circuits or wireless transmission among our domains) do not have their major economic and societal impact at emergence. Their disruptive and apparently discontinuous impacts instead often occur after decades of dynamic improvement. As such a domain continues to rapidly improve, the performance of artifacts in the domain rapidly rises so that more and more application fields are affected in the manner of general purpose technologies [<xref rid="pone.0121635.ref075" ref-type="bibr">75</xref>]. Although the changes in given fields are quite disruptive, the technological performance has grown over many years. Rapidly improving technological domains can in very few years go from being non-competitive in an application field to dominant: this makes such technological domains important in observed discontinuities. Thus, the implication to theories about discontinuities from the current work is to consider domains that have rapid rates of improvement as major sources of discontinuous change. This work has demonstrated that such technological domains have relatively higher levels of important, recent and immediate patents.</p>
+<p>One more speculative conceptual contribution is largely based upon the failed correlations as well as the successful ones: we call this concept the rising sea metaphor. Our results show that measurements at the <italic>domain level</italic> of importance, recency and immediacy correlate strongly with the rate of progress in <italic>that domain</italic>; however, the results also indicate that <italic>effort and science</italic> links measured at the <italic>domain level</italic> do not correlate with the rate of progress in the domain. The rising sea conceptualization imagines the contributions of science and inventions from all domains to be <italic>equally</italic> available to all domains but the ability of domains to convert that rising sea to performance improvement is strongly dependent upon <italic>fundamental characteristics of that domain</italic>. Such fundamental characteristics could involve the intensity of interactions among components in the domain [<xref rid="pone.0121635.ref009" ref-type="bibr">9</xref>,<xref rid="pone.0121635.ref073" ref-type="bibr">73</xref>] as well as the impact of feature scale on performance of artifacts in the domain [<xref rid="pone.0121635.ref076" ref-type="bibr">76</xref>,<xref rid="pone.0121635.ref077" ref-type="bibr">77</xref>].</p>
+</sec>
+<sec id="sec030">
+<title>Implications for technology strategy for firms</title>
+<p>The technological improvement rate of a domain can be very useful in understanding the potential of a specific technology particularly if one compares it to the improvement rate of competitive and complementary technological domains. This is because the improvement rates are reasonably consistent across time [<xref rid="pone.0121635.ref005" ref-type="bibr">5</xref>] so a domain that is improving much more rapidly than a competitive domain will almost always eventually (even shortly) dominate the competitive markets (except for a few resistant niches). Thus, quantitative technology improvement rates are helpful in understanding the future of technology from the component level to entire industries. While having reliable quantitative rates of improvement can be powerful, determining the improvement rate of even one domain can be very difficult, time consuming, and is often not possible depending on the availability of data. These issues are the main reason why reasonably reliable improvement rates have been found for only a small percentage of possible domains.</p>
+<p>The results of the research reported here are correlations robust to the domains analyzed and consistent for 12 years into the future (2001–2013). These findings statistically (in a robust way) reflect what is likely to happen—or at least what is happening now- in performance trends. The process of estimating a technological improvement rate given a domain of interest works as follows:</p>
+<list list-type="order">
+<list-item><p>Select a domain of interest</p></list-item>
+<list-item><p>Use the COM [<xref rid="pone.0121635.ref066" ref-type="bibr">66</xref>,<xref rid="pone.0121635.ref068" ref-type="bibr">68</xref>] to select a set of patents that represent the domain</p></list-item>
+<list-item><p>Calculate the average number of forward citations in 3 years (column 10 in <xref rid="pone.0121635.t002" ref-type="table">Table 2</xref>) and the average publication year (column 5) of the patent set</p></list-item>
+<list-item><p>Use the predictive model D in <xref rid="pone.0121635.t004" ref-type="table">Table 4</xref> to estimate the improvement rate</p></list-item>
+</list>
+<p>The R<sup>2</sup> of this predictive model is 0.64, so 64% of the variation in the improvement rate can be explained by the variation in the patent metrics included in the model. This type of estimate can be made in less than 3 hours (at least by an experienced COM user) and is probably nearly as accurate as an estimate that might take more than 30 hours of data search (and might not be possible to find in infinite time). A major implication from the research reported here is the potential to greatly expand the usage of technological improvement rates in technology strategy and research policy. Some useful approaches include:</p>
+<list list-type="bullet">
+<list-item><p>Quantitatively monitoring improvements at all phases of technological maturity to understand if large (unexpected) changes have occurred.</p></list-item>
+<list-item><p>Monitoring improvement rates in key competing (threat and opportunity) technologies.</p></list-item>
+<list-item><p>The patent based approach to estimation of improvement rates described above can be the basic approach to the monitoring task and it might be applied even very early in the technology’s history possibly even before the start of commercial production as long as sufficient patenting has started.</p></list-item>
+<list-item><p>Often times a competing technology has been used in other application fields and thus improvement rates might be found from actual data but using the patent based approach above would still be useful to improve the robustness of the estimate.</p></list-item>
+</list>
+<p>Based upon the prior discussion, relative rates of technical performance increase can have large implications for the future viability of component technologies in products and systems as well as the viability of industries and thus have great importance to forward-looking firms. Acquisition strategy, product component technology choice and appropriate research goals could be informed by improved understanding of the probable improvement potential of relevant technologies. Moreover, the results of performance improvement monitoring have implications for choosing technologies that should receive research funding from firms and governments and for choosing ventures in which to invest risk capital.</p>
+</sec>
+</sec>
+</sec>
+<sec id="sec031" sec-type="conclusions">
+<title>Conclusion</title>
+<p>This paper represents the first statistically significant comparison between metrics that were derived from individual patent sets from a group of technological domains and the performance improvement rates of the same individual domains. This was done to test hypotheses derived from existing theories of technological change, to initiate predictive theory development and to establish a stronger practical basis for technology strategy and planning for firms and governments. The strong correlations (r = 0.76 for the strongest case) and multiple regressions (R<sup>2</sup> = 0.64) establish an important empirical finding: patents do contain much significant information relevant to quantitatively determining the differences in technological improvement rates.</p>
+<p>The main theoretical implications of the findings reported here are that average importance, recency and immediacy of the patents in a domain each individually drive higher improvement rates and that these concepts are independent enough that models that combine all three are robust predictors of a domains improvement rate. The prediction models apparently provide good evidence of what change is currently happening and meaningful forecasts of the future within the specified robust time frame of 12 years, however past results are not always indicative of future returns and the estimations of the k’s are subject to the same disclaimer. Thus, the potential weaknesses (and possibly unrecognized at present strengths) of the practical application of the results of this research will only be known if and when widespread application occurs.</p>
+</sec>
+<sec id="sec032">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0121635.s001" xlink:href="info:doi/10.1371/journal.pone.0121635.s001" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:type="simple">
+<label>S1 File</label>
+<caption>
+<title>Table A. Patents obtained, relevancy and k-value for each of the 28 domains.</title>
+<p><bold>Table B.</bold> Raw values of 10 variables for 28 domains. <bold>Table C.</bold> Raw values of extra variables for 28 domains. <bold>Table D.</bold> Correlation values for all variables for 28 domains. <bold>Table E.</bold> Domain Robustness Tests for 10 variables for 20 trials (14 domains each). <bold>Table F.</bold> Time Robustness Analysis for 2 Patent metrics showing Pearson correlation and p-value.</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>We would like to thank Subarna Basnet and Guillaume Baldo, both who worked in the MIT International Design Center, for helping read through the large patent sets to determine the relevancy of the tested patent sets. We would also like to thank Professor Steven Eppinger for giving us useful input on an earlier version of the manuscript and to the SUTD/MIT International Design Center for supporting the research.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0121635.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Moore</surname> <given-names>GE</given-names></name>. <article-title>Cramming more components onto integrated circuits</article-title>. <source>Electronics Magazine</source>. <year>1965</year>; <volume>38</volume>, No. <issue>8</issue>.</mixed-citation></ref>
+<ref id="pone.0121635.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sahal</surname> <given-names>D</given-names></name>. <article-title>A Theory of Progress Functions</article-title>. <source>AIIE Transactions</source>. <year>1979</year>; <volume>11</volume>(<issue>1</issue>) <fpage>23</fpage>–<lpage>29</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1297-9686-11-1-23" xlink:type="simple">10.1186/1297-9686-11-1-23</ext-link></comment> <object-id pub-id-type="pmid">22896125</object-id></mixed-citation></ref>
+<ref id="pone.0121635.ref003"><label>3</label><mixed-citation publication-type="other" xlink:type="simple">Nordhaus WD. The Perils of the Learning Model for Modeling Endogenous Technological Change, Cowles Foundation Discussion Paper No. 1685. 2009; 1–17.</mixed-citation></ref>
+<ref id="pone.0121635.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nagy</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Farmer</surname> <given-names>JD</given-names></name>, <name name-style="western"><surname>Bui</surname> <given-names>QM</given-names></name>, <name name-style="western"><surname>Trancik</surname> <given-names>JE</given-names></name>. <article-title>Statistical Basis for Predicting Technological Progress</article-title>. <source>PLoS ONE</source>. <year>2013</year>; <volume>8</volume>(<issue>2</issue>), <fpage>1</fpage>–<lpage>7</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0052669" xlink:type="simple">10.1371/journal.pone.0052669</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref005"><label>5</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Magee</surname> <given-names>CL</given-names></name>, <name name-style="western"><surname>Basnet</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Funk</surname> <given-names>JL</given-names></name>, <name name-style="western"><surname>Benson</surname> <given-names>CL</given-names></name>. <chapter-title>Quantitative empirical trends in technical performance (No. (ESD-WP-2014-22))</chapter-title>. <publisher-name>MIT Engineering Systems Working Paper (ESD-WP-2014-22)</publisher-name>. <year>2014</year>; <publisher-loc>Cambridge, MA</publisher-loc>. <ext-link ext-link-type="uri" xlink:href="https://esd.mit.edu/WPS/2014/esd-wp-2014-22.pdf" xlink:type="simple">https://esd.mit.edu/WPS/2014/esd-wp-2014-22.pdf</ext-link></mixed-citation></ref>
+<ref id="pone.0121635.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Martino</surname> <given-names>J</given-names></name>. <article-title>Examples of Technological Trend Forecasting for Research and Development Planning</article-title>. <source>Technological Forecasting and Social Change</source>. <year>1971</year>; <volume>2</volume> (<issue>3/4</issue>). <fpage>247</fpage>–<lpage>260</lpage></mixed-citation></ref>
+<ref id="pone.0121635.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nordhaus</surname> <given-names>WD</given-names></name>. <article-title>Two Centuries of Productivity Growth in Computing</article-title>. <source>The Journal of Economic History</source>. <year>2007</year>; <volume>67</volume>(<issue>01</issue>), <fpage>17</fpage>–<lpage>22</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1017/S0022050707000058" xlink:type="simple">10.1017/S0022050707000058</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Koh</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Magee</surname> <given-names>CL</given-names></name>. <article-title>A functional approach for studying technological progress: Application to information technology</article-title>. <source>Technological Forecasting and Social Change</source>. <year>2006</year>; <volume>73</volume>(<issue>9</issue>), <fpage>1061</fpage>–<lpage>1083</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.techfore.2006.06.001" xlink:type="simple">10.1016/j.techfore.2006.06.001</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Koh</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Magee</surname> <given-names>CL</given-names></name>. <article-title>A functional approach for studying technological progress: Extension to energy technology</article-title>. <source>Technological Forecasting and Social Change</source>. <year>2008</year>; <volume>75</volume>(<issue>6</issue>), <fpage>735</fpage>–<lpage>758</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.techfore.2007.05.007" xlink:type="simple">10.1016/j.techfore.2007.05.007</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Trajtenberg</surname> <given-names>M</given-names></name>. <article-title>The Welfare Analysis of Product Innovations, with an Application to Computed Tomography Scanners</article-title>. <source>Journal of Political Economy</source>. <year>1989</year>; <volume>97</volume>(<issue>2</issue>), <fpage>444</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1086/261611" xlink:type="simple">10.1086/261611</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fleming</surname> <given-names>L</given-names></name>. <article-title>Recombinant Uncertainty in Technological Search</article-title>. <source>Management Science</source>. <year>2001</year>; <volume>47</volume>(<issue>1</issue>), <fpage>117</fpage>–<lpage>132</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1287/mnsc.47.1.117.10671" xlink:type="simple">10.1287/mnsc.47.1.117.10671</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nerkar</surname> <given-names>A</given-names></name>. <article-title>Old is gold? The value of temporal exploration in the creation of new knowledge</article-title>. <source>Management Science</source>. <year>2003</year>; <volume>49</volume>(<issue>2</issue>), <fpage>211</fpage>–<lpage>229</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref013"><label>13</label><mixed-citation publication-type="book" xlink:type="simple"><collab xlink:type="simple">Organisation for Economic Co-operation and Development</collab>. <source>Frascati Manual 2002: Proposed Standard Practice for Surveys on Research and Experimental Development</source>. <publisher-name>OECD</publisher-name>. <year>2002</year>.</mixed-citation></ref>
+<ref id="pone.0121635.ref014"><label>14</label><mixed-citation publication-type="book" xlink:type="simple"><collab xlink:type="simple">OECD/Eurostat</collab>. <chapter-title>Oslo Manual: Guidelines for Collecting and Interpreting Innovation Data</chapter-title>, <edition>3rd Edition</edition>. <source>The Measurement of Scientific and Technological Activities</source>. <year>2005</year>; <publisher-name>OECD Publishing</publisher-name>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1787/9789264013100-en" xlink:type="simple">10.1787/9789264013100-en</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jaffe</surname> <given-names>AB</given-names></name>, <name name-style="western"><surname>Lerner</surname> <given-names>J</given-names></name>. <article-title>Innovation and its Discontents</article-title>. <source>Capitalism and Society</source>. <year>2006</year>; <volume>1</volume>(<issue>3</issue>). Chicago</mixed-citation></ref>
+<ref id="pone.0121635.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Trajtenberg</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Henderson</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Jaffe</surname> <given-names>A</given-names></name>. <article-title>University Versus Corporate Patents : A Window On The Basicness Of Invention</article-title>. <source>Economics of Innovation and new technology</source>. <year>1997</year>; <volume>5</volume>(<issue>1</issue>), <fpage>19</fpage>–<lpage>50</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref017"><label>17</label><mixed-citation publication-type="other" xlink:type="simple">Hall B, Jaffe A. The NBER patent citation data file: Lessons, insights and methodological tools. Working paper #8498, National Bureau of Economic Research. 2001.</mixed-citation></ref>
+<ref id="pone.0121635.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mones</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Pollner</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Vicsek</surname> <given-names>T</given-names></name>. <article-title>Universal hierarchical behavior of citation networks</article-title>. <source>Journal of Statistical Mechanics: Theory and Experiment</source>. <year>2014</year>; (<issue>5</issue>), P05023.</mixed-citation></ref>
+<ref id="pone.0121635.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Benson</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Magee</surname> <given-names>CL</given-names></name>. <article-title>On improvement rates for renewable energy technologies: Solar PV, wind turbines, capacitors, and batteries</article-title>. <source>Renewable Energy</source>. <year>2014</year>; <volume>68</volume>, <fpage>745</fpage>–<lpage>751</lpage></mixed-citation></ref>
+<ref id="pone.0121635.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wright</surname> <given-names>T</given-names></name>. <article-title>Factors Affecting the Cost of Airplanes</article-title>. <source>Journal of Aeronautical Sciences</source>. <year>1936</year>; <volume>3</volume>(<issue>4</issue>), <fpage>122128</fpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Arrow</surname> <given-names>K</given-names></name>. <article-title>The Economic Implications of Learning by Doing</article-title>. <source>The Review of Economic Studies</source>. <year>1962</year>; <volume>29</volume>(<issue>3</issue>), <fpage>155</fpage>–<lpage>173</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref022"><label>22</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Lundberg</surname> <given-names>E</given-names></name>. <chapter-title>Produktivitet och rdntabilitet</chapter-title>. <publisher-loc>Stockholm</publisher-loc>: <publisher-name>P. A. Norstedt and Soner</publisher-name>. <year>1961</year>.</mixed-citation></ref>
+<ref id="pone.0121635.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alchian</surname> <given-names>A</given-names></name>. <article-title>Reliability of Progress curves in airframe production</article-title>. <source>Econometrica</source>. <year>1963</year>; <volume>31</volume>(<issue>4</issue>), <fpage>679</fpage>–<lpage>694</lpage></mixed-citation></ref>
+<ref id="pone.0121635.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ayres</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Martinas</surname> <given-names>K</given-names></name>. <article-title>Experience and the life cycle</article-title>, <source>Technovation</source>. <year>1992</year>; <volume>12</volume>(<issue>7</issue>): <fpage>465</fpage>–<lpage>486</lpage></mixed-citation></ref>
+<ref id="pone.0121635.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sinclair</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Klepper</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Cohen</surname> <given-names>W</given-names></name>. <article-title>What’s experience got to do with it? Sources of cost reduction in a large specialty chemicals producer</article-title>. <source>Management Science</source>. <year>2000</year>; <volume>46</volume>, <fpage>28</fpage>–<lpage>45</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Christensen</surname> <given-names>CM</given-names></name>. <article-title>Exploring the Limits of the Technology S-Curve. Part I: Component Technologies</article-title>. <source>Production and Operations Management</source>. <year>1992</year>; <volume>1</volume>(<issue>4</issue>), <fpage>334</fpage>–<lpage>357</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1937-5956.1992.tb00001.x" xlink:type="simple">10.1111/j.1937-5956.1992.tb00001.x</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Foster</surname> <given-names>RN</given-names></name>. <article-title>Timing Technological Transitions</article-title>. <source>Technology in Society</source>. <year>1985</year>; <volume>7</volume>(<issue>2/3</issue>), <fpage>127</fpage>–<lpage>141</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Margolis</surname> <given-names>RM</given-names></name>, <name name-style="western"><surname>Kammen</surname> <given-names>DM</given-names></name>. <article-title>Underinvestment: The Energy Technology and R&amp;D Policy Challenge</article-title>. <source>Science</source>. <year>1999</year>; <volume>285</volume>(<issue>5428</issue>), <fpage>690</fpage>–<lpage>692</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1126/science.285.5428.690" xlink:type="simple">10.1126/science.285.5428.690</ext-link></comment> <object-id pub-id-type="pmid">10426983</object-id></mixed-citation></ref>
+<ref id="pone.0121635.ref029"><label>29</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Sahal</surname> <given-names>D</given-names></name>. <source>Patterns of Technological Innovation</source>. <publisher-loc>London</publisher-loc>: <publisher-name>Addison-Wesley</publisher-name>; <year>1981</year>.</mixed-citation></ref>
+<ref id="pone.0121635.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tushman</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Anderson</surname> <given-names>P</given-names></name>. <article-title>Technological Discontinuities and Organizational Environments</article-title>. <source>Administrative Science Quarterly</source>. <year>1986</year>; <volume>9</volume>(<issue>1</issue>), <fpage>439</fpage>–<lpage>465</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref031"><label>31</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Girifalco</surname> <given-names>LA</given-names></name>. <chapter-title>Dynamics of technological change</chapter-title>. <publisher-loc>New York</publisher-loc>: <publisher-name>Van Nostrand Reinhold</publisher-name>; <year>1991</year>.</mixed-citation></ref>
+<ref id="pone.0121635.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sood</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Tellis</surname> <given-names>G</given-names></name>. <article-title>Technological evolution and radical innovation</article-title>. <source>Journal of Marketing</source>. <year>2005</year>; <volume>69</volume> (July), <fpage>152</fpage>–<lpage>168</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref033"><label>33</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Trajtenberg</surname> <given-names>M</given-names></name>. <article-title>A Penny for Your Quotes: Patent Citations and the Value of Innovations</article-title>. <source>The Rand Journal of Economics</source>. <year>1990</year>; <volume>21</volume>(<issue>1</issue>), <fpage>172</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.2307/2555502" xlink:type="simple">10.2307/2555502</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Harhoff</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Narin</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Scherer</surname> <given-names>FM</given-names></name>, <name name-style="western"><surname>Vopel</surname> <given-names>K</given-names></name>. <article-title>Citation frequency and the value of patented inventions</article-title>, <source>The Review of Economics and Statistics</source>. <year>1999</year>; <volume>81</volume>, <fpage>511</fpage>–<lpage>515</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref035"><label>35</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alcácer</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Gittelman</surname> <given-names>M</given-names></name>. <article-title>Patent citations as a measure of knowledge flows: The influence of examiner citations</article-title>. <source>The Review of Economics and Statistics</source>. <year>2006</year>; <volume>88</volume>(November), <fpage>774</fpage>–<lpage>779</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref036"><label>36</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ethiraj</surname> <given-names>S</given-names></name>. <article-title>Allocation of inventive effort in complex product systems</article-title>. <source>Strategic Management Journal</source>. <year>2007</year>; <volume>584</volume>(January), <fpage>563</fpage>–<lpage>584</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/smj" xlink:type="simple">10.1002/smj</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref037"><label>37</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Arts</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Appio</surname> <given-names>FP</given-names></name>, <name name-style="western"><surname>Van Looy</surname> <given-names>B</given-names></name>. <article-title>Inventions shaping technological trajectories: do existing patent indicators provide a comprehensive picture?</article-title> <source>Scientometrics</source>. <year>2013</year>; <volume>97</volume>(<issue>2</issue>), <fpage>397</fpage>–<lpage>419</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s11192-013-1045-1" xlink:type="simple">10.1007/s11192-013-1045-1</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref038"><label>38</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fischer</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Leidinger</surname> <given-names>J</given-names></name>. <article-title>Testing patent value indicators on directly observed patent value—An empirical analysis of Ocean Tomo patent auctions</article-title>. <source>Research Policy</source>. <year>2014</year>; <volume>43</volume>(<issue>3</issue>), <fpage>519</fpage>–<lpage>529</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.respol.2013.07.013" xlink:type="simple">10.1016/j.respol.2013.07.013</ext-link></comment> <object-id pub-id-type="pmid">24481497</object-id></mixed-citation></ref>
+<ref id="pone.0121635.ref039"><label>39</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schumpeter</surname> <given-names>JA</given-names></name>. <article-title>The Stability of Capitalism</article-title>, <source>The Economic Journal</source>. <year>1928</year>; <volume>38</volume> (<issue>151</issue>).</mixed-citation></ref>
+<ref id="pone.0121635.ref040"><label>40</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bush</surname> <given-names>V</given-names></name>. <article-title>Science: The Endless Frontier</article-title>. <source>Transactions of the Kansas Academy of Science</source>. <year>1945</year>; <volume>48</volume>(<issue>3</issue>), <fpage>231</fpage>–<lpage>264</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref041"><label>41</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Freeman</surname> <given-names>C</given-names></name>. <article-title>The greening of technology and models of innovation</article-title>. <source>Technological Forecasting and Social Change</source>. <year>1996</year>; <volume>53</volume>(<issue>1</issue>), <fpage>27</fpage>–<lpage>39</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/0040-1625(96)00060-1" xlink:type="simple">10.1016/0040-1625(96)00060-1</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref042"><label>42</label><mixed-citation publication-type="other" xlink:type="simple">Price D. D. S. Is technology historically independent of science? A study in statistical historiography. Technology and Culture. 1965; 553–568.</mixed-citation></ref>
+<ref id="pone.0121635.ref043"><label>43</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nelson</surname> <given-names>R</given-names></name>. <article-title>The simple economics of basic scientific research</article-title>. <source>The Journal of Political Economy</source>. <year>1971</year>; <volume>67</volume>(<issue>3</issue>), <fpage>297</fpage>–<lpage>306</lpage></mixed-citation></ref>
+<ref id="pone.0121635.ref044"><label>44</label><mixed-citation publication-type="other" xlink:type="simple">Levin RC, Klevorick AK, Nelson RR, Winter SG. Appropriating the Returns from Industrial R&amp;D. Brookings Papers on Economic Activity. 1987; 783–831</mixed-citation></ref>
+<ref id="pone.0121635.ref045"><label>45</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Godin</surname> <given-names>B</given-names></name>. <article-title>The Linear Model of Innovation: The Historical Construction of an Analytical Framework</article-title>. <source>Science, Technology &amp; Human Values</source>. <year>2006</year>; <volume>31</volume>(<issue>6</issue>), <fpage>639</fpage>–<lpage>667</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1177/0162243906291865" xlink:type="simple">10.1177/0162243906291865</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref046"><label>46</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Balconi</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Brusoni</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Orsenigo</surname> <given-names>L</given-names></name>. <article-title>In defence of the linear model: An essay</article-title>. <source>Research Policy</source>. <year>2010</year>; <volume>39</volume>(<issue>1</issue>), <fpage>1</fpage>–<lpage>13</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.respol.2009.09.013" xlink:type="simple">10.1016/j.respol.2009.09.013</ext-link></comment> <object-id pub-id-type="pmid">20305892</object-id></mixed-citation></ref>
+<ref id="pone.0121635.ref047"><label>47</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Trajtenberg</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Henderson</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Jaffe</surname> <given-names>A</given-names></name>. <article-title>University Versus Corporate Patents : A Window On The Basicness Of Invention</article-title>. <source>Economics of Innovation and new technology</source>. <year>1997</year>; <volume>5</volume>(<issue>1</issue>), <fpage>19</fpage>–<lpage>50</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref048"><label>48</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Klevorick</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Levin</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Nelson</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Winter</surname> <given-names>S</given-names></name>. <article-title>On the sources and significance of interindustry differences technological opportunities</article-title>. <source>Research Policy</source>. <year>1995</year>; <volume>24</volume>, <fpage>185</fpage>–<lpage>205</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref049"><label>49</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fleming</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Sorenson</surname> <given-names>O</given-names></name>. <article-title>Science as a map in technological search</article-title>. <source>Strategic Management Journal</source>. <year>2004</year>; <volume>25</volume>, <fpage>909</fpage>–<lpage>928</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref050"><label>50</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Murray</surname> <given-names>F</given-names></name>. <article-title>Innovation as co-evolution of scientific and technological networks: exploring tissue engineering</article-title>. <source>Research Policy</source>. <year>2002</year>; <volume>31</volume>(<issue>8–9</issue>), <fpage>1389</fpage>–<lpage>1403</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/S0048-7333(02)00070-7" xlink:type="simple">10.1016/S0048-7333(02)00070-7</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref051"><label>51</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Murray</surname> <given-names>F</given-names></name>. <article-title>The role of academic inventors in entrepreneurial firms: sharing the laboratory life</article-title>. <source>Research Policy</source>. <year>2004</year>; <volume>33</volume>(<issue>4</issue>), <fpage>643</fpage>–<lpage>659</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.respol.2004.01.013" xlink:type="simple">10.1016/j.respol.2004.01.013</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref052"><label>52</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rothaermal</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Thursby</surname> <given-names>M</given-names></name>. <article-title>The nanotech versus the biotech revolution: Sources of productivity in incumbent firm research</article-title>. <source>Research Policy</source>. <year>2007</year>; <volume>36</volume>, <fpage>832</fpage>–<lpage>849</lpage></mixed-citation></ref>
+<ref id="pone.0121635.ref053"><label>53</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Henderson</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Jaffe</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Trajtenberg</surname> <given-names>M</given-names></name>. <article-title>Universities as a source of commercial technology: A detailed analysis of university patenting, 1965–1988</article-title>. <source>The Review of Economics and Statistics</source>. <year>1998</year>; <volume>80</volume>, <fpage>119</fpage>–<lpage>127</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref054"><label>54</label><mixed-citation publication-type="other" xlink:type="simple">Hall B, Jaffe A. The NBER patent citation data file: Lessons, insights and methodological tools. Working paper #8498, National Bureau of Economic Research. 2001.</mixed-citation></ref>
+<ref id="pone.0121635.ref055"><label>55</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Valentini</surname> <given-names>G</given-names></name>. <article-title>Measuring the effect of M&amp;A on Patenting Quantity and Quality</article-title>. <source>Strategic Management Journal</source>. <year>2012</year>; <volume>346</volume>, <fpage>336</fpage>–<lpage>346</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/smj" xlink:type="simple">10.1002/smj</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref056"><label>56</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schoenmakers</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Duysters</surname> <given-names>G</given-names></name>. <article-title>The technological origins of radical inventions</article-title>. <source>Research Policy</source>. <year>2010</year>; <volume>39</volume>(<issue>8</issue>), <fpage>1051</fpage>–<lpage>1059</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.respol.2010.05.013" xlink:type="simple">10.1016/j.respol.2010.05.013</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref057"><label>57</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Price</surname> <given-names>DJ</given-names></name>. <article-title>Networks of Scientific Papers</article-title>. <source>Science</source>. <year>1965</year>; <volume>149</volume>(<issue>3683</issue>), <fpage>510</fpage>–<lpage>5</lpage>. <object-id pub-id-type="pmid">14325149</object-id></mixed-citation></ref>
+<ref id="pone.0121635.ref058"><label>58</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Rosenberg</surname> <given-names>N</given-names></name>. <source>Inside the Black Box: Technology and Economics</source>. <publisher-loc>Cambridge, MA</publisher-loc>: <publisher-name>Cambridge University Press</publisher-name>; <year>1982</year>.</mixed-citation></ref>
+<ref id="pone.0121635.ref059"><label>59</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nelson</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Winter</surname> <given-names>S</given-names></name>. <article-title>The Schumpterian Tradeoff Revisited</article-title>. <source>The American Economic Review</source>. <year>1982</year>; <volume>3</volume>(<issue>1</issue>), <fpage>114</fpage>–<lpage>132</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref060"><label>60</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Ruttan</surname> <given-names>VW</given-names></name>. <chapter-title>Technology, Growth, and Development: An Induced Innovation Perspective</chapter-title>. <publisher-loc>New York</publisher-loc>: <publisher-name>Oxford University Press</publisher-name>; <year>2001</year>.</mixed-citation></ref>
+<ref id="pone.0121635.ref061"><label>61</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nemet</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Johnson</surname> <given-names>E</given-names></name>. <article-title>Do important inventions benefit from knowledge originating in other technological domains?</article-title> <source>Research Policy</source>. <year>2012</year>; <volume>41</volume> (<issue>1</issue>), <fpage>190</fpage>–<lpage>200</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref062"><label>62</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Arthur</surname> <given-names>WB</given-names></name>. <article-title>The structure of invention</article-title>. <source>Research Policy</source>. <year>2007</year>; <volume>36</volume>(<issue>2</issue>), <fpage>274</fpage>–<lpage>287</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.respol.2006.11.005" xlink:type="simple">10.1016/j.respol.2006.11.005</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref063"><label>63</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Benson</surname> <given-names>CL</given-names></name>, <name name-style="western"><surname>Magee</surname> <given-names>CL</given-names></name>. <article-title>A Framework for Analyzing the Underlying Inventions That Drive Technical Improvements in a Specific Technological Field</article-title>. <source>Engineering Management Research</source>. <year>2012</year>; <volume>1</volume>(<issue>1</issue>), <fpage>2</fpage>–<lpage>14</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5539/emr.v1n1p2" xlink:type="simple">10.5539/emr.v1n1p2</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref064"><label>64</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Christensen</surname> <given-names>C</given-names></name>. <chapter-title>The innovator’s dilemma: When new technologies cause great firms to fail</chapter-title>. <publisher-loc>Cambridge, MA</publisher-loc>: <publisher-name>Harvard Business School Press</publisher-name>; <year>1997</year>.</mixed-citation></ref>
+<ref id="pone.0121635.ref065"><label>65</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Anderson</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Tushman</surname> <given-names>M</given-names></name>. <article-title>Technological Discontinuities and Dominant Designs: A Cyclical Model of Technological Change</article-title>. <source>Administrative Science Quarterly</source>. <year>1990</year>; <volume>35</volume>, <fpage>604</fpage>–<lpage>633</lpage></mixed-citation></ref>
+<ref id="pone.0121635.ref066"><label>66</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Benson</surname> <given-names>CL</given-names></name>, <name name-style="western"><surname>Magee</surname> <given-names>CL</given-names></name>. <article-title>A hybrid keyword and patent class methodology for selecting relevant sets of patents for a technological field</article-title>. <source>Scientometrics</source>. <year>2013</year>; <volume>96</volume>(<issue>1</issue>), <fpage>69</fpage>–<lpage>82</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s11192-012-0930-3" xlink:type="simple">10.1007/s11192-012-0930-3</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref067"><label>67</label><mixed-citation publication-type="other" xlink:type="simple">Benson CL. Cross-Domain Comparison of Quantitative Technology Improvement Using Patent Derived Characteristics. PhD thesis, MIT; 2014.</mixed-citation></ref>
+<ref id="pone.0121635.ref068"><label>68</label><mixed-citation publication-type="other" xlink:type="simple">Benson CL, Magee CL. Technology Structural Implications from the Extension of a Patent Search Method Scientometrics. 2014; <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s11192-014-1493-2" xlink:type="simple">10.1007/s11192-014-1493-2</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0121635.ref069"><label>69</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nagy</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Farmer</surname> <given-names>JD</given-names></name>, <name name-style="western"><surname>Trancik</surname> <given-names>JE</given-names></name>, <name name-style="western"><surname>Gonzales</surname> <given-names>JP</given-names></name>. <article-title>Super-exponential long-term trends in information technology</article-title>. <source>Technological Forecasting and Social Change</source>. <year>2011</year>; <volume>78</volume> (<issue>8</issue>), <fpage>1356</fpage>–<lpage>1364</lpage></mixed-citation></ref>
+<ref id="pone.0121635.ref070"><label>70</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Griliches</surname> <given-names>Z</given-names></name>. <article-title>The search for R&amp;D spillovers</article-title>. <source>Scandinavian Journal of Economics</source>. <year>1992</year>; <volume>94</volume>, <fpage>29</fpage>–<lpage>47</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref071"><label>71</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alcacer</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Chung</surname> <given-names>W</given-names></name>. <article-title>Location Strategies and Knowledge Spillovers</article-title>. <source>Management Science</source>. <year>2007</year>; <volume>53</volume>(<issue>5</issue>), <fpage>760</fpage>–<lpage>776</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref072"><label>72</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fu</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Chan</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Cagan</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Kotovsky</surname> <given-names>K</given-names></name>. <article-title>The Meaning Of “Near” And “Far”: The Impact Of Structuring Design Databases And The Effect Of Distance Of Analogy On Design Output</article-title>. <source>Journal of Mechanical Design</source>. <year>2013</year>; <volume>135</volume>(<issue>2</issue>), <fpage>1</fpage>–<lpage>12</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref073"><label>73</label><mixed-citation publication-type="other" xlink:type="simple">Mcnerney J, Farmer JD, Redner S, Trancik JE. Role of design complexity in technology improvement. Proceedings of the National Academy of Sciences. 2011; <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.1017298108/-/DCSupplemental" xlink:type="simple">10.1073/pnas.1017298108/-/DCSupplemental</ext-link></comment><ext-link ext-link-type="uri" xlink:href="http://www.pnas.org/cgi/doi/10.1073/pnas.1017298108" xlink:type="simple">www.pnas.org/cgi/doi/10.1073/pnas.1017298108</ext-link></mixed-citation></ref>
+<ref id="pone.0121635.ref074"><label>74</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Agrawal</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Henderson</surname> <given-names>R</given-names></name>. <article-title>Putting patents in context: Exploring knowledge transfer from MIT</article-title>. <source>Management Science</source>. <year>2002</year>; <volume>48</volume>(<issue>1</issue>) <fpage>44</fpage>–<lpage>60</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref075"><label>75</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bresnahan</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Trajtenberg</surname> <given-names>M</given-names></name>. <article-title>General Purpose Technologies “Engines of growth”?</article-title> <source>Journal of Econometrics</source>. <year>1995</year>; <volume>65</volume>, <fpage>83</fpage>–<lpage>108</lpage>.</mixed-citation></ref>
+<ref id="pone.0121635.ref076"><label>76</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Funk</surname> <given-names>JL</given-names></name>. <source>Technology Change and the Rise of New Industries</source>, <publisher-name>Stanford University Press</publisher-name>; <year>2013</year>.</mixed-citation></ref>
+<ref id="pone.0121635.ref077"><label>77</label><mixed-citation publication-type="other" xlink:type="simple">Funk JL, Magee CL. Exponential Change: What Drives it? What does it tell us about the future? Kindle ebook at amazon.com; 2013.</mixed-citation></ref>
+</ref-list>
+</back>
+</article>

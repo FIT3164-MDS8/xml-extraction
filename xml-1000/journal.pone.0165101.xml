@@ -1,0 +1,619 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1d3" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0165101</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-16-20917</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Cell biology</subject><subj-group><subject>Chromosome biology</subject><subj-group><subject>Chromosomes</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Proteins</subject><subj-group><subject>DNA-binding proteins</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Nucleotides</subject><subj-group><subject>Guanine</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Molecular biology</subject><subj-group><subject>Molecular biology techniques</subject><subj-group><subject>Sequencing techniques</subject><subj-group><subject>Sequence analysis</subject><subj-group><subject>Sequence motif analysis</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Molecular biology techniques</subject><subj-group><subject>Sequencing techniques</subject><subj-group><subject>Sequence analysis</subject><subj-group><subject>Sequence motif analysis</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Computational biology</subject><subj-group><subject>Genome analysis</subject><subj-group><subject>Sequence assembly tools</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Genomics</subject><subj-group><subject>Genome analysis</subject><subj-group><subject>Sequence assembly tools</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Molecular biology</subject><subj-group><subject>Molecular biology techniques</subject><subj-group><subject>Sequencing techniques</subject><subj-group><subject>Sequence analysis</subject><subj-group><subject>DNA sequence analysis</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Molecular biology techniques</subject><subj-group><subject>Sequencing techniques</subject><subj-group><subject>Sequence analysis</subject><subj-group><subject>DNA sequence analysis</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Genomics</subject><subj-group><subject>Repeated sequences</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Molecular biology</subject><subj-group><subject>Molecular biology techniques</subject><subj-group><subject>Sequencing techniques</subject><subj-group><subject>Sequence analysis</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Molecular biology techniques</subject><subj-group><subject>Sequencing techniques</subject><subj-group><subject>Sequence analysis</subject></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Computational Analysis of G-Quadruplex Forming Sequences across Chromosomes Reveals High Density Patterns Near the Terminal Ends</article-title>
+<alt-title alt-title-type="running-head">Computational Analysis of G4 across Chromosomes</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Chariker</surname>
+<given-names>Julia H.</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Miller</surname>
+<given-names>Donald M.</given-names>
+</name>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0003-3487-6572</contrib-id>
+<name name-style="western">
+<surname>Rouchka</surname>
+<given-names>Eric C.</given-names>
+</name>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+<xref ref-type="aff" rid="aff005"><sup>5</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Department of Psychological and Brain Sciences, University of Louisville, Louisville, KY, United States of America</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Kentucky Biomedical Research Infrastructure Network Bioinformatics Core, University of Louisville, Louisville, KY, United States of America</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>James Graham Brown Cancer Center, University of Louisville, Louisville, KY, United States of America</addr-line></aff>
+<aff id="aff004"><label>4</label> <addr-line>Department of Medicine, University of Louisville, Louisville, KY, United States of America</addr-line></aff>
+<aff id="aff005"><label>5</label> <addr-line>Department of Computer Engineering and Computer Science, University of Louisville, Louisville KY, United States of America</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Leng</surname>
+<given-names>Fenfei</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Florida International University, UNITED STATES</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con">
+<p>
+<list list-type="simple">
+<list-item><p><bold>Conceptualization:</bold> DMM ECR.</p></list-item>
+<list-item><p><bold>Data curation:</bold> ECR JHC.</p></list-item>
+<list-item><p><bold>Formal analysis:</bold> ECR JHC.</p></list-item>
+<list-item><p><bold>Funding acquisition:</bold> DMM ECR.</p></list-item>
+<list-item><p><bold>Investigation:</bold> ECR JHC.</p></list-item>
+<list-item><p><bold>Methodology:</bold> ECR JHC.</p></list-item>
+<list-item><p><bold>Project administration:</bold> DMM ECR.</p></list-item>
+<list-item><p><bold>Resources:</bold> DMM ECR JHC.</p></list-item>
+<list-item><p><bold>Software:</bold> ECR JHC.</p></list-item>
+<list-item><p><bold>Supervision:</bold> DMM ECR.</p></list-item>
+<list-item><p><bold>Validation:</bold> ECR JHC.</p></list-item>
+<list-item><p><bold>Visualization:</bold> JHC.</p></list-item>
+<list-item><p><bold>Writing – original draft:</bold> ECR JHC.</p></list-item>
+<list-item><p><bold>Writing – review &amp; editing:</bold> DMM ECR JHC.</p></list-item>
+</list>
+</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">eric.rouchka@louisville.edu</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>24</day>
+<month>10</month>
+<year>2016</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2016</year>
+</pub-date>
+<volume>11</volume>
+<issue>10</issue>
+<elocation-id>e0165101</elocation-id>
+<history>
+<date date-type="received">
+<day>24</day>
+<month>5</month>
+<year>2016</year>
+</date>
+<date date-type="accepted">
+<day>6</day>
+<month>10</month>
+<year>2016</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2016</copyright-year>
+<copyright-holder>Chariker et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0165101"/>
+<abstract>
+<p>G-quadruplex structures (G4) are found throughout the human genome and are known to play a regulatory role in a variety of molecular processes. Structurally, they have many configurations and can form from one or more DNA strands. At the gene level, they regulate gene expression and protein synthesis. In this paper, chromosomal-level patterns of distribution are analyzed on the human genome to identify high-level distribution patterns potentially related to global functional processes. Here we show unique high density banding patterns on individual chromosomes that are highly correlated, appearing in a mirror pattern, across forward and reverse DNA strands. The highest density of G4 sequences occurs within four megabases of one end of most chromosomes and contains G4 motifs that bind with zinc finger proteins. These findings suggest that G4 may play a role in global chromosomal processes such as those found in meiosis.</p>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/100000057</institution-id>
+<institution>National Institute of General Medical Sciences</institution>
+</institution-wrap>
+</funding-source>
+<award-id>P20GM103436</award-id>
+</award-group>
+<award-group id="award002">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/100000057</institution-id>
+<institution>National Institute of General Medical Sciences</institution>
+</institution-wrap>
+</funding-source>
+<award-id>P20GM106396</award-id>
+<principal-award-recipient>
+<name name-style="western">
+<surname>Miller</surname>
+<given-names>Donald M.</given-names>
+</name>
+</principal-award-recipient>
+</award-group>
+<funding-statement>Funding provided by National Institutes of Health (NIH) National Institute of General Medical Sciences (<ext-link ext-link-type="uri" xlink:href="https://www.nigms.nih.gov/" xlink:type="simple">https://www.nigms.nih.gov/</ext-link>) grants P20GM103436 (Nigel Cooper, PI) and P20GM106396 (Donald Miller, PI). The contents of this work are solely the responsibility of the authors and do not represent the official views of the NIH or the National Institute for General Medical Sciences (NIGMS). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="8"/>
+<table-count count="3"/>
+<page-count count="19"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>The raw data provided by Quadparser, including the sequence, sequence location, and sequence code, along with visualizations for individual chromosomes, are available from the Figshare repository at the following link: <ext-link ext-link-type="uri" xlink:href="https://dx.doi.org/10.6084/m9.figshare.c.3498270.v1" xlink:type="simple">https://dx.doi.org/10.6084/m9.figshare.c.3498270.v1</ext-link> (these data are also available at <ext-link ext-link-type="uri" xlink:href="http://bioinformatics.louisville.edu/QFS/index.html" xlink:type="simple">http://bioinformatics.louisville.edu/QFS/index.html</ext-link>). Individual scripts are also available from the Figshare repository at the following links: <ext-link ext-link-type="uri" xlink:href="https://dx.doi.org/10.6084/m9.figshare.3976440.v1" xlink:type="simple">https://dx.doi.org/10.6084/m9.figshare.3976440.v1</ext-link> (calculate_HBS_density.pl), <ext-link ext-link-type="uri" xlink:href="https://dx.doi.org/10.6084/m9.figshare.3976449.v1" xlink:type="simple">https://dx.doi.org/10.6084/m9.figshare.3976449.v1</ext-link> (calculate_TFBS_density.pl), <ext-link ext-link-type="uri" xlink:href="https://dx.doi.org/10.6084/m9.figshare.3976437.v1" xlink:type="simple">https://dx.doi.org/10.6084/m9.figshare.3976437.v1</ext-link> (calculate_GeneTranscript_density.pl), and <ext-link ext-link-type="uri" xlink:href="https://dx.doi.org/10.6084/m9.figshare.3976404.v1" xlink:type="simple">https://dx.doi.org/10.6084/m9.figshare.3976404.v1</ext-link> (calculate_G4_density.pl).</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>G-quadruplex structures, often referred to as G4, are a form of non-B DNA involved in a variety of molecular processes [<xref ref-type="bibr" rid="pone.0165101.ref001">1</xref>–<xref ref-type="bibr" rid="pone.0165101.ref009">9</xref>]. They are defined by sequences of DNA or RNA that consist of four tracts of guanine bases separated by short (3–7 bp) runs of non-specific nucleotide sequences. The sequence folds to form a three-dimensional structure in which the guanine tracts form stacks of planar structures, known as G-tetrads, while short segments separating the guanine tracts form connecting loops in the three-dimensional structure (see <xref ref-type="fig" rid="pone.0165101.g001">Fig 1</xref>). These structures are highly polymorphic, and variations often involve different numbers of G-tetrads and different connecting loop lengths. The configuration that results from the folding process is relevant to the stability and the function of the three-dimensional structure [<xref ref-type="bibr" rid="pone.0165101.ref010">10</xref>].</p>
+<fig id="pone.0165101.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165101.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>The relationship between (A) a DNA or RNA sequence, (B) a G-tetrad, and (C) the tertiary structure of a G4.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.g001" xlink:type="simple"/>
+</fig>
+<p>Sequences capable of forming G4 have been found in telomeres, promoters, introns, exons, 5’ untranslated regions (UTRs), and 3’ UTRs [<xref ref-type="bibr" rid="pone.0165101.ref001">1</xref>, <xref ref-type="bibr" rid="pone.0165101.ref011">11</xref>–<xref ref-type="bibr" rid="pone.0165101.ref014">14</xref>] with higher associations to genes belonging to particular functional classes such as transcriptional regulation [<xref ref-type="bibr" rid="pone.0165101.ref012">12</xref>, <xref ref-type="bibr" rid="pone.0165101.ref015">15</xref>, <xref ref-type="bibr" rid="pone.0165101.ref016">16</xref>]. Experimental evidence points to their role as a regulatory mechanism in processes such as telomerase production [<xref ref-type="bibr" rid="pone.0165101.ref009">9</xref>], gene transcription [<xref ref-type="bibr" rid="pone.0165101.ref003">3</xref>, <xref ref-type="bibr" rid="pone.0165101.ref004">4</xref>, <xref ref-type="bibr" rid="pone.0165101.ref006">6</xref>], alternative splicing [<xref ref-type="bibr" rid="pone.0165101.ref017">17</xref>–<xref ref-type="bibr" rid="pone.0165101.ref022">22</xref>], and protein synthesis [<xref ref-type="bibr" rid="pone.0165101.ref002">2</xref>, <xref ref-type="bibr" rid="pone.0165101.ref005">5</xref>]. More recently, G4 in mRNA have been shown to have a significant role in neurite localization signaling [<xref ref-type="bibr" rid="pone.0165101.ref008">8</xref>], dendrite localization [<xref ref-type="bibr" rid="pone.0165101.ref023">23</xref>], and polyadenylation [<xref ref-type="bibr" rid="pone.0165101.ref001">1</xref>]. Telomeric repeat sequences in humans are capable of forming successive G4 and may serve to protect the telomeric 3’ overhang from degradation [<xref ref-type="bibr" rid="pone.0165101.ref007">7</xref>].</p>
+<p>In 2005, Huppert and Balasubramanian used bioinformatics approaches to measure the prevalence of putative G4 sequences on the first assembly of the human genome and found approximately 376,000 sequences capable of forming a G4 structure [<xref ref-type="bibr" rid="pone.0165101.ref024">24</xref>]. Subsequent analyses looked at the distribution of these sequences within specific gene features, such as promoters [<xref ref-type="bibr" rid="pone.0165101.ref012">12</xref>], 5’ UTRs [<xref ref-type="bibr" rid="pone.0165101.ref005">5</xref>, <xref ref-type="bibr" rid="pone.0165101.ref011">11</xref>], and 3’ UTRs [<xref ref-type="bibr" rid="pone.0165101.ref001">1</xref>], as well as variations on canoncial structure, in particular, structures formed with two, rather than three, G-tetrads [<xref ref-type="bibr" rid="pone.0165101.ref025">25</xref>] and structures formed on both strands of DNA [<xref ref-type="bibr" rid="pone.0165101.ref026">26</xref>]. In general, these studies represent genome-wide analyses of local structural relationships in order to infer the biological functions of G4 at the gene level. However, fundamental biological processes exist at higher scales. One example of this is the positioning of chromosomes and the changes in chromosome condensation across phases of mitosis and meiosis. An analysis of global patterns of G4 distribution may provide insight into their potential role in higher order biological functions.</p>
+<p>In this manuscript, visual and computational methods of analysis are used in a complementary fashion to provide a new perspective on the prevalence of putative G4 within chromosomes on the hg38 assembly of the human genome. Although the use of computational methods in the study of G4 is well-known [<xref ref-type="bibr" rid="pone.0165101.ref024">24</xref>], as an analytical tool, visual methods can provide insight into patterns in data that are not easily accessible in numerical or statistical form [<xref ref-type="bibr" rid="pone.0165101.ref027">27</xref>]. As a first step in this analysis, putative G4 were identified using the Quadparser algorithm [<xref ref-type="bibr" rid="pone.0165101.ref024">24</xref>, <xref ref-type="bibr" rid="pone.0165101.ref028">28</xref>]. Next, using visual and statistical methods, the global distribution of putative G4 was examined across all chromosomes and across DNA strands within individual chromosomes. At a large scale, G4 appear as alternating high and low density bands on all chromosomes. This pattern is strongly similar, nearly a mirror pattern, across forward and reverse DNA strands. On the majority of chromosomes, the highest G4 densities are found within four megabases of the end of the chromosome, a pattern that is distinct from other genomic elements. The potential biological relevance of this pattern is discussed.</p>
+</sec>
+<sec id="sec002">
+<title>Material and Methods</title>
+<p>The reference assemblies and gene annotations for the human genome were downloaded from the UCSC Genome Browser [<xref ref-type="bibr" rid="pone.0165101.ref029">29</xref>] and Ensembl using NCBI build 38, version 78 (GrCh38/hg38) and build 37 (GRCh37/hg19). The starting and ending locations of sequence gaps and chromosome cytobands on the hg38 reference assembly were downloaded from the Mapping and Sequencing section of the UCSC Table Browser for chromosomal assemblies [<xref ref-type="bibr" rid="pone.0165101.ref030">30</xref>]. Experimentally-derived transcription factor binding sites and histone binding sites were obtained from the Ensembl regulation database (<italic>Homo sapiens</italic>, release 84) [<xref ref-type="bibr" rid="pone.0165101.ref031">31</xref>]. A custom Perl program was written to count the guanine (G) and cytosine (C) bases at megabase intervals in hg38 fasta files. Alternate, unknown, and random portions of the hg38 and hg19 assemblies were not considered in this analysis.</p>
+<p>Putative G4 were identified using the Quadparser algorithm [<xref ref-type="bibr" rid="pone.0165101.ref024">24</xref>, <xref ref-type="bibr" rid="pone.0165101.ref028">28</xref>]. Quadparser was set to identify sequences on the forward DNA strand with the pattern G<sub>3+</sub>N<sub>1-7</sub>G<sub>3+</sub>N<sub>1-7</sub>G<sub>3+</sub>N<sub>1-7</sub>G<sub>3+</sub>. Sequences on the reverse DNA strand were identified by substituting C for G in the same pattern. G4 locations identified by high-throughput sequencing (G4-seq) were obtained from the NCBI Gene Expression Omnibus [<xref ref-type="bibr" rid="pone.0165101.ref032">32</xref>] accession GSE63874 [<xref ref-type="bibr" rid="pone.0165101.ref033">33</xref>]. The starting and ending locations of G4 on forward and reverse strands were obtained from bed format files provided for the potassium (K+) G4 stabilization condition.</p>
+<p>Quadparser identified sequences along the genome containing varying numbers of guanine tracts, and this presented a significant challenge for measuring the prevalence of these structures [<xref ref-type="bibr" rid="pone.0165101.ref014">14</xref>, <xref ref-type="bibr" rid="pone.0165101.ref024">24</xref>]. In <xref ref-type="fig" rid="pone.0165101.g002">Fig 2A</xref>, sequences containing four guanine tracts can be counted as a single G4 structure that begins to form at the location of the first guanine tract in the sequence. However, <xref ref-type="fig" rid="pone.0165101.g002">Fig 2B and 2C</xref> illustrates the uncertainty in predicting G4 location and composition with sequences containing five or more guanine tracts. In <xref ref-type="fig" rid="pone.0165101.g002">Fig 2B</xref>, a single structure may form at multiple locations in the sequence. In this example, with five guanine tracts, a G4 could form at either one of the first two guanine tracts. In <xref ref-type="fig" rid="pone.0165101.g002">Fig 2C</xref>, a separate issue arises with sequences containing eight or more guanine tracts. With these sequences, multiple G4 could form simultaneously. To handle these issues, Quadparser codes each sequence in the format <italic>x</italic>:<italic>y</italic>:<italic>z</italic> where <italic>x</italic> represents the number of guanine tracts, <italic>y</italic> represents the number of locations at which a G4 could form, and <italic>z</italic> represents the number of G4 that could form simultaneously in the sequence. The raw data provided by Quadparser, including the sequence, sequence location, and sequence code, is available at <ext-link ext-link-type="uri" xlink:href="http://bioinformatics.louisville.edu/QFS/index.html" xlink:type="simple">http://bioinformatics.louisville.edu/QFS/index.html</ext-link>. <xref ref-type="supplementary-material" rid="pone.0165101.s001">S1 Table</xref> summarizes the number of G4 identified on each chromosome for different sequence codes.</p>
+<fig id="pone.0165101.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165101.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Three types of information available in sequences identified by Quadparser.</title>
+<p>This information is represented in a sequence code taking the form <italic>x</italic>:<italic>y</italic>:<italic>z</italic>. For each type, example sequences are displayed on the right along with their associated sequence code on the left. Red boxes indicate the position holding that particular information in the sequence code.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.g002" xlink:type="simple"/>
+</fig>
+<p>Several steps were taken to identify high and low G4 density bands along chromosomes. First, a Perl program was written to calculate the number of bases covered by G4 at megabase intervals along all chromosomes. The lengths of G4 sequences were summed to determine the number of bases covered in an interval, and this value was subtracted from the interval size to determine the number of bases not covered by G4 sequences in an interval. Next, a chi-square test was performed to compare the proportion of bases covered by G4 in each interval to the proportion of bases covered by G4 across the rest of the chromosome. The threshold for significance was adjusted using the Bonferroni correction for multiple tests. Specifically, a significance threshold of 0.05 was divided by the number of tests performed on each chromosome (i.e., the number of intervals along the chromosome). Intervals with G4 coverage significantly greater than G4 coverage on the remaining chromosome were consider high density intervals. Intervals with significantly lower G4 coverage than the remaining chromosome were considered low density intervals. Contiguous intervals of high or low G4 density were identified as high and low G4 density bands, respectively.</p>
+<p>This method was also used to determine whether the highest density interval on a chromosome had a unique level of G4 coverage. Specifically, chi-square tests with Bonferroni correction were used to compare the proportion of G4 covered in the highest density interval to the proportion of G4 covered in the highest density interval found within a separate band on the same chromosome.</p>
+<p>Perl programs were written to analyze the number and distribution of G4 sequences, gene transcripts, experimentally-derived transcription factor binding sites, and histone binding sites at megabase intervals (1,000,000 bp) along chromosomes. These programs have been made publically available on figshare (<ext-link ext-link-type="uri" xlink:href="https://figshare.com/" xlink:type="simple">https://figshare.com/</ext-link>). G4 densities were also calculated as the number of identified sequences within intervals spaced on a log<sub>10</sub> scale from 1,000 bp to 10,000,000 bp along a chromosome. The distance between G4 was calculated as the number of bases between two adjacent G4 minus the number of bases within any existing assembly gap between the two sequences.</p>
+<p>The density of sequences identified by Quadparser and the chromosomal locations of gene transcripts were visualized on ideograms created in Circos, a Perl-based tool for the circular representation of chromosomes and associated data [<xref ref-type="bibr" rid="pone.0165101.ref034">34</xref>]. Although Circos offers a flexible, and visually appealing, approach to displaying patterns of data along chromosomes, in our experience, chromosomes are often mentally represented as linear structures. Therefore, steps were taken to linearize the Circos plots. To accomplish this, each chromosome was initially represented in an individual Circos plot. The length of each chromosome was adjusted to reflect the relative size differences across chromosomes and to maintain a common base scale. As a result, in their circular representation, only the largest chromosome, chromosome 1, formed a complete circle. The circular ideograms were linearized in Photoshop<sup>™</sup> (Adobe Systems Incorporated, San Jose, CA) using a filtering tool that transforms polar coordinates to linear coordinates [<xref ref-type="bibr" rid="pone.0165101.ref035">35</xref>]. This process produced 24 linear chromosomes of the correct relative lengths. The 24 chromosomes were then assembled into a single image.</p>
+<p>The chromosomes were represented in the grayscale pattern typical of a Giemsa stain by providing cytoband boundaries and colors as input files to Circos. The centromeres of chromosomes were represented in a light orange color. Areas along the human genome reference that remain unassembled are represented in black. Gene transcript starting and ending locations and their colors were also provided. Gene transcripts were laid on top of the Giemsa staining pattern, and transcripts from the forward and reverse DNA strands were spatially separated so that transcripts on the forward strand appeared at the top of the linear image in green and transcripts from the reverse strand appeared at the bottom in blue. The density distributions for G4 on each strand were also provided as input files and were located outside the chromosome but directly adjacent to the gene transcripts for their respective strand.</p>
+<p>This layout supported a variety of visual analyses. Above all, the density pattern of G4 could be compared across DNA strands in individual chromosomes and across all chromosomes. Furthermore, this density pattern could be compared to the distribution of gene transcripts across different chromatin structures and DNA strands.</p>
+<p>TRANSFAC Match was used to identify DNA protein binding sites within one megabase intervals identified as having the highest G4 density on each chromosome [<xref ref-type="bibr" rid="pone.0165101.ref036">36</xref>]. The analysis was performed using TRANSFAC’s vertebrate profile under matrix table release 2016.1 with 4437 matrices. TRANSFAC’s default parameters were used to set cut-offs for core and matrix similarity. A custom Perl program was written to identify DNA protein binding sites overlapping G4 sequences by one or more nucleotides. To a relatively small degree, multiple TRANSFAC matrices identified identical binding sites and this led to duplicate overlaps with G4 in the data. These duplicates were removed prior to analysis.</p>
+</sec>
+<sec id="sec003" sec-type="results">
+<title>Results</title>
+<sec id="sec004">
+<title>Descriptive Analysis of Identified Sequences</title>
+<p>Quadparser identified 197,177 sequences containing four or more guanine tracts along both strands of DNA. The sequences were found in nearly identical proportions on the forward and reverse strands (98,738 and 98,439, respectively). Although the number of guanine tracts within a sequence ranged from 4 to 160, the majority of sequences, 70 percent of the total number of sequences found, contained only four guanine tracts. An additional 20 percent contained five guanine tracts (<xref ref-type="table" rid="pone.0165101.t001">Table 1</xref>).</p>
+<table-wrap id="pone.0165101.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165101.t001</object-id>
+<label>Table 1</label> <caption><title>The number of putative G4 sequences and the percentage identified with different numbers of guanine tracts.</title></caption>
+<alternatives>
+<graphic id="pone.0165101.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.t001" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">Number of Guanine Tracts in Sequence</th>
+<th align="left">Number of G4 Sequences</th>
+<th align="left">Percentage of all Sequences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">4</td>
+<td align="left">138,907</td>
+<td align="left">70.45</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">39,556</td>
+<td align="left">20.06</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">11,440</td>
+<td align="left">5.80</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">3,817</td>
+<td align="left">1.94</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">1,456</td>
+<td align="left">0.74</td>
+</tr>
+<tr>
+<td align="left">9–160</td>
+<td align="left">2,001</td>
+<td align="left">1.01</td>
+</tr>
+<tr>
+<td align="left" style="border-top:thick;">4–160</td>
+<td align="left" style="border-top:thick;">197,177</td>
+<td align="left" style="border-top:thick;">100</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>Nearly 30 percent of the sequences identified contained multiple points at which a G4 could form in the sequence. This resulted in 297,240 locations along the genome capable of structure formation. Again, this number was found in nearly identical proportions on the forward and reverse DNA strands (148,935 and 148,305, respectively).</p>
+<p>A vast majority of sequences (over 98 percent of those identified) would allow the formation of only one G4 at any given time (<xref ref-type="table" rid="pone.0165101.t002">Table 2</xref>). Still, there were a large number of sequences remaining across the genome (3,457) that would support the simultaneous formation of 2 to 40 G4, thus providing a foundation for the development of higher-order quadruplex structures [<xref ref-type="bibr" rid="pone.0165101.ref037">37</xref>]. These sequences were found in regions throughout both DNA strands on all chromosomes. The largest number of sequences allowing for higher-order structure were found on chromosomes 1 and 19 (286 each) and the fewest on chromosome Y (20). The number of these sequences per megabase ranged from 0 to 34 with the majority occurring only once per megabase interval.</p>
+<table-wrap id="pone.0165101.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165101.t002</object-id>
+<label>Table 2</label> <caption><title>The number of putative G4 sequences and the percentage of total sequences identified that would support the formation of one G4 or the simultaneous formation of multiple G4.</title></caption>
+<alternatives>
+<graphic id="pone.0165101.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.t002" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">Possible Co-occurring G4 in Sequence</th>
+<th align="left">Number of G4 Sequences</th>
+<th align="left">Percentage of Sequences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">193,720</td>
+<td align="left">98.25</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">2,697</td>
+<td align="left">1.37</td>
+</tr>
+<tr>
+<td align="left">3–40</td>
+<td align="left">760</td>
+<td align="left">0.39</td>
+</tr>
+<tr>
+<td align="left" style="border-top:thick;">1–40</td>
+<td align="left" style="border-top:thick;">197,177</td>
+<td align="left" style="border-top:thick;">100</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>In an initial visual analysis of G4 distribution, three highly similar global patterns were identified across individual chromosomes (<xref ref-type="fig" rid="pone.0165101.g003">Fig 3</xref>). Alternating bands of high and low G4 density appear along the length of each chromosome, and these bands are nearly a mirror pattern across the forward and reverse DNA strands. Most intriguingly, on the vast majority of chromosomes, the highest G4 density is within four megabases of one end of the chromosome. In the following sections, we describe the computational analysis of these patterns.</p>
+<fig id="pone.0165101.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165101.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Pattern of G4 sequence density across DNA strands in relation to gene transcripts on each strand.</title>
+<p>The number of G4 sequences per megabase for the forward strand (green, top) and the reverse strand (blue, bottom) is displayed as a histogram above and below each chromosome. Gene transcripts are displayed inside of each chromosome in corresponding strand colors. Gaps in the reference assembly are represented in black. Centromeres appear in orange.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.g003" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec005">
+<title>Alternating Bands of High and Low G4 Density</title>
+<p>In <xref ref-type="fig" rid="pone.0165101.g003">Fig 3</xref>, the distribution of putative G4 sequences appears to alternate between bands of high and low density across all chromosomes. This was confirmed by first identifying megabase intervals with G4 coverage significantly higher and lower than G4 coverage on the remaining areas of the chromosome at <italic>p</italic> &lt; 0.01 (see <xref ref-type="sec" rid="sec002">Materials and Methods</xref>). The wider high and low density bands were formed from contiguous high and low density megabase intervals along each chromosome. <xref ref-type="supplementary-material" rid="pone.0165101.s002">S2 Table</xref> displays the number of high and low density bands on each chromosome along with the range of band widths. Not surprisingly, a greater number of bands were found on longer chromosomes. On average, the number of high and low density bands was similar across chromosomes (high: <italic>M</italic> = 11.63, <italic>SD</italic> = 4.6; low: <italic>M</italic> = 12.79, <italic>SD</italic> = 5.33). Nevertheless, when aligning chromosomal end points from the direction of the p arm and the q arm, the width and the density pattern (high,low,or neutral) is unique for each chromosome within three bands.</p>
+<p><xref ref-type="fig" rid="pone.0165101.g003">Fig 3</xref> also illustrates areas that exist along the genome where gene annotations and G4 sequences are conspicuously absent. Many of these are unassembled sections of the genome. Sizeable gaps in the assembly are found on the short arms of several chromosomes and in several sites formed by heterochromatic DNA. Telomeric regions, where the formation of G4 structures is well-known, are also not represented in this assembly. Contigs and scaffolds make up the remaining gaps in the genome. <xref ref-type="supplementary-material" rid="pone.0165101.s003">S3 Table</xref> provides information regarding the size and types of assembly gaps on each chromosome.</p>
+<p>An important question is whether these gaps in the assembly are partially responsible for the variation in G4 sequence density along chromosomes. If this were the case, one would expect to see a negative relationship between the size of unassembled regions and the number of G4 sequences at each megabase interval. However, this relationship was near zero and insignificant for all chromosomes except chromosome X where a significant positive relationship was found (see <xref ref-type="supplementary-material" rid="pone.0165101.s004">S4 Table</xref> for details). Consequently, there is no reason to believe gaps in the reference assembly play a significant role in the pattern of variation in G4 sequence density along chromosomes.</p>
+<p>In <xref ref-type="fig" rid="pone.0165101.g003">Fig 3</xref> it also appears that higher G4 density tends to occur in lighter cytobands where GC content tends to be higher. In fact, it would not be surprising to find high guanine content in areas that are dense with G4 sequences. Guanine tracts are essential to the formation of the guanine tetrads that are fundamental aspects of G4 structure. The Spearman correlations between number of GC nucleotides and number of G4 per cytoband range from 0.44 on chromosome 12 to 0.91 on chromosome 21 with a mean correlation of 0.66 across all chromosomes. All <italic>p</italic> values remain significant after Bonferroni correction with the exception of chromosomes 12, 20, 21, and 24. Clearly, the relationship between the two is not a perfect one, indicating that G4 distribution is only partially related to the changes in GC content across cytobands.</p>
+<p>To explore the differences in the two patterns further, we calculated the mean number of G4 per 100,000 bases within different cytoband categories for each chromosome. In <xref ref-type="table" rid="pone.0165101.t003">Table 3</xref>, when looking across all chromosomes, the highest G4 densities occurred in the two lightest cytoband categories (gneg and gpos25) followed by a steep decrease in density, as much as 61 percent from a previous category, over the next four categories (gpos50, gpos75, gpos100, and gvar) as Giemsa staining becomes darker. In contrast, the mean GC content per 100,000 bases also remains high in the two lightest categories but varies little, less than 10 percentage points, through gpos100 with the only large decrease occurring in the gvar category, known to be heterochromatic. If the G4 were simply a by-product of GC content, one would expect the percentage change across the cytoband categories to be fairly similar, but this is not the case, and we see that the difference in the two patterns occurs mainly from gpos50 through gpos100. The mean G4 and GC densities for each cytoband category on individual chromosomes is available in <xref ref-type="supplementary-material" rid="pone.0165101.s005">S5</xref> and <xref ref-type="supplementary-material" rid="pone.0165101.s006">S6</xref> Tables.</p>
+<table-wrap id="pone.0165101.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165101.t003</object-id>
+<label>Table 3</label> <caption><title>Mean guanine and cytosine bases (GC) and G4 sequences per 100,000 bases for each cytoband category.</title> <p>The categories gneg (lightest), gpos25, gpos50, gpos75, and gpos100 (darkest) refer to the level of staining achieved. The gvar category refers to areas that tend to be heterochromatic. The acen category refers to centromeric regions. The stalk category refers to the short arm of acrocentric chromosomes.</p></caption>
+<alternatives>
+<graphic id="pone.0165101.t003g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.t003" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">Cytoband Category</th>
+<th align="left">Mean GC per 100,000 bases<xref ref-type="table-fn" rid="t003fn001">*</xref> (Percentage increase/decrease over previous category)</th>
+<th align="left">Mean G4 per 100,000 bases (Percentage increase/decrease over previous category)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">gneg</td>
+<td align="left">21,094.89</td>
+<td align="left">10.74</td>
+</tr>
+<tr>
+<td align="left">gpos25</td>
+<td align="left">21,538.82 (+2%)</td>
+<td align="left">11.33 (+6%)</td>
+</tr>
+<tr>
+<td align="left">gpos50</td>
+<td align="left">20,175.85 (-6%)</td>
+<td align="left">6.89 (-39%)</td>
+</tr>
+<tr>
+<td align="left">gpos75</td>
+<td align="left">18,244.71 (-10%)</td>
+<td align="left">2.71 (-61%)</td>
+</tr>
+<tr>
+<td align="left">gpos100</td>
+<td align="left">16,982.80 (-7%)</td>
+<td align="left">1.52 (-44%)</td>
+</tr>
+<tr>
+<td align="left">gvar</td>
+<td align="left">4,006.28 (-76%)</td>
+<td align="left">1.04 (-32%)</td>
+</tr>
+<tr>
+<td align="left">acen</td>
+<td align="left">3,776.62</td>
+<td align="left">1.07</td>
+</tr>
+<tr>
+<td align="left">stalk</td>
+<td align="left">1,650.24</td>
+<td align="left">1.19</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t003fn001"><p>*single strand</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec006">
+<title>Distribution of G4 Is Highly Similar across DNA Strands</title>
+<p>As <xref ref-type="fig" rid="pone.0165101.g003">Fig 3</xref> illustrates, the distribution of G4 is strikingly similar between DNA strands for a given chromosome. Using megabase intervals, G4 density was determined to be highly correlated across strands on all chromosomes, ranging from 0.86 to 0.98 at p &lt; 0.01 with a mean correlation of 0.94 (<xref ref-type="supplementary-material" rid="pone.0165101.s007">S7 Table</xref>). The G4 strand correlations are significantly higher than gene transcript strand correlations (Mean <italic>r</italic> = 0.65; range 0.43–0.86), indicating a greater similarity in the strand distributions for G4 sequences (<xref ref-type="supplementary-material" rid="pone.0165101.s007">S7 Table</xref>). It is important to note, however, that this is not a product of complementary structure being identified. G4 sequences that overlap across DNA strands occur rarely on chromosomes, ranging from 0 to 7 instances on individual chromosomes with a mean of 2.29 instances.</p>
+<p>As can be seen in <xref ref-type="fig" rid="pone.0165101.g004">Fig 4</xref>, density patterns across DNA strands increase in similarity at larger scales. The Spearman correlations rise above 0.5 when the number of G4 sequences is measured at intervals above 10 kb (<italic>p</italic> &lt; 0.05 at all intervals). In <xref ref-type="fig" rid="pone.0165101.g005">Fig 5</xref>, the median distance and the range of distances between G4 sequences also appears highly similar across DNA strands on individual chromosomes. On a genome-wide scale, G4 sequences are located as near as 9 nucleobases apart and as distant as ~5,800,000 nucleobases with median distances ranging between 1,996 to 15,346 nucleobases. The pattern of G4 sequence distance is in line with the visual pattern of G4 sequence density found in <xref ref-type="fig" rid="pone.0165101.g003">Fig 3</xref>, indicating alternating bands of high and low densities exist across chromosomes.</p>
+<fig id="pone.0165101.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165101.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Boxplots representing the range of correlation between the number of G4 sequences on the forward and reverse strands for all chromosomes at different bin sizes.</title>
+<p>The boxes represent the 25th to 75th percentile, and the end of each line is either the end of the data range or 1.5 of the interquartile range. Dots extending beyond the lines are correlations considered outliers.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.g004" xlink:type="simple"/>
+</fig>
+<fig id="pone.0165101.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165101.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Boxplots representing the range of distances on a log<sub>10</sub> scale between G4 sequences across all chromosomes and for each strand (represented as a + for the forward strand and a − for the reverse strand).</title>
+<p>Gaps in the reference assembly are subtracted from all distance measures where they occur. The boxes represent the 25th to 75th percentile, and the end of each line is either the end of the data range or 1.5 of the interquartile range. Dots extending beyond the lines are distances considered outliers for that chromosome.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.g005" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec007">
+<title>Highest G4 Density On One End of Most Chromosomes</title>
+<p>In <xref ref-type="fig" rid="pone.0165101.g003">Fig 3</xref>, an interesting pattern can be seen on 21 of 24 chromosomes. In each case, the highest density interval on the chromosome occurs within four megabases of one end of the chromosome. On some chromosomes, this interval has three times as many (or more) G4 sequences than high density intervals found in other bands further along the chromosome. Chromosomes 3, 6, and 15 are exceptions to this pattern. On these chromosomes, the highest density band is found toward the center of the chromosome. At first glance, chromosome 22 appears to be an exception to the pattern as well. However, the number of G4 sequences within one megabase of the end of the q arm is somewhat close to the highest density interval found slightly inward. In <xref ref-type="supplementary-material" rid="pone.0165101.s008">S8 Table</xref>, the proportion of bases covered by G4 in the highest density interval on each chromosome is signficantly greater than the proportion of bases covered in the highest density interval found among the remaining high density bands on each chromosome (<italic>p</italic> &lt; 0.01), indicating that these intervals are uniquely high on each chromosome. In <xref ref-type="fig" rid="pone.0165101.g006">Fig 6</xref>, the pattern of highest density on one end of chromosomes is also distinctive when compared to the pattern of highest density found on gene transcripts, transcription factor binding sites, and histone binding sites (<italic>p</italic> &lt; 0.05).</p>
+<fig id="pone.0165101.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165101.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>Boxplots representing the range of distances for the highest density megabase interval, measured as the shortest distance to one end of a chromosome, for G4, gene transcripts, transcription factor binding sites (TFBS), and histone binding sites (HBS).</title>
+<p>The boxes represent the 25th to 75th percentile, and the end of each line is either the end of the data range or 1.5 of the interquartile range. Dots extending beyond the lines are distances considered outliers for that range of distances.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.g006" xlink:type="simple"/>
+</fig>
+<p>Within the single megabase region on each chromosome with highest G4 density, binding sites for a wide variety of DNA binding proteins were found. The high density interval on Chromosome Y had the fewest binding sites identified (249,384), the fewest G4 (253), and the fewest binding sites overlapping with G4 sequences (2,511) whereas the high density interval on chromosome 19 demonstrated the highest number of binding sites (329,384), the highest number of G4 (850), and the highest number of binding sites overlapping with G4 (9,319). Information for remaining chromosomes can be found in <xref ref-type="supplementary-material" rid="pone.0165101.s009">S9 Table</xref>.</p>
+<p>The fifty DNA binding proteins on each chromosome having the greatest number of binding sites overlapping G4 sequences are listed vertically in <xref ref-type="fig" rid="pone.0165101.g007">Fig 7</xref>. On each chromosome, the proteins were ranked so that those with the highest number of binding sites overlapping G4 were ranked 1 (dark red) and those with the fewest were ranked 50 (white). In this group, over half of the DNA binding proteins identified (57 of 99) were zinc finger proteins (indicated by asterisks in <xref ref-type="fig" rid="pone.0165101.g007">Fig 7</xref>). This group of zinc fingers is comprised of at least a couple of different structural families with the vast majority being C2H2 zinc fingers and a smaller number consisting of C4 zinc fingers (<italic>VDR</italic>, <italic>PPARα</italic>, <italic>PPARγ</italic>, <italic>HNF4α</italic>, <italic>GR</italic>, <italic>and RARA</italic>). Several zinc finger proteins are among the highest ranked within all chromosomes in terms of number of binding sites overlapping G4. For example, at the top of <xref ref-type="fig" rid="pone.0165101.g007">Fig 7</xref>, <italic>GKLF</italic> is ranked number 1 or 2 in abundance across all chromosomes. However, in looking down the figure, many DNA protein binding sites vary in relative abundance across chromosomes, and it is interesting to find that there are also protein binding sites unique to a single chromosome or to a small subset of chromsomes. The raw numbers for DNA protein binding sites overlapping G4 are available in <xref ref-type="supplementary-material" rid="pone.0165101.s010">S10 Table</xref>.</p>
+<fig id="pone.0165101.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165101.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>The fifty DNA binding proteins on each chromosome with the greatest number of DNA protein binding sites overlapping G4 sequences.</title>
+<p>Numbers indicate the rank for a particular DNA binding protein with 1 indicating the highest number of binding sites on a chromosome (darker red) and 50 indicating the lowest number on a chromosome (white).</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.g007" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec008">
+<title>Comparison of Predicted to Experimentally Identified G4</title>
+<p>The distribution of G4 identified by Quadparser was compared to the distribution of G4 identified experimentally, using a high-throughput sequencing method, G4-seq [<xref ref-type="bibr" rid="pone.0165101.ref033">33</xref>]. The experimentally-derived G4 were identified on the hg19 reference assembly. Therefore, the comparison was made with G4 predicted by Quadparser on the same reference assembly. For each chromosome, Spearman correlations were performed on distributions calculated at one megabase intervals. The distribution of experimentally-derived G4 was highly similar to the distribution of G4 predicted by Quadparser (Mean r = 0.95, range 0.89–0.99, <italic>p</italic> &lt; .01). Strand correlations for experimentally identified G4 were also high (Mean r = 0.91, range 0.74–0.98, <italic>p</italic> &lt; .01), and in <xref ref-type="supplementary-material" rid="pone.0165101.s011">S11 Table</xref> the strand correlations for the majority of chromosomes show very small differences from strand correlations for G4 predicted by Quadparser. The exceptions are chromosomes X and Y where the strand correlation is higher for predicted G4. The pattern of highest G4 density on one end of most chromosomes is also found with the experimentally-derived data. The highest density interval was the same in both groups with the exception of chromosomes 1 and 20 where the highest density interval differed by 1 megabase but was still located within 3 megabase intervals from the end of the chromosome (<xref ref-type="supplementary-material" rid="pone.0165101.s011">S11 Table</xref>).</p>
+</sec>
+</sec>
+<sec id="sec009" sec-type="conclusions">
+<title>Discussion</title>
+<p>The distribution of G4 across chromosomes is highly distinctive with alternating bands of high and low density that appear in a mirror pattern across DNA strands and highest G4 density located on one end of most chromosomes. Although <italic>a priori</italic>, one might expect a relationship between G-rich structures and alternating GC content across cytobands, the G4 banding patterns were not entirely related to the GC content across different cytobands categories. Nonetheless, just as cytobands serve as a unique signature for identifying chromosomes, the banding patterns of G4 do so as well. In contrast to cytobands, however, the source of the banding is a functional genomic element rather than coloration related to Giemsa staining. Furthermore, this banding pattern is strongly similar across DNA strands showing significantly greater strand similarity than the distribution of gene transcripts across DNA strands. This degree of similarity in strand distributions is a key element in attributing a unique signature to G4, or any element, as one would expect any global chromosomal signature to become increasingly blurred as the distributions of the signature element differ across strands. The pattern of highest G4 density located near one end of most chromosomes distinguishes the distribution of G4 from the distributions of other genomic elements, in this case, gene transcripts, transcription factor binding sites, and histone binding sites, where highest densities on most chromosomes are found at distances that vary more widely and are located further from the ends of chromosomes.</p>
+<p>Remarkably, the G4 density patterns identified in this study are in line with a long-standing hypothesis of Sen and Gilbert (1988) regarding a role for these structures in the pairing of homologous maternal and paternal chromosomes (sister chromatids) during meiosis [<xref ref-type="bibr" rid="pone.0165101.ref038">38</xref>]. In 1988, while studying immunoglobulin switch regions, Sen and Gilbert found that guanine-rich regions along DNA self-associated <italic>in vitro</italic>, and on closer analysis, noted that these regions formed parallel four-stranded structures. They proposed that G4 were concentrated in bands at intervals along chromosomes and that they formed a structural component acting like a zipper to align sister chromatids. Sen and Gilbert suggested that the pattern of these bands might act like a “chromosomal fingerprint” for correct homologue pairing.</p>
+<p>In Sen and Gilbert’s original diagram in <xref ref-type="fig" rid="pone.0165101.g008">Fig 8A</xref>, the process shows a high density of G4 around the telomeric ends as the sister chromatids attach to the nuclear envelope during meiosis. This fits well in general with the distribution of G4 sequences in this analysis. Exceptionally high densities of G4 sequences are often seen at one or both ends of chromosomes. In addition, bands of guanine-rich sequences along the chromosome are uniquely spaced for each chromosome. In <xref ref-type="fig" rid="pone.0165101.g008">Fig 8B</xref>, in addition to the region of highest G4 density near the telomeres, there are approximately five regions with high G4 sequence density. The number, location, and lengths of these bands across chromosomes, together with the high degree of similarity in their distribution across DNA strands, supports the idea that they could serve as a “chromosomal fingerprint”, as Sen and Gilbert suggest, for the correct alignment of chromosomes.</p>
+<fig id="pone.0165101.g008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165101.g008</object-id>
+<label>Fig 8</label>
+<caption>
+<title>Comparison of Sen and Gilbert (A) to chromosome 1 observations (B).</title>
+<p>In part A, sister chromatids are attached to the nuclear envelope during meiosis. G-rich bands (A,A’,B,B’,C,C’) serve to align the chromosomes. In part B, highly correlated G4 sequence banding patterns are found along both DNA strands on chromosome 1. <ext-link ext-link-type="uri" xlink:href="http://www.nature.com/" xlink:type="simple">Part A reprinted by permission from Macmillan Publishers Ltd: NATURE (Sen and Gilbert 1988), copyright (1988).</ext-link></p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.g008" xlink:type="simple"/>
+</fig>
+<p>The pattern of highest G4 sequence density occurring within 1 to 4 Mb of one end of 21 out of 24 chromosomes also bears a striking similarity to research on homologue pairing in <italic>Caenorhabditis elegans</italic> [<xref ref-type="bibr" rid="pone.0165101.ref039">39</xref>–<xref ref-type="bibr" rid="pone.0165101.ref043">43</xref>]. Homologue pairing is perhaps best understood in this organism, where specific regions identified on one end of chromosomes, known as pairing centers, are enriched with repeated sequences that bind zinc finger proteins. During meiosis, the zinc finger proteins interact with proteins on the nuclear envelope to facilitate attachment and also serve as a mechanism for linking the pairing centers of homologous chromosomes. As in <italic>C</italic>. <italic>elegans</italic>, we identified regions located on one end of chromosomes containing repeated sequences that bind zinc finger proteins in the current study.</p>
+<p>In Sen and Gilbert’s original proposal for homologue pairing, the capacity for interstrand G4 formation was thought to be the basis for alignment and pairing [<xref ref-type="bibr" rid="pone.0165101.ref038">38</xref>, <xref ref-type="bibr" rid="pone.0165101.ref044">44</xref>], and it is well-known that these self-recognition motifs allow for the formation of G4 from two and four strands of DNA [<xref ref-type="bibr" rid="pone.0165101.ref045">45</xref>]. However, G4 sequence motifs and G4 tertiary structures are also known to bind to a variety of proteins [<xref ref-type="bibr" rid="pone.0165101.ref046">46</xref>, <xref ref-type="bibr" rid="pone.0165101.ref047">47</xref>]. In fact, several zinc fingers have been significantly associated with G4 motifs in mammals [<xref ref-type="bibr" rid="pone.0165101.ref048">48</xref>]. Perhaps G4 could play a role in homologue pairing through an alternate process, one in which they serve as a set of repeated sequences that bind proteins necessary for correct homologue pairing.</p>
+<p>In an alternative scenario for homologue pairing, we now have two factors operating to produce a unique fingerprint for self-recognition, a specific zinc finger binding G4 sequences and the distribution of the G4 sequences within the region. In the current study, it is not obvious that a particular zinc finger would serve as a unique identifier in recognition by itself. Many of the zinc fingers identified in this study bind G4 across all chromosomes. In <italic>C</italic>. <italic>elegans</italic>, although zinc finger proteins critical to homologue pairing do vary across chromosomes, they are not necessarily unique to a chromosome. In this case, it is also noteworthy that the pattern of repeated sequences in <italic>C</italic>. <italic>elegans</italic> differs across chromosomes [<xref ref-type="bibr" rid="pone.0165101.ref039">39</xref>]. Given the findings of our study, along with the research on <italic>C</italic>. <italic>elegans</italic>, it appears that a specific zinc finger distributed in a particular pattern, due to the distribution of G4, is a more likely basis for homologue pairing than zinc fingers operating alone.</p>
+<p>Hawley and Gilliland (2009) point out that the pairing center repeats and the telomeric sequences in <italic>C</italic>. <italic>elegans</italic> are highly similar, suggesting a common evolutionary history and implying a possible general mechanism for homologue pairing across species that involves the association of repeated sequences across homologues [<xref ref-type="bibr" rid="pone.0165101.ref039">39</xref>]. Certainly, G4 structures represent a sequence motif with multiple possibilities for binding DNA strands. In the past, this has been most frequently considered in terms of binding strands through the formation of intermolecular G4 structures. However, a variety of proteins, including zinc finger proteins, bind with G4 structures, offering a second mechanism for linking DNA strands. In either of these two cases, the distribution of G4 along the entire length of individual chromosomes, and especially within high G4 density regions, produce unique patterns that could certainly serve as a basis for self-recognition of homologue pairs. The combination of specific zinc finger proteins binding G4 motifs in these regions would increase the precision of any recognition process by using a combination of features to ensure correct homologue pairing.</p>
+</sec>
+<sec id="sec010">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0165101.s001" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.s001" xlink:type="simple">
+<label>S1 Table</label>
+<caption>
+<title>Number of G4 sequences identified on each chromosome of the human genome assembly (hg38) by class.</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165101.s002" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.s002" xlink:type="simple">
+<label>S2 Table</label>
+<caption>
+<title>The number and range of widths of high and low G4 density bands along each chromosome on reference assembly hg38.</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165101.s003" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.s003" xlink:type="simple">
+<label>S3 Table</label>
+<caption>
+<title>The size of unassembled regions within five areas on each chromosome.</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165101.s004" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.s004" xlink:type="simple">
+<label>S4 Table</label>
+<caption>
+<title>The proportion of each chromosome that remains unassembled and the correlation between the size of unassembled regions (gaps) per Mb and the number G4 sequences per Mb on each chromosome.</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165101.s005" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.s005" xlink:type="simple">
+<label>S5 Table</label>
+<caption>
+<title>The mean number of G4 per 100,000 bases found for each Giemsa staining category for all chromosomes.</title>
+<p>The categories gneg (lightest), gpos25, gpos50, gpos75, and gpos100 (darkest) refer to the level of staining achieved. The gvar category refers to areas that tend to be heterochromatic. The acen category refers to centromeric regions. The stalk category refers to the short arm of acrocentric chromosomes.</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165101.s006" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.s006" xlink:type="simple">
+<label>S6 Table</label>
+<caption>
+<title>The mean GC content per 100,000 bases found for each Giemsa staining category for all chromosomes.</title>
+<p>The categories gneg (lightest), gpos25, gpos50, gpos75, and gpos100 (darkest) refer to the level of staining achieved. The gvar category refers to areas that tend to be heterochromatic. The acen category refers to centromeric regions. The stalk category refers to the short arm of acrocentric chromosomes. The number of guanine and cytosine bases were counted on the hg38 reference assembly and thus the values are for one DNA strand. Densities would be the same on the second strand.</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165101.s007" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.s007" xlink:type="simple">
+<label>S7 Table</label>
+<caption>
+<title>Spearman correlations for the distribution of G4 sequences across DNA strands and the distribution of gene transcripts across DNA strands for all chromosomes on reference assembly hg38.</title>
+<p>The Fisher’s Z estimate and significance of the difference in the G4 strand correlation and the gene transcript correlation is included for each chromosome.</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165101.s008" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.s008" xlink:type="simple">
+<label>S8 Table</label>
+<caption>
+<title>An analysis of intervals with highest G4 coverage along chromosomes.</title>
+<p>A) Contains information regarding chromosome lengths and number of megabase intervals. B) Indicates the megabase interval with the highest G4 density on each chromosome along with the number of G4 sequences, the number of bases covered by G4 in the interval and the number of bases not covered by G4 in the interval. C) Contains the same information for the highest G4 density interval found in a separate band on the same chromosome. D) Contains the chi square estimate and significance level when comparing the proportion of G4 coverage in B) and C).</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165101.s009" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.s009" xlink:type="simple">
+<label>S9 Table</label>
+<caption>
+<title>The number of DNA protein binding sites, G4 sequences, and DNA protein binding sites overlapping G4 sequences within the megabase interval having highest G4 sequence density on each chromosome.</title>
+<p>Megabase intervals were measured from the beginning of a chromosome’s P arm. As a result, the last interval listed on the Q arm will be less than 1 megabase in size.</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165101.s010" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.s010" xlink:type="simple">
+<label>S10 Table</label>
+<caption>
+<title>The number of DNA protein binding sites overlapping G4 sequences within the highest G4 sequence density interval (Mb) on each chromosome.</title>
+<p>The 50 proteins with the highest number of binding sites for each chromosome are included in the table. Protein classes were obtained from TRANSFAC when available. Otherwise, the protein class was obtained from Gene Cards.</p>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165101.s011" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0165101.s011" xlink:type="simple">
+<label>S11 Table</label>
+<caption>
+<title>Spearman correlations between the distribution (per Mb) of experimentally identified G4 (G4-Seq) and the distribution of computationally predicted G4 (G4-Quadparser) on each chromosome in the hg19 reference assembly.</title>
+<p>Strand correlations are also displayed for each group along with the the number of megabase intervals on each chromosome and the highest G4 density interval found with G4-Seq and G4-Quadparser.</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>DMM conceived the idea of the project and the linkage to the work of Sen and Gilbert. ECR supervised the computational aspects of the project. JHC and ECR implemented the computational aspects with ECR focusing on the G4 detection and JHC with the visualization aspects. All authors contributed to the writing of the manuscript. The authors would like to thank Yvonne Fondufe-Mittendorf, Juw Won Park, and Francine Rezzoug for reading the manuscript and providing valuable comments.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0165101.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Beaudoin</surname> <given-names>J-D</given-names></name>, <name name-style="western"><surname>Perreault</surname> <given-names>J-P</given-names></name>. <article-title>Exploring mRNA 3′-UTR G-quadruplexes: evidence of roles in both alternative polyadenylation and mRNA shortening</article-title>. <source>Nucleic Acids Res</source>. <year>2013</year>;<volume>41</volume>(<issue>11</issue>):<fpage>5898</fpage>–<lpage>911</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkt265" xlink:type="simple">10.1093/nar/gkt265</ext-link></comment> <object-id pub-id-type="pmid">23609544</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bugaut</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Balasubramanian</surname> <given-names>S</given-names></name>. <article-title>5′-UTR RNA G-quadruplexes: translation regulation and targeting</article-title>. <source>Nucleic Acids Res</source>. <year>2012</year>;<volume>40</volume>(<issue>11</issue>):<fpage>4727</fpage>–<lpage>41</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gks068" xlink:type="simple">10.1093/nar/gks068</ext-link></comment> <object-id pub-id-type="pmid">22351747</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cogoi</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Xodo</surname> <given-names>LE</given-names></name>. <article-title>G-quadruplex formation within the promoter of the KRAS proto-oncogene and its effect on transcription</article-title>. <source>Nucleic Acids Res</source>. <year>2006</year>;<volume>34</volume>(<issue>9</issue>):<fpage>2536</fpage>–<lpage>49</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkl286" xlink:type="simple">10.1093/nar/gkl286</ext-link></comment> <object-id pub-id-type="pmid">16687659</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Huang</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Smaldino</surname> <given-names>PJ</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>Q</given-names></name>, <name name-style="western"><surname>Miller</surname> <given-names>LD</given-names></name>, <name name-style="western"><surname>Cao</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Stadelman</surname> <given-names>K</given-names></name>, <etal>et al</etal>. <article-title>Yin Yang 1 contains G-quadruplex structures in its promoter and 5′-UTR and its expression is modulated by G4 resolvase 1</article-title>. <source>Nucleic Acids Res</source>. <year>2012</year>;<volume>40</volume>(<issue>3</issue>):<fpage>1033</fpage>–<lpage>49</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkr849" xlink:type="simple">10.1093/nar/gkr849</ext-link></comment> <object-id pub-id-type="pmid">21993297</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kumari</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Bugaut</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Huppert</surname> <given-names>JL</given-names></name>, <name name-style="western"><surname>Balasubramanian</surname> <given-names>S</given-names></name>. <article-title>An RNA G-quadruplex in the 5′ UTR of the NRAS proto-oncogene modulates translation</article-title>. <source>Nat Chem Biol</source>. <year>2007</year>;<volume>3</volume>(<issue>4</issue>):<fpage>218</fpage>–<lpage>21</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nchembio864" xlink:type="simple">10.1038/nchembio864</ext-link></comment> <object-id pub-id-type="pmid">17322877</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Palumbo</surname> <given-names>SL</given-names></name>, <name name-style="western"><surname>Memmott</surname> <given-names>RM</given-names></name>, <name name-style="western"><surname>Uribe</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>Krotova-Khan</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Hurley</surname> <given-names>LH</given-names></name>, <name name-style="western"><surname>Ebbinghaus</surname> <given-names>SW</given-names></name>. <article-title>A novel G-quadruplex-forming GGA repeat region in the c-myb promoter is a critical regulator of promoter activity</article-title>. <source>Nucleic Acids Res</source>. <year>2008</year>;<volume>36</volume>(<issue>6</issue>):<fpage>1755</fpage>–<lpage>69</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkm1069" xlink:type="simple">10.1093/nar/gkm1069</ext-link></comment> <object-id pub-id-type="pmid">18252774</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ray</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Bandaria</surname> <given-names>JN</given-names></name>, <name name-style="western"><surname>Qureshi</surname> <given-names>MH</given-names></name>, <name name-style="western"><surname>Yildiz</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Balci</surname> <given-names>H</given-names></name>. <article-title>G-quadruplex formation in telomeres enhances POT1/TPP1 protection against RPA binding</article-title>. <source>Proc Natl Acad Sci</source>. <year>2014</year>;<volume>111</volume>(<issue>8</issue>):<fpage>2990</fpage>–<lpage>5</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.1321436111" xlink:type="simple">10.1073/pnas.1321436111</ext-link></comment> <object-id pub-id-type="pmid">24516170</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Subramanian</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Rage</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Tabet</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Flatter</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Mandel</surname> <given-names>JL</given-names></name>, <name name-style="western"><surname>Moine</surname> <given-names>H</given-names></name>. <article-title>G—quadruplex RNA structure as a signal for neurite mRNA targeting</article-title>. <source>EMBO reports</source>. <year>2011</year>;<volume>12</volume>(<issue>7</issue>):<fpage>697</fpage>–<lpage>704</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/embor.2011.76" xlink:type="simple">10.1038/embor.2011.76</ext-link></comment> <object-id pub-id-type="pmid">21566646</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zahler</surname> <given-names>AM</given-names></name>, <name name-style="western"><surname>Williamson</surname> <given-names>JR</given-names></name>, <name name-style="western"><surname>Cech</surname> <given-names>TR</given-names></name>, <name name-style="western"><surname>Prescott</surname> <given-names>DM</given-names></name>. <article-title>Inhibition of telomerase by G-quartet DMA structures</article-title>. <source>Nature</source>. <year>1991</year>;<volume>350</volume>:<fpage>718</fpage>–<lpage>20</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/350718a0" xlink:type="simple">10.1038/350718a0</ext-link></comment> <object-id pub-id-type="pmid">2023635</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Arthanari</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Bolton</surname> <given-names>PH</given-names></name>. <article-title>Functional and dysfunctional roles of quadruplex DNA in cells</article-title>. <source>Chemistry &amp; Biology</source>. <year>2001</year>;<volume>8</volume>(<issue>3</issue>):<fpage>221</fpage>–<lpage>30</lpage>.</mixed-citation></ref>
+<ref id="pone.0165101.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Beaudoin</surname> <given-names>J-D</given-names></name>, <name name-style="western"><surname>Perreault</surname> <given-names>J-P</given-names></name>. <article-title>5′-UTR G-quadruplex structures acting as translational repressors</article-title>. <source>Nucleic Acids Res</source>. <year>2010</year>;<volume>38</volume>(<issue>20</issue>):<fpage>7022</fpage>–<lpage>36</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkq557" xlink:type="simple">10.1093/nar/gkq557</ext-link></comment> <object-id pub-id-type="pmid">20571090</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Huppert</surname> <given-names>JL</given-names></name>, <name name-style="western"><surname>Balasubramanian</surname> <given-names>S</given-names></name>. <article-title>G-quadruplexes in promoters throughout the human genome</article-title>. <source>Nucleic Acids Res</source>. <year>2007</year>;<volume>35</volume>(<issue>2</issue>):<fpage>406</fpage>–<lpage>13</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkl1057" xlink:type="simple">10.1093/nar/gkl1057</ext-link></comment> <object-id pub-id-type="pmid">17169996</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tsai</surname> <given-names>ZT-Y</given-names></name>, <name name-style="western"><surname>Chu</surname> <given-names>W-Y</given-names></name>, <name name-style="western"><surname>Cheng</surname> <given-names>J-H</given-names></name>, <name name-style="western"><surname>Tsai</surname> <given-names>H-K</given-names></name>. <article-title>Associations between intronic non-B DNA structures and exon skipping</article-title>. <source>Nucleic Acids Res</source>. <year>2013</year>:<fpage>gkt939</fpage>.</mixed-citation></ref>
+<ref id="pone.0165101.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Todd</surname> <given-names>AK</given-names></name>, <name name-style="western"><surname>Johnston</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Neidle</surname> <given-names>S</given-names></name>. <article-title>Highly prevalent putative quadruplex sequence motifs in human DNA</article-title>. <source>Nucleic Acids Res</source>. <year>2005</year>;<volume>33</volume>(<issue>9</issue>):<fpage>2901</fpage>–<lpage>7</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gki553" xlink:type="simple">10.1093/nar/gki553</ext-link></comment> <object-id pub-id-type="pmid">15914666</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Eddy</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Maizels</surname> <given-names>N</given-names></name>. <article-title>Gene function correlates with potential for G4 DNA formation in the human genome</article-title>. <source>Nucleic Acids Res</source>. <year>2006</year>;<volume>34</volume>(<issue>14</issue>):<fpage>3887</fpage>–<lpage>96</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkl529" xlink:type="simple">10.1093/nar/gkl529</ext-link></comment> <object-id pub-id-type="pmid">16914419</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref016"><label>16</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Maizels</surname> <given-names>N</given-names></name>. <chapter-title>Quadruplexes and the biology of G-rich genomic regions</chapter-title>. In: <name name-style="western"><surname>Neidle</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Balasubramanian</surname> <given-names>S</given-names></name>, editors. <source>Quadruplex Nucleic Acids</source>. <publisher-loc>Cambridge, UK</publisher-loc>: <publisher-name>Royal Society of Chemistry/Springer</publisher-name>; <year>2006</year>. p. <fpage>228</fpage>–<lpage>52</lpage>.</mixed-citation></ref>
+<ref id="pone.0165101.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Didiot</surname> <given-names>M-C</given-names></name>, <name name-style="western"><surname>Tian</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Schaeffer</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Subramanian</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Mandel</surname> <given-names>J-L</given-names></name>, <name name-style="western"><surname>Moine</surname> <given-names>H</given-names></name>. <article-title>The G-quartet containing FMRP binding site in FMR1 mRNA is a potent exonic splicing enhancer</article-title>. <source>Nucleic Acids Res</source>. <year>2008</year>;<volume>36</volume>(<issue>15</issue>):<fpage>4902</fpage>–<lpage>12</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkn472" xlink:type="simple">10.1093/nar/gkn472</ext-link></comment> <object-id pub-id-type="pmid">18653529</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fisette</surname> <given-names>JF</given-names></name>, <name name-style="western"><surname>Montagna</surname> <given-names>DR</given-names></name>, <name name-style="western"><surname>Mihailescu</surname> <given-names>MR</given-names></name>, <name name-style="western"><surname>Wolfe</surname> <given-names>MS</given-names></name>. <article-title>AG-Rich element forms a G-quadruplex and regulates BACE1 mRNA alternative splicing</article-title>. <source>J Neurochem</source>. <year>2012</year>;<volume>121</volume>(<issue>5</issue>):<fpage>763</fpage>–<lpage>73</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1471-4159.2012.07680.x" xlink:type="simple">10.1111/j.1471-4159.2012.07680.x</ext-link></comment> <object-id pub-id-type="pmid">22303960</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gomez</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Lemarteleur</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Lacroix</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Mailliet</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Mergny</surname> <given-names>JL</given-names></name>, <name name-style="western"><surname>Riou</surname> <given-names>JF</given-names></name>. <article-title>Telomerase downregulation induced by the G-quadruplex ligand 12459 in A549 cells is mediated by hTERT RNA alternative splicing</article-title>. <source>Nucleic Acids Res</source>. <year>2004</year>;<volume>32</volume>(<issue>1</issue>):<fpage>371</fpage>–<lpage>9</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkh181" xlink:type="simple">10.1093/nar/gkh181</ext-link></comment> <object-id pub-id-type="pmid">14729921</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Marcel</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Tran</surname> <given-names>PL</given-names></name>, <name name-style="western"><surname>Sagne</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Martel-Planche</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Vaslin</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Teulade-Fichou</surname> <given-names>M-P</given-names></name>, <etal>et al</etal>. <article-title>G-quadruplex structures in TP53 intron 3: role in alternative splicing and in production of p53 mRNA isoforms</article-title>. <source>Carcinogenesis</source>. <year>2011</year>;<volume>32</volume>(<issue>3</issue>):<fpage>271</fpage>–<lpage>8</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/carcin/bgq253" xlink:type="simple">10.1093/carcin/bgq253</ext-link></comment> <object-id pub-id-type="pmid">21112961</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ribeiro</surname> <given-names>MM</given-names></name>, <name name-style="western"><surname>Teixeira</surname> <given-names>GS</given-names></name>, <name name-style="western"><surname>Martins</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Marques</surname> <given-names>MR</given-names></name>, <name name-style="western"><surname>de Souza</surname> <given-names>AP</given-names></name>, <name name-style="western"><surname>Line</surname> <given-names>SRP</given-names></name>. <article-title>G-quadruplex formation enhances splicing efficiency of PAX9 intron 1</article-title>. <source>Human Genetics</source>. <year>2015</year>;<volume>134</volume>(<issue>1</issue>):<fpage>37</fpage>–<lpage>44</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s00439-014-1485-6" xlink:type="simple">10.1007/s00439-014-1485-6</ext-link></comment> <object-id pub-id-type="pmid">25204874</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sirand-Pugnet</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Durosay</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Brody</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Marie</surname> <given-names>J</given-names></name>. <article-title>An intronic (A/U) GGG repeat enhances the splicing of an alternative intron of the chicken β-tropomyosin pre-mRNA</article-title>. <source>Nucleic Acids Res</source>. <year>1995</year>;<volume>23</volume>(<issue>17</issue>):<fpage>3501</fpage>–<lpage>7</lpage>. <object-id pub-id-type="pmid">7567462</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhang</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Gaetano</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Williams</surname> <given-names>KR</given-names></name>, <name name-style="western"><surname>Bassell</surname> <given-names>GJ</given-names></name>, <name name-style="western"><surname>Mihailescu</surname> <given-names>MR</given-names></name>. <article-title>FMRP interacts with G-quadruplex structures in the 3’-UTR of its dendritic target Shank1 mRNA</article-title>. <source>RNA Biology</source>. <year>2014</year>;<volume>11</volume>(<issue>11</issue>):<fpage>1364</fpage>–<lpage>74</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1080/15476286.2014.996464" xlink:type="simple">10.1080/15476286.2014.996464</ext-link></comment> <object-id pub-id-type="pmid">25692235</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Huppert</surname> <given-names>JL</given-names></name>, <name name-style="western"><surname>Balasubramanian</surname> <given-names>S</given-names></name>. <article-title>Prevalence of quadruplexes in the human genome</article-title>. <source>Nucleic Acids Res</source>. <year>2005</year>;<volume>33</volume>(<issue>9</issue>):<fpage>2908</fpage>–<lpage>16</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gki609" xlink:type="simple">10.1093/nar/gki609</ext-link></comment> <object-id pub-id-type="pmid">15914667</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Qin</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Luo</surname> <given-names>Q</given-names></name>, <name name-style="western"><surname>Wen</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Jiang</surname> <given-names>H</given-names></name>, <etal>et al</etal>. <article-title>Two-Quartet G-quadruplexes Formed by DNA Sequences Containing Four Contiguous GG Runs</article-title>. <source>J Phys Chem B</source>. <year>2015</year>.</mixed-citation></ref>
+<ref id="pone.0165101.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kudlicki</surname> <given-names>AS</given-names></name>. <article-title>G-Quadruplexes Involving Both Strands of Genomic DNA Are Highly Abundant and Colocalize with Functional Sites in the Human Genome</article-title>. <source>PLoS One</source>. <year>2016</year>;<volume>11</volume>(<issue>1</issue>):<fpage>e0146174</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0146174" xlink:type="simple">10.1371/journal.pone.0146174</ext-link></comment> <object-id pub-id-type="pmid">26727593</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Anscombe</surname> <given-names>FJ</given-names></name>. <article-title>Graphs in statistical analysis</article-title>. <source>The American Statistician</source>. <year>1973</year>;<volume>27</volume>(<issue>1</issue>):<fpage>17</fpage>–<lpage>21</lpage>.</mixed-citation></ref>
+<ref id="pone.0165101.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wong</surname> <given-names>HM</given-names></name>, <name name-style="western"><surname>Stegle</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Rodgers</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Huppert</surname> <given-names>JL</given-names></name>. <article-title>A toolbox for predicting g-quadruplex formation and stability</article-title>. <source>J Nucleic Acids</source>. <year>2010</year>;<volume>2010</volume>.</mixed-citation></ref>
+<ref id="pone.0165101.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rosenbloom</surname> <given-names>KR</given-names></name>, <name name-style="western"><surname>Armstrong</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Barber</surname> <given-names>GP</given-names></name>, <name name-style="western"><surname>Casper</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Clawson</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Diekhans</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>The UCSC Genome Browser database: 2015 update</article-title>. <source>Nucleic Acids Res</source>. <year>2015</year>;<volume>43</volume>(<issue>D1</issue>):<fpage>D670</fpage>–<lpage>D81</lpage>.</mixed-citation></ref>
+<ref id="pone.0165101.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Karolchik</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Hinrichs</surname> <given-names>AS</given-names></name>, <name name-style="western"><surname>Furey</surname> <given-names>TS</given-names></name>, <name name-style="western"><surname>Roskin</surname> <given-names>KM</given-names></name>, <name name-style="western"><surname>Sugnet</surname> <given-names>CW</given-names></name>, <name name-style="western"><surname>Haussler</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>The UCSC Table Browser data retrieval tool</article-title>. <source>Nucleic Acids Res</source>. <year>2004</year>;<volume>32</volume>(<issue>suppl 1</issue>):<fpage>D493</fpage>–<lpage>D6</lpage>.</mixed-citation></ref>
+<ref id="pone.0165101.ref031"><label>31</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zerbino</surname> <given-names>DR</given-names></name>, <name name-style="western"><surname>Johnson</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Juetteman</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Sheppard</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Wilder</surname> <given-names>SP</given-names></name>, <name name-style="western"><surname>Lavidas</surname> <given-names>I</given-names></name>, <etal>et al</etal>. <article-title>Ensembl regulation resources</article-title>. <source>Database</source>. <year>2016</year>;<volume>2016</volume>:<fpage>bav119</fpage>.</mixed-citation></ref>
+<ref id="pone.0165101.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Edgar</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Domrachev</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Lash</surname> <given-names>AE</given-names></name>. <article-title>Gene Expression Omnibus: NCBI gene expression and hybridization array data repository</article-title>. <source>Nucleic Acids Res</source>. <year>2002</year>;<volume>30</volume>(<issue>1</issue>):<fpage>207</fpage>–<lpage>10</lpage>. <object-id pub-id-type="pmid">11752295</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref033"><label>33</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chambers</surname> <given-names>VS</given-names></name>, <name name-style="western"><surname>Marsico</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Boutell</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Di Antonio</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Smith</surname> <given-names>GP</given-names></name>, <name name-style="western"><surname>Balasubramanian</surname> <given-names>S</given-names></name>. <article-title>High-throughput sequencing of DNA G-quadruplex structures in the human genome</article-title>. <source>Nat Biotechnol</source>. <year>2015</year>;<volume>33</volume>(<issue>8</issue>):<fpage>877</fpage>–<lpage>81</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nbt.3295" xlink:type="simple">10.1038/nbt.3295</ext-link></comment> <object-id pub-id-type="pmid">26192317</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Krzywinski</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Schein</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Birol</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Connors</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Gascoyne</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Horsman</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Circos: an information aesthetic for comparative genomics</article-title>. <source>Genome Res</source>. <year>2009</year>;<volume>19</volume>(<issue>9</issue>):<fpage>1639</fpage>–<lpage>45</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1101/gr.092759.109" xlink:type="simple">10.1101/gr.092759.109</ext-link></comment> <object-id pub-id-type="pmid">19541911</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref035"><label>35</label><mixed-citation publication-type="other" xlink:type="simple">Adobe Photoshop CS5. Adobe Systems Incorporated.</mixed-citation></ref>
+<ref id="pone.0165101.ref036"><label>36</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Matys</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Fricke</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Geffers</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Gößling</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Haubrock</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Hehl</surname> <given-names>R</given-names></name>, <etal>et al</etal>. <article-title>TRANSFAC<sup>®</sup>: transcriptional regulation, from patterns to profiles</article-title>. <source>Nucleic Acids Res</source>. <year>2003</year>;<volume>31</volume>(<issue>1</issue>):<fpage>374</fpage>–<lpage>8</lpage>. <object-id pub-id-type="pmid">12520026</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref037"><label>37</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Petraccone</surname> <given-names>L</given-names></name>. <chapter-title>Higher-Order quadruplex structures</chapter-title>. <source>Quadruplex Nucleic Acids</source>: <publisher-name>Springer</publisher-name>; <year>2013</year>. p. <fpage>23</fpage>–<lpage>46</lpage>.</mixed-citation></ref>
+<ref id="pone.0165101.ref038"><label>38</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sen</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Gilbert</surname> <given-names>W</given-names></name>. <article-title>Formation of parallel four-stranded complexes by guanine-rich motifs in DNA and its implications for meiosis</article-title>. <source>Nature</source>. <year>1988</year>;<volume>334</volume>:<fpage>364</fpage>–<lpage>6</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/334364a0" xlink:type="simple">10.1038/334364a0</ext-link></comment> <object-id pub-id-type="pmid">3393228</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref039"><label>39</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hawley</surname> <given-names>RS</given-names></name>, <name name-style="western"><surname>Gilliland</surname> <given-names>WD</given-names></name>. <article-title>Homologue pairing: getting it right</article-title>. <source>Nat Cell Biol</source>. <year>2009</year>;<volume>11</volume>(<issue>8</issue>):<fpage>917</fpage>–<lpage>8</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/ncb0809-917" xlink:type="simple">10.1038/ncb0809-917</ext-link></comment> <object-id pub-id-type="pmid">19648975</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref040"><label>40</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>MacQueen</surname> <given-names>AJ</given-names></name>, <name name-style="western"><surname>Phillips</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Bhalla</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Weiser</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Villeneuve</surname> <given-names>AM</given-names></name>, <name name-style="western"><surname>Dernburg</surname> <given-names>AF</given-names></name>. <article-title>Chromosome sites play dual roles to establish homologous synapsis during meiosis in C. elegans</article-title>. <source>Cell</source>. <year>2005</year>;<volume>123</volume>(<issue>6</issue>):<fpage>1037</fpage>–<lpage>50</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.cell.2005.09.034" xlink:type="simple">10.1016/j.cell.2005.09.034</ext-link></comment> <object-id pub-id-type="pmid">16360034</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref041"><label>41</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Phillips</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Dernburg</surname> <given-names>AF</given-names></name>. <article-title>A family of zinc-finger proteins is required for chromosome-specific pairing and synapsis during meiosis in C. elegans</article-title>. <source>Dev Cell</source>. <year>2006</year>;<volume>11</volume>(<issue>6</issue>):<fpage>817</fpage>–<lpage>29</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.devcel.2006.09.020" xlink:type="simple">10.1016/j.devcel.2006.09.020</ext-link></comment> <object-id pub-id-type="pmid">17141157</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref042"><label>42</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Phillips</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Meng</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Chretien</surname> <given-names>JH</given-names></name>, <name name-style="western"><surname>Urnov</surname> <given-names>FD</given-names></name>, <name name-style="western"><surname>Dernburg</surname> <given-names>AF</given-names></name>. <article-title>Identification of chromosome sequence motifs that mediate meiotic pairing and synapsis in C. elegans</article-title>. <source>Nat Cell Biol</source>. <year>2009</year>;<volume>11</volume>(<issue>8</issue>):<fpage>934</fpage>–<lpage>42</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/ncb1904" xlink:type="simple">10.1038/ncb1904</ext-link></comment> <object-id pub-id-type="pmid">19620970</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref043"><label>43</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Phillips</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Wong</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Bhalla</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Carlton</surname> <given-names>PM</given-names></name>, <name name-style="western"><surname>Weiser</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Meneely</surname> <given-names>PM</given-names></name>, <etal>et al</etal>. <article-title>HIM-8 binds to the X chromosome pairing center and mediates chromosome-specific meiotic synapsis</article-title>. <source>Cell</source>. <year>2005</year>;<volume>123</volume>(<issue>6</issue>):<fpage>1051</fpage>–<lpage>63</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.cell.2005.09.035" xlink:type="simple">10.1016/j.cell.2005.09.035</ext-link></comment> <object-id pub-id-type="pmid">16360035</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref044"><label>44</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Venczel</surname> <given-names>EA</given-names></name>, <name name-style="western"><surname>Sen</surname> <given-names>D</given-names></name>. <article-title>Synapsable DNA</article-title>. <source>J Mol Biol</source>. <year>1996</year>;<volume>257</volume>(<issue>2</issue>):<fpage>219</fpage>–<lpage>24</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1006/jmbi.1996.0157" xlink:type="simple">10.1006/jmbi.1996.0157</ext-link></comment> <object-id pub-id-type="pmid">8609618</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref045"><label>45</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bochman</surname> <given-names>ML</given-names></name>, <name name-style="western"><surname>Paeschke</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Zakian</surname> <given-names>VA</given-names></name>. <article-title>DNA secondary structures: stability and function of G-quadruplex structures</article-title>. <source>Nat Rev Genet</source>. <year>2012</year>;<volume>13</volume>(<issue>11</issue>):<fpage>770</fpage>–<lpage>80</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nrg3296" xlink:type="simple">10.1038/nrg3296</ext-link></comment> <object-id pub-id-type="pmid">23032257</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref046"><label>46</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Brázda</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Hároníková</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Liao</surname> <given-names>JC</given-names></name>, <name name-style="western"><surname>Fojta</surname> <given-names>M</given-names></name>. <article-title>DNA and RNA Quadruplex-Binding Proteins</article-title>. <source>International journal of molecular sciences</source>. <year>2014</year>;<volume>15</volume>(<issue>10</issue>):<fpage>17493</fpage>–<lpage>517</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.3390/ijms151017493" xlink:type="simple">10.3390/ijms151017493</ext-link></comment> <object-id pub-id-type="pmid">25268620</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref047"><label>47</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>von Hacht</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Seifert</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Menger</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Schütze</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Arora</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Konthur</surname> <given-names>Z</given-names></name>, <etal>et al</etal>. <article-title>Identification and characterization of RNA guanine-quadruplex binding proteins</article-title>. <source>Nucleic Acids Res</source>. <year>2014</year>;<volume>42</volume>(<issue>10</issue>):<fpage>6630</fpage>–<lpage>44</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gku290" xlink:type="simple">10.1093/nar/gku290</ext-link></comment> <object-id pub-id-type="pmid">24771345</object-id></mixed-citation></ref>
+<ref id="pone.0165101.ref048"><label>48</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kumar</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Yadav</surname> <given-names>VK</given-names></name>, <name name-style="western"><surname>Baral</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Kumar</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Saha</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Chowdhury</surname> <given-names>S</given-names></name>. <article-title>Zinc-finger transcription factors are associated with guanine quadruplex motifs in human, chimpanzee, mouse and rat promoters genome-wide</article-title>. <source>Nucleic Acids Res</source>. <year>2011</year>:<fpage>gkr536</fpage>.</mixed-citation></ref>
+</ref-list>
+</back>
+</article>

@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group>
+<journal-title>PLoS ONE</journal-title></journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-13-46323</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0111310</article-id>
+<article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology and life sciences</subject><subj-group><subject>Computational biology</subject><subj-group><subject>Population modeling</subject></subj-group></subj-group><subj-group><subject>Species interactions</subject></subj-group><subj-group><subject>Zoology</subject><subj-group><subject>Animal behavior</subject><subject>Entomology</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Physical sciences</subject><subj-group><subject>Chemistry</subject><subj-group><subject>Chemical reactions</subject></subj-group></subj-group><subj-group><subject>Mathematics</subject><subj-group><subject>Applied mathematics</subject><subj-group><subject>Algorithms</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Research and analysis methods</subject><subj-group><subject>Model organisms</subject><subj-group><subject>Animal models</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Social sciences</subject><subj-group><subject>Political science</subject><subj-group><subject>War and civil unrest</subject></subj-group></subj-group><subj-group><subject>Sociology</subject></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Modeling Warfare in Social Animals: A "Chemical" Approach</article-title>
+<alt-title alt-title-type="running-head">Chemical Modeling of Animal Warfare</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Santarlasci</surname><given-names>Alisa</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Martelloni</surname><given-names>Gianluca</given-names></name><xref ref-type="aff" rid="aff2"><sup>2</sup></xref><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Frizzi</surname><given-names>Filippo</given-names></name><xref ref-type="aff" rid="aff4"><sup>4</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Santini</surname><given-names>Giacomo</given-names></name><xref ref-type="aff" rid="aff4"><sup>4</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Bagnoli</surname><given-names>Franco</given-names></name><xref ref-type="aff" rid="aff2"><sup>2</sup></xref><xref ref-type="aff" rid="aff3"><sup>3</sup></xref><xref ref-type="aff" rid="aff5"><sup>5</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+</contrib-group>
+<aff id="aff1"><label>1</label><addr-line>Department of Information Engineering, University of Florence, Firenze, Italy</addr-line></aff>
+<aff id="aff2"><label>2</label><addr-line>Department Physics and Astronomy, University of Florence, Sesto Fiorentino (FI), Italy</addr-line></aff>
+<aff id="aff3"><label>3</label><addr-line>Center for the Study of Complex Dynamics (CSDC), University of Florence, Sesto Fiorentino (FI), Italy</addr-line></aff>
+<aff id="aff4"><label>4</label><addr-line>Department of Biology, University of Florence, Sesto Fiorentino (FI), Italy</addr-line></aff>
+<aff id="aff5"><label>5</label><addr-line>National Institute of Nuclear Physics (INFN), sez. Firenze, Italy</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Ramasco</surname><given-names>José Javier</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Instituto de Fisica Interdisciplinar y Sistemas Complejos IFISC (CSIC-UIB), Spain</addr-line></aff>
+<author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">franco.bagnoli@unifi.it</email></corresp>
+<fn fn-type="conflict"><p>The authors have declared that no competing interests exist.</p></fn>
+<fn fn-type="con"><p>Conceived and designed the experiments: FB GS FF. Performed the experiments: AS. Analyzed the data: AS GM. Contributed reagents/materials/analysis tools: GS FF. Wrote the paper: FB GS GM AS.</p></fn>
+</author-notes>
+<pub-date pub-type="collection"><year>2014</year></pub-date>
+<pub-date pub-type="epub"><day>4</day><month>11</month><year>2014</year></pub-date>
+<volume>9</volume>
+<issue>11</issue>
+<elocation-id>e111310</elocation-id>
+<history>
+<date date-type="received"><day>5</day><month>11</month><year>2013</year></date>
+<date date-type="accepted"><day>30</day><month>9</month><year>2014</year></date>
+</history>
+<permissions>
+<copyright-year>2014</copyright-year>
+<copyright-holder>Santarlasci et al</copyright-holder><license xlink:type="simple"><license-p>This is an open-access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions>
+<abstract>
+<p>We present here a general method for modelling the dynamics of battles among social animals. The proposed method exploits the procedures widely used to model chemical reactions, but still uncommon in behavioural studies. We applied this methodology to the interpretation of experimental observations of battles between two species of ants (<italic>Lasius neglectus</italic> and <italic>Lasius paralienus</italic>), but this scheme may have a wider applicability and can be extended to other species as well. We performed two types of experiment labelled as <italic>interaction</italic> and <italic>mortality</italic>. The <italic>interaction</italic> experiments are designed to obtain information on the combat dynamics and lasted one hour. The <italic>mortality</italic> ones provide information on the casualty rates of the two species and lasted five hours. We modelled the interactions among ants using a chemical model which considers the single ant individuals and fighting groups analogously to atoms and molecules. The mean-field behaviour of the model is described by a set of non-linear differential equations. We also performed stochastic simulations of the corresponding agent-based model by means of the Gillespie event-driven integration scheme. By fitting the stochastic trajectories with the deterministic model, we obtained the probability distribution of the reaction parameters. The main result that we obtained is a dominance phase diagram, that gives the average trajectory of a generic battle, for an arbitrary number of opponents. This phase diagram was validated with some extra experiments. With respect to other war models (<italic>e.g.</italic>, Lanchester's ones), our chemical model considers all phases of the battle and not only casualties. This allows a more detailed description of the battle (with a larger number of parameters), allowing the development of more sophisticated models (<italic>e.g.</italic>, spatial ones), with the goal of distinguishing collective effects from the strategic ones.</p>
+</abstract>
+<funding-group><funding-statement>The authors have no funding or support to report. The present investigation constitutes a part of the authors' normal research duty.</funding-statement></funding-group><counts><page-count count="12"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>Many social animals fight in groups in the context of intra- or inter-specific competition <xref ref-type="bibr" rid="pone.0111310-Zabel1">[1]</xref>, <xref ref-type="bibr" rid="pone.0111310-Adams1">[2]</xref>. Fighting in a group differs considerably from fighting individually, since the outcome of a combat is not simply dictated by the ability of each individual (usually known as <italic>individual fighting ability</italic> or <italic>resource holding potential</italic>). We can distinguish between collective effects (due to the number of participants) and strategic ones (changes of behavior for obtaining a specific goal).</p>
+<p>Both the size of fighting groups and the ability to coordinate within-group agonistic behaviors may play a role (see <italic>e.g.</italic> Refs. <xref ref-type="bibr" rid="pone.0111310-Cheney1">[3]</xref>–<xref ref-type="bibr" rid="pone.0111310-Batchelor1">[5]</xref>). Broadly speaking, two main type of battles may be recognized. At one extreme, a battle is formed by a series of individual duels and members of the larger group remain disengaged at the side of the battle until an opponent become available. At the other extreme, members of the larger group may cooperate in attacking isolated members of the smaller one. In the latter case, the group size may have a disproportionate importance on the final outcome of the battles whereas in the former the ability of each individual to fight may be the key factor <xref ref-type="bibr" rid="pone.0111310-Adams1">[2]</xref>. A strategic approach would imply for instance the choice of the more advantageous situations giving the available resources.</p>
+<p>An interesting mathematical framework for the analysis of the attrition rates during group battles is represented by the so-called Lanchester laws. Lanchester <xref ref-type="bibr" rid="pone.0111310-Lanchester1">[6]</xref>, <xref ref-type="bibr" rid="pone.0111310-Lanchester2">[7]</xref> formulated two models, known as the "linear" and the "square" laws, to describe aerial combats during the first world war. Since their early formulation, these models (and their further developments) have been extensively used to model battle outcomes in the sphere of human conflict (see <italic>e.g.</italic> Refs. <xref ref-type="bibr" rid="pone.0111310-Bracken1">[8]</xref>–<xref ref-type="bibr" rid="pone.0111310-Kress1">[11]</xref>). Lanchester theory has been applied to animal contests too, with varying degrees of success (see <italic>e.g.</italic> Refs. <xref ref-type="bibr" rid="pone.0111310-Franks1">[4]</xref>, <xref ref-type="bibr" rid="pone.0111310-Batchelor1">[5]</xref>, <xref ref-type="bibr" rid="pone.0111310-Whitehouse1">[12]</xref>–<xref ref-type="bibr" rid="pone.0111310-Batcelor1">[16]</xref>). The great appeal of these models lies in their simplicity, since they allow to estimate the attrition rates of two opposing armies solely as a function of their number and fighting ability of individuals within each group. One critical point when willing to apply these laws to animal warfare is that they rely on a number of restrictive assumption, which may not apply in animal combats (reviewed in Ref <xref ref-type="bibr" rid="pone.0111310-Adams1">[2]</xref>), such as use of long-range weapons which are common in human warfare but rare in animal combats, where a close contact between the opponents is required. As a consequence of their limited biological realism, predictions obtained from these models have to be considered carefully, although they may provide interesting mean-field approximations to the dynamics of aggressive encounters. The possibility to have a sound and coherent conceptual framework to investigate animal fights may have important consequences. On one hand, given a detailed model of an animal war, one can investigate the discrepancies between the model and the observed behaviour, hoping to be able to distinguish between the collective effects of the interacting elements (included in the model) from other effects due, for instance, to cognitive strategies not included into the model. On the other hand, predicting the outcome of combat may prove to be a fundamental tool in applied control science when willing to predict the spread of invasive species or the expansion range of some species following climate changes, both of which are well recognized among the most serious threats to world biodiversity <xref ref-type="bibr" rid="pone.0111310-Bellard1">[17]</xref>.</p>
+<p>A promising approach to the dynamical modelling of ecological systems is represented by the "chemical' approach', where all the interactions among members of the system are described following the formalism used to represent chemical reactions <xref ref-type="bibr" rid="pone.0111310-Connors1">[18]</xref>, disregarding complex cognitive strategies. Despite their widespread use to model chemical reactions and their recent introduction into ecology (see <italic>e.g.</italic> <xref ref-type="bibr" rid="pone.0111310-Black1">[19]</xref>), no attempt have been made, to our knowledge, to applied these approach in behavioural studies. In the specific case of aggressive encounters, all the possible combinations of combatants (isolated individuals of the two bands, groups of gripping fighters which form during the course of the battle) may be equated to the molecules ("chemical species") involved in a chemical reaction. For instance, one individual belonging to species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e001" xlink:type="simple"/></inline-formula> (chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e002" xlink:type="simple"/></inline-formula>) can stick to an enemy of species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e003" xlink:type="simple"/></inline-formula> (chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e004" xlink:type="simple"/></inline-formula>) to form a group, considered as an instance of a chemical species called <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e005" xlink:type="simple"/></inline-formula>, according to the formula:<disp-formula id="pone.0111310.e006"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e006" xlink:type="simple"/></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e007" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e008" xlink:type="simple"/></inline-formula> are the rate constants, which express the probability that this reversible reaction may occur per unit time.</p>
+<p>One of the great advantages of this approach is that all possible interactions can be outlined using a simple but biologically meaningful formalism, which provides a "microscopic", individual-level description of the system, to be contrasted to the "macroscopic", population-level description provided for instance by the classical Lanchester models. Once all the relevant reactions are identified, these can be converted into a system of differential equations to get a mean field description of the system, or used to perform stochastic simulations (<italic>e.g.</italic>, using the Gillespie algorithm <xref ref-type="bibr" rid="pone.0111310-Gillespie1">[20]</xref>), to explore and quantify the effect of variability on the behaviour of the system under investigation.</p>
+<p>Our approach was developed taking as reference the interactions between two ant species <italic>Lasius neglectus</italic> (an invasive species) and <italic>Lasius paralienus</italic> (an autochthonous species), for which multi-party combats were staged. Once all the possible reactions were identified, a system of differential non-linear equations that allows a mean-field description of the system was deduced and fitted to observed data. Stochastic simulations were also obtained solving the model using the Gillespie algorithm and these were compared to the mean-field description in order to estimate the errors of the experimental rate coefficients.</p>
+<p>The main goal of this approach is that of obtaining reliable rate coefficients that can be further interpreted in terms of a smaller number of parameters like aggressiveness, yieldingness, strength, etc. and that could give insights into the strategies used by opponents.</p>
+</sec><sec id="s2" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<sec id="s2a">
+<title>Experimental setup: ant sampling and types of experiments</title>
+<p>Ants of the two studied species (<italic>Lasius paralienus</italic> and <italic>Lasius neglectus</italic>) were collected during July/August 2013 in Prato (Northern Tuscany, Italy, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e009" xlink:type="simple"/></inline-formula>N, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e010" xlink:type="simple"/></inline-formula>E). According to Italian laws no specific permissions were required for collecting ants and performing the experiments. The study did not involve endangered or protected species and sampling was not carried out in a protected area. <italic>L. paralienus</italic> <xref ref-type="bibr" rid="pone.0111310-Seifert1">[21]</xref> is an endemic species, widespread in central Europe and part of the Mediterranean, forming medium to small colonies and generally showing little competitive ability. <italic>Lasius neglectus</italic> is an <italic>invasive species</italic>, which recently spread its range throughout Europe, causing serious concerns for its impact on native species <xref ref-type="bibr" rid="pone.0111310-Ugelvig1">[22]</xref>. This species is highly dominant, aggressive and form large supercolonies which extend over wide areas. Both species are monomorphic with reduced intraspecific differences in the size of ants. Congeneric species were chosen to reduce confounding due to the adoption of different combat modes. Ants were captured during the morning and stored in 50 ml test tubes, with water available, to acclimate to laboratory conditions for one hour (temperature <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e011" xlink:type="simple"/></inline-formula>) before being used in an experiment. Two different types of experiment were carried out. The aim of the first type, hereafter referred to as <italic>interaction experiments</italic>, was to obtain information on combat dynamics. In particular we monitored how ants interacted and formed fighting groups, <italic>i.e.</italic> group composed by two or more specimens, which remain in close contact for at least 20 seconds, biting or spraying venom. To avoid confounding effects due to fatigue or changes in individual motivation to fight, the duration of these experiments was maintained short (1 hour). After acclimation, 10 specimens of the two species were simultaneously dropped within a neutral arena, consisting in a 10 cm Petri dish with Fluon coated walls and their behaviour continuously recorded for the following hour using a digital camera.</p>
+<p>We choose this number as a compromise between the observability of the individual insects and a numerosity sufficiently high not to affect the formation of fighting groups. Preliminary observations showed that the largest groups are formed by four insects, so that with 10 opponents of each species there is room for several groups also in the presence of casualties. This choice is confirmed a posteriori by the fact that the non-linear effects are much more pronounced for numerosity of each species less than 10 (see <xref ref-type="fig" rid="pone-0111310-g001">Fig. 1</xref>).</p>
+<fig id="pone-0111310-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0111310.g001</object-id><label>Figure 1</label><caption>
+<title>Supremacy phase diagram.</title>
+<p>Evolution of the trajectories of the deterministic model starting from different initial conditions, projected on the plane determined by the total number of A individuals (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e012" xlink:type="simple"/></inline-formula>) and the total number of B individuals (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e013" xlink:type="simple"/></inline-formula>). Initial conditions indicated by diamonds lead to the supremacy of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e014" xlink:type="simple"/></inline-formula>'s (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e015" xlink:type="simple"/></inline-formula>), while the x-marks lead to the supremacy of the species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e016" xlink:type="simple"/></inline-formula> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e017" xlink:type="simple"/></inline-formula>). The red dashed line is the separatix between the two phases, where both species die; the green square marks the region where fitting has been performed and where non-linear effects are most effective. The magenta and the blue lines indicate experimental trajectories, each one given by an average over 5 experiments.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0111310.g001" position="float" xlink:type="simple"/></fig>
+<p>A total of 20 replicate experiments were performed. The videos were then analysed, detecting and recording the appearance and variation of all the fighting groups of interacting ants. The sampling is done per event, <italic>i.e.</italic>, we recorded the time when an event (for instance the formation of a group) occurred. An example of the resulting data is shown in <xref ref-type="table" rid="pone-0111310-t001">Table 1</xref> while <xref ref-type="fig" rid="pone-0111310-g002">Fig. 2</xref> shows three examples of experimental time series. All data and videos are available from the corresponding authors upon request.</p>
+<fig id="pone-0111310-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0111310.g002</object-id><label>Figure 2</label><caption>
+<title>Experimental data.</title>
+<p>Abundance of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e018" xlink:type="simple"/></inline-formula> (subfigure (a)) and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e019" xlink:type="simple"/></inline-formula> (subfigure (b)) species from three different experiments.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0111310.g002" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0111310-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0111310.t001</object-id><label>Table 1</label><caption>
+<title>An example of experimental data.</title>
+</caption><alternatives><graphic id="pone-0111310-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0111310.t001" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Event time <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e020" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e021" xlink:type="simple"/></inline-formula> <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e022" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e023" xlink:type="simple"/></inline-formula> <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e024" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e025" xlink:type="simple"/></inline-formula> <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e026" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e027" xlink:type="simple"/></inline-formula> <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e028" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e029" xlink:type="simple"/></inline-formula> <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e030" xlink:type="simple"/></inline-formula></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">714</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">741</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">751</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">778</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">781</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">783</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">797</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">801</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">803</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">805</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">821</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">824</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">830</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">832</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">846</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">850</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">858</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt101"><label/><p>The first column shows the occurrence time (in seconds) of a given reaction (event). The other columns (2–6) report the total number of each chemical species (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e031" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e032" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e033" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e034" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e035" xlink:type="simple"/></inline-formula>.</p></fn></table-wrap-foot></table-wrap>
+<p>The two species exhibit a slightly different behaviour: in most cases <italic>L. neglectus</italic> is the first aggressor and cooperation among nestmates against opponent was observed but also suffered the greater mortality. <italic>L. paralienus</italic>, on the contrary, is slightly greater in size, stronger in individual duels but less aggressive than <italic>L. neglectus</italic>. Due to the behaviour of the two species and denoting <italic>L. paralienus</italic> as <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e036" xlink:type="simple"/></inline-formula> and <italic>L. neglectus</italic> as <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e037" xlink:type="simple"/></inline-formula>, the following groups may form: <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e038" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e039" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e040" xlink:type="simple"/></inline-formula>. No observation of more than one <italic>L. paralienus</italic> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e041" xlink:type="simple"/></inline-formula>) attaching a single <italic>L. neglectus</italic> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e042" xlink:type="simple"/></inline-formula>) was done and hence other groups (es. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e043" xlink:type="simple"/></inline-formula>) were not considered in subsequent analysis. The combination <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e044" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e045" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e046" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e047" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e048" xlink:type="simple"/></inline-formula> are referred to as "chemical species" or "molecules", following the terminology used in chemical modeling <xref ref-type="bibr" rid="pone.0111310-Connors1">[18]</xref>.</p>
+<p>The second type of experiments, hereafter referred to as <italic>mortality experiments</italic> aimed to estimate the attrition rates of the two species for a different initial size of the two groups. Seven different sets of starting numbers were used, as shown in <xref ref-type="table" rid="pone-0111310-t002">Table 2</xref>. The two groups of ants were simultaneously dropped within a 10 cm Petri dish with Fluon coated walls and the number of dead ants was counted each at intervals of one hour there were individuals able to fight (alive and not injured) or up to a maximum of 5 hours.</p>
+<table-wrap id="pone-0111310-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0111310.t002</object-id><label>Table 2</label><caption>
+<title>Means of 5 experiments for 7 different initial conditions for the duration of 5 hour (Set 1, Set 2, etc.); <italic>L. paralienus</italic> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e049" xlink:type="simple"/></inline-formula>), <italic>L. neglectus</italic> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e050" xlink:type="simple"/></inline-formula>).</title>
+</caption><alternatives><graphic id="pone-0111310-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0111310.t002" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Observations (time [s])</td>
+<td colspan="2" align="left" rowspan="1">Set 1 (survivors)</td>
+<td colspan="2" align="left" rowspan="1">Set 2 (survivors)</td>
+<td colspan="2" align="left" rowspan="1">Set 3 (survivors)</td>
+<td colspan="2" align="left" rowspan="1">Set 4 (survivors)</td>
+<td colspan="2" align="left" rowspan="1">Set 5 (survivors)</td>
+<td colspan="2" align="left" rowspan="1">Set 6 (survivors)</td>
+<td colspan="2" align="left" rowspan="1">Set 7 (survivors)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e051" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e052" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e053" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e054" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e055" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e056" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e057" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e058" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e059" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e060" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e061" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e062" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e063" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e064" xlink:type="simple"/></inline-formula></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">14</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">3600</td>
+<td align="left" rowspan="1" colspan="1">9.4</td>
+<td align="left" rowspan="1" colspan="1">8.8</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">9.4</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">10.2</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">12.6</td>
+<td align="left" rowspan="1" colspan="1">4.6</td>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="left" rowspan="1" colspan="1">4.6</td>
+<td align="left" rowspan="1" colspan="1">14.2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">7200</td>
+<td align="left" rowspan="1" colspan="1">9.2</td>
+<td align="left" rowspan="1" colspan="1">6.8</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">7.4</td>
+<td align="left" rowspan="1" colspan="1">4.2</td>
+<td align="left" rowspan="1" colspan="1">8.6</td>
+<td align="left" rowspan="1" colspan="1">4.8</td>
+<td align="left" rowspan="1" colspan="1">8.4</td>
+<td align="left" rowspan="1" colspan="1">4.4</td>
+<td align="left" rowspan="1" colspan="1">10.2</td>
+<td align="left" rowspan="1" colspan="1">3.8</td>
+<td align="left" rowspan="1" colspan="1">12.8</td>
+<td align="left" rowspan="1" colspan="1">3.2</td>
+<td align="left" rowspan="1" colspan="1">13.2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">10800</td>
+<td align="left" rowspan="1" colspan="1">8.2</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">4.86</td>
+<td align="left" rowspan="1" colspan="1">.2</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">6.4</td>
+<td align="left" rowspan="1" colspan="1">3.2</td>
+<td align="left" rowspan="1" colspan="1">6.2</td>
+<td align="left" rowspan="1" colspan="1">3.8</td>
+<td align="left" rowspan="1" colspan="1">7.6</td>
+<td align="left" rowspan="1" colspan="1">3.2</td>
+<td align="left" rowspan="1" colspan="1">11.8</td>
+<td align="left" rowspan="1" colspan="1">1.8</td>
+<td align="left" rowspan="1" colspan="1">12.8</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">14400</td>
+<td align="left" rowspan="1" colspan="1">7.8</td>
+<td align="left" rowspan="1" colspan="1">4.2</td>
+<td align="left" rowspan="1" colspan="1">4.6</td>
+<td align="left" rowspan="1" colspan="1">5.8</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">3.4</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">5.4</td>
+<td align="left" rowspan="1" colspan="1">2.2</td>
+<td align="left" rowspan="1" colspan="1">6.4</td>
+<td align="left" rowspan="1" colspan="1">2.6</td>
+<td align="left" rowspan="1" colspan="1">11.2</td>
+<td align="left" rowspan="1" colspan="1">1.4</td>
+<td align="left" rowspan="1" colspan="1">12.6</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">18000</td>
+<td align="left" rowspan="1" colspan="1">7.6</td>
+<td align="left" rowspan="1" colspan="1">3.6</td>
+<td align="left" rowspan="1" colspan="1">4.2</td>
+<td align="left" rowspan="1" colspan="1">4.4</td>
+<td align="left" rowspan="1" colspan="1">1.2</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">1.8</td>
+<td align="left" rowspan="1" colspan="1">3.4</td>
+<td align="left" rowspan="1" colspan="1">2.2</td>
+<td align="left" rowspan="1" colspan="1">10.6</td>
+<td align="left" rowspan="1" colspan="1">1.4</td>
+<td align="left" rowspan="1" colspan="1">12.6</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap></sec><sec id="s2b">
+<title>Chemical model</title>
+<p>The model consists in a collection of chemical equations, which encode for the interactions among individual entities. The first reaction happens when an individual of <italic>L. neglectus</italic> (chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e065" xlink:type="simple"/></inline-formula>) establishes a strong tie in fight with an individual of <italic>L. paralienus</italic> (chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e066" xlink:type="simple"/></inline-formula>) to form a new group or chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e067" xlink:type="simple"/></inline-formula>,<disp-formula id="pone.0111310.e068"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e068" xlink:type="simple"/><label>(1)</label></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e069" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e070" xlink:type="simple"/></inline-formula> are the reaction constants of the direct and reverse reactions, respectively.</p>
+<p>The outcome of a duel can lead to the death of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e071" xlink:type="simple"/></inline-formula>,<disp-formula id="pone.0111310.e072"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e072" xlink:type="simple"/><label>(2)</label></disp-formula>or to the death of B,<disp-formula id="pone.0111310.e073"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e073" xlink:type="simple"/><label>(3)</label></disp-formula></p>
+<p>Once a group <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e074" xlink:type="simple"/></inline-formula> is formed, a second <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e075" xlink:type="simple"/></inline-formula> can participate in the fight. We describe the appearance of a group <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e076" xlink:type="simple"/></inline-formula> by means of the reversible reaction<disp-formula id="pone.0111310.e077"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e077" xlink:type="simple"/><label>(4)</label></disp-formula> since in the experiments we also observed cases in which a <italic>B</italic> detaches from the group.</p>
+<p>In a fighting group <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e078" xlink:type="simple"/></inline-formula>, an <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e079" xlink:type="simple"/></inline-formula> can die, giving the irreversible reaction<disp-formula id="pone.0111310.e080"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e080" xlink:type="simple"/><label>(5)</label></disp-formula></p>
+<p>Then we add the possibility, as observed in the experiments, that also an <italic>A</italic> ant dies as consequence of a fighting with two <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e083" xlink:type="simple"/></inline-formula> ants. In this case the group <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e084" xlink:type="simple"/></inline-formula> dissolves,<disp-formula id="pone.0111310.e085"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e085" xlink:type="simple"/><label>(6)</label></disp-formula></p>
+<p>Another recurring possibility is that a group <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e086" xlink:type="simple"/></inline-formula> dissolves without any death but also the reverse reaction may occur, <italic>i.e.</italic> that two <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e087" xlink:type="simple"/></inline-formula> attack an <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e088" xlink:type="simple"/></inline-formula>:<disp-formula id="pone.0111310.e089"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e089" xlink:type="simple"/><label>(7)</label></disp-formula></p>
+<p>Attack by two <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e090" xlink:type="simple"/></inline-formula> can be considered as simultaneous since it occur in a very short interval with respect to the observation time.</p>
+<p>Observations also show the sticking of three <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e092" xlink:type="simple"/></inline-formula>'s with an <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e091" xlink:type="simple"/></inline-formula>, as described in the following reversible reaction, in which it there is also the possibility that a <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e093" xlink:type="simple"/></inline-formula> abandons the group,<disp-formula id="pone.0111310.e094"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e094" xlink:type="simple"/><label>(8)</label></disp-formula></p>
+<p>An individual <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e091" xlink:type="simple"/></inline-formula> can die as a consequence of the fighting with three <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e096" xlink:type="simple"/></inline-formula>'s and the group dissolves, <italic>i.e.</italic>,<disp-formula id="pone.0111310.e097"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e097" xlink:type="simple"/><label>(9)</label></disp-formula></p>
+<p>Finally another possibility is the detachment of two <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e092" xlink:type="simple"/></inline-formula>'s from the group. Considering also the opposite reaction, we have<disp-formula id="pone.0111310.e099"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e099" xlink:type="simple"/><label>(10)</label></disp-formula>where it is assumed that the two <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e092" xlink:type="simple"/></inline-formula>'s attach to the group <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e101" xlink:type="simple"/></inline-formula> separately, but in a very short interval compared to the sampling time.</p>
+</sec><sec id="s2c">
+<title>Mean-field approximation</title>
+<p>As usual in chemical studies, we may exploit the hypothesis of decorrelation and random movement of particles (ants), in order to obtain the <italic>average</italic> behaviour of the model, that using the physics terminology can be denoted the <italic>mean-field</italic> approximation.</p>
+<p>Let us denote by <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e102" xlink:type="simple"/></inline-formula> the number of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e103" xlink:type="simple"/></inline-formula> individuals, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e104" xlink:type="simple"/></inline-formula> is the amount of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e105" xlink:type="simple"/></inline-formula>'s, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e106" xlink:type="simple"/></inline-formula> that of groups <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e107" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e108" xlink:type="simple"/></inline-formula> corresponds to groups <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e109" xlink:type="simple"/></inline-formula> and finally <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e110" xlink:type="simple"/></inline-formula> represent the number of groups <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e111" xlink:type="simple"/></inline-formula>. The above chemical reactions can be translated into a set of non-linear ordinary differential equations, describing the change in the numerosity of the different chemical species with respect to time:<disp-formula id="pone.0111310.e112"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e112" xlink:type="simple"/><label>(11)</label></disp-formula>where the dot denotes the derivative of each variable with respect to time.</p>
+<p>It is possible to derive the trajectories of this system using standard ODE solvers (see <xref ref-type="supplementary-material" rid="pone.0111310.s010">File S1</xref> for details).</p>
+<p>The mean-field approximation does not exhibit fixed points, <italic>i.e.</italic>, the stationary solution (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e113" xlink:type="simple"/></inline-formula>) always depends on the initial conditions and parameter values. The stationary condition is either <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e114" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e115" xlink:type="simple"/></inline-formula> or <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e116" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e117" xlink:type="simple"/></inline-formula>, which can be denoted as absorbing states for the dynamics. In practice, this means that one of the two groups of opponents (biological species) goes extinct, while the other survives. Examples of predictions obtained from this model are shown in <xref ref-type="supplementary-material" rid="pone.0111310.s001">Figs. S1</xref>–<xref ref-type="supplementary-material" rid="pone.0111310.s005">S5</xref>. A fuller analysis of the behaviour of the deterministic model and an illustration of non-existence of fixed points is reported in the <xref ref-type="supplementary-material" rid="pone.0111310.s010">File S1</xref>.</p>
+</sec><sec id="s2d">
+<title>Stochastic approximation</title>
+<p>To incorporate the consequences of finite-size fluctuations, due to the small size of the studied system (10 ants <italic>vs.</italic> 10 ants), we implemented a stochastic version of the model using the Gillespie's direct method <xref ref-type="bibr" rid="pone.0111310-Gillespie1">[20]</xref>, that again neglects spatial correlations. Given the limited spatial extension of the battlefield (Petri dish) and the limited time resolution (20s) we may in fact still assume that encounters between opponents occur randomly and use an event-driven approach, such as that used in chemistry to model "well-stirred" chemical reactions. Details of the implementation of the Gillespie method are given in <xref ref-type="supplementary-material" rid="pone.0111310.s010">File S1</xref>.</p>
+<p>The methodology we adopted to compare the deterministic and the stochastic version of the model is the following. Firstly, we fit the deterministic model to the average experimental time-series to obtain an estimate of the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e118" xlink:type="simple"/></inline-formula> reaction constants. Secondly, we run 100 times the stochastic model using the above parameter values, and re-analysed the simulated time series as done with the experimental one obtaining a distribution of parameter values, that can be used to estimate the variance (and thus the presumed error) of the experimental parameters. A schematic representation of this procedure is shown in <xref ref-type="supplementary-material" rid="pone.0111310.s006">Fig. S6</xref>.</p>
+<p>The parameter estimation was achieved using an heuristic optimization procedure, called the Simplex Flexible Algorithm (SFA) <xref ref-type="bibr" rid="pone.0111310-MarsiliLibelli1">[23]</xref>, based on the algorithm of Nelder and Mead <xref ref-type="bibr" rid="pone.0111310-Nelder1">[24]</xref>. Let us denote with <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e119" xlink:type="simple"/></inline-formula> the set of reaction parameters, with <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e120" xlink:type="simple"/></inline-formula>, the observed experimental quantities sampled at times <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e121" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e122" xlink:type="simple"/></inline-formula> (see <xref ref-type="table" rid="pone-0111310-t001">Table 1</xref>) and with <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e123" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e124" xlink:type="simple"/></inline-formula> the corresponding variables obtained by integrating the differential system Eq.(11). The error function <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e125" xlink:type="simple"/></inline-formula> to be minimized is<disp-formula id="pone.0111310.e126"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0111310.e126" xlink:type="simple"/><label>(12)</label></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e127" xlink:type="simple"/></inline-formula> is a weight. Three different types of weight were tested: <italic>i</italic>) no weight, <italic>ii</italic>) the observed values <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e128" xlink:type="simple"/></inline-formula> and <italic>iii</italic>) the absolute value of the derivative of the observed values <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e129" xlink:type="simple"/></inline-formula>. The lowest error <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e130" xlink:type="simple"/></inline-formula> was obtained using the observed values as weight. The same approach was used for both the <italic>interaction</italic> and the <italic>mortality</italic> experiments. In the first case, observed and predicted values were represented by the abundances of the different chemical species, while in the second by the number of dead ants. In the latter case, only the 10 <italic>vs</italic> 10 ants experiments were used to fit the model while all other data were used to test the model predictions.</p>
+</sec></sec><sec id="s3">
+<title>Results</title>
+<sec id="s3a">
+<title>Interaction experiments</title>
+<p>The estimated values of the coefficients <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e131" xlink:type="simple"/></inline-formula> of the 15 reaction constants of the deterministic model are reported in <xref ref-type="table" rid="pone-0111310-t003">Table 3</xref>. In the column labelled <bold>ExpT</bold> we list the value of parameters computed fitting the model with a time-average of all experimental data.</p>
+<table-wrap id="pone-0111310-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0111310.t003</object-id><label>Table 3</label><caption>
+<title>Comparison among estimated reaction constants (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e132" xlink:type="simple"/></inline-formula>), from all sets of data, averages from Gillespie simulations and experimental averages over single experiment.</title>
+</caption><alternatives><graphic id="pone-0111310-t003-3" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0111310.t003" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e133" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">Reaction</td>
+<td align="left" rowspan="1" colspan="1"><italic>ExpT</italic></td>
+<td align="left" rowspan="1" colspan="1"><italic>Gill</italic></td>
+<td align="left" rowspan="1" colspan="1"><italic>Exp</italic></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e134" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">1.0063e-003</td>
+<td align="left" rowspan="1" colspan="1">1.3178e-003</td>
+<td align="left" rowspan="1" colspan="1">1.5583e-003</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e135" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">1.3130e-002</td>
+<td align="left" rowspan="1" colspan="1">1.6753e-002</td>
+<td align="left" rowspan="1" colspan="1">2.7332e-002</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e136" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">3.5892e-007</td>
+<td align="left" rowspan="1" colspan="1">4.1913e-007</td>
+<td align="left" rowspan="1" colspan="1">7.0946e-007</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e137" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">5.8290e-005</td>
+<td align="left" rowspan="1" colspan="1">4.3790e-005</td>
+<td align="left" rowspan="1" colspan="1">1.3909e-005</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e138" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">8.8645e-004</td>
+<td align="left" rowspan="1" colspan="1">1.1091e-006</td>
+<td align="left" rowspan="1" colspan="1">3.3791e-005</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e139" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">2.1387e-002</td>
+<td align="left" rowspan="1" colspan="1">3.9210e-002</td>
+<td align="left" rowspan="1" colspan="1">5.8170e-002</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e140" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">6.1787e-005</td>
+<td align="left" rowspan="1" colspan="1">5.9673e-005</td>
+<td align="left" rowspan="1" colspan="1">8.0680e-005</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e141" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">1.2312e-005</td>
+<td align="left" rowspan="1" colspan="1">1.1618e-005</td>
+<td align="left" rowspan="1" colspan="1">1.1173e-005</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e142" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">1.0528e-003</td>
+<td align="left" rowspan="1" colspan="1">1.6991e-003</td>
+<td align="left" rowspan="1" colspan="1">1.6387e-003</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e143" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">2.1974e-005</td>
+<td align="left" rowspan="1" colspan="1">1.1079e-006</td>
+<td align="left" rowspan="1" colspan="1">3.9706e-006</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e144" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">5.8482e-004</td>
+<td align="left" rowspan="1" colspan="1">7.5142e-004</td>
+<td align="left" rowspan="1" colspan="1">9.7736e-004</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e145" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">1.0246e-001</td>
+<td align="left" rowspan="1" colspan="1">5.7494e-002</td>
+<td align="left" rowspan="1" colspan="1">1.7751e-001</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e146" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">7.1993e-005</td>
+<td align="left" rowspan="1" colspan="1">8.3475e-005</td>
+<td align="left" rowspan="1" colspan="1">1.2110e-004</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">14</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e147" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">4.6617e-002</td>
+<td align="left" rowspan="1" colspan="1">7.8662e-002</td>
+<td align="left" rowspan="1" colspan="1">1.0304e-001</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e148" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">6.6738e-005</td>
+<td align="left" rowspan="1" colspan="1">4.4724e-006</td>
+<td align="left" rowspan="1" colspan="1">1.0953e-005</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt102"><label/><p>In column <bold><italic>ExpT</italic></bold> the reaction constants extracted by overlapping all datasets (20 observations). In column <bold><italic>Gill</italic></bold> we report the estimated reaction constants from <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e149" xlink:type="simple"/></inline-formula> Gillespie simulations, fitting each single experiment and obtaining <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e150" xlink:type="simple"/></inline-formula>, and then computing <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e151" xlink:type="simple"/></inline-formula>, according to the lognormal distribution. In column <bold><italic>Exp</italic></bold> we report the same calculation for the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e152" xlink:type="simple"/></inline-formula> experiments.</p></fn></table-wrap-foot></table-wrap>
+<p>We then run 100 Gillespie simulations using the previous values of the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e153" xlink:type="simple"/></inline-formula>, and we re-derived the effective value of the parameters by fitting the simulated data for each run with the deterministic model, as described in the previous Section. In this way we got a probability distribution of each parameter <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e154" xlink:type="simple"/></inline-formula>.</p>
+<p>Some examples of the frequency distributions of parameter values <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e155" xlink:type="simple"/></inline-formula> estimated from the stochastic model are shown in <xref ref-type="fig" rid="pone-0111310-g003">Fig. 3</xref>. The best fit of their distribution is given by a Log-normal distribution (we test also Exponential and Weibull), using the likelihood method. We proceeded in this way: we divided the 100 Gillespie simulations in two sets of 50. We then evaluated the parameters of the Log-normal distribution (average and variance) for the first set and used them in the likelihood test for the following 50 samples. The same was done dividing the 20 experimental samples in two sets of 10. The results are reported in <xref ref-type="table" rid="pone-0111310-t004">Table 4</xref></p>
+<fig id="pone-0111310-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0111310.g003</object-id><label>Figure 3</label><caption>
+<title>Distribution of the reaction coefficient.</title>
+<p>Coefficients <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e156" xlink:type="simple"/></inline-formula> (A), <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e157" xlink:type="simple"/></inline-formula> (B), <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e158" xlink:type="simple"/></inline-formula> (C), <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e159" xlink:type="simple"/></inline-formula> (D), <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e160" xlink:type="simple"/></inline-formula> (E) and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e161" xlink:type="simple"/></inline-formula> (F), obtained with our stochastic procedure; the best fit is achieved by means of Log-normal distribution comparing the likelihoods.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0111310.g003" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0111310-t004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0111310.t004</object-id><label>Table 4</label><caption>
+<title>The likelihood <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e162" xlink:type="simple"/></inline-formula> obtained from the first set of 50 stochastic simulation; the likelihood <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e163" xlink:type="simple"/></inline-formula> of the second set of 50 stochastic simulation evaluated using the distribution fit parameters achieved with the first set <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e164" xlink:type="simple"/></inline-formula>; the likelihood <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e165" xlink:type="simple"/></inline-formula> from the first set of 10 experiments; the likelihood <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e166" xlink:type="simple"/></inline-formula> of the second set of 10 experiments evaluated using the distribution fit parameters achieved with the first set <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e167" xlink:type="simple"/></inline-formula>; the Wilcoxon test <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e168" xlink:type="simple"/></inline-formula> respectively, between the first stochastic set and the first experimental one, the second stochastic and the second experimental, the first stochastic and the second experimental, and finally the vice versa of the latter (0 accepted the zero hypothesis of the same distribution in which something belongs with significance level of 0.05, while if 1 the zero hypothesis is refused).</title>
+</caption><alternatives><graphic id="pone-0111310-t004-4" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0111310.t004" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e169" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e170" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e171" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e172" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e173" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e174" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e175" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e176" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e177" xlink:type="simple"/></inline-formula></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">275.7832</td>
+<td align="left" rowspan="1" colspan="1">258.1798</td>
+<td align="left" rowspan="1" colspan="1">42.5066</td>
+<td align="left" rowspan="1" colspan="1">38.8130</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">148.3391</td>
+<td align="left" rowspan="1" colspan="1">129.0754</td>
+<td align="left" rowspan="1" colspan="1">18.4377</td>
+<td align="left" rowspan="1" colspan="1">19.8115</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">655.0960</td>
+<td align="left" rowspan="1" colspan="1">662.2778</td>
+<td align="left" rowspan="1" colspan="1">127.7790</td>
+<td align="left" rowspan="1" colspan="1">128.7383</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">432.9189</td>
+<td align="left" rowspan="1" colspan="1">424.9808</td>
+<td align="left" rowspan="1" colspan="1">88.5726</td>
+<td align="left" rowspan="1" colspan="1">86.0501</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">576.2967</td>
+<td align="left" rowspan="1" colspan="1">575.9256</td>
+<td align="left" rowspan="1" colspan="1">81.7484</td>
+<td align="left" rowspan="1" colspan="1">66.1083</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">113.7160</td>
+<td align="left" rowspan="1" colspan="1">105.6386</td>
+<td align="left" rowspan="1" colspan="1">14.4388</td>
+<td align="left" rowspan="1" colspan="1">6.4581</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">423.8807</td>
+<td align="left" rowspan="1" colspan="1">410.9888</td>
+<td align="left" rowspan="1" colspan="1">75.8147</td>
+<td align="left" rowspan="1" colspan="1">78.1772</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">492.9463</td>
+<td align="left" rowspan="1" colspan="1">500.2600</td>
+<td align="left" rowspan="1" colspan="1">92.9226</td>
+<td align="left" rowspan="1" colspan="1">55.4166</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">270.5161</td>
+<td align="left" rowspan="1" colspan="1">255.1394</td>
+<td align="left" rowspan="1" colspan="1">48.8032</td>
+<td align="left" rowspan="1" colspan="1">53.9497</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">558.4369</td>
+<td align="left" rowspan="1" colspan="1">569.1068</td>
+<td align="left" rowspan="1" colspan="1">101.1988</td>
+<td align="left" rowspan="1" colspan="1">92.7381</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1">307.7186</td>
+<td align="left" rowspan="1" colspan="1">281.8925</td>
+<td align="left" rowspan="1" colspan="1">53.2616</td>
+<td align="left" rowspan="1" colspan="1">53.7673</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="left" rowspan="1" colspan="1">38.9892</td>
+<td align="left" rowspan="1" colspan="1">44.7289</td>
+<td align="left" rowspan="1" colspan="1">1.8639</td>
+<td align="left" rowspan="1" colspan="1">−1.4582</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="left" rowspan="1" colspan="1">392.4433</td>
+<td align="left" rowspan="1" colspan="1">391.8237</td>
+<td align="left" rowspan="1" colspan="1">72.1444</td>
+<td align="left" rowspan="1" colspan="1">68.2362</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">14</td>
+<td align="left" rowspan="1" colspan="1">72.6155</td>
+<td align="left" rowspan="1" colspan="1">67.6900</td>
+<td align="left" rowspan="1" colspan="1">5.3474</td>
+<td align="left" rowspan="1" colspan="1">8.8448</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">484.5265</td>
+<td align="left" rowspan="1" colspan="1">503.0466</td>
+<td align="left" rowspan="1" colspan="1">82.1955</td>
+<td align="left" rowspan="1" colspan="1">93.0230</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>The average values of the parameters obtained by means of the 100 Gillespie simulations are reported in <xref ref-type="table" rid="pone-0111310-t003">Table 3</xref>, in the column labelled <bold>Gill</bold>. For comparisons, in the same table, column labelled <bold>Exp</bold>, we also report the same average for the 20 experiments. It can be noticed that the values obtained in these different ways are different, although being of the same order of magnitude.</p>
+<p>The average value of the observed chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e178" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e179" xlink:type="simple"/></inline-formula>, together with predicted values obtained from the deterministic model and the average of 100 stochastic simulations are reported in <xref ref-type="fig" rid="pone-0111310-g004">Fig. 4</xref> and <xref ref-type="fig" rid="pone-0111310-g005">5</xref>. Three examples of stochastic time series are shown in <xref ref-type="fig" rid="pone-0111310-g006">Fig. 6</xref>. Predictions from models well agree with experimental data and these are contained within the confidence bounds of the stochastic predictions. The corresponding time series for species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e180" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e181" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e182" xlink:type="simple"/></inline-formula>, are shown in <xref ref-type="supplementary-material" rid="pone.0111310.s007">Figs. S7</xref>–<xref ref-type="supplementary-material" rid="pone.0111310.s009">S9</xref>.</p>
+<fig id="pone-0111310-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0111310.g004</object-id><label>Figure 4</label><caption>
+<title>Fitting abundance of species A.</title>
+<p>Blue curve: average of 100 simulations of the stochastic model with Gillespie algorithm. Green curve: average of the experimental data. Red dotted and dash-dotted curves indicate the variance. The black line is the solution of the deterministic chemical model for the species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e183" xlink:type="simple"/></inline-formula>.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0111310.g004" position="float" xlink:type="simple"/></fig><fig id="pone-0111310-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0111310.g005</object-id><label>Figure 5</label><caption>
+<title>Fitting abundance of species B.</title>
+<p>Blue curve: average of 100 simulations of the stochastic model with Gillespie algorithm. Green curve: the average of the experimental data. Red dotted and dash-dotted curves indicated the variance. The black line is the solution of the deterministic chemical model for the species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e184" xlink:type="simple"/></inline-formula>.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0111310.g005" position="float" xlink:type="simple"/></fig><fig id="pone-0111310-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0111310.g006</object-id><label>Figure 6</label><caption>
+<title>Stochastic time series.</title>
+<p>Temporal variation of the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e185" xlink:type="simple"/></inline-formula> (A) and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e186" xlink:type="simple"/></inline-formula> (B) chemical species, obtained from three simulations of the stochastic model. Predictions of the deterministic model are also shown (black line).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0111310.g006" position="float" xlink:type="simple"/></fig>
+<p>In <xref ref-type="table" rid="pone-0111310-t004">Table 4</xref> we also show the likelihood achieved with our procedure and the results of Wilcoxon statistical test applied to the comparison of experimental and simulated reaction rates. For each reaction <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e187" xlink:type="simple"/></inline-formula> we get 50 values of the corresponding reaction rate <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e188" xlink:type="simple"/></inline-formula> from the Gillespie simulations and compare it with 10 experimental values, in order to verify that they belong to the same distribution. The Wilcoxon statistical test is performed assigning the value 0 to the acceptance of the zero hypothesis (the two sets belong to the same distribution with a significance level of 0.05) and the value 1 to rejection of the zero hypothesis (see <xref ref-type="table" rid="pone-0111310-t004">Table 4</xref>).</p>
+</sec><sec id="s3b">
+<title>Mortality experiments</title>
+<p>The interaction experiments did not lasted long enough to allow an reliable estimation of the parameters related to casualties, Eqs. (2), (3), (5), (6), (9).</p>
+<p>We therefore performed longer experiments, denoted mortality, reported in <xref ref-type="table" rid="pone-0111310-t002">Table 2</xref>. The estimated values of the parameters obtained when the deterministic model was fitted to mortality data (mean of 5 experiments with 10 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e189" xlink:type="simple"/></inline-formula> <italic>vs</italic>. 10 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e190" xlink:type="simple"/></inline-formula>) are reported in <xref ref-type="table" rid="pone-0111310-t005">Table 5</xref>, column <bold>ExpM</bold>, while <xref ref-type="fig" rid="pone-0111310-g007">Fig. 7</xref> shows the fitting curves for both species. In this calibration, only the mortality reaction coefficients were varied, while the others were kept constant, since the 5-hours experiments were recorded at a lower temporal resolution and it was not possible to keep track of all interactions.</p>
+<fig id="pone-0111310-g007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0111310.g007</object-id><label>Figure 7</label><caption>
+<title>Mortality fitting.</title>
+<p>Calibration of the model with the 5-hour mortality experiments (black-line). The average of experimental data is indicated by diamonds: (A) species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e191" xlink:type="simple"/></inline-formula> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e192" xlink:type="simple"/></inline-formula>), (B) species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e193" xlink:type="simple"/></inline-formula> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e194" xlink:type="simple"/></inline-formula>).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0111310.g007" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0111310-t005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0111310.t005</object-id><label>Table 5</label><caption>
+<title>Values of estimated reaction constants (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e195" xlink:type="simple"/></inline-formula>) obtained using different sets of data.</title>
+</caption><alternatives><graphic id="pone-0111310-t005-5" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0111310.t005" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e196" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">Reaction</td>
+<td align="left" rowspan="1" colspan="1">ExpT</td>
+<td align="left" rowspan="1" colspan="1">ExpM</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e197" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">1.0063e-003</td>
+<td align="left" rowspan="1" colspan="1">//</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e198" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">1.3130e-002</td>
+<td align="left" rowspan="1" colspan="1">//</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e199" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">3.5892e-007</td>
+<td align="left" rowspan="1" colspan="1">1.8305e-005</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e200" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">5.8290e-005</td>
+<td align="left" rowspan="1" colspan="1">1.8074e-004</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e201" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">8.8645e-004</td>
+<td align="left" rowspan="1" colspan="1">//</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e202" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">2.1387e-002</td>
+<td align="left" rowspan="1" colspan="1">//</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e203" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">6.1787e-005</td>
+<td align="left" rowspan="1" colspan="1">9.5488e-005</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e204" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">1.2312e-005</td>
+<td align="left" rowspan="1" colspan="1">9.0222e-005</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e205" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">1.0528e-003</td>
+<td align="left" rowspan="1" colspan="1">//</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e206" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">2.1974e-005</td>
+<td align="left" rowspan="1" colspan="1">//</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e207" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">5.8482e-004</td>
+<td align="left" rowspan="1" colspan="1">//</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e208" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">1.0246e-001</td>
+<td align="left" rowspan="1" colspan="1">//</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e209" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">7.1993e-005</td>
+<td align="left" rowspan="1" colspan="1">2.9154e-003</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">14</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e210" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">4.6617e-002</td>
+<td align="left" rowspan="1" colspan="1">//</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e211" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1">6.6738e-005</td>
+<td align="left" rowspan="1" colspan="1">//</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt103"><label/><p>In column <bold><italic>ExpT</italic></bold> those from the <italic>interaction</italic> dataset (20 observations 10 vs. 10 for 1 hours), in column <bold><italic>ExpM</italic></bold> those from the mortality experimental dataset (5 observations 10 vs. 10 for 5 hours), limited to the reactions implying casualties.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s3c">
+<title>Supremacy phase diagram</title>
+<p>We are now in the position of performing simulations of arbitrarily long battles with any number of opponents. Although the effective phase space of the autonomous system describing our model, Eq. 11 is five-dimensional, we have found that the projection of the trajectories on the plane <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e212" xlink:type="simple"/></inline-formula> of the total number of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e213" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e214" xlink:type="simple"/></inline-formula> individuals (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e215" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e216" xlink:type="simple"/></inline-formula>) never intersect.</p>
+<p>The results of these runs are shown in <xref ref-type="fig" rid="pone-0111310-g001">Fig. 1</xref> as a phase plane portrait. A phase transition between two absorbing states, corresponding to zero-<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e217" xlink:type="simple"/></inline-formula> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e218" xlink:type="simple"/></inline-formula>) or zero-<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e219" xlink:type="simple"/></inline-formula> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e220" xlink:type="simple"/></inline-formula>) is evident. In other words, there is a critical value for the initial abundances of species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e221" xlink:type="simple"/></inline-formula> for which the final state is at the boundary separating the two absorbing states (<italic>i.e.</italic>, both species become extinct). The set of these critical values form a separatrix (red dashed line) which separates the initial states corresponding to the extinction of one or the other species. It is important to note that the phase separatrix is not a straight line, particularly when the size of the starting groups is small. This implies that the system is not simply represented by a superposition of small groups or, alternatively, that the large fighting groups have a non-negligible effect on the fate of the battle.</p>
+<p>However, one can observe that the the separatrix becomes essentially linear when the abundances of the species are larger than about 10. Also the part of the diagram where the non-linearity of the trajectories is larger corresponds to the abundance of species less than 10. This linear behaviour over the 10-ants limit implies that a real battle, in which one can find many hundreds of individuals fighting, can be approximated by a superposition of local sub-battles, each of them composed by a small number of interacting individuals, of the order of ten individuals per species. This observation can be considered as a a <italic>posteriori</italic> justification for the small size of our experiments and constitutes an important element for experimental observations.</p>
+<p>We also report in <xref ref-type="fig" rid="pone-0111310-g001">Fig. 1</xref> the experimental results obtained by battles with different initial group sizes (see <xref ref-type="table" rid="pone-0111310-t002">Table 2</xref> for details). Each of the seven reported trajectories is the average of five different trials. The results shows a good agreement between the experimental data and the model output. The experimental trajectories essentially follow the flux lines of the deterministic model. Two of the trajectories cross the separatrix. This fact may be due to "shielding" of many <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e222" xlink:type="simple"/></inline-formula> attacking a single <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e223" xlink:type="simple"/></inline-formula>, an effect that is not included in our model and that may have the effect of favouring the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e224" xlink:type="simple"/></inline-formula> species, but that is important only for large <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e225" xlink:type="simple"/></inline-formula>/<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e226" xlink:type="simple"/></inline-formula> ratios near the separatrix, since well above it the final state is always the extinction of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e227" xlink:type="simple"/></inline-formula>, and well below it the final state is the extinction of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e228" xlink:type="simple"/></inline-formula>. Indeed, all curves that start near the separatrix show an initial deviation favouring the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e229" xlink:type="simple"/></inline-formula> species.</p>
+</sec></sec><sec id="s4">
+<title>Discussion and Conclusions</title>
+<p>In this paper we proposed a model based on a "chemical" description of aggressive interactions between opposing groups of cooperating animals. Our approach considers isolated individuals as atoms and fighting groups as molecules, and exploits the standard investigation tools of chemical reactions.</p>
+<p>The model parameters were estimated using experimental observations of battles among a limited number (10) of individuals belonging to two species of ants (<italic>L.paralienus</italic> and <italic>L.neglectus</italic>). We developed both deterministic (mean-field) models and stochastic (Gillespie) ones.</p>
+<p>The chemical approach proved to be simple enough to be adapted to a number of different cases, and was much more flexible and biologically meaningful than, for instance, Lanchester's one. One of its main strengths relies, in fact, in the ease with which realistic assumptions on the behaviour of the two groups can be explicitly coded and translated into observable characteristics. The latter point is of the utmost importance and cannot be overemphasized.</p>
+<p>The main output of our model is the phase diagram shown in <xref ref-type="fig" rid="pone-0111310-g001">Fig. 1</xref>. First of all, although our model is five-dimensional, the projection of the trajectories in the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e230" xlink:type="simple"/></inline-formula> plane given by the total amount of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e231" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e232" xlink:type="simple"/></inline-formula> opponents shows no intersection, implying that these quantities are quite insensitive on the clusters that form and disaggregate during the battle. This point is important since it is much easier to estimate the total number of ants of each species than their aggregates. The fact that the trajectories and the separatrix are non-linear implies that there is a cooperative strategy in action. As illustrated below, it is given by the coordinated attack of multiple <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e233" xlink:type="simple"/></inline-formula> (<italic>L.neglectus</italic>) vs one <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e234" xlink:type="simple"/></inline-formula> (<italic>L.paralienus</italic>). The comparison with experimental data is quite good.</p>
+<p>The above scenario is confirmed by the analysis of the mortality rates. First of all <italic>L. paralienus</italic> (species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e235" xlink:type="simple"/></inline-formula>), due to its size, has more possibilities to defeat <italic>L. neglectus</italic> (species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e236" xlink:type="simple"/></inline-formula>) in a duel: the parameter <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e237" xlink:type="simple"/></inline-formula> of reaction <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e238" xlink:type="simple"/></inline-formula> is ten times <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e239" xlink:type="simple"/></inline-formula>, that of reaction <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e240" xlink:type="simple"/></inline-formula> (the difference is even larger in the shorter interaction experiment, see <xref ref-type="table" rid="pone-0111310-t005">Table 5</xref>).</p>
+<p>By comparing <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e241" xlink:type="simple"/></inline-formula> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e242" xlink:type="simple"/></inline-formula>), <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e243" xlink:type="simple"/></inline-formula> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e244" xlink:type="simple"/></inline-formula>) and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e245" xlink:type="simple"/></inline-formula> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e246" xlink:type="simple"/></inline-formula>) the cooperative strategy of <italic>L. neglectus</italic> becomes evident: by attacking <italic>en masse</italic> they can reach a higher killing ability; and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e247" xlink:type="simple"/></inline-formula> (three <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e248" xlink:type="simple"/></inline-formula> killing one <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e249" xlink:type="simple"/></inline-formula>) is larger than <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e250" xlink:type="simple"/></inline-formula> (one <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e251" xlink:type="simple"/></inline-formula> killing one <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e252" xlink:type="simple"/></inline-formula>). Clearly, this strategy depends on the possibility of having a larger number of opponents. Therefore, considering the coefficients of reactions that bring to death, we observe that the strategy of <italic>L. neglectus</italic> in 10 vs. 10 is not sufficient to defeat <italic>L. paralienus</italic>. The same consideration was also deduced with the stochastic model performing 1000 simulations with the Gillespie algorithm with the optimized parameters, in which we observe zero successes of the species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e253" xlink:type="simple"/></inline-formula>, <italic>i.e.</italic>, all <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e254" xlink:type="simple"/></inline-formula> individuals die, while species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e255" xlink:type="simple"/></inline-formula> survives with a certain mortality. This is confirmed by the analysis in the phase plane of the deterministic model by varying the initial conditions, <xref ref-type="fig" rid="pone-0111310-g001">Fig. 1</xref>, that shows the importance of the initial ratio between the opponents. It also shows that the separatrix is well above the bisectrix (representing the advantage of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e256" xlink:type="simple"/></inline-formula> vs <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e257" xlink:type="simple"/></inline-formula> for low numbers of opponents).</p>
+<p>We think that our approach is quite promising, although this present paper only represent a starting point. We are currently carrying out more detailed experiments, involving more ant species, in order to obtain a more careful quantitative estimation of the chemical parameters. Another direction is that of including the effects of fatigue. Our final goal is that of interpreting the chemical parameter in terms of a smaller number of factors (like aggressiveness, strength, cooperation, resistance, etc.) characteristic of each species.</p>
+</sec><sec id="s5">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0111310.s001" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0111310.s001" position="float" xlink:type="simple"><label>Figure S1</label><caption>
+<p><bold>Chemical species </bold><bold><italic>A</italic></bold><bold>.</bold> The chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e258" xlink:type="simple"/></inline-formula> is shown as a function of time up to the steady state for three values of the initial conditions.</p>
+<p>(TIFF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0111310.s002" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0111310.s002" position="float" xlink:type="simple"><label>Figure S2</label><caption>
+<p><bold>Chemical species </bold><bold><italic>B</italic></bold><bold>.</bold> The chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e259" xlink:type="simple"/></inline-formula> is shown as a function of time up to the steady state for three values of the initial conditions.</p>
+<p>(TIFF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0111310.s003" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0111310.s003" position="float" xlink:type="simple"><label>Figure S3</label><caption>
+<p><bold>Chemical species </bold><bold><italic>AB</italic></bold><bold>.</bold> The abundance of the chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e260" xlink:type="simple"/></inline-formula> is shown as a function of time up to the steady state for three values of the initial conditions.</p>
+<p>(TIFF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0111310.s004" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0111310.s004" position="float" xlink:type="simple"><label>Figure S4</label><caption>
+<p><bold>Chemical species </bold><bold><italic>ABB</italic></bold><bold>.</bold> The abundance of the chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e261" xlink:type="simple"/></inline-formula> is shown as a function of time up to the steady state for three values of the initial conditions.</p>
+<p>(TIFF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0111310.s005" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0111310.s005" position="float" xlink:type="simple"><label>Figure S5</label><caption>
+<p><bold>Chemical species </bold><bold><italic>ABBB</italic></bold><bold>.</bold> The chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e262" xlink:type="simple"/></inline-formula> is shown as a function of time up to the steady state for three values of the initial conditions.</p>
+<p>(TIFF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0111310.s006" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0111310.s006" position="float" xlink:type="simple"><label>Figure S6</label><caption>
+<p><bold>Scheme.</bold> Schematic representation of the proposed methodology followed to compare the deterministic model, expressed by means of a system of nonlinear differential equations, and the stochastic one.</p>
+<p>(TIF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0111310.s007" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0111310.s007" position="float" xlink:type="simple"><label>Figure S7</label><caption>
+<p><bold>Experimental data and deterministic model for species </bold><bold><italic>AB</italic></bold><bold>.</bold> The mean values of the chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e263" xlink:type="simple"/></inline-formula> obtained from 20 experiments vs. the solution of the deterministic model by means of Simplex Flexible Algorithm(SFA).</p>
+<p>(TIFF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0111310.s008" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0111310.s008" position="float" xlink:type="simple"><label>Figure S8</label><caption>
+<p><bold>Experimental data and deterministic model for species </bold><bold><italic>ABB</italic></bold><bold>.</bold> The mean values of the chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e264" xlink:type="simple"/></inline-formula> obtained from 20 experiments vs. the solution of the deterministic model by means of Simplex Flexible Algorithm(SFA).</p>
+<p>(TIFF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0111310.s009" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0111310.s009" position="float" xlink:type="simple"><label>Figure S9</label><caption>
+<p><bold>Experimental data and deterministic model for species </bold><bold><italic>ABBB</italic></bold><bold>.</bold> The mean values of the chemical species <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0111310.e265" xlink:type="simple"/></inline-formula> obtained from 20 experiments vs. the solution of the deterministic model by means of Simplex Flexible Algorithm(SFA).</p>
+<p>(TIFF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0111310.s010" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0111310.s010" position="float" xlink:type="simple"><label>File S1</label><caption>
+<p><bold>Supplementary material.</bold> Integration of the differential equations. Gillespie implementation. Nonexistence of attractors.</p>
+<p>(PDF)</p>
+</caption></supplementary-material></sec></body>
+<back>
+<ack>
+<p>We would like to thank Joseph Challenger for fruitful discussions.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0111310-Zabel1"><label>1</label>
+<mixed-citation publication-type="other" xlink:type="simple">Zabel CJ, Glickman SE, Frank LG (1992) Coalition formation in a colony of prepubertal spotted hyaenas. In: Harcourt AH, de Waal FBM, editors, Coalitions and alliances in humans and other animals, Oxford, UK: Oxford University Press. pp. 113–135.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Adams1"><label>2</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Adams</surname><given-names>ES</given-names></name>, <name name-style="western"><surname>Mesterton-Gibbons</surname><given-names>M</given-names></name> (<year>2003</year>) <article-title>Lanchester's attrition models and fights among social animals</article-title>. <source>Behavioral Ecology</source> <volume>14</volume>: <fpage>719</fpage>–<lpage>723</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Cheney1"><label>3</label>
+<mixed-citation publication-type="other" xlink:type="simple">Cheney DL (1987) Interactions and relations between groups. In: Cheney DL, Seyfarth RM, Wrangham RW, Struhsaker TT, editors, Primate societies, Chicago, USA: University of Chicago Press. pp. 267–281.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Franks1"><label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Franks</surname><given-names>NR</given-names></name>, <name name-style="western"><surname>Partridge</surname><given-names>LW</given-names></name> (<year>1992</year>) <article-title>Lanchester battles and the evolution of combat in ants</article-title>. <source>Animal Behavior</source> <volume>45</volume>: <fpage>197</fpage>–<lpage>199</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Batchelor1"><label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Batchelor</surname><given-names>TP</given-names></name>, <name name-style="western"><surname>Briffa</surname><given-names>M</given-names></name> (<year>2010</year>) <article-title>Influences on resource-holding potential during dangerous group contests between wood ants</article-title>. <source>Animal Behavior</source> <volume>80</volume>: <fpage>443</fpage>–<lpage>449</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Lanchester1"><label>6</label>
+<mixed-citation publication-type="other" xlink:type="simple">Lanchester FW (1916) Aircraft in Warfare. New York: Apleton.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Lanchester2"><label>7</label>
+<mixed-citation publication-type="book" xlink:type="simple">Lanchester FW (1956) Mathematics in warfare. In: Newman JR, editor, The world of mathematics, vol. 4, New York: Simon and Schuster. pp. 2138–2157.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Bracken1"><label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bracken</surname><given-names>J</given-names></name> (<year>1995</year>) <article-title>Lanchester models of the ardennes campaign</article-title>. <source>Naval Research Logistics</source> <volume>42</volume>: <fpage>559</fpage>–<lpage>577</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Jr1"><label>9</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jr</surname><given-names>RDF</given-names></name> (<year>1998</year>) <article-title>Attrition model of the ardennes campaign</article-title>. <source>Naval Research Logistics</source> <volume>45</volume>: <fpage>1</fpage>–<lpage>22</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Johnson1"><label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Johnson</surname><given-names>I</given-names></name>, <name name-style="western"><surname>MacKay</surname><given-names>NJ</given-names></name> (<year>2011</year>) <article-title>Lanchester models and the battle of britain</article-title>. <source>Naval Research Logistics</source> <volume>58</volume>: <fpage>210</fpage>–<lpage>222</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Kress1"><label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kress</surname><given-names>M</given-names></name> (<year>2012</year>) <article-title>Modeling armed conflicts</article-title>. <source>Science</source> <volume>336</volume>: <fpage>865</fpage>–<lpage>869</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Whitehouse1"><label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Whitehouse</surname><given-names>MEA</given-names></name>, <name name-style="western"><surname>Jaffe</surname><given-names>K</given-names></name> (<year>1996</year>) <article-title>Ant wars: combat strategies, territory and nest defencedefense in the leaf-cutting ant <italic>Atta laevigata</italic></article-title>. <source>Animal Behavior</source> <volume>51</volume>: <fpage>1207</fpage>–<lpage>1217</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-McGlynn1"><label>13</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>McGlynn</surname><given-names>TP</given-names></name> (<year>2000</year>) <article-title>Do lanchester ′s laws of combat describe competition in ants?</article-title> <source>Behavioral Ecology</source> <volume>11</volume>: <fpage>686</fpage>–<lpage>690</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Wilson1"><label>14</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wilson</surname><given-names>ML</given-names></name>, <name name-style="western"><surname>Britton</surname><given-names>NF</given-names></name>, <name name-style="western"><surname>Franks</surname><given-names>NR</given-names></name> (<year>2001</year>) <article-title>Chimpanzees and the mathematics of battle</article-title>. <source>Proceedings of the Royal Society London B</source> <volume>269</volume>: <fpage>1107</fpage>–<lpage>1112</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Plowes1"><label>15</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Plowes</surname><given-names>NJR</given-names></name>, <name name-style="western"><surname>Adams</surname><given-names>ES</given-names></name> (<year>2005</year>) <article-title>An empirical test of lanchester's square law: mortality during battles of the fire ant <italic>Solenopsis invicta</italic></article-title>. <source>Proceedings of the Royal Society London B</source> <volume>272</volume>: <fpage>1809</fpage>–<lpage>1814</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Batcelor1"><label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Batcelor</surname><given-names>TP</given-names></name>, <name name-style="western"><surname>Santini</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Briffa</surname><given-names>M</given-names></name> (<year>2011</year>) <article-title>Size distribution and battles in wood ants: group resource-holding potential is the sum of the individual parts</article-title>. <source>Animal Behavior</source> <volume>83</volume>: <fpage>111</fpage>–<lpage>117</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Bellard1"><label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bellard</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Bertelsmeier</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Leadley</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Thuiller</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Courchamp</surname><given-names>F</given-names></name> (<year>2012</year>) <article-title>Impacts of climate change on the future of biodiversity</article-title>. <source>Ecology Letters</source> <volume>15</volume>: <fpage>365</fpage>–<lpage>377</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Connors1"><label>18</label>
+<mixed-citation publication-type="other" xlink:type="simple">Connors KA (1991) Chemical Kinetics, the study of reaction rates in solution. New York: VCH Publishers.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Black1"><label>19</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Black</surname><given-names>AJ</given-names></name>, <name name-style="western"><surname>McKane</surname><given-names>AJ</given-names></name> (<year>2012</year>) <article-title>Stochastic formulation of ecological models and their applications</article-title>. <source>Trends in Ecology and Evolution</source> <volume>27</volume>: <fpage>337</fpage>–<lpage>345</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Gillespie1"><label>20</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gillespie</surname><given-names>DT</given-names></name> (<year>1977</year>) <article-title>Exact stochastic simulation of coupled chemical reaction</article-title>. <source>The Journal of Physical Chemistry</source> <volume>81</volume>: <fpage>2340</fpage>–<lpage>2361</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Seifert1"><label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Seifert</surname><given-names>B</given-names></name> (<year>1992</year>) <article-title>A taxonomic revision of the palaearctic members of the ant subgenus <italic>Lasius</italic> s. tr. (hymenoptera, formicidae)</article-title>. <source>Abhandlungen und Berichte des Naturkundemuseums Görlitz</source> <volume>66</volume>: <fpage>1</fpage>–<lpage>67</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Ugelvig1"><label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ugelvig</surname><given-names>LV</given-names></name>, <name name-style="western"><surname>Falko</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Drijfhout</surname><given-names>FP</given-names></name>, <name name-style="western"><surname>Daniel</surname><given-names>JC</given-names></name>, <name name-style="western"><surname>Kronauer</surname><given-names>DJC</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>The introduction history of invasive garden ants in europe: Integrating genetic, chemical and behavioural approaches</article-title>. <source>BMC Biology</source> <volume>6</volume>: <fpage>11</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-MarsiliLibelli1"><label>23</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Marsili-Libelli</surname><given-names>S</given-names></name> (<year>1992</year>) <article-title>Parameter estimation of ecological models</article-title>. <source>Ecological Modelling</source> <volume>62</volume>: <fpage>233</fpage>–<lpage>258</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0111310-Nelder1"><label>24</label>
+<mixed-citation publication-type="other" xlink:type="simple">Nelder JA, Mead R (1965) A simplex method for function minimization, volume 62. Comput.J., 233–258 pp.</mixed-citation>
+</ref>
+</ref-list></back>
+</article>

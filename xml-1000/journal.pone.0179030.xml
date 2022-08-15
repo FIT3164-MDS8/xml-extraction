@@ -1,0 +1,911 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1d3" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0179030</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-16-49656</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Applied mathematics</subject><subj-group><subject>Algorithms</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Simulation and modeling</subject><subj-group><subject>Algorithms</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>Acoustics</subject><subj-group><subject>Sound pressure</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Physiology</subject><subj-group><subject>Physiological processes</subject><subj-group><subject>Respiration</subject><subj-group><subject>Breathing</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Physiology</subject><subj-group><subject>Physiological processes</subject><subj-group><subject>Respiration</subject><subj-group><subject>Breathing</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Mathematical and statistical techniques</subject><subj-group><subject>Mathematical models</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Physiology</subject><subj-group><subject>Respiratory physiology</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Physiology</subject><subj-group><subject>Respiratory physiology</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Pulmonology</subject><subj-group><subject>Apnea</subject><subj-group><subject>Sleep apnea</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Neurology</subject><subj-group><subject>Sleep disorders</subject><subj-group><subject>Sleep apnea</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Engineering and technology</subject><subj-group><subject>Signal processing</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Pulmonology</subject><subj-group><subject>Pulmonary function</subject><subj-group><subject>Tidal volume</subject></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>An automated and reliable method for breath detection during variable mask pressures in awake and sleeping humans</article-title>
+<alt-title alt-title-type="running-head">Automated breath detection during variable mask pressures in awake and sleeping humans</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0001-7094-294X</contrib-id>
+<name name-style="western">
+<surname>Nguyen</surname>
+<given-names>Chinh D.</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Amatoury</surname>
+<given-names>Jason</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Carberry</surname>
+<given-names>Jayne C.</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Eckert</surname>
+<given-names>Danny J.</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Neuroscience Research Australia (NeuRA), Randwick, New South Wales, Australia</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Woolcock Institute of Medical Research and Sydney Medical School, University of Sydney, Glebe, New South Wales, Australia</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>School of Medical Sciences, University of New South Wales, Sydney, New South Wales, Australia</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Baumert</surname>
+<given-names>Mathias</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>University of Adelaide, AUSTRALIA</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con">
+<p><list list-type="simple"><list-item>
+<p><bold>Conceptualization:</bold> CN JA DE.</p></list-item> <list-item>
+<p><bold>Data curation:</bold> CN JA JC DE.</p></list-item> <list-item>
+<p><bold>Formal analysis:</bold> CN JA.</p></list-item> <list-item>
+<p><bold>Funding acquisition:</bold> DE.</p></list-item> <list-item>
+<p><bold>Investigation:</bold> CN JA JC DE.</p></list-item> <list-item>
+<p><bold>Methodology:</bold> CN DE.</p></list-item> <list-item>
+<p><bold>Project administration:</bold> CN DE.</p></list-item> <list-item>
+<p><bold>Resources:</bold> JC DE.</p></list-item> <list-item>
+<p><bold>Software:</bold> CN.</p></list-item> <list-item>
+<p><bold>Supervision:</bold> DE.</p></list-item> <list-item>
+<p><bold>Validation:</bold> CN JA DE.</p></list-item> <list-item>
+<p><bold>Visualization:</bold> CN.</p></list-item> <list-item>
+<p><bold>Writing – original draft:</bold> CN JA JC DE.</p></list-item> <list-item>
+<p><bold>Writing – review &amp; editing:</bold> CN JA JC DE.</p></list-item></list>
+</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">c.nguyen@neura.edu.au</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>13</day>
+<month>6</month>
+<year>2017</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2017</year>
+</pub-date>
+<volume>12</volume>
+<issue>6</issue>
+<elocation-id>e0179030</elocation-id>
+<history>
+<date date-type="received">
+<day>15</day>
+<month>12</month>
+<year>2016</year>
+</date>
+<date date-type="accepted">
+<day>23</day>
+<month>5</month>
+<year>2017</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2017</copyright-year>
+<copyright-holder>Nguyen et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0179030"/>
+<abstract>
+<p>Accurate breath detection is crucial in sleep and respiratory physiology research and in several clinical settings. However, this process is technically challenging due to measurement and physiological artifacts and other factors such as variable leaks in the breathing circuit. Recently developed techniques to quantify the multiple causes of obstructive sleep apnea, require intermittent changes in airway pressure applied to a breathing mask. This presents an additional unique challenge for breath detection. Traditional algorithms often require drift correction. However, this is an empirical operation potentially prone to human error. This paper presents a new algorithm for breath detection during variable mask pressures in awake and sleeping humans based on physiological landmarks detected in the airflow or epiglottic pressure signal (Pepi). The algorithms were validated using simulated data from a mathematical model and against the standard visual detection approach in 4 healthy individuals and 6 patients with sleep apnea during variable mask pressure conditions. Using the flow signal, the algorithm correctly identified 97.6% of breaths with a mean difference±SD in the onsets of respiratory phase compared to expert visual detection of 23±89ms for inspiration and 6±56ms for expiration during wakefulness and 10±74ms for inspiration and 3±28 ms for expiration with variable mask pressures during sleep. Using the Pepi signal, the algorithm correctly identified 89% of the breaths with accuracy of 31±156ms for inspiration and 9±147ms for expiration compared to expert visual detection during variable mask pressures asleep. The algorithm had excellent performance in response to baseline drifts and noise during variable mask pressure conditions. This new algorithm can be used for accurate breath detection including during variable mask pressure conditions which represents a major advance over existing time-consuming manual approaches.</p>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100000925</institution-id>
+<institution>National Health and Medical Research Council</institution>
+</institution-wrap>
+</funding-source>
+<award-id>1060992</award-id>
+<principal-award-recipient>
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0001-7094-294X</contrib-id>
+<name name-style="western">
+<surname>Nguyen</surname>
+<given-names>Chinh D.</given-names>
+</name>
+</principal-award-recipient>
+</award-group>
+<award-group id="award002">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100000925</institution-id>
+<institution>National Health and Medical Research Council</institution>
+</institution-wrap>
+</funding-source>
+<award-id>1060992</award-id>
+<principal-award-recipient>
+<name name-style="western">
+<surname>Carberry</surname>
+<given-names>Jayne C.</given-names>
+</name>
+</principal-award-recipient>
+</award-group>
+<award-group id="award003">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100000925</institution-id>
+<institution>National Health and Medical Research Council</institution>
+</institution-wrap>
+</funding-source>
+<award-id>1060992</award-id>
+<principal-award-recipient>
+<name name-style="western">
+<surname>Amatoury</surname>
+<given-names>Jason</given-names>
+</name>
+</principal-award-recipient>
+</award-group>
+<award-group id="award004">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100000925</institution-id>
+<institution>National Health and Medical Research Council</institution>
+</institution-wrap>
+</funding-source>
+<award-id>1116942</award-id>
+<principal-award-recipient>
+<name name-style="western">
+<surname>Eckert</surname>
+<given-names>Danny J.</given-names>
+</name>
+</principal-award-recipient>
+</award-group>
+<funding-statement>C. Nguyen, J. Amatoury and J. Carberry received support from a National Health and Medical Research Council (NHMRC) of Australia NeuroSleep Centre of Research Excellence Fellowship (1060992). D. Eckert has received support from a NHMRC RD Wright Fellowship, 1049814 (<ext-link ext-link-type="uri" xlink:href="https://www.nhmrc.gov.au" xlink:type="simple">https://www.nhmrc.gov.au</ext-link>). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="10"/>
+<table-count count="5"/>
+<page-count count="21"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its Supporting Information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>Accurate breath detection is crucial in sleep and respiratory physiology research and in clinical practice. Indeed, in order to quantify key breathing variables such as minute ventilation and peak inspiratory airflow, accurate identification of inspiration and expiration is required. Breath detection also has multiple applied and cross-disciplinary applications. For instance, breath detection is required to characterize interactions between the respiratory system and other organs such as the heart (e.g. respiratory sinus arrhythmia [<xref ref-type="bibr" rid="pone.0179030.ref001">1</xref>] and cardiorespiratory synchronization [<xref ref-type="bibr" rid="pone.0179030.ref001">1</xref>–<xref ref-type="bibr" rid="pone.0179030.ref004">4</xref>]), and neurological function [<xref ref-type="bibr" rid="pone.0179030.ref005">5</xref>, <xref ref-type="bibr" rid="pone.0179030.ref006">6</xref>].</p>
+<p>Despite its importance, breath detection is technically challenging. Physiological events such as sighs, swallows, transient reductions and pauses (hypopneas and apneas) in breathing during sleep recordings, as well as measurement artifacts including signal drift, EKG artifact, electrical noise on the airflow signal and mask leaks, each present unique challenges when attempting to quantify breath timing accurately. Manual detection and calculation of respiratory parameters are time-consuming and potentially prone to human error and impractical for large data sets. Accordingly, several algorithms have been developed for automated breath detection [<xref ref-type="bibr" rid="pone.0179030.ref007">7</xref>–<xref ref-type="bibr" rid="pone.0179030.ref009">9</xref>]. Most use an airflow signal, a volume signal, or both, and apply different threshold criteria to identify breaths [<xref ref-type="bibr" rid="pone.0179030.ref007">7</xref>–<xref ref-type="bibr" rid="pone.0179030.ref009">9</xref>]. However, measurement artifacts, especially baseline volume shifts, can render these algorithms inaccurate [<xref ref-type="bibr" rid="pone.0179030.ref007">7</xref>, <xref ref-type="bibr" rid="pone.0179030.ref008">8</xref>]. Drift correction is often used to counteract this problem. However, this is an empirical operation and is prone to error.</p>
+<p>Recent advances in the pathophysiology of obstructive sleep apnea (OSA), a common sleep-related breathing disorder characterized by repetitive narrowing and closure of the upper airway during sleep, indicate that there are at least four key causes [<xref ref-type="bibr" rid="pone.0179030.ref010">10</xref>, <xref ref-type="bibr" rid="pone.0179030.ref011">11</xref>]. These include upper airway anatomy/collapsibility, the respiratory arousal threshold, pharyngeal dilator muscle responsiveness and respiratory control instability [<xref ref-type="bibr" rid="pone.0179030.ref010">10</xref>]. Quantification of each parameter relies heavily on accurate detection of respiratory phase. The gold standard approach to measure these causes or “phenotypic traits” requires transient changes in mask pressure (positive and negative suction pressure) to induce varying degrees of upper airway collapse [<xref ref-type="bibr" rid="pone.0179030.ref010">10</xref>–<xref ref-type="bibr" rid="pone.0179030.ref018">18</xref>]. However, automated breath detection is particularly challenging during these conditions due to frequent and large volume drifts that accompany the transient changes in mask pressure and noise artifact from the pressure generation device. There are limited effective computational tools available to deal with this problem. Thus, breath detection under these conditions remains largely manual, labor intensive and is potentially prone to error. Accordingly, to facilitate translation of these and related applications, development of accurate, automated tools for breath detection to address these barriers is required.</p>
+<p>Thus, the aim of this study was to develop an algorithm to accurately detect the onset of inspiration and expiration in humans during variable mask pressure conditions and test its accuracy using multiple approaches.</p>
+</sec>
+<sec id="sec002" sec-type="materials|methods">
+<title>Materials and methods</title>
+<sec id="sec003">
+<title>Traditional approach and methodology for breath detection algorithms</title>
+<p>Traditional breath detection algorithms define the onsets of inspiration and expiration as the points at which the drift-corrected volume signal attains its minimum and maximum values, or where the flow signal crosses zero [<xref ref-type="bibr" rid="pone.0179030.ref007">7</xref>–<xref ref-type="bibr" rid="pone.0179030.ref009">9</xref>]. The common signal processing tasks include: 1) integration of the flow signal to obtain volume using a numerical integration algorithm, 2) volume drift correction, often performed by subtracting the straight line fitted to the end-expiratory points from the volume signal, and 3) minima and maxima of the drift-corrected volume signal (possible onsets of inspiration and expiration, respectively) (see [<xref ref-type="bibr" rid="pone.0179030.ref008">8</xref>] for further detail). However, the volume drift correction is an empirical process and becomes problematic when the drift does not increase or decrease linearly. Thus, this approach is inaccurate during conditions where mask pressure is variable or breathing is unstable (<xref ref-type="fig" rid="pone.0179030.g001">Fig 1</xref>).</p>
+<fig id="pone.0179030.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Volume drift during a transient reduction in continuous positive airway pressure delivered via a nasal mask (Pmask).</title>
+<p>End of expiratory volume signal (red circles) often does not follow a linear upward/downward direction during this period. Volume drift correction is an empirical process potentially prone to human error.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.g001" xlink:type="simple"/>
+</fig>
+<p>The zero-crossing algorithm approach to identify the onsets of inspiration and expiration also has several limitations. This algorithm requires two conditions to be satisfied: 1) no significant zero offset in the flow signal, and 2) no oscillations around baseline flow as any flow crossings including even small deviations unrelated to breathing will be incorrectly detected [<xref ref-type="bibr" rid="pone.0179030.ref008">8</xref>]. Both of these conditions are violated when there is a strong drift in the flow baseline which occurs as a consequence of air leaks and unstable breathing.</p>
+</sec>
+<sec id="sec004">
+<title>Novel breath detection algorithm</title>
+<sec id="sec005">
+<title>Physiological landmark of inspiratory and expiratory onsets</title>
+<p>Our proposed algorithm defines the “true” onset of inspiration as the points at which inspiratory effort commences. This can be identified as an inflection point in the flow or epiglottic pressure (Pepi) signals (Pepi, measured by an epiglottic catheter). <xref ref-type="fig" rid="pone.0179030.g002">Fig 2</xref> shows that the inflection point in flow aligns with the inflection point in the Pepi signal. Specifically, Pepi sharply decreases at the onset of inspiration. The inflection point in Pepi also provides important physiological information analogous to “breath timing” during situations where airflow is absent (e.g. during obstructive apneas). Detection of the onset of inspiratory effort using airway pressure transducers such as Pepi is also useful for estimating intrathoracic pressure gradients and for correcting baseline drift in these signals. Accordingly, our proposed algorithm focuses on reliable detection of inflection points in flow and Pepi signals. Once these components are clearly defined it is then possible to calculate key respiratory (e.g. tidal volume, minute ventilation, peak flow) and related variables that rely on accurate breath detection (e.g. airway resistance, pharyngeal pressure swings, inspiratory and expiratory muscle activity). Accurate quantification of these parameters is often crucial for sleep and respiratory research [<xref ref-type="bibr" rid="pone.0179030.ref019">19</xref>–<xref ref-type="bibr" rid="pone.0179030.ref022">22</xref>].</p>
+<fig id="pone.0179030.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Physiological landmarks of true onsets of inspiration as inflection points (green diamonds) in flow (a) and epiglottic pressure (Pepi) signals (b).</title>
+<p>Note the alignment of the inflection points in the flow and Pepi signals whereby Pepi sharply decreases at the onset of inspiration. When the flow signal (b) is used, the onsets of expiration (red circles) are defined as the points at which the algorithm corrected integrated volume signal (c) attains its maximum value between two adjacent inspiratory onsets. When the Pepi signal (a) is used, the expiratory onsets (red circles) are defined as the interception points between the straight lines (connecting the inspiratory onsets of two consecutive breaths, dash-dot lines) and Pepi waveform. The black arrow and blue vertical line indicate the start of a transient reduction in continuous positive airway pressure (CPAP).</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.g002" xlink:type="simple"/>
+</fig>
+<p>When using the flow signal, the onset of expiration is defined as the point at which the algorithm corrected integrated volume signal (generated by integrating flow signal value between two adjacent inspiratory onsets) attains its maximum (<xref ref-type="fig" rid="pone.0179030.g002">Fig 2b and 2c</xref>). However, it is more challenging to identify expiratory onset using the Pepi signal alone as unlike inspiration there is no clear marker on this signal that could be used to detect expiratory onsets. In this study, expiratory onset using the Pepi signal was defined as the point of intercept between a straight line (connecting the inspiratory onsets of two consecutive breaths) and the Pepi waveform (<xref ref-type="fig" rid="pone.0179030.g002">Fig 2a</xref>).</p>
+</sec>
+<sec id="sec006">
+<title>Automated detection of the inflection points with noisy flow and pressure signals</title>
+<p>The inflection point of the flow signal is detected as the point where its second derivative reaches its maximum value (reflecting the peak acceleration of changes in the shape of flow signal). There are three main steps required to apply this concept to detect inflection points in noisy flow and pressure signals (<xref ref-type="fig" rid="pone.0179030.g003">Fig 3</xref>). These include: 1) detection of signal peaks and valleys followed by selection of each segment of the signal connecting the corresponding peak, valley and possible inflection point (<xref ref-type="fig" rid="pone.0179030.g003">Fig 3a</xref>). A low pass filter with a cut-off frequency of 2 Hz was applied to the signal and peak detection was performed on the filtered signal using the MATLAB function ‘findpeaks’ with a threshold for breath duration of one second, 2) fitting a smoothing spline with a smoothing parameter (<italic>SP)</italic> through the segment (<xref ref-type="fig" rid="pone.0179030.g003">Fig 3b</xref>, upper panel), SP was set to 0.95, and 3) calculation of the second derivative of the fitted smoothing spline to find the location where it attains the maximum value (<xref ref-type="fig" rid="pone.0179030.g003">Fig 3b</xref>, lower panel). Similarly, the inflection point in the pressure signal is detected where its second derivative attains its minimum value (<xref ref-type="fig" rid="pone.0179030.g003">Fig 3c</xref>).</p>
+<fig id="pone.0179030.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Key steps of the proposed breath detection algorithm.</title>
+<p>Briefly, peaks and valleys of flow (or pressure) are identified (circles and triangular points) (a), smoothing curves are fitted to raw data (b-c, upper panels) and the second derivatives of the fitted curves are calculated (b-c, lower panels). Onsets of inspiration are located at the maximum and minimum points (diamonds) of the second derivate of flow and pressure signal, respectively (b-c, lower panels). Pepi: epiglottic pressure.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.g003" xlink:type="simple"/>
+</fig>
+</sec>
+</sec>
+<sec id="sec007">
+<title>Datasets for validation</title>
+<sec id="sec008">
+<title>Synthetic dataset from a mathematical model</title>
+<p>We created a mathematical model to validate our algorithm against different levels of noise and fluctuation in the flow amplitude and baseline, and across a range of sampling frequencies. The model was comprised of combined sine and cosine waveforms with known inflection points, which were set by a square waveform. Amplitude modulation, random trend and random noise were then added to the model to simulate fluctuations in amplitude of flow, fluctuations in flow baseline and signal noise, respectively (<xref ref-type="fig" rid="pone.0179030.g004">Fig 4</xref> and see Figure A in <xref ref-type="supplementary-material" rid="pone.0179030.s001">S1 File</xref> for further details).</p>
+<fig id="pone.0179030.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Mathematical model of a flow signal that contains inflection points.</title>
+<p>Amplitude modulation, random trend and random noise were added to the model to simulate fluctuations in amplitude, baseline shift and noise, respectively. For further detail on the model refer to the text and Figure A in <xref ref-type="supplementary-material" rid="pone.0179030.s001">S1 File</xref>. Note: the red line shows the random trend simulating fluctuations in baseline shift of the flow signal, which consequently renders traditional volume-drift correction algorithms inaccurate. Noise level is set to 2% in this example.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.g004" xlink:type="simple"/>
+</fig>
+<p>The signal with inflection points was generated according to the following model:
+<disp-formula id="pone.0179030.e001">
+<alternatives>
+<graphic id="pone.0179030.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0179030.e001" xlink:type="simple"/>
+<mml:math display="block" id="M1">
+<mml:mrow><mml:mi>X</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mo> </mml:mo><mml:mi>Y</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo stretchy="false">[</mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mtext>sin</mml:mtext><mml:mo stretchy="false">(</mml:mo><mml:mn>2</mml:mn><mml:mo>π</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mi>t</mml:mi><mml:mo>/</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>s</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mi>φ</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo stretchy="false">]</mml:mo><mml:mo>+</mml:mo><mml:mo> </mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mn>2</mml:mn></mml:msub><mml:mtext>cos</mml:mtext><mml:mo stretchy="false">(</mml:mo><mml:mn>2</mml:mn><mml:mo>π</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mi>t</mml:mi><mml:mo>/</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>s</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mi>φ</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(1)</label>
+</disp-formula>
+where <italic>A</italic><sub>1</sub> = 0.25, <italic>A</italic><sub>2</sub> = 0.1, <italic>f</italic><sub>1</sub> is breathing frequency, <italic>f</italic><sub><italic>s</italic></sub> is sampling frequency, <italic>Y</italic>(<italic>t</italic>) is a square wave function with duty cycle = 50% and <italic>φ</italic> is an initial phase of the signal (rad), <italic>φ</italic> ∈ [0,2<italic>π</italic>].</p>
+<p>Then random noise, amplitude modulation and random trend were added to the model:
+<disp-formula id="pone.0179030.e002">
+<alternatives>
+<graphic id="pone.0179030.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0179030.e002" xlink:type="simple"/>
+<mml:math display="block" id="M2">
+<mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>n</mml:mi><mml:mi>o</mml:mi><mml:mi>i</mml:mi><mml:mi>s</mml:mi><mml:mi>y</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mi>X</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:msub><mml:mi>ξ</mml:mi><mml:mi>n</mml:mi></mml:msub></mml:mrow><mml:mo>]</mml:mo></mml:mrow><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mi>m</mml:mi></mml:msub><mml:mtext>sin</mml:mtext><mml:mo stretchy="false">(</mml:mo><mml:mn>2</mml:mn><mml:mo>π</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>m</mml:mi></mml:msub><mml:mi>t</mml:mi><mml:mo>/</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>s</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mi>φ</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mo>]</mml:mo><mml:mrow><mml:mtext> </mml:mtext><mml:mo>+</mml:mo><mml:msub><mml:mi>ξ</mml:mi><mml:mrow><mml:mi>t</mml:mi><mml:mi>r</mml:mi><mml:mi>e</mml:mi><mml:mi>n</mml:mi><mml:mi>d</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>]</mml:mo></mml:mrow></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(2)</label>
+</disp-formula>
+where <italic>ξ</italic><sub><italic>n</italic></sub> is Gaussian white noise with zero mean and standard deviation = noise level x square root of amplitude of X(t); <italic>A</italic><sub><italic>m</italic></sub> and <italic>f</italic><sub><italic>m</italic></sub> are amplitude and frequency of the amplitude modulating signal (<italic>A</italic><sub><italic>m</italic></sub> = 0.5,<italic>f</italic><sub><italic>m</italic></sub> = 0.005); <italic>ξ</italic><sub><italic>trend</italic></sub> is fractal Gaussian noise with zero mean, standard deviation = 0.1 and Hurst exponent = 0.9, generated using Davies and Harte’s algorithm [<xref ref-type="bibr" rid="pone.0179030.ref023">23</xref>]. The amplitude and frequency modulation were used to simulate fluctuations in the amplitude and frequency of the flow signals. Whereas, the fractal Gaussian noise with Hurst exponent = 0.9 was used to simulate the breath-by-breath fluctuation in flow baseline.</p>
+<p>This model was used to generate a synthetic dataset as follows: 1) with each breathing frequency (from 8 to 17 breath/min), a segment of 100 breaths was generated, and the signal of a total of 1000 breaths was formed by concatenating these segments to cover a spectrum of the normal breathing frequency, 2) the process was repeated with each combination of sampling frequency {fs = [50, 100, 250, 500 and 1000] Hz} and noise level {noiselevel = [0, 2, 5, 7 and 10] (%)}, to generate a dataset of 1000 breath signals with different breath frequency, sampling frequency and noise levels (<xref ref-type="fig" rid="pone.0179030.g004">Fig 4</xref>).</p>
+</sec>
+<sec id="sec009">
+<title>Clinical dataset</title>
+<p>A dataset derived from 6 obstructive sleep apnea (OSA) patients and 4 healthy controls was used to validate the breath detection algorithm. Participants were fitted with a CPAP mask (Gel Mask; Philips Respironics, Murrysville, PA) attached to a pneumotachograph (model 3700A; Hans Rudolf Inc., Kansas City, MO) and differential pressure transducers (Validyne Corporation, Northbridge, CA) to measure airflow and mask pressure. An epiglottic pressure (Pepi) catheter (model MCP-500; Millar, Houston, TX) was placed 1 to 2 cm below the base of tongue. The epiglottic pressure sensor was taped to the nostril and passed through a port in the CPAP mask. Flow was sampled at 250 Hz, and mask and epiglottic pressures were sampled at 1000 Hz.</p>
+<p>Participants were studied under several conditions, including: awake quiet breathing, during stable non-rapid eye movement (NREM) sleep on therapeutic continuous positive airway pressure (CPAP), and during transient reductions in CPAP to cause varying levels of airflow limitation. Periods of wakefulness and NREM sleep were confirmed by electroencephalography (EEG). EEG, electrooculograms, and surface submentalis electromyograms were used for sleep staging and scoring arousals according to standard criteria by an experienced sleep technician. The study was approved by the University of New South Wales Human Research Ethics Committee and all participants provided informed written consent to participate in the protocol. In each participant, 2 minutes of wakefulness data, 1 minute of sleep data on therapeutic CPAP (or 4–5cmH<sub>2</sub>O in the healthy controls) immediately preceding each CPAP reduction and data from 4 transient CPAP reductions also during NREM sleep, were extracted for manual breath detection analysis. Two of the CPAP reductions were selected at random to yield mild-moderate airflow limitation where peak inspiratory flow (PIF) for all of the breaths were greater than 0.2 (L/s) during the reduction in CPAP. The remaining two CPAP reductions were randomly selected to yield low flow, where there were one or more breaths with PIF ≤ 0.2 (L/s) lasting greater than 10 sec. Manual breath detection was performed by placing cursors at the onset of inspiration and expiration by an experienced investigator blinded to the algorithm results using SPIKE2 software (Cambridge Electronic Design, UK).</p>
+</sec>
+</sec>
+<sec id="sec010">
+<title>Comparison process and statistical analyses</title>
+<p>We have implemented our novel algorithm in a custom signal-processing module, developed in MATLAB (version 8, The MathWorks, Natick, MA, USA). We applied our software to detect inspiratory and expiratory onsets and compared the results against the true values (set by square waves) in the synthetic dataset and the expert’s visual detection in the clinical dataset. Within the clinical dataset, flow signals were used for breath detection during wakefulness, therapeutic CPAP and mild-moderate airflow limitation conditions. Conversely, epiglottic pressure signals were used for breath detection during low flow conditions. Key respiratory parameters such as inspiratory time (Ti), expiratory time (Te), total breath timing (Ttot), peak inspiratory flow (PIF), tidal volume (Vt) and minute ventilation (Vi) were then calculated from the breath timing data. The algorithm data for each of these parameters was then compared for the synthetic and clinical datasets.</p>
+<p>Bias and variability of these differences are reported. Bland-Altman tests and linear regression were undertaken in MATLAB to assess the performance of the algorithm.</p>
+</sec>
+</sec>
+<sec id="sec011" sec-type="results">
+<title>Results</title>
+<sec id="sec012">
+<title>Synthetic dataset</title>
+<sec id="sec013">
+<title>Effect of sampling frequency and noise on the algorithm</title>
+<p><xref ref-type="fig" rid="pone.0179030.g005">Fig 5</xref> shows the effect of sampling frequency and noise on bias and variability of the algorithm. Both bias and variability increased with increased noise, while increased sampling frequency reduced both bias and variability. Given the noise level in a typical flow signal is less than 5% (refer to Figure B in <xref ref-type="supplementary-material" rid="pone.0179030.s001">S1 File</xref>) and sampling frequency is greater or equal to 250 Hz (from our laboratory), the bias and variability are less than 0.1 (s). <xref ref-type="fig" rid="pone.0179030.g006">Fig 6</xref> shows the bias and variability of Ti and Te from a synthetic signal of 1000 breaths generated by a mathematical model with sampling frequency = 250 Hz and noise level = 2%.</p>
+<fig id="pone.0179030.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Effect of sampling frequency and random noise on the accuracy of the proposed algorithm to detect inspiratory (a-b) and expiratory onsets (c-d).</title>
+<p>Noise level of less than 5% in the flow signal is typical to that seen in most experimental settings.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.g005" xlink:type="simple"/>
+</fig>
+<fig id="pone.0179030.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>Bias and variability of inspiratory time (Ti) (a-b) and expiratory time (Te) (c-d) when applying the proposed algorithm on synthetic data of 1000 breaths generated by a mathematical model with a sampling frequency fs = 250 Hz and noise level = 2%.</title>
+<p>True Ti and Te are the reference inspiratory and respiratory times from the noise-free flow signal generated by our mathematical model. Calculated Ti and Te are the calculated inspiratory and respiratory times from the noisy signal (after different types of noise were added to disturb the baseline), generated by our model.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.g006" xlink:type="simple"/>
+</fig>
+</sec>
+</sec>
+<sec id="sec014">
+<title>Bias and variability of fundamental respiratory parameters</title>
+<p>In <xref ref-type="fig" rid="pone.0179030.g007">Fig 7</xref> and <xref ref-type="table" rid="pone.0179030.t001">Table 1</xref>, we report the results of the model with a sampling frequency = 250Hz and noise level = 2% as these parameters reflect typical respiratory signals from our laboratory. <xref ref-type="fig" rid="pone.0179030.g007">Fig 7</xref> shows bias and variability of PIF and Vi. <xref ref-type="table" rid="pone.0179030.t001">Table 1</xref> shows errors of key respiratory parameters. R<sup>2</sup> values between the calculated and true respiratory parameters are all &gt; 0.97.</p>
+<fig id="pone.0179030.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>Bias and variability of peak inspiratory flow (PIF) (a-b) and minute ventilation (Vi) (c-d) when applying the proposed algorithm on synthetic data of 1000 breaths generated by a mathematical model with sampling frequency fs = 250 Hz and noise level = 2%.</title>
+<p>True PIF and Vi are the reference PIF and Vi calculated from the noise-free flow signal, generated by our mathematical model. Calculated PIF and Vi are the calculated PIF and Vi from the noisy signal (after different types of noise were added to disturb the baseline), generated by our model.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.g007" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0179030.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.t001</object-id>
+<label>Table 1</label> <caption><title>Errors of calculated respiratory parameters calculated from synthetic data of 1000 breaths generated by a mathematical model with sampling frequency = 250 Hz and noise level = 2%.</title></caption>
+<alternatives>
+<graphic id="pone.0179030.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.t001" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"/>
+<th align="center">Absolute Error</th>
+<th align="center">Relative Error (%)</th>
+<th align="center">R<sup>2</sup></th>
+<th align="center">SSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><bold>Ti</bold> (s)</td>
+<td align="center">-0.036 ± 0.069</td>
+<td align="center">-1.544 ± 2.572</td>
+<td align="char" char=".">0.988</td>
+<td align="char" char=".">0.068</td>
+</tr>
+<tr>
+<td align="left"><bold>Te</bold> (s)</td>
+<td align="center">0.036 ± 0.066</td>
+<td align="center">1.555 ± 2.451</td>
+<td align="char" char=".">0.989</td>
+<td align="char" char=".">0.066</td>
+</tr>
+<tr>
+<td align="left"><bold>Ttot</bold> (s)</td>
+<td align="center">0.0001 ± 0.042</td>
+<td align="center">0.006 ± 0.851</td>
+<td align="char" char=".">0.999</td>
+<td align="char" char=".">0.042</td>
+</tr>
+<tr>
+<td align="left"><bold>PIF</bold> (L/s)</td>
+<td align="center">0.003 ± 0.020</td>
+<td align="center">0.556 ± 3.056</td>
+<td align="char" char=".">0.992</td>
+<td align="char" char=".">0.020</td>
+</tr>
+<tr>
+<td align="left"><bold>Vt</bold> (L)</td>
+<td align="center">0.009 ± 0.053</td>
+<td align="center">1.211 ± 5.686</td>
+<td align="char" char=".">0.982</td>
+<td align="char" char=".">0.052</td>
+</tr>
+<tr>
+<td align="left"><bold>Vi</bold> (L/min)</td>
+<td align="center">0.097 ± 0.602</td>
+<td align="center">1.206 ± 5.620</td>
+<td align="char" char=".">0.974</td>
+<td align="char" char=".">0.599</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t001fn001"><p>Ti: inspiratory time; Te: expiratory time; Ttot: total duration of a breath; PIF: peak inspiratory flow; Vt: tidal volume; Vi: minute ventilation; SSE: sum of squared errors. R<sup>2</sup> and SSE were calculated from linear regression analysis. Data are presented as mean ± SD.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec015">
+<title>Clinical dataset</title>
+<sec id="sec016">
+<title>Participant characteristics for the clinical dataset</title>
+<p>Data were extracted from 6 people with OSA and 4 healthy controls of similar age and BMI range (<xref ref-type="table" rid="pone.0179030.t002">Table 2</xref>). In total, 20 minutes of data during wakefulness, 40 minute of sleep data on therapeutic CPAP (or 4 – 5cmH<sub>2</sub>O in the healthy controls) immediately preceding each CPAP reduction and 40 minutes of data during transient CPAP reductions during NREM sleep were extracted for analysis.</p>
+<table-wrap id="pone.0179030.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.t002</object-id>
+<label>Table 2</label> <caption><title>Participant characteristics.</title></caption>
+<alternatives>
+<graphic id="pone.0179030.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.t002" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center"/>
+<th align="center">Controls</th>
+<th align="center">OSA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><bold># Subjects</bold></td>
+<td align="center">4</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="left"><bold>Age</bold> (years)</td>
+<td align="center">37 ± 19</td>
+<td align="center">46 ± 15</td>
+</tr>
+<tr>
+<td align="left"><bold>Sex</bold></td>
+<td align="center">2M / 2F</td>
+<td align="center">6M / 0F</td>
+</tr>
+<tr>
+<td align="left"><bold>BMI</bold> (kg/m<sup>2</sup>)</td>
+<td align="center">25 ± 3</td>
+<td align="center">27 ± 5</td>
+</tr>
+<tr>
+<td align="left"><bold>AHI</bold> (# events/h sleep)</td>
+<td align="center">1 ± 2</td>
+<td align="center">35 ± 14</td>
+</tr>
+<tr>
+<td align="left"><bold># Analyzed breaths during wakefulness</bold></td>
+<td align="center">152</td>
+<td align="center">181</td>
+</tr>
+<tr>
+<td align="left"><bold># Analyzed breaths during sleep</bold></td>
+<td align="center">464</td>
+<td align="center">632</td>
+</tr>
+<tr>
+<td align="left"><bold>Pmask</bold> (cmH<sub>2</sub>O)</td>
+<td align="left"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left"> <bold>Pre- CPAP reduction</bold></td>
+<td align="center">5.6 ± 1.0</td>
+<td align="center">9.0 ± 3.7</td>
+</tr>
+<tr>
+<td align="left"> <bold>During CPAP reduction</bold></td>
+<td align="center">-2.2 ± 2.8</td>
+<td align="center">2.8 ± 2.4</td>
+</tr>
+<tr>
+<td align="left"> <bold>Difference</bold></td>
+<td align="center">7.7 ± 3.2</td>
+<td align="center">6.2 ± 2.6</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t002fn001"><p>BMI: Body mass index; AHI: apnea hypopnea index; Pmask: mask pressure; CPAP: continuous positive airway pressure; Data are presented as mean ± SD.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+</sec>
+<sec id="sec017">
+<title>Performance of the algorithm in the clinical dataset</title>
+<sec id="sec018">
+<title>Using the flow signal</title>
+<p><xref ref-type="table" rid="pone.0179030.t003">Table 3</xref> shows the performance of the proposed algorithm in detecting inspiratory and expiratory onsets from the clinical dataset. Using the flow signal, the inspiratory/expiratory onsets have bias ≤ 0.023 (s) and variability ≤ 0.089 (s), and only 2.4% (8 breaths) of the total number of analyzed breaths (N = 333) were missed during wakefulness. Similarly, the algorithm could detect the inspiratory/expiratory onsets with bias ≤ 0.01 (s) and variability ≤ 0.08 (s) and missed 5% (28 breaths) of the total number of analyzed breaths (N = 562) during sleep.</p>
+<table-wrap id="pone.0179030.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.t003</object-id>
+<label>Table 3</label> <caption><title>Performance of the proposed algorithm (compared to visual expert analysis) in detecting inspiratory and expiratory onsets from flow signal and epiglottic pressure signal (Pepi).</title></caption>
+<alternatives>
+<graphic id="pone.0179030.t003g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.t003" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="2"/>
+<th align="center" colspan="2">Flow signal</th>
+<th align="center" colspan="2">Pepi signal</th>
+</tr>
+<tr>
+<th align="center">Wakefulness</th>
+<th align="center">Sleep</th>
+<th align="center">Wakefulness</th>
+<th align="center">Sleep</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><bold>Number of breaths analyzed</bold></td>
+<td align="center">333</td>
+<td align="center">562</td>
+<td align="center">N/A</td>
+<td align="center">534</td>
+</tr>
+<tr>
+<td align="left"><bold>Missed breaths</bold> (%)</td>
+<td align="center">2.4</td>
+<td align="center">4.9</td>
+<td align="center">N/A</td>
+<td align="center">11.6</td>
+</tr>
+<tr>
+<td align="left"><bold>Difference in inspiratory onsets</bold> (mean ± SD) (s)</td>
+<td align="center">0.023 ± 0.089</td>
+<td align="center">-0.010 ± 0.074</td>
+<td align="center">N/A</td>
+<td align="center">-0.031 ± 0.156</td>
+</tr>
+<tr>
+<td align="left"><bold>Difference in expiratory onsets</bold> (mean ± SD) (s)</td>
+<td align="center">-0.006 ± 0.056</td>
+<td align="center">-0.003 ± 0.028</td>
+<td align="center">N/A</td>
+<td align="center">-0.009 ± 0.147</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t003fn001"><p>Difference in inspiratory onset = calculated inspiratory onset—expert detected inspiratory onset</p></fn>
+<fn id="t003fn002"><p>Difference in expiratory onset = calculated expiratory onset—expert detected expiratory onset</p></fn>
+<fn id="t003fn003"><p>Data are presented as mean ± SD.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p><xref ref-type="table" rid="pone.0179030.t004">Table 4</xref> shows the errors for each calculated respiratory parameter from the clinical dataset compared to expert detected values. Using the flow signal, the calculated breath timing (Ti, Te and Ttot) had a small absolute error with bias ≤ 0.029 (s) and variability ≤ 0.126 (s). R<sup>2</sup> values between the calculated and true breath timing parameters were all &gt; 0.92. <xref ref-type="fig" rid="pone.0179030.g008">Fig 8</xref> shows the Bland Altman plot of the calculated breath timing versus true breath timing using the flow signal during wakefulness.</p>
+<table-wrap id="pone.0179030.t004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.t004</object-id>
+<label>Table 4</label> <caption><title>Errors of calculated respiratory parameters calculated from flow signal of the clinical datasets during wakefulness.</title></caption>
+<alternatives>
+<graphic id="pone.0179030.t004g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.t004" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"/>
+<th align="center">Absolute Error</th>
+<th align="center">Relative Error (%)</th>
+<th align="center">R<sup>2</sup></th>
+<th align="center">SSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><bold>Flow signal</bold> (N = 333 breaths)</td>
+<td align="center"/>
+<td align="center"/>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left"><bold>Ti</bold> (s)</td>
+<td align="center">-0.029 ± 0.126</td>
+<td align="center">-1.141 ± 9.176</td>
+<td align="char" char=".">0.922</td>
+<td align="char" char=".">0.117</td>
+</tr>
+<tr>
+<td align="left"><bold>Te</bold> (s)</td>
+<td align="center">0.029 ± 0.113</td>
+<td align="center">2.043 ± 10.136</td>
+<td align="char" char=".">0.955</td>
+<td align="char" char=".">0.113</td>
+</tr>
+<tr>
+<td align="left"><bold>Ttot</bold> (s)</td>
+<td align="center">0.0001 ± 0.108</td>
+<td align="center">0.127 ± 4.192</td>
+<td align="char" char=".">0.984</td>
+<td align="char" char=".">0.107</td>
+</tr>
+<tr>
+<td align="left"><bold>PIF</bold> (L/s)</td>
+<td align="center">-0.009 ± 0.089</td>
+<td align="center">0.121 ± 13.819</td>
+<td align="char" char=".">0.914</td>
+<td align="char" char=".">0.084</td>
+</tr>
+<tr>
+<td align="left"><bold>Vt</bold> (L)</td>
+<td align="center">-0.026 ± 0.149</td>
+<td align="center">0.853 ± 22.083</td>
+<td align="char" char=".">0.922</td>
+<td align="char" char=".">0.129</td>
+</tr>
+<tr>
+<td align="left"><bold>Vi</bold> (L/min)</td>
+<td align="center">-0.340 ± 2.535</td>
+<td align="center">0.073 ± 19.615</td>
+<td align="char" char=".">0.858</td>
+<td align="char" char=".">2.336</td>
+</tr>
+<tr>
+<td align="left"><bold>Nadir Pepi</bold> (cmH<sub>2</sub>O)</td>
+<td align="center">0.043 ± 0.682</td>
+<td align="center">1.797 ± 19.269</td>
+<td align="char" char=".">0.938</td>
+<td align="char" char=".">0.640</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t004fn001"><p>Ti: inspiratory time; Te: expiratory time; Ttot: total duration of a breath; PIF: peak inspiratory flow; Vt: tidal volume; Vi: minute ventilation; SSE: sum of squared errors. R<sup>2</sup> and SSE were calculated from linear regression analysis. Data are presented as mean ± SD.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<fig id="pone.0179030.g008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.g008</object-id>
+<label>Fig 8</label>
+<caption>
+<title>Bias and variability of inspiratory time (Ti) (a-b) and expiratory time (Te) (c-d) when applying the proposed algorithm on flow signals of clinical datasets during transient reductions in continuous positive airway pressure during wakefulness.</title>
+<p>True values were visually scored by an expert investigator blinded to the algorithm data.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.g008" xlink:type="simple"/>
+</fig>
+<p><xref ref-type="table" rid="pone.0179030.t005">Table 5</xref> shows the errors for each calculated respiratory parameter from the clinical dataset compared to expert detected values during sleep. The absolute error was small with bias ≤ 0.01 (s) and variability ≤ 0.11 (s) when using the flow signal to calculate breath timing (Ti, Te and Ttot). R<sup>2</sup> values between the calculated and true breath timing parameters were all &gt;0.9. <xref ref-type="fig" rid="pone.0179030.g009">Fig 9</xref> shows the Bland Altman plot of the calculated breath timing versus true breath timing using the flow signal during sleep.</p>
+<table-wrap id="pone.0179030.t005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.t005</object-id>
+<label>Table 5</label> <caption><title>Errors of calculated respiratory parameters calculated from flow and epiglottic pressure signal of clinical datasets during sleep on CPAP.</title></caption>
+<alternatives>
+<graphic id="pone.0179030.t005g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.t005" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"/>
+<th align="center">Absolute Error</th>
+<th align="center">Relative Error (%)</th>
+<th align="center">R<sup>2</sup></th>
+<th align="center">SSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><bold>Flow signal</bold> (N = 562 breaths)</td>
+<td align="center"/>
+<td align="center"/>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left"><bold>Ti</bold> (s)</td>
+<td align="center">-0.007 ± 0.088</td>
+<td align="center">-0.465 ± 4.748</td>
+<td align="char" char=".">0.919</td>
+<td align="char" char=".">0.088</td>
+</tr>
+<tr>
+<td align="left"><bold>Te</bold> (s)</td>
+<td align="center">-0.006 ± 0.088</td>
+<td align="center">-0.363 ± 3.909</td>
+<td align="char" char=".">0.974</td>
+<td align="char" char=".">0.088</td>
+</tr>
+<tr>
+<td align="left"><bold>Ttot</bold> (s)</td>
+<td align="center">0.0001 ± 0.101</td>
+<td align="center">0.014 ± 2.361</td>
+<td align="char" char=".">0.977</td>
+<td align="char" char=".">0.101</td>
+</tr>
+<tr>
+<td align="left"><bold>PIF</bold> (L/s)</td>
+<td align="center">0.009 ± 0.052</td>
+<td align="center">2.283 ± 10.371</td>
+<td align="char" char=".">0.939</td>
+<td align="char" char=".">0.052</td>
+</tr>
+<tr>
+<td align="left"><bold>Vt</bold> (L)</td>
+<td align="center">0.015 ± 0.085</td>
+<td align="center">3.523 ± 13.455</td>
+<td align="char" char=".">0.874</td>
+<td align="char" char=".">0.084</td>
+</tr>
+<tr>
+<td align="left"><bold>Vi</bold> (L/min)</td>
+<td align="center">0.212 ± 1.387</td>
+<td align="center">3.069 ± 13.903</td>
+<td align="char" char=".">0.882</td>
+<td align="char" char=".">1.370</td>
+</tr>
+<tr>
+<td align="left"><bold>Nadir Pepi</bold> (cmH<sub>2</sub>O)</td>
+<td align="center">-0.089 ± 0.477</td>
+<td align="center">4.818 ± 20.078</td>
+<td align="char" char=".">0.984</td>
+<td align="char" char=".">0.478</td>
+</tr>
+<tr>
+<td align="left"><bold>Pepi signal (N = 534 breaths)</bold></td>
+<td align="center"/>
+<td align="center"/>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left"><bold>Ti</bold> (s)</td>
+<td align="center">0.022 ± 0.211</td>
+<td align="center">1.629 ± 11.676</td>
+<td align="char" char=".">0.797</td>
+<td align="char" char=".">0.207</td>
+</tr>
+<tr>
+<td align="left"><bold>Te</bold> (s)</td>
+<td align="center">-0.016 ± 0.222</td>
+<td align="center">-0.267 ± 11.291</td>
+<td align="char" char=".">0.883</td>
+<td align="char" char=".">0.220</td>
+</tr>
+<tr>
+<td align="left"><bold>Ttot</bold> (s)</td>
+<td align="center">0.007 ± 0.212</td>
+<td align="center">0.237 ± 5.128</td>
+<td align="char" char=".">0.899</td>
+<td align="char" char=".">0.212</td>
+</tr>
+<tr>
+<td align="left"><bold>PIF</bold> (L/s)</td>
+<td align="center">0.007 ± 0.111</td>
+<td align="center">3.265 ± 29.651</td>
+<td align="char" char=".">0.889</td>
+<td align="char" char=".">0.111</td>
+</tr>
+<tr>
+<td align="left"><bold>Vt</bold> (L)</td>
+<td align="center">0.004 ± 0.186</td>
+<td align="center">3.333 ± 34.145</td>
+<td align="char" char=".">0.663</td>
+<td align="char" char=".">0.181</td>
+</tr>
+<tr>
+<td align="left"><bold>Vi</bold> (L/min)</td>
+<td align="center">0.041 ± 2.710</td>
+<td align="center">3.687 ± 52.788</td>
+<td align="char" char=".">0.774</td>
+<td align="char" char=".">2.701</td>
+</tr>
+<tr>
+<td align="left"><bold>Nadir Pepi</bold> (cmH<sub>2</sub>O)</td>
+<td align="center">-0.253 ± 0.969</td>
+<td align="center">9.375 ± 18.245</td>
+<td align="char" char=".">0.974</td>
+<td align="char" char=".">0.965</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t005fn001"><p>Ti: inspiratory time; Te: expiratory time; Ttot: total duration of a breath; PIF: peak inspiratory flow; Vt: tidal volume; Vi: minute ventilation; Nadir Pepi: Nadir epiglottic pressure. SSE: sum of squared errors. R<sup>2</sup> and SSE were calculated from linear regression analysis. Data are presented as mean ± SD.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<fig id="pone.0179030.g009" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.g009</object-id>
+<label>Fig 9</label>
+<caption>
+<title>Bias and variability of inspiratory time (Ti) (a-b) and expiratory time (Te) (c-d) when applying the proposed algorithm on the flow signals of clinical datasets during transient reductions in continuous positive airway pressure during sleep.</title>
+<p>True values were visually scored by an expert blinded to the algorithm data.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.g009" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec019">
+<title>Using epiglottic pressure signal (Pepi)</title>
+<p><xref ref-type="table" rid="pone.0179030.t003">Table 3</xref> shows the performance of the proposed algorithm in detecting inspiratory and expiratory onsets using the Pepi signal from the clinical dataset during sleep. Specifically, the algorithm detected the inspiratory/expiratory onsets with bias ≤ 0.031 (s) and variability &lt; 0.16 (s), and missed 11.6% (62 breaths) of the total number of breaths detected manually (N = 534).</p>
+<p><xref ref-type="table" rid="pone.0179030.t005">Table 5</xref> shows the errors of all of the calculated respiratory parameters from the clinical dataset compared to expert detected values during sleep. Using the Pepi signal, the calculated breath timing (Ti, Te and Ttot) had an absolute error with bias ≤ 0.033 (s) and variability ≤ 0.2 (s). R<sup>2</sup> values between the calculated and true breath timing are all &gt; 0.79. <xref ref-type="fig" rid="pone.0179030.g010">Fig 10</xref> shows the Bland Altman plot of the calculated breath timing versus true breath timing using the Pepi signal during sleep.</p>
+<fig id="pone.0179030.g010" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179030.g010</object-id>
+<label>Fig 10</label>
+<caption>
+<title>Bias and variability of inspiratory time (Ti) (a-b) and expiratory time (Te) (c-d) when applying the proposed algorithm on the epiglottic pressure signals of clinical datasets during transient reductions in continuous positive airway pressure during sleep.</title>
+<p>True values were visually scored by an expert investigator blinded to the algorithm data.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.g010" xlink:type="simple"/>
+</fig>
+</sec>
+</sec>
+</sec>
+<sec id="sec020" sec-type="conclusions">
+<title>Discussion</title>
+<p>In this paper, we present a novel signal processing method for breath detection during variable mask pressures in awake and sleeping humans. One of the major advantages of our algorithm is that it can be applied on both flow and pressure signals, enabling automated breath detection when one of the signals are not available due to technical artifacts and/or physiological events such as obstructive apneas. This feature of the algorithm has important implications, including facilitation of sleep apnea phenotyping approaches that require accurate breath detection in large data sets, as well as multiple other research applications in which time-consuming, labor-intensive, manual breath detection processes have traditionally been required. We have also validated the algorithm under a variety of conditions to examine the effect of different types of noise, sampling frequencies and variable mask pressures on its performance.</p>
+<p>When applied to the flow signal, our algorithm is very accurate in detecting the onsets of inspiration and expiration during both wakefulness and sleep and during variable mask pressures. The results from our mathematical model indicate that higher sampling frequencies of the flow signal improve the noise tolerance of the algorithm. The findings suggest that sampling frequencies of equal to or greater than 250Hz are desirable for most research settings in order to achieve accurate breath detection. In the clinical dataset, the algorithm correctly identified approximately 98% of the analyzed breaths and detected inspiratory and expiratory onsets with minimal difference (≤23 ms) compared to expert visual detection during both wakefulness and during sleep with variable mask pressures. This is comparable to the results of the most accurate previously published algorithm which detected a mean difference in the onset of inspiration of 34 ± 71 ms and 5 ± 46 ms for expiration with 98% of the breaths being correctly identified [<xref ref-type="bibr" rid="pone.0179030.ref009">9</xref>]. However, our dataset contained much larger levels of baseline drift introduced by variable mask pressures compared to previous work. Furthermore, the proposed algorithm is simple to implement and operate, and does not require training datasets (with expert scored data) compared to the previous one [<xref ref-type="bibr" rid="pone.0179030.ref009">9</xref>]. Unlike traditional breath detection algorithms [<xref ref-type="bibr" rid="pone.0179030.ref007">7</xref>–<xref ref-type="bibr" rid="pone.0179030.ref009">9</xref>] that define the onsets of inspiration/expiration as the points where the flow signal crosses zero, our algorithm defines the “true” onset of inspiration as the points at which inspiratory effort commences as reflected by a sharp change in the shape of the flow signal—an inflection point. This, therefore, can overcome the problematic volume drift correction during conditions where mask pressure is variable or breathing is unstable [<xref ref-type="bibr" rid="pone.0179030.ref008">8</xref>].</p>
+<p>Detecting breaths from the epiglottic pressure signal is more challenging compared to flow due to higher level of noise and nonlinear variation of the baseline. This is the first study that we are aware of that has attempted to automatically detect breaths using an epiglottic pressure signal which has traditionally been reserved for time-consuming manual approaches. Our algorithm correctly identified 89% of breaths and detected inspiratory and expiratory onsets with a mean difference ≤ 31 ms with variable mask pressures during sleep. Although accuracy was reduced when using pressure compared to flow, the performance of our algorithm on the pressure signal is still indistinguishable to a previously reported study on inter-expert variability, whereby five experts scored breaths using flow signals with 95% confidence intervals of 220.5 ms and 100.6 ms for inspiration and expiration, respectively [<xref ref-type="bibr" rid="pone.0179030.ref009">9</xref>].</p>
+<p>Some limitations need to be noted. Firstly, the use of the inflection point will be problematic under certain conditions. For example in severe chronic obstructive pulmonary disease (COPD) the flow and pressure inflection points will not be aligned in time due to the presence of inspiratory PEEP (positive end expiratory pressure). However, this is also an issue for other breath detection approaches such as zero crossing. Secondly, the algorithm relies on recognition of the inflection points to detect breaths. Hence, high signal-to-noise ratio is required for the algorithm to operate correctly. Most of the breaths that failed to be detected in this study were due to signal quality where it is difficult to detect inflection points in the signal, even with a careful manual approach. Therefore, it should be noted that the proposed algorithm still requires expert oversight for correction of occasional errors in breath detection where signal quality is poor. Nonetheless, this is only a fraction of the time that would be required to complete the entire task manually and arguably may be more accurate by avoiding potential human error for the majority of the analysis tasks. The number of breaths used for validation was also relatively small (~1000). Finally, this study has scored data from only one expert and there can be inter-expert bias with manual scoring. This potential bias is another reason for our desire to develop an automated approach. While including an extra scorer would provide a measure of the degree of inter-expert bias, this was not the goal of the current study. Rather, we believe that our dual approach of assessing the performance of the algorithm both with the model simulation and an experienced scorer (current gold standard accepted in the published literature) is appropriate.</p>
+<p>In terms of future directions, it will be important to assess the performance of the algorithm in different datasets. There is also potential to use the algorithm across a range of clinical settings. For example, it could be used to gain an estimate of overnight mean and peak airflow using standard airflow signals acquired during polysomnography similar to recent techniques that have been proposed as simplified approaches to estimate airway collapsibility [<xref ref-type="bibr" rid="pone.0179030.ref024">24</xref>] to facilitate treatment decisions for sleep disordered breathing.</p>
+<p>In conclusion, we have developed and validated a new breath detection algorithm based on the inflection points of flow or epiglottic pressure signal. The algorithm has excellent performance and is robust to baseline drifts and noise during variable mask pressures. This algorithm has major implications in terms of reducing the highly time-consuming, labor-intensive burden that has traditionally been required for accurate breath detection for sleep apnea phenotyping techniques and respiratory physiology research.</p>
+</sec>
+<sec id="sec021">
+<title>Supporting information</title>
+<supplementary-material id="pone.0179030.s001" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.s001" xlink:type="simple">
+<label>S1 File</label>
+<caption>
+<title>Synthetic signal from mathematical model.</title>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0179030.s002" mimetype="application/zip" position="float" xlink:href="info:doi/10.1371/journal.pone.0179030.s002" xlink:type="simple">
+<label>S2 File</label>
+<caption>
+<title>Breath detection MATLAB source codes.</title>
+<p>(ZIP)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>C. Nguyen, J. Amatoury and J. Carberry received support from a National Health and Medical Research Council (NHMRC) of Australia NeuroSleep Centre of Research Excellence Fellowship (1060992). D. Eckert has received support from a NHMRC RD Wright Fellowship (1049814). C. Nguyen is grateful for the implementation of fractal trends provided by Dr. Cindy Thamrin.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0179030.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bartsch</surname> <given-names>RP</given-names></name>, <name name-style="western"><surname>Schumann</surname> <given-names>AY</given-names></name>, <name name-style="western"><surname>Kantelhardt</surname> <given-names>JW</given-names></name>, <name name-style="western"><surname>Penzel</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Ivanov</surname> <given-names>PC</given-names></name>. <article-title>Phase transitions in physiologic coupling</article-title>. <source>Proc Natl Acad Sci U S A</source>. <year>2012</year>;<volume>109</volume>(<issue>26</issue>):<fpage>10181</fpage>–<lpage>6</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.1204568109" xlink:type="simple">10.1073/pnas.1204568109</ext-link></comment> <object-id pub-id-type="pmid">22691492</object-id></mixed-citation></ref>
+<ref id="pone.0179030.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schafer</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Rosenblum</surname> <given-names>MG</given-names></name>, <name name-style="western"><surname>Abel</surname> <given-names>HH</given-names></name>, <name name-style="western"><surname>Kurths</surname> <given-names>J</given-names></name>. <article-title>Synchronization in the human cardiorespiratory system</article-title>. <source>Phys Rev E Stat Phys Plasmas Fluids Relat Interdiscip Topics</source>. <year>1999</year>;<volume>60</volume>(<issue>1</issue>):<fpage>857</fpage>–<lpage>70</lpage>. Epub 2002/04/24. <object-id pub-id-type="pmid">11969830</object-id></mixed-citation></ref>
+<ref id="pone.0179030.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nguyen</surname> <given-names>CD</given-names></name>, <name name-style="western"><surname>Dakin</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Yuill</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Crozier</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Wilson</surname> <given-names>S</given-names></name>. <article-title>The effect of sigh on cardiorespiratory synchronization in healthy sleeping infants</article-title>. <source>Sleep</source>. <year>2012</year>;<volume>35</volume>(<issue>12</issue>):<fpage>1643</fpage>–<lpage>50</lpage>. Epub 2012/12/04. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.5665/sleep.2236" xlink:type="simple">10.5665/sleep.2236</ext-link></comment> <object-id pub-id-type="pmid">23204607</object-id>.</mixed-citation></ref>
+<ref id="pone.0179030.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nguyen</surname> <given-names>CD</given-names></name>, <name name-style="western"><surname>Wilson</surname> <given-names>SJ</given-names></name>, <name name-style="western"><surname>Crozier</surname> <given-names>S</given-names></name>. <article-title>Automated quantification of the synchrogram by recurrence plot analysis</article-title>. <source>IEEE Trans Biomed Eng</source>. <year>2012</year>;<volume>59</volume>(<issue>4</issue>):<fpage>946</fpage>–<lpage>55</lpage>. Epub 2011/12/22. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TBME.2011.2179937" xlink:type="simple">10.1109/TBME.2011.2179937</ext-link></comment> <object-id pub-id-type="pmid">22186929</object-id>.</mixed-citation></ref>
+<ref id="pone.0179030.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Eckert</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>Lo</surname> <given-names>YL</given-names></name>, <name name-style="western"><surname>Saboisky</surname> <given-names>JP</given-names></name>, <name name-style="western"><surname>Jordan</surname> <given-names>AS</given-names></name>, <name name-style="western"><surname>White</surname> <given-names>DP</given-names></name>, <name name-style="western"><surname>Malhotra</surname> <given-names>A</given-names></name>. <article-title>Sensorimotor function of the upper-airway muscles and respiratory sensory processing in untreated obstructive sleep apnea</article-title>. <source>J Appl Physiol</source>. <year>2011</year>;<volume>111</volume>(<issue>6</issue>):<fpage>1644</fpage>–<lpage>53</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1152/japplphysiol.00653.2011" xlink:type="simple">10.1152/japplphysiol.00653.2011</ext-link></comment> <object-id pub-id-type="pmid">21885797</object-id></mixed-citation></ref>
+<ref id="pone.0179030.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nguyen</surname> <given-names>CD</given-names></name>, <name name-style="western"><surname>Wellman</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Jordan</surname> <given-names>AS</given-names></name>, <name name-style="western"><surname>Eckert</surname> <given-names>DJ</given-names></name>. <article-title>Mild Airflow Limitation during N2 Sleep Increases K-complex Frequency and Slows Electroencephalographic Activity</article-title>. <source>Sleep</source>. <year>2016</year>;<volume>39</volume>(<issue>3</issue>):<fpage>541</fpage>–<lpage>50</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.5665/sleep.5522" xlink:type="simple">10.5665/sleep.5522</ext-link></comment> <object-id pub-id-type="pmid">26612389</object-id>.</mixed-citation></ref>
+<ref id="pone.0179030.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schmidt</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Foitzik</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Wauer</surname> <given-names>RR</given-names></name>, <name name-style="western"><surname>Winkler</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Schmalisch</surname> <given-names>G</given-names></name>. <article-title>Comparative investigations of algorithms for the detection of breaths in newborns with disturbed respiratory signals</article-title>. <source>Comput Biomed Res</source>. <year>1998</year>;<volume>31</volume>(<issue>6</issue>):<fpage>413</fpage>–<lpage>25</lpage>. <object-id pub-id-type="pmid">9843627</object-id>.</mixed-citation></ref>
+<ref id="pone.0179030.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bates</surname> <given-names>JH</given-names></name>, <name name-style="western"><surname>Schmalisch</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Filbrun</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Stocks</surname> <given-names>J</given-names></name>. <article-title>Tidal breath analysis for infant pulmonary function testing. ERS/ATS Task Force on Standards for Infant Respiratory Function Testing. European Respiratory Society/American Thoracic Society</article-title>. <source>Eur Respir J</source>. <year>2000</year>;<volume>16</volume>(<issue>6</issue>):<fpage>1180</fpage>–<lpage>92</lpage>. <object-id pub-id-type="pmid">11292125</object-id>.</mixed-citation></ref>
+<ref id="pone.0179030.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sa</surname> <given-names>RC</given-names></name>, <name name-style="western"><surname>Verbandt</surname> <given-names>Y</given-names></name>. <article-title>Automated breath detection on long-duration signals using feedforward backpropagation artificial neural networks</article-title>. <source>IEEE Trans Biomed Eng</source>. <year>2002</year>;<volume>49</volume>(<issue>10</issue>):<fpage>1130</fpage>–<lpage>41</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TBME.2002.803514" xlink:type="simple">10.1109/TBME.2002.803514</ext-link></comment> <object-id pub-id-type="pmid">12374337</object-id></mixed-citation></ref>
+<ref id="pone.0179030.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Eckert</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>White</surname> <given-names>DP</given-names></name>, <name name-style="western"><surname>Jordan</surname> <given-names>AS</given-names></name>, <name name-style="western"><surname>Malhotra</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Wellman</surname> <given-names>A</given-names></name>. <article-title>Defining Phenotypic Causes of Obstructive Sleep Apnea Identification of Novel Therapeutic Targets</article-title>. <source>Am J Respir Crit Care Med</source>. <year>2013</year>;<volume>188</volume>(<issue>8</issue>):<fpage>996</fpage>–<lpage>1004</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1164/rccm.201303-0448OC" xlink:type="simple">10.1164/rccm.201303-0448OC</ext-link></comment> <object-id pub-id-type="pmid">23721582</object-id></mixed-citation></ref>
+<ref id="pone.0179030.ref011"><label>11</label><mixed-citation publication-type="other" xlink:type="simple">Eckert DJ. Phenotypic approaches to obstructive sleep apnoea- New pathways for targeted therapy. Sleep medicine reviews. 2016:In press (Accepted 13 Dec).</mixed-citation></ref>
+<ref id="pone.0179030.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wellman</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Eckert</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>Jordan</surname> <given-names>AS</given-names></name>, <name name-style="western"><surname>Edwards</surname> <given-names>BA</given-names></name>, <name name-style="western"><surname>Passaglia</surname> <given-names>CL</given-names></name>, <name name-style="western"><surname>Jackson</surname> <given-names>AC</given-names></name>, <etal>et al</etal>. <article-title>A method for measuring and modeling the physiological traits causing obstructive sleep apnea</article-title>. <source>J Appl Physiol</source>. <year>2011</year>;<volume>110</volume>(<issue>6</issue>):<fpage>1627</fpage>–<lpage>37</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1152/japplphysiol.00972.2010" xlink:type="simple">10.1152/japplphysiol.00972.2010</ext-link></comment> <object-id pub-id-type="pmid">21436459</object-id></mixed-citation></ref>
+<ref id="pone.0179030.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wellman</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Edwards</surname> <given-names>BA</given-names></name>, <name name-style="western"><surname>Sands</surname> <given-names>SA</given-names></name>, <name name-style="western"><surname>Owens</surname> <given-names>RL</given-names></name>, <name name-style="western"><surname>Nemati</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Butler</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>A simplified method for determining phenotypic traits in patients with obstructive sleep apnea</article-title>. <source>J Appl Physiol (1985)</source>. <year>2013</year>;<volume>114</volume>(<issue>7</issue>):<fpage>911</fpage>–<lpage>22</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1152/japplphysiol.00747.2012" xlink:type="simple">10.1152/japplphysiol.00747.2012</ext-link></comment> <object-id pub-id-type="pmid">23349453</object-id>.</mixed-citation></ref>
+<ref id="pone.0179030.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Younes</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ostrowski</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Atkar</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Laprairie</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Siemens</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Hanly</surname> <given-names>P</given-names></name>. <article-title>Mechanisms of breathing instability in patients with obstructive sleep apnea</article-title>. <source>J Appl Physiol</source>. <year>2007</year>;<volume>103</volume>(<issue>6</issue>):<fpage>1929</fpage>–<lpage>41</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1152/japplphysiol.00561.2007" xlink:type="simple">10.1152/japplphysiol.00561.2007</ext-link></comment> <object-id pub-id-type="pmid">17823298</object-id></mixed-citation></ref>
+<ref id="pone.0179030.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Younes</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Loewen</surname> <given-names>AHS</given-names></name>, <name name-style="western"><surname>Ostrowski</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Laprairie</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Maturino</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Hanly</surname> <given-names>PJ</given-names></name>. <article-title>Genioglossus activity available via non-arousal mechanisms vs. that required for opening the airway in obstructive apnea patients</article-title>. <source>J Appl Physiol</source>. <year>2012</year>;<volume>112</volume>(<issue>2</issue>):<fpage>249</fpage>–<lpage>58</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1152/japplphysiol.00312.2011" xlink:type="simple">10.1152/japplphysiol.00312.2011</ext-link></comment> <object-id pub-id-type="pmid">21921245</object-id></mixed-citation></ref>
+<ref id="pone.0179030.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Younes</surname> <given-names>M</given-names></name>. <article-title>Role of arousals in the pathogenesis of obstructive sleep apnea</article-title>. <source>Am J Respir Crit Care Med</source>. <year>2004</year>;<volume>169</volume>(<issue>5</issue>):<fpage>623</fpage>–<lpage>33</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1164/rccm.200307-1023OC" xlink:type="simple">10.1164/rccm.200307-1023OC</ext-link></comment> <object-id pub-id-type="pmid">14684560</object-id>.</mixed-citation></ref>
+<ref id="pone.0179030.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Younes</surname> <given-names>M</given-names></name>. <article-title>Contributions of upper airway mechanics and control mechanisms to severity of obstructive apnea</article-title>. <source>Am J Respir Crit Care Med</source>. <year>2003</year>;<volume>168</volume>(<issue>6</issue>):<fpage>645</fpage>–<lpage>58</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1164/rccm.200302-201OC" xlink:type="simple">10.1164/rccm.200302-201OC</ext-link></comment> <object-id pub-id-type="pmid">12773321</object-id>.</mixed-citation></ref>
+<ref id="pone.0179030.ref018"><label>18</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Eckert</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>Wellman</surname> <given-names>A</given-names></name>. <chapter-title>Physiological phenotypes</chapter-title>. In: <name name-style="western"><surname>Barbé</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Pépin</surname> <given-names>J-L</given-names></name>, editors. <source>European Respiratory Monograph: Obstructive Sleep Apnoea</source>. <publisher-loc>Plymouth, UK</publisher-loc>: <publisher-name>European Respiratory Society</publisher-name>; <year>2015</year>. p. <fpage>9</fpage>–<lpage>23</lpage>.</mixed-citation></ref>
+<ref id="pone.0179030.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Henke</surname> <given-names>KG</given-names></name>. <article-title>Upper airway muscle activity and upper airway resistance in young adults during sleep</article-title>. <source>J Appl Physiol</source>. <year>1998</year>;<volume>84</volume>(<issue>2</issue>):<fpage>486</fpage>–<lpage>91</lpage>. <object-id pub-id-type="pmid">9475857</object-id>.</mixed-citation></ref>
+<ref id="pone.0179030.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Verin</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Tardif</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Marie</surname> <given-names>JP</given-names></name>, <name name-style="western"><surname>Buffet</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Lacoume</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Delapille</surname> <given-names>P</given-names></name>, <etal>et al</etal>. <article-title>Upper airway resistance during progressive hypercapnia and progressive hypoxia in normal awake subjects</article-title>. <source>Respir Physiol</source>. <year>2001</year>;<volume>124</volume>(<issue>1</issue>):<fpage>35</fpage>–<lpage>42</lpage>. <object-id pub-id-type="pmid">11084201</object-id>.</mixed-citation></ref>
+<ref id="pone.0179030.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Eckert</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>White</surname> <given-names>DP</given-names></name>, <name name-style="western"><surname>Jordan</surname> <given-names>AS</given-names></name>, <name name-style="western"><surname>Malhotra</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Wellman</surname> <given-names>A</given-names></name>. <article-title>Defining phenotypic causes of obstructive sleep apnea. Identification of novel therapeutic targets</article-title>. <source>Am J Respir Crit Care Med</source>. <year>2013</year>;<volume>188</volume>(<issue>8</issue>):<fpage>996</fpage>–<lpage>1004</lpage>. Epub 2013/06/01. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1164/rccm.201303-0448OC" xlink:type="simple">10.1164/rccm.201303-0448OC</ext-link></comment> <object-id pub-id-type="pmid">23721582</object-id>.</mixed-citation></ref>
+<ref id="pone.0179030.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Saboisky</surname> <given-names>JP</given-names></name>, <name name-style="western"><surname>Gorman</surname> <given-names>RB</given-names></name>, <name name-style="western"><surname>De Troyer</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Gandevia</surname> <given-names>SC</given-names></name>, <name name-style="western"><surname>Butler</surname> <given-names>JE</given-names></name>. <article-title>Differential activation among five human inspiratory motoneuron pools during tidal breathing</article-title>. <source>J Appl Physiol</source>. <year>2007</year>;<volume>102</volume>(<issue>2</issue>):<fpage>772</fpage>–<lpage>80</lpage>. <object-id pub-id-type="pmid">17053105</object-id>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1152/japplphysiol.00683.2006" xlink:type="simple">10.1152/japplphysiol.00683.2006</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179030.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Davies</surname> <given-names>RB</given-names></name>, <name name-style="western"><surname>Harte</surname> <given-names>DS</given-names></name>. <article-title>Tests for Hurst Effect</article-title>. <source>Biometrika</source>. <year>1987</year>;<volume>74</volume>(<issue>1</issue>):<fpage>95</fpage>–<lpage>101</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/biomet/74.1.95" xlink:type="simple">10.1093/biomet/74.1.95</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179030.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Azarbarzin</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Sands</surname> <given-names>SA</given-names></name>, <name name-style="western"><surname>Taranto-Montemurro</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Oliveira Marques</surname> <given-names>MD</given-names></name>, <name name-style="western"><surname>Genta</surname> <given-names>PR</given-names></name>, <name name-style="western"><surname>Edwards</surname> <given-names>BA</given-names></name>, <etal>et al</etal>. <article-title>Estimation of pharyngeal collapsibility during sleep by peak inspiratory airflow</article-title>. <source>Sleep</source>. <year>2016</year>. <object-id pub-id-type="pmid">27634788</object-id>.</mixed-citation></ref>
+</ref-list>
+</back>
+</article>

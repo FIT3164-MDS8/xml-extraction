@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group>
+<journal-title>PLoS ONE</journal-title></journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-13-03198</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0064656</article-id>
+<article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Computational biology</subject><subj-group><subject>Population modeling</subject></subj-group></subj-group><subj-group><subject>Ecology</subject><subj-group><subject>Behavioral ecology</subject><subject>Population ecology</subject><subject>Spatial and landscape ecology</subject></subj-group></subj-group><subj-group><subject>Population biology</subject><subj-group><subject>Population dynamics</subject><subject>Population ecology</subject><subject>Population modeling</subject></subj-group></subj-group><subj-group><subject>Zoology</subject><subj-group><subject>Animal behavior</subject><subject>Mammalogy</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Computer science</subject><subj-group><subject>Computer modeling</subject></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>SEARCH: Spatially Explicit Animal Response to Composition of Habitat</article-title>
+<alt-title alt-title-type="running-head">SEARCH</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Pauli</surname><given-names>Benjamin P.</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>McCann</surname><given-names>Nicholas P.</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff2"><sup>2</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Zollner</surname><given-names>Patrick A.</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Cummings</surname><given-names>Robert</given-names></name><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Gilbert</surname><given-names>Jonathan H.</given-names></name><xref ref-type="aff" rid="aff4"><sup>4</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Gustafson</surname><given-names>Eric J.</given-names></name><xref ref-type="aff" rid="aff5"><sup>5</sup></xref></contrib>
+</contrib-group>
+<aff id="aff1"><label>1</label><addr-line>Department of Forestry and Natural Resources, Purdue University, West Lafayette, Indiana, United States of America</addr-line></aff>
+<aff id="aff2"><label>2</label><addr-line>Minnesota Zoo, Apple Valley, Minnesota, United States of America</addr-line></aff>
+<aff id="aff3"><label>3</label><addr-line>Rancho Deluxe Consulting, Stevens Point, Wisconsin, United States of America</addr-line></aff>
+<aff id="aff4"><label>4</label><addr-line>Great Lakes Indian Fish and Wildlife Commission, Odanah, Wisconsin, United States of America</addr-line></aff>
+<aff id="aff5"><label>5</label><addr-line>USDA Forest Service, Northern Research Station, Rhinelander, Wisconsin, United States of America</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Convertino</surname><given-names>Matteo</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>University of Florida, United States of America</addr-line></aff>
+<author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">bpauli@purdue.edu</email></corresp>
+<fn fn-type="conflict"><p>The authors have the following interests: Co-author RC is employed by Rancho Deluxe Consulting. There are no patents, products in development or marketed products to declare. This does not alter the authors' adherence to all the PLOS ONE policies on sharing data and materials.</p></fn>
+<fn fn-type="con"><p>Conceived and designed the experiments: BPP NPM PAZ RC. Performed the experiments: BPP. Analyzed the data: BPP PAZ. Contributed reagents/materials/analysis tools: BPP PAZ RC JHG EJG. Wrote the paper: BPP NPM PAZ JHG EJG.</p></fn>
+</author-notes>
+<pub-date pub-type="collection"><year>2013</year></pub-date>
+<pub-date pub-type="epub"><day>22</day><month>5</month><year>2013</year></pub-date>
+<volume>8</volume>
+<issue>5</issue>
+<elocation-id>e64656</elocation-id>
+<history>
+<date date-type="received"><day>15</day><month>1</month><year>2013</year></date>
+<date date-type="accepted"><day>17</day><month>4</month><year>2013</year></date>
+</history>
+<permissions>
+<copyright-year>2013</copyright-year>
+<license xlink:type="simple"><license-p>This is an open-access article, free of all copyright, and may be freely reproduced, distributed, transmitted, modified, built upon, or otherwise used by anyone for any lawful purpose. The work is made available under the Creative Commons CC0 public domain dedication.</license-p></license></permissions>
+<abstract>
+<p>Complex decisions dramatically affect animal dispersal and space use. Dispersing individuals respond to a combination of fine-scale environmental stimuli and internal attributes. Individual-based modeling offers a valuable approach for the investigation of such interactions because it combines the heterogeneity of animal behaviors with spatial detail. Most individual-based models (IBMs), however, vastly oversimplify animal behavior and such behavioral minimalism diminishes the value of these models. We present program SEARCH (Spatially Explicit Animal Response to Composition of Habitat), a spatially explicit, individual-based, population model of animal dispersal through realistic landscapes. SEARCH uses values in Geographic Information System (GIS) maps to apply rules that animals follow during dispersal, thus allowing virtual animals to respond to fine-scale features of the landscape and maintain a detailed memory of areas sensed during movement. SEARCH also incorporates temporally dynamic landscapes so that the environment to which virtual animals respond can change during the course of a simulation. Animals in SEARCH are behaviorally dynamic and able to respond to stimuli based upon their individual experiences. Therefore, SEARCH is able to model behavioral traits of dispersing animals at fine scales and with many dynamic aspects. Such added complexity allows investigation of unique ecological questions. To illustrate SEARCH's capabilities, we simulated case studies using three mammals. We examined the impact of seasonally variable food resources on the weight distribution of dispersing raccoons (<italic>Procyon lotor</italic>), the effect of temporally dynamic mortality pressure in combination with various levels of behavioral responsiveness in eastern chipmunks (<italic>Tamias striatus</italic>), and the impact of behavioral plasticity and home range selection on disperser mortality and weight change in virtual American martens (<italic>Martes americana</italic>). These simulations highlight the relevance of SEARCH for a variety of applications and illustrate benefits it can provide for conservation planning.</p>
+</abstract>
+<funding-group><funding-statement>Funding was provided by Purdue University and a USFS Chief's Award given to Pat Zollner via USFS RJVA 06-JV-11231300-0361. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="14"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>Individual-based (or agent-based) modeling is established as a valuable approach in disciplines such as landscape ecology and conservation biology for cases where individual variation and behavior are important drivers of system behavior <xref ref-type="bibr" rid="pone.0064656-Grimm1">[1]</xref>, <xref ref-type="bibr" rid="pone.0064656-McLane1">[2]</xref>. The conceptual basis for individual-based modeling is that the behavior of higher-level aggregations (i.e. populations, communities, ecosystems) can be simulated through the mechanistic behavior of the individuals that comprise that system <xref ref-type="bibr" rid="pone.0064656-omnicki1">[3]</xref>. In such systems the population-level attributes of simulated species emerge from the behavior and interaction of individuals that act according to detailed mechanistic rules <xref ref-type="bibr" rid="pone.0064656-Grimm1">[1]</xref>, <xref ref-type="bibr" rid="pone.0064656-Railsback1">[4]</xref>. This bottom-up approach offers the opportunity for the marriage of traditional behavioral ecology (which focuses on the small-scale behavior and individual variation) and population and community ecology (which focus on large-scale dynamics of higher-order groups) through the field of behavioral landscape ecology <xref ref-type="bibr" rid="pone.0064656-Lima1">[5]</xref>–<xref ref-type="bibr" rid="pone.0064656-Knowlton1">[7]</xref>.</p>
+<p>Early IBMs used simplified behavioral rules for simulated animals in order to reduce computing time and reduce model complexity <xref ref-type="bibr" rid="pone.0064656-Topping1">[8]</xref>. Unfortunately, oversimplified behavioral rules have persisted in many modern models that are less constrained by computing power. IBMs typically still include simplifications of animal behavior such as fixed dispersal distances, omniscient dispersers, or purely random walks <xref ref-type="bibr" rid="pone.0064656-Lima1">[5]</xref>, <xref ref-type="bibr" rid="pone.0064656-South1">[9]</xref>, <xref ref-type="bibr" rid="pone.0064656-Morales1">[10]</xref>. The omission of behavioral complexity can have important implications. Research has shown that complex behavioral decisions drive patterns of animal movement <xref ref-type="bibr" rid="pone.0064656-Lima1">[5]</xref>. Empirical studies show that movements based on behavioral decisions drive population expansion <xref ref-type="bibr" rid="pone.0064656-Morales1">[10]</xref>, species invasion success <xref ref-type="bibr" rid="pone.0064656-Holway1">[11]</xref>, and animal response to changing landscapes <xref ref-type="bibr" rid="pone.0064656-Baguette1">[12]</xref>. Further, ecological modeling has demonstrated that complex behavioral decisions can dramatically affect the viability of populations <xref ref-type="bibr" rid="pone.0064656-Gosling1">[13]</xref> and metapopulations <xref ref-type="bibr" rid="pone.0064656-Woodroffe1">[14]</xref>, <xref ref-type="bibr" rid="pone.0064656-Heinz1">[15]</xref>.</p>
+<p>There is a need to incorporate more behavioral complexity into IBMs to understand the main drivers of animal dispersal and population dynamics <xref ref-type="bibr" rid="pone.0064656-Stephens1">[16]</xref>–<xref ref-type="bibr" rid="pone.0064656-Hudgens1">[19]</xref>. Models that include too much detail, however, are in danger of becoming overly convoluted and difficult to interpret <xref ref-type="bibr" rid="pone.0064656-Grimm2">[20]</xref>. Therefore, models should strive for the optimal degree of complexity <xref ref-type="bibr" rid="pone.0064656-Grimm2">[20]</xref>. Because the appropriate degree of complexity is difficult to assess and may vary with the research goal, models with user-controlled levels of complexity are ideal. Individual-based models that are able to include sufficient behavioral complexity allow for the creation of a virtual environment in which a wide variety of questions related to population ecology could be investigated at relatively low cost and considerably lower effort than large scale field experiments.</p>
+<p>One area of research that is well suited for individual-based modeling is animal dispersal. Natal dispersal <xref ref-type="bibr" rid="pone.0064656-Howard1">[21]</xref>–<xref ref-type="bibr" rid="pone.0064656-Belthoff1">[23]</xref> is vital for the maintenance of viable populations because it is associated with reductions in inbreeding <xref ref-type="bibr" rid="pone.0064656-Bollinger1">[24]</xref>, expansion of population range <xref ref-type="bibr" rid="pone.0064656-Gardner1">[25]</xref>, the “rescue” of metapopulation patches <xref ref-type="bibr" rid="pone.0064656-Brown1">[26]</xref>, reduction in intraspecific competition for resources and mates <xref ref-type="bibr" rid="pone.0064656-Dobson1">[27]</xref>, and the ability of wild populations to respond to dynamic landscapes <xref ref-type="bibr" rid="pone.0064656-Travis1">[28]</xref>. Dispersal constitutes a complex interaction between landscape characteristics and animal behavior. Due to the rarity of dispersal events and the challenges associated with observing it, empirical research on animal dispersal is difficult <xref ref-type="bibr" rid="pone.0064656-Koenig1">[29]</xref>, <xref ref-type="bibr" rid="pone.0064656-Vuilleumier1">[30]</xref>. However, individual-based modeling offers a method for investigating the process and effect of animal dispersal <xref ref-type="bibr" rid="pone.0064656-Mooij1">[31]</xref>.</p>
+<p>Here we present program SEARCH (Spatially Explicit Animal Response to Composition of Habitat), a spatially explicit, individual-based model that incorporates a great degree of behavioral complexity. SEARCH simulates the dispersal of animals across a virtual landscape comprised of vector-based Geographic Information System (GIS) maps that determine the movement, foraging, mortality and spatial arrangement of animals (referred to as movement, food, risk and suitability maps, respectively). These maps can represent real areas such as those generated from remotely sensed data or theoretical landscapes with particular characteristics like those created based upon habitat metrics. These maps are vector-based rather than raster or regular geometry to reduce the potential for bias from spatial representation <xref ref-type="bibr" rid="pone.0064656-Holland1">[32]</xref>. As animals move they respond to local stimuli such as habitat boundaries and are capable of changing behavior states (e.g. foraging vs. searching) in response to their experience. Simulations in SEARCH may employ temporally dynamic landscapes, such that the environment to which animals respond changes during the simulation. Thus, simulations can model events such as land cover change, succession, seasonal shifts in food availability, or diurnal patterns in predation pressure. As SEARCH is a population model and incorporates breeding stochastically, simulations may span many years and population-level trends emerge as a result of the behavior of the individuals. SEARCH also has flexibility in that many components can be easily turned on or off allowing for variation in model complexity. All code for SEARCH was written in the C# language utilizing the.NET framework and employs ArcGIS (Environmental Systems Research Institute, Redlands, California, USA) for map manipulation procedures. SEARCH is freely available in many versions (as a graphic user interface or command-line application) at <ext-link ext-link-type="uri" xlink:href="http://code.google.com/p/paz-search" xlink:type="simple">http://code.google.com/p/paz-search</ext-link>.</p>
+<p>SEARCH incorporates concepts and features from numerous other individual-based and spatially explicit models. The modeling work of Gustafson and Gardner <xref ref-type="bibr" rid="pone.0064656-Gustafson1">[33]</xref> and Gardner and Gustafson <xref ref-type="bibr" rid="pone.0064656-Gardner1">[25]</xref>, which simulates animal movement along with energetics and predation of dispersers, provide an important conceptual foundation for this model. SEARCH also incorporates aspects and concepts of other simulation models including (but not limited to) the dynamic landscapes of ALMaSS <xref ref-type="bibr" rid="pone.0064656-Topping2">[34]</xref> and BACH-MAP <xref ref-type="bibr" rid="pone.0064656-Pulliam1">[35]</xref>, vector-based movement of Vuilleumier and Metzger <xref ref-type="bibr" rid="pone.0064656-Vuilleumier1">[30]</xref>, behavioral state changes of Morales et al. <xref ref-type="bibr" rid="pone.0064656-Morales2">[36]</xref>, boundary permeability of HexSim <xref ref-type="bibr" rid="pone.0064656-Schumaker1">[37]</xref> and habitat selection rules similar to Kramer-Schadt et al. <xref ref-type="bibr" rid="pone.0064656-KramerSchadt1">[38]</xref> and Wiegand et al. <xref ref-type="bibr" rid="pone.0064656-Wiegand1">[39]</xref>. SEARCH incorporates many features of the models listed above (and others) into a single population model which allows researchers to include a high degree of behavioral complexity and landscape dynamics. Most features in the model are optional and most users would not use all capabilities of SEARCH in a single simulation, rather, model complexity would be driven by the research question. In fact, SEARCH incorporates flexibility to the degree that it could be considered a modeling framework in which alternative features can be implemented to create particular models.</p>
+<p>To illustrate the ways in which the added behavioral complexity of the program may be utilized, we present examples of the application of SEARCH to three study populations. We demonstrate map-swapping capabilities of SEARCH and illustrate its use to investigate the impact of seasonally dynamic food resources on raccoon (<italic>Procyon lotor</italic>) dispersers. Similarly, we demonstrate the impacts of temporally variable predation risk on eastern chipmunk (<italic>Tamias striatus</italic>) dispersal. Additionally, the effects of behavioral state changes on weight distribution and disperser mortality were investigated using American martens (<italic>Martes americana</italic>). Finally, we simulated virtual martens that were given a range of home-range choice rules that varied the importance of food resources, safety, proximity, and search time when selecting a home-range center to determine their effect on settlement time, dispersal distance, and disperser mortality. Through these simulations we were able to highlight some of the capabilities of SEARCH and underscore the importance of incorporating an appropriate but flexible degree of behavioral complexity into individual-based models.</p>
+</sec><sec id="s2">
+<title>Model Overview</title>
+<p>The following model description follows the Overview – Design Concepts – Details (ODD) protocol for describing individual-based models <xref ref-type="bibr" rid="pone.0064656-Grimm3">[40]</xref>, <xref ref-type="bibr" rid="pone.0064656-Grimm4">[41]</xref>. Therefore, the “Model Overview” section describes the model in broad terms, the “Design Concepts” section discusses certain design concepts and the degree to which they are employed in SEARCH, the “Details” section and the supplementary materials give detailed descriptions of the processes and algorithms used in the model and the remaining sections describe case studies conducted to illustrate the capabilities of SEARCH.</p>
+<sec id="s2a">
+<title>Purpose</title>
+<p>SEARCH simulates the dispersal and home-range establishment of animals across a virtual landscape. Animals respond to four vector GIS layers that contain values used by the rules for animal movement, foraging, risk of predation, and the suitability of habitat for home-range establishment and the configuration of areas occupied by established resident animals. Thus, users are able to investigate such factors as the potential impacts of landscape change, habitat permeability, and energetic budgets on animal populations. Output from SEARCH provides information on both the characteristics of animal dispersal as well as the associated emergent population-level attributes. SEARCH can be used to simulate a variety of species and utilizes research from disparate fields such as animal movement, foraging ecology, and physiology to parameterize the model.</p>
+</sec><sec id="s2b">
+<title>State Variables and Scales</title>
+<p>Individuals within SEARCH can be one of two classes – juvenile dispersers or adult residents. Dispersers are characterized by a unique number, sex, weight, perception, activity mode, behavioral state, and location. State variables for residents include animal number, sex, and home-range location. Population characteristics such as age structure, sex ratio, and mortality rates can be derived from these model outputs.</p>
+<p>Dispersers interact with the environment by responding to habitat characteristics represented in four vector GIS maps. Polygon values contained in these maps drive animal movement, foraging, mortality and home-range establishment by dictating correlated random walk movement parameters, the probability of acquiring prey and size of prey, the probability of being killed, and the suitability for home-range establishment and whether or not a location is currently occupied by a resident animal, respectively (<xref ref-type="table" rid="pone-0064656-t001">Table 1</xref>).</p>
+<table-wrap id="pone-0064656-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0064656.t001</object-id><label>Table 1</label><caption>
+<title>Landscape parameter maps and field definitions input by the user to reflect variation in animal behavioral or physiological responses to different GIS classifications.</title>
+</caption><alternatives><graphic id="pone-0064656-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0064656.t001" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Map type</td>
+<td align="left" rowspan="1" colspan="1">Field</td>
+<td align="left" rowspan="1" colspan="1">Definition</td>
+<td align="left" rowspan="1" colspan="1">Range</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">Movement</td>
+<td align="left" rowspan="1" colspan="1">Tortuosity</td>
+<td align="left" rowspan="1" colspan="1">Tortuosity of movement drawn from a wrapped Cauchy distribution where 0 produces a purely random walk and 1 produces a linear movement</td>
+<td align="left" rowspan="1" colspan="1">0–1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Step length</td>
+<td align="left" rowspan="1" colspan="1">Mean step length (m) per time-step; includes a field for standard deviation (±SD)</td>
+<td align="left" rowspan="1" colspan="1">≥ 0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Energy use</td>
+<td align="left" rowspan="1" colspan="1">Energy used per time-step</td>
+<td align="left" rowspan="1" colspan="1">≥ 0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Crossing</td>
+<td align="left" rowspan="1" colspan="1">Rank of location quality</td>
+<td align="left" rowspan="1" colspan="1">≥ 0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Perceptual window modifier</td>
+<td align="left" rowspan="1" colspan="1">Modifies distance of perceptual window</td>
+<td align="left" rowspan="1" colspan="1">≥ 0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Food</td>
+<td align="left" rowspan="1" colspan="1">Probability</td>
+<td align="left" rowspan="1" colspan="1">Probability of capturing a prey item per time-step</td>
+<td align="left" rowspan="1" colspan="1">0–1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Size</td>
+<td align="left" rowspan="1" colspan="1">Mean size energy gain of captured prey; includes a field for standard deviation (±SD)</td>
+<td align="left" rowspan="1" colspan="1">≥0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Risk</td>
+<td align="left" rowspan="1" colspan="1">Probability</td>
+<td align="left" rowspan="1" colspan="1">Probability of mortality due to depredation per time-step</td>
+<td align="left" rowspan="1" colspan="1">0–1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Suitability</td>
+<td align="left" rowspan="1" colspan="1">Suitability</td>
+<td align="left" rowspan="1" colspan="1">Suitability of habitat for home-range establishment</td>
+<td align="left" rowspan="1" colspan="1">0 or 1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Occupancy</td>
+<td align="left" rowspan="1" colspan="1">If occupied by a male</td>
+<td align="left" rowspan="1" colspan="1">0 or 1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Occupancy</td>
+<td align="left" rowspan="1" colspan="1">If occupied by a female</td>
+<td align="left" rowspan="1" colspan="1">0 or 1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Release</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Location, number, and gender of animals upon initialization</td>
+<td align="left" rowspan="1" colspan="1">na</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>Time periods in SEARCH are discrete. The user defines the time-step length (≥ 1 minutes), dispersal season length (≥ 1 day), and the number of years of simulation (≥ 1 year). The period of the year outside of the dispersal season (i.e. the inter-dispersal period) is modeled as a single, discrete time period. Spatial scales employed by SEARCH follow the resolution and extent of user-input GIS maps. The extents for case studies presented below are 0.25 km<sup>2</sup>–660 km<sup>2</sup> but larger areas can be used <xref ref-type="bibr" rid="pone.0064656-McCann1">[42]</xref>.</p>
+</sec><sec id="s2c">
+<title>Process Overview and Scheduling</title>
+<p>In SEARCH, the user parameterizes the model to emulate the movement, foraging ecology, and habitat use of the study species (<xref ref-type="table" rid="pone-0064656-t002">Table 2</xref>). Additionally, the default behavior of individuals can be modified based upon sex, behavioral state, and time (<xref ref-type="table" rid="pone-0064656-t003">Table 3</xref>).</p>
+<table-wrap id="pone-0064656-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0064656.t002</object-id><label>Table 2</label><caption>
+<title>Animal parameter values input by the user for the temporal aspects of the simulation along with basic attributes of virtual animals.</title>
+</caption><alternatives><graphic id="pone-0064656-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0064656.t002" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Parameter</td>
+<td align="left" rowspan="1" colspan="1">Description</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">Dispersal season dates</td>
+<td align="left" rowspan="1" colspan="1">Start and end dates for dispersal season each year and the number of years to conduct simulation runs</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Time-step resolution</td>
+<td align="left" rowspan="1" colspan="1">Number of minutes between time-steps</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Start time</td>
+<td align="left" rowspan="1" colspan="1">Time of day that dispersal begins</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Activity and resting periods</td>
+<td align="left" rowspan="1" colspan="1">Hours (±SD) of activity and rest from start time</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Home-range center selection threshold</td>
+<td align="left" rowspan="1" colspan="1">Number of steps or suitable and unoccupied sites traversed before selecting a home-range center</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Minimum home-range size</td>
+<td align="left" rowspan="1" colspan="1">Gender-specific minimum area required for a home range</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Distance weighting factor</td>
+<td align="left" rowspan="1" colspan="1">Gender specific coefficient that modifies the effect of proximity on home-range center selection</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Energy</td>
+<td align="left" rowspan="1" colspan="1">Initial, minimum and maximum energy allowable for each animal. Death occurs below the minimum value</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Search/forage trigger</td>
+<td align="left" rowspan="1" colspan="1">Energy threshold below which animals switch behaviors from primarily searching to primarily foraging</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Perception window</td>
+<td align="left" rowspan="1" colspan="1">Distance at which habitat suitability and occupancy are perceived during dispersal</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Safe to risky</td>
+<td align="left" rowspan="1" colspan="1">Probability of switching from safe behavior to risky behavior</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Risky to safe</td>
+<td align="left" rowspan="1" colspan="1">Probability of switching from risky behavior to safe behavior</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap><table-wrap id="pone-0064656-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0064656.t003</object-id><label>Table 3</label><caption>
+<title>Modifiers of animal behavior employed in SEARCH which allow the user to modify habitat values by multiplying them by a real number to reflect variation caused by gender, activity mode, vigilance mode, time of day, and date.</title>
+</caption><alternatives><graphic id="pone-0064656-t003-3" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0064656.t003" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Modifier</td>
+<td align="left" rowspan="1" colspan="1">Parameter modified</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">Prey acquisition probability</td>
+<td align="left" rowspan="1" colspan="1">Probability of acquiring prey in a given GIS classification</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Predation probability</td>
+<td align="left" rowspan="1" colspan="1">Probability of mortality due to predation in a given GIS classification</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Energy use</td>
+<td align="left" rowspan="1" colspan="1">The energy used in each GIS classification</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Movement speed</td>
+<td align="left" rowspan="1" colspan="1">The movement distance per time-step in each GIS classification</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Movement tortuosity</td>
+<td align="left" rowspan="1" colspan="1">The movement tortuosity in each GIS classification</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Perception</td>
+<td align="left" rowspan="1" colspan="1">Animal perception distance in each GIS classification</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>During SEARCH simulations, animals traverse a virtual landscape comprised of four GIS maps that each contains multiple parameter values that are used to model virtual animal behavior (<xref ref-type="table" rid="pone-0064656-t001">Table 1</xref>). These maps are user created and can represent biologically relevant landscape features such as habitat type, land use, land cover, or topology. The initial landscape is populated by adult residents and/or released juveniles from the social and release maps, respectively. The initial population is input by the user depending on the scenario that best models the system under study. As animals move throughout the landscape, all four maps are queried during each time-step by each animal. After each animal movement segment, the location, energetic reserves, and behavioral states are updated for that individual. Animals move, forage, die and establish home ranges according to habitat and species parameters. During a time-step, each animal completes every action for that time-step in sequential order based on animal number assigned geographically at the beginning of each year.</p>
+<p>Once a user-defined threshold for number of steps taken or number of sites visited is exceeded, animals select a site for a possible home-range center from areas searched during dispersal. Virtual animals then move to that site, and attempt to establish a home range but may continue dispersing if they fail to locate a site with unoccupied suitable habitat. Animals become residents once a home range is established, but die if a home range is not established during the dispersal period. During the inter-dispersal period, residents are subject to random mortality and females stochastically give birth to young which disperse the following dispersal season.</p>
+</sec></sec><sec id="s3">
+<title>Design Concepts</title>
+<sec id="s3a">
+<title>Objectives</title>
+<p>In SEARCH each disperser's objective is to establish a home range before the end of the dispersal period. The behavioral traits of virtual animals are expected to affect dispersal success. Animals can be parameterized to remain in habitat that is of higher quality than adjacent areas. Since habitat quality in simulations is typically parameterized to correlate with increased safety and foraging opportunities (although it need not be) dispersers that remain in higher quality areas are typically less susceptible to predation or starvation. Similarly, animals that switch behavior due to perceived danger or low energy reserves behave in a way that minimizes risk of predation or starvation. Finally, implicit in many of the home-range selection criteria is the assumption that animals choosing home-range locations of higher quality (i.e. better foraging opportunities and/or lower mortality risks) will have offspring that are less likely to succumb to predation or starvation and will therefore have increased fitness.</p>
+</sec><sec id="s3b">
+<title>Adaptation</title>
+<p>Simulated animals make decisions in response to the environment and change behavior based on their individual experiences. Such dispersal behaviors are expected to change dispersal success. For example, animals calculate whether to cross a habitat boundary during dispersal by comparing the relative habitat value at their current location with adjacent locations based upon values in the movement map. Implied in this decision making is a simple predictive model that assumes that remaining in areas of higher habitat quality will increase their chance of home-range establishment. Animals also evaluate the probability of successfully capturing prey/forage when selecting a location for a home range. In addition, animal activity mode may change based on a user-defined energy threshold and the behavior of active animals can also be affected by their perceived risk of predation. In these ways, virtual animals respond to perceived danger or low energy reserves by changing their behavioral state to respond to conditions.</p>
+</sec><sec id="s3c">
+<title>Sensing</title>
+<p>Animals in SEARCH are able to detect information in their environment and respond to that information accordingly. During movement, virtual animals sense the predation pressure, foraging resources, habitat quality and the suitability of habitat for home range establishment along with the presence of resident animals around them. These attributes are detected by virtual animals at a distance dependent upon the perceptual window of that animal (see S.1.4 of <xref ref-type="supplementary-material" rid="pone.0064656.s009">Text S1</xref> for detail). The characteristics detected by virtual animals can be influenced by their behavioral states, energetic reserves, gender, time of day and season such that animals maintain a memory of the habitat as they perceived it during dispersal. If animals revisit a location, the most recent memory is stored and the totality of this memory is used when animals select potential home range centers.</p>
+</sec><sec id="s3d">
+<title>Interaction</title>
+<p>SEARCH incorporates little interaction between individuals and no direct interaction between dispersers. Indirect interaction between individuals is modeled through the restriction of non-overlapping home ranges between same-sex animals. This implies some form of interactive exclusion between individuals. Similarly, inter-dispersal reproduction implies male-female interaction though this is not modeled explicitly in SEARCH.</p>
+</sec><sec id="s3e">
+<title>Stochasticity</title>
+<p>Nearly every action taken by animals in SEARCH is probabilistic, thus stochasticity is critical. Animals in SEARCH move based upon a correlated random walk where path tortuosity can vary from completely random (mean vector length = 0) to completely straight (mean vector length = 1) based upon a value drawn from a wrapped Cauchy distribution <xref ref-type="bibr" rid="pone.0064656-Batschelet1">[43]</xref>, <xref ref-type="bibr" rid="pone.0064656-Haefner1">[44]</xref> that the virtual animal obtains from the polygons in the movement map. In addition, when dispersing individuals calculate the probability of crossing a habitat boundary they do so by comparing the quality values of adjacent polygons in the movement map to a random number to determine whether to cross a habitat boundary.</p>
+<p>Animal foraging uses stochasticity by assigning a probability of successfully foraging to each polygon to determine if an animal gains energy. The amount of energy gained during successful foraging bouts is drawn from a normal distribution based on a user-specified mean and standard deviation derived from a map polygon from the food map.</p>
+<p>The likelihood of an animal dying during a time-step is assigned based on the animal's location, the time of day, season, and animal parameters. Stochasticity is incorporated through a randomly drawn number that determines if that animal dies. Resident mortality is calculated in a similar way, although resident morality probabilities are aspatial and occur during each time-step of the dispersal season as well as once during the inter-dispersal season.</p>
+<p>The vigilance mode of dispersing animals is determined by a stochastic perception of risk. In this way, animals switch between risky and safe behaviors. Animal activity bouts (i.e. active/resting) are also determined by a stochastic process. The duration of each active and resting period is drawn from a normal distribution based on a user-defined mean and standard deviation of time.</p>
+<p>Home-range center selection is weighted toward higher quality sites but incorporates stochasticity in selecting a location. Animals create home range polygons by generating a set of points around a potential home-range center with random orientation and with distances that are drawn from a distribution based on the minimum home-range area for each sex to delineate the vertices of that home-range polygon.</p>
+<p>Breeding incorporates a number of stochastic processes. Whether a resident female becomes pregnant during an inter-dispersal period is based upon the probability of a female breeding. For those female residents that do become pregnant, the number of offspring produced is drawn from a normal distribution based on a user-specified mean and standard deviation of litter size. The sex of each offspring is determined probabilistically according to the sex ratio parameter.</p>
+</sec><sec id="s3f">
+<title>Emergence</title>
+<p>Population-level patterns emerge based upon the behavior and interactions of the individual animals in response to the spatio-temporal configuration of habitat and conspecific residents. These emergent properties develop from the interaction of baseline behavioral parameters, individual variation (due to gender, activity mode, etc.), interaction between individuals and stochasticity. Such higher-order emergent properties can include population density and spatial configuration, animal weight distribution, mortality rates by source (starvation vs. predation), and mortality locations.</p>
+</sec><sec id="s3g">
+<title>Observation</title>
+<p>During SEARCH simulations, data on the behavioral state (energetic, vigilance mode, etc.) and fate of each individual are produced during every time-step. This output includes a GIS polygon map that depicts the animal movement and perception during dispersal. Following each dispersal season, a landscape map is also produced that depicts all existing home ranges. Other population-level attributes (such as annual survivorship, population density, habitat selection, etc.) can be calculated from the individual and population output.</p>
+</sec></sec><sec id="s4">
+<title>Details</title>
+<sec id="s4a">
+<title>Initialization</title>
+<p>SEARCH can be initialized to reflect one of three scenarios. First, the simulation can begin without existing home ranges and all dispersers can be created based upon a map of releases. Such a simulation could model the reintroduction of a species into an area from where it had been extirpated. Second, the simulation can begin with established home ranges throughout the landscape without any released animals. Thus, all dispersers would be the result of reproduction of established females (chosen randomly based upon user-input parameters). This scenario would best reflect the population dynamics of an established population. Finally, simulations can implement a combination of resident reproduction and release of individuals. In this way an augmentation or supplementation of an existing population can be modeled <xref ref-type="bibr" rid="pone.0064656-McCann1">[42]</xref>.</p>
+<p>At the beginning of each simulation an empty memory map is created for each individual. This map reflects the area perceived by an animal during dispersal and the occupancy and suitability of all areas observed. During each time-step the memory map is updated for every animal to reflect the area perceived during dispersal. When animals begin selecting potential home-range centers, this map is used to eliminate all points in areas perceived as unsuitable or occupied. For each animal a text file is also created that records the animal's conditions for all state variables (i.e. location, energy level, etc.) during each time-step.</p>
+</sec><sec id="s4b">
+<title>Input</title>
+<sec id="s4b1">
+<title>Time Parameters</title>
+<p>SEARCH incorporates flexibility in the temporal scale and extent of simulations. The user inputs the start date of the simulation, the number of years to simulate (≥ 1), the number of days in the dispersal season (≥ 1), the start time of day 1 of the dispersal season (0–23 hours) and the length of each time-step in minutes (≥ 1).</p>
+</sec><sec id="s4b2">
+<title>Maps</title>
+<p>At the most basic level, virtual animals in SEARCH respond to the user-specified parameters of five GIS maps (<xref ref-type="table" rid="pone-0064656-t001">Table 1</xref>). These map types include 4 polygon maps (movement, food, risk and suitability) and 1 point map (assigning location and number of released animals). The landscape in SEARCH is dynamic in that any of the 5 GIS layers can be replaced at any time during the simulation with a map with different parameters and/or spatial configuration. Such map swapping can be employed to simulate habitat change or management, landscape disturbance or simply the variation in animal response to habitats at different times of day or seasons (see case studies for examples).</p>
+</sec><sec id="s4b3">
+<title>Species Attributes</title>
+<p>Energy parameters (with no units) represent the initial energetic reserves of each disperser, the minimum allowable energy level (below which animals die of starvation) and the maximum possible energy level (<xref ref-type="table" rid="pone-0064656-t002">Table 2</xref>). During each time-step, energy is lost based upon the energetic cost associated with a particular habitat as defined in the movement map. Energy is gained if prey or forage is acquired based upon the probability of foraging success and the amount gained is a function of the size of the item on the food map.</p>
+<p>Active dispersers move across the landscape relative to the various parameters on the movement map (resting animals remain static). The mean durations of active and resting periods are assigned by the user (along with a standard deviation) that applies to all dispersers. Activity periods of individual animals, however, may diverge based upon the stochasticity in period length due to variance around the mean (described by the standard deviation) so that animal activity and rest cycles need not be synchronized with one another. Animals may have many active and resting periods within a single day but must begin each year active. The mean values of all active and rest periods must sum to 24. Variability around mean active and resting periods may cause animals to have activity periods that do not exactly follow a 24-hour cycle.</p>
+<p>Within SEARCH, active, dispersing animals can be either foraging or searching. The particular behavior of each activity mode can be specified by the user through the parameterization of modifiers (see “Modifiers” in “Details” section; <xref ref-type="table" rid="pone-0064656-t003">Table 3</xref>). The user could parameterize SEARCH so that the probability of an animal successfully capturing a forage or prey item, for instance, would be higher during foraging activity but lower when in searching mode. All animals begin in searching mode but switch to foraging if their energetic reserves fall below a user-defined threshold. Note both searching and foraging animals are both capable of foraging or establishing home ranges.</p>
+<p>As with activity modes, virtual animals can also exhibit one of two possible vigilance modes at any time. Individuals can either be in safe mode or risky mode. The modifiers (as defined by the user; <xref ref-type="table" rid="pone-0064656-t003">Table 3</xref>) that affect animal behavior can differ based upon an animal's vigilance mode. The risk of an animal being killed, for instance, could be decreased when an animal is in safe mode (reflecting higher vigilance, for example) relative to risky mode. Animals begin each dispersal season in risky mode but will change to safe mode during any time-step if a randomly drawn number falls within a user specified interval (see section S.7.2 of <xref ref-type="supplementary-material" rid="pone.0064656.s009">Text S1</xref> for details). Animals in safe mode change back to risky mode if a randomly drawn number falls within the user specified interval (see section S.7.2 of <xref ref-type="supplementary-material" rid="pone.0064656.s009">Text S1</xref> for details).</p>
+<p>The individual memory of each animal in SEARCH is retained explicitly through the use of a memory map. An animal's perceptual range is the distance at which it can perceive and respond to landscape features <xref ref-type="bibr" rid="pone.0064656-Zollner1">[45]</xref>. SEARCH, however, utilizes a perceptual window that includes both perceptual range and small scale wandering of animals during a time-step (similar to assessment corridors of Doerr and Doerr <xref ref-type="bibr" rid="pone.0064656-Doerr1">[46]</xref>, ellipses of Bélisle et al. <xref ref-type="bibr" rid="pone.0064656-Blisle2">[47]</xref>, and circle-ellipses of Selonen et al. <xref ref-type="bibr" rid="pone.0064656-Selonen1">[48]</xref>. In SEARCH, this perceptual window is the area (with radius in meters) animals perceive during dispersal. Within this memory map, animals retain a complete record of the suitability and occupancy of perceived areas. If a specific location or area is revisited, the most recent suitability and occupancy status is overwritten on the memory map. The perceptual distance of an animal can be modified based upon that habitat type in which an animal occurs, the time of day, or the season. For example, the user can reduce the animal-perception window during low moonlight relative to the full moon perception window <xref ref-type="bibr" rid="pone.0064656-Zollner2">[49]</xref>.</p>
+</sec><sec id="s4b4">
+<title>Home-Range Attributes</title>
+<p>Animals in SEARCH can be triggered to begin selecting home-range centers based upon one of two user-selected criteria – either a user-specified number of time-steps have elapsed since the inception of dispersal or the animal has visited a user-specified number of suitable and unoccupied sites. Once this trigger is surpassed, animals choose their preferred home-range center based on user-specified criteria including the factors that most influence patch selection <xref ref-type="bibr" rid="pone.0064656-Sih1">[50]</xref>, <xref ref-type="bibr" rid="pone.0064656-Holbrook1">[51]</xref>. These criteria consider either (1) the proximity of the site (“closest”), (2) the proximity and food availability of a site (“food”), (3) the proximity and risk of mortality at a site (“risk”), or (4) the proximity, food and risk of a site (“integrated”). The user chooses one of these four criteria for each run. The user also inputs home-range establishment requirements including the minimum area for a home range for each sex and the relative importance of site proximity in home-range center selection for each sex (<xref ref-type="table" rid="pone-0064656-t002">Table 2</xref>). It is possible for users to effectively negate the effect of proximity in home site selection by choosing a large value for the distance weighting factor (<xref ref-type="table" rid="pone-0064656-t002">Table 2</xref>).</p>
+</sec><sec id="s4b5">
+<title>Modifiers</title>
+<p>In SEARCH, the user can modify the baseline parameters for many behavioral traits of animals to reflect the variability in behavior as a result of an animal's gender, behavioral state, the time of day, or the season (<xref ref-type="table" rid="pone-0064656-t003">Table 3</xref>). Modifiers can be created for both sexes (male and female), all four behavioral states (risky-searching, risky-foraging, safe-searching, and safe-foraging), and any number of temporal modifiers at two scales (hourly, daily). For instance, the perceptual distance of an animal that relies on vision may be increased during the day relative to night <xref ref-type="bibr" rid="pone.0064656-Zollner2">[49]</xref>.</p>
+</sec><sec id="s4b6">
+<title>Resident Attributes</title>
+<p>Residents are assigned a single, user-specified probability of mortality during each time-step (independent of location) but during the inter-dispersal period are subject to a single mortality probability. Additionally, a proportion of randomly selected females give birth to a user-defined (mean±SD) number of young (when this integer is negative, 0 is used) that have a sex ratio based on the defined probability of female offspring. Young begin dispersal in the subsequent season at the center of the mother's home range.</p>
+</sec></sec><sec id="s4c">
+<title>Submodels</title>
+<p>See Supplementary material for details including submodel descriptions (<xref ref-type="supplementary-material" rid="pone.0064656.s009">Text S1</xref>), technical documentation (<xref ref-type="supplementary-material" rid="pone.0064656.s010">Text S2</xref>) and process flow diagrams (<xref ref-type="supplementary-material" rid="pone.0064656.s001">Figure S1</xref>).</p>
+</sec></sec><sec id="s5">
+<title>Illustrative Case Studies</title>
+<p>To demonstrate the functionality of map swapping, behavioral states and home range selection in SEARCH, we provide a number of case studies here. These case studies are meant to be illustrative of the capabilities of the model rather than complete studies of model performance. These examples highlight some of the possible applications of SEARCH to real-world scenarios and demonstrate SEARCH's applicability to a variety of systems.</p>
+<sec id="s5a">
+<title>Case Studies: Food Map Swapping</title>
+<p>SEARCH is unique among individual-based models in that it allows the user to exchange any of the four GIS maps to which virtual animals respond (i.e. movement, risk, food, or social) at a daily, seasonally, or yearly time scale allowing temporally dynamic parameters. To illustrate the functionality and implications of these map swapping capabilities we simulated two study systems (raccoons in Indiana and chipmunks in Wisconsin).</p>
+<p>In the first study system, the effects of seasonally dynamic food resources on raccoon population dynamics were investigated. Raccoons in north-central Indiana experience dramatic shifts in forage availability throughout the year due to corn maturation and the subsequent superabundance of food resources <xref ref-type="bibr" rid="pone.0064656-Rivest1">[52]</xref>, <xref ref-type="bibr" rid="pone.0064656-Beasley1">[53]</xref>. This temporal shift in food availability was modeled in SEARCH by swapping food maps during corn maturation in the summer to reflect the increase in both the likelihood of successful foraging and the amount of energy gained during a foraging bout in an agricultural polygon. Because agriculture was the dominant cover type in the area and virtual raccoons were expected to forage heavily there, we predicted that raccoons that experienced temporally dynamic food resources would have dramatically different changes in mass compared to animals exposed to static foraging resources.</p>
+<sec id="s5a1">
+<title>Methods</title>
+<p>Raccoon simulations were conducted for a single year with a dispersal season of 150 days (the maximum observed raccoon colonization time in one study – Beasley unpublished data) and 1 hour time-steps on GIS layers digitized from USGS aerial photos of a 4 km×4 km area of the upper Wabash River basin in north-central Indiana (for more detail see: <xref ref-type="bibr" rid="pone.0064656-Beasley1">[53]</xref> and <xref ref-type="bibr" rid="pone.0064656-Retamosa1">[54]</xref>; Supplementary material, <xref ref-type="supplementary-material" rid="pone.0064656.s002">Table S1</xref>) simulations began with resident raccoons present on the landscape based on estimated raccoon density in the study area <xref ref-type="bibr" rid="pone.0064656-Beasley2">[55]</xref> and all dispersers were the product of resident reproduction. For virtual raccoons, energy parameters were used as a surrogate of mass. To approximate raccoon weight limits observed in field studies, dispersers began with a mass of 3750 g, had a maximum mass of 10000 g and died of starvation if their body mass fell below 1800 g <xref ref-type="bibr" rid="pone.0064656-Stuewer1">[56]</xref>, <xref ref-type="bibr" rid="pone.0064656-Mech1">[57]</xref>, (Beasley unpublished data). Dispersers were active for 12 h during the night (1800 until 600) and rested for 12 h during the day <xref ref-type="bibr" rid="pone.0064656-Sharp1">[58]</xref>, <xref ref-type="bibr" rid="pone.0064656-Bider1">[59]</xref>, <xref ref-type="bibr" rid="pone.0064656-Lotze1">[60]</xref>. Translocated raccoons typically establish home ranges after 2 weeks of dispersing <xref ref-type="bibr" rid="pone.0064656-Mosillo1">[61]</xref> so this value (168 active steps) was used as the trigger time for virtual raccoons to begin choosing home-range centers. Animals used the integrated criteria for home-range center selection and had minimum home-range sizes of 0.29 km<sup>2</sup> and 0.12 km<sup>2</sup> for males and females, respectively <xref ref-type="bibr" rid="pone.0064656-Beasley1">[53]</xref>. Resident virtual raccoons were subject to a mortality probability each time-step (8.34×10<sup>−5</sup>) and during the inter-dispersal season (0.194) based on published raccoon survival estimates <xref ref-type="bibr" rid="pone.0064656-Fritzell1">[62]</xref>–<xref ref-type="bibr" rid="pone.0064656-Gehrt1">[66]</xref>. Surviving resident females had a 90% pregnancy probability during the inter-dispersal season <xref ref-type="bibr" rid="pone.0064656-Fritzell2">[67]</xref>, <xref ref-type="bibr" rid="pone.0064656-Hasbrouck2">[68]</xref>, Beasley unpublished data) and produced young based on a litter size with mean 3.5 and standard deviation of 1 <xref ref-type="bibr" rid="pone.0064656-Stuewer1">[56]</xref>, <xref ref-type="bibr" rid="pone.0064656-Sagar1">[69]</xref>–<xref ref-type="bibr" rid="pone.0064656-Rees1">[72]</xref>, Beasley unpublished data). To simulate corn maturation, virtual animals were exposed to maps with low food resources in agricultural areas for 37 days, superabundant food resources in these areas for 76 days and then low resources for another 37 days. The weight distribution of successful dispersers in simulations with dynamic food maps was compared to that of the null model with a constant intermediate forage probability and energy gain. All modifiers were set to 1 to effectively eliminate variability due to gender, time, or behavior.</p>
+<p>For each scenario, 10 replicates were conducted and the weight change of every successful disperser in each simulation was recorded. Because the weight changes of dispersers within a simulation were not independent, we used a mixed modeling approach to avoid pseudoreplication <xref ref-type="bibr" rid="pone.0064656-Hurlbert1">[73]</xref>, <xref ref-type="bibr" rid="pone.0064656-Millar1">[74]</xref>. Each replicate simulation was nested within the corresponding scenario (static or dynamic food resources) and a nested ANOVA was conducted <xref ref-type="bibr" rid="pone.0064656-SAS1">[75]</xref> to determine if the mean weight change of virtual raccoons differed among the scenarios.</p>
+</sec><sec id="s5a2">
+<title>Results/Discussion</title>
+<p>In simulations of raccoons, the weight distributions of animals differed significantly between simulations with and without temporally dynamic food resources (t<sub>18</sub> = −20.78, p&lt;0.0001). Virtual raccoons that experienced static values for energetic gain from agricultural habitats gained an average of 475 g (SD = 230, n = 58). Virtual raccoons subjected to temporally dynamic agricultural food resources (with relative scarcity followed by superabundance and then scarcity again) lost an average of 473 g (SD = 228, n = 54) during the simulations (<xref ref-type="fig" rid="pone-0064656-g001">Figure 1</xref>).</p>
+<fig id="pone-0064656-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0064656.g001</object-id><label>Figure 1</label><caption>
+<title>Raccoon weight change.</title>
+<p>Mean (± 1 SD) change in weight of virtual raccoons for simulations with static and temporally dynamic food maps. Weight change values are for animals that successfully established home ranges during the simulation (Base n = 58; Swap n = 54).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0064656.g001" position="float" xlink:type="simple"/></fig>
+<p>The observed differences in virtual raccoon weight changes seem to be due to the amount of time animals dispersed before settling. Nearly all (96%) successful dispersers in the temporally dynamic simulation settled before agricultural areas produced superabundant food resources. These animals, therefore, were only subjected to food scarcity in agricultural areas and, not surprisingly, all lost weight during the simulation. The two dispersers that settled after the food map swap either settled one day after the food switch (losing 1108 g) or settled well after the superabundant food emergence and gained 701 g during the simulation. Therefore, temporally dynamic food resources appear to have a substantial effect on virtual animal weight distribution but this effect is dependent on the animal's dispersal time.</p>
+<p>Simulations of raccoon weight changes in response to dynamic food resources underscore the impact dynamic landscapes can have on animal populations. Animal populations that exploit seasonal food resources (including anthropogenic or naturally ephemeral sources) can be easily simulated in SEARCH. This capability allows researchers to include more temporal complexity in foraging resources than would be possible in simulations with static food availability.</p>
+</sec></sec><sec id="s5b">
+<title>Case Studies: Risk Map Swapping and Behavioral Response</title>
+<p>An appreciation for the importance of spatial heterogeneity in predation pressure on animal populations (i.e. the ‘landscape of fear’; <xref ref-type="bibr" rid="pone.0064656-Laundr1">[76]</xref> has gained recognition within the ecological community. Numerous animal populations are impacted by and respond to spatial variation in mortality risk <xref ref-type="bibr" rid="pone.0064656-Altendorf1">[77]</xref>–<xref ref-type="bibr" rid="pone.0064656-Laundr2">[81]</xref>. The importance of temporal heterogeneity in predation pressure has been studied less frequently, however. Temporal variation in mortality risk has been shown to have significant impact on survival and behavior in a few populations <xref ref-type="bibr" rid="pone.0064656-Lima2">[82]</xref>–<xref ref-type="bibr" rid="pone.0064656-Ferrari1">[84]</xref>.</p>
+<p>We investigated the potential population-level impacts of temporal variation in predation and the impact of behavioral response to such variation by modeling the dispersal of chipmunks in northern Wisconsin (Supplementary material, <xref ref-type="supplementary-material" rid="pone.0064656.s003">Table S2</xref>). Over the entirety of each simulation run virtual chipmunks were exposed to 1) a homogeneous static risk of mortality, 2) a spatially heterogeneous but temporally static predation risk or 3) different diurnal and nocturnal predation probabilities that were both spatially heterogeneous. Additionally we simulated virtual chipmunks that responded to variation in predation risk through variable permeability of habitat boundaries. Animals either had no response to habitat boundaries, or preferentially remained in habitat with lower predation risk (independent of time), lower predation risk based upon current time or lower predation risk based upon predicted future risk.</p>
+<sec id="s5b1">
+<title>Methods</title>
+<p>Chipmunks are exposed to different predators at different times of day, such as raptors during daylight and mustelids at night <xref ref-type="bibr" rid="pone.0064656-Allen1">[85]</xref>, <xref ref-type="bibr" rid="pone.0064656-Yahner1">[86]</xref>, (Zollner unpublished data). Furthermore, the timing of chipmunk activity in conjunction with predators has been shown to affect survival in field experiments <xref ref-type="bibr" rid="pone.0064656-DeCoursey1">[87]</xref>. In SEARCH, predation risk was modeled using a habitat-specific, empirically derived index of predation pressure where motion sensor cameras observed relative predation intensity of taxidermied chipmunks at different times in varying habitats (Zollner unpublished data). This was combined with published annual mortality values of chipmunks <xref ref-type="bibr" rid="pone.0064656-Tryon1">[88]</xref> to estimate simulation predation rates. Data used to calculate predation probabilities were combined, segregated spatially or segregated spatially and temporally to create predation maps that were aspatial, spatially heterogeneous or spatially and temporally heterogeneous, respectively. Temporally dynamic landscapes were simulated by swapping risk maps that represented daytime (6:00 – 18:00) and nighttime (18:00 – 6:00) mortality risk. Alternatively, chipmunks were simulated that had a constant predation risk with either aspatial or spatially variable risk.</p>
+<p>Simulation scenarios contrasted the empirical conditions described above with a range of responses to predation risk by virtual chipmunks. Animals without response to habitat boundaries used crossing values that were identical for all habitat types except for those areas into which animals never entered (cross. value none in Supplementary material, <xref ref-type="supplementary-material" rid="pone.0064656.s003">Table S2</xref>). Virtual animals that responded to spatial variation in predation risk had crossing values that scaled boundary permeability to the relative predation risk of habitat types independent of time (cross. value base in Supplementary material, <xref ref-type="supplementary-material" rid="pone.0064656.s003">Table S2</xref>). Temporally responsive animals had crossing values that determined boundary crossing relative to time-dependent predation risk either currently (cross. value day and night relative to risk map swapping in Supplementary material, <xref ref-type="supplementary-material" rid="pone.0064656.s003">Table S2</xref>) or predictively (cross. value day and night 1 hour prior to risk map swapping in Supplementary material, <xref ref-type="supplementary-material" rid="pone.0064656.s003">Table S2</xref>).</p>
+<p>All combinations of predation variation and behavioral response were simulated for a total of 12 simulation scenarios. Therefore, animals in particular simulations 1) responded at a coarser scale than risk was simulated (under-response), 2) responded at the same scale as risk was simulated (correct-response) or 3) responded at a finer scale than risk was simulated (over-response).</p>
+<p>Simulation output consisted of both overall and predation-specific (e.g. only animals that died of predation rather than from a failure to establish a home range by the end of the dispersal season) mortality rates. Both rates were compared among populations of all scenarios to determine if variation in predation risk and animal response to predation pressure impacted survival of the population. We predicted that both types of mortality rate in each population would scale inversely with the degree of response of the virtual chipmunks (i.e. under-response &gt; correct response &gt; over-response).</p>
+<p>All chipmunk simulations were run for 2 years with a 30 day dispersal season and 5 min time-steps on GIS maps 500 m×500 m (derived from digitized aerial photos). All virtual dispersers were produced through reproduction of resident animals present on the landscape at the beginning of the simulation based on estimated chipmunk density in the study area (Zollner unpublished data). Dispersing animals were active for 4 h beginning at 9 AM <xref ref-type="bibr" rid="pone.0064656-Snyder1">[89]</xref> and had a baseline perceptual window of 120 m <xref ref-type="bibr" rid="pone.0064656-Zollner3">[90]</xref>. Animals were triggered to begin choosing home-range centers after 1000 active steps or roughly 3 weeks of dispersal <xref ref-type="bibr" rid="pone.0064656-Loew1">[91]</xref>. Virtual chipmunks used the closest site criteria and had minimum home-range requirements of 0.002 km<sup>2</sup> for both sexes <xref ref-type="bibr" rid="pone.0064656-Snyder1">[89]</xref>. All resident females became pregnant and produced litters (mean = 4.5, SD = 0.5) and had an equal chance of male and female young <xref ref-type="bibr" rid="pone.0064656-Snyder1">[89]</xref>. We eliminated energy as a limiting factor due to insufficient data by creating ideal foraging conditions (i.e. 100% success) and no energy loss during movements. Similarly, resident mortality was eliminated and all multiplicative modifiers were set as 1 to turn off variability due to gender, time and behavior.</p>
+<p>For each scenario, 10 replicate simulations were conducted and the overall and predation-specific mortality rates of the dispersers were determined. The data were then power transformed (raised to 0.75) in order to satisfy assumptions of equal variance and normalized residuals (Shapiro-Wilk, W = 0.985073, p = 0.2086) and an ANOVA was conducted to compare overall mortality and predation rates based upon simulated risk and animal behavior. Contrasts were then used to compare the average predation rates of simulations with varying degrees of animal responsiveness (i.e. under, correct or over-response; all tests conducted in SAS 9.3; <xref ref-type="bibr" rid="pone.0064656-SAS1">[75]</xref>).</p>
+</sec><sec id="s5b2">
+<title>Results/Discussion</title>
+<p>Simulations of virtual chipmunks suggested that the effect of predation was compensatory in the overall mortality rate of the population. Overall mortality rates did not differ among virtual dispersing chipmunks in the 12 simulated scenarios (F<sub>11, 108</sub> = 0.85, p = 0.59) nor did overall mortality differ between the three levels of responsiveness of animals to their experienced predation (all pairwise p&gt;0.25; <xref ref-type="fig" rid="pone-0064656-g002">Figure 2a</xref>). Predation-specific mortality, however, was significantly different between scenarios (F<sub>11, 108</sub> = 2.08, p = 0.0277). In addition, contrasts of predation rate between levels of responsiveness differed with greater simulated mortality rates for under-responsive populations as compared to the others (<xref ref-type="table" rid="pone-0064656-t004">Table 4</xref>, <xref ref-type="fig" rid="pone-0064656-g002">Figure 2b</xref>).</p>
+<fig id="pone-0064656-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0064656.g002</object-id><label>Figure 2</label><caption>
+<title>Eastern chipmunk mortality rate.</title>
+<p>Mean (± 1 SD) A) overall mortality rate and B) predation-specific mortality rate for virtual chipmunks with varying levels of response to simulated predation risk.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0064656.g002" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0064656-t004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0064656.t004</object-id><label>Table 4</label><caption>
+<title>Contrasts of average predation-specific mortality between simulations of virtual chipmunks with varying degrees of responsiveness to simulated predation pressure.</title>
+</caption><alternatives><graphic id="pone-0064656-t004-4" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0064656.t004" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Contrast</td>
+<td align="left" rowspan="1" colspan="1">Difference</td>
+<td align="left" rowspan="1" colspan="1">Standard error</td>
+<td align="left" rowspan="1" colspan="1">Degrees of freedom</td>
+<td align="left" rowspan="1" colspan="1">t-value</td>
+<td align="left" rowspan="1" colspan="1">p-value</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Over vs. Under</bold></td>
+<td align="left" rowspan="1" colspan="1">−0.4425</td>
+<td align="left" rowspan="1" colspan="1">0.1829</td>
+<td align="left" rowspan="1" colspan="1">108</td>
+<td align="left" rowspan="1" colspan="1">−2.42</td>
+<td align="left" rowspan="1" colspan="1">0.0172</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Over vs. Correct</bold></td>
+<td align="left" rowspan="1" colspan="1">−0.1280</td>
+<td align="left" rowspan="1" colspan="1">0.2240</td>
+<td align="left" rowspan="1" colspan="1">108</td>
+<td align="left" rowspan="1" colspan="1">−0.57</td>
+<td align="left" rowspan="1" colspan="1">0.5687</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Correct vs. Under</bold></td>
+<td align="left" rowspan="1" colspan="1">−0.2772</td>
+<td align="left" rowspan="1" colspan="1">0.1530</td>
+<td align="left" rowspan="1" colspan="1">108</td>
+<td align="left" rowspan="1" colspan="1">−1.81</td>
+<td align="left" rowspan="1" colspan="1">0.0728</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Over vs. Pooled Others</bold></td>
+<td align="left" rowspan="1" colspan="1">−0.5706</td>
+<td align="left" rowspan="1" colspan="1">0.3421</td>
+<td align="left" rowspan="1" colspan="1">108</td>
+<td align="left" rowspan="1" colspan="1">−1.67</td>
+<td align="left" rowspan="1" colspan="1">0.0982</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Correct vs. Pooled Others</bold></td>
+<td align="left" rowspan="1" colspan="1">−0.0373</td>
+<td align="left" rowspan="1" colspan="1">0.0818</td>
+<td align="left" rowspan="1" colspan="1">108</td>
+<td align="left" rowspan="1" colspan="1">−0.46</td>
+<td align="left" rowspan="1" colspan="1">0.6493</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Under vs. Pooled Others</bold></td>
+<td align="left" rowspan="1" colspan="1">0.2399</td>
+<td align="left" rowspan="1" colspan="1">0.1002</td>
+<td align="left" rowspan="1" colspan="1">108</td>
+<td align="left" rowspan="1" colspan="1">2.40</td>
+<td align="left" rowspan="1" colspan="1">0.0183</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>The overall mortality rates were the same for all simulations despite differences in predation-specific mortality. Thus, it appears that predation, as a result of variation in probabilities of mortality and animal response, is only a compensatory factor within overall mortality of simulated eastern chipmunks. Therefore, factors other than predation, such as competition for space, seem to be driving mortality. Interestingly, the compensatory effect of predation has also been suggested for eastern chipmunks based on the results of field studies <xref ref-type="bibr" rid="pone.0064656-Nupp1">[92]</xref>.</p>
+<p>As expected, chipmunks that were under-responsive to the variability in predation risk exhibited the highest predation rates. Interestingly, virtual animals that over-responded to predation variability had the same predation rates as those that responded at the appropriate scale. This suggests that while over-responding animals did not gain any advantage through their behavior they also suffered no mortality cost from their over-responsiveness.</p>
+<p>These simulations highlight the capabilities and possible implications of fine-scale, temporally dynamic predation risk in conjunction with variable behavioral response in SEARCH. Most models use coarse, static mortality risk to model predation <xref ref-type="bibr" rid="pone.0064656-Lima2">[82]</xref>, <xref ref-type="bibr" rid="pone.0064656-Sih2">[83]</xref>. SEARCH simulations with virtual chipmunks have demonstrated that the inclusion of temporally and spatially variable risk, when combined with various degrees of behavioral response, can dramatically affect predation mortality. While the overall mortality was unaffected (thus the population dynamics nearly identical) by the inclusion of this added complexity, predation-specific mortality differed greatly. Therefore, research concerned with cause-specific mortality would benefit from the fine-scale temporal component of predation available in SEARCH.</p>
+</sec></sec><sec id="s5c">
+<title>Case Studies: Behavioral States</title>
+<p>Many spatially explicit individual-based models are behaviorally minimalistic and assume static behavior for mathematical convenience or due to lack of empirical data <xref ref-type="bibr" rid="pone.0064656-Lima1">[5]</xref>. Empirical research, however, has shown the behavioral states of dispersers to have dramatic effects on population dynamics <xref ref-type="bibr" rid="pone.0064656-Morales2">[36]</xref>, <xref ref-type="bibr" rid="pone.0064656-Frair1">[93]</xref>, <xref ref-type="bibr" rid="pone.0064656-Delgado1">[94]</xref>. SEARCH allows users to provide virtual animals with greater behavioral complexity by defining the conditions under which animals switch activity or behavioral state.</p>
+<p>We conducted SEARCH simulations to investigate the impact of increasing behavioral complexity on dispersal characteristics of simulated American martens. We simulated martens with varying degrees of responsiveness to behavioral triggers (low energy reserves and narrow predator escapes) and measured the weight change of individual virtual martens along with the disperser mortality rates under each scenario.</p>
+<sec id="s5c1">
+<title>Methods</title>
+<p>Simulations were conducted for one year on GIS maps of Wisconsin (derived from data from the U.S. Forest Service – Chequamegon-Nicolet National Forest Combined Data Systems STAND data and the Wisconsin Department of Natural Resources' WISCLAND Level 3 GIS data <xref ref-type="bibr" rid="pone.0064656-Reese1">[95]</xref>. Initial residents (17 male and 25 females) were created using the output of a separate simulation (the closest home-range selection of final case study) to approximate the distribution of martens following the four years of releases from 1987–1990 <xref ref-type="bibr" rid="pone.0064656-Williams1">[96]</xref>. Additionally, the population was augmented with a release of 14 animals to simulate a portion of the marten releases in the study area in 2008 <xref ref-type="bibr" rid="pone.0064656-Woodford1">[97]</xref>, <xref ref-type="bibr" rid="pone.0064656-Powell1">[98]</xref>.</p>
+<p>Spatial parameters for movement were derived from marten snow backtracking data, foraging parameters were based on small mammal trapping data, and predation risk parameters were based on predator indices (Zollner unpublished data; Supplementary material, <xref ref-type="supplementary-material" rid="pone.0064656.s004">Tables S3</xref>, <xref ref-type="supplementary-material" rid="pone.0064656.s005">S4</xref> and <xref ref-type="supplementary-material" rid="pone.0064656.s006">S5</xref>). Habitat suitability on the social map was based on Dumyahn et al. <xref ref-type="bibr" rid="pone.0064656-Dumyahn1">[99]</xref> and Wright <xref ref-type="bibr" rid="pone.0064656-Wright1">[100]</xref>. The dispersal season was 60 d <xref ref-type="bibr" rid="pone.0064656-Bull1">[101]</xref> with 1 h time-steps. Animals began active behavior at 4 am with alternating activity and rest periods of 4.5 h and 7.5 h (all with SD = 8) <xref ref-type="bibr" rid="pone.0064656-Gilbert1">[102]</xref>. Marten energy values were based on conversions of body mass to kilocalories. Animals dispersed with 4548 units of initial energy and had minimum and maximum energy limits of 3866 and 5003 units, respectively <xref ref-type="bibr" rid="pone.0064656-Gilbert1">[102]</xref>. Virtual martens had a baseline perceptual window of 100 m (from perceptual range of Gardner and Gustafson <xref ref-type="bibr" rid="pone.0064656-Gardner1">[25]</xref>. A baseline value of 270 active steps, or an average of 30 days, was used for a trigger value after which individuals began establishing home ranges. Virtual martens had minimum home ranges of 4.25 km<sup>2</sup> and 2.32 km<sup>2</sup> for males and females, respectively <xref ref-type="bibr" rid="pone.0064656-Dumyahn1">[99]</xref>. Residents were subject to a 5×10<sup>−5</sup> time-step mortality probability and a 0.17 inter-dispersal mortality <xref ref-type="bibr" rid="pone.0064656-McCann2">[103]</xref>. Surviving resident females had a 74.4% likelihood of becoming pregnant <xref ref-type="bibr" rid="pone.0064656-Strickland1">[104]</xref>, <xref ref-type="bibr" rid="pone.0064656-Aune1">[105]</xref>, had litter sizes with a mean of 3 and standard deviation of 1 <xref ref-type="bibr" rid="pone.0064656-Aune1">[105]</xref> with a balanced sex ratio <xref ref-type="bibr" rid="pone.0064656-Strickland1">[104]</xref>. Gender and temporal modifiers were set to 1 with the exception of the male risk modifier which was 0.7632 to model the low mortality risk of male martens compared to females <xref ref-type="bibr" rid="pone.0064656-McCann2">[103]</xref>.</p>
+<p>We simulated virtual martens with different sensitivities to low energy reserves. Martens that fell below the energy threshold switched activity mode from searching to foraging behavior (and vice versa). Martens in foraging mode had an increased likelihood of capturing prey and a decrease in energy use, movement speed, mean vector length and perceptual window distance as compared to searching martens (Supplementary material, <xref ref-type="supplementary-material" rid="pone.0064656.s007">Table S6</xref>). The baseline, reduced and increased threshold levels for simulations were set at 4250, 4000 and 4500, respectively. We predicted a positive relationship between energetic threshold level and animal weight change due to those animals' ability to respond to their level of energetic reserves. We predicted no effect of threshold level on disperser mortality compared to simulations with behaviorally static animals, however, due to the low likelihood of animal starvation.</p>
+<p>Similarly, we simulated martens with one of three levels of response to perceived mortality risk (animals switching from risky to safe behavior and vice versa). The baseline response was a 1% probability of switching vigilance modes during a single time-step. Animals with increased responsiveness had a 10% likelihood of changing and animals with reduced response had a 0.1% chance of changing behavior. Animals displaying safe behavior represented animals with increased vigilance and thus had an increased perceptual window <xref ref-type="bibr" rid="pone.0064656-Lima3">[106]</xref> but decreased speed (due to vigilance pauses; <xref ref-type="bibr" rid="pone.0064656-McAdam1">[107]</xref>, <xref ref-type="bibr" rid="pone.0064656-Zollner4">[108]</xref>) and mortality risk <xref ref-type="bibr" rid="pone.0064656-Lima4">[109]</xref> compared to those exhibiting risky behavior (Supplementary material, <xref ref-type="supplementary-material" rid="pone.0064656.s007">Table S6</xref>). Because the safe-risky trigger responds only to perceived predation risk, we predicted that animals with varying levels of responsiveness would have different levels of disperser mortality but no differences in mean animal weight change over the course of the simulation as compared to virtual animal without behavioral state changes.</p>
+<p>Finally, a scenario was conducted where marten had both a baseline level of danger response (1% probability of behavioral switch) and a baseline level of response to low energy (4250 units). Modifiers for animals in each of the four possible behavioral states were the product of the values for the activity and vigilance modes (Supplementary material, <xref ref-type="supplementary-material" rid="pone.0064656.s007">Table S6</xref>). We predicted that virtual animals with both predation and energetic behavioral responses would have different weight changes and mortality rates compared to the null model where animal behavior was constant.</p>
+<p>Three replicates of each scenario were conducted in SEARCH. A single disperser mortality rate per simulation was recorded. Because these data satisfied the assumptions of normality (Shapiro-Wilk, W = 0.983142, p = 0.9459) and homogeneous variances (Levene, F = 2.35, p = 0.0745) the survival values for the 8 behavioral states were compared using an ANOVA. A post hoc Dunnett's comparison <xref ref-type="bibr" rid="pone.0064656-Dunnett1">[110]</xref> of the control with the 7 experimental setups (three levels of risk response, three levels of energetic response, one level of both responses; simultaneous α = 0.05) was conducted.</p>
+<p>Because the dispersal characteristics of individual animals in the same simulation were not independent (i.e. fate of one animal affected that of another such as an animal settling precluding another individual from establishing a home range in an area), animal weights were considered multiple measurements from a single replicate to avoid pseudoreplication <xref ref-type="bibr" rid="pone.0064656-Hurlbert1">[73]</xref>, <xref ref-type="bibr" rid="pone.0064656-Millar1">[74]</xref>. Because these data failed to satisfy both the normality and equality of variances assumptions, these data were rank transformed in order to conduct non-parametric tests <xref ref-type="bibr" rid="pone.0064656-Conover1">[111]</xref>. The means of the rank transformed data were compared using a nested ANOVA. A post hoc Dunnett's comparison was conducted to compare the mean values of simulation runs to those virtual martens that had no behavioral modifiers relative to weight distribution (all tests conducted in SAS 9.3; <xref ref-type="bibr" rid="pone.0064656-SAS1">[75]</xref>).</p>
+</sec><sec id="s5c2">
+<title>Results/Discussion</title>
+<p>The inclusion and degree of sensitivity of animal behavioral state changes had significant effects on dispersal mortality and weight distribution. The mean ranked weight distributions of animals differed (F<sub>7, 16</sub> = 280.57, p&lt;0.0001) and was the response variable most affected by the various behavioral states. The differences in weight changes of animals appeared to be driven primarily by the search-foraging threshold (<xref ref-type="fig" rid="pone-0064656-g003">Figure 3a</xref>). All four conditions that used the search-forage trigger (low threshold, base threshold, high threshold, base foraging threshold combined with base risky) had significantly lower weight changes compared to animals that had no behavioral state changes (Dunnett's test, p&lt;0.05, df<sub>error</sub> = 874, MS<sub>E</sub> = 22968, t<sub>crit</sub> = 2.6). Mean weight change had a positive relationship with forage-search threshold level where the lowest threshold level resulted in animals with the greatest weight loss. The risky-safe vigilance modes, however, had no significant effect on animal weight compared to animals without behavioral state changes (all p&gt;0.05). There was an apparent positive correlation between the variance in animal weight and the probability of vigilance mode change though this was not tested explicitly.</p>
+<fig id="pone-0064656-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0064656.g003</object-id><label>Figure 3</label><caption>
+<title>Effect of behavioral state switching on American martens.</title>
+<p>Mean (± 1 SD) marten A) weight change (pooled for all replicates) and B) mortality rate for eight behavioral state scenarios (three replicates per scenario). Simulations consisted of animals with no behavioral state changes (no behav.), a search-forage threshold of 4000 (low forage), a search-forage threshold of 4250 (base forage), a search-forage threshold of 4500 (high forage), a risky-safe proability of 0.001 (rare risky), a risky-safe probability of 0.01 (base risky), a risky-safe probability of 0.1 (common risky) or a search-forage threshold of 4250 and a safe-risky probability of 0.01 (base forage and base risky). Asterisk denotes scenarios that were significantly different from no behavior simulations.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0064656.g003" position="float" xlink:type="simple"/></fig>
+<p>As expected, the search-forage threshold had a much stronger effect on virtual marten weights than the risky-safe probability. Animals subjected to differences in foraging and searching behavior had weights approaching the threshold for behavioral state change. In these situations, animals in the searching mode lost weight until they fell below the threshold, switched to foraging mode and began gaining weight. This resulted in animal weights that commonly oscillated around the threshold value. The risky-search probability, on the other hand, was stochastic and independent of an animal's energy reserves. All levels of this parameter, therefore, had little direct effect on weight change. Instead the probability of switching vigilance modes seemed to have more influence on the variance of animal weight changes than on the mean population weight change.</p>
+<p>Simulations including behavioral state changes differed significantly in terms of disperser mortality (F<sub>7, 16</sub> = 8.10, p = 0.0003). Simulations with the high and baseline forage-search threshold as well as simulations with both the base threshold and base risky had significantly lower disperser mortality than simulations with virtual animals with static behavior (using a simultaneous α = 0.05). Most dramatically, simulations with base levels of both vigilance mode and activity mode changes had less than 40% the mortality rate of simulations with static behavior (<xref ref-type="fig" rid="pone-0064656-g003">Figure 3b</xref>).</p>
+<p>Both types of behavioral complexity reduced mortality of virtual martens with the lowest mortality rates associated with animals with both types of behavioral response. Inclusion of the search-foraging threshold allowed animals to avoid starvation by responding to low energy reserves and changing behavior to maximize energetic gain. Similarly, the risky-safe probability allowed virtual animals to react to predation escapes and respond with safer behavior but was independent of observed mortality risk and was, therefore, purely stochastic. Thus, the forage-search threshold more dramatically affected mortality as it responded to the systematic threat of starvation while the safe-risky behavior responded to a stochastic probability of a predation escape.</p>
+<p>Behavioral variability in SEARCH resulted in animals that behaved differently than would have been possible in simulations without this flexibility. This added behavioral complexity significantly affected dispersal characteristics of virtual martens. Therefore, the dynamics of animals that utilize different behavioral states or strategies could be dramatically impacted by the inclusion or exclusion of behaviorally complexity in simulation modeling. SEARCH allows researchers to evaluate whether this increased complexity affects the population under study and incorporates it when it is found to be necessary to accurately model the system.</p>
+</sec></sec><sec id="s5d">
+<title>Case Studies: Home-Range Trigger and Decision Criteria</title>
+<p>SEARCH employs a number of options for home-range selection. These selection criteria differentially prioritize sites based on the factors most associated with animal habitat selection (i.e. foraging opportunities, <xref ref-type="bibr" rid="pone.0064656-Dussault1">[112]</xref>; predation risk, <xref ref-type="bibr" rid="pone.0064656-FestaBianchet1">[113]</xref>; proximity, <xref ref-type="bibr" rid="pone.0064656-Rhodes1">[114]</xref>). Empirical and modeling studies have shown that dispersal and space use of animals is affected by how they weigh the potential costs and benefits of sites when selecting from a number of potential home range locations <xref ref-type="bibr" rid="pone.0064656-Wiegand1">[39]</xref>, <xref ref-type="bibr" rid="pone.0064656-Doligez1">[115]</xref>, <xref ref-type="bibr" rid="pone.0064656-Stamps1">[116]</xref>.</p>
+<p>We studied the impact of varied prioritization of these costs and benefits for particular locations on dispersal distance, settlement time, and disperser mortality of virtual American martens. Dispersers in SEARCH select home-range locations based on a user-specified prioritization of attributes. We investigated the effect of the different home-range selection criteria on the dispersal of American marten. Simulations consisted of virtual animals that chose home-range locations based on only proximity (to current location), proximity and food availability, proximity and mortality risk, or proximity and food and risk together. For each scenario the dispersal distance, time to settlement and mortality of dispersers was measured. We predicted that the different home range selection criteria would result in differences in dispersal distance but not settlement time or disperser mortality because we expected animals to travel further to find appropriate home sites when using more restrictive selection criteria.</p>
+<sec id="s5d1">
+<title>Methods</title>
+<p>Marten simulations (with same parameterization as 6.3 except where specified) were run for 4 years on 33.4 km×28.7 km GIS map layers (same sources as “Behavioral States” case study). The simulation began without any resident individuals present in the area and animals were added to the simulation through releases every year that corresponded with actual releases of American martens in Wisconsin <xref ref-type="bibr" rid="pone.0064656-Williams1">[96]</xref> as well as reproduction of successful dispersers. For each scenario, three replicates were simulated.</p>
+<p>To satisfy the assumptions of normality and equal variances, some of the data were transformed. Dispersal distances were square-root transformed (Shapiro-Wilk, W = 0.9979, p = 0.2604; Levene, F = 1.19, p = 0.2920), settlement times were rank transformed and unmodified mortality values were used (Shapiro-Wilk, W = 0.8750, p = 0.0757; Levene, F = 1.07, p = 0.4162). Dispersal distances and times contained pseudoreplication due to the fact that the fate of an individual could be affected by that of another animal in the same simulation. Therefore, a nested ANOVA was conducted to detect differences among scenarios. Because a single mortality rate was measured for each simulation, a standard ANOVA was conducted to determine if scenarios differed in respect to disperser mortality (all tests conducted in SAS 9.3; <xref ref-type="bibr" rid="pone.0064656-SAS1">[75]</xref>).</p>
+</sec><sec id="s5d2">
+<title>Results/Discussion</title>
+<p>The criteria used for home-range center selection had little effect on any of the response variables of virtual animals. Mean dispersal distances were nearly identical for all four criteria (F<sub>3, 8</sub> = 1.31, p = 0.338; <xref ref-type="fig" rid="pone-0064656-g004">Figure 4a</xref>). Similarly, settlement times were fairly constant across the home-range selection scenarios (F<sub>3, 8</sub> = 1.69, p = 0.2450; <xref ref-type="fig" rid="pone-0064656-g004">Figure 4b</xref>). Finally, the mortality rates for simulations with the four criteria were nearly identical (F<sub>3, 8</sub> = 0.56, p = 0.654; <xref ref-type="fig" rid="pone-0064656-g004">Figure 4c</xref>).</p>
+<fig id="pone-0064656-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0064656.g004</object-id><label>Figure 4</label><caption>
+<title>Effect of home range selection criterion on American martens.</title>
+<p>Mean(± 1 SD) A) dispersal distance B) settlement time and C) annual mortality for virtual marten home range selection scenarios. Simulations consisted of martens that selected home range locations based upon proximity (closest), proximity and food availability (food), proximity and predation risk (risk), or proximity, predation risk and food availability (integrated).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0064656.g004" position="float" xlink:type="simple"/></fig>
+<p>Overall, virtual martens in SEARCH simulations exhibited the same dispersal characteristics (distance, time and mortality rate) in response to a variety of home range selection rules. At first, these negative results appear inconsequential and such non-significant results are often overlooked <xref ref-type="bibr" rid="pone.0064656-Csada1">[117]</xref>. This case study, however, highlights one of the major advantages of simulation models that have the capability of flexible levels of complexity. Models with features that can be turned on or off allow researchers to experimentally test the level of model complexity needed to adequately simulate the species in question <xref ref-type="bibr" rid="pone.0064656-Grimm1">[1]</xref>. In our case we found that more complex home-range selection criteria had no effect on the dispersal characteristics of virtual martens in Wisconsin. Therefore, future research on this study system could use simplified home-range selection rules (primarily the ‘closest’ home-range criterion) allowing for a simulation structure that only includes necessary complexity <xref ref-type="bibr" rid="pone.0064656-Hudgens1">[19]</xref>. Of course this particular form of model simplification would not pertain to all cases, but the principle of refinement of model application through experimentation is a valuable asset that could be used in many implementations of SEARCH.</p>
+</sec></sec></sec><sec id="s6">
+<title>Summary</title>
+<p>We present SEARCH, a newly developed, spatially explicit, individual based model. SEARCH incorporates a high degree of behavioral complexity and allows for temporally dynamic landscapes. SEARCH is parameter-intensive which allows researchers to utilize all available data in parameterizing the model. However, SEARCH has the flexibility to allow users to “turn off” functions in the model when data for parameterization are unavailable (as would be the case for some component of the model in nearly every case). This functionality enables users to investigate when added behavioral complexity results in quantitatively different model outcomes. Thus, users can investigate the model's sensitivity to added complexity and evaluate the benefits and costs of incorporating behavioral complexity. Users are therefore able to optimize model functionality for the research question and population under study.</p>
+<p>SEARCH is applicable to a number of species in a wide variety of systems though probably best suited for solitary mammals. It is a model that is ideal for simulating behaviorally complex populations with small abundances in a conservation setting. Furthermore, SEARCH allows researchers to simulate habitat and population manipulations that would be impractical in a field setting and offers that ability to project population dynamics into the future. There are a number of limitations to SEARCH, however. For example, the interaction between individuals in SEARCH is fairly rudimentary and the dynamic aspects of maps in SEARCH must be determined <italic>a priori</italic> (rather than as a response to model behavior). Furthermore, the breeding algorithms in SEARCH are not spatially explicit nor are they responsive to the state of the individual animal. Despite such shortcomings, SEARCH offers researchers a tool for investigating animal dispersal (and the subsequent population dynamics) that is not species specific but is capable of incorporating behavioral complexity not found in most comparable models. Thus the use of this tool has the potential to offer valuable insight into the role of the interplay between complex behavior and landscape configuration to animal population dynamics and management.</p>
+</sec><sec id="s7">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0064656.s001" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0064656.s001" position="float" xlink:type="simple"><label>Figure S1</label><caption>
+<p><bold>SEARCH process schematic.</bold> Process flow of SEARCH simulation (left) with detailed schematic of animal processes during dispersal (right).</p>
+<p>(PDF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0064656.s002" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0064656.s002" position="float" xlink:type="simple"><label>Table S1</label><caption>
+<p><bold>Spatial parameters of raccoon simulations with values for each habitat type corresponding to the movement map, the risk map and the food map.</bold></p>
+<p>(PDF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0064656.s003" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0064656.s003" position="float" xlink:type="simple"><label>Table S2</label><caption>
+<p><bold>Spatial parameters of chipmunk simulations with values for each habitat type corresponding to the movement map, the social map and the risk map.</bold></p>
+<p>(PDF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0064656.s004" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0064656.s004" position="float" xlink:type="simple"><label>Table S3</label><caption>
+<p><bold>Spatial parameters of movement map for American marten simulations.</bold></p>
+<p>(PDF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0064656.s005" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0064656.s005" position="float" xlink:type="simple"><label>Table S4</label><caption>
+<p><bold>Spatial parameters of food map for American marten simulations.</bold></p>
+<p>(PDF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0064656.s006" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0064656.s006" position="float" xlink:type="simple"><label>Table S5</label><caption>
+<p><bold>Spatial parameters of risk map for American marten simulations.</bold></p>
+<p>(PDF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0064656.s007" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0064656.s007" position="float" xlink:type="simple"><label>Table S6</label><caption>
+<p><bold>Modifier values for behavioral states of American martens with various levels of behavioral switching.</bold></p>
+<p>(PDF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0064656.s008" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0064656.s008" position="float" xlink:type="simple"><label>References S1</label><caption>
+<p><bold>Citations for materials referenced in supporting information documents.</bold></p>
+<p>(PDF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0064656.s009" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0064656.s009" position="float" xlink:type="simple"><label>Text S1</label><caption>
+<p><bold>Submodel descriptions.</bold></p>
+<p>(PDF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0064656.s010" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0064656.s010" position="float" xlink:type="simple"><label>Text S2</label><caption>
+<p><bold>Technical documentation.</bold></p>
+<p>(PDF)</p>
+</caption></supplementary-material></sec></body>
+<back>
+<ack>
+<p>We thank Tim Van Deelen, Ron Moen and Karl Malcolm for thoughts on model design. Dave McCabe, Bryan Pijanowski, David Braun and the Purdue Rosen Center for Advanced Computing provided computational assistance. We thank Gene Rhodes and Jim Beasley for sharing data and providing insight into raccoon ecology. Barny Dunning, Bill Peterman, Gene Rhodes, Julia Earl, Ray Semlitsch, Steven Railsback and Vanessa Quinn contributed valuable feedback on manuscript drafts.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0064656-Grimm1"><label>1</label>
+<mixed-citation publication-type="book" xlink:type="simple">Grimm V, Railsback SF (2005) Individual-based modeling and ecology. Princeton, NJ: Princeton University Press. 428 p.</mixed-citation>
+</ref>
+<ref id="pone.0064656-McLane1"><label>2</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>McLane</surname><given-names>AJ</given-names></name>, <name name-style="western"><surname>Semeniuk</surname><given-names>C</given-names></name>, <name name-style="western"><surname>McDermid</surname><given-names>GJ</given-names></name>, <name name-style="western"><surname>Marceau</surname><given-names>DJ</given-names></name> (<year>2011</year>) <article-title>The role of agent-based models in wildlife ecology and management</article-title>. <source>Ecol Model</source> <volume>222</volume>: <fpage>1544</fpage>–<lpage>1556</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-omnicki1"><label>3</label>
+<mixed-citation publication-type="book" xlink:type="simple">Łomnicki A (1992) Population ecology from the individual perspective. In: DeAngelis DL, Gross LJ, editors. Individual-based models and approaches in ecology: populations, communities and ecosystems. New York: Chapman and Hall. pp. 3–17.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Railsback1"><label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Railsback</surname><given-names>SF</given-names></name> (<year>2001</year>) <article-title>Concepts from complex adaptive systems as a framework for individual-based modelling</article-title>. <source>Ecol Model</source> <volume>139</volume>: <fpage>47</fpage>–<lpage>62</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Lima1"><label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lima</surname><given-names>SL</given-names></name>, <name name-style="western"><surname>Zollner</surname><given-names>PA</given-names></name> (<year>1996</year>) <article-title>Towards a behavioral ecology of ecological landscapes</article-title>. <source>Trends in Ecol Evol</source> <volume>11</volume>: <fpage>131</fpage>–<lpage>135</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Blisle1"><label>6</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bélisle</surname><given-names>M</given-names></name> (<year>2005</year>) <article-title>Measuring landscape connectivity: the challenge of behavioral landscape ecology</article-title>. <source>Ecology</source> <volume>86</volume>: <fpage>1988</fpage>–<lpage>1995</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Knowlton1"><label>7</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Knowlton</surname><given-names>JL</given-names></name>, <name name-style="western"><surname>Graham</surname><given-names>CH</given-names></name> (<year>2010</year>) <article-title>Using behavioral landscape ecology to predict species' responses to land-use and climate change</article-title>. <source>Biol Conserv</source> <volume>143</volume>: <fpage>1342</fpage>–<lpage>1354</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Topping1"><label>8</label>
+<mixed-citation publication-type="book" xlink:type="simple">Topping CJ, Dalkvist T, Forbes VE, Grimm V, Sibly RM (2009) The potential for the use of agent-based models in ecotoxicology. In: Devillers J, editor. Ecotoxicology modeling. Dordrecht:Springer. pp. 205–236.</mixed-citation>
+</ref>
+<ref id="pone.0064656-South1"><label>9</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>South</surname><given-names>A</given-names></name> (<year>1999</year>) <article-title>Dispersal in spatially explicit population models</article-title>. <source>Conserv Biol</source> <volume>13</volume>: <fpage>1039</fpage>–<lpage>1046</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Morales1"><label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Morales</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Ellner</surname><given-names>SP</given-names></name> (<year>2002</year>) <article-title>Scaling up animal movements in heterogeneous landscapes: the importance of behavior</article-title>. <source>Ecology</source> <volume>83</volume>: <fpage>2240</fpage>–<lpage>2247</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Holway1"><label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Holway</surname><given-names>DA</given-names></name>, <name name-style="western"><surname>Suarez</surname><given-names>AV</given-names></name> (<year>1999</year>) <article-title>Animal behavior: an essential component of invasion biology</article-title>. <source>Trends Ecol &amp; Evol</source> <volume>14</volume>: <fpage>328</fpage>–<lpage>330</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Baguette1"><label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Baguette</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Van Dyck</surname><given-names>H</given-names></name> (<year>2007</year>) <article-title>Landscape connectivity and animal behavior: functional grain as a key determinant for dispersal</article-title>. <source>Landsc Ecol</source> <volume>22</volume>: <fpage>1117</fpage>–<lpage>1129</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Gosling1"><label>13</label>
+<mixed-citation publication-type="book" xlink:type="simple">Gosling LM (2003) Adaptive behavior and population viability. In: Festa-Bianchet M, Apollonio M, editors. Animal Behavior and Wildlife Conservation. Washington DC:Island Press. pp. 13–30.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Woodroffe1"><label>14</label>
+<mixed-citation publication-type="book" xlink:type="simple">Woodroffe R (2003) Dispersal and conservation: a behavioral perspective on metapopulation persistence. In: Festa-Bianchet M, Apollonio M, editors. Animal behavior and wildlife conservation. Washington DC:Island Press. pp. 33–48.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Heinz1"><label>15</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Heinz</surname><given-names>SK</given-names></name>, <name name-style="western"><surname>Wissel</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Frank</surname><given-names>K</given-names></name> (<year>2006</year>) <article-title>The viability of metapopulations: individual dispersal behavior matters</article-title>. <source>Landsc Ecol</source> <volume>21</volume>: <fpage>77</fpage>–<lpage>89</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Stephens1"><label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Stephens</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Frey-Roos</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Arnold</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Sutherland</surname><given-names>WJ</given-names></name> (<year>2002</year>) <article-title>Model complexity and population predictions: the alpine marmot as a case study</article-title>. <source>J Anim Ecol</source> <volume>71</volume>: <fpage>343</fpage>–<lpage>361</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Jepsen1"><label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jepsen</surname><given-names>JU</given-names></name>, <name name-style="western"><surname>Baveco</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Topping</surname><given-names>CJ</given-names></name>, <name name-style="western"><surname>Verboom</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Vos</surname><given-names>CC</given-names></name> (<year>2005</year>) <article-title>Evaluating the effect of corridors and landscape heterogeneity on dispersal probability: a comparison of three spatially explicit modelling approaches</article-title>. <source>Ecol Model</source> <volume>181</volume>: <fpage>445</fpage>–<lpage>459</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Patterson1"><label>18</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Patterson</surname><given-names>TA</given-names></name>, <name name-style="western"><surname>Thomas</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Wilcox</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Ovaskainen</surname><given-names>O</given-names></name>, <name name-style="western"><surname>Matthiopoulos</surname><given-names>J</given-names></name> (<year>2008</year>) <article-title>State-space models of individual animal movement</article-title>. <source>Trends in EcolEvol</source> <volume>23</volume>: <fpage>87</fpage>–<lpage>94</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Hudgens1"><label>19</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hudgens</surname><given-names>BR</given-names></name>, <name name-style="western"><surname>Morris</surname><given-names>WF</given-names></name>, <name name-style="western"><surname>Haddad</surname><given-names>NM</given-names></name>, <name name-style="western"><surname>Fields</surname><given-names>WR</given-names></name>, <name name-style="western"><surname>Wilson</surname><given-names>JW</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>How complex do models need to be to predict dispersal of threatened species through matrix habitats?</article-title> <source>Ecol Appl</source> <volume>22</volume>: <fpage>1701</fpage>–<lpage>1710</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Grimm2"><label>20</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Grimm</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Revilla</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Berger</surname><given-names>U</given-names></name>, <name name-style="western"><surname>Jeltsch</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Mooij</surname><given-names>WM</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Pattern-oriented modeling of agent-based complex systems: lessons from ecology</article-title>. <source>Science</source> <volume>310</volume>: <fpage>987</fpage>–<lpage>991</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Howard1"><label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Howard</surname><given-names>WE</given-names></name> (<year>1960</year>) <article-title>Innate and environmental dispersal of individual vertebrates</article-title>. <source>American Midland Naturalist</source> <volume>63</volume>: <fpage>152</fpage>–<lpage>161</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Greenwood1"><label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Greenwood</surname><given-names>PJ</given-names></name> (<year>1980</year>) <article-title>Mating systems, philopatry and dispersal in birds and mammals</article-title>. <source>Animal Behavior</source> <volume>28</volume>: <fpage>1140</fpage>–<lpage>1162</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Belthoff1"><label>23</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Belthoff</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>Ritchison</surname><given-names>G</given-names></name> (<year>1990</year>) <article-title>Natal dispersal: Greenwood (1980) revisited</article-title>. <source>Condor</source> <volume>92</volume>: <fpage>803</fpage>–<lpage>804</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Bollinger1"><label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bollinger</surname><given-names>EK</given-names></name>, <name name-style="western"><surname>Harper</surname><given-names>SJ</given-names></name>, <name name-style="western"><surname>Barrett</surname><given-names>GW</given-names></name> (<year>1993</year>) <article-title>Inbreeding avoidance increases dispersal movements of the meadow vole</article-title>. <source>Ecology</source> <volume>74</volume>: <fpage>1153</fpage>–<lpage>1156</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Gardner1"><label>25</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gardner</surname><given-names>RH</given-names></name>, <name name-style="western"><surname>Gustafson</surname><given-names>EJ</given-names></name> (<year>2004</year>) <article-title>Simulating dispersal of reintroduced species within heterogeneous landscapes</article-title>. <source>Ecol Model</source> <volume>171</volume>: <fpage>339</fpage>–<lpage>358</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Brown1"><label>26</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Brown</surname><given-names>JH</given-names></name>, <name name-style="western"><surname>Kodric-Brown</surname><given-names>A</given-names></name> (<year>1977</year>) <article-title>Turnover rates in insular biogeography: effect of immigration on extinction</article-title>. <source>Ecology</source> <volume>58</volume>: <fpage>445</fpage>–<lpage>449</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Dobson1"><label>27</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dobson</surname><given-names>FS</given-names></name>, <name name-style="western"><surname>Jones</surname><given-names>WT</given-names></name> (<year>1985</year>) <article-title>Multiple causes of dispersal</article-title>. <source>Am Nat</source> <volume>126</volume>: <fpage>855</fpage>–<lpage>858</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Travis1"><label>28</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Travis</surname><given-names>JMJ</given-names></name>, <name name-style="western"><surname>Dytham</surname><given-names>C</given-names></name> (<year>1998</year>) <article-title>The evolution of dispersal in a metapopulation: a spatially explicit, individual-based model</article-title>. <source>Proc Biol Sci</source> <volume>265</volume>: <fpage>17</fpage>–<lpage>23</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Koenig1"><label>29</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Koenig</surname><given-names>WD</given-names></name>, <name name-style="western"><surname>Van Vuren</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Hooge</surname><given-names>PN</given-names></name> (<year>1996</year>) <article-title>Detectability, philopatry, and the distribution of dispersal distances in vertebrates</article-title>. <source>Trends Ecol Evol</source> <volume>11</volume>: <fpage>514</fpage>–<lpage>517</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Vuilleumier1"><label>30</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vuilleumier</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Metzger</surname><given-names>R</given-names></name> (<year>2006</year>) <article-title>Animal dispersal modelling: handling landscape features and related animal choices</article-title>. <source>Ecol Model</source> <volume>190</volume>: <fpage>159</fpage>–<lpage>170</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Mooij1"><label>31</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mooij</surname><given-names>WM</given-names></name>, <name name-style="western"><surname>DeAngelis</surname><given-names>DL</given-names></name> (<year>2003</year>) <article-title>Uncertainty in spatially explicit animal dispersal models</article-title>. <source>Ecol Appl</source> <volume>13</volume>: <fpage>794</fpage>–<lpage>805</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Holland1"><label>32</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Holland</surname><given-names>EP</given-names></name>, <name name-style="western"><surname>Aegerter</surname><given-names>JN</given-names></name>, <name name-style="western"><surname>Dytham</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Smith</surname><given-names>GC</given-names></name> (<year>2007</year>) <article-title>Landscape as a model: the importance of geometry</article-title>. <source>PLoS Comput Biol</source> <volume>3</volume>: <fpage>1979</fpage>–<lpage>1992</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Gustafson1"><label>33</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gustafson</surname><given-names>EJ</given-names></name>, <name name-style="western"><surname>Gardner</surname><given-names>RH</given-names></name> (<year>1996</year>) <article-title>The effect of landscape heterogeneity on the probability of patch colonization</article-title>. <source>Ecology</source> <volume>77</volume>: <fpage>94</fpage>–<lpage>107</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Topping2"><label>34</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Topping</surname><given-names>CJ</given-names></name>, <name name-style="western"><surname>Hansen</surname><given-names>TS</given-names></name>, <name name-style="western"><surname>Jensen</surname><given-names>TS</given-names></name>, <name name-style="western"><surname>Jepsen</surname><given-names>JU</given-names></name>, <name name-style="western"><surname>Nikolajsen</surname><given-names>F</given-names></name>, <etal>et al</etal>. (<year>2003</year>) <article-title>ALMaSS, an agent-based model for animals in temperate European landscapes</article-title>. <source>Ecol Model</source> <volume>167</volume>: <fpage>65</fpage>–<lpage>82</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Pulliam1"><label>35</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pulliam</surname><given-names>HR</given-names></name>, <name name-style="western"><surname>Dunning</surname><given-names>JB</given-names><suffix>Jr</suffix></name>, <name name-style="western"><surname>Liu</surname><given-names>J</given-names></name> (<year>1992</year>) <article-title>Population dynamics in complex landscapes: a case study</article-title>. <source>Ecol Appl</source> <volume>2</volume>: <fpage>165</fpage>–<lpage>177</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Morales2"><label>36</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Morales</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Haydon</surname><given-names>DT</given-names></name>, <name name-style="western"><surname>Frair</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Holsinger</surname><given-names>KE</given-names></name>, <name name-style="western"><surname>Fryxell</surname><given-names>JM</given-names></name> (<year>2004</year>) <article-title>Extracting more out of relocation data: building movement models as mixtures of random walks</article-title>. <source>Ecology</source> <volume>85</volume>: <fpage>2436</fpage>–<lpage>2445</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Schumaker1"><label>37</label>
+<mixed-citation publication-type="other" xlink:type="simple">Schumaker NH (2011) HexSim (Version 2.3). U.S. Environmental Protection Agency, Environmental Research Laboratory. 237 p. Available: <ext-link ext-link-type="uri" xlink:href="http://www.epa.gov/hexsim" xlink:type="simple">http://www.epa.gov/hexsim</ext-link>.Accessed 12 January 2013. </mixed-citation>
+</ref>
+<ref id="pone.0064656-KramerSchadt1"><label>38</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kramer-Schadt</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Revilla</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Wiegand</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Breitenmoser</surname><given-names>U</given-names></name> (<year>2004</year>) <article-title>Fragmented landscapes, road mortality and patch connectivity: modeling influences on the dispersal of Eurasian lynx</article-title>. <source>J Appl Ecol</source> <volume>41</volume>: <fpage>711</fpage>–<lpage>723</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Wiegand1"><label>39</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wiegand</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Moloney</surname><given-names>KA</given-names></name>, <name name-style="western"><surname>Naves</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Knauer</surname><given-names>F</given-names></name> (<year>1999</year>) <article-title>Finding the missing link between landscape structure and population dynamics: a spatially explicit perspective</article-title>. <source>Am Nat</source> <volume>154</volume>: <fpage>605</fpage>–<lpage>627</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Grimm3"><label>40</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Grimm</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Berger</surname><given-names>U</given-names></name>, <name name-style="western"><surname>Bastiansen</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Eliassen</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Ginot</surname><given-names>V</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>A standard protocol for describing individual-based and agent-based models</article-title>. <source>Ecol Model</source> <volume>198</volume>: <fpage>115</fpage>–<lpage>126</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Grimm4"><label>41</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Grimm</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Berger</surname><given-names>U</given-names></name>, <name name-style="western"><surname>DeAngelis</surname><given-names>DL</given-names></name>, <name name-style="western"><surname>Polhill</surname><given-names>JG</given-names></name>, <name name-style="western"><surname>Giske</surname><given-names>J</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>The ODD protocol: a review and first update</article-title>. <source>Ecol Model</source> <volume>221</volume>: <fpage>2760</fpage>–<lpage>2768</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-McCann1"><label>42</label>
+<mixed-citation publication-type="book" xlink:type="simple">McCann NP (2011) American marten survival and movement in the presence of fishers. PhD dissertation. West Lafayette, Indiana. Purdue University.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Batschelet1"><label>43</label>
+<mixed-citation publication-type="book" xlink:type="simple">Batschelet E (1965) Statistical methods for the analysis of problems in animal orientation and certain biological rhythms. Washington DC :American Institute of Biological Sciences. 57 p.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Haefner1"><label>44</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Haefner</surname><given-names>JW</given-names></name>, <name name-style="western"><surname>Crist</surname><given-names>TO</given-names></name> (<year>1994</year>) <article-title>Spatial model of movement and foraging in harvester ants (<italic>Pogonomyrmex</italic>) (I): the role of memory and communication</article-title>. <source>J Theor Biol</source> <volume>166</volume>: <fpage>299</fpage>–<lpage>313</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Zollner1"><label>45</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zollner</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Lima</surname><given-names>SL</given-names></name> (<year>1997</year>) <article-title>Landscape-level perceptual abilities in white-footed mice: perceptual range and the detection of forested habitat</article-title>. <source>Oikos</source> <volume>80</volume>: <fpage>51</fpage>–<lpage>60</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Doerr1"><label>46</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Doerr</surname><given-names>ED</given-names></name>, <name name-style="western"><surname>Doerr</surname><given-names>VAJ</given-names></name> (<year>2005</year>) <article-title>Dispersal range analysis: quantifying individual variation in dispersal behavior</article-title>. <source>Oecologia</source> <volume>142</volume>: <fpage>1</fpage>–<lpage>10</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Blisle2"><label>47</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bélisle</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Desrochers</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Fortin</surname><given-names>MJ</given-names></name> (<year>2001</year>) <article-title>Influence of forest cover on the movements of forest birds: a homing experiment</article-title>. <source>Ecology</source> <volume>82</volume>: <fpage>1893</fpage>–<lpage>1904</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Selonen1"><label>48</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Selonen</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Hanski</surname><given-names>IK</given-names></name>, <name name-style="western"><surname>Desrochers</surname><given-names>A</given-names></name> (<year>2010</year>) <article-title>Measuring habitat availability for dispersing animals</article-title>. <source>Landsc Ecol</source> <volume>25</volume>: <fpage>331</fpage>–<lpage>335</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Zollner2"><label>49</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zollner</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Lima</surname><given-names>SL</given-names></name> (<year>1999</year>) <article-title>Illumination and the perception of remote habitat patches by white-footed mice</article-title>. <source>Anim Behav</source> <volume>58</volume>: <fpage>489</fpage>–<lpage>500</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Sih1"><label>50</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sih</surname><given-names>A</given-names></name> (<year>1980</year>) <article-title>Optimal behavior: can foragers balance two conflicting demands?</article-title> <source>Science</source> <volume>210</volume>: <fpage>1041</fpage>–<lpage>1043</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Holbrook1"><label>51</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Holbrook</surname><given-names>SJ</given-names></name>, <name name-style="western"><surname>Schmitt</surname><given-names>RJ</given-names></name> (<year>1988</year>) <article-title>The combined effects of predation risk and food reward on patch selection</article-title>. <source>Ecology</source> <volume>69</volume>: <fpage>125</fpage>–<lpage>134</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Rivest1"><label>52</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rivest</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Bergeron</surname><given-names>JM</given-names></name> (<year>1981</year>) <article-title>Density, food habits, and economic importance of raccoons (<italic>Procyon lotor</italic>) in Quebec agrosystems</article-title>. <source>Can J Zool</source> <volume>59</volume>: <fpage>1755</fpage>–<lpage>1762</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Beasley1"><label>53</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Beasley</surname><given-names>JC</given-names></name>, <name name-style="western"><surname>DeVault</surname><given-names>TL</given-names></name>, <name name-style="western"><surname>Retamosa</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Rhodes</surname><given-names>OE</given-names><suffix>Jr</suffix></name> (<year>2007</year>) <article-title>A hierarchical analysis of habitat selection by raccoons in northern Indiana</article-title>. <source>J Wildl Manage</source> <volume>71</volume>: <fpage>1125</fpage>–<lpage>1133</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Retamosa1"><label>54</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Retamosa</surname><given-names>MI</given-names></name>, <name name-style="western"><surname>Humberg</surname><given-names>LA</given-names></name>, <name name-style="western"><surname>Beasley</surname><given-names>JC</given-names></name>, <name name-style="western"><surname>Rhodes</surname><given-names>OE</given-names><suffix>Jr</suffix></name> (<year>2008</year>) <article-title>Modeling wildlife damage to crops in northern Indiana</article-title>. <source>Human-Wildlife Conflicts</source> <volume>2</volume>: <fpage>225</fpage>–<lpage>239</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Beasley2"><label>55</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Beasley</surname><given-names>JC</given-names></name>, <name name-style="western"><surname>Rhodes</surname><given-names>OE</given-names><suffix>Jr</suffix></name> (<year>2008</year>) <article-title>Relationship between raccoon abundance and crop damage</article-title>. <source>Human-Wildlife Conflicts</source> <volume>2</volume>: <fpage>248</fpage>–<lpage>259</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Stuewer1"><label>56</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Stuewer</surname><given-names>FW</given-names></name> (<year>1943</year>) <article-title>Raccoons: their habitats and management in Michigan</article-title>. <source>Ecol Monogr</source> <volume>13</volume>: <fpage>203</fpage>–<lpage>257</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Mech1"><label>57</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mech</surname><given-names>LD</given-names></name>, <name name-style="western"><surname>Barnes</surname><given-names>DM</given-names></name>, <name name-style="western"><surname>Tester</surname><given-names>JR</given-names></name> (<year>1968</year>) <article-title>Seasonal weight changes, mortality and population structure of raccoons in Minnesota</article-title>. <source>J Mamm</source> <volume>49</volume>: <fpage>63</fpage>–<lpage>73</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Sharp1"><label>58</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sharp</surname><given-names>WM</given-names></name>, <name name-style="western"><surname>Sharp</surname><given-names>LH</given-names></name> (<year>1956</year>) <article-title>Nocturnal movements and behavior of wild raccoons at a winter feeding station</article-title>. <source>J Mamm</source> <volume>37</volume>: <fpage>170</fpage>–<lpage>177</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Bider1"><label>59</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bider</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>Thibault</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Sarrazin</surname><given-names>R</given-names></name> (<year>1968</year>) <article-title>Schèmes dynamiques spatio-temporales de l′activité de <italic>Procyon lotor</italic> en relation avec le comportement</article-title>. <source>Mammalia</source> <volume>32</volume>: <fpage>137</fpage>–<lpage>163</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Lotze1"><label>60</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lotze</surname><given-names>JH</given-names></name>, <name name-style="western"><surname>Anderson</surname><given-names>S</given-names></name> (<year>1979</year>) <article-title><italic>Procyon lotor</italic></article-title>. <source>Mamm Species</source> <volume>119</volume>: <fpage>1</fpage>–<lpage>8</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Mosillo1"><label>61</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mosillo</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Heske</surname><given-names>EJ</given-names></name>, <name name-style="western"><surname>Thompson</surname><given-names>JD</given-names></name> (<year>1999</year>) <article-title>Survival and movements of translocated raccoons in northcentral Illinois</article-title>. <source>J Wildl Manage</source> <volume>63</volume>: <fpage>278</fpage>–<lpage>286</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Fritzell1"><label>62</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fritzell</surname><given-names>EK</given-names></name>, <name name-style="western"><surname>Greenwood</surname><given-names>RJ</given-names></name> (<year>1984</year>) <article-title>Mortality of raccoons in North Dakota</article-title>. <source>Prairie Nat</source> <volume>16</volume>: <fpage>1</fpage>–<lpage>4</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Glueck1"><label>63</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Glueck</surname><given-names>TF</given-names></name>, <name name-style="western"><surname>Clark</surname><given-names>WR</given-names></name>, <name name-style="western"><surname>Andrews</surname><given-names>RD</given-names></name> (<year>1988</year>) <article-title>Raccoon movement and habitat use during the fur harvest season</article-title>. <source>Wildl Soc B</source> <volume>16</volume>: <fpage>6</fpage>–<lpage>11</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Clark1"><label>64</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Clark</surname><given-names>WR</given-names></name>, <name name-style="western"><surname>Hasbrouck</surname><given-names>JJ</given-names></name>, <name name-style="western"><surname>Kienzler</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Glueck</surname><given-names>TF</given-names></name> (<year>1989</year>) <article-title>Vital statistics and harvest of an Iowa raccoon population</article-title>. <source>J Wildl Manage</source> <volume>53</volume>: <fpage>982</fpage>–<lpage>990</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Hasbrouck1"><label>65</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hasbrouck</surname><given-names>JJ</given-names></name>, <name name-style="western"><surname>Clark</surname><given-names>WR</given-names></name>, <name name-style="western"><surname>Andrews</surname><given-names>RD</given-names></name> (<year>1992</year>) <article-title>Factors associated with raccoon mortality in Iowa</article-title>. <source>J Wildl Manage</source> <volume>56</volume>: <fpage>693</fpage>–<lpage>699</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Gehrt1"><label>66</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gehrt</surname><given-names>SD</given-names></name>, <name name-style="western"><surname>Fritzell</surname><given-names>EK</given-names></name> (<year>1999</year>) <article-title>Survivorship of a nonharvested raccoon population in south Texas</article-title>. <source>J Wildl Manage</source> <volume>63</volume>: <fpage>889</fpage>–<lpage>894</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Fritzell2"><label>67</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fritzell</surname><given-names>EK</given-names></name>, <name name-style="western"><surname>Hubert</surname><given-names>GF</given-names></name>, <name name-style="western"><surname>Meyen</surname><given-names>BE</given-names></name>, <name name-style="western"><surname>Sanderson</surname><given-names>GC</given-names></name> (<year>1985</year>) <article-title>Age-specific reproduction in Illinois and Missouri raccoons</article-title>. <source>J Wildl Manage</source> <volume>49</volume>: <fpage>901</fpage>–<lpage>905</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Hasbrouck2"><label>68</label>
+<mixed-citation publication-type="book" xlink:type="simple">Hasbrouck JJ (1991) Demographic responses of raccoons to varying exploitation rates. PhD dissertation. Ames, Iowa,Iowa State University.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Sagar1"><label>69</label>
+<mixed-citation publication-type="book" xlink:type="simple">Sagar RG (1956) A study of factors affecting raccoon reproduction in Ohio. MS thesis. Columbus, Ohio, The Ohio State University.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Sanderson1"><label>70</label>
+<mixed-citation publication-type="other" xlink:type="simple">Sanderson GC, Hubert GF (1981) Selected demographic characteristics of Illinois (USA) raccoons (<italic>Procyon lotor</italic>). In: Chapman JA, Pursley D, editors. Worldwide Furbearer Conference Proceedings. Frostburg: Worldwide Furbearer Conference, Inc. pp. 487–513</mixed-citation>
+</ref>
+<ref id="pone.0064656-Ritke1"><label>71</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ritke</surname><given-names>ME</given-names></name> (<year>1990</year>) <article-title>Quantitative assessment of variation in litter size of the raccoon <italic>Procyon lotor</italic></article-title>. <source>Am Midl Nat</source> <volume>123</volume>: <fpage>390</fpage>–<lpage>398</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Rees1"><label>72</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rees</surname><given-names>EE</given-names></name>, <name name-style="western"><surname>Pond</surname><given-names>BA</given-names></name>, <name name-style="western"><surname>Phillips</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>Murray</surname><given-names>D</given-names></name> (<year>2008</year>) <article-title>Raccoon ecology database: a resource for population dynamics modeling and meta-analysis</article-title>. <source>Ecol Inform</source> <volume>3</volume>: <fpage>87</fpage>–<lpage>96</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Hurlbert1"><label>73</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hurlbert</surname><given-names>SH</given-names></name> (<year>1984</year>) <article-title>Pseudoreplication and the design of ecological field experiments</article-title>. <source>Ecol Monogr</source> <volume>54</volume>: <fpage>187</fpage>–<lpage>211</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Millar1"><label>74</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Millar</surname><given-names>RB</given-names></name>, <name name-style="western"><surname>Anderson</surname><given-names>MJ</given-names></name> (<year>2004</year>) <article-title>Remedies for pseudoreplication</article-title>. <source>Fish Res</source> <volume>70</volume>: <fpage>397</fpage>–<lpage>407</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-SAS1"><label>75</label>
+<mixed-citation publication-type="other" xlink:type="simple">SAS Institute Inc. (2011) SAS/STAT® 9.3 User's Guide. SAS Institute Inc. 8621 p.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Laundr1"><label>76</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Laundré</surname><given-names>JW</given-names></name>, <name name-style="western"><surname>Hernández</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Altendorf</surname><given-names>KB</given-names></name> (<year>2001</year>) <article-title>Wolves, elk, and bison: reestablishing the “landscape of fear”in Yellowstone National Park, U.S.A</article-title>. <source> Can J Zool</source> <volume>79</volume>: <fpage>1401</fpage>–<lpage>1409</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Altendorf1"><label>77</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Altendorf</surname><given-names>KB</given-names></name>, <name name-style="western"><surname>Laundré</surname><given-names>JW</given-names></name>, <name name-style="western"><surname>López González</surname><given-names>CA</given-names></name>, <name name-style="western"><surname>Brown</surname><given-names>JS</given-names></name> (<year>2001</year>) <article-title>Assessing effects of predation risk on foraging behavior of mule deer</article-title>. <source>J Mamm</source> <volume>82</volume>: <fpage>430</fpage>–<lpage>439</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Brown2"><label>78</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Brown</surname><given-names>JS</given-names></name>, <name name-style="western"><surname>Kotler</surname><given-names>BP</given-names></name> (<year>2004</year>) <article-title>Hazardous duty pay and the foraging cost of predation</article-title>. <source>Ecol Lett</source> <volume>7</volume>: <fpage>999</fpage>–<lpage>1014</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Hernndez1"><label>79</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hernández</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Laundré</surname><given-names>JW</given-names></name> (<year>2005</year>) <article-title>Foraging in the ‘landscape of fear’ and its implications for habitat use and diet quality of elk <italic>Cervus elaphus</italic> and bison <italic>Bison bison</italic></article-title>. <source>Wildl Biol</source> <volume>11</volume>: <fpage>215</fpage>–<lpage>220</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-VanderMerwe1"><label>80</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Van der Merwe</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Brown</surname><given-names>JS</given-names></name> (<year>2008</year>) <article-title>Mapping the landscape of fear of the cape ground squirrel (<italic>Xerus inauris</italic>)</article-title>. <source>J Mamm</source> <volume>89</volume>: <fpage>1162</fpage>–<lpage>1169</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Laundr2"><label>81</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Laundré</surname><given-names>JW</given-names></name>, <name name-style="western"><surname>Hernández</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Ripple</surname><given-names>WJ</given-names></name> (<year>2010</year>) <article-title>The landscape of fear: ecological implications of being afraid</article-title>. <source>Open Ecol J</source> <volume>3</volume>: <fpage>1</fpage>–<lpage>7</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Lima2"><label>82</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lima</surname><given-names>SL</given-names></name>, <name name-style="western"><surname>Bednekoff</surname><given-names>PA</given-names></name> (<year>1999</year>) <article-title>Temporal variation in danger drives antipredator behavior: the predation risk allocation hypothesis</article-title>. <source>Am Nat</source> <volume>153</volume>: <fpage>649</fpage>–<lpage>659</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Sih2"><label>83</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sih</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Harding</surname><given-names>KC</given-names></name> (<year>2000</year>) <article-title>New insights on how temporal variation in predation risk shapes prey behavior</article-title>. <source>Trends in Ecol Evol</source> <volume>15</volume>: <fpage>3</fpage>–<lpage>4</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Ferrari1"><label>84</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ferrari</surname><given-names>MCO</given-names></name>, <name name-style="western"><surname>Messier</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Chivers</surname><given-names>DP</given-names></name> (<year>2008</year>) <article-title>Larval amphibians learn to match antipredator response intensity to temporal patterns of risk</article-title>. <source>Behav Ecol</source> <volume>19</volume>: <fpage>980</fpage>–<lpage>983</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Allen1"><label>85</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Allen</surname><given-names>EG</given-names></name> (<year>1938</year>) <article-title>The habits and life history of the eastern chipmunk, <italic>Tamias striatus lysteri</italic></article-title>. <source>New York State Museum Bulletin</source> <volume>314</volume>: <fpage>1</fpage>–<lpage>122</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Yahner1"><label>86</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yahner</surname><given-names>RH</given-names></name> (<year>1978</year>) <article-title>The adaptive nature of the social system and behavior in the eastern chipmunk, <italic>Tamias striatus</italic></article-title>. <source>Behav Ecol Sociobiol</source> <volume>3</volume>: <fpage>397</fpage>–<lpage>427</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-DeCoursey1"><label>87</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>DeCoursey</surname><given-names>PJ</given-names></name>, <name name-style="western"><surname>Walker</surname><given-names>JK</given-names></name>, <name name-style="western"><surname>Smith</surname><given-names>SA</given-names></name> (<year>2000</year>) <article-title>A circadian pacemaker in free-living chipmunks: essential for survival?</article-title> <source>J Comp Physiol A</source> <volume>186</volume>: <fpage>169</fpage>–<lpage>180</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Tryon1"><label>88</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tryon</surname><given-names>CA</given-names></name>, <name name-style="western"><surname>Snyder</surname><given-names>DP</given-names></name> (<year>1973</year>) <article-title>Biology of the eastern chipmunk, <italic>Tamias striatus</italic>: life tables, age distributions, and trends in population numbers</article-title>. <source>J Mamm</source> <volume>54</volume>: <fpage>145</fpage>–<lpage>168</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Snyder1"><label>89</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Snyder</surname><given-names>DP</given-names></name> (<year>1982</year>) <article-title><italic>Tamias striatus</italic></article-title>. <source>Mamm Species</source> <volume>168</volume>: <fpage>1</fpage>–<lpage>8</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Zollner3"><label>90</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zollner</surname><given-names>PA</given-names></name> (<year>2000</year>) <article-title>Comparing the landscape level perceptual abilities of forest sciurids in fragmented agricultural landscapes</article-title>. <source>Landsc Ecol</source> <volume>15</volume>: <fpage>523</fpage>–<lpage>533</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Loew1"><label>91</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Loew</surname><given-names>SS</given-names></name> (<year>1999</year>) <article-title>Sex-biased dispersal in eastern chipmunks, <italic>Tamias striatus</italic></article-title>. <source>Evol Ecol</source> <volume>13</volume>: <fpage>557</fpage>–<lpage>577</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Nupp1"><label>92</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nupp</surname><given-names>TE</given-names></name>, <name name-style="western"><surname>Swihart</surname><given-names>RK</given-names></name> (<year>1998</year>) <article-title>Effects of forest fragmentation on population attributes of white-footed mice and eastern chipmunks</article-title>. <source>J Mamm</source> <volume>79</volume>: <fpage>1234</fpage>–<lpage>1243</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Frair1"><label>93</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Frair</surname><given-names>JL</given-names></name>, <name name-style="western"><surname>Merrill</surname><given-names>EH</given-names></name>, <name name-style="western"><surname>Visscher</surname><given-names>DR</given-names></name>, <name name-style="western"><surname>Fortin</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Beyer</surname><given-names>HL</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Scales of movement by elk (<italic>Cervus elaphus</italic>) in response to heterogeneity in forage resources and predation risk</article-title>. <source>Landsc Ecol</source> <volume>20</volume>: <fpage>273</fpage>–<lpage>287</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Delgado1"><label>94</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Delgado</surname><given-names>MM</given-names></name>, <name name-style="western"><surname>Penteriani</surname><given-names>V</given-names></name> (<year>2008</year>) <article-title>Behavioral states help translate dispersal movements into spatial distribution patterns of floaters</article-title>. <source>Am Nat</source> <volume>172</volume>: <fpage>475</fpage>–<lpage>485</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Reese1"><label>95</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Reese</surname><given-names>HM</given-names></name>, <name name-style="western"><surname>Lillesand</surname><given-names>TM</given-names></name>, <name name-style="western"><surname>Nagel</surname><given-names>DE</given-names></name>, <name name-style="western"><surname>Stewart</surname><given-names>JS</given-names></name>, <name name-style="western"><surname>Goldmann</surname><given-names>RA</given-names></name>, <etal>et al</etal>. (<year>2002</year>) <article-title>Statewide land cover derived from multiseasonal Landsat TM data: a retrospective of the WISCLAND project</article-title>. <source>Remote Sens Environ</source> <volume>82</volume>: <fpage>224</fpage>–<lpage>237</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Williams1"><label>96</label>
+<mixed-citation publication-type="book" xlink:type="simple">Williams BW, Gilbert JH, Zollner PA (2007) Historical perspective on the reintroduction of the fisher and American marten in Michigan and Wisconsin. Newton Square: USDA, Forest Service. 29 p.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Woodford1"><label>97</label>
+<mixed-citation publication-type="book" xlink:type="simple">Woodford JE, Dumyahn SL (2011) Conservation and management plan for American martens in Wisconsin. Madison:Wisconsin Department of Natural Resources. 43 p.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Powell1"><label>98</label>
+<mixed-citation publication-type="book" xlink:type="simple">Powell RA, Lewis JC, Slough BG, Brainerd SM, Jordan NR, <etal>et al</etal>.. (2012) Evaluating translocations of martens, sables, and fishers: testing model predictions with field data. In: Aubry KB, Zielinski WJ, Raphael MG, Proulx G, Buskirk SW, editors. Biology and conservation of martens, sables, and fishers: a new synthesis. Ithaca:Cornell University Press. pp. 93–137.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Dumyahn1"><label>99</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dumyahn</surname><given-names>JB</given-names></name>, <name name-style="western"><surname>Zollner</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Gilbert</surname><given-names>JH</given-names></name> (<year>2007</year>) <article-title>Winter home-range characteristics of American marten (<italic>Martes americana</italic>) in northern Wisconsin</article-title>. <source>Am Midl Nat</source> <volume>158</volume>: <fpage>382</fpage>–<lpage>394</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Wright1"><label>100</label>
+<mixed-citation publication-type="book" xlink:type="simple">Wright JL (1999) Winter home range and habitat use by sympatric fishers (<italic>Martes pennanti</italic>) and American martens (<italic>Martes americana</italic>) in northern Wisconsin. MS thesis. Stevens Point, Wisconsin, University of Wisconsin-Stevens Point.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Bull1"><label>101</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bull</surname><given-names>EL</given-names></name>, <name name-style="western"><surname>Heater</surname><given-names>TW</given-names></name> (<year>2001</year>) <article-title>Home range and dispersal of the American marten in northeastern Oregon</article-title>. <source>Northwest Nat</source> <volume>82</volume>: <fpage>7</fpage>–<lpage>11</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Gilbert1"><label>102</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gilbert</surname><given-names>JH</given-names></name>, <name name-style="western"><surname>Zollner</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Green</surname><given-names>AK</given-names></name>, <name name-style="western"><surname>Wright</surname><given-names>JL</given-names></name>, <name name-style="western"><surname>Karasov</surname><given-names>WH</given-names></name> (<year>2009</year>) <article-title>Seasonal field metabolic rates of American martens in Wisconsin</article-title>. <source>Am Midl Nat</source> <volume>162</volume>: <fpage>327</fpage>–<lpage>334</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-McCann2"><label>103</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>McCann</surname><given-names>NP</given-names></name>, <name name-style="western"><surname>Zollner</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Gilbert</surname><given-names>JH</given-names></name> (<year>2010</year>) <article-title>Survival of adult martens in northern Wisconsin</article-title>. <source>J Wildl Manage</source> <volume>74</volume>: <fpage>1502</fpage>–<lpage>1507</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Strickland1"><label>104</label>
+<mixed-citation publication-type="book" xlink:type="simple">Strickland MA, Douglas CW (1987) Marten. In: Novak M, Baker JA, Obbard ME, Malloch B, editors. Wild furbearer management and conservation in North America.Toronto: Ontario Trappers Association. pp. 531–546.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Aune1"><label>105</label>
+<mixed-citation publication-type="other" xlink:type="simple">Aune KE, Schladweiler P (1997) Age, sex structure, and fecundity of the American marten in Montana. In: Proulx G, Bryant HN, Woodard PM, editors.<italic>Martes</italic>: taxonomy, ecology, techniques, and management.Edmonton:Provincial Museum of Alberta. pp. 61–77.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Lima3"><label>106</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lima</surname><given-names>SL</given-names></name>, <name name-style="western"><surname>Bednekoff</surname><given-names>PA</given-names></name> (<year>1999</year>) <article-title>Back to the basics of anitpredatory vigilance: can nonvigilant animals detect attack?</article-title> <source>Anim Behav</source> <volume>58</volume>: <fpage>537</fpage>–<lpage>543</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-McAdam1"><label>107</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>McAdam</surname><given-names>AG</given-names></name>, <name name-style="western"><surname>Kramer</surname><given-names>DL</given-names></name> (<year>1998</year>) <article-title>Vigilance as a benefit of intermittent locomotion in small mammals</article-title>. <source>Anim Behav</source> <volume>55</volume>: <fpage>109</fpage>–<lpage>117</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Zollner4"><label>108</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zollner</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Lima</surname><given-names>SL</given-names></name> (<year>2005</year>) <article-title>Behavioral trade-offs when dispersing across a patchy landscape</article-title>. <source>Oikos</source> <volume>108</volume>: <fpage>219</fpage>–<lpage>230</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Lima4"><label>109</label>
+<mixed-citation publication-type="book" xlink:type="simple">Lima SL (1996) The influence of models in the interpretation of vigilance. In: Bekoff M, Jamieson D, editors.Readings in Animal Cognition. Cambridge:Massachusetts Institute of Technology Press. pp. 201–216.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Dunnett1"><label>110</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dunnett</surname><given-names>CW</given-names></name> (<year>1955</year>) <article-title>A multiple comparison procedure for comparing several treatments with a control</article-title>. <source>J Am Stat Assoc</source> <volume>50</volume>: <fpage>1096</fpage>–<lpage>1121</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Conover1"><label>111</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Conover</surname><given-names>WJ</given-names></name>, <name name-style="western"><surname>Iman</surname><given-names>RL</given-names></name> (<year>1981</year>) <article-title>Rank transformations as a bridge between parametric and nonparametric statistics</article-title>. <source>Am Stat</source> <volume>35</volume>: <fpage>124</fpage>–<lpage>133</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Dussault1"><label>112</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dussault</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Ouellet</surname><given-names>JP</given-names></name>, <name name-style="western"><surname>Courtois</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Huot</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Breton</surname><given-names>L</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Linking moose habitat selection to limiting factors</article-title>. <source>Ecography</source> <volume>28</volume>: <fpage>619</fpage>–<lpage>628</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-FestaBianchet1"><label>113</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Festa-Bianchet</surname><given-names>M</given-names></name> (<year>1988</year>) <article-title>Seasonal range selection in bighorn sheep: conflicts between forage quality, forage quantity, and predator avoidance</article-title>. <source>Oecologia</source> <volume>75</volume>: <fpage>580</fpage>–<lpage>586</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Rhodes1"><label>114</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rhodes</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>McAlpine</surname><given-names>CA</given-names></name>, <name name-style="western"><surname>Lunney</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Possingham</surname><given-names>HP</given-names></name> (<year>2005</year>) <article-title>A spatially explicit habitat selection model incorporating home range behavior</article-title>. <source>Ecology</source> <volume>86</volume>: <fpage>1199</fpage>–<lpage>1205</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Doligez1"><label>115</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Doligez</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Danchin</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Clobert</surname><given-names>J</given-names></name> (<year>2002</year>) <article-title>Public information and breeding habitat selection in a wild bird population</article-title>. <source>Science</source> <volume>297</volume>: <fpage>1168</fpage>–<lpage>1170</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Stamps1"><label>116</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Stamps</surname><given-names>JA</given-names></name>, <name name-style="western"><surname>Krishnan</surname><given-names>VV</given-names></name>, <name name-style="western"><surname>Reid</surname><given-names>ML</given-names></name> (<year>2005</year>) <article-title>Search costs and habitat selection by dispersers</article-title>. <source>Ecology</source> <volume>86</volume>: <fpage>510</fpage>–<lpage>518</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0064656-Csada1"><label>117</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Csada</surname><given-names>RD</given-names></name>, <name name-style="western"><surname>James</surname><given-names>PC</given-names></name>, <name name-style="western"><surname>Espie</surname><given-names>HM</given-names></name> (<year>1996</year>) <article-title>The “file drawer problem” of non-significant results: does it apply to biological research?</article-title> <source>Oikos</source> <volume>76</volume>: <fpage>591</fpage>–<lpage>593</lpage>.</mixed-citation>
+</ref>
+</ref-list></back>
+</article>

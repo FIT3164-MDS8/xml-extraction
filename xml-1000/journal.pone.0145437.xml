@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article article-type="research-article" dtd-version="3.0" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-15-36185</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0145437</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>A Scheme to Optimize Flow Routing and Polling Switch Selection of Software Defined Networks</article-title>
+<alt-title alt-title-type="running-head">A Scheme to Optimize Flow Routing and Polling Switch Selection of SDN</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Chen</surname> <given-names>Huan</given-names></name>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Li</surname> <given-names>Lemin</given-names></name>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Ren</surname> <given-names>Jing</given-names></name>
+<xref ref-type="corresp" rid="cor001">*</xref>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Wang</surname> <given-names>Yang</given-names></name>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Zhao</surname> <given-names>Yangming</given-names></name>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Wang</surname> <given-names>Xiong</given-names></name>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Wang</surname> <given-names>Sheng</given-names></name>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Xu</surname> <given-names>Shizhong</given-names></name>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+</contrib-group>
+<aff id="aff001">
+<addr-line>Key Laboratory of Optical Fiber Sensing and Communication (Education Ministry of China), University of Electronic Science and Technology of China, Chengdu, Sichuan, China</addr-line>
+</aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Shi</surname> <given-names>Yongtang</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1">
+<addr-line>Nankai University, CHINA</addr-line>
+</aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: JR XW SW SX LL. Performed the experiments: HC YW YZ. Analyzed the data: HC YW. Contributed reagents/materials/analysis tools: JR YZ. Wrote the paper: HC YZ. Programming: HC.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">renjing@uestc.edu.cn</email></corresp>
+</author-notes>
+<pub-date pub-type="collection">
+<year>2015</year>
+</pub-date>
+<pub-date pub-type="epub">
+<day>21</day>
+<month>12</month>
+<year>2015</year>
+</pub-date>
+<volume>10</volume>
+<issue>12</issue>
+<elocation-id>e0145437</elocation-id>
+<history>
+<date date-type="received">
+<day>22</day>
+<month>8</month>
+<year>2015</year>
+</date>
+<date date-type="accepted">
+<day>3</day>
+<month>12</month>
+<year>2015</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2015</copyright-year>
+<copyright-holder>Chen et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0145437"/>
+<abstract>
+<p>This paper aims at minimizing the communication cost for collecting flow information in Software Defined Networks (SDN). Since flow-based information collecting method requires too much communication cost, and switch-based method proposed recently cannot benefit from controlling flow routing, jointly optimize flow routing and polling switch selection is proposed to reduce the communication cost. To this end, joint optimization problem is formulated as an Integer Linear Programming (ILP) model firstly. Since the ILP model is intractable in large size network, we also design an optimal algorithm for the multi-rooted tree topology and an efficient heuristic algorithm for general topology. According to extensive simulations, it is found that our method can save up to 55.76% communication cost compared with the state-of-the-art switch-based scheme.</p>
+</abstract>
+<funding-group>
+<funding-statement>This work is partially supported by 973 Program (2013CB329103), NSFC Fund (61271165, 61301153, 61401070), Program for Changjiang Scholars and Innovative Research Team (PCSIRT) in University and the 111 Project B14039.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="12"/>
+<table-count count="4"/>
+<page-count count="22"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its Supporting Information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>To improve the network performance, network operators need to conduct many measurement tasks. Traditionally, there are two types of measurement methods including active measurement and passive measurement. In active measurement, network operators inject probe traffics into the network. This method is easy to deploy but it may affect the performance of the network since extra traffics are introduced. In passive measurement, network operators monitor the performance of network devices such as routers and switches to measure the performance of entire network. Therefore, it has little impact to the network performance. However, the security concerns cannot be ignored since passive measurement requires full access to those network devices.</p>
+<p>The emergence of Software Defined Network (SDN) provides more opportunities for network measurement. It provides Application Programming Interfaces (API) to query the network performance statistics of each flow or each switch. Accordingly, it greatly reduces the amount of probing traffic in conventional active measurement techniques, and avoids fully accessing the network components as in previous passive measurement methods.</p>
+<p>SDN-enabled measurement techniques consist of several measurement primitives including counting, hashing, and programming [<xref ref-type="bibr" rid="pone.0145437.ref001">1</xref>–<xref ref-type="bibr" rid="pone.0145437.ref004">4</xref>]. As shown in <xref ref-type="fig" rid="pone.0145437.g001">Fig 1</xref>, these primitives consume various resources in switches and controllers including Ternary Content Addressable Memory (TCAM), processing time of CPUs, etc. Moreover, extra communication cost is introduced due to the bandwidth usage of the request and reply packets. Obviously, when there are hundreds of thousands of flows, collecting flow information may bring serious workload to the central controller.</p>
+<fig id="pone.0145437.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Resource Utilization.</title>
+<p>The resources consumed by different measurement primitives and the interactive process between switches and controllers.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.g001" xlink:type="simple"/>
+</fig>
+<p>To reduce the communication cost for collecting all the flow informations in SDN, one switch-based method called FlowCover [<xref ref-type="bibr" rid="pone.0145437.ref005">5</xref>] is proposed. FlowCover requests selected switches (referred as <italic>polling switch</italic>) to send the statistics of all flows on it. It should be guarantee that at least one polling switch is traversed by each flow. In this way, some request and reply packets of flow statistics are aggregated. However, this method may bring some duplicate pollings on the controller because the controller may poll same flows on different polling switches. The duplicate pollings bring extra resource consumption of switches and controller, such as more TCAM memory entries, and may result in the overuse of limited resources. For example, paper [<xref ref-type="bibr" rid="pone.0145437.ref006">6</xref>] shows the monitor rules of measurement require memory space, but the switch memory is limited as discussed in [<xref ref-type="bibr" rid="pone.0145437.ref007">7</xref>–<xref ref-type="bibr" rid="pone.0145437.ref010">10</xref>]. The TCAM memory is expensive (US$ 350 for a 1 M-bit chip) and power-hungry (about 15 Watt / 1 Mbit) as shown in [<xref ref-type="bibr" rid="pone.0145437.ref011">11</xref>]. Therefore, although switch-based method saves lots of communication cost, it may cause more resource stress on switches and controller than the flow-based method.</p>
+<p>SDN offers the possibility of saving both the communication cost and resources of switches and controller by flexible routing of flows. With an appropriate flow routing, the number of required polling switches can be reduced and a flow will not be monitored for multiple times unless it is necessary. Accordingly, there are more opportunities to save the communication cost for collecting information without extra resource stress on the controllers by jointly optimizing flow routing and polling switch selection. As a common knowledge, changing the route may cause some problems such as it may break the load balance and longer routes may increase the total load of the network. The switch and link capacity can be applied to find a tradeoff between the optimization of the number of polling switches and the network load. The technical contributions of this paper can be summarized as follows:
+<list list-type="bullet"><list-item><p>We formulate the joint optimization problem as an Integer Linear Programming (ILP) model and solve it in small-scale networks.</p></list-item> <list-item><p>We propose an algorithm to derive an optimal solution for multi-rooted tree topology which is commonly adopted in DCNs.</p></list-item> <list-item><p>We design an efficient heuristic algorithm to jointly optimize flow routing and polling switch selection on general topology.</p></list-item> <list-item><p>We conduct extensive simulations to evaluate the performance of the algorithms. It is found that up to 51.16% communication costs are saved on multi-rooted tree topologies compared with that of FlowCover, and up to 55.76% costs are saved on general topologies.</p></list-item></list></p>
+<p>This paper is organized as follows. At first, some related works are discussed. Then the motivation of jointly optimizing flow routing and polling switch selection is presented. After that, the joint optimization problem is formulated as an ILP model and an optimal algorithm on multi-rooted tree topology is proposed. Then we design an efficient heuristic algorithm for the problem, followed by extensive simulation results. At last, the conclusion is given.</p>
+</sec>
+<sec id="sec002">
+<title>Related Works</title>
+<p>There are a lot of previous works focusing on how to measure the network resource utilization. Some of the works are leveraging the TCAM on switches to measure the flow information [<xref ref-type="bibr" rid="pone.0145437.ref001">1</xref>, <xref ref-type="bibr" rid="pone.0145437.ref003">3</xref>], while some others design efficient software based schemes to monitor the traffic [<xref ref-type="bibr" rid="pone.0145437.ref004">4</xref>, <xref ref-type="bibr" rid="pone.0145437.ref012">12</xref>, <xref ref-type="bibr" rid="pone.0145437.ref013">13</xref>]. However, they all focus on the concrete technique to measure network resource utilization, but not on how to reduce the communication cost for collecting flow information.</p>
+<p>As far as we know, FlowCover [<xref ref-type="bibr" rid="pone.0145437.ref005">5</xref>] is the only existing work focusing on how to optimize the cost for collecting flow information. Different from the traditional flow-based monitor scheme, such as NetFlow [<xref ref-type="bibr" rid="pone.0145437.ref014">14</xref>] and sFlow [<xref ref-type="bibr" rid="pone.0145437.ref015">15</xref>], FlowCover requests <italic>all</italic> the flow information on the selected switches instead of the information of a specific flow. In this way, FlowCover aggregates the information of multiple flows into a single packet and reduces the communication cost. However, FlowCover assumes that the flow route is fixed, and hence loses part of the optimization space and causes duplicate pollings. To the best of our knowledge, we are the first to optimize communication cost for collecting flow information in SDN by jointly optimizing flow routing and polling switch selection.</p>
+</sec>
+<sec id="sec003">
+<title>Motivation</title>
+<p>In this section, we present why our joint optimization scheme can help reducing the communication cost of flow measurement in SDNs through a motivation example. The example is shown in Figs <xref ref-type="fig" rid="pone.0145437.g002">2</xref> and <xref ref-type="fig" rid="pone.0145437.g003">3</xref>. In this example, there are six switches and six hosts. Seven active flows are plotted in different colors and line styles. The source and destination nodes of each flow are given as <italic>f</italic><sub>1</sub>: <italic>H</italic><sub>1</sub> − <italic>H</italic><sub>2</sub>, <italic>f</italic><sub>2</sub>: <italic>H</italic>1 − <italic>H</italic>3, <italic>f</italic><sub>3</sub>: <italic>H</italic><sub>1</sub> − <italic>H</italic>4, <italic>f</italic><sub>4</sub>: <italic>H</italic><sub>2</sub> − <italic>H</italic><sub>4</sub>, <italic>f</italic><sub>5</sub>: <italic>H</italic><sub>2</sub> − <italic>H</italic><sub>5</sub>, <italic>f</italic><sub>6</sub>: <italic>H</italic><sub>4</sub> − <italic>H</italic><sub>5</sub>, <italic>f</italic><sub>7</sub>: <italic>H</italic><sub>6</sub> − <italic>H</italic><sub>7</sub>. Each of the switches only holds the partial view of all the flows. The partial view of each switch is given in the rectangles.</p>
+<fig id="pone.0145437.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Motivation Example (a).</title>
+<p>The paths of flows obtained by shortest path algorithm. The optimal solution is polling the flow information on switches <italic>S</italic><sub>2</sub>, <italic>S</italic><sub>3</sub> and <italic>S</italic><sub>6</sub>.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.g002" xlink:type="simple"/>
+</fig>
+<fig id="pone.0145437.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Motivation Example (b).</title>
+<p>The alternative shortest paths of flows with flexible routing. The optimal solution is polling the flow information on switches <italic>S</italic><sub>3</sub> and <italic>S</italic><sub>6</sub>.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.g003" xlink:type="simple"/>
+</fig>
+<p>Considering that different measurement tasks require different types of resources (e.g. CPU, memory) and one task may require multiple resources, this paper uses communication cost which is proportional to the other resources utilization of switches and controller to show the performance of joint optimization scheme.</p>
+<p>According to the OpenFlow specification [<xref ref-type="bibr" rid="pone.0145437.ref016">16</xref>], the message of an individual flow statistics request counts 56 bytes, and the header of a reply message counts 12 bytes, and the message body of reply message counts 96 bytes per flow. Taking the other packet headers (66 bytes per packet including headers of Ethernet, IP and TCP) into account, collecting the information of one flow requires 296 bytes data which is referred as <italic>communication cost</italic>.</p>
+<p>In the example, the network carries seven flows. The flow-based scheme queries one of the switches along the route of each flow. In this case, 7 request messages as well as 7 reply messages will be generated and sent between the controller and switches. Hereby, there are 7 × (122 + 174) = 2072 bytes on wire for flow statistics.</p>
+<p>FlowCover [<xref ref-type="bibr" rid="pone.0145437.ref005">5</xref>] selects polling switches to monitor all the flow information on them. However, the reducing of communication cost is limited by the fixed flow routing. When the flows are routed as shown in <xref ref-type="fig" rid="pone.0145437.g002">Fig 2</xref> which is obtained by shortest path algorithm, the optimal solution of FlowCover is polling the flow information on switches <italic>S</italic><sub>2</sub>, <italic>S</italic><sub>3</sub> and <italic>S</italic><sub>6</sub>. There are (66 + 56) × 3 = 366 bytes on wire for request messages and (66 + 12) × 3 + 96 × 9 = 1098 bytes for reply messages (<italic>f</italic><sub>1</sub> is monitored twice on <italic>S</italic><sub>2</sub> and <italic>S</italic><sub>3</sub>, and <italic>f</italic><sub>4</sub> is monitored twice on <italic>S</italic><sub>3</sub> and <italic>S</italic><sub>6</sub>), so the communication cost is 1464 bytes, and about 29.34% communication cost on the flow information statistics is saved compare with that of flow-based scheme.</p>
+<p>It should be pointed out that there are some changes of the length of request and reply messages in the latest OpenFlow specifications. However, the small differences will not lead to a fundamental change of the conclusion, and in order to make a fair comparison, we use the same version of OpenFlow specification with FlowCover [<xref ref-type="bibr" rid="pone.0145437.ref005">5</xref>].</p>
+<p>If we change the route of flow <italic>f</italic><sub>7</sub> as shown in <xref ref-type="fig" rid="pone.0145437.g003">Fig 3</xref> which is also the shortest path, the optimal solution of FlowCover is polling the flow information on switches <italic>S</italic><sub>3</sub> and <italic>S</italic><sub>6</sub>. The communication cost is reduced to (66 + 56) × 2 + (66 + 12) × 2 + 96 × 8 = 1168 bytes (<italic>f</italic><sub>4</sub> is monitored twice on <italic>S</italic><sub>3</sub> and <italic>S</italic><sub>6</sub>). It saves 43.63% communication cost compared with that of flow-based scheme. Meanwhile, it saves 20.22% less bytes compared with that of FlowCover if the routes can be changed. From above examples, we see that <italic>jointly optimizing flow routing and polling switch selection can greatly reduce the communication cost on flow information statistics</italic>.</p>
+</sec>
+<sec id="sec004" sec-type="materials|methods">
+<title>Methods</title>
+<sec id="sec005">
+<title>Problem Formulation</title>
+<p>In this section, the joint optimization problem is formulated as an Integer Linear Programming (ILP) model. All the notations used in this paper is shown in <xref ref-type="table" rid="pone.0145437.t001">Table 1</xref>.</p>
+<table-wrap id="pone.0145437.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.t001</object-id>
+<label>Table 1</label>
+<caption>
+<title>Notations Used in This Paper.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0145437.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.t001" xlink:type="simple"/>
+<table border="0" frame="box" rules="all">
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">Notation</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><italic>V</italic></td>
+<td align="center">The set of nodes</td>
+</tr>
+<tr>
+<td align="center"><italic>E</italic></td>
+<td align="center">The set of links</td>
+</tr>
+<tr>
+<td align="center"><italic>F</italic></td>
+<td align="center">The set of flows</td>
+</tr>
+<tr>
+<td align="center"><italic>f</italic><sub><italic>sdt</italic></sub></td>
+<td align="center">The parameter denotes the <italic>t</italic><sup><italic>th</italic></sup> flow from node <italic>s</italic> to node <italic>d</italic>.</td>
+</tr>
+<tr>
+<td align="center">
+<inline-formula id="pone.0145437.e001">
+<alternatives>
+<graphic id="pone.0145437.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e001" xlink:type="simple"/>
+<mml:math display="inline" id="M1">
+<mml:msubsup>
+<mml:mi>e</mml:mi>
+<mml:mrow>
+<mml:mi>s</mml:mi>
+<mml:mi>d</mml:mi>
+<mml:mi>t</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>u</mml:mi>
+<mml:mi>v</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+</mml:math>
+</alternatives>
+</inline-formula>
+</td>
+<td align="center">A binary variable indicates whether link (<italic>u</italic>, <italic>v</italic>) is in the path of flow <italic>f</italic><sub><italic>sdt</italic></sub></td>
+</tr>
+<tr>
+<td align="center">
+<inline-formula id="pone.0145437.e002">
+<alternatives>
+<graphic id="pone.0145437.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e002" xlink:type="simple"/>
+<mml:math display="inline" id="M2">
+<mml:msubsup>
+<mml:mi>q</mml:mi>
+<mml:mrow>
+<mml:mi>s</mml:mi>
+<mml:mi>d</mml:mi>
+<mml:mi>t</mml:mi>
+</mml:mrow>
+<mml:mrow>
+<mml:mi>u</mml:mi>
+<mml:mi>v</mml:mi>
+</mml:mrow>
+</mml:msubsup>
+</mml:math>
+</alternatives>
+</inline-formula>
+</td>
+<td align="center">A variable denotes the voltage value of link (<italic>u</italic>, <italic>v</italic>) in the path of flow <italic>f</italic><sub><italic>sdt</italic></sub></td>
+</tr>
+<tr>
+<td align="center">
+<inline-formula id="pone.0145437.e003">
+<alternatives>
+<graphic id="pone.0145437.e003g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e003" xlink:type="simple"/>
+<mml:math display="inline" id="M3">
+<mml:msubsup>
+<mml:mi>z</mml:mi>
+<mml:mrow>
+<mml:mi>s</mml:mi>
+<mml:mi>d</mml:mi>
+<mml:mi>t</mml:mi>
+</mml:mrow>
+<mml:mi>u</mml:mi>
+</mml:msubsup>
+</mml:math>
+</alternatives>
+</inline-formula>
+</td>
+<td align="center">A binary variable indicates whether flow <italic>f</italic><sub><italic>sdt</italic></sub> goes through node <italic>u</italic></td>
+</tr>
+<tr>
+<td align="center"><italic>m</italic><sub><italic>u</italic></sub></td>
+<td align="center">A binary variable indicates whether node <italic>u</italic> is a polling switch</td>
+</tr>
+<tr>
+<td align="center">
+<inline-formula id="pone.0145437.e004">
+<alternatives>
+<graphic id="pone.0145437.e004g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e004" xlink:type="simple"/>
+<mml:math display="inline" id="M4">
+<mml:msubsup>
+<mml:mi>y</mml:mi>
+<mml:mrow>
+<mml:mi>s</mml:mi>
+<mml:mi>d</mml:mi>
+<mml:mi>t</mml:mi>
+</mml:mrow>
+<mml:mi>u</mml:mi>
+</mml:msubsup>
+</mml:math>
+</alternatives>
+</inline-formula>
+</td>
+<td align="center">A binary variable indicates whether the statistics of flow <italic>f</italic><sub><italic>sdt</italic></sub> can be collected from node <italic>u</italic></td>
+</tr>
+<tr>
+<td align="center"><italic>h</italic><sub><italic>ij</italic></sub></td>
+<td align="center">The minimum hop number from node <italic>i</italic> to node <italic>j</italic></td>
+</tr>
+<tr>
+<td align="center"><italic>l</italic><sub><italic>reqheader</italic></sub></td>
+<td align="center">The length of the request packet header</td>
+</tr>
+<tr>
+<td align="center"><italic>l</italic><sub><italic>reqmsg</italic></sub></td>
+<td align="center">The length of the request packet payload</td>
+</tr>
+<tr>
+<td align="center"><italic>l</italic><sub><italic>flow</italic></sub></td>
+<td align="center">The length of a single flow entry in the flow table</td>
+</tr>
+<tr>
+<td align="center"><italic>C</italic><sub><italic>u</italic></sub></td>
+<td align="center">The flow table capacity of node <italic>u</italic></td>
+</tr>
+<tr>
+<td align="center"><italic>C</italic><sub><italic>uv</italic></sub></td>
+<td align="center">The capacity of link (<italic>u</italic>, <italic>v</italic>)</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>The topology of network is abstracted as an undirected graph <italic>G</italic> = (<italic>V</italic>, <italic>E</italic>). <italic>V</italic> denotes the set of nodes and <italic>E</italic> denotes the set of edges, edge (<italic>i</italic>, <italic>j</italic>) indicates that node <italic>i</italic> and <italic>j</italic> can directly communicate with each other.</p>
+<p>Firstly, to calculate a route from source node <italic>s</italic> to destination node <italic>d</italic> of the flow <italic>f</italic><sub><italic>sdt</italic></sub>, the flow conversation constraint should be satisfied, which is given by
+<disp-formula id="pone.0145437.e005"><alternatives><graphic id="pone.0145437.e005g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e005" xlink:type="simple"/><mml:math display="block" id="M5"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>u</mml:mi> <mml:mo>,</mml:mo> <mml:mi>v</mml:mi> <mml:mo>)</mml:mo> <mml:mo>∈</mml:mo> <mml:mi>E</mml:mi></mml:mrow></mml:munder> <mml:msubsup><mml:mi>e</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>u</mml:mi> <mml:mi>v</mml:mi></mml:mrow></mml:msubsup> <mml:mo>-</mml:mo> <mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>u</mml:mi> <mml:mo>,</mml:mo> <mml:mi>v</mml:mi> <mml:mo>)</mml:mo> <mml:mo>∈</mml:mo> <mml:mi>E</mml:mi></mml:mrow></mml:munder> <mml:msubsup><mml:mi>e</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>v</mml:mi> <mml:mi>u</mml:mi></mml:mrow></mml:msubsup> <mml:mo>=</mml:mo> <mml:mfenced close="" open="{" separators=""><mml:mtable><mml:mtr><mml:mtd columnalign="left"><mml:mn>1</mml:mn></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mtext>if</mml:mtext> <mml:mspace width="1pt"/><mml:mi mathvariant="normal">u</mml:mi> <mml:mo>=</mml:mo> <mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:mo>-</mml:mo> <mml:mn>1</mml:mn></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mtext>if</mml:mtext> <mml:mspace width="1pt"/><mml:mi mathvariant="normal">u</mml:mi> <mml:mo>=</mml:mo> <mml:mi mathvariant="normal">d</mml:mi></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="left"><mml:mn>0</mml:mn></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mtext>otherwise</mml:mtext></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:mfenced></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mo>∀</mml:mo> <mml:mi>f</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>F</mml:mi> <mml:mo>,</mml:mo> <mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:mi>u</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>V</mml:mi></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(1)</label></disp-formula></p>
+<p>However, the flow conversation constraint is not enough to ensure a valid route for each flow. For example, in <xref ref-type="fig" rid="pone.0145437.g004">Fig 4(a)</xref>, the route of the flow between nodes <italic>s</italic> and <italic>d</italic> satisfies the flow conversation constraints, but it is an invalid route since the disjointed circle. To solve this problem, a positive voltage <inline-formula id="pone.0145437.e006"><alternatives><graphic id="pone.0145437.e006g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e006" xlink:type="simple"/><mml:math display="inline" id="M6"><mml:msubsup><mml:mi>q</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>u</mml:mi> <mml:mi>v</mml:mi></mml:mrow></mml:msubsup></mml:math></alternatives></inline-formula> is added to each link (<italic>u</italic>, <italic>v</italic>) if flow <italic>f</italic><sub><italic>sdt</italic></sub> goes through link (<italic>u</italic>, <italic>v</italic>), otherwise <inline-formula id="pone.0145437.e007"><alternatives><graphic id="pone.0145437.e007g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e007" xlink:type="simple"/><mml:math display="inline" id="M7"><mml:msubsup><mml:mi>q</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>u</mml:mi> <mml:mi>v</mml:mi></mml:mrow></mml:msubsup></mml:math></alternatives></inline-formula> is appointed to 0. For any node traversed by flow <italic>f</italic><sub><italic>sdt</italic></sub> except the destination node of flow <italic>f</italic>, the sum of the voltage values of its outbound links must be larger than that of its inbound links. This is called the <italic>voltage constraint</italic> [<xref ref-type="bibr" rid="pone.0145437.ref017">17</xref>]. The specific voltage value on each link is not important once the voltage constraint is satisfied.</p>
+<fig id="pone.0145437.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Voltage Constraint.</title>
+<p>The voltage constraint to solve the disjointed route problem and ensure the valid route in SDN.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.g004" xlink:type="simple"/>
+</fig>
+<p>It is notable that the non-simple path (i.e. path with circles) shown in <xref ref-type="fig" rid="pone.0145437.g004">Fig 4(b)</xref> is valid in SDN by configuring the flow tables in SDN switches. To ensure that the non-simple path routing also satisfy the voltage constraints, we formulate the voltage constraints as
+<disp-formula id="pone.0145437.e008"><alternatives><graphic id="pone.0145437.e008g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e008" xlink:type="simple"/><mml:math display="block" id="M8"><mml:mrow><mml:msubsup><mml:mi>q</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>u</mml:mi> <mml:mi>v</mml:mi></mml:mrow></mml:msubsup> <mml:mo>≤</mml:mo> <mml:msubsup><mml:mi>e</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>u</mml:mi> <mml:mi>v</mml:mi></mml:mrow></mml:msubsup> <mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:msub><mml:mi>f</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow></mml:msub> <mml:mo>∈</mml:mo> <mml:mi>F</mml:mi> <mml:mo>,</mml:mo> <mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>u</mml:mi> <mml:mo>,</mml:mo> <mml:mi>v</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>∈</mml:mo> <mml:mi>E</mml:mi></mml:mrow></mml:math></alternatives> <label>(2)</label></disp-formula>
+<disp-formula id="pone.0145437.e009"><alternatives><graphic id="pone.0145437.e009g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e009" xlink:type="simple"/><mml:math display="block" id="M9"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>λ</mml:mi> <mml:mo>×</mml:mo> <mml:msubsup><mml:mi>z</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mi>u</mml:mi></mml:msubsup> <mml:mo>≤</mml:mo> <mml:mfenced close="" open="{" separators=""><mml:mtable><mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:mn>1</mml:mn> <mml:mo>+</mml:mo> <mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>u</mml:mi> <mml:mo>,</mml:mo> <mml:mi>v</mml:mi> <mml:mo>)</mml:mo> <mml:mo>∈</mml:mo> <mml:mi>E</mml:mi></mml:mrow></mml:munder> <mml:mrow><mml:mo>(</mml:mo> <mml:msubsup><mml:mi>q</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>u</mml:mi> <mml:mi>v</mml:mi></mml:mrow></mml:msubsup> <mml:mo>-</mml:mo> <mml:msubsup><mml:mi>q</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>v</mml:mi> <mml:mi>u</mml:mi></mml:mrow></mml:msubsup> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mtext>if</mml:mtext> <mml:mspace width="1pt"/><mml:mi>u</mml:mi> <mml:mo>=</mml:mo> <mml:mi>d</mml:mi></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>u</mml:mi> <mml:mo>,</mml:mo> <mml:mi>v</mml:mi> <mml:mo>)</mml:mo> <mml:mo>∈</mml:mo> <mml:mi>E</mml:mi></mml:mrow></mml:munder> <mml:mrow><mml:mo>(</mml:mo> <mml:msubsup><mml:mi>q</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>u</mml:mi> <mml:mi>v</mml:mi></mml:mrow></mml:msubsup> <mml:mo>-</mml:mo> <mml:msubsup><mml:mi>q</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>v</mml:mi> <mml:mi>u</mml:mi></mml:mrow></mml:msubsup> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mtext>otherwise</mml:mtext></mml:mtd></mml:mtr></mml:mtable></mml:mfenced></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd/></mml:mtr> <mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:mi>u</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>V</mml:mi> <mml:mo>,</mml:mo> <mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:mi>f</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>F</mml:mi></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(3)</label></disp-formula></p>
+<p><italic>λ</italic> is a positive constant number that is less than |<italic>E</italic>|<sup>−1</sup>. In <xref ref-type="disp-formula" rid="pone.0145437.e009">Eq (3)</xref>, the binary variable <inline-formula id="pone.0145437.e010"><alternatives><graphic id="pone.0145437.e010g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e010" xlink:type="simple"/><mml:math display="inline" id="M10"><mml:msubsup><mml:mi>z</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mi>u</mml:mi></mml:msubsup></mml:math></alternatives></inline-formula> indicates whether node <italic>u</italic> is traversed by flow <italic>f</italic><sub><italic>sdt</italic></sub>. Therefore, the following constraint must be satisfied
+<disp-formula id="pone.0145437.e011"><alternatives><graphic id="pone.0145437.e011g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e011" xlink:type="simple"/><mml:math display="block" id="M11"><mml:mrow><mml:msubsup><mml:mi>z</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mi>u</mml:mi></mml:msubsup> <mml:mo>≥</mml:mo> <mml:mfrac><mml:mrow><mml:msubsup><mml:mi>e</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>u</mml:mi> <mml:mi>v</mml:mi></mml:mrow></mml:msubsup> <mml:mo>+</mml:mo> <mml:msubsup><mml:mi>e</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>v</mml:mi> <mml:mi>u</mml:mi></mml:mrow></mml:msubsup></mml:mrow> <mml:mn>2</mml:mn></mml:mfrac> <mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:mi>u</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>V</mml:mi> <mml:mo>,</mml:mo> <mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>u</mml:mi> <mml:mo>,</mml:mo> <mml:mi>v</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>∈</mml:mo> <mml:mi>E</mml:mi></mml:mrow></mml:math></alternatives> <label>(4)</label></disp-formula></p>
+<p>When the routes are obtained for each flow, the next step is to select a polling switch for each flow. Let the binary variable <italic>m</italic><sub><italic>u</italic></sub> represent whether node <italic>u</italic> is a polling switch, and let the binary variable <inline-formula id="pone.0145437.e012"><alternatives><graphic id="pone.0145437.e012g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e012" xlink:type="simple"/><mml:math display="inline" id="M12"><mml:msubsup><mml:mi>y</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mi>u</mml:mi></mml:msubsup></mml:math></alternatives></inline-formula> denote whether the statistics of flow <italic>f</italic><sub><italic>sdt</italic></sub> is collected on node <italic>u</italic>. Obviously, if node <italic>u</italic> is a polling switch and traversed by flow <italic>f</italic><sub><italic>sdt</italic></sub>, the statistics of flow <italic>f</italic><sub><italic>sdt</italic></sub> can be collected from node <italic>u</italic>, i.e.,
+<disp-formula id="pone.0145437.e013"><alternatives><graphic id="pone.0145437.e013g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e013" xlink:type="simple"/><mml:math display="block" id="M13"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mfrac><mml:mrow><mml:msubsup><mml:mi>z</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mi>u</mml:mi></mml:msubsup> <mml:mo>+</mml:mo> <mml:msub><mml:mi>m</mml:mi> <mml:mi>u</mml:mi></mml:msub> <mml:mo>-</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mn>2</mml:mn></mml:mfrac> <mml:mo>≤</mml:mo> <mml:msubsup><mml:mi>y</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mi>u</mml:mi></mml:msubsup> <mml:mo>≤</mml:mo> <mml:mfrac><mml:mrow><mml:msubsup><mml:mi>z</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mi>u</mml:mi></mml:msubsup> <mml:mo>+</mml:mo> <mml:msub><mml:mi>m</mml:mi> <mml:mi>u</mml:mi></mml:msub></mml:mrow> <mml:mn>2</mml:mn></mml:mfrac> <mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:mi>u</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>V</mml:mi> <mml:mo>,</mml:mo> <mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:mi>f</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>F</mml:mi></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(5)</label></disp-formula></p>
+<p>To collect the statistics of all flows in the network, each flow should traverse at least one polling switch, which is given by
+<disp-formula id="pone.0145437.e014"><alternatives><graphic id="pone.0145437.e014g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e014" xlink:type="simple"/><mml:math display="block" id="M14"><mml:mrow><mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>u</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>V</mml:mi></mml:mrow></mml:munder> <mml:msubsup><mml:mi>y</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mi>u</mml:mi></mml:msubsup> <mml:mo>≥</mml:mo> <mml:mn>1</mml:mn> <mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:mi>f</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>F</mml:mi></mml:mrow></mml:math></alternatives> <label>(6)</label></disp-formula></p>
+<p>At last, in order to avoid the possible flow congestion in switches, the following capacity constraints should be satisfied.
+<disp-formula id="pone.0145437.e015"><alternatives><graphic id="pone.0145437.e015g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e015" xlink:type="simple"/><mml:math display="block" id="M15"><mml:mrow><mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:msub><mml:mi>f</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow></mml:msub> <mml:mo>∈</mml:mo> <mml:mi>F</mml:mi></mml:mrow></mml:munder> <mml:msubsup><mml:mi>z</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mi>u</mml:mi></mml:msubsup> <mml:mo>≤</mml:mo> <mml:msub><mml:mi>C</mml:mi> <mml:mi>u</mml:mi></mml:msub> <mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:mi>u</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>V</mml:mi></mml:mrow></mml:math></alternatives> <label>(7)</label></disp-formula>
+<disp-formula id="pone.0145437.e016"><alternatives><graphic id="pone.0145437.e016g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e016" xlink:type="simple"/><mml:math display="block" id="M16"><mml:mrow><mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:msub><mml:mi>f</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow></mml:msub> <mml:mo>∈</mml:mo> <mml:mi>F</mml:mi></mml:mrow></mml:munder> <mml:msubsup><mml:mi>e</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>u</mml:mi> <mml:mi>v</mml:mi></mml:mrow></mml:msubsup> <mml:mo>≤</mml:mo> <mml:msub><mml:mi>C</mml:mi> <mml:mrow><mml:mi>u</mml:mi> <mml:mi>v</mml:mi></mml:mrow></mml:msub> <mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>u</mml:mi> <mml:mo>,</mml:mo> <mml:mi>v</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>∈</mml:mo> <mml:mi>E</mml:mi></mml:mrow></mml:math></alternatives> <label>(8)</label></disp-formula></p>
+<p>The objective of the joint optimization problem is minimizing the communication cost for collecting flow information which consists of request cost and reply cost. The request cost is determined by the number of polling switches. Let <italic>l</italic><sub><italic>reqheader</italic></sub> denote the length of the request packet header, and let <italic>l</italic><sub><italic>reqmsg</italic></sub> denote the length of request packet payload, hence the request cost is
+<disp-formula id="pone.0145437.e017"><alternatives><graphic id="pone.0145437.e017g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e017" xlink:type="simple"/><mml:math display="block" id="M17"><mml:mrow><mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi>l</mml:mi> <mml:mrow><mml:mi>r</mml:mi> <mml:mi>e</mml:mi> <mml:mi>q</mml:mi> <mml:mi>h</mml:mi> <mml:mi>e</mml:mi> <mml:mi>a</mml:mi> <mml:mi>d</mml:mi> <mml:mi>e</mml:mi> <mml:mi>r</mml:mi></mml:mrow></mml:msub> <mml:mo>+</mml:mo> <mml:msub><mml:mi>l</mml:mi> <mml:mrow><mml:mi>r</mml:mi> <mml:mi>e</mml:mi> <mml:mi>q</mml:mi> <mml:mi>m</mml:mi> <mml:mi>s</mml:mi> <mml:mi>g</mml:mi></mml:mrow></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>×</mml:mo> <mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>u</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>V</mml:mi></mml:mrow></mml:munder> <mml:msub><mml:mi>m</mml:mi> <mml:mi>u</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></disp-formula></p>
+<p>Let <italic>l</italic><sub><italic>replyheader</italic></sub> denote the length of the reply packet header, and let <italic>l</italic><sub><italic>flow</italic></sub> denote the length of single flow entry, hence the replying cost is
+<disp-formula id="pone.0145437.e018"><alternatives><graphic id="pone.0145437.e018g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e018" xlink:type="simple"/><mml:math display="block" id="M18"><mml:mrow><mml:msub><mml:mi>l</mml:mi> <mml:mrow><mml:mi>r</mml:mi> <mml:mi>e</mml:mi> <mml:mi>p</mml:mi> <mml:mi>l</mml:mi> <mml:mi>y</mml:mi> <mml:mi>h</mml:mi> <mml:mi>e</mml:mi> <mml:mi>a</mml:mi> <mml:mi>d</mml:mi> <mml:mi>e</mml:mi> <mml:mi>r</mml:mi></mml:mrow></mml:msub> <mml:mo>×</mml:mo> <mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>u</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>V</mml:mi></mml:mrow></mml:munder> <mml:msub><mml:mi>m</mml:mi> <mml:mi>u</mml:mi></mml:msub> <mml:mo>+</mml:mo> <mml:msub><mml:mi>l</mml:mi> <mml:mrow><mml:mi>f</mml:mi> <mml:mi>l</mml:mi> <mml:mi>o</mml:mi> <mml:mi>w</mml:mi></mml:mrow></mml:msub> <mml:mo>×</mml:mo> <mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>u</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>V</mml:mi></mml:mrow></mml:munder> <mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:msub><mml:mi>f</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow></mml:msub> <mml:mo>∈</mml:mo> <mml:mi>F</mml:mi></mml:mrow></mml:munder> <mml:msubsup><mml:mi>y</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mi>u</mml:mi></mml:msubsup></mml:mrow></mml:math></alternatives></disp-formula></p>
+<p>As mentioned in Section, the OpenFlow specification 1.0 [<xref ref-type="bibr" rid="pone.0145437.ref016">16</xref>] is used in this paper. According to this specification, <italic>l</italic><sub><italic>reqheader</italic></sub> = 66 bytes, <italic>l</italic><sub><italic>reqmsg</italic></sub> = 56 bytes, <italic>l</italic><sub><italic>replyheader</italic></sub> = 78 bytes and <italic>l</italic><sub><italic>flow</italic></sub> = 96 bytes, Therefore, the objective of the problem is
+<disp-formula id="pone.0145437.e019"><alternatives><graphic id="pone.0145437.e019g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e019" xlink:type="simple"/><mml:math display="block" id="M19"><mml:mrow><mml:mtext>minimize</mml:mtext> <mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mn>200</mml:mn> <mml:mo>×</mml:mo> <mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>u</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>V</mml:mi></mml:mrow></mml:munder> <mml:msub><mml:mi>m</mml:mi> <mml:mi>u</mml:mi></mml:msub> <mml:mo>+</mml:mo> <mml:mn>96</mml:mn> <mml:mo>×</mml:mo> <mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>u</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>V</mml:mi></mml:mrow></mml:munder> <mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:msub><mml:mi>f</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow></mml:msub> <mml:mo>∈</mml:mo> <mml:mi>F</mml:mi></mml:mrow></mml:munder> <mml:msubsup><mml:mi>y</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mi>u</mml:mi></mml:msubsup></mml:mrow></mml:math></alternatives> <label>(9)</label></disp-formula></p>
+<sec id="sec006">
+<title>Complexity Analysis</title>
+<p>The ILP model has (2|<italic>E</italic>| + 2|<italic>V</italic>|)|<italic>F</italic>| + 2|<italic>V</italic>| + |<italic>E</italic>| variables and (|<italic>E</italic>| + 4|<italic>V</italic>| + 1)|<italic>F</italic>| + (|<italic>V</italic>| + 1)|<italic>E</italic>| + |<italic>V</italic>| constraints. Similarity to the analysis of the complexity of algorithms, we can only take the orders of growth into account. Moreover, the number of edges in a graph is usually much greater than that of nodes, and the number of flows is also much larger than the number of edges. Thus, the number of variables and constraints in the ILP model is proportional to <inline-formula id="pone.0145437.e020"><alternatives><graphic id="pone.0145437.e020g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e020" xlink:type="simple"/><mml:math display="inline" id="M20"><mml:mrow><mml:mi mathvariant="script">O</mml:mi> <mml:mo>(</mml:mo> <mml:mo>|</mml:mo> <mml:mi>E</mml:mi> <mml:mo>|</mml:mo> <mml:mo>|</mml:mo> <mml:mi>F</mml:mi> <mml:mo>|</mml:mo> <mml:mo>)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+</sec>
+</sec>
+<sec id="sec007">
+<title>Offline Algorithm on Multi-Rooted Tree Topologies</title>
+<p>The multi-rooted tree topology is widely adopted in Data Center Network (DCN) which is a popular instance of SDN. In DCN, no circle is allowed in the path of any flows, and each flow should be routed to one of the shortest paths between its two ends.</p>
+<p>Accordingly, one more constraint should be added into the ILP model formulated in last section.
+<disp-formula id="pone.0145437.e021"><alternatives><graphic id="pone.0145437.e021g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e021" xlink:type="simple"/><mml:math display="block" id="M21"><mml:mrow><mml:munder><mml:mo>∑</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>u</mml:mi> <mml:mo>,</mml:mo> <mml:mi>v</mml:mi> <mml:mo>)</mml:mo> <mml:mo>∈</mml:mo> <mml:mi>E</mml:mi></mml:mrow></mml:munder> <mml:msubsup><mml:mi>e</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow> <mml:mrow><mml:mi>u</mml:mi> <mml:mi>v</mml:mi></mml:mrow></mml:msubsup> <mml:mo>≤</mml:mo> <mml:msub><mml:mi>h</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi></mml:mrow></mml:msub> <mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mspace width="3.33333pt"/><mml:mo>∀</mml:mo> <mml:mi>f</mml:mi> <mml:mo>∈</mml:mo> <mml:mi>F</mml:mi></mml:mrow></mml:math></alternatives> <label>(10)</label></disp-formula>
+where <italic>h</italic><sub><italic>sd</italic></sub> denotes the minimum hop number from the source node <italic>s</italic> to the destination node <italic>d</italic>.</p>
+<p>It is believed that ILP model is usually intractable in large-scale networks. To verify this, we conduct several simulations to evaluate the solve elapsed time of the ILP model. The simulations are carried on PortLand [<xref ref-type="bibr" rid="pone.0145437.ref018">18</xref>] which is a type of multi-rooted tree topology in DCN. The parameter <italic>k</italic> is the number of switch port which determines the network size of PortLand. The PortLand topology with <italic>k</italic> = 4 is shown in <xref ref-type="fig" rid="pone.0145437.g005">Fig 5</xref>. The ILP model are solved by CPLEX [<xref ref-type="bibr" rid="pone.0145437.ref019">19</xref>] on a workstation with 2 Six-Core 2.00 GHz Intel Xeon E5-2620 CPUs and 16 GB memory. The results are shown in <xref ref-type="table" rid="pone.0145437.t002">Table 2</xref>.</p>
+<fig id="pone.0145437.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>The PortLand Topology.</title>
+<p>The Portland topology with <italic>k</italic> = 4. The parameter <italic>k</italic> is the number of switch port which is the only factor that determines the network size of Portland.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.g005" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0145437.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.t002</object-id>
+<label>Table 2</label>
+<caption>
+<title>Execution Time of Solving the ILP Model.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0145437.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.t002" xlink:type="simple"/>
+<table border="0" frame="box" rules="all">
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="2">Number of Flows</th>
+<th align="center" colspan="3">k</th>
+</tr>
+<tr>
+<th align="center">4</th>
+<th align="center">6</th>
+<th align="center">8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">8</td>
+<td align="center">4.836 s</td>
+<td align="center">57.876 s</td>
+<td align="center">1315.12 s</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td align="center">8.97 s</td>
+<td align="center">218.416 s</td>
+<td align="center">No solution found in 12 hours</td>
+</tr>
+<tr>
+<td align="center">32</td>
+<td align="center">20.873 s</td>
+<td align="center">9754.13 s</td>
+<td align="center">No solution found in 12 hours</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>According to <xref ref-type="table" rid="pone.0145437.t002">Table 2</xref>, the execution time increases rapidly when the network size increases. It can be found that the execution time of solving the ILP model with 32 flows in a k = 6 multi-rooted tree topology is more than 2 hours. Meanwhile, we cannot find a feasible solution for the ILP model within hours when there are more than 16 flows on a k = 8 multi-rooted tree topology.</p>
+<p>Since it is hard to solve the ILP model in large-scale networks, we design an optimal algorithm for this problem on multi-rooted tree topology. To prove the correctness of our algorithm, we not only present a solid theorem, but also compare the solution of ILP with that of the optimal algorithm on small size multi-rooted tree topology which is shown in <xref ref-type="supplementary-material" rid="pone.0145437.s001">S1 Appendix</xref>.</p>
+<p specific-use="line"><bold>Algorithm 1:</bold> Minimizing Communication Cost on Multi-rooted Tree</p>
+<p specific-use="line"><bold>Require:</bold> Network topology, flow set <bold><italic>F</italic></bold><sub>1</sub>, <bold><italic>F</italic></bold><sub>2</sub>, <bold><italic>F</italic></bold><sub>3</sub></p>
+<p specific-use="line"><bold>Ensure:</bold> Flow route <bold><italic>R</italic></bold> = {<italic>r</italic><sub><italic>f</italic></sub>}, polling switch set <bold><italic>P</italic></bold></p>
+<p specific-use="line"> 1: <bold>for</bold> flow <italic>f</italic> ∈ <bold><italic>F</italic></bold><sub>1</sub> <bold>do</bold></p>
+<p specific-use="line"> 2:  <italic>f</italic>’s route <italic>r</italic><sub><italic>f</italic></sub> is uniquely determined, <bold><italic>R</italic></bold><sub><bold><italic>F</italic></bold></sub> ← <bold><italic>R</italic></bold><sub><bold><italic>F</italic></bold></sub> ∪ <italic>r</italic><sub><italic>f</italic></sub></p>
+<p specific-use="line"> 3:  <italic>u</italic> is the access switch traversed by <italic>f</italic>, <bold><italic>P</italic></bold> ← <bold><italic>P</italic></bold> ∪ <italic>u</italic></p>
+<p specific-use="line"> 4:  Update <italic>U</italic><sub><italic>l</italic></sub> and <italic>U</italic><sub><italic>u</italic></sub></p>
+<p specific-use="line"> 5: <bold>end for</bold></p>
+<p specific-use="line"> 6: Get <bold><italic>T</italic></bold> ⊂ <bold><italic>F</italic></bold><sub>2</sub> ∪ <bold><italic>F</italic></bold><sub>3</sub> such that <italic>f</italic> ∈ <bold><italic>T</italic></bold> ends at a host <italic>a</italic> ∈ <bold><italic>P</italic></bold></p>
+<p specific-use="line"> 7: <bold><italic>F</italic></bold><sub>2</sub> ← <bold><italic>F</italic></bold><sub>2</sub> − <bold><italic>T</italic></bold>, <bold><italic>F</italic></bold><sub>3</sub> ← <bold><italic>F</italic></bold><sub>3</sub> − <bold><italic>T</italic></bold></p>
+<p specific-use="line"> 8: <bold>for</bold> flow <italic>f</italic> ∈ <bold><italic>F</italic></bold><sub>2</sub> <bold>do</bold></p>
+<p specific-use="line"> 9:  Determine <italic>r</italic><sub><italic>f</italic></sub> by 1) using the aggregate switch <italic>u</italic> ∈ <bold><italic>P</italic></bold> with enough remaining capacity; 2) using the aggregate switch <italic>u</italic> with maximum enough remaining capacity, <bold><italic>P</italic></bold> ← <bold><italic>P</italic></bold> ∪ <italic>u</italic></p>
+<p specific-use="line"> 10:  <bold><italic>R</italic></bold> ← <bold><italic>R</italic></bold> ∪ <italic>r</italic><sub><italic>f</italic></sub> and update <italic>U</italic><sub><italic>l</italic></sub> and <italic>U</italic><sub><italic>u</italic></sub></p>
+<p specific-use="line"> 11: <bold>end for</bold></p>
+<p specific-use="line"> 12: <bold>for</bold> flow <italic>f</italic> ∈ <bold><italic>F</italic></bold><sub>3</sub> <bold>do</bold></p>
+<p specific-use="line"> 13:  Determine <italic>r</italic><sub><italic>f</italic></sub> by 1) using the path with minimum, but at least one switch <italic>a</italic> ∈ <bold><italic>P</italic></bold>; 2) using aggregate switches with minimal enough remaining capacity and core switch with maximum enough remaining capacity <italic>c</italic> ∉ <bold><italic>P</italic></bold></p>
+<p specific-use="line"> 14:  <bold><italic>R</italic></bold> ← <bold><italic>R</italic></bold> ∪ <italic>r</italic><sub><italic>f</italic></sub> and update <italic>U</italic><sub><italic>l</italic></sub>, <italic>U</italic><sub><italic>u</italic></sub></p>
+<p specific-use="line"> 15: <bold>end for</bold></p>
+<p specific-use="line"> 16: Route flows in <bold><italic>T</italic></bold> through least switches in <bold><italic>P</italic></bold></p>
+<p specific-use="line"> 17: <bold>return</bold> <bold><italic>R</italic></bold> and <bold><italic>P</italic></bold></p>
+<p>In this algorithm, <bold><italic>F</italic></bold><sub>1</sub> is the set of flows within an access switch (i.e. the source and destination node are connected to the same access switch), <bold><italic>F</italic></bold><sub>2</sub> is the set of the flow whose source and destination are connected to different access switches but within the same pod (<italic>pod</italic> is a group of access and aggregate switches as shown in <xref ref-type="fig" rid="pone.0145437.g005">Fig 5</xref>). <bold><italic>F</italic></bold><sub>3</sub> is the set of cross-pod flows. In addition, <italic>U</italic><sub><italic>l</italic></sub> and <italic>U</italic><sub><italic>u</italic></sub> is used to denote the used capacity of link <italic>l</italic> and node <italic>u</italic>, respectively. <bold><italic>P</italic></bold> is the set of polling switches, <bold><italic>T</italic></bold> is the set of flows whose route is not determined but the access switch of the flow is already a polling switch.</p>
+<p>For any unrouted flow in <bold><italic>F</italic></bold><bold>1</bold>, there is only one candidate shortest path from source to destination through the access switch. So that the access switch must be selected as a polling switch (Line 1–5). The statistics of any other unrouted flows originating or ending at the hosts connected to this access switch will also be collected since the access switch is already selected as polling switch. Such unrouted flows will be put into set <bold><italic>T</italic></bold> as in Line 6–7.</p>
+<p>For any unrouted flow in <bold><italic>F</italic></bold><bold>2</bold>, the candidate shortest paths may traverse different aggregate switches. To minimize the number of polling switches, the routes of the flows are packed together. In other words, as long as there exists enough resource in the aggregate switches, the flows will be routed through the same aggregate switche which is already selected as a polling switch (Line 8–11).</p>
+<p>While choosing the routes for the unrouted flows in <bold><italic>F</italic></bold><bold>3</bold>, the candidate shortest path traversing only one polling switch is preferred. If there is no any polling switch along its all candidate paths, one core switch must be selected as polling switch. In such case, to minimize the number of polling switches, the routes of the flows are packed together (Line 12–15) which means the flows will be routed through the same core switch if the switch is already a polling switch.</p>
+<p>Finally, for the unrouted flows in <bold><italic>T</italic></bold>, the candidate shortest path traversing minimum number of polling switches is preferred (Line 16).</p>
+<p>For Algorithm 1, we have the following theorem:</p>
+<p><bold>Theorem 1.</bold> <italic>The Algorithm 1 can derive an optimal routing and polling switch selection scheme to minimize the communication cost for collecting all the flow information on multi-rooted tree topology</italic>.</p>
+<p>Proof: It is obvious that in Line 1–11 of Algorithm 1, the algorithm uses the minimum polling switches to monitor the flow information and each flow traverses only one polling switch. Therefore, the optimal route of the flows that are originating and ending under the same access switch or aggregate switch can be obtained. As in Line 8–11, the algorithm selects the necessary polling switches and each flow traverses only one polling switch. In Line 12–15, we do not increase the number of polling switches and each flow traverses only one or two (when the resources of the aggregate switches are not enough) polling switches, thus the communication cost is also minimized. At last, the remaining flows, all of whose routes are monitored by at least one polling switch, are routed to the path traverse minimum polling switches which means the communication cost can be also minimized in this step. In summary, Algorithm 1 can guarantee its solution is optimal at every step, and hence it derives the optimal solution.</p>
+<sec id="sec008">
+<title>Complexity Analysis</title>
+<p>As shown in Algorithm 1, we need to find the route of three types of flows denotes by <bold><italic>F</italic></bold><bold>1</bold>, <bold><italic>F</italic></bold><bold>2</bold> and <bold><italic>F</italic></bold><bold>3</bold>. Algorithm 1 can determine the route of each flow according to the existing polling switches. Thus, the computational complexity of Algorithm 1 is <inline-formula id="pone.0145437.e022"><alternatives><graphic id="pone.0145437.e022g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e022" xlink:type="simple"/><mml:math display="inline" id="M22"><mml:mrow><mml:mi mathvariant="script">O</mml:mi> <mml:mo>(</mml:mo> <mml:mo>|</mml:mo> <mml:mi>F</mml:mi> <mml:mo>|</mml:mo> <mml:mo>)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula> (<bold><italic>F</italic></bold> denotes the set of all flows).</p>
+</sec>
+</sec>
+<sec id="sec009">
+<title>Offline Algorithm in General Topology</title>
+<p>In this section, a heuristic algorithm is proposed to optimize the communication cost on general topologies. In general topologies, it is believed that the more a switch contributes to the network connectivity, the more flows the switch will carry. Therefore, the switch has more possibility to be chosen as a polling switch. Accordingly, we first identify the contribution of each switch to the network connectivity, then route the flows in the network through minimum number of polling switches. Following this line of thought, how to determine the switch importance is introduced firstly, and an algorithm to jointly optimize flow routing and polling switch selection is presented.</p>
+<p specific-use="line"><bold>Algorithm 2:</bold> Calculate Switch Importance</p>
+<p specific-use="line"><bold>Require:</bold> Importance spread matrix <italic>M</italic></p>
+<p specific-use="line"><bold>Ensure:</bold> Switch importance vector <italic>π</italic></p>
+<p specific-use="line"> 1: Initialize <inline-formula id="pone.0145437.e023"><alternatives><graphic id="pone.0145437.e023g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e023" xlink:type="simple"/><mml:math display="inline" id="M23"><mml:mrow><mml:msup><mml:mi>π</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>0</mml:mn> <mml:mo>)</mml:mo></mml:mrow></mml:msup> <mml:mo>←</mml:mo> <mml:mfrac><mml:mn>1</mml:mn> <mml:mi>S</mml:mi></mml:mfrac> <mml:mn mathvariant="bold">1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula></p>
+<p specific-use="line"> 2: <italic>π</italic><sup>(1)</sup> ← <italic>π</italic><sup>(0)</sup> <italic>M</italic>, <italic>k</italic> ← 1</p>
+<p specific-use="line"> 3: <bold>while</bold> |<italic>π</italic><sup>(<italic>k</italic>)</sup> − <italic>π</italic><sup>(<italic>k</italic> − 1)</sup>| &gt; <italic>ϵ</italic> <bold>do</bold></p>
+<p specific-use="line"> 4:  <italic>π</italic><sup>(<italic>k</italic>+1)</sup> ← <italic>π</italic><sup>(<italic>k</italic>)</sup> <italic>M</italic></p>
+<p specific-use="line"> 5:  <italic>k</italic> ← <italic>k</italic> + 1</p>
+<p specific-use="line"> 6: <bold>end while</bold></p>
+<p specific-use="line"> 7: <bold>return</bold> <italic>π</italic><sup>(<italic>k</italic>)</sup></p>
+<sec id="sec010">
+<title>Switch Importance Value Calculation</title>
+<p>It is widely believed that the switches contribute more to the network connectivity may be traversed by more flows. Thus, the switches may have higher potential to be selected as a polling switch since they can carry more flows. Meanwhile, the communication cost can be reduced by aggregating the flow information into fewer reply packets. To identify each switch’s contribution to the network connectivity, the <italic>importance value</italic> for each switch is used.</p>
+<p>There are many ways to determine the importance value of each switch [<xref ref-type="bibr" rid="pone.0145437.ref020">20</xref>]. In method we used, each switch evenly spreads its importance to its adjacent switches and receives importance from its adjacent switches. At the equilibrium state, the switches with higher importance may be the ones which contribute more to the network connectivity. Suppose there are <italic>S</italic> switches, to calculate such importance value of each switch, a matrix <italic>M</italic><sub><italic>S</italic> × <italic>S</italic></sub> is constructed as
+<disp-formula id="pone.0145437.e024"><alternatives><graphic id="pone.0145437.e024g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e024" xlink:type="simple"/><mml:math display="block" id="M24"><mml:mrow><mml:msub><mml:mi>m</mml:mi> <mml:mrow><mml:mi>i</mml:mi> <mml:mi>j</mml:mi></mml:mrow></mml:msub> <mml:mo>=</mml:mo> <mml:mfenced close="" open="{" separators=""><mml:mtable><mml:mtr><mml:mtd columnalign="left"><mml:mfrac><mml:mn>1</mml:mn> <mml:msub><mml:mi>D</mml:mi> <mml:mi>i</mml:mi></mml:msub></mml:mfrac></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mtext>if</mml:mtext> <mml:mspace width="1pt"/><mml:mtext>switch</mml:mtext> <mml:mspace width="1pt"/><mml:mi>i</mml:mi> <mml:mspace width="1pt"/><mml:mtext>and</mml:mtext> <mml:mspace width="1pt"/><mml:mi>j</mml:mi> <mml:mspace width="1pt"/><mml:mtext>are</mml:mtext> <mml:mspace width="1pt"/><mml:mtext>connected</mml:mtext></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="left"><mml:mn>0</mml:mn></mml:mtd> <mml:mtd columnalign="left"><mml:mtext>otherwise</mml:mtext></mml:mtd></mml:mtr></mml:mtable></mml:mfenced></mml:mrow></mml:math></alternatives> <label>(11)</label></disp-formula>
+where <italic>D</italic><sub><italic>i</italic></sub> is the nodal degree of switch <italic>i</italic>, and let <italic>π</italic> be an 1 × <italic>S</italic> vector denotes the importance of <italic>S</italic> switches. The switch importance can be calculated by solving the equation group
+<disp-formula id="pone.0145437.e025"><alternatives><graphic id="pone.0145437.e025g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e025" xlink:type="simple"/><mml:math display="block" id="M25"><mml:mrow><mml:mi>π</mml:mi> <mml:mo>=</mml:mo> <mml:mi>π</mml:mi> <mml:mi>M</mml:mi></mml:mrow></mml:math></alternatives> <label>(12)</label></disp-formula></p>
+<p>Since there are infinite numbers of solutions for <xref ref-type="disp-formula" rid="pone.0145437.e025">Eq (12)</xref>, and we only focus on the relative importance of the switches, we suppose the sum of the importance values is 1, i.e.
+<disp-formula id="pone.0145437.e026"><alternatives><graphic id="pone.0145437.e026g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e026" xlink:type="simple"/><mml:math display="block" id="M26"><mml:mrow><mml:mi>π</mml:mi> <mml:mn mathvariant="bold">1</mml:mn> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives> <label>(13)</label></disp-formula>
+where <bold>1</bold> is a <italic>S</italic> × 1 vector with all items being 1. By solving the equation group formed by Eqs (<xref ref-type="disp-formula" rid="pone.0145437.e025">12</xref>) and (<xref ref-type="disp-formula" rid="pone.0145437.e026">13</xref>), we can get the importance value of each switch.</p>
+<p>It is worth noting that this equation group is difficult to solve when matrix <italic>M</italic> has a large size. Therefore, we need an efficient algorithm to solve it, the procedure of calculating the importance value is shown in Algorithm 2.</p>
+<p specific-use="line"><bold>Algorithm 3:</bold> Jointly optimizing flow routing and polling switch selection</p>
+<p specific-use="line"><bold>Require:</bold> Network topology and flow set <bold><italic>F</italic></bold></p>
+<p specific-use="line"><bold>Ensure:</bold> Flow route {<bold><italic>R</italic></bold><sub><bold><italic>f</italic></bold></sub>} and polling switch set <bold><italic>P</italic></bold></p>
+<p specific-use="line"> 1: Get switch importance value vector <italic>π</italic> by using Algorithm 3 (without loss of generality, we assume <italic>π</italic><sub>1</sub> ≥ <italic>π</italic><sub>2</sub> ≥ ⋯ ≥ <italic>π</italic><sub><italic>S</italic></sub>)</p>
+<p specific-use="line"> 2: <italic>U</italic><sub><italic>i</italic></sub> denotes the used capacity of switch <italic>i</italic>, <italic>C</italic><sub><italic>i</italic></sub> denotes the total capacity of switch <italic>i</italic>.</p>
+<p specific-use="line"> 3: <bold>for</bold> <italic>i</italic> = 1 to <italic>S</italic> <bold>do</bold></p>
+<p specific-use="line"> 4:  <bold><italic>P</italic></bold> ← <bold><italic>P</italic></bold>∪{<italic>i</italic>}</p>
+<p specific-use="line"> 5:  <bold>if</bold> switch <italic>i</italic> carried some flows whose polling switches are not <italic>i</italic> <bold>then</bold></p>
+<p specific-use="line"> 6:   try to find a new path for flow <italic>f</italic>, where the new path must traverse its polling switch and does not traverse switch <italic>i</italic>, then update the route <italic>R</italic><sub><italic>f</italic></sub></p>
+<p specific-use="line"> 7:  <bold>end if</bold></p>
+<p specific-use="line"> 8:  <bold>while</bold> <italic>U</italic><sub><italic>i</italic></sub> &lt; <italic>C</italic><sub><italic>i</italic></sub> <bold>do</bold></p>
+<p specific-use="line"> 9:   Find a flow <italic>f</italic> ∈ <bold><italic>F</italic></bold> traverses minimum polling switches such that 1) it traverses switch <italic>i</italic>; 2) The route has minimum hops</p>
+<p specific-use="line"> 10:   <bold>if</bold> find a flow <italic>f</italic> ∈ <bold><italic>F</italic></bold> in Line 9 <bold>then</bold></p>
+<p specific-use="line"> 11:    Set the <italic>R</italic><sub><italic>f</italic></sub> of the selected flow, <bold><italic>F</italic></bold> ← <bold><italic>F</italic></bold> − <italic>f</italic></p>
+<p specific-use="line"> 12:    <bold>continue</bold></p>
+<p specific-use="line"> 13:   <bold>end if</bold></p>
+<p specific-use="line"> 14:   <bold>break</bold></p>
+<p specific-use="line"> 15:  <bold>end while</bold></p>
+<p specific-use="line"> 16: <bold>end for</bold></p>
+<p specific-use="line"> 17: <bold>return</bold> {<italic>R</italic><sub><italic>f</italic></sub>} and <bold><italic>P</italic></bold></p>
+</sec>
+<sec id="sec011">
+<title>Joint Optimization Algorithm on General Topology</title>
+<p>Given the importance value of each switch, the switches with larger importance value can be chosen to be polling switches. Then the flows can be routed to the polling switch for minimizing communication cost. Following this line of thought, we propose Algorithm 4 to joint optimizing flow routing and polling switch selection on general topologies.</p>
+<p>Firstly, let the switch with largest importance value be a new polling switch (Say it is switch <italic>i</italic>, line 4). If there are already some flows in switch <italic>i</italic>, these flows should be rerouted. For example, if switch <italic>i</italic> is traversed by the route of flow <italic>f</italic>, and the polling switch of flow <italic>f</italic> is <italic>j</italic> instead of <italic>i</italic>, flow <italic>f</italic> should be rerouted to avoid switch <italic>i</italic> and traverse switch <italic>j</italic> since the routes of flows should traverse minimum number of polling switches (Line 6).</p>
+<p>For each unrouted flow, one minimum-hop path passing through switch i is chosen as its candidate path. The smaller the number of polling switches along its candidate path is, the earlier the flow will be routed. The numbers of hops of multiple candidate paths are used to break the tie (Line 9–15). A flow will be successfully routed as long as the resources along the its candidate path could be successfully allocated.</p>
+</sec>
+<sec id="sec012">
+<title>Complexity Analysis</title>
+<p>The main loop of Algorithm 3 iterates for <inline-formula id="pone.0145437.e027"><alternatives><graphic id="pone.0145437.e027g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e027" xlink:type="simple"/><mml:math display="inline" id="M27"><mml:mrow><mml:mi mathvariant="script">O</mml:mi> <mml:mo>(</mml:mo> <mml:mo>|</mml:mo> <mml:mi>S</mml:mi> <mml:mo>|</mml:mo> <mml:mo>)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula> times. In the loop, the worst case is that the algorithm needs to find the candidate path for every flow. Therefore, the computational complexity of Algorithm 3 is <inline-formula id="pone.0145437.e028"><alternatives><graphic id="pone.0145437.e028g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0145437.e028" xlink:type="simple"/><mml:math display="inline" id="M28"><mml:mrow><mml:mi mathvariant="script">O</mml:mi> <mml:mo>(</mml:mo> <mml:mo>|</mml:mo> <mml:mi>F</mml:mi> <mml:mo>|</mml:mo> <mml:mo>|</mml:mo> <mml:mi>S</mml:mi> <mml:mo>|</mml:mo> <mml:mo>)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+</sec>
+</sec>
+</sec>
+<sec id="sec013">
+<title>Simulation Results</title>
+<p>In this section, the performance of algorithms is studied through extensive simulations. The performance of algorithms on multi-rooted tree topologies and general topologies is evaluated.</p>
+<p>As a benchmark, the performance of FlowCover is also tested. In addition, all the switch capacity constraint only works in our algorithm but not on FlowCover scheme, since the flow routing of FlowCover is fixed.</p>
+<p>As mentioned in Section, it is hard to calculate the various resource utilization accurately, so the communication cost which is proportional to the resource utilization is used to evaluate the algorithm performance.</p>
+<sec id="sec014">
+<title>Simulation Setup</title>
+<p>Firstly, we introduce the input parameters (e.g., network topologies, traffic datasets) and the hardware environment used in the simulations.</p>
+<sec id="sec015">
+<title>Network Topologies</title>
+<p>Though there are many multi-rooted tree topologies, such as PortLand [<xref ref-type="bibr" rid="pone.0145437.ref018">18</xref>] and VL2 [<xref ref-type="bibr" rid="pone.0145437.ref021">21</xref>], the simulations are carried on the PortLand which is commonly used in DCNs. The only parameter that affects the network size of PortLand is <italic>k</italic> which denotes the number of switch ports. The performance of Algorithm 1 is evaluated with different parameter <italic>k</italic>. The topology with <italic>k</italic> = 4 is shown in <xref ref-type="fig" rid="pone.0145437.g005">Fig 5</xref>.</p>
+<p>Besides the multi-rooted tree topologies, the simulations are also carried on two types of general topologies. First is the NSFNET [<xref ref-type="bibr" rid="pone.0145437.ref022">22</xref>] which is shown in <xref ref-type="fig" rid="pone.0145437.g006">Fig 6</xref>. Since the number of nodes and links in NSFNET is fixed, when we evaluate the performance of algorithms with different number of nodes, we use the random topologies with power law degree distribution generated by the NetworkX [<xref ref-type="bibr" rid="pone.0145437.ref023">23</xref>] which is a well-known Python Library used in network simulations.</p>
+<fig id="pone.0145437.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>NSFNET.</title>
+<p>The NSFNET topology which includes 13 nodes and 18 links.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.g006" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec016">
+<title>Traffic Datasets</title>
+<p>In multi-rooted tree topologies, the flows start and end in the hosts. Considering that in DCN, each host has the same possibility to send a request. Thus, we randomly generate the source and destination hosts of flows with uniform distribution and ensure that every host has at least one flow.</p>
+<p>In general topologies, the source and destination nodes of flows are generated with Poisson distribution which is widely used in traffic matrix estimation [<xref ref-type="bibr" rid="pone.0145437.ref024">24</xref>]. The number of flows is changed in different scenarios.</p>
+<p>All the simulations are run on a workstation with 2 Six-Core 2.00 GHz Intel Xeon E5-2620 CPUs and 16 GB memory.</p>
+</sec>
+</sec>
+<sec id="sec017">
+<title>Performance on Multi-rooted Tree</title>
+<p>In this subsection, the performance of Algorithm 1 on multi-rooted tree is studied. At first we compare the result of Algorithm 1 with that of ILP model in small-scale networks, then the case that no capacity constraint enforced into the network is studied to see the lower bound of the algorithm performance. After that, the impact of flow capacity on the communication cost is evaluated.</p>
+<sec id="sec018">
+<title>Comparison with the Result of ILP Model</title>
+<p>Since the ILP model is intractable in large-scale networks, the simulations are carried on a PortLand topology with the parameter <italic>k</italic> = 4. To make the detail solution of ILP model and Algorithm 1 clear, we generate eight bidirectional flows, and the distribution of the flows can be found in <xref ref-type="supplementary-material" rid="pone.0145437.s001">S1 Appendix</xref>. By applying both ILP model and Algorithm 1 on this scenario, we get the results shown in <xref ref-type="table" rid="pone.0145437.t003">Table 3</xref>. The ILP model is solved by CPLEX [<xref ref-type="bibr" rid="pone.0145437.ref019">19</xref>], and the detail results can be found in <xref ref-type="supplementary-material" rid="pone.0145437.s001">S1 Appendix</xref>.</p>
+<table-wrap id="pone.0145437.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.t003</object-id>
+<label>Table 3</label>
+<caption>
+<title>Result of ILP Model and Algorithm 1.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0145437.t003g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.t003" xlink:type="simple"/>
+<table border="0" frame="box" rules="all">
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">Algorithm</th>
+<th align="center">Switch Capacity</th>
+<th align="center">Communication Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">ILP</td>
+<td align="center">0</td>
+<td align="center">1168</td>
+</tr>
+<tr>
+<td align="center">Algorithm 1
+</td>
+<td align="center">0</td>
+<td align="center">1168</td>
+</tr>
+<tr>
+<td align="center">ILP</td>
+<td align="center">3</td>
+<td align="center">1368</td>
+</tr>
+<tr>
+<td align="center">Algorithm 1
+</td>
+<td align="center">3</td>
+<td align="center">1368</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>The solution derived by ILP model and Algorithm 1 are different in terms of the flow routing and polling switch selection. However, according to the results from <xref ref-type="table" rid="pone.0145437.t003">Table 3</xref>, we can see that the results of Algorithm 1 are exactly the same as the optimal results derived by ILP model in terms of the communication cost. It certificates the correctness of the Algorithm 1 and its optimality proof.</p>
+</sec>
+<sec id="sec019">
+<title>Performance with Unlimited Flow Table Capacity</title>
+<p>Assuming the capacity of switches is unlimited, we study the performance of Algorithm 1 from two perspectives. First is how the performance change with the network size, and the second is how the performance impacted by the number of flows. For the first perspective, we set the flow number to be 512 and change the PortLand parameter <italic>k</italic> (the only factor determining the network size) to evaluate the algorithm performance. For the second perspective, we set the PortLand parameter <italic>k</italic> to be 16 and put different numbers of flows into the network to evaluate the communication cost for collecting flow information. The detail results of the simulations can be found in <xref ref-type="supplementary-material" rid="pone.0145437.s002">S2 Appendix</xref>.</p>
+<p>
+<xref ref-type="fig" rid="pone.0145437.g007">Fig 7</xref> shows joint optimization algorithm can save 40.10%–51.16% communication cost with difference network size. <xref ref-type="fig" rid="pone.0145437.g008">Fig 8</xref> shows joint optimization algorithm brings 43.50%–49.28% performance improvement with different numbers of flows.</p>
+<fig id="pone.0145437.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>Communication Cost vs. Portland Parameter with No Capacity Constraint.</title>
+<p>The simulation result with 512 flows and different network size. The flow table capacity is unlimited in this scenario.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.g007" xlink:type="simple"/>
+</fig>
+<fig id="pone.0145437.g008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.g008</object-id>
+<label>Fig 8</label>
+<caption>
+<title>Communication Cost vs. Number of Flows with No Capacity Constraint.</title>
+<p>The simulation result with different number of flows on a <italic>k</italic> = 16 PortLand topology. The flow table capacity is unlimited in this scenario.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.g008" xlink:type="simple"/>
+</fig>
+<p>According to the routing principles of DCNs, the routes of flows must be the shortest path in the multi-root tree. Therefore, if the topology is fixed, the communication cost of either joint optimization or FlowCover is only slightly affected by the network size from <xref ref-type="fig" rid="pone.0145437.g007">Fig 7</xref>. Meanwhile, the communication cost of joint optimization is reduced by routing optimization compared with that of FlowCover.</p>
+<p>On the other hand, the communication cost increases when the flow number in the network increases (see <xref ref-type="fig" rid="pone.0145437.g008">Fig 8</xref>) since monitoring more flows requires more communication cost. Meanwhile, the joint optimization scheme always saves about half of the communication cost no matter how many flows in the networks compared with that of FlowCover.</p>
+</sec>
+<sec id="sec020">
+<title>Performance with Limited Flow Table Capacity</title>
+<p>To study how the performance of joint optimization impacted by the switch capacity, we set the PortLand parameter <italic>k</italic> to be 16 and evaluate how the communication cost changes with the different flow capacities and different numbers of flows in the network. The detail results of the simulations can be found in <xref ref-type="supplementary-material" rid="pone.0145437.s002">S2 Appendix</xref>.</p>
+<p>Simulation results are shown in <xref ref-type="fig" rid="pone.0145437.g009">Fig 9</xref>. There are some obvious results, such as the communication cost decreases when the switch capacity increases, and joint optimization has more advantages when there are more flows. Additionally, we can get some other results.</p>
+<fig id="pone.0145437.g009" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.g009</object-id>
+<label>Fig 9</label>
+<caption>
+<title>Communication Cost on PortLand vs. Switch Capacity.</title>
+<p>The simulation result with different switch capacities. The number of flows is set to a value in range of 128 to 1024. The Portland parameter <italic>k</italic> is 16.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.g009" xlink:type="simple"/>
+</fig>
+<p>Even if a very small flow capacity is set, joint optimization method can obtain a solution with lower communication cost than that required by FlowCover scheme. On the one hand, the uniform distribution of flows in the network increases the required number of polling switches. Accordingly, joint optimization scheme has the chance to optimize both load balance and communication cost. If there are more flows in the network, the larger probability flow congestion occurs. This is why we get a better load balance without pay much communication cost when there are more flows in the network.</p>
+</sec>
+</sec>
+<sec id="sec021">
+<title>Performance on General Topology</title>
+<p>In this subsection, we study the performance of our algorithm on general topology. At first we compare the result of our algorithm with that of the ILP model in NSFNET topology. After that, the performance of algorithm with unlimited and limited flow capacity is evaluated in different size topologies with power law degree distribution.</p>
+<sec id="sec022">
+<title>Comparison with the Result of ILP Model</title>
+<p>As mentioned above, the ILP is intractable in large-scale networks, thus the simulations are carried on the NSFNET shown in <xref ref-type="fig" rid="pone.0145437.g006">Fig 6</xref>. By applying Algorithm 3 and ILP model on the NSFNET topology with small number of flows, we can get the result in <xref ref-type="table" rid="pone.0145437.t004">Table 4</xref>. The distribution of the flows can be found in <xref ref-type="supplementary-material" rid="pone.0145437.s003">S3 Appendix</xref>. In the simulations, we present the result with unlimited flow table capacity and limited capacity. The capacity is set to 3 in the limited capacity scenarios.</p>
+<table-wrap id="pone.0145437.t004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.t004</object-id>
+<label>Table 4</label>
+<caption>
+<title>Result of ILP Model and Algorithm 3.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0145437.t004g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.t004" xlink:type="simple"/>
+<table border="0" frame="box" rules="all">
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="2">Number of Flows</th>
+<th align="center" colspan="2">Unlimited Capacity</th>
+<th align="center" colspan="2">Limited Capacity</th>
+</tr>
+<tr>
+<th align="center">ILP Model</th>
+<th align="center">Algorithm 3</th>
+<th align="center">ILP Model</th>
+<th align="center">Algorithm 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">5</td>
+<td align="center">680</td>
+<td align="center">680</td>
+<td align="center">880</td>
+<td align="center">880</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">968</td>
+<td align="center">968</td>
+<td align="center">1368</td>
+<td align="center">1464</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">1160</td>
+<td align="center">1160</td>
+<td align="center">1760</td>
+<td align="center">1856</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>From <xref ref-type="table" rid="pone.0145437.t004">Table 4</xref>, it can be found that Algorithm 3 can get the optimal result in the scenarios presented with unlimited capacity. Meanwhile, in limited capacity scenarios, Algorithm 3 can get near optimal results, the gap between the results of Algorithm 3 and the optimal solution is less than 7%.</p>
+<p>To evaluate the performance improvement in larger network, we present the result of Algorithm 3 in following paragraphs. As a benchmark, FlowCover [<xref ref-type="bibr" rid="pone.0145437.ref005">5</xref>] is also evaluated.</p>
+</sec>
+<sec id="sec023">
+<title>Performance with Unlimited Flow Table Capacity</title>
+<p>In this subsection, we study the performance of our algorithm on general topology. To this end, different size topologies with power law degree distribution are generated. The result of Algorithm 3 with unlimited and limited flow capacity is evaluated. The detail results of the simulations can be found in <xref ref-type="supplementary-material" rid="pone.0145437.s004">S4 Appendix</xref>.</p>
+<p>At first, the number of flows is set to be 512 firstly, and the communication cost changes with network size is evaluated. Then, the number of nodes is set to 200, and the performance affected by the flow numbers is evaluated. Figs <xref ref-type="fig" rid="pone.0145437.g010">10</xref> and <xref ref-type="fig" rid="pone.0145437.g011">11</xref> shows the simulation results. From these figures, we make following main observations.</p>
+<fig id="pone.0145437.g010" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.g010</object-id>
+<label>Fig 10</label>
+<caption>
+<title>Communication Cost vs. Network Size on General Topologies with No Capacity Constraint.</title>
+<p>The simulation result with 512 flows and different number of nodes. The switch capacity is unlimited in this scenario.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.g010" xlink:type="simple"/>
+</fig>
+<fig id="pone.0145437.g011" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.g011</object-id>
+<label>Fig 11</label>
+<caption>
+<title>Communication Cost vs. Number of Flows on General Topologies with No Capacity Constraint.</title>
+<p>The simulation result with 200 nodes and different number of flows. The switch capacity is unlimited in this scenario.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.g011" xlink:type="simple"/>
+</fig>
+<p>First of all, we observe that compared with FlowCover scheme, the joint optimization scheme proposed in our work can save 48.57%–55.76% communication cost with different numbers of nodes in the network, and save 47.86%–51.09% communication cost with different amounts of flow.</p>
+<p>From <xref ref-type="fig" rid="pone.0145437.g010">Fig 10</xref>, we can see that the communication cost of FlowCover decreases when the number of nodes increases. The reason is that when the network size increases, there are less flows interleave with each other and the possibility of multiple monitoring is reduced. With fixed number of flows in the network, the communication cost may be the same in networks with different size if jointly optimization scheme is adopted. Accordingly, the communication cost keeps the same when the network size changes, and the only factor that affects the communication cost is the flow number in the network (as shown in <xref ref-type="fig" rid="pone.0145437.g011">Fig 11</xref>).</p>
+</sec>
+<sec id="sec024">
+<title>Performance with Limited Flow Table Capacity</title>
+<p>To study the tradeoff between communication cost and the switch capacity, the number of switches is fixed to 200, and different numbers of flows are injected into the network. <xref ref-type="fig" rid="pone.0145437.g012">Fig 12</xref> shows how the communication cost changes with different switch capacities. The detail results of the simulations can be found in <xref ref-type="supplementary-material" rid="pone.0145437.s004">S4 Appendix</xref>.</p>
+<fig id="pone.0145437.g012" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0145437.g012</object-id>
+<label>Fig 12</label>
+<caption>
+<title>Performance on General Topologies vs. Switch Capacity Constraint.</title>
+<p>The simulation result with different switch capacities. The number of flows is set to a value in range of 128 to 1024. The number of nodes is 200.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.g012" xlink:type="simple"/>
+</fig>
+<p>From this figure, we can see that the communication cost is lower with larger switch capacity. More importantly, the communication cost is very sensitive to the flow table capacity of switches when the capacity is relative small. For example, according to the first sub-figure of <xref ref-type="fig" rid="pone.0145437.g012">Fig 12</xref>, when the capacity changes from 1–20, the communication reduces about 40%. It means that the communication cost can be saved greatly with small switch capacity.</p>
+<p>Furthermore, it is shown that by applying the switch capacity into the joint optimization scheme, the algorithm can not only get a balanced flow routing, but also reduce the communication cost for collecting flow information. This is due to the fact that FlowCover cannot always get the best routing in terms of the load balance, while SDN provides us the opportunity to optimize load balance and communication cost simultaneously by controlling the flow routing.</p>
+<p>Comparing the performance on multi-rooted tree with that on general topology, we find that there is larger performance improvement on general topology. It is because that there are more routing choices on general topology, and hence there is larger optimization space to reduce the communication cost.</p>
+</sec>
+</sec>
+</sec>
+<sec id="sec025" sec-type="conclusions">
+<title>Conclusion</title>
+<p>This paper jointly optimizes flow routing and polling switch selection to reduce communication cost for collecting flow information in SDN. Besides formulating the joint optimization problem as an ILP model, an optimal algorithm for multi-rooted tree topology and an efficient heuristic for general topology is proposed. According to extensive simulations, it can be concluded that joint optimization scheme requires only about half of the cost to collect all the flow information in the networks compared with that of the latest switch-based scheme. It is a very promising result according to the high price and power consumption of hardware resources.</p>
+</sec>
+<sec id="sec026">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0145437.s001" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.s001" xlink:type="simple">
+<label>S1 Appendix</label>
+<caption>
+<title>The Solution of ILP Model and Algorithm 1 on Multi-Root Tree Topology.</title>
+<p>In S1 Appendix, we present the detail solutions of the ILP model proposed and that of Algorithm 1 in a PortLand topology with parameter <italic>k</italic> = 4.</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0145437.s002" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.s002" xlink:type="simple">
+<label>S2 Appendix</label>
+<caption>
+<title>The Detail of Simulation Results on Multi-Rooted Tree.</title>
+<p>S2 Appendix contains the detail results of simulations carried on multi-rooted tree topologies. In the results, different number of flows and different parameter <italic>k</italic> is applied. Moreover, in the limited flow table capacity scenario, the results with different flow table capacities are also presented.</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0145437.s003" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.s003" xlink:type="simple">
+<label>S3 Appendix</label>
+<caption>
+<title>The Distribution of Flows in the Solution of ILP Model and Algorithm 3.</title>
+<p>In S3 Appendix, we present the distribution of the flows used in the simulations.</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0145437.s004" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0145437.s004" xlink:type="simple">
+<label>S4 Appendix</label>
+<caption>
+<title>The Detail of Simulation Results on General Topologies.</title>
+<p>S4 Appendix contains the detail results of simulations carried on general topologies. In the results, different number of flows and different number of nodes is applied. Moreover, in the limited flow table capacity scenario, the results with different flow table capacities are also presented.</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>We thank the anonymous reviewers for their valuable comments. This research is supported by 973 Program (2013CB329103), NSFC Fund (61271165, 61301153, 61401070), Program for Changjiang Scholars and Innovative Research Team (PCSIRT) in University and the 111 Project B14039.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0145437.ref001">
+<label>1</label>
+<mixed-citation publication-type="other" xlink:type="simple">Moshref M, Yu M, Govindan R. Resource/Accuracy Tradeoffs in Software-Defined Measurement. HotSDN’13 Proceedings of the second ACM SIGCOMM workshop on hot topics in software defined networking. 2013; 1:73–78.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref002">
+<label>2</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Curtis</surname> <given-names>AR</given-names></name>, <name name-style="western"><surname>Mogul</surname> <given-names>JC</given-names></name>, <name name-style="western"><surname>Tourrilhes</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Yalagandula</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Sharma</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Banerjee</surname> <given-names>S</given-names></name>. <article-title>DevoFlow: Scaling Flow Management for High-Performance Networks</article-title>. <source>ACM SIGCOMM Computer Communication Review</source>. <year>2011</year>; <volume>41</volume>:<fpage>254</fpage>–<lpage>265</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1145/2043164.2018466" xlink:type="simple">10.1145/2043164.2018466</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0145437.ref003">
+<label>3</label>
+<mixed-citation publication-type="other" xlink:type="simple">Jose L, Yu M, Rexford J. Online Measurement of Large Traffic Aggregates on Commodity Switches. Hot-ICE’11 Proceedings of the 11th USENIX conference on Hot topics in management of Internet, cloud, and enterprise networks and services. 2011; 1: 13–13.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref004">
+<label>4</label>
+<mixed-citation publication-type="other" xlink:type="simple">Yu M, Jose L, Miao R. Software Defined Traffic Measurement with OpenSketch. NSDI’13 Proceedings of the 10th USENIX conference on Networked Systems Design and Implementation. 2013; 1:29–42.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref005">
+<label>5</label>
+<mixed-citation publication-type="other" xlink:type="simple">Su Z, Wang T, Xia Y, Hamdi M. FlowCover: Low-cost Flow Monitoring Scheme in Software Defined Networks. IEEE Global Communications Conference (GLOBECOM). 2014; 1:1956–1961.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref006">
+<label>6</label>
+<mixed-citation publication-type="other" xlink:type="simple">Zhang Y. An Adaptive Flow Counting Method for Anomaly Detection in SDN. CoNEXT’13 Proceedings of the 9th ACM conference on Emerging networking experiments and technologies. 2013; 1:25–30.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref007">
+<label>7</label>
+<mixed-citation publication-type="other" xlink:type="simple">Yu M, Fabrikant A, Rexford J. BUFFALO: Bloom Filter Forwarding Architecture for Large Organizations. CoNEXT’09 Proceedings of the 5th ACM conference on Emerging networking experiments and technologies. 2009; 1:313–324.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref008">
+<label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Yu</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Rexford</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Freedman</surname> <given-names>MJ</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>J</given-names></name>. <article-title>Scalable Flow-based Networking with DIFANE</article-title>. <source>ACM SIGCOMM Computer Communication Review</source>. <year>2011</year>; <volume>41</volume>(<issue>4</issue>):<fpage>351</fpage>–<lpage>362</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref009">
+<label>9</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Kanizo</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Hay</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Keslassy</surname> <given-names>I</given-names></name>. <article-title>Palette: Distributing Tables in Software-Defined Networks</article-title>. <source>INFOCOM, 2013 Proceedings IEEE</source>. <year>2013</year>; <volume>1</volume>:<fpage>515</fpage>–<lpage>549</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref010">
+<label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Chowdhury</surname> <given-names>SR</given-names></name>, <name name-style="western"><surname>Bari</surname> <given-names>MF</given-names></name>, <name name-style="western"><surname>Ahmed</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Boutaba</surname> <given-names>R</given-names></name>. <article-title>Payless: A Low Cost Network Monitoring Framework for Software Defined Networks</article-title>. <source>IEEE Network Operations and Management Symposium (NOMS)</source>. <year>2014</year>; <volume>1</volume>:<fpage>1</fpage>–<lpage>9</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/NOMS.2014.6838227" xlink:type="simple">10.1109/NOMS.2014.6838227</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0145437.ref011">
+<label>11</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Kannan</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Banerjee</surname> <given-names>S</given-names></name>. <chapter-title>Compact TCAM: Flow Entry Compaction in TCAM for Power Aware SDN</chapter-title>. <source>Distributed Computing and Networking</source>. <publisher-name>Springer</publisher-name>. <year>2013</year>.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref012">
+<label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Estan</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Varghese</surname> <given-names>G</given-names></name>. <article-title>New Directions in Traffic Measurement and Accounting</article-title>. <source>ACM SIGCOMM Computer Communication Review</source>. <year>2002</year>; <volume>32</volume>(<issue>4</issue>):<fpage>323</fpage>–<lpage>336</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1145/964725.633056" xlink:type="simple">10.1145/964725.633056</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0145437.ref013">
+<label>13</label>
+<mixed-citation publication-type="other" xlink:type="simple">Sekar V, Reiter MK, Zhang H. Revisiting the Case for a Minimalist Approach for Network Flow Monitoring. Proceedings of the 10th ACM SIGCOMM Conference on Internet Measurement. ACM. 2010; 1:328–341.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref014">
+<label>14</label>
+<mixed-citation publication-type="other" xlink:type="simple">Claise, B. RFC3954 Cisco Systems NetFlow Services Export Version 9. 2004. Available: <ext-link ext-link-type="uri" xlink:href="http://www.rfc-editor.org/rfc/rfc3954.txt" xlink:type="simple">http://www.rfc-editor.org/rfc/rfc3954.txt</ext-link>.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref015">
+<label>15</label>
+<mixed-citation publication-type="other" xlink:type="simple">Wang M, Li B, Li Z. sFlow: Towards Resource-Efficient and Agile Service Federation in Service Overlay Networks. Proceedings of 24th International Conference on Distributed Computing Systems. 2004; 1:628–635.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref016">
+<label>16</label>
+<mixed-citation publication-type="other" xlink:type="simple">OpenFlow Consoritum. OpenFlow Switch Specification v1.0. 2009. Available: <ext-link ext-link-type="uri" xlink:href="https://www.opennetworking.org/images/stories/downloads/sdn-resources/onf-specifications/openflow/openflow-spec-v1.0.0.pdf" xlink:type="simple">https://www.opennetworking.org/images/stories/downloads/sdn-resources/onf-specifications/openflow/openflow-spec-v1.0.0.pdf</ext-link>.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref017">
+<label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Wu</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Ho</surname> <given-names>PH</given-names></name>, <name name-style="western"><surname>Yeung</surname> <given-names>KL</given-names></name>. <article-title>Monitoring Trail: On Fast Link Failure Localization in All-Optical WDM Mesh Networks</article-title>. <source>Journal of Lightwave Technology</source>. <year>2009</year>; <volume>27</volume>(<issue>18</issue>):<fpage>4175</fpage>–<lpage>4185</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/JLT.2009.2022769" xlink:type="simple">10.1109/JLT.2009.2022769</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0145437.ref018">
+<label>18</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Al-Fares</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Loukissas</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Vahdat</surname> <given-names>A</given-names></name>. <article-title>A Scalable, Commodity Data Center Network Architecture</article-title>. <source>ACM SIGCOMM Computer Communication Review</source>. <year>2008</year>; <volume>38</volume>(<issue>4</issue>):<fpage>63</fpage>–<lpage>74</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1145/1402946.1402967" xlink:type="simple">10.1145/1402946.1402967</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0145437.ref019">
+<label>19</label>
+<mixed-citation publication-type="other" xlink:type="simple">IBM. CPLEX Optimizer. Available: <ext-link ext-link-type="uri" xlink:href="http://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/" xlink:type="simple">http://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/</ext-link>.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref020">
+<label>20</label>
+<mixed-citation publication-type="other" xlink:type="simple">White S, Smyth P. Algorithms for Estimating Relative Importance in Networks. Proceedings of the 9th ACM SIGKDD international conference on knowledge discovery and data mining. 2003; 1:266–275.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref021">
+<label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Greenberg</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Hamilton</surname> <given-names>JR</given-names></name>, <name name-style="western"><surname>Jain</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Kandula</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Lahiri</surname> <given-names>P</given-names></name>, <etal>et al</etal>. <article-title>VL2: A Scalable and Flexible Data Center Network</article-title>. <source>ACM SIGCOMM Computer Communication Review</source>. <year>2009</year>; <volume>39</volume>: <fpage>51</fpage>–<lpage>62</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1145/1594977.1592576" xlink:type="simple">10.1145/1594977.1592576</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0145437.ref022">
+<label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Mills</surname> <given-names>DL</given-names></name>, <name name-style="western"><surname>Braun</surname> <given-names>HW</given-names></name>. <article-title>The NSFNET Backbone Network</article-title>. <source>ACM SIGCOMM Computer Communication Review</source>. <year>1987</year>; <volume>17</volume>: <fpage>191</fpage>–<lpage>196</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1145/55483.55502" xlink:type="simple">10.1145/55483.55502</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0145437.ref023">
+<label>23</label>
+<mixed-citation publication-type="other" xlink:type="simple">Hagberg A, Schult DA, Swart PJ. NetworkX; 2013. Available: <ext-link ext-link-type="uri" xlink:href="https://networkx.github.io/" xlink:type="simple">https://networkx.github.io/</ext-link>.</mixed-citation>
+</ref>
+<ref id="pone.0145437.ref024">
+<label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Medina</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Taft</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Salamatian</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Bhattacharyya</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Diot</surname> <given-names>C</given-names></name>. <article-title>Traffic Matrix Estimation: Existing Techniques and New Directions</article-title>. <source>ACM SIGCOMM Computer Communication Review</source>. <year>2002</year>; <volume>32</volume>: <fpage>161</fpage>–<lpage>174</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1145/964725.633041" xlink:type="simple">10.1145/964725.633041</ext-link></comment></mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

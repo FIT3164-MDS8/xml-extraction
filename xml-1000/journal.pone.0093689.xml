@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group>
+<journal-title>PLoS ONE</journal-title></journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-13-49923</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0093689</article-id>
+<article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology and life sciences</subject><subj-group><subject>Biotechnology</subject><subj-group><subject>Bioengineering</subject><subj-group><subject>Biomedical engineering</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Computer and information sciences</subject><subj-group><subject>Computer modeling</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Engineering and technology</subject><subj-group><subject>Aerospace engineering</subject><subj-group><subject>Avionics</subject><subj-group><subject>Synthetic vision systems</subject></subj-group></subj-group></subj-group><subj-group><subject>Signal processing</subject><subj-group><subject>Image processing</subject><subject>Signal filtering</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Medicine and health sciences</subject><subj-group><subject>Medical physics</subject></subj-group><subj-group><subject>Radiology and imaging</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Applied mathematics</subject><subj-group><subject>Algorithms</subject></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Computer Simulation of Magnetic Resonance Angiography Imaging: Model Description and Validation</article-title>
+<alt-title alt-title-type="running-head">Computer Simulation of Magnetic Resonance Angiography</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Klepaczko</surname><given-names>Artur</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Szczypiński</surname><given-names>Piotr</given-names></name><xref ref-type="aff" rid="aff1"/></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Dwojakowski</surname><given-names>Grzegorz</given-names></name><xref ref-type="aff" rid="aff1"/></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Strzelecki</surname><given-names>Michał</given-names></name><xref ref-type="aff" rid="aff1"/></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Materka</surname><given-names>Andrzej</given-names></name><xref ref-type="aff" rid="aff1"/></contrib>
+</contrib-group>
+<aff id="aff1"><addr-line>Medical Electronics Division, Institute of Electronics, Lodz University of Technology, Lodz, Poland</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Suarez</surname><given-names>Oscar Deniz</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Universidad de Castilla-La Mancha, Spain</addr-line></aff>
+<author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">aklepaczko@p.lodz.pl</email></corresp>
+<fn fn-type="conflict"><p>The authors have declared that no competing interests exist.</p></fn>
+<fn fn-type="con"><p>Conceived and designed the experiments: AK AM. Performed the experiments: AK GD MS. Analyzed the data: AK. Contributed reagents/materials/analysis tools: AK PS AM. Wrote the paper: AK. Designed the softwate tools used in the study: AK PS. Arranged experiments with the real MR scanner: MS. Performed flow simulation in the COMSOL software: AK GD. Designed the experiment with the physical phantoms: AM. Overall research coordination and management: AK.</p></fn>
+</author-notes>
+<pub-date pub-type="collection"><year>2014</year></pub-date>
+<pub-date pub-type="epub"><day>16</day><month>4</month><year>2014</year></pub-date>
+<volume>9</volume>
+<issue>4</issue>
+<elocation-id>e93689</elocation-id>
+<history>
+<date date-type="received"><day>26</day><month>11</month><year>2013</year></date>
+<date date-type="accepted"><day>8</day><month>3</month><year>2014</year></date>
+</history>
+<permissions>
+<copyright-year>2014</copyright-year>
+<copyright-holder>Klepaczko et al</copyright-holder><license xlink:type="simple"><license-p>This is an open-access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions>
+<abstract>
+<p>With the development of medical imaging modalities and image processing algorithms, there arises a need for methods of their comprehensive quantitative evaluation. In particular, this concerns the algorithms for vessel tracking and segmentation in magnetic resonance angiography images. The problem can be approached by using synthetic images, where true geometry of vessels is known. This paper presents a framework for computer modeling of MRA imaging and the results of its validation. A new model incorporates blood flow simulation within MR signal computation kernel. The proposed solution is unique, especially with respect to the interface between flow and image formation processes. Furthermore it utilizes the concept of particle tracing. The particles reflect the flow of fluid they are immersed in and they are assigned magnetization vectors with temporal evolution controlled by MR physics. Such an approach ensures flexibility as the designed simulator is able to reconstruct flow profiles of any type. The proposed model is validated in a series of experiments with physical and digital flow phantoms. The synthesized 3D images contain various features (including artifacts) characteristic for the time-of-flight protocol and exhibit remarkable correlation with the data acquired in a real MR scanner. The obtained results support the primary goal of the conducted research, i.e. establishing a reference technique for a quantified validation of MR angiography image processing algorithms.</p>
+</abstract>
+<funding-group><funding-statement>This paper was supported by the Polish National Science Centre under grants no. N N519 650940 and 2013/08/M/ST7/00943. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="15"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>Magnetic Resonance Angiography (MRA) is a powerful technique for visualization of blood vessels. Within the MRA setting, there exist both non-invasive imaging protocols, such as e.g. Time-Of-Flight (ToF) <xref ref-type="bibr" rid="pone.0093689-Arlat1">[1]</xref>–<xref ref-type="bibr" rid="pone.0093689-Haacke1">[3]</xref> or Phase Contrast Angiography (PCA) <xref ref-type="bibr" rid="pone.0093689-Stamm1">[4]</xref>, and sequences that rely on application of contrast agent <xref ref-type="bibr" rid="pone.0093689-Schneider1">[5]</xref>. In this paper we focus on the ToF sequence.</p>
+<p>Direct examination of the measured ToF images provides essentially qualitative description of the vessel system. Nonetheless, the quantitative information about the defects of vascularity of a visualized organ can help decide on the appropriate treatment. Such data can only be obtained with the use of specialized MRA image processing algorithms. If conducted properly, a quantitative analysis can increase objectivity and correctness of the medical diagnosis. For instance, the methods for vessels segmentation and tracking <xref ref-type="bibr" rid="pone.0093689-Eiho1">[6]</xref>–<xref ref-type="bibr" rid="pone.0093689-Materka1">[9]</xref> enable an automatic identification of occlusions, pathological narrowings and hyper- or neovascularizations.</p>
+<p>However, prior to the introduction of an image-based decision supporting system to clinical practice, it must be verified in a series of experiments involving a large number of test images, how reliable and accurate particular methods are. A statistically credible validation is difficult due to relatively high costs of collecting images solely for the research purposes. Additionally, MR scanners are extensively used in clinics and therefore are rarely accessible for experimentation. In consequence, the number of images available for evaluation studies is too low and there appears a need for a technique to generate synthetic images.</p>
+<p>The problem of simulating the magnetic resonance imaging (MRI) has been studied over the last two decades and several computer simulators have been designed. The proposed solutions differ in the approach to model tissue of the imaged objects, in the routines of MR image synthesis, and in the degree to which different artifactual or undesired phenomena (like noise, chemical shift, ringing or Gibbs phenomenon, partial volume effect etc.) are taken into account.</p>
+<p>In the approach proposed in <xref ref-type="bibr" rid="pone.0093689-Simmons1">[10]</xref>, the imaged objects are defined as parameter maps. The maps visualize distribution of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e001" xlink:type="simple"/></inline-formula> (spin-lattice relaxation time constant), <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e002" xlink:type="simple"/></inline-formula> (spin-spin relaxation) and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e003" xlink:type="simple"/></inline-formula> (proton density) values within the object. These values are calculated from real images. Formation of new images is performed using different repetition and echo times. On the other hand, in paper <xref ref-type="bibr" rid="pone.0093689-Petersson1">[11]</xref> the virtual organ object is modeled using the concept of spin density. By the use of inverse Fourier Transform, the simulator constructs the image representation in the spatial-frequency domain (k-space formalism). Simulation of the signal sampling phase and specific imaging sequence is accomplished through appropriate selection of the k-space elements and their amplitude and phase alteration. Separate simulation phases are required for each of the modeled tissues. This fact introduces a significant obstacle if a voxel contains more than one tissue leading to a partial volume effect.</p>
+<p>In comparison with other approaches, more realistic simulation effects are achieved by solutions proposed in <xref ref-type="bibr" rid="pone.0093689-BenoitCattin1">[12]</xref>–<xref ref-type="bibr" rid="pone.0093689-Yoder1">[15]</xref>. The models of the used imaged organs require that for each object voxel and every tissue component, relaxation times <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e004" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e005" xlink:type="simple"/></inline-formula>, proton density <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e006" xlink:type="simple"/></inline-formula>, as well as value of the frequency offset linked to chemical shift artifact are defined. Consequently, to deal with the partial volume effect it is sufficient to determine the volume of particular tissue in a voxel.</p>
+<p>It must be underlined that the simulators proposed so far can be used to synthesize only anatomical images, where the flow effects, suppressed by the imaging protocol parameters (echo and repetition times and RF pulse flip angle) are neglected. However, when it comes to MR angiography, beside nuclear phenomena, it is the motion of the hydrogen nuclei that produces the measured signal. Since none of the currently available simulators can be employed for MRA image synthesis, this paper presents an original computer system for simulation of the 3D ToF sequence.</p>
+</sec><sec id="s2" sec-type="methods">
+<title>Methods</title>
+<p>The design of the MRA simulator decomposes into the following tasks:</p>
+<list list-type="order"><list-item>
+<p>geometry definition of a vessel or a set of vessel branches (i.e. vascularity of an organ, hereafter shortly referred to as a <italic>vascularity object</italic>),</p>
+</list-item><list-item>
+<p>simulation of blood flow through the vessels,</p>
+</list-item><list-item>
+<p>modeling of stationary tissues which surround vessels (i.e. an <italic>organ</italic>),</p>
+</list-item><list-item>
+<p>simulation of magnetic resonance imaging sequences.</p>
+</list-item></list>
+<p>At first the blood flow and a vessel model is described. Since the aim of the research is a validation of the designed simulator, the focus is narrowed to relatively simple virtual phantoms of vascularity objects. Geometry of these models was adjusted to match real flow phantoms manufactured by Shelley Medical Imaging Technologies <xref ref-type="bibr" rid="pone.0093689-Shelley1">[16]</xref> (see <xref ref-type="fig" rid="pone-0093689-g001">Fig. 1</xref>) for the purpose of MR scanners calibration. This approach is motivated by the idea of reconstructing similar, corresponding to each other sets of images both in a simulator and a real MR scanner. The quantified degree of such correspondence enables an objective verification of the synthesized images from the point of view how realistic they are. The flow model description is succeeded by a presentation of the stationary tissue model and MR image formation procedures.</p>
+<fig id="pone-0093689-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g001</object-id><label>Figure 1</label><caption>
+<title>Flow phantoms used in the study.</title>
+<p>Channel diameters: 8 mm (1, 2, 3 and U-bend) and 5 mm (channel 4). Stenoses: channel 1 (75% of the diameter), channel 3 (50% of the diameter). Straight channels length: 207 mm. Curvature radius of the U-bend channel: 44 mm.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g001" position="float" xlink:type="simple"/></fig>
+<p>Eventually, details of real MRA image acquisitions are provided. Apart from the physical phantoms, the experimental apparatus consisted of the MR compatible, high-precision flow pump, CompuFlow 1000 MR, also manufactured by Shelley <xref ref-type="bibr" rid="pone.0093689-Holdsworth1">[17]</xref>. The pump is capable of forcing the flow at wide range of rates (from 0.1 ml/s to 35 ml/s) characteristic of human vessel system. It is also possible to generate a specific pulsatile flow waveforms, choosing either between one of the typical physiological courses (like common carotid or femoral waveforms) or a user-defined function. In the described experiments, however, only a steady flow option was used. It simplifies comparison of real and simulated images by removing additional factor causing potential discrepancies resulting from imperfect reproduction of the same pulsatile waveform in a flow simulation software. The pump is constructed mainly from non-ferromagnetic materials and is thus allowed to operate at high magnetic fields such as in the MR environment for the purpose of MR scanners calibration.</p>
+<p>Furthermore, to achieve realistic conditions of the experiments, the medium used with the flow phantoms was Shelley's blood mimicking fluid (BMF). It is essentially a water solution of glycerol in proportion 6∶4. The physical properties of the fluid are presented in <xref ref-type="table" rid="pone-0093689-t001">Table 1</xref>. All further computer simulations, with respect to flow and MR image formation, were performed using the same <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e007" xlink:type="simple"/></inline-formula>, and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e008" xlink:type="simple"/></inline-formula> parameters.</p>
+<table-wrap id="pone-0093689-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.t001</object-id><label>Table 1</label><caption>
+<title>BMF physical parameters.</title>
+</caption><alternatives><graphic id="pone-0093689-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.t001" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Parameter</td>
+<td align="left" rowspan="1" colspan="1">Value</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">Density <italic>d</italic></td>
+<td align="left" rowspan="1" colspan="1">1020 kg/m<sup>3</sup></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Viscosity <italic>ν</italic></td>
+<td align="left" rowspan="1" colspan="1">4.1 mPa s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Proton density <italic>ρ</italic> (water relative)</td>
+<td align="left" rowspan="1" colspan="1">1.00</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>T</italic><sub>1</sub> @ 1.5 T</td>
+<td align="left" rowspan="1" colspan="1">850 ms</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>T</italic><sub>2</sub> @ 1.5 T</td>
+<td align="left" rowspan="1" colspan="1">170 ms</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap><sec id="s2a">
+<title>Blood flow and vessel model</title>
+<p>A simulation of flow is performed in COMSOL Multiphysics software. The routines implemented therein solve Navier-Stokes equations for the incompressible fluid. A laminar flow, known also as stratified flow, assumes that fluid moves in parallel layers <xref ref-type="bibr" rid="pone.0093689-Anderson1">[18]</xref>. Each layer has its own speed and slides past one another with no lateral mixing. Blood flows in one direction with the parabolic velocity profile reaching the greatest value in the middle of the cylinder and it decreases towards vessel walls. The model is sufficiently accurate for simulating blood flow in a straight tube of relatively large diameter. However, in case of more complex structures with stenoses and bifurcations the flow behavior locally changes and turbulences and frictional forces should be taken into consideration <xref ref-type="bibr" rid="pone.0093689-Kwak1">[19]</xref>. Therefore, in the presented study the flow simulation is conducted in the turbulent regime using the RANS k-<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e009" xlink:type="simple"/></inline-formula> equation <xref ref-type="bibr" rid="pone.0093689-Wilcox1">[20]</xref>.</p>
+<p>Among other available options, fluid motion in a vessel can be forced by determining pressure difference between the inlet and outlet surfaces. From the physiological point of view, the reasonable rates of peak velocity of blood for medium and large arteries(such as those modeled by the Shelley phantoms) range from 30 to 100 cm/s and the pressure values must be adjusted accordingly. <xref ref-type="fig" rid="pone-0093689-g002">Figure 2</xref> presents a simulated distribution of pressure and velocity inside digitally reconstructed phantoms, where input and output pressure values were set to 11448 Pa and 11148 Pa respectively. Additionally, vessel walls are assumed solid, which prevents leakage.</p>
+<fig id="pone-0093689-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g002</object-id><label>Figure 2</label><caption>
+<title>Blood flow simulation in the 4 straight tubes phantom.</title>
+<p>Simulated pressure (a) and velocity magnitude (b) distribution. Pressure difference (300 Pa) between channel inlets and outlets is made equal for every tube. Note the rapid increase in the velocity value and simultaneously pressure drop in the area of stenoses.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g002" position="float" xlink:type="simple"/></fig>
+<p>It is important to note that COMSOL splits the domain of interest (in our case – the fluid) into a mesh of 3D geometrical primitives – tetrahedral nodes – of some finite volume. Velocity vectors are calculated for every mesh node. A crucial issue, is how to transfer this information in a usable form into the virtual MR scanner. A direct approach involves an operation on the COMSOL-generated mesh but it breeds a problem, referred to as numerical diffusion <xref ref-type="bibr" rid="pone.0093689-Hokr1">[21]</xref>, <xref ref-type="bibr" rid="pone.0093689-Holleman1">[22]</xref>. An example of fluid motion in <xref ref-type="fig" rid="pone-0093689-g003">Fig. 3</xref>, showing positions of a portion of blood in 3 subsequent time steps illustrates the problem. If the flow channel is decomposed into a mesh of regular square-shaped nodes (in fact, any shape of mesh primitives entails similar consequences) it seems that in step 2, only half of the fluid volume shifts from node 1 to node 2. Thus, any further mesh-based calculations would require a division of fluid volume of this particular blood portion into 2 fractions, each for nodes 1 and 2. In step 3, these fractions move on: a part of blood residing in node 2 is transported to node 3, and again only a fraction of node 1 volume shifts towards node 2. Apparently, a sample of blood which initially occupied only one mesh node, spilled over 3 nodes. Clearly, this leads to an ambiguous localization of fluid portions – an error which accumulates in subsequent time steps. Moreover, this problem affects simulation of magnetic resonance, where subsequent image formation procedures (selective excitation, spatial encoding etc.) are invoked in discrete time moments and applied to portions of fluids at specific locations. Hence, a numerical diffusion may cause misinterpretation of true position of some blood samples.</p>
+<fig id="pone-0093689-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g003</object-id><label>Figure 3</label><caption>
+<title>Illustration of the numerical diffusion problem.</title>
+<p>Fluid transportation in the case of a fixed mesh (a) and actual translation of a fluid portion along the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e010" xlink:type="simple"/></inline-formula> coordinate (b). In the former case, a fluid portion originally occupying node no. 1 spills over three consequtive nodes at time step 3 although in fact during this time period it has only and entirely moved from position <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e011" xlink:type="simple"/></inline-formula> to <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e012" xlink:type="simple"/></inline-formula>.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g003" position="float" xlink:type="simple"/></fig>
+<p>To avoid the above described problem another COMSOL toolbox, namely the Particle Tracing for Fluid Flow module <xref ref-type="bibr" rid="pone.0093689-Comsol1">[23]</xref> is used. Based on the laminar and turbulent flow solution, the group of particles fed into a tube at an inlet is transported to its outlet. Each spherically-shaped particle is described by its density and diameter. Furthermore, the simulation is configured in such a manner, that there is no particle-fluid interaction. On the other hand, fluid forces particles to move along a vessel and by tracing their locations in subsequent time steps it is possible to find a bundle of trajectories which represent the motion of blood (see <xref ref-type="fig" rid="pone-0093689-g004">Fig. 4</xref>). These particle trajectories define the input to the MRA simulator.</p>
+<fig id="pone-0093689-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g004</object-id><label>Figure 4</label><caption>
+<title>Particle trajectories as determined by the Particle Tracing Module.</title>
+<p>Simulated trajectories at a time step <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e013" xlink:type="simple"/></inline-formula>, where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e014" xlink:type="simple"/></inline-formula> indicates initiation of flow. The fastest particles move close to the main axis of the tube.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g004" position="float" xlink:type="simple"/></fig>
+<p>It is instructive to analyze the velocities achieved by the particles, as they move along a vessel, and compare them with the values obtained in a fluid flow simulation. <xref ref-type="fig" rid="pone-0093689-g005">Figure 5</xref> presents time courses of the velocity magnitude plotted for four randomly picked particles in the experiment inside the 50%-stenosis tube. It has been observed that the velocities remain constant until particles reach the narrowing, where they experience rapid acceleration, then they slow down and finally flow out from the vessel. The initial velocity value and the moment of its increase differ between the particles, depending on their position relative to central axis of the channel. <xref ref-type="fig" rid="pone-0093689-g006">Figures 6a–b</xref> depict locations of the same four particles in two cross-sections of the vessel situated either at 100 mm from the inlet or in the middle of stenosis. Also, velocity magnitudes, as calculated by the fluid flow simulation, are shown. Clearly, particle velocities presented in the time courses remain close to the values obtained using the plots in <xref ref-type="fig" rid="pone-0093689-g006">Fig. 6</xref>. It demonstrates the equivalence between a standard flow simulation and particle traces.</p>
+<fig id="pone-0093689-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g005</object-id><label>Figure 5</label><caption>
+<title>Time courses of velocity magnitude plotted for 4 randomly picked particles.</title>
+<p>Simulation performed for the 50%-stenosis tube with the flow rate of 2.5 ml/s. Particle which move faster (labeled 15 and 47) reach the narrowing earlier and gain larger peak velocity in the stenosis region than particles 2 and 7.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g005" position="float" xlink:type="simple"/></fig><fig id="pone-0093689-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g006</object-id><label>Figure 6</label><caption>
+<title>Distribution of velocity magnitude at two cross-sections of the 50%-stenosis tube [cm/s].</title>
+<p>Fluid flow rate equals to 2.5/s. Black dots depict approximated locations of 4 particles whose velocity time courses are shown in <xref ref-type="fig" rid="pone-0093689-g005">Fig. 5</xref> The selected cross-sections are situated a) 100 mm from the vessel inlet and b) in the middle of stenosis.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g006" position="float" xlink:type="simple"/></fig></sec><sec id="s2b">
+<title>MRA Imaging Simulation</title>
+<p>The main software modules of the designed simulator are presented in <xref ref-type="fig" rid="pone-0093689-g007">Fig. 7</xref> and described below.</p>
+<fig id="pone-0093689-g007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g007</object-id><label>Figure 7</label><caption>
+<title>Main modules of the designed MRA simulator.</title>
+<p>The simulator is decomposed into 4 integral parts: 1) virtual object description, 2) sequence management, 3) signal computation and 4) image reconstruction.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g007" position="float" xlink:type="simple"/></fig><sec id="s2b1">
+<title>Digital phantom</title>
+<p>The input to the MRA simulator is a model composed of particle trajectories as described above. These trajectories are defined by a series of particle coordinates at subsequent flow simulation time steps <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e015" xlink:type="simple"/></inline-formula>. In fact, the coordinates can be easily interpolated in time domain, which in turn allows the selection of any other time step for the purpose of the subsequent stages of the simulation. In other words, in both stages i.e. in the simulation of flow and in the simulation of magnetic resonance effects, the discretization of time domain can be adjusted independently.</p>
+<p>In the MRA simulation, the whole volume of a vascularity object has to be filled with particles. Furthermore, every particle corresponds to a portion of the fluid so that the sum of all these portions constitute the total volume of the blood flowing through the vessels. Therefore, in the proposed method every trajectory is populated by particles according to the following strategy.</p>
+<p>Firstly, the area of a tube inlet, which should be perpendicular to the course of trajectories, is tessellated by means of the Voronoi decomposition (<xref ref-type="fig" rid="pone-0093689-g008">Fig. 8a</xref>). It divides the inlet area into regions, so that every region corresponds with the individual trajectory. As a result, every trajectory is assigned an area <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e016" xlink:type="simple"/></inline-formula>, where the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e017" xlink:type="simple"/></inline-formula> indicates a particular trajectory. In consequence, contributions from trajectories sparsely scattered are balanced with respect to those which are distributed more densely. Secondly, let us consider a right prism in which an individual Voronoi cell constitutes a base polygon and the distance between the two base polygons is equal to <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e018" xlink:type="simple"/></inline-formula> (<xref ref-type="fig" rid="pone-0093689-g008">Fig. 8b</xref>). The volume of such prism is a product of the base face area <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e019" xlink:type="simple"/></inline-formula> and the distance <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e020" xlink:type="simple"/></inline-formula>. Therefore, in case of a straight tube, i in which the fluid speed along the trajectory is stable and the tube's cross-section remains constant, the trajectory is populated with particles equally spaced by the distance <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e021" xlink:type="simple"/></inline-formula>. The volume associated with every such particle is equal to the volume of the right prism mentioned above.</p>
+<fig id="pone-0093689-g008" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g008</object-id><label>Figure 8</label><caption>
+<title>Calculation of particles cell volume.</title>
+<p>a) The result of Voronoi tessellation of a tube cross-section. Particles (black dots) cast on the selected surface serve as seed points. The blue and red polygons are example base faces of particle-associated cells. b) Lengths <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e022" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e023" xlink:type="simple"/></inline-formula> denote distances traveled by particles on trajectories 1 (blue line) and 2 (red line), both during the same time interval <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e024" xlink:type="simple"/></inline-formula>. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e025" xlink:type="simple"/></inline-formula> as velocity on the red trajectory is larger.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g008" position="float" xlink:type="simple"/></fig>
+<p>As the MRA simulation advances, the particles move along the associated trajectories toward the tube outlets and finally, as they pass through the outlet, they disappear from the simulation. At the same time new particles must be introduced at the inlet of the tube, as the vascularity object should be filled with particles at all times of the simulation. The new particles are introduced at a specific time rate <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e026" xlink:type="simple"/></inline-formula> (not to be confused with the flow simulation time step <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e027" xlink:type="simple"/></inline-formula>) equal to the ratio of the distance <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e028" xlink:type="simple"/></inline-formula> and speed of the fluid along the corresponding trajectory. Therefore, every particle introduced at the inlet is distant from the preceding one by the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e029" xlink:type="simple"/></inline-formula> and represents the same amount of the volume equal to <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e030" xlink:type="simple"/></inline-formula>. The <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e031" xlink:type="simple"/></inline-formula> and consequently <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e032" xlink:type="simple"/></inline-formula> can be adjusted individually for each trajectory. In our approach, by default they are chosen so that the distances between adjacent particles on the same trajectory are comparable to the distances between the neighboring trajectories, giving an even distribution of particles in all three dimensions. These values however, can be manipulated to achieve a desired number of particles along trajectories.</p>
+<p>Note that in a narrowing particles move faster and the distance <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e033" xlink:type="simple"/></inline-formula> becomes larger. At the same time the area of vessel cross-section shrinks, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e034" xlink:type="simple"/></inline-formula> decreases with inverse proportion to the increase of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e035" xlink:type="simple"/></inline-formula> and as a result the volume corresponding with the particle remains constant.As the particles on different trajectories convey various portions of blood, the associated volume is used to weight the MR signal originating from its corresponding particle. It is important that information on exact shape of boundaries limiting the volume is not further required. In consequence, there is no need for exact tessellation of the three dimensional volume of the vascularity object, which in turn simplifies the simulator implementation.</p>
+<p>As indicated above, the time step of MRA simulation <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e036" xlink:type="simple"/></inline-formula> generally differs from the step used in flow simulation <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e037" xlink:type="simple"/></inline-formula> and also from the steps <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e038" xlink:type="simple"/></inline-formula> used to fill trajectories with particles. The system finds position of a particle at time <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e039" xlink:type="simple"/></inline-formula> by interpolating its coordinates corresponding to two locations, one at time <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e040" xlink:type="simple"/></inline-formula> and the other at <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e041" xlink:type="simple"/></inline-formula>, where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e042" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e043" xlink:type="simple"/></inline-formula> are respectively the flow and MRA simulation step numbers. This solution enables performing image synthesis at arbitrary temporal resolution.</p>
+<p>Apart from volume and parameters related to their motion, particles are assigned <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e044" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e045" xlink:type="simple"/></inline-formula> relaxation times and proton density value <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e046" xlink:type="simple"/></inline-formula>. Eventually, each particle on a trajectory obtains a unique identification label allowing to trace it during image formation. A description of the digital phantom is completed by the information about physical size of an imaged organ and position of the vessels within it.</p>
+<p>In the performed experiments the number of trajectories in a single tube was set to 256. Furthermore, the particle-associated volumes were adjusted to achieve the ratio of 3 particles per millimeter of a vessel length. It gives the value of about 20 particles per cubic millimeter or about 12 particles per final voxel. We found this ratio as optimal to obtain realistic images, while avoiding computational overload. In lower resolution images, also the number of trajectories may be decreased.</p>
+<p>Stationary tissue which surrounds vessels – for clarity not shown in <xref ref-type="fig" rid="pone-0093689-g007">Fig. 7</xref> – is modeled by a set of particles similarly to flowing spins but a position of the stationary particle is fixed for the entire scope of simulation. The definition of the stationary tissue requires setting of the shape and size of the organ. Then, the number of stationary particles is adjusted to match the density of their distribution to the ratio obtained for the moving ones. Tissue particles are uniformly distributed within the imaged volume except for the regions occupied by vessel branches. Furthermore, particles are assigned their <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e047" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e048" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e049" xlink:type="simple"/></inline-formula> values. Eventually, there can be several tissue types present in the imaging volume. Every component is simulated separately, and the final image is reconstructed from the sum of signals acquired for each tissue. Moreover, the chemical shift between fat and water components can be defined to simulate spatial misregistration of fat protons caused by magnetic shielding of the electron shell altering their effective resonant frequency. Nevertheless, the effect of chemical shift is not considered in the experiments reported in this study.</p>
+</sec><sec id="s2b2">
+<title>Imaging sequence</title>
+<p><italic>Protocol definition.</italic> An image synthesis procedure is controlled by a group of parameters constituting a sequence type and output image contents. The latter refers both to the image resolution (k-space size) and to the position and size of the field of view (FOV). By default, FOV embraces a whole object, but it can be reduced to only a part of it and its center can be shifted to any object point. It is important to keep a record of the FOV center offset and its location relative to gradients isocenter, since it directly affects the field strength value experienced by each particle.</p>
+<p>The sequence definition is mainly determined by the sequence type. The Time-of-Flight protocol utilizes the Spoiled Gradient Echo sequence (SPGR) <xref ref-type="bibr" rid="pone.0093689-Bernstein1">[2]</xref>. The SPGR sequence leads to saturation of the stationary spins which in turn produce much lower signal than fresh unsaturated molecules flowing into the imaging volume. The degree of inflow enhancement depends on velocity of blood spins and the orientation of vessels relative to the acquisition slice.</p>
+<p>As for MR experiment, the program requires a specification of the echo and repetition times (TE and TR accordingly) and also the flip angle (FA). The sequence type also includes information whether the target image is 2- or 3-dimensional. For the 2D image the slice position and orientation should be specified. In case of volumetric acquisitions it must be also defined whether the whole FOV is scanned as one thick volume, or as a series of thin slabs (MOTSA – multiple overlapping thin slabs acquisition technique) <xref ref-type="bibr" rid="pone.0093689-Parker1">[24]</xref>. Moreover, for 3D ToF it must be determined whether the ramped RF pulses, with spatially varying ip angle parallel to the direction of ow, are to be used. This technique, sometimes called TONE (tilted optimized non-saturating excitation) <xref ref-type="bibr" rid="pone.0093689-Carr1">[25]</xref>, <xref ref-type="bibr" rid="pone.0093689-Kim1">[26]</xref>, reduces the effect of signal suppression from molecules which have traversed long distances within a slab and thus have been saturated by multiple RF pulses. Finally, the signal sampling window is determined by the readout time parameter which must ensure that the resulting sampling frequency meets the Nyquist-Shanon theorem.</p>
+<p><italic>Sequence management.</italic> An event management module is responsible for invoking subsequent steps of computations based on the current simulation stage. It begins with establishing the initial magnetization of particle spins by allowing them to freely precess in the presence of the main external magnetic field <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e050" xlink:type="simple"/></inline-formula>. This procedure is later repeated for any new particles replacing those which flow out from vessel outlets. Then, the particles magnetization states are altered by an application of an RF pulse, free precession, and an application of phase encoding gradients. As for volumetric acquisitions and an in-plane flow in 2D, flow compensation gradients are included in the sequence design. These gradients account for a phase dispersion effect, taking place if spins of different speed flow through a voxel during the signal acquisition. Such spins have different phase and cause the signal from the voxel to fade away. By applying additional compensation gradients along the direction of flow, it is possible to partially eliminate this unwelcome effect.</p>
+<p>After the phase encoding and – optional – velocity compensation steps, the frequency encoding gradient is applied and the signal acquisition step is executed. Eventually, numerical spoiling of the transverse magnetization is accomplished. At each step the MRI kernel is invoked with the appropriate parameters.</p>
+</sec><sec id="s2b3">
+<title>Signal computation</title>
+<p><italic>Evolution of the magnetization vector.</italic> The core of the system routines implements the discrete time analytic solution to the Bloch equation <xref ref-type="bibr" rid="pone.0093689-Liang1">[27]</xref>. This approach relies on the assumptions of constant field <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e051" xlink:type="simple"/></inline-formula> and that the shape of an RF excitation pulse is rectangular or it can be approximated by the set of such pulses. Thus, the simulation is limited to time-invariant gradient fields during excitation. In the generic case of arbitrarily shaped RF pulses, no analytical solution exists and numerical approach is required.</p>
+<p>The analytical solution uses the rotation matrices and exponential scaling to modify magnetization vector of a particle (either moving or stationary) in accordance to specified sequence events. Hence, the magnetization vector <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e052" xlink:type="simple"/></inline-formula> of a particle <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e053" xlink:type="simple"/></inline-formula> is given by<disp-formula id="pone.0093689.e054"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0093689.e054" xlink:type="simple"/><label>(1)</label></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e055" xlink:type="simple"/></inline-formula> rotates the magnetization vector around the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e056" xlink:type="simple"/></inline-formula>-axis in reply to the phase encoding gradient (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e057" xlink:type="simple"/></inline-formula>) and as a consequence of the main magnetic field inhomogeneity (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e058" xlink:type="simple"/></inline-formula>). Note, that for the proper evaluation of the Bloch equation, position <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e059" xlink:type="simple"/></inline-formula> of a particle relative to gradient isocenter must be determined first. For a stationary component, each particle has constant coordinates. In contrast, a moving particle changes position in time. Thus, a magnetization vector must be updated at time intervals which ensure reasonable trade-off between precision of the flow simulation, MR modeling and computational burden. Too high values of t introduce unacceptable discontinuity in evolution of the effective Larmor frequency experienced by a particle. On the other hand, very short <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e060" xlink:type="simple"/></inline-formula> results in significant increase in simulation time. In our approach, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e061" xlink:type="simple"/></inline-formula> is adjusted to match sampling frequency of the signal acquisition phase, i.e. it is set to sampling window duration divided by the number of k-space points in the frequency encoding direction.</p>
+<p>The <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e062" xlink:type="simple"/></inline-formula> rotation matrix is responsible for the relaxation effects and is calculated as<disp-formula id="pone.0093689.e063"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0093689.e063" xlink:type="simple"/><label>(2)</label></disp-formula>The last term in (1) is the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e064" xlink:type="simple"/></inline-formula> operator. In the general case, where the local field differs from <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e065" xlink:type="simple"/></inline-formula> due to field inhomogeneity or chemical shift artifact, the resonance frequency <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e066" xlink:type="simple"/></inline-formula> deviates from <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e067" xlink:type="simple"/></inline-formula> implied by <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e068" xlink:type="simple"/></inline-formula>. Hence, the effective precessional frequency is<disp-formula id="pone.0093689.e069"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0093689.e069" xlink:type="simple"/><label>(3)</label></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e070" xlink:type="simple"/></inline-formula> measures the frequency offset. Consequently, a <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e071" xlink:type="simple"/></inline-formula> pulse of duration <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e072" xlink:type="simple"/></inline-formula> which is assumed to knock over <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e073" xlink:type="simple"/></inline-formula> by angle <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e074" xlink:type="simple"/></inline-formula> from <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e075" xlink:type="simple"/></inline-formula> yields the effective flip angle<disp-formula id="pone.0093689.e076"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0093689.e076" xlink:type="simple"/><label>(4)</label></disp-formula>In the off-resonance condition spins experience not only the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e077" xlink:type="simple"/></inline-formula> pulse directed (assuming rotating frame of reference) along the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e078" xlink:type="simple"/></inline-formula> axis, optionally with a phase angle <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e079" xlink:type="simple"/></inline-formula>, but also residual field <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e080" xlink:type="simple"/></inline-formula> – where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e081" xlink:type="simple"/></inline-formula> is gyromagnetic ration – which points along <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e082" xlink:type="simple"/></inline-formula>. Therefore, the effective <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e083" xlink:type="simple"/></inline-formula> field forms an angle <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e084" xlink:type="simple"/></inline-formula> relative to the main magnetic field direction. Hence, the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e085" xlink:type="simple"/></inline-formula> is eventually determined by<disp-formula id="pone.0093689.e086"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0093689.e086" xlink:type="simple"/><label>(5)</label></disp-formula></p>
+<p>It is important to note, that <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e087" xlink:type="simple"/></inline-formula> has to be divided into time intervals <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e088" xlink:type="simple"/></inline-formula> as in the other simulation phases (relaxation, gradient application). The blood particles move during RF pulse application and may not acquire sufficient energy to get excited. Thus, at each <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e089" xlink:type="simple"/></inline-formula> step the particle magnetization vectors are flipped only partially by angle <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e090" xlink:type="simple"/></inline-formula>, where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e091" xlink:type="simple"/></inline-formula>. Moreover, in the case of TONE protocol, the <xref ref-type="disp-formula" rid="pone.0093689.e076">equation (4)</xref> resolves to<disp-formula id="pone.0093689.e092"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0093689.e092" xlink:type="simple"/><label>(6)</label></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e093" xlink:type="simple"/></inline-formula> is the extra flip angle dependent on a particle <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e094" xlink:type="simple"/></inline-formula>-position and which adds to the base angle set for the entry slice.</p>
+<p><italic>Signal acquisition.</italic> A signal acquisition phase fills one line of k-space per TR. A single data point is calculated through numerical integration of transverse components of particle magnetization vectors over the whole imaging volume according to equation<disp-formula id="pone.0093689.e095"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0093689.e095" xlink:type="simple"/><label>(7)</label></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e096" xlink:type="simple"/></inline-formula> denotes number of particles.</p>
+<p>Sampling frequency is determined by user-defined length of the sampling time frame and the desired number of voxels in the frequency encoding direction. Upon completion of one k-space point acquisition the system is allowed to alter its state - due to blood flow on one side, and relaxation phenomena on the other. After updating particles position and their magnetization vectors, next data point is calculated.</p>
+<p>Note that because blood particles are subjected to flow, some of them may leave a vessel between two subsequent signal measurement times. New particles replacing those that have disappeared have no transverse magnetization as they did not receive any RF excitation pulse. As a result, they do not produce any signal until next echo cycle. This shows up in the resulting image as dark voxels in the slices where blood particles of high velocity enter imaging volume.</p>
+</sec><sec id="s2b4">
+<title>Image reconstruction</title>
+<p>The last stage of image formation procedure consists in transformation of the raw data in the spatial-frequency domain (K-space) into image intensity domain. This stage is accomplished by the fast Fourier transform, followed by calculation of the magnitude of – complex transformation output. Before application of the FFT routine, it may be necessary to filter the raw data to reduce the phase mismapping artifact appearing in the phase encoding direction due to the motion of blood particles. We decided to port the filtering routine and FFT-based image reconstruction to the Matlab environment to enable any kind of low-pass digital filter available in the Signal Processing Toolbox <xref ref-type="bibr" rid="pone.0093689-The1">[28]</xref> to be used.</p>
+</sec><sec id="s2b5">
+<title>Implementation</title>
+<p>Apart from the image reconstruction module, the designed system has been implemented as a custom computer program. The source code was written in the ANSI-C language and compiled for the Mac OS X 10.7 platform (the OS X-native <italic>clang</italic> compiler was used). Moreover, the program was parallelized using Open MPI library <xref ref-type="bibr" rid="pone.0093689-Gabriel1">[29]</xref>. The algorithm execution is divided into a set of computing agent-nodes, each responsible for handling a given bunch of trajectories. After calculation of the MR signal from its assigned trajectories, an agent sends the results to the master node who adds the received data to the signals simulated by other agents. If there are trajectories still waiting for assignment, an agent who completed its job is employed to handle another portion of data. This procedure ensures high efficiency as more powerful processing resources can be utilized more often. In our experiments the system was installed on the computer grid composed of one iMac desktop (Intel Core i7 3.4 GHz) and 10 MacMini units (10<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e097" xlink:type="simple"/></inline-formula> Intel Core i5 2.5 GHz) which is equivalent to 24 CPU cores. Additionally, if hyperthreading feature is taken into account, the execution can be distributed among 48 processing slots. The computers were connected over the local ethernet network and communicated on the SSH layer. The details of the SSH- and Open MPI-based grid setup are outlined in <xref ref-type="bibr" rid="pone.0093689-Klepaczko1">[30]</xref>, where a heterogeneous computing environment extended on a Linux and legacy OS X (version 10.5) server is employed.</p>
+</sec></sec><sec id="s2c">
+<title>Measurements</title>
+<p>Image acquisition was performed on the GE Signa HDxt 1.5 T system for various flow rates and sequence parameters. In every case, the 3D images were acquired using MOTSA and TONE techniques, and with flow compensation option switched on in each dimension. <xref ref-type="table" rid="pone-0093689-t002">Tables 2</xref> and <xref ref-type="table" rid="pone-0093689-t003">3</xref> summarize the experimental setup. Note that in TONE technique, the FA parameter is the nominal flip angle set in the middle of the slab and it linearly decreases or increases along the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e098" xlink:type="simple"/></inline-formula> coordinate. On the other hand, simulation experiments are restricted to the two tubes with stenoses and the U-bend phantom, as their geometry seems to be more explanatory in quantitative inference.</p>
+<table-wrap id="pone-0093689-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.t002</object-id><label>Table 2</label><caption>
+<title>Flow rates and corresponding image acquisition parameters.</title>
+</caption><alternatives><graphic id="pone-0093689-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.t002" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Study #</td>
+<td align="left" rowspan="1" colspan="1">Flow rate [ml/s]</td>
+<td align="left" rowspan="1" colspan="1">TE/TR/FA [ms/ms/–]</td>
+<td align="left" rowspan="1" colspan="1">Slab width/slab overlap [mm]</td>
+<td align="left" rowspan="1" colspan="1">FOV (x/y/z) [cm]</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">2.5</td>
+<td align="left" rowspan="1" colspan="1">4.7/40/20°</td>
+<td align="left" rowspan="1" colspan="1">44/8</td>
+<td align="left" rowspan="1" colspan="1">17.5/13.4/14.4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">2.5</td>
+<td align="left" rowspan="1" colspan="1">4.7/40/15°</td>
+<td align="left" rowspan="1" colspan="1">44/8</td>
+<td align="left" rowspan="1" colspan="1">17.5/13.4/14.4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">4.6</td>
+<td align="left" rowspan="1" colspan="1">4.6/27/15°</td>
+<td align="left" rowspan="1" colspan="1">44/8</td>
+<td align="left" rowspan="1" colspan="1">17.5/13.4/22.4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">4.6/27/15°</td>
+<td align="left" rowspan="1" colspan="1">25/5</td>
+<td align="left" rowspan="1" colspan="1">17.5/13.4/24.5</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap><table-wrap id="pone-0093689-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.t003</object-id><label>Table 3</label><caption>
+<title>Common image acquisition parameters.</title>
+</caption><alternatives><graphic id="pone-0093689-t003-3" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.t003" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Parameter</td>
+<td align="left" rowspan="1" colspan="1">Value</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">Magnetic field strength</td>
+<td align="left" rowspan="1" colspan="1">1.5 T</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Protocol</td>
+<td align="left" rowspan="1" colspan="1">Brain Vascular</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Coil</td>
+<td align="left" rowspan="1" colspan="1">1-channel transmit/receive bird-cage head coil</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Scanning sequence</td>
+<td align="left" rowspan="1" colspan="1">SPGR</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Scanning options</td>
+<td align="left" rowspan="1" colspan="1">Flow compensation, Variable flip angle (TONE), Spatial saturation, MOTSA</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Slice thinckness</td>
+<td align="left" rowspan="1" colspan="1">1 mm</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>In addition to flow phantoms, the experimental set is completed by three agarose gel slabs which are placed within the magnet together with the phantoms, as illustrated in <xref ref-type="fig" rid="pone-0093689-g009">Fig. 9a</xref>. The purpose of these layers is to increase load for the RF coils and to enhance signal quality. Also they can be used to estimate noise level and perform background correction.</p>
+<fig id="pone-0093689-g009" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g009</object-id><label>Figure 9</label><caption>
+<title>Assembly of the physical phantom set.</title>
+<p>(a) The stack of flow phantoms and separating agar gel layers. (b) Schematic of flow channel connections.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g009" position="float" xlink:type="simple"/></fig>
+<p>Both phantoms were simultaneously put into the scanner and the phantoms were interconnected as viewed schematically in <xref ref-type="fig" rid="pone-0093689-g009">Fig. 9b</xref>. In this setting, the fluid first enters the 75%-stenosis tube, then returns through the U-bend phantom to the pump. The phantoms inside the magnet bore were oriented in such a manner that the flow channels were placed parallel to the z axis i.e. parallel to the main magnetic field, and vertically to the transverse plane, thus maximizing the effect of inflow enhancement. In the transverse plane, the data space was sampled with 224 and 160 of respectively frequency and phase encoding steps. The measured k-space slices were then null padded to <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e099" xlink:type="simple"/></inline-formula>–pixel images. A field of view size was adjusted to entirely cover a cross-sectional area of the phantom set, while slabs depth, their number and consequently FOV along the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e100" xlink:type="simple"/></inline-formula> axis varied depending on the study (cf. <xref ref-type="table" rid="pone-0093689-t002">Table 2</xref>). Eventually, the imaging protocol included spatial presaturation option. In such a protocol spins flowing against the direction of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e101" xlink:type="simple"/></inline-formula> field enter a saturation band located above an imaging slab. They receive additional RF pulses and are saturated, thus giving no or a reduced signal during acquisition. The goal of this action is to separate signals of arterial and venous origin.</p>
+</sec></sec><sec id="s3">
+<title>Results</title>
+<p>In order to validate the designed simulator system, a series of experiments using the above described physical phantoms imaged in a real MR scanner, was performed. On the other hand we synthesized equivalent images using our simulation framework forcing the same flow and imaging sequence parameters. A comparison of these two groups of images – real and synthetic ones – allows a comprehensive verification of correct implementation of the designed system. <xref ref-type="fig" rid="pone-0093689-g010">Figures 10</xref>–<xref ref-type="fig" rid="pone-0093689-g013">13</xref> present the obtained real and their corresponding synthesized images.</p>
+<fig id="pone-0093689-g010" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g010</object-id><label>Figure 10</label><caption>
+<title>U-bend phantom images – Studies 1 and 2.</title>
+<p>Real (left panel) and simulated (right panel) acquisitions.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g010" position="float" xlink:type="simple"/></fig><fig id="pone-0093689-g011" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g011</object-id><label>Figure 11</label><caption>
+<title>U-bend phantom images – Studies 3 and 4.</title>
+<p>Real (left panel) and simulated (right panel) acquisitions.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g011" position="float" xlink:type="simple"/></fig><fig id="pone-0093689-g012" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g012</object-id><label>Figure 12</label><caption>
+<title>Straight tubes phantom images – Studies 1 and 2.</title>
+<p>Real (left panel) and simulated (right panel) acquisitions.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g012" position="float" xlink:type="simple"/></fig><fig id="pone-0093689-g013" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g013</object-id><label>Figure 13</label><caption>
+<title>Straight tubes phantom images – Studies 3 and 4.</title>
+<p>Real (left panel) and simulated (right panel) acquisitions.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g013" position="float" xlink:type="simple"/></fig><sec id="s3a">
+<title>Simulation results – qualitative analysis</title>
+<p>A visual inspection of the results reveals that the highest degree of similarity between these two sorts of data has been obtained for the lower and medium flow rates. First of all, in both types of images a characteristic signal void near the entry layers of each slab is observed. This effect is caused by the spins flowing faster which are flushed out from the area of their initial excitation and produce a signal deeper in the slab. Slower spins receive more RF pulses and become saturated before reaching the end of the slab. Consequently, image brightness decreases more quickly near the channel walls, when compared to its central tracts, giving a parabolic profile of the image intensity.</p>
+<p>Next, it can be noticed that a signal from the return section of the U-bend phantom is low relative to the inlet channel. In this case the mechanism responsible for signal suppression is spatial presaturation. Apparently, the signal close to channel borders is brighter than that observed in the middle. This can be explained by the fact, that it takes same time for spins to travel from the saturation band to an imaging slab. Those spins which move slower i.e. near channel borders, have time to recover some portion of their longitudinal magnetization and thus produce a measurable signal. This effect is better visible in the real images, however still observable in the synthetic ones.</p>
+<p>Moreover, image intensity at locations where the fluid only exits, immediately after passing a narrowing and close to central axis rather than channel walls, is significantly larger. It is especially manifested in the 75%-stenosis tube. The main flux – as it can be judged from the brightest voxels bundle – visible after stenosis is asymmetric relative to the tube axis. This fact is reflected in the synthesized images, although the deviation from the symmetry axis is slightly different. It seems to be a result of complex and chaotic flow patterns which appear after a narrowing. Hence, the need to take into account both laminar and turbulent models in the simulation of flow, becomes evident.</p>
+<p>Also, one can compare images acquired for the same – 2.5 ml/s – flow rate, but for different nominal flip angle (i.e. 15° or 20°), see Study 1 and 2. As to a larger flip angle, the wash out effect on slab entries is reduced and also channels with reverse direction of flow (i.e. against <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e102" xlink:type="simple"/></inline-formula> field) produce slightly higher signal in the channel lumen (observed for the U-bend phantom – <xref ref-type="fig" rid="pone-0093689-g010">Fig. 10</xref>). The same effects can be observed for the synthesized images.</p>
+<p>On the other hand, images synthesized in Study 4 (with flow rate of 10 ml/s) appear less realistic. For example, in the case of the 50%-stenosis tube simulation intensity jumps between neighboring slabs are clearly visible, although in the real image they can hardly be noticed.</p>
+</sec><sec id="s3b">
+<title>Simulation results – quantitative analysis</title>
+<sec id="s3b1">
+<title>Validation methodology</title>
+<p>In the analysis described in this section we aim at comparing two sets of images – real and synthesized – objectively, i.e. in the quantitative manner. In order to accomplish this task we propose the following methodology. First, we select volumes of interest (VOIs) in each examined 3D image, which contain isolated tubes with stenosis and the U-bend phantom. <xref ref-type="fig" rid="pone-0093689-g014">Figure 14</xref> shows outline of two exemplar VOIs selected in real images for the 75%-stenosis and the U-bend tubes. VOIs selection was performed manually simply by appropriate indexing of the image data loaded to the MATLAB workspace. As for the tubes with stenoses, the size of the subvolumes are <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e103" xlink:type="simple"/></inline-formula> voxels, while the U-bend phantom was cropped to a region of size <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e104" xlink:type="simple"/></inline-formula> voxels. The determined VOI depth ensures that a vessel is embraced at its entire length, while width and height are adjusted to account for oblique vessels orientation. The observed distance range between all voxels from a single tube projected onto an axial plane does not exceed the value of 20 points. Similar VOIs were selected both in the real and synthetic images.</p>
+<fig id="pone-0093689-g014" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g014</object-id><label>Figure 14</label><caption>
+<title>Examples of selected volumes of interest.</title>
+<p>Axial (a) and coronal (b and c) cross-sections of delineated VOIs embracing U-bend phantom (blue region) and 75%-stenosis tube (green region). Note that it is only a conceptual figure – the actual VOI selection was performed automatically in the MATLAB environment.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g014" position="float" xlink:type="simple"/></fig>
+<p>Note that the flow channel axes in the real images are neither perfectly parallel to the z axis of the image space coordinate system, nor vertical to the transverse plane. Thus, in order to compare them with the simulation results on the voxel-by-voxel basis, the real and synthetic images must be registered. We perform this procedure within respective VOIs using MATLAB Image Processing Toolbox <xref ref-type="bibr" rid="pone.0093689-The2">[31]</xref>. The employed algorithm matches two volumetric data sets by performing rigid transformation of a synthesized image and optimizing their mutual information. Having registered VOIs, we calculate correlation coefficients and also – after scaling intensity values to span the same range in both data sets – root mean squared errors between corresponding images.</p>
+</sec><sec id="s3b2">
+<title>Image denoising</title>
+<p>It must be noted that real images contain noise component, not included in the synthesized images. Noise degrades quality of images which hampers their visual examination and affects their quantitative analysis. Voxel-based calculations and comparisons involving different MR volumes require estimation of the true noise-free signal to ensure reliable, unbiased inference. Also, registration algorithms often suffer from misleading information inherent in the noisy data <xref ref-type="bibr" rid="pone.0093689-Coup1">[32]</xref>.</p>
+<p>Therefore, before the registration step, all analyzed images are submitted to 3-dimensional noise-removal routine. Denoising of MR magnitude images using standard image noise removal techniques is generally not fully justified, since thermal noise adds to raw data space and after its Fourier transform it has no more additive characteristics. It is best modeled by the Rician distribution, in fact. However, for higher SNR ratios (i.e. SNR<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e105" xlink:type="simple"/></inline-formula>) it can be well approximated by the Gaussian function <xref ref-type="bibr" rid="pone.0093689-Coup1">[32]</xref>, <xref ref-type="bibr" rid="pone.0093689-Nowak1">[33]</xref>. In the case of the available images, SNR ranges from around 16 to 23. Therefore, in this study we perform denoising of the real data assuming the Gaussian model of noise.</p>
+<p>The noise removal procedure is accomplished using the non-local means (NLM) filter. Its exact definition is omitted here as it exceeds the scope of this paper. Instead, the reader is suggested to review references <xref ref-type="bibr" rid="pone.0093689-Buades1">[34]</xref>–<xref ref-type="bibr" rid="pone.0093689-Zuo1">[36]</xref>. The principle of the algorithm operation consists in calculation of an output (denoised) pixel value based on the weighted mean of all other image pixels. Weights for a given pixel are determined by distances between this pixel neighborhood and neighborhoods of other image pixels. A neighborhood is defined as a set of all adjacent image points of a given pixel, excluding this pixel itself, while the distance is calculated as the L2 norm between relevant neighborhood pixel intensities. In our experiments we employ custom made implementation of the NLM algorithm extended to 3D.</p>
+</sec><sec id="s3b3">
+<title>Calculation results</title>
+<p>The calculated correlation coefficients between simulated and real images are presented in <xref ref-type="table" rid="pone-0093689-t004">Table 4</xref>. The upper and lower bounds for each coefficient assuming 95% confidence interval are also given. The correlation coefficients for Studies 1–3 range from 0.86 to 0.92 and for Study 4 the minimum correlation exists between 50%-stenosis tubes and equals to 0.78. The p-value remains below 0.001 in any case which proves validity of the designed simulation framework and its ability to synthesize realistic MRA images. It is observed that the largest local differences (exceeding the level of 30% of maximum brightness in the real image) appear near the vessel walls as well as in the region after the narrowing, where the main flux of the laminar flow deviates from long axis of the vessel. The calculated RMS error, however, falls into the range (11.5,16.8), below the value of standard deviation of both the denoised real images (45–61) and the synthetic ones (32–41).</p>
+<table-wrap id="pone-0093689-t004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.t004</object-id><label>Table 4</label><caption>
+<title>Correlation coefficients between simulated and real images.</title>
+</caption><alternatives><graphic id="pone-0093689-t004-4" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.t004" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Phantom</td>
+<td align="left" rowspan="1" colspan="1">Study ID</td>
+<td align="left" rowspan="1" colspan="1">Correlation coefficient</td>
+<td align="left" rowspan="1" colspan="1">Lower bound</td>
+<td align="left" rowspan="1" colspan="1">Upper bound</td>
+<td align="left" rowspan="1" colspan="1">RMS error</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">U-bend</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0.927</td>
+<td align="left" rowspan="1" colspan="1">0.926</td>
+<td align="left" rowspan="1" colspan="1">0.929</td>
+<td align="left" rowspan="1" colspan="1">11.52</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">0.927</td>
+<td align="left" rowspan="1" colspan="1">0.925</td>
+<td align="left" rowspan="1" colspan="1">0.929</td>
+<td align="left" rowspan="1" colspan="1">11.68</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">0.904</td>
+<td align="left" rowspan="1" colspan="1">0.902</td>
+<td align="left" rowspan="1" colspan="1">0.906</td>
+<td align="left" rowspan="1" colspan="1">11.57</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">0.811</td>
+<td align="left" rowspan="1" colspan="1">0.809</td>
+<td align="left" rowspan="1" colspan="1">0.814</td>
+<td align="left" rowspan="1" colspan="1">13.24</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">50%-stenosis</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0.918</td>
+<td align="left" rowspan="1" colspan="1">0.919</td>
+<td align="left" rowspan="1" colspan="1">0.921</td>
+<td align="left" rowspan="1" colspan="1">12.01</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">0.893</td>
+<td align="left" rowspan="1" colspan="1">0.889</td>
+<td align="left" rowspan="1" colspan="1">0.895</td>
+<td align="left" rowspan="1" colspan="1">12.67</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">0.911</td>
+<td align="left" rowspan="1" colspan="1">0.909</td>
+<td align="left" rowspan="1" colspan="1">0.912</td>
+<td align="left" rowspan="1" colspan="1">11.89</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">0.781</td>
+<td align="left" rowspan="1" colspan="1">0.779</td>
+<td align="left" rowspan="1" colspan="1">0.784</td>
+<td align="left" rowspan="1" colspan="1">16.75</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">75%-stenosis</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">0.897</td>
+<td align="left" rowspan="1" colspan="1">0.896</td>
+<td align="left" rowspan="1" colspan="1">0.898</td>
+<td align="left" rowspan="1" colspan="1">13.05</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">0.881</td>
+<td align="left" rowspan="1" colspan="1">0.879</td>
+<td align="left" rowspan="1" colspan="1">0.884</td>
+<td align="left" rowspan="1" colspan="1">13.52</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">0.901</td>
+<td align="left" rowspan="1" colspan="1">0.899</td>
+<td align="left" rowspan="1" colspan="1">0.903</td>
+<td align="left" rowspan="1" colspan="1">12.06</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">0.875</td>
+<td align="left" rowspan="1" colspan="1">0.877</td>
+<td align="left" rowspan="1" colspan="1">0.879</td>
+<td align="left" rowspan="1" colspan="1">13.97</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap></sec><sec id="s3b4">
+<title>Performance evaluation</title>
+<p>The problem of computational efficiency of any complex and data-exhaustive system deserves individual and thorough analysis and it exceeds the scope of this work. Therefore, in this study, which is primarily concerned with the proposed MRA imaging model validation, we provide only partial evaluation of the execution performance. The following considerations refer solely to image synthesis, and the blood flow modeling, which precedes MRA-related routines, is not taken into account.</p>
+<p>The MRA simulation time depends mostly on two factors – the k-space size (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e106" xlink:type="simple"/></inline-formula>) and the number of particles <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e107" xlink:type="simple"/></inline-formula>. <xref ref-type="table" rid="pone-0093689-t005">Table 5</xref> presents simulation times measured for different values of these factors and for various grid configurations. The experiments were accomplished for the 50%-stenosis tube and – if not indicated otherwise – on the previously described computing grid (1 iMac and 10 MacMini computers).</p>
+<table-wrap id="pone-0093689-t005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.t005</object-id><label>Table 5</label><caption>
+<title>Performance eveluation for the 50%-stenosis tube.</title>
+</caption><alternatives><graphic id="pone-0093689-t005-5" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.t005" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Image size</td>
+<td align="left" rowspan="1" colspan="1">Number of trajectories</td>
+<td align="left" rowspan="1" colspan="1">Total number of particles</td>
+<td align="left" rowspan="1" colspan="1">Number of processing slots</td>
+<td align="left" rowspan="1" colspan="1">Using hyperthreading</td>
+<td align="left" rowspan="1" colspan="1">Simulation time</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">128×128×25</td>
+<td align="left" rowspan="1" colspan="1">128</td>
+<td align="left" rowspan="1" colspan="1">71 967</td>
+<td align="left" rowspan="1" colspan="1">48</td>
+<td align="left" rowspan="1" colspan="1">Yes</td>
+<td align="left" rowspan="1" colspan="1">6 m 15 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">149 386</td>
+<td align="left" rowspan="1" colspan="1">48</td>
+<td align="left" rowspan="1" colspan="1">Yes</td>
+<td align="left" rowspan="1" colspan="1">11 m 24 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">298 651</td>
+<td align="left" rowspan="1" colspan="1">48</td>
+<td align="left" rowspan="1" colspan="1">Yes</td>
+<td align="left" rowspan="1" colspan="1">23 m 56 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">192×192×44</td>
+<td align="left" rowspan="1" colspan="1">256</td>
+<td align="left" rowspan="1" colspan="1">202 141</td>
+<td align="left" rowspan="1" colspan="1">48</td>
+<td align="left" rowspan="1" colspan="1">Yes</td>
+<td align="left" rowspan="1" colspan="1">53 m 59 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">192×192×44</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">24</td>
+<td align="left" rowspan="1" colspan="1">No</td>
+<td align="left" rowspan="1" colspan="1">1 h 5 m 53 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">128×128×44</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">48</td>
+<td align="left" rowspan="1" colspan="1">Yes</td>
+<td align="left" rowspan="1" colspan="1">23 m 39 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">128×128×25</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">48</td>
+<td align="left" rowspan="1" colspan="1">Yes</td>
+<td align="left" rowspan="1" colspan="1">13 m 14 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">128×128×25</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">24</td>
+<td align="left" rowspan="1" colspan="1">No</td>
+<td align="left" rowspan="1" colspan="1">15 m 52 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">128×128×25</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">16<xref ref-type="table-fn" rid="nt101">a</xref></td>
+<td align="left" rowspan="1" colspan="1">No</td>
+<td align="left" rowspan="1" colspan="1">22 m 29 s</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">128×128×25</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">10<xref ref-type="table-fn" rid="nt102">b</xref></td>
+<td align="left" rowspan="1" colspan="1">No</td>
+<td align="left" rowspan="1" colspan="1">36 m 25 s</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt101"><label>a</label><p>Grid composed of 1 iMac desktop and 6 MacMini units.</p></fn><fn id="nt102"><label>b</label><p>Grid composed of 1 iMac desktop and 3 MacMini units.</p></fn></table-wrap-foot></table-wrap>
+<p>The measured execution times span from single minutes to approximately 1 h for the most complicated case. These results show efficiency of the system implementation. The duration of a single image synthesis process allows for collecting of their relatively large database in a reasonable time period. This is crucial since large data sample is required for statistically significant evaluation of image processing algorithms.</p>
+<p>A comparison of individual measurements reveals that the computational complexity is <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e108" xlink:type="simple"/></inline-formula>. For example, experiments in rows 1–3 were performed on the same image size but various number of particles <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e109" xlink:type="simple"/></inline-formula>. As it can be seen, the dependence on the execution time is linear. Similarly, the change on <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e110" xlink:type="simple"/></inline-formula> (measurements 6 and 7) in relation 1∶1.76 (25∶44) results in the equivalent increase of the simulation time (in seconds 794∶1419). Furthermore, it can be observed (rows 4 and 5) that using hyper-threading technology leads to improved efficiency, although this benefit is lower than the apparent increase in the number of parallel processing slots would suggest.</p>
+<p>It must be underlined that the achieved high performance is in part guaranteed by the model itself. Image formation procedures involving the greatest computational burden iterate over particles i.e. actual sources of MR signal but not over every element of the imaged volume (potentially containing the air) as in the other simulators.</p>
+</sec></sec><sec id="s3c">
+<title>Towards simulation of anatomical models</title>
+<p>A comparative study presented above constitutes a formal approach to evaluate the designed system. The ultimate goal is to employ the simulator to collect a series of images for statistical analysis of vessel segmentation algorithms. Therefore, it is required that the produced images contain vessel geometries visible in actual MRA examinations. In this section we demonstrate capabilities of the technique in synthesizing images for structures anatomically more realistic than straight phantom tubes. In particular, <xref ref-type="fig" rid="pone-0093689-g015">Fig. 15a–c</xref> show the obtained images – coronal slices from 3D acquisitions – for a stenosed bifurcation, a vessel with fusiform aneurysm and a vessel with side-branches. The observed signal attenuation at stenosis and around aneurysm are characteristic for real MRA studies. These artefacts are caused in part by spin dephasing due to large local differences in flow velocity, especially near stenosis, and becuase of saturation of some molecules which slow down in the area of aneurysm. Note also the lower image intensity in a thinner side branch of a vessel in <xref ref-type="fig" rid="pone-0093689-g015">Fig. 15c</xref>. This intensity drop reflects the lower flow rate and signal averaging in a voxel covering both the edge and central axis of the vessel.</p>
+<fig id="pone-0093689-g015" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0093689.g015</object-id><label>Figure 15</label><caption>
+<title>Sample images of realistic structures.</title>
+<p>A vessel with fusiform aneurysm (a), eccentric shape of stenosis at bifurcation (b) a vessel with side-branches (c) and stationary tissue around 4-vessel phantom (d). a–c) 3D acquisitions using both MOTSA and TONE options (TR/TE/FA = 27/4.6/15°), d) a 2D sequence (TR/TE/FA = 40/4.7/15°).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0093689.g015" position="float" xlink:type="simple"/></fig>
+<p>Finally, <xref ref-type="fig" rid="pone-0093689-g015">Fig. 15d</xref> presents a 2D image synthesized for a 4-tube digital phantom surrounded by two virtual tissue types. The stationary particles were assigned magnetic properties characteristic for gray and white matter. As expected, the signal produced by the moving spins is significantly enhanced relative to the stationary tissues.</p>
+</sec></sec><sec id="s4">
+<title>Discussion</title>
+<p>The above presented comparisons constitute preliminary results of our research into the problem of designing versatile MRA simulation system. he obtained images contain many realistic details although some results fail to meet expectations. Most importantly this concerns the issue of too large intensity drops on the slab borders visible in images synthesized for the 10 ml/s flow rate (<xref ref-type="fig" rid="pone-0093689-g013">Fig. 13</xref>). This effect might be caused by an inappropriate adjustment of the excitation pulses. Real scanning systems implement various optimization procedures, which control – in the way hidden for the user – the inclination of a ramped flip angle. The exact dependence of FA from the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e111" xlink:type="simple"/></inline-formula> coordinate may not be strictly linear on the entire length of the slab. From the synthesized image it is clear that the range of the flip angle used in simulation (20<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0093689.e112" xlink:type="simple"/></inline-formula> around nominal FA) has been too large to produce balanced signal for the whole slab. However, reducing this range would affect images of the other channels. Also, the U-bend phantom simulated in Study 4 (<xref ref-type="fig" rid="pone-0093689-g011">Fig. 11</xref>) deviates from its real counterpart, especially in the arc section. Undoubtedly, in case of larger flow rates, further research is needed into tuning of the simulation parameters in order to achieve closer resemblance to the true data acquisition procedures.</p>
+<p>The Time-Of-Flight protocol in spite of its simplicity is quite demanding for computer modeling – both with respect to the underlying physical processes, as well as from the efficient implementation viewpoint. We approached the latter problem by decomposition of a single simulation experiment into a series of acquisitions, each concerned with its dedicated bundle of particle trajectories. Here, a very important advantage of our solution based on particle tracing becomes visible. A possible alternative approach to combined flow and MR simulation would utilize fixed lattice of nodes, where information about fluid flowing in and out is somehow stored and transferred to neighboring nodes. As for the distributed computing it would involve additional message passing between various computing grid agents. In our solution, the only communication events take place between the master and the agent computer and it happens at the beginning of simulation, when agent receives identifiers of trajectories to handle, and then after computations are done, when an agent sends the calculated signals to the master.</p>
+<p>The designed system will be further developed to account for phenomena which are now disregarded. The problems which need to be addressed in the future can be grouped into two major issues corresponding to separate physical phenomena, i.e. blood flow simulation and MR physics. The first group of issues includes modeling of blood transport within a body part which is itself subject to motion. A blood particle position is then determined by two processes – hemodynamics and physiological displacement of an organ. It concerns important clinical applications of MRA such as diagnosis of cardiac anatomy, liver or kidney. Moreover, modeling of blood flow in the present study assumes fluid behavior which is either laminar or – in narrowed or bending regions – turbulent. Even in the latter case, however, it is a simplified model. The blood motion in such situations is chaotic and shear stress tensor should be estimated to account for non-Newtonian flow. Finally, more complex, anatomical topologies of the vessel system, as well as pulsatile flow will be considered in order to obtain more realistic MRA data sets.</p>
+<p>Within the MRI part of the simulator, future efforts will be directed at including the effect of magnetization transfer used to maximize signal suppression from stationary tissue. Another issue that needs investigation is the consequence of using a special case analytic solution to the Bloch equation instead of a numerical solver. Redesigning the simulator to calculate exact solution of a differential equation will not only allow usage of time-varying gradient pulses, but also it will give an opportunity to quantitatively evaluate the degree of measurement error induced by analytical solution. The images synthesized in this study are noise-free. This assumption is justified in experiments where the goal is to solely verify the simulator operation. However, as far as the validation of MRA image processing algorithms is concerned, the simulation results should be corrupted by noise, so that the applied methods meet the same impediments characteristic for real images. Commonly the noise in MRI simulations is modeled as white Gaussian ergodic process added directly to the calculated k-space.</p>
+<p>Nonetheless, the achieved results are satisfactory and meet the initial specification of system. The synthesized images contain much of information found in the real ones. The most important image features reproduced in the performed simulations are as follows:</p>
+<list list-type="bullet"><list-item>
+<p>parabolic profile of the signal in regions of laminar flow,</p>
+</list-item><list-item>
+<p>signal void on slab borders,</p>
+</list-item><list-item>
+<p>specific flow patterns after stenoses,</p>
+</list-item><list-item>
+<p>signal attenuation due to saturation, both in the stationary tissue and in fluid passing through a saturation band,</p>
+</list-item><list-item>
+<p>higher signal on vessel walls than in the lumen in the channels with reverse flow direction.</p>
+</list-item></list>
+<p>In conclusion, these results encourage a follow-up study on quantitative validation of vessel segmentation algorithms applied to the MRA synthesized images.</p>
+</sec></body>
+<back>
+<ack>
+<p>The authors express their gratitude towards Scanlab Medical Diagnostics Centre Lodz and Dr. Pawel Majewski for their cooperation in conducting experiments with real phantoms and MRI scanners.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0093689-Arlat1"><label>1</label>
+<mixed-citation publication-type="book" xlink:type="simple">Arlat I, Bongartz G, Marchal G (2002) Magnetic Resonance Angiography. Berlin: Springer Verlag.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Bernstein1"><label>2</label>
+<mixed-citation publication-type="book" xlink:type="simple">Bernstein MA, King KF, Zhou XJ (2004) Handbook of MRI Pulse Sequences. Amsterdam, The Netherlands: Academic Press.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Haacke1"><label>3</label>
+<mixed-citation publication-type="book" xlink:type="simple">Haacke EM, Brown RW, Thompson MR, Venkatesan R (1999) Magnetic resonance imaging: physical principles and sequence design. New York: Wiley-Liss.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Stamm1"><label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Stamm</surname><given-names>AC</given-names></name>, <name name-style="western"><surname>Wright</surname><given-names>CL</given-names></name>, <name name-style="western"><surname>Knopp</surname><given-names>MV</given-names></name>, <name name-style="western"><surname>Schmalbrock</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Heverhagen</surname><given-names>JT</given-names></name> (<year>2013</year>) <article-title>Phase contrast and time-of-ight magnetic resonance angiography of the intracerebral arteries at 1.5, 3 and 7 T</article-title>. <source>Magn Reson Imaging</source> <volume>31</volume>: <fpage>545</fpage>–<lpage>549</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Schneider1"><label>5</label>
+<mixed-citation publication-type="book" xlink:type="simple">Schneider G, Prince MR, Meaney JF, Ho VB (2005) Magnetic Resonance Angiography. Techniques, Indications and Practical Applications. Milan: Springer-Verlag Italia.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Eiho1"><label>6</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Eiho</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Qian</surname><given-names>Y</given-names></name> (<year>1997</year>) <article-title>Detection of coronary artery tree using morphological operator</article-title>. <source>Proc Comput Cardiol</source> <volume>7</volume>: <fpage>525</fpage>–<lpage>528</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Frangi1"><label>7</label>
+<mixed-citation publication-type="book" xlink:type="simple">Frangi AF, Niessen WJ, Vincken KL, Viergever MA (1998) Multiscale vessel enhancement filtering. In: Wells WM, Colchester A, Delp S, editors, Medical Image Computing and Computer-Assisted Interventation MICCAI'98, Springer Berlin Heidelberg, volume 1496 of <italic>Lecture Notes in Computer Science</italic>. pp. 130–137.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Kirbas1"><label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kirbas</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Quek</surname><given-names>F</given-names></name> (<year>2004</year>) <article-title>A review of vessel extraction techniques and algorithms</article-title>. <source>ACM Comput Surv</source> <volume>36</volume>: <fpage>81</fpage>–<lpage>121</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Materka1"><label>9</label>
+<mixed-citation publication-type="book" xlink:type="simple">Materka A, Strzelecki M, Szczypiński P, Kociński M, Deistung A, et al. (2009) Arteries tracking in simultaneous ToF-SWI MR images: image characteristics and preliminary results. In: Image and Signal Processing and Analysis, 2009. ISPA 2009. Proceedings of 6th International Symposium on. IEEE, pp. 748–753.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Simmons1"><label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Simmons</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Arridge</surname><given-names>SR</given-names></name>, <name name-style="western"><surname>Barker</surname><given-names>GJ</given-names></name>, <name name-style="western"><surname>Williams</surname><given-names>SC</given-names></name> (<year>1996</year>) <article-title>Simulation of MRI cluster plots and application to neurological applications</article-title>. <source>Magn Reson Imaging</source> <volume>14</volume>: <fpage>73</fpage>–<lpage>92</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Petersson1"><label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Petersson</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Christoffersson</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Golman</surname><given-names>K</given-names></name> (<year>1993</year>) <article-title>MRI simulation using the k-space formalism</article-title>. <source>Magn Reson Imaging</source> <volume>11</volume>: <fpage>557</fpage>–<lpage>568</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-BenoitCattin1"><label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Benoit-Cattin</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Collewet</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Belaroussi</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Saint-Jalmes</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Odet</surname><given-names>C</given-names></name> (<year>2005</year>) <article-title>The SIMRI project: a versatile and interactive MRI simulator</article-title>. <source>J Magn Reson Imaging</source> <volume>173</volume>: <fpage>97</fpage>–<lpage>115</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Kwan1"><label>13</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kwan</surname><given-names>RS</given-names></name>, <name name-style="western"><surname>Evans</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Pike</surname><given-names>G</given-names></name> (<year>1999</year>) <article-title>MRI simulation-based evaluation of image-processing and classification methods</article-title>. <source>IEEE Trans Med Imaging</source> <volume>18</volume>: <fpage>1085</fpage>–<lpage>1097</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Stoecker1"><label>14</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Stoecker</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Vahedipour</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Pugfelder</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Shah</surname><given-names>NJ</given-names></name> (<year>2010</year>) <article-title>High-performance computing MRI simulations</article-title>. <source>Magn Reson Med</source> <volume>64</volume>: <fpage>186</fpage>–<lpage>193</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Yoder1"><label>15</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yoder</surname><given-names>DA</given-names></name>, <name name-style="western"><surname>Zhao</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Paschal</surname><given-names>CB</given-names></name>, <name name-style="western"><surname>Fitzpatric</surname><given-names>JM</given-names></name> (<year>2004</year>) <article-title>MRI simulator with object-specific field map calculations</article-title>. <source>Magn Reson Imaging</source> <volume>22</volume>: <fpage>315</fpage>–<lpage>328</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Shelley1"><label>16</label>
+<mixed-citation publication-type="other" xlink:type="simple">Shelley Medical Imaging Technologies (2013) MRI Quality Assurance Flow Phantom Set. Available: <ext-link ext-link-type="uri" xlink:href="http://www.simutec.com/" xlink:type="simple">http://www.simutec.com/</ext-link>. Accessed February 2014.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Holdsworth1"><label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Holdsworth</surname><given-names>DW</given-names></name>, <name name-style="western"><surname>Rickey</surname><given-names>DW</given-names></name>, <name name-style="western"><surname>Drangova</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Miller</surname><given-names>DJM</given-names></name>, <name name-style="western"><surname>Fenster</surname><given-names>A</given-names></name> (<year>1991</year>) <article-title>Computer-controlled positive displacement pump for physiological ow simulation</article-title>. <source>Med Biol Eng Comput</source> <volume>29</volume>: <fpage>565</fpage>–<lpage>570</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Anderson1"><label>18</label>
+<mixed-citation publication-type="book" xlink:type="simple">Anderson JD (1995) Computational Fluid Dynamics. The Basics with Applications. New York: McGraw-Hill.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Kwak1"><label>19</label>
+<mixed-citation publication-type="book" xlink:type="simple">Kwak D, Kiris CC (2011) Computation of Viscous Incompressible Flows. Springer.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Wilcox1"><label>20</label>
+<mixed-citation publication-type="book" xlink:type="simple">Wilcox DC (2006) Turbulence Modeling for CFD. DCW Industries.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Hokr1"><label>21</label>
+<mixed-citation publication-type="book" xlink:type="simple">Hokr M, Maryska J (2005) Inuence of mesh geometry to numerical diffusion in upwind scheme for porous media solute transport. In: Proceedings of algoritmy. pp. 123–131.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Holleman1"><label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Holleman</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Fringer</surname><given-names>O</given-names></name>, <name name-style="western"><surname>Stacey</surname><given-names>M</given-names></name> (<year>2013</year>) <article-title>Numerical diffusion for ow-aligned unstructured grids with application to estuarine modeling</article-title>. <source>Int J Numer Methods Fluids</source> <volume>72</volume>: <fpage>1117</fpage>–<lpage>1145</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Comsol1"><label>23</label>
+<mixed-citation publication-type="other" xlink:type="simple">Comsol AB (2014) COMSOL Multiphysics Version 4.3, Particle Tracing User's Guide, Comsol AB, Stockholm, Sweden.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Parker1"><label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Parker</surname><given-names>DL</given-names></name>, <name name-style="western"><surname>Yuan</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Blatter</surname><given-names>DD</given-names></name> (<year>1991</year>) <article-title>MR angiography by multiple thin slab 3D acquisition</article-title>. <source>Magn Reson Med</source> <volume>17</volume>: <fpage>434</fpage>–<lpage>451</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Carr1"><label>25</label>
+<mixed-citation publication-type="book" xlink:type="simple">Carr J, Carroll T (2012) Magnetic Resonance Angiography: Principles and Applications. New York: Springer Science+Business Media.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Kim1"><label>26</label>
+<mixed-citation publication-type="book" xlink:type="simple">Kim SE, Parker DL (2012) Time-of-Flight Angiography,chapter 2. New York: Springer Science+Business Media. pp. 39–50.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Liang1"><label>27</label>
+<mixed-citation publication-type="book" xlink:type="simple">Liang ZP, Lauterbur PC (2000) Principles of Magnetic Resonance Imaging: A Signal Processing Perspective. New York: IEEE Press.</mixed-citation>
+</ref>
+<ref id="pone.0093689-The1"><label>28</label>
+<mixed-citation publication-type="other" xlink:type="simple">The MathWorks,Inc. (2013) MATLAB and Signal Processing Toolbox Release 2013a, The MathWorks, Inc., Natick, Massachusetts, United States.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Gabriel1"><label>29</label>
+<mixed-citation publication-type="other" xlink:type="simple">Gabriel E, Fagg GE, Bosilca G, Angskun T, Dongarra JJ, et al. (2004) Open MPI: Goals, concept, and design of a next generation MPI implementation. In: Proceedings, 11th European PVM/MPI Users' Group Meeting. Budapest, Hungary, pp. 97–104.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Klepaczko1"><label>30</label>
+<mixed-citation publication-type="other" xlink:type="simple">Klepaczko A, Szczypiński P, Dwojakowski G, Kociński M, Strzelecki M (2012) Computer simulation of magnetic resonance angiography imaging. Parallel implementation in heterogeneous computing environment. In: New Trends in Audio and Video Signal Processing: Algorithms, Architectures, Arrangements and Applications, NTAV/SPA 2012. Proceedings of the Joint Conference. pp. 43–48.</mixed-citation>
+</ref>
+<ref id="pone.0093689-The2"><label>31</label>
+<mixed-citation publication-type="other" xlink:type="simple">The MathWorks, Inc. (2013) MATLAB and Image Processing Toolbox Release 2013a, The MathWorks, Inc., Natick, Massachusetts, United States.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Coup1"><label>32</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Coupé</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Manjón</surname><given-names>JV</given-names></name>, <name name-style="western"><surname>Gedamu</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Arnold</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Robles</surname><given-names>M</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Robust Rician noise estimation for MR images</article-title>. <source>Med Image Anal</source> <volume>14</volume>: <fpage>483</fpage>–<lpage>493</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Nowak1"><label>33</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nowak</surname><given-names>R</given-names></name> (<year>1999</year>) <article-title>Wavelet-based Rician noise removal for magnetic resonance imaging</article-title>. <source>IEEE Trans Image Process</source> <volume>8</volume>: <fpage>1408</fpage>–<lpage>1419</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Buades1"><label>34</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Buades</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Coll</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Morel</surname><given-names>JM</given-names></name> (<year>2005</year>) <article-title>A review of image denoising algorithms, with a new one</article-title>. <source>Multiscale Model Simul</source> <volume>4</volume>: <fpage>490</fpage>–<lpage>530</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-He1"><label>35</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>He</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Greenshields</surname><given-names>IR</given-names></name> (<year>2009</year>) <article-title>A Nonlocal Maximum Likelihood estimation method for Rician noise reduction in MR images</article-title>. <source>IEEE Trans Image Process</source> <volume>28</volume>: <fpage>165</fpage>–<lpage>172</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0093689-Zuo1"><label>36</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zuo</surname><given-names>XN</given-names></name>, <name name-style="western"><surname>Xing</surname><given-names>XX</given-names></name> (<year>2011</year>) <article-title>Effects of non-local diffusion on structural MRI preprocessing and default network mapping: Statistical comparisons with isotropic/anisotropic diffusion</article-title>. <source>PLoS One</source> <volume>6</volume>: <fpage>e26703</fpage>.</mixed-citation>
+</ref>
+</ref-list></back>
+</article>

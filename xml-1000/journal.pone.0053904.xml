@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+      <journal-id journal-id-type="publisher-id">plos</journal-id>
+      <journal-id journal-id-type="pmc">plosone</journal-id>
+      <journal-title-group>
+        <journal-title>PLoS ONE</journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1932-6203</issn>
+      <publisher>
+        <publisher-name>Public Library of Science</publisher-name>
+        <publisher-loc>San Francisco, USA</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id">PONE-D-12-20957</article-id>
+      <article-id pub-id-type="doi">10.1371/journal.pone.0053904</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Biology</subject>
+          <subj-group>
+            <subject>Computational biology</subject>
+            <subj-group>
+              <subject>Evolutionary modeling</subject>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Ecology</subject>
+            <subj-group>
+              <subject>Evolutionary ecology</subject>
+              <subject>Population ecology</subject>
+              <subject>Theoretical ecology</subject>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Evolutionary biology</subject>
+            <subj-group>
+              <subject>Evolutionary processes</subject>
+              <subj-group>
+                <subject>Natural selection</subject>
+              </subj-group>
+            </subj-group>
+            <subj-group>
+              <subject>Organismal evolution</subject>
+              <subj-group>
+                <subject>Animal evolution</subject>
+              </subj-group>
+            </subj-group>
+            <subj-group>
+              <subject>Evolutionary theory</subject>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Computer science</subject>
+          <subj-group>
+            <subject>Computer modeling</subject>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline">
+          <subject>Computational Biology</subject>
+          <subject>Computer Science</subject>
+          <subject>Evolutionary Biology</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Resource Elasticity of Offspring Survival and the Optimal Evolution of Sex Ratios</article-title>
+        <alt-title alt-title-type="running-head">Sex Ratio and Elasticity</alt-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Wang</surname>
+            <given-names>Rui-Wu</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="corresp" rid="cor1">
+            <sup>*</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Wang</surname>
+            <given-names>Ya-Qiang</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>He</surname>
+            <given-names>Jun-Zhou</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff3">
+            <sup>3</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Li</surname>
+            <given-names>Yao-Tang</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+          <xref ref-type="corresp" rid="cor1">
+            <sup>*</sup>
+          </xref>
+        </contrib>
+      </contrib-group>
+      <aff id="aff1">
+        <label>1</label>
+        <addr-line>Kunming Institute of Zoology, Chinese Academy of Science, Kunming, Yunnan, China</addr-line>
+      </aff>
+      <aff id="aff2">
+        <label>2</label>
+        <addr-line>School of Mathematics and Statistics, Yunnan University, Kunming, Yunnan, China</addr-line>
+      </aff>
+      <aff id="aff3">
+        <label>3</label>
+        <addr-line>Statistics and Mathematics College, Yunnan University of Finance and Economics, Kunming, Yunnan, China</addr-line>
+      </aff>
+      <contrib-group>
+        <contrib contrib-type="editor" xlink:type="simple">
+          <name name-style="western">
+            <surname>Sueur</surname>
+            <given-names>Cédric</given-names>
+          </name>
+          <role>Editor</role>
+          <xref ref-type="aff" rid="edit1"/>
+        </contrib>
+      </contrib-group>
+      <aff id="edit1">
+        <addr-line>Institut Pluridisciplinaire Hubert Curien, France</addr-line>
+      </aff>
+      <author-notes>
+        <corresp id="cor1">* E-mail: <email xlink:type="simple">ruiwukiz@hotmail.com</email> (RWW); <email xlink:type="simple">liyaotang@ynu.edu.cn</email> (YTL)</corresp>
+        <fn fn-type="conflict">
+          <p>The authors have declared that no competing interests exist.</p>
+        </fn>
+        <fn fn-type="con">
+          <p>Performed the experiments: RWW YQW JZH YTL. Analyzed the data: RWW YQW. Contributed reagents/materials/analysis tools: RWW YQW JZH. Wrote the paper: RWW YQW.</p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2013</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>23</day>
+        <month>1</month>
+        <year>2013</year>
+      </pub-date>
+      <volume>8</volume>
+      <issue>1</issue>
+      <elocation-id>e53904</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>13</day>
+          <month>7</month>
+          <year>2012</year>
+        </date>
+        <date date-type="accepted">
+          <day>4</day>
+          <month>12</month>
+          <year>2012</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-year>2013</copyright-year>
+        <copyright-holder>Wang et al</copyright-holder>
+        <license xlink:type="simple">
+          <license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>The fitness of any organisms includes the survival and reproductive rate of adults and the survival of their offspring. Environmental selection pressures might not affect these two aspects of an organism equally. Assuming that an organism first allocates its limited resources to maintain its survival under environmental selection pressure, our model, based on the evolutionarily stable strategy theory, surprisingly shows that the sex ratio is greatly affected by the environmental pressure intensity and by the reproductive resource elasticity of offspring survival. Moreover, the concept of the resource elasticity of offspring survival intrinsically integrates the ecological concepts of <italic>K</italic> selection and <italic>r</italic> selection. The model shows that in a species with reproductive strategy <italic>K</italic>, increased environmental selection pressure will reduce resource allocation to the male function. By contrast, in a species with reproductive strategy <italic>r</italic>, harsher environmental selection pressure will increase allocation to the male function. The elasticity of offspring survival might vary not only across species, but also across many other factors affecting the same species (e.g., age structure, spatial heterogeneity), which explains sex ratio differences across species or age structures and spatial heterogeneity in the same species.</p>
+      </abstract>
+      <funding-group>
+        <funding-statement>This research was supported by the National Natural Science Foundation of China (31170408, 71161020, 31270433), the Yunnan Natural Science Foundation (2009CD104), the Postgraduate Science Foundation of the Yunnan University (Grant No. ynuy201038), the West Light Foundation of the Chinese Academy of Sciences, Special Fund for the Excellent Youth of the Chinese Academy of Sciences (KSCX2-EW-Q-9). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+      </funding-group>
+      <counts>
+        <page-count count="6"/>
+      </counts>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Introduction</title>
+      <p>The classical definition of fitness deals separately with the survival and reproductive functions of the organism, and with males and females, which partly avoids the problem of resource allocation. The fitness of an organism is simply described as <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e001" xlink:type="simple"/></inline-formula>, where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e002" xlink:type="simple"/></inline-formula> is the specific reproductive rate (reproductive rate represents the number of offspring produced by an organism), <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e003" xlink:type="simple"/></inline-formula> is the survival from birth (or the seedling stage) to the adult or reproductive stage, and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e004" xlink:type="simple"/></inline-formula> is the survival (per time interval) of the reproductive stage <xref ref-type="bibr" rid="pone.0053904-Sun1">[1]</xref>. In this original definition of organism fitness, the resources of the organism are linearly correlated to survival and reproduction, as well as to the male and female functions <xref ref-type="bibr" rid="pone.0053904-Sun1">[1]</xref>–<xref ref-type="bibr" rid="pone.0053904-Chr1">[3]</xref>. On this assumption, the survival (or reproduction) and the sex ratio are independent of the resource allocation <xref ref-type="bibr" rid="pone.0053904-Zhang1">[4]</xref>, and also independent of mortality, fecundity with age, size, and environmental selection pressures <xref ref-type="bibr" rid="pone.0053904-Schaffer1">[5]</xref>.</p>
+      <p>However, the fitness of any organism, comprising the survival and reproductive rate of adults and the survival of their offspring, should depend on the allocation of limiting resources <xref ref-type="bibr" rid="pone.0053904-Trivers1">[6]</xref>. If the available resources are limited, the increase in one activity must be at the expense of another, constituting a trade-off in resource allocation. In this context, the trade-off in resource allocation will exist between survival and reproductive effort, and between the male and female functions. This dilemma of resource allocation has received considerable attention and each aspect has spawned a huge literature <xref ref-type="bibr" rid="pone.0053904-Trivers1">[6]</xref>–<xref ref-type="bibr" rid="pone.0053904-Zhang2">[8]</xref>. The consensus opinion is still that survival and reproduction should be addressed separately, as if they were independent questions, and only reproductive effort and sex allocation have been incorporated into a single framework <xref ref-type="bibr" rid="pone.0053904-Zhang2">[8]</xref>, <xref ref-type="bibr" rid="pone.0053904-Zhang3">[9]</xref>. However, an interaction between these two forces of natural selection must exist because male function, female function and survival are undoubtedly constrained by a single resource pool. Under natural conditions, if there exists a discriminative selection pressure against survival, male and female function, such as inter- or intra-specific competition or predation/parasitism, the increased resource allocation to one of these three functions must reduce the resources invested in the other one or two functions, and might therefore affect sex allocation in a nonlinear process <xref ref-type="bibr" rid="pone.0053904-Zhang2">[8]</xref>.</p>
+      <p>The variation of the resource allocation to either survival or reproduction, however, might also lead to the survival or reproduction rate change. This is the resource elasticity of survival or reproduction (elasticity here could be defined as percentage change in survival or reproduction in response to a one percent change in resource allocation), similar to elasticity concept in economics (see <xref ref-type="supplementary-material" rid="pone.0053904.s001">Appendix S1</xref>) <xref ref-type="bibr" rid="pone.0053904-Samuelson1">[10]</xref>. Unfortunately, there exist few literatures dealing with whether or not such resource elasticity of survival or reproduction could affect sex ratio of any organisms. This being the case, it is necessary to develop a model of the comprehensive fitness characteristics of an organism that incorporates the interactions between sex allocation and resource elasticity in a single framework.</p>
+      <p>In this model, we assumed that the resource available to an organism is limited. Considering the resource elasticity of survival, we explored the optimal resource allocation to survival and reproduction and to producing male and female offspring. We asked the following question: under an environmental selective pressure, such as competition or predation, should the individuals/species of different reproduction strategies take different resource allocation strategies to maximize their total fitness gain?</p>
+    </sec>
+    <sec id="s2" sec-type="methods">
+      <title>Methods</title>
+      <sec id="s2a">
+        <title>Model of Discriminative Environmental Pressure on Fitness Functions</title>
+        <p>Throughout this article, we use population growth rate (it could also be defined as reproductive factor) as the measure of the fitness <xref ref-type="bibr" rid="pone.0053904-Murray1">[11]</xref>–<xref ref-type="bibr" rid="pone.0053904-Nur1">[14]</xref>, and the key assumption is that some underlying resource is limited, such as energy or any other resource that can be spent only once. In addition, an individual was assumed to reach its reproductive maturity after a single time interval (i.e., from <italic>T</italic> to <italic>T+1</italic>). In a stochastic environment, it is possible that the organisms will first allocate their limited resource to their survival under environmental pressure, and then the remainder to their future reproduction. Therefore, in this model, we assume that the resource allocation to survival will increase under harsher environmental pressure, whereas the resource allocation to reproduction will monotonically decrease to zero because of the limited availability of resource. Therefore, the resource allocation is nonlinearly related to reproduction. In this comprehensive model, the functions of survival, male reproduction, and female reproduction will be constrained by the trade-off in resource allocation. We would like to find the optimal sex allocation between the male and female functions of an organism subject to the optimization of fitness gain under environmental selection pressure.</p>
+      </sec>
+      <sec id="s2b">
+        <title>Optimal Resource Allocation under Discriminative Environmental Selection Pressure</title>
+        <p>As a previous model has demonstrated that density-dependent effect has no impact on the sex ratio in a resource allocation model <xref ref-type="bibr" rid="pone.0053904-Zhang4">[15]</xref>, in this article we suppose that individual organisms have no density-dependent effect on offspring production, and that offspring production also has no density-dependent effect on the survival of the adult individuals. All of the aspects of the fitness of an organism are mainly determined by resource allocation. The total resource of each individual is affected by environmental selection pressure, and we assume the available resource is first allocated to individual survival under the environmental selective pressure, which means that the reproduction allocation will decrease as the environmental selective pressure increases. In the total resource of each individual allocated to the three competing functions of male production, female production, and survival, let each individual allocate a proportion <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e005" xlink:type="simple"/></inline-formula> to survival, and the remaining proportion <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e006" xlink:type="simple"/></inline-formula> to reproduction. Among the proportion of resource <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e007" xlink:type="simple"/></inline-formula>, a proportion <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e008" xlink:type="simple"/></inline-formula> is allocated to male and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e009" xlink:type="simple"/></inline-formula> to female, where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e010" xlink:type="simple"/></inline-formula> denotes the strength of environmental pressure. Then the number of organisms at time <italic>T+1</italic> can be written as:<disp-formula id="pone.0053904.e011"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0053904.e011" xlink:type="simple"/><label>(1)</label></disp-formula>where <italic>N</italic>(<italic>T</italic>) is the number of organisms at time <italic>T</italic>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e012" xlink:type="simple"/></inline-formula> is the number of female offspring or plant seeds produced by an organism, <italic>C</italic>(<italic>x</italic>) is the probability of an offspring survival from <italic>T</italic> to <italic>T+1</italic>, and <italic>P</italic>(<italic>x</italic>) is the probability of an adult survival from <italic>T</italic> to <italic>T+1</italic>. The notations used in this and later sections are listed in <xref ref-type="table" rid="pone-0053904-t001">Table 1</xref>.</p>
+        <table-wrap id="pone-0053904-t001" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0053904.t001</object-id>
+          <label>Table 1</label>
+          <caption>
+            <title>Definitions of the notations used throughout this paper.</title>
+          </caption>
+          <alternatives>
+            <graphic id="pone-0053904-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0053904.t001" xlink:type="simple"/>
+            <table>
+              <colgroup span="1">
+                <col align="left" span="1"/>
+                <col align="center" span="1"/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Symbol</td>
+                  <td align="left" rowspan="1" colspan="1">Definition</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">
+                    <inline-formula>
+                      <inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e013" xlink:type="simple"/>
+                    </inline-formula>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1">The number of organism individuals at time <italic>T</italic></td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">
+                    <inline-formula>
+                      <inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e014" xlink:type="simple"/>
+                    </inline-formula>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1">The proportion of total resource allocated to reproductive effort for an individual organism</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">
+                    <inline-formula>
+                      <inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e015" xlink:type="simple"/>
+                    </inline-formula>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1">The proportion of total reproductive resource allocated to male reproductive effort for an individual organism</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">
+                    <inline-formula>
+                      <inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e016" xlink:type="simple"/>
+                    </inline-formula>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1">The probability of adult survival from <italic>T</italic> to <italic>T+1</italic></td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">
+                    <inline-formula>
+                      <inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e017" xlink:type="simple"/>
+                    </inline-formula>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1">The number of females produced by an individual organism</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">
+                    <inline-formula>
+                      <inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e018" xlink:type="simple"/>
+                    </inline-formula>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1">The probability of an offspring survival from <italic>T</italic> to <italic>T+1</italic></td>
+                </tr>
+              </tbody>
+            </table>
+          </alternatives>
+        </table-wrap>
+        <p>From (1), the fitness of an organism can be written as<disp-formula id="pone.0053904.e019"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0053904.e019" xlink:type="simple"/><label>(2)</label></disp-formula>For mathematical simplicity, we assume that female reproduction is a linear function of its resource input, that is, the female reproduction <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e020" xlink:type="simple"/></inline-formula> can be written as:<disp-formula id="pone.0053904.e021"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0053904.e021" xlink:type="simple"/><label>(3)</label></disp-formula>Let<disp-formula id="pone.0053904.e022"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0053904.e022" xlink:type="simple"/><label>(4)</label></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e023" xlink:type="simple"/></inline-formula> represents the maximum number of female offspring produced by an organism individual when all available resources allocated for reproduction are spent on female production. Here the probability of an offspring survival <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e024" xlink:type="simple"/></inline-formula> could be a function of any other parameters. For example, if <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e025" xlink:type="simple"/></inline-formula> is a function of the reproductive allocation <italic>E</italic>(<italic>x</italic>), it can be denoted by <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e026" xlink:type="simple"/></inline-formula>.</p>
+        <p>If the available resource is first allocated to individual survival under the environmental selective pressure, then the effect of the environmental selective pressure on individual survival can be neglected and the resource allocation to reproduction will monotonically decrease to zero, so we can suppose<disp-formula id="pone.0053904.e027"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0053904.e027" xlink:type="simple"/><label>(5)</label></disp-formula></p>
+        <p>From <xref ref-type="disp-formula" rid="pone.0053904.e019">equations (2)</xref> and <xref ref-type="disp-formula" rid="pone.0053904.e022">(4)</xref>, we know that the population growth rate <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e028" xlink:type="simple"/></inline-formula> depends on the resource allocation strategy <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e029" xlink:type="simple"/></inline-formula>. If we assume that the resource allocation strategy <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e030" xlink:type="simple"/></inline-formula> is an ESS, we must have <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e031" xlink:type="simple"/></inline-formula> for any allocation strategies <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e032" xlink:type="simple"/></inline-formula>. If the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e033" xlink:type="simple"/></inline-formula> is donated by <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e034" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e035" xlink:type="simple"/></inline-formula> is donated by <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e036" xlink:type="simple"/></inline-formula>, then, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e037" xlink:type="simple"/></inline-formula>.When the allocation pattern <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e038" xlink:type="simple"/></inline-formula> is an optimal strategy, the population growth rate <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e039" xlink:type="simple"/></inline-formula> attains its maximum. From optimal theory, a necessary condition for the population growth rate <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e040" xlink:type="simple"/></inline-formula> to attain the maximum is <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e041" xlink:type="simple"/></inline-formula> and to ensure the population growth rate <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e042" xlink:type="simple"/></inline-formula> is a maximum rather than a minimum, the condition <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e043" xlink:type="simple"/></inline-formula> is therefore required.</p>
+        <p>Differentiating <xref ref-type="disp-formula" rid="pone.0053904.e019">equation (2)</xref> with respect to <italic>x</italic>, we get<disp-formula id="pone.0053904.e044"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0053904.e044" xlink:type="simple"/><label>(6)</label></disp-formula>Substituting <xref ref-type="disp-formula" rid="pone.0053904.e022">equations (4)</xref> and <xref ref-type="disp-formula" rid="pone.0053904.e027">(5)</xref> into <xref ref-type="disp-formula" rid="pone.0053904.e044">equation (6)</xref>, we can derive the following equation:<disp-formula id="pone.0053904.e045"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0053904.e045" xlink:type="simple"/></disp-formula>Let <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e046" xlink:type="simple"/></inline-formula>,</p>
+        <p>Therefore, we have<disp-formula id="pone.0053904.e047"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0053904.e047" xlink:type="simple"/><label>(7)</label></disp-formula>From (7), it is easy to determine that the sign of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e048" xlink:type="simple"/></inline-formula> is decided by (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e049" xlink:type="simple"/></inline-formula>) because <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e050" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e051" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e052" xlink:type="simple"/></inline-formula>, and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e053" xlink:type="simple"/></inline-formula>. Therefore, the characteristics of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e054" xlink:type="simple"/></inline-formula> will be predominantly determined by <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e055" xlink:type="simple"/></inline-formula>, where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e056" xlink:type="simple"/></inline-formula> is the percentage change in offspring survival divided by the percentage change in resource allocation. This can be defined as the resource elasticity of offspring survival. This is very similar to the elasticity concepts of economics, such as the well-known price elasticity of demand <xref ref-type="bibr" rid="pone.0053904-Samuelson1">[10]</xref>. The resource elasticity of offspring survival is a measure used to show the responsiveness of offspring survival to a change in resource allocation, more precisely, it gives the percentage change in offspring survival in response to a one percent change in resource allocation.</p>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Results</title>
+      <p>If <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e057" xlink:type="simple"/></inline-formula>, from (7), we have <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e058" xlink:type="simple"/></inline-formula>, so that the  resource allocation to the male function will increase with increasing environmental selection pressure. The model experimental result shows here that if <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e059" xlink:type="simple"/></inline-formula> (resource elasticity of offspring survival), the organism will allocate more resources to the male function to maximize its total fitness gain under increased environmental selection (<xref ref-type="fig" rid="pone-0053904-g001">Figure 1</xref>).</p>
+      <fig id="pone-0053904-g001" position="float">
+        <object-id pub-id-type="doi">10.1371/journal.pone.0053904.g001</object-id>
+        <label>Figure 1</label>
+        <caption>
+          <title>The effect of the resource elasticity of the offspring survival parameter <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e060" xlink:type="simple"/></inline-formula> on the sex ratio (male) under environmental selection pressure.</title>
+          <p>When <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e061" xlink:type="simple"/></inline-formula>, the increased environmental selection pressure will increase the proportion of males, namely, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e062" xlink:type="simple"/></inline-formula>. When <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e063" xlink:type="simple"/></inline-formula>, the increased environmental selection pressure will reduce the proportion of males, namely, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e064" xlink:type="simple"/></inline-formula>. When <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e065" xlink:type="simple"/></inline-formula>, the increased environmental selection pressure will reduce the proportion of males, namely, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e066" xlink:type="simple"/></inline-formula>.</p>
+        </caption>
+        <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0053904.g001" position="float" xlink:type="simple"/>
+      </fig>
+      <p>If <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e067" xlink:type="simple"/></inline-formula>, the sex ratio will be constant under the influence of environmental factors (<xref ref-type="fig" rid="pone-0053904-g002">Figure 2</xref>).</p>
+      <fig id="pone-0053904-g002" position="float">
+        <object-id pub-id-type="doi">10.1371/journal.pone.0053904.g002</object-id>
+        <label>Figure 2</label>
+        <caption>
+          <title>The effect of environmental selection pressure <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e068" xlink:type="simple"/></inline-formula> on the sex ratio <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e069" xlink:type="simple"/></inline-formula> (male proportion) with different values for the resource elasticity of offspring survival.</title>
+        </caption>
+        <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0053904.g002" position="float" xlink:type="simple"/>
+      </fig>
+      <p>Similar to the price elasticity of demand (see <xref ref-type="supplementary-material" rid="pone.0053904.s001">Appendix S1</xref>), If <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e070" xlink:type="simple"/></inline-formula>, the offspring survival is not very responsive to the change of resource allocation to reproduction. The offspring survival is inelastic to resource allocation for reproduction in such condition. From (7), we have <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e071" xlink:type="simple"/></inline-formula>, namely, the male function will decrease with increasing environmental selection pressure. The model experiment result shows here that if <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e072" xlink:type="simple"/></inline-formula> (inelastic survival of offspring), the organism will allocate less resource to the male offspring under such condition.</p>
+      <p>If <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e073" xlink:type="simple"/></inline-formula>, which is similar to unitary elasticity in economics, from (7), we also have <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e074" xlink:type="simple"/></inline-formula>, so resource allocation to the male function will decrease with increasing environmental selection pressure <italic>x</italic>.</p>
+      <p>If <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e075" xlink:type="simple"/></inline-formula>, from (7), we have <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e076" xlink:type="simple"/></inline-formula>, so the resource allocation to the male function will decrease with increasing environmental selection pressure <italic>x</italic>. The model experiment result shows here that if <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e077" xlink:type="simple"/></inline-formula> (resource elasticity of offspring survival), the organism will allocate less resource to the male function to maximize its total fitness gain under the increased environmental selection.</p>
+    </sec>
+    <sec id="s4">
+      <title>Discussion</title>
+      <p>Sex ratio evolution is closely related to resource allocation, and some studies in the literature have dealt with how resource allocation affects sex allocation under different male and female function relationships <xref ref-type="bibr" rid="pone.0053904-Zhang1">[4]</xref>, <xref ref-type="bibr" rid="pone.0053904-Zhang3">[9]</xref>, <xref ref-type="bibr" rid="pone.0053904-Charnov1">[16]</xref>. However, the integration of environmental selection pressure and sex allocation has not been directly addressed, although it is partly implied in the models of Zhang et al. <xref ref-type="bibr" rid="pone.0053904-Zhang1">[4]</xref>, <xref ref-type="bibr" rid="pone.0053904-Zhang3">[9]</xref>. The model described in this paper shows that if we assume that the environmental selection pressure will force an organism first to allocate its limited resource to its survival <xref ref-type="bibr" rid="pone.0053904-Sun1">[1]</xref>, <xref ref-type="bibr" rid="pone.0053904-Bell1">[17]</xref>, the evolution of the sex ratio will depend strongly on the environmental selection pressure, as well as on the resource elasticity of offspring survival. However, whether the resource elasticity of offspring survival affects the evolution of the sex ratio has never been addressed before.</p>
+      <p>Our model shows that the environmental selection pressure leading to the variation in the offspring sex ratio of the target organism is greatly affected by the resource elasticity of offspring survival, whereas the resource elasticity of offspring survival might be determined by the reproductive strategy of the organism. Constrained by the same resource pool, organisms with different genetic characteristics, evolutionary pathways, habitats, age structures, or any other related factors, might have different resource elasticity of offspring survival. Therefore, there may be different sex ratio investment rewards across different species or even across different genotypes, phenotypes, or even age structures within the same species <xref ref-type="bibr" rid="pone.0053904-Bell1">[17]</xref>, if male production is nonlinearly related to female production when constrained by limited resource availability. The difference in reproductive strategies is essentially that different reproduction strategies have different offspring survival probabilities with a given resource allocation <xref ref-type="bibr" rid="pone.0053904-Sun1">[1]</xref>, <xref ref-type="bibr" rid="pone.0053904-Pianka1">[18]</xref>, <xref ref-type="bibr" rid="pone.0053904-MacArthur1">[19]</xref>. The resource elasticity of offspring survival developed here effectively integrated the differences in offspring survival probability.</p>
+      <p>For organisms that quantitatively produce more offspring with increasing resource allocation to their offspring, the increase in the proportion of resource allocated to reproduction might reduce the percentage of offspring survival. This is <italic>r</italic> selection, in which the organism produces more offspring but offers less parental care or allocates less resource to offspring development, and therefore has a lower offspring survival probability <xref ref-type="bibr" rid="pone.0053904-Sun1">[1]</xref>, <xref ref-type="bibr" rid="pone.0053904-MacArthur1">[19]</xref>, <xref ref-type="bibr" rid="pone.0053904-Vli1">[20]</xref>. In this model, that the allocation of more resource to reproduction reduces the offspring survival probability falls within the range of resource elasticity of offspring survival (i.e., left of the −1 point in <xref ref-type="fig" rid="pone-0053904-g001">Figure 1</xref>).</p>
+      <p>Contrary to <italic>r</italic>-selection organisms, the <italic>K</italic>-selection organisms, which allocate more of their resources to increasing their offspring survival <xref ref-type="bibr" rid="pone.0053904-Fisher1">[2]</xref>, <xref ref-type="bibr" rid="pone.0053904-Pianka1">[18]</xref>, <xref ref-type="bibr" rid="pone.0053904-MacArthur1">[19]</xref>, will fall within right of the resource elasticity of offspring survival in <xref ref-type="fig" rid="pone-0053904-g001">Figure 1</xref> of this model. For <italic>K</italic> selection organisms, the parents offer more protection/care to their offspring, produce offspring with larger body sizes, or have longer gestation periods to allow the full development of their offspring, and so on. In this way, the <italic>K</italic>-selection organism might increase its survival but produce fewer offspring. Therefore, the resource elasticity of offspring survival for <italic>K</italic>-selection organisms might be greater than -1 (right of <xref ref-type="fig" rid="pone-0053904-g001">Figure 1</xref>), and the increasing environmental selection pressure will reduce the proportion of male offspring.</p>
+      <p>When the percentage of offspring survival is not greatly affected by changes in the percentage of resource allocation to reproduction, offspring survival will be inelastic to resource allocation for reproduction (i.e. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e078" xlink:type="simple"/></inline-formula>), similar to the inelastic demand to price in economics <xref ref-type="bibr" rid="pone.0053904-Samuelson1">[10]</xref>. In such situations, the sex ratio (proportion of males) will decrease slightly with increasing environmental pressure (<xref ref-type="fig" rid="pone-0053904-g002">Figure 2</xref>). When <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e079" xlink:type="simple"/></inline-formula>, the sex ratio will be constant under the influence of environmental factors.</p>
+      <p>The sex ratio determination mechanism suggested here can help explain why the sex ratio varies contrarily across species under the harsher living environment. For example, the spotted eagle, which usually produced one or two offspring per year with <italic>K</italic> selection strategy, the male offspring proportion has increased in good year with rich food condition <xref ref-type="bibr" rid="pone.0053904-Vli1">[20]</xref>. This is also true for primates which produce one or two offspring every one or two years. The birth sex ratios of primates are male biased in zoos in which the food availability and living condition are better than in wild condition <xref ref-type="bibr" rid="pone.0053904-Faust1">[21]</xref>. However, the experimental data and empirical observations showed that house mice, a typical <italic>r</italic> selection species, will produce more male offspring than females when the mothers were underfed <xref ref-type="bibr" rid="pone.0053904-Faust1">[21]</xref>, <xref ref-type="bibr" rid="pone.0053904-Meikle1">[22]</xref>. The concept that sex ratio depends on environmental selection pressure as well as the resource elasticity of offspring survival well explains such contradictory sex ratio variation under the harsher food availability.</p>
+      <p>Although the resource elasticity or inelasticity of offspring survival was first introduced to explain biological characteristics, the concept of price/resource availability elasticity or inelasticity of demand, consumption, or any other behavior, is one of the most basic economic rules, and has been shown to greatly affect the behaviors of human beings <xref ref-type="bibr" rid="pone.0053904-Samuelson1">[10]</xref>. Because the resource elasticity of offspring survival to reproduction resource might vary across different species because of differences in their reproductive strategies, the sex ratios of different species might be very different under the same environmental section pressure. Theoretically, the resource elasticity of offspring survival might also be a function of other physiological factors, and different environments might lead to different physiological responses. Therefore, this might result in different resource elasticity of offspring survival in the same species, which might in turn lead to the different sex ratios for the same species under different environmental selection pressures.</p>
+      <p>In terms of the biological characteristics of the sex ratio (allocation), the reproductive resource elasticity (or inelasticity) of offspring survival might be predominantly determined by the reproductive reaction to resource allocation, and this should be easier to understand. However, it is also theoretically possible that the resource elasticity (or inelasticity) of offspring survival is a reaction to changes in other related factors, such as hormone or chemical responses (e.g., nervous strain resulting from intraspecific or interspecific competition in animal, and both negative and positive allelopathic effects in plants). The resource elasticity (or inelasticity) of offspring survival might even be a response to age structure. In different age structures, the resource offspring survival might differ with a change in resource allocation because of variations in parent care or nutrient utilization <xref ref-type="bibr" rid="pone.0053904-Pianka1">[18]</xref>. Under the same environmental selection pressure, the resource elasticity (or inelasticity) coefficient of offspring survival might differ with different age structures, and therefore might also lead to a change in the sex ratio of a specific population. If the resource elasticity (or inelasticity) of offspring survival responds to different factors, the sex ratio (allocation) might change very differently or even in the opposite direction under changes in different components of the environmental selection pressure.</p>
+      <p>Throughout this paper, we assumed that available resources are limited and that there is a trade-off between survival and reproduction for resource allocation. Under such an assumption, we suppose that an organism allocates limited resources first to survival and then to reproduction. However, this will not always be the case for a species. When available resources are not limited for an organism, such as when a pioneer species with less species competition does not experience resource trade-off between survival and reproduction under increased environmental selection pressure, the sex ratio might not vary under different environmental pressure <xref ref-type="bibr" rid="pone.0053904-Zhang1">[4]</xref>. It is also true that the sex ratio pattern might be very different from the pattern predicted by this model if an organism does not first allocate limited resources to survival under increased environmental selection pressure. If an organism first allocates limited resources under environmental selection or extra availability of resources to reproduction and then to survival, the sex ratio variation will change to the pattern predicted by Trivers-Willard Hypothesis and the model of Zhang &amp; Wang <xref ref-type="bibr" rid="pone.0053904-Zhang1">[4]</xref>, <xref ref-type="bibr" rid="pone.0053904-Trivers1">[6]</xref>. Using sex ratio variation patterns for a species, the resource allocation strategy of the species can therefore be hypothesized.</p>
+    </sec>
+    <sec id="s5">
+      <title>Supporting Information</title>
+      <supplementary-material id="pone.0053904.s001" mimetype="application/msword" xlink:href="info:doi/10.1371/journal.pone.0053904.s001" position="float" xlink:type="simple">
+        <label>Appendix S1</label>
+        <caption>
+          <p><bold>Supporting information for “The concept of Elasticity”.</bold> Elasticity is one of the most basic concepts in economics. Here, let's use the price elasticity of demand to illustrate this concept used in economics <xref ref-type="bibr" rid="pone.0053904-Samuelson1">[10]</xref>. Price elasticity of demand is a measure used to show the responsiveness, or elasticity, of the quantity demanded of a good or service to a change in its price. More precisely, it gives the percentage change in quantity demanded in response to a one percent change in price (holding constant all the other determinants of demand, such as income. It can be described as: <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e080" xlink:type="simple"/></inline-formula>. Since price and quantity demanded always move in opposite directions, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e083" xlink:type="simple"/></inline-formula> is a negative value. For convenience, however, the absolute value of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e084" xlink:type="simple"/></inline-formula> is used. If <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e085" xlink:type="simple"/></inline-formula> is larger than 1, we say demand is elastic: Consumer response is large relative to the change in price. If <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e086" xlink:type="simple"/></inline-formula> is less than 1, we say demand is inelastic: Consumers are not very responsive to price changes. If <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0053904.e087" xlink:type="simple"/></inline-formula> is equal to 1, demand is unitary elastic. In this case, the percentage change in quantity demanded is exactly equal to the percentage change in price.</p>
+          <p>(DOC)</p>
+        </caption>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>We are indebted to Da-Yong Zhang, Stuart A West, Ding Wang, Sheng-Guo Fang, Lei-Gao and Qi-long Liu for their discussion on the results of this manuscript, and to anonymous reviewers for perceptive comments and suggestions that improved the manuscript.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="pone.0053904-Sun1">
+        <label>1</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Sun R (1992) Essential of animal ecology. Beijing: Beijing Normal University Press.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Fisher1">
+        <label>2</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Fisher RA (1930) The genetical theory of natural selection. Oxford, England: Clarendon Press.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Chr1">
+        <label>3</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chr</surname><given-names>N</given-names></name> (<year>1983</year>) <article-title>Grasses, grazers, mutualism and coevolution: a comment about handwaving in ecology</article-title>. <source>Oikos</source> <volume>41</volume>: <fpage>152</fpage>–<lpage>153</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Zhang1">
+        <label>4</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhang</surname><given-names>DY</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>G</given-names></name> (<year>1994</year>) <article-title>Evolutionarily stable reproductive strategies in sexual organisms: an integrated approach to life-history evolution and sex allocation</article-title>. <source>Am Nat</source> <volume>144</volume>: <fpage>65</fpage>–<lpage>75</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Schaffer1">
+        <label>5</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schaffer</surname><given-names>WM</given-names></name> (<year>1974</year>) <article-title>Optimal reproductive effort in fluctuating environments</article-title>. <source>Am Nat</source> <volume>108</volume>: <fpage>783</fpage>–<lpage>790</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Trivers1">
+        <label>6</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Trivers</surname><given-names>RL</given-names></name> (<year>1974</year>) <article-title>Parent-offspring conflict</article-title>. <source>Am Zool</source> <volume>14</volume>: <fpage>249</fpage>–<lpage>264</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Stearns1">
+        <label>7</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Stearns SC (1992) The evolution of life histories. Oxford University Press Oxford.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Zhang2">
+        <label>8</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhang</surname><given-names>DY</given-names></name> (<year>2000</year>) <article-title>Resource allocation and the evolution of self-fertilization in plants</article-title>. <source>Am Nat</source> <volume>155</volume>: <fpage>187</fpage>–<lpage>199</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Zhang3">
+        <label>9</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhang</surname><given-names>DY</given-names></name>, <name name-style="western"><surname>Jiang</surname><given-names>XH</given-names></name>, <name name-style="western"><surname>Zhao</surname><given-names>SL</given-names></name> (<year>1996</year>) <article-title>Evolutionarily stable reproductive strategies in sexual organisms. II. Dioecy and optimal resource allocation</article-title>. <source>Am Nat</source> <volume>147</volume>: <fpage>1115</fpage>–<lpage>1123</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Samuelson1">
+        <label>10</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Samuelson</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Nordhaus</surname><given-names>WD</given-names></name> (<year>1992</year>) <article-title>Economics. New York</article-title>. <source>McGraw-Hill</source></mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Murray1">
+        <label>11</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Murray</surname><given-names>BG</given-names></name> (<year>1985</year>) <article-title>Population growth rate as a measure of individual fitness</article-title>. <source>Oikos</source> <volume>44</volume>: <fpage>509</fpage>–<lpage>511</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Otto1">
+        <label>12</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Otto SP, Day T (2011) A biologist's guide to mathematical modeling in ecology and evolution. Princeton University Press.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Sibly1">
+        <label>13</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sibly</surname><given-names>RM</given-names></name>, <name name-style="western"><surname>Hone</surname><given-names>J</given-names></name> (<year>2002</year>) <article-title>Population growth rate and its determinants: an overview</article-title>. <source>Philos Trans R Soc Lond B Biol Sci</source> <volume>357</volume>: <fpage>1153</fpage>–<lpage>1170</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Nur1">
+        <label>14</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nur</surname><given-names>N</given-names></name> (<year>1987</year>) <article-title>Population growth rate and the measurement of fitness: a critical reflection</article-title>. <source>Oikos</source> <fpage>338</fpage>–<lpage>341</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Zhang4">
+        <label>15</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhang</surname><given-names>DY</given-names></name>, <name name-style="western"><surname>Jiang</surname><given-names>XH</given-names></name> (<year>1997</year>) <article-title>Evolutionarily stable reproductive strategies in sexual organisms: III. The effects of lottery density dependence and pollen limitation</article-title>. <source>J Theor Biol</source> <volume>185</volume>: <fpage>223</fpage>–<lpage>231</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Charnov1">
+        <label>16</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Charnov</surname><given-names>EL</given-names></name> (<year>1979</year>) <article-title>The genetical evolution of patterns of sexuality: Darwinian fitness</article-title>. <source>Am Nat</source> <volume>113</volume>: <fpage>465</fpage>–<lpage>480</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Bell1">
+        <label>17</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bell</surname><given-names>G</given-names></name> (<year>1980</year>) <article-title>The costs of reproduction and their consequences</article-title>. <source>Am Nat</source> <volume>116</volume>: <fpage>45</fpage>–<lpage>76</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Pianka1">
+        <label>18</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pianka</surname><given-names>ER</given-names></name> (<year>1974</year>) <article-title>Niche overlap and diffuse competition</article-title>. <source>Proc Natl Acad Sci U S A</source> <volume>71</volume>: <fpage>2141</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-MacArthur1">
+        <label>19</label>
+        <mixed-citation publication-type="other" xlink:type="simple">MacArthur RH, Wilson EO (1967) The theory of island biogeography. Princeton: Princeton University Press.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Vli1">
+        <label>20</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Väli</surname><given-names>Ü</given-names></name> (<year>2004</year>) <article-title>Sex ratio of Lesser Spotted Eagle Aquila pomarina nestlings in good and poor breeding years: Capsule The ratio was female-biased in good years and male-biased in poor years, but did not differ from parity in the long term</article-title>. <source>Bird Study</source> <volume>51</volume>: <fpage>189</fpage>–<lpage>191</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Faust1">
+        <label>21</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Faust</surname><given-names>LJ</given-names></name>, <name name-style="western"><surname>Thompson</surname><given-names>SD</given-names></name> (<year>2000</year>) <article-title>Birth sex ratio in captive mammals: patterns, biases, and the implications for management and conservation</article-title>. <source>Zoo Biol</source> <volume>19</volume>: <fpage>11</fpage>–<lpage>25</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0053904-Meikle1">
+        <label>22</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Meikle</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Drickamer</surname><given-names>LC</given-names></name> (<year>1986</year>) <article-title>Food availability and secondary sex ratio variation in wild and laboratory house mice (Mus musculus)</article-title>. <source>J Reprod Fert</source> <volume>78</volume>: <fpage>587</fpage>–<lpage>591</lpage>.</mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

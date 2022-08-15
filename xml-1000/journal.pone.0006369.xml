@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="EN">
+<front>
+<journal-meta><journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><!--===== Grouping journal title elements =====--><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta>
+<article-meta><article-id pub-id-type="publisher-id">09-PONE-RA-09433R1</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0006369</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline"><subject>Computational Biology/Evolutionary Modeling</subject><subject>Computational Biology/Population Genetics</subject><subject>Genetics and Genomics/Population Genetics</subject><subject>Evolutionary Biology/Human Evolution</subject></subj-group></article-categories><title-group><article-title>Impact of Selection and Demography on the Diffusion of Lactase Persistence</article-title><alt-title alt-title-type="running-head">Lactase Persistence Diffusion</alt-title></title-group><contrib-group>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple"><name name-style="western"><surname>Gerbault</surname><given-names>Pascale</given-names></name><xref ref-type="aff" rid="aff1"/></contrib>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple"><name name-style="western"><surname>Moret</surname><given-names>Céline</given-names></name><xref ref-type="aff" rid="aff1"/></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Currat</surname><given-names>Mathias</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Sanchez-Mazas</surname><given-names>Alicia</given-names></name><xref ref-type="aff" rid="aff1"/></contrib>
+</contrib-group><aff id="aff1">          <addr-line>Laboratory of Anthropology, Genetics and Peopling History (AGP), Department of Anthropology and Ecology, University of Geneva, Geneva, Switzerland</addr-line>       </aff><contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>O'Rourke</surname><given-names>Dennis</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group><aff id="edit1">University of Utah, United States of America</aff><author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">mathias.currat@unige.ch</email></corresp>
+<fn fn-type="con"><p>Conceived and designed the experiments: MC ASM. Performed the experiments: PG CM. Wrote the paper: PG CM MC ASM. Developed the simulation algorithm: MC PG. Reviewed and validated the results and interpretation: MC ASM.</p></fn>
+<fn fn-type="conflict"><p>The authors have declared that no competing interests exist.</p></fn></author-notes><pub-date pub-type="collection"><year>2009</year></pub-date><pub-date pub-type="epub"><day>24</day><month>7</month><year>2009</year></pub-date><volume>4</volume><issue>7</issue><elocation-id>e6369</elocation-id><history>
+<date date-type="received"><day>27</day><month>3</month><year>2009</year></date>
+<date date-type="accepted"><day>17</day><month>6</month><year>2009</year></date>
+</history><!--===== Grouping copyright info into permissions =====--><permissions><copyright-year>2009</copyright-year><copyright-holder>Gerbault et al</copyright-holder><license><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions><abstract><sec>
+<title>Background</title>
+<p>The lactase enzyme allows lactose digestion in fresh milk. Its activity strongly decreases after the weaning phase in most humans, but persists at a high frequency in Europe and some nomadic populations. Two hypotheses are usually proposed to explain the particular distribution of the lactase persistence phenotype. The <italic>gene-culture coevolution</italic> hypothesis supposes a nutritional advantage of lactose digestion in pastoral populations. The <italic>calcium assimilation</italic> hypothesis suggests that carriers of the lactase persistence allele(s) (LCT*P) are favoured in high-latitude regions, where sunshine is insufficient to allow accurate vitamin-D synthesis. In this work, we test the validity of these two hypotheses on a large worldwide dataset of lactase persistence frequencies by using several complementary approaches.</p>
+</sec><sec>
+<title>Methodology</title>
+<p>We first analyse the distribution of lactase persistence in various continents in relation to geographic variation, pastoralism levels, and the genetic patterns observed for other independent polymorphisms. Then we use computer simulations and a large database of archaeological dates for the introduction of domestication to explore the evolution of these frequencies in Europe according to different demographic scenarios and selection intensities.</p>
+</sec><sec>
+<title>Conclusions</title>
+<p>Our results show that <italic>gene-culture coevolution</italic> is a likely hypothesis in Africa as high LCT*P frequencies are preferentially found in pastoral populations. In Europe, we show that population history played an important role in the diffusion of lactase persistence over the continent. Moreover, selection pressure on lactase persistence has been very high in the North-western part of the continent, by contrast to the South-eastern part where genetic drift alone can explain the observed frequencies. This selection pressure increasing with latitude is highly compatible with the <italic>calcium assimilation</italic> hypothesis while the <italic>gene-culture coevolution</italic> hypothesis cannot be ruled out if a positively selected lactase gene was carried at the front of the expansion wave during the Neolithic transition in Europe.</p>
+</sec></abstract><funding-group><funding-statement>This work was supported by the Swiss National Foundation (SNF) grant #3100A0-112651 to A.S-M (SNF: <ext-link ext-link-type="uri" xlink:href="http://www.snf.ch/E/Pages/default.aspx" xlink:type="simple">http://www.snf.ch/E/Pages/default.aspx</ext-link>&gt;). The funders had no rule in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="10"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>Lactase is an enzyme that allows lactose digestion in fresh milk. Its activity strongly decreases after the weaning phase in most humans. However, in many European individuals and in people from various populations of other continents, lactase is still active throughout adult life <xref ref-type="bibr" rid="pone.0006369-Swallow1">[1]</xref>. This dominantly inherited genetic trait is called <italic>lactase persistence</italic> and at least three mutations are tightly associated with it: <italic>−13,910 C/T</italic> (generally linked to <italic>−22,018 G/A</italic>) in northern Europe (100% association) <xref ref-type="bibr" rid="pone.0006369-Enattah1">[2]</xref>, <xref ref-type="bibr" rid="pone.0006369-Troelsen1">[3]</xref>, <italic>−14,010 G/C</italic> in East Africa and <italic>−13,915 T/G</italic> in the Middle-East/North Africa <xref ref-type="bibr" rid="pone.0006369-Enattah2">[4]</xref>, <xref ref-type="bibr" rid="pone.0006369-Tishkoff1">[5]</xref>. In this study, we will use <italic>LP</italic> to refer to the <italic>lactase persistence</italic> phenotype, <italic>LCT</italic> to refer to the <italic>lactase gene</italic> and <italic>LCT*P</italic> to refer to the <italic>lactase persistence</italic> associated allele(s).</p>
+<p>The particular distribution of lactase persistence throughout the world indicates that this trait evolved under strong positive selection <xref ref-type="bibr" rid="pone.0006369-Tishkoff1">[5]</xref>, <xref ref-type="bibr" rid="pone.0006369-Ingram1">[6]</xref>, <xref ref-type="bibr" rid="pone.0006369-Bersaglieri1">[7]</xref>. Two main hypotheses have been proposed: <italic>gene-culture coevolution</italic> (<italic>gcc</italic>) <xref ref-type="bibr" rid="pone.0006369-McCracken1">[8]</xref>, <xref ref-type="bibr" rid="pone.0006369-Simoons1">[9]</xref>, which suggests that lactose digestion confers a nutritional advantage to milk-consuming (e.g. pastoralist) populations; and <italic>calcium assimilation</italic> (<italic>cal</italic>) <xref ref-type="bibr" rid="pone.0006369-Flatz1">[10]</xref>, which proposes that carriers of LCT*P are favoured in high-latitude regions, where lactose would substitute vitamin-D (deficient when sunlight is low) to allow accurate calcium assimilation, thus preventing rickets. Holden and Mace <xref ref-type="bibr" rid="pone.0006369-Holden1">[11]</xref> studied the two mentioned hypotheses and a third one, proposing that LP was favoured in highly arid environments, where people would have drunk milk to prevent dehydration <xref ref-type="bibr" rid="pone.0006369-Cook1">[12]</xref>, <xref ref-type="bibr" rid="pone.0006369-Cook2">[13]</xref>. Their conclusion was that LP is an adaptation to pastoralism, in agreement with the <italic>gcc</italic> model, while no evidence for the other hypotheses was found. Compatible with this theory, Coelho et al. <xref ref-type="bibr" rid="pone.0006369-Coelho1">[14]</xref> suggested that <italic>−13,910*T</italic> originated in Eurasia before the Neolithic Era, and observed a significant departure from neutrality of this variant in the few populations examined. On the other hand, these studies do not explain the significant correlation found between LP frequencies and latitude in Europe <xref ref-type="bibr" rid="pone.0006369-Sabbagh1">[15]</xref>, as predicted by the <italic>cal</italic> model.</p>
+<p>The aim of the present work was to test the relevance of the two main hypotheses associated with lactase persistence, <italic>gcc</italic> and <italic>cal</italic>, using a large database of LP frequencies (115 populations worldwide, <xref ref-type="supplementary-material" rid="pone.0006369.s004">Table S1</xref> in Supplementary Information). In a first step, we analysed the correlation between LCT*P variation, geography, and the variation of other independent polymorphisms at different geographic scales, to check whether LCT*P genetic patterns were really peculiar or could have been shaped, at least in part, by population history and demography. We also analysed the correlation between LCT*P frequencies and pastoralism levels in Africa. In a second step, we used computer simulation to investigate a possible effect of positive selection in Europe, where LP variation is particularly sharp. Our algorithm considers various parameters (genetic drift, demographic growth, positive selection, and the time elapsed since the likely beginning of milk consumption), and takes into account two alternative models of Neolithic diffusion: demic and cultural <xref ref-type="bibr" rid="pone.0006369-Currat1">[16]</xref>. According to our results, the <italic>gcc</italic> hypothesis fits better the observed data in Africa while the <italic>cal</italic> hypothesis is compatible with observed data in Europe.</p>
+</sec><sec id="s2">
+<title>Results</title>
+<sec id="s2a">
+<title>Correlation between genetics, geography and pastoralism levels</title>
+<p>We first tested the correlation between genetic and geographic variation for LCT*P, both at the global and at continental scales (<xref ref-type="table" rid="pone-0006369-t001">Table 1</xref>). Our goal was to assess whether LCT*P could have evolved neutrally. Indeed, a significant and positive correlation is expected between genetic and geographic variation under a simple model of isolation by distance <xref ref-type="bibr" rid="pone.0006369-Malcot1">[17]</xref>, <xref ref-type="bibr" rid="pone.0006369-SanchezMazas1">[18]</xref>. Of course, as such a correlation may also be observed under some non-neutral models (like selection due to environmental factors showing geographic clines, or geographic spread of a beneficial allele arising in a single location and spreading outwards), additional analyses would be required to confirm neutrality. On the other hand, no correlation at all between genetic and geographic variation would indicate that migration history did not leave any signature on <italic>LCT</italic> genetic patterns.</p>
+<table-wrap id="pone-0006369-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0006369.t001</object-id><label>Table 1</label><caption>
+<title>Correlation coefficients between genetics and geography.</title>
+</caption><!--===== Grouping alternate versions of objects =====--><alternatives><graphic id="pone-0006369-t001-1" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0006369.t001" xlink:type="simple"/><table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" colspan="1" rowspan="1">Region</td>
+<td align="left" colspan="1" rowspan="1">n</td>
+<td align="left" colspan="1" rowspan="1">r<sub>gen,geo</sub></td>
+<td align="left" colspan="1" rowspan="1">P val.</td>
+<td align="left" colspan="1" rowspan="1">r<sub>LCT*P-lat</sub></td>
+<td align="left" colspan="1" rowspan="1">P val.</td>
+<td align="left" colspan="1" rowspan="1">r<sub>LCT*P-long</sub></td>
+<td align="left" colspan="1" rowspan="1">P val.</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" colspan="1" rowspan="1">World Scale</td>
+<td align="left" colspan="1" rowspan="1">115</td>
+<td align="left" colspan="1" rowspan="1">0.050</td>
+<td align="left" colspan="1" rowspan="1">0.0400</td>
+<td align="left" colspan="1" rowspan="1">0.274</td>
+<td align="left" colspan="1" rowspan="1">&lt;0.0001</td>
+<td align="left" colspan="1" rowspan="1">−0.080</td>
+<td align="left" colspan="1" rowspan="1">0.003</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Europe</td>
+<td align="left" colspan="1" rowspan="1">33</td>
+<td align="left" colspan="1" rowspan="1">0.260</td>
+<td align="left" colspan="1" rowspan="1">0.0001</td>
+<td align="left" colspan="1" rowspan="1">0.400</td>
+<td align="left" colspan="1" rowspan="1">0.0005</td>
+<td align="left" colspan="1" rowspan="1">−0.010</td>
+<td align="left" colspan="1" rowspan="1">0.568</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Europe (indo-europeans only)</td>
+<td align="left" colspan="1" rowspan="1">26</td>
+<td align="left" colspan="1" rowspan="1">0.420</td>
+<td align="left" colspan="1" rowspan="1">0.0000</td>
+<td align="left" colspan="1" rowspan="1">0.840</td>
+<td align="left" colspan="1" rowspan="1">&lt;0.0001</td>
+<td align="left" colspan="1" rowspan="1">−0.310</td>
+<td align="left" colspan="1" rowspan="1">0.006</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Africa</td>
+<td align="left" colspan="1" rowspan="1">38</td>
+<td align="left" colspan="1" rowspan="1">0.016</td>
+<td align="left" colspan="1" rowspan="1">0.1700</td>
+<td align="left" colspan="1" rowspan="1">0.329</td>
+<td align="left" colspan="1" rowspan="1">0.0010</td>
+<td align="left" colspan="1" rowspan="1">0.134</td>
+<td align="left" colspan="1" rowspan="1">0.048</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Near East &amp;East Asia</td>
+<td align="left" colspan="1" rowspan="1">34</td>
+<td align="left" colspan="1" rowspan="1">0.016</td>
+<td align="left" colspan="1" rowspan="1">0.3600</td>
+<td align="left" colspan="1" rowspan="1">−0.041</td>
+<td align="left" colspan="1" rowspan="1">0.2560</td>
+<td align="left" colspan="1" rowspan="1">−0.046</td>
+<td align="left" colspan="1" rowspan="1">0.230</td>
+</tr>
+</tbody>
+</table></alternatives><table-wrap-foot><fn id="nt101"><p><italic>n</italic>: number of populations; <italic>r</italic><sub>gen,geo</sub>: correlation coefficient between genetic and geographic distances; <italic>r</italic><sub>LCT*P-lat</sub>: correlation coefficient between LCT*P frequency and latitude; r<sub>LCT*P-long</sub>:correlation coefficient between LCT*P frequency and longitude; P.val.: P-value for significance. Population used are listed in <xref ref-type="supplementary-material" rid="pone.0006369.s004">Table S1</xref>.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s2b">
+<title>Worldwide level</title>
+<p>When all 115 worldwide populations were considered, a weak but significant (at level 5%) correlation was found between genetic and geographic distances (<italic>r</italic> = 0.05, <italic>p</italic> = 0.04, <xref ref-type="table" rid="pone-0006369-t001">Table 1</xref>). The correlation coefficient between LCT*P frequencies and latitude was highly significant (<italic>r</italic> = 0.274, <italic>p</italic>&lt;0.0001). However, this result was merely due to a sharp contrast existing between LCT*P frequencies observed in Europe (high to very high) and those observed in sub-Saharan Africa (low to very low), rather than to a south to north continuum of frequencies supporting an isolation by distance model (results of spatial autocorrelation analysis not shown). The correlation between LCT*P frequencies and longitude was very low but negative and significant (<italic>r</italic> = −0.08, <italic>p</italic> = 0.003), which was reflecting the higher frequencies observed in Europe and Africa, compared to East Asia. Globally, while these results were not supporting any peculiar model of natural selection, they were indicating that the evolution of LCT*P was probably not purely neutral.</p>
+</sec><sec id="s2c">
+<title>Continental levels</title>
+<p>When looking at continental scales, we did not observe any significant correlation between genetic and geographic variation in Asia (i.e. Near East &amp; East Asia, <xref ref-type="table" rid="pone-0006369-t001">Table 1</xref>). This was explained by a heterogeneous distribution of LCT*P in this continent (from 0 to 0.626 in the Near East and India, and very low in East Asia). The gene did probably not evolve neutrally there, but no clear pattern appeared as to allow further explanations. Moreover, we could not have tested the <italic>gcc</italic> hypothesis as we did for Africa (see below) due to a lack of data on pastoralism levels in Asia. Note also that for Oceania and the Americas, the number of available samples was too low (<italic>n</italic> = 3 and <italic>n</italic> = 7, respectively) to get a representative pattern of LCT*P frequencies.</p>
+<p>In Africa, the distribution of LCT*P frequencies revealed an interesting pattern. Their correlation with longitude was not significant at the 1% level (<italic>p</italic> = 0.048), but we have found a positive and highly significant correlation with latitude (<italic>r</italic> = 0.329; <italic>p</italic> = 0.001). These results indicated that higher LCT*P frequencies were found in the north of the continent. Interestingly, this was where most of the African pastoral populations were located. We also calculated a linear correlation coefficient between LCT*P frequencies and pastoralism levels (PL) for 25 African populations (out of 38) for which PL data were available (<xref ref-type="supplementary-material" rid="pone.0006369.s004">Table S1</xref>) <xref ref-type="bibr" rid="pone.0006369-Murdock1">[19]</xref>. We found a very high and highly significant correlation of 0.548 (p = 0.0003), indicating that populations with a high level of pastoralism had also a high LCT*P frequency. This result was playing in favour of the <italic>gcc</italic> hypothesis. A Samova analysis confirmed this observation in revealing two significant boundaries which separated three groups of populations from the bulk of them: a first group including only the Fulani (with a LCT*P frequency of 100% and a PL of 80.5%), a second group composed by the Tutsi (LCT*P frequency = 74%, PL = 40.5%), various populations of Beja and the Twaregs (LCT*P frequency = 624%; average PL = 7913%), and a fourth group composed by all other populations (LCT*P frequency = 2125%, average PL = 4127%). A significant <italic>F<sub>CT</sub></italic> of 0.44 (<italic>p</italic>&lt;0.00001) was associated to this structure and was much higher than the <italic>F<sub>SC</sub></italic> value (0.038, <italic>p</italic>&lt;0.00001). This confirmed that the particular pattern of LCT*P frequencies in Africa might be explained (at least in part) by variation in the level of pastoralism.</p>
+<p>In Europe, a positive and significant correlation has been found between genetic and geographic distances with 33 populations considered (<italic>r</italic> = 0.26, <italic>p</italic> = 0.0001, <xref ref-type="table" rid="pone-0006369-t001">Table 1</xref>). Moreover, the correlation between LCT*P frequencies and latitude was positive and significant (<italic>r</italic> = 0.4, <italic>p</italic> = 0.001) while the correlation with longitude was not. The correlation with latitude was even higher when looking only at Indo-European populations (<italic>n</italic> = 26), which are considered by some authors <xref ref-type="bibr" rid="pone.0006369-Renfrew1">[20]</xref> to be the descendants of the first Neolithic farmers in Europe (<italic>r</italic> = 0.84, <italic>p</italic>&lt;0.0001). Therefore, selection on LCT*P would have occurred during the Neolithic Era, and mostly in populations from northern Europe. This fits the <italic>cal</italic> hypothesis whereby a vitamin-D deficiency due to insufficient sunlight in Northern Europe would have been compensated by high levels of lactose assimilation. However, we cannot exclude that the correlation found between LCT*P frequencies and latitude was due to population history rather than to natural selection, since human migrations created genetic clines along a southeast-to-northwest direction for many classical markers in Europe <xref ref-type="bibr" rid="pone.0006369-CavalliSforza1">[21]</xref>.</p>
+<p>To tackle this last question, we first studied the correlation, in Europe, between <italic>LCT</italic> variation and the genetic patterns observed for two other polymorphims, RH and HLA (loci A, B and DRB1, <xref ref-type="table" rid="pone-0006369-t002">Table 2</xref>). As mentioned above, if the evolution of LCT*P frequency was only driven by positive selection, its pattern of variation would certainly not be correlated to those of other independent genes– like RH and HLA <xref ref-type="bibr" rid="pone.0006369-SanchezMazas2">[22]</xref> - evolving through other evolutionary forces. Our results (<xref ref-type="table" rid="pone-0006369-t002">Table 2</xref>) revealed a high (0.42&lt;<italic>r</italic>&lt;0.53) and highly significant correlation between genetic and geographic variation for both RH <xref ref-type="bibr" rid="pone.0006369-CavalliSforza1">[21]</xref> and HLA (all loci), as well as between both systems (although not highly significant for RH) and <italic>LCT</italic> (0.2&lt;<italic>r</italic>&lt;0.62). They suggested that <italic>LCT</italic> variation in Europe was shaped at least in part by the same evolutionary forces as for RH and HLA, e.g. those linked to population history. On the other hand, they did not allow us excluding the influence of natural selection. To further investigate this question, we used a simulation method.</p>
+<table-wrap id="pone-0006369-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0006369.t002</object-id><label>Table 2</label><caption>
+<title>Comparison of LCT*P with other genetic polymorphisms (Europe).</title>
+</caption><!--===== Grouping alternate versions of objects =====--><alternatives><graphic id="pone-0006369-t002-2" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0006369.t002" xlink:type="simple"/><table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" colspan="1" rowspan="1">Locus</td>
+<td align="left" colspan="1" rowspan="1">n</td>
+<td align="left" colspan="1" rowspan="1">r<sub>gen,geo</sub></td>
+<td align="left" colspan="1" rowspan="1">P val.</td>
+<td align="left" colspan="1" rowspan="1">r<sub>loc-LCT*P</sub></td>
+<td align="left" colspan="1" rowspan="1">P val.</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" colspan="1" rowspan="1">HLA-A</td>
+<td align="left" colspan="1" rowspan="1">22</td>
+<td align="left" colspan="1" rowspan="1">0.528</td>
+<td align="left" colspan="1" rowspan="1">&lt;0.0001</td>
+<td align="left" colspan="1" rowspan="1">0.377</td>
+<td align="left" colspan="1" rowspan="1">0.0003</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">HLA-B</td>
+<td align="left" colspan="1" rowspan="1">22</td>
+<td align="left" colspan="1" rowspan="1">0.440</td>
+<td align="left" colspan="1" rowspan="1">0.0003</td>
+<td align="left" colspan="1" rowspan="1">0.476</td>
+<td align="left" colspan="1" rowspan="1">&lt;0.0001</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">HLA-DRB1</td>
+<td align="left" colspan="1" rowspan="1">14</td>
+<td align="left" colspan="1" rowspan="1">0.460</td>
+<td align="left" colspan="1" rowspan="1">0.003</td>
+<td align="left" colspan="1" rowspan="1">0.620</td>
+<td align="left" colspan="1" rowspan="1">&lt;0.0001</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">RH</td>
+<td align="left" colspan="1" rowspan="1">17</td>
+<td align="left" colspan="1" rowspan="1">0.420</td>
+<td align="left" colspan="1" rowspan="1">0.001</td>
+<td align="left" colspan="1" rowspan="1">0.200</td>
+<td align="left" colspan="1" rowspan="1">0.014</td>
+</tr>
+</tbody>
+</table></alternatives><table-wrap-foot><fn id="nt102"><p><italic>n</italic>: number of populations; <italic>r</italic><sub>gen,geo</sub>: correlation coefficient between genetic and geographic distances; <italic>r</italic><sub>loc-LCT*P</sub>: correlation coefficient between each locus and LCT*P genetic distances; <italic>P.val</italic>.: P-value for significance.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s2d">
+<title>Simulation</title>
+<p>We simulated independently for Indo-European and a few populations from the Near East the evolution of the frequency of a dominant allele associated to LP since the Neolithic transition in those populations (<xref ref-type="fig" rid="pone-0006369-g001">Figure 1</xref>). We repeated the simulation in varying the selection coefficient (<italic>s</italic>) for this allele, and we looked for the <italic>s</italic> value that explained at best the observed frequency (e.g. the value that gave the maximum likelihood) in each population. Four scenarios were simulated combining the two different demographic models described below (<italic>CD</italic> and <italic>DD</italic>) for the Neolithic transition with the two alternative hypotheses for selection at LCT*P (<italic>gcc</italic> and <italic>cal</italic>). The goal was to evaluate which of these combinations fitted at best the observed data.</p>
+<fig id="pone-0006369-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0006369.g001</object-id><label>Figure 1</label><caption>
+<title>Map location of European and Near-Eastern populations used for the computer simulation.</title>
+<p>Dots locate the populations used for computer simulation (Note that the Iran sample should be located farther East, outside of the map). When more than one population from the same country were used, the name of the corresponding city is given (see <xref ref-type="table" rid="pone-0006369-t003">Table 3</xref>). Below each population name, the approximate date of domestication and its standard error (years BP) are mentioned. When simulating the Demic Diffusion hypothesis (<italic>DD</italic>), dotted arrows show the simulated relations between population source and "new founded" populations (regarding initial frequency of LCT*P, see <xref ref-type="sec" rid="s4">Material and Methods</xref> and Supplementary Information). To facilitate reading, the dotted area regroups populations for which we use Greece as the source.</p>
+</caption><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0006369.g001" xlink:type="simple"/></fig>
+<p>The results are presented in <xref ref-type="fig" rid="pone-0006369-g002">Figure 2</xref> and <xref ref-type="supplementary-material" rid="pone.0006369.s005">Table S2</xref> (supplementary information). We noticed that genetic drift alone was able to explain LCT*P frequencies in southern Europe (0 is included in the 95% CI of <italic>s</italic>) in all four scenarios. More precisely, the absence of selection was compatible with LCT*P frequencies in all populations located south of latitude 41°N, except Valencia (the most western, <xref ref-type="fig" rid="pone-0006369-g002">Figure 2</xref>) and Sicily (<xref ref-type="fig" rid="pone-0006369-g002">Figure 2</xref>, <italic>CD/cal</italic>). On the contrary, higher coefficients were required in north-western populations for all scenarios tested, except for Poland (the most eastern, <xref ref-type="fig" rid="pone-0006369-g002">Figure 2</xref>). We could also noticed that the maximum likelihood was globally higher in the north-western than in the south-eastern populations (Supplementary Information, <xref ref-type="supplementary-material" rid="pone.0006369.s005">Table S2</xref>), revealing that a model with selection was particularly well adapted to the high LCT*P frequencies of northern Europe. This result was in agreement with the correlation found between latitude and LCT*P frequencies in Europe (<xref ref-type="table" rid="pone-0006369-t001">Table 1</xref>). Therefore, our study revealed that genetic drift alone could not explain the high LCT*P frequencies in northern and western Europeans, but that positive selection was required (under the specific model of local population demographic growth considered in this work).</p>
+<fig id="pone-0006369-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0006369.g002</object-id><label>Figure 2</label><caption>
+<title>Selection coefficients required to fit the observed estimates of lactase persistence frequencies.</title>
+<p>Each graph corresponds to one of the four scenario simulated: <italic>DD/gcc</italic>; <italic>DD/cal</italic>; <italic>CD/gcc</italic>; <italic>CD/cal</italic> (see <xref ref-type="sec" rid="s4">Material and Methods</xref>). Bars represent the 95% CI of the selection coefficient estimated for the population and the central point is the MLE (Maximum Likelihood Estimate). Populations are ordered from the highest (right) to the lowest (left) latitude: Danish (Dan), Irish (Iri), German from Bremen (Bre), German from Berlin (Ber), English (Eng), Polish (Pol), Czech (Cze), German from Stuttgart (Stu), German from Munchen (Mun), Austrian (Aus), French from Nantes (Nan), Swiss (Swi), Slovenian (Slo), Italian from Brescia (Bre), French from Nice (Nic), Spanish from Santiago de Compostela (Com), Italian from Roma (Rom), Italian from Napoli (Nap), Sardinian (Sas), Spanish from Valencia (Val), Greek (Gre), Sicilian (Sic), Cypriot (Cyp), Lebanese (Leb) and Iranian (Ira).</p>
+</caption><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0006369.g002" xlink:type="simple"/></fig>
+<p>Among the four tested scenarios, Demic Diffusion with calcium assimilation (<italic>DD/cal</italic>) had, by far, the highest probability of obtaining the observed data (99.1%), followed by <italic>CD/cal</italic> (0.9%). Both <italic>gcc</italic> scenarios (<italic>DD/gcc</italic> and <italic>CD/gcc</italic>) had an associated probability equal to 0%. The average selection coefficient for the 1,000 best simulations was 1.2% with a 95% percentile between 0.8% and 1.8%. Given the fact that all those estimations had been obtained with the <italic>cal</italic> selection model (which makes the assumption that selection increases with latitude), <italic>s</italic> thus varied across populations from 0% in the southern populations, until a maximum of 1.8% in the most Northern populations. From these observations, the interval [0.8%–1.8%] can be taken as a plausible range for LCT*P selection coefficient in Europe. Note that the estimated values of the selection coefficients were smaller when simulating the Neolithic demic diffusion (<italic>DD)</italic> compared to the cultural diffusion (<italic>CD</italic>). This may be explained by the “surfing phenomenon”, which describes how the frequency of a neutral or positively selected mutation may increase during a demographic expansion, if this mutation is carried by the pioneers <xref ref-type="bibr" rid="pone.0006369-Klopfstein1">[23]</xref>, <xref ref-type="bibr" rid="pone.0006369-Travis1">[24]</xref>. Computer simulations thus rejected a model of constant selection over the whole continent. In that sense, as our selection coefficients had been estimated independently, these independent estimates could have given possible intervals of the selection intensity for each population studied here. Furthermore, computer simulations showed that the high LCT*P frequencies observed in North and Western Europe may be explained by a selective pressure, possibly increasing with latitude, combined to the effect of demographic expansion during the Neolithic transition.</p>
+<p>Alternatively to a selection increasing with latitude, Gotherstrom et al proposed that dairy farming was more intensively developed in Central European populations belonging to the early Neolithic Linearbandkeramik culture (LBK) <xref ref-type="bibr" rid="pone.0006369-Gotherstrom1">[25]</xref>. In order to test this alternative hypothesis, we simulated two additional scenarios under the “<italic>lbk</italic>” selection hypothesis (<italic>DD/lbk</italic> and <italic>CD/lbk</italic>) to see if the resulting simulations better fit the data than the four previously tested scenarios. Under the <italic>lbk</italic> selection hypothesis, we assumed that the selection coefficient was higher in the populations belonging to the former LBK area <xref ref-type="bibr" rid="pone.0006369-Zvelebil1">[26]</xref> than in other populations. We tested combinations of values between 1% and 3% in the five “<italic>lbk</italic>” populations from our database (Munchen, Stuttgart and Berlin - all in Germany - Czech and Polish) and values between 0% and 0.8% in all other populations (see also Supplementary information for more details). 360,000 new simulations were performed under this new scheme. The Approximate Bayesian Computation approach (ABC) estimated a probability of 0% for both <italic>DD/lbk</italic> and <italic>CD/lbk</italic> scenarios compared to the four previously simulated ones. We can thus not conclude that the hypothesis of a higher selective pressure on LP in central and north Europe due to more intensive cattle exploitation is a better explanation of the current distribution of LP in Europe, compared to the <italic>cal</italic> and <italic>gcc</italic> hypotheses.</p>
+</sec></sec><sec id="s3">
+<title>Discussion</title>
+<sec id="s3a">
+<title>Lactase persistence and population history</title>
+<p>Analyses performed on the large dataset gathered in this work did not show any strong correlation between LCT*P genetic distances and geographic distances among populations at the worldwide scale. This suggests that the evolution of the lactase gene cannot be simply explained by a model of isolation by distance. Indeed, the significant correlation coefficients found between LCT*P frequencies, latitude and longitude are better explained by a pronounced genetic differentiation between a few geographically distant populations than by continuous patterns of frequency variation. We thus analysed our data regarding the two main selective hypotheses proposed to account for the special pattern of LCT*P distribution, <italic>gene-culture coevolution</italic> (<italic>gcc</italic>) <xref ref-type="bibr" rid="pone.0006369-McCracken1">[8]</xref>, <xref ref-type="bibr" rid="pone.0006369-Simoons1">[9]</xref> and <italic>calcium assimilation</italic> (<italic>cal</italic>) <xref ref-type="bibr" rid="pone.0006369-Flatz1">[10]</xref>.</p>
+<p>The <italic>gcc</italic> hypothesis is favoured by the high and significant correlation found between pastoralism levels and LCT*P frequencies in 25 African populations, as well as by the Samova analysis, which reveals a significant genetic boundary between pastoral populations and the others. This result agrees with Holden and Mace's conclusion <xref ref-type="bibr" rid="pone.0006369-Holden1">[11]</xref>. In Europe, the gradient of LCT*P frequencies could be explained either by a positive selection on this allele or by population history, or both. As comparisons between <italic>LCT</italic>, RH and HLA lead to quite similar results, it was possible to conclude to a significant effect of population history, but not to exclude a significant selection pressure on the lactase gene. We thus simulated the evolution of LCT*P according to various parameters (genetic drift, demographic growth, positive selection and the time since the introduction of domestication).</p>
+</sec><sec id="s3b">
+<title>Simulated scenarios and selection coefficient values</title>
+<p>The results of our simulation show that the current frequencies of LCT*P in the North-western part of Europe are too high to be only due to genetic drift. We estimated the 95% upper limit for LCT*P selection coefficients as large as 3% in some populations (<xref ref-type="fig" rid="pone-0006369-g002">Figure 2</xref>). Our average estimates for <italic>s</italic> (0.8%–1.8%) are compatible with previous studies (i.e. 1.4–1.5%) <xref ref-type="bibr" rid="pone.0006369-Bersaglieri1">[7]</xref> and also indicate that selection pressure may have been extremely different in various populations. We also confirm the fact (mentioned above) that population history played an important role in shaping the lactase persistence distribution in Europe, since the demic diffusion (<italic>DD</italic>) scenario associated to the <italic>cal</italic> selection model is the most compatible with the observed data (&gt;99%). It is important to note that the <italic>DD</italic> scenarios tested here cannot be assimilated to the classical wave-of-advance model <xref ref-type="bibr" rid="pone.0006369-CavalliSforza1">[21]</xref> because the number of steps considered for the transmission of LCT*P along the route of the Neolithic spread in Europe is low. Actually, if the number of steps was higher, and if founder effects were also considered like in the case of spatially explicit-simulations (e.g. <xref ref-type="bibr" rid="pone.0006369-Currat1">[16]</xref>), the role of demography in increasing the frequency of LCT*P would certainly be even more pronounced. In that case, we would expect the selection coefficients to be smaller than our present estimates.</p>
+<p>While a strong selective effect on LCT*P is suggested in Northern Europe, its cause remains to be clarified. Actually the <italic>cal</italic> hypothesis is possible because simulations strongly suggest a signature of selection along the latitude, but one can imagine another cause of variation for the selection coefficient, such as nutritional selection due to specific diets or economies in different regions. Indeed, while North-western European populations were the last (in continental Europe) to introduce cattle domestication, dairy farming was more intensively developed in those regions <xref ref-type="bibr" rid="pone.0006369-Gotherstrom1">[25]</xref>. This could potentially explain the higher frequencies of LCT*P in populations from Northern Europe. However, our simulations of a higher selective pressure in the former LBK region (central and north Europe) do not support this hypothesis. An alternative hypothesis would be that a strong genetic structure for LCT*P was already present during the Mesolithic Era and lead to differential milk consumption in European populations (“The reverse cause hypothesis” <xref ref-type="bibr" rid="pone.0006369-Simoons1">[9]</xref>, <xref ref-type="bibr" rid="pone.0006369-Nei1">[27]</xref>). This hypothesis cannot formally be excluded, although the arguments favouring this scenario are yet too scarce <xref ref-type="bibr" rid="pone.0006369-Burger1">[28]</xref>.</p>
+<p>Of course, it is important to keep in mind the limits of the model tested in this study. The choice of parameters was very difficult and we had to resort to some approximations. Using a starting value of 1%, we made the assumption that LCT*P was present but not frequent before the Neolithic transition in Europe, as suggested by the rare data available <xref ref-type="bibr" rid="pone.0006369-Burger1">[28]</xref>. Note that this value is higher than the 1‰ used in two other studies <xref ref-type="bibr" rid="pone.0006369-Enattah2">[4]</xref>, <xref ref-type="bibr" rid="pone.0006369-Bersaglieri1">[7]</xref>. Another source of imprecision was the time elapsed since the introduction of animal domestication based on archaeological data, which often depends on indirect evidence. This problem is amplified by the confusion, in the literature, between plant and animal domestication. Also, all effective population sizes were fixed to 1,000 individuals in the first generation and increased until reaching a carrying capacity of 10,000, which is a huge simplification. The effective size of European populations since the Neolithic Era was certainly higher than 10,000; but the chosen value is conservative to detect selection, as the higher the effective population size, the weaker the genetic drift and, consequently, the smaller the probability for a rare mutation to reach a high frequency without selection. This has been confirmed with simulations using smaller population sizes (from 100 to 1,000; 500 to 2,000, results not shown). Despite our simplifications (which were the same for all populations), the main results are consistent over all sets of simulations performed. An important improvement of our study would be to take into account the spatial expansion of populations during their Neolithic settlement, as well as migration and possible admixture between hunter-gatherers and Neolithic farmers <xref ref-type="bibr" rid="pone.0006369-Currat1">[16]</xref>. It would certainly lead to a more precise estimation of the selection coefficient. Such extensions will certainly be possible in the near future and be useful to study other potentially selected genes, like that of the Duffy blood group.</p>
+<p>Our study highlights the difficulty to evaluate the probability of the alternative hypotheses of selection for LP in Europe because a correlation between LP frequency and latitude is expected under all of them and also because they are not mutually exclusive. Indeed, as the basic assumption is that the selective pressure on LP started at the same time than milk consumption, all three selection hypotheses tested here (<italic>cal</italic>, <italic>gcc</italic> and <italic>lbk</italic>) are strongly linked to the Neolithic diffusion. Both a selection coefficient increasing with latitude and a demographic spread of LCT*P would lead to identical signatures into the northern European populations compared to the southern ones. Consequently it is very difficult to disentangle the effects of demography from those of selection. One key to differentiate with more confidence the alternative selective hypotheses would be to get more samples from the Iberian Peninsula because in this particular region, LP frequency is expected to be very low under <italic>cal</italic> or <italic>lbk</italic> hypotheses and certainly higher under <italic>gcc</italic>. Another key would be to get more samples from other regions of the world, especially from Asia because cross-continental analyses will bring a more precise understanding of LP diffusion.</p>
+</sec><sec id="s3c">
+<title>Conclusion</title>
+<p>If the <italic>gcc</italic> hypothesis is compatible with LP distribution in Africa, the <italic>cal</italic> hypothesis, in conjunction with demographic effects, better explained its distribution in Europe. We show that selective pressure on LP was stronger in Northern Europe than in the South. This could possibly be explained by the fact that carriers of the lactase persistence allele(s) are favoured in high-latitude regions but eventually by another reason that still needs to be determined. Moreover, we show that the European Neolithic transition played an important role in the diffusion of LP over the continent as revealed by the simulation results but also by the facts that: <italic>i</italic>) the correlation between <italic>LCT</italic> and other independent loci submitted to distinct evolutionary forces (RH and HLA) is significant; <italic>ii</italic>) the sample from Valencia, in the Western part of Europe, is located at low latitude (below 41°N) but has an estimated selection coefficient above 0 (see <xref ref-type="fig" rid="pone-0006369-g002">Figure 2</xref>); In this case, selection due to the latitude cannot be invoked while the frequency of LCT*P may have increased because of the Neolithic transition, Valencia being located at one extremity of this expansion process; Indeed, in case of range expansion during the Neolithic transition in Europe, the frequency of LCT*P may thus have increased gradually to a particularly large extent if this allele was maintained by selection in the early Neolithic populations, i.e. at the front of the Neolithic expansion. This hypothesis is compatible with the inferred ages for the <italic>−13,910*T</italic> mutation (between 2,188 and 20,650 years <xref ref-type="bibr" rid="pone.0006369-Bersaglieri1">[7]</xref> and between 7,450 and 12,300 years <xref ref-type="bibr" rid="pone.0006369-Bersaglieri1">[7]</xref>,<xref ref-type="bibr" rid="pone.0006369-Coelho1">[14]</xref>). Our own results, based on statistical analyses and simulation of genetic evolution on a large dataset of LP frequencies, are thus complementary to those obtained from molecular analyses done at high resolution on this gene <xref ref-type="bibr" rid="pone.0006369-Ingram1">[6]</xref>.</p>
+</sec></sec><sec id="s4">
+<title>Materials and Methods</title>
+<sec id="s4a">
+<title>Population data</title>
+<p>We studied 115 worldwide populations tested for LP: 38 African, 34 Asian, 33 European (among which 26 Indo-European populations), 7 American and 3 Oceanian <xref ref-type="bibr" rid="pone.0006369-Holden1">[11]</xref>, <xref ref-type="bibr" rid="pone.0006369-Bowman1">[29]</xref>, <xref ref-type="bibr" rid="pone.0006369-Flatz2">[30]</xref>, <xref ref-type="bibr" rid="pone.0006369-Roychoudhury1">[31]</xref>. These data (<xref ref-type="supplementary-material" rid="pone.0006369.s004">Table S1</xref> in Supplementary Information) were gathered from the literature. For our correlation study, we also used a large set of data on European populations tested for RH (frequencies of 8 Dd/Cc/Ee haplotypes) and HLA (allelic frequencies at loci A, B and DRB1) polymorphisms <xref ref-type="bibr" rid="pone.0006369-CavalliSforza1">[21]</xref>, <xref ref-type="bibr" rid="pone.0006369-SanchezMazas3">[32]</xref>, <xref ref-type="bibr" rid="pone.0006369-Solberg1">[33]</xref>. RH and HLA were chosen because the evolution of these systems was probably driven by different forces than <italic>LCT</italic>. RH may have undergone a complex selective effect due to foeto-maternal incompatibility, but its frequency patterns are highly correlated to geography at the world scale <xref ref-type="bibr" rid="pone.0006369-CavalliSforza1">[21]</xref>, suggesting a nearly-neutral mode of evolution. HLA is known to be submitted to balancing selection <xref ref-type="bibr" rid="pone.0006369-Meyer1">[34]</xref>, although probably not to a similar extent at all loci <xref ref-type="bibr" rid="pone.0006369-SanchezMazas2">[22]</xref>, <xref ref-type="bibr" rid="pone.0006369-Solberg1">[33]</xref> and without blurring the signatures of population history <xref ref-type="bibr" rid="pone.0006369-Mack1">[35]</xref>, <xref ref-type="bibr" rid="pone.0006369-SanchezMazas4">[36]</xref>, <xref ref-type="bibr" rid="pone.0006369-SanchezMazas5">[37]</xref>. A significant correlation between <italic>LCT</italic> and RH or HLA genetic patterns is thus expected only if these genes shared a common evolution linked, at least in part, to human population history, and not distorted too much by natural selection.</p>
+</sec><sec id="s4b">
+<title>LP (lactase persistence) frequencies</title>
+<p>Depending on the sources consulted for this study <xref ref-type="bibr" rid="pone.0006369-Holden1">[11]</xref>, <xref ref-type="bibr" rid="pone.0006369-Bowman1">[29]</xref>, <xref ref-type="bibr" rid="pone.0006369-Flatz2">[30]</xref>, <xref ref-type="bibr" rid="pone.0006369-Roychoudhury1">[31]</xref>, we directly used published LCT*P frequencies or recomputed them from LP phenotypes by assuming Hardy-Weinberg equilibrium. Note that there are several methods diagnosing LP. One of the most reliable is the quantification of breath H<sub>2</sub> after ingestion of lactose <xref ref-type="bibr" rid="pone.0006369-Flatz2">[30]</xref>. However, this method can be influenced by several factors like tobacco smoking or antibiotics. Moreover, malnutrition, as well as viral infections and inflammation of the intestine are known to reduce lactase expression, leading to an incorrect diagnosis <xref ref-type="bibr" rid="pone.0006369-Troelsen1">[3]</xref>. Thus, one should be aware that all these factors are responsible for a certain amount of imprecision while estimating LCT*P frequencies, as it is the case in this study. However, frequency differences due to that imprecision are certainly negligible compared to the frequency differences observed between populations.</p>
+</sec><sec id="s4c">
+<title>Pastoralism levels</title>
+<p>Pastoralism levels (PL) are used in our analysis of lactase persistence variation in Africa. These values, taken from Murdock's Ethnographic Atlas <xref ref-type="bibr" rid="pone.0006369-Murdock1">[19]</xref>, roughly correspond to the percent of subsistence due to milk consumption in each population.</p>
+</sec><sec id="s4d">
+<title>Geographic coordinates and distances</title>
+<p>The geographic coordinates of each population were used for the correlation analyses. We determined those coordinates from population localities by using the “Getty Thesaurus of Geographic Names” (<ext-link ext-link-type="uri" xlink:href="http://www.getty.edu" xlink:type="simple">http://www.getty.edu</ext-link>). If no locality was indicated in the literature, we used the central coordinates of the corresponding country. Those coordinates were also used to calculate geographic great-circle distances between populations using a homemade program <xref ref-type="bibr" rid="pone.0006369-Ray1">[38]</xref>.</p>
+</sec><sec id="s4e">
+<title>Genetic Distances</title>
+<p>For a given locus, genetic distances between two populations were calculated according to where <italic>x<sub>i</sub></italic><sub>,</sub> and <italic>y<sub>i</sub></italic> are the frequencies of allele <italic>i</italic> in the populations <italic>x</italic> and <italic>y</italic>, respectively, and <italic>k</italic> is the total number of alleles at that locus <xref ref-type="bibr" rid="pone.0006369-Prevosti1">[39]</xref>.</p>
+</sec><sec id="s4f">
+<title>Samova</title>
+<p>The Samova analysis <xref ref-type="bibr" rid="pone.0006369-Dupanloup1">[40]</xref> allows to determine genetic boundaries between <italic>n</italic> populations by using both their geographic location and their allelic frequencies at a given locus. The algorithm tries to find the distribution of populations among <italic>k</italic> groups defined <italic>a priori</italic> that maximises the <italic>F<sub>CT</sub></italic> index (proportion of total genetic variation due to differences among groups of populations). The group structure is modified 10,000 times and the largest <italic>F<sub>CT</sub></italic> value is retained as the best structure. The <italic>F<sub>SC</sub></italic> value (proportion of genetic variation explained by differences between populations within each group) associated to the optimal structure, as well as <italic>p</italic> values for both indexes, are also given.</p>
+</sec><sec id="s4g">
+<title>Correlations</title>
+<p>We calculated a linear correlation coefficient (<italic>r</italic>) between allele frequencies and either latitudes or longitudes, and we assessed its significance by using a Student's <italic>t</italic> test <xref ref-type="bibr" rid="pone.0006369-Sokal1">[41]</xref>. As significance may be inflated using a <italic>t</italic> test due to a possible non-independence between the data points (allele frequencies of different populations may share some complex pattern of covariance driven by population history), we chose a significance level of 1% (rather than 5%) to reduce type I errors. We also performed Mantel tests <xref ref-type="bibr" rid="pone.0006369-Mantel1">[42]</xref> to assess the significance of the correlation between genetic and geographic distance matrices, as well as between two genetic distance matrices obtained for two different genetic systems.</p>
+</sec><sec id="s4h">
+<title>Introduction of domestication in European populations</title>
+<p>To provide a lower limit for the beginning of milk consumption in each European population, we used a large documented archaeological database including the earliest dates for domestication in the different regions of Europe <xref ref-type="bibr" rid="pone.0006369-Pinhasi1">[43]</xref>. We determined for each population a specific date for the introduction of domestication based on detailed archaeological studies performed at proximity of the population's geographic location (<xref ref-type="table" rid="pone-0006369-t003">Table 3</xref>). We can notice from the standard errors associated to the estimated dates (<xref ref-type="fig" rid="pone-0006369-g001">Figure 1</xref>) that domestication started at a distinct time in each region. It is worth mentioning, also, that these dates correspond to the introduction of either animal or plant domestication, or both, because the distinction between the two is not always possible from the archaeological records. Moreover, we considered that animal domestication started in the Near East around 10,000 years BP (Before Present), a likely estimation for cattle <xref ref-type="bibr" rid="pone.0006369-Edwards1">[44]</xref>, <xref ref-type="bibr" rid="pone.0006369-Helmer1">[45]</xref>. Finally, we used a generation time of 27 years <xref ref-type="bibr" rid="pone.0006369-Gage1">[46]</xref> to calculate the number of generations during which LP was potentially selected since the beginning of milk consumption in Europe.</p>
+<table-wrap id="pone-0006369-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0006369.t003</object-id><label>Table 3</label><caption>
+<title>Parameters for simulated populations.</title>
+</caption><!--===== Grouping alternate versions of objects =====--><alternatives><graphic id="pone-0006369-t003-3" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0006369.t003" xlink:type="simple"/><table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" colspan="1" rowspan="1">N</td>
+<td align="left" colspan="1" rowspan="1">Population (location)</td>
+<td align="left" colspan="1" rowspan="1">Lat</td>
+<td align="left" colspan="1" rowspan="1">Long</td>
+<td align="left" colspan="1" rowspan="1">Lactase persistence frequency</td>
+<td align="left" colspan="1" rowspan="1">Simulated number of generation</td>
+<td align="left" colspan="1" rowspan="1">L values</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" colspan="1" rowspan="1">105</td>
+<td align="left" colspan="1" rowspan="1">Iranian</td>
+<td align="left" colspan="1" rowspan="1">32.0</td>
+<td align="left" colspan="1" rowspan="1">53.0</td>
+<td align="left" colspan="1" rowspan="1">0.171</td>
+<td align="left" colspan="1" rowspan="1">370</td>
+<td align="left" colspan="1" rowspan="1">0.000</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">225</td>
+<td align="left" colspan="1" rowspan="1">Lebanese</td>
+<td align="left" colspan="1" rowspan="1">33.8</td>
+<td align="left" colspan="1" rowspan="1">35.8</td>
+<td align="left" colspan="1" rowspan="1">0.111</td>
+<td align="left" colspan="1" rowspan="1">370</td>
+<td align="left" colspan="1" rowspan="1">0.075</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">75</td>
+<td align="left" colspan="1" rowspan="1">Syrian</td>
+<td align="left" colspan="1" rowspan="1">35.0</td>
+<td align="left" colspan="1" rowspan="1">38.0</td>
+<td align="left" colspan="1" rowspan="1">0.046</td>
+<td align="left" colspan="1" rowspan="1">370</td>
+<td align="left" colspan="1" rowspan="1">0.126</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">67</td>
+<td align="left" colspan="1" rowspan="1">Cypriot</td>
+<td align="left" colspan="1" rowspan="1">35.0</td>
+<td align="left" colspan="1" rowspan="1">33.0</td>
+<td align="left" colspan="1" rowspan="1">0.152</td>
+<td align="left" colspan="1" rowspan="1">355</td>
+<td align="left" colspan="1" rowspan="1">0.126</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">100</td>
+<td align="left" colspan="1" rowspan="1">Sicilian</td>
+<td align="left" colspan="1" rowspan="1">37.5</td>
+<td align="left" colspan="1" rowspan="1">14.0</td>
+<td align="left" colspan="1" rowspan="1">0.157</td>
+<td align="left" colspan="1" rowspan="1">278</td>
+<td align="left" colspan="1" rowspan="1">0.230</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">200</td>
+<td align="left" colspan="1" rowspan="1">Greek</td>
+<td align="left" colspan="1" rowspan="1">39.0</td>
+<td align="left" colspan="1" rowspan="1">22.0</td>
+<td align="left" colspan="1" rowspan="1">0.134</td>
+<td align="left" colspan="1" rowspan="1">315</td>
+<td align="left" colspan="1" rowspan="1">0.293</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">119</td>
+<td align="left" colspan="1" rowspan="1">Spanish (Valencia)</td>
+<td align="left" colspan="1" rowspan="1">39.5</td>
+<td align="left" colspan="1" rowspan="1">−0.4</td>
+<td align="left" colspan="1" rowspan="1">0.471</td>
+<td align="left" colspan="1" rowspan="1">281</td>
+<td align="left" colspan="1" rowspan="1">0.314</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">100</td>
+<td align="left" colspan="1" rowspan="1">Sardinian (Sassari)</td>
+<td align="left" colspan="1" rowspan="1">40.7</td>
+<td align="left" colspan="1" rowspan="1">8.6</td>
+<td align="left" colspan="1" rowspan="1">0.073</td>
+<td align="left" colspan="1" rowspan="1">280</td>
+<td align="left" colspan="1" rowspan="1">0.364</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">178</td>
+<td align="left" colspan="1" rowspan="1">Italian (Napoli)</td>
+<td align="left" colspan="1" rowspan="1">40.8</td>
+<td align="left" colspan="1" rowspan="1">14.3</td>
+<td align="left" colspan="1" rowspan="1">0.082</td>
+<td align="left" colspan="1" rowspan="1">289</td>
+<td align="left" colspan="1" rowspan="1">0.368</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">839</td>
+<td align="left" colspan="1" rowspan="1">Italian (Roma)</td>
+<td align="left" colspan="1" rowspan="1">41.9</td>
+<td align="left" colspan="1" rowspan="1">12.5</td>
+<td align="left" colspan="1" rowspan="1">0.171</td>
+<td align="left" colspan="1" rowspan="1">285</td>
+<td align="left" colspan="1" rowspan="1">0.414</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">338</td>
+<td align="left" colspan="1" rowspan="1">Spanish (Santiago de Compostela)</td>
+<td align="left" colspan="1" rowspan="1">42.9</td>
+<td align="left" colspan="1" rowspan="1">−8.6</td>
+<td align="left" colspan="1" rowspan="1">0.417</td>
+<td align="left" colspan="1" rowspan="1">282</td>
+<td align="left" colspan="1" rowspan="1">0.456</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">55</td>
+<td align="left" colspan="1" rowspan="1">French (Nice)</td>
+<td align="left" colspan="1" rowspan="1">43.7</td>
+<td align="left" colspan="1" rowspan="1">7.3</td>
+<td align="left" colspan="1" rowspan="1">0.352</td>
+<td align="left" colspan="1" rowspan="1">270</td>
+<td align="left" colspan="1" rowspan="1">0.490</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">208</td>
+<td align="left" colspan="1" rowspan="1">Italian (Brescia)</td>
+<td align="left" colspan="1" rowspan="1">45.6</td>
+<td align="left" colspan="1" rowspan="1">10.2</td>
+<td align="left" colspan="1" rowspan="1">0.286</td>
+<td align="left" colspan="1" rowspan="1">275</td>
+<td align="left" colspan="1" rowspan="1">0.569</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">153</td>
+<td align="left" colspan="1" rowspan="1">Slovenian (Ljubljana)</td>
+<td align="left" colspan="1" rowspan="1">46.1</td>
+<td align="left" colspan="1" rowspan="1">14.5</td>
+<td align="left" colspan="1" rowspan="1">0.490</td>
+<td align="left" colspan="1" rowspan="1">275</td>
+<td align="left" colspan="1" rowspan="1">0.590</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">51</td>
+<td align="left" colspan="1" rowspan="1">Swiss (Geneva)</td>
+<td align="left" colspan="1" rowspan="1">46.2</td>
+<td align="left" colspan="1" rowspan="1">6.2</td>
+<td align="left" colspan="1" rowspan="1">0.423</td>
+<td align="left" colspan="1" rowspan="1">274</td>
+<td align="left" colspan="1" rowspan="1">0.594</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">102</td>
+<td align="left" colspan="1" rowspan="1">French (Nantes)</td>
+<td align="left" colspan="1" rowspan="1">47.2</td>
+<td align="left" colspan="1" rowspan="1">−1.6</td>
+<td align="left" colspan="1" rowspan="1">0.516</td>
+<td align="left" colspan="1" rowspan="1">243</td>
+<td align="left" colspan="1" rowspan="1">0.636</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">528</td>
+<td align="left" colspan="1" rowspan="1">Austrian (Innsbruck)</td>
+<td align="left" colspan="1" rowspan="1">47.3</td>
+<td align="left" colspan="1" rowspan="1">11.4</td>
+<td align="left" colspan="1" rowspan="1">0.551</td>
+<td align="left" colspan="1" rowspan="1">262</td>
+<td align="left" colspan="1" rowspan="1">0.640</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">221</td>
+<td align="left" colspan="1" rowspan="1">German (Munchen)</td>
+<td align="left" colspan="1" rowspan="1">48.1</td>
+<td align="left" colspan="1" rowspan="1">11.6</td>
+<td align="left" colspan="1" rowspan="1">0.632</td>
+<td align="left" colspan="1" rowspan="1">273</td>
+<td align="left" colspan="1" rowspan="1">0.674</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">136</td>
+<td align="left" colspan="1" rowspan="1">German (Stuttgart)</td>
+<td align="left" colspan="1" rowspan="1">48.4</td>
+<td align="left" colspan="1" rowspan="1">9.1</td>
+<td align="left" colspan="1" rowspan="1">0.515</td>
+<td align="left" colspan="1" rowspan="1">264</td>
+<td align="left" colspan="1" rowspan="1">0.686</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">200</td>
+<td align="left" colspan="1" rowspan="1">Czech (Plzen)</td>
+<td align="left" colspan="1" rowspan="1">49.8</td>
+<td align="left" colspan="1" rowspan="1">13.4</td>
+<td align="left" colspan="1" rowspan="1">0.646</td>
+<td align="left" colspan="1" rowspan="1">270</td>
+<td align="left" colspan="1" rowspan="1">0.745</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">275</td>
+<td align="left" colspan="1" rowspan="1">Polish</td>
+<td align="left" colspan="1" rowspan="1">52.0</td>
+<td align="left" colspan="1" rowspan="1">20.0</td>
+<td align="left" colspan="1" rowspan="1">0.388</td>
+<td align="left" colspan="1" rowspan="1">276</td>
+<td align="left" colspan="1" rowspan="1">0.837</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">246</td>
+<td align="left" colspan="1" rowspan="1">German (Berlin)</td>
+<td align="left" colspan="1" rowspan="1">52.5</td>
+<td align="left" colspan="1" rowspan="1">13.4</td>
+<td align="left" colspan="1" rowspan="1">0.527</td>
+<td align="left" colspan="1" rowspan="1">265</td>
+<td align="left" colspan="1" rowspan="1">0.858</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">162</td>
+<td align="left" colspan="1" rowspan="1">English (Birmingham)</td>
+<td align="left" colspan="1" rowspan="1">52.5</td>
+<td align="left" colspan="1" rowspan="1">−1.9</td>
+<td align="left" colspan="1" rowspan="1">0.776</td>
+<td align="left" colspan="1" rowspan="1">224</td>
+<td align="left" colspan="1" rowspan="1">0.858</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">441</td>
+<td align="left" colspan="1" rowspan="1">German (Bremen)</td>
+<td align="left" colspan="1" rowspan="1">53.1</td>
+<td align="left" colspan="1" rowspan="1">8.8</td>
+<td align="left" colspan="1" rowspan="1">0.714</td>
+<td align="left" colspan="1" rowspan="1">257</td>
+<td align="left" colspan="1" rowspan="1">0.883</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">50</td>
+<td align="left" colspan="1" rowspan="1">Irish (Dublin)</td>
+<td align="left" colspan="1" rowspan="1">53.3</td>
+<td align="left" colspan="1" rowspan="1">−6.3</td>
+<td align="left" colspan="1" rowspan="1">0.800</td>
+<td align="left" colspan="1" rowspan="1">212</td>
+<td align="left" colspan="1" rowspan="1">0.891</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">761</td>
+<td align="left" colspan="1" rowspan="1">Danish (Copenhagen)</td>
+<td align="left" colspan="1" rowspan="1">55.9</td>
+<td align="left" colspan="1" rowspan="1">12.4</td>
+<td align="left" colspan="1" rowspan="1">0.827</td>
+<td align="left" colspan="1" rowspan="1">204</td>
+<td align="left" colspan="1" rowspan="1">1.000</td>
+</tr>
+</tbody>
+</table></alternatives><table-wrap-foot><fn id="nt103"><p><italic>n</italic>: sample size; <italic>Lat</italic>: latitude; <italic>Long</italic>: longitude; <italic>L values</italic>: coefficient used to increase the strength of selection with latitude as follow <italic>s<sub>Lat</sub></italic> = <italic>sL</italic> where <italic>s<sub>Lat</sub></italic> is the simulated selection coefficient in one given population and <italic>s</italic> the coefficient of selection tested overall (see Supplementary Information for further details).</p></fn></table-wrap-foot></table-wrap></sec><sec id="s4i">
+<title>Computer simulation program</title>
+<p>We investigated a possible effect of positive selection on LCT*P evolution in Europe by estimating which values of selection coefficient were necessary to explain the observed LCT*P frequencies. To that aim, we used a homemade simulation software called SELECTOR. Our forward algorithm takes into account genetic drift, demographic growth, positive selection, the time elapsed since the possible start of milk consumption in different regions of Europe, and various initial LCT*P frequencies. The program simulates the evolution of a positively selected allele in a population of <italic>N</italic> diploid individuals. Each step of the simulation corresponds to a discrete generation and each genotype of the current generation is drawn by considering the allele frequency in the precedent generation. In order to reflect the advantage conferred to LP, the fitness associated to homozygotes or heterozygotes for LCT*P is set to 1 while the fitness associated to the alternative genotype is set to 1-<italic>s</italic>, where <italic>s</italic> is the selection coefficient. Further details about the algorithm are given in the Supplementary Information.</p>
+<p>For each simulated population, the input parameters are the following:</p>
+<list list-type="alpha-lower"><list-item>
+<p>The <italic>number of generations</italic> since the introduction of plant or animal domestication in the population (<xref ref-type="fig" rid="pone-0006369-g001">Figure 1</xref>, <xref ref-type="supplementary-material" rid="pone.0006369.s002">Figure S1</xref> and <xref ref-type="table" rid="pone-0006369-t003">Table 3</xref>).</p>
+</list-item><list-item>
+<p>The <italic>initial LCT*P frequency</italic>: this parameter was sampled out of a normal distribution with a mean of 1% for populations from the Near-East (Syrian, Lebanese, Iranian). For all other populations, this mean was either kept constant or given different values according to the scenario simulated (<italic>CD</italic> or <italic>DD</italic>, see below).</p>
+</list-item><list-item>
+<p>The <italic>size of the populations</italic>: the demographic growth was logistically regulated within each population (see Supplementary Information). Moreover, results were also obtained for a constant population size (<xref ref-type="supplementary-material" rid="pone.0006369.s003">Figure S2</xref> in Supplementary Information for details).</p>
+</list-item><list-item>
+<p>The <italic>selection coefficient</italic>: for each population from Europe and the Near-East, a range of <italic>selection coefficients</italic> (between 0% and 3%) was tested in order to find which value(s) best explained the observed LCT*P frequencies. Depending on the selective model considered, the tested selection coefficient was either kept constant for all simulated populations (<italic>gcc</italic> model) or increased with <italic>L</italic>, a factor related to the latitude of a population (<italic>cal</italic> model, see <xref ref-type="table" rid="pone-0006369-t003">Table 3</xref> and Supplementary Information). Additionally, a third scenario was considered (<italic>lbk</italic> model), in which a combination of two selection coefficients were tested to represent the hypothesis that dairy farming was more intensively developed in Central European populations belonging to the early Neolithic Linearbandkeramik culture (LBK) (see <xref ref-type="sec" rid="s3">discussion</xref>). To this aim, our European samples was separated in two population groups: the ones that are located on the geographic area of the former Neolithic LBK culture, where the selection coefficients vary between 1% and 3%, and all the other populations, in which the selection coefficients vary between 0% and 0.8%.</p>
+</list-item><list-item>
+<p>The <italic>number of iterations</italic>: the program was run 10,000 times for each selection coefficient tested to obtain an empirical distribution of frequencies expected under each scenario.</p>
+</list-item></list>
+<p>Following Currat et al. <xref ref-type="bibr" rid="pone.0006369-Currat2">[47]</xref>, we performed a maximum likelihood test (independently in each population) to compare the observed LCT*P frequencies to those simulated by our program, and to evaluate which selection coefficient(s) best explained the observed data. Both the value of <italic>s</italic> giving the highest proportion of simulations “compatible” with the observed frequency (i.e. the maximum likelihood value of <italic>s</italic>) and its 95% CI were determined (See Supplementary Information for further details).</p>
+</sec><sec id="s4j">
+<title>Simulated scenarios</title>
+<p>In order to consider possible uncertainties about the exact impact of the Neolithic transition on the European genetic pool <xref ref-type="bibr" rid="pone.0006369-Belle1">[48]</xref>, two alternative extreme demographic scenarios were simulated:</p>
+<list list-type="order"><list-item>
+<p>Cultural diffusion (<italic>CD</italic>): this model makes the assumption that the Neolithic transition was a cultural transmission of technologies without large movement of populations (by opposition to the Demic Diffusion model below). It implies that the know-how of the early farmers travelled over Europe from the Near East but not their genes. Consequently, all populations are simulated without any connection between them (i.e. possible migrations). In this case, our computer simulation program draws an initial frequency of LCT*P from a normal distribution with a mean equal to 1% in every population. We thus assumed that LCT*P was rare all over Europe and the Near East (average frequency of 1%) before the Neolithic transition. According to this model, simulated populations only differ among each other by the duration of selection since the introduction of farming (<xref ref-type="table" rid="pone-0006369-t003">Table 3</xref>).</p>
+</list-item><list-item>
+<p>Demic diffusion (<italic>DD</italic>): this model makes the assumption that the Neolithic transition was mainly due to the spread of early farmers from the Near East to the North and Western edges of Europe. It implies that the genes of the first farmers travelled over Europe during the Neolithic transition. To simulate this spread of genes, populations are connected to each other along the likely route of the Neolithic diffusion (<xref ref-type="fig" rid="pone-0006369-g001">Figure 1</xref> and <xref ref-type="supplementary-material" rid="pone.0006369.s002">Figure S1</xref> in supplementary information). Except for the three Near Eastern populations (Syrian, Lebanese and Iranian), all other populations are associated to a Neolithic source population. For the Near Eastern populations, the initial LCT*P frequency is drawn from a normal distribution with a mean equal to 1%; while for the other populations the initial LCT*P frequency is taken from a source population at the generation corresponding to the beginning of plant or animal domestication. This latter varies in each target population (<xref ref-type="table" rid="pone-0006369-t003">Table 3</xref> and <xref ref-type="supplementary-material" rid="pone.0006369.s002">Figure S1</xref> in Supplementary Information). The frequency of LCT*P is thus transmitted from one source population to the next along the likely route of the Neolithic spread, assuming a migration of people diffusing their new technology. The difference between each simulated population is both the duration of selection since the introduction of farming (<xref ref-type="table" rid="pone-0006369-t003">Table 3</xref> and <xref ref-type="supplementary-material" rid="pone.0006369.s002">Figure S1</xref> in Supplementary Information) and the initial frequency of LCT*P. Note that we use precise dates for the beginning of the Neolithic to connect the populations together instead of using spatial coordinates as it has been done in other contexts <xref ref-type="bibr" rid="pone.0006369-Currat1">[16]</xref>. It results in a reduced number of migration steps (a maximum of 5 between Lebanon and Ireland). Note also that there are no more migrations between the source and the target populations once the latter as been founded.</p>
+</list-item></list>
+<p>These two alternative demographic scenarios were simulated in combination with the three selection hypotheses <italic>gcc</italic>, <italic>cal</italic> and <italic>lbk</italic> (see below).</p>
+<p>Initially, four alternative extreme scenarios were simulated:</p>
+<list list-type="order"><list-item>
+<p><italic>DD/gcc</italic>: Demic diffusion with gene-culture coevolution hypothesis; the frequency of LCT*P is transmitted from one population to the next (<xref ref-type="fig" rid="pone-0006369-g001">Figure 1</xref> and <xref ref-type="supplementary-material" rid="pone.0006369.s002">Figure S1</xref>) along the presumed route of Neolithic diffusion assuming a migration of people spreading their know-how. Additionally, for all simulated populations, the value of the selection coefficient is kept constant assuming that the selective pressure on lactase persistence is equal all over the continent.</p>
+</list-item><list-item>
+<p><italic>DD/cal</italic>: Demic diffusion with calcium assimilation hypothesis; populations are connected to each other and the selection coefficient increases with latitude (<xref ref-type="table" rid="pone-0006369-t003">Table 3</xref> and Supplementary information).</p>
+</list-item><list-item>
+<p><italic>CD/gcc</italic>: Cultural diffusion with gene-culture coevolution hypothesis; there is no migrations between populations and the selection coefficient is kept constant all over Europe.</p>
+</list-item><list-item>
+<p><italic>CD/cal</italic>: Cultural diffusion with calcium assimilation hypothesis; in this case, there is no migration between populations and the selection coefficient increases with latitude.</p>
+<p>Then, two additional scenarios were performed as follow:</p>
+</list-item><list-item>
+<p><italic>DD/lbk</italic>: Demic diffusion with LBK dairy hypothesis (see <xref ref-type="sec" rid="s3">discussion</xref>); The frequency of LCT*P is transmitted from one population to the next (<xref ref-type="fig" rid="pone-0006369-g001">Figure 1</xref> and <xref ref-type="supplementary-material" rid="pone.0006369.s002">Figure S1</xref>) and a combination of two different selection coefficients are used for each simulation: a higher <italic>s</italic> (1–3%) for the LBK group and a smaller <italic>s</italic> (0–0.8%) for all other populations.</p>
+</list-item><list-item>
+<p><italic>CD/lbk</italic>: Cultural diffusion with dairy farming hypothesis; There is no migration between populations and a higher selection coefficient is simulated in populations belonging to the LBK culture than in other populations.</p>
+</list-item></list>
+</sec><sec id="s4k">
+<title>Scenario comparison</title>
+<p>We formally compared the 4 simulated scenarios (then 6 including <italic>lbk</italic>) using the Approximate Bayesian Computation approach (ABC). For each simulation (whatever scenario is considered), Euclidian distances between simulated and observed frequencies are calculated according to Beaumont et al. <xref ref-type="bibr" rid="pone.0006369-Beaumont1">[49]</xref>, using a weighted multiple linear regression. Allele frequencies (LCT*P) in the 26 samples are used as summary statistics, as suggested by Sousa et al <xref ref-type="bibr" rid="pone.0006369-Sousa1">[50]</xref>. From the 640,000 simulations realized (1,000,000 when comparing 6 scenarios instead of 4), the best 1,000 are retained (those with simulated LP frequencies the closest to the observed ones). The probability of obtaining the observed data under alternative scenarios is given by the proportion of the 1,000 best simulations generated by each of those scenarios. We used the software abcEst <xref ref-type="bibr" rid="pone.0006369-Excoffier1">[51]</xref> to perform these comparisons.</p>
+</sec></sec><sec id="s5">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0006369.s001" mimetype="application/rtf" position="float" xlink:href="info:doi/10.1371/journal.pone.0006369.s001" xlink:type="simple"><label>Electronic Supplementary Information S1</label><caption>
+<p>(0.10 MB RTF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0006369.s002" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0006369.s002" xlink:type="simple"><label>Figure S1</label><caption>
+<p>Schematic view of the connections between populations according to the Demic Diffusion (DD) model. Arrows represent links between Neolithic source populations and target populations. Numbers represent the generations elapsed since the start of the Neolithic transition in the Near-eastern populations. For each population, the red curve represents the logistic demographic growth, and the green curve represents the evolution of LCT*P frequency. Note that these are not the simulated curves but schematic curves, as the LCT*P frequency evolves in many different ways depending on the parameters. Population names are as in <xref ref-type="fig" rid="pone-0006369-g001">Figure 1</xref>. Names in bold correspond to source populations.</p>
+<p>(1.59 MB TIF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0006369.s003" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0006369.s003" xlink:type="simple"><label>Figure S2</label><caption>
+<p>Results for simulations run under constant population size of 10,000 individuals. Selection coefficients required to fit the observed estimates of lactase persistence frequencies, according to the four scenarios simulated: DD/gcc; DD/cal; CD/gcc; CD/cal (see <xref ref-type="sec" rid="s4">Material and Methods</xref>). Bars represent the 95% CI of the selection coefficient estimated for the corresponding population and the central point is the MLE (Maximum Likelihood Estimate, see <xref ref-type="supplementary-material" rid="pone.0006369.s005">Table S2</xref>). Populations are ordered from the highest (right) to the lowest (left) latitude (see <xref ref-type="fig" rid="pone-0006369-g002">Figure 2</xref>).</p>
+<p>(6.83 MB TIF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0006369.s004" mimetype="application/rtf" position="float" xlink:href="info:doi/10.1371/journal.pone.0006369.s004" xlink:type="simple"><label>Table S1</label><caption>
+<p>List of samples tested for lactase persistence phenotype (LP) and used in this study.</p>
+<p>(0.58 MB RTF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0006369.s005" mimetype="application/rtf" position="float" xlink:href="info:doi/10.1371/journal.pone.0006369.s005" xlink:type="simple"><label>Table S2</label><caption>
+<p>Maximum likelihood values and associated selection coefficients, according to the simulated scenarios.</p>
+<p>(0.25 MB RTF)</p>
+</caption></supplementary-material></sec></body>
+<back>
+<ack>
+<p>We warmly acknowledge Ron Pinhasi for providing us with precious archaeological dates from his personal database, as well as Louis Chaix and Estella S. Poloni for stimulating discussions and Laurent Excoffier for providing the software abcEst. We also thank two anonymous referees for suggestions that helped improve our paper.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0006369-Swallow1"><label>1</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Swallow</surname><given-names>DM</given-names></name>
+</person-group>             <year>2003</year>             <article-title>Genetics of lactase persistence and lactose intolerance.</article-title>             <source>Annu Rev Genet</source>             <volume>37</volume>             <fpage>197</fpage>             <lpage>219</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Enattah1"><label>2</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Enattah</surname><given-names>NS</given-names></name>
+<name name-style="western"><surname>Sahi</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Savilahti</surname><given-names>E</given-names></name>
+<name name-style="western"><surname>Terwilliger</surname><given-names>JD</given-names></name>
+<name name-style="western"><surname>Peltonen</surname><given-names>L</given-names></name>
+<etal/></person-group>             <year>2002</year>             <article-title>Identification of a variant associated with adult-type hypolactasia.</article-title>             <source>Nat Genet</source>             <volume>30</volume>             <fpage>233</fpage>             <lpage>237</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Troelsen1"><label>3</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Troelsen</surname><given-names>JT</given-names></name>
+</person-group>             <year>2005</year>             <article-title>Adult-type hypolactasia and regulation of lactase expression.</article-title>             <source>Biochim Biophys Acta</source>             <volume>1723</volume>             <fpage>19</fpage>             <lpage>32</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Enattah2"><label>4</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Enattah</surname><given-names>NS</given-names></name>
+<name name-style="western"><surname>Jensen</surname><given-names>TG</given-names></name>
+<name name-style="western"><surname>Nielsen</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Lewinski</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Kuokkanen</surname><given-names>M</given-names></name>
+<etal/></person-group>             <year>2008</year>             <article-title>Independent introduction of two lactase-persistence alleles into human populations reflects different history of adaptation to milk culture.</article-title>             <source>Am J Hum Genet</source>             <volume>82</volume>             <fpage>57</fpage>             <lpage>72</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Tishkoff1"><label>5</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Tishkoff</surname><given-names>SA</given-names></name>
+<name name-style="western"><surname>Reed</surname><given-names>FA</given-names></name>
+<name name-style="western"><surname>Ranciaro</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Voight</surname><given-names>BF</given-names></name>
+<name name-style="western"><surname>Babbitt</surname><given-names>CC</given-names></name>
+<etal/></person-group>             <year>2007</year>             <article-title>Convergent adaptation of human lactase persistence in Africa and Europe.</article-title>             <source>Nat Genet</source>             <volume>39</volume>             <fpage>31</fpage>             <lpage>40</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Ingram1"><label>6</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Ingram</surname><given-names>CJ</given-names></name>
+<name name-style="western"><surname>Mulcare</surname><given-names>CA</given-names></name>
+<name name-style="western"><surname>Itan</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Thomas</surname><given-names>MG</given-names></name>
+<name name-style="western"><surname>Swallow</surname><given-names>DM</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Lactose digestion and the evolutionary genetics of lactase persistence.</article-title>             <source>Hum Genet</source>             <volume>124</volume>             <fpage>579</fpage>             <lpage>591</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Bersaglieri1"><label>7</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Bersaglieri</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Sabeti</surname><given-names>PC</given-names></name>
+<name name-style="western"><surname>Patterson</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Vanderploeg</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Schaffner</surname><given-names>SF</given-names></name>
+<etal/></person-group>             <year>2004</year>             <article-title>Genetic signatures of strong recent positive selection at the lactase gene.</article-title>             <source>Am J Hum Genet</source>             <volume>74</volume>             <fpage>1111</fpage>             <lpage>1120</lpage>          </element-citation></ref>
+<ref id="pone.0006369-McCracken1"><label>8</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>McCracken</surname><given-names>RD</given-names></name>
+</person-group>             <year>1971</year>             <article-title>Origins and implications of the distribution of adult lactase deficiency in human populations.</article-title>             <source>J Trop Pediatr Environ Child Health</source>             <volume>17</volume>             <fpage>7</fpage>             <lpage>10</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Simoons1"><label>9</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Simoons</surname><given-names>FJ</given-names></name>
+</person-group>             <year>1970</year>             <article-title>Primary adult lactose intolerance and the milking habit: a problem in biological and cultural interrelations. II. A culture historical hypothesis.</article-title>             <source>Am J Dig Dis</source>             <volume>15</volume>             <fpage>695</fpage>             <lpage>710</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Flatz1"><label>10</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Flatz</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Rotthauwe</surname><given-names>HW</given-names></name>
+</person-group>             <year>1973</year>             <article-title>Lactose nutrition and natural selection.</article-title>             <source>Lancet</source>             <volume>2</volume>             <fpage>76</fpage>             <lpage>77</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Holden1"><label>11</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Holden</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Mace</surname><given-names>R</given-names></name>
+</person-group>             <year>1997</year>             <article-title>Phylogenetic analysis of the evolution of lactose digestion in adults.</article-title>             <source>Hum Biol</source>             <volume>69</volume>             <fpage>605</fpage>             <lpage>628</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Cook1"><label>12</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Cook</surname><given-names>GC</given-names></name>
+</person-group>             <year>1978</year>             <article-title>Breath hydrogen concentrations after oral lactose and lactulose in tropical malabsorption and adult hypolactasia.</article-title>             <source>Trans R Soc Trop Med Hyg</source>             <volume>72</volume>             <fpage>277</fpage>             <lpage>281</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Cook2"><label>13</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Cook</surname><given-names>GC</given-names></name>
+<name name-style="western"><surname>al-Torki</surname><given-names>MT</given-names></name>
+</person-group>             <year>1975</year>             <article-title>High intestinal lactase concentrations in adult Arabs in Saudi Arabia.</article-title>             <source>Br Med J</source>             <volume>3</volume>             <fpage>135</fpage>             <lpage>136</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Coelho1"><label>14</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Coelho</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Luiselli</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Bertorelle</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Lopes</surname><given-names>AI</given-names></name>
+<name name-style="western"><surname>Seixas</surname><given-names>S</given-names></name>
+<etal/></person-group>             <year>2005</year>             <article-title>Microsatellite variation and evolution of human lactase persistence.</article-title>             <source>Hum Genet</source>             <volume>117</volume>             <fpage>329</fpage>             <lpage>339</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Sabbagh1"><label>15</label><element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Sabbagh</surname><given-names>A</given-names></name>
+</person-group>             <year>2002</year>             <article-title>Etude de la diversité génétique dans les populations humaines de gènes sélectionnés [DEA in biodiversity: genetics, history and evolutionary mechanisms].</article-title>             <publisher-loc>Paris</publisher-loc>             <publisher-name>University of Paris VI, VII, IX, MNHN, INAPG</publisher-name>          </element-citation></ref>
+<ref id="pone.0006369-Currat1"><label>16</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Currat</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Excoffier</surname><given-names>L</given-names></name>
+</person-group>             <year>2005</year>             <article-title>The effect of the Neolithic expansion on European molecular diversity.</article-title>             <source>Proc R Soc Lond B Biol Sci</source>             <volume>272</volume>             <fpage>679</fpage>             <lpage>688</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Malcot1"><label>17</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Malécot</surname><given-names>G</given-names></name>
+</person-group>             <year>1955</year>             <article-title>The decrease of relationship with distance.</article-title>             <source>Cold Spring Harbor Symp Quant Biol</source>             <volume>20</volume>             <fpage>52</fpage>             <lpage>53</lpage>          </element-citation></ref>
+<ref id="pone.0006369-SanchezMazas1"><label>18</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Sanchez-Mazas</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Bütler-Brunner</surname><given-names>E</given-names></name>
+<name name-style="western"><surname>Excoffier</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Ghanem</surname><given-names>N</given-names></name>
+<name name-style="western"><surname>Ben-Salem</surname><given-names>M</given-names></name>
+<etal/></person-group>             <year>1994</year>             <article-title>New data for AG haplotype frequencies in Caucasoid populations and the selective neutrality of the AG polymorphism.</article-title>             <source>Hum Biol</source>             <volume>66</volume>             <fpage>27</fpage>             <lpage>48</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Murdock1"><label>19</label><element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Murdock</surname><given-names>GP</given-names></name>
+</person-group>             <year>1967</year>             <article-title>Ethnographic Atlas.</article-title>             <publisher-loc>Pittsburgh, PA</publisher-loc>             <publisher-name>University of Pittsburgh Press</publisher-name>          </element-citation></ref>
+<ref id="pone.0006369-Renfrew1"><label>20</label><element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Renfrew</surname><given-names>C</given-names></name>
+</person-group>             <year>1989</year>             <article-title>Archaeology and Language: The Puzzle of Indo-European Origins.</article-title>             <publisher-loc>London</publisher-loc>             <publisher-name>Penguin Books</publisher-name> <fpage>346</fpage>          </element-citation></ref>
+<ref id="pone.0006369-CavalliSforza1"><label>21</label><element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Cavalli-Sforza</surname><given-names>LL</given-names></name>
+<name name-style="western"><surname>Menozzi</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Piazza</surname><given-names>A</given-names></name>
+</person-group>             <year>1994</year>             <article-title>The History and Geography of Human Genes.</article-title>             <publisher-loc>Princeton, New Jersey</publisher-loc>             <publisher-name>Princeton University Press</publisher-name>             <fpage>145</fpage>             <lpage>154</lpage>          </element-citation></ref>
+<ref id="pone.0006369-SanchezMazas2"><label>22</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Sanchez-Mazas</surname><given-names>A</given-names></name>
+</person-group>             <year>2007</year>             <article-title>An apportionment of human HLA diversity.</article-title>             <source>Tissue Antigens</source>             <volume>69</volume>             <fpage>198</fpage>             <lpage>202</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Klopfstein1"><label>23</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Klopfstein</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Currat</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Excoffier</surname><given-names>L</given-names></name>
+</person-group>             <year>2005</year>             <article-title>The Fate of Mutations Surfing on the Wave of a Range Expansion.</article-title>             <source>Mol Biol Evol</source>          </element-citation></ref>
+<ref id="pone.0006369-Travis1"><label>24</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Travis</surname><given-names>JM</given-names></name>
+<name name-style="western"><surname>Munkemuller</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Burton</surname><given-names>OJ</given-names></name>
+<name name-style="western"><surname>Best</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Dytham</surname><given-names>C</given-names></name>
+<etal/></person-group>             <year>2007</year>             <article-title>Deleterious mutations can surf to high densities on the wave front of an expanding population.</article-title>             <source>Mol Biol Evol</source>             <volume>24</volume>             <fpage>2334</fpage>             <lpage>2343</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Gotherstrom1"><label>25</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Gotherstrom</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Anderung</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Hellborg</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Elburg</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Smith</surname><given-names>C</given-names></name>
+<etal/></person-group>             <year>2005</year>             <article-title>Cattle domestication in the Near East was followed by hybridization with aurochs bulls in Europe.</article-title>             <source>Proc Biol Sci</source>             <volume>272</volume>             <fpage>2345</fpage>             <lpage>2350</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Zvelebil1"><label>26</label><element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Zvelebil</surname><given-names>M</given-names></name>
+</person-group>             <year>2000</year>             <article-title>The social context of the Agricultural transition in Europe.</article-title>             <person-group person-group-type="editor">
+<name name-style="western"><surname>Renfrew</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Boyle</surname><given-names>K</given-names></name>
+</person-group>             <source>Archaeogenetics: DNA and the population prehistory of Europe</source>             <publisher-loc>Cambridge</publisher-loc>             <publisher-name>McDonald Institute for Archaeological Research, University of Cambridge</publisher-name>             <fpage>57</fpage>             <lpage>79</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Nei1"><label>27</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Nei</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Saitou</surname><given-names>N</given-names></name>
+</person-group>             <year>1986</year>             <article-title>Genetic relationship of human populations and ethnic differences in reaction to drugs and food.</article-title>             <source>Prog Clin Biol Res</source>             <volume>214</volume>             <fpage>21</fpage>             <lpage>37</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Burger1"><label>28</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Burger</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Kirchner</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Bramanti</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Haak</surname><given-names>W</given-names></name>
+<name name-style="western"><surname>Thomas</surname><given-names>MG</given-names></name>
+</person-group>             <year>2007</year>             <article-title>Absence of the lactase-persistence-associated allele in early Neolithic Europeans.</article-title>             <source>Proc Natl Acad Sci U S A</source>             <volume>104</volume>             <fpage>3736</fpage>             <lpage>3741</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Bowman1"><label>29</label><element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Bowman</surname><given-names>JE</given-names></name>
+<name name-style="western"><surname>Murray</surname><given-names>RF</given-names></name>
+</person-group>             <year>1990</year>             <article-title>Genetic variation and disorders in peoples of African origin.</article-title>             <publisher-loc>Baltimore, London</publisher-loc>             <publisher-name>John Hopkins University Press</publisher-name>          </element-citation></ref>
+<ref id="pone.0006369-Flatz2"><label>30</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Flatz</surname><given-names>G</given-names></name>
+</person-group>             <year>1987</year>             <article-title>Genetics of lactose digestion in humans.</article-title>             <source>Adv Hum Genet</source>             <volume>16</volume>             <fpage>1</fpage>             <lpage>77</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Roychoudhury1"><label>31</label><element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Roychoudhury</surname><given-names>AK</given-names></name>
+<name name-style="western"><surname>Nei</surname><given-names>M</given-names></name>
+</person-group>             <year>1988</year>             <article-title>Human Polymorphic Genes World Distribution;</article-title>             <person-group person-group-type="editor">
+<name name-style="western"><surname>Press</surname><given-names>Ou</given-names></name>
+</person-group>             <publisher-loc>New york </publisher-loc>             <publisher-name>Oxford</publisher-name> <fpage>400</fpage>           </element-citation></ref>
+<ref id="pone.0006369-SanchezMazas3"><label>32</label><element-citation publication-type="other" xlink:type="simple">             <comment>Sanchez-Mazas A Personal database</comment>          </element-citation></ref>
+<ref id="pone.0006369-Solberg1"><label>33</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Solberg</surname><given-names>OD</given-names></name>
+<name name-style="western"><surname>Mack</surname><given-names>SJ</given-names></name>
+<name name-style="western"><surname>Lancaster</surname><given-names>AK</given-names></name>
+<name name-style="western"><surname>Single</surname><given-names>RM</given-names></name>
+<name name-style="western"><surname>Tsai</surname><given-names>Y</given-names></name>
+<etal/></person-group>             <year>2008</year>             <article-title>Balancing selection and heterogeneity across the classical human leukocyte antigen loci: A meta-analytic review of 497 population studies.</article-title>             <source>Hum Immunol</source>             <volume>69</volume>             <fpage>443</fpage>             <lpage>464</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Meyer1"><label>34</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Meyer</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Thomson</surname><given-names>G</given-names></name>
+</person-group>             <year>2001</year>             <article-title>How selection shapes variation of the human major histocompatibility complex: a review.</article-title>             <source>Annals of Human Genetics</source>             <volume>65</volume>             <fpage>1</fpage>             <lpage>26</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Mack1"><label>35</label><element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Mack</surname><given-names>SJ</given-names></name>
+<name name-style="western"><surname>Erlich</surname><given-names>HA</given-names></name>
+</person-group>             <year>2007</year>             <article-title>13th International Histocompatibility Workshop Anthropology/Human Genetic Diversity Joint Report: population relationships as inferred from classical HLA genes.</article-title>             <person-group person-group-type="editor">
+<name name-style="western"><surname>Hansen</surname><given-names>JA</given-names></name>
+</person-group>             <source>Immunobiology of the Human MHC: Proceedings of the 13th International Histocompatibility Workshop and Conference</source>             <publisher-loc>Seattle, WA</publisher-loc>             <publisher-name>IHWG Press</publisher-name>             <fpage>747</fpage>             <lpage>757</lpage>          </element-citation></ref>
+<ref id="pone.0006369-SanchezMazas4"><label>36</label><element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Sanchez-Mazas</surname><given-names>A</given-names></name>
+</person-group>             <year>2007</year>             <article-title>13th International Histocompatibility Workshop Anthropology/Human Genetic Diversity Joint Report: HLA genetic differentiation of the 13th IHWC population data relative to worldwide linguistic families.</article-title>             <person-group person-group-type="editor">
+<name name-style="western"><surname>Hansen</surname><given-names>JA</given-names></name>
+</person-group>             <source>Immunobiology of the Human MHC: Proceedings of the 13th International Histocompatibility Workshop and Conference</source>             <publisher-loc>Seattle, WA</publisher-loc>             <publisher-name>IHWG Press</publisher-name>             <fpage>758</fpage>             <lpage>766</lpage>          </element-citation></ref>
+<ref id="pone.0006369-SanchezMazas5"><label>37</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Sanchez-Mazas</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Poloni</surname><given-names>ES</given-names></name>
+<name name-style="western"><surname>Jacques</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Sagart</surname><given-names>L</given-names></name>
+</person-group>             <year>2005</year>             <article-title>HLA genetic diversity and linguistic variation in East Asia.</article-title>             <person-group person-group-type="editor">
+<name name-style="western"><surname>Sagart</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Blench</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Sanchez-Mazas</surname><given-names>A</given-names></name>
+</person-group>             <source>The Peopling of East Asia: Putting Together Archaeology, Linguistics and Genetics</source>             <publisher-loc>London &amp; New York</publisher-loc>             <publisher-name>Routledge Curzon</publisher-name>             <fpage>273</fpage>             <lpage>296</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Ray1"><label>38</label><element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Ray</surname><given-names>N</given-names></name>
+</person-group>             <comment>University of Bern, Switzerland, personal communication</comment>          </element-citation></ref>
+<ref id="pone.0006369-Prevosti1"><label>39</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Prevosti</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Ocana</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Alonso</surname><given-names>G</given-names></name>
+</person-group>             <year>1975</year>             <article-title>Distances between populations of Drosophila subobscura based on chromosome arrangement frequencies.</article-title>             <source>Theoritical and applied genetics</source>             <volume>45</volume>             <fpage>231</fpage>             <lpage>241</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Dupanloup1"><label>40</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Dupanloup</surname><given-names>I</given-names></name>
+<name name-style="western"><surname>Schneider</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Excoffier</surname><given-names>L</given-names></name>
+</person-group>             <year>2002</year>             <article-title>A simulated annealing approach to define the genetic structure of populations.</article-title>             <source>Mol Ecol</source>             <volume>11</volume>             <fpage>2571</fpage>             <lpage>2581</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Sokal1"><label>41</label><element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Sokal</surname><given-names>RR</given-names></name>
+<name name-style="western"><surname>Rohlf</surname><given-names>FJ</given-names></name>
+</person-group>             <year>1995</year>             <article-title>Biometry.</article-title>             <publisher-loc>New York</publisher-loc>             <publisher-name>Freeman</publisher-name> <fpage>887</fpage>           </element-citation></ref>
+<ref id="pone.0006369-Mantel1"><label>42</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Mantel</surname><given-names>G</given-names></name>
+</person-group>             <year>1967</year>             <article-title>The detection of disease clustering and generalized regression approach.</article-title>             <source>Cancer Res</source>             <volume>27</volume>             <fpage>209</fpage>             <lpage>220</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Pinhasi1"><label>43</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Pinhasi</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Fort</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Ammerman</surname><given-names>AJ</given-names></name>
+</person-group>             <year>2005</year>             <article-title>Tracing the origin and spread of agriculture in Europe.</article-title>             <source>PLoS Biol</source>             <volume>3</volume>             <fpage>e410</fpage>          </element-citation></ref>
+<ref id="pone.0006369-Edwards1"><label>44</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Edwards</surname><given-names>CJ</given-names></name>
+<name name-style="western"><surname>Bollongino</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Scheu</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Chamberlain</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Tresset</surname><given-names>A</given-names></name>
+<etal/></person-group>             <year>2007</year>             <article-title>Mitochondrial DNA analysis shows a Near Eastern Neolithic origin for domestic cattle and no indication of domestication of European aurochs.</article-title>             <source>Proc Biol Sci</source>             <volume>274</volume>             <fpage>1377</fpage>             <lpage>1385</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Helmer1"><label>45</label><element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Helmer</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Gourichon</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Monchot</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Peters</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Sana Segui</surname><given-names>M</given-names></name>
+</person-group>             <year>2005</year>             <article-title>Identifying early domestic cattle from Pre-Pottery Neolithic sites on the Middle Euphrates using sexual dimorphism.</article-title>             <person-group person-group-type="editor">
+<name name-style="western"><surname>J-D</surname><given-names>V</given-names></name>
+<name name-style="western"><surname>Peters</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Helmer</surname><given-names>D</given-names></name>
+</person-group>             <source>The first steps of animal domestication: New archaeological approaches</source>             <publisher-loc> Great Britain</publisher-loc>             <publisher-name>Oxbow Books</publisher-name>             <fpage>86</fpage>             <lpage>95</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Gage1"><label>46</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Gage</surname><given-names>TB</given-names></name>
+</person-group>             <year>1998</year>             <article-title>The comparative demography of primates: with some comments on the evolution of life history.</article-title>             <source>Annual Review of Anthropology</source>             <volume>27</volume>             <fpage>1841</fpage>             <lpage>1853</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Currat2"><label>47</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Currat</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Trabuchet</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Rees</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Perrin</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Harding</surname><given-names>RM</given-names></name>
+<etal/></person-group>             <year>2002</year>             <article-title>Molecular Analysis of the beta-Globin Gene Cluster in the Niokholo Mandenka Population Reveals a Recent Origin of the betaS Senegal Mutation.</article-title>             <source>Am J Hum Genet</source>             <volume>70</volume>             <fpage>207</fpage>             <lpage>223</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Belle1"><label>48</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Belle</surname><given-names>EM</given-names></name>
+<name name-style="western"><surname>Landry</surname><given-names>PA</given-names></name>
+<name name-style="western"><surname>Barbujani</surname><given-names>G</given-names></name>
+</person-group>             <year>2006</year>             <article-title>Origins and evolution of the Europeans' genome: evidence from multiple microsatellite loci.</article-title>             <source>Proc Biol Sci</source>             <volume>273</volume>             <fpage>1595</fpage>             <lpage>1602</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Beaumont1"><label>49</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Beaumont</surname><given-names>MA</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>W</given-names></name>
+<name name-style="western"><surname>Balding</surname><given-names>DJ</given-names></name>
+</person-group>             <year>2002</year>             <article-title>Approximate Bayesian Computation in Population Genetics.</article-title>             <source>Genetics</source>             <volume>162</volume>             <fpage>2025</fpage>             <lpage>2035</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Sousa1"><label>50</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Sousa</surname><given-names>VC</given-names></name>
+<name name-style="western"><surname>Fritz</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Beaumont</surname><given-names>MA</given-names></name>
+<name name-style="western"><surname>Chikhi</surname><given-names>L</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Approximate bayesian computation without summary statistics: the case of admixture.</article-title>             <source>Genetics</source>             <volume>181</volume>             <fpage>1507</fpage>             <lpage>1519</lpage>          </element-citation></ref>
+<ref id="pone.0006369-Excoffier1"><label>51</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Excoffier</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Estoup</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Cornuet</surname><given-names>JM</given-names></name>
+</person-group>             <year>2005</year>             <article-title>Bayesian analysis of an admixture model with mutations and arbitrarily linked markers.</article-title>             <source>Genetics</source>             <volume>169</volume>             <fpage>1727</fpage>             <lpage>1738</lpage>          </element-citation></ref>
+</ref-list>
+
+</back>
+</article>

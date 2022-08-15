@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group>
+<journal-title>PLoS ONE</journal-title></journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-13-54833</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0102082</article-id>
+<article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Computer and information sciences</subject><subj-group><subject>Computer software</subject></subj-group><subj-group><subject>Software engineering</subject><subj-group><subject>Software tools</subject></subj-group></subj-group><subj-group><subject>Computerized simulations</subject></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>GLIMMPSE Lite: Calculating Power and Sample Size on Smartphone Devices</article-title>
+<alt-title alt-title-type="running-head">GLIMMPSE Lite: Calculate Power on Mobile Devices</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Munjal</surname><given-names>Aarti</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Sakhadeo</surname><given-names>Uttara R.</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Muller</surname><given-names>Keith E.</given-names></name><xref ref-type="aff" rid="aff2"><sup>2</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Glueck</surname><given-names>Deborah H.</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Kreidler</surname><given-names>Sarah M.</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+</contrib-group>
+<aff id="aff1"><label>1</label><addr-line>Dept. of Biostatistics and Informatics, University of Colorado Denver, Aurora, Colorado, United States of America</addr-line></aff>
+<aff id="aff2"><label>2</label><addr-line>Health Outcomes and Policy, University of Florida, Gainesville, Florida, United States of America</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Zhou</surname><given-names>Fengfeng</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Shenzhen Institutes of Advanced Technology, China</addr-line></aff>
+<author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">aarti.munjal@ucdenver.edu</email></corresp>
+<fn fn-type="conflict"><p>Each author contributed substantially to the manuscript and supporting documentation. None of the coauthors except Keith Muller have any conflicts of interest to declare. Dr. Muller has in the past been a paid consultant to SAS Institute and NCSS. Dr. Muller's wife worked for SAS for 5 years. This does not alter the authors' adherence to PLOS ONE policies on sharing data and materials.</p></fn>
+<fn fn-type="con"><p>Conceived and designed the experiments: AM URS KEM DHG SMK. Performed the experiments: AM URS KEM DHG SMK. Analyzed the data: AM URS KEM DHG SMK. Contributed reagents/materials/analysis tools: AM URS KEM DHG SMK. Wrote the paper: AM URS KEM DHG SMK.</p></fn>
+</author-notes>
+<pub-date pub-type="collection"><year>2014</year></pub-date>
+<pub-date pub-type="epub"><day>26</day><month>12</month><year>2014</year></pub-date>
+<volume>9</volume>
+<issue>12</issue>
+<elocation-id>e102082</elocation-id>
+<history>
+<date date-type="received"><day>27</day><month>12</month><year>2013</year></date>
+<date date-type="accepted"><day>14</day><month>6</month><year>2014</year></date>
+</history>
+<permissions>
+<copyright-year>2014</copyright-year>
+<copyright-holder>Munjal et al</copyright-holder><license xlink:type="simple"><license-p>This is an open-access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions>
+<abstract>
+<p>Researchers seeking to develop complex statistical applications for mobile devices face a common set of difficult implementation issues. In this work, we discuss general solutions to the design challenges. We demonstrate the utility of the solutions for a free mobile application designed to provide power and sample size calculations for univariate, one-way analysis of variance (ANOVA), GLIMMPSE Lite. Our design decisions provide a guide for other scientists seeking to produce statistical software for mobile platforms.</p>
+</abstract>
+<funding-group><funding-statement>The GLIMMPSE Lite project was funded by NIDCR 1 R01 DE020832-01A1 to the University of Florida (Keith Muller, PI; Deborah Glueck, University of Colorado site PI). Additional support for Dr. Muller was provided in part by NIH/NIDCR grants U54-DE019261, NIH/NCRR grant K30-RR022258, NIH/NHLBI grant R01-HL091005 and NIH/NIAAA grant R01-AA013458-01. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="26"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<sec id="s1a">
+<title>Motivation</title>
+<p>An increasing number of scientists and statisticians use mobile devices, such as smart phones and tablets. Moving statistical power and sample size software to mobile devices allows designing studies anywhere, anytime, even when away from the office.</p>
+<p>Developers of mobile statistical applications face a common set of design challenges. In this paper, we list the challenges and provide general solutions. In addition, we provide detailed example solutions from our experience developing GLIMMPSE Lite. GLIMMPSE Lite calculates power and sample size for studies that use analysis of variance (ANOVA). Our design decisions should be useful for other developers of statistical software aimed at mobile platforms.</p>
+</sec><sec id="s1b">
+<title>Migrating statistical power software to a mobile platform</title>
+<p>We present a list of challenges we faced in designing statistical power software for a mobile platform. We encountered each one of the challenges listed below while designing our mobile power and sample size application, GLIMMPSE Lite.</p>
+<sec id="s1b1">
+<title>C1. Statistical power software is computationally intensive, and many mobile devices have limited computing resources</title>
+<p>Power calculations for ANOVA in particular, and the general linear model in general, involve complex matrix operations such as inversions and multiplication of large matrices. In addition, sample size calculations do not have a closed form, and require numerical search algorithms. Given that the calculations are both memory and processor intensive, statistical power applications may run poorly on mobile devices with limited random access memory (RAM) or slow processors.</p>
+</sec><sec id="s1b2">
+<title>C2. Statistical power software requires complex inputs</title>
+<p>To perform a power or sample size calculation, a user must input several pieces of information about the design. Inputs include the Type I error rate, the list of independent and dependent variables, the hypothesis of interest, and choices for means and variances. Developing an intuitive user interface to accept these inputs is a challenge. For mobile devices, developers have an additional challenge of tailoring the interface to the small screen format.</p>
+</sec><sec id="s1b3">
+<title>C3. The interface must provide an appropriate level of guidance to users regarding the required inputs</title>
+<p>Users of power and sample size software have differing levels of statistical training. Some users may need additional assistance to understand inputs to the power or sample size calculation. The limited screen size of a mobile device forces designers to present concise help pages that do not clutter the view.</p>
+</sec><sec id="s1b4">
+<title>C4. Communication between the mobile device and supporting servers must be fast and lightweight</title>
+<p>Using a client-server architecture is a better option than performing power and sample size calculations directly on the mobile device. In the client-server architecture, the mobile device elicits inputs from the user and sends the data to a server with greater computing resources. In turn, the server performs the actual calculation. The client-server architecture solves the problem of limited computing resources on the mobile device, but introduces a potential bottleneck in communication with the server. Application performance may be optimal over wi-fi or 4G cellular networks, but performance may degrade on slower cellular data networks such as 2G and 3G. To maintain adequate performance at slower data speeds, the communication protocol must be both lightweight and optimally utilize available bandwidth.</p>
+</sec><sec id="s1b5">
+<title>C5. The mobile app must scale easily and robustly</title>
+<p>With an increasing number of mobile device users and the potential for wide distribution from online application stores, the number of users for a popular application can increase very rapidly. Thus, the client-server architecture supporting the mobile application must scale well. This means that the application must handle an increasing number of users in a short time frame without failure.</p>
+</sec><sec id="s1b6">
+<title>C6. Supporting multiple platforms requires significant development time</title>
+<p>Every mobile platform has its own software development kit (SDK). Applications developed for one mobile platform are not compatible with other mobile platforms. Thus, development time increases proportionally to the number of devices supported.</p>
+</sec><sec id="s1b7">
+<title>C7. Mobile devices have frequent updates in operating systems</title>
+<p>Due to frequent updates, developers must ensure that any application is compatible with current versions of the mobile operating system and a reasonable subset of previous versions. The problem is compounded when supporting multiple brands of mobile devices.</p>
+</sec><sec id="s1b8">
+<title>C8. Applications must coordinate with other applications</title>
+<p>Most mobile devices are capable of running multiple applications simultaneously. Therefore, a power and sample size application must manage shared resources such as file storage or network connections appropriately, and gracefully handle errors generated when interacting with other applications.</p>
+</sec><sec id="s1b9">
+<title>C9. Users must be able to save outputs for later reference</title>
+<p>To increase the usability of power and sample size calculations on a mobile platform, users must be able to save outputs and use them later.</p>
+</sec><sec id="s1b10">
+<title>C10. Users must be able to reproduce the power and sample size results without reiterating the whole process</title>
+<p>To facilitate reproducible research, scientists and statisticians need an accurate record of the steps involved in a power or data analysis. Therefore, users must be able to save any design, and recall it for reuse later.</p>
+</sec></sec><sec id="s1c">
+<title>Mobile design by example: the GLIMMPSE Lite software</title>
+<p>GLIMMPSE Lite is a smartphone application that calculates power and sample size for ANOVA study designs on two mobile platforms: iOS from Apple <xref ref-type="bibr" rid="pone.0102082-Apple1">[1]</xref> and Android from Google <xref ref-type="bibr" rid="pone.0102082-Google1">[2]</xref>. GLIMMPSE Lite widens the user base of GLIMMPSE (<ext-link ext-link-type="uri" xlink:href="http://glimmpse.samplesizeshop.org" xlink:type="simple">http://glimmpse.samplesizeshop.org</ext-link>), our free and web application that calculates power and sample size for study designs with normally distributed outcomes. GLIMMPSE provides researchers with a user-friendly interface for calculating power and sample for the general linear multivariate model and the general linear mixed model with and without a Gaussian covariate. A full description of GLIMMPSE appears in <xref ref-type="bibr" rid="pone.0102082-Kreidler1">[3]</xref>.</p>
+<p>GLIMMPSE Lite is a prototype mobile application that implements a subset of the functionality of GLIMMPSE. Limiting GLIMMPSE Lite to ANOVA designs enabled us to solve the general design challenges of porting statistical power software to mobile platforms with minimum development time. Using the experience we gained from developing GLIMMPSE Lite, we plan to expand the functionality of the mobile application to include multilevel and longitudinal designs in future releases.</p>
+</sec><sec id="s1d">
+<title>Organization of the manuscript</title>
+<p>The remainder of the manuscript is organized as follows. The next section presents a review of statistical power software packages available for standard web browsers, personal computers, and mobile platforms. In the Challenges section, we describe general solutions to the computing challenges listed above, and then the specific solutions we used to implement GLIMMPSE Lite. Finally, in the Conclusions section we present conclusions and discuss directions for further research in this area.</p>
+</sec></sec><sec id="s2">
+<title>Review of power and sample size software</title>
+<sec id="s2a">
+<title>Statistical power and sample size software packages</title>
+<p>The credibility of a statistical software package primarily depends on three factors: 1) if the user can clearly understand what statistical methods were chosen to perform the power and sample size calculations, 2) if the user can understand what computational technologies were used, and 3) if experiments were used to validate the power and sample size results. SPSS <xref ref-type="bibr" rid="pone.0102082-IBM1">[4]</xref>, Power and Precision <xref ref-type="bibr" rid="pone.0102082-Borenstein1">[5]</xref>, NQuery <xref ref-type="bibr" rid="pone.0102082-Statistical1">[6]</xref>, PASS <xref ref-type="bibr" rid="pone.0102082-NCSS1">[7]</xref>, SAS PROC GLMPOWER <xref ref-type="bibr" rid="pone.0102082-SAS1">[8]</xref>, POWERLIB <xref ref-type="bibr" rid="pone.0102082-Johnson1">[10]</xref>, Optimal Design <xref ref-type="bibr" rid="pone.0102082-Raudenbush1">[11]</xref>, UnifyPow <xref ref-type="bibr" rid="pone.0102082-RG1">[12]</xref>, and GLIMMPSE <xref ref-type="bibr" rid="pone.0102082-Kreidler1">[3]</xref> all fit the criteria for credibility.</p>
+<p>Statistical power software packages that are distributed as stand-alone desktop installations can cost upwards of $500, even for an academic version. These packages include SPSS <xref ref-type="bibr" rid="pone.0102082-IBM1">[4]</xref>, Power and Precision <xref ref-type="bibr" rid="pone.0102082-Borenstein1">[5]</xref>, NQuery <xref ref-type="bibr" rid="pone.0102082-Statistical1">[6]</xref>, PASS <xref ref-type="bibr" rid="pone.0102082-NCSS1">[7]</xref>, and SASGLMpower <xref ref-type="bibr" rid="pone.0102082-SAS1">[8]</xref>. Several statistical power software packages are available for free, including POWERLIB <xref ref-type="bibr" rid="pone.0102082-Johnson1">[10]</xref>, Optimal Design <xref ref-type="bibr" rid="pone.0102082-Raudenbush1">[11]</xref>, UnifyPow <xref ref-type="bibr" rid="pone.0102082-RG1">[12]</xref>, and GLIMMPSE <xref ref-type="bibr" rid="pone.0102082-Kreidler1">[3]</xref>. Although these packages are available for free, some require an active license for an underlying statistical software package. For example, the POWERLIB software requires a paid installation of SAS/IML <xref ref-type="bibr" rid="pone.0102082-SAS2">[9]</xref>.</p>
+<p>Usability differs across these software packages. Specifically, POWERLIB requires knowledge of SAS/IML programming statements. UnifyPow must be installed on the user's workstation, has no graphical user interface, and was last updated in 2008. GLIMMPSE, our free, web-based application, can be accessed via a standard web browser and is easy to use with no prior hands-on training.</p>
+<p>Several other statistical power software packages that are available for free are listed in <xref ref-type="bibr" rid="pone.0102082-Education1">[13]</xref>–<xref ref-type="bibr" rid="pone.0102082-CTSPEDIA1">[15]</xref>. Many of these packages provide none or very limited validation information.</p>
+</sec><sec id="s2b">
+<title>Statistical power applications for mobile platforms</title>
+<p>As part of our design process, we surveyed all statistical packages for mobile devices available on the App Store <xref ref-type="bibr" rid="pone.0102082-Apple2">[16]</xref> or Google Play <xref ref-type="bibr" rid="pone.0102082-Google2">[17]</xref> store as of November 1, 2012. <xref ref-type="table" rid="pone-0102082-t001"><bold>Table 1</bold></xref> provides a review of the applications, including information about the mobile platform supported, the cost, and the capability of each application. Our audit of competing software shows that no other mobile application performs power and sample size calculations for ANOVA. In addition, most mobile statistical software is relatively expensive.</p>
+<table-wrap id="pone-0102082-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.t001</object-id><label>Table 1</label><caption>
+<title>Summary of statistical applications available on Apple iOS and Google Android mobile platforms.</title>
+</caption><alternatives><graphic id="pone-0102082-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.t001" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Product Name</td>
+<td align="left" rowspan="1" colspan="1">Platform</td>
+<td align="left" rowspan="1" colspan="1">Cost</td>
+<td align="left" rowspan="1" colspan="1">1-sample t-test</td>
+<td align="left" rowspan="1" colspan="1">2-sample t-test</td>
+<td align="left" rowspan="1" colspan="1">1-way ANOVA</td>
+<td align="left" rowspan="1" colspan="1">Data Analysis</td>
+<td align="left" rowspan="1" colspan="1">Power Analysis</td>
+<td align="left" rowspan="1" colspan="1">Sample Size Analysis</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">GlimmpseLite</td>
+<td align="left" rowspan="1" colspan="1">iOS/Android</td>
+<td align="left" rowspan="1" colspan="1">FREE</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ANOVA</td>
+<td align="left" rowspan="1" colspan="1">Android</td>
+<td align="left" rowspan="1" colspan="1">$2.99</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">1-way ANOVA</td>
+<td align="left" rowspan="1" colspan="1">iOS</td>
+<td align="left" rowspan="1" colspan="1">$8.99</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ANOVA</td>
+<td align="left" rowspan="1" colspan="1">iOS</td>
+<td align="left" rowspan="1" colspan="1">$4.99</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ANOVA</td>
+<td align="left" rowspan="1" colspan="1">Android</td>
+<td align="left" rowspan="1" colspan="1">$2.99</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Power Analysis</td>
+<td align="left" rowspan="1" colspan="1">iOS</td>
+<td align="left" rowspan="1" colspan="1">$4.99</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+<td align="left" rowspan="1" colspan="1">✓</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap></sec></sec><sec id="s3">
+<title>Challenges in migrating software to a mobile platform</title>
+<sec id="s3a">
+<title>Introduction</title>
+<p>As outlined in the Introduction section, migrating a statistical power software package to a mobile platform raises several challenges. In this section, we describe each challenge, discuss possible solutions, and then present the specific solutions we adopted to develop GLIMMPSE Lite.</p>
+</sec><sec id="s3b">
+<title>C1. Statistical power software is computationally intensive, and many mobile devices have limited computing resources</title>
+<p>Power and sample size calculations require computationally intensive algorithms including matrix multiplication, matrix inversion, numerical integration, and search. To give an idea of the difficulty of the problem, the complexity of matrix multiplication is <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0102082.e001" xlink:type="simple"/></inline-formula> for Coppersmith-Winograd <xref ref-type="bibr" rid="pone.0102082-Williams1">[18]</xref>, where <italic>n</italic> is the largest dimension of the matrices. Thus, calculating power and sample size becomes increasingly slow as the size of the experiment increases, even on a powerful desktop machine. <xref ref-type="bibr" rid="pone.0102082-Kreidler1">[3]</xref> provided timing data for sixteen example power and sample size analyses (<ext-link ext-link-type="uri" xlink:href="http://samplesizeshop.org/documentation/glimmpse/validation-results/" xlink:type="simple">http://samplesizeshop.org/documentation/glimmpse/validation-results/</ext-link>). Total CPU time to calculate power using GLIMMPSE was as much as 101 seconds per calculation for complex designs. The timing experiments were performed on an Intel i7-2600 quad core, 3.40 GHz processor with 8GB of RAM, running 64-bit Windows 7.</p>
+<p>By contrast, a typical fast mobile platform comes equipped with 1GB of RAM and a processor speed of 1100 MHz. The lower RAM and slower processors on a mobile device would lead to unacceptably slow calculation times, if the calculation were performed on the mobile device. There are two approaches to solving the computational speed issue. One approach is to invest strong efforts to optimize the algorithm. In the case of power calculations, this is impossible, as the inherent complexity is irreducible. The other option is to export the calculation to another more powerful machine, as is done in the client-server model. The mobile device accesses a web service to perform the power and sample size calculations. Because the web server has fewer limitations in RAM and processing power, the approach is faster. The mobile device needs only to elicit inputs to the power calculation from the user, format the request to the server, and display the results.</p>
+<p>When designing GLIMMPSE Lite, we decided to use a client-server approach based on the Java web services architecture <xref ref-type="bibr" rid="pone.0102082-McGovern1">[19]</xref>. This approach afforded several advantages. We minimized slow calculations on the mobile platform by shifting complex calculations to the server. We were able to leverage the existing, validated, web services architecture developed for our web-based product, GLIMMPSE. We reduced our development time significantly through extensive code reuse. <xref ref-type="fig" rid="pone-0102082-g001"><bold>Fig. 1</bold></xref> presents the software architecture used by both GLIMMPSE Lite and GLIMMPSE.</p>
+<fig id="pone-0102082-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g001</object-id><label>Figure 1</label><caption>
+<title>Current web and mobile software architecture.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g001" position="float" xlink:type="simple"/></fig>
+<p>The architecture contains three web services. The <italic>Power Service</italic> calculates power and sample size. The <italic>Chart Service</italic> produces power curves. The <italic>File Service</italic> provides upload and save functionality. For full details on the GLIMMPSE software architecture, see <ext-link ext-link-type="uri" xlink:href="http://samplesizeshop.com/documentation/glimmpse/" xlink:type="simple">http://samplesizeshop.com/documentation/glimmpse/</ext-link>. GLIMMPSE Lite currently interacts only with the <italic>Power Service</italic>. Thus, the ANOVA power and sample size calculations are performed on the server side, rather than overburdening the mobile device.</p>
+</sec><sec id="s3c">
+<title>C2. Statistical power software requires complex inputs</title>
+<p>Statistical power software involves a complex set of inputs. The user must choose the Type I error rate, list the dependent and independent variables, and specify hypotheses, means, variances, relative group sizes, correlations, repeated measures, covariates, and the type of statistical test. To assist users in creating a study design, a simple and easy to understand user interface was needed. To address the challenge, we took the following approach: 1) We divided the input requests so that the user only had to understand and input one item on each screen; 2) We added logic checks to prevent the user from entering nonsensical input; and 3) We tested the resulting user interface in a focus group.</p>
+<p>We implemented GLIMMPSE Lite on two smartphone mobile platforms: iOS and Android. Our choice of these two platforms is based on their current share of the worldwide mobile phone market (see C6 under the Challenges section for details). Creating a usable interface required different design decisions for each platform. To illustrate the design decisions for each platform, we describe how to specify an ANOVA study design using GLIMMPSE Lite on each mobile platform.</p>
+<p>The GLIMMPSE Lite user interface first presents the “Design” screen, a top-level list of the required inputs for an ANOVA design, in a tabular format, as shown in <xref ref-type="fig" rid="pone-0102082-g002"><bold>Fig. 2</bold></xref>. Each line of the table shown in <xref ref-type="fig" rid="pone-0102082-g002"><bold>Fig. 2</bold></xref> loads a new screen, which allows users to input a specific design feature. Users can navigate easily back and forth from any input screen to the “Design” screen, as shown in <xref ref-type="fig" rid="pone-0102082-g002"><bold>Fig. 2</bold></xref>. For example, a tap on the table cell titled “Solving For” in <xref ref-type="fig" rid="pone-0102082-g002"><bold>Fig. 2</bold></xref> loads the screen shown in <xref ref-type="fig" rid="pone-0102082-g003"><bold>Fig. 3</bold></xref>. The “Design” button on the upper left of the “Solving For” screen provides navigation back to the “Design” screen.</p>
+<fig id="pone-0102082-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g002</object-id><label>Figure 2</label><caption>
+<title>ANOVA “Design” screen on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g002" position="float" xlink:type="simple"/></fig><fig id="pone-0102082-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g003</object-id><label>Figure 3</label><caption>
+<title>“Solving For” input screen on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g003" position="float" xlink:type="simple"/></fig><sec id="s3c1">
+<title>Setting up an ANOVA design on GLIMMPSE Lite</title>
+<p>While the GLIMMPSE Lite user interface is similar for both platforms (iOS and Android), a few design solutions are specific to the SDK available for each platform, as discussed below.</p>
+</sec><sec id="s3c2">
+<title>The “Solving For” screen</title>
+<p>To start the ANOVA study design, the user first selects whether to solve for power or sample size. To facilitate the selection, we use the “Segmented Control” widget from the iOS SDK, as shown in <xref ref-type="fig" rid="pone-0102082-g003"><bold>Fig. 3(a)</bold></xref>. Since the same widget is not available on the Android platform, we use radio buttons instead, as shown in <xref ref-type="fig" rid="pone-0102082-g003"><bold>Fig. 3(b)</bold></xref>.</p>
+<p>Each time the user selects power or sample size, the “Design” screen in <xref ref-type="fig" rid="pone-0102082-g002"><bold>Fig. 2</bold></xref> is updated to reflect the selection made by user, as shown in <xref ref-type="fig" rid="pone-0102082-g004"><bold>Fig. 4</bold></xref>. If solving for sample size, the user is required to specify the desired power level. When solving for power, the user must input the smallest group size. The “Design” screen summarizes the study design, providing a visual indicator for input completion. Specifially, the pencil image for each list entry on the “Design” screen changes to a green checkmark, indicating that the corresponding portion of the study design is complete.</p>
+<fig id="pone-0102082-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g004</object-id><label>Figure 4</label><caption>
+<title>“Design” screen tailored to the user's choice of “Solving For” on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g004" position="float" xlink:type="simple"/></fig></sec><sec id="s3c3">
+<title>The “Type I Error” screen</title>
+<p>The Type I error rate is the probability of rejecting a null hypothesis when in fact the null hypothesis is true. The Type I error rate is a number between 0 and 1. For the iPhone, we use the “Rotating Wheel” widget available on iOS, shown in <xref ref-type="fig" rid="pone-0102082-g005"><bold>Fig. 5(a)</bold></xref>. For the Android platform, we use a text box instead, as shown in <xref ref-type="fig" rid="pone-0102082-g005"><bold>Fig. 5(b)</bold></xref>.</p>
+<fig id="pone-0102082-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g005</object-id><label>Figure 5</label><caption>
+<title>“Type I error” screen on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g005" position="float" xlink:type="simple"/></fig></sec><sec id="s3c4">
+<title>The “Number of Groups” screen</title>
+<p>A one-way ANOVA design compares means among two or more groups. Currently, GLIMMPSE Lite supports up to 10 groups. As shown in <xref ref-type="fig" rid="pone-0102082-g006"><bold>Fig. 6</bold></xref>, we use the iPhone “Rotating Wheel” widget, and a text box for the Android to enable the user to select the number of groups involved in the study design.</p>
+<fig id="pone-0102082-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g006</object-id><label>Figure 6</label><caption>
+<title>“Number of Groups” screen on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g006" position="float" xlink:type="simple"/></fig></sec><sec id="s3c5">
+<title>The “Relative Group Size” screen</title>
+<p>GLIMMPSE Lite supports power and sample size for ANOVA designs with equal or unequal group sizes. The default study design assumes equal group sizes. For unequal group sizes, GLIMMPSE Lite sliding bars allow the user to select the relative size of the groups (see <xref ref-type="fig" rid="pone-0102082-g007"><bold>Fig. 7</bold></xref>). Users can slide a bar from left to right to increase the relative group size.</p>
+<fig id="pone-0102082-g007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g007</object-id><label>Figure 7</label><caption>
+<title>“Relative Group Size” screen on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g007" position="float" xlink:type="simple"/></fig></sec><sec id="s3c6">
+<title>The “Smallest Group Size” screen</title>
+<p>If solving for power, the user must specify the smallest group size. Currently, GLIMMPSE Lite allows users to enter up to 4 smallest group sizes. A separate power calculation is performed for each group size. Since a user may enter any integer value for this input, we provide text boxes on both iOS and Android platforms, as shown in <xref ref-type="fig" rid="pone-0102082-g008"><bold>Fig. 8</bold></xref>.</p>
+<fig id="pone-0102082-g008" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g008</object-id><label>Figure 8</label><caption>
+<title>“Smallest Group Size” screen on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g008" position="float" xlink:type="simple"/></fig></sec><sec id="s3c7">
+<title>The “Power” screen</title>
+<p>If solving for sample size, the user must input the desired power level for the ANOVA study design. Currently, GLIMMPSE Lite allows users to select up to four commonly used power levels on each platform, as shown in <xref ref-type="fig" rid="pone-0102082-g009"><bold>Fig. 9(a)</bold></xref> for the iOS platform, and in <xref ref-type="fig" rid="pone-0102082-g009"><bold>Fig. 9(b)</bold></xref> for the Android platform. A sample size is calculated for each power value provided.</p>
+<fig id="pone-0102082-g009" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g009</object-id><label>Figure 9</label><caption>
+<title>“Power” screen, if solving for sample size on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g009" position="float" xlink:type="simple"/></fig></sec><sec id="s3c8">
+<title>The “Means and Variances” screen</title>
+<p>GLIMMPSE Lite assumes equal variance across all groups. The user enters a mean value for each group and a single standard deviation value. Since the user can enter any real value for means and any positive number for the standard deviation, we use text boxes on both iOS and Android platforms, as shown in <xref ref-type="fig" rid="pone-0102082-g010"><bold>Fig. 10</bold></xref>.</p>
+<fig id="pone-0102082-g010" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g010</object-id><label>Figure 10</label><caption>
+<title>“Means and Variances” screen on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g010" position="float" xlink:type="simple"/></fig>
+<p>The GLIMMPSE Lite user interface allows the user to select the “Relative Group Size” and “Means and Variances” screens after the “Number of Groups” input is complete. If a user taps on the cell titled “Relative Group Size” or “Means and Variances” without completing the “Number of Groups” input, the GLIMMPSE Lite interface alerts the user with an error message shown in <xref ref-type="fig" rid="pone-0102082-g011"><bold>Fig. 11</bold></xref>. Once all of the required inputs for the ANOVA study design are complete, a “Calculate” button appears on the “Design” screen as shown in <xref ref-type="fig" rid="pone-0102082-g012"><bold>Fig. 12</bold></xref>.</p>
+<fig id="pone-0102082-g011" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g011</object-id><label>Figure 11</label><caption>
+<title>Example error dialog on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g011" position="float" xlink:type="simple"/></fig>
+<fig id="pone-0102082-g012" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g012</object-id><label>Figure 12</label><caption>
+<title>“Design” screen with completed ANOVA study design on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g012" position="float" xlink:type="simple"/></fig></sec><sec id="s3c9">
+<title>Focus group study</title>
+<p>To evaluate the GLIMMPSE Lite user interface, we conducted a focus group study with nine participants. To match our target market, the focus group included five PhD level biostatisticians, three PhD level epidemiologists, and a Master's level student in biostatistics. The goal of the focus group was to assess the usability, look and feel, and text readability of the GLIMMPSE Lite user interface. Participants used a Likert scale <xref ref-type="bibr" rid="pone.0102082-Wikipedia1">[20]</xref> to rate agreement with the following statements about the iOS and Android versions of GLIMMPSE Lite:</p>
+<list list-type="bullet"><list-item>
+<p>The look and feel of the GLIMMPSE Lite application was appealing.</p>
+</list-item><list-item>
+<p>I could easily read the text even on the small screen.</p>
+</list-item><list-item>
+<p>My calculation was successful.</p>
+</list-item></list>
+<p><xref ref-type="fig" rid="pone-0102082-g013"><bold>Fig. 13</bold></xref> presents the results of our focus group analysis. The user satisfaction was high for both “look and feel” and “text readability” for both mobile platforms. Two users encountered errors while using the application, which we have since corrected.</p>
+<fig id="pone-0102082-g013" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g013</object-id><label>Figure 13</label><caption>
+<title>Focus group results for GLIMMPSE Lite on iOS and Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g013" position="float" xlink:type="simple"/></fig></sec></sec><sec id="s3d">
+<title>C3. The interface must provide an appropriate level of guidance to users regarding the required inputs</title>
+<p>Many users of our software have limited experience with power or sample size calculations. They may not be trained in statistical concepts such as the Type I error rate or power. Adding help pages is the obvious solution. However, on a mobile platform, the amount of help is limited by the mobile device screen size.</p>
+<p>To address this challenge, we implemented a separate help page for each input screen. Separating the help pages from the input screens allows the GLIMMPSE Lite user interface to access information only when needed, while maintaining a clean design. The help page is available for all users upon request. The text was designed to be understandable for individuals with limited statistical training, while still providing adequate theoretical details for trained scientists and statisticians. Sophisticated or experienced users who need no help can proceed directly to the input screen without looking at the help pages.</p>
+<p>Users can navigate to the help pages in one of two ways. They can go directly to the help page from the first screen. They can also view the help screens from anywhere within the input sequence, without losing any study design inputs. The start screen of the GLIMMPSE Lite user interface is shown in <xref ref-type="fig" rid="pone-0102082-g014"><bold>Fig. 14</bold></xref>. The “Start” button navigates directly to the “Design” screen, thereby allowing frequent GLIMMPSE Lite users to begin their ANOVA study design without pausing to look at a tutorial. The “Learn More” button, on the other hand, brings the user to the “Tutorial” screen, as shown in <xref ref-type="fig" rid="pone-0102082-g015"><bold>Fig. 15</bold></xref>. The “Tutorial” screen is more appropriate for first-time GLIMMPSE Lite users, as it provides generic information related to the ANOVA study design inputs.</p>
+<fig id="pone-0102082-g014" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g014</object-id><label>Figure 14</label><caption>
+<title>“Start” screen on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g014" position="float" xlink:type="simple"/></fig><fig id="pone-0102082-g015" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g015</object-id><label>Figure 15</label><caption>
+<title>“Tutorial” screen on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g015" position="float" xlink:type="simple"/></fig>
+<p>Users who need assistance during the input sequence can always access the help pages by tapping one of three tabs displayed at the bottom of the screen as shown in <xref ref-type="fig" rid="pone-0102082-g015"><bold>Fig. 15</bold></xref>. The purpose of each tab is described below:</p>
+<list list-type="order"><list-item>
+<p>The <bold>Tutorial</bold> tab leads to a table showing each available help page.</p>
+</list-item><list-item>
+<p>The <bold>Design</bold> tab summarizes the study design created so far, lists finished inputs, and indicates which screens remain to be filled in.</p>
+</list-item><list-item>
+<p>The <bold>About Us</bold> tab includes funding information and details on our development team. GLIMMPSE Lite users can submit a query or report a bug via the “Contact Us” button provided at the bottom of the “About Us” screen (see <xref ref-type="fig" rid="pone-0102082-g016"><bold>Fig. 16</bold></xref>).</p>
+</list-item></list>
+<fig id="pone-0102082-g016" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g016</object-id><label>Figure 16</label><caption>
+<title>“About Us” screen on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g016" position="float" xlink:type="simple"/></fig></sec><sec id="s3e">
+<title>C4. Communication between the mobile device and supporting servers must be fast and lightweight</title>
+<p>The client-server model used in GLIMMPSE Lite is only beneficial if the mobile application can communicate efficiently with the server. HTTP <xref ref-type="bibr" rid="pone.0102082-W3C1">[21]</xref> is a reasonable protocol to use for communication since most mobile devices are already web-enabled. The primary design decision for the communication layer that remained was the choice of the textual data format. The ideal format must be lightweight, supported on multiple platforms, human readable, and easy to parse. Possible data formats include direct Java object serialization <xref ref-type="bibr" rid="pone.0102082-Noelios1">[22]</xref>, XML <xref ref-type="bibr" rid="pone.0102082-Bray1">[23]</xref>, and JSON <xref ref-type="bibr" rid="pone.0102082-Crockford1">[24]</xref>. Java object serialization is an extremely lightweight binary format, but is not human-readable. In addition, object serialization may lead to platform compatibility problems. XML is robust, human readable, and cross-platform. However, it can be overly verbose, and parsing is expensive. On the other hand, JSON provides a lightweight communication medium and maintains human readability. JSON parsing toolkits are available for most mobile platforms.</p>
+<p>For GLIMMPSE Lite, we selected JSON as the textual data format. When the user has finished describing the ANOVA study design, the “Calculate” button at the top of the “Design” screen is highlighted as shown in <xref ref-type="fig" rid="pone-0102082-g012"><bold>Fig. 12</bold></xref>. When the user taps on the “Calculate” button, GLIMMPSE Lite creates a study design object, encodes the object into JSON, and sends an HTTP request to the <italic>Power Service</italic>, shown in <xref ref-type="fig" rid="pone-0102082-g017"><bold>Fig. 17</bold></xref>. When the calculation is complete, the <italic>Power Service</italic> sends a JSON encoded list of results back to the mobile device. After receiving the server's response, the GLIMMPSE Lite user interface extracts the power and sample size values from the JSON encoded object and displays these as a two-column table on the “Results” screen, as shown in <xref ref-type="fig" rid="pone-0102082-g018"><bold>Fig. 18</bold></xref>.</p>
+<fig id="pone-0102082-g017" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g017</object-id><label>Figure 17</label><caption>
+<title>Processing dialog box on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g017" position="float" xlink:type="simple"/></fig><fig id="pone-0102082-g018" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g018</object-id><label>Figure 18</label><caption>
+<title>“Results” screen on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g018" position="float" xlink:type="simple"/></fig>
+<p>Platform specific libraries for iOS and Android support JSON encoding and HTTP requests. For the iOS platform, we use a third-party framework called AFNetworking <xref ref-type="bibr" rid="pone.0102082-Thompson1">[25]</xref> to communicate with the <italic>Power Service</italic>. The AFNetworking framework supports JSON encoding and, thus, enables the GLIMMPSE Lite user interface to serialize the study design object before sending a HTTP request to the web server. For Android, JSON encoding and HTTP requests are supported by the Restlet library <xref ref-type="bibr" rid="pone.0102082-Noelios1">[22]</xref>.</p>
+</sec><sec id="s3f">
+<title>C5. The mobile app must scale easily and robustly</title>
+<p>GLIMMPSE Lite relies on our web services architecture, shown in <xref ref-type="fig" rid="pone-0102082-g019"><bold>Fig. 19</bold></xref>. As more and more users hit the mobile site, calculation times may slow, and the system may crash. We fear that frequent crashes due to traffic or server load inevitably will erode the user base for the statistical application.</p>
+<fig id="pone-0102082-g019" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g019</object-id><label>Figure 19</label><caption>
+<title>Our scaled web and mobile software architecture.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g019" position="float" xlink:type="simple"/></fig>
+<p>To address the challenge of scalability, our web services are hosted on a reliable cloud-based architecture provided by Amazon Web Services (AWS) <xref ref-type="bibr" rid="pone.0102082-Amazon1">[26]</xref>, as shown in <xref ref-type="fig" rid="pone-0102082-g019"><bold>Fig. 19</bold></xref>. The cloud-based service provided by Amazon offers several infrastructural as well as architectural advantages. AWS is cost-effective, easily customized, and can be quickly scaled to handle increased user demand.</p>
+</sec><sec id="s3g">
+<title>C6. Supporting multiple platforms requires significant development time</title>
+<p>As discussed in the Introduction section, each mobile platform has its own software development kit. In other words, native applications developed for one mobile platform will not compile on other mobile platforms. Therefore, the development time for a mobile application increases proportionally to the number of supported mobile platforms.</p>
+<p>With limited resources on our development team, we chose to develop GLIMMPSE Lite only for the iOS and Android mobile platforms. <xref ref-type="table" rid="pone-0102082-t002"><bold>Tables 2</bold></xref> and <xref ref-type="table" rid="pone-0102082-t003"><bold>3</bold></xref> list the tools used in developing GLIMMPSE Lite for each platform. These two platforms together hold 85% of the world-wide mobile market, as shown in <xref ref-type="fig" rid="pone-0102082-g020"><bold>Fig. 20</bold></xref>. GLIMMPSE Lite was developed by our two part-time software engineers in 2 months, and required roughly 720 woman-hours for the entire development process, from design to final release. GLIMMPSE Lite is built as a native application on both iOS and Android mobile platforms. Thus, GLIMMPSE Lite required separate code branches for the iOS platform using Objective-C, Xcode <xref ref-type="bibr" rid="pone.0102082-Apple3">[27]</xref>, and AFNetworking, and for the Android platform using Java, Eclipse <xref ref-type="bibr" rid="pone.0102082-Eclipse1">[28]</xref>, and Restlet.</p>
+<fig id="pone-0102082-g020" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g020</object-id><label>Figure 20</label><caption>
+<title>Smartphone World wide market share 2012.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g020" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0102082-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.t002</object-id><label>Table 2</label><caption>
+<title>Development environment for the iOS platform.</title>
+</caption><alternatives><graphic id="pone-0102082-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.t002" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Term</td>
+<td align="left" rowspan="1" colspan="1">Definition</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">.app</td>
+<td align="left" rowspan="1" colspan="1">The application file created for release.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">iOS</td>
+<td align="left" rowspan="1" colspan="1">The iPhone Operating System.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Xcode IDE</td>
+<td align="left" rowspan="1" colspan="1">Integrated development environment for iOS devices.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">iOS 5 - iOS 6</td>
+<td align="left" rowspan="1" colspan="1">The supported Apple mobile device operating system versions.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Objective-C</td>
+<td align="left" rowspan="1" colspan="1">The programming language used for native app development.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Provisioning profile</td>
+<td align="left" rowspan="1" colspan="1">The developer profile for build, test, and release on multiple iOS devices.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Certificate</td>
+<td align="left" rowspan="1" colspan="1">The developer certificate purchased for development from Apple.</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap><table-wrap id="pone-0102082-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.t003</object-id><label>Table 3</label><caption>
+<title>Development environment for the Android platform.</title>
+</caption><alternatives><graphic id="pone-0102082-t003-3" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.t003" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Term</td>
+<td align="left" rowspan="1" colspan="1">Definition</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">.apk</td>
+<td align="left" rowspan="1" colspan="1">The application package file created for release.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Dalvik</td>
+<td align="left" rowspan="1" colspan="1">The Android platform's virtual machine (VM).</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Eclipse IDE</td>
+<td align="left" rowspan="1" colspan="1">The Indigo Release 1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">adb</td>
+<td align="left" rowspan="1" colspan="1">Android debug bridge, a command line debugging application.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Android SDK</td>
+<td align="left" rowspan="1" colspan="1">The Android software development kit.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">API Level</td>
+<td align="left" rowspan="1" colspan="1">An integer value that defines the framework API revision offered.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">minSDKVersion (9)</td>
+<td align="left" rowspan="1" colspan="1">The minimum SDK version supported by the application.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">targetSDKVersion (15)</td>
+<td align="left" rowspan="1" colspan="1">The target SDK version for the application designed to run.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">AVD</td>
+<td align="left" rowspan="1" colspan="1">The Android virtual devices.</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>The GLIMMPSE Lite application for both iOS and Android platforms is available at <ext-link ext-link-type="uri" xlink:href="http://www.samplesizeshop.org/" xlink:type="simple">http://www.samplesizeshop.org/</ext-link>. The Android version can be installed directly from Google Play. The iOS version is available from the App Store.</p>
+</sec><sec id="s3h">
+<title>C7. Mobile devices have frequent updates in operating systems</title>
+<p>Mobile devices have a rapid development cycle, and mobile operating system change frequently. New operating systems may be unstable, and manufacturers may not fix problems on a regular schedule. Therefore, computer scientists must decide what subset of mobile platforms they can afford to support. The problem is further complicated by the fact different variants of the operating system may only run on specific phone hardware. Even after the target operating systems and devices are chosen, developers must test the mobile application on all combinations of the supported operating systems, mobile devices, and software development kits.</p>
+<p>We felt that supporting iOS and Android would cover the largest number of mobile users while not overburdening the development team. We have released our GLIMMPSE Lite application for iOS versions 5 and 6 for iPhone and iPod touch devices. iOS 5 is considered a stable iOS release by Apple. The iPhone 5, the latest mobile phone released by Apple, runs iOS 6. We have tested our GLIMMPSE Lite application on both iOS 5 and 6 versions via two iPhone simulators (5.0 and 6.0), four physical iPhones, and two iPod touch devices.</p>
+<p>The GLIMMPSE Lite application for the Android platform has been released for application programming interface (API) levels 9 (i.e., Gingerbread) onwards. We have tested our GLIMMPSE Lite application via Android Virtual Devices for Gingerbread with API levels 9 and 10 <xref ref-type="bibr" rid="pone.0102082-Google3">[29]</xref>, Honeycomb with API levels 11, 12 and 13 <xref ref-type="bibr" rid="pone.0102082-Google4">[30]</xref>, Ice Cream Sandwich with API levels 14 and 15 <xref ref-type="bibr" rid="pone.0102082-Google5">[31]</xref>, and Jelly Bean with API level 16 and 17 <xref ref-type="bibr" rid="pone.0102082-Google6">[32]</xref>. We have also tested the application on three physical smartphones, including the Google Samsung Nexus S (Gingerbread API level 10) <xref ref-type="bibr" rid="pone.0102082-Samsung1">[33]</xref>, the Samsung S III (Jelly Bean API level 16) <xref ref-type="bibr" rid="pone.0102082-Samsung2">[34]</xref> and the Samsung Stratosphere (Gingerbread API level 9) <xref ref-type="bibr" rid="pone.0102082-Samsung3">[35]</xref>.</p>
+</sec><sec id="s3i">
+<title>C8. Applications must interact effectively with other applications</title>
+<p>Resources on a mobile device, such as random access memory (RAM), file storage, and internet bandwidth, are typically shared among multiple running applications. Therefore, a statistical power application must efficiently use the shared resources and gracefully handle errors caused by interaction with other applications installed on the mobile device.</p>
+<p>The GLIMMPSE Lite product includes extensive error checking when interacting with other applications. For example, GLIMMPSE Lite allows users to save power results either by sending an email or by producing an image in the camera folder on the device. When a valid email cannot be found, GLIMMPSE Lite will alert the user with an appropriate error message, similar to that shown in <xref ref-type="fig" rid="pone-0102082-g011"><bold>Fig. 11</bold></xref>, encouraging the user to set up an email client. Similarly, GLIMMPSE Lite will alert the user if the camera folder or other local storage is inaccessible. Lastly, to respect the user's privacy concerns, GLIMMPSE Lite always asks for the user's permission before accessing any other resources on the mobile device.</p>
+</sec><sec id="s3j">
+<title>C9. Users must be able to save outputs for later reference</title>
+<p>Upon completion of a power or sample size calculation, GLIMMPSE Lite allows the user to save the results via the following methods:</p>
+<sec id="s3j1">
+<title>Email Results</title>
+<p>Many users will want the ability to re-create a power analysis, as well as looking at the results of the power analysis in the future. We allow both activities. In case an internet connection is available (wi-fi or 3G/4G), the power and sample size results can be emailed via the default email client registered on user's mobile device, as shown in <xref ref-type="fig" rid="pone-0102082-g021">Fig. 21</xref>. The results email includes a.csv file with power and sample size results, as well as the subset of the input parameters. To re-run a power analysis, the user can request the JSON encoded study design object file (.json). The.json file can be uploaded at our main website, glimmpse.Samplesizeshop.org. Using the uploaded.json file, the user can recreate the power analysis exactly, or make small changes and run it again.</p>
+<fig id="pone-0102082-g021" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0102082.g021</object-id><label>Figure 21</label><caption>
+<title>Save buttons on (a) iOS and (b) Android platforms.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0102082.g021" position="float" xlink:type="simple"/></fig></sec><sec id="s3j2">
+<title>Save As Image</title>
+<p>In case the mobile device loses an internet connection, the calculated power and sample size results can still be saved locally on the mobile device via the “Save As Image” option, as shown in <xref ref-type="fig" rid="pone-0102082-g021">Fig. 21a</xref>. This feature accesses the camera folder of the mobile device and saves a snapshot of the “Results” screen for later use.</p>
+</sec></sec><sec id="s3k">
+<title>C10. Users must be able to reproduce the power and sample size results without reiterating the whole process</title>
+<p>For credible studies, scientists and statisticians need to be able to save study designs and reproduce the power and sample size results. The GLIMMPSE software allows users to save their study design anytime during the design input process. The saved study design can be used later to reproduce the power and sample size results without following all the steps involved in the input process. The GLIMMPSE Lite user interface saves the ANOVA study design as a JSON file that can be used on the GLIMMPSE web application via the “Upload a study design” feature.</p>
+</sec></sec><sec id="s4">
+<title>Conclusions and future work</title>
+<p>This paper described the challenges that occur when porting statistical power software to a mobile platform. We suggested specific solutions for each challenge, and gave examples from the development of GLIMMPSE Lite, our mobile ANOVA power and sample size application.</p>
+<p>Our next effort in this direction is to implement GLIMMPSE Mobile. GLIMMPSE Mobile will allow users to calculate power and sample size for multilevel and longitudinal studies. Currently, GLIMMPSE Lite is available on only iOS and Android mobile platforms. To increase the user base for GLIMMPSE Mobile and make power and sample size calculations more accessible to users, we will target the development of GLIMMPSE Mobile to multiple mobile platforms. For this purpose, we will use Phonegap <xref ref-type="bibr" rid="pone.0102082-Adobe1">[36]</xref>, an open-source framework capable of building cross platform mobile applications. Phonegap allows the development of mobile applications in HTML <xref ref-type="bibr" rid="pone.0102082-W3C1">[21]</xref>, Java, and CSS <xref ref-type="bibr" rid="pone.0102082-Lie1">[37]</xref>. The same code can be rebuilt for multiple mobile platforms, including iOS, Android, Blackberry OS <xref ref-type="bibr" rid="pone.0102082-BlackBerry1">[38]</xref>, Windows Phone <xref ref-type="bibr" rid="pone.0102082-Microsoft1">[39]</xref>, Palm webOS <xref ref-type="bibr" rid="pone.0102082-HP1">[40]</xref>, Bada <xref ref-type="bibr" rid="pone.0102082-Samsung4">[41]</xref>, and Symbian <xref ref-type="bibr" rid="pone.0102082-Symbian1">[42]</xref>.</p>
+<p>While GLIMMPSE Lite does not currently provide power curves, the underlying architecture will allow us to easily implement these capabilities for GLIMMPSE Mobile in the future. If a future GLIMMPSE Mobile release requests a power curve, the existing <italic>Chart Service</italic> can generate a power curve image in response to an HTTP GET request.</p>
+<p>With the release of GLIMMPSE Lite, we have provided a free, open-source, validated power and sample size tool for users seeking to design ANOVA studies. In addition to being a useful tool for scientists, we hope that the explanations of our design decisions provide a guide for other designers seeking to produce statistical software for mobile platforms.</p>
+</sec></body>
+<back>
+<ack>
+<p>GLIMMPSE Lite is copyright 2012, by the Regents of the University of Colorado Denver. GLIMMPSE Lite is released under the GNU Public License version 2.0 (<ext-link ext-link-type="uri" xlink:href="http://www.gnu.org/licenses/gpl-2.0.html" xlink:type="simple">http://www.gnu.org/licenses/gpl-2.0.html</ext-link>).</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0102082-Apple1"><label>1</label>
+<mixed-citation publication-type="other" xlink:type="simple">Apple (2012) iOS. Cupertino, CA. Available: <ext-link ext-link-type="uri" xlink:href="http://www.apple.com/ios/" xlink:type="simple">http://www.apple.com/ios/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Google1"><label>2</label>
+<mixed-citation publication-type="other" xlink:type="simple">Google (2012) Android. Cupertino, CA. Available: <ext-link ext-link-type="uri" xlink:href="http://www.android.com/" xlink:type="simple">http://www.android.com/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Kreidler1"><label>3</label>
+<mixed-citation publication-type="other" xlink:type="simple">Kreidler SM, Muller KE, Grunwald GK, Ringham BM, Coker-Dukowitz ZT, <etal>et al</etal>.<bold>.</bold> (2013) GLIMMPSE: Online power computation for linear models with and without a baseline covariate. Journal of Statistical Software <volume>54</volume>..</mixed-citation>
+</ref>
+<ref id="pone.0102082-IBM1"><label>4</label>
+<mixed-citation publication-type="other" xlink:type="simple">IBM (2012) SPSS. Armonk, New York. Available: <ext-link ext-link-type="uri" xlink:href="http://www-" xlink:type="simple">http://www-</ext-link> 01.ibm.com/software/analytics/spss/. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Borenstein1"><label>5</label>
+<mixed-citation publication-type="other" xlink:type="simple">Borenstein M (2012) Power and Precision. Englewood, NJ. Available: <ext-link ext-link-type="uri" xlink:href="http://www.poweranalysis.com/" xlink:type="simple">http://www.poweranalysis.com/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Statistical1"><label>6</label>
+<mixed-citation publication-type="other" xlink:type="simple">Statistical Solutions (2008) Nquery Advisor, Sample Size and Power Calculation Software. Version 7.0. Saugus, MA. Available: <ext-link ext-link-type="uri" xlink:href="http://www.statsol.ie/" xlink:type="simple">http://www.statsol.ie/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-NCSS1"><label>7</label>
+<mixed-citation publication-type="other" xlink:type="simple">NCSS (2008) PASS, Power Analysis and Sample Size. Kaysville, UT. Available: <ext-link ext-link-type="uri" xlink:href="http://www.ncss.com/pass.html" xlink:type="simple">http://www.ncss.com/pass.html</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-SAS1"><label>8</label>
+<mixed-citation publication-type="other" xlink:type="simple">SAS Institute Inc (2011) SAS 9.2 Software, Version 9.2. Cary, NC. Available: <ext-link ext-link-type="uri" xlink:href="http://www.sas.com/software/sas9/" xlink:type="simple">http://www.sas.com/software/sas9/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-SAS2"><label>9</label>
+<mixed-citation publication-type="other" xlink:type="simple">SAS (2011) SAS/IML Software, Version 9.2. Cary, NC. Available: <ext-link ext-link-type="uri" xlink:href="http://support.sas.com/rnd/app/da/iml.html" xlink:type="simple">http://support.sas.com/rnd/app/da/iml.html</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Johnson1"><label>10</label>
+<mixed-citation publication-type="other" xlink:type="simple">Johnson JL, Muller KE, Slaughter JC, Gurka MJ, Gribbin MJ (2009) Powerlib: SAS/IML software for computing power in multivariate linear models. Journal of Statistical Software.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Raudenbush1"><label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Raudenbush</surname><given-names>SW</given-names></name>, <name name-style="western"><surname>Liu</surname><given-names>X</given-names></name> (<year>2000</year>) <article-title>Statistical power and optimal design for multisite randomized trials</article-title>. <source>Psychological Methods</source> <volume>5</volume>:<fpage>199</fpage>–<lpage>213</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0102082-RG1"><label>12</label>
+<mixed-citation publication-type="other" xlink:type="simple">RG O (2003) UnifyPow. Englewood, NJ. Available: <ext-link ext-link-type="uri" xlink:href="http://www.bio.ri.ccf.org/power.html" xlink:type="simple">http://www.bio.ri.ccf.org/power.html</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Education1"><label>13</label>
+<mixed-citation publication-type="other" xlink:type="simple">Education P (2012). Power Education. Available: <ext-link ext-link-type="uri" xlink:href="http://power.education.uconn.edu/otherwebsites.htm" xlink:type="simple">http://power.education.uconn.edu/otherwebsites.htm</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Statistics1"><label>14</label>
+<mixed-citation publication-type="other" xlink:type="simple">Statistics F (2012). Free Statistics. <ext-link ext-link-type="uri" xlink:href="http://freestatistics.info/?p=stat" xlink:type="simple">http://freestatistics.info/?p=stat</ext-link>. Available: <ext-link ext-link-type="uri" xlink:href="http://freestatistics.info/?p=stat" xlink:type="simple">http://freestatistics.info/?p=stat</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-CTSPEDIA1"><label>15</label>
+<mixed-citation publication-type="other" xlink:type="simple">CTSPEDIA (2012). CTSPEDIA. <ext-link ext-link-type="uri" xlink:href="https://www.ctspedia.org/do/view/CTSpedia" xlink:type="simple">https://www.ctspedia.org/do/view/CTSpedia</ext-link>. Available: <ext-link ext-link-type="uri" xlink:href="https://www.ctspedia.org/do/view/CTSpedia" xlink:type="simple">https://www.ctspedia.org/do/view/CTSpedia</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Apple2"><label>16</label>
+<mixed-citation publication-type="other" xlink:type="simple">Apple (2012) Apple Store. Cupertino, CA. Available: <ext-link ext-link-type="uri" xlink:href="https://itunes.apple.com/us/genre/ios/id36" xlink:type="simple">https://itunes.apple.com/us/genre/ios/id36</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Google2"><label>17</label>
+<mixed-citation publication-type="other" xlink:type="simple">Google (2012) Google Play. Cupertino, CA. Available: <ext-link ext-link-type="uri" xlink:href="https://play.google.com/store" xlink:type="simple">https://play.google.com/store</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Williams1"><label>18</label>
+<mixed-citation publication-type="other" xlink:type="simple">Williams VV (2011) Breaking the coppersmith-winograd barrier. STOC 44th Symposium on Theory of Computing.</mixed-citation>
+</ref>
+<ref id="pone.0102082-McGovern1"><label>19</label>
+<mixed-citation publication-type="other" xlink:type="simple">McGovern J, Tyagi S, Stevens M, Mathew S (2003) Java Web Services Architecture. San Francisco, CA: Morgan Kaufmann.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Wikipedia1"><label>20</label>
+<mixed-citation publication-type="other" xlink:type="simple">Wikipedia (2012). Likert scale. Available: <ext-link ext-link-type="uri" xlink:href="http://en.wikipedia.org/wiki/Likert" xlink:type="simple">http://en.wikipedia.org/wiki/Likert</ext-link> scale. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-W3C1"><label>21</label>
+<mixed-citation publication-type="other" xlink:type="simple">W3C (1999). HTML 4.01 speci cation. Available: <ext-link ext-link-type="uri" xlink:href="http://www.w3.org/TR/1999/REC-html401-" xlink:type="simple">http://www.w3.org/TR/1999/REC-html401-</ext-link> 19991224/. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Noelios1"><label>22</label>
+<mixed-citation publication-type="other" xlink:type="simple">Noelios Technologies (2011) Restlet. Version 2.0.10. Nanterre, France. Available: <ext-link ext-link-type="uri" xlink:href="http://www.restlet.org/" xlink:type="simple">http://www.restlet.org/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Bray1"><label>23</label>
+<mixed-citation publication-type="other" xlink:type="simple">Bray T, Paoli J, Sperberg-McQueen CM, Maler E, Yergeau F, <etal>et al</etal>.<bold>.</bold> (2006) Extensible markup language (XML) 1.1 (Second edition). W3C Recommendation.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Crockford1"><label>24</label>
+<mixed-citation publication-type="other" xlink:type="simple">Crockford D (2012). JSON. Available: <ext-link ext-link-type="uri" xlink:href="http://www.json.org/" xlink:type="simple">http://www.json.org/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Thompson1"><label>25</label>
+<mixed-citation publication-type="other" xlink:type="simple">Thompson M (2012) AFNetworking. Cupertino, CA. Available: <ext-link ext-link-type="uri" xlink:href="https://www.google.com/" xlink:type="simple">https://www.google.com/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Amazon1"><label>26</label>
+<mixed-citation publication-type="other" xlink:type="simple">Amazon (2012) Amazon Web Services. Seattle, WA. Available: <ext-link ext-link-type="uri" xlink:href="http://aws.amazon.com/" xlink:type="simple">http://aws.amazon.com/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Apple3"><label>27</label>
+<mixed-citation publication-type="other" xlink:type="simple">Apple (2012) Xcode. Cupertino, CA. Available: <ext-link ext-link-type="uri" xlink:href="https://developer.apple.com/xcode/" xlink:type="simple">https://developer.apple.com/xcode/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Eclipse1"><label>28</label>
+<mixed-citation publication-type="other" xlink:type="simple">Eclipse Foundation (2012) Eclipse. Ottawa, Ontario. Available: <ext-link ext-link-type="uri" xlink:href="http://www.eclipse.org/" xlink:type="simple">http://www.eclipse.org/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Google3"><label>29</label>
+<mixed-citation publication-type="other" xlink:type="simple">Google (2012) Gingerbread. Cupertino, CA. Available: <ext-link ext-link-type="uri" xlink:href="http://developer.android.com/about/versions/android-2.3-highlights.html" xlink:type="simple">http://developer.android.com/about/versions/android-2.3-highlights.html</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Google4"><label>30</label>
+<mixed-citation publication-type="other" xlink:type="simple">Google (2012) Honeycomb. Cupertino, CA. Available: <ext-link ext-link-type="uri" xlink:href="http://developer.android.com/about/versions/android-3.0-highlights.html" xlink:type="simple">http://developer.android.com/about/versions/android-3.0-highlights.html</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Google5"><label>31</label>
+<mixed-citation publication-type="other" xlink:type="simple">Google (2012) Ice Cream Sandwich. Cupertino, CA. Available: <ext-link ext-link-type="uri" xlink:href="http://developer.android.com/about/versions/android-4.0-highlights.html" xlink:type="simple">http://developer.android.com/about/versions/android-4.0-highlights.html</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Google6"><label>32</label>
+<mixed-citation publication-type="other" xlink:type="simple">Google (2012) Jelly Bean. Cupertino, CA. Available: <ext-link ext-link-type="uri" xlink:href="http://developer.android.com/about/versions/jelly-bean.html" xlink:type="simple">http://developer.android.com/about/versions/jelly-bean.html</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Samsung1"><label>33</label>
+<mixed-citation publication-type="other" xlink:type="simple">Samsung (2012). Nexus S. Available: <ext-link ext-link-type="uri" xlink:href="http://www.samsung.com/us/mobile/cell-phones/GT-" xlink:type="simple">http://www.samsung.com/us/mobile/cell-phones/GT-</ext-link> I9020FSTTMB.Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Samsung2"><label>34</label>
+<mixed-citation publication-type="other" xlink:type="simple">Samsung (2012). GalaxySIII. Available: <ext-link ext-link-type="uri" xlink:href="http://www.samsung.com/global/galaxys3/" xlink:type="simple">http://www.samsung.com/global/galaxys3/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Samsung3"><label>35</label>
+<mixed-citation publication-type="other" xlink:type="simple">Samsung (2012). Stratosphere. Available: <ext-link ext-link-type="uri" xlink:href="http://www.samsung.com/us/mobile/cell-phones/SCH-" xlink:type="simple">http://www.samsung.com/us/mobile/cell-phones/SCH-</ext-link> I405LKAVZW. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Adobe1"><label>36</label>
+<mixed-citation publication-type="other" xlink:type="simple">Adobe Systems (2003) PhoneGap. Cambridge, MA. Available: <ext-link ext-link-type="uri" xlink:href="http://phonegap.com/" xlink:type="simple">http://phonegap.com/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Lie1"><label>37</label>
+<mixed-citation publication-type="other" xlink:type="simple">Lie HW, Bos B (2008) Cascading Style Sheets, Level 1. W3C Recommendation.</mixed-citation>
+</ref>
+<ref id="pone.0102082-BlackBerry1"><label>38</label>
+<mixed-citation publication-type="other" xlink:type="simple">BlackBerry (2012) BlackBerry. Waterloo, Ontario. Available: <ext-link ext-link-type="uri" xlink:href="http://us.blackberry.com/" xlink:type="simple">http://us.blackberry.com/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Microsoft1"><label>39</label>
+<mixed-citation publication-type="other" xlink:type="simple">Microsoft (2012) Windows Phone. Seattle, WA. Available: <ext-link ext-link-type="uri" xlink:href="http://www.windowsphone.com/en-us" xlink:type="simple">http://www.windowsphone.com/en-us</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-HP1"><label>40</label>
+<mixed-citation publication-type="other" xlink:type="simple">HP (2011) Palm webOS. Seattle, WA. Available: <ext-link ext-link-type="uri" xlink:href="https://developer.palm.com/" xlink:type="simple">https://developer.palm.com/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Samsung4"><label>41</label>
+<mixed-citation publication-type="other" xlink:type="simple">Samsung (2011) bada. Seattle, WA. Available: <ext-link ext-link-type="uri" xlink:href="http://www.bada.com/" xlink:type="simple">http://www.bada.com/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+<ref id="pone.0102082-Symbian1"><label>42</label>
+<mixed-citation publication-type="other" xlink:type="simple">Symbian (2010) Symbian. Englewood, NJ. Available: <ext-link ext-link-type="uri" xlink:href="http://licensing.symbian.org/" xlink:type="simple">http://licensing.symbian.org/</ext-link>. Accessed: 2014 Nov 24.</mixed-citation>
+</ref>
+</ref-list></back>
+</article>

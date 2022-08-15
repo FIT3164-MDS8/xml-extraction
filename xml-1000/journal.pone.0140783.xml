@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="3.0" xml:lang="en" article-type="research-article">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-15-07367</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0140783</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>A Novel Algorithm for Movement Artifact Removal in ECG Signals Acquired from Wearable Systems Applied to Horses</article-title>
+<alt-title alt-title-type="running-head">Robust Movement Artifact Removal Method in Horse ECG</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Lanata</surname> <given-names>Antonio</given-names></name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="fn" rid="currentaff001"><sup>¤</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Guidi</surname> <given-names>Andrea</given-names></name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Baragli</surname> <given-names>Paolo</given-names></name>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Valenza</surname> <given-names>Gaetano</given-names></name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Scilingo</surname> <given-names>Enzo Pasquale</given-names></name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+</contrib-group>
+<aff id="aff001">
+<label>1</label>
+<addr-line>Research Center E. Piaggio, School of Engineering, University of Pisa, Pisa, Italy</addr-line>
+</aff>
+<aff id="aff002">
+<label>2</label>
+<addr-line>Department of Veterinary Sciences, University of Pisa, Pisa, Italy</addr-line>
+</aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Hadjileontiadis</surname> <given-names>Leontios</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1">
+<addr-line>Aristotle University of Thessaloniki, GREECE</addr-line>
+</aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: AL PB. Performed the experiments: AG. Analyzed the data: AG GV. Contributed reagents/materials/analysis tools: GV EPS. Wrote the paper: AL AG PB EPS.</p>
+</fn>
+<fn fn-type="current-aff" id="currentaff001">
+<label>¤</label>
+<p>Current address: Largo lucio Lazzarino, 1- 56126—Pisa, Italy</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">a.lanata@centropiaggio.unipi.it</email></corresp>
+</author-notes>
+<pub-date pub-type="collection">
+<year>2015</year>
+</pub-date>
+<pub-date pub-type="epub">
+<day>20</day>
+<month>10</month>
+<year>2015</year>
+</pub-date>
+<volume>10</volume>
+<issue>10</issue>
+<elocation-id>e0140783</elocation-id>
+<history>
+<date date-type="received">
+<day>17</day>
+<month>2</month>
+<year>2015</year>
+</date>
+<date date-type="accepted">
+<day>30</day>
+<month>9</month>
+<year>2015</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2015</copyright-year>
+<copyright-holder>Lanata et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0140783" xlink:type="simple"/>
+<abstract>
+<p>This study reports on a novel method to detect and reduce the contribution of movement artifact (MA) in electrocardiogram (ECG) recordings gathered from horses in free movement conditions. We propose a model that integrates cardiovascular and movement information to estimate the MA contribution. Specifically, ECG and physical activity are continuously acquired from seven horses through a wearable system. Such a system employs completely integrated textile electrodes to monitor ECG and is also equipped with a triaxial accelerometer for movement monitoring. In the literature, the most used technique to remove movement artifacts, when noise bandwidth overlaps the primary source bandwidth, is the adaptive filter. In this study we propose a new algorithm, hereinafter called Stationary Wavelet Movement Artifact Reduction (SWMAR), where the Stationary Wavelet Transform (SWT) decomposition algorithm is employed to identify and remove movement artifacts from ECG signals in horses. A comparative analysis with the Normalized Least Mean Square Adaptive Filter technique (NLMSAF) is performed as well. Results achieved on seven hours of recordings showed a reduction greater than 40% of MA percentage (between before- and after- the application of the proposed algorithm). Moreover, the comparative analysis with the NLMSAF, applied to the same ECG recordings, showed a greater reduction of MA percentage in favour of SWMAR with a statistical significant difference (<italic>p</italic>–<italic>value</italic> &lt; 0.0.5).</p>
+</abstract>
+<funding-group>
+<funding-statement>The authors have no support or funding to report.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="14"/>
+<table-count count="1"/>
+<page-count count="21"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability" xlink:type="simple">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its Supporting Information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>Detection and reduction of noises and artifacts in the cardiovascular monitoring are two of the greatest challenges for enhancing signal quality [<xref ref-type="bibr" rid="pone.0140783.ref001">1</xref>–<xref ref-type="bibr" rid="pone.0140783.ref006">6</xref>]. ECG morphology is strongly affected by movement artifacts (MAs), which must be therefore effectively removed [<xref ref-type="bibr" rid="pone.0140783.ref007">7</xref>, <xref ref-type="bibr" rid="pone.0140783.ref008">8</xref>]. In humans, several efforts have been made to obtain robust ECG against MAs [<xref ref-type="bibr" rid="pone.0140783.ref009">9</xref>–<xref ref-type="bibr" rid="pone.0140783.ref014">14</xref>], but MAs remain one of the major problems in both short- and long- term cardiovascular monitoring [<xref ref-type="bibr" rid="pone.0140783.ref015">15</xref>–<xref ref-type="bibr" rid="pone.0140783.ref018">18</xref>]. More specifically, MAs are mostly generated by skin stretching [<xref ref-type="bibr" rid="pone.0140783.ref019">19</xref>] that is recognized to be the most common source of MAs [<xref ref-type="bibr" rid="pone.0140783.ref020">20</xref>]. Skin stretching causes modifications in the distribution of charges at the interface between the skin and electrode. Since skin can be considered a current generator that actively produces a potential difference between the in- and out-side of the skin, stretching causes disturbance in the distribution of charges at the electrode-electrolyte interface. It induces a temporary change in the half-cell potential, providing a variation of the involved potentials and reducing its magnitude [<xref ref-type="bibr" rid="pone.0140783.ref021">21</xref>–<xref ref-type="bibr" rid="pone.0140783.ref023">23</xref>]. There are two possible approaches to compensating MAs. The first, is the modification of supports and materials involved in the skin-electrode interface, while the second implements models and algorithms for reducing MA contribution. The first approach is based on reducing skin-electrode discontinuity. It is achieved by cleaning or grazing the part of the skin in contact with the electrode and modifying material or form of the electrode itself [<xref ref-type="bibr" rid="pone.0140783.ref024">24</xref>–<xref ref-type="bibr" rid="pone.0140783.ref026">26</xref>]. An example of the latter approach is the use of textile electrodes, which are made of conductive yarns integrated into textile substrates. They exhibit the advantage of having a bigger surface in contact with the skin than the standard electrodes decreasing the skin-electrode impedance. Moreover, textile electrodes offer a greater dynamical adaptation to anatomical profiles [<xref ref-type="bibr" rid="pone.0140783.ref024">24</xref>]. The second approach includes procedures and algorithms which aim at detecting and removing artifacts from the acquired signals. Several techniques have been used in biomedical applications compensate for MAs. Among these, one of the most used and effective is the adaptive filtering cancellation technique [<xref ref-type="bibr" rid="pone.0140783.ref027">27</xref>–<xref ref-type="bibr" rid="pone.0140783.ref029">29</xref>]. It uses a “primary” input containing the corrupted signal (signal with artifacts) and a “reference” input containing artifacts correlated in some unknown way with the primary noise [<xref ref-type="bibr" rid="pone.0140783.ref030">30</xref>]. This adaptive filtering adjusts its parameters automatically, requiring a little a priori knowledge of noise characteristics. More specifically, the reference input is derived from a noise field where the signal is weak or undetectable, and is subtracted from a primary input containing both signal and noise. In this way, the primary noise is attenuated or eliminated by cancellation. Successive implementations were then improved with the introduction of recursivity [<xref ref-type="bibr" rid="pone.0140783.ref031">31</xref>]. In this latter case, an adaptive recurrent filter structure was introduced where the primary input was the ECG signal affected by MAs, while the reference input was an impulse train, whose impulses were coincident with the onsets of QRS complexes. This approach has two major limitations. The first is the introduction of errors due to the inaccurate coincidence of the impulses of the reference signal with the QRS complex onsets. The second issue is related to unusual beat-by-beat variation that may prevent complete adaptation from taking place [<xref ref-type="bibr" rid="pone.0140783.ref031">31</xref>]. Further studies evidenced the importance of acquiring noise, movement, as well as skin-electrode impedance. In fact, some studies on the correlation between MAs and electrode impedance have been already done in the literature [<xref ref-type="bibr" rid="pone.0140783.ref032">32</xref>]. Other studies have introduced stretch sensors to measure MAs effect [<xref ref-type="bibr" rid="pone.0140783.ref033">33</xref>, <xref ref-type="bibr" rid="pone.0140783.ref034">34</xref>]. In such cases, both electrode-skin impedance and sensor were mounted on the electrode for adaptively modeling motion artifact. In some cases, the need to measure the abovementioned parameters led to the development of novel hardware prototypes [<xref ref-type="bibr" rid="pone.0140783.ref001">1</xref>]. Other researchers proposed to measure the voltage difference from two adjacent electrodes to estimate a noise reference signal [<xref ref-type="bibr" rid="pone.0140783.ref035">35</xref>]. Furthermore, skin stretch was also estimated by using non-invasive optical sensors incorporated into ECG electrodes [<xref ref-type="bibr" rid="pone.0140783.ref036">36</xref>]. The reported research findings have underlined the importance of measuring movements for investigating their relationship with the MAs in ECG. In fact, the information obtained from accelerometer and magneto-resistive sensors were recently used [<xref ref-type="bibr" rid="pone.0140783.ref037">37</xref>, <xref ref-type="bibr" rid="pone.0140783.ref038">38</xref>]. Moreover, other techniques such as principal component (PCA) and independent component (ICA) analysis [<xref ref-type="bibr" rid="pone.0140783.ref039">39</xref>–<xref ref-type="bibr" rid="pone.0140783.ref042">42</xref>] as well as Empirical Mode Decomposition (EMD) [<xref ref-type="bibr" rid="pone.0140783.ref043">43</xref>, <xref ref-type="bibr" rid="pone.0140783.ref044">44</xref>] have been explored, but nevertheless the MA issue needs to be still addressed. In this work we propose a novel algorithm based on the stationary wavelet transform (SWT) [<xref ref-type="bibr" rid="pone.0140783.ref045">45</xref>] method for robustly estimating MAs for reliable removal. Moreover, it overcomes many limitations due to empirical thresholds proposed by previous research [<xref ref-type="bibr" rid="pone.0140783.ref046">46</xref>].</p>
+<sec id="sec002">
+<title>The issues of equine ECG traces</title>
+<p>The assessment of ECG morphology plays a paramount role in the investigation of cardiac activity in horses [<xref ref-type="bibr" rid="pone.0140783.ref047">47</xref>]. It is important for the evaluation of heart activity during exercise and recovery phase, as well as in the diagnosis of poor performance and exercise intolerance [<xref ref-type="bibr" rid="pone.0140783.ref048">48</xref>–<xref ref-type="bibr" rid="pone.0140783.ref051">51</xref>]. It has been suggested that both sopraventricular and ventricular premature depolarisation during physical activity can be considered a clue of poor performance in the horses [<xref ref-type="bibr" rid="pone.0140783.ref052">52</xref>]. Given the above considerations, high-quality ECG recordings become critical in the field of equine internal and sport medicine and exercise physiology. Therefore, the presence of MAs in the ECG signal should be avoided, since they would make ECG traces useless or misleading. In human cardiology, such issues are solved, or reduced, by limiting the amount of physical activity. Unlike humans, horses never stay still, and MAs are normally present during ECG recording, corrupting a large part of the significant signal [<xref ref-type="bibr" rid="pone.0140783.ref053">53</xref>]. Typically, restraining horse is discouraged because it is unnatural and stressful, and increases the sympathetic contribution to heart control [<xref ref-type="bibr" rid="pone.0140783.ref054">54</xref>], thus giving a misleading ECG interpretation [<xref ref-type="bibr" rid="pone.0140783.ref048">48</xref>]. The problems related to MAs in the equine ECG become more relevant during exercise [<xref ref-type="bibr" rid="pone.0140783.ref055">55</xref>]. To reduce MAs, one of the most adopted strategies is the repositioning of electrodes by modifying the base-apex configuration [<xref ref-type="bibr" rid="pone.0140783.ref047">47</xref>, <xref ref-type="bibr" rid="pone.0140783.ref056">56</xref>–<xref ref-type="bibr" rid="pone.0140783.ref060">60</xref>]. Despite technical strategies (e.g., glue, adhesive bendage, etc) and the portability achieved by miniaturized holter ECG acquisition platforms, the ECG-related artifacts are even more important in equine sports [<xref ref-type="bibr" rid="pone.0140783.ref047">47</xref>, <xref ref-type="bibr" rid="pone.0140783.ref053">53</xref>]. Therefore, horse body movements still remain the biggest source of artifacts in ECG, and manual inspection remains the most diffuse method of removing artifacts [<xref ref-type="bibr" rid="pone.0140783.ref057">57</xref>–<xref ref-type="bibr" rid="pone.0140783.ref059">59</xref>], although it is operator-expertise dependent, inaccurate and time-demanding. When manual inspection occurs, the corrupted ECG segments are usually completely removed, thus leading to a great loss of signal and related information [<xref ref-type="bibr" rid="pone.0140783.ref058">58</xref>]. Hence, an optimized approach for movement-related artifact reduction is strongly required in both equine medicine and in the research applied to horses. Unfortunately, there are currently no accurate and consistent algorithms for identifying equine QRS complexes regrading horses.</p>
+<p>In this study, we perform an automatic movement artifact identification and removal of corrupted ECGs through innovative algorithms based on the discrete stationary wavelet transform (SWT). Thanks to a wearable monitoring system, ECG signal and physical activity were continuously monitored to be then combined and put through a multi-resolution thresholding procedure to obtain a signal that was and estimate of the MAs. Finally, by using a simple subtracting process, we removed MAs from the original ECGs. Results are compared to those coming from the application of the Normalized Least Mean Square Adaptive Filter method (NLMSAF) on the same ECG recordings. The manuscript is organized as follows: Section II describes the experimental protocol, along with the signal processing chain. The sections relative to the signal processing chain are split into three sub paragraphs: (i) preprocessing phase, (ii) detection phase, and (iii) artifact removal phase; Section III results are reported, and in Section IV conclusions are drawn and discussed.</p>
+</sec>
+</sec>
+<sec id="sec003" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<p>Seven healthy standardbred mares in anestrus were enrolled in this study (mean age: 8.4 ± 1.3 years, weight: 566.7 ± 54.5 kg. height: 162.9 ± 5.2 cm, body score: 3.9 ± 0.7). Horses were socially housed in a paddock (75 × 75 m) and were provided ad libitum access to both hay and water. Horses were used as receivers in the embryo transfer program of the Department of Veterinary Sciences (University of Pisa, Italy) where this study was performed. Mares were in healthy conditions and not pregnant at the time of this protocol. Each horse underwent an accurate cardiological examination, including ECG and echo-cardio in order to exclude any abnormality in the heart activity. Moreover, they were equipped with a wearable system to monitor physiological signals and physical activity. The wearable monitoring system used in this study (<xref ref-type="fig" rid="pone.0140783.g001">Fig 1</xref>) was developed by Smartex s.r.l (Italy) and was comprised of an elastic belt fastened around the chest behind the shoulder area of the horses. Two textile electrodes and a strain gauge sensor were integrated into the belt to acquire the ECG (with a sampling frequency of 250 Hz) in the modified base-apex configuration [<xref ref-type="bibr" rid="pone.0140783.ref056">56</xref>] and respiration activity. The two sensors were finally connected to portable electronics. A triaxial accelerometer was embedded into the electronics, which was positioned on the back of the horse and used to monitor physical activity (with a sampling frequency of 25 Hz). Moreover, through a wireless connection, the system was connected to a mobile device where a dedicated application allowed for checking both the electrode status and the quality of the acquired signal and controlling remotely the storing process in a secure digital (SD) card. Data acquisition was performed in a stall (4 × 4 m), where each horse was alone and left free to move for 60 minutes continuously. The horses were unfed for at least one hour before data acquisition. All horses came from a breeding farm where were used as stud mares after participating in sport. Therefore all horses were perfectly accustomed human handling. At the end of acquisition, and before the application of the processing algorithms, all the acquired ECGs were visually examined by two experts, and all the ECG segments, corrupted by MA, were marked and then used for further validation. The experts were two cardiologists of the Veterinary Teaching Hospital equine clinical section especially trained to individuate MAs. The output of the labeling process was the MA percentage estimated as the percentage of the time in which the ECG exhibits MAs over the whole length of the ECG. Moreover, the experts analyzed the same ECG traces, separately, and in the case of different labelling, an additional veterinary cardiologist was involved to solve the discordant evaluation and to come to a shared and accepted decision in assigning the definitive labels. All raw data can be downloaded as supporting information in <xref ref-type="supplementary-material" rid="pone.0140783.s001">S1 Supporting Information</xref>.</p>
+<fig id="pone.0140783.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Scheme of the electronic set up: placement of the proposed system.</title>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g001"/>
+</fig>
+<sec id="sec004">
+<title>Ethics Statement</title>
+<p>This study was carried out in accordance with the recommendations in the Italian Animal Care Act (Decree Law 116/92). The experimental protocol was approved by the Ethics Committee on Animal Experimentation of the University of Pisa (reference no. 4886). Consent to participation in the test was signed by each horse owner.</p>
+</sec>
+<sec id="sec005">
+<title>Signal Processing</title>
+<p>The method here proposed is organised into three different phases. <xref ref-type="fig" rid="pone.0140783.g002">Fig 2</xref> shows a concise scheme of the method. In the first phase, named Preprocessing Phase (PP), all the acquired signals, specifically ECG and accelerometers, were limited in bandwidth. The second phase, named Detection Phase (DP), was comprised of algorithms of QRS complex detection, motion detection, and stationary wavelet reduction. Finally, the third phase, named Artifact Removal Phase (ARP), was focused on the reconstruction of a signal which includes only artifacts, successively removed from the starting raw ECG. In the next, the whole signal processing chain is explained in detail. Hereinafter the whole method is named Stationary Wavelet Movement Artifact Reduction (SWMAR).</p>
+<fig id="pone.0140783.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Block diagram of the proposed method.</title>
+<p>After a pre-processing phase, the SWT decomposition, the QRS complexes and motion detections are performed followed by the reconstruction of the signal affected by artifacts, that is used to reduce and/or remove MAs.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g002"/>
+</fig>
+<sec id="sec006">
+<title>Preprocessing Phase</title>
+<p>In this phase, ECG signals are digitally filtered first with a zero-phase Butterworth IIR band pass filter (0.5–40 Hz), while the accelerometer signals are up-sampled, by means of a linear interpolation method, from 25 Hz to 250 Hz, and combined in order to obtain the acceleration module vectors according to <xref ref-type="disp-formula" rid="pone.0140783.e001">Eq (1)</xref> <disp-formula id="pone.0140783.e001"><alternatives><graphic id="pone.0140783.e001g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e001"/><mml:math id="M1" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>A</mml:mi> <mml:mi>C</mml:mi> <mml:mi>C</mml:mi> <mml:mo>=</mml:mo> <mml:msqrt><mml:mrow><mml:mi>a</mml:mi> <mml:mi>c</mml:mi> <mml:msubsup><mml:mi>c</mml:mi> <mml:mi>x</mml:mi> <mml:mn>2</mml:mn></mml:msubsup> <mml:mo>+</mml:mo> <mml:mi>a</mml:mi> <mml:mi>c</mml:mi> <mml:msubsup><mml:mi>c</mml:mi> <mml:mi>y</mml:mi> <mml:mn>2</mml:mn></mml:msubsup> <mml:mo>+</mml:mo> <mml:mi>a</mml:mi> <mml:mi>c</mml:mi> <mml:msubsup><mml:mi>c</mml:mi> <mml:mi>z</mml:mi> <mml:mn>2</mml:mn></mml:msubsup></mml:mrow></mml:msqrt></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(1)</label></disp-formula>
+where <italic>ACC</italic> is the acceleration module vector and <italic>acc</italic><sub><italic>x</italic></sub>, <italic>acc</italic><sub><italic>y</italic></sub>, <italic>acc</italic><sub><italic>z</italic></sub> are the accelerometer components.</p>
+</sec>
+<sec id="sec007">
+<title>Detection Phase</title>
+<p>This phase has three steps: QRS complex detection, detection of the ACC segments in which the movement was supposed to introduce artifacts into the ECG signals, and finally the ECG signal decomposition through SWT.</p>
+<p><bold>QRS Complex Detection</bold> (QRSCD) used in this study is based on the computation of the energy of the second derivative of the ECG (see diagram reported in <xref ref-type="fig" rid="pone.0140783.g003">Fig 3</xref>). Operatively, the second derivative of the ECG signal was segmented by applying a 30 ms long moving window with a time shift equal to 15 ms, therefore with an overlap of 50%. Then, frame by frame, the energy signal was obtained as the sum of squares of the data within each frame. Afterwards, in each of non-overlapped time intervals lasting 1.5 s, Local Maxima (LM) and Local minima (Lm) of the energy signal were detected. By moving the window, a series of LM and Lm is constructed and used to estimate the threshold used to identify the QRS complexes. More specifically, after computing the medians of both the LM and Lm series, the threshold was estimated as the median value of the two previously calculated values. Of note, for an accurate computation of the LM and Lm, it is important that at least one ECG be present into the window, therefore we have chosen the value of 1.5 s, as it coincides with the maximum of the mean RR interval computed over 60 minutes among all of the 7 horses. Afterwards, energy segments of the derived signal showing a energy value greater than the threshold were considered as belonging to a QRS complex (see <xref ref-type="fig" rid="pone.0140783.g004">Fig 4</xref>). <xref ref-type="fig" rid="pone.0140783.g004">Fig 4</xref> shows an example of QRS detection algorithm applied to two consecutive QRSs. Specifically, for each QRS, two markers (A and B, A starting time-instant and B ending time-instant of QRS) are computed. In order to test the performance of the QRS detection algorithm proposed here, 19 ECG records (Fs = 250Hz) gathered from the human QT database [<xref ref-type="bibr" rid="pone.0140783.ref061">61</xref>, <xref ref-type="bibr" rid="pone.0140783.ref062">62</xref>] provided by PhysioNet [<xref ref-type="bibr" rid="pone.0140783.ref063">63</xref>] (PN-DB) were used. ECGs were chosen in order to collect a broad variety of QRS and ST-T morphologies. A total of 596 QRS complexes were detected and segmented by our algorithm and compared with the manual labeling provided by the database [<xref ref-type="bibr" rid="pone.0140783.ref064">64</xref>].</p>
+<fig id="pone.0140783.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Block diagram of the QRS-complexes detection.</title>
+<p>The method employes a threshold to detect QRS complexes based on an estimate of the energy of the second derivative of the ECG signals.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g003"/>
+</fig>
+<fig id="pone.0140783.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Example of two consecutive QRS complexes detected by the proposed method.</title>
+<p>Letter <italic>A</italic> indicates the stating time-instant while <italic>B</italic> indicates the ending time-instant.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g004"/>
+</fig>
+<p><bold>Motion Detection</bold> (MD) algorithm detects the time-intervals of ACC where the amplitude was supposed to generate MAs. <xref ref-type="fig" rid="pone.0140783.g005">Fig 5</xref> shows a concise block diagram of the MD algorithm. The movements that can contribute to the MAs are computed by means of a threshold, <italic>T</italic>, that was estimated by considering the rectified acceleration according to:
+<disp-formula id="pone.0140783.e002"><alternatives><graphic id="pone.0140783.e002g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e002"/><mml:math id="M2" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>T</mml:mi> <mml:mo>=</mml:mo> <mml:mi>m</mml:mi> <mml:mi>e</mml:mi> <mml:mi>d</mml:mi> <mml:mi>i</mml:mi> <mml:mi>a</mml:mi> <mml:mi>n</mml:mi> <mml:mo>(</mml:mo> <mml:mi>A</mml:mi> <mml:mi>C</mml:mi> <mml:mi>C</mml:mi> <mml:mo>)</mml:mo> <mml:mo>+</mml:mo> <mml:mn>1</mml:mn> <mml:mo>.</mml:mo> <mml:mn>4826</mml:mn> <mml:mo>*</mml:mo> <mml:mi>m</mml:mi> <mml:mi>a</mml:mi> <mml:mi>d</mml:mi> <mml:mo>(</mml:mo> <mml:mi>A</mml:mi> <mml:mi>C</mml:mi> <mml:mi>C</mml:mi> <mml:mo>)</mml:mo> <mml:mo>;</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(2)</label></disp-formula>
+where <italic>median</italic>(<italic>ACC</italic>) is considered as the robust estimate of the average of acceleration module, and 1.4826 ∗ <italic>mad</italic>(<italic>ACC</italic>) is used as robust estimate of the standard deviation of the acceleration module, where robustness is estimated according to [<xref ref-type="bibr" rid="pone.0140783.ref065">65</xref>]. The acceleration signal segments having a value lower than <italic>T</italic> <xref ref-type="disp-formula" rid="pone.0140783.e002">Eq (2)</xref> are considered unable to generate MA in the corresponding ECG signal. <xref ref-type="fig" rid="pone.0140783.g006">Fig 6</xref> shows the module of the acceleration vector (upper plot) and the ECG signal (lower plot) in the same time frame. Of note, this figure shows that information provided by the accelerometer, when a relevant movement occurs, is different from the ECG both in terms of shape and frequency contribution.</p>
+<fig id="pone.0140783.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Block diagram of the Motion-detection procedure.</title>
+<p>After the signal is rectified and subtracted by its mean value, strong movement segments are detected through a threshold as estimated in <xref ref-type="disp-formula" rid="pone.0140783.e002">Eq (2)</xref>. These motion signal segments can introduce MAs.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g005"/>
+</fig>
+<fig id="pone.0140783.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>The graph at the top shows the acceleration module with an event of remarkable movement, while at the bottom the ECG with the corresponding MA is reported.</title>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g006"/>
+</fig>
+<p><bold>Stationary Wavelet Reduction</bold> (SWR) is based on the application of Stationary Wavelet Transform (SWT) to decompose ECG into different scales for separating small features (fine scales) from large features (coarse scales), [<xref ref-type="bibr" rid="pone.0140783.ref066">66</xref>]. Since SWT is able to perform local signal processing analysis, i.e., to zoom in on any interval of time or space, it could reveal hidden aspects of the data that other signal analysis techniques fail to detect. For implementing this decomposition it is essential to perform a redundant representation of the signal through an orthonormal transform to guarantee a time-invariance transform (i.e., the coefficients of a delayed signal are a time-shifted version of those of the original signal). For a given signal <italic>x</italic>(<italic>t</italic>) ∈ <italic>L</italic><sup>2</sup>(ℝ), the SWT can be obtained by integrating the product of the given function with the complex conjugate of the wavelet function <italic>ψ</italic><sub><italic>j</italic>,<italic>k</italic></sub>(<italic>x</italic>)
+<disp-formula id="pone.0140783.e003"><alternatives><graphic id="pone.0140783.e003g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e003"/><mml:math id="M3" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mi mathvariant="script">W</mml:mi> <mml:mrow><mml:mi>j</mml:mi></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mo>(</mml:mo> <mml:mi>x</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mtd> <mml:mtd><mml:mo>≜</mml:mo></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mfrac><mml:mn>1</mml:mn> <mml:msup><mml:mn>2</mml:mn> <mml:mfrac><mml:mi>j</mml:mi> <mml:mn>2</mml:mn></mml:mfrac></mml:msup></mml:mfrac> <mml:munderover><mml:mo>∫</mml:mo> <mml:mrow><mml:mo>-</mml:mo> <mml:mi>∞</mml:mi></mml:mrow> <mml:mi>∞</mml:mi></mml:munderover> <mml:mi>x</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:msubsup><mml:mi>ψ</mml:mi> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>,</mml:mo> <mml:mi>k</mml:mi></mml:mrow> <mml:mo>*</mml:mo></mml:msubsup> <mml:mrow><mml:mo>(</mml:mo> <mml:mfrac><mml:mi>t</mml:mi> <mml:msup><mml:mn>2</mml:mn> <mml:mi>j</mml:mi></mml:msup></mml:mfrac> <mml:mo>-</mml:mo> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd/><mml:mtd><mml:mo>≜</mml:mo></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mo>⟨</mml:mo> <mml:mi>x</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>,</mml:mo> <mml:mfrac><mml:mn>1</mml:mn> <mml:msup><mml:mn>2</mml:mn> <mml:mfrac><mml:mi>j</mml:mi> <mml:mn>2</mml:mn></mml:mfrac></mml:msup></mml:mfrac> <mml:msub><mml:mi>ψ</mml:mi> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>,</mml:mo> <mml:mi>k</mml:mi></mml:mrow></mml:msub> <mml:mo>(</mml:mo> <mml:mfrac><mml:mi>t</mml:mi> <mml:msup><mml:mn>2</mml:mn> <mml:mi>j</mml:mi></mml:msup></mml:mfrac> <mml:mo>-</mml:mo> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo> <mml:mo>⟩</mml:mo> <mml:mspace width="2.em"/><mml:mrow><mml:mo>(</mml:mo> <mml:mi>j</mml:mi> <mml:mo>,</mml:mo> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>∈</mml:mo> <mml:mi mathvariant="double-struck">Z</mml:mi></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(3)</label></disp-formula>
+where <italic>ψ</italic>(.) is referred to as a mother wavelet, * stands for complex conjugation, and ⟨˙⟩ represents the inner product of the two functions, hence, the orthonormal wavelet basis <italic>L</italic><sup>2</sup>(ℝ) was <inline-formula id="pone.0140783.e004"><alternatives><graphic id="pone.0140783.e004g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e004"/><mml:math id="M4" display="inline" overflow="scroll"><mml:mrow><mml:mrow><mml:mo stretchy="true">{</mml:mo> <mml:msup><mml:mn>2</mml:mn> <mml:mrow><mml:mo>−</mml:mo> <mml:mfrac><mml:mi>j</mml:mi> <mml:mn>2</mml:mn></mml:mfrac></mml:mrow></mml:msup> <mml:mi>ψ</mml:mi> <mml:mrow><mml:mo stretchy="true">(</mml:mo> <mml:mfrac><mml:mi>t</mml:mi> <mml:msup><mml:mn>2</mml:mn> <mml:mi>j</mml:mi></mml:msup></mml:mfrac> <mml:mo>−</mml:mo> <mml:mi>k</mml:mi> <mml:mo stretchy="true">)</mml:mo></mml:mrow> <mml:mo>,</mml:mo> <mml:mrow><mml:mo stretchy="true">(</mml:mo> <mml:mi>j</mml:mi> <mml:mo>,</mml:mo> <mml:mi>k</mml:mi> <mml:mo stretchy="true">)</mml:mo></mml:mrow> <mml:mo>∈</mml:mo> <mml:mo>ℤ</mml:mo> <mml:mo stretchy="true">}</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>. Then by performing the multiresolution analysis (MRA) as proposed by Mallat et al. [<xref ref-type="bibr" rid="pone.0140783.ref067">67</xref>], the signal was decomposed into various resolution levels. At each level the signal is decomposed into two sub-signals: the first, called <italic>approximation</italic>, contains information at lower frequencies, and the second, called <italic>detail</italic>, contains information at higher frequencies. Finally, detail coefficients <italic>D</italic><sub><italic>j</italic>,<italic>k</italic></sub> and approximation coefficients <italic>A</italic><sub><italic>j</italic>,<italic>k</italic></sub> at level <italic>j</italic> are given by
+<disp-formula id="pone.0140783.e005"><alternatives><graphic id="pone.0140783.e005g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e005"/><mml:math id="M5" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mi mathvariant="script">D</mml:mi> <mml:mrow><mml:mi>j</mml:mi></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mo stretchy="false">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="false">)</mml:mo> <mml:mspace width=".1em"/><mml:mo>≜</mml:mo> <mml:mspace width=".1em"/><mml:mo>⟨</mml:mo> <mml:mi>x</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>,</mml:mo> <mml:mfrac><mml:mn>1</mml:mn> <mml:msup><mml:mn>2</mml:mn> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>/</mml:mo> <mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mfrac> <mml:mi>ψ</mml:mi> <mml:mo>(</mml:mo> <mml:mfrac><mml:mi>t</mml:mi> <mml:msup><mml:mn>2</mml:mn> <mml:mi>j</mml:mi></mml:msup></mml:mfrac> <mml:mo>-</mml:mo> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo> <mml:mo>⟩</mml:mo> <mml:mspace width="2.em"/><mml:mrow><mml:mo>(</mml:mo> <mml:mi>j</mml:mi> <mml:mo>,</mml:mo> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>∈</mml:mo> <mml:mi mathvariant="double-struck">Z</mml:mi></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(4)</label></disp-formula> <disp-formula id="pone.0140783.e006"><alternatives><graphic id="pone.0140783.e006g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e006"/><mml:math id="M6" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mi mathvariant="script">A</mml:mi> <mml:mrow><mml:mi>j</mml:mi></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mo stretchy="false">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="false">)</mml:mo><mml:mspace width=".1em"/> <mml:mo>≜</mml:mo><mml:mspace width=".1em"/> <mml:mo>⟨</mml:mo> <mml:mi>x</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>,</mml:mo> <mml:mfrac><mml:mn>1</mml:mn> <mml:msup><mml:mn>2</mml:mn> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>/</mml:mo> <mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mfrac> <mml:mi>ϕ</mml:mi> <mml:mo>(</mml:mo> <mml:mfrac><mml:mi>t</mml:mi> <mml:msup><mml:mn>2</mml:mn> <mml:mi>j</mml:mi></mml:msup></mml:mfrac> <mml:mo>-</mml:mo> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo> <mml:mo>⟩</mml:mo> <mml:mspace width="2.em"/><mml:mrow><mml:mo>(</mml:mo> <mml:mi>j</mml:mi> <mml:mo>,</mml:mo> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>∈</mml:mo> <mml:mi mathvariant="double-struck">Z</mml:mi></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(5)</label></disp-formula>
+where <italic>ϕ</italic>(˙) is the scaling function. The mother wavelet and the scaling function must satisfy the two-scale equations:
+<disp-formula id="pone.0140783.e007"><alternatives><graphic id="pone.0140783.e007g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e007"/><mml:math id="M7" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msup><mml:mn>2</mml:mn> <mml:mrow><mml:mo>-</mml:mo> <mml:mn>1</mml:mn> <mml:mo>/</mml:mo> <mml:mn>2</mml:mn></mml:mrow></mml:msup> <mml:mi>ϕ</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mfrac><mml:mi>t</mml:mi> <mml:mn>2</mml:mn></mml:mfrac> <mml:mo>-</mml:mo> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>n</mml:mi> <mml:mo>=</mml:mo> <mml:mo>-</mml:mo> <mml:mi>∞</mml:mi></mml:mrow> <mml:mrow><mml:mo>+</mml:mo> <mml:mi>∞</mml:mi></mml:mrow></mml:munderover> <mml:msub><mml:mi>h</mml:mi> <mml:mrow><mml:mi>n</mml:mi> <mml:mo>-</mml:mo> <mml:mn>2</mml:mn> <mml:mi>k</mml:mi></mml:mrow></mml:msub> <mml:mi>ϕ</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>-</mml:mo> <mml:mi>n</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(6)</label></disp-formula> <disp-formula id="pone.0140783.e008"><alternatives><graphic id="pone.0140783.e008g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e008"/><mml:math id="M8" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msup><mml:mn>2</mml:mn> <mml:mrow><mml:mo>-</mml:mo> <mml:mn>1</mml:mn> <mml:mo>/</mml:mo> <mml:mn>2</mml:mn></mml:mrow></mml:msup> <mml:mi>ψ</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mfrac><mml:mi>t</mml:mi> <mml:mn>2</mml:mn></mml:mfrac> <mml:mo>-</mml:mo> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>n</mml:mi> <mml:mo>=</mml:mo> <mml:mo>-</mml:mo> <mml:mi>∞</mml:mi></mml:mrow> <mml:mrow><mml:mo>+</mml:mo> <mml:mi>∞</mml:mi></mml:mrow></mml:munderover> <mml:msub><mml:mi>g</mml:mi> <mml:mrow><mml:mi>n</mml:mi> <mml:mo>-</mml:mo> <mml:mn>2</mml:mn> <mml:mi>k</mml:mi></mml:mrow></mml:msub> <mml:mi>ϕ</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>-</mml:mo> <mml:mi>n</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(7)</label></disp-formula>
+where {<italic>h</italic><sub><italic>k</italic></sub>}<sub><italic>k</italic>∈ℤ</sub> and {<italic>g</italic><sub><italic>k</italic></sub>}<sub><italic>k</italic>∈ℤ</sub> are the impulse responses of lowpass and highpass paraunitary quadrature mirror filters (QMF’s), respectively [<xref ref-type="bibr" rid="pone.0140783.ref068">68</xref>]. Let define <italic>ϕ</italic><sub><italic>j</italic>,<italic>k</italic></sub>(<italic>x</italic>) and <italic>ψ</italic><sub><italic>j</italic>,<italic>k</italic></sub>(<italic>x</italic>) as follows
+<disp-formula id="pone.0140783.e009"><alternatives><graphic id="pone.0140783.e009g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e009"/><mml:math id="M9" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>ϕ</mml:mi> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>,</mml:mo> <mml:mi>k</mml:mi></mml:mrow></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:msup><mml:mn>2</mml:mn> <mml:mrow><mml:mo>-</mml:mo> <mml:mi>j</mml:mi> <mml:mo>/</mml:mo> <mml:mn>2</mml:mn></mml:mrow></mml:msup> <mml:mi>ϕ</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:msup><mml:mn>2</mml:mn> <mml:mrow><mml:mo>-</mml:mo> <mml:mi>j</mml:mi></mml:mrow></mml:msup> <mml:mi>t</mml:mi> <mml:mo>-</mml:mo> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(8)</label></disp-formula> <disp-formula id="pone.0140783.e010"><alternatives><graphic id="pone.0140783.e010g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e010"/><mml:math id="M10" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>ψ</mml:mi> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>,</mml:mo> <mml:mi>k</mml:mi></mml:mrow></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:msup><mml:mn>2</mml:mn> <mml:mrow><mml:mo>-</mml:mo> <mml:mi>j</mml:mi> <mml:mo>/</mml:mo> <mml:mn>2</mml:mn></mml:mrow></mml:msup> <mml:mi>ψ</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:msup><mml:mn>2</mml:mn> <mml:mrow><mml:mo>-</mml:mo> <mml:mi>j</mml:mi></mml:mrow></mml:msup> <mml:mi>t</mml:mi> <mml:mo>-</mml:mo> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(9)</label></disp-formula>
+then <inline-formula id="pone.0140783.e011"><alternatives><graphic id="pone.0140783.e011g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e011"/><mml:math id="M11" display="inline" overflow="scroll"><mml:mrow><mml:msubsup><mml:mi mathvariant="script">D</mml:mi> <mml:mi>j</mml:mi> <mml:mi>k</mml:mi></mml:msubsup> <mml:mrow><mml:mo stretchy="true">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="true">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula> and <inline-formula id="pone.0140783.e012"><alternatives><graphic id="pone.0140783.e012g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e012"/><mml:math id="M12" display="inline" overflow="scroll"><mml:mrow><mml:msubsup><mml:mi mathvariant="script">A</mml:mi> <mml:mi>j</mml:mi> <mml:mi>k</mml:mi></mml:msubsup> <mml:mrow><mml:mo stretchy="true">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="true">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula> can be rewritten as
+<disp-formula id="pone.0140783.e013"><alternatives><graphic id="pone.0140783.e013g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e013"/><mml:math id="M13" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mi mathvariant="script">D</mml:mi> <mml:mrow><mml:mi>j</mml:mi></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mo>(</mml:mo> <mml:mi>x</mml:mi> <mml:mo>)</mml:mo> <mml:mo>=</mml:mo> <mml:mrow><mml:mo>⟨</mml:mo> <mml:mi>x</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>,</mml:mo> <mml:msub><mml:mi>ϕ</mml:mi> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>,</mml:mo> <mml:mi>k</mml:mi></mml:mrow></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>⟩</mml:mo></mml:mrow></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(10)</label></disp-formula> <disp-formula id="pone.0140783.e014"><alternatives><graphic id="pone.0140783.e014g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e014"/><mml:math id="M14" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mi mathvariant="script">A</mml:mi> <mml:mrow><mml:mi>j</mml:mi></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mo>(</mml:mo> <mml:mi>x</mml:mi> <mml:mo>)</mml:mo> <mml:mo>=</mml:mo> <mml:mrow><mml:mo>⟨</mml:mo> <mml:mi>x</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>,</mml:mo> <mml:msub><mml:mi>ψ</mml:mi> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>,</mml:mo> <mml:mi>k</mml:mi></mml:mrow></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>⟩</mml:mo></mml:mrow></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(11)</label></disp-formula>
+Therefore <inline-formula id="pone.0140783.e015"><alternatives><graphic id="pone.0140783.e015g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e015"/><mml:math id="M15" display="inline" overflow="scroll"><mml:mrow><mml:msubsup><mml:mi mathvariant="script">D</mml:mi> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>+</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mrow><mml:mo stretchy="true">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="true">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula> and <inline-formula id="pone.0140783.e016"><alternatives><graphic id="pone.0140783.e016g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e016"/><mml:math id="M16" display="inline" overflow="scroll"><mml:mrow><mml:msubsup><mml:mi mathvariant="script">A</mml:mi> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>+</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mrow><mml:mo stretchy="true">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="true">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula> can be obtained from Eqs (<xref ref-type="disp-formula" rid="pone.0140783.e007">6</xref>), (<xref ref-type="disp-formula" rid="pone.0140783.e008">7</xref>), (<xref ref-type="disp-formula" rid="pone.0140783.e009">8</xref>) and (<xref ref-type="disp-formula" rid="pone.0140783.e010">9</xref>) as
+<disp-formula id="pone.0140783.e017"><alternatives><graphic id="pone.0140783.e017g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e017"/><mml:math id="M17" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mi mathvariant="script">D</mml:mi> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>+</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mo stretchy="false">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="false">)</mml:mo> <mml:mo>=</mml:mo> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>n</mml:mi> <mml:mo>=</mml:mo> <mml:mo>-</mml:mo> <mml:mi>∞</mml:mi></mml:mrow> <mml:mrow><mml:mo>+</mml:mo> <mml:mi>∞</mml:mi></mml:mrow></mml:munderover> <mml:mi>h</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>n</mml:mi> <mml:mo>-</mml:mo> <mml:mn>2</mml:mn> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:msubsup><mml:mi mathvariant="script">A</mml:mi> <mml:mrow><mml:mi>j</mml:mi></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mo stretchy="false">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(12)</label></disp-formula> <disp-formula id="pone.0140783.e018"><alternatives><graphic id="pone.0140783.e018g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e018"/><mml:math id="M18" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mi mathvariant="script">A</mml:mi> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>+</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mo stretchy="false">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="false">)</mml:mo> <mml:mo>=</mml:mo> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>n</mml:mi> <mml:mo>=</mml:mo> <mml:mo>-</mml:mo> <mml:mi>∞</mml:mi></mml:mrow> <mml:mrow><mml:mo>+</mml:mo> <mml:mi>∞</mml:mi></mml:mrow></mml:munderover> <mml:mi>g</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>n</mml:mi> <mml:mo>-</mml:mo> <mml:mn>2</mml:mn> <mml:mi>k</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:msubsup><mml:mi mathvariant="script">A</mml:mi> <mml:mrow><mml:mi>j</mml:mi></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mo stretchy="false">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(13)</label></disp-formula>
+By doubling the number of input samples in the MRA, a redundant decomposition can be performed on the signal. Then the approximation and detail coefficients of SWT can be given by
+<disp-formula id="pone.0140783.e019"><alternatives><graphic id="pone.0140783.e019g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e019"/><mml:math id="M19" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mover accent="true"><mml:mi mathvariant="script">A</mml:mi> <mml:mo>˜</mml:mo></mml:mover> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>+</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mo stretchy="false">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="false">)</mml:mo> <mml:mo>=</mml:mo> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>l</mml:mi> <mml:mo>=</mml:mo> <mml:mo>-</mml:mo> <mml:mi>∞</mml:mi></mml:mrow> <mml:mrow><mml:mo>+</mml:mo> <mml:mi>∞</mml:mi></mml:mrow></mml:munderover> <mml:mi>g</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>l</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:msubsup><mml:mover accent="true"><mml:mi mathvariant="script">A</mml:mi> <mml:mo>˜</mml:mo></mml:mover> <mml:mrow><mml:mi>j</mml:mi></mml:mrow> <mml:mrow><mml:mi>k</mml:mi> <mml:mo>+</mml:mo> <mml:msup><mml:mn mathvariant="italic">2</mml:mn> <mml:mi>j</mml:mi></mml:msup> <mml:mi>l</mml:mi></mml:mrow></mml:msubsup> <mml:mo stretchy="false">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(14)</label></disp-formula> <disp-formula id="pone.0140783.e020"><alternatives><graphic id="pone.0140783.e020g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e020"/><mml:math id="M20" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mover accent="true"><mml:mi mathvariant="script">D</mml:mi> <mml:mo>˜</mml:mo></mml:mover> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>+</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>k</mml:mi></mml:msubsup> <mml:mo stretchy="false">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="false">)</mml:mo> <mml:mo>=</mml:mo> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>l</mml:mi> <mml:mo>=</mml:mo> <mml:mo>-</mml:mo> <mml:mi>∞</mml:mi></mml:mrow> <mml:mrow><mml:mo>+</mml:mo> <mml:mi>∞</mml:mi></mml:mrow></mml:munderover> <mml:mi>h</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>l</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:msubsup><mml:mover accent="true"><mml:mi mathvariant="script">A</mml:mi> <mml:mo>˜</mml:mo></mml:mover> <mml:mrow><mml:mi>j</mml:mi></mml:mrow> <mml:mrow><mml:mi>k</mml:mi> <mml:mo>+</mml:mo> <mml:msup><mml:mn>2</mml:mn> <mml:mi>j</mml:mi></mml:msup> <mml:mi>l</mml:mi></mml:mrow></mml:msubsup> <mml:mo stretchy="false">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(15)</label></disp-formula>
+where <italic>h</italic>{<italic>l</italic>} and <italic>g</italic>{<italic>l</italic>} are low- and high-pass defined orthogonal wavelet functions.</p>
+<p>The idea behind SWT is the recursive application of a series of high- and low-pass filters to the data to produce two sequences: <italic>approximation</italic> and <italic>detail</italic>. In the theoretical fashion, the original signal can be decomposed into a set of infinite levels, but from a technical point of view, this number of coefficients must be limited (i.e., <italic>M</italic> = 2<sup>−<italic>j</italic></sup>), where j corresponds to the order of the SWT. Different mother wavelets can be chosen to perform SWT analysis without changing the obtained results. Here, the Haar wavelet <xref ref-type="disp-formula" rid="pone.0140783.e021">Eq (16)</xref> was chosen because it has the advantage of being numerically faster, theoretically simpler, physically easier to interpret and exactly reversible without any edge effects:
+<disp-formula id="pone.0140783.e021"><alternatives><graphic id="pone.0140783.e021g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e021"/><mml:math id="M21" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>ψ</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mo>{</mml:mo> <mml:mtable><mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:mn>1</mml:mn> <mml:mo>,</mml:mo></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mn>0</mml:mn> <mml:mo>≤</mml:mo> <mml:mi>t</mml:mi> <mml:mo>&lt;</mml:mo> <mml:mn>1</mml:mn> <mml:mo>/</mml:mo> <mml:mn>2</mml:mn></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:mo>-</mml:mo> <mml:mn>1</mml:mn> <mml:mo>,</mml:mo></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mn>1</mml:mn> <mml:mo>/</mml:mo> <mml:mn>2</mml:mn> <mml:mo>≤</mml:mo> <mml:mi>t</mml:mi> <mml:mo>&lt;</mml:mo> <mml:mn>1</mml:mn></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:mn>0</mml:mn> <mml:mo>,</mml:mo></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mi>o</mml:mi> <mml:mi>t</mml:mi> <mml:mi>h</mml:mi> <mml:mi>e</mml:mi> <mml:mi>r</mml:mi> <mml:mi>w</mml:mi> <mml:mi>i</mml:mi> <mml:mi>s</mml:mi> <mml:mi>e</mml:mi></mml:mrow></mml:mtd></mml:mtr></mml:mtable> <mml:mo/></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(16)</label></disp-formula>
+In this work, a decomposition level equal to 5, as suggested by Li and Lin [<xref ref-type="bibr" rid="pone.0140783.ref069">69</xref>], was used to provide a good trade-off between the amount of available information and computational effort. The frequency content of obtained coefficient sequences strongly depends on the corresponding level. More specifically, low levels represent the fast changing parts of the signal, i.e. the QRS complexes, while high levels contain information about slower parts such as P and T waves.</p>
+</sec>
+<sec id="sec008">
+<title>Artifact Removal Phase</title>
+<p>The Artifact Removal Phase (ARP) is mainly focused on the estimation of the wavelet components of the signal where MAs are mainly present. In particular, the algorithm computes two thresholds (Eqs (<xref ref-type="disp-formula" rid="pone.0140783.e024">19</xref>) and (<xref ref-type="disp-formula" rid="pone.0140783.e025">20</xref>)) for each decomposition level in order to recognize the signal affected by artifacts. By using the Motion Detection (MD) algorithm, we identified the time intervals in which strong movement contributions are present. ECG signal segments that were outside of these time intervals were considered artifact-free. Hence, we put intervals of the coefficients corresponding to the artifact-free ECG segments to zero, within the first three SWT decomposition levels, which are supposed to contain most of the informative contribution of the cardiac information. Afterwards, in all of the decomposition levels, we estimated maxima and minima of the wavelet coefficients within non overlapped frames lasting 1 second. Then, for these two distributions (i.e., maximum and minimum series) we robustly computed mean and standard deviation [<xref ref-type="bibr" rid="pone.0140783.ref065">65</xref>]. According to the statistics, the robust estimator of mean and standard deviation are:
+<disp-formula id="pone.0140783.e022"><alternatives><graphic id="pone.0140783.e022g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e022"/><mml:math id="M22" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>μ</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo>=</mml:mo> <mml:mi>m</mml:mi> <mml:mi>e</mml:mi> <mml:mi>d</mml:mi> <mml:mi>i</mml:mi> <mml:mi>a</mml:mi> <mml:mi>n</mml:mi> <mml:mrow><mml:mo stretchy="false">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="false">)</mml:mo></mml:mrow> <mml:mo>;</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(17)</label></disp-formula> <disp-formula id="pone.0140783.e023"><alternatives><graphic id="pone.0140783.e023g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e023"/><mml:math id="M23" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>σ</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn> <mml:mo>.</mml:mo> <mml:mn>4826</mml:mn> <mml:mo>*</mml:mo> <mml:mi>M</mml:mi> <mml:mi>A</mml:mi> <mml:mi>D</mml:mi> <mml:mrow><mml:mo stretchy="false">(</mml:mo> <mml:mi>x</mml:mi> <mml:mo stretchy="false">)</mml:mo></mml:mrow> <mml:mo>;</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(18)</label></disp-formula>
+where <italic>x</italic> is the investigated distribution, and <italic>i</italic> can assume only 1 or 2 for maxima and minima, respectively. Finally, obtained thresholds are expressed by
+<disp-formula id="pone.0140783.e024"><alternatives><graphic id="pone.0140783.e024g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e024"/><mml:math id="M24" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>M</mml:mi> <mml:mi>j</mml:mi></mml:msub> <mml:mo>=</mml:mo> <mml:msub><mml:mrow><mml:msub><mml:mi>μ</mml:mi> <mml:mn>1</mml:mn></mml:msub></mml:mrow> <mml:mi>j</mml:mi></mml:msub> <mml:mo>+</mml:mo> <mml:msub><mml:mrow><mml:msub><mml:mi>σ</mml:mi> <mml:mn>1</mml:mn></mml:msub></mml:mrow> <mml:mi>j</mml:mi></mml:msub> <mml:mo>;</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(19)</label></disp-formula> <disp-formula id="pone.0140783.e025"><alternatives><graphic id="pone.0140783.e025g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e025"/><mml:math id="M25" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>m</mml:mi> <mml:mi>j</mml:mi></mml:msub> <mml:mo>=</mml:mo> <mml:msub><mml:mrow><mml:msub><mml:mi>μ</mml:mi> <mml:mn>2</mml:mn></mml:msub></mml:mrow> <mml:mi>j</mml:mi></mml:msub> <mml:mo>-</mml:mo> <mml:msub><mml:mrow><mml:msub><mml:mi>σ</mml:mi> <mml:mn>2</mml:mn></mml:msub></mml:mrow> <mml:mi>j</mml:mi></mml:msub> <mml:mo>;</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(20)</label></disp-formula>
+where <italic>j</italic> represents the decomposition level. In <xref ref-type="fig" rid="pone.0140783.g007">Fig 7</xref> the distribution of maxima and minima, and the relative thresholds are displayed for a given decomposition level. Coefficients higher than <italic>M</italic><sub><italic>j</italic></sub> or lower than <italic>m</italic><sub><italic>j</italic></sub> are considered related to the movement artifacts. In performing the Inverse Stationary Wavelet Transform (ISWT) it is therefore possible to obtain a signal in the time domain corresponding to and depending on the MAs. Finally the movement artifact removal is performed by subtracting the obtained signal of the MAs from the original.</p>
+<fig id="pone.0140783.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>Histograms of the distribution of maxima (right) and minima (left) for a given decomposition level.</title>
+<p>In red the relative thresholds are displayed.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g007"/>
+</fig>
+</sec>
+</sec>
+<sec id="sec009">
+<title>Normalized Least Mean Square Adaptive Filter method</title>
+<p>An adaptive filter has recursive structure where coefficients are continuously updated in the feedback loop, see <xref ref-type="fig" rid="pone.0140783.g008">Fig 8</xref>. The aim is to minimize the error, <italic>e</italic>(<italic>n</italic>), between the current filter output, <italic>y</italic>(<italic>n</italic>), and the primary input, <italic>x</italic>(<italic>n</italic>).</p>
+<fig id="pone.0140783.g008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g008</object-id>
+<label>Fig 8</label>
+<caption>
+<title>Recursive scheme of an Adaptive filter.</title>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g008"/>
+</fig>
+<p>An adaptive filter, whose schema is reported in <xref ref-type="fig" rid="pone.0140783.g008">Fig 8</xref>, shows that there are two inputs, <italic>x</italic>(<italic>n</italic>) and <italic>n</italic><sub>1</sub>(<italic>n</italic>), which are called the primary input and the reference input, respectively. The signal <italic>x</italic>(<italic>n</italic>) includes the desired signal <italic>s</italic>(<italic>n</italic>) plus undesired interference <italic>n</italic><sub>0</sub>(<italic>n</italic>). Let us hypothesize that <italic>s</italic>, <italic>n</italic><sub>0</sub>, <italic>n</italic><sub>1</sub> and <italic>y</italic> are statistically stationary and have zero means. Moreover, let us assume that <italic>s</italic> is uncorrelated with <italic>n</italic><sub>0</sub> and <italic>n</italic><sub>1</sub>, and suppose that <italic>n</italic><sub>1</sub> is correlated with <italic>n</italic><sub>0</sub>. The output <italic>z</italic> is obtained as follows:
+<disp-formula id="pone.0140783.e026"><alternatives><graphic id="pone.0140783.e026g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e026"/><mml:math id="M26" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>z</mml:mi> <mml:mo>=</mml:mo> <mml:mi>s</mml:mi> <mml:mo>+</mml:mo> <mml:msub><mml:mi>n</mml:mi> <mml:mn>0</mml:mn></mml:msub> <mml:mo>-</mml:mo> <mml:mi>y</mml:mi></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(21)</label></disp-formula>
+By squaring, one obtains <italic>z</italic><sup>2</sup> = <italic>s</italic><sup>2</sup> + (<italic>n</italic><sub>0</sub> − <italic>y</italic>)<sup>2</sup> + 2<italic>s</italic>(<italic>n</italic><sub>0</sub> − <italic>y</italic>) taking the expansion of both sides and considering that <italic>s</italic> is uncorrelated with <italic>n</italic><sub>0</sub> and <italic>y</italic>, we obtained:
+<disp-formula id="pone.0140783.e027"><alternatives><graphic id="pone.0140783.e027g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e027"/><mml:math id="M27" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>E</mml:mi> <mml:mrow><mml:mo>[</mml:mo> <mml:msup><mml:mi>z</mml:mi> <mml:mn>2</mml:mn></mml:msup> <mml:mo>]</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mi>E</mml:mi> <mml:mrow><mml:mo>[</mml:mo> <mml:msup><mml:mi>s</mml:mi> <mml:mn>2</mml:mn></mml:msup> <mml:mo>]</mml:mo></mml:mrow> <mml:mo>+</mml:mo> <mml:mi>E</mml:mi> <mml:mrow><mml:mo>[</mml:mo> <mml:msup><mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi>n</mml:mi> <mml:mn>0</mml:mn></mml:msub> <mml:mo>-</mml:mo> <mml:mi>y</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mn>2</mml:mn></mml:msup> <mml:mo>]</mml:mo></mml:mrow> <mml:mo>+</mml:mo> <mml:mn>2</mml:mn> <mml:mi>E</mml:mi> <mml:mrow><mml:mo>[</mml:mo> <mml:mi>s</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi>n</mml:mi> <mml:mn>0</mml:mn></mml:msub> <mml:mo>-</mml:mo> <mml:mi>y</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>]</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mi>E</mml:mi> <mml:mrow><mml:mo>[</mml:mo> <mml:msup><mml:mi>s</mml:mi> <mml:mn>2</mml:mn></mml:msup> <mml:mo>]</mml:mo></mml:mrow> <mml:mo>+</mml:mo> <mml:mi>E</mml:mi> <mml:mrow><mml:mo>[</mml:mo> <mml:msup><mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi>n</mml:mi> <mml:mn>0</mml:mn></mml:msub> <mml:mo>-</mml:mo> <mml:mi>y</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mn>2</mml:mn></mml:msup> <mml:mo>]</mml:mo></mml:mrow></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(22)</label></disp-formula>
+The signal power <italic>E</italic>[<italic>s</italic><sup>2</sup>] will be unaffected as the filter is adjusted to minimize <italic>E</italic>[<italic>z</italic><sup>2</sup>]. Accordingly, the minimum output power is
+<disp-formula id="pone.0140783.e028"><alternatives><graphic id="pone.0140783.e028g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0140783.e028"/><mml:math id="M28" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>m</mml:mi> <mml:mi>i</mml:mi> <mml:mi>n</mml:mi> <mml:mi>E</mml:mi> <mml:mrow><mml:mo>[</mml:mo> <mml:msup><mml:mi>z</mml:mi> <mml:mn>2</mml:mn></mml:msup> <mml:mo>]</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mi>E</mml:mi> <mml:mrow><mml:mo>[</mml:mo> <mml:msup><mml:mi>s</mml:mi> <mml:mn>2</mml:mn></mml:msup> <mml:mo>]</mml:mo></mml:mrow> <mml:mo>+</mml:mo> <mml:mi>m</mml:mi> <mml:mi>i</mml:mi> <mml:mi>n</mml:mi> <mml:mi>E</mml:mi> <mml:mrow><mml:mo>[</mml:mo> <mml:msup><mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi>n</mml:mi> <mml:mn>0</mml:mn></mml:msub> <mml:mo>-</mml:mo> <mml:mi>y</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mn>2</mml:mn></mml:msup> <mml:mo>]</mml:mo></mml:mrow></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(23)</label></disp-formula>
+When the filter is adjusted so that <italic>E</italic>[<italic>z</italic><sup>2</sup>] is minimized, <italic>E</italic>[(<italic>n</italic><sub>0</sub> − <italic>y</italic>)<sup>2</sup>] is minimized as well. The filter output y is then a best least squares estimate of the primary noise <italic>n</italic><sub>0</sub>. Moreover, when <italic>E</italic>[(<italic>n</italic><sub>0</sub> − <italic>y</italic>)<sup>2</sup>] is minimized, <italic>E</italic>[(<italic>z</italic> − <italic>s</italic>)<sup>2</sup>] is also minimized, therefore (<italic>z</italic> − <italic>s</italic>) = (<italic>n</italic><sub>0</sub> − <italic>y</italic>). As a consequence <italic>z</italic> is the best estimate of <italic>s</italic>.</p>
+</sec>
+<sec id="sec010">
+<title>Statistical analysis</title>
+<p>In this work several statistical tools were implemented to assess the performance of both the QRS complex detection algorithm and the SWMAR algorithm. More specifically, the first algorithm was applied to several ECG traces extracted from the PN-DB database with the aim of identifying the starting and ending time of each QRS complex. The outcome of the algorithm is, therefore, a series of time instants that was compared with that provided by the database itself. Comparison was performed by means of the Bland-Altman plot [<xref ref-type="bibr" rid="pone.0140783.ref070">70</xref>]. This plot is usually used to evaluate the agreement among two different measurements. In particular, we estimated both the mean difference, as estimated bias, and the Standard Deviation (SD) of the differences between the two series. The limits of agreement were computed as the average difference ±1.96 SD of the difference. If the differences were within mean ± 1.96 SD, the two methods could be considered interchangeably [<xref ref-type="bibr" rid="pone.0140783.ref071">71</xref>]. In addition, the regression line of the data was reported in the Bland-Altman plot to show any bias or trend. The evaluation of the performance of SWMAR algorithm in MA removal was performed through the statistical comparison of the outcomes of SWMAR, NLMSAF and the MA percentages of the raw signals before the treatment. In particular, statistics were performed through a nonparametric Friedman’s test applied to the three series of percentage to investigate any possible statistical difference among them. Moreover, a Wilcoxon signed rank test for paired samples was used to investigate any statistical difference among all of the couples of series. All the processing tools and statistical analysis were performed by means of <italic>The</italic> <italic>MathWorks</italic> − <italic>Matlab</italic>.</p>
+</sec>
+</sec>
+<sec id="sec011" sec-type="results">
+<title>Results</title>
+<p>This section discusses the results obtained by applying the proposed methodology to seven hours of EGC acquired from horses. First, we evaluated the performance of the QRS detection algorithm by applying it to the online PN-DB. Afterwards, we investigated the performance of the SWT decomposition algorithm and, finally we evaluated SWMAR and NLMSFA applied to collected the ECGs comparing the results in terms of MA removal with respect to the starting MA amount present in the raw signals, where the MA were detected through visual inspection. More specifically, due to the novelty of the QRS detection algorithm, we preliminarily tested and validated it on the PN-DB. We applied the algorithm to ECG traces extracted from PN-DB and compared results. Figs <xref ref-type="fig" rid="pone.0140783.g009">9</xref> and <xref ref-type="fig" rid="pone.0140783.g010">10</xref> show the results of the Bland-Altman plots of the comparison results. More specifically, the mean of the differences between starting (ending) time-instant series calculated with the proposed algorithm and those provided by the PN-DB was −0.0204s (0.0105s) with SD 0.004. Moreover, Figs <xref ref-type="fig" rid="pone.0140783.g009">9</xref> and <xref ref-type="fig" rid="pone.0140783.g010">10</xref> show that most of the series points are within the limits of agreement for both comparisons. This means that the performance of our algorithm is comparable with those provided by the PN-DB [<xref ref-type="bibr" rid="pone.0140783.ref071">71</xref>, <xref ref-type="bibr" rid="pone.0140783.ref072">72</xref>]. Concerning the performance of the SWT, Figs <xref ref-type="fig" rid="pone.0140783.g011">11</xref> and <xref ref-type="fig" rid="pone.0140783.g012">12</xref> show two examples of the decomposition of the ECG signals gathered from horses, with 5 decomposition levels. In <xref ref-type="fig" rid="pone.0140783.g011">Fig 11</xref>, a decomposition of ECG without MAs is presented whilst in <xref ref-type="fig" rid="pone.0140783.g012">Fig 12</xref> a decomposition of an ECG affected by artifacts is reported. Comparing the two Figs, it is worthwhile noting that MA is much more prevalent at lower level of the decomposition, i.e. at higher frequency components. <xref ref-type="fig" rid="pone.0140783.g013">Fig 13</xref> shows an example of the result of SWMAR applied to an ECG signal affected by artifacts. In the upper plot the motion signal (top) and the ECG with artifacts (bottom) are reported, while in the lower plot the ECG cleaned by the removal algorithm is shown. Moreover, the results of evaluation of the proposed method are shown in the <xref ref-type="table" rid="pone.0140783.t001">Table 1</xref>. Specifically, it reports the percentages of detected MAs for the raw and the treated signals with SWMAR and NLMSFA. In addition, it also reports the difference in terms of MA percentage between raw signals and those treated with NLMSAF (<italic>δ</italic><sub><italic>N</italic></sub>), and raw signals and those treated with SWMAR (<italic>δ</italic><sub><italic>O</italic></sub>) in the seven hours of ECGs. More specifically, in the table the horses are labelled with the acronym <italic>H</italic> followed by a subscription, and the MAs are manually checked by two experts before and after the application of both methods. Results show that recognized MAs in all of the 7 horse-recordings after the application of the SWMAR and NLMSAF were reduced with respect to percentages of signal with artifacts obtained from RAW signals. In particular results obtained with the proposed method outperform those obtained by NLMSAF. Moreover, <xref ref-type="fig" rid="pone.0140783.g014">Fig 14</xref> shows the box plot of detected MAs. A nonparametric Friedman’s test applied to the three series RAW, NLMSAF and SWMAR show a statistical significant difference with a <italic>p</italic>–<italic>value</italic> of 0.0021. Finally, Wilcoxon signed rank test for paired samples was used for comparing all the couples of classes. It reported significant differences in comparing raw data and both treated data, returning in both case a <italic>p</italic>–<italic>value</italic> equal to 0.0156. Moreover, a statistical significant difference was also reported in comparing the two treated data, showing an increased reduction of MAs (%) obtained with SWMAR (see <xref ref-type="fig" rid="pone.0140783.g014">Fig 14</xref>). In this latter case a <italic>p</italic>–<italic>value</italic> equal to 0.0313 was returned.</p>
+<fig id="pone.0140783.g009" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g009</object-id>
+<label>Fig 9</label>
+<caption>
+<title>Bland-Altman plot comparing QRS complex starting time instant series between the SWMAR algorithm with those provided by PhysioNet Database.</title>
+<p>The black line indicates the bias (mean difference), the red lines are limits of agreement (mean ± 2 SD), whilst the blue line indicates the trend of the data. Mean = −0.0204 (95% CI: −0.0195 to −0.0213); limits of agreement between 0.0036 and −0.0372.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g009"/>
+</fig>
+<fig id="pone.0140783.g010" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g010</object-id>
+<label>Fig 10</label>
+<caption>
+<title>Bland-Altman plot comparing QRS complex ending time instant series between the SWMAR algorithm with those provided by PhysioNet Database.</title>
+<p>The black line indicates the bias (mean difference), the red lines are limits of agreement (mean ± 2 SD), whilst the blue line indicates the trend of the data. Mean = 0.0105 (95% CI: 0.0115 to 0.0094); limits of agreement between −0.0309 and −0.0099.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g010"/>
+</fig>
+<fig id="pone.0140783.g011" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g011</object-id>
+<label>Fig 11</label>
+<caption>
+<title>Decomposition of a clean ECG segment.</title>
+<p>At the top the original ECG signal is plotted, following the 5 decomposition detail signals and the approximation regarding the 5th level. Red and yellow lines represent the threshold levels as calculated according to Eqs (<xref ref-type="disp-formula" rid="pone.0140783.e024">19</xref>) and (<xref ref-type="disp-formula" rid="pone.0140783.e025">20</xref>).</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g011"/>
+</fig>
+<fig id="pone.0140783.g012" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g012</object-id>
+<label>Fig 12</label>
+<caption>
+<title>Decomposition of an ECG segment affected by artifacts.</title>
+<p>At the top the original ECG signal is plotted, following the 5 decomposition detail signals and the approximation regarding the 5th level. Red and yellow lines represent the threshold levels as calculated according to Eqs (<xref ref-type="disp-formula" rid="pone.0140783.e024">19</xref>) and (<xref ref-type="disp-formula" rid="pone.0140783.e025">20</xref>). The figure shows that MAs details and approximations coefficients that are out of the interval delimited by the two thresholds.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g012"/>
+</fig>
+<fig id="pone.0140783.g013" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g013</object-id>
+<label>Fig 13</label>
+<caption>
+<title>The upper plot reports the accelerometric signal (in red) along with the ECG signal with the corresponding artifact.</title>
+<p>The lower plot shows the ECG signal after applying the MA removal algorithm.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g013"/>
+</fig>
+<table-wrap id="pone.0140783.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.t001</object-id>
+<label>Table 1</label>
+<caption>
+<title>Percentage (%) of detected MAs into: raw ECG signals (RAW); NLMSAF; the difference between raw and NLMSAF <italic>δ</italic><sub><italic>N</italic></sub>; SWMAR; and the difference between raw and SWMAR.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0140783.t001g" mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.t001"/>
+<table frame="box" rules="all" border="0">
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="2" colspan="1">Horse</th>
+<th align="center" rowspan="1" colspan="1">RAW</th>
+<th align="center" rowspan="1" colspan="1">NLMSAF</th>
+<th align="center" rowspan="1" colspan="1"><italic>δ</italic><sub><italic>N</italic></sub></th>
+<th align="center" rowspan="1" colspan="1">SWMAR</th>
+<th align="center" rowspan="1" colspan="1"><italic>δ</italic><sub><italic>O</italic></sub></th>
+</tr>
+<tr>
+<th align="center" rowspan="1" colspan="1">(%)</th>
+<th align="center" rowspan="1" colspan="1">(%)</th>
+<th align="center" rowspan="1" colspan="1">(%)</th>
+<th align="center" rowspan="1" colspan="1">(%)</th>
+<th align="center" rowspan="1" colspan="1">(%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" rowspan="1" colspan="1"><italic>H</italic><sub>1</sub></td>
+<td align="char" char="." rowspan="1" colspan="1">55.37</td>
+<td align="char" char="." rowspan="1" colspan="1">32.90</td>
+<td align="char" char="." rowspan="1" colspan="1">-22.47</td>
+<td align="char" char="." rowspan="1" colspan="1">15.00</td>
+<td align="char" char="." rowspan="1" colspan="1">-40.37</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"><italic>H</italic><sub>2</sub></td>
+<td align="char" char="." rowspan="1" colspan="1">55.31</td>
+<td align="char" char="." rowspan="1" colspan="1">34.53</td>
+<td align="char" char="." rowspan="1" colspan="1">-20.78</td>
+<td align="char" char="." rowspan="1" colspan="1">13.77</td>
+<td align="char" char="." rowspan="1" colspan="1">-41.54</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"><italic>H</italic><sub>3</sub></td>
+<td align="char" char="." rowspan="1" colspan="1">65.42</td>
+<td align="char" char="." rowspan="1" colspan="1">45.11</td>
+<td align="char" char="." rowspan="1" colspan="1">-20.31</td>
+<td align="char" char="." rowspan="1" colspan="1">34.91</td>
+<td align="char" char="." rowspan="1" colspan="1">-30.51</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"><italic>H</italic><sub>4</sub></td>
+<td align="char" char="." rowspan="1" colspan="1">43.69</td>
+<td align="char" char="." rowspan="1" colspan="1">35.64</td>
+<td align="char" char="." rowspan="1" colspan="1">-8.05</td>
+<td align="char" char="." rowspan="1" colspan="1">26.15</td>
+<td align="char" char="." rowspan="1" colspan="1">-17.54</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"><italic>H</italic><sub>5</sub></td>
+<td align="char" char="." rowspan="1" colspan="1">48.19</td>
+<td align="char" char="." rowspan="1" colspan="1">38.92</td>
+<td align="char" char="." rowspan="1" colspan="1">-9.27</td>
+<td align="char" char="." rowspan="1" colspan="1">22.93</td>
+<td align="char" char="." rowspan="1" colspan="1">-25.26</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"><italic>H</italic><sub>6</sub></td>
+<td align="char" char="." rowspan="1" colspan="1">64.10</td>
+<td align="char" char="." rowspan="1" colspan="1">54.36</td>
+<td align="char" char="." rowspan="1" colspan="1">-9.74</td>
+<td align="char" char="." rowspan="1" colspan="1">34.96</td>
+<td align="char" char="." rowspan="1" colspan="1">-29.14</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"><italic>H</italic><sub>7</sub></td>
+<td align="char" char="." rowspan="1" colspan="1">72.18</td>
+<td align="char" char="." rowspan="1" colspan="1">25.41</td>
+<td align="char" char="." rowspan="1" colspan="1">-46.77</td>
+<td align="char" char="." rowspan="1" colspan="1">28.69</td>
+<td align="char" char="." rowspan="1" colspan="1">-43.49</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<fig id="pone.0140783.g014" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0140783.g014</object-id>
+<label>Fig 14</label>
+<caption>
+<title>Boxplot of the MAs percentage before and after the method of removal MAs.</title>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.g014"/>
+</fig>
+</sec>
+<sec id="sec012" sec-type="conclusions">
+<title>Discussion and Conclusion</title>
+<p>In several research studies the quality of ECG is considered empirically acceptable when distinct R-waves can be detected during the recordings. Detection can be facilitated by using automatic software, but more often than not it is done through manual and visual inspection. However, depending on heart rate and electrode position, the T wave of the equine ECG is commonly erroneously detected by commercial software as an R peak, thus manual inspection remains mandatory in this field [<xref ref-type="bibr" rid="pone.0140783.ref056">56</xref>]. Furthermore, manual inspection of the ECG trace could raise further issues, for example, the number of rhythm events could be dependent on observation periods, or intra- and inter-observer agreement for recognition and classification of arrhythmias during and immediately after exercise. Moreover, possible mistakes or disagreement could also be due to miscounting events in a large number of events [<xref ref-type="bibr" rid="pone.0140783.ref057">57</xref>]. In addition, computerised ECG interpretation programs have a high rate of misclassification, especially in non-sinus rhythm events [<xref ref-type="bibr" rid="pone.0140783.ref073">73</xref>]. The high number of physiological atrio-ventricular-blocks and high amplitude and variable morphology of the T wave make the use of such fully automated algorithms very difficult in horses [<xref ref-type="bibr" rid="pone.0140783.ref057">57</xref>]. The aforementioned considerations point out the importance and relevance of a specific algorithm for the reduction of MAs on the recording of equine electrophysiology of the heart. Moreover, since restriction of movement in horses dramatically increases their sympathetic activity, it is therefore recommended to be avoided [<xref ref-type="bibr" rid="pone.0140783.ref054">54</xref>]. This work underlines that quantity and quality of body movements is a fundamental variable that needs to be taken into account for the implementation of algorithms addressing the movement artifact issue [<xref ref-type="bibr" rid="pone.0140783.ref056">56</xref>].</p>
+<p>A new algorithm was implemented in the acquisition of equine ECG signals in order to remove MAs. We integrated the time-invariance of the Stationary Wavelet Transform with the essential exogenous information of movement provided by a triaxial accelerometer. As a comparator, a NLMSAF was also applied to the same dataset. The outcomes of the two algorithms were manually evaluated by two experts and ranked as a percentage of MAs over the 7 hours of acquisition from horses (see <xref ref-type="table" rid="pone.0140783.t001">Table 1</xref>). Algorithm performance was also evaluated in terms of reduction of the MA percentage. Referring to SWMAR, after the detection of the corrupted QRS complexes through the accelerometric data, the SWT was used in order to estimate the artifact-contribution to the ECG signals. After applying the proposed method to 7 hours of ECG recordings, results highlighted how the rates of artifacts detected by the physicians significantly decrease. In addition, as indicated by visual inspection, our algorithm achieved a good percentage of MAs removal with respect to NLMSAF. In fact, the boxplot reported in <xref ref-type="fig" rid="pone.0140783.g014">Fig 14</xref> showed the statistics of the detected percentage of MAs on the raw data and after applying NLMSAF and SWMAR algorithms, respectively. The figure also shows that the SWMAR algorithm outperforms NLMSAF. As shown, the proposed method is reliable and effective, but it could fail if the ECG signal is heavily affected by movement artifacts whose amplitude is remarkable. Indeed in this case, the algorithm could be unable to exactly identify the starting and ending times of the QRS complexes. Next steps will be to test our algorithm on ECGs acquired from horses while they walk or trot outdoors. Nevertheless, the achieved results are promising in view of applying advanced processing techniques also to ECG equine signals otherwise not applicable due to the relevant presence of movement artifacts. It is worthwhile noting that the ECG has been already demonstrated to be nonlinear and non-stationary in humans, and has been studied in depth using both standard as well as nonlinear approaches. On the contrary, it has not been yet possible for horses, since long epochs of signal without movement artifacts cannot be acquired. In this view a system able to remove artifacts in equine-ECG would make it feasible to apply nonlinear approaches such as the Lyapunov exponent, entropy, or correlation dimension, providing important information for the biology of the equine cardiovascular system.</p>
+</sec>
+<sec id="sec013">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0140783.s001" position="float" xlink:href="info:doi/10.1371/journal.pone.0140783.s001" mimetype="application/zip" xlink:type="simple">
+<label>S1 Supporting Information</label>
+<caption>
+<title>Dataset.</title>
+<p>Electrocardiographic and Accellerometric data.</p>
+<p>(ZIP)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>Authors thanks to Prof. Claudio Sighieri and Dr Micaela Sgorbini for horses and stable’s facilities.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0140783.ref001">
+<label>1</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Hamilton</surname> <given-names>P</given-names></name>, <etal>et al</etal>. <chapter-title>Comparison of methods for adaptive removal of motion artifact</chapter-title>. In: <source>Computers in Cardiology 2000</source>. <publisher-name>IEEE</publisher-name>; <year>2000</year>. p. <fpage>383</fpage>–<lpage>386</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref002">
+<label>2</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Aase</surname> <given-names>SO</given-names></name>, <etal>et al</etal>. <article-title>CPR artifact removal from human ECG using optimal multichannel filtering</article-title>. <source>Biomedical Engineering, IEEE Transactions on</source>. <year>2000</year>;<volume>47</volume>(<issue>11</issue>):<fpage>1440</fpage>–<lpage>1449</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/10.880095" xlink:type="simple">10.1109/10.880095</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref003">
+<label>3</label>
+<mixed-citation xlink:type="simple" publication-type="other">Rahman MZU, et al. Adaptive noise removal in the ECG using the block LMS algorithm. In: Adaptive Science &amp; Technology, 2009. ICAST 2009. 2nd International Conference on. IEEE; 2009. p. 380–383.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref004">
+<label>4</label>
+<mixed-citation xlink:type="simple" publication-type="other">Deepu CJ, et al. An ECG-on-chip for wearable cardiac monitoring devices. In: Electronic Design, Test and Application, 2010. DELTA’10. Fifth IEEE International Symposium on. IEEE; 2010. p. 225–228.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref005">
+<label>5</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Zito</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Feasibility study and design of a wearable system-on-a-chip pulse radar for contactless cardiopulmonary monitoring</article-title>. <source>International journal of telemedicine and applications</source>. <year>2008</year>;<volume>2008</volume>:<fpage>6</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1155/2008/328597" xlink:type="simple">10.1155/2008/328597</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref006">
+<label>6</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Lanata</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>A multimodal transducer for cardiopulmonary activity monitoring in emergency</article-title>. <source>Information Technology in Biomedicine, IEEE Transactions on</source>. <year>2010</year>;<volume>14</volume>(<issue>3</issue>):<fpage>817</fpage>–<lpage>825</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TITB.2009.2024414" xlink:type="simple">10.1109/TITB.2009.2024414</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref007">
+<label>7</label>
+<mixed-citation xlink:type="simple" publication-type="other">Anapagamini S, Rajavel R. Removal of artifacts in ECG using Empirical mode decomposition. In: Communications and Signal Processing (ICCSP), 2013 International Conference on. IEEE; 2013. p. 288–292.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref008">
+<label>8</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Ercelebi</surname> <given-names>E</given-names></name>. <article-title>Electrocardiogram signals de-noising using lifting-based discrete wavelet transform</article-title>. <source>Computers in Biology and Medicine</source>. <year>2004</year>;<volume>34</volume>(<issue>6</issue>):<fpage>479</fpage>–<lpage>493</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/S0010-4825(03)00090-8" xlink:type="simple">10.1016/S0010-4825(03)00090-8</ext-link></comment> <object-id pub-id-type="pmid">15265720</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref009">
+<label>9</label>
+<mixed-citation xlink:type="simple" publication-type="other">Wu Y, Rangayyan RM. An algorithm for evaluating the performance of adaptive filters for the removal of artifacts in ECG signals. In: Electrical and Computer Engineering, 2007. CCECE 2007. Canadian Conference on. IEEE; 2007. p. 864–867.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref010">
+<label>10</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Shoker</surname> <given-names>L</given-names></name>, <etal>et al</etal>. <article-title>Artifact removal from electroencephalograms using a hybrid BSS-SVM algorithm</article-title>. <source>Signal Processing Letters, IEEE</source>. <year>2005</year>;<volume>12</volume>(<issue>10</issue>):<fpage>721</fpage>–<lpage>724</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/LSP.2005.855539" xlink:type="simple">10.1109/LSP.2005.855539</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref011">
+<label>11</label>
+<mixed-citation xlink:type="simple" publication-type="other">Velazquez R. An optimal adaptive filtering approach for stress-tests motion artifacts removal: application on an ECG for telediagnosis. In: Signal Processing, 2002 6th International Conference on. vol. 2. IEEE; 2002. p. 1504–1507.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref012">
+<label>12</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Hedley</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Yan</surname> <given-names>H</given-names></name>. <article-title>Motion artifact suppression: a review of post-processing techniques</article-title>. <source>Magnetic resonance imaging</source>. <year>1992</year>;<volume>10</volume>(<issue>4</issue>):<fpage>627</fpage>–<lpage>635</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/0730-725X(92)90014-Q" xlink:type="simple">10.1016/0730-725X(92)90014-Q</ext-link></comment> <object-id pub-id-type="pmid">1501533</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref013">
+<label>13</label>
+<mixed-citation xlink:type="simple" publication-type="other">Greco A, Lanata A, Valenza G, Rota G, Vanello N, Scilingo EP. On the deconvolution analysis of electrodermal activity in bipolar patients. In: Engineering in Medicine and Biology Society (EMBC), 2012 Annual International Conference of the IEEE. IEEE; 2012. p. 6691–6694.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref014">
+<label>14</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Lanatà</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Valenza</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Greco</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Gentili</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Bartolozzi</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Bucchi</surname> <given-names>F</given-names></name>, <etal>et al</etal>. <article-title>How the Autonomic Nervous System and Driving Style Change With Incremental Stressing Conditions During Simulated Driving</article-title>. <source>Intelligent Transportation Systems, IEEE Transactions on</source>. <year>2015</year>;<volume>16</volume>(<issue>3</issue>):<fpage>1505</fpage>–<lpage>1517</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TITS.2014.2365681" xlink:type="simple">10.1109/TITS.2014.2365681</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref015">
+<label>15</label>
+<mixed-citation xlink:type="simple" publication-type="other">Serteyn A, et al. Using an injection signal to reduce motion artifacts in capacitive ECG measurements. In: Engineering in Medicine and Biology Society (EMBC), 2013 35th Annual International Conference of the IEEE. IEEE; 2013. p. 4795–4798.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref016">
+<label>16</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Lim</surname> <given-names>YG</given-names></name>, <etal>et al</etal>. <article-title>ECG recording on a bed during sleep without direct skin-contact</article-title>. <source>Biomedical Engineering, IEEE Transactions on</source>. <year>2007</year>;<volume>54</volume>(<issue>4</issue>):<fpage>718</fpage>–<lpage>725</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TBME.2006.889194" xlink:type="simple">10.1109/TBME.2006.889194</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref017">
+<label>17</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Sameni</surname> <given-names>R</given-names></name>, <etal>et al</etal>. <article-title>Multichannel electrocardiogram decomposition using periodic component analysis</article-title>. <source>Biomedical Engineering, IEEE Transactions on</source>. <year>2008</year>;<volume>55</volume>(<issue>8</issue>):<fpage>1935</fpage>–<lpage>1940</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TBME.2008.919714" xlink:type="simple">10.1109/TBME.2008.919714</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref018">
+<label>18</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Sameni</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Clifford</surname> <given-names>GD</given-names></name>. <article-title>A review of fetal ECG signal processing; issues and promising directions</article-title>. <source>The open pacing, electrophysiology &amp; therapy journal</source>. <year>2010</year>;<volume>3</volume>:<fpage>4</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref019">
+<label>19</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Webster</surname> <given-names>JG</given-names></name>. <article-title>Reducing motion artifacts and interference in biopotential recording</article-title>. <source>Biomedical Engineering, IEEE Transactions on</source>. <year>1984</year>;(<issue>12</issue>):<fpage>823</fpage>–<lpage>826</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TBME.1984.325244" xlink:type="simple">10.1109/TBME.1984.325244</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref020">
+<label>20</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Ödman</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Öberg</surname> <given-names>PA</given-names></name>. <article-title>Movement-induced potentials in surface electrodes</article-title>. <source>Medical and Biological Engineering and Computing</source>. <year>1982</year>;<volume>20</volume>(<issue>2</issue>):<fpage>159</fpage>–<lpage>166</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/BF02441351" xlink:type="simple">10.1007/BF02441351</ext-link></comment> <object-id pub-id-type="pmid">7098572</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref021">
+<label>21</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Webster</surname> <given-names>J</given-names></name>. <source>Medical instrumentation: application and design</source>. <publisher-name>John Wiley &amp; Sons</publisher-name>; <year>2009</year>.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref022">
+<label>22</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>de Talhouet</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Webster</surname> <given-names>JG</given-names></name>. <article-title>The origin of skin-stretch-caused motion artifacts under electrodes</article-title>. <source>Physiological Measurement</source>. <year>1996</year>;<volume>17</volume>(<issue>2</issue>):<fpage>81</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1088/0967-3334/17/2/003" xlink:type="simple">10.1088/0967-3334/17/2/003</ext-link></comment> <object-id pub-id-type="pmid">8724520</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref023">
+<label>23</label>
+<mixed-citation xlink:type="simple" publication-type="other">Thakor N, Webster J. The origin of skin potential and its variations. In: Proc. Ann. Conf. Eng. Biol. Med. vol. 20; 1978. p. 212.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref024">
+<label>24</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Tam</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Webster</surname> <given-names>JG</given-names></name>. <article-title>Minimizing electrode motion artifact by skin abrasion</article-title>. <source>Biomedical Engineering, IEEE Transactions on</source>. <year>1977</year>;(<issue>2</issue>):<fpage>134</fpage>–<lpage>139</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TBME.1977.326117" xlink:type="simple">10.1109/TBME.1977.326117</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref025">
+<label>25</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Burbank</surname> <given-names>DP</given-names></name>, <name name-style="western"><surname>Webster</surname> <given-names>JG</given-names></name>. <article-title>Reducing skin potential motion artefact by skin abrasion</article-title>. <source>Medical and Biological Engineering and Computing</source>. <year>1978</year>;<volume>16</volume>(<issue>1</issue>):<fpage>31</fpage>–<lpage>38</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/BF02442929" xlink:type="simple">10.1007/BF02442929</ext-link></comment> <object-id pub-id-type="pmid">305999</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref026">
+<label>26</label>
+<mixed-citation xlink:type="simple" publication-type="other">Khan A, Greatbatch W. Physiologic electrodes. Medical engineering. 1974;p. 1073–1082.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref027">
+<label>27</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Yelderman</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>ECG enhancement by adaptive cancellation of electrosurgical interference</article-title>. <source>Biomedical Engineering, IEEE Transactions on</source>. <year>1983</year>;(<issue>7</issue>):<fpage>392</fpage>–<lpage>398</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TBME.1983.325039" xlink:type="simple">10.1109/TBME.1983.325039</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref028">
+<label>28</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Ferrara</surname> <given-names>ER</given-names></name>, <name name-style="western"><surname>Widraw</surname> <given-names>B</given-names></name>. <article-title>Fetal electrocardiogram enhancement by time-sequenced adaptive filtering</article-title>. <source>Biomedical Engineering, IEEE Transactions on</source>. <year>1982</year>;(<issue>6</issue>):<fpage>458</fpage>–<lpage>460</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TBME.1982.324973" xlink:type="simple">10.1109/TBME.1982.324973</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref029">
+<label>29</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Vullings</surname> <given-names>R</given-names></name>, <etal>et al</etal>. <article-title>An adaptive Kalman filter for ECG signal enhancement</article-title>. <source>Biomedical Engineering, IEEE Transactions on</source>. <year>2011</year>;<volume>58</volume>(<issue>4</issue>):<fpage>1094</fpage>–<lpage>1103</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TBME.2010.2099229" xlink:type="simple">10.1109/TBME.2010.2099229</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref030">
+<label>30</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Widrow</surname> <given-names>B</given-names></name>, <etal>et al</etal>. <article-title>Adaptive noise cancelling: Principles and applications</article-title>. <source>Proceedings of the IEEE</source>. <year>1975</year>;<volume>63</volume>(<issue>12</issue>):<fpage>1692</fpage>–<lpage>1716</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/PROC.1975.10036" xlink:type="simple">10.1109/PROC.1975.10036</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref031">
+<label>31</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Thakor</surname> <given-names>NV</given-names></name>, <name name-style="western"><surname>Zhu</surname> <given-names>YS</given-names></name>. <article-title>Applications of adaptive filtering to ECG analysis: noise cancellation and arrhythmia detection</article-title>. <source>Biomedical Engineering, IEEE Transactions on</source>. <year>1991</year>;<volume>38</volume>(<issue>8</issue>):<fpage>785</fpage>–<lpage>794</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/10.83591" xlink:type="simple">10.1109/10.83591</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref032">
+<label>32</label>
+<mixed-citation xlink:type="simple" publication-type="other">Devlin PH, et al. Detection electrode motion noise in ecg signals by monitoring electrode impedance. Computers in Cardiology. 1984;p. 51–56.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref033">
+<label>33</label>
+<mixed-citation xlink:type="simple" publication-type="other">Hamilton PS, Curley MG. Adaptive removal of motion artifact. In: Engineering in Medicine and Biology Society, 1997. Proceedings of the 19th Annual International Conference of the IEEE. vol. 1. IEEE; 1997. p. 297–299.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref034">
+<label>34</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Hamilton</surname> <given-names>PS</given-names></name>, <etal>et al</etal>. <article-title>Effect of adaptive motion-artifact reduction on QRS detection</article-title>. <source>Biomedical instrumentation &amp; technology/Association for the Advancement of Medical Instrumentation</source>. <year>1999</year>;<volume>34</volume>(<issue>3</issue>):<fpage>197</fpage>–<lpage>202</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref035">
+<label>35</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Luo</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Tompkins</surname> <given-names>WJ</given-names></name>. <chapter-title>Experimental study: brachial motion artifact reduction in the ECG</chapter-title>. In: <source>Computers in Cardiology 1995</source>. <publisher-name>IEEE</publisher-name>; <year>1995</year>. p. <fpage>33</fpage>–<lpage>36</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref036">
+<label>36</label>
+<mixed-citation xlink:type="simple" publication-type="other">Liu Y, Pecht MG. Reduction of skin stretch induced motion artifacts in electrocardiogram monitoring using adaptive filtering. In: Engineering in Medicine and Biology Society, 2006. EMBS’06. 28th Annual International Conference of the IEEE. IEEE; 2006. p. 6045–6048.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref037">
+<label>37</label>
+<mixed-citation xlink:type="simple" publication-type="other">Tong D, et al. Adaptive reduction of motion artifact in the electrocardiogram. In: Engineering in Medicine and Biology, 2002. 24th Annual Conference and the Annual Fall Meeting of the Biomedical Engineering Society EMBS/BMES Conference, 2002. Proceedings of the Second Joint. vol. 2. IEEE; 2002. p. 1403–1404.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref038">
+<label>38</label>
+<mixed-citation xlink:type="simple" publication-type="other">Raya MAD, Sison LG. Adaptive noise cancelling of motion artifact in stress ECG signals using accelerometer. In: Engineering in Medicine and Biology, 2002. 24th Annual Conference and the Annual Fall Meeting of the Biomedical Engineering Society EMBS/BMES Conference, 2002. Proceedings of the Second Joint. vol. 2. IEEE; 2002. p. 1756–1757.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref039">
+<label>39</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Barros</surname> <given-names>AK</given-names></name>, <etal>et al</etal>. <article-title>Removing artifacts from electrocardiographic signals using independent components analysis</article-title>. <source>Neurocomputing</source>. <year>1998</year>;<volume>22</volume>(<issue>1</issue>):<fpage>173</fpage>–<lpage>186</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/S0925-2312(98)00056-3" xlink:type="simple">10.1016/S0925-2312(98)00056-3</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref040">
+<label>40</label>
+<mixed-citation xlink:type="simple" publication-type="other">Milanesi M, et al. Multichannel techniques for motion artifacts removal from electrocardiographic signals. In: Engineering in Medicine and Biology Society, 2006. EMBS’06. 28th Annual International Conference of the IEEE. IEEE; 2006. p. 3391–3394.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref041">
+<label>41</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Milanesi</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>Independent component analysis applied to the removal of motion artifacts from electrocardiographic signals</article-title>. <source>Medical &amp; biological engineering &amp; computing</source>. <year>2008</year>;<volume>46</volume>(<issue>3</issue>):<fpage>251</fpage>–<lpage>261</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s11517-007-0293-8" xlink:type="simple">10.1007/s11517-007-0293-8</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref042">
+<label>42</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Chawla</surname> <given-names>M</given-names></name>. <article-title>PCA and ICA processing methods for removal of artifacts and noise in electrocardiograms: A survey and comparison</article-title>. <source>Applied Soft Computing</source>. <year>2011</year>;<volume>11</volume>(<issue>2</issue>):<fpage>2216</fpage>–<lpage>2226</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.asoc.2010.08.001" xlink:type="simple">10.1016/j.asoc.2010.08.001</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref043">
+<label>43</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Lee</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Automatic motion and noise artifact Detection in Holter ECG data using empirical mode decomposition and statistical approaches</article-title>. <source>Biomedical Engineering, IEEE Transactions on</source>. <year>2012</year>;<volume>59</volume>(<issue>6</issue>):<fpage>1499</fpage>–<lpage>1506</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TBME.2011.2175729" xlink:type="simple">10.1109/TBME.2011.2175729</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref044">
+<label>44</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Chang</surname> <given-names>KM</given-names></name>. <article-title>Arrhythmia ECG noise reduction by ensemble empirical mode decomposition</article-title>. <source>Sensors</source>. <year>2010</year>;<volume>10</volume>(<issue>6</issue>):<fpage>6063</fpage>–<lpage>6080</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.3390/s100606063" xlink:type="simple">10.3390/s100606063</ext-link></comment> <object-id pub-id-type="pmid">22219702</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref045">
+<label>45</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Pesquet</surname> <given-names>JC</given-names></name>, <etal>et al</etal>. <article-title>Time-invariant orthonormal wavelet representations</article-title>. <source>Signal Processing, IEEE Transactions on</source>. <year>1996</year>;<volume>44</volume>(<issue>8</issue>):<fpage>1964</fpage>–<lpage>1970</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/78.533717" xlink:type="simple">10.1109/78.533717</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref046">
+<label>46</label>
+<mixed-citation xlink:type="simple" publication-type="other">Strasser F, et al. Motion artifact removal in ECG signals using multi-resolution thresholding. In: Signal Processing Conference (EUSIPCO), 2012 Proceedings of the 20th European. IEEE; 2012. p. 899–903.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref047">
+<label>47</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Reef</surname> <given-names>V</given-names></name>, <etal>et al</etal>. <article-title>Recommendations for Management of Equine Athletes with Cardiovascular Abnormalities</article-title>. <source>Journal of Veterinary Internal Medicine</source>. <year>2014</year>;<volume>28</volume>(<issue>3</issue>):<fpage>749</fpage>–<lpage>761</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/jvim.12340" xlink:type="simple">10.1111/jvim.12340</ext-link></comment> <object-id pub-id-type="pmid">24628586</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref048">
+<label>48</label>
+<mixed-citation xlink:type="simple" publication-type="other">Young L, van Loon G. Diseases of the heart and vessels. Equine sports medicine and surgery: basic and clinical sciences of equine athlete. 2013;p. 695–744.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref049">
+<label>49</label>
+<mixed-citation xlink:type="simple" publication-type="other">Petersen E, et al. Prevalence of arrhythmias during and immediately after racing in Standardbred trotters–is there an association between arrhythmias and myocardial hypertrophy. In: Proceedings of the BEVA Congress, Liverpool, United Kingdom; 2008. p. 138.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref050">
+<label>50</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Buhl</surname> <given-names>R</given-names></name>, <etal>et al</etal>. <article-title>Evaluation of clinical and electrocardiographic changes during the euthanasia of horses</article-title>. <source>The Veterinary Journal</source>. <year>2013</year>;<volume>196</volume>(<issue>3</issue>):<fpage>483</fpage>–<lpage>491</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.tvjl.2012.11.016" xlink:type="simple">10.1016/j.tvjl.2012.11.016</ext-link></comment> <object-id pub-id-type="pmid">23290564</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref051">
+<label>51</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Buhl</surname> <given-names>R</given-names></name>. <article-title>Valvular regurgitations in the horse: The importance of an exercise ECG</article-title>. <source>The Veterinary Journal</source>. <year>2010</year>;<volume>183</volume>(<issue>2</issue>):<fpage>117</fpage>–<lpage>118</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.tvjl.2009.06.018" xlink:type="simple">10.1016/j.tvjl.2009.06.018</ext-link></comment> <object-id pub-id-type="pmid">20036587</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref052">
+<label>52</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Martin</surname> <given-names>BB</given-names> <suffix>Jr</suffix></name>, <etal>et al</etal>. <article-title>Causes of poor performance of horses during training, racing, or showing: 348 cases (1992–1996)</article-title>. <source>Journal of the American Veterinary Medical Association</source>. <year>2000</year>;<volume>216</volume>(<issue>4</issue>):<fpage>554</fpage>–<lpage>558</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.2460/javma.2000.216.554" xlink:type="simple">10.2460/javma.2000.216.554</ext-link></comment> <object-id pub-id-type="pmid">10687012</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref053">
+<label>53</label>
+<mixed-citation xlink:type="simple" publication-type="other">Marr C, Bowen M. Cardiology of the Horse. Elsevier Health Sciences; 2011.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref054">
+<label>54</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Vitale</surname> <given-names>V</given-names></name>, <etal>et al</etal>. <article-title>The effects of restriction of movement on the reliability of heart rate variability measurements in the horse (Equus caballus)</article-title>. <source>Journal of Veterinary Behavior: Clinical Applications and Research</source>. <year>2013</year>;<volume>8</volume>(<issue>5</issue>):<fpage>400</fpage>–<lpage>403</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.jveb.2013.02.003" xlink:type="simple">10.1016/j.jveb.2013.02.003</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref055">
+<label>55</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Scheffer</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>van Oldruitenborgh-Oosterbaan</surname> <given-names>MS</given-names></name>. <article-title>Computerized ECG recording in horses during a standardized exercise test</article-title>. <source>Veterinary quarterly</source>. <year>1996</year>;<volume>18</volume>(<issue>1</issue>):<fpage>2</fpage>–<lpage>7</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1080/01652176.1996.9694601" xlink:type="simple">10.1080/01652176.1996.9694601</ext-link></comment> <object-id pub-id-type="pmid">8833603</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref056">
+<label>56</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Verheyen</surname> <given-names>T</given-names></name>, <etal>et al</etal>. <article-title>Electrocardiography in horses, part 1: how to make a good recording</article-title>. <source>Vlaams Diergeneeskundig Tijdschrift</source>. <year>2010</year>;<volume>79</volume>(<issue>5</issue>):<fpage>331</fpage>–<lpage>336</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref057">
+<label>57</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Trachsel</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Observer agreement for detection of cardiac arrhythmias on telemetric ECG recordings obtained at rest, during and after exercise in 10 Warmblood horses</article-title>. <source>Equine Veterinary Journal</source>. <year>2010</year>;<volume>42</volume>(<issue>s38</issue>):<fpage>208</fpage>–<lpage>215</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.2042-3306.2010.00172.x" xlink:type="simple">10.1111/j.2042-3306.2010.00172.x</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref058">
+<label>58</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Buhl</surname> <given-names>R</given-names></name>, <etal>et al</etal>. <article-title>Cardiac arrhythmias in clinically healthy showjumping horses</article-title>. <source>Equine Veterinary Journal</source>. <year>2010</year>;<volume>42</volume>(<issue>s38</issue>):<fpage>196</fpage>–<lpage>201</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.2042-3306.2010.00185.x" xlink:type="simple">10.1111/j.2042-3306.2010.00185.x</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref059">
+<label>59</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Cottin</surname> <given-names>F</given-names></name>, <etal>et al</etal>. <article-title>Effect of repeated exercise and recovery on heart rate variability in elite trotting horses during high intensity interval training</article-title>. <source>Equine Veterinary Journal</source>. <year>2006</year>;<volume>38</volume>(<issue>S36</issue>):<fpage>204</fpage>–<lpage>209</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.2042-3306.2006.tb05540.x" xlink:type="simple">10.1111/j.2042-3306.2006.tb05540.x</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref060">
+<label>60</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Ryan</surname> <given-names>N</given-names></name>, <etal>et al</etal>. <article-title>Survey of cardiac arrhythmias during submaximal and maximal exercise in Thoroughbred racehorses</article-title>. <source>Equine veterinary journal</source>. <year>2005</year>;<volume>37</volume>(<issue>3</issue>):<fpage>265</fpage>–<lpage>268</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.2746/0425164054530713" xlink:type="simple">10.2746/0425164054530713</ext-link></comment> <object-id pub-id-type="pmid">15892238</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref061">
+<label>61</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Martínez</surname> <given-names>JP</given-names></name>, <etal>et al</etal>. <article-title>A wavelet-based ECG delineator: evaluation on standard databases</article-title>. <source>Biomedical Engineering, IEEE Transactions on</source>. <year>2004</year>;<volume>51</volume>(<issue>4</issue>):<fpage>570</fpage>–<lpage>581</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TBME.2003.821031" xlink:type="simple">10.1109/TBME.2003.821031</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref062">
+<label>62</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Laguna</surname> <given-names>P</given-names></name>, <etal>et al</etal>. <chapter-title>A database for evaluation of algorithms for measurement of QT and other waveform intervals in the ECG</chapter-title>. In: <source>Computers in Cardiology 1997</source>. <publisher-name>IEEE</publisher-name>; <year>1997</year>. p. <fpage>673</fpage>–<lpage>676</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref063">
+<label>63</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Goldberger</surname> <given-names>AL</given-names></name>, <etal>et al</etal>. <article-title>Physiobank, physiotoolkit, and physionet components of a new research resource for complex physiologic signals</article-title>. <source>Circulation</source>. <year>2000</year>;<volume>101</volume>(<issue>23</issue>):<fpage>e215</fpage>–<lpage>e220</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1161/01.CIR.101.23.e215" xlink:type="simple">10.1161/01.CIR.101.23.e215</ext-link></comment> <object-id pub-id-type="pmid">10851218</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref064">
+<label>64</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Laguna</surname> <given-names>P</given-names></name>, <etal>et al</etal>. <article-title>Automatic detection of wave boundaries in multilead ECG signals: Validation with the CSE database</article-title>. <source>Computers and biomedical research</source>. <year>1994</year>;<volume>27</volume>(<issue>1</issue>):<fpage>45</fpage>–<lpage>60</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1006/cbmr.1994.1006" xlink:type="simple">10.1006/cbmr.1994.1006</ext-link></comment> <object-id pub-id-type="pmid">8004942</object-id></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref065">
+<label>65</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Maronna</surname> <given-names>R</given-names></name>, <etal>et al</etal>. <source>Robust statistics</source>. <publisher-name>John Wiley &amp; Sons</publisher-name>, <publisher-loc>Chichester</publisher-loc>. ISBN; <year>2006</year>.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref066">
+<label>66</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Holschneider</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <chapter-title>A real-time algorithm for signal analysis with the help of the wavelet transform</chapter-title>. In: <source>Wavelets</source>. <publisher-name>Springer</publisher-name>; <year>1990</year>. p. <fpage>286</fpage>–<lpage>297</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref067">
+<label>67</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Mallat</surname> <given-names>SG</given-names></name>. <article-title>A theory for multiresolution signal decomposition: the wavelet representation</article-title>. <source>Pattern Analysis and Machine Intelligence, IEEE Transactions on</source>. <year>1989</year>;<volume>11</volume>(<issue>7</issue>):<fpage>674</fpage>–<lpage>693</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/34.192463" xlink:type="simple">10.1109/34.192463</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref068">
+<label>68</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Vetterli</surname> <given-names>M</given-names></name>. <article-title>A theory of multirate filter banks</article-title>. <source>Acoustics, Speech and Signal Processing, IEEE Transactions on</source>. <year>1987</year>;<volume>35</volume>(<issue>3</issue>):<fpage>356</fpage>–<lpage>372</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TASSP.1987.1165137" xlink:type="simple">10.1109/TASSP.1987.1165137</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref069">
+<label>69</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Li</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Lin</surname> <given-names>J</given-names></name>. <chapter-title>The optimal de-noising algorithm for ECG using stationary wavelet transform</chapter-title>. In: <source>Computer Science and Information Engineering, 2009 WRI World Congress on. vol. 6</source>. <publisher-name>IEEE</publisher-name>; <year>2009</year>. p. <fpage>469</fpage>–<lpage>473</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0140783.ref070">
+<label>70</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Bland</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Altman</surname> <given-names>D</given-names></name>. <article-title>Statistical methods for assessing agreement between two methods of clinical measurement</article-title>. <source>The lancet</source>. <year>1986</year>;<volume>327</volume>(<issue>8476</issue>):<fpage>307</fpage>–<lpage>310</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/S0140-6736(86)90837-8" xlink:type="simple">10.1016/S0140-6736(86)90837-8</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref071">
+<label>71</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Bland</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Altman</surname> <given-names>DG</given-names></name>. <article-title>Comparing methods of measurement: why plotting difference against standard method is misleading</article-title>. <source>The Lancet</source>. <year>1995</year>;<volume>346</volume>(<issue>8982</issue>):<fpage>1085</fpage>–<lpage>1087</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/S0140-6736(95)91748-9" xlink:type="simple">10.1016/S0140-6736(95)91748-9</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref072">
+<label>72</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Lanatà</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Scilingo</surname> <given-names>EP</given-names></name>, <name name-style="western"><surname>Nardini</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Loriga</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Paradiso</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>De-Rossi</surname> <given-names>D</given-names></name>. <article-title>Comparative evaluation of susceptibility to motion artifact in different wearable systems for monitoring respiratory rate</article-title>. <source>Information Technology in Biomedicine, IEEE Transactions on</source>. <year>2010</year>;<volume>14</volume>(<issue>2</issue>):<fpage>378</fpage>–<lpage>386</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TITB.2009.2037614" xlink:type="simple">10.1109/TITB.2009.2037614</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0140783.ref073">
+<label>73</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Shah</surname> <given-names>AP</given-names></name>, <name name-style="western"><surname>Rubin</surname> <given-names>SA</given-names></name>. <article-title>Errors in the computerized electrocardiogram interpretation of cardiac rhythm</article-title>. <source>Journal of electrocardiology</source>. <year>2007</year>;<volume>40</volume>(<issue>5</issue>):<fpage>385</fpage>–<lpage>390</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.jelectrocard.2007.03.008" xlink:type="simple">10.1016/j.jelectrocard.2007.03.008</ext-link></comment> <object-id pub-id-type="pmid">17531257</object-id></mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

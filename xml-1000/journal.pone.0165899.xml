@@ -1,0 +1,867 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1d3" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0165899</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-16-31384</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Organisms</subject><subj-group><subject>Bacteria</subject><subj-group><subject>Staphylococcus</subject><subj-group><subject>Staphylococcus aureus</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Microbiology</subject><subj-group><subject>Medical microbiology</subject><subj-group><subject>Microbial pathogens</subject><subj-group><subject>Bacterial pathogens</subject><subj-group><subject>Staphylococcus</subject><subj-group><subject>Staphylococcus aureus</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Pathology and laboratory medicine</subject><subj-group><subject>Pathogens</subject><subj-group><subject>Microbial pathogens</subject><subj-group><subject>Bacterial pathogens</subject><subj-group><subject>Staphylococcus</subject><subj-group><subject>Staphylococcus aureus</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Microbiology</subject><subj-group><subject>Medical microbiology</subject><subj-group><subject>Microbial pathogens</subject><subj-group><subject>Bacterial pathogens</subject><subj-group><subject>Pseudomonas aeruginosa</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Pathology and laboratory medicine</subject><subj-group><subject>Pathogens</subject><subj-group><subject>Microbial pathogens</subject><subj-group><subject>Bacterial pathogens</subject><subj-group><subject>Pseudomonas aeruginosa</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Organisms</subject><subj-group><subject>Bacteria</subject><subj-group><subject>Pseudomonas</subject><subj-group><subject>Pseudomonas aeruginosa</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Materials science</subject><subj-group><subject>Material properties</subject><subj-group><subject>Permeability</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Pharmacology</subject><subj-group><subject>Drugs</subject><subj-group><subject>Antimicrobials</subject><subj-group><subject>Antibiotics</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Microbiology</subject><subj-group><subject>Microbial control</subject><subj-group><subject>Antimicrobials</subject><subj-group><subject>Antibiotics</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Microbiology</subject><subj-group><subject>Microbial control</subject><subj-group><subject>Antimicrobial resistance</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Pharmacology</subject><subj-group><subject>Antimicrobial resistance</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Algebra</subject><subj-group><subject>Linear algebra</subject><subj-group><subject>Eigenvectors</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Algebra</subject><subj-group><subject>Linear algebra</subject><subj-group><subject>Eigenvalues</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Cell biology</subject><subj-group><subject>Cell processes</subject><subj-group><subject>Cell growth</subject></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Dynamical Model of Drug Accumulation in Bacteria: Sensitivity Analysis and Experimentally Testable Predictions</article-title>
+<alt-title alt-title-type="running-head">Model of Drug Accumulation in Bacteria</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Vesselinova</surname>
+<given-names>Neda</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0001-8636-4603</contrib-id>
+<name name-style="western">
+<surname>Alexandrov</surname>
+<given-names>Boian S.</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Wall</surname>
+<given-names>Michael E.</given-names>
+</name>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Theoretical Division, Los Alamos National Laboratory, Los Alamos, NM, 87545, United States of America</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>University of California Los Angeles, Los Angeles, CA, 90095, United States of America</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>Computer, Computational, and Statistical Sciences Division, Los Alamos National Laboratory, Los Alamos, NM, 87545, United States of America</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Vilar</surname>
+<given-names>Jose M. G.</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>University of the Basque Country, SPAIN</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con">
+<p><list list-type="simple">
+<list-item><p><bold>Conceptualization:</bold> BSA MEW.</p></list-item>
+<list-item><p><bold>Formal analysis:</bold> NV BSA MEW.</p></list-item>
+<list-item><p><bold>Funding acquisition:</bold> MEW.</p></list-item>
+<list-item><p><bold>Investigation:</bold> NV BSA MEW.</p></list-item>
+<list-item><p><bold>Methodology:</bold> BSA MEW.</p></list-item>
+<list-item><p><bold>Project administration:</bold> MEW.</p></list-item>
+<list-item><p><bold>Resources:</bold> BSA MEW.</p></list-item>
+<list-item><p><bold>Software:</bold> NV BSA MEW.</p></list-item>
+<list-item><p><bold>Supervision:</bold> BSA MEW.</p></list-item>
+<list-item><p><bold>Validation:</bold> NV BSA MEW.</p></list-item>
+<list-item><p><bold>Visualization:</bold> NV BSA MEW.</p></list-item>
+<list-item><p><bold>Writing – original draft:</bold> NV BSA MEW.</p></list-item>
+<list-item><p><bold>Writing – review &amp; editing:</bold> BSA MEW.</p></list-item></list></p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">mewall@lanl.gov</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>8</day>
+<month>11</month>
+<year>2016</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2016</year>
+</pub-date>
+<volume>11</volume>
+<issue>11</issue>
+<elocation-id>e0165899</elocation-id>
+<history>
+<date date-type="received">
+<day>11</day>
+<month>8</month>
+<year>2016</year>
+</date>
+<date date-type="accepted">
+<day>15</day>
+<month>9</month>
+<year>2016</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2016</copyright-year>
+<copyright-holder>Vesselinova et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0165899"/>
+<abstract>
+<p>We present a dynamical model of drug accumulation in bacteria. The model captures key features in experimental time courses on ofloxacin accumulation: initial uptake; two-phase response; and long-term acclimation. In combination with experimental data, the model provides estimates of import and export rates in each phase, the time of entry into the second phase, and the decrease of internal drug during acclimation. Global sensitivity analysis, local sensitivity analysis, and Bayesian sensitivity analysis of the model provide information about the robustness of these estimates, and about the relative importance of different parameters in determining the features of the accumulation time courses in three different bacterial species: <italic>Escherichia coli</italic>, <italic>Staphylococcus aureus</italic>, and <italic>Pseudomonas aeruginosa</italic>. The results lead to experimentally testable predictions of the effects of membrane permeability, drug efflux and trapping (e.g., by DNA binding) on drug accumulation. A key prediction is that a sudden increase in ofloxacin accumulation in both <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic> is accompanied by a decrease in membrane permeability.</p>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/100008902</institution-id>
+<institution>Los Alamos National Laboratory</institution>
+</institution-wrap>
+</funding-source>
+<award-id>Laboratory Directed Research and Development</award-id>
+</award-group>
+<funding-statement>This study was supported by the US Department of Energy under Contract DE-AC52-06NA25396 through the Laboratory-Directed Research and Development Program at Los Alamos National Laboratory. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="7"/>
+<table-count count="5"/>
+<page-count count="20"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and Supporting Information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>Drug resistance in bacteria can be increased by efflux pump systems [<xref ref-type="bibr" rid="pone.0165899.ref001">1</xref>], and pump inhibition has emerged as a strategy for overcoming drug resistance [<xref ref-type="bibr" rid="pone.0165899.ref002">2</xref>]. Many details of how efflux pumps work are still unclear, however. In particular, quantitative information about how efflux influences drug accumulation in bacteria is still scarce [<xref ref-type="bibr" rid="pone.0165899.ref003">3</xref>].</p>
+<p>Drug accumulation is a key factor in obtaining a quantitative understanding of resistance. For example, predictions of minimum inhibitory concentrations (MICs) of β-lactams in <italic>Escherichia coli</italic> were obtained by equating the steady state periplasmic drug concentration with a periplasmic binding protein inhibitory concentration [<xref ref-type="bibr" rid="pone.0165899.ref004">4</xref>]. A predicted MIC was calculated as the <italic>external</italic> concentration that would yield the accumulated <italic>internal</italic> inhibitory concentration in steady state, considering flux terms from membrane permeation and β-lactamase degradation. MIC predictions also have been made considering the action of efflux pumps on cephalosporins [<xref ref-type="bibr" rid="pone.0165899.ref005">5</xref>] and β-lactams [<xref ref-type="bibr" rid="pone.0165899.ref006">6</xref>] in <italic>E</italic>. <italic>coli</italic>. These predictions were accompanied by estimates of efflux pump kinetic constants (<italic>i</italic>.<italic>e</italic>., <italic>K</italic><sub><italic>m</italic></sub> and <italic>V</italic><sub><italic>max</italic></sub> values), providing an explicit connection between efflux and resistance.</p>
+<p>Time-dependent drug accumulation studies also have yielded insight into drug transport [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>–<xref ref-type="bibr" rid="pone.0165899.ref009">9</xref>]. Diver et al. [<xref ref-type="bibr" rid="pone.0165899.ref008">8</xref>] found exposure of <italic>E</italic>. <italic>coli</italic> to five different quinolones induced a rapid ~10 sec uptake followed by a ~30 min phase of more gradual accumulation. Similar two phase behavior was seen by Asuquo and Piddock [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>] in accumulation of fifteen different quinolones in <italic>E</italic>. <italic>coli</italic>, <italic>Pseudomonas aeruginosa</italic>, and <italic>Staphylococcus aureus</italic> [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>]. The experiments of Asuquo and Piddock [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>] highlighted exposure to ofloxacin, which exhibited apparently different accumulation behavior in each species (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1</xref>). Whereas drug levels appeared to plateau in <italic>E</italic>. <italic>coli</italic> (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1A</xref>) and <italic>S</italic>. <italic>aureus</italic> (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1C</xref>) levels in <italic>P</italic>. <italic>aeruginosa</italic> gradually decreased at longer times (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1B</xref>), suggesting an acclimation process.</p>
+<fig id="pone.0165899.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165899.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Ofloxacin accumulation data (open squares) with model fits (solid lines).</title>
+<p>A) <italic>E</italic>. <italic>coli</italic>. B) <italic>P</italic>. <italic>aeruginosa</italic>. C) <italic>S</italic>. <italic>aureus</italic>. Each data point is assumed to have the same measurement error, estimated from the maximum values reported for norfloxacin in Ref. [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>] (vertical bars). The external drug concentration of 10 mg/L is shown in each panel in ng/mg units (dashed straight lines), converted using the factors derived from the buoyant densities and dry fraction (Methods). The x-axis is plotted using a log scale, reflecting the time sampling of the data.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.g001" xlink:type="simple"/>
+</fig>
+<p>Mathematical modeling has provided substantial insights into accumulation of β-lactams [<xref ref-type="bibr" rid="pone.0165899.ref004">4</xref>,<xref ref-type="bibr" rid="pone.0165899.ref006">6</xref>], cephalosporins [<xref ref-type="bibr" rid="pone.0165899.ref005">5</xref>], and tetracycline [<xref ref-type="bibr" rid="pone.0165899.ref009">9</xref>] in <italic>E</italic>. <italic>coli</italic>. Quinolone accumulation, however, has not yet been analyzed in the context of a mathematical model. Here we present a mathematical model of drug accumulation and use it to analyze experimental data on accumulation of the quinolone ofloxacin in <italic>E</italic>. <italic>coli</italic>, <italic>S</italic>. <italic>aureus</italic>, and <italic>P</italic>. <italic>aeruginosa</italic> [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>]. The analysis yields estimates of permeation and efflux rates, the time of entry into the second phase of the response, and the rate of decrease of drug during acclimation. We also perform global sensitivity analysis, local sensitivity analysis, and Bayesian sensitivity analysis of the model. The sensitivity analyses provide information about the robustness of parameter estimates and enable assessment of the relative importance of the short-term response and long-term acclimation in different bacterial species.</p>
+<p>The results lead to experimentally testable predictions of membrane permeability and drug efflux, which influence drug resistance. A key prediction is that an increase in <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic> drug accumulation is accompanied by a decrease in membrane permeability. Overall the results indicate the utility of mathematical modeling and sensitivity analysis in obtaining new insights into drug accumulation in bacteria.</p>
+</sec>
+<sec id="sec002" sec-type="results">
+<title>Results</title>
+<sec id="sec003">
+<title>Model behavior</title>
+<p>Both the <italic>E</italic>. <italic>coli</italic> (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1A</xref>) and <italic>P</italic>. <italic>aeruginosa</italic> (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1B</xref>) behaviors clearly show two phases of drug accumulation dynamics, which are captured by our model of drug accumulation (Methods). The model also allows for the possibility of acclimation in the second phase; this was initially added to capture the longer-time (~10–60 min) behavior of <italic>P</italic>. <italic>aeruginosa</italic> (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1B</xref>). Although <italic>S</italic>. <italic>aureus</italic> data initially appeared to involve only one phase (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1C</xref>), the modeling and sensitivity analysis later revealed a significant two-phase behavior, with acclimation.</p>
+<p>The relationship between the model parameters and the model behavior is illustrated in <xref ref-type="fig" rid="pone.0165899.g002">Fig 2</xref>. After exposure at <italic>t</italic> = 0, the first phase begins, where cellular antibiotic levels rise and relax toward an asymptotic value <italic>a</italic><sub>1</sub>. The relaxation in this phase is exponential with rate β<sub>1</sub>. At time <italic>t</italic> = τ, the second phase begins, where antibiotic levels may either rise or fall towards a new asymptotic value <italic>a</italic><sub>2</sub>. The relaxation in this phase is initially dominated by exponential relaxation with rate β<sub>2</sub>. Later, acclimation can dominate the dynamics, specified by modulation of β<sub>2</sub> by the factor [1+ δ(t- τ)] (or, equivalently, modulation of α<sub>2</sub> by [1+ δ(t- τ)]<sup>-1</sup>; see <xref ref-type="sec" rid="sec010">Discussion</xref>). Together these features capture the full set of salient behaviors exhibited by the experimental data on ofloxacin accumulation [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>] (<xref ref-type="fig" rid="pone.0165899.g002">Fig 2</xref>).</p>
+<fig id="pone.0165899.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165899.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Behavior of the model and connection to parameters.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.g002" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec004">
+<title>Parameter estimates</title>
+<p>Optimal parameter values were estimated by fitting the model to data on ofloxacin accumulation in <italic>E</italic>. <italic>coli</italic>, <italic>P</italic>. <italic>aeruginosa</italic>, and <italic>S</italic>. <italic>aureus</italic>. The fits were performed assuming the same measurement error for each data point within the same curve (Methods). Reasonable fits were obtained for all datasets (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1</xref>), with an optimal value of the goodness of fit χ<sup>2</sup>/NDF of 0.98, 1.5, and 0.74 for <italic>E</italic>. <italic>coli</italic>, <italic>P</italic>. <italic>aeruginosa</italic>, and <italic>S</italic>. <italic>aureus</italic>, respectively. Values of β<sub>1</sub>, β<sub>2</sub>, and τ for <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic> were surprisingly similar (<xref ref-type="table" rid="pone.0165899.t001">Table 1</xref>) given the visible differences between the two datasets (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1</xref>); the parameter values for <italic>P</italic>. <italic>aeruginosa</italic> differed from the other two cases (<xref ref-type="table" rid="pone.0165899.t001">Table 1</xref>). <italic>E</italic>. <italic>coli</italic> exhibits two phases of accumulation with little apparent long-term acclimation, consistent with the low value of δ. <italic>P</italic>. <italic>aeruginosa</italic> shows a stronger acclimation response, corresponding to the higher value of δ. <italic>S</italic>. <italic>aureus</italic> exhibits a degree of acclimation (δ) that is intermediate between <italic>E</italic>. <italic>coli</italic> and <italic>P</italic>. <italic>aeruginosa</italic>.</p>
+<table-wrap id="pone.0165899.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165899.t001</object-id>
+<label>Table 1</label> <caption><title>Estimated parameter values obtained after fitting the model to data on ofloxacin accumulation in different bacteria.</title></caption>
+<alternatives>
+<graphic id="pone.0165899.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.t001" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"/>
+<th align="left"><italic>a</italic><sub>1</sub> (ng/mg)</th>
+<th align="left"><italic>a</italic><sub>2</sub> (ng/mg)</th>
+<th align="left">β<sub>1</sub> (1/s)</th>
+<th align="left">β<sub>2</sub> (1/s)</th>
+<th align="left">δ (1/s)</th>
+<th align="left">τ (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><italic>E</italic>. <italic>coli</italic></td>
+<td align="left">32.0</td>
+<td align="left">67.1</td>
+<td align="left">0.116</td>
+<td align="left">0.00125</td>
+<td align="left">0.000048</td>
+<td align="left">772</td>
+</tr>
+<tr>
+<td align="left"><italic>P</italic>. <italic>aeruginosa</italic></td>
+<td align="left">7.43</td>
+<td align="left">13.7</td>
+<td align="left">&gt;0.1<xref ref-type="table-fn" rid="t001fn001"><sup>a</sup></xref></td>
+<td align="left">&gt;0.1<xref ref-type="table-fn" rid="t001fn001"><sup>a</sup></xref></td>
+<td align="left">0.000314</td>
+<td align="left">44.5</td>
+</tr>
+<tr>
+<td align="left"><italic>S</italic>. <italic>aureus</italic></td>
+<td align="left">66.6</td>
+<td align="left">85.2</td>
+<td align="left">0.169</td>
+<td align="left">0.0014</td>
+<td align="left">0.000091</td>
+<td align="left">740</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t001fn001"><p><sup>a</sup>Entries using ‘&gt;‘ represent lower bounds.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec005">
+<title>Sensitivity analysis results</title>
+<p>We applied three types of sensitivity analysis to the model: global sensitivity analysis (GSA), local sensitivity analysis (LSA), and Bayesian sensitivity analysis (BSA). The GSA yielded a fine-grained assessment of the importance of each parameter in determining the model behavior at each time point. The LSA indicated parameters that are responsible for the principal variations in the immediate neighborhood of the optimal values. The BSA provided a detailed picture of the shapes of probability distributions of parameters in a more extended range about the optimum than for the LSA, including correlations that arise due to the nature of the model equations. Semi-quantitative sensitivity rankings of parameters for each case are presented in <xref ref-type="supplementary-material" rid="pone.0165899.s005">S1 Table</xref>; the detailed results are described below.</p>
+<sec id="sec006">
+<title>Global Sensitivity Analysis (GSA</title>
+<p>GSA results were obtained using log-uniform prior distributions over the ranges in <xref ref-type="table" rid="pone.0165899.t002">Table 2</xref>. The results for <italic>E</italic>. <italic>coli</italic> (<xref ref-type="fig" rid="pone.0165899.g003">Fig 3A and 3B</xref>) and <italic>S</italic>. <italic>aureus</italic> (<xref ref-type="fig" rid="pone.0165899.g003">Fig 3E and 3F</xref>) are similar, due to the identical priors (<xref ref-type="table" rid="pone.0165899.t002">Table 2</xref>) and the similarity in the optimal parameter values for these cases (<xref ref-type="table" rid="pone.0165899.t001">Table 1</xref>). The “main effect” index (a.k.a. the first-order sensitivity index) quantifies the contribution to the variance of the model of each parameter alone, while averaging over variations in other parameters, whereas the “total effect” index quantifies the change in the variance of the model caused by the investigated parameter and its interactions with any of the other parameters (Methods). Both the main effect and total effect are measured on a scale from 0 to 1 for each parameter. As a reference for the following paragraphs, <italic>a</italic><sub>1</sub> and <italic>a</italic><sub>2</sub> correspond to the initial steady-state level of antibiotic in the first and second phase; β<sub>1</sub> and β<sub>2</sub> correspond to the relaxation rates at the entry into the first and second phase; τ is the time of entry into phase 2; and δ is the rate constant associated with acclimation.</p>
+<fig id="pone.0165899.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165899.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title/>
+<p>Global sensitivity analysis results for <italic>E</italic>. <italic>coli</italic> (A, B); <italic>P</italic>. <italic>aeruginosa</italic> (C, D); and <italic>S</italic>. <italic>aureus</italic> (E, F) models. The left panels (A, C, E) show the main effect results, and the right panels (B,D,F) show the total effect results. Color code: <italic>a</italic><sub>1</sub> (cyan); <italic>a</italic><sub>2</sub> (yellow); β<sub>1</sub> (magenta); β<sub>2</sub> (green); δ (lavender); and τ (red).</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.g003" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0165899.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165899.t002</object-id>
+<label>Table 2</label> <caption><title>Parameter ranges used for prior distributions for GSA and BSA (Log<sub>10</sub> transformed values).</title> <p>Units of parameters are as in <xref ref-type="table" rid="pone.0165899.t001">Table 1</xref>.</p></caption>
+<alternatives>
+<graphic id="pone.0165899.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.t002" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"/>
+<th align="center">Log<sub>10</sub> <italic>a</italic><sub>1</sub></th>
+<th align="center">Log<sub>10</sub> <italic>a</italic><sub>2</sub></th>
+<th align="center">Log<sub>10</sub> β<sub>1</sub></th>
+<th align="center">Log<sub>10</sub> β<sub>2</sub></th>
+<th align="center">Log<sub>10</sub> δ</th>
+<th align="center">Log<sub>10</sub> τ</th>
+</tr>
+<tr>
+<th align="center" colspan="7"><italic>E</italic>. <italic>coli</italic></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">min</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">-3</td>
+<td align="center">-3</td>
+<td align="center">-7</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">max</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">-3.5</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center" colspan="7"><italic>P</italic>. <italic>aeruginosa</italic></td>
+</tr>
+<tr>
+<td align="left">min</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">-1</td>
+<td align="center">-1</td>
+<td align="center">-7</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">max</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">-2</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center" colspan="7"><italic>S</italic>. <italic>aureus</italic></td>
+</tr>
+<tr>
+<td align="left">min</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">-3</td>
+<td align="center">-3</td>
+<td align="center">-7</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">max</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">-3.5</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>For <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic>, the main effect of <italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, and β<sub>1</sub> is high, and the main effect of β<sub>2</sub>, τ, and δ is low (<xref ref-type="fig" rid="pone.0165899.g003">Fig 3A and 3E</xref>). The total effect of <italic>a</italic><sub>1</sub>, β<sub>1</sub>, <italic>a</italic><sub>2</sub>, and τ is high, and the total effect is low for β<sub>2</sub> (especially at later times) and δ (<xref ref-type="fig" rid="pone.0165899.g003">Fig 3B and 3F</xref>). The total effect of <italic>a</italic><sub>1</sub> remains high at long times, despite being associated with the first phase; this is because the prior for τ spans the entire range 0–3600 s, enabling the first phase to extend to long times in the analysis.</p>
+<p>For <italic>P</italic>. <italic>aeruginosa</italic>, the main effect of <italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, and δ is high, and the main effect of β<sub>1</sub>, β<sub>2</sub>, and τ is low (<xref ref-type="fig" rid="pone.0165899.g003">Fig 3C</xref>). The total effect of <italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, τ, and δ is high, and the total effect of β<sub>1</sub> and β<sub>2</sub> is low (<xref ref-type="fig" rid="pone.0165899.g003">Fig 3D</xref>). The increased importance of δ for <italic>P</italic>. <italic>aeruginosa</italic> compared to <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic> is consistent with the more pronounced acclimation response (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1</xref>). The low importance of β<sub>1</sub> and β<sub>2</sub> is consistent with the unbounded upper limit due to the step-like transitions in <italic>P</italic>. <italic>aeruginosa</italic>; in comparison, the behavior of <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic> shows more gradual relaxations with improved sampling (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1</xref>), leading to increased importance of β<sub>1</sub> and β<sub>2</sub>.</p>
+</sec>
+<sec id="sec007">
+<title>Local sensitivity analysis (LSA)</title>
+<p>The LSA results are presented using the eigenvectors and eigenvalues of the covariance matrix of model parameters (Methods). The eigenvectors are visualized in columns of colored squares in <xref ref-type="fig" rid="pone.0165899.g004">Fig 4</xref>, ordered in importance from left to right using the eigenvalues (<xref ref-type="table" rid="pone.0165899.t003">Table 3</xref>; sensitivity values correspond to -Log<sub>10</sub>(λ), where λ is the eigenvalue). For all cases, the first two eigenvectors are dominated by <italic>a</italic><sub>1</sub> and <italic>a</italic><sub>2</sub>, indicating that these are the most sensitive parameters. For <italic>E</italic>. <italic>coli</italic>, the third eigenvalue is more than 10-fold larger than the first eigenvalue (corresponding to a lower sensitivity), with an eigenvector that is dominated by τ. The lowest sensitivities correspond to combinations of β<sub>1</sub>, β<sub>2</sub>, and δ. For <italic>P</italic>. <italic>aeruginosa</italic>, the third eigenvalue is 50-fold larger than the first, and corresponds to δ. The lowest sensitivities correspond to β<sub>1</sub>, β<sub>2</sub>, and τ. For <italic>S</italic>. <italic>aureus</italic>, the third eigenvalue is 100-fold larger than the first, and corresponds to β<sub>1</sub>. The lowest sensitivities correspond to combinations of β<sub>1</sub>, δ, and τ. The relatively low sensitivity of τ in the LSA is consistent with the very sharp transition between the two phases, as the precise value of τ is ill-determined between the discretely sampled time points. The higher sensitivity of τ for <italic>E</italic>. <italic>coli</italic> is consistent with the extrapolation of the phase 2 relaxation curve to a more precise value of τ.</p>
+<fig id="pone.0165899.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165899.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title/>
+<p>Local sensitivity analysis (LSA) results for A) <italic>E</italic>. <italic>coli</italic>; B) <italic>P</italic>. <italic>aeruginosa</italic>; and C) <italic>S</italic>. <italic>aureus</italic>. Columns correspond to eigenvectors, ordered left to right from the most to the least sensitive, as in <xref ref-type="table" rid="pone.0165899.t003">Table 3</xref>. Rows correspond to parameters, with labels indicated at the left. The strength and sign of the coefficient of each parameter with each eigenvector is indicated using the color code in the legend to the right.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.g004" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0165899.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165899.t003</object-id>
+<label>Table 3</label> <caption><title>Sensitivities calculated from eigenvalues corresponding to each eigenvector from LSA.</title> <p>Sensitivity values are calculated as -Log<sub>10</sub>(λ), where λ is the eigenvalue. The connection of each eigenvector to the model parameters is visualized in <xref ref-type="fig" rid="pone.0165899.g004">Fig 4</xref>.</p></caption>
+<alternatives>
+<graphic id="pone.0165899.t003g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.t003" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" style="background-color:#FFFFFF">Eigenvector #</th>
+<th align="left" style="background-color:#FFFFFF"><italic>E</italic>. <italic>coli</italic></th>
+<th align="left" style="background-color:#FFFFFF"><italic>P</italic>. <italic>aeruginosa</italic></th>
+<th align="left" style="background-color:#FFFFFF"><italic>S</italic>. <italic>aureus</italic></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" style="background-color:#FFFFFF">1</td>
+<td align="left" style="background-color:#FFFFFF">3.6</td>
+<td align="left" style="background-color:#FFFFFF">3.7</td>
+<td align="left" style="background-color:#FFFFFF">3.6</td>
+</tr>
+<tr>
+<td align="left" style="background-color:#FFFFFF">2</td>
+<td align="left" style="background-color:#FFFFFF">3.5</td>
+<td align="left" style="background-color:#FFFFFF">2.7</td>
+<td align="left" style="background-color:#FFFFFF">3.1</td>
+</tr>
+<tr>
+<td align="left" style="background-color:#FFFFFF">3</td>
+<td align="left" style="background-color:#FFFFFF">2.4</td>
+<td align="left" style="background-color:#FFFFFF">2.0</td>
+<td align="left" style="background-color:#FFFFFF">1.5</td>
+</tr>
+<tr>
+<td align="left" style="background-color:#FFFFFF">4</td>
+<td align="left" style="background-color:#FFFFFF">1.7</td>
+<td align="left" style="background-color:#FFFFFF">-1.9</td>
+<td align="left" style="background-color:#FFFFFF">1.2</td>
+</tr>
+<tr>
+<td align="left" style="background-color:#FFFFFF">5</td>
+<td align="left" style="background-color:#FFFFFF">1.3</td>
+<td align="left" style="background-color:#FFFFFF">-6.7</td>
+<td align="left" style="background-color:#FFFFFF">0.5</td>
+</tr>
+<tr>
+<td align="left" style="background-color:#FFFFFF">6</td>
+<td align="left" style="background-color:#FFFFFF">-1.0</td>
+<td align="left" style="background-color:#FFFFFF">-12</td>
+<td align="left" style="background-color:#FFFFFF">-1.2</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+<sec id="sec008">
+<title>Bayesian sensitivity analysis (BSA)</title>
+<p>We used BSA with Markov Chain Monte Carlo (MCMC) sampling (Methods) to obtain insight into probability distribution functions (PDFs) of parameter values (Figs <xref ref-type="fig" rid="pone.0165899.g005">5</xref>–<xref ref-type="fig" rid="pone.0165899.g007">7</xref>). Because the measurement errors were not available for individual data points, we used an arbitrary error of 1 ng/mg for each data point (Methods). The resulting PDFs therefore should not be interpreted as actual posterior PDFs, but only as indicators of: (1) the overall shape of the distributions; (2) the relative degree to which different parameters are constrained; and (3) the relative degree and nature in which different parameters are correlated.</p>
+<fig id="pone.0165899.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165899.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Bayesian sensitivity analysis for <italic>E</italic>. <italic>coli</italic>.</title>
+<p>Pairwise parameter PDFs are shown using scatter plots in off-diagonal panels; Monte Carlo sampled points illustrate the extent of the PDFs in the space of parameter values indicated on the x- and y-axes. Panels in transposed positions within the grids contain identical information with the x- and y-axes swapped. PDFs for individual parameters are shown on the diagonals using histograms, with the number of counts in each bin (out of 10<sup>6</sup> total samples) indicated on the y-axis.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.g005" xlink:type="simple"/>
+</fig>
+<fig id="pone.0165899.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165899.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>Bayesian sensitivity analysis for <italic>P</italic>. <italic>aeruginosa</italic>.</title>
+<p>Plots of posterior PDFs for parameter values and pairwise distributions are as in <xref ref-type="fig" rid="pone.0165899.g005">Fig 5</xref>.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.g006" xlink:type="simple"/>
+</fig>
+<fig id="pone.0165899.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165899.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>Bayesian sensitivity analysis for <italic>S</italic>. <italic>aureus</italic>.</title>
+<p>Plots of posterior PDFs for parameter values and pairwise distributions as in <xref ref-type="fig" rid="pone.0165899.g005">Fig 5</xref>.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.g007" xlink:type="simple"/>
+</fig>
+<p>The parameters β<sub>1</sub>, β<sub>2</sub>, and τ in <italic>P</italic>. <italic>aeruginosa</italic> have relatively flat PDFs that deviate substantially from a normal distribution (<xref ref-type="fig" rid="pone.0165899.g006">Fig 6</xref>). Sharpening the likelihood function by decreasing the errors 10-fold led to sharper PDFs for peaked distributions (<xref ref-type="supplementary-material" rid="pone.0165899.s001">S1</xref>–<xref ref-type="supplementary-material" rid="pone.0165899.s003">S3</xref> Figs) while maintaining similarly flat distributions for these parameters (<xref ref-type="supplementary-material" rid="pone.0165899.s002">S2 Fig</xref>), providing evidence that the flat distributions are not an artifact of the sampling.</p>
+<p>The individual PDFs for the parameters of both <italic>E</italic>. <italic>coli</italic> (<xref ref-type="fig" rid="pone.0165899.g005">Fig 5</xref>) and <italic>S</italic>. <italic>aureus</italic> (<xref ref-type="fig" rid="pone.0165899.g007">Fig 7</xref>) all show peaks, which is justification for the providing the estimates for all parameters in <xref ref-type="table" rid="pone.0165899.t001">Table 1</xref> (the distribution of β<sub>2</sub> for <italic>S</italic>. <italic>aureus</italic> is truncated at low values due to the restricted range of the prior; however, the peak clearly falls within the range of the prior when the likelihood function is sharpened (<xref ref-type="supplementary-material" rid="pone.0165899.s003">S3 Fig</xref>)). The range of the values of β<sub>2</sub> and δ among the MCMC sampled points (an indicator of the width of the PDFs) is greater than for other parameters (<xref ref-type="table" rid="pone.0165899.t004">Table 4</xref>), indicating that estimates of β<sub>2</sub> and δ are less reliable (there is a noticeable tail in the <italic>a</italic><sub>2</sub> distribution for <italic>E</italic>. <italic>coli</italic>, but the range of 0.14 Log<sub>10</sub> units is still sufficiently narrow to provide an estimate). The pairwise scatter plots indicate relatively strong correlations between <italic>a</italic><sub>2</sub> and both β<sub>2</sub> and δ. These correlations follow from <xref ref-type="disp-formula" rid="pone.0165899.e004">Eq 4</xref>, in which both β<sub>2</sub> and δ appear in factors that multiply <italic>a</italic><sub>2</sub>; a weaker correlation between δ and β<sub>2</sub> is explained by the same term. The correlations involving δ are only substantial when δ is sufficiently large; this is because the effect of δ is negligible when it is smaller than about 10<sup>−5</sup> s<sup>-1</sup> (<xref ref-type="disp-formula" rid="pone.0165899.e004">Eq 4</xref>, considering the experiment duration of 3600 s). In addition, β<sub>1</sub> appears in the term modulating <italic>a</italic><sub>1</sub> in <xref ref-type="disp-formula" rid="pone.0165899.e004">Eq 4</xref>, explaining a weak correlation between these two.</p>
+<table-wrap id="pone.0165899.t004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165899.t004</object-id>
+<label>Table 4</label> <caption><title>Minimum and maximum values of parameters among 10<sup>6</sup> random samples obtained by BSA MCMC (Log<sub>10</sub> transformed values).</title> <p>Units for parameters are as in <xref ref-type="table" rid="pone.0165899.t001">Table 1</xref>.</p></caption>
+<alternatives>
+<graphic id="pone.0165899.t004g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.t004" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"/>
+<th align="center">Log<sub>10</sub> <italic>a</italic><sub>1</sub></th>
+<th align="center">Log<sub>10</sub> <italic>a</italic><sub>2</sub></th>
+<th align="center">Log<sub>10</sub> β<sub>1</sub></th>
+<th align="center">Log<sub>10</sub> β<sub>2</sub></th>
+<th align="center">Log<sub>10</sub> δ</th>
+<th align="center">Log<sub>10</sub> τ</th>
+</tr>
+<tr>
+<th align="center" colspan="7"><italic>E</italic>. <italic>coli</italic></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">min</td>
+<td align="center">1.49</td>
+<td align="center">1.75</td>
+<td align="center">-1.05</td>
+<td align="center">-3.00</td>
+<td align="center">-7.00</td>
+<td align="center">2.81</td>
+</tr>
+<tr>
+<td align="left">max</td>
+<td align="center">1.52</td>
+<td align="center">1.90</td>
+<td align="center">-0.80</td>
+<td align="center">-2.57</td>
+<td align="center">-3.90</td>
+<td align="center">2.94</td>
+</tr>
+<tr>
+<td align="left">range</td>
+<td align="center">0.03</td>
+<td align="center">0.14</td>
+<td align="center">0.25</td>
+<td align="center">0.43</td>
+<td align="center">3.10</td>
+<td align="center">0.13</td>
+</tr>
+<tr>
+<td align="center" colspan="7"><italic>P</italic>. <italic>aeruginosa</italic></td>
+</tr>
+<tr>
+<td align="left">min</td>
+<td align="center">0.76</td>
+<td align="center">1.08</td>
+<td align="center">-1.00</td>
+<td align="center">-1.00</td>
+<td align="center">-3.75</td>
+<td align="center">1.53</td>
+</tr>
+<tr>
+<td align="left">max</td>
+<td align="center">0.97</td>
+<td align="center">1.18</td>
+<td align="center">4.00</td>
+<td align="center">4.00</td>
+<td align="center">-3.28</td>
+<td align="center">1.69</td>
+</tr>
+<tr>
+<td align="left">range</td>
+<td align="center">0.21</td>
+<td align="center">0.10</td>
+<td align="center">5.00</td>
+<td align="center">5.00</td>
+<td align="center">0.47</td>
+<td align="center">0.16</td>
+</tr>
+<tr>
+<td align="center" colspan="7"><italic>S</italic>. <italic>aureus</italic></td>
+</tr>
+<tr>
+<td align="left">min</td>
+<td align="center">1.82</td>
+<td align="center">1.88</td>
+<td align="center">-0.84</td>
+<td align="center">-3.00</td>
+<td align="center">-4.53</td>
+<td align="center">2.76</td>
+</tr>
+<tr>
+<td align="left">max</td>
+<td align="center">1.83</td>
+<td align="center">1.98</td>
+<td align="center">-0.69</td>
+<td align="center">-0.77</td>
+<td align="center">-3.80</td>
+<td align="center">2.96</td>
+</tr>
+<tr>
+<td align="left">range</td>
+<td align="center">0.01</td>
+<td align="center">0.10</td>
+<td align="center">0.15</td>
+<td align="center">2.23</td>
+<td align="center">0.73</td>
+<td align="center">0.20</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>Like for <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic>, the PDFs of <italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, and δ for <italic>P</italic>. <italic>aeruginosa</italic> show peaks (<xref ref-type="fig" rid="pone.0165899.g006">Fig 6</xref>), justifying the entry of estimates in <xref ref-type="table" rid="pone.0165899.t001">Table 1</xref>. In addition the PDF for τ, although flat, is confined to a very narrow range, leading to an estimate in <xref ref-type="table" rid="pone.0165899.t001">Table 1</xref>. The lack of a peak for τ can be understood by the sharp, step-like increase (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1B</xref>) combined with the discrete sampling in time; i.e., the step can be located anywhere between the time points that mark the increase, with approximately equal probability. Step-like increases in accumulation also lead to high uncertainty in both β<sub>1</sub> and β<sub>2</sub> (<xref ref-type="table" rid="pone.0165899.t004">Table 4</xref>); these parameters can assume essentially any value that is large enough to enable the antibiotic to rise between the time points that mark the increase, with equal probability. Like for <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic>, <italic>a</italic><sub>2</sub> and δ are correlated for <italic>P</italic>. <italic>aeruginosa</italic>; however, compared to <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic>, increased uncertainty masks any underlying correlations involving β<sub>1</sub> and β<sub>2</sub>.</p>
+</sec>
+</sec>
+<sec id="sec009">
+<title>Predictions of permeability, net efflux rate, and accumulation factor</title>
+<p>We used Eqs <xref ref-type="disp-formula" rid="pone.0165899.e006">5</xref>–<xref ref-type="disp-formula" rid="pone.0165899.e008">7</xref> to predict the values of parameters that directly characterize permeation, net efflux, and the degree of drug accumulation. The predictions are quantified in the form of the permeability α<sub><italic>i</italic></sub> in each phase <italic>i</italic>, the net efflux rate ε<sub><italic>i</italic></sub>, which is defined as the portion of the specific export rate not associated with permeation, and the accumulation factor, ϕ<sub><italic>i</italic></sub>, which is the fold-increase of antibiotic concentration inside the cell compared to the external concentration. A positive value of ε is associated with a net efflux and a value ϕ&lt;1, while a negative value is associated with a net trapping of drug and a value ϕ&gt;1. The total value of ε can be determined by a combination of individual positive or negative fluxes, potentially involving multiple mechanisms including efflux pumps and drug binding to DNA (Discussion).</p>
+<p>The resulting predictions of <italic>α</italic><sub><italic>i</italic></sub>, ε<sub><italic>i</italic></sub>, and ϕ<sub><italic>i</italic></sub> are shown in <xref ref-type="table" rid="pone.0165899.t005">Table 5</xref>. Predictions of <italic>α</italic><sub><italic>i</italic></sub> and ε<sub><italic>i</italic></sub> for <italic>P</italic>. <italic>aeruginosa</italic> are provided as lower bounds, following from the entries for β<sub><italic>i</italic></sub> in <xref ref-type="table" rid="pone.0165899.t001">Table 1</xref>. The true reliability of the predictions of ϕ<sub><italic>i</italic></sub> depends both on the robustness of the estimation of <italic>a</italic><sub><italic>i</italic></sub> (Sensitivity analysis results) and the uncertainty in the factor used to convert <italic>a</italic><sub><italic>0</italic></sub> to ng/mg dry weight units (Methods). The reliability of the predictions of <italic>α</italic><sub><italic>i</italic></sub>, ε<sub><italic>i</italic></sub> additionally depends on the robustness of the estimation of β<sub><italic>i</italic></sub>.</p>
+<table-wrap id="pone.0165899.t005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165899.t005</object-id>
+<label>Table 5</label> <caption><title>Predicted accumulation factors (ϕ), permeabilities (α), and net efflux (ε) rates.</title></caption>
+<alternatives>
+<graphic id="pone.0165899.t005g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.t005" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"/>
+<th align="left">ϕ<sub>1</sub></th>
+<th align="left">ϕ<sub>2</sub></th>
+<th align="left">α<sub>1</sub> (1/s)</th>
+<th align="left">α<sub>2</sub> (1/s)</th>
+<th align="left">ε<sub>1</sub> (1/s)</th>
+<th align="left">ε<sub>2</sub> (1/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><italic>E</italic>. <italic>coli</italic></td>
+<td align="left">1.09</td>
+<td align="left">2.29</td>
+<td align="left">0.126</td>
+<td align="left">0.0029</td>
+<td align="left">-0.011</td>
+<td align="left">-0.0016</td>
+</tr>
+<tr>
+<td align="left"><italic>P</italic>. <italic>aeruginosa</italic></td>
+<td align="left">0.39</td>
+<td align="left">0.72</td>
+<td align="left">&gt;0.039<xref ref-type="table-fn" rid="t005fn001"><sup>a</sup></xref></td>
+<td align="left">&gt;0.072<xref ref-type="table-fn" rid="t005fn001"><sup>a</sup></xref></td>
+<td align="left">&gt;0<xref ref-type="table-fn" rid="t005fn001"><sup>a</sup></xref></td>
+<td align="left">&gt;0<xref ref-type="table-fn" rid="t005fn001"><sup>a</sup></xref></td>
+</tr>
+<tr>
+<td align="left"><italic>S</italic>. <italic>aureus</italic></td>
+<td align="left">2.93</td>
+<td align="left">3.75</td>
+<td align="left">0.495</td>
+<td align="left">0.0053</td>
+<td align="left">-0.326</td>
+<td align="left">-0.0039</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t005fn001"><p><sup>a</sup>Entries with a ‘&gt;‘ indicate a lower bound.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>The predictions of permeability behavior are strikingly similar for <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic>. At early times, the permeability is high, corresponding to about a 5.5 s half-equilibration time for <italic>E</italic>. <italic>coli</italic>, and a 1.5 s half-equilibration time for <italic>S</italic>. <italic>aureus</italic> (α<sub>1</sub> from <xref ref-type="table" rid="pone.0165899.t005">Table 5</xref>). The permeability then decreases dramatically after about 12.5 minutes (τ from <xref ref-type="table" rid="pone.0165899.t001">Table 1</xref>): by a factor of ~50 for E. coli and a factor of ~100 for S. aureus (α<sub>2</sub>/α<sub>1</sub> from <xref ref-type="table" rid="pone.0165899.t005">Table 5</xref>). In addition, the value of ε at both early and late times is negative for both <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic>, and the values of ϕ are greater than one, indicating a net trapping of antibiotic.</p>
+<p>In contrast to <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic>, the values of ϕ are less than one for <italic>P</italic>. <italic>aeruginosa</italic>, indicating a net efflux of antibiotic. The lower bound of α<sub>1</sub> for <italic>P</italic>. <italic>aeruginosa</italic> is consistent with <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic> but the lower bound of α<sub>2</sub> is higher by a factor O(10). The upper bounds of ε for <italic>P</italic>. <italic>aeruginosa</italic> are consistent with the estimates for <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic>.</p>
+</sec>
+</sec>
+<sec id="sec010" sec-type="conclusions">
+<title>Discussion</title>
+<p>The present modeling and analysis of ofloxacin accumulation time courses indicates that <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic> exhibit a similar two-phase ofloxacin accumulation behavior. Whereas the two-phase behavior for <italic>E</italic>. <italic>coli</italic> was easily visible in the data, for <italic>S</italic>. <italic>aureus</italic> it was only detected as a result of the BSA. Even though the change in antibiotic level entering phase 2 is small for <italic>S</italic>. <italic>aureus</italic>, the BSA indicates a clear peak in the posterior distributions of all of the influx and outflux parameters, increasing confidence in the two-phase model for this case (<xref ref-type="fig" rid="pone.0165899.g007">Fig 7</xref>).</p>
+<p>The contribution of sensitivity analysis to the present study was substantial. The BSA enabled us to identify a significant two-phase model for <italic>S</italic>. <italic>aureus</italic> that we were unable to detect in the data by eye. In addition, the BSA enabled us to identify correlations in the data that are consistent with the way the parameters work together in the model. We also note that the lack of individual error estimates for each data point in the present study prevented calculation of true posterior PDFs; the availability of error estimates for future datasets will enable a substantial increase in the information provided by the BSA. The sensitivity analysis also enables a quantitative means of distinguishing of important from unimportant parameter values in the modeling. This further enables a degree of confidence to be associated with results based on the quantitative analysis, which can be used to assess which predictions are more or less likely. Some aspects of the sensitivity analysis confirm what is already apparent in just looking at the data, such as the increased importance of δ for <italic>P</italic>. <italic>aeruginosa</italic> compared to <italic>E</italic>. <italic>coli</italic>; however, even in this case, it provides quantitative measures that can enable obvious results to be obtained automatically. Automation will become increasingly important as we increase the number of data sets being analyzed. In addition, future data sets might not be as straightforward to interpret by eye, and the present study serves as an example that demonstrates the consistency of the sensitivity analysis with the interpretation of a relatively clear-cut case, so that the methods can be applied with increased confidence to cases where the interpretation might not be so obvious.</p>
+<p>The rapid initial accumulation of ofloxacin in <italic>E</italic>. <italic>coli</italic>, <italic>P</italic>. <italic>aeruginosa</italic>, and <italic>S</italic>. <italic>aureas</italic> has been cited as evidence that these bacteria lack a substantial permeability barrier for fluoroquinolones [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>]. Our modeling supports the high permeability at early times in the accumulation dynamics. The permeation rates in <xref ref-type="table" rid="pone.0165899.t005">Table 5</xref> lead to a half-equilibration time for ofloxacin permeation of 5.5 s into <italic>E</italic>. <italic>coli</italic>, &lt;18 s into <italic>P</italic>. <italic>aeruginosa</italic>, and 1.5 s for <italic>S</italic>. <italic>aureus</italic>. These values are similar to the expected 5 s half-equilibration time for permeation of norfloxacin across a lipid bilayer [<xref ref-type="bibr" rid="pone.0165899.ref010">10</xref>]; as measured in Ref. [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>], the apparent partition coefficient of ofloxacin is 4-fold greater than that of norfloxacin, so their permeabilities across the cytoplasmic membrane are expected to be within a similar range.</p>
+<p>In contrast with the early time behavior, after about 12.5 mins, both <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic> show a predicted 50-to-100-fold decrease in permeability (<xref ref-type="table" rid="pone.0165899.t005">Table 5</xref>). This sudden decrease in permeability only was detected using the modeling and was not detected in the prior qualitative analysis of the data [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>]. One way to test this prediction is to shift the cells to a medium with radiolabeled drug, looking for a difference in labeled drug accumulation in phase 1 versus phase 2. At this point we can only speculate about the mechanism. <italic>E</italic>. <italic>coli</italic> is gram negative, whereas <italic>S</italic>. <italic>aureus</italic> is gram positive, suggesting the common decrease in permeability does not involve the outer membrane. That the permeability rates are consistent with diffusion across the cytoplasmic membrane indicates that the decrease in permeability is not necessarily be associated with transporters. It is possible that the sacculus, a mesh structure common to both <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic>, might be involved in a decrease in permeability. The ability of the sacculus to allow translocation of proteins as large as 25 kDa [<xref ref-type="bibr" rid="pone.0165899.ref011">11</xref>] or 100 kDa [<xref ref-type="bibr" rid="pone.0165899.ref012">12</xref>] would seem to rule out a role for the sacculus by itself, as ofloxacin has a molecular weight of 361 Da, and should ordinarily freely diffuse across the mesh. However, the sacculus is associated with a comparable mass of other biomolecules in both gram negative and positive bacteria [<xref ref-type="bibr" rid="pone.0165899.ref013">13</xref>] [<xref ref-type="bibr" rid="pone.0165899.ref014">14</xref>]. If ~98% of the mesh were to become blocked somehow, it could explain the ~50-fold decrease in permeability for <italic>E</italic>. <italic>coli</italic>.</p>
+<p>For <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic>, the values of the accumulation factor ϕ&gt;1 indicate net trapping of antibiotic. The trapping is weak for <italic>E</italic>. <italic>coli</italic> in phase 1 (ϕ<sub>1</sub> = 1.09) and becomes stronger in phase 2 (ϕ<sub>2</sub> = 2.29). Compared to <italic>E</italic>. <italic>coli</italic>, the trapping is stronger in <italic>S</italic>. <italic>aureus</italic> for both phases: ϕ<sub>1</sub> = 2.93 and ϕ<sub>2</sub> = 3.75. For <italic>P</italic>. <italic>aeruginosa</italic>, the values of ϕ&lt;1 indicate a net efflux of antibiotic that is stronger in phase 1 (ϕ<sub>1</sub> = 0.39) than in phase 2 (ϕ<sub>2</sub> = 0.72).</p>
+<p>Several individual effects can combine to determine whether there is a net trapping or efflux of antibiotic. Targeted experiments will be required to determine the role of specific mechanisms, but we can gain some insights by assuming that an important effect favoring trapping is the immobilization of antibiotic on DNA. This effect can be estimated using the dissociation constant <italic>K</italic><sub><italic>D</italic></sub> = 633 μM reported by Shen et al. [<xref ref-type="bibr" rid="pone.0165899.ref015">15</xref>] for nonspecific binding to DNA of norfloxacin at high concentrations (10–1000 μM). Assuming roughly 2.1 genome equivalents per cell [<xref ref-type="bibr" rid="pone.0165899.ref016">16</xref>], a volume of 1.25 fL, and 4.7 x 10<sup>6</sup> bp per chromosome yields an estimated DNA bp concentration in <italic>E</italic>. <italic>coli</italic> [D] = 1.3 x 10<sup>4</sup> μM. Then, assuming the <italic>K</italic><sub><italic>D</italic></sub> for norfloxacin applies to ofloxacin and that each bp can bind one drug molecule yields a fraction of DNA-bound drug of 1/(1+<italic>K</italic><sub><italic>D</italic></sub>/[D]) = 0.95, or a mobile fraction of just 0.05. In this case, the contribution of permeability to the outflow would be only 5% of that assumed in <xref ref-type="disp-formula" rid="pone.0165899.e007">Eq 6</xref>, leading to an increase in efflux by 0.95α. This translates into an increase in the specific efflux rate by 0.12 s<sup>-1</sup> for <italic>E</italic>. <italic>coli</italic> in phase 1.</p>
+<p>Based on the above estimates, despite the small negative value of the net efflux parameter ε<sub>1</sub> (= -0.011 s<sup>-1</sup>) in <xref ref-type="table" rid="pone.0165899.t005">Table 5</xref>, due to the effect of trapping by DNA binding, we expect the underlying rate of efflux in <italic>E</italic>. <italic>coli</italic> to be 0.11 s<sup>-1</sup> (= 0.12 s<sup>-1</sup>–0.011 s<sup>-1</sup>), which is comparable to the rate of permeation. To assess the importance of efflux in <italic>S</italic>. <italic>aureus</italic>, we use similar reasoning as for <italic>E</italic>. <italic>coli</italic>, noting that the net efflux parameter ε<sub>1</sub> is -0.326 s<sup>-1</sup> and the effective permeability α is 0.495 s<sup>-1</sup> (<xref ref-type="table" rid="pone.0165899.t005">Table 5</xref>). Assuming the same degree of trapping in <italic>S</italic>. <italic>aureus</italic> as in <italic>E</italic>. <italic>coli</italic> yields a contribution 0.48 s<sup>-1</sup> and an estimated specific efflux rate of roughly 0.15 s<sup>-1</sup> (= 0.48 s<sup>-1</sup>–0.326 s<sup>-1</sup>) in phase 1, which is close to the value for <italic>E</italic>. <italic>coli</italic>. In contrast to <italic>E</italic>. <italic>coli</italic>, however, where the efflux rate is comparable to the inflow rate, in <italic>S</italic>. <italic>aureus</italic> the efflux rate is less than 1/3 of the inflow rate.</p>
+<p>The estimated specific efflux rates in phase 1 of 0.11 s<sup>-1</sup> for <italic>E</italic>. <italic>coli</italic> and 0.15 s<sup>-1</sup> for <italic>S</italic>. <italic>aureus</italic> can be used to estimate the rate of outflow of drug due to efflux. Multiplying by <italic>a</italic><sub>1</sub> yields an outflow of 3.5 ng/mg/s (= 0.11 s<sup>-1</sup> x 32 ng/mg) for <italic>E</italic>. <italic>coli</italic>, and 10 ng/mg/s (= 0.15 s<sup>-1</sup> x 66.6 ng/mg) for <italic>S</italic>. <italic>aureus</italic>. Dividing by the molecular weight of ofloxacin (361.368 g/mol) yields 0.0097 nmol/mg/s for <italic>E</italic>. <italic>coli</italic> and 0.028 nmol/mg/s for <italic>S</italic>. <italic>aureus</italic>. These values are similar to the <italic>V</italic><sub><italic>max</italic></sub> value of 0.0235 ± 0.003 nmol/mg/s found by Lim and Nikaido [<xref ref-type="bibr" rid="pone.0165899.ref006">6</xref>] for efflux of nitrocefin from <italic>E</italic>. <italic>coli</italic>, and are much lower than the value of 1.82 ± 0.85 nmol/mg/s found for cephaloridine efflux from <italic>E</italic>. <italic>coli</italic> in the same study. Therefore our predictions are consistent with the <italic>V</italic><sub><italic>max</italic></sub> for efflux of ofloxacin in <italic>E</italic>. <italic>coli</italic> and <italic>S</italic>. <italic>aureus</italic> being similar to the <italic>V</italic><sub><italic>max</italic></sub> for efflux of nitrocefin in <italic>E</italic>. <italic>coli</italic>.</p>
+<p>In addition to DNA binding, differential permeability of ionic subspecies of ofloxacin or Mg2+ chelates of ofloxacin might also influence the balance of inflows and outflows [<xref ref-type="bibr" rid="pone.0165899.ref010">10</xref>]. These effects can easily lead to two-fold or greater accumulation or exclusion of antibiotic [<xref ref-type="bibr" rid="pone.0165899.ref010">10</xref>]. In addition to the predicted change in membrane permeability, therefore, changes in DNA binding, efflux, pH, and the availability of Mg2+ all might potentially be linked to the two-phase behavior of ofloxacin accumulation.</p>
+<p>Because we predict that the underlying efflux rate is comparable to the inflow rate in <italic>E</italic>. <italic>coli</italic>, we also predict that efflux plays an important role in ofloxacin accumulation. In contrast, for <italic>S</italic>. <italic>aureus</italic>, we predict efflux plays a less important role in ofloxacin accumulation, because the efflux rate is predicted to be substantially lower than the inflow rate. For <italic>P</italic>. <italic>aeruginosa</italic>, we are unable to make predictions based on quantitative estimates of rate constants, due to uncertainty in the key parameter values in <xref ref-type="table" rid="pone.0165899.t001">Table 1</xref> and <xref ref-type="table" rid="pone.0165899.t005">Table 5</xref>. However, because the internal concentration of antibiotic is predicted to be less than the external concentration (ϕ &lt; 1 in <xref ref-type="table" rid="pone.0165899.t005">Table 5</xref>), we predict that efflux is important in <italic>P</italic>. <italic>aeruginosa</italic> accumulation of ofloxacin.</p>
+<p>Both <italic>P</italic>. <italic>aeruginosa</italic> and <italic>S</italic>. <italic>aureus</italic> exhibit a visible slow decrease in accumulated drug during the second phase (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1</xref>). The model captures this decrease in terms of the parameter δ which increases β<sub>2</sub> by a factor [1 + <italic>δ</italic>(<italic>t</italic> − <italic>τ</italic>)] in <xref ref-type="disp-formula" rid="pone.0165899.e003">Eq 3</xref>. Mechanisms for increasing β include enhancing efflux (e.g., by increased expression of pumps) or decreasing trapping (e.g., by chromosome remodeling that results in a decrease in drug binding to DNA). Importantly, the combination of <xref ref-type="disp-formula" rid="pone.0165899.e004">Eq 4</xref> and <xref ref-type="disp-formula" rid="pone.0165899.e006">Eq 5</xref> indicate that δ can be interpreted alternatively as decreasing α<sub>2</sub> by a factor [1 + <italic>δ</italic>(<italic>t</italic> − <italic>τ</italic>)]<sup>−1</sup>. Thus, in addition to an increase in efflux or a decrease in trapping, the acclimation behavior can be attributed to a decrease in permeability (e.g., through the hypothetical mechanisms described above). Additional experiments targeted at the mechanism of decrease will be required to determine the cause of the acclimation response.</p>
+<p>Ofloxacin is bactericidal at the concentration of 10 mg/L used in the experiments [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>], which might have important implications for the interpretation of the results. If nonviable cells are excluded from the analyzed pellet after centrifugation (e.g. because they have been lysed and remain suspended), the accumulation data simply correspond to viable cells, and the interpretation is straightforward. If nonviable cells are included in the pellet, the interpretation depends on the relative populations of viable and nonviable cells. According to Ref. [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>], 5 mins after exposure in phosphate buffer, the viable count of <italic>E</italic>. <italic>coli</italic> decreased by 0.74 Log<sub>10</sub> units, the count of <italic>P</italic>. <italic>aeruginosa</italic> decreased by 0.45 Log<sub>10</sub> units, and the count of <italic>S</italic>. <italic>aureus</italic> decreased by 0.4 Log<sub>10</sub> units. These data indicate that in all cases, the number of viable cells decreases by at least 2.5-fold after 5 mins. At the longest times, 60 mins after exposure, the values were 2.06, 3.75, and 0.54 Log<sub>10</sub> units, respectively, indicating that the number of viable cells of <italic>E</italic>. <italic>coli</italic> and <italic>P</italic>. <italic>aeruginosa</italic> decreases by at least 100-fold over the course of the experiment. These results indicate that if nonviable cells are included in the analyzed pellet, the behavior should be dominated by the nonviable cells; indeed, trapping of antibiotic in nonviable cells removes antibiotic from the environment, which would increase the chance of survival of neighboring viable cells, leading to a fitness advantage at the population level.</p>
+<p>That the model matches the data well (<xref ref-type="fig" rid="pone.0165899.g001">Fig 1</xref>) is consistent with the interpretation that the behavior is predominantly due to one type of cell, either viable or nonviable. However, the killing kinetics do indicate that the number of viable cells is still not negligible at early times for all cells, and at late times for <italic>S</italic>. <italic>aureus</italic>. In addition, including the effect of antibiotic on cell growth and death will be critical to connecting the present results to drug resistance. Future work should therefore include investigating an expanded dynamical model that includes subpopulations of viable and nonviable cells, including the dependence of cell growth (for bacteriostatic effect) and death (for bactericidal effect) on intracellular antibiotic concentration. Including the antibiotic effect (e.g., via the target inhibitory concentration [<xref ref-type="bibr" rid="pone.0165899.ref004">4</xref>–<xref ref-type="bibr" rid="pone.0165899.ref006">6</xref>]) is essential for understanding the relation between the amount of accumulated drug and antibacterial activity, as they are not necessarily correlated [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>]. In particular, Nagano and Nikaido [<xref ref-type="bibr" rid="pone.0165899.ref005">5</xref>] used mathematical modeling to predict MIC values of drugs for <italic>E</italic>. <italic>coli</italic>, and to show how efflux pump deletion or overexpression might not change the MIC value of drugs that are nevertheless strong efflux pump substrates.</p>
+<p>It is interesting to consider the importance of models of drug accumulation in light of a recent survey of physical properties of active compounds in a drug screening collection and their relation to whole cell antibacterial activity [<xref ref-type="bibr" rid="pone.0165899.ref017">17</xref>]. The survey reported on the difficulties encountered in simultaneously optimizing both biochemical potency and antibacterial activity, and concluded that “what is clearly needed is greater insight into medicinal chemistry strategies which optimize transport through porins and decrease efflux through the prolific efflux pumps.” Together, the findings reported here and elsewhere [<xref ref-type="bibr" rid="pone.0165899.ref005">5</xref>,<xref ref-type="bibr" rid="pone.0165899.ref006">6</xref>] suggest that mathematical modeling of drug accumulation can provide these insights, and thus can be a key tool in enabling antibacterial medicinal chemistry.</p>
+</sec>
+<sec id="sec011" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<sec id="sec012">
+<title>Model</title>
+<p>Our dynamical model of drug accumulation lumps together transport across the inner and outer membranes. This is appropriate as the drug target is in the cytoplasm, there are no data on drug accumulation in the periplasm, and we wish to use the same model for gram positive or negative bacteria. We note that this lumping does not prevent the interpretation of results in light of differences between the outer and inner membranes (Discussion).</p>
+<p>The time dependence of accumulated drug <italic>a(t)</italic> is modeled using
+<disp-formula id="pone.0165899.e001">
+<alternatives>
+<graphic id="pone.0165899.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165899.e001" xlink:type="simple"/>
+<mml:math display="block" id="M1">
+<mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:mi>a</mml:mi><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:mi>α</mml:mi><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mo>)</mml:mo><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>o</mml:mi></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:mi>β</mml:mi><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mo>)</mml:mo><mml:mi>a</mml:mi><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mo>)</mml:mo>
+</mml:math>
+</alternatives>
+<label>(1)</label>
+</disp-formula>
+where <italic>a</italic><sub><italic>o</italic></sub> is the environmental antibiotic concentration, α(t) is the specific rate of increase, and β(t) is the specific rate of decrease. The term “specific” is used to indicate that the rate constant is multiplied by the antibiotic concentration. We assume α(t) corresponds to the permeability, although it also can include active transport. We assume β(t) corresponds to both active and passive transport, although it also can include degradation and cell growth. Cell growth in <italic>E</italic>. <italic>coli</italic> occurs by a constant cell size extension [<xref ref-type="bibr" rid="pone.0165899.ref018">18</xref>], which is consistent with including cell growth in β. If included, assuming a 42 min doubling time, cell growth would contribute a specific rate of 2.75 x 10<sup>−4</sup> s<sup>-1</sup>; this is orders of magnitude smaller than the values of β at early times (<xref ref-type="table" rid="pone.0165899.t001">Table 1</xref>), when growth is expected to be highest, and is at least 4-fold smaller than the values of β at early times (<xref ref-type="table" rid="pone.0165899.t001">Table 1</xref>), when growth is expected to be lowest. Ignoring cell growth therefore is a reasonable approximation in the present study, although it might be necessary to include it in other studies.</p>
+<p><xref ref-type="disp-formula" rid="pone.0165899.e001">Eq 1</xref> was developed assuming that only viable cells are analyzed. This corresponds to the case when nonviable cells are disrupted and are excluded from pellet after centrifugation in Ref. [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>]. Even when nonviable cells are not excluded from analysis (Discussion), <xref ref-type="disp-formula" rid="pone.0165899.e001">Eq 1</xref> applies to viable cells when the external antibiotic level is low and there is a negligible fraction of nonviable cells at all times. If nonviable cells are included in the pellet and there is a negligible fraction of viable cells at all times, <xref ref-type="disp-formula" rid="pone.0165899.e001">Eq 1</xref> will still be relevant but will instead describe accumulation in the nonviable cells. If both viable and nonviable cells are analyzed and there is an intermediate drug concentration, the model should be extended to include both viable and nonviable cells, with population dynamics (Discussion).</p>
+<p>To model the data in <xref ref-type="fig" rid="pone.0165899.g001">Fig 1</xref>, we assume α(t) and β(t) both switch rapidly from a constant value in phase 1 to a different constant value in phase 2. The import rate α(t) is given by
+<disp-formula id="pone.0165899.e002">
+<alternatives>
+<graphic id="pone.0165899.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165899.e002" xlink:type="simple"/>
+<mml:math display="block" id="M2">
+<mml:mi>α</mml:mi><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mrow><mml:mo>{</mml:mo><mml:mtable><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi>α</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo></mml:mtd><mml:mtd><mml:mi>t</mml:mi><mml:mo>&lt;</mml:mo><mml:mi>τ</mml:mi></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi>α</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo></mml:mtd><mml:mtd><mml:mi>t</mml:mi><mml:mo>≥</mml:mo><mml:mi>τ</mml:mi></mml:mtd></mml:mtr></mml:mtable></mml:mrow><mml:mo>,</mml:mo>
+</mml:math>
+</alternatives>
+<label>(2)</label>
+</disp-formula>
+where α <sub>1</sub> applies to the early phase of the accumulation dynamics (t&lt;τ), and α <sub>2</sub> applies to the late phase (t ≥ τ).</p>
+<p>The export rate β(t) is given by
+<disp-formula id="pone.0165899.e003">
+<alternatives>
+<graphic id="pone.0165899.e003g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165899.e003" xlink:type="simple"/>
+<mml:math display="block" id="M3">
+<mml:mi>β</mml:mi><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mrow><mml:mo>{</mml:mo><mml:mtable><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi>β</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo></mml:mtd><mml:mtd><mml:mi>t</mml:mi><mml:mo>&lt;</mml:mo><mml:mi>τ</mml:mi></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi>β</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mo>[</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>δ</mml:mi><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:mi>τ</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>]</mml:mo><mml:mo>,</mml:mo></mml:mtd><mml:mtd><mml:mi>t</mml:mi><mml:mo>≥</mml:mo><mml:mi>τ</mml:mi></mml:mtd></mml:mtr></mml:mtable></mml:mrow><mml:mo>,</mml:mo>
+</mml:math>
+</alternatives>
+<label>(3)</label>
+</disp-formula>
+where β<sub>1</sub> applies during the early phase (t&lt;τ), β<sub>2</sub> applies during the late phase (t≥τ), and δ is the fractional rate of increase of export during the later phase.</p>
+<p>Assuming rapid relaxation (β<sub>2</sub>) compared to acclimation (δ) in phase 2 yields
+<disp-formula id="pone.0165899.e004">
+<alternatives>
+<graphic id="pone.0165899.e004g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165899.e004" xlink:type="simple"/>
+<mml:math display="block" id="M4">
+<mml:mi>a</mml:mi><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mrow><mml:mo>{</mml:mo><mml:mtable><mml:mtr><mml:mtd><mml:msup><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mrow><mml:mi>β</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mi>t</mml:mi></mml:mrow></mml:msup><mml:mi>a</mml:mi><mml:mo>(</mml:mo><mml:mrow><mml:mn>0</mml:mn></mml:mrow><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msup><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mrow><mml:mi>β</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mi>t</mml:mi></mml:mrow></mml:msup></mml:mrow><mml:mo>)</mml:mo><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo></mml:mtd><mml:mtd><mml:mi>t</mml:mi><mml:mo>≤</mml:mo><mml:mi>τ</mml:mi></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:msup><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mrow><mml:mi>β</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:mi>τ</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:msup><mml:mi>a</mml:mi><mml:mo>(</mml:mo><mml:mrow><mml:mi>τ</mml:mi></mml:mrow><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:mo>[</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msup><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mrow><mml:mi>β</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:mi>τ</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:msup></mml:mrow><mml:mo>]</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>δ</mml:mi><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:mi>τ</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mfrac><mml:mo>,</mml:mo></mml:mtd><mml:mtd><mml:mi>t</mml:mi><mml:mo>&gt;</mml:mo><mml:mi>τ</mml:mi></mml:mtd></mml:mtr></mml:mtable></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(4)</label>
+</disp-formula>
+where <italic>a</italic><sub>1</sub> = α<sub>1</sub> <italic>a</italic><sub><italic>o</italic></sub>/ β<sub>1</sub>, and <italic>a</italic><sub>2</sub> = α<sub>2</sub> <italic>a</italic><sub><italic>o</italic></sub>/ β<sub>2</sub>.</p>
+<p>Given additional assumptions, the α and β parameters can be used to derive permeation and net efflux rates (see below). The δ parameter models long-term acclimation by, e.g., gene regulation.</p>
+</sec>
+<sec id="sec013">
+<title>Parameter estimation</title>
+<p>Parameter estimation for <xref ref-type="disp-formula" rid="pone.0165899.e004">Eq 4</xref> was performed using published experimental time courses of ofloxacin accumulation in <italic>E</italic>. <italic>coli</italic>, <italic>P</italic>. <italic>aeruginosa</italic>, and <italic>S</italic>. <italic>aureus</italic> [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>]. Data points were extracted from Figure 1 in Ref. [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>]. Numerical solutions to <xref ref-type="disp-formula" rid="pone.0165899.e004">Eq 4</xref> were obtained for each data point using functions defined in Mathematica Version 10 (Wolfram Research, Inc., Champaign, IL). Errors for each individual data point were not available, and were therefore estimated using the maximum values given for norfloxacin in Ref. [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>]: ±12.5, ±11.6, and ±9.7 ng/mg for <italic>E</italic>. <italic>coli</italic>, <italic>P</italic>. <italic>aeruginosa</italic>, and <italic>S</italic>. <italic>aureus</italic>, respectively. To obtain error estimates for ofloxacin, these maximal errors were scaled using the initial rapid phase concentration entries in Tables II, III, and IV of Ref. [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>], and were then divided by two. The following were the resulting estimated errors for each data point: 2.3 ng/mg for <italic>E</italic>. <italic>coli</italic>, 0.75 ng/mg for <italic>P</italic>. <italic>aeruginosa</italic>; and 4.35 ng/mg for <italic>S</italic>. <italic>aureus</italic>. We also performed the fits using the maximal errors as the estimates, without dividing by two; however, we favored using the half-maximal errors for the following reasons: (1) the maximal values are very likely overestimates; and (2) the half-maximal values yielded χ<sup>2</sup>/NDF values close to 1, whereas the maximal values yielded values substantially lower than 1. The choice of errors between these cases merely resulted in a different overall scaling χ<sup>2</sup> and did not influence the optimal parameter values obtained in the fits.</p>
+<p>A standard χ<sup>2</sup>/NDF was used as a goodness of fit measure between the model and the data, using a number of degrees of freedom NDF = number of data points minus six parameters. The χ<sup>2</sup>/NDF was minimized with respect to values of <italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, β<sub>1</sub>, β<sub>2</sub>, δ, and τ using the FindMinimum method, assuming a(0) = 0. The values of <italic>a</italic><sub>1</sub>, <italic>a</italic><sub>2</sub>, β<sub>1</sub>, β<sub>2</sub>, δ were varied over twelve decades. For <italic>E</italic>. <italic>coli</italic> and <italic>P</italic>. <italic>aeruginosa</italic>, the value of τ was varied from 0–10,000 s (covering the full span of each 3,600 s time course) to seek an optimal solution. For <italic>S</italic>. <italic>aureus</italic>, optimization was initially performed for τ = 10,000 s (a time beyond the last data point), as the behavior appeared to be one phase. A more thorough investigation of the parameter space using Bayesian sensitivity analysis (BSA), however, revealed a relatively weak but significant two-phase response, with a value of τ that is similar to <italic>E</italic>. <italic>coli</italic>. Therefore the optimization for <italic>S</italic>. <italic>aureus</italic> also was performed varying τ from 0–10,000 s. Mathematica workbooks, experimental data, and model fits for all cases are available in a compressed archive (<xref ref-type="supplementary-material" rid="pone.0165899.s004">S1 File</xref>).</p>
+</sec>
+<sec id="sec014">
+<title>Sensitivity analysis methods</title>
+<p>All sensitivity analyses were performed using the open source code Model-Analysis and Decision Support (MADS), developed at Los Alamos National Laboratory (<ext-link ext-link-type="uri" xlink:href="http://mads.lanl.gov/" xlink:type="simple">http://mads.lanl.gov</ext-link>).</p>
+<sec id="sec015">
+<title>Global Sensitivity Analysis (GSA)</title>
+<p>We performed variance-based GSA [<xref ref-type="bibr" rid="pone.0165899.ref019">19</xref>], which decomposes the variance of the output into parts ascribed to different input parameters using a Fourier Haar decomposition [<xref ref-type="bibr" rid="pone.0165899.ref020">20</xref>,<xref ref-type="bibr" rid="pone.0165899.ref021">21</xref>]. Both the “main effect “and the “total effect” results presented here for each input parameter were calculated using the Sobol Monte Carlo algorithm [<xref ref-type="bibr" rid="pone.0165899.ref022">22</xref>] using about 10<sup>6</sup> independent model evaluations drawn from log-uniform distributions defined by <xref ref-type="table" rid="pone.0165899.t002">Table 2</xref>. We found that this number of samples was sufficient to achieve convergence for the estimated quantities. The ranges in <xref ref-type="table" rid="pone.0165899.t002">Table 2</xref> were chosen arbitrarily to encompass the optima in <xref ref-type="table" rid="pone.0165899.t001">Table 1</xref> while exploring a reasonably broad region of parameter space and satisfying the requirement of rapid relaxation (β<sub>2</sub>) compared to acclimation (δ) in phase 2 for <xref ref-type="disp-formula" rid="pone.0165899.e004">Eq 4</xref>.</p>
+</sec>
+<sec id="sec016">
+<title>Local Sensitivity Analysis (LSA)</title>
+<p>LSA has a rich history of use in assessing the robustness of biochemical network model behavior to changes in parameter values [<xref ref-type="bibr" rid="pone.0165899.ref023">23</xref>,<xref ref-type="bibr" rid="pone.0165899.ref024">24</xref>]. In LSA, the local gradients of the model output are calculated with respect to model parameters at a fixed point (the point with the lowest χ<sup>2</sup>). Here we use the gradients to define a covariance matrix of variations [<xref ref-type="bibr" rid="pone.0165899.ref025">25</xref>]. We used a finite difference method requiring a limited number of model evaluations (equal to the number of unknown parameters). As a result, we obtain a gradient matrix <bold>J</bold> (i.e. the Jacobian) with dimensions [<italic>m</italic> × <italic>n</italic>] where <italic>m</italic> is the number of model parameters and <italic>n</italic> is the number of model inputs (we use logarithmic derivatives, to obtain an analysis in terms of dimensionless parameters). Each component of the <bold>J</bold> matrix represents the local sensitivity of each model parameter to each model output [<xref ref-type="bibr" rid="pone.0165899.ref025">25</xref>]. We analyze the covariance matrix <bold>C</bold> of model parameters which is computed as <bold>C</bold> = [J<sup>T</sup>J]<sup>-1</sup>. The covariance matrix is analyzed using eigenanalysis where eigenvectors and eigenvalues of the covariance matrix are explored. How dominant (important) is each eigenvector depends on the respective eigenvalues; the smaller the eigenvalue, the higher the importance of the eigenvector. The components of each eigenvector represent the contributions of each model parameter to the simultaneous variation of multiple parameters: the larger the absolute value of the components, the larger the contribution. Model parameters with a large contribution in dominant eigenvectors are important (sensitive) model parameters. Model parameters with large contribution in non-dominant eigenvectors are unimportant (insensitive) model parameters. If several model parameters have an important contribution in a single eigenvector, these model parameters are correlated. If these contributions have the same sign, the correlation is positive. If these contributions have opposite signs, the correlation is negative.</p>
+</sec>
+<sec id="sec017">
+<title>Bayesian Sensitivity Analysis (BSA)</title>
+<p>Posterior probability density functions (PDFs) of the model parameters given observed data (Figs <xref ref-type="fig" rid="pone.0165899.g005">5</xref>–<xref ref-type="fig" rid="pone.0165899.g007">7</xref>) were obtained following Bayes’ theorem [<xref ref-type="bibr" rid="pone.0165899.ref026">26</xref>,<xref ref-type="bibr" rid="pone.0165899.ref027">27</xref>]. The PDFs were obtained using a log-uniform prior with the ranges indicated in <xref ref-type="table" rid="pone.0165899.t002">Table 2</xref>, with a likelihood function defined as <inline-formula id="pone.0165899.e005"><alternatives><graphic id="pone.0165899.e005g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165899.e005" xlink:type="simple"/><mml:math display="inline" id="M5"><mml:msup><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:msup><mml:mrow><mml:mi>χ</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math></alternatives></inline-formula>, using an arbitrary error value of 1 ng/mg for each data point. The error was decreased to 0.1 ng/mg to demonstrate the effect of sharpening the likelihood function in <xref ref-type="supplementary-material" rid="pone.0165899.s001">S1</xref>–<xref ref-type="supplementary-material" rid="pone.0165899.s003">S3</xref> Figs. The BSA was performed using the Robust Adaptive Metropolis Markov Chain Monte Carlo (MCMC) algorithm [<xref ref-type="bibr" rid="pone.0165899.ref028">28</xref>]. Analysis was performed using sample sizes of 10<sup>4</sup>, 10<sup>5</sup>, and 10<sup>6</sup>; we found a sample size of 10<sup>6</sup> yielded adequate sampling. The posterior PDF scatter plots (off-diagonal panels in Figs <xref ref-type="fig" rid="pone.0165899.g005">5</xref>–<xref ref-type="fig" rid="pone.0165899.g007">7</xref>) show an overlay of individual counts; the extent of the plots reflects the parameter range over which 10<sup>6</sup> random samples can fall. The posterior parameter ranges in <xref ref-type="table" rid="pone.0165899.t004">Table 4</xref> were obtained by identifying the minimum and maximum parameter values among 10<sup>6</sup> points sampled using the MCMC. (The values in <xref ref-type="table" rid="pone.0165899.t004">Table 4</xref> must be interpreted in light of the fact that the range might increase with increasing number of samples, and that the precise values can change depending on differences in sampling, e.g., using different random number seeds.) The histograms (diagonal panels in Figs <xref ref-type="fig" rid="pone.0165899.g005">5</xref>–<xref ref-type="fig" rid="pone.0165899.g007">7</xref>) indicate the shape of the individual marginalized PDFs using the number of counts on the y-axis.</p>
+</sec>
+</sec>
+<sec id="sec018">
+<title>Predictions of permeability, net efflux rate, and accumulation factor</title>
+<p>Estimation of the model parameters enables prediction of permeability and efflux rates. Given <italic>a</italic><sub><italic>o</italic></sub>, the specific import rate α<sub><italic>i</italic></sub> in each phase <italic>i</italic> may be calculated as
+<disp-formula id="pone.0165899.e006">
+<alternatives>
+<graphic id="pone.0165899.e006g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165899.e006" xlink:type="simple"/>
+<mml:math display="block" id="M6">
+<mml:msub><mml:mrow><mml:mi>α</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>β</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>/</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:mrow><mml:mo>.</mml:mo>
+</mml:math>
+</alternatives>
+<label>(5)</label>
+</disp-formula></p>
+<p>Assuming the import is due to permeation, α<sub><italic>i</italic></sub> is the permeability. Next, assume the specific export rate β is a sum of contributions from permeability, α and other effects. The other effects are then captured by the difference ε between β and α:
+<disp-formula id="pone.0165899.e007">
+<alternatives>
+<graphic id="pone.0165899.e007g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165899.e007" xlink:type="simple"/>
+<mml:math display="block" id="M7">
+<mml:msub><mml:mrow><mml:mi>ε</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>β</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mrow><mml:mi>α</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>.</mml:mo>
+</mml:math>
+</alternatives>
+<label>(6)</label>
+</disp-formula></p>
+<p>When ε<sub>i</sub> &gt; 0, outward flow is enhanced compared to permeation, and ε<sub>i</sub> indicates a net efflux. When ε<sub>i</sub> &lt; 0, the outward flow is decreased compared to permeation, and ε<sub>i</sub> indicates a net trapping of drug.</p>
+<p>Finally, the accumulation factor ϕ is used as a measure of the degree to which antibiotic is either accumulated in or expelled from the cell. It is given by
+<disp-formula id="pone.0165899.e008">
+<alternatives>
+<graphic id="pone.0165899.e008g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165899.e008" xlink:type="simple"/>
+<mml:math display="block" id="M8">
+<mml:msub><mml:mrow><mml:mi>ϕ</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>/</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>o</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mrow><mml:mo>.</mml:mo>
+</mml:math>
+</alternatives>
+<label>(7)</label>
+</disp-formula></p>
+<p>If <italic>ϕ</italic><sub><italic>i</italic></sub> &lt; 1 the internal antibiotic concentration is less than the external antibiotic, which is associated with net efflux (ε<sub>i</sub>&gt;0). If <italic>ϕ</italic><sub><italic>i</italic></sub> &gt; 1 the internal antibiotic exceeds the external antibiotic, which is associated with net trapping (ε<sub>i</sub>&lt;0).</p>
+<p>Eqs <xref ref-type="disp-formula" rid="pone.0165899.e006">5</xref>–<xref ref-type="disp-formula" rid="pone.0165899.e008">7</xref> are only valid under the same assumptions as for <xref ref-type="disp-formula" rid="pone.0165899.e004">Eq 4</xref>. Predictions of α<sub><italic>i</italic></sub> and ε<sub>i</sub> are only meaningful using reliable estimates of both <italic>a</italic><sub><italic>i</italic></sub> and β<sub><italic>i</italic></sub>. In contrast, ϕ<sub><italic>i</italic></sub> can be predicted just with estimates of <italic>a</italic><sub><italic>i</italic></sub> and <italic>a</italic><sub><italic>o</italic></sub>.</p>
+<p>The predictions use the environmental drug concentration <italic>a</italic><sub>0</sub> in ng drug/mg dry weight units. The external ofloxacin concentration in the experiments was 10 mg/L [<xref ref-type="bibr" rid="pone.0165899.ref007">7</xref>]. To convert to ng/mg dry weight units, following Ref. [<xref ref-type="bibr" rid="pone.0165899.ref029">29</xref>], we used a buoyant density of 1.1 g/mL and a 31% dry weight for <italic>E</italic>. <italic>coli</italic>, a buoyant density of 1.2 g/mL and a 48% dry weight for <italic>P</italic>. <italic>aeruginosa</italic> (transferred from <italic>P</italic>. <italic>putida</italic>), and assumed a buoyant density of 1.1 g/mL and a 40% dry weight for <italic>S</italic>. <italic>aureus</italic>. This yielded conversion factors of 0.341 (mg drug/L)/(ng drug/mg dry weight) for <italic>E</italic>. <italic>coli</italic>, 0.528 for <italic>P</italic>. <italic>aeruginosa</italic>, and 0.440 for <italic>S</italic>. <italic>aureus</italic>. The uncertainty in the dry weight fraction for <italic>S</italic>. <italic>aureus</italic> should be estimated at about 25%, given the range spanned by <italic>E</italic>. <italic>coli</italic> and <italic>P</italic>. <italic>aeruginosa</italic>. This introduces uncertainty in the predictions beyond those indicated by the sensitivity analysis alone.</p>
+</sec>
+</sec>
+<sec id="sec019">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0165899.s001" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.s001" xlink:type="simple">
+<label>S1 Fig</label>
+<caption>
+<title>Bayesian sensitivity analysis for <italic>E</italic>. <italic>coli</italic> using a sharpened likelihood function.</title>
+<p>The analysis and presentation is the same as in <xref ref-type="fig" rid="pone.0165899.g005">Fig 5</xref>, but using a 10-fold lower error value.</p>
+<p>(TIF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165899.s002" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.s002" xlink:type="simple">
+<label>S2 Fig</label>
+<caption>
+<title>Bayesian sensitivity analysis for <italic>P</italic>. <italic>aeruginosa</italic> using a sharpened likelihood function.</title>
+<p>The analysis and presentation is the same as in <xref ref-type="fig" rid="pone.0165899.g006">Fig 6</xref>, but using a 10-fold lower error value.</p>
+<p>(TIF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165899.s003" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.s003" xlink:type="simple">
+<label>S3 Fig</label>
+<caption>
+<title>Bayesian sensitivity analysis for <italic>S</italic>. <italic>aureus</italic> using a sharpened likelihood function.</title>
+<p>The analysis and presentation is the same as in <xref ref-type="fig" rid="pone.0165899.g007">Fig 7</xref>, but using a 10-fold lower error value.</p>
+<p>(TIF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165899.s004" mimetype="application/x-gzip" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.s004" xlink:type="simple">
+<label>S1 File</label>
+<caption>
+<title>Archive Model.tgz containing Mathematica workbooks, experimental data, and model fits for the <italic>E</italic>. <italic>coli</italic>, <italic>P</italic>. <italic>aeruginosa</italic>, and <italic>S</italic>. <italic>aureus</italic> models of drug accumulation.</title>
+<p>The archive is in TAR format and has been compressed using GZIP.</p>
+<p>(TGZ)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165899.s005" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0165899.s005" xlink:type="simple">
+<label>S1 Table</label>
+<caption>
+<title>Parameter rankings based on different sensitivity methods (values in bold are representing ranking ties).</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>We are grateful to the reviewers for their comments, which led to substantial improvements in the paper. This study was performed under the auspices of the Laboratory-Directed Research and Development Program at Los Alamos National Laboratory, which is managed for the US Department of Energy by Los Alamos National Security, LLC under contract DE-AC52-06NA25396.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0165899.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname> <given-names>XZ</given-names></name>, <name name-style="western"><surname>Nikaido</surname> <given-names>H</given-names></name> (<year>2009</year>) <article-title>Efflux-mediated drug resistance in bacteria: an update</article-title>. <source>Drugs</source> <volume>69</volume>: <fpage>1555</fpage>–<lpage>1623</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.2165/11317030-000000000-00000" xlink:type="simple">10.2165/11317030-000000000-00000</ext-link></comment> <object-id pub-id-type="pmid">19678712</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kourtesi</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Ball</surname> <given-names>AR</given-names></name>, <name name-style="western"><surname>Huang</surname> <given-names>YY</given-names></name>, <name name-style="western"><surname>Jachak</surname> <given-names>SM</given-names></name>, <name name-style="western"><surname>Vera</surname> <given-names>DM</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>Microbial efflux systems and inhibitors: approaches to drug discovery and the challenge of clinical implementation</article-title>. <source>Open Microbiol J</source> <volume>7</volume>: <fpage>34</fpage>–<lpage>52</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.2174/1874285801307010034" xlink:type="simple">10.2174/1874285801307010034</ext-link></comment> <object-id pub-id-type="pmid">23569468</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nikaido</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Pages</surname> <given-names>JM</given-names></name> (<year>2012</year>) <article-title>Broad-specificity efflux pumps and their role in multidrug resistance of Gram-negative bacteria</article-title>. <source>FEMS Microbiol Rev</source> <volume>36</volume>: <fpage>340</fpage>–<lpage>363</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1574-6976.2011.00290.x" xlink:type="simple">10.1111/j.1574-6976.2011.00290.x</ext-link></comment> <object-id pub-id-type="pmid">21707670</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nikaido</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Normark</surname> <given-names>S</given-names></name> (<year>1987</year>) <article-title>Sensitivity of Escherichia coli to various beta-lactams is determined by the interplay of outer membrane permeability and degradation by periplasmic beta-lactamases: a quantitative predictive treatment</article-title>. <source>Mol Microbiol</source> <volume>1</volume>: <fpage>29</fpage>–<lpage>36</lpage>. <object-id pub-id-type="pmid">3330755</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nagano</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Nikaido</surname> <given-names>H</given-names></name> (<year>2009</year>) <article-title>Kinetic behavior of the major multidrug efflux pump AcrB of Escherichia coli</article-title>. <source>Proc Natl Acad Sci U S A</source> <volume>106</volume>: <fpage>5854</fpage>–<lpage>5858</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.0901695106" xlink:type="simple">10.1073/pnas.0901695106</ext-link></comment> <object-id pub-id-type="pmid">19307562</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lim</surname> <given-names>SP</given-names></name>, <name name-style="western"><surname>Nikaido</surname> <given-names>H</given-names></name> (<year>2010</year>) <article-title>Kinetic parameters of efflux of penicillins by the multidrug efflux transporter AcrAB-TolC of Escherichia coli</article-title>. <source>Antimicrob Agents Chemother</source> <volume>54</volume>: <fpage>1800</fpage>–<lpage>1806</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/AAC.01714-09" xlink:type="simple">10.1128/AAC.01714-09</ext-link></comment> <object-id pub-id-type="pmid">20160052</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Asuquo</surname> <given-names>AE</given-names></name>, <name name-style="western"><surname>Piddock</surname> <given-names>LJ</given-names></name> (<year>1993</year>) <article-title>Accumulation and killing kinetics of fifteen quinolones for Escherichia coli, Staphylococcus aureus and Pseudomonas aeruginosa</article-title>. <source>J Antimicrob Chemother</source> <volume>31</volume>: <fpage>865</fpage>–<lpage>880</lpage>. <object-id pub-id-type="pmid">8360125</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Diver</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Piddock</surname> <given-names>LJ</given-names></name>, <name name-style="western"><surname>Wise</surname> <given-names>R</given-names></name> (<year>1990</year>) <article-title>The accumulation of five quinolone antibacterial agents by Escherichia coli</article-title>. <source>J Antimicrob Chemother</source> <volume>25</volume>: <fpage>319</fpage>–<lpage>333</lpage>. <object-id pub-id-type="pmid">2110938</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Thanassi</surname> <given-names>DG</given-names></name>, <name name-style="western"><surname>Suh</surname> <given-names>GS</given-names></name>, <name name-style="western"><surname>Nikaido</surname> <given-names>H</given-names></name> (<year>1995</year>) <article-title>Role of outer membrane barrier in efflux-mediated tetracycline resistance of Escherichia coli</article-title>. <source>J Bacteriol</source> <volume>177</volume>: <fpage>998</fpage>–<lpage>1007</lpage>. <object-id pub-id-type="pmid">7860612</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nikaido</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Thanassi</surname> <given-names>DG</given-names></name> (<year>1993</year>) <article-title>Penetration of lipophilic agents with multiple protonation sites into bacterial cells: tetracyclines and fluoroquinolones as examples</article-title>. <source>Antimicrob Agents Chemother</source> <volume>37</volume>: <fpage>1393</fpage>–<lpage>1399</lpage>. <object-id pub-id-type="pmid">8363364</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Demchick</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Koch</surname> <given-names>AL</given-names></name> (<year>1996</year>) <article-title>The permeability of the wall fabric of Escherichia coli and Bacillus subtilis</article-title>. <source>J Bacteriol</source> <volume>178</volume>: <fpage>768</fpage>–<lpage>773</lpage>. <object-id pub-id-type="pmid">8550511</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vazquez-Laslop</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Hu</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Neyfakh</surname> <given-names>AA</given-names></name> (<year>2001</year>) <article-title>Molecular sieve mechanism of selective release of cytoplasmic proteins by osmotically shocked Escherichia coli</article-title>. <source>J Bacteriol</source> <volume>183</volume>: <fpage>2399</fpage>–<lpage>2404</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/JB.183.8.2399-2404.2001" xlink:type="simple">10.1128/JB.183.8.2399-2404.2001</ext-link></comment> <object-id pub-id-type="pmid">11274096</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Brown</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Santa Maria</surname> <given-names>JP</given-names> <suffix>Jr.</suffix></name>, <name name-style="western"><surname>Walker</surname> <given-names>S</given-names></name> (<year>2013</year>) <article-title>Wall teichoic acids of gram-positive bacteria</article-title>. <source>Annu Rev Microbiol</source> <volume>67</volume>: <fpage>313</fpage>–<lpage>336</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1146/annurev-micro-092412-155620" xlink:type="simple">10.1146/annurev-micro-092412-155620</ext-link></comment> <object-id pub-id-type="pmid">24024634</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Silhavy</surname> <given-names>TJ</given-names></name>, <name name-style="western"><surname>Kahne</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Walker</surname> <given-names>S</given-names></name> (<year>2010</year>) <article-title>The bacterial cell envelope</article-title>. <source>Cold Spring Harb Perspect Biol</source> <volume>2</volume>: <fpage>a000414</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1101/cshperspect.a000414" xlink:type="simple">10.1101/cshperspect.a000414</ext-link></comment> <object-id pub-id-type="pmid">20452953</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Shen</surname> <given-names>LL</given-names></name>, <name name-style="western"><surname>Baranowski</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Pernet</surname> <given-names>AG</given-names></name> (<year>1989</year>) <article-title>Mechanism of inhibition of DNA gyrase by quinolone antibacterials: specificity and cooperativity of drug binding to DNA</article-title>. <source>Biochemistry</source> <volume>28</volume>: <fpage>3879</fpage>–<lpage>3885</lpage>. <object-id pub-id-type="pmid">2546584</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref016"><label>16</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Neidhardt</surname> <given-names>FC</given-names></name>, <name name-style="western"><surname>Umbarger</surname> <given-names>HE</given-names></name> (<year>1996</year>) <chapter-title>Chemical Composition of <italic>Escherichia coli</italic></chapter-title>. In: <name name-style="western"><surname>Neidhardt</surname> <given-names>FC</given-names></name>, <name name-style="western"><surname>Curtiss</surname> <given-names>R</given-names> <suffix>III</suffix></name>, <name name-style="western"><surname>Ingraham</surname> <given-names>JL</given-names></name>, <name name-style="western"><surname>Lin</surname> <given-names>ECC</given-names></name>, <name name-style="western"><surname>Low</surname> <given-names>KB</given-names></name> <etal>et al</etal>., editors. <source><italic>Escherichia coli</italic> and <italic>Salmonella</italic>: Cellular and Molecular Biology</source>. <edition>2 ed.</edition> <publisher-loc>Washington, D. C.</publisher-loc>: <publisher-name>ASM Press</publisher-name>.</mixed-citation></ref>
+<ref id="pone.0165899.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Brown</surname> <given-names>DG</given-names></name>, <name name-style="western"><surname>May-Dracka</surname> <given-names>TL</given-names></name>, <name name-style="western"><surname>Gagnon</surname> <given-names>MM</given-names></name>, <name name-style="western"><surname>Tommasi</surname> <given-names>R</given-names></name> (<year>2014</year>) <article-title>Trends and exceptions of physical properties on antibacterial activity for Gram-positive and Gram-negative pathogens</article-title>. <source>J Med Chem</source> <volume>57</volume>: <fpage>10144</fpage>–<lpage>10161</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1021/jm501552x" xlink:type="simple">10.1021/jm501552x</ext-link></comment> <object-id pub-id-type="pmid">25402200</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Campos</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Surovtsev</surname> <given-names>IV</given-names></name>, <name name-style="western"><surname>Kato</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Paintdakhi</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Beltran</surname> <given-names>B</given-names></name>, <etal>et al</etal>. (<year>2014</year>) <article-title>A constant size extension drives bacterial cell size homeostasis</article-title>. <source>Cell</source> <volume>159</volume>: <fpage>1433</fpage>–<lpage>1446</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.cell.2014.11.022" xlink:type="simple">10.1016/j.cell.2014.11.022</ext-link></comment> <object-id pub-id-type="pmid">25480302</object-id></mixed-citation></ref>
+<ref id="pone.0165899.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sobol'</surname> <given-names>IM</given-names></name> (<year>1990</year>) <article-title>On sensitivity estimation for nonlinear mathematical models</article-title>. <source>Matematicheskoe Modelirovanie</source> <volume>2</volume>: <fpage>112</fpage>–<lpage>118</lpage>.</mixed-citation></ref>
+<ref id="pone.0165899.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sobol'</surname> <given-names>IM</given-names></name> (<year>1993</year>) <article-title>Asymmetric convergence of approximations of the Monte Carlo method</article-title>. <source>Computational mathematics and mathematical physics</source> <volume>33</volume>: <fpage>1391</fpage>–<lpage>1396</lpage>.</mixed-citation></ref>
+<ref id="pone.0165899.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Saltelli</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Andres</surname> <given-names>TH</given-names></name>, <name name-style="western"><surname>Homma</surname> <given-names>T</given-names></name> (<year>1993</year>) <article-title>Sensitivity Analysis of Model Output—an Investigation of New Techniques</article-title>. <source>Computational Statistics &amp; Data Analysis</source> <volume>15</volume>: <fpage>211</fpage>–<lpage>238</lpage>.</mixed-citation></ref>
+<ref id="pone.0165899.ref022"><label>22</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Saltelli</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Ratto</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Andres</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Campolongo</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Cariboni</surname> <given-names>J</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <source>Global Sensitivity Analysis: The Primer</source>: <publisher-name>John Wiley &amp; Sons</publisher-name>.</mixed-citation></ref>
+<ref id="pone.0165899.ref023"><label>23</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Savageau</surname> <given-names>MA</given-names></name> (<year>1976</year>) <chapter-title>Biochemical systems analysis: a study of function and design in molecular biology</chapter-title>. <publisher-loc>Reading, MA</publisher-loc>: <publisher-name>Addison-Wesley</publisher-name>.</mixed-citation></ref>
+<ref id="pone.0165899.ref024"><label>24</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Savageau</surname> <given-names>MA</given-names></name> (<year>2013</year>) <chapter-title>System design principles</chapter-title>. In: <name name-style="western"><surname>Wall</surname> <given-names>ME</given-names></name>, editor. <source>Quantitative Biology: From Molecular to Cellular Systems</source>. <publisher-loc>Boca Raton</publisher-loc>: <publisher-name>Taylor and Francis</publisher-name>. pp. <fpage>23</fpage>–<lpage>49</lpage>.</mixed-citation></ref>
+<ref id="pone.0165899.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gustafson</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Srinivasan</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Wasserman</surname> <given-names>L</given-names></name> (<year>1995</year>) <article-title>Local sensitivity analysis</article-title>. <source>Bayesian Statistics</source> <volume>5</volume>: <fpage>631</fpage>–<lpage>640</lpage>.</mixed-citation></ref>
+<ref id="pone.0165899.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Oakley</surname> <given-names>JE</given-names></name>, <name name-style="western"><surname>O'Hagan</surname> <given-names>A</given-names></name> (<year>2004</year>) <article-title>Probabilistic sensitivity analysis of complex models: a Bayesian approach</article-title>. <source>J Roy Stat Soc B</source> <volume>66</volume>: <fpage>751</fpage>–<lpage>769</lpage>.</mixed-citation></ref>
+<ref id="pone.0165899.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Weiss</surname> <given-names>R</given-names></name> (<year>1996</year>) <article-title>An approach to Bayesian sensitivity analysis</article-title>. <source>J Roy Stat Soc B</source> <volume>58</volume>: <fpage>739</fpage>–<lpage>750</lpage>.</mixed-citation></ref>
+<ref id="pone.0165899.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vihola</surname> <given-names>M</given-names></name> (<year>2012</year>) <article-title>Robist adaptice Metropolis algorithm with coerced acceptance rate</article-title>. <source>Stat Comp</source> <volume>22</volume>.</mixed-citation></ref>
+<ref id="pone.0165899.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bratbak</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Dundas</surname> <given-names>I</given-names></name> (<year>1984</year>) <article-title>Bacterial dry matter content and biomass estimations</article-title>. <source>Appl Environ Microbiol</source> <volume>48</volume>: <fpage>755</fpage>–<lpage>757</lpage>. <object-id pub-id-type="pmid">6508285</object-id></mixed-citation></ref>
+</ref-list>
+</back>
+</article>

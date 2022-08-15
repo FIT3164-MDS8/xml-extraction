@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+      <journal-id journal-id-type="publisher-id">plos</journal-id>
+      <journal-id journal-id-type="pmc">plosone</journal-id>
+      <journal-title-group>
+        <journal-title>PLoS ONE</journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1932-6203</issn>
+      <publisher>
+        <publisher-name>Public Library of Science</publisher-name>
+        <publisher-loc>San Francisco, USA</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id">PONE-D-11-23672</article-id>
+      <article-id pub-id-type="doi">10.1371/journal.pone.0056079</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Biology</subject>
+          <subj-group>
+            <subject>Computational biology</subject>
+            <subj-group>
+              <subject>Population modeling</subject>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Medicine</subject>
+          <subj-group>
+            <subject>Clinical immunology</subject>
+            <subj-group>
+              <subject>Immunity</subject>
+              <subj-group>
+                <subject>Vaccination</subject>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Epidemiology</subject>
+            <subj-group>
+              <subject>Epidemiological methods</subject>
+              <subject>Infectious disease epidemiology</subject>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Infectious diseases</subject>
+            <subj-group>
+              <subject>Bacterial diseases</subject>
+              <subj-group>
+                <subject>Pneumococcus</subject>
+              </subj-group>
+            </subj-group>
+            <subj-group>
+              <subject>Infectious disease control</subject>
+              <subject>Infectious disease modeling</subject>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline">
+          <subject>Immunology</subject>
+          <subject>Public Health and Epidemiology</subject>
+          <subject>Infectious Diseases</subject>
+          <subject>Computational Biology</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Pneumococcal Transmission and Disease <italic>In Silico</italic>: A Microsimulation Model of the Indirect Effects of Vaccination</article-title>
+        <alt-title alt-title-type="running-head">Microsimulation Model of Pneumococcal Transmission</alt-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Nurhonen</surname>
+            <given-names>Markku</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="corresp" rid="cor1">
+            <sup>*</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Cheng</surname>
+            <given-names>Allen C.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Auranen</surname>
+            <given-names>Kari</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+      </contrib-group>
+      <aff id="aff1">
+        <label>1</label>
+        <addr-line>Department of Vaccination and Immune Protection, National Institute for Health and Welfare, Helsinki, Finland</addr-line>
+      </aff>
+      <aff id="aff2">
+        <label>2</label>
+        <addr-line>Department of Epidemiology and Preventive Medicine, Monash University and Infectious Diseases Unit, Alfred Hospital, Melbourne, Victoria, Australia</addr-line>
+      </aff>
+      <contrib-group>
+        <contrib contrib-type="editor" xlink:type="simple">
+          <name name-style="western">
+            <surname>Borrow</surname>
+            <given-names>Ray</given-names>
+          </name>
+          <role>Editor</role>
+          <xref ref-type="aff" rid="edit1"/>
+        </contrib>
+      </contrib-group>
+      <aff id="edit1">
+        <addr-line>Health Protection Agency, United Kingdom</addr-line>
+      </aff>
+      <author-notes>
+        <corresp id="cor1">* E-mail: <email xlink:type="simple">markku.nurhonen@thl.fi</email></corresp>
+        <fn fn-type="conflict">
+          <p>The authors have declared that no competing interests exist.</p>
+        </fn>
+        <fn fn-type="con">
+          <p>Developed the model: MN ACC KA. Performed simulations and analyzed simulation results: MN KA. Participated in writing and critically reviewed the paper: AC. Wrote the paper: MN KA.</p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2013</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>6</day>
+        <month>2</month>
+        <year>2013</year>
+      </pub-date>
+      <volume>8</volume>
+      <issue>2</issue>
+      <elocation-id>e56079</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>23</day>
+          <month>11</month>
+          <year>2011</year>
+        </date>
+        <date date-type="accepted">
+          <day>9</day>
+          <month>1</month>
+          <year>2013</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-year>2013</copyright-year>
+        <copyright-holder>Nurhonen et al</copyright-holder>
+        <license xlink:type="simple">
+          <license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <sec>
+          <title>Background</title>
+          <p>The degree and time frame of indirect effects of vaccination (serotype replacement and herd immunity) are key determinants in assessing the net effectiveness of vaccination with pneumococcal conjugate vaccines (PCV) in control of pneumococcal disease. Using modelling, we aimed to quantify these effects and their dependence on coverage of vaccination and the vaccine's efficacy against susceptibility to pneumococcal carriage.</p>
+        </sec>
+        <sec>
+          <title>Methods and Findings</title>
+          <p>We constructed an individual-based simulation model that explores the effects of large-scale PCV programmes and applied it in a developed country setting (Finland). A population structure with transmission of carriage taking place within relevant mixing groups (families, day care groups, schools and neighbourhoods) was considered in order to properly assess the dependency of herd immunity on coverage of vaccination and vaccine efficacy against carriage. Issues regarding potential serotype replacement were addressed by employing a novel competition structure between multiple pneumococcal serotypes. Model parameters were calibrated from pre-vaccination data about the age-specific carriage prevalence and serotype distribution. The model predicts that elimination of vaccine-type carriage and disease among those vaccinated and, due to a substantial herd effect, also among the general population takes place within 5–10 years since the onset of a PCV programme with high (90%) coverage of vaccination and moderate (50%) vaccine efficacy against acquisition of carriage. A near-complete replacement of vaccine-type carriage by non-vaccine-type carriage occurs within the same time frame.</p>
+        </sec>
+        <sec>
+          <title>Conclusions</title>
+          <p>The changed patterns in pneumococcal carriage after PCV vaccination predicted by the model are unequivocal. The overall effect on disease incidence depends crucially on the magnitude of age- and serotype-specific case-to-carrier ratios of the remaining serotypes relative to those of the vaccine types. Thus the availability of reliable data on the incidence of both pneumococcal carriage and disease is essential in assessing the net effectiveness of PCV vaccination in a given epidemiological setting.</p>
+        </sec>
+      </abstract>
+      <funding-group>
+        <funding-statement>This study is a part of the research of the PneumoCarr Consortium (<ext-link ext-link-type="uri" xlink:href="http://www.pneumocarr.org" xlink:type="simple">www.pneumocarr.org</ext-link>) funded by a grant from the Bill and Melinda Gates Foundation through the Grand Challenges in Global Health Initiative. Additional funding was provided by grant 138068 from the Academy of Finland. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+      </funding-group>
+      <counts>
+        <page-count count="13"/>
+      </counts>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Introduction</title>
+      <p><italic>Streptococcus pneumoniae</italic> (pneumococcus) is a commensal that colonises the human nasopharynx. Colonisation occurs as episodes of carriage, starting with the acquisition of a pneumococcus clone, followed by a stable period of carriage until the clearance of the bacterium. Only rarely does carriage lead to infections of the mucosa (e.g. otitis media and pneumonia) or systemic infections (invasive pneumococcal disease). The polysaccharide capsule is the main virulence factor <xref ref-type="bibr" rid="pone.0056079-Weiser1">[1]</xref>, and pneumococci are classified into more than 90 serotypes based on the antigenic properties of the capsule <xref ref-type="bibr" rid="pone.0056079-Calix1">[2]</xref>. The frequency of different serotypes in carriage and their propensity to cause invasive disease per episode of carriage vary significantly <xref ref-type="bibr" rid="pone.0056079-Hanage1">[3]</xref>, <xref ref-type="bibr" rid="pone.0056079-Brueggemann1">[4]</xref>.</p>
+      <p>The first pneumococcal conjugate vaccine (PCV7) containing antigens against 7 pneumococcal serotypes was licensed for use in routine childhood immunisation in the USA in 2000. More recently, 10-valent (PCV10) and 13-valent (PCV13) vaccines have become available and adopted in immunisation programmes in large parts of the developed world and in some developing countries <xref ref-type="bibr" rid="pone.0056079-Levine1">[5]</xref>. The direct protective effect of PCV against invasive pneumococcal disease (IPD), pneumonia, and otitis media caused by the vaccine serotypes has been demonstrated in a number of clinical trials. While vaccine efficacy against vaccine-type IPD is very high (90%), it is considerably lower against pneumonia and otitis media <xref ref-type="bibr" rid="pone.0056079-Pavia1">[6]</xref>. Vaccine-induced protection is largely confined to vaccine serotypes (VT).</p>
+      <p>In addition to protecting against VT disease, a large-scale use of PCV reduces the risk of VT carriage in vaccinated individuals <xref ref-type="bibr" rid="pone.0056079-Obaro1">[7]</xref>, <xref ref-type="bibr" rid="pone.0056079-Mbelle1">[8]</xref>, thus reducing VT circulation in the population at large. This induces two major types of indirect effects of vaccination. The unvaccinated population gains protection against VT carriage and disease due to <italic>herd immunity</italic>. The other indirect effect is <italic>serotype replacement</italic> in which the reduced VT circulation opens a niche for non-vaccine serotypes (NVT), increasing the incidence of NVT carriage and potentially also NVT disease. The two indirect effects work in opposite directions in determining the net effectiveness of PCV vaccination <xref ref-type="bibr" rid="pone.0056079-DeWals1">[9]</xref>.</p>
+      <p>There are important public health considerations regarding herd immunity and serotype replacement. An obvious question concerns the degree of indirect protection induced by a planned vaccination programme. The economic evaluation of PCV vaccination depends heavily on the inclusion of indirect effects in the analysis <xref ref-type="bibr" rid="pone.0056079-Beutels1">[10]</xref>. More generally, to understand the conditions for VT elimination, it is necessary to explore how indirect protection depends on the coverage of vaccination and the vaccine efficacy against VT carriage. Near-elimination of VT carriage and disease has occurred in populations under broad-scale vaccination with PCV <xref ref-type="bibr" rid="pone.0056079-Pilishvili1">[11]</xref>, <xref ref-type="bibr" rid="pone.0056079-Miller1">[12]</xref>. At the same time, the replacement of VT disease by NVT disease has partially offset the benefits of vaccination, with varying reports on its magnitude <xref ref-type="bibr" rid="pone.0056079-Weinberger1">[13]</xref>. However, transmission dynamic models have not been used extensively to address conditions for VT elimination and the extent of serotype replacement in carriage and disease.</p>
+      <p>Serotype replacement in pneumococcal carriage appears to be complete and take place readily after the onset of a vaccination programme <xref ref-type="bibr" rid="pone.0056079-Hanage2">[14]</xref>, <xref ref-type="bibr" rid="pone.0056079-Vestrheim1">[15]</xref>. The obvious underlying mechanism of replacement is competition among pneumococcal strains and serotypes <xref ref-type="bibr" rid="pone.0056079-Weiser1">[1]</xref>, <xref ref-type="bibr" rid="pone.0056079-Lipsitch1">[16]</xref>, <xref ref-type="bibr" rid="pone.0056079-Weinberger2">[17]</xref>. In mathematical models of pneumococcal transmission, competition has invariably been quantified as reduced acquisition of pneumococcal carriage in an individual already carrying another serotype. The problem with a large number of serotypes has been tackled through pooling of serotypes into two or three aggregate types by their inclusion in the vaccine formulation (VT/NVT) <xref ref-type="bibr" rid="pone.0056079-Melegaro1">[18]</xref>, <xref ref-type="bibr" rid="pone.0056079-Choi1">[19]</xref>, antibiotic susceptibility <xref ref-type="bibr" rid="pone.0056079-Karlsson1">[20]</xref>, or capsular switch status <xref ref-type="bibr" rid="pone.0056079-Temime1">[21]</xref>. The only studies accounting for a larger number of types in a dynamic model appears to be Van Effelterre et al. <xref ref-type="bibr" rid="pone.0056079-VanEffelterre1">[22]</xref>, which addresses the impact of PCV on antibiotic resistance and IPD in children &lt;2 years of age, and Cobey et al. <xref ref-type="bibr" rid="pone.0056079-Cobey1">[23]</xref>, which investigates mechanisms that maintain diversity in pneumococcal serotypes in unvaccinated and vaccinated populations. In addition, the net effectiveness of pneumococcal vaccination has been considered using non-dynamic cohort models <xref ref-type="bibr" rid="pone.0056079-DeWals1">[9]</xref>, <xref ref-type="bibr" rid="pone.0056079-Talbird1">[24]</xref>. However, cohort models cannot adequately address all implications of indirect effects of vaccination.</p>
+      <p>In this article, we introduce a comprehensive transmission dynamic model of pneumococcal carriage and disease. The model is based on a microsimulation of the demography and carriage in social mixing groups relevant for pneumococcal transmission in a developed country and incorporates dynamic modelling of a large number of competing serotypes. Progression of carriage to invasive pneumococcal disease is considered in terms of serotype-specific attack rates (case-to-carrier ratios). The main aim of this study was to examine the net effectiveness of PCV vaccination, i.e., the extent of herd immunity against VT carriage and IPD, and that of replacement IPD, over time. We compare the effectiveness of vaccination under different serotype compositions in the vaccine.</p>
+    </sec>
+    <sec id="s2" sec-type="methods">
+      <title>Methods</title>
+      <sec id="s2a">
+        <title>Stratification of serotypes and model parameterisation</title>
+        <p><xref ref-type="fig" rid="pone-0056079-g001">Figure 1</xref> presents a stratification of pneumococcal serotypes into five epidemiologically distinct categories, based on their inclusion in different PCV formulations and their propensity to cause invasive disease. The stratification serves as a basis to parameterise competition among serotypes, enabling predictions of the long-term effects of vaccination in terms of individual serotypes. The categories are labelled from I to V in a decreasing order of prevalence in carriage.</p>
+        <fig id="pone-0056079-g001" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0056079.g001</object-id>
+          <label>Figure 1</label>
+          <caption>
+            <title>Stratification of pneumococcal serotypes.</title>
+            <p>Serotypes are stratified into 5 categories, based on their inclusion in different PCV formulations (PCV7, PCV10 and PCV13) and their case-to-carrier ratios. The number (<italic>N</italic>) of isolates refers to the distribution of serotypes in children &lt;2 years of age <xref ref-type="bibr" rid="pone.0056079-Syrjanen1">[25]</xref>. In the model, each category is subdivided into a given number of individual model types.</p>
+          </caption>
+          <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0056079.g001" position="float" xlink:type="simple"/>
+        </fig>
+        <p>The currently available PCV formulations are PCV7 (serotypes 4, 6B, 9V, 14, 18C, 19F and 23F), PCV10 (additional serotypes 1, 5, 7F), and PCV13 (additional serotypes 3, 6A, 19A). Vaccine types (VT)/non-vaccine types (NVT) refer to serotypes included/not included in the vaccine. Note that a vaccine with a higher valency always includes all serotypes in a vaccine with a lower valency.</p>
+        <p>The classification of the PCV7 types into two categories (I and IV) with low and high case-to- carrier ratios (probability of disease per carriage episode), respectively, was initially based on Brueggemann et al. <xref ref-type="bibr" rid="pone.0056079-Brueggemann1">[4]</xref>, who considered the ratio of IPD incidence to the point prevalence of carriage by serotype. This division of the PCV7 types as well as labelling of the rest of categories as corresponding to low or high case-to-carrier ratios proves to agree with the data in the current analysis as well (see below).</p>
+        <p>For parsimonious modelling, each of the five serotype categories was divided into one or more <italic>model types</italic>, which were treated individually but assumed to share identical rates of acquisition and clearance. The model types do not necessarily correspond to individual serotypes. The number of model types within each category was chosen so that a model type in a category with a higher rank has a higher prevalence than any model type in a lower-ranked category. The mutual ranking of model types within any given category is arbitrary. The ranking corresponds to model types with higher ranks (i.e., higher prevalence) having larger competitive strengths than model types with lower ranks (see below). The total number of model types is 11.</p>
+      </sec>
+      <sec id="s2b">
+        <title>Empirical data</title>
+        <sec id="s2b1">
+          <title>Age-specific prevalence of pneumococcal carriage</title>
+          <p><xref ref-type="fig" rid="pone-0056079-g002">Figure 2A</xref> presents data about the prevalence of pneumococcal carriage by age. The data were derived from various sources as described in the following. The prevalence of pneumococcal carriage in 329 unvaccinated Finnish children &lt;2 years of age was recorded in the FinOM Cohort Study <xref ref-type="bibr" rid="pone.0056079-Syrjanen1">[25]</xref>. The data were originally stratified according to the health status of the child at the time of sampling (healthy vs. sick visits). To describe the natural history of carriage in young children, only one sample of either type was taken into account for each child at each of the eight four-week age windows (at 2,5,6,9,12,15,18, and 24 months of age). The prevalence of pneumococcal carriage increases from 13% at 2 months of age to 46% at 24 months of age.</p>
+          <fig id="pone-0056079-g002" position="float">
+            <object-id pub-id-type="doi">10.1371/journal.pone.0056079.g002</object-id>
+            <label>Figure 2</label>
+            <caption>
+              <title>Age-specific prevalence of carriage and the serotype distribution.</title>
+              <p>(A) The prevalence of pneumococcal carriage in 9 age windows (&lt;0.5, 0.5–0.99, 1.00–1.49, 1.50–1.99, 2–3, 4–5, 6–12, 13–17, 18+ years of age). The blue and red horizontal lines correspond to the model simulation using the 5 most optimal parameter combinations having the 5 highest (median) likelihood values, with the blue lines indicating the most optimal combination (<xref ref-type="table" rid="pone-0056079-t001">Table 1</xref>). The ranges of model predictions are shown for each age window in grey colour. These correspond to the 50 most optimal parameter combinations. The point-wise intervals containing 75% of these 50 prevalence values are shown in yellow. The observed proportions (number of positive samples/number of samples) are indicated by the green line segments (there were no observations in age window 2–3 years). These data originate from 3 studies as described in the text. (B) The serotype distribution for the five serotype categories. The simulation results and the observed data are presented as in panel A. The observed data originate from a study of pneumococcal carriage in children &lt;2 years of age (<xref ref-type="table" rid="pone-0056079-t001">Table 1</xref>; <xref ref-type="bibr" rid="pone.0056079-Syrjanen1">[25]</xref>).</p>
+            </caption>
+            <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0056079.g002" position="float" xlink:type="simple"/>
+          </fig>
+          <p>Pneumococcal carriage in unvaccinated children and adults was recorded in family members of day care attendees during a 9 month follow-up in Finland <xref ref-type="bibr" rid="pone.0056079-Leino1">[26]</xref>. The mean prevalence of carriage in 6–12 year old siblings of day care attendees was 13% (30/224), in 13–17 year old siblings 0% (0/34), and in adult family members (median age 36 years) 3% (25/789). The prevalence of pneumococcal carriage was 30% (105/353) in 4–5 year old children that had participated in a vaccine trial 3 years earlier <xref ref-type="bibr" rid="pone.0056079-Palmu1">[27]</xref>.</p>
+        </sec>
+        <sec id="s2b2">
+          <title>Serotype distribution in carriage</title>
+          <p><xref ref-type="fig" rid="pone-0056079-g001">Figure 1</xref> lists the numbers of isolates of individual serotypes in children less than 2 years of age in the FinOM Cohort data <xref ref-type="bibr" rid="pone.0056079-Syrjanen1">[25]</xref>. Based on these data, <xref ref-type="fig" rid="pone-0056079-g002">Figure 2B</xref> presents the serotype distribution aggregated according to the five serotype categories.</p>
+        </sec>
+      </sec>
+      <sec id="s2c">
+        <title>The demographic model</title>
+        <p>The demographic model has been described in detail elsewhere <xref ref-type="bibr" rid="pone.0056079-Auranen1">[28]</xref> (see also Table S1.1 in <xref ref-type="supplementary-material" rid="pone.0056079.s001">File S1</xref>). Briefly, it is an individual-based contact network (microsimulation) model that mimics the population turnover of the population in a developed country (Finland). The mixing pattern involves contacts within families, two different types of day care groups (1–2 years of age, 3–6 years of age; 44% of children attending), school classes and the general population. In addition, a sixth level of mixing, neighbourhoods, was now implemented by partitioning the total simulated population of 100,000 individuals into 20 neighbourhoods of size 5,000. The microsimulation of the demography readily produces a realistic pattern of mixing groups in the Finnish population.</p>
+      </sec>
+      <sec id="s2d">
+        <title>The epidemiological model of pneumococcal transmission</title>
+        <p>At any time, an individual is either a non-carrier (susceptible), carrier of one of the 11 model types, or a double carrier of two different model types. A schematic presentation of these epidemiological states is presented by <xref ref-type="fig" rid="pone-0056079-g003">Figure 3</xref>. Transitions between these states are governed by rates of acquisition and clearance as described in the following.</p>
+        <fig id="pone-0056079-g003" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0056079.g003</object-id>
+          <label>Figure 3</label>
+          <caption>
+            <title>Model for transmission of pneumococcal carriage.</title>
+            <p>Each individual in the population belongs to one of 67 possible states: susceptible to carriage, carrier of one of the 11 model types, or simultaneous carrier of any two of the 11 model types. For simplicity, the figure presents the model for two of the 11 model types, denoted as A and B. The flow of individuals is governed by rates of clearance and acquisition, as marked at each arrow. The rates of acquisition depend on the number of carriers in the mixing group which the individual belongs to and, for already carrying individuals, also on the ranking order of the categories corresponding to the incoming and the carried type (see text). The rates of acquisition for vaccine-protected individuals are reduced by a factor (1-<italic>φ<sub>c</sub></italic>). Vaccinated individuals lose protection against carriage with a waning rate (see text) and move to an unprotected compartment. The rate of clearance <italic>μ</italic> is assumed same, regardless of the vaccination status, the type(s) and the number of types carried.</p>
+          </caption>
+          <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0056079.g003" position="float" xlink:type="simple"/>
+        </fig>
+        <sec id="s2d1">
+          <title>Acquisition of carriage</title>
+          <p>For individual <italic>i</italic>, the number of individuals and the number of carriers of type <italic>j</italic> in his/her <italic>k</italic>th social mixing group at time <italic>t</italic> are denoted by <italic>N<sub>ik</sub>(t)</italic> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0056079.e001" xlink:type="simple"/></inline-formula>, respectively, <italic>k</italic> = 1,…,6; <italic>j</italic> = 1,…,11. The per capita rate at which a non-carrying (susceptible) individual of age a acquires carriage of type <italic>j</italic> at time <italic>t</italic> is defined as<disp-formula id="pone.0056079.e002"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0056079.e002" xlink:type="simple"/></disp-formula>where <italic>β(a)</italic> is the age-dependent baseline rate of acquisition and <italic>d<sub>k</sub></italic>, <italic>k</italic> = 1, 2,…,6, are the six mixing group-specific relative contact rates of acquisition (<xref ref-type="table" rid="pone-0056079-t001">Table 1</xref>). The rate of acquisition for a particular type thus depends on the numbers of carriers of the type in the mixing groups of the individual. Double carriers are assumed to be equally infectious for both carried types. To avoid extinction, if the total number of carriers of any model type <italic>j</italic> was below 50, say 50-<italic>x</italic>, a supplementary force of infection corresponding to <italic>x</italic> carriers in the population was added to λ<italic>ij</italic>(<italic>a</italic>,<italic>t</italic>).</p>
+          <table-wrap id="pone-0056079-t001" position="float">
+            <object-id pub-id-type="doi">10.1371/journal.pone.0056079.t001</object-id>
+            <label>Table 1</label>
+            <caption>
+              <title>Parameter values.</title>
+            </caption>
+            <alternatives>
+              <graphic id="pone-0056079-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0056079.t001" xlink:type="simple"/>
+              <table>
+                <colgroup span="1">
+                  <col align="left" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                  <col align="center" span="1"/>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1">Parameter type</td>
+                    <td align="left" rowspan="1" colspan="1">Parameter</td>
+                    <td align="left" rowspan="1" colspan="1">Value (grid range)</td>
+                    <td align="left" rowspan="1" colspan="1">Source</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1">(A)</td>
+                    <td align="left" rowspan="1" colspan="1">Relative rates of acquisition</td>
+                    <td align="left" rowspan="1" colspan="1">Family, <italic>d</italic><sub>1</sub></td>
+                    <td align="left" rowspan="1" colspan="1">1.2 (0.6, 1.5)</td>
+                    <td align="left" rowspan="1" colspan="1">Calibration parameter</td>
+                  </tr>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1">Day care 1, <italic>d</italic><sub>2</sub></td>
+                    <td align="left" rowspan="1" colspan="1">0.6 (0.2, 1.4)</td>
+                    <td align="left" rowspan="1" colspan="1">Calibration parameter</td>
+                  </tr>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1">Day care 2, <italic>d</italic><sub>3</sub></td>
+                    <td align="left" rowspan="1" colspan="1">1.2 (0.8, 2.2)</td>
+                    <td align="left" rowspan="1" colspan="1">Calibration parameter</td>
+                  </tr>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1">School, <italic>d</italic><sub>4</sub></td>
+                    <td align="left" rowspan="1" colspan="1">0.80 (0.25, 1.20)</td>
+                    <td align="left" rowspan="1" colspan="1">Calibration parameter</td>
+                  </tr>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1">Neighbourhood, <italic>d</italic><sub>5</sub></td>
+                    <td align="left" rowspan="1" colspan="1">0.133 (0.083, 0.200)</td>
+                    <td align="left" rowspan="1" colspan="1">Calibration parameter</td>
+                  </tr>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1">Population, <italic>d</italic><sub>6</sub></td>
+                    <td align="left" rowspan="1" colspan="1"><italic>d</italic><sub>5</sub>/2</td>
+                    <td align="left" rowspan="1" colspan="1">Ratio <italic>d</italic><sub>6</sub>/<italic>d</italic><sub>5</sub> fixed to 0.5</td>
+                  </tr>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1">Baseline rates of acq. (per day)</td>
+                    <td align="left" rowspan="1" colspan="1">Age group [0,1), <italic>β</italic><sub>1</sub></td>
+                    <td align="left" rowspan="1" colspan="1">0.045</td>
+                    <td align="left" rowspan="1" colspan="1">For definiteness</td>
+                  </tr>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1">Age group [1,4), <italic>β</italic><sub>2</sub></td>
+                    <td align="left" rowspan="1" colspan="1">0.070</td>
+                    <td align="left" rowspan="1" colspan="1">Fixed value</td>
+                  </tr>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1">Age group 4+ y., <italic>β</italic><sub>3</sub></td>
+                    <td align="left" rowspan="1" colspan="1">0.020</td>
+                    <td align="left" rowspan="1" colspan="1">Fixed value</td>
+                  </tr>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1">Competition parameters</td>
+                    <td align="left" rowspan="1" colspan="1">
+                      <italic>θ</italic>
+                      <sub>1</sub>
+                    </td>
+                    <td align="left" rowspan="1" colspan="1">0.800</td>
+                    <td align="left" rowspan="1" colspan="1">Fixed value</td>
+                  </tr>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1">
+                      <italic>θ</italic>
+                      <sub>2</sub>
+                    </td>
+                    <td align="left" rowspan="1" colspan="1">0.744</td>
+                    <td align="left" rowspan="1" colspan="1">Fixed value</td>
+                  </tr>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1">(B)</td>
+                    <td align="left" rowspan="1" colspan="1">Rates of clearance</td>
+                    <td align="left" rowspan="1" colspan="1">Children under 5 y.</td>
+                    <td align="left" rowspan="1" colspan="1">0.67 per month</td>
+                    <td align="left" rowspan="1" colspan="1"><xref ref-type="bibr" rid="pone.0056079-Melegaro2">[29]</xref>, <xref ref-type="bibr" rid="pone.0056079-Hoti1">[30]</xref></td>
+                  </tr>
+                  <tr>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1"/>
+                    <td align="left" rowspan="1" colspan="1">Individuals 5+ y.</td>
+                    <td align="left" rowspan="1" colspan="1">1.00 per month</td>
+                    <td align="left" rowspan="1" colspan="1"><xref ref-type="bibr" rid="pone.0056079-Melegaro2">[29]</xref>, <xref ref-type="bibr" rid="pone.0056079-Hoti1">[30]</xref></td>
+                  </tr>
+                </tbody>
+              </table>
+            </alternatives>
+            <table-wrap-foot>
+              <fn id="nt101">
+                <p>(A) Parameter values that were assessed in the context of the simulation model. The age-specific baseline rate of acquisition of pneumococcal carriage, <italic>β</italic>(<italic>a</italic>), was considered in 3 age groups as a stepwise function with values <italic>β</italic><sub>1</sub>, <italic>β</italic><sub>2</sub> and <italic>β</italic><sub>3</sub>. There are 6 mixing group-specific parameters (<italic>d</italic><sub>1</sub>–<italic>d</italic><sub>6</sub>) in the model, corresponding to family, 2 different types of day care groups (children 0.5–2 years of age, and children 3–6 years of age), school (children 7–17 years of age), neighbourhood, and the general population. Five of these (<italic>d</italic><sub>1</sub>–<italic>d</italic><sub>5</sub>) were calibrated. A range of the design grid (in parentheses) is given that covers values corresponding to the 9,000 simulation runs in the calibration process. The values of the two competition parameters were searched before the final calibration phase so that their ratio (<italic>θ</italic><sub>2</sub>/<italic>θ</italic><sub>1</sub> = 0.93) reproduces the serotype distribution. For more details, see <xref ref-type="supplementary-material" rid="pone.0056079.s002">File S2</xref>. (B) Parameter values that were given literature values.</p>
+              </fn>
+            </table-wrap-foot>
+          </table-wrap>
+          <p>Between-type competition in colonisation was included in the model by means of a model type dependent acquisition rate for double carriage in an already carrying individual. This rate, given by <italic>θ(h,j)λ<sub>ij</sub></italic>(<italic>a,t</italic>), where <italic>θ(h,j)</italic>&lt;1 is the parameter accounting for the reduced acquisition rate for double carriage, depends on the ranks of the currently colonising type <italic>h</italic> and of the incoming type <italic>j</italic> in the hierarchy of the model types. Specifically, parameter <italic>θ(h,j)</italic> is assigned one of two possible values, <italic>θ</italic><sub>1</sub> or <italic>θ</italic><sub>2</sub>, satisfying the constraints 0&lt;<italic>θ</italic><sub>2</sub>&lt;<italic>θ</italic><sub>1</sub>&lt;1. For an incoming model type with a higher (lower) rank than the currently carried model type, <italic>θ(h,j)</italic> = <italic>θ</italic><sub>1</sub> (<italic>θ(h,j)</italic> = <italic>θ</italic><sub>2</sub>). The quantity 1- <italic>θ</italic><sub>2</sub>/<italic>θ</italic><sub>1</sub> is related to the skewness of the serotype distribution. In particular, <italic>θ</italic><sub>2</sub> = <italic>θ</italic><sub>1</sub> would correspond to symmetric competition, i.e., a uniform distribution across the model types.</p>
+        </sec>
+        <sec id="s2d2">
+          <title>Clearance of carriage</title>
+          <p>We assume a constant rate of clearance with an exponential distribution for the duration of carriage, with the rate of 0.67 per month in children &lt;5 years of age. The rate is assumed to be 1.5 times higher in individuals of age 5+ <xref ref-type="bibr" rid="pone.0056079-Melegaro2">[29]</xref>, <xref ref-type="bibr" rid="pone.0056079-Hoti1">[30]</xref>.</p>
+        </sec>
+        <sec id="s2d3">
+          <title>Serotype distribution in disease and the case-to-carrier ratios</title>
+          <p>The incidence of invasive pneumococcal disease (IPD) in Finland was collected from the years 1995–2006, stratified by age class and serotype category. For each age class and serotype category, the case-to-carrier ratio, i.e., the probability of carriage episode to progress to IPD was calculated as the ratio of the respective average annual IPD incidence to the stationary incidence of carriage episodes. The incidence of carriage was extracted from the simulation output. The case-to-carrier ratios are shown on the vertical axis of <xref ref-type="fig" rid="pone-0056079-g004">Figure 4</xref> for age classes &lt;5 and 5+. Note that the case-to-carrier ratios in categories I–III are “low” and those in categories IV–V “high”, in agreement with the terminology adopted in <xref ref-type="fig" rid="pone-0056079-g001">Figure 1</xref>. The actual annual mean incidence of IPD is the area of the respective rectangle.</p>
+          <fig id="pone-0056079-g004" position="float">
+            <object-id pub-id-type="doi">10.1371/journal.pone.0056079.g004</object-id>
+            <label>Figure 4</label>
+            <caption>
+              <title>Incidence of carriage and case-to-carrier ratios by serotype category in two age classes in Finland.</title>
+              <p>The stationary incidence of pneumococcal carriage (per year per 100,000 persons) is indicated on the horizontal axis by category, shown cumulatively. The serotype category-specific case-to-carrier ratios are shown on the vertical axis; note the different scales in the &lt;5 and 5+ panels. The area of each rectangle represents the annual IPD incidence (per 100,000) in the respective serotype category. The upmost horizontal pair of panels shows the annual IPD incidence (per 100,000) before vaccination. The category-specific incidences of carriage (horizontal axis) correspond to the average pre-vaccination incidences. The other panels correspond to the projected IPD incidences after the onset of vaccination programme with PCV7, PCV10 and PCV13. The projected overall and serotype category-specific IPD incidences (indicated in green font) are obtained as averages from simulation runs based on the 50 most optimal parameter combinations. The post-vaccination panels show the average projected IPD incidence (area), the average case-to-carrier ratios (vertical axis) and the corresponding incidence of carriage (horizontal axis). The pairs of values in parentheses are the corresponding ranges of projected IPD incidences based on the 50 simulation runs.</p>
+            </caption>
+            <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0056079.g004" position="float" xlink:type="simple"/>
+          </fig>
+        </sec>
+        <sec id="s2d4">
+          <title>Sensitivity of detection of carriage</title>
+          <p>The empirical data available in this study only record one serotype per carrier. To link model predictions to data, the sensitivity of detecting carriage in both single and double carriers was taken to be 100%. In a single carrier, the carried serotype was always detected. In a double carrier, either of the two types was detected as the carried one, both having a 50% probability of detection.</p>
+        </sec>
+        <sec id="s2d5">
+          <title>Structure of transmission</title>
+          <p>The implied structure of transmission can be characterised by the number of secondary infections produced by a typical infective in the structured population during a single episode of carriage. This is obtained as the leading eigenvalue of the basic reproduction matrix <italic>K</italic> (see e.g. <xref ref-type="bibr" rid="pone.0056079-Wallinga1">[31]</xref>). The entry (<italic>i</italic>,<italic>j</italic>) of matrix <italic>K</italic> is the number of infectious contacts from one carrier in stratum <italic>j</italic> to individuals in stratum <italic>i</italic>. The stratification is based on 29 age groups, presence of siblings under 7 years of age (yes/no for children &lt;7 years of age), parental status (with/without children &lt;7 years of age), day care attendance (yes/no), resulting in a total of 55 strata. The elements of <italic>K</italic> are thus given by the expression<disp-formula id="pone.0056079.e003"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0056079.e003" xlink:type="simple"/></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0056079.e004" xlink:type="simple"/></inline-formula> is the age-specific baseline rate of acquisition in stratum <italic>i</italic>, <italic>n<sub>j</sub></italic> is the number of individuals in stratum <italic>j</italic>, and <italic>μ</italic><sub>(<italic>j</italic>)</sub> is the age-specific rate of clearance in stratum <italic>j</italic>. Furthermore, <italic>B</italic><sup>(<italic>m</italic>)</sup> is the symmetric mixing matrix specific to the mixing group. The element <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0056079.e005" xlink:type="simple"/></inline-formula> of <italic>B</italic><sup>(<italic>m</italic>)</sup> is the sum of contact contributions from all individuals in stratum <italic>j</italic> that have contacts to individuals in stratum <italic>i</italic> in mixing group of type <italic>m</italic> (e.g. family). For each such individual in stratum <italic>j</italic>, the contact contribution is defined as 1/<italic>M</italic> where <italic>M</italic> is the number of all other individuals sharing the same mixing group, cf. <xref ref-type="bibr" rid="pone.0056079-Auranen1">[28]</xref><xref ref-type="bibr" rid="pone.0056079-Iozzi1">[32]</xref>. Matrix <italic>B</italic><sup>(<italic>m</italic>)</sup> is calculated from one simulation run of the demographic model for a population of size 100,000, independently of the infection model. The basic reproduction matrix <italic>K</italic>, corresponding to a single model type in the absence of other types, is the sum of the 6 mixing group-specific reproduction matrices obtained in this manner.</p>
+          <p>The matrix of average number of transmission events per time unit in the population by source stratum (columns) and recipient stratum (rows) is then (<italic>I</italic>-<italic>P</italic>)<italic>KNUP</italic>, where <italic>P</italic> is the diagonal matrix of carriage prevalences in the 55 strata, <italic>I</italic> is the identity matrix, <italic>N</italic> is the diagonal matrix of numbers of individuals in each stratum and <italic>U</italic> is the diagonal matrix of age-specific rates of clearance <italic>μ</italic><sub>(<italic>j</italic>)</sub>, <italic>j</italic> = 1, 2, …, 55.</p>
+        </sec>
+      </sec>
+      <sec id="s2e">
+        <title>Vaccination</title>
+        <p>The impact of vaccination depends on the coverage of vaccination and on vaccine efficacies for susceptibility to carriage and progression of carriage to disease. In the model, a proportion <italic>p<sub>c</sub></italic> of children completes a full regime of PCV vaccination at the age of one year. Before that the child is assumed to be fully susceptible to carriage and disease. After one year of age, a vaccinated child is protected against carriage and disease according to vaccine efficacies as specified below. We explore the consequences of different levels of the coverage <italic>p<sub>c</sub></italic> of vaccination on the elimination thresholds for pneumococcal carriage.</p>
+        <p>There are two vaccine efficacy parameters in the model. Vaccine efficacy against pneumococcal acquisition (<italic>φ<sub>c</sub></italic>) is the relative percentage reduction in the rate of acquisition of carriage, due to the individual being vaccinated. The same efficacy against acquisition is assumed for all vaccine types. We consider the effect of different levels of efficacy on the elimination thresholds for pneumococcal carriage. Vaccine efficacy against progression to disease (<italic>φ<sub>D</sub></italic>) is the relative percentage reduction in the probability of IPD per episode of carriage, due to the individual being vaccinated. In each scenario, the same value (<italic>φ<sub>D</sub></italic> = 90%) was used for all vaccine types.</p>
+        <p>In addition, the efficacy of vaccine may wane over time. In lack of clear evidence about this, we used values 10% and 25% per year (the rate of loss of vaccine-induced protection), corresponding to an average of 10 and 4 years protection against carriage, respectively. This waning is considered only with regard to efficacy against carriage. Of note, assumptions about waning immunity against disease are irrelevant in the current analysis, as the model predictions about disease only pertain to the new steady state when vaccine-type carriage and disease are eliminated. The possibility of vaccine-induced cross-immunity against serotypes not included in the vaccine formulation is not considered.</p>
+      </sec>
+      <sec id="s2f">
+        <title>Calibration of the simulation model</title>
+        <p>Empirical data on the age-specific prevalence of pneumococcal carriage (<xref ref-type="fig" rid="pone-0056079-g002">Figure 2A</xref>) and the serotype distribution (<xref ref-type="fig" rid="pone-0056079-g002">Figure 2B</xref>) prior to PCV vaccinations were used to estimate parameters that determine pneumococcal transmission. For details of model calibration, see <xref ref-type="supplementary-material" rid="pone.0056079.s002">File S2</xref>. Briefly, values for 11 parameters, listed in <xref ref-type="table" rid="pone-0056079-t001">Table 1</xref> (part A), were assessed. In particular, the 5 mixing group-specific relative rates were optimised to maximise a likelihood function, which measures the concordance of the model output to the data. The most optimal parameter combinations were defined as those corresponding to the 50 largest median likelihood values, see Text S2.1 and Figures S2.1 and S2.2 in <xref ref-type="supplementary-material" rid="pone.0056079.s002">File S2</xref>. Model projections were realised using the optimal parameter combinations. In addition, we define a range of plausible values for a quantity of interest as those based on the set of the 50 most optimal parameter combinations (cf. Garnett et al. <xref ref-type="bibr" rid="pone.0056079-Garnett1">[33]</xref>). The simulation code was implemented using C++ and run on a cluster of 250 Intel Xeon 2.27 GHz processors.</p>
+        <p>In addition to parameters that were based on the empirical data described above, some parameters of the simulation model were based on values reported in the literature (<xref ref-type="table" rid="pone-0056079-t001">Table 1</xref>, part B). These include the age-specific rates of clearing carriage (see above). Finally, when different scenarios of vaccination were considered, the vaccine coverage (<italic>p<sub>C</sub></italic>) and vaccine efficacy against acquisition (<italic>φ<sub>c</sub></italic>) were treated as <italic>control parameters</italic>, i.e., they were assigned ranges of alternative values in producing model predictions.</p>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Results</title>
+      <sec id="s3a">
+        <title>Model calibration and validity</title>
+        <p>The simulation model was calibrated by searching a set of values for the 11 model parameters (<xref ref-type="supplementary-material" rid="pone.0056079.s002">File S2</xref> and <xref ref-type="table" rid="pone-0056079-t001">Table 1</xref>). Figure S2.1 in <xref ref-type="supplementary-material" rid="pone.0056079.s002">File S2</xref> presents the approximate profile likelihood for the 5 mixing group-specific parameters. As could be expected, there were some dependencies among the supported values. In particular, there is a clear negative dependence between parameters <italic>d</italic><sub>1</sub> (family) and most of the other mixing group-specific rates.</p>
+        <p>The model simulations agree well with the observed pattern of the age-specific prevalence of carriage (<xref ref-type="fig" rid="pone-0056079-g002">Figure 2A</xref>), indicating that the model appropriately reproduces the incidence of colonisation. The high prevalence among children 1–4 years of age is mainly explained by their higher rate of acquisition (<italic>β</italic><sub>2</sub>) in comparison to other age groups.</p>
+        <p>The case-to-carrier ratios were calculated as ratios of the observed IPD incidence to the incidence of carriage episodes in each of the five serotype categories and two age classes (<xref ref-type="fig" rid="pone-0056079-g004">Figure 4</xref>, upper panels). In children &lt;5 years of age, they vary between less than 1 to 4 per 100,000 episodes of carriage, roughly in concordance with the analysis of Sleeman et al. <xref ref-type="bibr" rid="pone.0056079-Sleeman1">[34]</xref>. The case-to-carrier ratios in categories I–III are “low” and those in categories IV–V “high”, in agreement with the terminology adopted in <xref ref-type="fig" rid="pone-0056079-g001">Figure 1</xref>. The actual annual mean incidence of IPD is the area of the respective rectangle. Note the importance of category I as a cause of IPD in age class &lt;5 years of age, in contrast to the older age class.</p>
+        <p>The two competition parameters (<italic>θ</italic><sub>1</sub>, <italic>θ</italic><sub>2</sub>) govern the serotype distribution. The estimated value of the ratio <italic>θ</italic><sub>2</sub>/<italic>θ</italic><sub>1</sub> (0.93) yields a good fit to the observed distribution of serotype categories (<xref ref-type="fig" rid="pone-0056079-g002">Figure 2B</xref>). With the choice of <italic>θ</italic><sub>1</sub> = 0.80, a higher-in-rank model type experiences a 20% reduction in the rate of acquisition if the individual is already colonised with a lower-in-rank type. For a lower-in-rank type, this reduction is 26% (i.e., 1−0.8×0.93) if the individual is already colonised with a higher-in-rank type. In the following, results are presented for these values (<italic>θ</italic><sub>1</sub> = 0.80, <italic>θ</italic><sub>2</sub> = 0.74), corresponding to the proportion of double carriage of approximately 23% among carriers. Results pertaining to an alternative pair of values (<italic>θ</italic><sub>1</sub> = 0.5, <italic>θ</italic><sub>2</sub> = 0.47) are presented in Figures S3.1 and S3.2 in <xref ref-type="supplementary-material" rid="pone.0056079.s003">File S3</xref>.</p>
+      </sec>
+      <sec id="s3b">
+        <title>Transmission structure and potential</title>
+        <p><xref ref-type="fig" rid="pone-0056079-g005">Figure 5</xref> presents the basic reproduction matrix <italic>K</italic> induced by the simulation model. Based on matrix <italic>K</italic> and calculated for a single serotype in the absence of others and using structure of transmission stratified by age together with parenthood, sibling and day care status, the basic reproduction number is 2.0 (range of plausible values 1.9–3.7), indicating a transmission potential whose effect on the population can be expected to be significantly reduced by the application of control efforts of a reasonable magnitude. Based on the stationary age distribution of susceptibles and the basic reproduction matrix <italic>K</italic>, in 44% (with range of plausible values 40–61%) of transmission events, with regard to carriage, in the whole population the source is a child (&lt;7 years of age) and 18% (range 17–31%) of transmission events occurs among &lt;7 year old children (see Table S1.2 in <xref ref-type="supplementary-material" rid="pone.0056079.s001">File S1</xref>). This pattern highlights the importance of children in the transmission of pneumococcal carriage.</p>
+        <fig id="pone-0056079-g005" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0056079.g005</object-id>
+          <label>Figure 5</label>
+          <caption>
+            <title>Basic reproduction matrix <italic>K</italic>.</title>
+            <p>Each column in the plot corresponds to a single carrier of a given stratum. The stratification is based on 29 age groups, presence of siblings under 7 years of age (yes/no for children &lt;7 years of age), parental status (with/without children &lt;7 years of age for adults 20–45 years of age), day care attendance (yes/no). Each entry indicates the average number of infectious contacts from a single carrier in stratum <italic>j</italic> (column) to a one-year age cohort of individuals in stratum <italic>i</italic> (row). Darker colours indicate higher numbers. The numbers are calculated from the distribution of social contacts extracted from the simulation and applying the most optimal parameter combintation. The column/row numbering refers to the lower limit of the age group.</p>
+          </caption>
+          <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0056079.g005" position="float" xlink:type="simple"/>
+        </fig>
+      </sec>
+      <sec id="s3c">
+        <title>Elimination of vaccine-type carriage and serotype replacement in carriage</title>
+        <p>The simulation model was run for an initial population of 100,000 people consisting of 20 neighbourhoods of equal size and for a period of 60 years prior and 40 years following the implementation of an infant vaccination programme. At the end of each year the age-specific prevalence of carriage of each of the 5 serotype categories was calculated. <xref ref-type="fig" rid="pone-0056079-g006">Figure 6</xref> presents the projected levels of prevalence in two age classes (&lt;5 and 5+ years of age) for the three vaccine formulations (PCV7, PCV10, PCV13). Using the baseline values of vaccine efficacy against vaccine-type acquisition (<italic>φ<sub>c</sub></italic> = 50%), coverage of vaccination in the childhood programme (<italic>p<sub>c</sub></italic> = 90%) and the waning rate of vaccine-induced protection (10% per year), vaccine-type carriage is essentially eliminated in the whole population within 5–10 years after the onset of the vaccination programme, suggesting the herd effect taking place in a relatively prompt manner. However, the model projects only a modest (at most 10%) decrease in the overall carriage prevalence as the non-vaccine serotypes effectively replace the eliminated vaccine types in carriage. Moreover, the relative prevalence of the non-vaccine categories remains approximately the same as in the non-vaccinated situation. These results are similar irrespective of the vaccine formulation.</p>
+        <fig id="pone-0056079-g006" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0056079.g006</object-id>
+          <label>Figure 6</label>
+          <caption>
+            <title>Impact of vaccination on pneumococcal carriage in two age classes in Finland.</title>
+            <p>Each panel presents the projected cumulative prevalence of carriage of the five serotype categories (from V to I) as a function of time, with time 0 corresponding to the onset of the vaccination programme. The point-wise median prevalence based on the 50 most optimal parameter combinations is shown cumulatively by serotype category. For the total prevalence of all five categories, also the 5% and 95% quantiles (dashed curves) are shown. <italic>Upper panels</italic>: individuals &lt;5 years of age. <italic>Lower panels</italic>: individuals 5+ years of age. From left to right: PCV7, PCV10, PCV13. To adjust for a changing demography, the prevalence shown in the figure is standardised according to the age distribution of Finland in 2005. In the simulation, the values of vaccine efficacy against carriage (<italic>φ<sub>c</sub></italic>) was 0.50 for all vaccine types in the respective vaccine formulation, the coverage of vaccination (<italic>p<sub>c</sub></italic>) 0.90 and the waning rate of immunity against carriage (<italic>w</italic>) 10% per year.</p>
+          </caption>
+          <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0056079.g006" position="float" xlink:type="simple"/>
+        </fig>
+      </sec>
+      <sec id="s3d">
+        <title>Thresholds for elimination of vaccine-type carriage</title>
+        <p>The impact of vaccine efficacy against carriage, coverage of vaccination and the waning rate of vaccine-induced protection against carriage were investigated in a systematic manner by tabulating, for various values of these three quantities, the number of years it takes after the onset of a vaccination programme for the carriage prevalence of vaccine types to reach a level of 5% of the pre-vaccination carriage prevalence in children &lt;5 years of age. <xref ref-type="fig" rid="pone-0056079-g007">Figure 7</xref> presents these results for two PCV formulations (PCV7 and PCV13) and two waning rates (10% and 25% per year). Those sets of values of the two quantities that correspond to effective vaccination programmes are easily detected. The threshold behaviour is similar for PCV7 and PCV13. If the waning rate would be as high as 25% (right panels), elimination becomes more difficult and a high coverage of vaccination is essential. These results about the threshold behaviour were concordant among the 50 most optimal parameter combinations. Interestingly, they also remained essentially the same under the alternative model of stronger between-serotype competition (<italic>θ</italic><sub>1</sub> = 0.5) (see Figure S3.2 in <xref ref-type="supplementary-material" rid="pone.0056079.s003">File S3</xref>).</p>
+        <fig id="pone-0056079-g007" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0056079.g007</object-id>
+          <label>Figure 7</label>
+          <caption>
+            <title>Thresholds for elimination of vaccine-type carriage among children less than five years of age.</title>
+            <p>The figure shows the time in years until near elimination (5% of the level of vaccine-type carriage prevalence in the pre-vaccination era) for PCV7 and PCV13 and for different combinations of the values of vaccine efficacy against carriage (horizontal axis in each plot) and coverage of vaccination (vertical axis). <italic>Left panels</italic>: The waning rate of vaccine-induced immunity against carriage is 10% per year. <italic>Right panels</italic>: the waning rate is 25% per year. <italic>Upper panels</italic>: PCV7. <italic>Lower panels</italic>: PCV13. The numbering within each panel corresponds to lower limits (in years) of the respective colour codes, with 40+ corresponding to 40 or more years until near elimination. The results were obtained using the most optimal parameter combination. For results corresponding to the 50 most optimal parameter combinations, see Figure S3.2 in <xref ref-type="supplementary-material" rid="pone.0056079.s003">File 3</xref>.</p>
+          </caption>
+          <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0056079.g007" position="float" xlink:type="simple"/>
+        </fig>
+      </sec>
+      <sec id="s3e">
+        <title>Implications of the projected carriage patterns on IPD</title>
+        <p>Together with the age and serotype category dependent case-to-carrier ratios, the projected levels of carriage predict the incidence of IPD. The lower panels in <xref ref-type="fig" rid="pone-0056079-g004">Figure 4</xref> illustrate the predicted IPD incidence in individuals &lt;5 and 5+ years of age for the three PCV formulations (see also Figure S2.3 in <xref ref-type="supplementary-material" rid="pone.0056079.s002">File S2</xref>). In individuals &lt;5 years of age, the predicted IPD incidence is approximately 24%, 37% and 71% less than without vaccination for PCV7, PCV10, PCV13, respectively. However, in individuals 5+ years of age, the IPD incidence is much less reduced by vaccination with PCV10 and PCV13 (2% and 23%, respectively) and not reduced with PCV7. This is mainly because vaccination eliminates the category of paediatric serotypes with the lowest case-to-carrier ratios among the adult population.</p>
+      </sec>
+    </sec>
+    <sec id="s4">
+      <title>Discussion</title>
+      <p>We constructed an agent-based dynamic transmission model of pneumococcal carriage and disease to explore some of the key determinants of the indirect effects of large-scale vaccination with pneumococcal conjugate vaccines (PCVs). Both of the principal types of indirect effects, herd immunity and serotype replacement, are mediated through the direct protective effect of vaccination on carriage, the source for pneumococcal transmission. Our findings are in agreement with earlier assertions that elimination of pneumococcal disease with serotypes included in the vaccine requires only a moderate direct efficacy against acquisition of carriage (e.g. Lipsitch, 1997). However, even in the event of elimination of vaccine-type (VT) invasive pneumococcal disease (IPD), there will be replacement disease whose incidence greatly depends on the disease causing propensity of the serotypes not included in the vaccine formulation.</p>
+      <p>This study corroborates to the notion that the transmission potential of pneumococcal carriage is moderate. Based on a susceptible–carrier–susceptible dynamics, we derived an approximate reproduction number <italic>R</italic><sub>0</sub> = 2 for an individual pneumococcal serotype. This value is broadly in line with a previous analysis of pneumococcal transmission in a population of mixing groups <xref ref-type="bibr" rid="pone.0056079-Hoti1">[30]</xref>. Such a low reproduction number implies that carriage of the common serotypes can be effectively controlled by a reasonable direct impact of vaccination on carriage of the respective types, provided the coverage of vaccination is high (<xref ref-type="fig" rid="pone-0056079-g007">Figure 7</xref> and Figure S3.2 in <xref ref-type="supplementary-material" rid="pone.0056079.s003">File S3</xref>). In a model-based study of the transmission dynamics of pneumococcal carriage and disease, an 86% coverage was enough for elimination of the vaccine types with vaccine efficacy against acquisition of the aggregate vaccine type at 76% and a waning rate of efficacy at 12% per year <xref ref-type="bibr" rid="pone.0056079-Melegaro1">[18]</xref>.</p>
+      <p>Assuming a negligible waning rate, the condition for obtaining herd immunity is <italic>p<sub>c</sub>φ<sub>c</sub></italic>&gt;1−1/<italic>R</italic><sub>0</sub>, where <italic>φ<sub>c</sub></italic> is the vaccine efficacy against carriage and <italic>p<sub>c</sub></italic> is the coverage of vaccination <xref ref-type="bibr" rid="pone.0056079-Halloran1">[35]</xref>. This inverse relation between <italic>p<sub>c</sub></italic> and <italic>φ<sub>c</sub></italic> is clear also in the current setting (<xref ref-type="fig" rid="pone-0056079-g007">Figure 7</xref>) although the required efficacy and coverage are less than implied by the simple formula. This is obviously due to the fact that in a vaccinated population the non-vaccine types gain a fitness benefit which helps them to out-compete vaccine-type colonisation. This assertion is further supported by the finding that the model predictions about vaccine-type elimination did not depend on the assumed level of between-serotype competition (<xref ref-type="supplementary-material" rid="pone.0056079.s003">File S3</xref>).</p>
+      <p>With a higher rate of waning (25%), the threshold moves towards higher values of <italic>p<sub>c</sub></italic> and <italic>φ<sub>c</sub></italic>. The current knowledge about the duration of vaccine-induced protection against pneumococcal carriage is scarce. In a cross-sectional study among toddlers that had participated in a vaccine trial 3–4 years earlier, vaccine efficacy against VT carriage was approximately 40%, indicating a slow decline in vaccine-induced protection <xref ref-type="bibr" rid="pone.0056079-Palmu1">[27]</xref>.</p>
+      <p>When elimination of vaccine types is reached, the pattern of serotype replacement in carriage is determined by the competitive interactions among the non-vaccine types (NVT), independently of vaccination-related parameters. Our model of between-serotype competition was constructed so that almost complete replacement of carriage occurs at the post-vaccination equilibrium, i.e., the incidence of NVT carriage in the new equilibrium is close to the overall incidence rate of all-type carriage in the pre-vaccination era. This feature corresponds to empirical observations from populations in which pneumococcal conjugate vaccine has been in large-scale use <xref ref-type="bibr" rid="pone.0056079-Hanage2">[14]</xref>, <xref ref-type="bibr" rid="pone.0056079-Vestrheim1">[15]</xref>, <xref ref-type="bibr" rid="pone.0056079-Flasche1">[36]</xref>. Moreover, the relative proportions of the non-vaccine types as causes of carriage retained their pre-vaccination era relative magnitudes. Data from long-term surveillance of some vaccinated populations indicate that this may indeed be at least the first approximation of the distribution of serotypes in the post-vaccination era <xref ref-type="bibr" rid="pone.0056079-Flasche1">[36]</xref>, <xref ref-type="bibr" rid="pone.0056079-Spijkerman1">[37]</xref>. Of note, given the ratio of the two competition parameters, the overall level and pattern of replacement in carriage were largely independent of their magnitudes (<xref ref-type="fig" rid="pone-0056079-g006">Figure 6</xref> and <xref ref-type="supplementary-material" rid="pone.0056079.s003">File S3</xref>).</p>
+      <p>In addition to the new equilibrium in the incidence of carriage, replacement in disease (IPD) depends on the type- and age-specific case-to-carrier ratios. With increasing valency of the vaccine, the model projects a decreased IPD incidence among the target population of children &lt;5 years of age and a longer time until near-elimination. Because of the different distribution of case-to-carrier ratios among the general population, the expected effect on the overall IPD incidence is milder. In particular, although category I with the three paediatric serotypes is clearly a major cause for IPD among children, it has a low case-to-carrier ratio among the general population compared to the case-to-carrier ratios of the categories of the replacing non-vaccine types.</p>
+      <p>To our knowledge, our model is the first agent-based dynamic model of pneumococcal carriage and disease which accommodates a large number of individual serotypes. Karlsson <xref ref-type="bibr" rid="pone.0056079-Karlsson1">[20]</xref> considered two aggregate types in an agent-based model to study the role of antibiotic use on pneumococcal transmission. Other approaches have been based on compartmental deterministic models. Effelterre et al. <xref ref-type="bibr" rid="pone.0056079-VanEffelterre1">[22]</xref> considered the effects of antibiotic use and vaccination in children less than 2 years of age, based on a dynamic model for 18 serotypes or groups. Melegaro et al. <xref ref-type="bibr" rid="pone.0056079-Melegaro2">[29]</xref> investigated the long-term effectiveness of PCV7 vaccination in the UK. Their model was based on pooling the vaccine types and non-vaccine serotypes into two aggregate types and calibrating the efficacy and duration vaccine-induced protection against carriage to produce the post-vaccination pattern of herd immunity and serotype replacement in the US, i.e., in another population after the introduction of PCV7. The calibration of an updated model was based on 3-year post-vaccination surveillance of IPD in the UK <xref ref-type="bibr" rid="pone.0056079-Choi1">[19]</xref>. Of note, the model in the present paper was calibrated using pre-vaccination data in a single population. The efficacy and duration of vaccine-induced protection against carriage were free control parameters in post-vaccination projections of carriage and disease (<xref ref-type="fig" rid="pone-0056079-g007">Figure 7</xref>).</p>
+      <p>Clearly, building a dynamic transmission model which would address the more than 90 pneumococcal serotypes individually is both impractical and unnecessary. Some kind of pooling of serotypes is called for. Our approach is based on splitting of both the vaccine and non-vaccine groups of serotypes, corresponding to each PCV formulation, into individual types or subcategories. This feature has important implications. First, pooling serotypes simply into vaccine and non-vaccine types would create two “super-types”, with an overestimated overall rate of acquisition for the vaccine types. This might translate into exaggerated claims of the required vaccination effort for elimination of vaccine-type carriage and disease. Second, the nearly complete replacement of carriage cannot be easily reproduced with a model with only two types. By contrast, our model with 11 competing model types reproduces this phenomenon. Third, any projections on the post-vaccination pattern of IPD based on two types could be biased due to the lack of any detail regarding the rate and pattern of carriage. Furthermore, the additional cost of including more than two types into the model is minimal, with only two parameters required to parameterise the between serotype competition. Our simple empirical model of competition among the serotypes is consistent with the hypothesis that the polysaccharide capsule (i.e., serotype) may affect the fitness of the bacterium in competition with other serotypes during colonisation <xref ref-type="bibr" rid="pone.0056079-Weinberger2">[17]</xref>.</p>
+      <p>The mixing pattern induced by the demographic characteristics implemented in our model emphasizes the importance of contacts among children in families, day care centres and schools and contacts between parents and their children. This is in agreement with strong assortative contact patterns found elsewhere <xref ref-type="bibr" rid="pone.0056079-Melegaro1">[18]</xref>, <xref ref-type="bibr" rid="pone.0056079-Iozzi1">[32]</xref>, <xref ref-type="bibr" rid="pone.0056079-Mossong1">[38]</xref>.</p>
+      <p>Potential caveats in our model assumptions include the stability of the serotype distribution by age and the homogeneity of vaccine protection against all vaccine types. The distribution of serotypes was based on data about pneumococcal carriage in children less than 2 years of age (<xref ref-type="fig" rid="pone-0056079-g002">Figure 2B</xref>; <xref ref-type="bibr" rid="pone.0056079-Syrjanen1">[25]</xref>). It is possible that the dominant serotypes are different in older children or adults <xref ref-type="bibr" rid="pone.0056079-Flasche1">[36]</xref> although the scarcity of data declined a conclusive analysis of this in the current setting. The threshold for VT elimination is likely to be robust to slight misspecifications of the serotype distribution in adults because of the importance of the younger age classes in sustaining transmission. By contrast, the projected IPD incidence in adults could be more prone to bias due to biased rates of acquisition and case-to-carrier ratios. For example, if the actual proportion of non-vaccine serotypes in adults is larger than in the model, the corresponding case-to-carrier ratios in our analysis would be over-estimates. This would lead to exaggerated predictions on replacement disease in adults so that the 22% increase in IPD under use of PCV7 (<xref ref-type="fig" rid="pone-0056079-g004">Figure 4</xref>) would be pessimistic. This problem is likely to be largest with PCV7, which covers serotypes commonly carried by children. An analogous argument applies to biases induced by the assumed similarity of serotype-specific clearance rates. For example, if some non-vaccine serotypes are carried for clearly shorter times than in the model, the estimated acquisition rates would be under-estimates and, subsequently, the case-to-carrier ratios over-estimates. This could lead to over-estimates of replacement disease by such serotypes.</p>
+      <p>The vaccine efficacy against acquisition of carriage was assumed to have the same value for all vaccine serotypes. Although there maybe differences in efficacy between individual serotypes, the overall efficacy against serotypes in various PCV formulations appears to be somewhere about 50% <xref ref-type="bibr" rid="pone.0056079-RintaKokko1">[39]</xref>. The current findings can therefore be expected to hold for most vaccine serotypes. Vaccine-induced cross-protection was not considered in the model although some serotypes may be affected by cross-reactive immunity, serotype 6A being the most frequently carried and an important source of replacement. However, the data in this study did not differentiate between serotypes 6A (potential cross-immunity) and 6C (no cross-immunity) which were formerly both classified as 6A <xref ref-type="bibr" rid="pone.0056079-Park1">[40]</xref>. The inclusion of 6A as an NVT in the analyses for PCV7 and PCV10 is likely to lead to too low IPD predictions, based on the relative importance of 6A as cause of carriage and its low case-to-carrier ratio. The possibility for capsular switching was also not featured in our model. However, its impact on pneumococcal population has been suggested to be minor in comparison to serotype expansion caused by reduced competition by the vaccine types <xref ref-type="bibr" rid="pone.0056079-Lipsitch2">[41]</xref>.</p>
+      <p>The vaccine-induced protection was not assumed to take effect until the booster dose at 12 months of age. This model feature excludes the possibility to address questions about the impact of different schedules and dosage of vaccination. However, model-based predictions about the indirect effects and the net effectiveness of vaccination depend on the assumed vaccine efficacy against acquisition and the waning rate of protection. Assuming protection only after 12 months represents a conservative approximation, should there be considerable protection starting during the earlier phase of the schedule.</p>
+      <p>One of the key questions about the long-term effectiveness of pneumococcal vaccination concerns the extent and pattern of serotype replacement in different disease manifestations. In this study, of the possible manifestations of pneumococcal disease, we only considered invasive pneumococcal disease. This was because of the relatively sensitive and specific data on the incidence of IPD in Finland. Acute otitis media (AOM) and mild respiratory infections are probably not of interest because of rapid replacement of carriage in the long-term. The question of pneumococcal pneumonia remains to be tackled, in particular in developing country settings where it is thought to constitute the main burden of pneumococcal disease. The current micro-simulation approach offers a suitable platform for such extensions.</p>
+    </sec>
+    <sec id="s5">
+      <title>Supporting Information</title>
+      <supplementary-material id="pone.0056079.s001" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0056079.s001" position="float" xlink:type="simple">
+        <label>File S1</label>
+        <caption>
+          <p>
+            <bold>The demographic model. Transmission by age and mixing group. Tables S1.1 and S1.2.</bold>
+          </p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0056079.s002" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0056079.s002" position="float" xlink:type="simple">
+        <label>File S2</label>
+        <caption>
+          <p>
+            <bold>Supplementary information on model calibration, parametrisation and the likelihood function. Texts S2.1 and S2.2. Figures S2.1–S2.3.</bold>
+          </p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0056079.s003" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0056079.s003" position="float" xlink:type="simple">
+        <label>File S3</label>
+        <caption>
+          <p>
+            <bold>Model projections under alternative parameter values. Figures S3.1 and S3.2.</bold>
+          </p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>We thank Hanna Nohynek, Terhi Kilpi and Heini Salo for useful discussions.</p>
+      <p>Parts of this study were presented as a poster at the ECDC European Vaccination Conference, Stockholm, December 2009, and as a poster at the 7th International Symposium on Pneumococci &amp; Pneumococcal Related Diseases, Tel Aviv, March 2010.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="pone.0056079-Weiser1">
+        <label>1</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Weiser</surname><given-names>JN</given-names></name> (<year>2010</year>) <article-title>The pneumococcus: Why a commensal misbehaves</article-title>. <source>J Mol Med (Berl)</source> <volume>88</volume> (<issue>2</issue>) <fpage>97</fpage>–<lpage>102</lpage> 10.1007/s00109-009-0557-x.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Calix1">
+        <label>2</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Calix</surname><given-names>JJ</given-names></name>, <name name-style="western"><surname>Nahm</surname><given-names>MH</given-names></name> (<year>2010</year>) <article-title>A new pneumococcal serotype, 11E, has a variably inactivated wcjE gene</article-title>. <source>J Infect Dis</source> <volume>202</volume> (<issue>1</issue>) <fpage>29</fpage>–<lpage>38</lpage> 10.1086/653123.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Hanage1">
+        <label>3</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hanage</surname><given-names>WP</given-names></name>, <name name-style="western"><surname>Kaijalainen</surname><given-names>TH</given-names></name>, <name name-style="western"><surname>Syrjanen</surname><given-names>RK</given-names></name>, <name name-style="western"><surname>Auranen</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Leinonen</surname><given-names>M</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Invasiveness of serotypes and clones of streptococcus pneumoniae among children in finland</article-title>. <source>Infect Immun</source> <volume>73</volume> (<issue>1</issue>) <fpage>431</fpage>–<lpage>435</lpage> 10.1128/IAI.73.1.431-435.2005.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Brueggemann1">
+        <label>4</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Brueggemann</surname><given-names>AB</given-names></name>, <name name-style="western"><surname>Peto</surname><given-names>TE</given-names></name>, <name name-style="western"><surname>Crook</surname><given-names>DW</given-names></name>, <name name-style="western"><surname>Butler</surname><given-names>JC</given-names></name>, <name name-style="western"><surname>Kristinsson</surname><given-names>KG</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Temporal and geographic stability of the serogroup-specific invasive disease potential of streptococcus pneumoniae in children</article-title>. <source>J Infect Dis</source> <volume>190</volume> (<issue>7</issue>) <fpage>1203</fpage>–<lpage>1211</lpage> 10.1086/423820.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Levine1">
+        <label>5</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Levine</surname><given-names>OS</given-names></name>, <name name-style="western"><surname>Knoll</surname><given-names>MD</given-names></name>, <name name-style="western"><surname>Jones</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Walker</surname><given-names>DG</given-names></name>, <name name-style="western"><surname>Risko</surname><given-names>N</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Global status of haemophilus influenzae type b and pneumococcal conjugate vaccines: Evidence, policies, and introductions</article-title>. <source>Curr Opin Infect Dis</source> <volume>23</volume> (<issue>3</issue>) <fpage>236</fpage>–<lpage>241</lpage> 10.1097/QCO.0b013e328338c135.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Pavia1">
+        <label>6</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pavia</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Bianco</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Nobile</surname><given-names>CG</given-names></name>, <name name-style="western"><surname>Marinelli</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Angelillo</surname><given-names>IF</given-names></name> (<year>2009</year>) <article-title>Efficacy of pneumococcal vaccination in children younger than 24 months: A meta-analysis</article-title>. <source>Pediatrics</source> <volume>123</volume> (<issue>6</issue>) <fpage>e1103-10</fpage> 10.1542/peds.2008-3422.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Obaro1">
+        <label>7</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Obaro</surname><given-names>SK</given-names></name>, <name name-style="western"><surname>Adegbola</surname><given-names>RA</given-names></name>, <name name-style="western"><surname>Banya</surname><given-names>WA</given-names></name>, <name name-style="western"><surname>Greenwood</surname><given-names>BM</given-names></name> (<year>1996</year>) <article-title>Carriage of pneumococci after pneumococcal vaccination</article-title>. <source>Lancet</source> <volume>348</volume> (<issue>9022</issue>) <fpage>271</fpage>–<lpage>272</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Mbelle1">
+        <label>8</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mbelle</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Huebner</surname><given-names>RE</given-names></name>, <name name-style="western"><surname>Wasas</surname><given-names>AD</given-names></name>, <name name-style="western"><surname>Kimura</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Chang</surname><given-names>I</given-names></name>, <etal>et al</etal>. (<year>1999</year>) <article-title>Immunogenicity and impact on nasopharyngeal carriage of a nonavalent pneumococcal conjugate vaccine</article-title>. <source>J Infect Dis</source> <volume>180</volume> (<issue>4</issue>) <fpage>1171</fpage>–<lpage>1176</lpage> 10.1086/315009.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-DeWals1">
+        <label>9</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>De Wals</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Black</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Borrow</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Pearce</surname><given-names>D</given-names></name> (<year>2009</year>) <article-title>Modeling the impact of a new vaccine on pneumococcal and nontypable haemophilus influenzae diseases: A new simulation model</article-title>. <source>Clin Ther</source> <volume>31</volume> (<issue>10</issue>) <fpage>2152</fpage>–<lpage>2169</lpage> 10.1016/j.clinthera.2009.10.014.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Beutels1">
+        <label>10</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Beutels</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Thiry</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Van Damme</surname><given-names>P</given-names></name> (<year>2007</year>) <article-title>Convincing or confusing? economic evaluations of childhood pneumococcal conjugate vaccination–a review (2002–2006)</article-title>. <source>Vaccine</source> <volume>25</volume> (<issue>8</issue>) <fpage>1355</fpage>–<lpage>1367</lpage> 10.1016/j.vaccine.2006.10.034.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Pilishvili1">
+        <label>11</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pilishvili</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Lexau</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Farley</surname><given-names>MM</given-names></name>, <name name-style="western"><surname>Hadler</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Harrison</surname><given-names>LH</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Sustained reductions in invasive pneumococcal disease in the era of conjugate vaccine</article-title>. <source>J Infect Dis</source> <volume>201</volume> (<issue>1</issue>) <fpage>32</fpage>–<lpage>41</lpage> 10.1086/648593.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Miller1">
+        <label>12</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Miller</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Andrews</surname><given-names>NJ</given-names></name>, <name name-style="western"><surname>Waight</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Slack</surname><given-names>MP</given-names></name>, <name name-style="western"><surname>George</surname><given-names>RC</given-names></name> (<year>2011</year>) <article-title>Herd immunity and serotype replacement 4 years after seven-valent pneumococcal conjugate vaccination in england and wales: An observational cohort study</article-title>. <source>Lancet Infect Dis</source> 10.1016/S1473-3099(11)70090-1.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Weinberger1">
+        <label>13</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Weinberger</surname><given-names>DM</given-names></name>, <name name-style="western"><surname>Malley</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Lipsitch</surname><given-names>M</given-names></name> (<year>2011</year>) <article-title>Serotype replacement in disease after pneumococcal vaccination</article-title>. <source>Lancet</source> 10.1016/S0140-6736(10)62225-8.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Hanage2">
+        <label>14</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hanage</surname><given-names>WP</given-names></name>, <name name-style="western"><surname>Finkelstein</surname><given-names>JA</given-names></name>, <name name-style="western"><surname>Huang</surname><given-names>SS</given-names></name>, <name name-style="western"><surname>Pelton</surname><given-names>SI</given-names></name>, <name name-style="western"><surname>Stevenson</surname><given-names>AE</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Evidence that pneumococcal serotype replacement in massachusetts following conjugate vaccination is now complete</article-title>. <source>Epidemics</source> <volume>2</volume> (<issue>2</issue>) <fpage>80</fpage>–<lpage>84</lpage> 10.1016/j.epidem.2010.03.005.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Vestrheim1">
+        <label>15</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vestrheim</surname><given-names>DF</given-names></name>, <name name-style="western"><surname>Hoiby</surname><given-names>EA</given-names></name>, <name name-style="western"><surname>Aaberge</surname><given-names>IS</given-names></name>, <name name-style="western"><surname>Caugant</surname><given-names>DA</given-names></name> (<year>2010</year>) <article-title>Impact of a pneumococcal conjugate vaccination program on carriage among children in norway</article-title>. <source>Clin Vaccine Immunol</source> <volume>17</volume> (<issue>3</issue>) <fpage>325</fpage>–<lpage>334</lpage> 10.1128/CVI.00435-09.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Lipsitch1">
+        <label>16</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lipsitch</surname><given-names>M</given-names></name> (<year>1997</year>) <article-title>Vaccination against colonizing bacteria with multiple serotypes</article-title>. <source>Proc Natl Acad Sci U S A</source> <volume>94</volume> (<issue>12</issue>) <fpage>6571</fpage>–<lpage>6576</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Weinberger2">
+        <label>17</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Weinberger</surname><given-names>DM</given-names></name>, <name name-style="western"><surname>Trzcinski</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Lu</surname><given-names>YJ</given-names></name>, <name name-style="western"><surname>Bogaert</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Brandes</surname><given-names>A</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Pneumococcal capsular polysaccharide structure predicts serotype prevalence</article-title>. <source>PLoS Pathog</source> <volume>5</volume> (<issue>6</issue>) <fpage>e1000476</fpage> 10.1371/journal.ppat.1000476.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Melegaro1">
+        <label>18</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Melegaro</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Choi</surname><given-names>YH</given-names></name>, <name name-style="western"><surname>George</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Edmunds</surname><given-names>WJ</given-names></name>, <name name-style="western"><surname>Miller</surname><given-names>E</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Dynamic models of pneumococcal carriage and the impact of the heptavalent pneumococcal conjugate vaccine on invasive pneumococcal disease</article-title>. <source>BMC Infect Dis</source> <volume>10</volume>: <fpage>90</fpage> 10.1186/1471-2334-10-90.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Choi1">
+        <label>19</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Choi</surname><given-names>YH</given-names></name>, <name name-style="western"><surname>Jit</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Gay</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Andrews</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Waight</surname><given-names>PA</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>7-valent pneumococcal conjugate vaccination in england and wales: Is it still beneficial despite high levels of serotype replacement</article-title>? <source>PLoS One</source> <volume>6</volume> (<issue>10</issue>) <fpage>e26190</fpage> 10.1371/journal.pone.0026190.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Karlsson1">
+        <label>20</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Karlsson</surname><given-names>D</given-names></name> (<year>2011</year>) <article-title>Probabilistic network modelling of the impact of penicillin consumption on spread of pneumococci</article-title>. <source>Epidemiol Infect</source> <volume>139</volume> (<issue>9</issue>) <fpage>1351</fpage>–<lpage>1360</lpage> 10.1017/S0950268810002773.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Temime1">
+        <label>21</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Temime</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Boelle</surname><given-names>PY</given-names></name>, <name name-style="western"><surname>Opatowski</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Guillemot</surname><given-names>D</given-names></name> (<year>2008</year>) <article-title>Impact of capsular switch on invasive pneumococcal disease incidence in a vaccinated population</article-title>. <source>PLoS One</source> <volume>3</volume> (<issue>9</issue>) <fpage>e3244</fpage> 10.1371/journal.pone.0003244.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-VanEffelterre1">
+        <label>22</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Van Effelterre</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Moore</surname><given-names>MR</given-names></name>, <name name-style="western"><surname>Fierens</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Whitney</surname><given-names>CG</given-names></name>, <name name-style="western"><surname>White</surname><given-names>L</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>A dynamic model of pneumococcal infection in the united states: Implications for prevention through vaccination</article-title>. <source>Vaccine</source> <volume>28</volume> (<issue>21</issue>) <fpage>3650</fpage>–<lpage>3660</lpage> 10.1016/j.vaccine.2010.03.030.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Cobey1">
+        <label>23</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cobey</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Lipsitch</surname><given-names>M</given-names></name> (<year>2012</year>) <article-title>Niche and neutral effects of acquired immunity permit coexistence of pneumococcal serotypes</article-title>. <source>Science</source> <volume>335</volume> (<issue>6074</issue>) <fpage>1376</fpage>–<lpage>1380</lpage> 10.1126/science.1215947.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Talbird1">
+        <label>24</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Talbird</surname><given-names>SE</given-names></name>, <name name-style="western"><surname>Ismaila</surname><given-names>AS</given-names></name>, <name name-style="western"><surname>Taylor</surname><given-names>TN</given-names></name> (<year>2010</year>) <article-title>A steady-state, population-based model to estimate the direct and indirect effects of pneumococcal vaccines</article-title>. <source>Vaccine</source> <volume>28 Suppl 6</volume>: <fpage>G3</fpage>–<lpage>13</lpage> 10.1016/j.vaccine.2010.06.013.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Syrjanen1">
+        <label>25</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Syrjanen</surname><given-names>RK</given-names></name>, <name name-style="western"><surname>Kilpi</surname><given-names>TM</given-names></name>, <name name-style="western"><surname>Kaijalainen</surname><given-names>TH</given-names></name>, <name name-style="western"><surname>Herva</surname><given-names>EE</given-names></name>, <name name-style="western"><surname>Takala</surname><given-names>AK</given-names></name> (<year>2001</year>) <article-title>Nasopharyngeal carriage of streptococcus pneumoniae in finnish children younger than 2 years old</article-title>. <source>J Infect Dis</source> <volume>184</volume> (<issue>4</issue>) <fpage>451</fpage>–<lpage>459</lpage> 10.1086/322048.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Leino1">
+        <label>26</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Leino</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Hoti</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Syrjanen</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Tanskanen</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Auranen</surname><given-names>K</given-names></name> (<year>2008</year>) <article-title>Clustering of serotypes in a longitudinal study of streptococcus pneumoniae carriage in three day care centres</article-title>. <source>BMC Infect Dis</source> <volume>8</volume>: <fpage>173</fpage> 10.1186/1471-2334-8-173.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Palmu1">
+        <label>27</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Palmu A, Kaijalainen T, Verho J, Herva E, Mäkelä PH, et al. (2002) Long-term efficacy of the sevenvalent PncCRM vaccine on nasopharyngeal carriage. 3th International Symposium on Pneumococci and Pneumococcal Diseases (ISSPD) Anchorage, Alaska.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Auranen1">
+        <label>28</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Auranen</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Eichner</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Leino</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Takala</surname><given-names>AK</given-names></name>, <name name-style="western"><surname>Makela</surname><given-names>PH</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Modelling transmission, immunity and disease of haemophilus influenzae type b in a structured population</article-title>. <source>Epidemiol Infect</source> <volume>132</volume> (<issue>5</issue>) <fpage>947</fpage>–<lpage>957</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Melegaro2">
+        <label>29</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Melegaro</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Choi</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Pebody</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Gay</surname><given-names>N</given-names></name> (<year>2007</year>) <article-title>Pneumococcal carriage in united kingdom families: Estimating serotype-specific transmission parameters from longitudinal data</article-title>. <source>Am J Epidemiol</source> <volume>166</volume> (<issue>2</issue>) <fpage>228</fpage>–<lpage>235</lpage> 10.1093/aje/kwm076.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Hoti1">
+        <label>30</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hoti</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Erasto</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Leino</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Auranen</surname><given-names>K</given-names></name> (<year>2009</year>) <article-title>Outbreaks of streptococcus pneumoniae carriage in day care cohorts in finland - implications for elimination of transmission</article-title>. <source>BMC Infect Dis</source> <volume>9</volume>: <fpage>102</fpage> 10.1186/1471-2334-9-102.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Wallinga1">
+        <label>31</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wallinga</surname><given-names>J</given-names></name>, <name name-style="western"><surname>van Boven</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Lipsitch</surname><given-names>M</given-names></name> (<year>2010</year>) <article-title>Optimizing infectious disease interventions during an emerging epidemic</article-title>. <source>Proc Natl Acad Sci U S A</source> <volume>107</volume> (<issue>2</issue>) <fpage>923</fpage>–<lpage>928</lpage> 10.1073/pnas.0908491107.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Iozzi1">
+        <label>32</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Iozzi</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Trusiano</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Chinazzi</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Billari</surname><given-names>FC</given-names></name>, <name name-style="western"><surname>Zagheni</surname><given-names>E</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Little italy: An agent-based approach to the estimation of contact patterns- fitting predicted matrices to serological data</article-title>. <source>PLoS Comput Biol</source> <volume>6</volume> (<issue>12</issue>) <fpage>e1001021</fpage> 10.1371/journal.pcbi.1001021.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Garnett1">
+        <label>33</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Garnett</surname><given-names>GP</given-names></name>, <name name-style="western"><surname>Cousens</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Hallett</surname><given-names>TB</given-names></name>, <name name-style="western"><surname>Steketee</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Walker</surname><given-names>N</given-names></name> (<year>2011</year>) <article-title>Mathematical models in the evaluation of health programmes</article-title>. <source>Lancet</source> <volume>378</volume> (<issue>9790</issue>) <fpage>515</fpage>–<lpage>525</lpage> 10.1016/S0140-6736(10)61505-X.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Sleeman1">
+        <label>34</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sleeman</surname><given-names>KL</given-names></name>, <name name-style="western"><surname>Griffiths</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Shackley</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Diggle</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Gupta</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Capsular serotype-specific attack rates and duration of carriage of streptococcus pneumoniae in a population of children</article-title>. <source>J Infect Dis</source> <volume>194</volume> (<issue>5</issue>) <fpage>682</fpage>–<lpage>688</lpage> 10.1086/505710.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Halloran1">
+        <label>35</label>
+        <mixed-citation publication-type="book" xlink:type="simple">Halloran M.E., Longini I.M., Struchiner C.J (2010) Design and analysis of vaccine studies. : Springer.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Flasche1">
+        <label>36</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Flasche</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Van Hoek</surname><given-names>AJ</given-names></name>, <name name-style="western"><surname>Sheasby</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Waight</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Andrews</surname><given-names>N</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Effect of pneumococcal conjugate vaccination on serotype-specific carriage and invasive disease in england: A cross-sectional study</article-title>. <source>PLoS Med</source> <volume>8</volume> (<issue>4</issue>) <fpage>e1001017</fpage> 10.1371/journal.pmed.1001017; 10.1371/journal.pmed.1001017.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Spijkerman1">
+        <label>37</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Spijkerman</surname><given-names>J</given-names></name>, <name name-style="western"><surname>van Gils</surname><given-names>EJ</given-names></name>, <name name-style="western"><surname>Veenhoven</surname><given-names>RH</given-names></name>, <name name-style="western"><surname>Hak</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Yzerman</surname><given-names>EP</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Carriage of streptococcus pneumoniae 3 years after start of vaccination program, the netherlands</article-title>. <source>Emerg Infect Dis</source> <volume>17</volume> (<issue>4</issue>) <fpage>584</fpage>–<lpage>591</lpage> 10.3201/eid1704.101115.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Mossong1">
+        <label>38</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mossong</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Hens</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Jit</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Beutels</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Auranen</surname><given-names>K</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>Social contacts and mixing patterns relevant to the spread of infectious diseases</article-title>. <source>PLoS Med</source> <volume>5</volume> (<issue>3</issue>) <fpage>e74</fpage> 10.1371/journal.pmed.0050074.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-RintaKokko1">
+        <label>39</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rinta-Kokko</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Dagan</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Givon-Lavi</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Auranen</surname><given-names>K</given-names></name> (<year>2009</year>) <article-title>Estimation of vaccine efficacy against acquisition of pneumococcal carriage</article-title>. <source>Vaccine</source> <volume>27</volume> (<issue>29</issue>) <fpage>3831</fpage>–<lpage>3837</lpage> 10.1016/j.vaccine.2009.04.009.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Park1">
+        <label>40</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Park</surname><given-names>IH</given-names></name>, <name name-style="western"><surname>Moore</surname><given-names>MR</given-names></name>, <name name-style="western"><surname>Treanor</surname><given-names>JJ</given-names></name>, <name name-style="western"><surname>Pelton</surname><given-names>SI</given-names></name>, <name name-style="western"><surname>Pilishvili</surname><given-names>T</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>Differential effects of pneumococcal vaccines against serotypes 6A and 6C</article-title>. <source>J Infect Dis</source> <volume>198</volume> (<issue>12</issue>) <fpage>1818</fpage>–<lpage>1822</lpage> 10.1086/593339.</mixed-citation>
+      </ref>
+      <ref id="pone.0056079-Lipsitch2">
+        <label>41</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lipsitch</surname><given-names>M</given-names></name>, <name name-style="western"><surname>O'Neill</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Cordy</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Bugalter</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Trzcinski</surname><given-names>K</given-names></name>, <etal>et al</etal>. (<year>2007</year>) <article-title>Strain characteristics of streptococcus pneumoniae carriage and invasive disease isolates during a cluster-randomized clinical trial of the 7-valent pneumococcal conjugate vaccine</article-title>. <source>J Infect Dis</source> <volume>196</volume> (<issue>8</issue>) <fpage>1221</fpage>–<lpage>1227</lpage> 10.1086/521831.</mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

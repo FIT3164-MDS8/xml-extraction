@@ -1,86 +1,15 @@
-# from bs4 import BeautifulSoup
-
-# # Reading the data inside the xml
-# # file to a variable under the name
-# # data
-# with open('test.xml', 'r') as f:
-#     data = f.read()
-
-# # Passing the stored data inside
-# # the beautifulsoup parser, storing
-# # the returned object
-# Bs_data = BeautifulSoup(data, "xml")
- 
-# # print(Bs_data)
-
-# # # Finding all instances of tag
-# # # `unique`
-# b_unique = Bs_data.find_all('contrib')
- 
-# print(b_unique)
- 
-# # # Using find() to extract attributes
-# # # of the first instance of the tag
-# # b_name = Bs_data.find('child', {'name':'Frank'})
- 
-# # print(b_name)
- 
-# # # Extracting the data stored in a
-# # # specific attribute of the
-# # # `child` tag
-# # value = b_name.get('test')
- 
-# # print(value)
-
-
-# importing element tree
-# under the alias of ET
+# importing element tree under the alias of ET
 import xml.etree.ElementTree as ET
- 
-# Passing the path of the
-# xml document to enable the
-# parsing process
+from lxml import etree
 
-# tree = ET.parse('test.xml')
-# tree = ET.parse('journal.pbio.1000147.xml')
-tree = ET.parse('journal.pbio.1000231.xml')
-
-# getting the parent tag of
-# the xml document
-root = tree.getroot()
-
-# for child in root:
-#     print(child.tag, child.text, len(child))
-
-# printing the root (parent) tag
-# of the xml document, along with
-# its memory location
-# print(len(root))
- 
-# printing the attributes of the
-# first tag from the parent
-# print(root[0].attrib)
- 
-# printing the text contained within
-# first subtag of the 5th tag from
-# the parent
-# print(root[5][0].text)
-
-# def recc_read_root(r):
-#     if len(r) > 0:
-#         for c in r:
-#             recc_read_root(c)
-#     else:
-#         print(r.tag, end= " : ")
-#         print(r.text)
+# import os
+import os
 
 
-    
-
-def recc_read_root(r, root_tag = ""):
+def recc_read_root(r, root_tag=""):
     f = open("output.txt", "a")
 
-    arr = p["abstract","body","title"]
+    arr = p["abstract", "body", "title"]
 
     if root_tag == "":
         for c in r:
@@ -95,7 +24,69 @@ def recc_read_root(r, root_tag = ""):
         f.write(root_tag + "; " + r.tag + " : ")
         if r.text != None:
             f.write(r.text + "\n")
-        print(root_tag + "; " + r.tag, end= " : ")
+        print(root_tag + "; " + r.tag, end=" : ")
         print(r.text)
 
-recc_read_root(root)
+# recc_read_root(root)
+
+
+def read_text(root):
+    return "".join(root.itertext())
+
+
+def read_tag(root, tagname, outputFileName):
+
+    q = open("output//"+outputFileName + ".txt", "a", encoding="utf-8")
+
+    for tags in root.iter(tagname):
+        # print(read_text(tags))
+        q.write(read_text(tags) + "\n")
+
+# Code sample to get all title text in documents
+# def get_title():
+
+#     # print(os.getcwd())
+#     # print(os.getcwd())
+#     os.chdir('xml-1000\\')
+
+#     # List ALL files in "xml-1000" directory
+#     file_list = os.listdir()
+#     # print(file_list)
+
+#     for docName in file_list:
+        
+#         if os.path.isfile(docName):
+
+#             # Passing the path of the xml document to enable the parsing process
+#             tree = ET.parse(docName, etree.XMLParser(recover=True))
+
+#             # getting the parent tag of the xml document
+#             root = tree.getroot()
+
+#             read_tag(root, "title", docName.split(".")[2])
+        
+#         else:
+#             print("file ignore: " + docName)
+#             # fstr = "journal.pone.0001458.xml"
+#             # tree = ET.parse("xml-1000//" + docName)
+#             # print(str.split(".")[2])
+
+
+def get_tags_text(tagname):
+    
+    file_list = os.listdir()
+    for docName in file_list:      
+        if os.path.isfile(docName):
+            tree = ET.parse(docName, etree.XMLParser(recover=True))
+            root = tree.getroot()
+            read_tag(root, tagname, docName.split(".")[2])
+        else:
+            print("file ignore: " + docName)
+
+
+def main():
+    os.chdir('xml-1000\\')
+    get_tags_text("article-title")
+    get_tags_text("title")
+
+main()

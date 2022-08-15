@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="EN">
+  <front>
+    <journal-meta><journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><!--===== Grouping journal title elements =====--><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher>
+        <publisher-name>Public Library of Science</publisher-name>
+        <publisher-loc>San Francisco, USA</publisher-loc>
+      </publisher></journal-meta>
+    <article-meta><article-id pub-id-type="publisher-id">PONE-D-10-00709</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0015323</article-id><article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Biology</subject>
+          <subj-group>
+            <subject>Computational biology</subject>
+            <subj-group>
+              <subject>Ecosystem modeling</subject>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Ecology</subject>
+            <subj-group>
+              <subject>Macroecology</subject>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Earth sciences</subject>
+          <subj-group>
+            <subject>Marine and aquatic sciences</subject>
+            <subj-group>
+              <subject>Oceanography</subject>
+              <subj-group>
+                <subject>Biological oceanography</subject>
+              </subj-group>
+              <subj-group>
+                <subject>Marine ecology</subject>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline">
+          <subject>Computational Biology</subject>
+          <subject>Ecology</subject>
+          <subject>Marine and Aquatic Sciences</subject>
+        </subj-group>
+      </article-categories><title-group><article-title>Global Patterns and Predictions of Seafloor Biomass Using Random Forests</article-title><alt-title alt-title-type="running-head">Patterns and Predictions of Seafloor Biomass</alt-title></title-group><contrib-group>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Wei</surname>
+            <given-names>Chih-Lin</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="corresp" rid="cor1">
+            <sup>*</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Rowe</surname>
+            <given-names>Gilbert T.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Escobar-Briones</surname>
+            <given-names>Elva</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff3">
+            <sup>3</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Boetius</surname>
+            <given-names>Antje</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff4">
+            <sup>4</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Soltwedel</surname>
+            <given-names>Thomas</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff4">
+            <sup>4</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Caley</surname>
+            <given-names>M. Julian</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff5">
+            <sup>5</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Soliman</surname>
+            <given-names>Yousria</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff6">
+            <sup>6</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Huettmann</surname>
+            <given-names>Falk</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff7">
+            <sup>7</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Qu</surname>
+            <given-names>Fangyuan</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff8">
+            <sup>8</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Yu</surname>
+            <given-names>Zishan</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff8">
+            <sup>8</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Pitcher</surname>
+            <given-names>C. Roland</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff9">
+            <sup>9</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Haedrich</surname>
+            <given-names>Richard L.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff10">
+            <sup>10</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Wicksten</surname>
+            <given-names>Mary K.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff11">
+            <sup>11</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Rex</surname>
+            <given-names>Michael A.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff12">
+            <sup>12</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Baguley</surname>
+            <given-names>Jeffrey G.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff13">
+            <sup>13</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Sharma</surname>
+            <given-names>Jyotsna</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff14">
+            <sup>14</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Danovaro</surname>
+            <given-names>Roberto</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff15">
+            <sup>15</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>MacDonald</surname>
+            <given-names>Ian R.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff16">
+            <sup>16</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Nunnally</surname>
+            <given-names>Clifton C.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Deming</surname>
+            <given-names>Jody W.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff17">
+            <sup>17</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Montagna</surname>
+            <given-names>Paul</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff18">
+            <sup>18</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Lévesque</surname>
+            <given-names>Mélanie</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff19">
+            <sup>19</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Weslawski</surname>
+            <given-names>Jan Marcin</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff20">
+            <sup>20</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Wlodarska-Kowalczuk</surname>
+            <given-names>Maria</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff20">
+            <sup>20</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Ingole</surname>
+            <given-names>Baban S.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff21">
+            <sup>21</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Bett</surname>
+            <given-names>Brian J.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff22">
+            <sup>22</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Billett</surname>
+            <given-names>David S. M.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff22">
+            <sup>22</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Yool</surname>
+            <given-names>Andrew</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff22">
+            <sup>22</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Bluhm</surname>
+            <given-names>Bodil A.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff23">
+            <sup>23</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Iken</surname>
+            <given-names>Katrin</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff23">
+            <sup>23</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Narayanaswamy</surname>
+            <given-names>Bhavani E.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff24">
+            <sup>24</sup>
+          </xref>
+        </contrib>
+      </contrib-group><aff id="aff1"><label>1</label><addr-line>Department of Oceanography, Texas A&amp;M University, College Station, Texas, United States of America</addr-line>       </aff><aff id="aff2"><label>2</label><addr-line>Department of Marine Biology, Texas A&amp;M University at Galveston, Galveston, Texas, United States of America</addr-line>       </aff><aff id="aff3"><label>3</label><addr-line>Instituto de Ciencias del Mar y Limnología, Universidad Nacional Autónoma de México, México D.F., México</addr-line>       </aff><aff id="aff4"><label>4</label><addr-line>Alfred Wegener Institute for Polar and Marine Research, Bremerhaven, Germany</addr-line>       </aff><aff id="aff5"><label>5</label><addr-line>Australian Institute of Marine Science, Townsville, Queensland, Australia</addr-line>       </aff><aff id="aff6"><label>6</label><addr-line>Biological and Environmental Sciences, Qatar University, Doha, Qatar</addr-line>       </aff><aff id="aff7"><label>7</label><addr-line>Biology and Wildlife Department, Institute of Arctic Biology, University of Alaska Fairbanks, Fairbanks, Alaska, United States of America</addr-line>       </aff><aff id="aff8"><label>8</label><addr-line>College of Marine Life Science, Ocean University of Qingdao, Qingdao, China</addr-line>       </aff><aff id="aff9"><label>9</label><addr-line>CSIRO Marine and Atmospheric Research, Cleveland, Queensland, Australia</addr-line>       </aff><aff id="aff10"><label>10</label><addr-line>Department of Biology, Memorial University, St. John's, Newfoundland and Labrador, Canada</addr-line>       </aff><aff id="aff11"><label>11</label><addr-line>Department of Biology, Texas A&amp;M University, College Station, Texas, United States of America</addr-line>       </aff><aff id="aff12"><label>12</label><addr-line>Department of Biology, University of Massachusetts, Boston, Massachusetts, United States of America</addr-line>       </aff><aff id="aff13"><label>13</label><addr-line>Department of Biology, University of Nevada Reno, Reno, Nevada, United States of America</addr-line>       </aff><aff id="aff14"><label>14</label><addr-line>Department of Biology, University of Texas at San Antonio, San Antonio, Texas, United States of America</addr-line>       </aff><aff id="aff15"><label>15</label><addr-line>Department of Marine Sciences, Polytechnic University of Marche, Ancona, Italy</addr-line>       </aff><aff id="aff16"><label>16</label><addr-line>Department of Oceanography, Florida State University, Tallahassee, Florida, United States of America</addr-line>       </aff><aff id="aff17"><label>17</label><addr-line>Department of Oceanography, University of Washington, Seattle, Washington, United States of America</addr-line>       </aff><aff id="aff18"><label>18</label><addr-line>Harte Research Institute, Texas A&amp;M University-Corpus Christi, Corpus Christi, Texas, United States of America</addr-line>       </aff><aff id="aff19"><label>19</label><addr-line>Institut des sciences de la mer de Rimouski, Université du Québec à Rimouski, Rimouski, Québec, Canada</addr-line>       </aff><aff id="aff20"><label>20</label><addr-line>Institute of Oceanology, Polish Academy of Sciences, Sopot, Poland</addr-line>       </aff><aff id="aff21"><label>21</label><addr-line>National Institute of Oceanography, Dona Paula, Goa, India</addr-line>       </aff><aff id="aff22"><label>22</label><addr-line>National Oceanography Centre, Southampton, Southampton, United Kingdom</addr-line>       </aff><aff id="aff23"><label>23</label><addr-line>School of Fisheries and Ocean Sciences, University of Alaska Fairbanks, Fairbanks, Alaska, United States of America</addr-line>       </aff><aff id="aff24"><label>24</label><addr-line>Scottish Association for Marine Science, Scottish Marine Institute, Oban, United Kingdom</addr-line>       </aff><contrib-group>
+        <contrib contrib-type="editor" xlink:type="simple">
+          <name name-style="western">
+            <surname>Romanuk</surname>
+            <given-names>Tamara Natasha</given-names>
+          </name>
+          <role>Editor</role>
+          <xref ref-type="aff" rid="edit1"/>
+        </contrib>
+      </contrib-group><aff id="edit1">Dalhousie University, Canada</aff><author-notes>
+        <corresp id="cor1">* E-mail: <email xlink:type="simple">weic@tamug.edu</email></corresp>
+        <fn fn-type="con">
+          <p>Conceived and designed the experiments: CLW GTR EEB. Analyzed the data: CW. Contributed reagents/materials/analysis tools: CLW GTR EEB AB TS MJC YS FH FQ ZY CRP RLH MKW MAR JGB JS RD IRM CCN JWD PM ML JMW MWK BSI BJB DSMB AY BAB KI BEN. Wrote the paper: CLW GTR.</p>
+        </fn>
+      <fn fn-type="conflict">
+        <p>The authors have declared that no competing interests exist.</p>
+      </fn></author-notes><pub-date pub-type="collection">
+        <year>2010</year>
+      </pub-date><pub-date pub-type="epub">
+        <day>30</day>
+        <month>12</month>
+        <year>2010</year>
+      </pub-date><volume>5</volume><issue>12</issue><elocation-id>e15323</elocation-id><history>
+        <date date-type="received">
+          <day>10</day>
+          <month>8</month>
+          <year>2010</year>
+        </date>
+        <date date-type="accepted">
+          <day>8</day>
+          <month>11</month>
+          <year>2010</year>
+        </date>
+      </history><!--===== Grouping copyright info into permissions =====--><permissions><copyright-year>2010</copyright-year><copyright-holder>Wei et al</copyright-holder><license><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions><abstract>
+        <p>A comprehensive seafloor biomass and abundance database has been constructed from 24 oceanographic institutions worldwide within the Census of Marine Life (CoML) field projects. The machine-learning algorithm, Random Forests, was employed to model and predict seafloor standing stocks from surface primary production, water-column integrated and export particulate organic matter (POM), seafloor relief, and bottom water properties. The predictive models explain 63% to 88% of stock variance among the major size groups. Individual and composite maps of predicted global seafloor biomass and abundance are generated for bacteria, meiofauna, macrofauna, and megafauna (invertebrates and fishes). Patterns of benthic standing stocks were positive functions of surface primary production and delivery of the particulate organic carbon (POC) flux to the seafloor. At a regional scale, the census maps illustrate that integrated biomass is highest at the poles, on continental margins associated with coastal upwelling and with broad zones associated with equatorial divergence. Lowest values are consistently encountered on the central abyssal plains of major ocean basins The shift of biomass dominance groups with depth is shown to be affected by the decrease in average body size rather than abundance, presumably due to decrease in quantity and quality of food supply. This biomass census and associated maps are vital components of mechanistic deep-sea food web models and global carbon cycling, and as such provide fundamental information that can be incorporated into evidence-based management.</p>
+      </abstract><funding-group><funding-statement>This research was supported by a grant from the Census of Marine Life (CoML) and the Sloan Foundation to G. T. Rowe and E. Escobar-Briones. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts>
+        <page-count count="15"/>
+      </counts></article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Introduction</title>
+      <sec id="s1a">
+        <title>Rationale</title>
+        <p>A ‘census’, according to our dictionaries, was originally a counting of individuals for the purpose of taxation. The Census of Marine Life (CoML) is on the other hand an attempt to make a comprehensive assessment of what lives in the world's oceans. CoML is attempting to document, describe, list, archive and map as many species of organisms as possible in all marine ecosystems, independent of an individual species' population size. A natural by-product of CoML however has been new tabulations of animal abundances and biomass by CoML field projects. The purpose of this CoML biomass synthesis has been to capture all the new information on biomass that has been uncovered during CoML into a single data base, independent of species composition. This project has thus archived and mapped a broad spectrum of biomass data from CoML projects from around the world, added data from a number of previous comprehensive reviews, and, as a result, produced maps of biomass of a limited number of size groups living on the sea floor on a world wide basis.</p>
+        <p>While the causes of biodiversity remain obscure to a large degree, there is general agreement that biomass is a function of food supply to or within any particular habitat. As a result, standing stock biomass has been used as a surrogate for biomass production and carbon flow to and through an ecosystem, without necessarily defining the taxa contributing to the biomass. On the other hand, by analyzing the statistical relationships of diversity to biomass, it might be possible to make some practical inferences about the effects that productivity might have on diversity <xref ref-type="bibr" rid="pone.0015323-Rowe1">[1]</xref>, as this is an open question that has generated considerable conjecture <xref ref-type="bibr" rid="pone.0015323-Rex1">[2]</xref>. While the biomass census is not related to ‘taxation’ in the classic sense, it directly links marine populations to carbon as an ecosystem model currency. Inorganic carbon is fixed into organic-rich compounds by photosynthesis and then transferred through food webs where it has a variety of fates, usually a return to CO<sub>2</sub>. However, it is also harvested by fishers and it thus ends up in markets around the world. A biomass census therefore has relevance to societies because human populations are putting a ‘tax’ on the ocean biota in the form of valuable protein in fisheries products.</p>
+      </sec>
+      <sec id="s1b">
+        <title>Historical background</title>
+        <p>The earliest quantitative sampling of the sea floor began at the beginning of the 20<sup>th</sup> century as an attempt to determine food resources available to bottom-dwelling fish in European waters <xref ref-type="bibr" rid="pone.0015323-Petersen1">[3]</xref>, <xref ref-type="bibr" rid="pone.0015323-Petersen2">[4]</xref>. A good review of the mechanical instruments developed for the early shallow-water surveys <xref ref-type="bibr" rid="pone.0015323-Holme1">[5]</xref> pictures a wide variety of grab-like samplers, many still in use today. By the middle of the 20<sup>th</sup> century, the macrofauna of many continental shelves and estuaries had been sampled quantitatively by a relatively standard set of instruments. For demersal fishes and vagile megafaunal invertebrates, the most common sampling methods are trawling and photography. Both methods have weaknesses: for example, trawling tends to capture only surface-dwelling and slow species. It may be impossible to positively identify animals to species from photographs. However, to this day neither is fool proof. With smaller forms (meiofauna, microfauna, bacteria and viruses), sampling problems are solved seemingly easily by utilizing small-diameter cores, but care has to be taken not to lose organisms by either washing or bow-wake of sampling devices. For these groups, the problem is that they have not yet been sampled comprehensively on global or ocean-basin scales.</p>
+        <p>Generalizations about the controls of sea floor biomass began to emerge by the middle of the 20<sup>th</sup> century. Expeditions sponsored by Union of Soviet Socialist Republics (USSR: dissolved in 1991) reached every corner of the globe. This large body of work concluded that biomass declines sharply with depth and with distance from land. They observed that high latitudes tended to have higher biomass than low latitudes. The major food supply to both pelagic and sea floor communities was the rain of particulate detritus, enhanced by a ladder of vertical migration <xref ref-type="bibr" rid="pone.0015323-Vinogradov1">[6]</xref>. Sea floor biomass likewise declines precipitously with depth, but is also tightly coupled to primary production in surface layers. Regression equations of the variation in benthic biomass as a function of depth and primary production established in the 1970's initially (reviewed in <xref ref-type="bibr" rid="pone.0015323-Rowe2">[7]</xref>) are still reasonable estimates of deep benthic biomass today <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref>. The slopes of the biomass regressions have been equated to the rate at which the delivery of POC to the sea floor declines, but the height or zero intercept of the regression line is a function of the mean primary production in the photic zone.</p>
+        <p>Previous reviews of seafloor standing stocks focused on bathymetric standing stock patterns in which the distribution of biomass and abundance was fitted to a linear function of water depth or direct measurement of sinking particle flux <xref ref-type="bibr" rid="pone.0015323-Rowe2">[7]</xref>, <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref>, <xref ref-type="bibr" rid="pone.0015323-Soltwedel1">[9]</xref>, <xref ref-type="bibr" rid="pone.0015323-Deming1">[10]</xref>. Applying such equations is conceptually intuitive but the relationships tend sometimes to fall apart in large scale predictive mapping. In this paper, we explore a novel machine-learning algorithm, Random Forests <xref ref-type="bibr" rid="pone.0015323-Breiman1">[11]</xref>, to model the complex and potentially non-linear relationships between oceanic properties and seafloor standing stocks. Random Forests (RF) is a data mining method widely used in the fields of bioinformatics <xref ref-type="bibr" rid="pone.0015323-Cutler1">[12]</xref>, speech recognition <xref ref-type="bibr" rid="pone.0015323-Xu1">[13]</xref>, and drug design and development <xref ref-type="bibr" rid="pone.0015323-Svetnik1">[14]</xref>. Recently RF is gaining popularity in terrestrial ecology <xref ref-type="bibr" rid="pone.0015323-Cutler2">[15]</xref>, <xref ref-type="bibr" rid="pone.0015323-Prasad1">[16]</xref>, <xref ref-type="bibr" rid="pone.0015323-Death1">[17]</xref>; however, so far, only a handful of studies have applied RF in marine ecosystems <xref ref-type="bibr" rid="pone.0015323-Oppel1">[18]</xref>, <xref ref-type="bibr" rid="pone.0015323-Pitcher1">[19]</xref>. In short, RF, as the name suggested, is an ensemble of many decision trees with binary divisions. Each tree is grown from a bootstrap sample of response variable and each node is guided by a predictor value to maximize differences in offspring branches. The fit of the tree is examined using the data not in the bootstrap selection; hence, cross-validation with external data is not necessary. Predictive accuracy requires low bias and low correlation between decision trees <xref ref-type="bibr" rid="pone.0015323-Breiman1">[11]</xref>. RF achieves these by growing a large number of trees and then averaging the predictions. At the same time, the node decision is chosen from a random subset of predictors to make the trees look as different as possible. RF does not assume any data distribution and does not require formal selection of predictors. RF is robust to outlier and unbalanced data, making it a better choice than traditional statistical methods <xref ref-type="bibr" rid="pone.0015323-Cutler1">[12]</xref>.</p>
+      </sec>
+    </sec>
+    <sec id="s2" sec-type="materials|methods">
+      <title>Materials and Methods</title>
+      <sec id="s2a">
+        <title>Response Variables</title>
+        <p>Biomass and abundance of bacteria, meiofauna, macrofauna, megafauna (invertebrates+fishes), invertebrates, and fishes were assembled from literature and the Census of Marine Life (CoML) field projects (<xref ref-type="fig" rid="pone-0015323-g001">Figure 1</xref> and <xref ref-type="supplementary-material" rid="pone.0015323.s004">Appendix S1</xref>). The “CoML Fresh Biomass Database” includes 4872 biomass records, 5511 abundance records, and 4196 records with both biomass and abundance from 175 studies. Additional datasets include nematodes (230 records from 10 studies) and pelagic decapods (17 records from 1 study); however, they were not included in this analysis. The complete list of references and detailed data information are available in <xref ref-type="supplementary-material" rid="pone.0015323.s004">Appendix S1</xref> and <xref ref-type="supplementary-material" rid="pone.0015323.s001">File S1</xref>.</p>
+        <fig id="pone-0015323-g001" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0015323.g001</object-id>
+          <label>Figure 1</label>
+          <caption>
+            <title>Distribution of abundance and biomass records in the “CoML Fresh Biomass Database”.</title>
+            <p>References and locations for each size class are given in <xref ref-type="supplementary-material" rid="pone.0015323.s004">Appendix S1</xref> and <xref ref-type="supplementary-material" rid="pone.0015323.s001">File S1</xref>. Bathymetric layer uses NOAA ETOPO 1 Global Relief Model <xref ref-type="bibr" rid="pone.0015323-Amante1">[26]</xref>.</p>
+          </caption>
+          <graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.g001" xlink:type="simple"/>
+        </fig>
+        <p>Categories of benthic fauna are usually defined by size classes. In this paper, we refer to the term “bacteria” to include both bacterial and archaeal domains. We have not included viruses. The metazoan meiofauna and macrofauna are small infauna invertebrates sampled by core or grab devices and retained on 20 to 74-µm and 250 to 520-µm sieves, respectively. Megafauna refers to large epibenthic invertebrates and demersal fishes (usually larger than 1 cm) caught or recorded by bottom trawling and photographic survey. Many studies deal with trawl invertebrates and fishes separately; hence, 3 categories were created for the megafauna, including the invertebrates plus fishes, invertebrates, and fishes. Here the “megafauna” dataset includes both invertebrates and fishes. Estimates of meiofaunal and macrofaunal standing stocks are affected by the gear design, sampling area, and sieve sizes <xref ref-type="bibr" rid="pone.0015323-Rowe2">[7]</xref>, <xref ref-type="bibr" rid="pone.0015323-Bett1">[20]</xref>, <xref ref-type="bibr" rid="pone.0015323-Gage1">[21]</xref>, <xref ref-type="bibr" rid="pone.0015323-Gage2">[22]</xref>. These factors however have been suggested to be minor compared to water depth at a global scale and do not significantly affect the overall level and pattern of stock-depth relationships <xref ref-type="bibr" rid="pone.0015323-Rex1">[2]</xref>, <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref>. Only studies reporting standing stocks for the whole assemblage of a size category were used in these analyses. Benthic foraminiferans were not included due to difficulty differentiating between living biomass from empty tests or shells <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref>, <xref ref-type="bibr" rid="pone.0015323-Soltwedel1">[9]</xref>. Throughout this analysis, the abundance was standardized to cells (for bacteria) or individuals (for meiofauna, macrofauna, and megafauna) per square meter. The biomass was standardized to milligrams carbon per square meter using appropriate conversion factors from wet or dry weight to organic carbon weight <xref ref-type="bibr" rid="pone.0015323-Rowe2">[7]</xref>, <xref ref-type="bibr" rid="pone.0015323-Soltwedel1">[9]</xref>.</p>
+      </sec>
+      <sec id="s2b">
+        <title>Environmental Predictors</title>
+        <p>Environmental variables with global coverage were utilized to characterize 1) the surface ocean climate relating to phytoplankton production, 2) water column processes associated with export POC flux, 3) bottom water properties characterizing the seafloor habitats, and 4) seafloor relief (water depth) as a proxy of declining export POC flux arriving at the ocean floor (<xref ref-type="table" rid="pone-0015323-t001">Table 1</xref> and <xref ref-type="supplementary-material" rid="pone.0015323.s005">Figure S1</xref>). Contemporaneous environmental and standing stocks data were not always available; therefore, mean and standard deviation (S.D.) of the predictors were calculated for the longest time periods possible. The variables are listed as:</p>
+        <list list-type="order">
+          <list-item>
+            <p>Primary productivity variables: Decadal mean and standard deviation (S.D.) of monthly net primary production (NPP) models (cbpm, vgpm), and the data inputs for the NPP models <xref ref-type="bibr" rid="pone.0015323-Behrenfeld1">[23]</xref>, <xref ref-type="bibr" rid="pone.0015323-Westberry1">[24]</xref> including chlorophyll concentration (chl), sea surface temperature (sst), photosynthetic available irradiance (par), mixed layer depth (mld), particle backscatter (bbp), phytoplankton growth rate (growth), and carbon concentration (carbon), all calculated between years of 1998 and 2007. The monthly data were obtained from the Ocean Productivity Group, Oregon State University, as products of the Sea Viewing Wide Field-of-view Sensor (SeaWiFS r2009.1) and Advanced Very High Resolution Radiometer (AVHRR).</p>
+          </list-item>
+          <list-item>
+            <p>Water column processes: Decadal mean of water-column integrated total carbon (int.c) and nitrogen (int.n), detrital carbon (det.c) and nitrogen (det.n), phytoplankton (phyt) and zooplankton (zoop), as well as export flux of detrital carbon (det.flx.c) and nitrogen (det.flx.n), obtained from a 10-year simulation of monthly model outputs from 1995 to 2004 using Ocean Circulation and Climate Advanced Model (OCCAM) driven by a nitrogen based Nutrient Phytoplankton Zooplankton Detritus (NPZD) Model <xref ref-type="bibr" rid="pone.0015323-Yool1">[25]</xref>.</p>
+          </list-item>
+          <list-item>
+            <p>Bottom water properties: Annual mean and seasonal standard deviation (S.D.) of bottom water temperature, salinity, oxygen, nitrate, phosphate, and silicate concentration were obtained from World Ocean Atlas 2009, NOAA National Oceanographic Data Center.</p>
+          </list-item>
+          <list-item>
+            <p>Global ocean depths were obtained from the ETOPO1 Global Relief Model, NOAA National Geophysical Data Center <xref ref-type="bibr" rid="pone.0015323-Amante1">[26]</xref>.</p>
+          </list-item>
+        </list>
+        <table-wrap id="pone-0015323-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0015323.t001</object-id><label>Table 1</label><caption>
+            <title>Global datasets of environmental predictors.</title>
+          </caption><!--===== Grouping alternate versions of objects =====--><alternatives><graphic id="pone-0015323-t001-1" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.t001" xlink:type="simple"/><table>
+            <colgroup span="1">
+              <col align="left" span="1"/>
+              <col align="center" span="1"/>
+              <col align="center" span="1"/>
+              <col align="center" span="1"/>
+              <col align="center" span="1"/>
+              <col align="center" span="1"/>
+              <col align="center" span="1"/>
+            </colgroup>
+            <thead>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Data Type</td>
+                <td align="left" colspan="1" rowspan="1">Data Source</td>
+                <td align="left" colspan="1" rowspan="1">Res.</td>
+                <td align="left" colspan="1" rowspan="1">Cell</td>
+                <td align="left" colspan="1" rowspan="1">Abbrev.</td>
+                <td align="left" colspan="1" rowspan="1">Variable</td>
+                <td align="left" colspan="1" rowspan="1">Unit</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">
+                  <bold>Primary Production</bold>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <underline>Ocean Productivity, OSU</underline>
+                </td>
+                <td align="left" colspan="1" rowspan="1">5 minutes</td>
+                <td align="left" colspan="1" rowspan="1">3×3</td>
+                <td align="left" colspan="1" rowspan="1">chl</td>
+                <td align="left" colspan="1" rowspan="1">Chlorophyll a concentration (SeaWiFS r2009.1)</td>
+                <td align="left" colspan="1" rowspan="1">mg m<sup>−3</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="2" rowspan="1">Decadal mean &amp; standard deviation of monthly data from January 1998 to December 2007</td>
+                <td align="left" colspan="1" rowspan="1">5.3 minutes</td>
+                <td align="left" colspan="1" rowspan="1">3×3</td>
+                <td align="left" colspan="1" rowspan="1">sst</td>
+                <td align="left" colspan="1" rowspan="1">Sea Surface Temperature (AVHRR)</td>
+                <td align="left" colspan="1" rowspan="1">°C</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="2" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">5 minutes</td>
+                <td align="left" colspan="1" rowspan="1">3×3</td>
+                <td align="left" colspan="1" rowspan="1">par</td>
+                <td align="left" colspan="1" rowspan="1">Photosynthetically available radiation (SeaWiFS r2009.1)</td>
+                <td align="left" colspan="1" rowspan="1">Einstein m<sup>−2</sup> day<sup>−1</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="2" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">5 minutes</td>
+                <td align="left" colspan="1" rowspan="1">3×3</td>
+                <td align="left" colspan="1" rowspan="1">bbp</td>
+                <td align="left" colspan="1" rowspan="1">Particulate backscatter (SeaWiFS r2009.1)</td>
+                <td align="left" colspan="1" rowspan="1">m<sup>−1</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="2" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">10 minutes</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">mld</td>
+                <td align="left" colspan="1" rowspan="1">Mixed layed depth</td>
+                <td align="left" colspan="1" rowspan="1">m</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">5 minutes</td>
+                <td align="left" colspan="1" rowspan="1">3×3</td>
+                <td align="left" colspan="1" rowspan="1">growth</td>
+                <td align="left" colspan="1" rowspan="1">Phytoplankton growth rate</td>
+                <td align="left" colspan="1" rowspan="1">divisions day<sup>−1</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">5 minutes</td>
+                <td align="left" colspan="1" rowspan="1">3×3</td>
+                <td align="left" colspan="1" rowspan="1">carbon</td>
+                <td align="left" colspan="1" rowspan="1">Carbon concentration</td>
+                <td align="left" colspan="1" rowspan="1">mg m<sup>−3</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">5 minutes</td>
+                <td align="left" colspan="1" rowspan="1">3×3</td>
+                <td align="left" colspan="1" rowspan="1">vgpm</td>
+                <td align="left" colspan="1" rowspan="1">Chlorophyll based net primary production</td>
+                <td align="left" colspan="1" rowspan="1">mg C m<sup>−2</sup> day<sup>−1</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">5 minutes</td>
+                <td align="left" colspan="1" rowspan="1">3×3</td>
+                <td align="left" colspan="1" rowspan="1">cbpm</td>
+                <td align="left" colspan="1" rowspan="1">Carbon based net primary production</td>
+                <td align="left" colspan="1" rowspan="1">mg C m<sup>−2</sup> day<sup>−1</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">
+                  <bold>Water column</bold>
+                </td>
+                <td align="left" colspan="1" rowspan="1">Yool et al. <xref ref-type="bibr" rid="pone.0015323-Yool1">[25]</xref></td>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">int.c</td>
+                <td align="left" colspan="1" rowspan="1">Integrate C to 500 m above seafloor</td>
+                <td align="left" colspan="1" rowspan="1">mg C m<sup>−2</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="2" rowspan="1">Decadal mean of monthly model simulation from January 1995 to December 2004</td>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">int.n</td>
+                <td align="left" colspan="1" rowspan="1">Integrate N to 500 m above seafloor</td>
+                <td align="left" colspan="1" rowspan="1">mg N m<sup>−2</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="2" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">det.c</td>
+                <td align="left" colspan="1" rowspan="1">Integrate detrital C to 500 m above seafloor</td>
+                <td align="left" colspan="1" rowspan="1">mg C m<sup>−2</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="2" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">det.n</td>
+                <td align="left" colspan="1" rowspan="1">Integrate detrital N to 500 m above seafloor</td>
+                <td align="left" colspan="1" rowspan="1">mg N m<sup>−2</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">phyt</td>
+                <td align="left" colspan="1" rowspan="1">Integrate phytoplankton to 500 m above seafloor</td>
+                <td align="left" colspan="1" rowspan="1">mg N m<sup>−2</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">zoop</td>
+                <td align="left" colspan="1" rowspan="1">Integrate zooplankton to 500 m above seafloor</td>
+                <td align="left" colspan="1" rowspan="1">mg N m<sup>−2</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">det.c.flx</td>
+                <td align="left" colspan="1" rowspan="1">Detrital C flux at 500 m above seafloor</td>
+                <td align="left" colspan="1" rowspan="1">mg C m<sup>−2</sup> day<sup>−1</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">det.n.flx</td>
+                <td align="left" colspan="1" rowspan="1">Detrital N flux at 500 m above seafloor</td>
+                <td align="left" colspan="1" rowspan="1">mg N m<sup>−2</sup> day<sup>−1</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">
+                  <bold>Bottom Water</bold>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <underline>World Ocean Atlas 2009</underline>
+                </td>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">temp</td>
+                <td align="left" colspan="1" rowspan="1">Temperature</td>
+                <td align="left" colspan="1" rowspan="1">°C</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="2" rowspan="1">Annual mean &amp; seasonal standard deviation</td>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">salin</td>
+                <td align="left" colspan="1" rowspan="1">Salinity</td>
+                <td align="left" colspan="1" rowspan="1">ppm</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="2" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">oxyg</td>
+                <td align="left" colspan="1" rowspan="1">Oxygen concentration</td>
+                <td align="left" colspan="1" rowspan="1">milliters liter<sup>−1</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">nitra</td>
+                <td align="left" colspan="1" rowspan="1">Nitrate concentration</td>
+                <td align="left" colspan="1" rowspan="1">micromoles liter<sup>−1</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">phos</td>
+                <td align="left" colspan="1" rowspan="1">Phosphate concentration</td>
+                <td align="left" colspan="1" rowspan="1">micromoles liter<sup>−1</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1">1 degree</td>
+                <td align="left" colspan="1" rowspan="1">1×1</td>
+                <td align="left" colspan="1" rowspan="1">si</td>
+                <td align="left" colspan="1" rowspan="1">Silicate concentration</td>
+                <td align="left" colspan="1" rowspan="1">micromoles liter<sup>−1</sup></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">
+                  <bold>Water Depth</bold>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <underline>ETOPO1 Global Relief</underline>
+                </td>
+                <td align="left" colspan="1" rowspan="1">1 minute</td>
+                <td align="left" colspan="1" rowspan="1">N.A.</td>
+                <td align="left" colspan="1" rowspan="1">depth</td>
+                <td align="left" colspan="1" rowspan="1">Water depth</td>
+                <td align="left" colspan="1" rowspan="1">m</td>
+              </tr>
+            </tbody>
+          </table></alternatives><table-wrap-foot>
+            <fn id="nt101">
+              <label/>
+              <p>The mean value was extracted for abundance and biomass records with catchment area of 3×3 or 1×1 cells. The datasets are divided into 4 categories, including 1) primary productivity variables, 2) water column variables, 3) bottom water properties, and 4) water depth. The table abbreviations follow: Res.  =  data resolution, Cell  =  cell size for extraction, Abbrev.  =  variable abbreviation.</p>
+            </fn>
+          </table-wrap-foot></table-wrap>
+      </sec>
+      <sec id="s2c">
+        <title>Data Analyses and Modeling</title>
+        <p>We used partial regression analysis to examine the relationships between standing stocks and depth when the latitude and longitude are held constant. The multiple regression residuals of stocks against latitude and longitude were used as dependent variables to regress against depth. To bring the dependent variable back to an appropriate scale, the y-intercept from the multiple regression was added to the residuals. The partial regression was also used in the pre-treatment of the depth-integrated bacteria data to standardize sediment penetration depths (from 0.5 to 29.5 cm; &gt;83% are between 5 and 15 cm). Similar approaches has been developed and tested in Rex et al. <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref>.</p>
+        <p>A stochastic model between standing stocks and 39 environmental predictors (<xref ref-type="table" rid="pone-0015323-t001">Table 1</xref> and <xref ref-type="supplementary-material" rid="pone.0015323.s005">Figure S1</xref>) was constructed using Random Forests (RF) <xref ref-type="bibr" rid="pone.0015323-Breiman1">[11]</xref>. RF is a member of Regression Tree Analyses (RTA) <xref ref-type="bibr" rid="pone.0015323-Breiman2">[27]</xref>. In RTA, the response variable (standing stocks) is recursively partitioned into small successive binary splits. Each split is based on a single value of predictor from an exhaustive search of all available predictors to maximize the differences between the offspring branches. In RF, the response variable was bootstrap resampled before conducting RTA to generate large numbers of un-pruned decision trees (1000 trees in this study). Unlike traditional RTA, the RF algorithm searches the best split from a random subset of predictors (1/3 of all variables) and the prediction can be made from new data (environmental) by averaging the model outputs of all trees. At each bootstrap resampling step, 2/3 of the data (in-bag) were selected to build the decision tree. The other 1/3 of the data (out-of-bag, or OOB) were used to carry out an internal examination of model (decision tree) prediction error and estimate variable importance. The OOB data can generate predictions using the tree grown from the in-bag data. These OOB predictions were aggregated (by averaging the outputs of all trees) to compare with the observations and estimated the prediction error. The performance of the RF model was examined as percent variance explained: R<sup>2</sup> = 1– MSE<sub>OOB</sub>/observed variance, where MSE<sub>OOB</sub> is the mean square error between observations and OOB predictions. Predictor Importance was determined by how much worse the OOB predictions can be if the data for that predictor are randomly permuted. This essentially mimicked what would happen with or without the help of that predictor. The increase of prediction error (MSE<sub>OOB</sub>) after the permutation was used to measure its contribution to the prediction accuracy. This accuracy importance measure (increase of MSE<sub>OOB</sub>) was computed for each tree and averaged over the forest (1000 trees).</p>
+      </sec>
+      <sec id="s2d">
+        <title>Construction of Random Forest Models</title>
+        <p>Standing stocks (biomass and abundance) were logarithm (base 10) transformed before conducting RF analysis. Environmental data were extracted based on the latitude and longitude of the stock records by averaging a box of size 3×3 or 1×1 cells (<xref ref-type="table" rid="pone-0015323-t001">Table 1</xref>). Mean value of the box was matched to the corresponding stocks record. RF algorithm was then run independently on each of the 12 datasets. Most primary productivity predictors have declining temporal coverage at the high latitudes between years of 1998 and 2007 due to prolonged winter darkness or cloud cover preventing SeaWiFS ocean color measurements (<xref ref-type="supplementary-material" rid="pone.0015323.s006">Figure S2</xref>). This can be a source of error during the RF modeling, because decadal mean and standard deviation of the predictors was only calculated from the available monthly data. In order to evaluate the model stability, we conducted 4 RF simulations for each dataset. The simulations were based on different data selection scenarios, including: 1) all standing stocks and environmental data were included; 2) only data calculated from &gt;30 months of SeaWiFS measurements were included; 3) only data calculated from &gt;60 months of SeaWiFS measurements were included; 4) only data calculated from &gt;90 months of SeaWiFS measurements were included. In other words, Scenario 1 retained all the data and Scenario 4 excluded much of the high latitude data (&gt;50°N or S, see <xref ref-type="supplementary-material" rid="pone.0015323.s006">Figure S2</xref>). The mean and standard deviation (S.D.) of the model performance (R<sup>2</sup>) and variable importance were calculated to evaluate the model sensitivity. In the following text, the “simulations” refer to the RF runs under the 4 data selection scenarios.</p>
+      </sec>
+      <sec id="s2e">
+        <title>Global Prediction of Seafloor Standing Stocks</title>
+        <p>Environmental data were averaged to the same grid resolution (1 arc degree grids) before using them as model inputs for global standing stocks predictions (<xref ref-type="supplementary-material" rid="pone.0015323.s005">Figure S1</xref>). For each dataset, 4 global predictions were generated from RF simulations. The mean and coefficient of variation (S.D./mean * 100%) were calculated for each grid to optimize the predictions and examine the output stability. In order to produce a smooth predicted surface, the predictions were interpolated to 0.1 degree cell resolution using Inverse Distance Weighting (IDW). The predicted map of standing stocks is displayed in color classes using Jenks Natural Breaks Optimization method to maximize the differences between the classes. The global integral of benthic biomass was integrated from each cell value multipling the cell area on predicted map based on equidistant cylindrical projection. The calculations were based on the formula: Global integral  = Σ map cell value (in per unit area) * cell area at equator (∼12343 km<sup>2</sup>) * cosine (latitude). Statistical analyses and RF modeling used R 2.11.0 <xref ref-type="bibr" rid="pone.0015323-R1">[28]</xref> and R package randomForest <xref ref-type="bibr" rid="pone.0015323-Liaw1">[29]</xref>. Geostatistical analyses and mapping used ESRI® ArcMap™ 9.2 and R package sp <xref ref-type="bibr" rid="pone.0015323-Bivand1">[30]</xref>.</p>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Results</title>
+      <sec id="s3a">
+        <title>Partial linear regressions</title>
+        <p>Our results confirmed the conclusions of Rex et al. <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref> and suggested significantly negative log-linear relationships of biomass, abundance, and body size for 3 large size classes with depth; however, none of these parameters showed statistically significant depth dependency for bacteria (<xref ref-type="table" rid="pone-0015323-t002">Table 2</xref>). We adapted figure legends from Rex et al. <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref> and raised the y-intercepts of their regression equations 3 orders of magnitude (converting the unit from g C m<sup>−2</sup> to mg C m<sup>−2</sup>) for comparison with our current results. Our regression y-intercepts were slightly lower than the previous synthesis (2.4 vs. 2.5 for bacteria; 2.2 vs. 2.3 for meiofauna; 3.1 vs. 3.2 for macrofauna; 1.8 vs. 2.3 for megafauna.), while the rate of decline biomass with depth was steeper for meiofauna (−2.4×10<sup>−4</sup> vs. −1.7×10<sup>−4</sup>) and macrofauna (−5.2×10<sup>−4</sup> vs. −4.5×10<sup>−4</sup>), but more gradual for megafauna (−3.1×10<sup>−4</sup> vs. −3.9×10<sup>−4</sup>, <xref ref-type="table" rid="pone-0015323-t002">Table 2</xref>). The biomass hierarchy among size groups was similar between the 2 studies: macrofauna dominated the shelves and bacteria and meiofauna dominated the abyssal plains (<xref ref-type="fig" rid="pone-0015323-g002">Figure 2</xref>). The only apparent difference was a cross of the regression lines between macrofauna and megafauna at ∼6000 m depth, or a reversal of their biomass hierarchies. The lower y-intercepts and steeper slopes for the meiofauna and macrofauna suggested that the biomass levels were lower in this study than in the previous synthesis. The rate of declining biomass with depth was highest for macrofauna, followed by megafauna and meiofauna. Except for meiofauna, the y-intercept of the abundance-depth regressions were slightly lower in this study (13.3 vs. 14.1 for bacteria; 3.5 vs. 3.6 for macrofauna; −0.7 vs. −0.3 for megafauna.) while the slopes were more gradual (−2×10<sup>−4</sup> vs. −2.8×10<sup>−4</sup> for macrofauna; −2.8×10<sup>−4</sup> vs. −3.7×10<sup>−4</sup> for megafauna, <xref ref-type="table" rid="pone-0015323-t002">Table 2</xref>). The rate of declining abundance with depth was sharpest for megafauna, followed by macrofauna and meiofauna (<xref ref-type="fig" rid="pone-0015323-g003">Figure 3</xref>, <xref ref-type="table" rid="pone-0015323-t002">Table 2</xref>). Average body size for each size class was calculated as biomass divided by abundance. The average sizes of all 3 large groups showed significant depth dependency with the rates of declining mean size with depth being the most rapid for macrofauna, followed by megafauna and meiofauna (<xref ref-type="table" rid="pone-0015323-t002">Table 2</xref> and <xref ref-type="fig" rid="pone-0015323-g004">Figure 4</xref>). The rapid decline in average macrofaunal size was likely overestimated at abyssal depths, because the regression line was apparently higher at shelf depths due to extremely large values (&gt;10 mg C individual<sup>−1</sup>) at high latitude areas.</p>
+        <fig id="pone-0015323-g002" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0015323.g002</object-id>
+          <label>Figure 2</label>
+          <caption>
+            <title>Biomass as a function of depth for bacteria, meiofauna, macrofauna, and megafauna.</title>
+            <p>Biomass was log<sub>10</sub> transformed and the effects of latitude and longitude were removed by partial regression. Figure legend follows Rex et al. <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref> for comparison. References of data source are available in <xref ref-type="supplementary-material" rid="pone.0015323.s004">Appendix S1</xref> and <xref ref-type="supplementary-material" rid="pone.0015323.s001">File S1</xref>. Regression equations and test statistics for each size categories are available in <xref ref-type="table" rid="pone-0015323-t002">Table 2</xref>.</p>
+          </caption>
+          <graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.g002" xlink:type="simple"/>
+        </fig>
+        <fig id="pone-0015323-g003" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0015323.g003</object-id>
+          <label>Figure 3</label>
+          <caption>
+            <title>Abundance as a function of depth for bacteria, meiofauna, macrofauna, and megafauna.</title>
+            <p>Abundance was log<sub>10</sub> transformed and the effects of latitude and longitude were removed by partial regression. Figure legend follows Rex et al. <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref> for comparison. References of data source are available in <xref ref-type="supplementary-material" rid="pone.0015323.s004">Appendix S1</xref> and <xref ref-type="supplementary-material" rid="pone.0015323.s001">File S1</xref>. Regression equations and test statistics for each size category are available in <xref ref-type="table" rid="pone-0015323-t002">Table 2</xref>.</p>
+          </caption>
+          <graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.g003" xlink:type="simple"/>
+        </fig>
+        <fig id="pone-0015323-g004" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0015323.g004</object-id>
+          <label>Figure 4</label>
+          <caption>
+            <title>Average body size as a function of depth for bacteria, meiofauna, macrofauna, and megafauna.</title>
+            <p>The average size was calculated by dividing biomass with abundance. The body size was log<sub>10</sub> transformed and the effects of latitude and longitude were removed by partial regression. Figure legend follows Rex et al. <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref> for comparison. References of data source are available in <xref ref-type="supplementary-material" rid="pone.0015323.s004">Appendix S1</xref> and <xref ref-type="supplementary-material" rid="pone.0015323.s001">File S1</xref>. Regression equations and test statistics for each size categories are available in <xref ref-type="table" rid="pone-0015323-t002">Table 2</xref>.</p>
+          </caption>
+          <graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.g004" xlink:type="simple"/>
+        </fig>
+        <table-wrap id="pone-0015323-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0015323.t002</object-id><label>Table 2</label><caption>
+            <title>Regression analyses of biomass, abundance, and body size against depth for bacteria, meiofauna, macrofauna, and megafauna.</title>
+          </caption><!--===== Grouping alternate versions of objects =====--><alternatives><graphic id="pone-0015323-t002-2" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.t002" xlink:type="simple"/><table>
+            <colgroup span="1">
+              <col align="left" span="1"/>
+              <col align="center" span="1"/>
+              <col align="center" span="1"/>
+              <col align="center" span="1"/>
+            </colgroup>
+            <thead>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Regression</td>
+                <td align="left" colspan="1" rowspan="1">Equations</td>
+                <td align="left" colspan="1" rowspan="1">N</td>
+                <td align="left" colspan="1" rowspan="1">F</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left" colspan="2" rowspan="1">
+                  <bold>Log10 Biomass (mg C m<sup>−2</sup>)</bold>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Bacteria</td>
+                <td align="left" colspan="1" rowspan="1">Y = 2.4−(1.22e−06) X</td>
+                <td align="left" colspan="1" rowspan="1">525</td>
+                <td align="left" colspan="1" rowspan="1">&lt;0.01 n.s.</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Meiofauna</td>
+                <td align="left" colspan="1" rowspan="1">Y = 2.18−(2.39e−04) X</td>
+                <td align="left" colspan="1" rowspan="1">689</td>
+                <td align="left" colspan="1" rowspan="1">244.1<xref ref-type="table-fn" rid="nt103">***</xref></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Macrofauna</td>
+                <td align="left" colspan="1" rowspan="1">Y = 3.05−(5.15e−04) X</td>
+                <td align="left" colspan="1" rowspan="1">2552</td>
+                <td align="left" colspan="1" rowspan="1">1885<xref ref-type="table-fn" rid="nt103">***</xref></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Megafauna</td>
+                <td align="left" colspan="1" rowspan="1">Y = 1.81−(3.07e−04) X</td>
+                <td align="left" colspan="1" rowspan="1">282</td>
+                <td align="left" colspan="1" rowspan="1">136.2<xref ref-type="table-fn" rid="nt103">***</xref></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="2" rowspan="1">
+                  <bold>Log 10 Abundance (individual m<sup>−1</sup>)</bold>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Bacteria</td>
+                <td align="left" colspan="1" rowspan="1">Y = 13.27−(3.58e−05) X</td>
+                <td align="left" colspan="1" rowspan="1">515</td>
+                <td align="left" colspan="1" rowspan="1">2.82 n.s.</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Meiofauna</td>
+                <td align="left" colspan="1" rowspan="1">Y = 5.73−(1.25e−04) X</td>
+                <td align="left" colspan="1" rowspan="1">1148</td>
+                <td align="left" colspan="1" rowspan="1">184.7<xref ref-type="table-fn" rid="nt103">***</xref></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Macrofauna</td>
+                <td align="left" colspan="1" rowspan="1">Y = 3.5−(1.95e−04) X</td>
+                <td align="left" colspan="1" rowspan="1">2734</td>
+                <td align="left" colspan="1" rowspan="1">618.2<xref ref-type="table-fn" rid="nt103">***</xref></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Megafauna</td>
+                <td align="left" colspan="1" rowspan="1">Y = −0.68−(2.82e−04) X</td>
+                <td align="left" colspan="1" rowspan="1">253</td>
+                <td align="left" colspan="1" rowspan="1">32.92<xref ref-type="table-fn" rid="nt103">***</xref></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="2" rowspan="1">
+                  <bold>Log 10 Body Size(µg C individual<sup>−1</sup>)</bold>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Bacteria</td>
+                <td align="left" colspan="1" rowspan="1">Y = −7.79+(1.35e−05) X</td>
+                <td align="left" colspan="1" rowspan="1">451</td>
+                <td align="left" colspan="1" rowspan="1">2.28 n.s.</td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Meiofauna</td>
+                <td align="left" colspan="1" rowspan="1">Y = −0.61−(6.81e−05) X</td>
+                <td align="left" colspan="1" rowspan="1">616</td>
+                <td align="left" colspan="1" rowspan="1">27.6<xref ref-type="table-fn" rid="nt103">***</xref></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Macrofauna</td>
+                <td align="left" colspan="1" rowspan="1">Y = 2.62−(3.63e−04) X</td>
+                <td align="left" colspan="1" rowspan="1">2393</td>
+                <td align="left" colspan="1" rowspan="1">637.3<xref ref-type="table-fn" rid="nt103">***</xref></td>
+              </tr>
+              <tr>
+                <td align="left" colspan="1" rowspan="1">Megafauna</td>
+                <td align="left" colspan="1" rowspan="1">Y = 6.17−(1.57e−04) X</td>
+                <td align="left" colspan="1" rowspan="1">136</td>
+                <td align="left" colspan="1" rowspan="1">43.58<xref ref-type="table-fn" rid="nt103">***</xref></td>
+              </tr>
+            </tbody>
+          </table></alternatives><table-wrap-foot>
+            <fn id="nt102">
+              <label/>
+              <p>Response variables are log<sub>10</sub> transformed biomass (mg C m<sup>−2</sup>), abundance (individual m<sup>−1</sup>), and body size (µg C individual<sup>−1</sup>). Predictor is depth (m). Scatter plots of the response variables against predictor and regression lines are given in <xref ref-type="fig" rid="pone-0015323-g002">Figures 2</xref>, <xref ref-type="fig" rid="pone-0015323-g003">3</xref>, <xref ref-type="fig" rid="pone-0015323-g004">4</xref>. Abbreviations: N =  number of samples;</p>
+            </fn>
+            <fn id="nt103">
+              <label/>
+              <p>***denotes P&lt;0.001; n.s.  =  not significant.</p>
+            </fn>
+          </table-wrap-foot></table-wrap>
+      </sec>
+      <sec id="s3b">
+        <title>Random Forests</title>
+        <p>On average, RF models explained 78% to 81% of total variance (R<sup>2</sup>) for bacteria, meiofauna, and macrofauna biomass (<xref ref-type="fig" rid="pone-0015323-g005">Figure 5a</xref>). Compared to the small size classes, the RF performance was subordinate for megafauna, invertebrates, and fishes, in which the models only explained 63% to 68% of the observed biomass variance. The RF algorithm appears to perform better for abundance with the models explaining 77% to 88% of total variance for each size class. The RF performance among different simulation scenarios was generally stable (S.D ≤1%). The variability was only slightly higher for macrofauna and invertebrates with S.D. between 2% to 3%. A scatter plot between observed and predicted biomass (<xref ref-type="fig" rid="pone-0015323-g005">Figure 5b</xref>) suggests that the OOB predictions were in proper scale (regression slopes  = ∼1) with modest deviations from the observations.</p>
+        <fig id="pone-0015323-g005" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0015323.g005</object-id>
+          <label>Figure 5</label>
+          <caption>
+            <title>Random Forests (RF) performance on biomass and abundance of each size class.</title>
+            <p>(a) Mean percent variance explained by the RF model ± S.D. (error bar) from 4 RF simulations. Abbreviations: Bact  =  bacteria, Meio  =  meiofauna, Macro  =  macrofauna, Mega  =  megafauna, and invert  =  invertebrates. (b) Observed against OOB predicted biomass from the 4 RF simulations. Color legends indicate 4 major size classes.</p>
+          </caption>
+          <graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.g005" xlink:type="simple"/>
+        </fig>
+        <p>We combined predictor importance from bacteria, meiofauna, macrofauna, and megafauna (<xref ref-type="supplementary-material" rid="pone.0015323.s007">Figure S3</xref>) to examine the predictor importance on total benthic biomass. This was only done for the biomass datasets because they were converted to a unified currency in mg C per square meter. With the exception of bacteria, depth was ranked highly important for the 3 larger size classes (<xref ref-type="fig" rid="pone-0015323-g006">Figure 6</xref>). To our surprise, neither net primary production (vgpm, cbpm) nor flux of detrital organic matter to seafloor (det.c.flx, det.n.flx) was considered the most important for the total benthic biomass. Instead, water depth and the data inputs for the NPP models (carbon, bbp, sst, par, mld, chl) were among the top 10 most important variables. Nonetheless, when the predictor importance was examined for the size classes, NPP models (vgpm, cbpm) had considerable importance for bacterial, meiofaunal, and macrofaunal biomass but appeared less important for megafaunal biomass. Decadal mean and S.D. of the predictors generally ranked in similar orders suggesting high correlation between them; however, it may also suggest that overall levels and seasonal fluctuations of the predictors were both important in predicting the biomass. The predictors associated with water column processes (<xref ref-type="table" rid="pone-0015323-t001">Table 1</xref>) appeared not significant to the total biomass; however, the decadal mean of water column-integrated zooplankton (zoop.mean), total organic matter (int.c.mean, int.n.mean), and detrital organic matter (det.c.mean, det.n.mean), were among the most important predictors for megafaunal standing stocks, especially for abundance (see <xref ref-type="supplementary-material" rid="pone.0015323.s007">Figure S3d</xref> and <xref ref-type="supplementary-material" rid="pone.0015323.s008">Figure S4d</xref>). Annual mean salinity (salin.mean) was the only bottom water property ranked within the top 10 most important predictors for the total biomass (<xref ref-type="fig" rid="pone-0015323-g006">Figure 6</xref>).</p>
+        <fig id="pone-0015323-g006" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0015323.g006</object-id>
+          <label>Figure 6</label>
+          <caption>
+            <title>Mean predictor Importance on total seafloor biomass.</title>
+            <p>The predictor importance of major size classes were combined (<xref ref-type="supplementary-material" rid="pone.0015323.s007">Figure S3</xref>) and mean ± S.D. (error bar) was calculated from 4 RF simulations. The top 20 most important variables are shown in descending order. Increase of mean square error (MSE<sub>OOB</sub>) indicates the contribution to RF prediction accuracy for that variable.</p>
+          </caption>
+          <graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.g006" xlink:type="simple"/>
+        </fig>
+      </sec>
+      <sec id="s3c">
+        <title>Patterns of Predicted Biomass</title>
+        <p>No biomass predictions were given near the northern tip of the Arctic Ocean and part of the Antarctic shores due to a lack of SeaWiFS satellite data as a result of permanent sea ice cover (<xref ref-type="supplementary-material" rid="pone.0015323.s006">Figure S2</xref>). The predictions of major size classes (<xref ref-type="supplementary-material" rid="pone.0015323.s009">Figure S5a</xref>, b, c, d) were combined to estimate the total benthic biomass. The maximum biomass of 2.6 to 10 g C per square meter occurred on the shelves of the north frigid zones (e.g. Kara Sea, Siberian Sea, and Chukchi/Bering Sea) and temperate areas (e.g. Yellow sea and North Sea, see <xref ref-type="fig" rid="pone-0015323-g007">Figure 7</xref>, red color). These predictions however were lower than the empirical maximum found in the Chukchi/Bering Sea, where the infauna biomass as high as 40 to 100 g C m<sup>−2</sup> were reported <xref ref-type="bibr" rid="pone.0015323-Grebmeier1">[31]</xref>. The discrepancy is probably associated with high prediction uncertainty in the areas (C.V.  = 15% to 22%, <xref ref-type="fig" rid="pone-0015323-g008">Figure 8</xref>) or unexplained variability in the models (<xref ref-type="fig" rid="pone-0015323-g005">Figure 5a</xref>). The weaker maximum (orange color) between 1.3 to 2.5 g C per square meter occurred on the polar to temperate shelves and subtropical coastal areas (e.g. East/South China Sea, Arabian Sea, and Persian Gulf). The lowest biomass prediction between 30 and 80 mg C per square meter occurred on the abyssal plains of the Pacific, Atlantic, and Indian Ocean; however, relatively higher biomass was predicted on the seafloor of the east side of Pacific and Atlantic basins under the productive equatorial divergence and coastal upwelling areas <xref ref-type="bibr" rid="pone.0015323-Williams1">[32]</xref>. For these largest ocean areas, the model outputs were stable among 4 RF simulations with S.D. less than 10% of the mean predictions (<xref ref-type="fig" rid="pone-0015323-g008">Figure 8</xref>, light blue to dark blue colors). Any high uncertainties were usually associated with high predicted biomass. The Southern Ocean for example had the highest uncertainty with S.D. between 15% and 26% of the mean (yellow to red class), where most of the uncertainty was derived from the unstable predictions for macrofauna biomass (<xref ref-type="supplementary-material" rid="pone.0015323.s010">Figure S6</xref>). The S.D. of some Arctic shelves were slightly lower than the Southern Ocean, mostly between 11% and 18% of the mean (green to yellow class, <xref ref-type="fig" rid="pone-0015323-g008">Figure 8</xref>). The log<sub>10</sub> predictied biomass (mg C m<sup>−2</sup>) and abundance (individual m<sup>−2</sup>) for each size class are available in <xref ref-type="supplementary-material" rid="pone.0015323.s002">File S2</xref> and <xref ref-type="supplementary-material" rid="pone.0015323.s003">File S3</xref>, respectively. Global maps showing the mean of abundance prediction and coefficient of variation for each size class are given in <xref ref-type="supplementary-material" rid="pone.0015323.s011">Figure S7</xref> and <xref ref-type="supplementary-material" rid="pone.0015323.s012">Figure S8</xref>, respectively.</p>
+        <fig id="pone-0015323-g007" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0015323.g007</object-id>
+          <label>Figure 7</label>
+          <caption>
+            <title>Distribution of seafloor biomass predictions.</title>
+            <p>The total biomass was combined from predictions of bacteria, meiofauna, macrofauna, and megafauna biomass (<xref ref-type="supplementary-material" rid="pone.0015323.s009">Figure S5a</xref>, b, c, d). Map was smoothed using Inverse Distance Weighting interpolation to 0.1 degree resolution and displayed in logarithm scale (base of 10).</p>
+          </caption>
+          <graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.g007" xlink:type="simple"/>
+        </fig>
+        <fig id="pone-0015323-g008" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0015323.g008</object-id>
+          <label>Figure 8</label>
+          <caption>
+            <title>Coefficient of variation (C.V.) for mean seafloor biomass prediction.</title>
+            <p>The C.V. was computed as S.D./mean * 100% from 4 RF simulations. Map was smoothed using Inverse Distance Weighting interpolation to 0.1 degree resolution.</p>
+          </caption>
+          <graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.g008" xlink:type="simple"/>
+        </fig>
+        <p>A total of 110.3±48.2 (Mean ± S.D. from 4 RF simulations) megatons of living carbon biomass were estimated based on the global integral of the predicted map cells (<xref ref-type="fig" rid="pone-0015323-g007">Figure 7</xref>), in which bacteria, meiofauna, macrofauna, and megafauna contributed 31.4%, 12.9%, 50.7%, and 5% of the global integral, respectively. Previous workers estimated that global POC flux to the seafloor was 3.76 to 3.91 megaton C day<sup>−1</sup> <xref ref-type="bibr" rid="pone.0015323-Yool1">[25]</xref>, <xref ref-type="bibr" rid="pone.0015323-Dunne1">[33]</xref> and carbon burial was about 0.82 megaton C day<sup>−1</sup> <xref ref-type="bibr" rid="pone.0015323-Dunne1">[33]</xref>. By dividing the total mass by the flux <xref ref-type="bibr" rid="pone.0015323-Rowe3">[34]</xref>, <xref ref-type="bibr" rid="pone.0015323-Rowe4">[35]</xref>, we estimated that the mean residence time for the seafloor living carbon was 36.6±16 days (mean ±S.D.). Generally, the predictions were highest on the continental shelves, which account for 21.1% of the global integral biomass but cover merely 5.9% of the total seafloor area (≤200 m water depth, <xref ref-type="fig" rid="pone-0015323-g009">Figure 9a</xref>). Water depths deeper than 3000 m harbor more then 50% of the global benthic biomass due to their vast area (covering &gt;75% of seafloor). The predictions were also high at high latitudes (&gt; 60°N or S) and the tropical ocean (&lt;23.5°N or S) of the northern and southern hemisphere, in which the biomass contributed 25.4% and 28.8% of the global integral on 13.4% and 40.7% of the ocean area, respectively (<xref ref-type="fig" rid="pone-0015323-g009">Figure 9b</xref>). As a rule of thumb, the total biomass of all size classes (except for bacteria) dissipates along the continental margins to the abyssal plains (<xref ref-type="fig" rid="pone-0015323-g002">Figure 2</xref>) but this is accompanied by a major shift in size classes in the predictions, with the biomass composition changing from metazoan dominated (meiofauna + macrofauna) for the first couple hundred-meter zonal integrals to bacteria dominated on the abyssal plain (<xref ref-type="fig" rid="pone-0015323-g009">Figure 9a</xref>). Along the latitudinal zonal integrals, the biomass composition also shifted from the majority of large-size macrofauna at high latitudes to the small-size meiofauna and bacteria dominated at the tropics (<xref ref-type="fig" rid="pone-0015323-g009">Figure 9b</xref>).</p>
+        <fig id="pone-0015323-g009" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0015323.g009</object-id>
+          <label>Figure 9</label>
+          <caption>
+            <title>Global zonal integrals of benthic biomass (bars) in unit of megaton carbon based on 100-m bins (a) and 2-latitude-degree bins (b).</title>
+            <p>The blue line shows integrals of seafloor area in unit of square kilometer. Color legends indicate 4 major size classes.</p>
+          </caption>
+          <graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.g009" xlink:type="simple"/>
+        </fig>
+        <p>Regional variability among the major ocean basin is apparent when predicted biomass was plotted against depth (<xref ref-type="fig" rid="pone-0015323-g010">Figure 10</xref>). Generally, the declining trends of biomass with depth were similar but the overall levels differed by basin, with the predictions bounded between the higher end of the Southern Ocean and the lower end of the Mediterranean Sea (<xref ref-type="fig" rid="pone-0015323-g010">Figure 10h</xref>). In the Atlantic and Arctic Ocean, high density at bathyal depths near the upper end of the biomass–depth distribution (<xref ref-type="fig" rid="pone-0015323-g010">Figure 10a, e</xref>) appeared responsible for elevated biomass levels above the Pacific, Indian Ocean, and Gulf of Mexico (<xref ref-type="fig" rid="pone-0015323-g010">Figure 10</xref>). These high values corresponded to the high biomass predictions in the North Atlantic to Arctic Ocean (<xref ref-type="fig" rid="pone-0015323-g007">Figure 7</xref>) under the productive subpolar gyre north of the Gulf Stream <xref ref-type="bibr" rid="pone.0015323-Williams1">[32]</xref>. The high density at the bottom of the biomass-depth distribution for the Atlantic and Pacific Oceans (<xref ref-type="fig" rid="pone-0015323-g010">Figure 10a, b</xref>) illustrates the low predicted biomass on the vast abyssal plains. In the Indian Ocean, the extraordinary high predicted values between ∼1200 to 3000-m water depths (<xref ref-type="fig" rid="pone-0015323-g010">Figure 10c</xref>) single out the Oman and Pakistan Margin, where the benthic biomass between 1.3 and 2.5 g C per square meter is as high as continental shelf values (<xref ref-type="fig" rid="pone-0015323-g007">Figure 7</xref>, orange color). We believe that the high predictions derive mainly from the monsoon dynamics and seasonal fluctuation of export POC flux <xref ref-type="bibr" rid="pone.0015323-Pfannkuche1">[36]</xref> rather than the mid-water Oxygen Minimum Zones (OMZ), because resolution of our bottom oxygen data (<xref ref-type="table" rid="pone-0015323-t001">Table 1</xref>) is probably not sufficient to detect OMZ influences. At hadal depths (&gt;6000 m), the biomass predictions were meager in general (&lt;0.2 g C m<sup>−2</sup>, <xref ref-type="fig" rid="pone-0015323-g010">Figure 10a, b</xref>); however, relatively high values (0.5∼0.7 g C m<sup>−2</sup>) were predicted near the Kurile-Kamchatka Trench of the Northwest Pacific Basin (<xref ref-type="fig" rid="pone-0015323-g010">Figure 10b</xref>) and the South Sandwich Trench near the southern tip of the South America and Antarctic Peninsula (<xref ref-type="fig" rid="pone-0015323-g010">Figure 10d</xref>).</p>
+        <fig id="pone-0015323-g010" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0015323.g010</object-id>
+          <label>Figure 10</label>
+          <caption>
+            <title>Seafloor biomass predictions against depths for the (a) Atlantic Ocean, (b) Pacific Ocean, (c) Indian Ocean, (d) Southern Ocean, (e) Arctic Ocean, (f) Mediterranean Sea, and (g) Gulf of Mexico.</title>
+            <p>Blue color gradient indicates kernel density estimates. Panel (h) shows the regional predicted trends based on smoothing spline function. Color legend indicates the spline trends for each basin.</p>
+          </caption>
+          <graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.g010" xlink:type="simple"/>
+        </fig>
+      </sec>
+    </sec>
+    <sec id="s4">
+      <title>Discussion</title>
+      <sec id="s4a">
+        <title>Observed and Predicted Patterns</title>
+        <p>In this study, classic log-linear declines of seafloor biomass and abundance with depth were demonstrated for meiofauna, macrofauna, and megafauna <xref ref-type="bibr" rid="pone.0015323-Rowe2">[7]</xref>, <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref>, <xref ref-type="bibr" rid="pone.0015323-Soltwedel1">[9]</xref>. These widely recognized patterns have been attributed to the decreasing quantity and quality of sinking phytodetritus with increasing depth and distance from the productive coastal waters and river runoff <xref ref-type="bibr" rid="pone.0015323-Rowe2">[7]</xref>, <xref ref-type="bibr" rid="pone.0015323-Gage3">[37]</xref>. Although the selection pressure (food limitation) may be the same, responses differed among the size groups along the depth gradients, showing disparate rates of declining biomass and shifts of biomass hierarchy from macrofauna domination on the shelves and upper slope to meiofauna and bacteria domination on the abyssal plains <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref>, <xref ref-type="bibr" rid="pone.0015323-Rowe3">[34]</xref>, <xref ref-type="bibr" rid="pone.0015323-Rowe4">[35]</xref>, <xref ref-type="bibr" rid="pone.0015323-Heip1">[38]</xref>. <xref ref-type="fig" rid="pone-0015323-g004">Figure 4</xref> suggests that these observed biomass patterns among size groups are governed by the rate of declining average body size rather than by the rate of declining abundance with depth. The decrease of animal size in the deep-sea has been explained by energy constraints and the need to maintain viable density for successful reproduction <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref>, <xref ref-type="bibr" rid="pone.0015323-Thiel1">[39]</xref>. Recent evidence from terrestrial environments also suggests a potential link between the animal body size and food quality <xref ref-type="bibr" rid="pone.0015323-Ho1">[40]</xref>. It has been suggested that the macrofauna may compete for fresh settled phytodetritus with bacteria <xref ref-type="bibr" rid="pone.0015323-Sweetman1">[41]</xref>, <xref ref-type="bibr" rid="pone.0015323-vanNugteren1">[42]</xref>, <xref ref-type="bibr" rid="pone.0015323-Witte1">[43]</xref>, <xref ref-type="bibr" rid="pone.0015323-Rowe5">[44]</xref>, while the meiofauna may prefer bacterial carbon over phytodetitus <xref ref-type="bibr" rid="pone.0015323-Ingels1">[45]</xref>. Hence, the rapid decline of macrofaual average size with depth could be related to the exponential decrease of sinking detrital carbon or the refractory organic matter in the deep-sea sediments. The meiofauna, on the contrary, may be less affected by the deterioration of the food influx and experienced a relatively gradual decline of average size with depth; however, the actual causes of this discrepancy in size-structure remain unclear.</p>
+        <p>Interestingly, our predicted biomass not only has captured the shifts of dominant size groups with depth but also with latitude (<xref ref-type="fig" rid="pone-0015323-g009">Figure 9</xref>), supporting the dominance of macrofaunal biomass <xref ref-type="bibr" rid="pone.0015323-Grebmeier1">[31]</xref>, <xref ref-type="bibr" rid="pone.0015323-Clough1">[46]</xref> and meager importance of bacteria at the high latitudes <xref ref-type="bibr" rid="pone.0015323-Rowe6">[47]</xref> due, potentially, to strong benthic-pelagic coupling, short food chain, and weaker microbial loop in the overlying water <xref ref-type="bibr" rid="pone.0015323-Kirchman1">[48]</xref>, <xref ref-type="bibr" rid="pone.0015323-Grebmeier2">[49]</xref>. Other intriguing features from our predictions include the apparent increase of bacterial, meiofaunal, and decrease of macrofaunal biomass integrals from high latitudes toward the tropical oceans (<xref ref-type="fig" rid="pone-0015323-g009">Figure 9b</xref>). In fact, the increasing bacterial and meiofaunal integrals were a function of the increasing cell areas toward the equator due to the map projection, which in turn makes the decrease of macrofaunal integrals seemingly even more convincing. This cross-latitude comparison however could be biased by a potential interaction with water depth, because the tropical oceans comprise many deep basins and the high latitudes, such as Chukchi/Bering Sea, have extended shelf areas. We tested this by using partial regression to statistically remove the effect of water depth and longitude. When depth was held constant, macrofaunal biomass could be fitted to a positive parabolic function of latitude (R<sup>2</sup> = 0.17, P&lt;0.001), supporting the elevated macrofaunal biomass at high latitudes <xref ref-type="bibr" rid="pone.0015323-Rowe2">[7]</xref>.</p>
+        <p>From a global perspective, the results of regressions (<xref ref-type="fig" rid="pone-0015323-g002">Figures 2</xref>, <xref ref-type="fig" rid="pone-0015323-g003">3</xref>, <xref ref-type="fig" rid="pone-0015323-g004">4</xref>) reinforced the weak to no depth-dependency of bacterial standing stocks <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref>, <xref ref-type="bibr" rid="pone.0015323-Deming2">[50]</xref>, <xref ref-type="bibr" rid="pone.0015323-Dixon1">[51]</xref>. Despite immense variation in declining POC flux at depth, the surface sediments supported a remarkably constant bacterial stock spanning only ∼2 orders of magnitude difference worldwide (30 to 2220 mg C m<sup>−2</sup> and 1.3×10<sup>12</sup> to 1.9×10<sup>14</sup> cells m<sup>−2</sup>, 5th to 95th percentile, n = 525); nonetheless, regional and local studies in our database do indicate dependency of bacterial standing stocks with depth or POC flux <xref ref-type="bibr" rid="pone.0015323-Deming1">[10]</xref>, <xref ref-type="bibr" rid="pone.0015323-Deming3">[52]</xref>, <xref ref-type="bibr" rid="pone.0015323-Lochte1">[53]</xref>. The high bacterial stocks at the supposedly depauperate abyssal depths have been attributed to their barophilic adaption <xref ref-type="bibr" rid="pone.0015323-Deming4">[54]</xref>, <xref ref-type="bibr" rid="pone.0015323-Patching1">[55]</xref>. As bacteria are transported with phytoditrital aggregates to the deep sea <xref ref-type="bibr" rid="pone.0015323-Lochte2">[56]</xref>, a large number of the bacteria could be dormant or inactive because of the extreme pressure and frigid temperature <xref ref-type="bibr" rid="pone.0015323-Deming5">[57]</xref>, <xref ref-type="bibr" rid="pone.0015323-Quric1">[58]</xref>, while the active microbes are supported by carbon deposition flux <xref ref-type="bibr" rid="pone.0015323-Witte1">[43]</xref>, viral lysis of the infected prokaryotes <xref ref-type="bibr" rid="pone.0015323-Danovaro1">[59]</xref>, extracellular enzymatic activities <xref ref-type="bibr" rid="pone.0015323-Boetius1">[60]</xref>, <xref ref-type="bibr" rid="pone.0015323-Vetter1">[61]</xref>, and benthic metazoan sloppy feeding <xref ref-type="bibr" rid="pone.0015323-Rowe5">[44]</xref>. It is worth noting that many studies have applied a uniformed conversion factor to estimate the biomass from bacterial numbers, which may be the main reason that no statistical relationship was detected between the bacterial cell size and water depth (<xref ref-type="fig" rid="pone-0015323-g004">Figure 4</xref>). Based on direct measurements of the cell volume over a wide range of water depths in the northern Gulf of Mexico, Deming and Carpenter <xref ref-type="bibr" rid="pone.0015323-Deming3">[52]</xref> concluded that the greater ocean depths generally harbored smaller bacterial cells despite the abundance remaining constant. That is, the constancy of bacterial biomass with depth that we observed here could be an artifact because the cell volumes were not measured directly at all depths. To our surprise, even though no depth-dependency was evident for the bacterial standing stocks, the RF algorithm performed well in predicting the bacterial biomass (R<sup>2</sup> = 79±0.6%) and abundance (R<sup>2</sup> = 81±1.2%, mean±S.D, n = 4). High predictor importance of sea surface temperature (sst), irradiance (par), mixed layer depth (mld), and carbon-based primary production model (cbpm) support the idea that the sedimentary bacterial biomass may be imported in the form of sinking particles <xref ref-type="bibr" rid="pone.0015323-Deming4">[54]</xref>, <xref ref-type="bibr" rid="pone.0015323-Lochte2">[56]</xref>. The high bacterial biomass predictions on the abyssal plains of semi-enclosed basins, such as the Gulf of Mexico, Arabian Sea, and East Mediterranean (<xref ref-type="supplementary-material" rid="pone.0015323.s009">Figure S5a</xref>), supported potential lateral advection of detritus from the margins due to relatively large area of shelves and margins compared to basin volume <xref ref-type="bibr" rid="pone.0015323-Deming3">[52]</xref>.</p>
+      </sec>
+      <sec id="s4b">
+        <title>Anomalies not explained by Random Forests</title>
+        <p>Although multiple predictors were obtained to cover as many aspects and processes that could affect the distribution of benthic standing stocks, around 19% to 36% of observed variances are still unexplainable in the current RF models. Some important predictors, such as sediment grain size <xref ref-type="bibr" rid="pone.0015323-Flach1">[62]</xref>, organic composition <xref ref-type="bibr" rid="pone.0015323-Danovaro2">[63]</xref>, bioturbation <xref ref-type="bibr" rid="pone.0015323-Clough2">[64]</xref>, <xref ref-type="bibr" rid="pone.0015323-Smith1">[65]</xref>, and community oxygen demand <xref ref-type="bibr" rid="pone.0015323-Rowe7">[66]</xref>, <xref ref-type="bibr" rid="pone.0015323-Smith2">[67]</xref>, were not included due to sparse data availability; others such as oxygen minimums <xref ref-type="bibr" rid="pone.0015323-Levin1">[68]</xref>, <xref ref-type="bibr" rid="pone.0015323-Quiroga1">[69]</xref> or abrupt changes in thermal dynamic regimes <xref ref-type="bibr" rid="pone.0015323-Narayanaswamy1">[70]</xref>, could also be left undetected due to the coarse resolution in available hydrographic data. Nevertheless, the largest unexplained variability was probably derived from our non-contemporaneous predictors that do not account for the seasonal or inter-annual changes of benthic standing stocks as a result of climate-induced variations on productivity and export POC flux <xref ref-type="bibr" rid="pone.0015323-Smith3">[71]</xref>, <xref ref-type="bibr" rid="pone.0015323-Billett1">[72]</xref>. The seafloor organisms depend on diverse sources of energy <xref ref-type="bibr" rid="pone.0015323-Rowe8">[73]</xref>, including large food falls <xref ref-type="bibr" rid="pone.0015323-Smith4">[74]</xref>, hydrocarbons from cold seeps and hydrothermal vents <xref ref-type="bibr" rid="pone.0015323-Brooks1">[75]</xref>, <xref ref-type="bibr" rid="pone.0015323-VanDover1">[76]</xref>, lateral resource advection from continental margins <xref ref-type="bibr" rid="pone.0015323-Rowe9">[77]</xref>, accumulation of organic matter in submarine canyons <xref ref-type="bibr" rid="pone.0015323-Rowe10">[78]</xref> and trenches <xref ref-type="bibr" rid="pone.0015323-Danovaro3">[79]</xref>, and rapid energy transfers on seamounts <xref ref-type="bibr" rid="pone.0015323-Boehlert1">[80]</xref>. In addition, benthic foraminifera, sometimes accounting for more than 50% of eukaryote biomass <xref ref-type="bibr" rid="pone.0015323-Gooday1">[81]</xref>, are not included in our datasets. These anomalies are not in the scope of this analysis and should be estimated separately elsewhere in a global context. For example, at the head of the New Zealand's Kaikoura Canyon (data not in the database), the extremely high macrofauna and megafauna biomass (89 g C m<sup>−2</sup>) was about 100-fold more than our total biomass prediction (0.94 g C m<sup>−2</sup>) <xref ref-type="bibr" rid="pone.0015323-DeLeo1">[82]</xref>. Within the datasets, extraordinary high “total biomass” was also reported at the head of the Mississippi Submarine Canyon <xref ref-type="bibr" rid="pone.0015323-Rowe4">[35]</xref> due to dominance of a “carpet of worms” <xref ref-type="bibr" rid="pone.0015323-Soliman1">[83]</xref>. The observed biomass was still more than 4-fold higher than our prediction. This is partially because the Gulf of Mexico basin had very high background bacterial biomass <xref ref-type="bibr" rid="pone.0015323-Deming3">[52]</xref>. When the bacteria component is removed, the prediction still under estimates the observed biomass by about 50%. Hence, the total living carbon prediction in this study (<xref ref-type="fig" rid="pone-0015323-g007">Figure 7</xref>) should be considered as a conservative estimate for the soft bottom communities solely reling on sinking phytodetritus, with the anomalies causing the observed biomass to deviate from this baseline (<xref ref-type="fig" rid="pone-0015323-g005">Figure 5b</xref>).</p>
+      </sec>
+      <sec id="s4c">
+        <title>Predictor Importance</title>
+        <p>We tested the RF algorithm using only the primary productivity predictors (decadal mean and S.D. of chl, sst, par, bbp, mld, growth, carbon, vgpm, and cbpm) and depth (<xref ref-type="table" rid="pone-0015323-t001">Table 1</xref>). We found that the reduced models only experienced modest deterioration in performance (R<sup>2</sup><sub>reduced</sub>  = 75%–80.3% for biomass of 3 small size classes and R<sup>2</sup><sub>reduced</sub>  = 63% for megafauna biomass; R<sup>2</sup><sub>reduced</sub>  = 76.3%–80.6% for abundance of 4 major size classes), suggesting that these productivity/depth predictors alone can explain much of the observed stock variances. It is also evident that these satellite-based ocean color parameters and depth are among the most important predictors when the full RF models were constructed (<xref ref-type="fig" rid="pone-0015323-g006">Figure 6</xref>). Their importance was even greater than the model estimates of export phytodetritus flux (det.c.flx &amp; det.n.flx, <xref ref-type="table" rid="pone-0015323-t001">Table 1</xref>) that have been considered important for benthic communities <xref ref-type="bibr" rid="pone.0015323-Witte1">[43]</xref>, <xref ref-type="bibr" rid="pone.0015323-Lochte2">[56]</xref>, <xref ref-type="bibr" rid="pone.0015323-Smith5">[84]</xref>, <xref ref-type="bibr" rid="pone.0015323-Wei1">[85]</xref>. One possibility is that not all export flux is utilized by the benthos <xref ref-type="bibr" rid="pone.0015323-Rowe4">[35]</xref> and the combination of productivity/depth predictors simply explain the stock variances better; however, the spurious correlations between these predictors could also make them all rank highly important. Strobl et al. <xref ref-type="bibr" rid="pone.0015323-Strobl1">[86]</xref> recommended “Conditional Permutation” while calculating the variable importance to reduce the effect of spurious correlations. We did not attempt this analysis because our focus was on prediction rather than pinpointing the exact contribution of each predictor.</p>
+      </sec>
+      <sec id="s4d">
+        <title>Conclusions</title>
+        <p>The fate of sinking phytodetritus flux to the ocean floor and the energy transfer to the benthos is a complex biogeochemical process. The combination of mechanistic primary productivity models <xref ref-type="bibr" rid="pone.0015323-Behrenfeld1">[23]</xref>, <xref ref-type="bibr" rid="pone.0015323-Westberry1">[24]</xref> and empirical relationship of export POC flux at depth <xref ref-type="bibr" rid="pone.0015323-Pace1">[87]</xref> may not properly reflect the actual benthic food influx and consumption. In this study, we demonstrated that the combination of multivariate predictors and machine-learning algorithm was superior to conventional regression models using only water depth or export POC flux to predict benthic standing stocks <xref ref-type="bibr" rid="pone.0015323-Rex2">[8]</xref>, <xref ref-type="bibr" rid="pone.0015323-Johnson1">[88]</xref>. Conceptually, the RF predicted biomass presented here (<xref ref-type="fig" rid="pone-0015323-g007">Figure 7</xref>) can be seen as non-linear transformation of the surface primary production through a sophisticated decision network and is thus potentially a more realistic reflection of benthic food supply or utilization. Benthic biomass is essential to understand the dynamic processes of global carbon cycling <xref ref-type="bibr" rid="pone.0015323-Rowe11">[89]</xref> and productivity-diversity relationship in the deep sea <xref ref-type="bibr" rid="pone.0015323-Rowe1">[1]</xref>, <xref ref-type="bibr" rid="pone.0015323-Rex1">[2]</xref>. Predictive mapping of this kind can fill the gaps where critical biomass information is lacking, since a true ‘census’ of global living carbon is expensive and practically impossible. Accurate prediction of benthic biomass can facilitate Ecosystem Based Management (EBM) on socioeconomically important species <xref ref-type="bibr" rid="pone.0015323-Pikitch1">[90]</xref>. It is also extremely useful for generating and testing large scale hypotheses (e.g. latitudinal and cross-basin comparison) and planning shipboard surveys. Moreover, the reduced RF models mentioned above can be used to perform fine-scale predictions with high resolution ocean color images (5 arc minute grids) and the global relief model (1 arc minute grids, <xref ref-type="table" rid="pone-0015323-t001">Table 1</xref>), and potentially reveal more heterogeneous biomass patterns at local scale than the current coarse analysis framework. The ocean color/depth predictors also make it possible to do contemporaneous modeling with recent sampling (SeaWiFS data are only available since 1997) or data collected in the future. This study presents an initial framework for archiving the seafloor standing stock data. More training datasets from diverse environments matched in space and time are urgently needed to improve the model performance and prediction accuracy, and perhaps, in due course, the seafloor standing stocks can be now-casted using the current ocean climate or even forecasted under the future climate scenarios <xref ref-type="bibr" rid="pone.0015323-IPCC1">[91]</xref>.</p>
+      </sec>
+    </sec>
+    <sec id="s5">
+      <title>Supporting Information</title>
+      <supplementary-material id="pone.0015323.s001" mimetype="application/vnd.google-earth.kml" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.s001" xlink:type="simple">
+        <label>File S1</label>
+        <caption>
+          <p>Google Earth file for the “CoML fresh biomass database”.</p>
+          <p>(KML)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0015323.s002" mimetype="text/comma-separated-values" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.s002" xlink:type="simple">
+        <label>File S2</label>
+        <caption>
+          <p>Global seafloor biomass predictions. Predicted biomass (mg C m<sup>-2</sup>) is in global 1×1 degree grids. Data fields include latitude, longitude, depth, and biomass of each size class. The biomass data are in logarithm scale (base 10).</p>
+          <p>(CSV)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0015323.s003" mimetype="text/comma-separated-values" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.s003" xlink:type="simple">
+        <label>File S3</label>
+        <caption>
+          <p>Global seafloor abundance predictions. Predicted abundance (individual m-<sup>2</sup>) is in global 1×1 degree grids. Data fields include latitude, longitude, depth, and abundance of each size class. The abundance data are in logarithm scale (base 10).</p>
+          <p>(CSV)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0015323.s004" mimetype="application/msword" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.s004" xlink:type="simple">
+        <label>Appendix S1</label>
+        <caption>
+          <p>The complete list of references for the “CoML Fresh Biomass Database”.</p>
+          <p>(DOC)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0015323.s005" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.s005" xlink:type="simple">
+        <label>Figure S1</label>
+        <caption>
+          <p>Environmental predictors for Random Forest models. Data were logarithm transformed (base 10) and scaled to between 0 (minimum value) and 1 (maximum value). Detail description of the variable is given in <xref ref-type="table" rid="pone-0015323-t001">Table 1</xref>. Abbreviations: mean  =  decadal or annual mean; sd  =  decadal or seasonal standard deviation.</p>
+          <p>(TIFF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0015323.s006" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.s006" xlink:type="simple">
+        <label>Figure S2</label>
+        <caption>
+          <p>Temporal coverage of primary productivity predictors between years of 1998 and 2007. Color ramp shows the sample size from 0 to 120 months of measurements. Detail description of the variable is given in <xref ref-type="table" rid="pone-0015323-t001">Table 1</xref>. Abbreviations: n  =  sample size.</p>
+          <p>(TIFF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0015323.s007" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.s007" xlink:type="simple">
+        <label>Figure S3</label>
+        <caption>
+          <p>Mean predictor Importance for biomass of (a) bacteria, (b) meiofauna, (c) macrofauna, and (d) megafauna. The mean ± S.D. (error bar) were calculated from 4 RF simulations. The top 20 most important variables are shown in descending order. Increase of mean square error (IncMSE) indicates the contribution to RF prediction accuracy for that variable. Detail description of the variable is given in <xref ref-type="table" rid="pone-0015323-t001">Table 1</xref>. Abbreviations: mean  =  decadal or annual mean; sd  =  decadal or seasonal standard deviation.</p>
+          <p>(TIF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0015323.s008" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.s008" xlink:type="simple">
+        <label>Figure S4</label>
+        <caption>
+          <p>Mean predictor Importance for abundance of (a) bacteria, (b) meiofauna, (c) macrofauna, and (d) megafauna. The mean ± S.D. (error bar) were calculated from 4 RF simulations. The top 20 most important variables are shown in descending order. Increase of mean square error (IncMSE) indicates the contribution to RF prediction accuracy for that variable. Detail description of the variable is given in <xref ref-type="table" rid="pone-0015323-t001">Table 1</xref>. Abbreviations: mean  =  decadal or annual mean; sd  =  decadal or seasonal standard deviation.</p>
+          <p>(TIF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0015323.s009" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.s009" xlink:type="simple">
+        <label>Figure S5</label>
+        <caption>
+          <p>Distribution of mean biomass predictions for (a) bacteria, (b) meiofauna, (c) macrofauna, (d) megafauna, (e) invertebrates, and (f) fishes. The mean biomass was computed from 4 RF simulations. Predictions were smoothed by Inverse Distance Weighting interpolation to 0.1 degree resolution and displayed in logarithm scale (base of 10).</p>
+          <p>(TIF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0015323.s010" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.s010" xlink:type="simple">
+        <label>Figure S6</label>
+        <caption>
+          <p>Coefficient of variation (C.V.) for mean biomass predictions of each size class. The C.V. was computed as S.D./mean * 100% from 4 RF simulations. The abbreviations are: bact  =  bacteria, meio  =  meiofauna, macro  =  macrofauna, mega  =  megafauna, inv  =  invertebrates, fis  =  fishes.</p>
+          <p>(TIFF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0015323.s011" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.s011" xlink:type="simple">
+        <label>Figure S7</label>
+        <caption>
+          <p>Distribution of mean abundance predictions for (a) bacteria, (b) meiofauna, (c) macrofauna, (d) megafauna, (e) invertebrates, and (f) fishes. The mean abundance was computed from 4 RF simulations. Predictions were smoothed by Inverse Distance Weighting interpolation to 0.1 degree resolution and displayed in logarithm scale (base of 10).</p>
+          <p>(TIF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0015323.s012" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0015323.s012" xlink:type="simple">
+        <label>Figure S8</label>
+        <caption>
+          <p>Coefficient of variation (C.V.) for mean abundance predictions of each size class. The C.V. was computed as S.D./mean * 100% from 4 RF simulations. The abbreviations are: bact  =  bacteria, meio  =  meiofauna, macro  =  macrofauna, mega  =  megafauna, inv  =  invertebrates, fis  =  fishes.</p>
+          <p>(TIFF)</p>
+        </caption>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>We thank Paul Snelgrove and Michele Durant for overseeing the Census of Marine Life (CoML) synthesis groups and putting their trust and confidence in a graduate student (C.-L. Wei). We also thank an anonymous reviewer for comments to improve the manuscript. We thank Nikolaos Lampadariou, Agnes Muthumbi, Karline Soetaert, Jan Vanaverbeke, and Maria Franco for providing nematode data and Tone Falkenhaug for providing pelagic decapod data. We are grateful to John Dunne for generously providing export POC model from his publication, and to Peter Lawton, Nick Ellis, Stephen Smith, Lewis Incze, Michelle Greenlaw, Nicholas Wolff, and Tom Shirley for discussing modeling methods with the first author (C.-L. Wei).</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="pone.0015323-Rowe1">
+        <label>1</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Wei</surname><given-names>C-L</given-names></name></person-group>             <article-title>Biodiversity of Deep-Sea Macrofauna as a Function of Food Supply. In preparation.</article-title>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Rex1">
+        <label>2</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Rex</surname><given-names>M</given-names></name><name name-style="western"><surname>Etter</surname><given-names>R</given-names></name></person-group>             <year>2010</year>             <article-title>Deep-sea biodiversity: pattern and scale.</article-title>             <publisher-loc>Cambridge, MA</publisher-loc>             <publisher-name>Harvard University Press</publisher-name> <!--===== Restructure page-count as size[@units="page"] =====--><size units="page">354</size>           </element-citation>
+      </ref>
+      <ref id="pone.0015323-Petersen1">
+        <label>3</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Petersen</surname><given-names>CGJ</given-names></name></person-group>             <year>1918</year>             <article-title>The sea-bottom and its production of fish-food.</article-title>             <source>Report of the Danish Biological Station</source>             <volume>25</volume>             <fpage>1</fpage>             <lpage>62</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Petersen2">
+        <label>4</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Petersen</surname><given-names>CGJ</given-names></name></person-group>             <year>1913</year>             <article-title>Valuation of the sea, Part 2. The animal communities of the sea-bottom and their importance for marine zoogeography.</article-title>             <source>Report of the Danish Biological Station</source>             <volume>21</volume>             <fpage>1</fpage>             <lpage>43</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Holme1">
+        <label>5</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Holme</surname><given-names>N</given-names></name><name name-style="western"><surname>McIntyre</surname><given-names>A</given-names></name></person-group>             <year>1971</year>             <article-title>Methods for the study of marine benthos. IBP Handbook No. 16</article-title>             <publisher-loc>Oxford, UK</publisher-loc>             <publisher-name>Blackwell</publisher-name>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Vinogradov1">
+        <label>6</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Vinogradov</surname><given-names>M</given-names></name><name name-style="western"><surname>Tseitlin</surname><given-names>V</given-names></name></person-group>             <year>1983</year>             <article-title>Deep-sea pelagic domain (aspects of bioenergetics).</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name></person-group>             <source>Deep-sea biology</source>             <publisher-loc>New York</publisher-loc>             <publisher-name>Wily-interscience</publisher-name>             <fpage>123</fpage>             <lpage>165</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Rowe2">
+        <label>7</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name></person-group>             <year>1983</year>             <article-title>Biomass and production of deep-sea macrobenthos.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name></person-group>             <source>Deep-Sea Biology</source>             <publisher-loc>New York</publisher-loc>             <publisher-name>Wily-interscience</publisher-name>             <fpage>97</fpage>             <lpage>121</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Rex2">
+        <label>8</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Rex</surname><given-names>MA</given-names></name><name name-style="western"><surname>Etter</surname><given-names>RJ</given-names></name><name name-style="western"><surname>Morris</surname><given-names>JS</given-names></name><name name-style="western"><surname>Crouse</surname><given-names>J</given-names></name><name name-style="western"><surname>McClain</surname><given-names>CR</given-names></name><etal/></person-group>             <year>2006</year>             <article-title>Global bathymetric patterns of standing stock and body size in the deep-sea benthos.</article-title>             <source>Marine Ecology Progress Series</source>             <volume>317</volume>             <fpage>1</fpage>             <lpage>8</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Soltwedel1">
+        <label>9</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Soltwedel</surname><given-names>T</given-names></name></person-group>             <year>2000</year>             <article-title>Metazoan meiobenthos along continental margins: a review.</article-title>             <source>Progress In Oceanography</source>             <volume>46</volume>             <fpage>59</fpage>             <lpage>84</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Deming1">
+        <label>10</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Deming</surname><given-names>J</given-names></name><name name-style="western"><surname>Yager</surname><given-names>P</given-names></name></person-group>             <year>1992</year>             <article-title>Natural bacterial assemblages in deep-sea sediments: towards a global view.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Pariente</surname><given-names>V</given-names></name></person-group>             <source>Deep-sea food chains and the global carbon cycle</source>             <publisher-loc>Dordrecht, The Netherlands</publisher-loc>             <publisher-name>Kluwer</publisher-name>             <fpage>11</fpage>             <lpage>27</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Breiman1">
+        <label>11</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Breiman</surname><given-names>L</given-names></name></person-group>             <year>2001</year>             <article-title>Random forests.</article-title>             <source>Machine Learning</source>             <volume>45</volume>             <fpage>5</fpage>             <lpage>32</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Cutler1">
+        <label>12</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Cutler</surname><given-names>A</given-names></name><name name-style="western"><surname>Stevens</surname><given-names>JR</given-names></name></person-group>             <year>2006</year>             <article-title>Random Forests for Microarrays.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Alan</surname><given-names>K</given-names></name><name name-style="western"><surname>Brian</surname><given-names>O</given-names></name></person-group>             <source>Methods in Enzymology: Academic Press</source>             <fpage>422</fpage>             <lpage>432</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Xu1">
+        <label>13</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Xu</surname><given-names>P</given-names></name><name name-style="western"><surname>Jelinek</surname><given-names>F</given-names></name></person-group>             <year>2004</year>             <article-title>Random forests in language modeling.</article-title>             <source>Proceedings of EMNLP 2004</source>             <publisher-loc>Brcelona, Spain</publisher-loc>             <publisher-name>Association for Computational Linguistics</publisher-name>             <fpage>325</fpage>             <lpage>332</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Svetnik1">
+        <label>14</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Svetnik</surname><given-names>V</given-names></name><name name-style="western"><surname>Liaw</surname><given-names>A</given-names></name><name name-style="western"><surname>Tong</surname><given-names>C</given-names></name><name name-style="western"><surname>Culberson</surname><given-names>JC</given-names></name><name name-style="western"><surname>Sheridan</surname><given-names>RP</given-names></name><etal/></person-group>             <year>2003</year>             <article-title>Random Forest: A Classification and Regression Tool for Compound Classification and QSAR Modeling.</article-title>             <source>Journal of Chemical Information and Computer Sciences</source>             <volume>43</volume>             <fpage>1947</fpage>             <lpage>1958</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Cutler2">
+        <label>15</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Cutler</surname><given-names>DR</given-names></name><name name-style="western"><surname>Edwards</surname><given-names>TC</given-names></name><name name-style="western"><surname>Beard</surname><given-names>KH</given-names></name><name name-style="western"><surname>Cutler</surname><given-names>A</given-names></name><name name-style="western"><surname>Hess</surname><given-names>KT</given-names></name><etal/></person-group>             <year>2007</year>             <article-title>Random forests for classification in ecology.</article-title>             <source>Ecology</source>             <volume>88</volume>             <fpage>2783</fpage>             <lpage>2792</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Prasad1">
+        <label>16</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Prasad</surname><given-names>A</given-names></name><name name-style="western"><surname>Iverson</surname><given-names>L</given-names></name><name name-style="western"><surname>Liaw</surname><given-names>A</given-names></name></person-group>             <year>2006</year>             <article-title>Newer Classification and Regression Tree Techniques: Bagging and Random Forests for Ecological Prediction.</article-title>             <source>Ecosystems</source>             <volume>9</volume>             <fpage>181</fpage>             <lpage>199</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Death1">
+        <label>17</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>De'ath</surname><given-names>G</given-names></name></person-group>             <year>2007</year>             <article-title>Boosted trees for ecological modeling and prediction.</article-title>             <source>Ecology</source>             <volume>88</volume>             <fpage>243</fpage>             <lpage>251</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Oppel1">
+        <label>18</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Oppel</surname><given-names>S</given-names></name><name name-style="western"><surname>Huettmann</surname><given-names>F</given-names></name></person-group>             <year>2010</year>             <article-title>Using a Random Forest Model and Public Data to Predict the Distribution of Prey for Marine Wildlife Management.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Cushman</surname><given-names>SA</given-names></name><name name-style="western"><surname>Huettmann</surname><given-names>F</given-names></name></person-group>             <source>Spatial Complexity, Informatics, and Wildlife Conservation</source>             <fpage>151</fpage>             <lpage>163</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Pitcher1">
+        <label>19</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Pitcher</surname><given-names>CR</given-names></name><name name-style="western"><surname>Lawton</surname><given-names>P</given-names></name><name name-style="western"><surname>Ellis</surname><given-names>N</given-names></name><name name-style="western"><surname>Smith</surname><given-names>SJ</given-names></name><name name-style="western"><surname>Incze</surname><given-names>LS</given-names></name><etal/></person-group>             <article-title>Exploring the role of environmental variables in shaping patterns of biodiversity composition in seabed assemblages.</article-title>             <comment>In preparation</comment>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Bett1">
+        <label>20</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Bett</surname><given-names>B</given-names></name><name name-style="western"><surname>Vanreusel</surname><given-names>A</given-names></name><name name-style="western"><surname>Vincx</surname><given-names>M</given-names></name><name name-style="western"><surname>Soltwedel</surname><given-names>T</given-names></name><name name-style="western"><surname>Pfannkuche</surname><given-names>O</given-names></name><etal/></person-group>             <year>1994</year>             <article-title>Sampler bias in the quantitative study of deep-sea meiobenthos.</article-title>             <source>Marine Ecology Progress Series</source>             <volume>104</volume>             <fpage>197</fpage>             <lpage>197</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Gage1">
+        <label>21</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Gage</surname><given-names>JD</given-names></name><name name-style="western"><surname>Hughes</surname><given-names>DJ</given-names></name><name name-style="western"><surname>Vecino</surname><given-names>JLG</given-names></name></person-group>             <year>2002</year>             <article-title>Sieve size influence in estimating biomass, abundance and diversity in samples of deep-sea macrobenthos.</article-title>             <source>Marine Ecology Progress Series</source>             <volume>225</volume>             <fpage>97</fpage>             <lpage>107</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Gage2">
+        <label>22</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Gage</surname><given-names>J</given-names></name><name name-style="western"><surname>Bett</surname><given-names>B</given-names></name></person-group>             <year>2005</year>             <article-title>Deep-sea benthic sampling.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Eleftheriou</surname><given-names>A</given-names></name><name name-style="western"><surname>McIntyre</surname><given-names>A</given-names></name></person-group>             <source>Methods for the Study of the Marine Benthos</source>             <publisher-loc>Oxford, UK</publisher-loc>             <publisher-name>Blackwell</publisher-name>             <fpage>273</fpage>             <lpage>325</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Behrenfeld1">
+        <label>23</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Behrenfeld</surname><given-names>MJ</given-names></name><name name-style="western"><surname>Falkowski</surname><given-names>PG</given-names></name></person-group>             <year>1997</year>             <article-title>Photosynthetic rates derived from satellite-based chlorophyll concentration.</article-title>             <source>Limnology and Oceanography</source>             <volume>42</volume>             <fpage>1</fpage>             <lpage>20</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Westberry1">
+        <label>24</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Westberry</surname><given-names>T</given-names></name><name name-style="western"><surname>Behrenfeld</surname><given-names>M</given-names></name><name name-style="western"><surname>Siegel</surname><given-names>D</given-names></name><name name-style="western"><surname>Boss</surname><given-names>E</given-names></name></person-group>             <year>2008</year>             <article-title>Carbon-based primary productivity modeling with vertically resolved photoacclimation.</article-title>             <source>Global Biogeochemical Cycles</source>             <volume>22</volume>             <fpage>GB2024</fpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Yool1">
+        <label>25</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Yool</surname><given-names>A</given-names></name><name name-style="western"><surname>Shepherd</surname><given-names>JG</given-names></name><name name-style="western"><surname>Bryden</surname><given-names>HL</given-names></name><name name-style="western"><surname>Oschlies</surname><given-names>A</given-names></name></person-group>             <year>2009</year>             <article-title>Low efficiency of nutrient translocation for enhancing oceanic uptake of carbon dioxide.</article-title>             <source>J Geophys Res</source>             <volume>114</volume>             <fpage>C08009</fpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Amante1">
+        <label>26</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Amante</surname><given-names>C</given-names></name><name name-style="western"><surname>Eakins</surname><given-names>BW</given-names></name></person-group>             <year>2009</year>             <article-title>ETOPO1 1 Arc-Minute Global Relief Model: Procedures, Data Sources and Analysis.</article-title>             <publisher-name>NOAA Technical Memorandum NESDIS NGDC-24</publisher-name> <!--===== Restructure page-count as size[@units="page"] =====--><size units="page">19</size>           </element-citation>
+      </ref>
+      <ref id="pone.0015323-Breiman2">
+        <label>27</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Breiman</surname><given-names>L</given-names></name><name name-style="western"><surname>Freidman</surname><given-names>J</given-names></name><name name-style="western"><surname>Olshen</surname><given-names>R</given-names></name><name name-style="western"><surname>Stone</surname><given-names>C</given-names></name></person-group>             <year>1984</year>             <article-title>Classification and regression trees.</article-title>             <publisher-loc>Belmont, CA</publisher-loc>             <publisher-name>Wadsworth</publisher-name>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-R1">
+        <label>28</label>
+        <element-citation publication-type="other" xlink:type="simple">             <collab xlink:type="simple">R Development Core Team</collab>             <year>2010</year>             <article-title>R: A Language and Environment for Statistical Computing Vienna,</article-title>             <publisher-loc>Austria</publisher-loc>             <publisher-name>R Foundation for Statistical Computing</publisher-name>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Liaw1">
+        <label>29</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Liaw</surname><given-names>A</given-names></name><name name-style="western"><surname>Wiener</surname><given-names>M</given-names></name></person-group>             <year>2002</year>             <article-title>Classification and Regression by randomForest.</article-title>             <source>R News</source>             <volume>2</volume>             <fpage>18</fpage>             <lpage>22</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Bivand1">
+        <label>30</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Bivand</surname><given-names>RS</given-names></name><name name-style="western"><surname>Pebesma</surname><given-names>EJ</given-names></name><name name-style="western"><surname>Gomez-Rubio</surname><given-names>V</given-names></name></person-group>             <year>2008</year>             <article-title>Applied spatial data analysis with R.</article-title>             <publisher-loc>New York</publisher-loc>             <publisher-name>Springer</publisher-name>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Grebmeier1">
+        <label>31</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Grebmeier</surname><given-names>JM</given-names></name><name name-style="western"><surname>Cooper</surname><given-names>LW</given-names></name><name name-style="western"><surname>Feder</surname><given-names>HM</given-names></name><name name-style="western"><surname>Sirenko</surname><given-names>BI</given-names></name></person-group>             <year>2006</year>             <article-title>Ecosystem dynamics of the Pacific-influenced Northern Bering and Chukchi Seas in the Amerasian Arctic.</article-title>             <source>Progress In Oceanography</source>             <volume>71</volume>             <fpage>331</fpage>             <lpage>361</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Williams1">
+        <label>32</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Williams</surname><given-names>RG</given-names></name><name name-style="western"><surname>Follows</surname><given-names>MJ</given-names></name></person-group>             <year>2003</year>             <article-title>Physical transport of nutrients and the maintenance of biological production.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Fasham</surname><given-names>M</given-names></name></person-group>             <source>Ocean Biogeochemistry: The role of the ocean carbon cycle in global change: Springer</source>             <fpage>19</fpage>             <lpage>51</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Dunne1">
+        <label>33</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Dunne</surname><given-names>J</given-names></name><name name-style="western"><surname>Sarmiento</surname><given-names>J</given-names></name><name name-style="western"><surname>Gnanadesikan</surname><given-names>A</given-names></name></person-group>             <year>2007</year>             <article-title>A synthesis of global particle export from the surface ocean and cycling through the ocean interior and on the seafloor.</article-title>             <source>Global Biogeochem Cycles</source>             <volume>21</volume>             <fpage>GB4006</fpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Rowe3">
+        <label>34</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Sibuet</surname><given-names>M</given-names></name><name name-style="western"><surname>Deming</surname><given-names>JW</given-names></name><name name-style="western"><surname>Khripounoff</surname><given-names>A</given-names></name><name name-style="western"><surname>Tietjen</surname><given-names>J</given-names></name><etal/></person-group>             <year>1991</year>             <article-title>“Total” sediment biomass and preliminary estimates of organic carbon residence time in deep-sea benthos.</article-title>             <source>Marine Ecology Progress Series</source>             <volume>79</volume>             <fpage>99</fpage>             <lpage>114</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Rowe4">
+        <label>35</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Wei</surname><given-names>C-L</given-names></name><name name-style="western"><surname>Nunnally</surname><given-names>C</given-names></name><name name-style="western"><surname>Haedrich</surname><given-names>R</given-names></name><name name-style="western"><surname>Montagna</surname><given-names>P</given-names></name><etal/></person-group>             <year>2008</year>             <article-title>Comparative biomass structure and estimated carbon flow in food webs in the deep Gulf of Mexico.</article-title>             <source>Deep Sea Research Part II: Topical Studies in Oceanography</source>             <volume>55</volume>             <fpage>2699</fpage>             <lpage>2711</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Pfannkuche1">
+        <label>36</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Pfannkuche</surname><given-names>O</given-names></name><name name-style="western"><surname>Lochte</surname><given-names>K</given-names></name></person-group>             <year>2000</year>             <article-title>The biogeochemistry of the deep Arabian Sea: overview.</article-title>             <source>Deep Sea Research Part II: Topical Studies in Oceanography</source>             <volume>47</volume>             <fpage>2615</fpage>             <lpage>2628</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Gage3">
+        <label>37</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Gage</surname><given-names>JD</given-names></name><name name-style="western"><surname>Tyler</surname><given-names>PA</given-names></name></person-group>             <year>1991</year>             <article-title>Deep-sea biology: A natural history of organisms at the deep-sea floor.</article-title>             <publisher-loc>Cambridge</publisher-loc>             <publisher-name>Cambridge University Press</publisher-name> <!--===== Restructure page-count as size[@units="page"] =====--><size units="page">504</size>           </element-citation>
+      </ref>
+      <ref id="pone.0015323-Heip1">
+        <label>38</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Heip</surname><given-names>CHR</given-names></name><name name-style="western"><surname>Duineveld</surname><given-names>G</given-names></name><name name-style="western"><surname>Flach</surname><given-names>E</given-names></name><name name-style="western"><surname>Graf</surname><given-names>G</given-names></name><name name-style="western"><surname>Helder</surname><given-names>W</given-names></name><etal/></person-group>             <year>2001</year>             <article-title>The role of the benthic biota in sedimentary metabolism and sediment-water exchange processes in the Goban Spur area (NE Atlantic).</article-title>             <source>Deep Sea Research Part II: Topical Studies in Oceanography</source>             <volume>48</volume>             <fpage>3223</fpage>             <lpage>3243</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Thiel1">
+        <label>39</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Thiel</surname><given-names>H</given-names></name></person-group>             <year>1975</year>             <article-title>The size structure of the deep-sea benthos.</article-title>             <source>Internationale Revue der gesamten Hydrobiologie und Hydrographie</source>             <volume>60</volume>             <fpage>575</fpage>             <lpage>606</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Ho1">
+        <label>40</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Ho</surname><given-names>CK</given-names></name><name name-style="western"><surname>Pennings</surname><given-names>SC</given-names></name><name name-style="western"><surname>Carefoot</surname><given-names>TH</given-names></name></person-group>             <year>2010</year>             <article-title>Is Diet Quality an Overlooked Mechanism for Bergmann's Rule?</article-title>             <source>The American Naturalist</source>             <volume>175</volume>             <fpage>269</fpage>             <lpage>276</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Sweetman1">
+        <label>41</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Sweetman</surname><given-names>A</given-names></name><name name-style="western"><surname>Witte</surname><given-names>U</given-names></name></person-group>             <year>2008</year>             <article-title>Response of an abyssal macrofaunal community to a phytodetrital pulse.</article-title>             <source>Marine Ecology Progress Series</source>             <volume>355</volume>             <fpage>73</fpage>             <lpage>84</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-vanNugteren1">
+        <label>42</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>van Nugteren</surname><given-names>P</given-names></name><name name-style="western"><surname>Herman</surname><given-names>P</given-names></name><name name-style="western"><surname>Moodley</surname><given-names>L</given-names></name><name name-style="western"><surname>Middelburg</surname><given-names>J</given-names></name><name name-style="western"><surname>Vos</surname><given-names>M</given-names></name><etal/></person-group>             <year>2009</year>             <article-title>Spatial distribution of detrital resources determines the outcome of competition between bacteria and a facultative detritivorous worm.</article-title>             <source>Limnol Oceanogr</source>             <volume>54</volume>             <fpage>1413</fpage>             <lpage>1419</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Witte1">
+        <label>43</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Witte</surname><given-names>U</given-names></name><name name-style="western"><surname>Wenzhofer</surname><given-names>F</given-names></name><name name-style="western"><surname>Sommer</surname><given-names>S</given-names></name><name name-style="western"><surname>Boetius</surname><given-names>A</given-names></name><name name-style="western"><surname>Heinz</surname><given-names>P</given-names></name><etal/></person-group>             <year>2003</year>             <article-title>In situ experimental evidence of the fate of a phytodetritus pulse at the abyssal sea floor.</article-title>             <source>Nature</source>             <volume>424</volume>             <fpage>763</fpage>             <lpage>766</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Rowe5">
+        <label>44</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Deming</surname><given-names>JW</given-names></name></person-group>             <article-title>An Alternative View of the Role of Bacteria in the Cycling of Organic Matter in Deep-sea Sediments.</article-title>             <comment>Marine Biology Research: Submitted</comment>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Ingels1">
+        <label>45</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Ingels</surname><given-names>J</given-names></name><name name-style="western"><surname>Van den Driessche</surname><given-names>P</given-names></name><name name-style="western"><surname>De Mesel</surname><given-names>I</given-names></name><name name-style="western"><surname>Vanhove</surname><given-names>S</given-names></name><name name-style="western"><surname>Moens</surname><given-names>T</given-names></name><etal/></person-group>             <year>2010</year>             <article-title>Preferred use of bacteria over phytoplankton by deep-sea nematodes in polar regions.</article-title>             <source>Mar Ecol Prog Ser</source>             <volume>406</volume>             <fpage>121</fpage>             <lpage>133</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Clough1">
+        <label>46</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Clough</surname><given-names>L</given-names></name><name name-style="western"><surname>Renaud</surname><given-names>P</given-names></name><name name-style="western"><surname>Ambrose</surname><given-names>W</given-names><suffix>Jr</suffix></name></person-group>             <year>2005</year>             <article-title>Impacts of water depth, sediment pigment concentration, and benthic macrofaunal biomass on sediment oxygen demand in the western Arctic Ocean.</article-title>             <source>Canadian Journal of Fisheries and Aquatic Sciences</source>             <volume>62</volume>             <fpage>1756</fpage>             <lpage>1765</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Rowe6">
+        <label>47</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Boland</surname><given-names>GS</given-names></name><name name-style="western"><surname>Escobar Briones</surname><given-names>EG</given-names></name><name name-style="western"><surname>Cruz-Kaegi</surname><given-names>ME</given-names></name><name name-style="western"><surname>Newton</surname><given-names>A</given-names></name><etal/></person-group>             <year>1997</year>             <article-title>Sediment community biomass and respiration in the Northeast water polynya, Greenland: a numerical simulation of benthic lander and spade core data.</article-title>             <source>Journal of Marine Systems</source>             <volume>10</volume>             <fpage>497</fpage>             <lpage>515</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Kirchman1">
+        <label>48</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Kirchman</surname><given-names>DL</given-names></name><name name-style="western"><surname>Moran</surname><given-names>XAG</given-names></name><name name-style="western"><surname>Ducklow</surname><given-names>H</given-names></name></person-group>             <year>2009</year>             <article-title>Microbial growth in the polar oceans - role of temperature and potential impact of climate change.</article-title>             <source>Nature Reviews Microbiology</source>             <volume>7</volume>             <fpage>451</fpage>             <lpage>459</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Grebmeier2">
+        <label>49</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Grebmeier</surname><given-names>JM</given-names></name><name name-style="western"><surname>Barry</surname><given-names>JP</given-names></name></person-group>             <year>2007</year>             <article-title>Chapter 11 Benthic Processes in Polynyas.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Smith</surname><given-names>WO</given-names></name><name name-style="western"><surname>Barber</surname><given-names>DG</given-names></name></person-group>             <source>Elsevier Oceanography Series: Elsevier</source>             <fpage>363</fpage>             <lpage>390</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Deming2">
+        <label>50</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Deming</surname><given-names>J</given-names></name><name name-style="western"><surname>Baross</surname><given-names>J</given-names></name></person-group>             <year>1993</year>             <article-title>The early diagenesis of organic matter: bacterial activity.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Engel</surname><given-names>MH</given-names></name><name name-style="western"><surname>Macko</surname><given-names>SA</given-names></name></person-group>             <source>Organic geochemistry</source>             <publisher-loc>New York</publisher-loc>             <publisher-name>Plenum Press</publisher-name>             <fpage>119</fpage>             <lpage>144</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Dixon1">
+        <label>51</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Dixon</surname><given-names>JL</given-names></name><name name-style="western"><surname>Turley</surname><given-names>CM</given-names></name></person-group>             <year>2000</year>             <article-title>The effect of water depth on bacterial numbers, thymidine incorporation rates and C:N ratios in northeast Atlantic surficial sediments.</article-title>             <source>Hydrobiologia</source>             <volume>440</volume>             <fpage>217</fpage>             <lpage>225</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Deming3">
+        <label>52</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Deming</surname><given-names>JW</given-names></name><name name-style="western"><surname>Carpenter</surname><given-names>SD</given-names></name></person-group>             <year>2008</year>             <article-title>Factors influencing benthic bacterial abundance, biomass, and activity on the northern continental margin and deep basin of the Gulf of Mexico.</article-title>             <source>Deep Sea Research Part II: Topical Studies in Oceanography</source>             <volume>55</volume>             <fpage>2597</fpage>             <lpage>2606</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Lochte1">
+        <label>53</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Lochte</surname><given-names>K</given-names></name></person-group>             <year>1992</year>             <article-title>Bacterial standing stock and consumption of organic carbon in the benthic boundary layer of the abyssal North Atlantic.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Pariente</surname><given-names>V</given-names></name></person-group>             <source>Deep-sea food chains and the global carbon cycle</source>             <publisher-loc>Dordrecht, The Netherlands</publisher-loc>             <publisher-name>Kluwer</publisher-name>             <fpage>1</fpage>             <lpage>10</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Deming4">
+        <label>54</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Deming</surname><given-names>JW</given-names></name><name name-style="western"><surname>Colwell</surname><given-names>RR</given-names></name></person-group>             <year>1985</year>             <article-title>Observations of Barophilic Microbial Activity in Samples of Sediment and Intercepted Particulates from the Demerara Abyssal Plain.</article-title>             <source>Appl Environ Microbiol</source>             <volume>50</volume>             <fpage>1002</fpage>             <lpage>1006</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Patching1">
+        <label>55</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Patching</surname><given-names>JW</given-names></name><name name-style="western"><surname>Eardly</surname><given-names>D</given-names></name></person-group>             <year>1997</year>             <article-title>Bacterial biomass and activity in the deep waters of the eastern Atlantic–evidence of a barophilic community.</article-title>             <source>Deep Sea Research Part I: Oceanographic Research Papers</source>             <volume>44</volume>             <fpage>1655</fpage>             <lpage>1670</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Lochte2">
+        <label>56</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Lochte</surname><given-names>K</given-names></name><name name-style="western"><surname>Turley</surname><given-names>CM</given-names></name></person-group>             <year>1988</year>             <article-title>Bacteria and cyanobacteria associated with phytodetritus in the deep sea.</article-title>             <source>Nature</source>             <volume>333</volume>             <fpage>67</fpage>             <lpage>69</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Deming5">
+        <label>57</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Deming</surname><given-names>J</given-names></name><name name-style="western"><surname>Baross</surname><given-names>J</given-names></name></person-group>             <year>2000</year>             <article-title>Survival, dormancy, and nonculturable cells in extreme deep-sea environments.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Colwell</surname><given-names>RR</given-names></name><name name-style="western"><surname>Grimes</surname><given-names>DJ</given-names></name></person-group>             <source>Nonculturable Microorganisms in the Environments</source>             <publisher-loc>Washington, DC</publisher-loc>             <publisher-name>American Society for Microbiology Press</publisher-name>             <fpage>147</fpage>             <lpage>197</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Quric1">
+        <label>58</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Quéric</surname><given-names>N-V</given-names></name><name name-style="western"><surname>Soltwedel</surname><given-names>T</given-names></name><name name-style="western"><surname>Arntz</surname><given-names>WE</given-names></name></person-group>             <year>2004</year>             <article-title>Application of a rapid direct viable count method to deep-sea sediment bacteria.</article-title>             <source>Journal of Microbiological Methods</source>             <volume>57</volume>             <fpage>351</fpage>             <lpage>367</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Danovaro1">
+        <label>59</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Danovaro</surname><given-names>R</given-names></name><name name-style="western"><surname>Dell'Anno</surname><given-names>A</given-names></name><name name-style="western"><surname>Corinaldesi</surname><given-names>C</given-names></name><name name-style="western"><surname>Magagnini</surname><given-names>M</given-names></name><name name-style="western"><surname>Noble</surname><given-names>R</given-names></name><etal/></person-group>             <year>2008</year>             <article-title>Major viral impact on the functioning of benthic deep-sea ecosystems.</article-title>             <source>Nature</source>             <volume>454</volume>             <fpage>1084</fpage>             <lpage>1087</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Boetius1">
+        <label>60</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Boetius</surname><given-names>A</given-names></name><name name-style="western"><surname>Lochte</surname><given-names>K</given-names></name></person-group>             <year>1994</year>             <article-title>Regulation of microbial enzymatic degradation of organic matter in deep-sea sediments.</article-title>             <source>Marine Ecology-Progress Series</source>             <volume>104</volume>             <fpage>299</fpage>             <lpage>299</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Vetter1">
+        <label>61</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Vetter</surname><given-names>Y</given-names></name><name name-style="western"><surname>Deming</surname><given-names>J</given-names></name><name name-style="western"><surname>Jumars</surname><given-names>P</given-names></name><name name-style="western"><surname>Krieger-Brockett</surname><given-names>B</given-names></name></person-group>             <year>1998</year>             <article-title>A predictive model of bacterial foraging by means of freely released extracellular enzymes.</article-title>             <source>Microbial ecology</source>             <volume>36</volume>             <fpage>75</fpage>             <lpage>92</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Flach1">
+        <label>62</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Flach</surname><given-names>E</given-names></name><name name-style="western"><surname>Muthumbi</surname><given-names>A</given-names></name><name name-style="western"><surname>Heip</surname><given-names>C</given-names></name></person-group>             <year>2002</year>             <article-title>Meiofauna and macrofauna community structure in relation to sediment composition at the Iberian margin compared to the Goban Spur (NE Atlantic).</article-title>             <source>Progress In Oceanography</source>             <volume>52</volume>             <fpage>433</fpage>             <lpage>457</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Danovaro2">
+        <label>63</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Danovaro</surname><given-names>R</given-names></name><name name-style="western"><surname>Croce</surname><given-names>ND</given-names></name><name name-style="western"><surname>Eleftheriou</surname><given-names>A</given-names></name><name name-style="western"><surname>Fabiano</surname><given-names>M</given-names></name><name name-style="western"><surname>Papadopoulou</surname><given-names>N</given-names></name><etal/></person-group>             <year>1995</year>             <article-title>Meiofauna of the deep Eastern Mediterranean Sea: distribution and abundance in relation to bacterial biomass, organic matter composition and other environmental factors.</article-title>             <source>Progress In Oceanography</source>             <volume>36</volume>             <fpage>329</fpage>             <lpage>341</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Clough2">
+        <label>64</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Clough</surname><given-names>L</given-names></name><name name-style="western"><surname>Ambrose</surname><given-names>W</given-names></name></person-group>             <year>1997</year>             <article-title>Infaunal density, biomass and bioturbation in the sediments of the Arctic Ocean.</article-title>             <source>Deep Sea Research Part II: Topical Studies in Oceanography</source>             <volume>44</volume>             <fpage>1683</fpage>             <lpage>1704</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Smith1">
+        <label>65</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Smith</surname><given-names>C</given-names></name></person-group>             <year>1992</year>             <article-title>Factors controlling bioturbation in deep-sea sediments and their relation to models of carbon diagenesis.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Pariente</surname><given-names>V</given-names></name></person-group>             <source>Deep-sea food chains and the global carbon cycle</source>             <publisher-loc>Dordrecht, The Netherlands</publisher-loc>             <publisher-name>Kluwer</publisher-name>             <fpage>375</fpage>             <lpage>393</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Rowe7">
+        <label>66</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Morse</surname><given-names>J</given-names></name><name name-style="western"><surname>Nunnally</surname><given-names>C</given-names></name><name name-style="western"><surname>Boland</surname><given-names>GS</given-names></name></person-group>             <year>2008</year>             <article-title>Sediment community oxygen consumption in the deep Gulf of Mexico.</article-title>             <source>Deep Sea Research Part II: Topical Studies in Oceanography</source>             <volume>55</volume>             <fpage>2686</fpage>             <lpage>2691</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Smith2">
+        <label>67</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Smith</surname><given-names>K</given-names></name><name name-style="western"><surname>Hinga</surname><given-names>K</given-names></name></person-group>             <year>1983</year>             <article-title>Sediment community respiration in the deep sea.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>R</surname><given-names>GT</given-names></name></person-group>             <source>Deep Sea Biology</source>             <publisher-loc>New York</publisher-loc>             <publisher-name>Wily-interscience</publisher-name>             <fpage>331</fpage>             <lpage>370</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Levin1">
+        <label>68</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Levin</surname><given-names>L</given-names></name><name name-style="western"><surname>Gage</surname><given-names>J</given-names></name><name name-style="western"><surname>Martin</surname><given-names>C</given-names></name><name name-style="western"><surname>Lamont</surname><given-names>P</given-names></name></person-group>             <year>2000</year>             <article-title>Macrobenthic community structure within and beneath the oxygen minimum zone, NW Arabian Sea.</article-title>             <source>Deep Sea Research Part II: Topical Studies in Oceanography</source>             <volume>47</volume>             <fpage>189</fpage>             <lpage>226</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Quiroga1">
+        <label>69</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Quiroga</surname><given-names>E</given-names></name><name name-style="western"><surname>Quiñones</surname><given-names>R</given-names></name><name name-style="western"><surname>Palma</surname><given-names>M</given-names></name><name name-style="western"><surname>Sellanes</surname><given-names>J</given-names></name><name name-style="western"><surname>Gallardo</surname><given-names>VA</given-names></name><etal/></person-group>             <year>2005</year>             <article-title>Biomass size-spectra of macrobenthic communities in the oxygen minimum zone off Chile.</article-title>             <source>Estuarine, Coastal and Shelf Science</source>             <volume>62</volume>             <fpage>217</fpage>             <lpage>231</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Narayanaswamy1">
+        <label>70</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Narayanaswamy</surname><given-names>BE</given-names></name><name name-style="western"><surname>Bett</surname><given-names>BJ</given-names></name><name name-style="western"><surname>Hughes</surname><given-names>DJ</given-names></name></person-group>             <year>2010</year>             <article-title>Deep-water macrofaunal diversity in the Faroe-Shetland region (NE Atlantic): a margin subject to an unusual thermal regime.</article-title>             <source>Marine Ecology</source>             <volume>31</volume>             <fpage>237</fpage>             <lpage>246</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Smith3">
+        <label>71</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Smith</surname><given-names>KL</given-names></name><name name-style="western"><surname>Ruhl</surname><given-names>HA</given-names></name><name name-style="western"><surname>Bett</surname><given-names>BJ</given-names></name><name name-style="western"><surname>Billett</surname><given-names>DSM</given-names></name><name name-style="western"><surname>Lampitt</surname><given-names>RS</given-names></name><etal/></person-group>             <year>2009</year>             <article-title>Climate, carbon cycling, and deep-ocean ecosystems.</article-title>             <source>Proceedings of the National Academy of Sciences</source>             <volume>106</volume>             <fpage>19211</fpage>             <lpage>19218</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Billett1">
+        <label>72</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Billett</surname><given-names>DSM</given-names></name><name name-style="western"><surname>Bett</surname><given-names>BJ</given-names></name><name name-style="western"><surname>Reid</surname><given-names>WDK</given-names></name><name name-style="western"><surname>Boorman</surname><given-names>B</given-names></name><name name-style="western"><surname>Priede</surname><given-names>IG</given-names></name></person-group>             <year>2010</year>             <article-title>Long-term change in the abyssal NE Atlantic: The ‘Amperima Event’ revisited.</article-title>             <source>Deep Sea Research Part II: Topical Studies in Oceanography</source>             <volume>57</volume>             <fpage>1406</fpage>             <lpage>1417</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Rowe8">
+        <label>73</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Staresinic</surname><given-names>N</given-names></name></person-group>             <year>1979</year>             <article-title>Sources of organic matter to the deep-sea benthos.</article-title>             <source>Ambio Special Report</source>             <fpage>19</fpage>             <lpage>23</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Smith4">
+        <label>74</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Smith</surname><given-names>CR</given-names></name><name name-style="western"><surname>Maybaum</surname><given-names>HL</given-names></name><name name-style="western"><surname>Baco</surname><given-names>AR</given-names></name><name name-style="western"><surname>Pope</surname><given-names>RH</given-names></name><name name-style="western"><surname>Carpenter</surname><given-names>SD</given-names></name><etal/></person-group>             <year>1998</year>             <article-title>Sediment community structure around a whale skeleton in the deep Northeast Pacific: Macrofaunal, microbial and bioturbation effects.</article-title>             <source>Deep Sea Research Part II: Topical Studies in Oceanography</source>             <volume>45</volume>             <fpage>335</fpage>             <lpage>364</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Brooks1">
+        <label>75</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Brooks</surname><given-names>J</given-names></name><name name-style="western"><surname>Kennicutt</surname><given-names>M</given-names></name></person-group>             <year>1987</year>             <article-title>Deep-sea hydrocarbon seep communities: evidence for energy and nutritional carbon sources.</article-title>             <source>Science</source>             <volume>238</volume>             <fpage>1138</fpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-VanDover1">
+        <label>76</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Van Dover</surname><given-names>C</given-names></name></person-group>             <year>2000</year>             <article-title>The ecology of deep-sea hydrothermal vents.</article-title>             <publisher-loc>Princeton, NJ</publisher-loc>             <publisher-name>Princeton University Press</publisher-name>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Rowe9">
+        <label>77</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Boland</surname><given-names>GS</given-names></name><name name-style="western"><surname>Phoel</surname><given-names>WC</given-names></name><name name-style="western"><surname>Anderson</surname><given-names>RF</given-names></name><name name-style="western"><surname>Biscaye</surname><given-names>PE</given-names></name></person-group>             <year>1994</year>             <article-title>Deep-sea floor respiration as an indication of lateral input of biogenic detritus from continental margins.</article-title>             <source>Deep Sea Research Part II: Topical Studies in Oceanography</source>             <volume>41</volume>             <fpage>657</fpage>             <lpage>668</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Rowe10">
+        <label>78</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Polloni</surname><given-names>PT</given-names></name><name name-style="western"><surname>Haedrich</surname><given-names>RL</given-names></name></person-group>             <year>1982</year>             <article-title>The deep-sea macrobenthos on the continental margin of the northwest Atlantic Ocean.</article-title>             <source>Deep Sea Research Part A Oceanographic Research Papers</source>             <volume>29</volume>             <fpage>257</fpage>             <lpage>278</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Danovaro3">
+        <label>79</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Danovaro</surname><given-names>R</given-names></name><name name-style="western"><surname>Gambi</surname><given-names>C</given-names></name><name name-style="western"><surname>Della Croce</surname><given-names>N</given-names></name></person-group>             <year>2002</year>             <article-title>Meiofauna hotspot in the Atacama Trench, eastern South Pacific Ocean.</article-title>             <source>Deep Sea Research Part I: Oceanographic Research Papers</source>             <volume>49</volume>             <fpage>843</fpage>             <lpage>857</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Boehlert1">
+        <label>80</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Boehlert</surname><given-names>G</given-names></name><name name-style="western"><surname>Genin</surname><given-names>A</given-names></name></person-group>             <year>1987</year>             <article-title>A review of the effects of seamounts on biological processes.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Keating</surname><given-names>BH</given-names></name></person-group>             <source>Seamounts, islands and atolls: American Geophysical Union</source>             <fpage>319</fpage>             <lpage>334</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Gooday1">
+        <label>81</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Gooday</surname><given-names>A</given-names></name><name name-style="western"><surname>Levin</surname><given-names>L</given-names></name><name name-style="western"><surname>Linke</surname><given-names>P</given-names></name><name name-style="western"><surname>Heeger</surname><given-names>T</given-names></name></person-group>             <year>1992</year>             <article-title>The role of benthic foraminifera in deep-sea food webs and carbon cycling.</article-title>             <person-group person-group-type="editor"><name name-style="western"><surname>Rowe</surname><given-names>G</given-names></name><name name-style="western"><surname>Pariente</surname><given-names>V</given-names></name></person-group>             <source>Deep-sea food chains and the global carbon cycle</source>             <publisher-loc>Dordrecht, The Netherlands</publisher-loc>             <publisher-name>Kluwer</publisher-name>             <fpage>63</fpage>             <lpage>91</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-DeLeo1">
+        <label>82</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>De Leo</surname><given-names>FC</given-names></name><name name-style="western"><surname>Smith</surname><given-names>CR</given-names></name><name name-style="western"><surname>Rowden</surname><given-names>AA</given-names></name><name name-style="western"><surname>Bowden</surname><given-names>DA</given-names></name><name name-style="western"><surname>Clark</surname><given-names>MR</given-names></name></person-group>             <year>2010</year>             <article-title>Submarine canyons: hotspots of benthic biomass and productivity in the deep sea.</article-title>             <source>Proceedings of the Royal Society B: Biological Sciences: In press</source>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Soliman1">
+        <label>83</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Soliman</surname><given-names>Y</given-names></name><name name-style="western"><surname>Wicksten</surname><given-names>M</given-names></name></person-group>             <year>2007</year>             <article-title><italic>Ampelisca mississippiana</italic>: a new species (Crustacea: Amphipoda: Gammaridea) from the Mississippi Canyon (Northern Gulf of Mexico).</article-title>             <source>Zootaxa</source>             <volume>1389</volume>             <fpage>45</fpage>             <lpage>54</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Smith5">
+        <label>84</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Smith</surname><given-names>CR</given-names></name><name name-style="western"><surname>Berelson</surname><given-names>W</given-names></name><name name-style="western"><surname>Demaster</surname><given-names>DJ</given-names></name><name name-style="western"><surname>Dobbs</surname><given-names>FC</given-names></name><name name-style="western"><surname>Hammond</surname><given-names>D</given-names></name><etal/></person-group>             <year>1997</year>             <article-title>Latitudinal variations in benthic processes in the abyssal equatorial Pacific: control by biogenic particle flux.</article-title>             <source>Deep Sea Research Part II: Topical Studies in Oceanography</source>             <volume>44</volume>             <fpage>2295</fpage>             <lpage>2317</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Wei1">
+        <label>85</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Wei</surname><given-names>C-L</given-names></name><name name-style="western"><surname>Rowe</surname><given-names>G</given-names></name><name name-style="western"><surname>Hubbard</surname><given-names>G</given-names></name><name name-style="western"><surname>Scheltema</surname><given-names>A</given-names></name><name name-style="western"><surname>Wilson</surname><given-names>G</given-names></name><etal/></person-group>             <year>2010</year>             <article-title>Bathymetric zonation of deep-sea macrofauna in relation to export of surface phytoplankton production.</article-title>             <source>Marine Ecology Progress Series</source>             <volume>399</volume>             <fpage>1</fpage>             <lpage>14</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Strobl1">
+        <label>86</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Strobl</surname><given-names>C</given-names></name><name name-style="western"><surname>Boulesteix</surname><given-names>A-L</given-names></name><name name-style="western"><surname>Kneib</surname><given-names>T</given-names></name><name name-style="western"><surname>Augustin</surname><given-names>T</given-names></name><name name-style="western"><surname>Zeileis</surname><given-names>A</given-names></name></person-group>             <year>2008</year>             <article-title>Conditional variable importance for random forests.</article-title>             <source>BMC Bioinformatics</source>             <volume>9</volume>             <fpage>307</fpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Pace1">
+        <label>87</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Pace</surname><given-names>ML</given-names></name><name name-style="western"><surname>Knauer</surname><given-names>GA</given-names></name><name name-style="western"><surname>Karl</surname><given-names>DM</given-names></name><name name-style="western"><surname>Martin</surname><given-names>JH</given-names></name></person-group>             <year>1987</year>             <article-title>Primary production, new production and vertical flux in the eastern Pacific Ocean.</article-title>             <source>Nature</source>             <volume>325</volume>             <fpage>803</fpage>             <lpage>804</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Johnson1">
+        <label>88</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Johnson</surname><given-names>NA</given-names></name><name name-style="western"><surname>Campbell</surname><given-names>JW</given-names></name><name name-style="western"><surname>Moore</surname><given-names>TS</given-names></name><name name-style="western"><surname>Rex</surname><given-names>MA</given-names></name><name name-style="western"><surname>Etter</surname><given-names>RJ</given-names></name><etal/></person-group>             <year>2007</year>             <article-title>The relationship between the standing stock of deep-sea macrobenthos and surface production in the western North Atlantic.</article-title>             <source>Deep Sea Research Part I: Oceanographic Research Papers</source>             <volume>54</volume>             <fpage>1350</fpage>             <lpage>1360</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-Rowe11">
+        <label>89</label>
+        <element-citation publication-type="other" xlink:type="simple">             <person-group person-group-type="editor"><name name-style="western"><surname>Rowe</surname><given-names>GT</given-names></name><name name-style="western"><surname>Pariente</surname><given-names>V</given-names></name></person-group>             <year>1992</year>             <article-title>Deep-sea food chains and the global carbon cycle.</article-title>             <publisher-loc>Dordrecht, The Netherlands</publisher-loc>             <publisher-name>Kluwer</publisher-name> <!--===== Restructure page-count as size[@units="page"] =====--><size units="page">412</size>           </element-citation>
+      </ref>
+      <ref id="pone.0015323-Pikitch1">
+        <label>90</label>
+        <element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author"><name name-style="western"><surname>Pikitch</surname><given-names>EK</given-names></name><name name-style="western"><surname>Santora</surname><given-names>C</given-names></name><name name-style="western"><surname>Babcock</surname><given-names>EA</given-names></name><name name-style="western"><surname>Bakun</surname><given-names>A</given-names></name><name name-style="western"><surname>Bonfil</surname><given-names>R</given-names></name><etal/></person-group>             <year>2004</year>             <article-title>ECOLOGY: Ecosystem-Based Fishery Management.</article-title>             <source>Science</source>             <volume>305</volume>             <fpage>346</fpage>             <lpage>347</lpage>          </element-citation>
+      </ref>
+      <ref id="pone.0015323-IPCC1">
+        <label>91</label>
+        <element-citation publication-type="other" xlink:type="simple">             <collab xlink:type="simple">IPCC 2007 Climate Change, editor</collab>             <year>2007</year>             <article-title>The Physical Science Basis. Contribution of Working Group I to the Fourth Assessment Report of the Intergovernmental Panel on Climate Change Cambridge,</article-title>             <publisher-loc>UK and New York, USA</publisher-loc>             <publisher-name>Cambridge University Press</publisher-name>          </element-citation>
+      </ref>
+    </ref-list>
+    
+  </back>
+</article>

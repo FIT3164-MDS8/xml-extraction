@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" article-type="research-article" dtd-version="3.0" xml:lang="en">
+  <front>
+    <journal-meta><journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><issn pub-type="epub">1932-6203</issn><publisher>
+        <publisher-name>Public Library of Science</publisher-name>
+        <publisher-loc>San Francisco, USA</publisher-loc>
+      </publisher></journal-meta>
+    <article-meta><article-id pub-id-type="publisher-id">PONE-D-12-08793</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0045097</article-id><article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Biology</subject>
+          <subj-group>
+            <subject>Computational biology</subject>
+            <subj-group>
+              <subject>Genomics</subject>
+              <subj-group>
+                <subject>Genome analysis tools</subject>
+                <subj-group>
+                  <subject>Genome scans</subject>
+                  <subject>Transcriptomes</subject>
+                </subj-group>
+              </subj-group>
+              <subj-group>
+                <subject>Genome expression analysis</subject>
+              </subj-group>
+            </subj-group>
+            <subj-group>
+              <subject>Microarrays</subject>
+              <subject>Sequence analysis</subject>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Genetics</subject>
+            <subj-group>
+              <subject>Gene expression</subject>
+              <subj-group>
+                <subject>DNA transcription</subject>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Genomics</subject>
+            <subj-group>
+              <subject>Genome analysis tools</subject>
+              <subj-group>
+                <subject>Transcriptomes</subject>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Microbiology</subject>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline">
+          <subject>Genetics and Genomics</subject>
+          <subject>Computational Biology</subject>
+        </subj-group>
+      </article-categories><title-group><article-title>Genome-Wide Prediction and Validation of Sigma70 Promoters in <italic>Lactobacillus plantarum</italic> WCFS1</article-title><alt-title alt-title-type="running-head">Prediction and Validation of Sigma70 Promoters</alt-title></title-group><contrib-group>
+        <contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+          <name name-style="western">
+            <surname>Todt</surname>
+            <given-names>Tilman J.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+          <name name-style="western">
+            <surname>Wels</surname>
+            <given-names>Michiel</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff3">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff4">
+            <sup>4</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff5">
+            <sup>5</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Bongers</surname>
+            <given-names>Roger S.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff3">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff4">
+            <sup>4</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Siezen</surname>
+            <given-names>Roland S.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff3">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff4">
+            <sup>4</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff5">
+            <sup>5</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff7">
+            <sup>7</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>van Hijum</surname>
+            <given-names>Sacha A. F. T.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff3">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff4">
+            <sup>4</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff5">
+            <sup>5</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff7">
+            <sup>7</sup>
+          </xref>
+          <xref ref-type="corresp" rid="cor1">
+            <sup>*</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Kleerebezem</surname>
+            <given-names>Michiel</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff3">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff4">
+            <sup>4</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff5">
+            <sup>5</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff6">
+            <sup>6</sup>
+          </xref>
+        </contrib>
+      </contrib-group><aff id="aff1">
+        <label>1</label>
+        <addr-line>Center for Molecular and Biomolecular Informatics, Nijmegen Center for Molecular Life Sciences, Radboud University Medical Centre, Nijmegen, The Netherlands</addr-line>
+      </aff><aff id="aff2">
+        <label>2</label>
+        <addr-line>HAN University of Applied Sciences, Institute of Applied Sciences, Nijmegen, The Netherlands</addr-line>
+      </aff><aff id="aff3">
+        <label>3</label>
+        <addr-line>NIZO food research, Ede, The Netherlands</addr-line>
+      </aff><aff id="aff4">
+        <label>4</label>
+        <addr-line>TI Food and Nutrition, Wageningen, The Netherlands</addr-line>
+      </aff><aff id="aff5">
+        <label>5</label>
+        <addr-line>Kluyver Centre for Genomics of Industrial Fermentation, Delft, The Netherlands</addr-line>
+      </aff><aff id="aff6">
+        <label>6</label>
+        <addr-line>Wageningen University, Host Microbe Interactomics Group, Wageningen, The Netherlands</addr-line>
+      </aff><aff id="aff7">
+        <label>7</label>
+        <addr-line>Netherlands Bioinformatics Centre, Nijmegen, The Netherlands</addr-line>
+      </aff><contrib-group>
+        <contrib contrib-type="editor" xlink:type="simple">
+          <name name-style="western">
+            <surname>Song</surname>
+            <given-names>Qing</given-names>
+          </name>
+          <role>Editor</role>
+          <xref ref-type="aff" rid="edit1"/>
+        </contrib>
+      </contrib-group><aff id="edit1">
+        <addr-line>Morehouse School of Medicine, United States of America</addr-line>
+      </aff><author-notes>
+        <corresp id="cor1">* E-mail: <email xlink:type="simple">svhijum@cmbi.ru.nl</email></corresp>
+        <fn fn-type="conflict">
+          <p>Michiel Wels, Roger S. Bongers, Roland S. Siezen, Sacha A.F.T. van Hijum and Michiel Kleerebezem are affiliated with NIZO food research and TI Food and Nutrition. Michiel Wels, Roland S. Siezen, Sacha A.F.T. van Hijum and Michiel Kleerebezem are affiliated with Kluyver Centre for Genomics of Industrial Fermentation. This does not alter the authors' adherence to all the PLoS ONE policies on sharing data and materials..</p>
+        </fn>
+        <fn fn-type="con">
+          <p>Conceived and designed the experiments: MK. Performed the experiments: RSB. Analyzed the data: TJT MW SvH. Contributed reagents/materials/analysis tools: RSB MW TJT. Wrote the paper: TJT MW SvH.</p>
+        </fn>
+      </author-notes><pub-date pub-type="collection">
+        <year>2012</year>
+      </pub-date><pub-date pub-type="epub">
+        <day>20</day>
+        <month>9</month>
+        <year>2012</year>
+      </pub-date><volume>7</volume><issue>9</issue><elocation-id>e45097</elocation-id><history>
+        <date date-type="received">
+          <day>26</day>
+          <month>3</month>
+          <year>2012</year>
+        </date>
+        <date date-type="accepted">
+          <day>14</day>
+          <month>8</month>
+          <year>2012</year>
+        </date>
+      </history><permissions>
+        
+        <copyright-holder>Todt et al</copyright-holder>
+        <license xlink:type="simple">
+          <license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+        </license>
+      </permissions><abstract>
+        <sec>
+          <title>Background</title>
+          <p>In prokaryotes, sigma factors are essential for directing the transcription machinery towards promoters. Various sigma factors have been described that recognize, and bind to specific DNA sequence motifs in promoter sequences. The canonical sigma factor σ<sup>70</sup> is commonly involved in transcription of the cell's housekeeping genes, which is mediated by the conserved σ<sup>70</sup> promoter sequence motifs. In this study the σ<sup>70</sup>-promoter sequences in <italic>Lactobacillus plantarum</italic> WCFS1 were predicted using a genome-wide analysis. The accuracy of the transcriptionally-active part of this promoter prediction was subsequently evaluated by correlating locations of predicted promoters with transcription start sites inferred from the 5′-ends of transcripts detected by high-resolution tiling array transcriptome datasets.</p>
+        </sec>
+        <sec>
+          <title>Results</title>
+          <p>To identify σ<sup>70</sup>-related promoter sequences, we performed a genome-wide sequence motif scan of the <italic>L. plantarum</italic> WCFS1 genome focussing on the regions upstream of protein-encoding genes. We obtained several highly conserved motifs including those resembling the conserved σ<sup>70</sup>-promoter consensus. Position weight matrices-based models of the recovered σ<sup>70</sup>-promoter sequence motif were employed to identify 3874 motifs with significant similarity (p-value&lt;10<sup>−4</sup>) to the model-motif in the <italic>L. plantarum</italic> genome. Genome-wide transcript information deduced from whole genome tiling-array transcriptome datasets, was used to infer transcription start sites (TSSs) from the 5′-end of transcripts. By this procedure, 1167 putative TSSs were identified that were used to corroborate the transcriptionally active fraction of these predicted promoters. In total, 568 predicted promoters were found in proximity (≤40 nucleotides) of the putative TSSs, showing a highly significant co-occurrence of predicted promoter and TSS (p-value&lt;10<sup>−263</sup>).</p>
+        </sec>
+        <sec>
+          <title>Conclusions</title>
+          <p>High-resolution tiling arrays provide a suitable source to infer TSSs at a genome-wide level, and allow experimental verification of <italic>in silico</italic> predicted promoter sequence motifs.</p>
+        </sec>
+      </abstract><funding-group>
+        <funding-statement>T.J. Todt was funded by HAN University of Applied Sciences. The funder had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+      </funding-group><counts>
+        <page-count count="8"/>
+      </counts></article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Background</title>
+      <p>Methods for predicting protein-coding genes have been extensively optimized <xref ref-type="bibr" rid="pone.0045097-Baxevanis1">[1]</xref>, while the development of methodology for the structural and functional analysis of intergenic regions has only come into focus more recently.</p>
+      <p>Although the fraction of non-coding and/or intergenic sequences in prokaryotic genomes is relatively low compared to eukaryotes <xref ref-type="bibr" rid="pone.0045097-Mira1">[2]</xref>, it encompasses a similar complexity in conserved DNA sequence motifs and regulatory elements <xref ref-type="bibr" rid="pone.0045097-Huerta1">[3]</xref>. In prokaryotes, elements such as binding sites for the sigma factor unit of the RNA-polymerase <xref ref-type="bibr" rid="pone.0045097-Gruber1">[4]</xref> are essential for appropriate guidance of the transcription machinery. Sigma factors enable the binding of the RNA polymerase core enzyme to the canonical promoter sequences they recognize. Various sigma factors have been identified and many bacteria possess more than one sigma factor <xref ref-type="bibr" rid="pone.0045097-Kroos1">[5]</xref>, each recognizing specific DNA sequence motifs in promoters, which enables cells to respond rapidly to changing conditions by sigma factor-mediated adjustment of gene transcription patterns. Although different sigma factors recognize specific promoter sequences, the target sequence elements recognized by particular classes of sigma factors have been reported to be conserved among bacteria <xref ref-type="bibr" rid="pone.0045097-Gruber1">[4]</xref>, <xref ref-type="bibr" rid="pone.0045097-deHaseth1">[6]</xref>. For example, σ<sup>70</sup> <xref ref-type="bibr" rid="pone.0045097-Lonetto1">[7]</xref>, <xref ref-type="bibr" rid="pone.0045097-Paget1">[8]</xref> and σ<sup>54</sup> <xref ref-type="bibr" rid="pone.0045097-Stevens1">[9]</xref> factors were shown to recognize similar sequences in phylogenetically distant bacterial species. Further fine-tuning of transcription activity by the sigma-factor containing RNA polymerase (e.g., harbouring the canonical σ<sup>70</sup>) involves regulatory factors that either repress or activate transcription by binding to specific DNA sequence motifs located in close proximity of, or overlapping with, the actual promoter sequence <xref ref-type="bibr" rid="pone.0045097-Lloyd1">[10]</xref>.</p>
+      <p>Previously, many studies aimed at detection of intergenic regulatory elements on a genome-wide scale <xref ref-type="bibr" rid="pone.0045097-Down1">[11]</xref>, <xref ref-type="bibr" rid="pone.0045097-McGrath1">[12]</xref> have employed consensus sequences that were deduced from experimentally determined binding sites in order to identify similar regulatory elements elsewhere in the genome <xref ref-type="bibr" rid="pone.0045097-Huerta1">[3]</xref>. When experimental evidence is limited or absent, comparative genomics or other <italic>de novo</italic> prediction methods can be employed to detect conserved intergenic <italic>cis</italic>-acting elements in a genome <xref ref-type="bibr" rid="pone.0045097-Alkema1">[13]</xref>–<xref ref-type="bibr" rid="pone.0045097-Wels1">[16]</xref>.</p>
+      <p>The species <italic>Lactobacillus plantarum</italic> is frequently encountered in vegetable, meat and dairy fermentations and is also present among the natural inhabitant of mammalian gastrointestinal tracts <xref ref-type="bibr" rid="pone.0045097-Ahrne1">[17]</xref>. The genome of <italic>L. plantarum</italic> WCFS1 <xref ref-type="bibr" rid="pone.0045097-Kleerebezem1">[18]</xref> was predicted to encode two sigma factors besides σ<sup>70</sup>, namely the <italic>rpoN</italic>-encoded σ<sup>54</sup> factor that has been shown to exclusively control the expression of the mannose specific PTS system in this strain <xref ref-type="bibr" rid="pone.0045097-Stevens1">[9]</xref>, and the <italic>sigH</italic> encoded sigma factor of which the target genes in <italic>L. plantarum</italic> remain unknown to date, but that resembles the <italic>Bacillus subtilis</italic> 168 transcription factor <italic>sigH</italic> that is involved in sporulation.</p>
+      <p>In this study, we performed a model-based genome-wide prediction of conserved motifs in the intergenic sequence upstream of protein-encoding genes within the genome of <italic>L. plantarum</italic> WCFS1. <italic>In silico</italic> models of recognizable σ<sup>70</sup>-promoter sequence elements were generated using position weight matrices (PWM; <xref ref-type="bibr" rid="pone.0045097-Stormo1">[19]</xref>, <xref ref-type="bibr" rid="pone.0045097-Staron1">[20]</xref>), which were subsequently used for genome-wide prediction of promoter sites. Using this approach we predicted 3874 candidate σ<sup>70</sup> promoters in the <italic>L. plantarum</italic> WCFS1 genome at p-value cut-offs of 10<sup>−4</sup>. Subsequently, transcriptome datasets obtained using strand-specific genome-wide tiling DNA microarrays were used to validate the transcriptionally active proportion of the <italic>in silico</italic> predicted σ<sup>70</sup>-promoter sequence elements <xref ref-type="bibr" rid="pone.0045097-McGrath1">[12]</xref>, <xref ref-type="bibr" rid="pone.0045097-Tjaden1">[21]</xref>, <xref ref-type="bibr" rid="pone.0045097-Selinger1">[22]</xref>, enabling the validation of 568 of the predicted promoters by their proximity (≤40 nucleotides) to 1167 transcription start sites inferred from experimentally estimated transcript boundaries.</p>
+    </sec>
+    <sec id="s2">
+      <title>Results</title>
+      <sec id="s2a">
+        <title>Prediction of conserved motifs in the intergenic regions of <italic>L. plantarum</italic></title>
+        <p>With 3.3 million nucleotides, the genome of <italic>L. plantarum</italic> WCFS1 is among the largest <italic>Lactobacillus</italic> genomes <xref ref-type="bibr" rid="pone.0045097-Kleerebezem1">[18]</xref> and comprises 3137 predicted genes, of which 3051 are protein-encoding (Refseq NC_004567, <xref ref-type="bibr" rid="pone.0045097-Siezen1">[23]</xref>). The intergenic regions encompass approximately 16 percent of the entire genome nucleotide sequence (530640 out of 3308275 nucleotides). Using the genome annotation of <italic>L. plantarum</italic> WCFS1, 2209 intergenic sequences (see Methods) were used to search for conserved motifs using MEME <xref ref-type="bibr" rid="pone.0045097-Bailey1">[24]</xref>, resulting in the detection of eight distinct sequence motifs with E-values below 10<sup>−3</sup> (see <xref ref-type="fig" rid="pone-0045097-g001">Figure 1</xref>, <xref ref-type="supplementary-material" rid="pone.0045097.s001">Results S1</xref> and <xref ref-type="supplementary-material" rid="pone.0045097.s004">Figure S1</xref>).</p>
+        <fig id="pone-0045097-g001" orientation="portrait" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0045097.g001</object-id>
+          <label>Figure 1</label>
+          <caption>
+            <title>Highly conserved motifs.</title>
+            <p>Highly conserved motifs (E-value&lt;10<sup>−80</sup>) detected by MEME search in the upstream regions of protein-encoding genes (for a full list see <xref ref-type="supplementary-material" rid="pone.0045097.s004">Figure S1</xref> in Supplementary results). Motifs are shown as Seqlogos <xref ref-type="bibr" rid="pone.0045097-Crooks1">[45]</xref>.</p>
+          </caption>
+          <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0045097.g001" xlink:type="simple"/>
+        </fig>
+        <p>The element with the lowest E-value (motif 1; E-value 2.7×10<sup>−239</sup>; <xref ref-type="fig" rid="pone-0045097-g001">Figure 1</xref>) displayed clear resemblance to the consensus Shine and Dalgarno sequence (SD; <named-content content-type="gene" xlink:type="simple">5′-AGAAAGGAGGTGATC-3′</named-content>) of bacteria <xref ref-type="bibr" rid="pone.0045097-Shine1">[25]</xref>. The SD sequence of <italic>L. plantarum</italic> WCFS1 is found because the intergenic sequences used to search for conserved motifs generally include the untranslated regions of the protein-encoding genes that encompass the SD sequence. In addition to the SD sequence, two motifs (motif 2, motif 3; <xref ref-type="fig" rid="pone-0045097-g001">Figure 1</xref>) were identified that resemble <italic>cis</italic>-acting elements described for sigma factor σ<sup>70</sup> (<italic>rpoD</italic>) <xref ref-type="bibr" rid="pone.0045097-deHaseth1">[6]</xref> dependent promoters. These motifs encompassed one or both of the two canonical consensus σ<sup>70</sup> elements that were previously designated the −35 and −10 box (consensus sequence <named-content content-type="gene" xlink:type="simple">5′-TTGACA-3′</named-content>and <named-content content-type="gene" xlink:type="simple">5′-TATAAT-3′</named-content>, respectively) <xref ref-type="bibr" rid="pone.0045097-Gruber1">[4]</xref>. Both motif 2 (E-value 1.1×10<sup>−149</sup>) and motif 3 (E-value 3.8×10<sup>−82</sup>) encompass sequences that resemble the −10 box, while motif 3 also includes the −35 box.</p>
+      </sec>
+      <sec id="s2b">
+        <title>Genome-wide prediction of σ<sup>70</sup> promoters in <italic>L. plantarum</italic></title>
+        <p>The detection of <italic>L. plantarum</italic> related σ<sup>70</sup>-promoter elements enabled the genome-wide prediction of σ<sup>70</sup>-promoters that share similarity with the identified motifs. The two σ<sup>70</sup>-promoter associated position-specific weight matrices (PWMs) generated by MEME (motif 2 and motifs 3) were employed to predict the positions of both sequence elements in the <italic>L. plantarum</italic> WCFS1 chromosome, using MAST <xref ref-type="bibr" rid="pone.0045097-Bailey2">[26]</xref>. These predictions generated 939 and 1141 occurrences of the extended −10 (based on motif 2) and the −35 −10 promoter motifs (based on motif 3) at a p-value cut-off of 10<sup>−4</sup>, respectively. Occurrences were filtered for partially overlapping promoters, resulting in the identification of 1879 putative σ<sup>70</sup> promoters. Previous studies have revealed that the two σ<sup>70</sup>-promoter elements (−35 and −10 boxes) may flank a spacer sequence of slightly variable length in different promoters (16–20 nt) <xref ref-type="bibr" rid="pone.0045097-Helmann1">[27]</xref>. To accommodate such spacer-length variation in our predictions, the PWM of the −35 −10 promoter (based on motif 3) was manually modified to allow for length variations ranging from 16 to 22 nt. MAST-based searches using these modified PWMs yielded 1995 additional non-overlapping predicted promoter sequences. Overall, these predictions generated a total of 3874 putative promoter sequences that displayed high-level similarity to the consensus motif (Bonferroni corrected p-values&lt;0.05).</p>
+      </sec>
+      <sec id="s2c">
+        <title>Detection of putative transcription start sites</title>
+        <p>As described in previous studies, the high sensitivity of <italic>in silico</italic> prediction of σ<sup>70</sup>-promoters using PWMs usually generates many false-positive identifications <xref ref-type="bibr" rid="pone.0045097-Huerta1">[3]</xref>, <xref ref-type="bibr" rid="pone.0045097-Fickett1">[28]</xref>–<xref ref-type="bibr" rid="pone.0045097-Pedersen1">[30]</xref>. To overcome this limitation, putative transcription start sites (TSSs) inferred from 5′-ends of transcripts are commonly employed to corroborate predicted σ<sup>70</sup>-promoter locations <xref ref-type="bibr" rid="pone.0045097-McGrath1">[12]</xref>, <xref ref-type="bibr" rid="pone.0045097-Tjaden1">[21]</xref>, <xref ref-type="bibr" rid="pone.0045097-MendozaVargas1">[31]</xref>. In this study, we determined genome-wide putative TSSs from tiling-array derived transcription data obtained for <italic>L. plantarum</italic> WCFS1 grown in rich laboratory medium (MRS) at 37°C. Transcriptional activity was assigned to genomic regions by employing a global threshold approach <xref ref-type="bibr" rid="pone.0045097-Cheng1">[32]</xref>, leading to the identification of 1167 distinct transcriptionally active regions (TARs) larger than 120 nucleotides <xref ref-type="bibr" rid="pone.0045097-Rinn1">[33]</xref>. The 1167 TARs cover 1995 of the 3137 predicted genes in the <italic>L. plantarum</italic> WCFS1 genome, likely reflecting the transcriptionally active fraction of the entire genomic coding capacity under the growth conditions employed in this study.</p>
+        <p>The 5′-ends of TARs may be the result of transcription initiation but can also arise from other events, such as degradation, processing or cross-hybridisation. Although in the majority of cases 5′-end points of TARs are probably the TSSs <xref ref-type="bibr" rid="pone.0045097-McGrath1">[12]</xref> false-positive identifications are possible (see <xref ref-type="supplementary-material" rid="pone.0045097.s002">Results S2</xref>, <xref ref-type="supplementary-material" rid="pone.0045097.s005">Figure S2</xref> and <xref ref-type="supplementary-material" rid="pone.0045097.s006">S3</xref>). Inspection of signal strength patterns at the 5′-end of different TARs, revealed sharper increases in signal intensity for highly expressed TARs compared to weakly expressed TARs. Consequently, the assignment of putative TSSs to weakly expressed TARs leads to more ambiguous TSS positioning as compared to those assigned to highly expressed TARs. Therefore, TARs were grouped according to their mean signal intensity (see Methods), which allowed the discrimination between TSSs assigned to highly and weakly expressed TARs. To consistently assign TSSs to TARs an algorithm was developed that identifies the maximum increase in signal intensity at the 5′-end of a TAR and by linear extrapolation of the local transcription signal-intensity slope estimates the position of the TSS of the TAR. We evaluated the performance of our TSS predictions by correlating the tiling array-based TSSs with those that were previously identified in <italic>L. plantarum</italic> by primer extension. For nearly all cases (11 out of 12 genes) the putative TSS predicted on basis of the tiling array data was within a maximum distance of 28 nt from the experimentally TSS determined by primer extension (see <xref ref-type="supplementary-material" rid="pone.0045097.s003">Results S3</xref>). The majority of these genes (8 genes) were highly expressed in the tiling array dataset (their average expression signal belonged to the two groups of TARs that showed the highest expression levels, see Method).</p>
+        <p>Application of the algorithm allowed prediction of a TSS for each of the 1167 TARs. Expectedly, out of the 1167 predicted TSSs, the majority were located upstream of protein encoding genes (912). Next to these expected TSSs, 149 of the predicted TSSs appeared to be positioned in an antisense orientation relative to the annotated genes, while an additional 106 predicted TSSs were positioned in genomic regions that lack genetically linked genes, suggesting that these TSSs could represent the start of non-coding RNAs (see <xref ref-type="fig" rid="pone-0045097-g002">Figure 2</xref>).</p>
+        <fig id="pone-0045097-g002" orientation="portrait" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0045097.g002</object-id>
+          <label>Figure 2</label>
+          <caption>
+            <title>Flow chart of promoter validation.</title>
+            <p>Genome-wide motif search using MEME and MAST provided 3874 and 14962 predicted σ<sup>70</sup>-promoters at p-value cut-offs of 10<sup>−4</sup> and (10<sup>−4</sup>≤p-value&lt;10<sup>−3</sup>), respectively. For validation of the predicted promoters, transcriptionally active regions (TARs) were detected using tiling array data of <italic>L. plantarum</italic> WCFS1 and for each TAR the transcription start site (TSS) was determined. After filtering the TSSs for low-expressed TARs, 621 TSSs were obtained for validation of predicted σ<sup>70</sup>-promoters. At a low p-value cut-off (p-value&lt;10<sup>−4</sup>), 568 σ<sup>70</sup>-promoters were found that co-localized within a distance of 40 nt of TSSs. An additional 120 σ<sup>70</sup>-promoters were found to co-localized within a distance of 40 nt of TSSs after raising the p-value cut-off (10<sup>−4</sup>≤p-value&lt;10<sup>−3</sup>). For 94 TSSs, no co-localized σ<sup>70</sup>-promoter (within a distance of 40 nt) was found.</p>
+          </caption>
+          <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0045097.g002" xlink:type="simple"/>
+        </fig>
+      </sec>
+      <sec id="s2d">
+        <title>Validation of predicted σ<sup>70</sup> promoters using TSSs</title>
+        <p>Experimentally verified TSSs are commonly located between 8–14 nucleotides downstream of their cognate promoter −10 sequence element <xref ref-type="bibr" rid="pone.0045097-Huerta1">[3]</xref>. Therefore, the positions of inferred TSSs and their relative distance to predicted promoters can be used to corroborate the involvement of these promoters in the initiation of transcription of the corresponding TAR. The TSS locations were correlated to appropriately oriented predicted σ<sup>70</sup>-promoters (p-value&lt;10<sup>−4</sup>) in close proximity of the TSS, identifying 568 σ<sup>70</sup>-promoters within a distance 40 nt of a TSS (see <xref ref-type="fig" rid="pone-0045097-g002">Figure 2</xref>) of which 474 σ<sup>70</sup>-promoters were within a distance 20 nt of a TSS (tiling-array resolution 14 nt) (see <xref ref-type="fig" rid="pone-0045097-g003">Figure 3</xref>). About 70% of TSSs assigned to highly expressed TARs (group A and B in <xref ref-type="fig" rid="pone-0045097-g004">Figure 4</xref>) were in close proximity of a predicted σ<sup>70</sup>-promoter (≤40 nt), while for ‘only’ 17% of TSSs detected for low expressed TARs (group E in <xref ref-type="fig" rid="pone-0045097-g004">Figure 4</xref>) a σ<sup>70</sup>-promoter could be assigned. Expectedly, TSSs inferred from expression signals of highly expressed genes give better corroboration results than TSSs inferred from expression signals of lower expressed genes. The lower promoter assignment to the low-expression TARs may be due to the ambiguity of the TSS prediction for these TARs, while the higher accuracy of TSS prediction for high expression TARs provides more confident co-localizations with corresponding promoter predictions. Overall, TSSs and predicted promoters displayed significant co-occurrence (Fisher exact p-value&lt;10<sup>−263</sup>) based on the detected TSSs matching with predicted promoters in comparison with randomly generated TSSs. The expected co-occurrence frequencies of TSSs and promoters within a range of 40 nucleotides are predicted to be 4% (see <xref ref-type="fig" rid="pone-0045097-g004">Figure 4</xref>, group Random).</p>
+        <fig id="pone-0045097-g003" orientation="portrait" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0045097.g003</object-id>
+          <label>Figure 3</label>
+          <caption>
+            <title>Distribution of distances between promoters and TSSs.</title>
+            <p>Distribution of distances (in nt) for 568 cases where a predicted σ<sup>70</sup>-promoter (genome-wide search, p-values&lt;10<sup>−4</sup>) and a TSS were found in proximity (≤60 nt) of each other. TSSs are divided into 5 groups (A, B, C, D, E) defined by the differences between the means of signal intensities upstream and downstream of the TSS. The 5 groups are the inter-percentile ranges (E: 0–20%, D: 21–40%, C:41–60%, B: 61–80%, A: 81–100%) of the ranked mean differences (see Methods). At distances above 40 nt the observed number of co-localized TSSs and promoters (≤10 counts) is equal to the expected number co-localized TSSs and promoters (see Methods).</p>
+          </caption>
+          <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0045097.g003" xlink:type="simple"/>
+        </fig>
+        <fig id="pone-0045097-g004" orientation="portrait" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0045097.g004</object-id>
+          <label>Figure 4</label>
+          <caption>
+            <title>Frequency distribution of validated promoters.</title>
+            <p>Frequency distribution of σ<sup>70</sup>-promoters (genome-wide search, p-values&lt;10<sup>−4</sup>) with TSSs found in proximity (≤40 nt) of each other. Frequencies are given for 5 groups (A, B, C, D, E) and the expected frequency of co-localized TSSs and promoters (Random). The 5 groups are the inter-percentile ranges (E: 0–20%, D: 21–40%, C:41–60%, B: 61–80%, A: 81–100%) of the ranked mean differences between the means of signal intensities upstream and downstream of the TSS (see Methods).</p>
+          </caption>
+          <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0045097.g004" xlink:type="simple"/>
+        </fig>
+        <p>As σ<sup>70</sup> target sequences may exhibit quite extensive sequence variation, this approach may have missed recognizable, but less conserved, σ<sup>70</sup>-promoter sequence elements. To expand our analyses to also encompass σ<sup>70</sup>-promoters with more deviating sequences, the stringency of promoter detection was relieved (10<sup>−4</sup>≤p-value&lt;10<sup>−3</sup>), allowing MAST-based detection of an additional 14962 sequence elements with σ<sup>70</sup>-promoters similarity. Of these predicted elements 276 co-localized within a distance of 40 nt of TSSs for which no conserved σ<sup>70</sup> promoters (p-value&lt;10<sup>−4</sup>) could be found (see <xref ref-type="fig" rid="pone-0045097-g002">Figure 2</xref> and <xref ref-type="supplementary-material" rid="pone.0045097.s007">Figure S4</xref>). However, TSSs and these lower stringency predicted promoters displayed no significant co-occurrence (Fisher exact p-value = 0.16) and co-occurrence frequencies of TSSs and promoters within a range of 40 nucleotides are predicted to be 19% (see <xref ref-type="supplementary-material" rid="pone.0045097.s008">Figure S5</xref>).</p>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Discussion</title>
+      <p>In this study we determined the consensus motifs of the σ<sup>70</sup> promoters in <italic>L. plantarum</italic> WCFS1 using different models and approaches, including the validation of predicted promoters using tiling array transcriptome datasets.</p>
+      <p>Searching for conserved motifs in the intergenic regions of <italic>L. plantarum</italic> WCFS1 revealed highly conserved motifs (see <xref ref-type="fig" rid="pone-0045097-g001">Figure 1</xref>). Analogous to their anticipated sequence conservation, the two elements of the general σ<sup>70</sup> promoter, the so-called −35 and −10 elements, were among the most conserved motifs (p-values&lt;10<sup>−4</sup>).</p>
+      <p>The σ<sup>70</sup> promoter related motifs were used to generate position weight matrix (PWM) based models. PWM models enabled the genome-wide detection of 3874 and additional 14962 putative σ<sup>70</sup> promoters in the <italic>L. plantarum</italic> WCFS1 genome at p-value cut-offs of 10<sup>−4</sup> and 10<sup>−3</sup>, respectively. Removing all σ<sup>70</sup> promoters that were intergenic but overlapped partly with the 5′- or 3′-ends of genes yielded 1763 and 4093 σ<sup>70</sup> promoters at p-value cut-offs of 10<sup>−4</sup> and 10<sup>−3</sup>, respectively. As shown in previous studies on lactic acid bacteria <xref ref-type="bibr" rid="pone.0045097-Wels1">[16]</xref>, the average number of transcriptional units is about 1077 with an average of 1.77 genes per unit suggesting that the number of σ<sup>70</sup> promoters reflects the number of transcripts that would be expected on basis of the number of predicted operons on the genome of <italic>L. plantarum</italic> <xref ref-type="bibr" rid="pone.0045097-Wels1">[16]</xref>. The additional σ<sup>70</sup> promoters partly overlapping with coding parts of genes might be alternative σ<sup>70</sup> promoters (see for example <xref ref-type="supplementary-material" rid="pone.0045097.s002">Results S2</xref>) which are also found in other bacterial genomes <xref ref-type="bibr" rid="pone.0045097-Browning1">[34]</xref>.</p>
+      <p>PWMs have been used to predict σ<sup>70</sup>-promoters with high sensitivity in other species <xref ref-type="bibr" rid="pone.0045097-Huerta1">[3]</xref>, <xref ref-type="bibr" rid="pone.0045097-Hertz1">[35]</xref>, <xref ref-type="bibr" rid="pone.0045097-Mulligan1">[36]</xref>, but were hampered by many false-positive identifications <xref ref-type="bibr" rid="pone.0045097-Huerta1">[3]</xref>, <xref ref-type="bibr" rid="pone.0045097-Fickett1">[28]</xref>–<xref ref-type="bibr" rid="pone.0045097-Pedersen1">[30]</xref>, illustrating the difficulty to model the general σ<sup>70</sup>-promoter sequence elements, which are bipartite motifs composed of 2 conserved sequence motifs separated by a non-conserved spacer sequences of variable length <xref ref-type="bibr" rid="pone.0045097-Helmann1">[27]</xref>, <xref ref-type="bibr" rid="pone.0045097-Lisser1">[37]</xref>, <xref ref-type="bibr" rid="pone.0045097-Ozoline1">[38]</xref>.</p>
+      <p>Analogous to what was described in previous studies <xref ref-type="bibr" rid="pone.0045097-McGrath1">[12]</xref>, <xref ref-type="bibr" rid="pone.0045097-Tjaden1">[21]</xref>, <xref ref-type="bibr" rid="pone.0045097-MendozaVargas1">[31]</xref>, transcription start sites (TSS), determined by high-resolution tiling arrays, can be used to corroborate predicted σ<sup>70</sup>-promoter locations. The analysis of transcriptome datasets from <italic>L. plantarum</italic> WCFS1 obtained with strand-specific genome-wide tiling arrays revealed 1167 transcriptionally active regions (TARs). The 5′-ends of TARs were used to infer putative TSSs (see <xref ref-type="fig" rid="pone-0045097-g002">Figure 2</xref>). To confirm the TSSs inferred from the 5′-ends of TARs these TSSs were compared to TSSs that have previously been determined by primer extension analysis (see <xref ref-type="supplementary-material" rid="pone.0045097.s003">Results S3</xref>). Our predicted TSSs co-localised nicely with the previously described TSS positions. With the available TSS information, we were able to show that our approach gives highly reliable results. Similarly, alternative genome wide transcription analysis methods such as RNA-seq can also be employed to detect TSSs in bacteria <xref ref-type="bibr" rid="pone.0045097-MendozaVargas1">[31]</xref>, <xref ref-type="bibr" rid="pone.0045097-Sharma1">[39]</xref>, <xref ref-type="bibr" rid="pone.0045097-Guell1">[40]</xref>, but here we confirm that high-resolution tiling array data are a valuable resource to infer TSS locations <xref ref-type="bibr" rid="pone.0045097-McGrath1">[12]</xref>, <xref ref-type="bibr" rid="pone.0045097-Tjaden1">[21]</xref>, <xref ref-type="bibr" rid="pone.0045097-Selinger1">[22]</xref>.</p>
+      <p>Of the 1167 putative TSSs selected for validation, 568 TSS were positioned within proximity of the σ<sup>70</sup> promoters that were predicted with high stringency, while an additional 276 TSSs could be co-localized with predicted promoters using the lower stringency promoter prediction (10<sup>−4</sup>≤p-values&lt;10<sup>−3</sup>). However, the latter co-occurrence of TSSs and low-stringency predicted promoters was not significant (Fisher exact p-value = 0.16), which is likely due to a substantial overprediction (false-positives) of promoter sequences.</p>
+      <p>In general, promoters function more efficiently with sequence elements that resemble the consensus sequences. However, most promoters have non-consensus sequences and their activity is further modulated by trans-acting factors (including alternative sigma factors, small ligands and transcription factors) <xref ref-type="bibr" rid="pone.0045097-Browning1">[34]</xref>. To discover conserved transcription initiation motifs other than the σ<sup>70</sup> promoter-related sequences, DNA sequences upstream to TSSs with no σ<sup>70</sup> promoter were searched for other conserved motifs (applying MEME searches as described for the initial search, see Method). These searches did not reveal additional highly-conserved motifs (p-value cut-off&lt;10<sup>−4</sup>; data not shown).</p>
+      <p>Our results show that motif-based approaches can be used to recover conserved sequence elements of the σ<sup>70</sup> promoter. However, the discovery of more degenerate promoter elements is hampered by many false-positive identifications <xref ref-type="bibr" rid="pone.0045097-Huerta1">[3]</xref>, <xref ref-type="bibr" rid="pone.0045097-Fickett1">[28]</xref>–<xref ref-type="bibr" rid="pone.0045097-Pedersen1">[30]</xref> and validation of predicted promoters (e.g. using transcriptome data) is required but limited by the statistical significance of the obtained results. Our findings suggest that these more degenerate σ<sup>70</sup> promoters may constitute a considerable proportion of all σ<sup>70</sup> promoters in a given genome (in our case about 24% of the validated σ<sup>70</sup> promoters have p-values≥10<sup>−4</sup>), which has been described for other bacterial genomes (such as <italic>E. coli</italic>) <xref ref-type="bibr" rid="pone.0045097-Browning1">[34]</xref>. In this study, transcription data under a single growth condition was used limiting the validation to the active portion of σ<sup>70</sup> promoter-related genes that are clearly transcribed. Transcription data obtained under a variety of growth conditions would still be required to validate the full complement of functional σ70 promoters and distinguish them from false-positive predictions.</p>
+    </sec>
+    <sec id="s4" sec-type="materials|methods">
+      <title>Materials and Methods</title>
+      <sec id="s4a">
+        <title>Transcription analysis of <italic>Lactobacillus plantarum</italic> WCFS1</title>
+        <p>For genome wide transcriptome analysis <italic>L. plantarum</italic> WCFS1 <xref ref-type="bibr" rid="pone.0045097-Kleerebezem1">[18]</xref> was grown until mid-exponential growth phase in MRS, cells were harvested and RNA was isolated and labeled as described before <xref ref-type="bibr" rid="pone.0045097-Marco1">[41]</xref>, <xref ref-type="bibr" rid="pone.0045097-Saulnier1">[42]</xref>. 1.5 µg of labeled targets were hybridized and analyzed on WCFS1 DNA microarrays that cover the whole genome in a tiling fashion as described (GSE36898, GPL15385, GPL15386). The gene expression data are MIAME compliant and deposited in the gene expression omnibus (GEO) database (accession numbers GSE36898, GPL15385, GPL15386).</p>
+        <p>The hybridization intensities of two biological replicates were obtained. Hybridization intensities were log2-transformed, background corrected and normalized by quantile normalization <xref ref-type="bibr" rid="pone.0045097-Bolstad1">[43]</xref>. After normalization, intensities of the two replicates were averaged yielding two strand-specific transcript-level data sets.</p>
+      </sec>
+      <sec id="s4b">
+        <title>Building σ<sup>70</sup>-promoter models using PWMs</title>
+        <p>Position weight matrices were constructed from high-scoring motifs identified by MEME <xref ref-type="bibr" rid="pone.0045097-Bailey1">[24]</xref> searches on a selected subset of intergenic DNA sequences of the <italic>L. plantarum</italic> WCFS1 genome. Initially, all 100 nt regions upstream of all protein encoding genes were selected from the <italic>L. plantarum</italic> WCFS1 genome (Refseq NC_004567). Subsequently, these sequences were evaluated for their potential overlap with a preceding gene, and in such cases, only the intergenic sequence was used for analysis, provided they were 25 nt or longer.</p>
+        <p>The resulting set of selected intergenic sequences was searched for conserved motifs using MEME <xref ref-type="bibr" rid="pone.0045097-Bailey1">[24]</xref>, applying standard DNA parameter settings. Only motifs reported by MEME with E-values below 10<sup>−4</sup> were considered relevant for further analysis. Additional parameters used for selection of candidate sequences were: 1) Zero or One Occurrence Per Sequence (ZOOPS mode), 2) a maximum of ten different motifs per sequence, and 3) each motif should be found in at least thirty-five different sequences. PWM models were constructed for the most abundantly encountered motifs, including those resembling the canonical −35 and −10 elements known from general σ<sup>70</sup>-dependent promoters <xref ref-type="bibr" rid="pone.0045097-deHaseth1">[6]</xref>.</p>
+      </sec>
+      <sec id="s4c">
+        <title>Predicting σ<sup>70</sup> promoters</title>
+        <p>The PWM models were used in a MAST <xref ref-type="bibr" rid="pone.0045097-Bailey2">[26]</xref> search against the complete genomic sequence of <italic>L. plantarum</italic> WCFS1 including the coding regions to predict potential σ<sup>70</sup> promoters. MAST hits with relatively high significance (p-values&lt;10<sup>−4</sup>) were used in further analysis, unless indicated otherwise.</p>
+        <p>Because the spacer region between the −35 and −10 boxes of the σ<sup>70</sup>-promoter varies in length (16–20 nt) <xref ref-type="bibr" rid="pone.0045097-Helmann1">[27]</xref>, PWM models were manually altered by either copying or deleting the columns in the position weight matrix that were part of the spacer region and had the least functional information (low overall specificity and low sequence conservation) of this region. These new matrices were used in genome-wide MAST searches to predict additional promoter occurrences with different spacer-lengths. All predicted promoters (including those predicted on basis of the extended −10 box motif) were filtered for overlapping promoter elements. In case of overlap, the hit with the highest significance was used for further analysis. All non-intergenic promoter elements were removed.</p>
+      </sec>
+      <sec id="s4d">
+        <title>Detecting transcriptionally active regions</title>
+        <p>A global threshold approach was used to detect significantly transcribed genomic regions. For each strand-specific dataset the global threshold was determined from the log distribution of the probe signals. A background normal distribution was estimated from the left-of-the-mode data <xref ref-type="bibr" rid="pone.0045097-Bolstad1">[43]</xref> and used to estimate the background probability of a probe signal. The global threshold was set to a signal level at which the probability of a probe signal being a background signal was less than 10<sup>−6</sup>.</p>
+        <p>Next, transcriptionally active regions (TARs; <xref ref-type="bibr" rid="pone.0045097-Rinn1">[33]</xref>) were determined by applying a segmentation algorithm (comparable to transfrags as described in <xref ref-type="bibr" rid="pone.0045097-Cheng1">[32]</xref> and <xref ref-type="bibr" rid="pone.0045097-Kampa1">[44]</xref>) using the previously estimated global threshold. Segments of adjacent probes with signal intensities above the threshold were identified. Adjacent segments with a gap of maximal 60 nt (corresponding to the length of a single probe on the tiled micro-array) were joined and, segments shorter than 120 nt were discarded.</p>
+      </sec>
+      <sec id="s4e">
+        <title>Transcription start site determination and statistical analysis</title>
+        <p>The 5′-end of a TAR was used to estimate the corresponding TSS position. Manual inspection of signal patterns of different TARs in the tiling array data revealed that highly expressed regions display a rather sharp, approximately linear rise in signal intensity while in lowly expressed regions the signal change appeared to be sigmoidal (data not shown). Based on this observation, we developed the following procedure to determine TSS: Probe signals from the 5′-end of a TAR and its upstream region were used to determine the genomic position at which the slope of increase in signal intensities reached its maximum. This position was used to linearly extrapolate the position of the TSS using the difference between the probe signal of the maximum slope position and the background signal (derived from the mode of the distribution of the probe signals).</p>
+        <p>Using the gene annotation of <italic>L. plantarum</italic> WCFS1 (Refseq NC_004567, <xref ref-type="bibr" rid="pone.0045097-Siezen1">[23]</xref>), TSSs were labelled anti sense if the transcribed strand (TAR) was opposite to a gene-containing strand. In addition, if a TAR had no overlap with known genes (based on the current gene annotation) the assigned TSS and its corresponding TAR were annotated as non-coding. All other TSSs were assigned to the closest downstream located gene positioned on the same strand.</p>
+        <p>To estimate the probability for randomly selecting a TSS in a 40 nucleotide range from a promoter, we used the genomic positions of the TSSs, randomly selected genomics positions of promoters (10.000 times) and calculated for each TSS the minimum distance to the 3′end of a promoter.</p>
+        <p>TSSs were grouped according to the increase in signal intensity by (1) calculating the differences between the means of expression signal upstream and downstream of the TSS and (2) division of the TSS into five groups according to their rank position (inter-percentile ranges 0–20%, 21–40%, 41–60%, 61–80% and 81–100%).</p>
+      </sec>
+    </sec>
+    <sec id="s5">
+      <title>Supporting Information</title>
+      <supplementary-material id="pone.0045097.s001" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0045097.s001" xlink:type="simple">
+        <label>Results S1</label>
+        <caption>
+          <p>Conserved motifs detected by MEME in the upstream regions of protein-encoding genes in <italic>L. plantarum</italic> WCFS1.</p>
+          <p>(DOCX)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0045097.s002" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0045097.s002" xlink:type="simple">
+        <label>Results S2</label>
+        <caption>
+          <p>Interpretation of TAR detection results.</p>
+          <p>(DOCX)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0045097.s003" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0045097.s003" xlink:type="simple">
+        <label>Results S3</label>
+        <caption>
+          <p>Evaluation of results of the TSS prediction method.</p>
+          <p>(DOCX)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0045097.s004" mimetype="image/tiff" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0045097.s004" xlink:type="simple">
+        <label>Figure S1</label>
+        <caption>
+          <p><bold>Motifs detected by MEME in </bold><bold><italic>L. plantarum</italic></bold><bold> WCFS1.</bold> Motifs are displayed as Seqlogo's that contain at each position stacks of letters. The height of an individual letter in a stack represents the probability of the letter at that position in an occurrence of the motif. The position-specific probabilities are retrieved from the position-specific weight matrices calculated by MEME.</p>
+          <p>(TIF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0045097.s005" mimetype="image/tiff" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0045097.s005" xlink:type="simple">
+        <label>Figure S2</label>
+        <caption>
+          <p><bold>Inferred signal intensity of a genomic region containing two genes.</bold> Inferred signal intensity plotted on part of the <italic>L. plantarum</italic> WCFS1 chromosome (genome location: 1156200–1159500 of the forward strand). At this location two genes are located (<italic>lp_1273</italic> and <italic>lp_1274</italic>) which are considered to form an operon. The tiling microarray signal intensities measured confirms that both genes are transcribed at an approximately equal level and suggest that the inferred transcription start is 537 nucleotides upstream of <italic>lp_1273</italic>. The black box indicates the position of a predicted σ<sup>70</sup>-promoter. The grey box indicates the position of a second predicted σ<sup>70</sup>-promoter with no close TSS.</p>
+          <p>(TIF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0045097.s006" mimetype="image/tiff" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0045097.s006" xlink:type="simple">
+        <label>Figure S3</label>
+        <caption>
+          <p><bold>Inferred signal intensity of a genomic region containing two genes.</bold> Inferred signal intensity plotted on part of the <italic>L. plantarum</italic> WCFS1 chromosome (genome location: 1407149–1410217 of the forward strand). At this location two genes are located (<italic>lp_1541</italic> and <italic>lp_1543</italic>) expressed at different levels. For <italic>lp_1541</italic> a putative TSS and a predicted σ<sup>70</sup>-promoter co-localized (2 nt apart) upstream to the annotated translation start of the gene. For <italic>lp_1543</italic> a putative TSS is located 145 nt downstream of the annotated translation start of <italic>lp_1543</italic> and a σ<sup>70</sup>-promoter is predicted 31 nt upstream of this translation start. The low signal expression of <italic>lp_1543</italic> makes it difficult to infer a clear TSS position. The black boxes indicate the positions of predicted σ<sup>70</sup>-promoters.</p>
+          <p>(TIF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0045097.s007" mimetype="image/tiff" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0045097.s007" xlink:type="simple">
+        <label>Figure S4</label>
+        <caption>
+          <p><bold>Distribution of distances between promoters and TSSs.</bold> Distribution of distances (in nt) for 568 cases where a predicted σ<sup>70</sup>-promoter (10<sup>−4</sup>≤p-values&lt;10<sup>−3</sup>) and a TSS were found in proximity (≤60 nt) of each other. TSSs are divided into 5 groups (A, B, C, D, E) defined by the differences between the means of signal intensities upstream and downstream of the TSS. The 5 groups are the inter-percentile ranges (E: 0–20%, D: 21–40%, C:41–60%, B: 61–80%, A: 81–100%) of the ranked mean differences (see Methods). At distances above 40 nt the observed number of co-localized TSSs and promoters (≤10 counts) is equal to the expected number co-localized TSSs and promoters (see Methods).</p>
+          <p>(TIF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0045097.s008" mimetype="image/tiff" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0045097.s008" xlink:type="simple">
+        <label>Figure S5</label>
+        <caption>
+          <p><bold>Frequency distribution of validated promoters.</bold> Frequency distribution of σ<sup>70</sup>-promoters (10<sup>−4</sup>≤p-values&lt;10<sup>−3</sup>) with TSSs found in proximity (≤40 nt) of each other. Frequencies are given for 5 groups (A, B, C, D, E) and the expected frequency of co-localized TSSs and promoters (Random). The 5 groups are the inter-percentile ranges (E: 0–20%, D: 21–40%, C:41–60%, B: 61–80%, A: 81–100%) of the ranked mean differences between the means of signal intensities upstream and downstream of the TSS (see Methods).</p>
+          <p>(TIF)</p>
+        </caption>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <title>References</title>
+      <ref id="pone.0045097-Baxevanis1">
+        <label>1</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Baxevanis</surname><given-names>AD</given-names></name> (<year>2004</year>) <article-title>An overview of gene identification: approaches, strategies, and considerations</article-title>. <source>Curr Protoc Bioinformatics Chapter</source> <volume>4</volume>: <fpage>Unit4 1</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Mira1">
+        <label>2</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mira</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Ochman</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Moran</surname><given-names>NA</given-names></name> (<year>2001</year>) <article-title>Deletional bias and the evolution of bacterial genomes</article-title>. <source>Trends Genet</source> <volume>17</volume>: <fpage>589</fpage>–<lpage>596</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Huerta1">
+        <label>3</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Huerta</surname><given-names>AM</given-names></name>, <name name-style="western"><surname>Collado-Vides</surname><given-names>J</given-names></name> (<year>2003</year>) <article-title>Sigma70 promoters in <italic>Escherichia coli</italic>: specific transcription in dense regions of overlapping promoter-like signals</article-title>. <source>J Mol Biol</source> <volume>333</volume>: <fpage>261</fpage>–<lpage>278</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Gruber1">
+        <label>4</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gruber</surname><given-names>TM</given-names></name>, <name name-style="western"><surname>Gross</surname><given-names>CA</given-names></name> (<year>2003</year>) <article-title>Multiple sigma subunits and the partitioning of bacterial transcription space</article-title>. <source>Annu Rev Microbiol</source> <volume>57</volume>: <fpage>441</fpage>–<lpage>466</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Kroos1">
+        <label>5</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kroos</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Yu</surname><given-names>YT</given-names></name> (<year>2000</year>) <article-title>Regulation of sigma factor activity during <italic>Bacillus subtilis</italic> development</article-title>. <source>Current opinion in microbiology</source> <volume>3</volume>: <fpage>553</fpage>–<lpage>560</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-deHaseth1">
+        <label>6</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>deHaseth</surname><given-names>PL</given-names></name>, <name name-style="western"><surname>Zupancic</surname><given-names>ML</given-names></name>, <name name-style="western"><surname>Record</surname><given-names>MT</given-names><suffix>Jr</suffix></name> (<year>1998</year>) <article-title>RNA polymerase-promoter interactions: the comings and goings of RNA polymerase</article-title>. <source>J Bacteriol</source> <volume>180</volume>: <fpage>3019</fpage>–<lpage>3025</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Lonetto1">
+        <label>7</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lonetto</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Gribskov</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Gross</surname><given-names>CA</given-names></name> (<year>1992</year>) <article-title>The sigma 70 family: sequence conservation and evolutionary relationships</article-title>. <source>J Bacteriol</source> <volume>174</volume>: <fpage>3843</fpage>–<lpage>3849</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Paget1">
+        <label>8</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Paget</surname><given-names>MS</given-names></name>, <name name-style="western"><surname>Helmann</surname><given-names>JD</given-names></name> (<year>2003</year>) <article-title>The sigma70 family of sigma factors</article-title>. <source>Genome Biol</source> <volume>4</volume>: <fpage>203</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Stevens1">
+        <label>9</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Stevens</surname><given-names>MJ</given-names></name>, <name name-style="western"><surname>Molenaar</surname><given-names>D</given-names></name>, <name name-style="western"><surname>de Jong</surname><given-names>A</given-names></name>, <name name-style="western"><surname>De Vos</surname><given-names>WM</given-names></name>, <name name-style="western"><surname>Kleerebezem</surname><given-names>M</given-names></name> (<year>2010</year>) <article-title>sigma54-Mediated control of the mannose phosphotransferase sytem in <italic>Lactobacillus plantarum</italic> impacts on carbohydrate metabolism</article-title>. <source>Microbiology</source> <volume>156</volume>: <fpage>695</fpage>–<lpage>707</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Lloyd1">
+        <label>10</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lloyd</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Landini</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Busby</surname><given-names>S</given-names></name> (<year>2001</year>) <article-title>Activation and repression of transcription initiation in bacteria</article-title>. <source>Essays Biochem</source> <volume>37</volume>: <fpage>17</fpage>–<lpage>31</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Down1">
+        <label>11</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Down</surname><given-names>TA</given-names></name>, <name name-style="western"><surname>Bergman</surname><given-names>CM</given-names></name>, <name name-style="western"><surname>Su</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Hubbard</surname><given-names>TJ</given-names></name> (<year>2007</year>) <article-title>Large-scale discovery of promoter motifs in <italic>Drosophila melanogaster</italic></article-title>. <source>PLoS Comput Biol</source> <volume>3</volume>: <fpage>e7</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-McGrath1">
+        <label>12</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>McGrath</surname><given-names>PT</given-names></name>, <name name-style="western"><surname>Lee</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Zhang</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Iniesta</surname><given-names>AA</given-names></name>, <name name-style="western"><surname>Hottes</surname><given-names>AK</given-names></name>, <etal>et al</etal>. (<year>2007</year>) <article-title>High-throughput identification of transcription start sites, conserved promoter motifs and predicted regulons</article-title>. <source>Nat Biotechnol</source> <volume>25</volume>: <fpage>584</fpage>–<lpage>592</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Alkema1">
+        <label>13</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alkema</surname><given-names>WB</given-names></name>, <name name-style="western"><surname>Lenhard</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Wasserman</surname><given-names>WW</given-names></name> (<year>2004</year>) <article-title>Regulog analysis: detection of conserved regulatory networks across bacteria: application to <italic>Staphylococcus aureus</italic></article-title>. <source>Genome Res</source> <volume>14</volume>: <fpage>1362</fpage>–<lpage>1373</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-McGuire1">
+        <label>14</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>McGuire</surname><given-names>AM</given-names></name>, <name name-style="western"><surname>Hughes</surname><given-names>JD</given-names></name>, <name name-style="western"><surname>Church</surname><given-names>GM</given-names></name> (<year>2000</year>) <article-title>Conservation of DNA regulatory motifs and discovery of new motifs in microbial genomes</article-title>. <source>Genome Res</source> <volume>10</volume>: <fpage>744</fpage>–<lpage>757</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-vanNimwegen1">
+        <label>15</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>van Nimwegen</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Zavolan</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Rajewsky</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Siggia</surname><given-names>ED</given-names></name> (<year>2002</year>) <article-title>Probabilistic clustering of sequences: inferring new bacterial regulons by comparative genomics</article-title>. <source>Proc Natl Acad Sci U S A</source> <volume>99</volume>: <fpage>7323</fpage>–<lpage>7328</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Wels1">
+        <label>16</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wels</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Francke</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Kerkhoven</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Kleerebezem</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Siezen</surname><given-names>RJ</given-names></name> (<year>2006</year>) <article-title>Predicting cis-acting elements of <italic>Lactobacillus plantarum</italic> by comparative genomics with different taxonomic subgroups</article-title>. <source>Nucleic Acids Res</source> <volume>34</volume>: <fpage>1947</fpage>–<lpage>1958</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Ahrne1">
+        <label>17</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ahrne</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Nobaek</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Jeppsson</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Adlerberth</surname><given-names>I</given-names></name>, <name name-style="western"><surname>Wold</surname><given-names>AE</given-names></name>, <etal>et al</etal>. (<year>1998</year>) <article-title>The normal <italic>Lactobacillus</italic> flora of healthy human rectal and oral mucosa</article-title>. <source>Journal of applied microbiology</source> <volume>85</volume>: <fpage>88</fpage>–<lpage>94</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Kleerebezem1">
+        <label>18</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kleerebezem</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Boekhorst</surname><given-names>J</given-names></name>, <name name-style="western"><surname>van Kranenburg</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Molenaar</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Kuipers</surname><given-names>OP</given-names></name>, <etal>et al</etal>. (<year>2003</year>) <article-title>Complete genome sequence of <italic>Lactobacillus plantarum</italic> WCFS1</article-title>. <source>Proc Natl Acad Sci U S A</source> <volume>100</volume>: <fpage>1990</fpage>–<lpage>1995</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Stormo1">
+        <label>19</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Stormo</surname><given-names>GD</given-names></name> (<year>2000</year>) <article-title>Gene-finding approaches for eukaryotes</article-title>. <source>Genome research</source> <volume>10</volume>: <fpage>394</fpage>–<lpage>397</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Staron1">
+        <label>20</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Staron</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Sofia</surname><given-names>HJ</given-names></name>, <name name-style="western"><surname>Dietrich</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Ulrich</surname><given-names>LE</given-names></name>, <name name-style="western"><surname>Liesegang</surname><given-names>H</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>The third pillar of bacterial signal transduction: classification of the extracytoplasmic function (ECF) sigma factor protein family</article-title>. <source>Molecular microbiology</source> <volume>74</volume>: <fpage>557</fpage>–<lpage>581</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Tjaden1">
+        <label>21</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tjaden</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Saxena</surname><given-names>RM</given-names></name>, <name name-style="western"><surname>Stolyar</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Haynor</surname><given-names>DR</given-names></name>, <name name-style="western"><surname>Kolker</surname><given-names>E</given-names></name>, <etal>et al</etal>. (<year>2002</year>) <article-title>Transcriptome analysis of <italic>Escherichia coli</italic> using high-density oligonucleotide probe arrays</article-title>. <source>Nucleic Acids Res</source> <volume>30</volume>: <fpage>3732</fpage>–<lpage>3738</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Selinger1">
+        <label>22</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Selinger</surname><given-names>DW</given-names></name>, <name name-style="western"><surname>Cheung</surname><given-names>KJ</given-names></name>, <name name-style="western"><surname>Mei</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Johansson</surname><given-names>EM</given-names></name>, <name name-style="western"><surname>Richmond</surname><given-names>CS</given-names></name>, <etal>et al</etal>. (<year>2000</year>) <article-title>RNA expression analysis using a 30 base pair resolution <italic>Escherichia coli</italic> genome array</article-title>. <source>Nat Biotechnol</source> <volume>18</volume>: <fpage>1262</fpage>–<lpage>1268</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Siezen1">
+        <label>23</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Siezen</surname><given-names>RJ</given-names></name>, <name name-style="western"><surname>Francke</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Renckens</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Boekhorst</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Wels</surname><given-names>M</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Complete resequencing and reannotation of the <italic>Lactobacillus plantarum</italic> WCFS1 genome</article-title>. <source>J Bacteriol</source> <volume>194</volume>: <fpage>195</fpage>–<lpage>196</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Bailey1">
+        <label>24</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bailey</surname><given-names>TL</given-names></name>, <name name-style="western"><surname>Elkan</surname><given-names>C</given-names></name> (<year>1994</year>) <article-title>Fitting a mixture model by expectation maximization to discover motifs in biopolymers</article-title>. <source>Proc Int Conf Intell Syst Mol Biol</source> <volume>2</volume>: <fpage>28</fpage>–<lpage>36</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Shine1">
+        <label>25</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Shine</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Dalgarno</surname><given-names>L</given-names></name> (<year>1975</year>) <article-title>Determinant of cistron specificity in bacterial ribosomes</article-title>. <source>Nature</source> <volume>254</volume>: <fpage>34</fpage>–<lpage>38</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Bailey2">
+        <label>26</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bailey</surname><given-names>TL</given-names></name>, <name name-style="western"><surname>Gribskov</surname><given-names>M</given-names></name> (<year>1998</year>) <article-title>Methods and statistics for combining motif match scores</article-title>. <source>Journal of computational biology : a journal of computational molecular cell biology</source> <volume>5</volume>: <fpage>211</fpage>–<lpage>221</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Helmann1">
+        <label>27</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Helmann</surname><given-names>JD</given-names></name> (<year>1995</year>) <article-title>Compilation and analysis of <italic>Bacillus subtilis</italic> sigma A-dependent promoter sequences: evidence for extended contact between RNA polymerase and upstream promoter DNA</article-title>. <source>Nucleic Acids Res</source> <volume>23</volume>: <fpage>2351</fpage>–<lpage>2360</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Fickett1">
+        <label>28</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fickett</surname><given-names>JW</given-names></name>, <name name-style="western"><surname>Hatzigeorgiou</surname><given-names>AG</given-names></name> (<year>1997</year>) <article-title>Eukaryotic promoter recognition</article-title>. <source>Genome Res</source> <volume>7</volume>: <fpage>861</fpage>–<lpage>878</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Kanhere1">
+        <label>29</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kanhere</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Bansal</surname><given-names>M</given-names></name> (<year>2005</year>) <article-title>A novel method for prokaryotic promoter prediction based on DNA stability</article-title>. <source>BMC Bioinformatics</source> <volume>6</volume>: <fpage>1</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Pedersen1">
+        <label>30</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pedersen</surname><given-names>AG</given-names></name>, <name name-style="western"><surname>Baldi</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Chauvin</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Brunak</surname><given-names>S</given-names></name> (<year>1999</year>) <article-title>The biology of eukaryotic promoter prediction–a review</article-title>. <source>Comput Chem</source> <volume>23</volume>: <fpage>191</fpage>–<lpage>207</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-MendozaVargas1">
+        <label>31</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mendoza-Vargas</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Olvera</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Olvera</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Grande</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Vega-Alvarado</surname><given-names>L</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Genome-wide identification of transcription start sites, promoters and transcription factor binding sites in <italic>E. coli</italic></article-title>. <source>PLoS One</source> <volume>4</volume>: <fpage>e7526</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Cheng1">
+        <label>32</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cheng</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Kapranov</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Drenkow</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Dike</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Brubaker</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Transcriptional maps of 10 human chromosomes at 5-nucleotide resolution</article-title>. <source>Science</source> <volume>308</volume>: <fpage>1149</fpage>–<lpage>1154</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Rinn1">
+        <label>33</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rinn</surname><given-names>JL</given-names></name>, <name name-style="western"><surname>Euskirchen</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Bertone</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Martone</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Luscombe</surname><given-names>NM</given-names></name>, <etal>et al</etal>. (<year>2003</year>) <article-title>The transcriptional activity of human Chromosome 22</article-title>. <source>Genes &amp; development</source> <volume>17</volume>: <fpage>529</fpage>–<lpage>540</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Browning1">
+        <label>34</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Browning</surname><given-names>DF</given-names></name>, <name name-style="western"><surname>Busby</surname><given-names>SJ</given-names></name> (<year>2004</year>) <article-title>The regulation of bacterial transcription initiation</article-title>. <source>Nat Rev Microbiol</source> <volume>2</volume>: <fpage>57</fpage>–<lpage>65</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Hertz1">
+        <label>35</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hertz</surname><given-names>GZ</given-names></name>, <name name-style="western"><surname>Stormo</surname><given-names>GD</given-names></name> (<year>1996</year>) <article-title><italic>Escherichia coli</italic> promoter sequences: analysis and prediction</article-title>. <source>Methods in enzymology</source> <volume>273</volume>: <fpage>30</fpage>–<lpage>42</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Mulligan1">
+        <label>36</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mulligan</surname><given-names>ME</given-names></name>, <name name-style="western"><surname>Hawley</surname><given-names>DK</given-names></name>, <name name-style="western"><surname>Entriken</surname><given-names>R</given-names></name>, <name name-style="western"><surname>McClure</surname><given-names>WR</given-names></name> (<year>1984</year>) <article-title><italic>Escherichia coli</italic> promoter sequences predict in vitro RNA polymerase selectivity</article-title>. <source>Nucleic Acids Res</source> <volume>12</volume>: <fpage>789</fpage>–<lpage>800</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Lisser1">
+        <label>37</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lisser</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Margalit</surname><given-names>H</given-names></name> (<year>1993</year>) <article-title>Compilation of E. coli mRNA promoter sequences</article-title>. <source>Nucleic Acids Res</source> <volume>21</volume>: <fpage>1507</fpage>–<lpage>1516</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Ozoline1">
+        <label>38</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ozoline</surname><given-names>ON</given-names></name>, <name name-style="western"><surname>Deev</surname><given-names>AA</given-names></name>, <name name-style="western"><surname>Arkhipova</surname><given-names>MV</given-names></name> (<year>1997</year>) <article-title>Non-canonical sequence elements in the promoter structure. Cluster analysis of promoters recognized by <italic>Escherichia coli</italic> RNA polymerase</article-title>. <source>Nucleic Acids Res</source> <volume>25</volume>: <fpage>4703</fpage>–<lpage>4709</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Sharma1">
+        <label>39</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sharma</surname><given-names>CM</given-names></name>, <name name-style="western"><surname>Hoffmann</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Darfeuille</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Reignier</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Findeiss</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>The primary transcriptome of the major human pathogen <italic>Helicobacter pylori</italic></article-title>. <source>Nature</source> <volume>464</volume>: <fpage>250</fpage>–<lpage>255</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Guell1">
+        <label>40</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Guell</surname><given-names>M</given-names></name>, <name name-style="western"><surname>van Noort</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Yus</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Chen</surname><given-names>WH</given-names></name>, <name name-style="western"><surname>Leigh-Bell</surname><given-names>J</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Transcriptome complexity in a genome-reduced bacterium</article-title>. <source>Science</source> <volume>326</volume>: <fpage>1268</fpage>–<lpage>1271</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Marco1">
+        <label>41</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Marco</surname><given-names>ML</given-names></name>, <name name-style="western"><surname>Peters</surname><given-names>TH</given-names></name>, <name name-style="western"><surname>Bongers</surname><given-names>RS</given-names></name>, <name name-style="western"><surname>Molenaar</surname><given-names>D</given-names></name>, <name name-style="western"><surname>van Hemert</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Lifestyle of <italic>Lactobacillus plantarum</italic> in the mouse caecum</article-title>. <source>Environ Microbiol</source> <volume>11</volume>: <fpage>2747</fpage>–<lpage>2757</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Saulnier1">
+        <label>42</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Saulnier</surname><given-names>DM</given-names></name>, <name name-style="western"><surname>Molenaar</surname><given-names>D</given-names></name>, <name name-style="western"><surname>de Vos</surname><given-names>WM</given-names></name>, <name name-style="western"><surname>Gibson</surname><given-names>GR</given-names></name>, <name name-style="western"><surname>Kolida</surname><given-names>S</given-names></name> (<year>2007</year>) <article-title>Identification of prebiotic fructooligosaccharide metabolism in <italic>Lactobacillus plantarum</italic> WCFS1 through microarrays</article-title>. <source>Appl Environ Microbiol</source> <volume>73</volume>: <fpage>1753</fpage>–<lpage>1765</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Bolstad1">
+        <label>43</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bolstad</surname><given-names>BM</given-names></name>, <name name-style="western"><surname>Irizarry</surname><given-names>RA</given-names></name>, <name name-style="western"><surname>Astrand</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Speed</surname><given-names>TP</given-names></name> (<year>2003</year>) <article-title>A comparison of normalization methods for high density oligonucleotide array data based on variance and bias</article-title>. <source>Bioinformatics</source> <volume>19</volume>: <fpage>185</fpage>–<lpage>193</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Kampa1">
+        <label>44</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kampa</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Cheng</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Kapranov</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Yamanaka</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Brubaker</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Novel RNAs identified from an in-depth analysis of the transcriptome of human chromosomes 21 and 22</article-title>. <source>Genome Res</source> <volume>14</volume>: <fpage>331</fpage>–<lpage>342</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0045097-Crooks1">
+        <label>45</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Crooks</surname><given-names>GE</given-names></name>, <name name-style="western"><surname>Hon</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Chandonia</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Brenner</surname><given-names>SE</given-names></name> (<year>2004</year>) <article-title>WebLogo: a sequence logo generator</article-title>. <source>Genome Res</source> <volume>14</volume>: <fpage>1188</fpage>–<lpage>1190</lpage>.</mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

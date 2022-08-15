@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group>
+<journal-title>PLoS ONE</journal-title></journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-13-49396</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0103942</article-id>
+<article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Computer and information sciences</subject><subj-group><subject>Information technology</subject><subj-group><subject>Text mining</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Engineering and technology</subject><subj-group><subject>Nanotechnology</subject><subj-group><subject>Nanomaterials</subject></subj-group></subj-group><subj-group><subject>Signal processing</subject><subj-group><subject>Image processing</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Physical sciences</subject><subj-group><subject>Materials science</subject><subj-group><subject>Metallurgy</subject><subj-group><subject>Metals</subject></subj-group></subj-group><subj-group><subject>Materials by attribute</subject><subject>Materials by structure</subject><subject>Materials characterization</subject></subj-group></subj-group><subj-group><subject>Mathematics</subject><subj-group><subject>Applied mathematics</subject><subj-group><subject>Algorithms</subject></subj-group></subj-group></subj-group><subj-group><subject>Physics</subject><subj-group><subject>Particle physics</subject><subj-group><subject>Elementary particles</subject><subj-group><subject>Electrons</subject></subj-group></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Curvelet Based Offline Analysis of SEM Images</article-title>
+<alt-title alt-title-type="running-head">Curvelet Based Offline Analysis of SEM Images</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Shirazi</surname><given-names>Syed Hamad</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Haq</surname><given-names>Nuhman ul</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Hayat</surname><given-names>Khizar</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff3"><sup>3</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Naz</surname><given-names>Saeeda</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Haque</surname><given-names>Ihsan ul</given-names></name><xref ref-type="aff" rid="aff2"><sup>2</sup></xref></contrib>
+</contrib-group>
+<aff id="aff1"><label>1</label><addr-line>COMSATS Institute of Information Technology, Abbottabad, Pakistan</addr-line></aff>
+<aff id="aff2"><label>2</label><addr-line>Centralized Resource Laboratory, University of Peshawar, Peshawar, Pakistan</addr-line></aff>
+<aff id="aff3"><label>3</label><addr-line>University of Nizwa, Nizwa, Sultanate of Oman</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Metze</surname><given-names>Konradin</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>University of Campinas, Brazil</addr-line></aff>
+<author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">khizarhayat@ciit.net.pk</email></corresp>
+<fn fn-type="conflict"><p>The authors have declared that no competing interests exist.</p></fn>
+<fn fn-type="con"><p>Conceived and designed the experiments: SHS NH KH IH. Performed the experiments: SHS NH SN. Analyzed the data: SHS KH IH. Contributed reagents/materials/analysis tools: SHS SN NH. Wrote the paper: SHS SN KH.</p></fn>
+</author-notes>
+<pub-date pub-type="collection"><year>2014</year></pub-date>
+<pub-date pub-type="epub"><day>4</day><month>8</month><year>2014</year></pub-date>
+<volume>9</volume>
+<issue>8</issue>
+<elocation-id>e103942</elocation-id>
+<history>
+<date date-type="received"><day>20</day><month>12</month><year>2013</year></date>
+<date date-type="accepted"><day>7</day><month>7</month><year>2014</year></date>
+</history>
+<permissions>
+<copyright-year>2014</copyright-year>
+<copyright-holder>Shirazi et al</copyright-holder><license xlink:type="simple"><license-p>This is an open-access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions>
+<abstract>
+<p>Manual offline analysis, of a scanning electron microscopy (SEM) image, is a time consuming process and requires continuous human intervention and efforts. This paper presents an image processing based method for automated offline analyses of SEM images. To this end, our strategy relies on a two-stage process, <italic>viz.</italic> texture analysis and quantification. The method involves a preprocessing step, aimed at the noise removal, in order to avoid false edges. For texture analysis, the proposed method employs a state of the art Curvelet transform followed by segmentation through a combination of entropy filtering, thresholding and mathematical morphology (MM). The quantification is carried out by the application of a box-counting algorithm, for fractal dimension (FD) calculations, with the ultimate goal of measuring the parameters, like surface area and perimeter. The perimeter is estimated indirectly by counting the boundary boxes of the filled shapes. The proposed method, when applied to a representative set of SEM images, not only showed better results in image segmentation but also exhibited a good accuracy in the calculation of surface area and perimeter. The proposed method outperforms the well-known Watershed segmentation algorithm.</p>
+</abstract>
+<funding-group><funding-statement>The authors have no support or funding to report.</funding-statement></funding-group><counts><page-count count="11"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>Electron microscopes (EMs) are the most flexible and powerful instruments available for the analysis and micro-structural characterization of different materials. An ordinary electron microscopy image exhibits high contrast and signal to noise ratio (SNR), with a magnification at millimeter to nanometer scales. Recent advancements in nano-technology have made electron microscopy a very important and powerful tool for the analysis and fabrication of new nano-materials. For a typical EM, the image acquisition time is spanned from several seconds to minutes. Generally, EMs exploit highly energetic beams of electrons in order to examine, on a very fine scale, material objects and their surface features. The measurements of nano-surface features are highly desirable for the characterization of the underlying materials. Scanning electron microscope (SEM), Atomic force microscope (AFM) and X-ray microscope are some of the main instruments used for the characterization of materials at micro- and nano-levels. The problem with surface analysis is that the EM performs live surface analysis of a specimen. This is a costly procedure and should not be carried out on the same sample more than once; offline approaches <xref ref-type="bibr" rid="pone.0103942-Haq1">[1]</xref> are therefore recommended for subsequent analyses on the ensued images.</p>
+<p>A typical EM operates beyond the visible region of the electromagnetic spectrum. In order to be observed with a naked eye, the output is needed to be mapped on the visible spectrum and recorded as an image. Traditionally, such images had been analyzed by manual scanning wherein the information was required in the form of shapes and sizes of particles, only to be measured by drawing grids across the image. Indeed, this had been a time consuming and laborious exercise that required continuous human intervention and effort. Hence, automated analyses were more than needed and the advent of digital image processing and computer vision techniques did the trick. State of the art digital image processing techniques can be used to acquire the quantitative information from specialized images and such techniques can also be exploited for the enhancement of the EM images.</p>
+<p>Image segmentation is mostly used as a pre-processing step to locate objects in SEM images. It is the process of partitioning an image to objects, shapes and regions. To be more elaborate, image segmentation not only focuses on the discrimination between objects and their background but also on the separation between different regions. The image segmentation techniques can be classified as region based and contour based. For region based segmentation <xref ref-type="bibr" rid="pone.0103942-Li1">[2]</xref>, <xref ref-type="bibr" rid="pone.0103942-Hernandez1">[3]</xref>, morphological operators and watershed approaches are used. The literature is replete with works focused on the segmentation and enhancements of not only the normal images but also the specialized images - especially the images of porous materials, containing voids <xref ref-type="bibr" rid="pone.0103942-Lu1">[4]</xref>–<xref ref-type="bibr" rid="pone.0103942-Zhang1">[6]</xref>. However, the segmentation of an SEM image is a challenging task, especially when it has overlapping objects/regions. These overlapping regions need to be segmented in order to measure their size and shape, without any bias. The watershed algorithm, for its efficiency and ease of use, may be a good choice for segmenting normal images with particular characteristics. The same may not be true in case complex and textured images, like SEM, and the use of watershed segmentation may lead to <italic>over-</italic> or <italic>under-</italic>segmentation.</p>
+<p>The proposed method, for automated offline analyses of SEM images, consists of two broad steps:</p>
+<list list-type="order"><list-item>
+<p>Texture analysis that is achieved by first enhancing the image via the Curvelet transform followed by its segmentation through the application of entropy filter, thresholding and mathematical morphology (MM) operations.</p>
+</list-item><list-item>
+<p>A box counting algorithm for estimating the quantities, like surface area and perimeter.</p>
+</list-item></list>
+<p>In SEM images, edges are mainly curved in nature and are suited for a Curvelet transform. In addition, the Curvelet transform enables us to perform the analysis with various block sizes. We have applied a Discrete Curvelet Transform to SEM images, in order to get the fine details in the frequency domain.</p>
+<p>The rest of the paper is organized as follows. Section surveys the related literature. This followed by Section that presents the proposed method in detail. The ensued results are being analyzed and discussed in Section. The paper is summed up in Section 0.2.</p>
+</sec><sec id="s2">
+<title>Related Work</title>
+<p>Microscopic images are of vital importance in a wide variety of biological, metallurgical, pharmaceutical, chemical and nutritional materials. The electron microscopy (EM) images are vulnerable to a variety of factors that may degrade the image quality; therefore image enhancement is vital for preserving the quality of information in electron microscope images. A very recent reference <xref ref-type="bibr" rid="pone.0103942-Kayser1">[7]</xref> in the area of microscope image processing is worth mentioning. Image enhancement is a significant part of image processing, that is used to improve image quality, focus on the interesting features and strengthen the image recognition effects in order to fulfill the demands for special analyses. Its main characteristic is to recover the information contained in an image, for an ordinary or specialized observer. Additionally, it provides better input for other automated techniques used in image processing. Several techniques are adopted for image enhancement. The global image processing techniques - like gradient stretching, gamma correction and histogram equalization - are mainly aimed at improving the underlying image histogram <xref ref-type="bibr" rid="pone.0103942-Xu1">[8]</xref>. In contrast, the local processing is better suited for human visual system (HVS) as it focuses on each part of a scene locally. The Retinex <xref ref-type="bibr" rid="pone.0103942-Jing1">[9]</xref>–<xref ref-type="bibr" rid="pone.0103942-Zhengyu1">[12]</xref> theory of color vision aims to explain how HVS obtain reliable information from the world regardless of variations in illumination. The main clue is that there is little correlation among the extent of radiation dropping on retina and visible lightness of an object.</p>
+<p>The main focus of contemporary literature has been the classification on the basis of individual particle characteristics - like size and shape - and their distribution. Texture analysis plays an important and powerful role in microscopic image analysis. In texture analysis, statistical or structural information is produced on the basis of local gray level variations in the image. This information can be used for pattern discrimination. In <xref ref-type="bibr" rid="pone.0103942-Hafemeister1">[13]</xref>, the authors employ spatial 2D frequency processing tools to analyze the local texture. The work cited in <xref ref-type="bibr" rid="pone.0103942-Tuceryan1">[14]</xref>, grabs the local spatial variation in image for classification and segmentation. Another example <xref ref-type="bibr" rid="pone.0103942-Ma1">[15]</xref> for finding the texture is the use of statistical moments. In <xref ref-type="bibr" rid="pone.0103942-Yangi1">[16]</xref>, the texture analysis is performed for determining the spatial distribution of grains and crystals in minerals. In <xref ref-type="bibr" rid="pone.0103942-Holecz1">[17]</xref>, textural analysis of Synthetic Aperture Radar (SAR) images are performed for the reduction of speckle effects in order to differentiate between forest and non-forest areas. The authors of <xref ref-type="bibr" rid="pone.0103942-Cointault1">[18]</xref> have used color and surface analysis image processing techniques to distinguish and then quantify wheat ears. For feature extraction, they have relied on texture image segmentation and higher order statistical methods. To overcome the problem of overlaid objects, traditional distance measurement techniques - like K-nearest neighbors and Euclidean distance - have been employed followed by the application of mathematical morphology. The technique in <xref ref-type="bibr" rid="pone.0103942-Flores1">[19]</xref> is based on two phases, <italic>viz.</italic> the training phase and the segmentation phase. In the first step, the shape and outer shell knowledge is developed by using the shape histogram and image intensity statistics. The segmentation phase is based on the classical watershed segmentation, k-means clustering and shape alignment stages.</p>
+<p>Methodologies, for describing element size and shape, have been formulated in many domains and are used in various geological, chemical, engineering and industrial applications. A wide variety of image processing methods are used in mineral processing, paint and concrete industries <xref ref-type="bibr" rid="pone.0103942-Prakongkep1">[20]</xref>, <xref ref-type="bibr" rid="pone.0103942-Soroushian1">[21]</xref>. The work, in <xref ref-type="bibr" rid="pone.0103942-Vincent1">[22]</xref>, highlights the potential of such techniques for the quantification of changes in archaeological bones. In <xref ref-type="bibr" rid="pone.0103942-R1">[23]</xref>, segmentation is exploited for observing cortical porosity in bones in 2.5 micron resolution SEM images of the specimen. The method precisely and reproducibly isolates a bone from its background. In addition, it splits the bone into its transitional, cortical and trabecular sections, and perform quantification below and above 100 micron - the size of maximum pores in cortical bone. The authors of <xref ref-type="bibr" rid="pone.0103942-Li2">[24]</xref> carry out legion segmentation of dental images for early carries' detection. The work of <xref ref-type="bibr" rid="pone.0103942-Tremeau1">[25]</xref> employs region adjacency graph for segmentation. Entropy based features are extracted from the texture of script images in <xref ref-type="bibr" rid="pone.0103942-Padma1">[26]</xref>.</p>
+<p>In the context of material science, a range of techniques for three-dimensional (3D) reconstruction of micro-structures had been in vogue for several decades <xref ref-type="bibr" rid="pone.0103942-Woodward1">[27]</xref>. In the last decade or so, however, there have been a mushroom growth in the field and several methods have been proposed, e.g. <xref ref-type="bibr" rid="pone.0103942-Salzer1">[28]</xref>, thanks mainly to the invention of the focused ion beam microscope and the evolution of transmission electron microscopy into a flexible analytical tool. The main source of the advancement in these fields is perhaps the advent of nano-technology with the aim to achieve nano-scale resolution and the aspiration to get a real 3D view thereof. A texture analysis strategy <xref ref-type="bibr" rid="pone.0103942-Dettori1">[29]</xref>, for nano-fiber membrane, exploits the multivariate statistical techniques and various filters to extract, from the underlying image, the texture features associated with the quality of the material being investigated. In <xref ref-type="bibr" rid="pone.0103942-Sheppard1">[30]</xref>, the authors discuss many techniques in order to enhance and segment images of porous materials, obtained through the X-Ray tomography. The study of fractures and their origin is called fractography and one of the first instance, of exploiting the SEM image for this purpose, is found in <xref ref-type="bibr" rid="pone.0103942-Nemati1">[31]</xref>. A method is proposed in <xref ref-type="bibr" rid="pone.0103942-Mizoguchi1">[32]</xref> to identify the origin of micron scale cracks based on a genetic algorithm. In <xref ref-type="bibr" rid="pone.0103942-Bennis1">[33]</xref>, a method for quantifying pores in Z-direction is determined and related to optical and physical properties. The authors have used image processing techniques and identified some texture features of powdery samples. One image processing technique <xref ref-type="bibr" rid="pone.0103942-Soroushian1">[21]</xref> provides a layout of system expansion for measuring the micro-structural features of material. In <xref ref-type="bibr" rid="pone.0103942-Baojun1">[34]</xref>, an SEM image analysis tool is used to assay the micro-structure of clay soil and then extract the constituent particles and their boundaries. Using the SEM image analysis, the authors of <xref ref-type="bibr" rid="pone.0103942-Prakongkep1">[20]</xref> realize a detailed categorization of sand grains in samples of Thai paddy soils that had been molded from mixed parent materials. In <xref ref-type="bibr" rid="pone.0103942-ApGwynn1">[35]</xref>, the nature of various fretting particles created by titanium, titanium-molybdenum, and stainless steel are ascertained by employing what the authors call a boundary dilation method. Artificial neural networks had been used to examine the particles; all the three particles produced different results, e.g. titanium showed high diversity of texture and sizes while steel had produced least diversity.</p>
+<p>The work in <xref ref-type="bibr" rid="pone.0103942-Chen1">[36]</xref> proposes image fusion as solution to compensate for the deficiencies in image enhancement techniques. In a related work <xref ref-type="bibr" rid="pone.0103942-Chen2">[37]</xref>, low contrast microscopy images were enhanced based on a multi-fusion technique that explores the image edges and details, efficiently, and increases the image contrast and entropy. In <xref ref-type="bibr" rid="pone.0103942-Erikson1">[38]</xref>, two methods of image fusion are proposed. The first one is for exposure fusion in order to reduce the image enhancement deficiencies. The second method is based on the local dissimilarities and maintain the enhanced information. In <xref ref-type="bibr" rid="pone.0103942-Kim1">[39]</xref>, the authors rely on Sobel operator, Laplacian of Gaussian (LoG) operator and histogram equalization methods for image enhancement in SEM. They propose a multi-technology fusion for low contrast SEM image enhancement wherein the low and high frequency image components are separated to avoid increased image noise.</p>
+<p>Techniques, like Wavelet transform filtering and anisotropic diffusion, are useful for edge preservation <xref ref-type="bibr" rid="pone.0103942-Sheppard1">[30]</xref>. They do have limitations, e.g. Wavelets are very powerful technique for 1D signal processing, but may not work well for higher dimensions. In <xref ref-type="bibr" rid="pone.0103942-Jing1">[9]</xref>, MM and a non-localized algorithm have been employed for noise reduction, image enhancement and object segmentation of multi-layered thin micro-structures. For the detection of breast cancer from microscopic cytology images, a complex Wavelet transform based textural analysis segmentation method is outlined in <xref ref-type="bibr" rid="pone.0103942-Niwas1">[40]</xref> with a focus on variability features, first and second order texture features, to identify the cancerous cells. Based on a Wavelet framework, line edge detection is carried out in <xref ref-type="bibr" rid="pone.0103942-Sun1">[41]</xref> by thresholding the spatial information of top-down nano-scale SEM images. The Wavelet based segmentation can efficiently decompose an image into an approximation image and at least on detailed image. At each level the Wavelet decomposition is performed; the high-frequency components in the image are successively detached. In <xref ref-type="bibr" rid="pone.0103942-Jiang1">[42]</xref>, the authors decompose document images through the Wavelets using the Haar basis function with two levels. The texture features are obtained from the packet decomposition of sub-bands of the Wavelet. They have particular combination of methods results in a significantly reduced over-segmentation.</p>
+<p>In <xref ref-type="bibr" rid="pone.0103942-Li3">[43]</xref>, <xref ref-type="bibr" rid="pone.0103942-Herman1">[44]</xref>, the enhancement of ceramic images is performed by using Curvelet and watershed algorithms. They have performed both the enhancement of images and reduction of noise. The Curvelet transform used for image enhancement in <xref ref-type="bibr" rid="pone.0103942-Li3">[43]</xref>, <xref ref-type="bibr" rid="pone.0103942-Nencini1">[45]</xref>, is used for representing natural images, sparsely. A Curvelet based approach of image fusion is proposed in <xref ref-type="bibr" rid="pone.0103942-Nencini1">[45]</xref>. The benefit of Curvelet based technique is that it is receptive to boundaries at various angles and better extracts the high pass or finest details of object contours at multiple scales through multiple nonzero coefficients. A local contrast enhancement method for gray scale images <xref ref-type="bibr" rid="pone.0103942-Mukhopadhyay1">[46]</xref> utilizes multi-scale morphological filtering to obtain the scale specific dark and bright features from the input image. In <xref ref-type="bibr" rid="pone.0103942-Fattal1">[47]</xref>, the authors enhance the shape and surface details of an object in a small set of photographs taken from a fixed viewpoint under varying light conditions. They rely on a multi-scale decomposition via a bilateral filter and thereafter reconstruct the image by combining the detail information, at each scale, across all the input images. In <xref ref-type="bibr" rid="pone.0103942-Hamarneh1">[48]</xref>, the authors realize watershed segmentation using prior shape and appearance knowledge.</p>
+</sec><sec id="s3">
+<title>The Proposed Method</title>
+<p>In our methodology, the image is first enhanced by obtaining the highest frequency components from its Curvelet transform and then add it to the original image, in order to sharpen the edge detail. Subsequently the sharpened image is subjected to entropy filtering and thresholding to get a binary image, from which boundaries are extracted after morphological processing. In the end, a box-counting algorithm is applied to get the parameters, like surface area and perimeter of the contained objects. We thus propose a novel solution for parameter calculations in electron microscopy that would, in addition, serve as a useful method for the enhancement as well as segmentation of SEM images.</p>
+<p>Our procedure involves the following steps:<list list-type="order"><list-item>
+<p>For any segmentation strategy, noise removal is a must, <italic>a priori</italic>, lest one may get a lot of false edges. Our method starts with the removal of unwanted particles or noise present in the image (<italic>I</italic>), through the use of Weiner filter to get <italic>I<sub>W</sub></italic>. The latter is useful in the situations where the purpose is to reduce noise but preserve the edges. Wiener filter is statistical in nature as it adopts a least square (LS) approach for signal recovery in the presence of noise. It is very effective in eliminating both the additive noise and blur which are usually competing against each other.</p>
+</list-item><list-item>
+<p>A Forward Discrete Curvelet Transform (FDCT) is applied to the input image to get the finest detailed coefficients. The FDCT is a multi-dimensional transform in the sense that not only linear contours but also the curvy edges of the contained objects can be captured through its use. Hence, the Curvelet transform captures the structural activity along the radial wedges in the frequency domain and has a very high directional sensitivity. It captures singularities with very few coefficients in a non-adaptive manner. The edge and singularity details are processed to extract the feature points.</p>
+</list-item><list-item>
+<p>Next the Inverse Forward Discrete Curvelet Transform (IFDCT) is applied to only the high frequency sub-bands from FDCT domain to get the high pass or detail image (<italic>I<sub>HP</sub></italic>).</p>
+</list-item><list-item>
+<p>The obtained high-pass image (<italic>I<sub>HP</sub></italic>) is added to <italic>I<sub>W</sub></italic> and we get an enhanced SEM image (<italic>I<sub>e</sub></italic>). The image would now have stronger edges than the original and would perform better in lending edge details to the segmentation step.</p>
+</list-item><list-item>
+<p>An entropy based filter is thereafter employed to obtain the texture information in the form of (<italic>I<sub>E</sub></italic>); the texture image highlights the object present in the image. The entropy filter assigns a value to a pixel in the output image according to the entropies of its neighbors in a given range. In our case, the entropy is calculated according to a 9×9 region around the pixel of interest. It is defined by:<disp-formula id="pone.0103942.e001"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0103942.e001" xlink:type="simple"/><label>(1)</label></disp-formula>where <italic>p<sub>i</sub></italic> is the probability that the entropy difference between the pixel of interest and the <italic>i</italic>th neighbor agrees to certain threshold.</p>
+</list-item><list-item>
+<p>The entropy filtered image is subsequently thresholded to get a binary image with unwanted objects eventually removed. The threshold ((<italic>T</italic>)) can be intelligently adjusted to restrict the objects according to the size requirement of permitted objects. A Mask is thus generated that has the same size as original image. The mask is used to get the boundaries of objects in an image. This mask would be used to extract only the object(s) of interest, on the fly.</p>
+</list-item><list-item>
+<p>The mask is further refined via Mathematical Morphology (MM) processing, getting (<italic>I<sub>M</sub></italic>), in order to further highlight the image boundaries. The segmented image (<italic>I<sub>S</sub></italic>) is formed by superimposing the mask (<italic>I<sub>M</sub></italic>) on the image <italic>I<sub>E</sub></italic> and the regions are separated by setting all the pixels to 1 that belong to the set of the segmentation boundaries.</p>
+</list-item><list-item>
+<p>In the end, a box counting algorithm is applied to the segmented image. Various algorithms are used for calculating the fractal dimensions - like the fractional (or fractal) Brownian motion and triangular-prism-surface area methods. The box counting algorithm counts the number of boxes having side length <italic>r</italic> needed to cover the surface of fractal objects and the number of boxes <italic>N</italic>, occupied by more than one pixel of the image. Two procedures are defined by two parameters in the box counting method. One is the selection of <italic>r</italic> and the other is the other is the range of <italic>r</italic>. The SEM image has finite set of points and the upper limit is the size of image while the lower is the pixel unit. Various researches <xref ref-type="bibr" rid="pone.0103942-Jiang1">[42]</xref> proposes using <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e002" xlink:type="simple"/></inline-formula> pixels as box sizes to have a uniform spread of observation. The quadratic boxes cover the object, and the number of the boxes is recorded. The fractal dimension (FD) measures the dependence between the number of boxes <italic>N</italic> and the box side length <italic>r</italic> and is defined by</p>
+<p><disp-formula id="pone.0103942.e003"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0103942.e003" xlink:type="simple"/><label>(2)</label></disp-formula>For estimation, the dependence of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e004" xlink:type="simple"/></inline-formula> on In <italic>r</italic> is fitted by a line <disp-formula id="pone.0103942.e005"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0103942.e005" xlink:type="simple"/><label>(3)</label></disp-formula></p>
+<p>Substituting Eq. 3 in to Eq. 2 we get <disp-formula id="pone.0103942.e006"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0103942.e006" xlink:type="simple"/><label>(4)</label></disp-formula></p>
+<p>The term <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e007" xlink:type="simple"/></inline-formula> disappears because the denominator tends to infinity. In <xref ref-type="bibr" rid="pone.0103942-Sarkar1">[49]</xref>, the authors have considered the FD relationships of images of fracture surfaces. The relationships did not reach the tightness, which would be sufficient for fractographic functions. It was found that images cannot be characterized by a single numerical parameter; the reason being the too multi-formic, complex and uneven character of the fractured surfaces.</p>
+</list-item></list></p>
+<p>The essence of our strategy is outlined in the form of algorithms outlined in <xref ref-type="table" rid="pone-0103942-t001">Table 1</xref> and <xref ref-type="table" rid="pone-0103942-t002">Table 2</xref>. The former is concerned with the enhancement step - from <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e008" xlink:type="simple"/></inline-formula> to <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e009" xlink:type="simple"/></inline-formula> - whereas the latter outlines the main algorithm that requires <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e010" xlink:type="simple"/></inline-formula> and process it for quantification.</p>
+<table-wrap id="pone-0103942-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0103942.t001</object-id><label>Table 1</label><caption>
+<title>The Image Enhancement Algorithm.</title>
+</caption><alternatives><graphic id="pone-0103942-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0103942.t001" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Require:</bold></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e011" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Ensure:</bold></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e012" xlink:type="simple"/></inline-formula>/*Enhanced image*/</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">1:</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e013" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">2:</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e014" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">3:</td>
+<td align="left" rowspan="1" colspan="1"><bold>for</bold> <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e015" xlink:type="simple"/></inline-formula> to <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e016" xlink:type="simple"/></inline-formula> <bold>do</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">4:</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e017" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">5:</td>
+<td align="left" rowspan="1" colspan="1"><bold>end for</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">6:</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e018" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">7:</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e019" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">8:</td>
+<td align="left" rowspan="1" colspan="1">Exit</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap><table-wrap id="pone-0103942-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0103942.t002</object-id><label>Table 2</label><caption>
+<title>The Main Algorithm.</title>
+</caption><alternatives><graphic id="pone-0103942-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0103942.t002" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Require:</bold></td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e020" xlink:type="simple"/></inline-formula> of size <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e021" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Ensure:</bold></td>
+<td align="left" rowspan="1" colspan="1">The Surface Area (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e022" xlink:type="simple"/></inline-formula>) and Perimeter (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e023" xlink:type="simple"/></inline-formula>)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">1:</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e024" xlink:type="simple"/></inline-formula> {Subject to <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e025" xlink:type="simple"/></inline-formula> entropy filter}</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">2:</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e026" xlink:type="simple"/></inline-formula> {Threshold the image using threshold <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e027" xlink:type="simple"/></inline-formula>}</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">3:</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e028" xlink:type="simple"/></inline-formula> {MM processing to include regions conforming to threshold <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e029" xlink:type="simple"/></inline-formula>}</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">4:</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e030" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">{lines 5–11: Apply the mask <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e031" xlink:type="simple"/></inline-formula> to <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e032" xlink:type="simple"/></inline-formula> to get the segmented image <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e033" xlink:type="simple"/></inline-formula>}</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">5:</td>
+<td align="left" rowspan="1" colspan="1"><bold>for</bold> <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e034" xlink:type="simple"/></inline-formula> to <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e035" xlink:type="simple"/></inline-formula> <bold>do</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">6:</td>
+<td align="left" rowspan="1" colspan="1"><bold>for</bold> <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e036" xlink:type="simple"/></inline-formula> to <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e037" xlink:type="simple"/></inline-formula> <bold>do</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">7:</td>
+<td align="left" rowspan="1" colspan="1"><bold>if</bold> <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e038" xlink:type="simple"/></inline-formula> <bold>then</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">8:</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e039" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">9:</td>
+<td align="left" rowspan="1" colspan="1"><bold>end if</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">10:</td>
+<td align="left" rowspan="1" colspan="1"><bold>end for</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">11:</td>
+<td align="left" rowspan="1" colspan="1"><bold>end for</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">12:</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e040" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">13:</td>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e041" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">14:</td>
+<td align="left" rowspan="1" colspan="1">Exit</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap></sec><sec id="s4">
+<title>Simulation Results</title>
+<p>Our method employs a Curvelet transform for the image enhancement and a box counting algorithm for quantification. To demonstrate the efficacy of our method, we have used a data set of 60 SEM images of different materials and at various intensities. In this section we first apply our method to a representative example in detail and then present the results with respect to all the 60 samples.</p>
+<sec id="s4a">
+<title>0.1. Example Illustration</title>
+<p>The images shown in <xref ref-type="fig" rid="pone-0103942-g001">Figure 1</xref> are concerned with the various stages of our method as applied to an example image shown in <xref ref-type="fig" rid="pone-0103942-g001">Figure 1</xref>.a that corresponds to an SEM image of low carbon steel. This image was subjected to Wiener filtering and FDCT. By setting the lower frequency coefficients to zero and applying the IFDCT, a high-pass detail image (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e042" xlink:type="simple"/></inline-formula>) is obtained which is given in <xref ref-type="fig" rid="pone-0103942-g001">Figure 1</xref>.b. The high pass image contains the finest details of the image, and we add the high pass image with the smoothened image, we got <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e043" xlink:type="simple"/></inline-formula>, the edge-enhanced image of <xref ref-type="fig" rid="pone-0103942-g001">Figure 1</xref>.c. In other words, this is the output image of Algorithm 1 and input to Algorithm 2.</p>
+<fig id="pone-0103942-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0103942.g001</object-id><label>Figure 1</label><caption>
+<title>Proposed Method Illustrated.</title>
+<p>(a) Input Image, (b) Detailed Image, (c) Enhanced Image, (d) Texture Image after Entropy filtering, (e) Corresponding Binary Image, (f) Mask generated from Binary Image, (g) Image generated by Range filter, and (h) Image Segmented by the Proposed Method.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0103942.g001" position="float" xlink:type="simple"/></fig>
+<p>The edge-enhanced image was then subjected to a <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e044" xlink:type="simple"/></inline-formula> entropy filter for the texture analysis with the aim of region characterization. The textured image is shown in <xref ref-type="fig" rid="pone-0103942-g001">Figure 1</xref>.d. The texture of an image provides the required data about the local differences in intensity level of pixels in an image. Next a binary image (<xref ref-type="fig" rid="pone-0103942-g001">Figure 1</xref>.e) was realized through the thresholding of the texture image followed by the use of morphological opening in order to remove the small unwanted spots/regions disagreeing with a certain threshold. The result was a mask shown in <xref ref-type="fig" rid="pone-0103942-g001">Figure 1</xref>.f which was employed to highlight the region boundaries. For this particular case we had employed a range filter as part of the MM processing to output <xref ref-type="fig" rid="pone-0103942-g001">Figure 1</xref>.g. The resultant mask (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e045" xlink:type="simple"/></inline-formula>) was finally superimposed on <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e046" xlink:type="simple"/></inline-formula> resulting in the segmented image <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e047" xlink:type="simple"/></inline-formula>. The segmented image is shown in <xref ref-type="fig" rid="pone-0103942-g001">Figure 1</xref>.h.</p>
+<p>By using a box counting algorithm, quantities - like surface area and perimeter - from different segmented regions in the image were calculated and preserved for further analyses. The perimeter, for example, of a given segmented area was found by using the polygon method and by counting the boundary ‘boxes’, while presenting the results in pixel units.</p>
+</sec><sec id="s4b">
+<title>0.2 Detailed results and comparison analysis</title>
+<p>The qualitative visual assessment shows that the segmentation results of our proposed algorithm are comparable to those proposed in the literature. We have performed the segmentation of SEM images and calculated the required parameters of different regions in the image. The results are calculated from images of different materials. We have analyzed the image of 14 materials, including low carbon steel, aluminum, copper, carbonate, RBC (red blood cells), pollen grains, clay and iron oxide. We have compared our results with the well-known Watershed segmentation technique. We have estimated the measurement parameters with the both techniques, i.e. our proposed technique and with Watershed segmentation technique <xref ref-type="bibr" rid="pone.0103942-Vincent1">[22]</xref>. The obtained results have also been compared with the manually calculated results.</p>
+<p>The proposed technique has produced better results than the Watershed segmentation approach. The segmentation results for two different cases are illustrated in <xref ref-type="fig" rid="pone-0103942-g002">Figure 2</xref>. The first case is concerned with the segmentation of a SEM image of a Low carbon steel. <xref ref-type="fig" rid="pone-0103942-g002">Figure 2</xref>.a shows the resultant of our technique while <xref ref-type="fig" rid="pone-0103942-g002">Figure 2</xref>.b that of Watershed segmentation technique. The problem with the Watershed segmentation result is that it suffers from under segmentation for some regions. This problem can be tackled by region merging but the issue with region merging is that how to determine similarity among the different segmented regions. This task becomes more challenging when the images contain dissimilar and complex objects. It performs poorly when there are high textured objects in the image. Obviously, quantifications with our method had been more reliable due to better segmentation. The main drawbacks we have analyzed in different proposed methods in literature for microscopy image quantification and enhancement is that most of the techniques are unable to identify overlapped and connected particles. When overlapping particles appear in different regions of image the existing techniques consider it as single particle, which usually leads to an erroneous characterization of the particles.</p>
+<fig id="pone-0103942-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0103942.g002</object-id><label>Figure 2</label><caption>
+<title>The Proposed Method vs. Watershed Segmentation.</title>
+<p>(a) Example 1 Segmented by the Proposed Method, (b) Example 1 Segmented by Watersheds, (c) Example 2 Segmented by the Proposed Method, and (d) Example 2 Segmented by Watersheds.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0103942.g002" position="float" xlink:type="simple"/></fig>
+<p>Not only under-segmentation but also the tendency to over-segment is also common with the watershed techniques. For illustration compare our result from <xref ref-type="fig" rid="pone-0103942-g002">Figure 2</xref>.c with that in <xref ref-type="fig" rid="pone-0103942-g002">Figure 2</xref>.d. Another proof of the inability of watershed techniques, to segment properly, in the presence of overlapped particles, is obvious from the carbonate SEM image of <xref ref-type="fig" rid="pone-0103942-g003">Figure 3</xref>. For microscopy images, the segmentation method should be able to accurately separate the particles pixels from the background pixels. Our proposed method provides the better solution for image segmentation. The method precisely segment the overlapped particles shown in <xref ref-type="fig" rid="pone-0103942-g003">Figure 3</xref>.a as against its watershed counterpart (<xref ref-type="fig" rid="pone-0103942-g003">Figure 3</xref>.b). From the results shown in the <xref ref-type="fig" rid="pone-0103942-g002">Figure 2</xref> and <xref ref-type="fig" rid="pone-0103942-g003">Figure 3</xref>, we can say that our technique works well in rich textured SEM images.</p>
+<fig id="pone-0103942-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0103942.g003</object-id><label>Figure 3</label><caption>
+<title>Segmentation of the Carbonates Image.</title>
+<p>(a) The Proposed Method, (b) The Watershed Method.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0103942.g003" position="float" xlink:type="simple"/></fig>
+<p><xref ref-type="table" rid="pone-0103942-t003">Table 3</xref> compares the area of the regions in 15 example SEM images calculated manually with that estimated by the proposed method and watershed segmentation technique. Obviously, the manual results must be the gauge since they are carefully calculated with high precision. It can be readily observed that the proposed method outperforms watershed segmentation in closeness to the reference manual method and the percentage error of the proposed method is very low <italic>par rapport</italic> the Watershed segmentation. <xref ref-type="fig" rid="pone-0103942-g004">Figure 4</xref> graphically illustrates this comparison. The average relative error by the proposed method was observed to be only <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e048" xlink:type="simple"/></inline-formula>, which is very low as compared to that by Watershed segmentation, i.e. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e049" xlink:type="simple"/></inline-formula>.</p>
+<fig id="pone-0103942-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0103942.g004</object-id><label>Figure 4</label><caption>
+<title>Graph Illustrating the Area Comparison.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0103942.g004" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0103942-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0103942.t003</object-id><label>Table 3</label><caption>
+<title>Estimated Areas from Segmented SEM Image.</title>
+</caption><alternatives><graphic id="pone-0103942-t003-3" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0103942.t003" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Image Tag</td>
+<td align="left" rowspan="1" colspan="1">Manual Methods</td>
+<td align="left" rowspan="1" colspan="1">Proposed Method</td>
+<td align="left" rowspan="1" colspan="1">Watershed Segmentation</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">Carbon1</td>
+<td align="left" rowspan="1" colspan="1">10864</td>
+<td align="left" rowspan="1" colspan="1">9647</td>
+<td align="left" rowspan="1" colspan="1">8853</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Carbon2</td>
+<td align="left" rowspan="1" colspan="1">21325</td>
+<td align="left" rowspan="1" colspan="1">21227</td>
+<td align="left" rowspan="1" colspan="1">18469</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Steel1</td>
+<td align="left" rowspan="1" colspan="1">11411</td>
+<td align="left" rowspan="1" colspan="1">12123</td>
+<td align="left" rowspan="1" colspan="1">7240</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Clay</td>
+<td align="left" rowspan="1" colspan="1">438</td>
+<td align="left" rowspan="1" colspan="1">402</td>
+<td align="left" rowspan="1" colspan="1">373</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Copper</td>
+<td align="left" rowspan="1" colspan="1">2464</td>
+<td align="left" rowspan="1" colspan="1">2394</td>
+<td align="left" rowspan="1" colspan="1">1890</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Steel2</td>
+<td align="left" rowspan="1" colspan="1">15947</td>
+<td align="left" rowspan="1" colspan="1">15191</td>
+<td align="left" rowspan="1" colspan="1">14528</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Steel3</td>
+<td align="left" rowspan="1" colspan="1">2510</td>
+<td align="left" rowspan="1" colspan="1">2360</td>
+<td align="left" rowspan="1" colspan="1">2232</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Iron Oxide</td>
+<td align="left" rowspan="1" colspan="1">3801</td>
+<td align="left" rowspan="1" colspan="1">3929</td>
+<td align="left" rowspan="1" colspan="1">3193</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">U1i</td>
+<td align="left" rowspan="1" colspan="1">2893</td>
+<td align="left" rowspan="1" colspan="1">3277</td>
+<td align="left" rowspan="1" colspan="1">1980</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">IOX</td>
+<td align="left" rowspan="1" colspan="1">7062</td>
+<td align="left" rowspan="1" colspan="1">6444</td>
+<td align="left" rowspan="1" colspan="1">7753</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Aluminum1</td>
+<td align="left" rowspan="1" colspan="1">160</td>
+<td align="left" rowspan="1" colspan="1">151</td>
+<td align="left" rowspan="1" colspan="1">146</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">RBC2</td>
+<td align="left" rowspan="1" colspan="1">15303</td>
+<td align="left" rowspan="1" colspan="1">14277</td>
+<td align="left" rowspan="1" colspan="1">13352</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">RBC</td>
+<td align="left" rowspan="1" colspan="1">26943</td>
+<td align="left" rowspan="1" colspan="1">22943</td>
+<td align="left" rowspan="1" colspan="1">21556</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Ceramics</td>
+<td align="left" rowspan="1" colspan="1">9468</td>
+<td align="left" rowspan="1" colspan="1">9430</td>
+<td align="left" rowspan="1" colspan="1">9610</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Aluminum2</td>
+<td align="left" rowspan="1" colspan="1">2151</td>
+<td align="left" rowspan="1" colspan="1">2118</td>
+<td align="left" rowspan="1" colspan="1">2557</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt101"><label/><p>The Sample Images Referred in the Tables: <xref ref-type="fig" rid="pone-0103942-g006">Figure 6</xref> lists the sample images referred in <xref ref-type="table" rid="pone-0103942-t003">Table 3</xref>.</p></fn></table-wrap-foot></table-wrap>
+<p>In a similar fashion, perimeter values can be compared. First the length of the textural region was ascertained and then the perimeters were derived. The perimeter is inclined to be, roughly, more than double the length, due to inherent porosity that may increase the population of perimeter pixels. In <xref ref-type="table" rid="pone-0103942-t004">Table 4</xref> we are showing the perimeter of the segmented regions from each of the 15 SEM images, estimated manually and via the proposed and watershed methods. These results are graphically illustrated in <xref ref-type="fig" rid="pone-0103942-g005">Figure 5</xref>. In this case too, the proposed method has produced results more closer to the manual ones computed by the means of photometry. The aggregate error rate of proposed method is <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0103942.e050" xlink:type="simple"/></inline-formula> which is far better than the results generated by using Watershed segmentation at 23.5%.</p>
+<fig id="pone-0103942-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0103942.g005</object-id><label>Figure 5</label><caption>
+<title>Graph Illustrating the Perimeter Comparison.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0103942.g005" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0103942-t004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0103942.t004</object-id><label>Table 4</label><caption>
+<title>Estimated Perimeters from Segmented SEM Images.</title>
+</caption><alternatives><graphic id="pone-0103942-t004-4" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0103942.t004" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Image Tag</td>
+<td align="left" rowspan="1" colspan="1">Manual</td>
+<td align="left" rowspan="1" colspan="1">Proposed</td>
+<td align="left" rowspan="1" colspan="1">Watershed</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">Carbon1</td>
+<td align="left" rowspan="1" colspan="1">399</td>
+<td align="left" rowspan="1" colspan="1">391</td>
+<td align="left" rowspan="1" colspan="1">427</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Carbon2</td>
+<td align="left" rowspan="1" colspan="1">606</td>
+<td align="left" rowspan="1" colspan="1">592</td>
+<td align="left" rowspan="1" colspan="1">511</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Steel1</td>
+<td align="left" rowspan="1" colspan="1">906</td>
+<td align="left" rowspan="1" colspan="1">869</td>
+<td align="left" rowspan="1" colspan="1">728</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Clay</td>
+<td align="left" rowspan="1" colspan="1">125</td>
+<td align="left" rowspan="1" colspan="1">127</td>
+<td align="left" rowspan="1" colspan="1">118</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Copper</td>
+<td align="left" rowspan="1" colspan="1">220</td>
+<td align="left" rowspan="1" colspan="1">225</td>
+<td align="left" rowspan="1" colspan="1">180</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Steel2</td>
+<td align="left" rowspan="1" colspan="1">595</td>
+<td align="left" rowspan="1" colspan="1">561</td>
+<td align="left" rowspan="1" colspan="1">550</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Steel3</td>
+<td align="left" rowspan="1" colspan="1">469</td>
+<td align="left" rowspan="1" colspan="1">454</td>
+<td align="left" rowspan="1" colspan="1">433</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Iron Oxide</td>
+<td align="left" rowspan="1" colspan="1">553</td>
+<td align="left" rowspan="1" colspan="1">557</td>
+<td align="left" rowspan="1" colspan="1">506</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">U1i</td>
+<td align="left" rowspan="1" colspan="1">373</td>
+<td align="left" rowspan="1" colspan="1">359</td>
+<td align="left" rowspan="1" colspan="1">309</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">IOX</td>
+<td align="left" rowspan="1" colspan="1">399</td>
+<td align="left" rowspan="1" colspan="1">393</td>
+<td align="left" rowspan="1" colspan="1">384</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Aluminum1</td>
+<td align="left" rowspan="1" colspan="1">345</td>
+<td align="left" rowspan="1" colspan="1">323</td>
+<td align="left" rowspan="1" colspan="1">242</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">RBC2</td>
+<td align="left" rowspan="1" colspan="1">1388</td>
+<td align="left" rowspan="1" colspan="1">1342</td>
+<td align="left" rowspan="1" colspan="1">1300</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">RBC</td>
+<td align="left" rowspan="1" colspan="1">776</td>
+<td align="left" rowspan="1" colspan="1">701</td>
+<td align="left" rowspan="1" colspan="1">681</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Ceramics</td>
+<td align="left" rowspan="1" colspan="1">490</td>
+<td align="left" rowspan="1" colspan="1">481</td>
+<td align="left" rowspan="1" colspan="1">460</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Aluminum2</td>
+<td align="left" rowspan="1" colspan="1">235</td>
+<td align="left" rowspan="1" colspan="1">221</td>
+<td align="left" rowspan="1" colspan="1">201</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt102"><label/><p>The Sample Images Referred in the Tables: <xref ref-type="fig" rid="pone-0103942-g006">Figure 6</xref> lists the sample images referred in <xref ref-type="table" rid="pone-0103942-t004">Table 4</xref>.</p></fn></table-wrap-foot></table-wrap><fig id="pone-0103942-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0103942.g006</object-id><label>Figure 6</label><caption>
+<title>Set of images.</title>
+<p>(a) Carbon1, (b) Carbon2, (c) Steel1, (d) Steel2, (e) Steel3, (f) Clay, (g) Copper, (h) Iron Oxide, (i) U1i, (j) IOX, (k) RBC, (l) RBC2, (m) Aluminum1, (n) Aluminum2, and (o) Ceramics.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0103942.g006" position="float" xlink:type="simple"/></fig></sec></sec><sec id="s5">
+<title>Conclusion</title>
+<p>In this paper, we proposed a novel method for SEM image segmentation and subsequent quantification of the geometrical parameters. Our method is based on two main stages: one is the image segmentation and the other is concerned with the estimation of the underlying measures. The former constitutes a more complex task than the later one, because SEM images usually contain irregular and complex objects. The segmentation part is based on a Curvelet transform and entropy calculations. The Curvelet transform has proved to be very much useful for the multi-dimensional analysis that dealt with not only linear structures but also the curved contours. The technique is promising and may well produce better results than the state of the art techniques, like watershed segmentation. To test its efficacy, we compared our results with those by Watershed segmentation, and found out that the proposed technique has segmented the highly textured SEM images far better than its Watershed counterpart. In future, we want to expand our analyses to nano-scale images while vying for an improved segmentation and measurement strategy.</p>
+</sec></body>
+<back><ref-list>
+<title>References</title>
+<ref id="pone.0103942-Haq1"><label>1</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Haq</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Hayat</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Madani</surname><given-names>SA</given-names></name>, <name name-style="western"><surname>Iqbal</surname><given-names>Y</given-names></name> (<year>2012</year>) <article-title>Offline Estimation of 2D Crystal Lattice Parameters by Processing the Electron Diffraction Image</article-title>. <source>Optics Communications</source> <volume>285</volume>: <fpage>609616</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Li1"><label>2</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Xiao</surname><given-names>X</given-names></name> (<year>2004</year>) <article-title>An Unsupervised Marker Image Generation Method for Watershed Segmen-tation of Multiespectral Imagery</article-title>. <source>Geoscience Journal</source> <volume>8(3)</volume>: <fpage>325</fpage>–<lpage>331</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Hernandez1"><label>3</label>
+<mixed-citation publication-type="other" xlink:type="simple">Hernandez BK (2000) Joint Region Merging Criteria for Watershed-based Image Segmentation. IEEE Trans on Image Processing.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Lu1"><label>4</label>
+<mixed-citation publication-type="other" xlink:type="simple">Lu C (2008) Image Decomposition Based on Curvelet and Wave Atom. Advances in Computation and Intelligence: 687–696.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Yuan1"><label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yuan</surname><given-names>LH</given-names></name>, <name name-style="western"><surname>Ma</surname><given-names>XY</given-names></name>, <name name-style="western"><surname>Yang</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Gu</surname><given-names>XC</given-names></name> (<year>2010</year>) <article-title>Enhancement Technology for Container X-ray Images</article-title>. <source>Journal of Computer Applications</source> <volume>30</volume>: <fpage>44</fpage>–<lpage>46</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Zhang1"><label>6</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhang</surname><given-names>YJ</given-names></name> (<year>1996</year>) <article-title>A Survey on Evaluation Methods for Image Segmentation</article-title>. <source>Pattern Recognition</source> <volume>29</volume>: <fpage>1335</fpage>–<lpage>1346</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Kayser1"><label>7</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kayser</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Gortler</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Borkenfeld</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Kayser</surname><given-names>G</given-names></name> (<year>2011</year>) <article-title>Interactive and Automated Application of Virtual Microscopy</article-title>. <source>Diagnostic Pathology</source> <volume>6</volume>: <fpage>S10</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Xu1"><label>8</label>
+<mixed-citation publication-type="other" xlink:type="simple">Xu X, Chen Q, Xia D (2010) Improving Image Enhancement by Gradient Fusion. In: Photonics and Optoelectronic (SOPO), 2010 Symposium on. pp. 1–4. doi:10.1109/SOPO.2010.5504345.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Jing1"><label>9</label>
+<mixed-citation publication-type="other" xlink:type="simple">Jing L, Guirong W (2010) Analysis Image of Multiplayer Thin Films. In: Photonics and Optoelec-tronic (SOPO), 2010 Symposium on. pp. 1–3.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Malkucsh1"><label>10</label>
+<mixed-citation publication-type="other" xlink:type="simple">Malkucsh W (2002) Quantitative Image Analysis Methods and Limitations. Technical report, Bimedical Products Tools and Techniques for life science researchers.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Myers1"><label>11</label>
+<mixed-citation publication-type="other" xlink:type="simple">Myers B, Zheng JG, Dravid VP. Hitachi S-3500N VP SEM Operation Instructions. Hitachi.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Zhengyu1"><label>12</label>
+<mixed-citation publication-type="other" xlink:type="simple">Zhengyu L, Yangyong S (2010) Research on Dimension Algorithms about Fractal of Micro-structure Curve of Rock by Using Box-Counting Dimension Method. In: Proc. International Conference on Intelligent System Design and Engineering Application (ISDEA). <volume>volume 2</volume> , pp. 189–192. doi:10.1109/ISDEA.2010.172.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Hafemeister1"><label>13</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hafemeister</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Duvaut</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Cocquerez</surname><given-names>JP</given-names></name> (<year>1994</year>) <article-title>Textural Analysis of Ocean Surface Images</article-title>. In <source>Proc. OCEANS’94. ‘Oceans Engineering for Today's Technology and Tomorrow's Preservation.'</source> <volume>volume 2</volume> pp. <fpage>69</fpage>–<lpage>74</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Tuceryan1"><label>14</label>
+<mixed-citation publication-type="book" xlink:type="simple">Tuceryan M, Jain AK (1998) The Handbook of Pattern Recognition and Computer Vision - Texture Analysis. In: Chen CH, Pau LF, Wang PSP, editors, The Handbook of Pattern Recognition and Computer Vision, World Scientific Publishing Co. pp. 1–41.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Ma1"><label>15</label>
+<mixed-citation publication-type="other" xlink:type="simple">Ma WY, Manjunath BS (1995) A Comparison of Wavelet Transform Features for Texture Image Annotation. In: Proc. International Conference on Image Processing. <volume>volume 2</volume> , pp. 256–259.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Yangi1"><label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yangi</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Peng</surname><given-names>XF</given-names></name>, <name name-style="western"><surname>Chu</surname><given-names>CP</given-names></name>, <name name-style="western"><surname>Lee</surname><given-names>DJ</given-names></name> (<year>2007</year>) <article-title>Image Processing and Geometric Parameters Extracted from Sliced Image of Porous Biomaterial</article-title>. <source>Advanced Powder Technology</source> <volume>18</volume>: <fpage>187</fpage>–<lpage>213</lpage> <comment><ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/" xlink:type="simple">10.1163/156855207780208655</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0103942-Holecz1"><label>17</label>
+<mixed-citation publication-type="other" xlink:type="simple">Holecz F, Meier E, Graf C, Nuesch D (1989) Textural Analysis Applied to Geocoded SAR Images. In: Geoscience and Remote Sensing Symposium, 1989. IGARSS’89. 12th Canadian Symposium on Remote Sensing., 1989 International. volume 5, pp. 2789–2793.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Cointault1"><label>18</label>
+<mixed-citation publication-type="other" xlink:type="simple">Cointault F, Gouton P (2007) Texture or Color Analysis in Agronomic Images for Wheat Ear Counting. In: Proc. IEEE International Conference on Signal-Image Technologies and Internet-Based System. pp. 696–701.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Flores1"><label>19</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Flores</surname><given-names>FC</given-names></name>, <name name-style="western"><surname>Lotufo</surname><given-names>RA</given-names></name> (<year>2010</year>) <article-title>Watershed from Propagated Markers: An Interactive Method to Morphological Object Segmentation in Image Sequences</article-title>. <source>Image and Vision Computing</source> <volume>28</volume>: <fpage>1491</fpage>–<lpage>1514</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Prakongkep1"><label>20</label>
+<mixed-citation publication-type="other" xlink:type="simple">Prakongkep N, Suddhiprakarn A, Kheoruenromne I, Gilkes RJ (2010) SEM Image Analysis for Characterization of Sand Grains in Thai Paddy Soils. Geoderma 156: 20–31.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Soroushian1"><label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Soroushian</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Elzafraney</surname><given-names>M</given-names></name> (<year>2005</year>) <article-title>Morphological Operations, Planar Mathematical Formulations, and Stereological Interpretations for Automated Image Analysis of Concrete Microstructure</article-title>. <source>Cement and Concrete Composites</source> <volume>27</volume>: <fpage>823</fpage>–<lpage>833</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Vincent1"><label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vincent</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Soille</surname><given-names>P</given-names></name> (<year>1991</year>) <article-title>Watersheds in Digital Spaces: An Efficient Algorithm Based on Immersion Simulations</article-title>. <source>IEEE Trans Pattern Anal Mach Intell</source> <volume>13</volume>: <fpage>583</fpage>–<lpage>598</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-R1"><label>23</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><collab xlink:type="simple">R Zebaze AM A Ghasem-Zadeh A</collab> (<year>2013</year>) <article-title>New Method of Segmentation of Compact-Appearing, Transitional and Trabecular Compartments and Quantification of Cortical Porosity from High Resolution Peripheral Quantitative Computed Tomographic Images</article-title>. <source>Bone</source> <volume>54</volume>: <fpage>820</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Li2"><label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Bowman</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Fazel-Rezai</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Hewko</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Choo-Smith</surname><given-names>LP</given-names></name> (<year>2009</year>) <article-title>Speckle Reduction and Lesion Segmentation of OCT Tooth Images for early Caries Detection</article-title>. <source>Proc the International Conference of IEEE Engineering in Medicine and Biology Society</source> <volume>2009</volume>: <fpage>1449</fpage>–<lpage>1452</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Tremeau1"><label>25</label>
+<mixed-citation publication-type="other" xlink:type="simple">Tremeau A, Colantoni P (2000) Regions Adjacency Graph Applied to Color Image Segmentation. Image Processing, IEEE Transactions on 9: 735–744.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Padma1"><label>26</label>
+<mixed-citation publication-type="other" xlink:type="simple">Padma MC, Vijaya PA. Entropy based Texture Features Useful for Automatic Script Identification.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Woodward1"><label>27</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Woodward</surname><given-names>JD</given-names></name>, <name name-style="western"><surname>Sewell</surname><given-names>BT</given-names></name> (<year>2010</year>) <article-title>Tomography of Asymmetric Bulk Specimens Imaged by Scanning Electron Microscopy</article-title>. <source>Ultramicroscopy</source> <volume>110</volume>: <fpage>170</fpage>–<lpage>175</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Salzer1"><label>28</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Salzer</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Spettl</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Stenzel</surname><given-names>O</given-names></name>, <name name-style="western"><surname>Smatt</surname><given-names>JH</given-names></name>, <name name-style="western"><surname>Linden</surname><given-names>M</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>A Two-Stage Approach to the Segmentation of FIB-SEM Images of Highly Porous Materials</article-title>. <source>MATERIALS CHARACTERIZATION</source> <volume>69</volume>: <fpage>115</fpage>–<lpage>126</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Dettori1"><label>29</label>
+<mixed-citation publication-type="other" xlink:type="simple">Dettori L, Semler L (2007) A Comparison of Wavelet, Ridgelet, and Curvelet-based Texture Classification Algorithms in Computed Tomography. International Journal of Computers in Biology and Medicine 37: 486–498.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Sheppard1"><label>30</label>
+<mixed-citation publication-type="other" xlink:type="simple">Sheppard AP, Sok RM, Averdunk H (2004) Techniques for Image Enhancement and Segmentation of Tomographic Images of Porous Materials. Physica A: Statistical Mechanics and its Applications 339: 145–151.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Nemati1"><label>31</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nemati</surname><given-names>KM</given-names></name> (<year>1997</year>) <article-title>Fracture Analysis of Concrete using Scanning Electron Microscopy</article-title>. <source>Scanning</source> <volume>19</volume>: <fpage>426</fpage>–<lpage>430</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Mizoguchi1"><label>32</label>
+<mixed-citation publication-type="other" xlink:type="simple">Mizoguchi M, Obata K, Kato Y, Ogata K (2009) Genetic Algorithm based Parameters Adjustments for Micron-order Image Analysis of Metal Fracture. In: Proc. International Symposium on Micro-NanoMechatronics and Human Science, 2009. MHS 2009. pp. 426–431.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Bennis1"><label>33</label>
+<mixed-citation publication-type="other" xlink:type="simple">Bennis H, Benslimane R (2010) Quantification of Pore Size Distribution in the Z-direction of Paper by Using Image Analysis: Characterization of Paper Structure by Image Analysis. In: Symposium on I/V Communications and Mobile Network (ISVC), 2010. pp. 1–4.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Baojun1"><label>34</label>
+<mixed-citation publication-type="other" xlink:type="simple">Baojun W, Bin S (2009) Particle Extraction and Quantitative Analysis of Soil Microstructure from SEM Using Spatial Analyst Tools in ArcGIS. In: Proc. International Congress on Image and Signal Processing. pp. 1–5.</mixed-citation>
+</ref>
+<ref id="pone.0103942-ApGwynn1"><label>35</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ap Gwynn</surname><given-names>I</given-names></name>, <name name-style="western"><surname>Wilson</surname><given-names>C</given-names></name> (<year>2001</year>) <article-title>Characterizing Fretting Particles by Analysis of SEM Images</article-title>. <source>European cells materials</source> <volume>1</volume>: <fpage>1</fpage>–<lpage>11</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Chen1"><label>36</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chen</surname><given-names>Q</given-names></name>, <name name-style="western"><surname>Xu</surname><given-names>X</given-names></name>, <name name-style="western"><surname>Sun</surname><given-names>Q</given-names></name>, <name name-style="western"><surname>Xia</surname><given-names>D</given-names></name> (<year>2010</year>) <article-title>A Solution to the Deficiencies of Image Enhancement</article-title>. <source>Journal of Signal Processing</source> <volume>90</volume>: <fpage>44</fpage>–<lpage>56</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Chen2"><label>37</label>
+<mixed-citation publication-type="other" xlink:type="simple">Chen W, Mao X, Ma H (2010) Low-Contrast Microscopic Image Enhancement based on Multi-Technology Fusion. In: IEEE International Conference on Intelligent Computing and Intelligent Systems. <volume>volume 3</volume> , pp. 891–895.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Erikson1"><label>38</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Erikson</surname><given-names>M</given-names></name> (<year>2006</year>) <article-title>Two Preprocessing Techniques based on Grey Level and Geometric Thickness to Improve Segmentation Results</article-title>. <source>Pattern Recognition Letters</source> <volume>27</volume>: <fpage>160</fpage>–<lpage>166</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Kim1"><label>39</label>
+<mixed-citation publication-type="other" xlink:type="simple">Kim DH, Kim SJ, Oh SK (2010) Image Improvement with Modified Scanning Waves and Noise Reduction in a Scanning Electron Microscope. Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment 620: 112–120.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Niwas1"><label>40</label>
+<mixed-citation publication-type="other" xlink:type="simple">Niwas SI, Palanisamy P, Sujathan K (2010) Complex Wavelet based Texture Features of Cancer Cytology Images. In: Proc. International Conference on Industrial and Information Systems (ICIIS). pp. 348–353.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Sun1"><label>41</label>
+<mixed-citation publication-type="other" xlink:type="simple">Sun W, Romagnoli JA, Tringe JW, Letant SE, Stroeve P, et al. (2009) Line Edge Detection and Characterization in SEM Images Using Wavelets. Semiconductor Manufacturing, IEEE Transactions on 22: 180–187.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Jiang1"><label>42</label>
+<mixed-citation publication-type="other" xlink:type="simple">Jiang X, Bunke H, Meier U (2000) High-Level Feature based Range Image Segmentation. Image and Vision Computing 18: 817–822.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Li3"><label>43</label>
+<mixed-citation publication-type="other" xlink:type="simple">Li Q, Ni X, Liu G (2007) Ceramic Image Processing using the Second Curvelet Transform and Watershed Algorithm. In: Proc. IEEE International Conference on Robotics and Biomimetics. ROBIO2007, pp. 2037–2042.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Herman1"><label>44</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Herman</surname><given-names>GT</given-names></name>, <name name-style="western"><surname>Marabini</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Carazo</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Garduno</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Lewitt</surname><given-names>RM</given-names></name>, <etal>et al</etal>. (<year>2000</year>) <article-title>Image Pprocessing Approaches to Biological Three-Dimensional Electron Microscopy</article-title>. <source>International Journal of Imaging Systems and Technology</source> <volume>11</volume>: <fpage>12</fpage>–<lpage>29</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Nencini1"><label>45</label>
+<mixed-citation publication-type="other" xlink:type="simple">Nencini F, Garzelli A, Baronti S, Alparone L (2007) Remote Sensing Image Fusion using the Curvelet Transform. Information Fusion 8: 143–156.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Mukhopadhyay1"><label>46</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mukhopadhyay</surname><given-names>S</given-names></name> (<year>2000</year>) <article-title>A Multiscale Morphological Approach to Local Contrast Enhancement</article-title>. <source>Signal Processing</source> <volume>80</volume>: <fpage>685</fpage>–<lpage>696</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Fattal1"><label>47</label>
+<mixed-citation publication-type="other" xlink:type="simple">Fattal R, Agrawala M, Rusinkiewicz S (2007) Multiscale Shape and Detail Enhancement from Multi-light Image Collections. ACM Transactions on Graphics (Proc SIGGRAPH) 26.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Hamarneh1"><label>48</label>
+<mixed-citation publication-type="other" xlink:type="simple">Hamarneh G, Li X (2009) Watershed Segmentation using Prior Shape and Appearance Knowledge. Image and Vision Computing 27: 59–68.</mixed-citation>
+</ref>
+<ref id="pone.0103942-Sarkar1"><label>49</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sarkar</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Chaudhuri</surname><given-names>BB</given-names></name> (<year>1992</year>) <article-title>An Efficient Aapproach to Estimate Fractal Dimension of Textural Images</article-title>. <source>Pattern Recognition</source> <volume>25</volume>: <fpage>1035</fpage>–<lpage>1041</lpage>.</mixed-citation>
+</ref>
+</ref-list></back>
+</article>

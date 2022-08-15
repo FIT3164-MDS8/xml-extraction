@@ -1,0 +1,963 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1d3" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0194907</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-17-26722</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>Classical mechanics</subject><subj-group><subject>Continuum mechanics</subject><subj-group><subject>Fluid mechanics</subject><subj-group><subject>Fluid dynamics</subject><subj-group><subject>Drag</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>Classical mechanics</subject><subj-group><subject>Continuum mechanics</subject><subj-group><subject>Fluid mechanics</subject><subj-group><subject>Fluid dynamics</subject><subj-group><subject>Reynolds number</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>Classical mechanics</subject><subj-group><subject>Continuum mechanics</subject><subj-group><subject>Fluid mechanics</subject><subj-group><subject>Fluid dynamics</subject><subj-group><subject>Bubbles</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Chemistry</subject><subj-group><subject>Chemical properties</subject><subj-group><subject>Viscosity</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Chemistry</subject><subj-group><subject>Physical chemistry</subject><subj-group><subject>Chemical properties</subject><subj-group><subject>Viscosity</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Materials science</subject><subj-group><subject>Materials physics</subject><subj-group><subject>Viscosity</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>Materials physics</subject><subj-group><subject>Viscosity</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Numerical analysis</subject><subj-group><subject>Interpolation</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>States of matter</subject><subj-group><subject>Fluids</subject><subj-group><subject>Liquids</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>States of matter</subject><subj-group><subject>Fluids</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>Classical mechanics</subject><subj-group><subject>Continuum mechanics</subject><subj-group><subject>Fluid mechanics</subject><subj-group><subject>Surface tension</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Universal expression for the drag on a fluid sphere</article-title>
+<alt-title alt-title-type="running-head">Universal drag formula for spheres</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0002-8621-0425</contrib-id>
+<name name-style="western">
+<surname>Barry</surname>
+<given-names>D. A.</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Formal analysis</role>
+<role content-type="http://credit.casrai.org/">Investigation</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<role content-type="http://credit.casrai.org/">Software</role>
+<role content-type="http://credit.casrai.org/">Validation</role>
+<role content-type="http://credit.casrai.org/">Visualization</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Parlange</surname>
+<given-names>J.-Y.</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Investigation</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Ecological Engineering Laboratory (ECOL), Environmental Engineering Institute (IIE), Faculty of Architecture, Civil and Environmental Engineering (ENAC), Ecole polytechnique fédérale de Lausanne (EPFL), Lausanne, Switzerland</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Department of Biological and Environmental Engineering, Cornell University, Ithaca, New York, United States of America</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Chai</surname>
+<given-names>Zhenhua</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Huazhong University of Science and Technology, CHINA</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">andrew.barry@epfl.ch</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>16</day>
+<month>4</month>
+<year>2018</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2018</year>
+</pub-date>
+<volume>13</volume>
+<issue>4</issue>
+<elocation-id>e0194907</elocation-id>
+<history>
+<date date-type="received">
+<day>17</day>
+<month>7</month>
+<year>2017</year>
+</date>
+<date date-type="accepted">
+<day>21</day>
+<month>2</month>
+<year>2018</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2018</copyright-year>
+<copyright-holder>Barry, Parlange</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0194907"/>
+<abstract>
+<p>An expression was developed for prediction of drag coefficients for any spherical particle, drop or bubble in an infinite, homogeneous liquid. The formula reproduces the limiting cases for gas bubbles and solid spheres, as well as the exact Hadamard-Rybczynski solution. The accuracy of the expression, which is valid for Reynolds numbers up to a few hundred, was confirmed by comparison with published numerical predictions of the drag coefficient for a range of physical circumstances.</p>
+</abstract>
+<funding-group>
+<funding-statement>The author received no specific funding for this work.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="2"/>
+<table-count count="2"/>
+<page-count count="10"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and Supporting Information.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>Bubbles, drops and particles are widespread in science and engineering phenomena. Knowledge of the behavior of single bubbles and drops is not only directly relevant to many applications; it also supports understanding of the corresponding swarms, e.g., [<xref ref-type="bibr" rid="pone.0194907.ref001">1</xref>].</p>
+<p>Wegener et al. [<xref ref-type="bibr" rid="pone.0194907.ref002">2</xref>] recently provided a comprehensive review of theory, experimental data and pertinent approximations describing the dynamics of single drops in fluid systems. The steady rate of movement of spherical particle, drops and bubbles is quantified by the drag coefficient, <italic>C</italic><sub><italic>d</italic></sub>. Of relevance here is Wegener et al.’s summary of drag formulas (their Tables <xref ref-type="table" rid="pone.0194907.t001">1</xref> and <xref ref-type="table" rid="pone.0194907.t002">2</xref>), and the ranges of (drop) Reynolds numbers over which the different formulas apply.</p>
+<p>We consider the drag on a single spherical solid particle, liquid drop or gas bubble (collectively referred to as a particle) moving in an otherwise quiescent, infinite, homogeneous liquid, without interphase mass transfer (i.e., Sherwood number of zero). Spherical particles will occur if surface tension is dominant, or if inertia is negligible. Clift et al. [<xref ref-type="bibr" rid="pone.0194907.ref003">3</xref>] and Bhaga and Weber [<xref ref-type="bibr" rid="pone.0194907.ref004">4</xref>] provide systematic characterizations of particle shape as it varies with Reynolds, Eötvös and Morton numbers. These authors show, for instance, that spherical shapes for Reynolds numbers of about 100 or higher are found for sufficiently small Eötvös and Morton numbers.</p>
+<p>Below, we develop and test a new expression for <italic>C</italic><sub><italic>d</italic></sub> applicable to spherical particles. Our approach is to build an interpolation based on known limiting cases (e.g., small Reynolds number), as well as a validated large Reynolds number drag expression.</p>
+</sec>
+<sec id="sec002">
+<title>Theory</title>
+<sec id="sec003">
+<title>Drag formula interpolations between gas bubbles and solid spheres</title>
+<p>There are several approximations for <italic>C</italic><sub><italic>d</italic></sub> in the literature for the limiting cases of bubbles or solid spheres [<xref ref-type="bibr" rid="pone.0194907.ref005">5</xref>–<xref ref-type="bibr" rid="pone.0194907.ref008">8</xref>]. As mentioned, Wegener et al. [<xref ref-type="bibr" rid="pone.0194907.ref002">2</xref>] provide a summary of these approximations, remarking that they “approximate only certain intervals of the standard drag curve.”</p>
+<p>A well-known interpolation is that of Rivkind and Ryskin [<xref ref-type="bibr" rid="pone.0194907.ref009">9</xref>]:
+<disp-formula id="pone.0194907.e001">
+<alternatives>
+<graphic id="pone.0194907.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e001" xlink:type="simple"/>
+<mml:math display="block" id="M1">
+<mml:mrow><mml:msub><mml:mi>C</mml:mi><mml:mi>d</mml:mi></mml:msub><mml:mo>≅</mml:mo><mml:mfrac><mml:mrow><mml:mi>X</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>24</mml:mn><mml:msubsup><mml:mi>R</mml:mi><mml:mn>0</mml:mn><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msubsup><mml:mo>+</mml:mo><mml:mn>4</mml:mn><mml:msubsup><mml:mi>R</mml:mi><mml:mn>0</mml:mn><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>3</mml:mn></mml:mrow></mml:msubsup></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mn>14</mml:mn><mml:mo>.</mml:mo><mml:mn>9</mml:mn><mml:msubsup><mml:mi>R</mml:mi><mml:mn>0</mml:mn><mml:mrow><mml:mo>−</mml:mo><mml:mn>0</mml:mn><mml:mo>.</mml:mo><mml:mn>78</mml:mn></mml:mrow></mml:msubsup></mml:mrow><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>X</mml:mi></mml:mrow></mml:mfrac><mml:mo>,</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(1)</label>
+</disp-formula>
+with
+<disp-formula id="pone.0194907.e002">
+<alternatives>
+<graphic id="pone.0194907.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e002" xlink:type="simple"/>
+<mml:math display="block" id="M2">
+<mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mi>U</mml:mi><mml:msub><mml:mi>ρ</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mi>a</mml:mi><mml:msubsup><mml:mi>μ</mml:mi><mml:mrow><mml:msub><mml:mrow/><mml:mn>0</mml:mn></mml:msub></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msubsup><mml:mo>;</mml:mo><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mi>μ</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:msubsup><mml:mi>μ</mml:mi><mml:mrow><mml:msub><mml:mrow/><mml:mn>0</mml:mn></mml:msub></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msubsup><mml:mo>,</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(2)</label>
+</disp-formula>
+where <italic>ρ</italic> is the density, <italic>μ</italic> the viscosity, <italic>U</italic> the (steady) velocity of the sphere, <italic>R</italic><sub>0</sub> the Reynolds number, <italic>X</italic> the viscosity ratio (<italic>X</italic> → 0 for a gas bubble and ∞ for a solid sphere) and <italic>a</italic> the sphere radius. Subscript “0” refers to the material outside the sphere and “1” to that within. Although <xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref> is straightforward, it does not approach known limits, as given below.</p>
+</sec>
+<sec id="sec004">
+<title>Analytical drag results for small Reynolds number</title>
+<p>For <italic>R</italic><sub>0</sub> → 0, the exact Hadamard-Rybczynski limit, e.g., [<xref ref-type="bibr" rid="pone.0194907.ref003">3</xref>], valid for all <italic>X</italic>, is:
+<disp-formula id="pone.0194907.e003">
+<alternatives>
+<graphic id="pone.0194907.e003g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e003" xlink:type="simple"/>
+<mml:math display="block" id="M3">
+<mml:mrow><mml:msub><mml:mi>C</mml:mi><mml:mi>d</mml:mi></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mo>≪</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>16</mml:mn></mml:mrow><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mfrac><mml:mn>3</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(3)</label>
+</disp-formula></p>
+<p>For the solid sphere, the small-<italic>R</italic><sub>0</sub> limit is [<xref ref-type="bibr" rid="pone.0194907.ref010">10</xref>]:
+<disp-formula id="pone.0194907.e004">
+<alternatives>
+<graphic id="pone.0194907.e004g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e004" xlink:type="simple"/>
+<mml:math display="block" id="M4">
+<mml:mrow><mml:msub><mml:mi>C</mml:mi><mml:mi>d</mml:mi></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mo>∞</mml:mo><mml:mo>,</mml:mo><mml:mspace width="0.25em"/><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mo>≪</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>24</mml:mn></mml:mrow><mml:mi>R</mml:mi></mml:mfrac><mml:mo>+</mml:mo><mml:mfrac><mml:mn>9</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:mo>+</mml:mo><mml:mi>O</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mspace width="0.25em"/><mml:mi>ln</mml:mi><mml:mspace width="0.25em"/><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mo stretchy="false">)</mml:mo><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(4)</label>
+</disp-formula></p>
+<p>Oliver and Chung [<xref ref-type="bibr" rid="pone.0194907.ref011">11</xref>] recommended using <xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref> for 2&lt;<italic>R</italic><sub>0</sub>≤50 and, for <italic>R</italic><sub>0</sub>≤2:
+<disp-formula id="pone.0194907.e005">
+<alternatives>
+<graphic id="pone.0194907.e005g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e005" xlink:type="simple"/>
+<mml:math display="block" id="M5">
+<mml:mrow><mml:msub><mml:mi>C</mml:mi><mml:mi>d</mml:mi></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mo>≤</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="false">)</mml:mo><mml:mo>≅</mml:mo><mml:mfrac><mml:mrow><mml:mn>16</mml:mn></mml:mrow><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mfrac><mml:mn>3</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mfrac><mml:mi>χ</mml:mi><mml:mrow><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:mfrac><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mfrac><mml:mn>3</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(5)</label>
+</disp-formula>
+with <italic>χ</italic> = 8/5 [<xref ref-type="bibr" rid="pone.0194907.ref012">12</xref>]. If we instead take <italic>χ</italic> = 2 in <xref ref-type="disp-formula" rid="pone.0194907.e005">Eq (5)</xref>, then it gives the exact small-<italic>R</italic><sub>0</sub> result for a solid sphere, <xref ref-type="disp-formula" rid="pone.0194907.e004">Eq (4)</xref></p>
+</sec>
+<sec id="sec005">
+<title>Analytical drag results for large Reynolds number</title>
+<p>Unlike the situation for <italic>R</italic><sub>0</sub> ≪ 1, exact results for <italic>R</italic><sub>0</sub> ≫ 1 do not exist. For laminar flow (i.e., oscillations of the particle do not occur), Harper and Moore [<xref ref-type="bibr" rid="pone.0194907.ref013">13</xref>] as well as Parlange [<xref ref-type="bibr" rid="pone.0194907.ref014">14</xref>] obtained approximate expressions for the drag for this case, however. In both [<xref ref-type="bibr" rid="pone.0194907.ref013">13</xref>] and [<xref ref-type="bibr" rid="pone.0194907.ref014">14</xref>], it was observed that, to a first approximation, flow inside the particle is described by a Hill’s vortex, and outside by a potential flow. Both approaches give drag predictions that are “numerically indistinguishable” [<xref ref-type="bibr" rid="pone.0194907.ref014">14</xref>]. This conclusion follows from the minor effect on the drag made by slightly different assumptions in [<xref ref-type="bibr" rid="pone.0194907.ref013">13</xref>] and [<xref ref-type="bibr" rid="pone.0194907.ref014">14</xref>]. Barry and Parlange [<xref ref-type="bibr" rid="pone.0194907.ref015">15</xref>] compared predictions of both theories to experimental results on recirculation within the particle [<xref ref-type="bibr" rid="pone.0194907.ref004">4</xref>], and found that the theory of Parlange [<xref ref-type="bibr" rid="pone.0194907.ref014">14</xref>] is more accurate. Thus, this theory is the starting point for the developments presented below.</p>
+<p>The drag formula of Parlange [<xref ref-type="bibr" rid="pone.0194907.ref014">14</xref>] is:
+<disp-formula id="pone.0194907.e006">
+<alternatives>
+<graphic id="pone.0194907.e006g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e006" xlink:type="simple"/>
+<mml:math display="block" id="M6">
+<mml:mtable><mml:mtr><mml:mtd><mml:msub><mml:mi>C</mml:mi><mml:mi>d</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>48</mml:mn></mml:mrow><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mfrac><mml:mn>3</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mfrac><mml:mn>4</mml:mn><mml:mn>5</mml:mn></mml:mfrac><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mn>2</mml:mn><mml:mrow><mml:mi>π</mml:mi><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mfrac><mml:mn>3</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>6</mml:mn><mml:msqrt><mml:mn>3</mml:mn></mml:msqrt><mml:mo>+</mml:mo><mml:mn>5</mml:mn><mml:msqrt><mml:mn>2</mml:mn></mml:msqrt><mml:mo>−</mml:mo><mml:mn>14</mml:mn></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi>Z</mml:mi></mml:mrow><mml:mo>]</mml:mo></mml:mrow><mml:mspace width="0.25em"/><mml:mtext>with</mml:mtext></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mi>Z</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>α</mml:mi><mml:mo>−</mml:mo><mml:mn>2</mml:mn></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>X</mml:mi><mml:mi>P</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>+</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>β</mml:mi><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi>X</mml:mi><mml:mi>P</mml:mi></mml:mrow><mml:mo>]</mml:mo></mml:mrow><mml:msup><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>X</mml:mi><mml:mi>P</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow><mml:mo>]</mml:mo></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>,</mml:mo></mml:mtd></mml:mtr></mml:mtable>
+</mml:math>
+</alternatives>
+<label>(6)</label>
+</disp-formula>
+where <italic>P</italic> = <italic>ρ</italic><sub>1</sub><inline-formula id="pone.0194907.e007"><alternatives><graphic id="pone.0194907.e007g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e007" xlink:type="simple"/><mml:math display="inline" id="M7"><mml:mrow><mml:msubsup><mml:mi>ρ</mml:mi><mml:mn>0</mml:mn><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msubsup></mml:mrow></mml:math></alternatives></inline-formula> is the density ratio. The two constants, <italic>α</italic> and <italic>β</italic>, are defined by integrals. Parlange [<xref ref-type="bibr" rid="pone.0194907.ref014">14</xref>] simplified <italic>Z</italic> by taking <italic>α</italic> = 2 and <italic>β</italic> = 1. Numerical evaluations (Appendix) give <italic>α</italic> and <italic>β</italic> as:
+<disp-formula id="pone.0194907.e008">
+<alternatives>
+<graphic id="pone.0194907.e008g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e008" xlink:type="simple"/>
+<mml:math display="block" id="M8">
+<mml:mrow><mml:mi>α</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo>.</mml:mo><mml:mn>5891</mml:mn><mml:mo>,</mml:mo><mml:mspace width="0.25em"/><mml:mi>β</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn><mml:mo>.</mml:mo><mml:mn>9879</mml:mn><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(7)</label>
+</disp-formula></p>
+<p>In the following, we use <italic>α</italic> and <italic>β</italic> as given by <xref ref-type="disp-formula" rid="pone.0194907.e008">Eq (7)</xref> For later convenience in manipulating <xref ref-type="disp-formula" rid="pone.0194907.e006">Eq (6)</xref>, we define <italic>A</italic> as:
+<disp-formula id="pone.0194907.e009">
+<alternatives>
+<graphic id="pone.0194907.e009g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e009" xlink:type="simple"/>
+<mml:math display="block" id="M9">
+<mml:mrow><mml:mi>A</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mn>2</mml:mn><mml:mn>5</mml:mn></mml:mfrac><mml:msqrt><mml:mrow><mml:mfrac><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mfrac></mml:mrow></mml:msqrt><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>6</mml:mn><mml:msqrt><mml:mn>3</mml:mn></mml:msqrt><mml:mo>+</mml:mo><mml:mn>5</mml:mn><mml:msqrt><mml:mn>2</mml:mn></mml:msqrt><mml:mo>−</mml:mo><mml:mn>14</mml:mn></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>≅</mml:mo><mml:mn>1</mml:mn><mml:mo>.</mml:mo><mml:mn>10535</mml:mn><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(8)</label>
+</disp-formula></p>
+</sec>
+<sec id="sec006">
+<title>New drag formula</title>
+<p><xref ref-type="disp-formula" rid="pone.0194907.e006">Eq (6)</xref> holds for <italic>R</italic><sub>0</sub> ≫ 1, so it is not surprising that <xref ref-type="disp-formula" rid="pone.0194907.e003">Eq (3)</xref> (the Hadamard-Rybczynski limit) is not obtained for <italic>R</italic><sub>0</sub> ≪ 1. However, we can force <xref ref-type="disp-formula" rid="pone.0194907.e006">Eq (6)</xref> to do so by using standard Padé approximations [<xref ref-type="bibr" rid="pone.0194907.ref016">16</xref>]. First, we rewrite <xref ref-type="disp-formula" rid="pone.0194907.e006">Eq (6)</xref> as:
+<disp-formula id="pone.0194907.e010">
+<alternatives>
+<graphic id="pone.0194907.e010g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e010" xlink:type="simple"/>
+<mml:math display="block" id="M10">
+<mml:mrow><mml:msub><mml:mi>C</mml:mi><mml:mi>d</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>16</mml:mn></mml:mrow><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mfrac><mml:mn>3</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msubsup><mml:mi>R</mml:mi><mml:mn>0</mml:mn><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msubsup><mml:mo>+</mml:mo><mml:mi>A</mml:mi><mml:mi>Z</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:msup><mml:mrow><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mfrac><mml:mrow><mml:msubsup><mml:mi>R</mml:mi><mml:mn>0</mml:mn><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msubsup></mml:mrow><mml:mn>3</mml:mn></mml:mfrac><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup><mml:mo>+</mml:mo><mml:mi>A</mml:mi><mml:mi>Z</mml:mi></mml:mrow><mml:mo>]</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup><mml:mo>,</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(9)</label>
+</disp-formula>
+which is identical in order to <xref ref-type="disp-formula" rid="pone.0194907.e006">Eq (6)</xref> but additionally approaches <xref ref-type="disp-formula" rid="pone.0194907.e003">Eq (3)</xref> as <italic>R</italic><sub>0</sub> → 0. Next, we modify <xref ref-type="disp-formula" rid="pone.0194907.e010">Eq (9)</xref> so that it will reduce to <xref ref-type="disp-formula" rid="pone.0194907.e005">Eq (5)</xref> (with <italic>χ</italic> = 2), in which case it must be corrected for <italic>R</italic><sub>0</sub> ≪ 1 without affecting predictions for <italic>R</italic><sub>0</sub> ≫ 1. This occurs with a Padé approximant that maintains the first two orders of Eqs (<xref ref-type="disp-formula" rid="pone.0194907.e004">4</xref>) and (<xref ref-type="disp-formula" rid="pone.0194907.e006">6</xref>) for <italic>R</italic><sub>0</sub> small and large, respectively. We proceed stepwise and satisfy the different limiting cases given above. First, to ensure that the predictions of <xref ref-type="disp-formula" rid="pone.0194907.e010">Eq (9)</xref> are not affected for <italic>R</italic><sub>0</sub> ≫ 1, we take corrections that are exponentially small in that limit, and so replace <xref ref-type="disp-formula" rid="pone.0194907.e010">Eq (9)</xref> with:
+<disp-formula id="pone.0194907.e011">
+<alternatives>
+<graphic id="pone.0194907.e011g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e011" xlink:type="simple"/>
+<mml:math display="block" id="M11">
+<mml:mrow><mml:msub><mml:mi>C</mml:mi><mml:mi>d</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>48</mml:mn></mml:mrow><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mfrac><mml:mn>3</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mfrac><mml:mrow><mml:msubsup><mml:mi>R</mml:mi><mml:mn>0</mml:mn><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msubsup><mml:mo>+</mml:mo><mml:mi>A</mml:mi><mml:mi>Z</mml:mi><mml:mo>+</mml:mo><mml:mi>τ</mml:mi><mml:mi>exp</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mo>−</mml:mo><mml:mi>λ</mml:mi><mml:msubsup><mml:mi>R</mml:mi><mml:mn>0</mml:mn><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msubsup></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:msubsup><mml:mi>R</mml:mi><mml:mn>0</mml:mn><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msubsup><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup><mml:mo>+</mml:mo><mml:mn>3</mml:mn><mml:mi>A</mml:mi><mml:mi>Z</mml:mi><mml:mo>+</mml:mo><mml:mn>3</mml:mn><mml:mi>τ</mml:mi><mml:mi>exp</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mo>−</mml:mo><mml:mi>ω</mml:mi><mml:msubsup><mml:mi>R</mml:mi><mml:mn>0</mml:mn><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msubsup></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac><mml:mo>,</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(10)</label>
+</disp-formula>
+which reduces to <xref ref-type="disp-formula" rid="pone.0194907.e010">Eq (9)</xref> for <italic>R</italic><sub>0</sub> ≫ 1 (or for <italic>τ</italic> = 0) and <xref ref-type="disp-formula" rid="pone.0194907.e003">Eq (3)</xref> for <italic>R</italic><sub>0</sub> → 0. Second, the parameters <italic>τ</italic>, <italic>λ</italic> and <italic>ω</italic> (all &gt; 0) are chosen to ensure that <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> reduces to the other limits given above. For this purpose, we observe that <xref ref-type="disp-formula" rid="pone.0194907.e005">Eq (5)</xref> requires a Padé approximant in powers of <italic>R</italic><sub>0</sub>, rather than <inline-formula id="pone.0194907.e012"><alternatives><graphic id="pone.0194907.e012g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e012" xlink:type="simple"/><mml:math display="inline" id="M12"><mml:mrow><mml:msubsup><mml:mi>R</mml:mi><mml:mn>0</mml:mn><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msubsup></mml:mrow></mml:math></alternatives></inline-formula>, appearing in <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> The initial appearance of <inline-formula id="pone.0194907.e013"><alternatives><graphic id="pone.0194907.e013g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e013" xlink:type="simple"/><mml:math display="inline" id="M13"><mml:mrow><mml:msubsup><mml:mi>R</mml:mi><mml:mn>0</mml:mn><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msubsup></mml:mrow></mml:math></alternatives></inline-formula> is removed from the small-<italic>R</italic><sub>0</sub> expansion of <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> if:
+<disp-formula id="pone.0194907.e014">
+<alternatives>
+<graphic id="pone.0194907.e014g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e014" xlink:type="simple"/>
+<mml:math display="block" id="M14">
+<mml:mrow><mml:mi>λ</mml:mi><mml:mi>τ</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mspace width="0.25em"/><mml:mi>a</mml:mi><mml:mi>n</mml:mi><mml:mi>d</mml:mi><mml:mspace width="0.25em"/><mml:mi>ω</mml:mi><mml:mi>τ</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:mrow><mml:mn>3</mml:mn><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>X</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(11)</label>
+</disp-formula></p>
+<p>In addition, to satisfy <xref ref-type="disp-formula" rid="pone.0194907.e005">Eq (5)</xref> (with <italic>χ</italic> = 2) for <italic>R</italic><sub>0</sub> ≪ 1 requires that <italic>τ</italic> is given by:
+<disp-formula id="pone.0194907.e015">
+<alternatives>
+<graphic id="pone.0194907.e015g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e015" xlink:type="simple"/>
+<mml:math display="block" id="M15">
+<mml:mrow><mml:mi>τ</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>τ</mml:mi><mml:mo>+</mml:mo><mml:mi>A</mml:mi><mml:mi>Z</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mn>8</mml:mn><mml:mn>9</mml:mn></mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mrow><mml:mn>4</mml:mn><mml:mo>+</mml:mo><mml:mn>3</mml:mn><mml:mi>X</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>X</mml:mi></mml:mrow></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(12)</label>
+</disp-formula></p>
+<p>Once <italic>τ</italic> is obtained using <xref ref-type="disp-formula" rid="pone.0194907.e015">Eq (12)</xref>, <italic>λ</italic> and <italic>ω</italic> follow straightforwardly from <xref ref-type="disp-formula" rid="pone.0194907.e014">Eq (11)</xref>.</p>
+<p>The only arbitrary element in the deviation of <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> is the form of the exponential corrections. Alternative functional forms were investigated, with the most promising being <inline-formula id="pone.0194907.e016"><alternatives><graphic id="pone.0194907.e016g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e016" xlink:type="simple"/><mml:math display="inline" id="M16"><mml:mrow><mml:mi>β</mml:mi><mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>λ</mml:mi><mml:msubsup><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msubsup><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mo>-</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>. However, based on comparisons with published numerical results (below), we found that only the exponential form reduced to <xref ref-type="disp-formula" rid="pone.0194907.e010">Eq (9)</xref> rapidly enough for <italic>R</italic><sub>0</sub> ≫ 1.</p>
+<p><xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> constitutes a new, fully analytical, expression for the drag of a spherical particle. It reduces quickly to <xref ref-type="disp-formula" rid="pone.0194907.e010">Eq (9)</xref> for <italic>R</italic><sub>0</sub> ≫ 1. All coefficients are determined by the behavior of <italic>C</italic><sub><italic>d</italic></sub> under different conditions, i.e., no empirical coefficient is determined by curve fitting of numerical results.</p>
+<p>Because the bubble (<italic>X</italic> = 0) and the solid sphere (<italic>X</italic> → ∞) are oft-investigated special cases, we present <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> for these limits.</p>
+</sec>
+<sec id="sec007">
+<title>Bubble (<italic>X</italic> = 0)</title>
+<disp-formula id="pone.0194907.e017">
+<alternatives>
+<graphic id="pone.0194907.e017g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e017" xlink:type="simple"/>
+<mml:math display="block" id="M17">
+<mml:mrow><mml:msub><mml:mi>C</mml:mi><mml:mi>d</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>48</mml:mn></mml:mrow><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:mfrac><mml:mfrac><mml:mrow><mml:msqrt><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:msqrt><mml:mo>+</mml:mo><mml:mi>A</mml:mi><mml:mo>+</mml:mo><mml:msub><mml:mi>τ</mml:mi><mml:mrow><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mi>exp</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mo>−</mml:mo><mml:msqrt><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:msqrt><mml:mo>/</mml:mo><mml:msub><mml:mi>τ</mml:mi><mml:mrow><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:msqrt><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:msqrt><mml:mo>+</mml:mo><mml:mn>3</mml:mn><mml:mi>A</mml:mi><mml:mo>+</mml:mo><mml:mn>3</mml:mn><mml:msub><mml:mi>τ</mml:mi><mml:mrow><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mi>exp</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mo>−</mml:mo><mml:msqrt><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:msqrt><mml:mo>/</mml:mo><mml:mn>3</mml:mn><mml:msub><mml:mi>τ</mml:mi><mml:mrow><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac><mml:mo>;</mml:mo><mml:mn>2</mml:mn><mml:msub><mml:mi>τ</mml:mi><mml:mrow><mml:mi>X</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:msup><mml:mi>A</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mfrac><mml:mrow><mml:mn>128</mml:mn></mml:mrow><mml:mn>9</mml:mn></mml:mfrac></mml:mrow></mml:msqrt><mml:mo>−</mml:mo><mml:mi>A</mml:mi><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(13)</label>
+</disp-formula>
+</sec>
+<sec id="sec008">
+<title>Solid sphere (<italic>X</italic> → ∞)</title>
+<disp-formula id="pone.0194907.e018">
+<alternatives>
+<graphic id="pone.0194907.e018g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e018" xlink:type="simple"/>
+<mml:math display="block" id="M18">
+<mml:mrow><mml:msub><mml:mi>C</mml:mi><mml:mi>d</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>24</mml:mn></mml:mrow><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:mfrac><mml:mfrac><mml:mrow><mml:msqrt><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:msqrt><mml:mo>+</mml:mo><mml:mi>A</mml:mi><mml:mi>β</mml:mi><mml:mo>+</mml:mo><mml:msub><mml:mi>τ</mml:mi><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mo>∞</mml:mo></mml:mrow></mml:msub><mml:mi>exp</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mo>−</mml:mo><mml:msqrt><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:msqrt><mml:mo>/</mml:mo><mml:msub><mml:mi>τ</mml:mi><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mo>∞</mml:mo></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mi>A</mml:mi><mml:mi>β</mml:mi><mml:mo>+</mml:mo><mml:msub><mml:mi>τ</mml:mi><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mo>∞</mml:mo></mml:mrow></mml:msub></mml:mrow></mml:mfrac><mml:mo>;</mml:mo><mml:mn>2</mml:mn><mml:msub><mml:mi>τ</mml:mi><mml:mrow><mml:mi>X</mml:mi><mml:mo>→</mml:mo><mml:mo>∞</mml:mo></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:msup><mml:mi>A</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:msup><mml:mi>β</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mfrac><mml:mrow><mml:mn>32</mml:mn></mml:mrow><mml:mn>3</mml:mn></mml:mfrac></mml:mrow></mml:msqrt><mml:mo>−</mml:mo><mml:mi>A</mml:mi><mml:mi>β</mml:mi><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(14)</label>
+</disp-formula>
+</sec>
+<sec id="sec009">
+<title>Comparison with numerical results</title>
+<p><xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> is compared with numerical results from the literature. For convenience, numerous comparisons are collected in <xref ref-type="supplementary-material" rid="pone.0194907.s001">S1 Text</xref>. Specifically, tables of results from <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> are compared with those from [<xref ref-type="bibr" rid="pone.0194907.ref003">3</xref>,<xref ref-type="bibr" rid="pone.0194907.ref011">11</xref>,<xref ref-type="bibr" rid="pone.0194907.ref017">17</xref>–<xref ref-type="bibr" rid="pone.0194907.ref027">27</xref>]. Representative results are presented below.</p>
+<p>First, we consider in <xref ref-type="fig" rid="pone.0194907.g001">Fig 1</xref> the gas bubble (<italic>X</italic> = 0), where results from the literature are collected. The figure compares <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> with values given by Clift et al. [<xref ref-type="bibr" rid="pone.0194907.ref003">3</xref>], Oliver and Chung [<xref ref-type="bibr" rid="pone.0194907.ref011">11</xref>], Brabston and Keller [<xref ref-type="bibr" rid="pone.0194907.ref018">18</xref>] and Magnaudet et al. [<xref ref-type="bibr" rid="pone.0194907.ref025">25</xref>]. For the data of Clift et al. [<xref ref-type="bibr" rid="pone.0194907.ref003">3</xref>], the predictions agree well with the published values except for <italic>R</italic><sub>0</sub> ≥ 200. This is not surprising as Clift et al. [<xref ref-type="bibr" rid="pone.0194907.ref003">3</xref>] obtained values at <italic>R</italic><sub>0</sub> = 300 and 400 by interpolation with higher Reynolds numbers, when <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> does not apply. Eqs (<xref ref-type="disp-formula" rid="pone.0194907.e001">1</xref>) and (<xref ref-type="disp-formula" rid="pone.0194907.e005">5</xref>) are accurate over their reported ranges of validity. The numerical simulations of Brabston and Keller [<xref ref-type="bibr" rid="pone.0194907.ref018">18</xref>] for <italic>R</italic><sub>0</sub> up to 200 are in close agreement with <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref>. The accuracy of the numerical results of Brabston and Keller is confirmed from their agreement with the numerical results of Oliver and Chung [<xref ref-type="bibr" rid="pone.0194907.ref011">11</xref>] over the narrower range of 1/2 &lt; <italic>R</italic><sub>0</sub> ≤ 50. The results of Magnaudet et al. [<xref ref-type="bibr" rid="pone.0194907.ref025">25</xref>] agree well with <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> for the entire range of <italic>R</italic><sub>0</sub> considered.</p>
+<fig id="pone.0194907.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0194907.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Comparison of various numerical data sets with predictions of drag formulas for the case of the gas bubble.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0194907.g001" xlink:type="simple"/>
+</fig>
+<p><xref ref-type="fig" rid="pone.0194907.g002">Fig 2</xref> makes the same comparison for a solid sphere. Interestingly, the disagreement with the Clift et al. [<xref ref-type="bibr" rid="pone.0194907.ref003">3</xref>] values, and the predictions of the Rivkind and Ryskin [<xref ref-type="bibr" rid="pone.0194907.ref009">9</xref>] formula, <xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref>, is very small and is limited to <italic>R</italic><sub>0</sub> between approximately 10 and 100. Again, the drag values reported by Oliver and Chung [<xref ref-type="bibr" rid="pone.0194907.ref011">11</xref>], Chang et al. [<xref ref-type="bibr" rid="pone.0194907.ref023">23</xref>] and Chang and Maxey [<xref ref-type="bibr" rid="pone.0194907.ref024">24</xref>] are all similar, and agree more closely with <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> than the results reported by Clift et al., although the results from <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> seem slightly high. This figure includes results calculated from the formula of Flemmer and Banks ([<xref ref-type="bibr" rid="pone.0194907.ref028">28</xref>], <xref ref-type="disp-formula" rid="pone.0194907.e008">Eq (7)</xref>, which tends to be slightly lower than the numerical results. Besides the Flemmer and Banks [<xref ref-type="bibr" rid="pone.0194907.ref028">28</xref>] formula, there are several expressions for the solid sphere drag coefficient available. However, as shown by Mikhailov and Silva Freire [<xref ref-type="bibr" rid="pone.0194907.ref029">29</xref>], the largest variations between them occur at about <italic>R</italic><sub>0</sub> = 100, with a maximum deviation of about 5%, so the Flemmer and Banks formula can be taken as representative.</p>
+<fig id="pone.0194907.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0194907.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Comparison of various numerical data sets with predictions of drag formulas for the case of the solid sphere.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0194907.g002" xlink:type="simple"/>
+</fig>
+<p>Comparisons for various <italic>X</italic> are given in <xref ref-type="table" rid="pone.0194907.t001">Table 1</xref>, which lists drag values computed by Oliver and Chung [<xref ref-type="bibr" rid="pone.0194907.ref011">11</xref>] for <italic>X</italic> = 0, 0.333, 1, 3, <bold>∞</bold> and 1/2 ≤ <italic>R</italic><sub>0</sub> ≤ 50. The results for <italic>X</italic> = 0 and <italic>X →</italic> <bold>∞</bold> were already presented in the figures, of course. As expected, the agreement for intermediate <italic>X</italic> values is excellent and is similar to that shown in Figs <xref ref-type="fig" rid="pone.0194907.g001">1</xref> and <xref ref-type="fig" rid="pone.0194907.g002">2</xref>. <xref ref-type="table" rid="pone.0194907.t001">Table 1</xref> includes the estimates calculated with <xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref>, which are less accurate than those from <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref>.</p>
+<table-wrap id="pone.0194907.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0194907.t001</object-id>
+<label>Table 1</label> <caption><title>Drag coefficient, <italic>C</italic><sub><italic>d</italic></sub>, estimated by Oliver and Chung [<xref ref-type="bibr" rid="pone.0194907.ref011">11</xref>] for various viscosity ratios (<italic>X</italic>) over a range of Reynolds numbers (<italic>R</italic><sub>0</sub>) compared with predictions of Eqs (<xref ref-type="disp-formula" rid="pone.0194907.e001">1</xref>) and (<xref ref-type="disp-formula" rid="pone.0194907.e011">10</xref>).</title></caption>
+<alternatives>
+<graphic id="pone.0194907.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0194907.t001" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"><italic>R</italic><sub>0</sub><break/>↓</th>
+<th align="left"><italic>X</italic> →</th>
+<th align="left">0</th>
+<th align="left">0.333</th>
+<th align="left">1</th>
+<th align="left">3</th>
+<th align="left">∞</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="3">0.5</td>
+<td align="left">O&amp;C<xref ref-type="table-fn" rid="t001fn001"><sup>†</sup></xref></td>
+<td align="left">33.8</td>
+<td align="left">38.2</td>
+<td align="left">42.7</td>
+<td align="left">47.2</td>
+<td align="left">51.8</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref></td>
+<td align="left">25.6</td>
+<td align="left">32.4</td>
+<td align="left">39.3</td>
+<td align="left">46.2</td>
+<td align="left">53.0</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref></td>
+<td align="left">33.7</td>
+<td align="left">38.1</td>
+<td align="left">42.6</td>
+<td align="left">47.1</td>
+<td align="left">51.7</td>
+</tr>
+<tr>
+<td align="left" rowspan="3">1</td>
+<td align="left">O&amp;C</td>
+<td align="left">17.6</td>
+<td align="left">20.0</td>
+<td align="left">22.5</td>
+<td align="left">25.0</td>
+<td align="left">27.5</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref></td>
+<td align="left">14.9</td>
+<td align="left">18.2</td>
+<td align="left">21.5</td>
+<td align="left">24.7</td>
+<td align="left">28.0</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref></td>
+<td align="left">17.5</td>
+<td align="left">19.9</td>
+<td align="left">22.4</td>
+<td align="left">24.9</td>
+<td align="left">27.5</td>
+</tr>
+<tr>
+<td align="left" rowspan="3">2</td>
+<td align="left">O&amp;C</td>
+<td align="left">9.4</td>
+<td align="left">10.8</td>
+<td align="left">12.2</td>
+<td align="left">13.6</td>
+<td align="left">15.1</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref></td>
+<td align="left">8.68</td>
+<td align="left">10.3</td>
+<td align="left">11.9</td>
+<td align="left">13.6</td>
+<td align="left">15.2</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref></td>
+<td align="left">9.39</td>
+<td align="left">10.8</td>
+<td align="left">12.2</td>
+<td align="left">13.6</td>
+<td align="left">15.1</td>
+</tr>
+<tr>
+<td align="left" rowspan="3">5</td>
+<td align="left">O&amp;C</td>
+<td align="left">4.33</td>
+<td align="left">5.02</td>
+<td align="left">5.75</td>
+<td align="left">6.50</td>
+<td align="left">7.28</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref></td>
+<td align="left">4.25</td>
+<td align="left">4.97</td>
+<td align="left">5.69</td>
+<td align="left">6.42</td>
+<td align="left">7.14</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref></td>
+<td align="left">4.33</td>
+<td align="left">5.04</td>
+<td align="left">5.80</td>
+<td align="left">6.59</td>
+<td align="left">7.42</td>
+</tr>
+<tr>
+<td align="left" rowspan="3">10</td>
+<td align="left">O&amp;C</td>
+<td align="left">2.48</td>
+<td align="left">2.94</td>
+<td align="left">3.43</td>
+<td align="left">3.93</td>
+<td align="left">4.45</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref></td>
+<td align="left">2.47</td>
+<td align="left">2.92</td>
+<td align="left">3.37</td>
+<td align="left">3.81</td>
+<td align="left">4.26</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref></td>
+<td align="left">2.50</td>
+<td align="left">2.96</td>
+<td align="left">3.48</td>
+<td align="left">4.02</td>
+<td align="left">4.59</td>
+</tr>
+<tr>
+<td align="left" rowspan="3">20</td>
+<td align="left">O&amp;C</td>
+<td align="left">1.43</td>
+<td align="left">1.74</td>
+<td align="left">2.09</td>
+<td align="left">2.45</td>
+<td align="left">2.81</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref></td>
+<td align="left">1.44</td>
+<td align="left">1.75</td>
+<td align="left">2.06</td>
+<td align="left">2.37</td>
+<td align="left">2.67</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref></td>
+<td align="left">1.46</td>
+<td align="left">1.78</td>
+<td align="left">2.14</td>
+<td align="left">2.55</td>
+<td align="left">2.96</td>
+</tr>
+<tr>
+<td align="left" rowspan="3">50</td>
+<td align="left">O&amp;C</td>
+<td align="left">0.70</td>
+<td align="left">0.90</td>
+<td align="left">1.15</td>
+<td align="left">1.44</td>
+<td align="left">1.72</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref></td>
+<td align="left">0.705</td>
+<td align="left">0.920</td>
+<td align="left">1.14</td>
+<td align="left">1.35</td>
+<td align="left">1.56</td>
+</tr>
+<tr>
+<td align="left"><xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref></td>
+<td align="left">0.703</td>
+<td align="left">0.896</td>
+<td align="left">1.14</td>
+<td align="left">1.44</td>
+<td align="left">1.73</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t001fn001"><p><sup>†</sup> Oliver and Chung [<xref ref-type="bibr" rid="pone.0194907.ref011">11</xref>]</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p><xref ref-type="table" rid="pone.0194907.t002">Table 2</xref> lists numerical results from Juncu [<xref ref-type="bibr" rid="pone.0194907.ref030">30</xref>], who considered different density ratios, <italic>P</italic>, for <italic>R</italic><sub>0</sub> = 100. We mention, in passing, that <italic>C</italic><sub><italic>d</italic></sub> is largely insensitive to changes in <italic>P</italic>, and if <italic>P</italic> is not specified, typically <italic>P = X</italic> is assumed (as done here). The agreement between the numerical results and <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> is excellent. Again, the estimates of <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> are usually slightly above the numerical values. <xref ref-type="table" rid="pone.0194907.t002">Table 2</xref> includes predictions from <xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref>, although this expression does not account for variations of <italic>C</italic><sub><italic>d</italic></sub> with <italic>P</italic>.</p>
+<table-wrap id="pone.0194907.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0194907.t002</object-id>
+<label>Table 2</label> <caption><title>Drag coefficient, <italic>C</italic><sub><italic>d</italic></sub>, for <italic>R</italic><sub>0</sub> = 100 for different viscosity (<italic>X</italic>) and density (<italic>P</italic>) ratios.</title> <p>Roman values (dashes: No values provided) from Juncu [<xref ref-type="bibr" rid="pone.0194907.ref030">30</xref>], results from <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> are in italics, results in the rightmost column are from <xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref>.</p></caption>
+<alternatives>
+<graphic id="pone.0194907.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0194907.t002" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"><italic>X</italic> <italic>P</italic> → <break/>↓</th>
+<th align="center">0.01</th>
+<th align="center">0.1</th>
+<th align="center">0.2</th>
+<th align="center">0.5</th>
+<th align="center">1.0</th>
+<th align="center">2.0</th>
+<th align="center">5.0</th>
+<th align="center">10.0</th>
+<th align="center">100.0</th>
+<th align="left"><xref ref-type="disp-formula" rid="pone.0194907.e001">Eq (1)</xref></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0.01</td>
+<td align="center">0.384</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">0.417</td>
+</tr>
+<tr>
+<td align="center"/>
+<td align="center"><italic>0</italic>.<italic>393</italic></td>
+<td align="center"><italic>0</italic>.<italic>392</italic></td>
+<td align="center"><italic>0</italic>.<italic>392</italic></td>
+<td align="center"><italic>0</italic>.<italic>392</italic></td>
+<td align="center"><italic>0</italic>.<italic>391</italic></td>
+<td align="center"><italic>0</italic>.<italic>390</italic></td>
+<td align="center"><italic>0</italic>.<italic>389</italic></td>
+<td align="center"><italic>0</italic>.<italic>388</italic></td>
+<td align="center"><italic>0</italic>.<italic>387</italic></td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="center">0.1</td>
+<td align="center">-</td>
+<td align="center">0.421</td>
+<td align="center">0.421</td>
+<td align="center">0.422</td>
+<td align="center">0.423</td>
+<td align="center">0.425</td>
+<td align="center">0.427</td>
+<td align="center">0.430</td>
+<td align="center">-</td>
+<td align="center">0.473</td>
+</tr>
+<tr>
+<td align="center"/>
+<td align="center"><italic>0</italic>.<italic>432</italic></td>
+<td align="center"><italic>0</italic>.<italic>430</italic></td>
+<td align="center"><italic>0</italic>.<italic>429</italic></td>
+<td align="center"><italic>0</italic>.<italic>428</italic></td>
+<td align="center"><italic>0</italic>.<italic>427</italic></td>
+<td align="center"><italic>0</italic>.<italic>426</italic></td>
+<td align="center"><italic>0</italic>.<italic>425</italic></td>
+<td align="center"><italic>0</italic>.<italic>425</italic></td>
+<td align="center"><italic>0</italic>.<italic>427</italic></td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="center">0.2</td>
+<td align="center">-</td>
+<td align="center">0.461</td>
+<td align="center">0.461</td>
+<td align="center">0.462</td>
+<td align="center">0.462</td>
+<td align="center">0.464</td>
+<td align="center">0.464</td>
+<td align="center">0.466</td>
+<td align="center">-</td>
+<td align="center">0.526</td>
+</tr>
+<tr>
+<td align="center"/>
+<td align="center"><italic>0</italic>.<italic>472</italic></td>
+<td align="center"><italic>0</italic>.<italic>470</italic></td>
+<td align="center"><italic>0</italic>.<italic>468</italic></td>
+<td align="center"><italic>0</italic>.<italic>467</italic></td>
+<td align="center"><italic>0</italic>.<italic>466</italic></td>
+<td align="center"><italic>0</italic>.<italic>465</italic></td>
+<td align="center"><italic>0</italic>.<italic>465</italic></td>
+<td align="center"><italic>0</italic>.<italic>465</italic></td>
+<td align="center"><italic>0</italic>.<italic>469</italic></td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="center">0.5</td>
+<td align="center">-</td>
+<td align="center">0.558</td>
+<td align="center">0.558</td>
+<td align="center">0.558</td>
+<td align="center">0.559</td>
+<td align="center">0.560</td>
+<td align="center">0.562</td>
+<td align="center">0.566</td>
+<td align="center">-</td>
+<td align="center">0.641</td>
+</tr>
+<tr>
+<td align="center"/>
+<td align="center"><italic>0</italic>.<italic>576</italic></td>
+<td align="center"><italic>0</italic>.<italic>571</italic></td>
+<td align="center"><italic>0</italic>.<italic>570</italic></td>
+<td align="center"><italic>0</italic>.<italic>568</italic></td>
+<td align="center"><italic>0</italic>.<italic>567</italic></td>
+<td align="center"><italic>0</italic>.<italic>566</italic></td>
+<td align="center"><italic>0</italic>.<italic>567</italic></td>
+<td align="center"><italic>0</italic>.<italic>568</italic></td>
+<td align="center"><italic>0</italic>.<italic>574</italic></td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="center">1.0</td>
+<td align="center">-</td>
+<td align="center">0.676</td>
+<td align="center">0.676</td>
+<td align="center">0.676</td>
+<td align="center">0.674</td>
+<td align="center">0.670</td>
+<td align="center">0.667</td>
+<td align="center">0.665</td>
+<td align="center">-</td>
+<td align="center">0.756</td>
+</tr>
+<tr>
+<td align="center"/>
+<td align="center"><italic>0</italic>.<italic>704</italic></td>
+<td align="center"><italic>0</italic>.<italic>697</italic></td>
+<td align="center"><italic>0</italic>.<italic>694</italic></td>
+<td align="center"><italic>0</italic>.<italic>692</italic></td>
+<td align="center"><italic>0</italic>.<italic>692</italic></td>
+<td align="center"><italic>0</italic>.<italic>693</italic></td>
+<td align="center"><italic>0</italic>.<italic>695</italic></td>
+<td align="center"><italic>0</italic>.<italic>697</italic></td>
+<td align="center"><italic>0</italic>.<italic>705</italic></td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="center">2.0</td>
+<td align="center">-</td>
+<td align="center">0.812</td>
+<td align="center">0.812</td>
+<td align="center">0.812</td>
+<td align="center">0.811</td>
+<td align="center">0.810</td>
+<td align="center">0.807</td>
+<td align="center">0.799</td>
+<td align="center">-</td>
+<td align="center">0.871</td>
+</tr>
+<tr>
+<td align="center"/>
+<td align="center"><italic>0</italic>.<italic>856</italic></td>
+<td align="center"><italic>0</italic>.<italic>846</italic></td>
+<td align="center"><italic>0</italic>.<italic>844</italic></td>
+<td align="center"><italic>0</italic>.<italic>843</italic></td>
+<td align="center"><italic>0</italic>.<italic>843</italic></td>
+<td align="center"><italic>0</italic>.<italic>846</italic></td>
+<td align="center"><italic>0</italic>.<italic>850</italic></td>
+<td align="center"><italic>0</italic>.<italic>853</italic></td>
+<td align="center"><italic>0</italic>.<italic>862</italic></td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="center">3.0</td>
+<td align="center">-</td>
+<td align="center">0.883</td>
+<td align="center">0.883</td>
+<td align="center">0.883</td>
+<td align="center">0.882</td>
+<td align="center">0.881</td>
+<td align="center">0.875</td>
+<td align="center">0.867</td>
+<td align="center">-</td>
+<td align="center">0.929</td>
+</tr>
+<tr>
+<td align="center"/>
+<td align="center"><italic>0</italic>.<italic>937</italic></td>
+<td align="center"><italic>0</italic>.<italic>926</italic></td>
+<td align="center"><italic>0</italic>.<italic>925</italic></td>
+<td align="center"><italic>0</italic>.<italic>925</italic></td>
+<td align="center"><italic>0</italic>.<italic>927</italic></td>
+<td align="center"><italic>0</italic>.<italic>930</italic></td>
+<td align="center"><italic>0</italic>.<italic>935</italic></td>
+<td align="center"><italic>0</italic>.<italic>939</italic></td>
+<td align="center"><italic>0</italic>.<italic>948</italic></td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="center">5.0</td>
+<td align="center">-</td>
+<td align="center">0.951</td>
+<td align="center">0.951</td>
+<td align="center">0.951</td>
+<td align="center">0.951</td>
+<td align="center">0.951</td>
+<td align="center">0.948</td>
+<td align="center">0.944</td>
+<td align="center">-</td>
+<td align="center">0.987</td>
+</tr>
+<tr>
+<td align="center"/>
+<td align="center"><italic>1</italic>.<italic>017</italic></td>
+<td align="center"><italic>1</italic>.<italic>006</italic></td>
+<td align="center"><italic>1</italic>.<italic>005</italic></td>
+<td align="center"><italic>1</italic>.<italic>007</italic></td>
+<td align="center"><italic>1</italic>.<italic>011</italic></td>
+<td align="center"><italic>1</italic>.<italic>015</italic></td>
+<td align="center"><italic>1</italic>.<italic>020</italic></td>
+<td align="center"><italic>1</italic>.<italic>024</italic></td>
+<td align="center"><italic>1</italic>.<italic>033</italic></td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="center">10.0</td>
+<td align="center">-</td>
+<td align="center">1.008</td>
+<td align="center">1.008</td>
+<td align="center">1.008</td>
+<td align="center">1.008</td>
+<td align="center">1.008</td>
+<td align="center">1.008</td>
+<td align="center">1.007</td>
+<td align="center">-</td>
+<td align="center">1.039</td>
+</tr>
+<tr>
+<td align="center"/>
+<td align="center"><italic>1</italic>.<italic>082</italic></td>
+<td align="center"><italic>1</italic>.<italic>073</italic></td>
+<td align="center"><italic>1</italic>.<italic>074</italic></td>
+<td align="center"><italic>1</italic>.<italic>079</italic></td>
+<td align="center"><italic>1</italic>.<italic>083</italic></td>
+<td align="center"><italic>1</italic>.<italic>088</italic></td>
+<td align="center"><italic>1</italic>.<italic>094</italic></td>
+<td align="center"><italic>1</italic>.<italic>098</italic></td>
+<td align="center"><italic>1</italic>.<italic>105</italic></td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="center">100.0</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">1.06</td>
+<td align="center">1.095</td>
+</tr>
+<tr>
+<td align="center"/>
+<td align="center"><italic>1</italic>.<italic>129</italic></td>
+<td align="center"><italic>1</italic>.<italic>140</italic></td>
+<td align="center"><italic>1</italic>.<italic>145</italic></td>
+<td align="center"><italic>1</italic>.<italic>151</italic></td>
+<td align="center"><italic>1</italic>.<italic>155</italic></td>
+<td align="center"><italic>1</italic>.<italic>159</italic></td>
+<td align="center"><italic>1</italic>.<italic>162</italic></td>
+<td align="center"><italic>1</italic>.<italic>164</italic></td>
+<td align="center"><italic>1</italic>.<italic>167</italic></td>
+<td align="center"/>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+</sec>
+<sec id="sec010" sec-type="conclusions">
+<title>Conclusion</title>
+<p>We developed a formula, <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref>, to predict the drag for a spherical particle, for all viscosity ratios between gas bubbles and solid spheres. It was derived as a Padé approximant that interpolates between known analytical results at low and moderate Reynolds numbers assuming that the particle does not oscillate or wobble. The formula can be used to predict the drag coefficient for spherical bubbles, drops and particles for any viscosity and density ratios. Surface tension is assumed sufficient to maintain the spherical shape of the particle. Both <xref ref-type="fig" rid="pone.0194907.g002">Fig 2</xref>.5 of Clift et al. [<xref ref-type="bibr" rid="pone.0194907.ref003">3</xref>] and Fig [<xref ref-type="bibr" rid="pone.0194907.ref008">8</xref>] of Bhaga and Weber [<xref ref-type="bibr" rid="pone.0194907.ref004">4</xref>] show how the particle shape changes (spherical, ellipsoidal, spherical cap, etc.) with the Eötvös, Morton and Reynolds numbers, and thus indicate the range of conditions for which <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> applies. <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref> is more theoretically based than, for instance, the formula of Rivkind and Ryskin [<xref ref-type="bibr" rid="pone.0194907.ref009">9</xref>] and appears to be more accurate as well, especially at low Reynolds numbers.</p>
+</sec>
+<sec id="sec011">
+<title>Appendix: Computation of <italic>α</italic> and <italic>β</italic>, <xref ref-type="disp-formula" rid="pone.0194907.e008">Eq (7)</xref></title>
+<p>The definitions of <italic>α</italic> and <italic>β</italic>, which appear in <xref ref-type="disp-formula" rid="pone.0194907.e006">Eq (6)</xref>, are, respectively:
+<disp-formula id="pone.0194907.e019">
+<alternatives>
+<graphic id="pone.0194907.e019g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e019" xlink:type="simple"/>
+<mml:math display="block" id="M19">
+<mml:mtable><mml:mtr><mml:mtd><mml:mn>2</mml:mn><mml:msup><mml:mi>π</mml:mi><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mi>A</mml:mi><mml:mi>α</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msqrt><mml:mn>3</mml:mn></mml:msqrt><mml:mo>−</mml:mo><mml:mfrac><mml:mn>2</mml:mn><mml:mn>3</mml:mn></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mfrac><mml:mrow><mml:mn>24</mml:mn></mml:mrow><mml:mn>5</mml:mn></mml:mfrac><mml:msqrt><mml:mn>2</mml:mn></mml:msqrt><mml:mo>+</mml:mo><mml:mfrac><mml:mn>8</mml:mn><mml:mrow><mml:msqrt><mml:mn>3</mml:mn></mml:msqrt></mml:mrow></mml:mfrac></mml:mrow><mml:mo>]</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msqrt><mml:mrow><mml:mfrac><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mfrac></mml:mrow></mml:msqrt><mml:mstyle displaystyle="true"><mml:mrow><mml:munderover><mml:mo>∫</mml:mo><mml:mn>0</mml:mn><mml:mi>∞</mml:mi></mml:munderover><mml:mrow><mml:mstyle displaystyle="true"><mml:mrow><mml:munderover><mml:mo>∫</mml:mo><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mn>1</mml:mn></mml:munderover><mml:mrow><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mrow><mml:mo>∂</mml:mo><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mo>∂</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:mrow></mml:mstyle></mml:mrow></mml:mrow></mml:mstyle><mml:mi>d</mml:mi><mml:mi>Y</mml:mi><mml:mi>d</mml:mi><mml:mi>r</mml:mi></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mo>−</mml:mo><mml:mn>9</mml:mn><mml:msqrt><mml:mn>3</mml:mn></mml:msqrt><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mfrac><mml:mrow><mml:mn>16</mml:mn></mml:mrow><mml:mrow><mml:mn>7</mml:mn><mml:mi>π</mml:mi></mml:mrow></mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msqrt><mml:mn>3</mml:mn></mml:msqrt><mml:mo>−</mml:mo><mml:mfrac><mml:mn>4</mml:mn><mml:mn>3</mml:mn></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:mrow><mml:msqrt><mml:mrow><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mrow></mml:msqrt></mml:mrow></mml:mfrac><mml:mstyle displaystyle="true"><mml:mrow><mml:munderover><mml:mo>∫</mml:mo><mml:mn>0</mml:mn><mml:mi>∞</mml:mi></mml:munderover><mml:mrow><mml:mi>N</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mn>8</mml:mn><mml:mn>9</mml:mn></mml:mfrac><mml:mo>,</mml:mo><mml:mi>Y</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mtext>ierfc</mml:mtext><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mrow><mml:mn>3</mml:mn><mml:mi>Y</mml:mi></mml:mrow><mml:mrow><mml:mn>4</mml:mn><mml:msqrt><mml:mn>2</mml:mn></mml:msqrt></mml:mrow></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi>d</mml:mi><mml:mi>Y</mml:mi></mml:mrow></mml:mrow></mml:mstyle></mml:mrow><mml:mo>]</mml:mo></mml:mrow><mml:mo>,</mml:mo></mml:mtd></mml:mtr></mml:mtable>
+</mml:math>
+</alternatives>
+<label>(A1)</label>
+</disp-formula>
+<disp-formula id="pone.0194907.e020">
+<alternatives>
+<graphic id="pone.0194907.e020g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e020" xlink:type="simple"/>
+<mml:math display="block" id="M20">
+<mml:mrow><mml:mn>2</mml:mn><mml:msup><mml:mi>π</mml:mi><mml:mrow><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mi>A</mml:mi><mml:mi>β</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mn>8</mml:mn><mml:mrow><mml:msqrt><mml:mn>3</mml:mn></mml:msqrt></mml:mrow></mml:mfrac><mml:mo>−</mml:mo><mml:msqrt><mml:mrow><mml:mfrac><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mfrac></mml:mrow></mml:msqrt><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:msup><mml:mrow><mml:mstyle displaystyle="true"><mml:mrow><mml:munderover><mml:mo>∫</mml:mo><mml:mn>0</mml:mn><mml:mo>∞</mml:mo></mml:munderover><mml:mrow><mml:mstyle displaystyle="true"><mml:mrow><mml:munderover><mml:mo>∫</mml:mo><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mn>1</mml:mn></mml:munderover><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mrow><mml:mo>∂</mml:mo><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mo>∂</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mrow></mml:mstyle></mml:mrow></mml:mrow></mml:mstyle></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mi>d</mml:mi><mml:mi>Y</mml:mi><mml:mi>d</mml:mi><mml:mi>r</mml:mi><mml:mo>+</mml:mo><mml:mfrac><mml:mrow><mml:mn>27</mml:mn></mml:mrow><mml:mrow><mml:mn>16</mml:mn></mml:mrow></mml:mfrac><mml:mstyle displaystyle="true"><mml:mrow><mml:munderover><mml:mo>∫</mml:mo><mml:mn>0</mml:mn><mml:mo>∞</mml:mo></mml:munderover><mml:mrow><mml:msup><mml:mi>N</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mn>8</mml:mn><mml:mn>9</mml:mn></mml:mfrac><mml:mo>,</mml:mo><mml:mi>Y</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi>d</mml:mi><mml:mi>Y</mml:mi></mml:mrow></mml:mrow></mml:mstyle></mml:mrow><mml:mo>]</mml:mo></mml:mrow><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(A2)</label>
+</disp-formula>
+where ierfc is the integral of the coerror function [<xref ref-type="bibr" rid="pone.0194907.ref031">31</xref>]. Eqs (<xref ref-type="disp-formula" rid="pone.0194907.e020">A1</xref>) and (<xref ref-type="disp-formula" rid="pone.0194907.e021">A2</xref>) are obtained from the general definition of <italic>C</italic><sub><italic>d</italic></sub> ([<xref ref-type="bibr" rid="pone.0194907.ref013">13</xref>], <xref ref-type="disp-formula" rid="pone.0194907.e009">Eq (8)</xref>.1), with the velocity field of Parlange ([<xref ref-type="bibr" rid="pone.0194907.ref014">14</xref>], [<xref ref-type="bibr" rid="pone.0194907.ref018">18</xref>], [<xref ref-type="bibr" rid="pone.0194907.ref019">19</xref>] and [<xref ref-type="bibr" rid="pone.0194907.ref025">25</xref>]). <italic>N</italic> is defined as:
+<disp-formula id="pone.0194907.e021">
+<alternatives>
+<graphic id="pone.0194907.e021g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e021" xlink:type="simple"/>
+<mml:math display="block" id="M21">
+<mml:mrow><mml:mi>N</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>W</mml:mi><mml:mo>,</mml:mo><mml:mi>Y</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mi>Y</mml:mi><mml:mrow><mml:mn>2</mml:mn><mml:msqrt><mml:mi>π</mml:mi></mml:msqrt></mml:mrow></mml:mfrac><mml:mstyle displaystyle="true"><mml:mrow><mml:munderover><mml:mo>∫</mml:mo><mml:mn>0</mml:mn><mml:mi>W</mml:mi></mml:munderover><mml:mrow><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>W</mml:mi><mml:mo>−</mml:mo><mml:mover accent="true"><mml:mi>W</mml:mi><mml:mo stretchy="true">¯</mml:mo></mml:mover></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:mn>3</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:msup><mml:mrow><mml:mi>sin</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mi>θ</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mover accent="true"><mml:mi>W</mml:mi><mml:mo stretchy="true">¯</mml:mo></mml:mover></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi>exp</mml:mi><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mo>−</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>Y</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:mrow><mml:mn>4</mml:mn></mml:mfrac><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>W</mml:mi><mml:mo>−</mml:mo><mml:mover accent="true"><mml:mi>W</mml:mi><mml:mo stretchy="true">¯</mml:mo></mml:mover></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:mrow><mml:mo>]</mml:mo></mml:mrow></mml:mrow></mml:mrow></mml:mstyle><mml:mi>d</mml:mi><mml:mover accent="true"><mml:mi>W</mml:mi><mml:mo stretchy="true">¯</mml:mo></mml:mover><mml:mo>,</mml:mo><mml:mn>0</mml:mn><mml:mo>≤</mml:mo><mml:mi>W</mml:mi><mml:mo>≤</mml:mo><mml:mi>Y</mml:mi><mml:mo>,</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(A3)</label>
+</disp-formula>
+with <inline-formula id="pone.0194907.e022"><alternatives><graphic id="pone.0194907.e022g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e022" xlink:type="simple"/><mml:math display="inline" id="M22"><mml:mrow><mml:msup><mml:mrow><mml:mtext>sin</mml:mtext></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo mathvariant="italic">θ</mml:mo><mml:mo>(</mml:mo><mml:mi>W</mml:mi><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mn>4</mml:mn><mml:msup><mml:mrow><mml:mtext>cos</mml:mtext></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>[</mml:mo><mml:mrow><mml:mi>arccos</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>9</mml:mn><mml:mi>W</mml:mi><mml:mo>/</mml:mo><mml:mn>4</mml:mn><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>/</mml:mo><mml:mn>3</mml:mn><mml:mo>+</mml:mo><mml:mi>π</mml:mi><mml:mo>/</mml:mo><mml:mn>3</mml:mn></mml:mrow><mml:mo>]</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>, and where <italic>θ</italic>, <italic>W</italic> and <italic>r</italic> are related by:
+<disp-formula id="pone.0194907.e023">
+<alternatives>
+<graphic id="pone.0194907.e023g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e023" xlink:type="simple"/>
+<mml:math display="block" id="M23">
+<mml:mrow><mml:mi>r</mml:mi><mml:mo>=</mml:mo><mml:mi>cos</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>θ</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mspace width="0.25em"/><mml:mtext>and</mml:mtext><mml:mspace width="0.25em"/><mml:mi>W</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mn>2</mml:mn><mml:mn>9</mml:mn></mml:mfrac><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>r</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>2</mml:mn><mml:mo>+</mml:mo><mml:mi>r</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(A4)</label>
+</disp-formula></p>
+<p>The integrals appearing in Eqs (<xref ref-type="disp-formula" rid="pone.0194907.e020">A1</xref>) and (<xref ref-type="disp-formula" rid="pone.0194907.e021">A2</xref>) contain integrands that vary rapidly, viz., those containing <italic>N</italic><sup>2</sup> and (∂<italic>N</italic>/∂<italic>Y</italic>)<sup>2</sup>. However, the integral containing <italic>N</italic> and ierfc varies smoothly, and integrates to:
+<disp-formula id="pone.0194907.e024">
+<alternatives>
+<graphic id="pone.0194907.e024g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e024" xlink:type="simple"/>
+<mml:math display="block" id="M24">
+<mml:mrow><mml:mfrac><mml:mn>1</mml:mn><mml:mrow><mml:msqrt><mml:mi>π</mml:mi></mml:msqrt></mml:mrow></mml:mfrac><mml:mstyle displaystyle="true"><mml:mrow><mml:munderover><mml:mo>∫</mml:mo><mml:mn>0</mml:mn><mml:mo>∞</mml:mo></mml:munderover><mml:mrow><mml:mi>N</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mn>8</mml:mn><mml:mn>9</mml:mn></mml:mfrac><mml:mo>,</mml:mo><mml:mi>Y</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mrow></mml:mstyle><mml:mspace width="0.25em"/><mml:mtext>ierfc</mml:mtext><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mrow><mml:mn>3</mml:mn><mml:mi>Y</mml:mi></mml:mrow><mml:mrow><mml:mn>4</mml:mn><mml:msqrt><mml:mn>2</mml:mn></mml:msqrt></mml:mrow></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi>d</mml:mi><mml:mi>Y</mml:mi><mml:mo>≃</mml:mo><mml:mn>0</mml:mn><mml:mo>.</mml:mo><mml:mn>29156</mml:mn><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(A5)</label>
+</disp-formula></p>
+<p>The integrands containing of <italic>N</italic><sup>2</sup> and (∂<italic>N</italic>/∂<italic>Y</italic>)<sup>2</sup> contain sharp peaks. To circumvent inaccuracies caused by these peaks, Möbius transformations of the integrands were used to make the integrals more amenable to quadrature [<xref ref-type="bibr" rid="pone.0194907.ref032">32</xref>]. Following transformation of the integrand to smooth forms, the standard 61-point Gauss-Kronrod rule was used, as it was for <xref ref-type="disp-formula" rid="pone.0194907.e024">Eq (A5)</xref>. We then find:
+<disp-formula id="pone.0194907.e025">
+<alternatives>
+<graphic id="pone.0194907.e025g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e025" xlink:type="simple"/>
+<mml:math display="block" id="M25">
+<mml:mrow><mml:mstyle displaystyle="true"><mml:mrow><mml:munderover><mml:mo>∫</mml:mo><mml:mn>0</mml:mn><mml:mo>∞</mml:mo></mml:munderover><mml:mrow><mml:msup><mml:mi>N</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:mrow></mml:mstyle><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mn>8</mml:mn><mml:mn>9</mml:mn></mml:mfrac><mml:mo>,</mml:mo><mml:mi>Y</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi>d</mml:mi><mml:mi>Y</mml:mi><mml:mo>≃</mml:mo><mml:mn>0</mml:mn><mml:mo>.</mml:mo><mml:mn>26020</mml:mn><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(A6)</label>
+</disp-formula></p>
+<p>The final integral involving (∂<italic>N</italic>/∂<italic>Y</italic>)<sup>2</sup> requires an additional step, i.e., calculation of the derivative ∂<italic>N</italic>/∂<italic>Y</italic>. We first used different finite-difference approximations [<xref ref-type="bibr" rid="pone.0194907.ref033">33</xref>]. However, the results were not reliable as <italic>Y</italic> → 0 so an additional Möbius transformation as used in that region, accounting for the case of <italic>W</italic> → 8/9, which again involves a rapidly varying integrand. The result obtained is:
+<disp-formula id="pone.0194907.e026">
+<alternatives>
+<graphic id="pone.0194907.e026g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0194907.e026" xlink:type="simple"/>
+<mml:math display="block" id="M26">
+<mml:mrow><mml:mstyle displaystyle="true"><mml:mrow><mml:munderover><mml:mo>∫</mml:mo><mml:mn>0</mml:mn><mml:mo>∞</mml:mo></mml:munderover><mml:mrow><mml:mstyle displaystyle="true"><mml:mrow><mml:munderover><mml:mo>∫</mml:mo><mml:mrow><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mn>1</mml:mn></mml:munderover><mml:mrow><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mrow><mml:mo>∂</mml:mo><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mo>∂</mml:mo><mml:mi>Y</mml:mi></mml:mrow></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mi>d</mml:mi><mml:mi>Y</mml:mi><mml:mi>d</mml:mi><mml:mi>r</mml:mi></mml:mrow></mml:mrow></mml:mstyle></mml:mrow></mml:mrow></mml:mstyle><mml:mo>≃</mml:mo><mml:mn>0</mml:mn><mml:mo>.</mml:mo><mml:mn>49823</mml:mn><mml:mo>.</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(A7)</label>
+</disp-formula></p>
+</sec>
+<sec id="sec012">
+<title>Supporting information</title>
+<supplementary-material id="pone.0194907.s001" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0194907.s001" xlink:type="simple">
+<label>S1 Text</label>
+<caption>
+<title>Comparison of the new drag formula, <xref ref-type="disp-formula" rid="pone.0194907.e011">Eq (10)</xref>, with numerous data sets from the literature (XLSX).</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ref-list>
+<title>References</title>
+<ref id="pone.0194907.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bozzano</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Dente</surname> <given-names>M</given-names></name> (<year>2001</year>) <article-title>Shape and terminal velocity of single bubble motion: A novel approach</article-title>. <source>Computers &amp; Chemical Engineering</source> <volume>25</volume>: <fpage>571</fpage>–<lpage>576</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wegener</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Paul</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Kraume</surname> <given-names>M</given-names></name> (<year>2014</year>) <article-title>Fluid dynamics and mass transfer at single droplets in liquid/liquid systems</article-title>. <source>International Journal of Heat and Mass Transfer</source> <volume>71</volume>: <fpage>475</fpage>–<lpage>495</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref003"><label>3</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Clift</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Grace</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Weber</surname> <given-names>ME</given-names></name> (<year>1978</year>) <source>Bubbles, Drops, and Particles</source>. New York, <publisher-loc>New York, USA</publisher-loc>: <publisher-name>Academic Press</publisher-name>.</mixed-citation></ref>
+<ref id="pone.0194907.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bhaga</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Weber</surname> <given-names>ME</given-names></name> (<year>1981</year>) <article-title>Bubbles in viscous liquids: Shapes, wakes and velocities</article-title>. <source>Journal of Fluid Mechanics</source> <volume>105</volume>: <fpage>61</fpage>–<lpage>85</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Turton</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Clark</surname> <given-names>NN</given-names></name> (<year>1987</year>) <article-title>An explicit relationship to predict spherical particle terminal velocity</article-title>. <source>Powder Technology</source> <volume>53</volume>: <fpage>127</fpage>–<lpage>129</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Karamanev</surname> <given-names>DG</given-names></name> (<year>1996</year>) <article-title>Equations for calculation of the terminal velocity and drag coefficient of solid spheres and gas bubbles</article-title>. <source>Chemical Engineering Communications</source> <volume>147</volume>: <fpage>75</fpage>–<lpage>84</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Brown</surname> <given-names>PP</given-names></name>, <name name-style="western"><surname>Lawler</surname> <given-names>DF</given-names></name> (<year>2003</year>) <article-title>Sphere drag and settling velocity revisited</article-title>. <source>Journal of Environmental Engineering</source> <volume>129</volume>: <fpage>222</fpage>–<lpage>231</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kelbaliyev</surname> <given-names>GI</given-names></name>, <name name-style="western"><surname>Ceylan</surname> <given-names>K</given-names></name> (<year>2011</year>) <article-title>Drag coefficients of variously shaped solid particles, drops, and bubbles</article-title>. <source>Theoretical Foundations of Chemical Engineering</source> <volume>45</volume>: <fpage>248</fpage>–<lpage>266</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rivkind</surname> <given-names>VY</given-names></name>, <name name-style="western"><surname>Ryskin</surname> <given-names>GM</given-names></name> (<year>1976</year>) <article-title>Flow structure in motion of a spherical drop in a fluid medium at intermediate Reynolds numbers</article-title>. <source>Fluid Dynamics</source> <volume>11</volume>: <fpage>5</fpage>–<lpage>12</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Proudman</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Pearson</surname> <given-names>JRA</given-names></name> (<year>1957</year>) <article-title>Expansions at small Reynolds numbers for the flow past a sphere and a circular cylinder</article-title>. <source>Journal of Fluid Mechanics</source> <volume>2</volume>: <fpage>237</fpage>–<lpage>262</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Oliver</surname> <given-names>DLR</given-names></name>, <name name-style="western"><surname>Chung</surname> <given-names>JN</given-names></name> (<year>1987</year>) <article-title>Flow about a fluid sphere at low to moderate Reynolds numbers</article-title>. <source>Journal of Fluid Mechanics</source> <volume>177</volume>: <fpage>1</fpage>–<lpage>18</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Oliver</surname> <given-names>DLR</given-names></name>, <name name-style="western"><surname>Chung</surname> <given-names>JN</given-names></name> (<year>1985</year>) <article-title>Steady flows inside and around a fluid sphere at low Reynolds numbers</article-title>. <source>Journal of Fluid Mechanics</source> <volume>154</volume>: <fpage>215</fpage>–<lpage>230</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Harper</surname> <given-names>JF</given-names></name>, <name name-style="western"><surname>Moore</surname> <given-names>DW</given-names></name> (<year>1968</year>) <article-title>The motion of a spherical liquid drop at high Reynolds number</article-title>. <source>Journal of Fluid Mechanics</source> <volume>32</volume>: <fpage>367</fpage>–<lpage>391</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Parlange</surname> <given-names>J-Y</given-names></name> (<year>1970</year>) <article-title>Motion of spherical drops at large Reynolds numbers</article-title>. <source>Acta Mechanica</source> <volume>9</volume>: <fpage>323</fpage>–<lpage>328</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Barry</surname> <given-names>DA</given-names></name>, <name name-style="western"><surname>Parlange</surname> <given-names>J-Y</given-names></name> (<year>2002</year>) <article-title>Recirculation within a fluid sphere at moderate Reynolds numbers</article-title>. <source>Journal of Fluid Mechanics</source> <volume>465</volume>: <fpage>293</fpage>–<lpage>300</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref016"><label>16</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Baker</surname> <given-names>GA</given-names></name>, <name name-style="western"><surname>Graves-Morris</surname> <given-names>P</given-names></name> (<year>1996</year>) <source>Padé Approximants</source>; <name name-style="western"><surname>Rota</surname> <given-names>G-C</given-names></name>, editor. <publisher-loc>Cambridge, United Kingdom</publisher-loc>: <publisher-name>Cambridge University Press</publisher-name>. <fpage>746</fpage> p.</mixed-citation></ref>
+<ref id="pone.0194907.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Abdel-Alim</surname> <given-names>AH</given-names></name>, <name name-style="western"><surname>Hamielec</surname> <given-names>AE</given-names></name> (<year>1975</year>) <article-title>A theoretical and experimental investigation of the effect of internal circulation on the drag of spherical droplets falling at terminal velocity in liquid media</article-title>. <source>Industrial &amp; Engineering Chemistry Fundamentals</source> <volume>14</volume>: <fpage>308</fpage>–<lpage>312</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Brabston</surname> <given-names>DC</given-names></name>, <name name-style="western"><surname>Keller</surname> <given-names>HB</given-names></name> (<year>2006</year>) <article-title>Viscous flows past spherical gas bubbles</article-title>. <source>Journal of Fluid Mechanics</source> <volume>69</volume>: <fpage>179</fpage>–<lpage>189</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rivkind</surname> <given-names>VI</given-names></name>, <name name-style="western"><surname>Ryskin</surname> <given-names>GM</given-names></name>, <name name-style="western"><surname>Fishbein</surname> <given-names>GA</given-names></name> (<year>1976</year>) <article-title>Flow around a spherical drop at intermediate Reynolds numbers</article-title>. <source>Journal of Applied Mathematics and Mechanics</source> <volume>40</volume>: <fpage>687</fpage>–<lpage>691</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cliffe</surname> <given-names>KA</given-names></name>, <name name-style="western"><surname>Lever</surname> <given-names>DA</given-names></name> (<year>1986</year>) <article-title>A comparison of finite-element methods for solving flow past a sphere</article-title>. <source>Journal of Computational Physics</source> <volume>62</volume>: <fpage>321</fpage>–<lpage>330</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fornberg</surname> <given-names>B</given-names></name> (<year>1988</year>) <article-title>Steady viscous flow past a sphere at high Reynolds numbers</article-title>. <source>Journal of Fluid Mechanics</source> <volume>190</volume>: <fpage>471</fpage>–<lpage>489</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dandy</surname> <given-names>DS</given-names></name>, <name name-style="western"><surname>Leal</surname> <given-names>LG</given-names></name> (<year>1989</year>) <article-title>Buoyancy-driven motion of a deformable drop through a quiescent liquid at intermediate Reynolds numbers</article-title>. <source>Journal of Fluid Mechanics</source> <volume>208</volume>: <fpage>161</fpage>–<lpage>192</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chang</surname> <given-names>C-C</given-names></name>, <name name-style="western"><surname>Liou</surname> <given-names>B-H</given-names></name>, <name name-style="western"><surname>Chern</surname> <given-names>R-L</given-names></name> (<year>1992</year>) <article-title>An analytical and numerical study of axisymmetric flow around spheroids</article-title>. <source>Journal of Fluid Mechanics</source> <volume>234</volume>: <fpage>219</fpage>–<lpage>246</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chang</surname> <given-names>EJ</given-names></name>, <name name-style="western"><surname>Maxey</surname> <given-names>MR</given-names></name> (<year>2006</year>) <article-title>Unsteady flow about a sphere at low to moderate Reynolds number. Part 1. Oscillatory motion</article-title>. <source>Journal of Fluid Mechanics</source> <volume>277</volume>: <fpage>347</fpage>–<lpage>379</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Magnaudet</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Rivero</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Fabre</surname> <given-names>J</given-names></name> (<year>1995</year>) <article-title>Accelerated flows past a rigid sphere or a spherical bubble. Part 1. Steady straining flow</article-title>. <source>Journal of Fluid Mechanics</source> <volume>284</volume>: <fpage>97</fpage>–<lpage>135</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Feng</surname> <given-names>Z-G</given-names></name>, <name name-style="western"><surname>Michaelides</surname> <given-names>EE</given-names></name> (<year>2001</year>) <article-title>Drag coefficients of viscous spheres at intermediate and high Reynolds numbers</article-title>. <source>Journal of Fluids Engineering</source> <volume>123</volume>: <fpage>841</fpage>–<lpage>849</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Saboni</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Alexandrova</surname> <given-names>S</given-names></name> (<year>2002</year>) <article-title>Numerical study of the drag on a fluid sphere</article-title>. <source>AIChE Journal</source> <volume>48</volume>: <fpage>2992</fpage>–<lpage>2994</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Flemmer</surname> <given-names>RLC</given-names></name>, <name name-style="western"><surname>Banks</surname> <given-names>CL</given-names></name> (<year>1986</year>) <article-title>On the drag coefficient of a sphere</article-title>. <source>Powder Technology</source> <volume>48</volume>: <fpage>217</fpage>–<lpage>221</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mikhailov</surname> <given-names>MD</given-names></name>, <name name-style="western"><surname>Silva Freire</surname> <given-names>AP</given-names></name> (<year>2013</year>) <article-title>The drag coefficient of a sphere: An approximation using Shanks transform</article-title>. <source>Powder Technology</source> <volume>237</volume>: <fpage>432</fpage>–<lpage>435</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Juncu</surname> <given-names>G</given-names></name> (<year>1999</year>) <article-title>A numerical study of steady viscous flow past a fluid sphere</article-title>. <source>International Journal of Heat and Fluid Flow</source> <volume>20</volume>: <fpage>414</fpage>–<lpage>421</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref031"><label>31</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Gautschi</surname> <given-names>W</given-names></name> (<year>1964</year>) <chapter-title>Error function and Fresnel integrals</chapter-title>. In: <name name-style="western"><surname>Abramowitz</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Stegun</surname> <given-names>IA</given-names></name>, editors. <source>Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables</source>. <publisher-loc>Washington, DC, USA</publisher-loc>: <publisher-name>US Dept. of Commerce, National Bureau of Standards</publisher-name>. pp. <fpage>295</fpage>–<lpage>329</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Homeier</surname> <given-names>HHH</given-names></name>, <name name-style="western"><surname>Steinborn</surname> <given-names>EO</given-names></name> (<year>1990</year>) <article-title>Numerical integration of functions with a sharp peak at or near one boundary using möbius transformations</article-title>. <source>Journal of Computational Physics</source> <volume>87</volume>: <fpage>61</fpage>–<lpage>72</lpage>.</mixed-citation></ref>
+<ref id="pone.0194907.ref033"><label>33</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Davis</surname> <given-names>PJ</given-names></name>, <name name-style="western"><surname>Polonsky</surname> <given-names>I</given-names></name> (<year>1964</year>) <chapter-title>Numerical interpolation, differentiation and integration</chapter-title>. In: <name name-style="western"><surname>Abramowitz</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Stegun</surname> <given-names>IA</given-names></name>, editors. <source>Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables</source>. <publisher-loc>Washington, DC, USA</publisher-loc>: <publisher-name>US Dept. of Commerce, National Bureau of Standards</publisher-name>. pp. <fpage>875</fpage>–<lpage>924</lpage>.</mixed-citation></ref>
+</ref-list>
+</back>
+</article>

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0128485</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-14-53073</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>An Internet-Based Real-Time Audiovisual Link for Dual MEG Recordings</article-title>
+<alt-title alt-title-type="running-head">Audiovisual Link for Dual MEG</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Zhdanov</surname>
+<given-names>Andrey</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+<xref rid="aff002" ref-type="aff"><sup>2</sup></xref>
+<xref rid="aff003" ref-type="aff"><sup>3</sup></xref>
+<xref rid="cor001" ref-type="corresp">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Nurminen</surname>
+<given-names>Jussi</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Baess</surname>
+<given-names>Pamela</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Hirvenkari</surname>
+<given-names>Lotta</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Jousmäki</surname>
+<given-names>Veikko</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Mäkelä</surname>
+<given-names>Jyrki P.</given-names>
+</name>
+<xref rid="aff003" ref-type="aff"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Mandel</surname>
+<given-names>Anne</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Meronen</surname>
+<given-names>Lassi</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Hari</surname>
+<given-names>Riitta</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Parkkonen</surname>
+<given-names>Lauri</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Department of Neuroscience and Biomedical Engineering, Aalto University School of Science, Espoo, Finland</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>MEG Core, Aalto Neuroimaging, Aalto University, Espoo, Finland</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>BioMag Laboratory, HUS Medical Imaging Center, University of Helsinki and Helsinki University Hospital, Helsinki, Finland</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>van Wassenhove</surname>
+<given-names>Virginie</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>CEA.DSV.I2BM.NeuroSpin, FRANCE</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: LH VJ JPM AM RH LP. Performed the experiments: AZ JN PB LH AM. Analyzed the data: AZ LM. Contributed reagents/materials/analysis tools: AZ JN PB VJ LP. Wrote the paper: AZ PB LH VJ JPM AM RH LP.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">andrey.zhdanov@aalto.fi</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>22</day>
+<month>6</month>
+<year>2015</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2015</year>
+</pub-date>
+<volume>10</volume>
+<issue>6</issue>
+<elocation-id>e0128485</elocation-id>
+<history>
+<date date-type="received">
+<day>26</day>
+<month>11</month>
+<year>2014</year>
+</date>
+<date date-type="accepted">
+<day>27</day>
+<month>4</month>
+<year>2015</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2015</copyright-year>
+<copyright-holder>Zhdanov et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0128485" xlink:type="simple"/>
+<abstract>
+<sec id="sec001">
+<title>Hyperscanning</title>
+<p>Most neuroimaging studies of human social cognition have focused on brain activity of single subjects. More recently, “two-person neuroimaging” has been introduced, with simultaneous recordings of brain signals from two subjects involved in social interaction. These simultaneous “hyperscanning” recordings have already been carried out with a spectrum of neuroimaging modalities, such as functional magnetic resonance imaging (fMRI), electroencephalography (EEG), and functional near-infrared spectroscopy (fNIRS).</p>
+</sec>
+<sec id="sec002">
+<title>Dual MEG Setup</title>
+<p>We have recently developed a setup for simultaneous magnetoencephalographic (MEG) recordings of two subjects that communicate in real time over an audio link between two geographically separated MEG laboratories. Here we present an extended version of the setup, where we have added a video connection and replaced the telephone-landline-based link with an Internet connection. Our setup enabled transmission of video and audio streams between the sites with a one-way communication latency of about 130 ms. Our software that allows reproducing the setup is publicly available.</p>
+</sec>
+<sec id="sec003">
+<title>Validation</title>
+<p>We demonstrate that the audiovisual Internet-based link can mediate real-time interaction between two subjects who try to mirror each others’ hand movements that they can see via the video link. All the nine pairs were able to synchronize their behavior. In addition to the video, we captured the subjects’ movements with accelerometers attached to their index fingers; we determined from these signals that the average synchronization accuracy was 215 ms. In one subject pair we demonstrate inter-subject coherence patterns of the MEG signals that peak over the sensorimotor areas contralateral to the hand used in the task.</p>
+</sec>
+</abstract>
+<funding-group>
+<funding-statement>This study was financially supported by the European Research Council (Advanced Grant #232946 “Brain2Brain”), the European Union Seventh Framework Programme (FP7/2007–2013) under grant agreement no. 604102 (Human Brain Project), the Academy of Finland (grants #129678, #218072, #131483 and #263800, and grant LASTU #135198), the aivoAALTO research project of Aalto University (<ext-link ext-link-type="uri" xlink:href="http://www.aivoaalto.fi" xlink:type="simple">http://www.aivoaalto.fi</ext-link>), the Finnish Graduate School of Neuroscience / Doctoral Program Brain &amp; Mind, the Jenny and Antti Wihuri Foundation, the Academy of Finland Computational Program (grant #135198), and the SalWe Research Program for Mind and Body (Tekes—the Finnish Funding Agency for Innovation grant 1104/10). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="8"/>
+<table-count count="0"/>
+<page-count count="15"/>
+</counts>
+</article-meta>
+</front>
+<body>
+<sec id="sec004" sec-type="intro">
+<title>Introduction</title>
+<p>Social interaction constitutes an important part of human behavior, and its brain basis is under intensive study. However, neuroimaging studies of social cognition or social interaction have typically comprised just single participants at a time in carefully controlled but artificial environments, whereas experiments on complex and ecologically more valid social interactions between two or more subjects have been limited (for reviews, see [<xref rid="pone.0128485.ref001" ref-type="bibr">1</xref>–<xref rid="pone.0128485.ref003" ref-type="bibr">3</xref>]). To remediate this shortcoming, several research groups have started to employ hyperscanning—simultaneous neuroimaging of two or more interacting subjects, using functional magnetic resonance imaging (fMRI) [<xref rid="pone.0128485.ref004" ref-type="bibr">4</xref>], near-infrared spectroscopy (NIRS) [<xref rid="pone.0128485.ref005" ref-type="bibr">5</xref>], and electroencephalography (EEG) [<xref rid="pone.0128485.ref006" ref-type="bibr">6</xref>–<xref rid="pone.0128485.ref012" ref-type="bibr">12</xref>].</p>
+<p>The fMRI community was the first to embrace the two-person neuroimaging approach starting with the seminal “hyperscanning” work by Montague et al. [<xref rid="pone.0128485.ref004" ref-type="bibr">4</xref>]. Simultaneous fMRI of two interacting subjects is an important methodological advance; nevertheless the inherent sluggishness of the haemodynamic response limits the usefulness of fMRI (and other haemodynamics-based modalities, such as NIRS) in studies of fast-paced social interactions, such as e.g. turn-takings during conversation.</p>
+<p>EEG, on the other hand, provides millisecond-level temporal resolution necessary for probing the neuronal bases of fast social interaction. However, it only partially captures the available electromagnetic signatures of neuronal currents. Magnetoencephalography (MEG)—a method based on measuring the extracranial magnetic fields generated by neuronal currents—significantly complements EEG without compromising the temporal resolution (for a review, see [<xref rid="pone.0128485.ref013" ref-type="bibr">13</xref>]). MEG is less sensitive to inaccuracies in modeling the conductivity geometry between cortex and sensors. Moreover, in spatial localization accuracy, combined MEG–EEG measurements can outperform both, MEG and EEG alone [<xref rid="pone.0128485.ref014" ref-type="bibr">14</xref>].</p>
+<p>However, unlike other neuroimaging modalities, MEG studies have mainly focused on single-subject recordings, with our previous study [<xref rid="pone.0128485.ref015" ref-type="bibr">15</xref>] and a more recent mother–child interaction study by Hirata et al. [<xref rid="pone.0128485.ref016" ref-type="bibr">16</xref>] as the only exceptions.</p>
+<p>In our previous work we designed and validated an experimental setup that enables simultaneous MEG recording of two subjects connected with an accurate audio link based on a telephone landline [<xref rid="pone.0128485.ref015" ref-type="bibr">15</xref>], with lags of the order of 10 ms that would correspond the travel time for sound over a few meters and thus impossible for the subject to notice. In the current study, we extend our setup by adding a broadband Internet-based audio-video link, and report the results of a simple validation experiment.</p>
+</sec>
+<sec id="sec005" sec-type="materials|methods">
+<title>Methods</title>
+<sec id="sec006">
+<title>Instrumentation</title>
+<sec id="sec007">
+<title>Overview</title>
+<p><xref rid="pone.0128485.g001" ref-type="fig">Fig 1</xref> shows the schematic diagram of our setup. We record MEG signals with two whole-scalp neuromagnetometers located at two different sites: one at the MEG Core, Aalto University School of Science, Espoo, Finland (hereafter referred to as Aalto), another at BioMag Laboratory, Helsinki University Central Hospital, Helsinki, Finland (hereafter referred to as HUCH). The distance between the sites is about 5 km. The subjects at the two sites interact with each other in real time via a custom-built audiovisual (AV) system. The AV system enables communication between the subjects as well as recording the audio and video streams at each site. For temporal co-registration, our setup brings all data streams (video, audio, and MEG) from both sites to a common timeline.</p>
+<fig id="pone.0128485.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0128485.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Schematic depiction of the experimental setup.</title>
+<p>The setup consists of two similar sets of hardware located at two different MEG sites linked over the Internet. The AV system (marked in red) allows the subjects to see and hear each other during the experiment. The experimenter at each site can monitor and instruct the subject at either site. The sites are synchronized by using GPS receivers that output timing signals.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0128485.g001" position="float" xlink:type="simple"/>
+</fig>
+<p><xref rid="pone.0128485.g002" ref-type="fig">Fig 2</xref> shows that during the experiment the subject is seated inside the magnetically shielded room (MSR), with his head covered by the helmet-shaped neuromagnetometer. The subject from the other site is visible on the back-projection screen.</p>
+<fig id="pone.0128485.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0128485.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>MEG2MEG setup at HUCH.</title>
+<p>The subject at HUCH performs a hand movement in synchrony with the subject at Aalto that can be seen on the backprojection screen. The subjects in the picture did not participate in the actual experiment.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0128485.g002" position="float" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec008">
+<title>MEG recording</title>
+<p>MEG signals are recorded with two 306-channel whole-scalp neuromagnetometers (Elekta Neuromag at Aalto and Neuromag Vectorview at HUCH; both are devices by Elekta Oy, Helsinki, Finland, with only minor differences in design). To reduce environmental noise, the devices are located inside high-quality MSR: a three-layer room by Imedco AG (Hägendorf, Switzerland) at Aalto, and a three-layer room by Euroshield/ETS Lindgren Oy (Eura, Finland) at HUCH. The devices have identical sensor arrays comprising 102 pairs of orthogonal planar gradiometers (204 in total) and 102 magnetometers.</p>
+</sec>
+<sec id="sec009">
+<title>AV system</title>
+<p>The AV system allows the subjects and experimenters to interact in real time. The subjects can see and hear each other over the audiovisual link. At each site, the experimenter can monitor the video and audio from both sites and instruct the subjects. The system also allows documenting the interaction by recording the audio and video streams at each site. The system comprises two identical sets of hardware, one at each site. The hardware set includes:
+<list list-type="order">
+<list-item><p>A microphone and a set of MEG-compatible earphones for the subject located inside the MSR.</p></list-item>
+<list-item><p>A microphone and a set of earphones for the experimenter located in the control room.</p></list-item>
+<list-item><p>A full-matrix audio mixer that allows flexible routing of audio streams among the subject’s and experimenter’s microphones and earphones and the audio connections of the AV computer (described below).</p></list-item>
+<list-item><p>A video camera and a standard video presentation setup (projector and back-projection screen) for capturing and presenting the video inside the MSR.</p></list-item>
+<list-item><p>A computer that provides the videoconferencing, audio and video recording, and synchronization facilities (AV computer); this computer is connected to its counterpart at the other site via a standard Internet connection.</p></list-item>
+<list-item><p>A GPS unit serving as an accurate time source.</p></list-item>
+</list></p>
+</sec>
+<sec id="sec010">
+<title>Audio setup</title>
+<p>We forfeited the optical microphone used for capturing the subject’s speech in our previous setup (Baess et al., 2012) in favor of a consumer-grade electret microphone that offers better sound fidelity. We present the audio to the subject through MEG-compatible insert earphones (Etymotic ER-2, Etymotic Research, Elk Grove Village, IL, USA). At each site the experimenters can interact with the subject through an additional set of headphones and a microphone located in the control room. As the AV computer’s audio interface we use E-MU 1616m digital sound card (E-MU Systems Inc., Scotts Valley, CA, USA) that allows low-latency (approximately 5 ms) audio capture and playback. The computer captures and plays back the audio at the sampling rate of 48 kHz. All the audio sources and destinations are connected to a full-matrix digital mixer (iDR-8; Allen &amp; Heath, Cornwall, UK) that allows flexible routing of the audio streams according to the needs of the experiment.</p>
+</sec>
+<sec id="sec011">
+<title>Video camera</title>
+<p>For video recording, we used Stingray F-033C machine-vision camera (Allied Vision Technologies GmbH, Stadtroda, Germany). The camera captures color video at the VGA resolution (640 by 480 pixels) at a rate of 15 to 30 frames per second (fps). The exact frame rate depends on the frame exposure time that is adjusted by the user. The camera is connected to the computer via an IEEE 1394 interface, also known as FireWire. The connection is physically implemented as an optical fiber, which reduces electromagnetic interference inside the MSR.</p>
+</sec>
+<sec id="sec012">
+<title>Video presentation</title>
+<p>The AV computer software displays the video feed from the other site in a dedicated window. The computer is equipped with a video adapter with two outputs that are configured to produce identical outputs (“clone” mode). The outputs are connected to i) the monitor in the control room, and ii) the DLP projector (Panasonic PT-D7500E (Panasonic, Kadoma, Osaka, Japan) at HUCH; Panasonic PT-D7700E-K (Panasonic, Kadoma, Osaka, Japan) at MEG Core), outside the MSR projecting the video onto the back-projection screen (Elekta Oy, Helsinki, Finland) inside the MSR. The video adapter is configured to produce the signal at 60 fps, which is the native frame rate of the projector.</p>
+</sec>
+<sec id="sec013">
+<title>GPS time source</title>
+<p>To accurately synchronize the AV computers, both sites use GPS (global positioning system) time sources. Each source consists of a custom-made GPS unit (at Aalto based on Fastrax uPatch100-S, u-blox, Thalwil, Switzerland, and at HUCH on Lassen iQ, Trimble Navigation Limited, Sunnyvale, CA, USA) with the antenna located within a clear view of the sky. The unit outputs a standard NMEA 0183 data stream and a pulse-per-second (PPS) signal. The PPS signal consists of square pulses; the rising edge of each pulse indicates the beginning of a new second of the GPS time. The PPS and NMEA signals are fed to the AV computer to synchronize its Network Time Protocol (NTP) server and real-time clock.</p>
+</sec>
+<sec id="sec014">
+<title>AV compute</title>
+<p>The AV computer plays a central role in the setup, performing three main functions: (i) it provides a real-time audio–visual link between the two subjects, (ii) it records the video and audio streams, and (iii) it inserts timestamps into the recorded video, audio, and MEG data streams to allow for an accurate off-line temporal co-registration of all data. The software that provides this functionality has been developed in the framework of the Aalto MEG2MEG Project (supported by European Research Council Advanced Grant to R. Hari)—a collaborative open-source project aimed at providing MEG researchers with tools for conducting hyperscanning experiments [<xref rid="pone.0128485.ref017" ref-type="bibr">17</xref>]. It is distributed under the terms of GNU General Public License, version 3 [<xref rid="pone.0128485.ref018" ref-type="bibr">18</xref>] and is freely available from the project’s GitHub page. The software is written in C and C++ programming languages using Qt programming framework. It is based on the software for our experimental video-MEG system [<xref rid="pone.0128485.ref019" ref-type="bibr">19</xref>,<xref rid="pone.0128485.ref020" ref-type="bibr">20</xref>].</p>
+<p>In our setup, the software is installed on a commodity office PC (Dell Optiplex 990, Dell, Round Rock, TX, USA) running the 64-bit version of Ubuntu 12.04 LTS Linux operating system.</p>
+</sec>
+<sec id="sec015">
+<title>Communication protocol</title>
+<p>The AV computers send and receive audio and video streams using a simple custom-designed communication protocol implemented over User Datagram Protocol (UDP). We optimized the protocol for simplicity, short latency, and predictability of timing at the expense of optimal utilization of network bandwidth.</p>
+<p>After receiving each video frame from the camera, the AV computer compresses it using the JPEG algorithm with the compression quality factor <italic>q</italic> = 60 and sends it to the other site in a single UDP packet, independently of other frames. Upon arrival of the packet, the AV computer at the other site decompresses the frame and displays it to the subject. The computer processes each frame immediately without any buffering or temporal reordering.</p>
+<p>In a similar fashion, the sound card captures the audio signal, one frame (96 samples, corresponding to 2 ms of audio at our sampling rate of 48 kHz) at a time. The AV computer immediately sends each audio frame over the network uncompressed in a separate UDP packet. To reduce artifacts caused by a variable network delay, the receiving AV computer buffers the arriving frames. A buffer size of 15 audio frames turned out to be sufficient to provide good audio quality given our network connection.</p>
+<p>During the experiment, the AV computer software does not check either audio or video streams for missing frames, out-of-order arrival, duplication or other problems that the UDP layer might introduce. However, the software assigns each frame a unique serial id number and timestamps it twice: once when being sent and once upon arrival at the other side. The AV computer records each frame’s id number and timestamps together with the frame data. Consequently, one can detect any problems in the network transmission off-line, during the analysis stage.</p>
+</sec>
+<sec id="sec016">
+<title>Synchronization mechanism</title>
+<p>One of the tasks of the AV computers is to synchronize all data streams at both sites. To achieve this goal, we first synchronize the computers’ real-time clocks (RTCs) using the GPS time sources. Once the RTCs are accurately synchronized, they serve as master sources of timing information for all the data streams. The AV computers timestamp the video and audio streams by attaching the RTC time to every frame. To insert the timing information into the MEG data, each AV computer outputs serially-encoded timestamps via its parallel port into the MEG system’s trigger channel.</p>
+</sec>
+</sec>
+<sec id="sec017">
+<title>System performance</title>
+<p>Our setup allows videoconferencing between the two sites with one-way end-to-end latency of about 50 ms for audio and 130 ms for video over the current Aalto—HUCH network link. All the recorded video, audio, and MEG data streams are aligned with an accuracy of 1 ms. For more details on quantifying the system performance, see <xref rid="pone.0128485.s001" ref-type="supplementary-material">S1 Appendix</xref>.</p>
+</sec>
+<sec id="sec018">
+<title>Validation experiment</title>
+<p>To validate our setup we performed a simple experiment in which the subjects used the video link to synchronize their hand movements.</p>
+<sec id="sec019">
+<title>Experimental setup</title>
+<p>Nine pairs of subjects (12 males, 6 females; mean ± SD age 27.1 ± 5.6 years, range 21–43 years) with normal or corrected-to-normal vision participated in the experiment. The subjects gave their written informed consent after the course of the study had been explained to them. The study had prior approval by the Ethics Committee of the Hospital District of Helsinki and Uusimaa and all participants gave their written informed consent before the experiment. The individuals appearing in Figs <xref rid="pone.0128485.g001" ref-type="fig">1</xref> and <xref rid="pone.0128485.g002" ref-type="fig">2</xref> have given written informed consent for the publication.</p>
+<p>We asked the subjects of each pair to perform self-paced repetitive movements of the right-hand fingers against the thumb for 5 min so that the movements between the participants were as synchronized as possible; importantly, there was no predefined leader for the task. To achieve synchronization, the subjects observed each other over the video link (see <xref rid="pone.0128485.g003" ref-type="fig">Fig 3</xref>; <xref rid="pone.0128485.s004" ref-type="supplementary-material">S1 Video</xref>).</p>
+<fig id="pone.0128485.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0128485.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Three video frames showing two subjects mirroring each other’s hand movements.</title>
+<p>Subjects were synchronizing their movements by observing each other via the video link.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0128485.g003" position="float" xlink:type="simple"/>
+</fig>
+<p>We recorded MEG signals from both subjects with sampling frequency of 1 kHz. Additionally, we monitored the hand movements with 3-axis accelerometers (ADXL335 iMEMS Accelerometer, Analog Devices, Inc., Norwood, MA, USA) attached to the subjects’ index fingers. For technical reasons at the Aalto site, we recorded the accelerometer signals with MEG analog inputs in 3 subject pairs and with EEG input of the MEG device for 6 subject pairs. At HUCH, we recorded the accelerometer signals with the MEG analog inputs for all subjects. We also recorded the video of the subjects at both sites.</p>
+<p>The anonymized accelerometer data are available as supplementary material. Due to the national legislation regulating research on human subjects, we are not able to distribute the original MEG data.</p>
+</sec>
+<sec id="sec020">
+<title>Behavioral data analysis</title>
+<p>For each pair of subjects, we synchronized the video streams recorded at the two sites and merged these into a single video file that displayed the two subjects side-by-side (see <xref rid="pone.0128485.g003" ref-type="fig">Fig 3</xref>; <xref rid="pone.0128485.s004" ref-type="supplementary-material">S1 Video</xref>). We reviewed the resulting video file to verify that the subjects performed the task correctly. To discard any transient failures in performance at the beginning or end of the task, we restricted our analysis to a single continuous 4-min block of data. For each subject pair, we manually selected the block location so that it did not contain any transient task failures. To remove power-line interference, we notch-filtered the accelerometer signals at 50 Hz using a second-order Infinite Impulse Response (IIR) filter with a bandwidth of 1 Hz at –3 dB. To avoid any phase distortion, the filter was applied to the signals twice, once in forward and once in reverse direction.</p>
+<p><xref rid="pone.0128485.g004" ref-type="fig">Fig 4</xref> illustrates the three components of the accelerometer signals and the stages of their analysis. The finger movements performed by the subjects had essentially a single degree of freedom. Thus, we wanted to reduce the 3-dimensional accelerometer data to a single summary signal that captured the relevant aspect of the movement. We selected Principal Components Analysis (PCA) as the reduction method because it is simple and easy to interpret, and because it provides a uniform representation of the movement that is invariant, e.g., to accelerometer orientation. Moreover, visual inspection of the principal components (PCs) of all the participants indicated that the first principal component (PC1) reliably captured most of the movement (see, for an example, the middle rows of <xref rid="pone.0128485.g004" ref-type="fig">Fig 4</xref>).</p>
+<fig id="pone.0128485.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0128485.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Detecting events from accelerometer signals.</title>
+<p>Acc x, Acc y, and Acc z are the signals from the orthogonal x, y, and z accelerometers. PC 1, PC 2, and PC 3 are the principal components in the order of decreasing variance. LP is the low-pass-filtered (at 3 Hz) version of PC 1. Vertical red markers denote the detected events i.e. the rising zero-crossings of LP.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0128485.g004" position="float" xlink:type="simple"/>
+</fig>
+<p>We performed PCA for each subject and selected PC1 for further analysis. Since principal components are defined up to an arbitrary multiplicative factor of ±1, we multiplied the largest principal components from all 9 subject-pairs by 1 or –1 as necessary to ensure that the resulting waveforms exhibited the same polarity for all subjects. We then low-pass (LP) filtered PC1 at 3 Hz using Type II Chebyshev IIR filter of order 6 with stopband attenuation of 30 dB from the peak passband value (the bottom row in <xref rid="pone.0128485.g004" ref-type="fig">Fig 4</xref>). We chose the Chebyshev Type II filter to avoid distortion in the passband. Similarly to the notch filter, the LP filter was applied twice, once in forward and once in reverse directions. We marked each time point when the LP signal crossed zero from negative to positive values as an event (vertical red lines). For each subject pair, we detected an identical number of events at the two sites (in one case we had to adjust the location of the 4-min block by less than 1 s to make sure that the matching events from the both sites are properly included).</p>
+</sec>
+<sec id="sec021">
+<title>MEG data analysis</title>
+<p>In addition to the behavioral data analysis, we conducted connectivity analysis of the MEG signals between the subjects of one pair. We used coherence as the connectivity measure as it robustly detects relations between MEG signals and hand acceleration [<xref rid="pone.0128485.ref021" ref-type="bibr">21</xref>]. Our subjects were able to accurately synchronize their hand movements, as measured by accelerometers (see the <xref rid="sec022" ref-type="sec">Results</xref> section), and we expected this synchronization to mediate sensor-level coherence between the two subjects’ MEG signals in a frequency band that includes the movement frequency.</p>
+<p>We first reduced the external interference by applying signal-space separation (SSS) method [<xref rid="pone.0128485.ref022" ref-type="bibr">22</xref>] to the MEG signals (MaxFilter software version 2.2.10; Elekta Oy, Helsinki, Finland).</p>
+<p>As a proof-of-concept, we only analyzed the data of pair #3 that had the largest number of repetition cycles and a low variability of the cycle length. The analysis involved the 204 planar first-order gradiometers that in our neuromagnetometers are arranged in 102 modules of 2 gradiometers each. The gradiometers in one module correspond to the same location on the helmet surface and measure the orthogonal components of the magnetic field’s gradient.</p>
+<p>We estimated magnitude-squared coherence between the gradiometer signals of the two subjects in a pairwise fashion, resulting in a 204-by-204 coherence matrix that was computed using the same 4-min block of data that were used for the behavioral analysis. The rows correspond to the gradiometers at HUCH and the columns to the gradiometers at Aalto. The entry (<italic>i</italic>,<italic>j</italic>) of the matrix contains the estimate of the magnitude-squared coherence between the signals from the <italic>i</italic>-th gradiometer at HUCH and <italic>j</italic>-th gradiometer at Aalto. We estimated the average coherence in the 0.5–2 Hz frequency window with Welch’s periodogram method using window length of 8096 samples (approximately 8 s) which provided about 0.12-Hz frequency resolution.</p>
+<p>We then averaged the coherence matrix of the subject pair separately along the rows and columns. The resulting 204-dimentional vectors describe the distribution of the average coherence over the HUCH and Aalto gradiometers, respectively. To visualize the results, we further averaged the coherence over the two gradiometers in each module. That way we obtained two 102-dimensional vectors that characterize the distribution of average coherence over the helmet surface for both participants. We then plotted these vectors on flattened helmet surface. Data analysis was performed in MATLAB R2014b and Python version 2.7.6 software. We used MNE software [<xref rid="pone.0128485.ref023" ref-type="bibr">23</xref>] (version 2.7.4) and MNE-Python [<xref rid="pone.0128485.ref024" ref-type="bibr">24</xref>] (version 0.9) for importing the MEG data, and we visualized the results using MNE-Python and Matplotlotlib library [<xref rid="pone.0128485.ref025" ref-type="bibr">25</xref>] (version 1.3.1).</p>
+<p>The source code for the data analysis is available in <xref rid="pone.0128485.s002" ref-type="supplementary-material">S2 Appendix</xref>. Anonymized accelerometer data is available in <xref rid="pone.0128485.s003" ref-type="supplementary-material">S3 Appendix</xref>.</p>
+</sec>
+</sec>
+</sec>
+<sec id="sec022" sec-type="results">
+<title>Results</title>
+<p>Reviewing the videos revealed that every subject pair was able to perform the task for at least 4 min. None of the subject pairs reported any difficulties during the experiment.</p>
+<sec id="sec023">
+<title>Behavioral data analysis</title>
+<p>The upper box of <xref rid="pone.0128485.g005" ref-type="fig">Fig 5</xref> provides a characteristic example of PC1 from the two subjects and the corresponding events (red and blue vertical markers). The rising zero-crossings were reliably detected and matched between the sites. We quantified the behavioral synchronization accuracy in two ways: (1) Segmenting and averaging the full-bandwidth accelerometer signals at one site time-locked to the events detected on the other (time window from –1 to 3 s around the trigger; no baseline correction), and (2) computing time differences between matching events between the two sites.</p>
+<fig id="pone.0128485.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0128485.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Accelerometer signals.</title>
+<p>The upper box shows the first principal components from the two sites. The plot depicts the original, unfiltered signals (grey) and the same signals low-pass filtered at 3 Hz (red—HUCH, blue—Aalto). The detected events are marked by vertical lines. The lower nine boxes depict segmented first PC for the nine subject pairs. Grey lines denote individual movement cycles time-locked to the events detected at Aalto. The upper traces are from Aalto, the lower from HUCH. The thick blue and red curves show the averages for Aalto and HUCH, respectively.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0128485.g005" position="float" xlink:type="simple"/>
+</fig>
+<p>We were able to reliably match all the events for all subject pairs (the time difference between the matched events was always smaller than one third of the movement cycle duration—the difference between two consecutive events at the same site).</p>
+<p>Over the 4-min period the subjects performed between 39 (pair #7) and 144 (pair #3) movement cycles, the average number of cycles per pair was 83.4. The average duration of a movement cycle for a given pair of subjects varied from 1.7 s for the fastest pair to 5.9 s for the slowest, corresponding to movement rates of 0.17–0.60 Hz (see <xref rid="pone.0128485.g006" ref-type="fig">Fig 6</xref>). The longest cycle lasted 8.5 s (pair #7, HUCH subject) and the shortest 1.4 s (pair #3, HUCH subject).</p>
+<fig id="pone.0128485.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0128485.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>Pairwise comparison of the lags between HUCH and Aalto.</title>
+<p>The upper boxplot shows the distributions of the signed lags, the lower the distribution of the absolute values of the lags. The red line indicates the median delay for subject each pair, the box the location of the 25-th and the 75-th percentiles, and the whiskers the minimum and maximum delay values.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0128485.g006" position="float" xlink:type="simple"/>
+</fig>
+<p>All subject pairs maintained a relatively constant movement rate throughout the experiment, which is reflected as the relatively narrow dispersion of individual cycle durations around the average (see <xref rid="pone.0128485.g006" ref-type="fig">Fig 6</xref>); no single cycle duration deviated from the average by more than 50%.</p>
+<p>The lower 9 boxes of <xref rid="pone.0128485.g005" ref-type="fig">Fig 5</xref> describe the movement synchrony between the subjects in all the nine pairs. The superimposed segmented signals demonstrate a similar behavioral pattern at both sites, both at the level of single segments and averages.</p>
+<p><xref rid="pone.0128485.g007" ref-type="fig">Fig 7</xref> presents the lags between the subjects computed by matching each event at one site to the temporally closest event at the other site; the upper box—the signed lag and lower—the absolute value. All subject pairs were able to achieve synchronization accuracy of 215 ms or better (in terms of average absolute lag) with the best pair (#3) attaining the accuracy of 77 ms.</p>
+<fig id="pone.0128485.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0128485.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>Rate of movement (duration of one movement cycle) for all nine subject pairs.</title>
+<p>For each subject pair, the bar denotes the average cycle duration at Aalto (dark) and at HUCH (light). The small horizontal lines mark the durations of the individual cycles.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0128485.g007" position="float" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec024">
+<title>MEG data analysis</title>
+<p><xref rid="pone.0128485.g008" ref-type="fig">Fig 8</xref> depicts the average coherence distribution over the MEG helmet for the subjects of pair #3. The map exhibits a clear maximum over the contralateral sensorimotor area. Relatively low coherence values can be explained by the fact that for each location the map depicts an average coherence value to all the channels from the other site, most of which are unrelated to the given location. The maximum value of magnitude-squared coherence for a single pair was approximately 0.06.</p>
+<fig id="pone.0128485.g008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0128485.g008</object-id>
+<label>Fig 8</label>
+<caption>
+<title>Average inter-subject coherence for subject pair #3.</title>
+<p>The flattened sensor-helmet maps show the average coherence in the 0.5–2-Hz band for one pair of subjects.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0128485.g008" position="float" xlink:type="simple"/>
+</fig>
+</sec>
+</sec>
+<sec id="sec025" sec-type="conclusions">
+<title>Discussion</title>
+<p>One of the main obstacles to MEG hyperscanning is the price of MEG systems, including the shielded room, so that no laboratory at present has two identical MEG devices under the same premises. Unlike, for example, EEG, where signals can be easily recorded from multiple participants in the same room, MEG hyperscanning (with one exception so far [<xref rid="pone.0128485.ref016" ref-type="bibr">16</xref>]) needs to involve two MEG devices located at two geographically separate sites. Such a setup requires an accurate audiovisual link enabling the two subjects to interact and an accurate procedure for synchronizing the two MEG recordings.</p>
+<p>We started building an MEG-to-MEG two-person recording setup by first implementing an audio-only link that used telephone landlines and that thus allowed us to achieve a low-latency (12.7 ms) connection with negligible transmission time [<xref rid="pone.0128485.ref015" ref-type="bibr">15</xref>]. However, the setup naturally limited the possible experiments to those relying only on auditory interaction.</p>
+<p>In our current audiovisual setup, we shifted to the Internet as the underlying communication channel. This transition comes at a price of longer transmission delays and increased jitter. The jitter can be to a considerable degree mitigated by buffering at the receiving site, thus trading additional delay for reduced jitter. The key question is therefore whether an Internet link can provide a level of performance necessary to take the full advantage of MEG’s high temporal resolution in two-person recordings. Our validation experiments provide some insights into this question.</p>
+<p>The measured one-way delays, 50 ms for the audio and 130 ms for the video streams, are in line with the requirements of less than 100-ms (audio) and 500-ms (video) delays mediating smooth social interaction [<xref rid="pone.0128485.ref026" ref-type="bibr">26</xref>,<xref rid="pone.0128485.ref027" ref-type="bibr">27</xref>]. The 80-ms misalignment between the audio and video streams falls within the perceptual integration window of natural speech [<xref rid="pone.0128485.ref028" ref-type="bibr">28</xref>,<xref rid="pone.0128485.ref029" ref-type="bibr">29</xref>]. Consequently, all our subject pairs were able to effortlessly maintain a free conversation over the link and to perform the finger-movement synchronization task without perceiving any timing problems introduced by the setup.</p>
+<p>The results of the behavioral validation experiment further indicate that our setup can be used for investigating the mechanisms of motor synchronization between subjects. All the subject pairs succeeded in the task. It is notable that some subject pairs (e.g. pair #3) managed to synchronize their behavior so accurately that the lag between the subjects’ movements was considerably shorter than the AV delay. Such accuracy obviously reflects mutual adaptation, based on predictive models of the partner’s behavior, rather than simple leader/follower synchronization.</p>
+<p>Our MEG data analysis produced subject-to-subject coherence maps that showed, in both subjects, clear maxima over the sensorimotor area contralateral to the moving hand. It was previously demonstrated that for a single participant, the distribution of coherence between the MEG signals and the hand acceleration peaks over the contralateral sensorimotor cortex [<xref rid="pone.0128485.ref021" ref-type="bibr">21</xref>]. If two participants synchronize their hand accelerations accurately enough, one expects to find similar distribution of coherence between each participant’s MEG sensors and the peer’s hand acceleration, and, by the transitivity of coherence, between the two participants’ MEG sensors. Thus our findings are in line with results previously reported for single subjects, meaning that our setup can not only mediate sub-second behavioral synchronization between subjects, but also synchronization of the subjects’ brain signals that are associated with such joint behavior.</p>
+</sec>
+<sec id="sec026" sec-type="conclusions">
+<title>Conclusions</title>
+<p>We have demonstrated the feasibility of building a multi-site MEG setup for probing the brain mechanisms of human interaction mediated via visual and auditory channels. Our setup relies on widely available off-the-shelf components and a standard Internet connection. It achieves performance sufficient for investigating interactions occurring at timescales from tens to hundreds of milliseconds, which allows the researcher to exploit the high temporal resolution of MEG.</p>
+</sec>
+<sec id="sec027">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0128485.s001" xlink:href="info:doi/10.1371/journal.pone.0128485.s001" mimetype="application/msword" position="float" xlink:type="simple">
+<label>S1 Appendix</label>
+<caption>
+<title>Quantifying the dual MEG system performance.</title>
+<p>(DOC)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0128485.s002" xlink:href="info:doi/10.1371/journal.pone.0128485.s002" mimetype="application/zip" position="float" xlink:type="simple">
+<label>S2 Appendix</label>
+<caption>
+<title>Source code for the data analysis.</title>
+<p>(ZIP)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0128485.s003" xlink:href="info:doi/10.1371/journal.pone.0128485.s003" mimetype="application/zip" position="float" xlink:type="simple">
+<label>S3 Appendix</label>
+<caption>
+<title>Accelerometer data.</title>
+<p>(ZIP)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0128485.s004" xlink:href="info:doi/10.1371/journal.pone.0128485.s004" mimetype="video/x-msvideo" position="float" xlink:type="simple">
+<label>S1 Video</label>
+<caption>
+<title>Subjects synchronizing their hand movements during the validation experiment.</title>
+<p>(AVI)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>This study was financially supported by European Research Council (Advanced Grant #232946 “Brain2Brain”), the European Union Seventh Framework Programme (FP7/2007–2013) under grant agreement no. 604102 (Human Brain Project), the Academy of Finland (grants #218072, #131483 and #263800), the aivoAALTO research project of Aalto University (<ext-link ext-link-type="uri" xlink:href="http://www.aivoaalto.fi" xlink:type="simple">http://www.aivoaalto.fi</ext-link>), the Finnish Graduate School of Neuroscience / Doctoral Program Brain &amp; Mind, the Jenny and Antti Wihuri Foundation, the Academy of Finland Computational Program (grant #135198), and the SalWe Research Program for Mind and Body (Tekes—the Finnish Funding Agency for Innovation grant 1104/10). We thank Ronny Schreiber and Petteri Räisänen from the Brain Research Unit, Aalto University, for their help with the technical aspects of the experimental setup, and Jarkko Luoma from the BioMag Laboratory for the insightful discussion of coherence analysis and its application to the inter-subject connectivity analysis of MEG data.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0128485.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hari</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Kujala</surname> <given-names>MV</given-names></name>. <article-title>Brain basis of human social interaction: from concepts to brain imaging</article-title>. <source>Physiol Rev</source>. <year>2009</year>;<volume>89</volume>: <fpage>453</fpage>–<lpage>479</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1152/physrev.00041.2007" xlink:type="simple">10.1152/physrev.00041.2007</ext-link></comment> <object-id pub-id-type="pmid">19342612</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dumas</surname> <given-names>G</given-names></name>. <article-title>Towards a two-body neuroscience</article-title>. <source>Commun Integr Biol</source>. <year>2011</year>;<volume>4</volume>: <fpage>349</fpage>–<lpage>352</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.4161/cib.4.3.15110" xlink:type="simple">10.4161/cib.4.3.15110</ext-link></comment> <object-id pub-id-type="pmid">21980578</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dumas</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Lachat</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Martinerie</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Nadel</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>George</surname> <given-names>N</given-names></name>. <article-title>From social behaviour to brain synchronization: Review and perspectives in hyperscanning</article-title>. <source>IRBM</source>. <year>2011</year>;<volume>32</volume>: <fpage>48</fpage>–<lpage>53</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.irbm.2011.01.002" xlink:type="simple">10.1016/j.irbm.2011.01.002</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0128485.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Montague</surname> <given-names>PR</given-names></name>, <name name-style="western"><surname>Berns</surname> <given-names>GS</given-names></name>, <name name-style="western"><surname>Cohen</surname> <given-names>JD</given-names></name>, <name name-style="western"><surname>McClure</surname> <given-names>SM</given-names></name>, <name name-style="western"><surname>Pagnoni</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Dhamala</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>Hyperscanning: simultaneous fMRI during linked social interactions</article-title>. <source>NeuroImage</source>. <year>2002</year>;<volume>16</volume>: <fpage>1159</fpage>–<lpage>1164</lpage>. <object-id pub-id-type="pmid">12202103</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cui</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Bryant</surname> <given-names>DM</given-names></name>, <name name-style="western"><surname>Reiss</surname> <given-names>AL</given-names></name>. <article-title>NIRS-based hyperscanning reveals increased interpersonal coherence in superior frontal cortex during cooperation</article-title>. <source>NeuroImage</source>. <year>2012</year>;<volume>59</volume>: <fpage>2430</fpage>–<lpage>2437</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.neuroimage.2011.09.003" xlink:type="simple">10.1016/j.neuroimage.2011.09.003</ext-link></comment> <object-id pub-id-type="pmid">21933717</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Babiloni</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Cincotti</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Mattia</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Mattiocco</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>De Vico Fallani</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Tocci</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>Hypermethods for EEG hyperscanning</article-title>. <source>Conf Proc Annu Int Conf IEEE Eng Med Biol Soc IEEE Eng Med Biol Soc Annu Conf</source>. <year>2006</year>;<volume>1</volume>: <fpage>3666</fpage>–<lpage>3669</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/IEMBS.2006.260754" xlink:type="simple">10.1109/IEMBS.2006.260754</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0128485.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lindenberger</surname> <given-names>U</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>S-C</given-names></name>, <name name-style="western"><surname>Gruber</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Müller</surname> <given-names>V</given-names></name>. <article-title>Brains swinging in concert: cortical phase synchronization while playing guitar</article-title>. <source>BMC Neurosci</source>. <year>2009</year>;<volume>10</volume>: <fpage>1</fpage>–<lpage>12</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1471-2202-10-22" xlink:type="simple">10.1186/1471-2202-10-22</ext-link></comment> <object-id pub-id-type="pmid">19126204</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Astolfi</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Cincotti</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Mattia</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>De Vico Fallani</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Salinari</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Vecchiato</surname> <given-names>G</given-names></name>, <etal>et al</etal>. <article-title>Imaging the social brain: multi-subjects EEG recordings during the “Chicken’s game.”</article-title> <source>Conf Proc Annu Int Conf IEEE Eng Med Biol Soc IEEE Eng Med Biol Soc Annu Conf</source>. <year>2010</year>;<volume>2010</volume>: <fpage>1734</fpage>–<lpage>1737</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/IEMBS.2010.5626708" xlink:type="simple">10.1109/IEMBS.2010.5626708</ext-link></comment> <object-id pub-id-type="pmid">21096409</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Astolfi</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Toppi</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>De Vico Fallani</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Vecchiato</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Salinari</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Mattia</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Neuroelectrical hyperscanning measures simultaneous brain activity in humans</article-title>. <source>Brain Topogr</source>. <year>2010</year>;<volume>23</volume>: <fpage>243</fpage>–<lpage>256</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s10548-010-0147-9" xlink:type="simple">10.1007/s10548-010-0147-9</ext-link></comment> <object-id pub-id-type="pmid">20480221</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jiang</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Dai</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Peng</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Zhu</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Lu</surname> <given-names>C</given-names></name>. <article-title>Neural synchronization during face-to-face communication</article-title>. <source>J Neurosci Off J Soc Neurosci</source>. <year>2012</year>;<volume>32</volume>: <fpage>16064</fpage>–<lpage>16069</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1523/JNEUROSCI.2926-12.2012" xlink:type="simple">10.1523/JNEUROSCI.2926-12.2012</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0128485.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dumas</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Martinerie</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Soussignan</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Nadel</surname> <given-names>J</given-names></name>. <article-title>Does the brain know who is at the origin of what in an imitative interaction?</article-title> <source>Front Hum Neurosci</source>. <year>2012</year>;<volume>6</volume>: <fpage>128</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.3389/fnhum.2012.00128" xlink:type="simple">10.3389/fnhum.2012.00128</ext-link></comment> <object-id pub-id-type="pmid">22582043</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sänger</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Müller</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Lindenberger</surname> <given-names>U</given-names></name>. <article-title>Intra- and interbrain synchronization and network properties when playing guitar in duets</article-title>. <source>Front Hum Neurosci</source>. <year>2012</year>;<volume>6</volume>: <fpage>312</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.3389/fnhum.2012.00312" xlink:type="simple">10.3389/fnhum.2012.00312</ext-link></comment> <object-id pub-id-type="pmid">23226120</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hämäläinen</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Hari</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Ilmoniemi</surname> <given-names>RJ</given-names></name>, <name name-style="western"><surname>Knuutila</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Lounasmaa</surname> <given-names>OV</given-names></name>. <article-title>Magnetoencephalography—theory, instrumentation, and applications to noninvasive studies of the working human brain</article-title>. <source>Rev Mod Phys</source>. <year>1993</year>;<volume>65</volume>: <fpage>413</fpage>–<lpage>497</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1103/RevModPhys.65.413" xlink:type="simple">10.1103/RevModPhys.65.413</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0128485.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sharon</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Hämäläinen</surname> <given-names>MS</given-names></name>, <name name-style="western"><surname>Tootell</surname> <given-names>RBH</given-names></name>, <name name-style="western"><surname>Halgren</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Belliveau</surname> <given-names>JW</given-names></name>. <article-title>The advantage of combining MEG and EEG: Comparison to fMRI in focally stimulated visual cortex</article-title>. <source>NeuroImage</source>. <year>2007</year>;<volume>36</volume>: <fpage>1225</fpage>–<lpage>1235</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.neuroimage.2007.03.066" xlink:type="simple">10.1016/j.neuroimage.2007.03.066</ext-link></comment> <object-id pub-id-type="pmid">17532230</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Baess</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Zhdanov</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Mandel</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Parkkonen</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Hirvenkari</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Mäkelä</surname> <given-names>JP</given-names></name>, <etal>et al</etal>. <article-title>MEG dual scanning: a procedure to study real-time auditory interaction between two persons</article-title>. <source>Front Hum Neurosci</source>. <year>2012</year>;<volume>6</volume>: <fpage>83</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.3389/fnhum.2012.00083" xlink:type="simple">10.3389/fnhum.2012.00083</ext-link></comment> <object-id pub-id-type="pmid">22514530</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hirata</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ikeda</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Kikuchi</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Kimura</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Hiraishi</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Yoshimura</surname> <given-names>Y</given-names></name>, <etal>et al</etal>. <article-title>Hyperscanning MEG for understanding mother–child cerebral interactions</article-title>. <source>Front Hum Neurosci</source>. <year>2014</year>;<volume>8</volume>: <fpage>118</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.3389/fnhum.2014.00118" xlink:type="simple">10.3389/fnhum.2014.00118</ext-link></comment> <object-id pub-id-type="pmid">24624076</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref017"><label>17</label><mixed-citation publication-type="other" xlink:type="simple">Zhdanov A, Nurminen J. The Aalto MEG2MEG Project [Internet]. Available: <ext-link ext-link-type="uri" xlink:href="https://github.com/andreyzhd/MEG2MEG" xlink:type="simple">https://github.com/andreyzhd/MEG2MEG</ext-link></mixed-citation></ref>
+<ref id="pone.0128485.ref018"><label>18</label><mixed-citation publication-type="other" xlink:type="simple">GNU General Public License. Version 3 [Internet]. Free Software Foundation; 2007. Available: <ext-link ext-link-type="uri" xlink:href="http://www.gnu.org/licenses/gpl.html" xlink:type="simple">http://www.gnu.org/licenses/gpl.html</ext-link></mixed-citation></ref>
+<ref id="pone.0128485.ref019"><label>19</label><mixed-citation publication-type="other" xlink:type="simple">Zhdanov A, Larson E, Nurminen J. The Helsinki VideoMEG Project [Internet]. Available: <ext-link ext-link-type="uri" xlink:href="https://github.com/andreyzhd/VideoMEG" xlink:type="simple">https://github.com/andreyzhd/VideoMEG</ext-link></mixed-citation></ref>
+<ref id="pone.0128485.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhdanov</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Wilenius</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Paetau</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Ahonen</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Mäkelä</surname> <given-names>JP</given-names></name>. <article-title>Quantifying the contribution of video in combined video-magnetoencephalographic ictal recordings of epilepsy patients</article-title>. <source>Epilepsy Res</source>. <year>2013</year>;<volume>105</volume>: <fpage>405</fpage>–<lpage>409</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.eplepsyres.2013.02.017" xlink:type="simple">10.1016/j.eplepsyres.2013.02.017</ext-link></comment> <object-id pub-id-type="pmid">23535034</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bourguignon</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>De Tiège</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>de Beeck</surname> <given-names>MO</given-names></name>, <name name-style="western"><surname>Pirotte</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Van Bogaert</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Goldman</surname> <given-names>S</given-names></name>, <etal>et al</etal>. <article-title>Functional motor-cortex mapping using corticokinematic coherence</article-title>. <source>NeuroImage</source>. <year>2011</year>;<volume>55</volume>: <fpage>1475</fpage>–<lpage>1479</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.neuroimage.2011.01.031" xlink:type="simple">10.1016/j.neuroimage.2011.01.031</ext-link></comment> <object-id pub-id-type="pmid">21256222</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Taulu</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Kajola</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Simola</surname> <given-names>J</given-names></name>. <article-title>Suppression of Interference and Artifacts by the Signal Space Separation Method</article-title>. <source>Brain Topogr</source>. <year>2004</year>;<volume>16</volume>: <fpage>269</fpage>–<lpage>275</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1023/B:BRAT.0000032864.93890.f9" xlink:type="simple">10.1023/B:BRAT.0000032864.93890.f9</ext-link></comment> <object-id pub-id-type="pmid">15379226</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gramfort</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Luessi</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Larson</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Engemann</surname> <given-names>DA</given-names></name>, <name name-style="western"><surname>Strohmeier</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Brodbeck</surname> <given-names>C</given-names></name>, <etal>et al</etal>. <article-title>MNE software for processing MEG and EEG data</article-title>. <source>NeuroImage</source>. <year>2014</year>;<volume>86</volume>: <fpage>446</fpage>–<lpage>460</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.neuroimage.2013.10.027" xlink:type="simple">10.1016/j.neuroimage.2013.10.027</ext-link></comment> <object-id pub-id-type="pmid">24161808</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gramfort</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Luessi</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Larson</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Engemann</surname> <given-names>DA</given-names></name>, <name name-style="western"><surname>Strohmeier</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Brodbeck</surname> <given-names>C</given-names></name>, <etal>et al</etal>. <article-title>MEG and EEG data analysis with MNE-Python</article-title>. <source>Brain Imaging Methods</source>. <year>2013</year>;<volume>7</volume>: <fpage>267</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.3389/fnins.2013.00267" xlink:type="simple">10.3389/fnins.2013.00267</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0128485.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hunter</surname> <given-names>JD</given-names></name>. <article-title>Matplotlib: A 2D graphics environment</article-title>. <source>Comput Sci Eng</source>. <year>2007</year>;<volume>9</volume>: <fpage>90</fpage>–<lpage>95</lpage>.</mixed-citation></ref>
+<ref id="pone.0128485.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Baldi</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ofek</surname> <given-names>Y</given-names></name>. <article-title>End-to-end delay analysis of videoconferencing over packet-switched networks</article-title>. <source>IEEEACM Trans Netw</source>. <year>2000</year>;<volume>8</volume>: <fpage>479</fpage>–<lpage>492</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/90.865076" xlink:type="simple">10.1109/90.865076</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0128485.ref027"><label>27</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Jansen</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Bulterman</surname> <given-names>DCA</given-names></name>. <chapter-title>User-centric Video Delay Measurements. Proceeding of the 23rd ACM Workshop on Network and Operating Systems Support for Digital Audio and Video</chapter-title>. <publisher-loc>New York, NY, USA</publisher-loc>: <publisher-name>ACM</publisher-name>; <year>2013</year>. pp. <fpage>37</fpage>–<lpage>42</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1145/2460782.2460789" xlink:type="simple">10.1145/2460782.2460789</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0128485.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Summerfield</surname> <given-names>Q</given-names></name>. <article-title>Lipreading and audio-visual speech perception</article-title>. <source>Philos Trans R Soc Lond B Biol Sci</source>. <year>1992</year>;<volume>335</volume>: <fpage>71</fpage>–<lpage>78</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1098/rstb.1992.0009" xlink:type="simple">10.1098/rstb.1992.0009</ext-link></comment> <object-id pub-id-type="pmid">1348140</object-id></mixed-citation></ref>
+<ref id="pone.0128485.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vroomen</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Stekelenburg</surname> <given-names>JJ</given-names></name>. <article-title>Perception of intersensory synchrony in audiovisual speech: Not that special</article-title>. <source>Cognition</source>. <year>2011</year>;<volume>118</volume>: <fpage>75</fpage>–<lpage>83</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.cognition.2010.10.002" xlink:type="simple">10.1016/j.cognition.2010.10.002</ext-link></comment> <object-id pub-id-type="pmid">21035795</object-id></mixed-citation></ref>
+</ref-list>
+</back>
+</article>

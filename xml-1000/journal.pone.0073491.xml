@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group>
+<journal-title>PLoS ONE</journal-title></journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-13-21820</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0073491</article-id>
+<article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories>
+<title-group>
+<article-title>Design and Implementation of a Custom Built Optical Projection Tomography System</article-title>
+<alt-title alt-title-type="running-head">Optical Projection Tomography: A Blue-Print</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Wong</surname><given-names>Michael D.</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff2"><sup>2</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Dazai</surname><given-names>Jun</given-names></name><xref ref-type="aff" rid="aff2"><sup>2</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Walls</surname><given-names>Johnathon R.</given-names></name><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Gale</surname><given-names>Nicholas W.</given-names></name><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Henkelman</surname><given-names>R. Mark</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff2"><sup>2</sup></xref></contrib>
+</contrib-group>
+<aff id="aff1"><label>1</label><addr-line>Department of Medical Biophysics, University of Toronto, Toronto, Ontario, Canada</addr-line></aff>
+<aff id="aff2"><label>2</label><addr-line>Mouse Imaging Centre (MICe), Hospital for Sick Children, Toronto, Ontario, Canada</addr-line></aff>
+<aff id="aff3"><label>3</label><addr-line>Regeneron Pharmaceuticals, Tarrytown, New York, United States of America</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Brody</surname><given-names>James P.</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>University of California, Irvine, United States of America</addr-line></aff>
+<author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">mwong@mouseimaging.ca</email></corresp>
+<fn fn-type="conflict"><p>Nicholas Gale and Johnathon Walls are employees of Regeneron Pharmaceuticals and helped with the design of the proposed system through personal communication. It was ensured that this manuscript does not conflict with any patents, products in development or marketed products at Regeneron. Their employment at Regeneron Pharmaceuticals does not alter the authors' adherence to PLOS ONE policies of sharing and materials as detailed in <ext-link ext-link-type="uri" xlink:href="http://www.PLOSone.org/static/editorial.action#competing" xlink:type="simple">http://www.PLOSone.org/static/editorial.action#competing</ext-link>.</p></fn>
+<fn fn-type="con"><p>Conceived and designed the experiments: MDW JD JRW NWG RMH. Performed the experiments: MDW JD. Analyzed the data: MDW JD. Contributed reagents/materials/analysis tools: MDW JD JRW. Wrote the paper: MDW JD JRW NWG RMH.</p></fn>
+</author-notes>
+<pub-date pub-type="collection"><year>2013</year></pub-date>
+<pub-date pub-type="epub"><day>4</day><month>9</month><year>2013</year></pub-date>
+<volume>8</volume>
+<issue>9</issue>
+<elocation-id>e73491</elocation-id>
+<history>
+<date date-type="received"><day>24</day><month>5</month><year>2013</year></date>
+<date date-type="accepted"><day>23</day><month>7</month><year>2013</year></date>
+</history>
+<permissions>
+<copyright-year>2013</copyright-year>
+<copyright-holder>Wong et al</copyright-holder><license xlink:type="simple"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions>
+<abstract>
+<p>Optical projection tomography (OPT) is an imaging modality that has, in the last decade, answered numerous biological questions owing to its ability to view gene expression in 3 dimensions (3D) at high resolution for samples up to several cm<sup>3</sup>. This has increased demand for a cabinet OPT system, especially for mouse embryo phenotyping, for which OPT was primarily designed for. The Medical Research Council (MRC) Technology group (UK) released a commercial OPT system, constructed by Skyscan, called the Bioptonics OPT 3001 scanner that was installed in a limited number of locations. The Bioptonics system has been discontinued and currently there is no commercial OPT system available. Therefore, a few research institutions have built their own OPT system, choosing parts and a design specific to their biological applications. Some of these custom built OPT systems are preferred over the commercial Bioptonics system, as they provide improved performance based on stable translation and rotation stages and up to date CCD cameras coupled with objective lenses of high numerical aperture, increasing the resolution of the images. Here, we present a detailed description of a custom built OPT system that is robust and easy to build and install. Included is a hardware parts list, instructions for assembly, a description of the acquisition software and a free download site, and methods for calibration. The described OPT system can acquire a full 3D data set in 10 minutes at 6.7 micron isotropic resolution. The presented guide will hopefully increase adoption of OPT throughout the research community, for the OPT system described can be implemented by personnel with minimal expertise in optics or engineering who have access to a machine shop.</p>
+</abstract>
+<funding-group><funding-statement>Genome Canada (<ext-link ext-link-type="uri" xlink:href="http://www.genomecanada.ca" xlink:type="simple">www.genomecanada.ca</ext-link>) has helped fund this study. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="12"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>Ex-vivo 3D imaging at the mesoscopic scale (resolution = 2–50 µm) and with isotropic data acquisition is valuable for the observation and analysis of whole specimen and individual organ morphology. 3D imaging of morphology can give clues to physiological function; while aberrations in morphology can identify phenotypes when observed in genetically manipulated populations. Ex-vivo magnetic resonance imaging (MRI) has been successful in delineating anatomical differences in the mouse brain in models of autism and Huntington’s disease <xref ref-type="bibr" rid="pone.0073491-Ellegood1">[1]</xref>, <xref ref-type="bibr" rid="pone.0073491-Lerch1">[2]</xref> and describing cardiac malformations in the mouse embryo <xref ref-type="bibr" rid="pone.0073491-Schneider1">[3]</xref>, <xref ref-type="bibr" rid="pone.0073491-Cleary1">[4]</xref> in knockout mice. Micro-CT can obviously detect malformations in bone structure <xref ref-type="bibr" rid="pone.0073491-Nieman1">[5]</xref> and with the development of iodine based contrast agents, micro-CT can produce images with surprisingly good soft tissue contrast, extending the potential applications to imaging the mouse embryo <xref ref-type="bibr" rid="pone.0073491-Wong1">[6]</xref> and brain <xref ref-type="bibr" rid="pone.0073491-deCrespigny1">[7]</xref>. Episcopic Fluorescence Image Capture (EFIC) and High Resolution Episcopic Microscopy (HREM) are block-face imaging techniques that acquire superior resolution (∼1 µm) of sample autofluorescence <xref ref-type="bibr" rid="pone.0073491-Weninger1">[8]</xref> and sample attenuation of fluorescence of a resin-embedding media through eosin staining <xref ref-type="bibr" rid="pone.0073491-Weninger2">[9]</xref>. Both EFIC <xref ref-type="bibr" rid="pone.0073491-Rosenthal1">[10]</xref> and HREM <xref ref-type="bibr" rid="pone.0073491-Pieles1">[11]</xref> have been used extensively to analyze normal and aberrant mouse embryo phenotypes. Light sheet fluorescence microscopy (LSFM) or selective plane illumination microscopy (SPIM) employs a focused light sheet of excitation light which enables fast and high resolution imaging of small samples with minimal photobleaching; perfect for time lapse 3D images of development of live embryos <xref ref-type="bibr" rid="pone.0073491-Huisken1">[12]</xref>. Optical Coherence Tomography (OCT) is an interferometric technique to measure the optical scattering of tissue that can acquire high resolution (2–10 µm) 3D data sets at suitable depths (1–3 mm) for ex-vivo and in-vivo imaging of embryos early in development <xref ref-type="bibr" rid="pone.0073491-Larin1">[13]</xref>–<xref ref-type="bibr" rid="pone.0073491-Larina1">[15]</xref>.</p>
+<p>Optical projection tomography <xref ref-type="bibr" rid="pone.0073491-Sharpe1">[16]</xref> has its own niche in the 3D imaging world as it can provide morphological information from tissue autofluorescence along with 3D visualization of gene expression through the use of fluorescent antibodies. It can image samples up to several cm<sup>3</sup> in size and, depending on the sample size and objective lens used, OPT can resolve structures down to a few microns at isotropic resolution through use of a clearing agent termed BABB (1∶2 benzyl alcohol:benzyl benzoate). Projection data over the whole sample volume can be acquired within 10 minutes, which allows for studies with large sample sizes to be completed in a high-throughput fashion. The individual hardware components are readily available and the installation and software implementation is straightforward as well. This culminates in a stand alone cabinet OPT system with a general ease of operation. The combination of fast, high-resolution acquisition along with molecular specificity, ease of operation, and straightforward implementation makes OPT an attractive candidate to image ex-vivo whole mouse embryos and excised organs in 3D.</p>
+<p>Over the last decade, OPT has been used to image a wide variety of organisms, tissues and biological systems. Numerous studies analyzing islet beta cell masses, the insulin producing cells in the pancreas, employed OPT to image, measure volumes, and depict locations of islet beta cell masses in concert with overall pancreatic morphology <xref ref-type="bibr" rid="pone.0073491-Alanentalo1">[17]</xref>–<xref ref-type="bibr" rid="pone.0073491-Hrnblad1">[20]</xref>. Mouse embryo vasculature has been imaged with OPT through PECAM-1 antibody staining to describe normal mouse vasculogenesis <xref ref-type="bibr" rid="pone.0073491-Walls1">[21]</xref>, and to view perturbations in vascular patterning due to genetic manipulations <xref ref-type="bibr" rid="pone.0073491-Lickert1">[22]</xref>, <xref ref-type="bibr" rid="pone.0073491-Jeansson1">[23]</xref>. Kidney ureter <xref ref-type="bibr" rid="pone.0073491-Short1">[24]</xref>–<xref ref-type="bibr" rid="pone.0073491-Short2">[26]</xref>, human embryonic brain <xref ref-type="bibr" rid="pone.0073491-Kerwin1">[27]</xref>–<xref ref-type="bibr" rid="pone.0073491-Kerwin2">[30]</xref>, vascular <xref ref-type="bibr" rid="pone.0073491-Zygmunt1">[31]</xref> and cardiac development <xref ref-type="bibr" rid="pone.0073491-Takeuchi1">[32]</xref> are presented in three-dimensions through OPT imaging to better describe these developmental processes spatially. Researchers are pushing OPT’s limitations in sample size with custom OPT implementations that can generate images of 3D structure of small samples such as those of single cells <xref ref-type="bibr" rid="pone.0073491-Fauver1">[33]</xref>, <xref ref-type="bibr" rid="pone.0073491-Miao1">[34]</xref> and large samples such as the adult mouse brain <xref ref-type="bibr" rid="pone.0073491-Gleave1">[35]</xref> and the adult mouse heart <xref ref-type="bibr" rid="pone.0073491-Vinegoni1">[36]</xref>. The combination of visualizing gene expression throughout the whole volume of mouse embryos and overall morphology with OPT proves to be essential for studies in neural <xref ref-type="bibr" rid="pone.0073491-Miller1">[37]</xref>, <xref ref-type="bibr" rid="pone.0073491-Lemos1">[38]</xref> and lung <xref ref-type="bibr" rid="pone.0073491-Sato1">[39]</xref>–<xref ref-type="bibr" rid="pone.0073491-Hajduk1">[42]</xref> development as well. OPT also has the potential to investigate in-vivo processes <xref ref-type="bibr" rid="pone.0073491-Colas1">[43]</xref>. Modifications in hardware and the development of sophisticated software algorithms <xref ref-type="bibr" rid="pone.0073491-Zhu1">[44]</xref>, <xref ref-type="bibr" rid="pone.0073491-Rieckher1">[45]</xref> have made real-time visualization of internal structures possible, such as the skeletal and nervous systems of the zebrafish <xref ref-type="bibr" rid="pone.0073491-Fieramonti1">[46]</xref>.</p>
+<p>The majority of these studies were performed using a commercial OPT system distributed by the MRC Technology group named the Bioptonics 3001 OPT scanner. The remaining experiments were performed by custom in-house built OPT systems developed at research institutions with expertise in optics and engineering. The reason for this was two-fold: a limited number of the Bioptonics 3001 OPT scanners were produced and eventually this product was discontinued. The Bioptonics 3001 OPT scanner employed an uncooled CCD camera and an objective lens with a relatively small numerical aperture. The choice of the smaller numerical aperture ensured that the sample would be covered by an overly generous depth of field, but at a serious sacrifice in resolution. The company, Bioptonics, is no longer developing or selling new OPT systems and at present there is no OPT product that can be purchased by labs and institutes that need one.</p>
+<p>Open access to design and operational protocols of imaging systems is essential for further development and its adoption in biological research. Open access initiatives have recently been published for both SPIM <xref ref-type="bibr" rid="pone.0073491-Pitrone1">[47]</xref> and integrated microscopy systems <xref ref-type="bibr" rid="pone.0073491-Gualda1">[48]</xref>. Presented here are hardware and software components, along with assembly instructions, required to successfully build and install a fully functional optical projection tomography system. In addition, we describe algorithms to align the optics and moving stages and correct for deviations in the center of rotation. This reference will be essential for research institutes that would like to use OPT for their respective biological application but do not have the expertise to build a custom system from first principles.</p>
+</sec><sec id="s2" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<sec id="s2a">
+<title>System Parameters</title>
+<p>The optical parameters of the presented OPT system are determined by the coupling of the 0.5× objective lens, 1.38× TV tube, and CCD. These parameters are listed in <xref ref-type="table" rid="pone-0073491-t001">Table 1</xref> for minimum and maximum magnification. The flexible zoom range is capable of imaging a sample as large as the adult mouse brain <xref ref-type="bibr" rid="pone.0073491-Gleave1">[35]</xref> and as miniscule as the E9.5 (Embryonic Day 9.5) embryo <xref ref-type="bibr" rid="pone.0073491-Anderson1">[49]</xref>.</p>
+<table-wrap id="pone-0073491-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0073491.t001</object-id><label>Table 1</label><caption>
+<title>Optical parameters of the described OPT system.</title>
+</caption><alternatives><graphic id="pone-0073491-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0073491.t001" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Mode</td>
+<td align="left" rowspan="1" colspan="1">MAG.</td>
+<td align="left" rowspan="1" colspan="1">N.A.</td>
+<td align="left" rowspan="1" colspan="1">D.O.F. (mm)</td>
+<td align="left" rowspan="1" colspan="1">F.O.V. (mm)</td>
+<td align="left" rowspan="1" colspan="1">Pixel Size (µm)</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">Minimum Magnification</td>
+<td align="left" rowspan="1" colspan="1">0.52</td>
+<td align="left" rowspan="1" colspan="1">0.0094</td>
+<td align="left" rowspan="1" colspan="1">6.2</td>
+<td align="left" rowspan="1" colspan="1">13×13</td>
+<td align="left" rowspan="1" colspan="1">12.8</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Maximum Magnification</td>
+<td align="left" rowspan="1" colspan="1">5.2</td>
+<td align="left" rowspan="1" colspan="1">0.094</td>
+<td align="left" rowspan="1" colspan="1">0.062</td>
+<td align="left" rowspan="1" colspan="1">1.5×1.5</td>
+<td align="left" rowspan="1" colspan="1">1.5</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt101"><label/><p>Optical parameters of the described OPT system are listed for both maximum and minimum magnification. MAG = magnification, N.A. = numerical aperture, D.O.F. = depth of field, F.O.V = field of view.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s2b">
+<title>Assembly Instructions</title>
+<p>Part numbers for the hardware are listed in <xref ref-type="table" rid="pone-0073491-t002">Table 2</xref> and a more detailed hardware parts list is available in <xref ref-type="supplementary-material" rid="pone.0073491.s001">Table S1</xref>. The arrangement of hardware components and the orientation of the Cartesian axes are demonstrated in <xref ref-type="fig" rid="pone-0073491-g001">Figure 1</xref>. Autodesk schematics for custom hardware are downloadable as supplementary material at <ext-link ext-link-type="uri" xlink:href="http://www.mouseimaging.ca/technologies/opt.html" xlink:type="simple">www.mouseimaging.ca/technologies/opt.html</ext-link>. The minimum requirements for the OPT computer hardware includes a dual-core central processing unit (CPU) and a discrete graphics processing unit (GPU) with a modern version of the Windows operating system installed. The tested computer set-up was assembled with an Intel Xeon E5502 CPU, NVidia Quadro FX580 GPU and 4 GB of RAM running a 32-bit Windows XP Professional Service Pack 3 operating system. Labview by National Instruments and Matlab by Mathworks must be installed if the downloadable OPT controlling software and calibration software are to be used. The downloadable software were written and tested using Labview 2009 and Matlab 2009b, however, both pieces of software are compatible with, and were recently tested on, Labview 2012 and Matlab R2012a. The Matlab image processing toolbox and the National Instruments Vision Development module must also be installed to use the supplied OPT software.</p>
+<fig id="pone-0073491-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0073491.g001</object-id><label>Figure 1</label><caption>
+<title>Diagram of custom-built OPT hardware set-up.</title>
+<p>OPT system set-up is presented in three different views to identify each hardware component and its relation to all other parts in the OPT system. The hardware parts are labeled in the view in which they are best displayed. The assembly of parts is described in the text and the parts list is available in <xref ref-type="table" rid="pone-0073491-t001">Table 1</xref>.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0073491.g001" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0073491-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0073491.t002</object-id><label>Table 2</label><caption>
+<title>OPT hardware parts list.</title>
+</caption><alternatives><graphic id="pone-0073491-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0073491.t002" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Element</td>
+<td align="left" rowspan="1" colspan="1">Vendor</td>
+<td align="left" rowspan="1" colspan="1">Description</td>
+<td align="left" rowspan="1" colspan="1">Part #</td>
+<td align="left" rowspan="1" colspan="1">Quantity</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Breadboard</bold></td>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Optical Breadboard</td>
+<td align="left" rowspan="1" colspan="1">RG-25-4-ML</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Microscope</bold></td>
+<td align="left" rowspan="1" colspan="1">Qioptiq</td>
+<td align="left" rowspan="1" colspan="1">“C” Mount Coupler</td>
+<td align="left" rowspan="1" colspan="1">33-02-00-000</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Qioptiq</td>
+<td align="left" rowspan="1" colspan="1">1.38x TV tube</td>
+<td align="left" rowspan="1" colspan="1">30-58-03-000</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Qioptiq</td>
+<td align="left" rowspan="1" colspan="1">Junction box</td>
+<td align="left" rowspan="1" colspan="1">30-17-74-000</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Qioptiq</td>
+<td align="left" rowspan="1" colspan="1">Wall transformer</td>
+<td align="left" rowspan="1" colspan="1">30-17-31-000</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Qioptiq</td>
+<td align="left" rowspan="1" colspan="1">Upper core zoom w/stepper motor</td>
+<td align="left" rowspan="1" colspan="1">30-51-67-000</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Qioptiq</td>
+<td align="left" rowspan="1" colspan="1">0.5X Objective</td>
+<td align="left" rowspan="1" colspan="1">30-57-30-000</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Qioptiq</td>
+<td align="left" rowspan="1" colspan="1">Stepper Motor Drive</td>
+<td align="left" rowspan="1" colspan="1">30-17-78-000</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Qioptiq</td>
+<td align="left" rowspan="1" colspan="1">Connector DB25</td>
+<td align="left" rowspan="1" colspan="1">301730-802</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Qioptiq</td>
+<td align="left" rowspan="1" colspan="1">Connector DB9</td>
+<td align="left" rowspan="1" colspan="1">301730-803</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>CCD</bold></td>
+<td align="left" rowspan="1" colspan="1">Qimaging</td>
+<td align="left" rowspan="1" colspan="1">Retiga 4000DC</td>
+<td align="left" rowspan="1" colspan="1">RET-4000DC-R-F-M-12-C</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Custom</td>
+<td align="left" rowspan="1" colspan="1">Custom CCD-to-microscope adapter</td>
+<td align="left" rowspan="1" colspan="1">CP-9</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Custom</td>
+<td align="left" rowspan="1" colspan="1">Height Spacer</td>
+<td align="left" rowspan="1" colspan="1">CP-4</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Cuvette</bold></td>
+<td align="left" rowspan="1" colspan="1">Hellma</td>
+<td align="left" rowspan="1" colspan="1">50 mm Light path large cell</td>
+<td align="left" rowspan="1" colspan="1">704.003-OG</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Custom</td>
+<td align="left" rowspan="1" colspan="1">Cuvette holder</td>
+<td align="left" rowspan="1" colspan="1">CP-8</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Stages</bold></td>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Linear stage, 2.0 inch travel</td>
+<td align="left" rowspan="1" colspan="1">443</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Linear stage, 1.0 inch travel</td>
+<td align="left" rowspan="1" colspan="1">423</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Rotation stage</td>
+<td align="left" rowspan="1" colspan="1">PR50CC</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">90° Angle bracket</td>
+<td align="left" rowspan="1" colspan="1">360-90</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Vernier micrometer, 25 mm travel</td>
+<td align="left" rowspan="1" colspan="1">SM-25</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Power Supply</td>
+<td align="left" rowspan="1" colspan="1">SMC-PS80</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Motorized actuator, 50 mm travel</td>
+<td align="left" rowspan="1" colspan="1">LTA-HS</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Single-axis motion controller/driver</td>
+<td align="left" rowspan="1" colspan="1">SMC100CC</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Rail Carrier</td>
+<td align="left" rowspan="1" colspan="1">prc-3</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Rail Carrier</td>
+<td align="left" rowspan="1" colspan="1">prc-1</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">24" Precision Dovetail Rail</td>
+<td align="left" rowspan="1" colspan="1">prl-24</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">12" Precision Dovetail Rail</td>
+<td align="left" rowspan="1" colspan="1">PRL-12</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">USB Interface</td>
+<td align="left" rowspan="1" colspan="1">SMC-USB</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Custom</td>
+<td align="left" rowspan="1" colspan="1">Steel disk mount for rotation stage</td>
+<td align="left" rowspan="1" colspan="1">CP-1</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Custom</td>
+<td align="left" rowspan="1" colspan="1">Adapter plate: microscope-rail guides</td>
+<td align="left" rowspan="1" colspan="1">CP-2</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Custom</td>
+<td align="left" rowspan="1" colspan="1">Adapter plate:PR50CC-to-360-90</td>
+<td align="left" rowspan="1" colspan="1">CP-6</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Illumination (WH)</bold></td>
+<td align="left" rowspan="1" colspan="1">Edmund Optics</td>
+<td align="left" rowspan="1" colspan="1">Telecentric Backlight Illuminator</td>
+<td align="left" rowspan="1" colspan="1">NT62-760</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Edmund Optics</td>
+<td align="left" rowspan="1" colspan="1">Fiber Optic Light Guide Adapter</td>
+<td align="left" rowspan="1" colspan="1">NT38-944</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Edmund Optics</td>
+<td align="left" rowspan="1" colspan="1">Flexible Fiber Optic Light Guide</td>
+<td align="left" rowspan="1" colspan="1">NT42-346</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Edmund Optics</td>
+<td align="left" rowspan="1" colspan="1">Silver Series Mounting Clamp</td>
+<td align="left" rowspan="1" colspan="1">NT56-870</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Edmund Optics</td>
+<td align="left" rowspan="1" colspan="1">115V, MI-150 Fiber Optic Illuminator</td>
+<td align="left" rowspan="1" colspan="1">NT59-235</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Iris Diaphragm</td>
+<td align="left" rowspan="1" colspan="1">ID-1.5</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Post Mounting Ring</td>
+<td align="left" rowspan="1" colspan="1">LT10-PR</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Custom</td>
+<td align="left" rowspan="1" colspan="1">Height spacer for iris</td>
+<td align="left" rowspan="1" colspan="1">CP-5</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Custom</td>
+<td align="left" rowspan="1" colspan="1">Height spacer for telecentric lens</td>
+<td align="left" rowspan="1" colspan="1">CP-7</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Illumination (UV)</bold></td>
+<td align="left" rowspan="1" colspan="1">EXFO</td>
+<td align="left" rowspan="1" colspan="1">X-Cite exacte system with lamp</td>
+<td align="left" rowspan="1" colspan="1">P010-00230R</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Edmund Optics</td>
+<td align="left" rowspan="1" colspan="1">Focusing Assembly</td>
+<td align="left" rowspan="1" colspan="1">NT58-837</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Semrock</td>
+<td align="left" rowspan="1" colspan="1">425/30 BrightLine bandpass filter</td>
+<td align="left" rowspan="1" colspan="1">FF01-425/30-25</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Semrock</td>
+<td align="left" rowspan="1" colspan="1">473 RazorEdge long-pass Filter</td>
+<td align="left" rowspan="1" colspan="1">LP02-473RU-50.8-D</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Filter Wheel Hub</td>
+<td align="left" rowspan="1" colspan="1">FWMH</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Filter Carrier</td>
+<td align="left" rowspan="1" colspan="1">FWC-25T</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Thorlabs</td>
+<td align="left" rowspan="1" colspan="1">60 mm Cage Filter Wheel</td>
+<td align="left" rowspan="1" colspan="1">LCFW5</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Optical Post Holder, 1.9 inch</td>
+<td align="left" rowspan="1" colspan="1">VPH-1-P</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Optical Post Holder, 2.19 inch</td>
+<td align="left" rowspan="1" colspan="1">VPH-2-P</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Clamping Fork</td>
+<td align="left" rowspan="1" colspan="1">PS-F</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">Optical Mounting Post, 0.5 inch</td>
+<td align="left" rowspan="1" colspan="1">SP-1.5</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Newport</td>
+<td align="left" rowspan="1" colspan="1">V-Block</td>
+<td align="left" rowspan="1" colspan="1">VB-1</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Custom</td>
+<td align="left" rowspan="1" colspan="1">Emission filter wheel mount</td>
+<td align="left" rowspan="1" colspan="1">CP-3</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt102"><label/><p>All parts needed for the presented OPT system are listed here, both commercially available and custom-made. Illumination assembly is separated for hardware parts required for white light (WH) and ultraviolent (UV) illumination. A more descriptive parts lists along with optional system additions are included in <xref ref-type="supplementary-material" rid="pone.0073491.s001">Table S1</xref>.</p></fn></table-wrap-foot></table-wrap><sec id="s2b1">
+<title>Step 1: Base</title>
+<p>Attach the long optical rail (PRL-24) to the optical breadboard (RG-25-4-ML) along its longest dimension (z-axis). Attach the shorter optical rail (PRL-12) on the breadboard coaxially to the longer rail on the z-axis. The distance between the two optical rails should be approximately 30 cm.</p>
+</sec><sec id="s2b2">
+<title>Step 2: Translation stages</title>
+<p>Attach a stage (423) with a Vernier micrometer (SM-25) to the optical table such that the stage axis of movement is along the x-axis, perpendicular to the optical rails. This will be act as fine adjustment along the x-axis to place the center of rotation in the middle of the field of view (FOV) of the camera. Attach another stage (443) with a motorized actuator (LTA-HS) on top of the 423 stage such that it actuates along the z-axis, the same axis as the optical rail. This will act as the focus motor in the OPT system, working to bring the sample into and out of the focal plane. Place the custom cuvette holder (CP-7) on top of the 443 stage. Using screws, secure a 90° angle bracket (360–90) and the cuvette holder to the 443 stage. Attach another stage (443) with a motorized actuator (LTA-HS) to the 90<bold>°</bold> angle bracket so that the stage movement will be along the y-axis. This stage will act as fine adjustment for the sample along the y-axis so it can be centered into the FOV of the camera. Lastly, attach another angle bracket (360–90) to the vertical 443 stage. This bracket will be used to mount the rotation stage.</p>
+</sec><sec id="s2b3">
+<title>Step 3: Rotation stage</title>
+<p>Attach the custom magnetic disc (CP-1) and the custom rotation stage interface plate (CP-6) to the rotation stage (PR50CC). Next, attach the rotation stage assembly to the angle bracket so that the magnetic disc is facing downwards (along y-axis).</p>
+</sec><sec id="s2b4">
+<title>Step 4: Microscope</title>
+<p>First, attach the custom microscope interface plate (CP-2) to two rail carriers (PRC-1). Then, attach the microscope interface plate to the upper core of the microscope (30-51-67-000). Place the rail carriers on the long optical rail and then attach the objective lens (30-57-30-000) and TV tube (30-58-03-000) to the upper core of the microscope.</p>
+</sec><sec id="s2b5">
+<title>Step 5: CCD</title>
+<p>To align the heights of the CCD (RET-4000DC-R-F-M-12-C) and microscope, place the custom spacer (CP-4) between the CCD and rail carrier (PRC-1) and screw the three components together. This requires the underside of the center hole on the rail carrier to be counterbored to accommodate the screw. Screw the custom CCD-to-microscope adapter (CP-9) onto the CCD. Place the rail carrier for the CCD onto the long optical rail and slide the CCD assembly onto the microscope and fasten the setscrews.</p>
+</sec><sec id="s2b6">
+<title>Step 6: White light and iris diaphragm</title>
+<p>Attach the telecentric backlight illuminator (NT62-760) to the clamp (NT57-870) and mount this assembly onto a rail carrier (PRC-3) using a shim washer between the clamp and rail carrier to elevate the illuminator to the same height as the microscope and CCD. Mount this new illuminator assembly to the short optical rail, facing the microscope. Mount the iris diaphragm (ID-1.5) to a rail carrier (PRC-1) with a custom spacer (CP-5) between these two components to elevate and align the center of the iris to the center of the microscope assembly along the optical axis (z-axis). Place the iris diaphragm assembly on the short optical rail just in front of the telecentric illuminator. The adjustable iris is needed when using the microscope at high magnifications, to minimize the contributions of internal reflections within the illuminator and, therefore, produce a homogeneous bright-field over the FOV of the camera. Lastly, (not shown in <xref ref-type="fig" rid="pone-0073491-g001">Figure 1</xref>) attach the white light source (NT59-235) to the back-end of the illuminator by fiber-optic cable (NT42346) using the appropriate adapter (NT38-944).</p>
+</sec><sec id="s2b7">
+<title>Step 7: Emission filter wheel</title>
+<p>Attach the emission filter wheel (LCFW5) to the custom filter wheel mount (CP-3). Position and screw down the filter wheel assembly onto the breadboard such that the filters are positioned in front of the objective lens and that the objective does not interfere with the rotation of the filter wheel.</p>
+</sec><sec id="s2b8">
+<title>Step 8: Excitation focusing lens and filter wheel</title>
+<p>Mount the V-Block (VB-1) to an optical mounting post (SP-1.5) and insert the post into a 1 inch post holder (VPH-1-P). Mount the excitation filter wheel assembly (6x FWC-25T, FWMH) to an optical mounting post (SP-1.5) and insert the post into a 2 inch post holder (VPH-2-P). Position and clamp the V-Block and excitation filter wheel assemblies to the breadboard using clamping forks (PS-F). Clamp the excitation focusing lens (NT58-837) to the V-Block. Insert the UV light source (P010-00230R) into the focusing lens through fiber optic (not shown in <xref ref-type="fig" rid="pone-0073491-g001">Figure 1</xref>).</p>
+</sec><sec id="s2b9">
+<title>Step 9: Initialization of hardware components on the personal computer</title>
+<p>Connect each actuator cable to its own controller box (SMC100CC). Using the provided manufacturers software and instructions, initialize each actuator on your computer, each with their own respective channel. Test the functionality of each actuator using the manufacturers software before attempting to use them with the provided Labview OPT software. Connect the CCD to the computer and install the manufacturer supplied device drivers and software. Again, make sure the camera is operational via the manufacturer software before using the supplied Labview program. Lastly, connect the microscope controller to the computer and initialize the zoom mechanism using the supplied drivers and software. Once the hardware components are recognized and functional through PC connection, the provided Labview software template can be used for the subsequent presented alignment and image acquisition steps.</p>
+</sec></sec><sec id="s2c">
+<title>Alignment Procedure</title>
+<p>The following is a description of a method to ensure proper optical alignment of the aforementioned hardware components which is essential for successful OPT image acquisition. One can use the software supplied by the microscope, camera, and stage actuator manufacturers in tandem to execute this alignment process. Equivalently, the downloadable Labview software integrates all these controllers together, which may be the most robust method in carrying out the following procedure. A downloadable Matlab script can be used to make the calibration process more user friendly as well. Code for operational and calibration software can also be found at <ext-link ext-link-type="uri" xlink:href="http://www.mouseimaging.ca/technologies/opt.html" xlink:type="simple">www.mouseimaging.ca/technologies/opt.html</ext-link>.</p>
+<p>A phantom is required for the outlined alignment process. For example, a 1 mm ball bearing embedded in low-melting point agarose cleared with BABB (2∶1 benzyl benzoate, benzyl alcohol solution).</p>
+<sec id="s2c1">
+<title>Step 1: Positioning the optics</title>
+<p>The microscope-CCD assembly should be positioned on the long optical rail such that the objective lens is its working distance away (16cm) from the center of the focusing stage’s travel range (i.e. 25 mm). The easiest way to approach this is to suspend an object from the rotation stage, set the focusing actuator to 25 mm, and move the microscope-CCD assembly along the z-axis of the optical rail until the object is in focus.</p>
+</sec><sec id="s2c2">
+<title>Step 2: Align CCD and microscope</title>
+<p>Turn on the white light source. At minimum zoom, suspend the ball-bearing phantom from the rotation stage and use the height displacement actuator (y-direction) to place the ball bearing at the center of the FOV of the CCD. Increase the zoom level towards maximum zoom. If aligned correctly, the centroid of the ball bearing would remain in the center of the FOV. If the centroid moves during zoom action, adjust the screws on the camera-microscope mount to attain columnarity.</p>
+</sec><sec id="s2c3">
+<title>Step 3: Align the stage assembly with the microscope</title>
+<p>With the ball bearing at the center of the CCD FOV, move the focus actuator (z- direction). Again, if the stage assembly is perfectly aligned with the microscope-CCD assembly the centroid of the ball bearing should not move with the focus motor. If the stages are not aligned with the optics, rotate the stage assembly in the XZ plane until the focus motor is parallel to the microscope. Re-test and rotate again if necessary.</p>
+<p>At minimum zoom, center the ball bearing on the center vertical of the FOV and place it at the bottom of the FOV with the height actuator. Raise the ball bearing in the y-direction until the bead reaches the top of the FOV. If the ball bearing deviates from the center vertical, shim the stage assembly to rotate the stage assembly in the XY plane until this test is passed.</p>
+<p>At a medium zoom setting, set the ball bearing away from the center of rotation such that throughout a 360 degree rotation, the ball bearing does not escape the FOV. Acquire an image of the ball bearing at 10 degree steps throughout one revolution. In Matlab or equivalent graphing program, trace the centroid of the ball bearing throughout the 360 degree rotation. The path should appear as an ellipse (<xref ref-type="fig" rid="pone-0073491-g002">Figure 2a</xref>).</p>
+<fig id="pone-0073491-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0073491.g002</object-id><label>Figure 2</label><caption>
+<title>Alignment of the stage assembly with the OPT microscope carving out an ellipse using a bead phantom.</title>
+<p>In this example, the stage assembly is rotated in both the XY and YZ planes with respect to the microscope and the center of rotation is currently at pixel 1100. (A) To align the stage assembly with the microscope in the XY plane, the angle (θ) between the x-axis and the major axis of the ellipse should be reduced from 0.1 to less than 0.01. (B) To align the stage assembly with the microscope in the YZ plane, the diameter of the minor axis should be reduced from 4 pixels to less than 1.5 pixels. (C) To move the center or rotation to the center of the CCD, move the stage assembly such that the center of the ellipse is positioned at the center pixel of the field-of-view (i.e. 1024).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0073491.g002" position="float" xlink:type="simple"/></fig>
+<p>The misalignment due to a rotation in the XY plane can be determined by calculating the angle between the x-axis and major axis of the ellipse (<xref ref-type="fig" rid="pone-0073491-g002">Figure 2a</xref>). Optimally, this angle, θ, should be zero. Shim between the custom cuvette holder (CP-7) and the focus stage (443) to rotate the stage in the XY plane, such that θ is less than +/−0.01 degrees.</p>
+<p>Once the misalignment due to the rotation θ in the XY plane is reduced to zero, the extent of which the system is misaligned due to a rotation in the YZ plane is proportional to the diameter of the minor axis of the ellipse (<xref ref-type="fig" rid="pone-0073491-g002">Figure 2b</xref>). To correct this, the 360-90 bracket that holds the rotation stage can be re-positioned on the vertical stage (443) by re-adjusting the screw locations, resulting in a rotation in the YZ plane. Redraw the ellipse and repeat the aforementioned hardware adjustments until the diameter of the minor axis is less than 1.5 pixels (<xref ref-type="fig" rid="pone-0073491-g002">Figure 2c</xref>).</p>
+<p>The center of rotation (COR) of the system can be measured as the x-coordinate of the center of the ellipse (<xref ref-type="fig" rid="pone-0073491-g002">Figure 2c</xref>). Use the vernier micrometer to move the stage assembly in the x-direction until this center of rotation value is at the center of the CCD.</p>
+</sec></sec><sec id="s2d">
+<title>Acquisition Software (Labview)</title>
+<p>A copy of our custom Labview program for image acquisition and Matlab code for the conversion of the raw binary image files to compatible tiff files for the computer tomography reconstruction software (Skyscan Nrecon) can be found at (<ext-link ext-link-type="uri" xlink:href="http://www.mouseimaging.ca/technologies/opt.html" xlink:type="simple">www.mouseimaging.ca/technologies/opt.html</ext-link>). Brief descriptions of each component of the software are presented below. A flow chart of the acquisition software is illustrated in <xref ref-type="fig" rid="pone-0073491-g003">Figure 3</xref>.</p>
+<fig id="pone-0073491-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0073491.g003</object-id><label>Figure 3</label><caption>
+<title>Flow chart of the Labview OPT software.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0073491.g003" position="float" xlink:type="simple"/></fig><sec id="s2d1">
+<title>Initialization</title>
+<p>The camera and zoom motor must be powered on, before the Labview program is initiated. Once initialized, the three actuators, focus motor, rotation motor, and height motor are homed and reset to their default positions.</p>
+</sec><sec id="s2d2">
+<title>Live preview (White light)</title>
+<p>The white light source is powered on to properly position the sample within the field-of-view of the camera. CCD camera settings such as exposure time, electronic gain, image size, and binning can all be adjusted in the live view. The sample is placed in the OPT system and is suspended from the rotation actuator stage with magnetic contacts. The sample is then lowered into the BABB filled cuvette, by way of the height actuator, until it is fully immersed and within the field of view of the CCD. The sample is centered by fine adjustments to the height actuator along with manual fine adjustments in the x-direction with a set of forceps. To ensure that the sample is centered on the axis of rotation, the sample is rotated 90 degrees, repositioned to the center of the CCD in the x-direction, and rotated another 90 degrees. This is done iteratively until the sample is observed to be rotating on the motors center of rotation. The focus motor is then adjusted until the sample is visually ‘in-focus’.</p>
+</sec><sec id="s2d3">
+<title>Live preview (UV Light)</title>
+<p>The white light source is powered off and the UV source powered on when imaging in emission mode. The appropriate excitation and emission filters are placed in front of the excitation light and objective respectively by way of a filter wheel so that the appropriate wavelength can be used for a chosen fluorophore. The focus motor is finely re-adjusted because of the different wavelength of light. The exposure time for the CCD camera is adjusted so that within the live histogram, the image is Exposed To The Right (ETTR) so that the brightest pixels are close but not more than the ceiling of the 12-bit CCD. This is to maximize the dynamic range so the images will utilize all 12-bits available in the camera. This should be checked at different projection angles as the acquired cumulative signal varies with the orientation of the sample. Once exposure is finalized, the sample is lifted out of the FOV and 10 dark-field images are acquired, which will be later averaged and subtracted from each projection. The sample is then lowered to the exact position it was before and then the scan parameters such as angular step size and number of averages can be updated.</p>
+</sec><sec id="s2d4">
+<title>Acquisition (UV Light)</title>
+<p>At the initialization of the scan, the system enters a loop in which a projection at each angular step is acquired, saved to disk, and then the rotation motor rotates the sample at the designated angular step. This is repeated for the number of projections chosen by the user (360/angular step size). Of special note, the CCD can also be used to trigger the shutter of the UV light source. This will minimize photobleaching; eliminating UV illumination of the sample while the image is being saved to disk as well as while it is rotating through each angular step. The Labview program displays each projection that is acquired, providing a ‘slowly’ refreshing live view. This will allow the user to determine if the sample has shifted or has fallen during the scan acquisition as a result of inadequate mounting.</p>
+</sec><sec id="s2d5">
+<title>Reset</title>
+<p>At the end of the acquisition, the rotation motor has revolved the sample back to its initial so that another scan can be acquired using another channel easily and in the same space. In addition, the shutter of the UV light source is closed after a full acquisition to minimize photobleaching. At this point, another scan can be initiated or the Labview program can be powered off along with the hardware components.</p>
+</sec><sec id="s2d6">
+<title>Preparation for image reconstruction</title>
+<p>The raw data output from the scan must be converted into uncompressed TIFF images before it can be read by the Skyscan Nrecon software. In addition, projection image averaging and the subtraction of background images must be performed as well. The supplied Matlab code averages the raw data and subtracts each projection image from an average of 10 background images before converting to TIFF. These operations are executed post image acquisition in Labview to minimize the processes performed during a scan and, therefore, minimizing scan time and photobleaching. The recon software, Skyscan Nrecon, is identical to that shipped with the commercial Bioptonics scanner and is straightforward to use.</p>
+</sec></sec><sec id="s2e">
+<title>System Characterization</title>
+<p>An investigation of the resolution of the system is measured empirically by measuring the point spread function (PSF) in 3D by imaging a fluorescent bead with a diameter less than that of the system resolution. This measurement was taken at a magnification of 2.871, which corresponds to a stepper count value of 12307 in the Labview software. This magnification corresponds to an image pixel size of 2.45 microns. A line profile of image intensity through the center of the bead along the x and z axes is presented in <xref ref-type="fig" rid="pone-0073491-g004">Figure 4</xref> to determine the lateral and axial resolution respectively. The full width at half maximum is 2.76 and 2.74 pixels for the x and z line profiles respectively. As a result, the lateral and axial resolution of the presented OPT system is 6.77 and 6.72 microns. The resolution at other magnifications can be calculated from these measured values and can be used to determine if an OPT system built using this guide is performing as expected optically.</p>
+<fig id="pone-0073491-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0073491.g004</object-id><label>Figure 4</label><caption>
+<title>3 dimensional point spread function (PSF) of the described OPT system.</title>
+<p>Line profiles of the image intensity through the center of a fluorescent bead along the x (blue) and z (red) axes discretized by pixel number. The full width at half maximum of these line profiles is demonstrative of the lateral and axial resolution of the system (6.77 and 6.72 microns respectively).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0073491.g004" position="float" xlink:type="simple"/></fig></sec></sec><sec id="s3">
+<title>Results and Discussion</title>
+<p>Presented here is a detailed description of how to assemble, install, and use a custom optical projection tomography system that is capable of generating 3-dimensional data sets like <xref ref-type="fig" rid="pone-0073491-g005">Figure 5</xref>. The value of capturing a 3D image demonstrating morphology over the whole volume of the sample is evident in <xref ref-type="fig" rid="pone-0073491-g005">Figure 5</xref>, where an autofluorescence image of an E12.5 C57Bl/6 mouse embryo can be sliced digitally and therefore viewed at any arbitrary orientation such as sagittal, axial, and coronal to observe locations of interest (<xref ref-type="fig" rid="pone-0073491-g005">Figure 5b,c,d</xref>). In addition, the benefit of a custom OPT with a better CCD camera and an objective lens with a larger numerical aperture over the commercial Bioptonics OPT 3001 Scanner is demonstrated in <xref ref-type="fig" rid="pone-0073491-g006">Figure 6</xref>. The higher resolution of the custom built OPT system is visually evident in <xref ref-type="fig" rid="pone-0073491-g006">Figure 6a</xref> where the overall morphology of the E12.5 mouse embryo is sharper and more defined compared to a similar E12.5 mouse embryo autofluorescence image acquired with the Bioptonics 3001 OPT scanner (<xref ref-type="fig" rid="pone-0073491-g006">Figure 6b</xref>). This difference in resolution is most evident in the ability to resolve punctate individual blood pooling in the mouse embryo vasculature in <xref ref-type="fig" rid="pone-0073491-g006">Figure 6a</xref> versus <xref ref-type="fig" rid="pone-0073491-g006">Figure 6b</xref>. Both 3D data sets were acquired at the same magnification and the generated images have an equivalent pixel size. In addition, both 3d data sets run through the same Skyscan recon software with the same parameters.</p>
+<fig id="pone-0073491-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0073491.g005</object-id><label>Figure 5</label><caption>
+<title>E12.5 mouse embryo autofluorescence image acquired with the presented custom OPT system.</title>
+<p>(A) 3D textured rendering of the whole volume of the mouse embryo is illustrated in orange. Digital sections of the same mouse embryo are illustrated in gray-scale demonstrating autofluorescence anatomy data in sagittal (B), coronal (C), and axial planes (D). An equivalent location in anatomy is shown by the location of the red cross-hair. The scale bar is 2 mm.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0073491.g005" position="float" xlink:type="simple"/></fig><fig id="pone-0073491-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0073491.g006</object-id><label>Figure 6</label><caption>
+<title>E12.5 mouse embryo autofluorescence image acquired by the presented custom OPT and the commercial Bioptonics 3001 OPT Scanner.</title>
+<p>Similarly positioned sagittal sections through an E12.5 mouse embryo acquired by the custom OPT (A) and the Bioptonics system (B). The higher resolution produced by the custom scanner is visually evident through sharper and more defined edges as well as the observation of individual blood pooling in the vasculature. The scale bar is 2 mm.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0073491.g006" position="float" xlink:type="simple"/></fig>
+<p>The data output of the presented custom OPT system can also be manipulated for resolution improvement using published methods <xref ref-type="bibr" rid="pone.0073491-Walls2">[50]</xref>. An application where the enhanced resolution of the custom-built system and the resolution improvement detailed by Walls et. al <xref ref-type="bibr" rid="pone.0073491-Walls2">[50]</xref> is needed is early vasculogenesis and vascular patterning in the early mouse embryo. These early blood vessels are approximately 5–10 microns in diameter, which require a resolution that the Bioptonics 3001 OPT scanner cannot achieve. Therefore, this new scanner with FDR and deconvolution can give the requisite &lt;3 micron resolution.</p>
+<p>The presented system is capable of acquiring a full data set of 1200 projections in one channel within approximately 10 minutes with a typical exposure time of 500 ms. This is comparatively very fast considering that the generated data set can achieve a pixel size of 3–5 microns over the volume of a whole mouse embryo. However, the largest gain in throughput would be an automated system in which samples can be imaged sequentially without any user intervention. The presented implementation of an OPT system is a starting point to such a goal, where the Labview program could be modified to position, focus and scan a sample without user input. The real challenge is mounting samples onto rotation stages one after the other to be scanned, as the samples must be stored in BABB before, during, and after image acquisition. The successful addition of robotics to mount these samples onto the OPT system could result in a scan rate of approximately 120 samples scan in a 24 hour day. This would be incredibly useful in large-scale applications such as the International Mouse Phenotyping Consortium (<ext-link ext-link-type="uri" xlink:href="http://www.mousephenotype.org" xlink:type="simple">http://www.mousephenotype.org</ext-link>) from which approximately 30% of 23,000 mouse lines will require mouse embryo phenotyping. 3D imaging has been accepted as a primary screen for embryonic lethal mouse lines and OPT is a leading imaging option for E9.5 mouse embryo screening <xref ref-type="bibr" rid="pone.0073491-Adams1">[51]</xref>. The system described here can be installed in production centers internationally as well as individual research labs at relatively low cost and does not require much physical space or specialized expertise by users. The presented OPT system costs approximately $80,000 to build in hardware parts alone; a relatively low cost compared to commercial high-resolution 3D ex-vivo imaging systems. It is hoped that this paper will help to eliminate the barrier to entry and enable the wider spread use of OPT throughout the research community.</p>
+</sec><sec id="s4">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0073491.s001" mimetype="application/vnd.ms-excel" xlink:href="info:doi/10.1371/journal.pone.0073491.s001" position="float" xlink:type="simple"><label>Table S1</label><caption>
+<p>Detailed OPT hardware parts list. A more detailed description of each OPT hardware part than the information provided in <xref ref-type="table" rid="pone-0073491-t002">Table 2</xref>.</p>
+<p>(XLS)</p>
+</caption></supplementary-material></sec></body>
+<back>
+<ack>
+<p>All individuals who have contributed to this study have been acknowledged as contributing authors.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0073491-Ellegood1"><label>1</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ellegood</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Lerch</surname><given-names>JP</given-names></name>, <name name-style="western"><surname>Henkelman</surname><given-names>RM</given-names></name> (<year>2011</year>) <article-title>Brain abnormalities in a Neuroligin3 R451C knockin mouse model associated with autism</article-title>. <source>Autism Res</source> <volume>4</volume>: <fpage>368</fpage>–<lpage>376</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/aur.215" xlink:type="simple">10.1002/aur.215</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Lerch1"><label>2</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lerch</surname><given-names>JP</given-names></name>, <name name-style="western"><surname>Carroll</surname><given-names>JB</given-names></name>, <name name-style="western"><surname>Spring</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Bertram</surname><given-names>LN</given-names></name>, <name name-style="western"><surname>Schwab</surname><given-names>C</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>Automated deformation analysis in the YAC128 Huntington disease mouse model</article-title>. <source>NeuroImage</source> <volume>39</volume>: <fpage>32</fpage>–<lpage>39</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.neuroimage.2007.08.033" xlink:type="simple">10.1016/j.neuroimage.2007.08.033</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Schneider1"><label>3</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schneider</surname><given-names>JE</given-names></name>, <name name-style="western"><surname>Bamforth</surname><given-names>SD</given-names></name>, <name name-style="western"><surname>Farthing</surname><given-names>CR</given-names></name>, <name name-style="western"><surname>Clarke</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Neubauer</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2003</year>) <article-title>Rapid identification and 3D reconstruction of complex cardiac malformations in transgenic mouse embryos using fast gradient echo sequence magnetic resonance imaging</article-title>. <source>J Mol Cell Cardiol</source> <volume>35</volume>: <fpage>217</fpage>–<lpage>222</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0073491-Cleary1"><label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cleary</surname><given-names>JO</given-names></name>, <name name-style="western"><surname>Price</surname><given-names>AN</given-names></name>, <name name-style="western"><surname>Thomas</surname><given-names>DL</given-names></name>, <name name-style="western"><surname>Scambler</surname><given-names>PJ</given-names></name>, <name name-style="western"><surname>Kyriakopoulou</surname><given-names>V</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Cardiac phenotyping in ex vivo murine embryos using microMRI</article-title>. <source>NMR Biomed</source> <volume>22</volume>: <fpage>857</fpage>–<lpage>866</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/nbm.1400" xlink:type="simple">10.1002/nbm.1400</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Nieman1"><label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nieman</surname><given-names>BJ</given-names></name>, <name name-style="western"><surname>Flenniken</surname><given-names>AM</given-names></name>, <name name-style="western"><surname>Adamson</surname><given-names>SL</given-names></name>, <name name-style="western"><surname>Henkelman</surname><given-names>RM</given-names></name>, <name name-style="western"><surname>Sled</surname><given-names>JG</given-names></name> (<year>2006</year>) <article-title>Anatomical phenotyping in the brain and skull of a mutant mouse by magnetic resonance imaging and computed tomography</article-title>. <source>Physiological Genomics</source> <volume>24</volume>: <fpage>154</fpage>–<lpage>162</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1152/physiolgenomics.00217.2005" xlink:type="simple">10.1152/physiolgenomics.00217.2005</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Wong1"><label>6</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wong</surname><given-names>MD</given-names></name>, <name name-style="western"><surname>Dorr</surname><given-names>AE</given-names></name>, <name name-style="western"><surname>Walls</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>Lerch</surname><given-names>JP</given-names></name>, <name name-style="western"><surname>Henkelman</surname><given-names>RM</given-names></name> (<year>2012</year>) <article-title>A novel 3D mouse embryo atlas based on micro-CT</article-title>. <source>Development</source> <volume>139</volume>: <fpage>3248</fpage>–<lpage>3256</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1242/dev.082016" xlink:type="simple">10.1242/dev.082016</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-deCrespigny1"><label>7</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>de Crespigny</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Bou-Reslan</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Nishimura</surname><given-names>MC</given-names></name>, <name name-style="western"><surname>Phillips</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Carano</surname><given-names>RAD</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>3D micro-CT imaging of the postmortem brain</article-title>. <source>J Neurosci Methods</source> <volume>171</volume>: <fpage>207</fpage>–<lpage>213</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.jneumeth.2008.03.006" xlink:type="simple">10.1016/j.jneumeth.2008.03.006</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Weninger1"><label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Weninger</surname><given-names>WJ</given-names></name>, <name name-style="western"><surname>Mohun</surname><given-names>T</given-names></name> (<year>2002</year>) <article-title>Phenotyping transgenic embryos: a rapid 3-D screening method based on episcopic fluorescence image capturing</article-title>. <source>Nat Genet</source> <volume>30</volume>: <fpage>59</fpage>–<lpage>65</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/ng785" xlink:type="simple">10.1038/ng785</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Weninger2"><label>9</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Weninger</surname><given-names>WJ</given-names></name>, <name name-style="western"><surname>Geyer</surname><given-names>SH</given-names></name>, <name name-style="western"><surname>Mohun</surname><given-names>TJ</given-names></name>, <name name-style="western"><surname>Rasskin-Gutman</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Matsui</surname><given-names>T</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>High-resolution episcopic microscopy: a rapid technique for high detailed 3D analysis of gene activity in the context of tissue architecture and morphology</article-title>. <source>Anat Embryol</source> <volume>211</volume>: <fpage>213</fpage>–<lpage>221</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s00429-005-0073-x" xlink:type="simple">10.1007/s00429-005-0073-x</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Rosenthal1"><label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rosenthal</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Mangal</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Walker</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Bennett</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Mohun</surname><given-names>TJ</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Rapid high resolution three dimensional reconstruction of embryos with episcopic fluorescence image capture</article-title>. <source>Birth Defect Res C</source> <volume>72</volume>: <fpage>213</fpage>–<lpage>223</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/bdrc.20023" xlink:type="simple">10.1002/bdrc.20023</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Pieles1"><label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pieles</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Geyer</surname><given-names>SH</given-names></name>, <name name-style="western"><surname>Szumska</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Schneider</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Neubauer</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2007</year>) <article-title>microMRI-HREM pipeline for high-throughput, high-resolution phenotyping of murine embryos</article-title>. <source>J Anat</source> <volume>211</volume>: <fpage>132</fpage>–<lpage>137</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1469-7580.2007.00746.x" xlink:type="simple">10.1111/j.1469-7580.2007.00746.x</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Huisken1"><label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Huisken</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Stainier</surname><given-names>DYR</given-names></name> (<year>2009</year>) <article-title>Selective plane illumination microscopy techniques in developmental biology</article-title>. <source>Development</source> <volume>136</volume>: <fpage>1963</fpage>–<lpage>1975</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1242/dev.022426" xlink:type="simple">10.1242/dev.022426</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Larin1"><label>13</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Larin</surname><given-names>KV</given-names></name>, <name name-style="western"><surname>Larina</surname><given-names>IV</given-names></name>, <name name-style="western"><surname>Liebling</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Dickinson</surname><given-names>ME</given-names></name> (<year>2009</year>) <article-title>Live Imaging of Early Developmental Processes in Mammalian Embryos with Optical Coherence Tomography</article-title>. <source>J Innov Opt Health Sci</source> <volume>2</volume>: <fpage>253</fpage>–<lpage>259</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1142/S1793545809000619" xlink:type="simple">10.1142/S1793545809000619</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Syed1"><label>14</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Syed</surname><given-names>SH</given-names></name>, <name name-style="western"><surname>Larin</surname><given-names>KV</given-names></name>, <name name-style="western"><surname>Dickinson</surname><given-names>ME</given-names></name>, <name name-style="western"><surname>Larina</surname><given-names>IV</given-names></name> (<year>2011</year>) <article-title>Optical coherence tomography for high-resolution imaging of mouse development in utero</article-title>. <source>J Biomed Opt</source> <volume>16</volume>: <fpage>046004</fpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1117/1.3560300" xlink:type="simple">10.1117/1.3560300</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Larina1"><label>15</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Larina</surname><given-names>IV</given-names></name>, <name name-style="western"><surname>Larin</surname><given-names>KV</given-names></name>, <name name-style="western"><surname>Justice</surname><given-names>MJ</given-names></name>, <name name-style="western"><surname>Dickinson</surname><given-names>ME</given-names></name> (<year>2011</year>) <article-title>Optical Coherence Tomography for live imaging of mammalian development</article-title>. <source>Curr Opin Genet Dev</source> <volume>21</volume>: <fpage>579</fpage>–<lpage>584</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.gde.2011.09.004" xlink:type="simple">10.1016/j.gde.2011.09.004</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Sharpe1"><label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sharpe</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Ahlgren</surname><given-names>U</given-names></name>, <name name-style="western"><surname>Perry</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Hill</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Ross</surname><given-names>A</given-names></name>, <etal>et al</etal>. (<year>2002</year>) <article-title>Optical projection tomography as a tool for 3D microscopy and gene expression studies</article-title>. <source>Science</source> <volume>296</volume>: <fpage>541</fpage>–<lpage>545</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1126/science.1068206" xlink:type="simple">10.1126/science.1068206</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Alanentalo1"><label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alanentalo</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Asayesh</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Morrison</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Lorén</surname><given-names>CE</given-names></name>, <name name-style="western"><surname>Holmberg</surname><given-names>D</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Tomographic molecular imaging and 3D quantification within adult mouse organs</article-title>. <source>Nat Methods</source> <volume>4</volume>: <fpage>31</fpage>–<lpage>33</lpage> Available: <ext-link ext-link-type="uri" xlink:href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&amp;id=17143281&amp;retmode=ref&amp;cmd=prlinks" xlink:type="simple">http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&amp;id=17143281&amp;retmode=ref&amp;cmd=prlinks</ext-link>.</mixed-citation>
+</ref>
+<ref id="pone.0073491-Alanentalo2"><label>18</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alanentalo</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Hörnblad</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Mayans</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Karin Nilsson</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Sharpe</surname><given-names>J</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Quantification and three-dimensional imaging of the insulitis-induced destruction of beta-cells in murine type 1 diabetes</article-title>. <source>Diabetes</source> <volume>59</volume>: <fpage>1756</fpage>–<lpage>1764</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.2337/db09-1400" xlink:type="simple">10.2337/db09-1400</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Alanentalo3"><label>19</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alanentalo</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Lorén</surname><given-names>CE</given-names></name>, <name name-style="western"><surname>Larefalk</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Sharpe</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Holmberg</surname><given-names>D</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>High-resolution three-dimensional imaging of islet-infiltrate interactions based on optical projection tomography assessments of the intact adult mouse pancreas</article-title>. <source>J Biomed Opt</source> <volume>13</volume>: <fpage>054070</fpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1117/1.3000430" xlink:type="simple">10.1117/1.3000430</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Hrnblad1"><label>20</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hörnblad</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Cheddad</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Ahlgren</surname><given-names>U</given-names></name> (<year>2011</year>) <article-title>An improved protocol for optical projection tomography imaging reveals lobular heterogeneities in pancreatic islet and β-cell mass distribution</article-title>. <source>Islets</source> <volume>3</volume>: <fpage>204</fpage>–<lpage>208</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0073491-Walls1"><label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Walls</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>Coultas</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Rossant</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Henkelman</surname><given-names>RM</given-names></name> (<year>2008</year>) <article-title>Three-dimensional analysis of vascular development in the mouse embryo</article-title>. <source>PLoS ONE</source> <volume>3</volume>: <fpage>e2853</fpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0002853" xlink:type="simple">10.1371/journal.pone.0002853</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Lickert1"><label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lickert</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Takeuchi</surname><given-names>JK</given-names></name>, <name name-style="western"><surname>Both von</surname><given-names>I</given-names></name>, <name name-style="western"><surname>Walls</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>McAuliffe</surname><given-names>F</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Baf60c is essential for function of BAF chromatin remodelling complexes in heart development</article-title>. <source>Nature</source> <volume>432</volume>: <fpage>107</fpage>–<lpage>112</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nature03071" xlink:type="simple">10.1038/nature03071</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Jeansson1"><label>23</label>
+<mixed-citation publication-type="other" xlink:type="simple">Jeansson M, Gawlik A, Anderson G, Li C, Kerjaschki D, <etal>et al</etal>.. (2011) Angiopoietin-1 is essential in mouse vasculature during development and in response to injury. J Clin Invest. doi:10.1172/JCI46322.</mixed-citation>
+</ref>
+<ref id="pone.0073491-Short1"><label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Short</surname><given-names>KM</given-names></name>, <name name-style="western"><surname>Hodson</surname><given-names>MJ</given-names></name>, <name name-style="western"><surname>Smyth</surname><given-names>IM</given-names></name> (<year>2010</year>) <article-title>Tomographic quantification of branching morphogenesis and renal development</article-title>. <source>Kidney Int</source> <volume>77</volume>: <fpage>1132</fpage>–<lpage>1139</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/ki.2010.42" xlink:type="simple">10.1038/ki.2010.42</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Rumballe1"><label>25</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rumballe</surname><given-names>BA</given-names></name>, <name name-style="western"><surname>Georgas</surname><given-names>KM</given-names></name>, <name name-style="western"><surname>Combes</surname><given-names>AN</given-names></name>, <name name-style="western"><surname>Ju</surname><given-names>AL</given-names></name>, <name name-style="western"><surname>Gilbert</surname><given-names>T</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Nephron formation adopts a novel spatial topology at cessation of nephrogenesis</article-title>. <source>Developmental Biology</source> <volume>360</volume>: <fpage>110</fpage>–<lpage>122</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.ydbio.2011.09.011" xlink:type="simple">10.1016/j.ydbio.2011.09.011</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Short2"><label>26</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Short</surname><given-names>KM</given-names></name>, <name name-style="western"><surname>Smyth</surname><given-names>IM</given-names></name> (<year>2012</year>) <article-title>Analysis of native kidney structures in three dimensions</article-title>. <source>Methods Mol Biol</source> <volume>886</volume>: <fpage>95</fpage>–<lpage>107</lpage> <comment>doi:_<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/978-1-61779-851-19" xlink:type="simple">10.1007/978-1-61779-851-1_9</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Kerwin1"><label>27</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kerwin</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Scott</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Sharpe</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Puelles</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Robson</surname><given-names>SC</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>3 dimensional modelling of early human brain development using optical projection tomography</article-title>. <source>BMC Neurosci</source> <volume>5</volume>: <fpage>27</fpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1471-2202-5-27" xlink:type="simple">10.1186/1471-2202-5-27</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Lindsay1"><label>28</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lindsay</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Sarma</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Martínez-de-la-Torre</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Kerwin</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Scott</surname><given-names>M</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Anatomical and gene expression mapping of the ventral pallium in a three-dimensional model of developing human brain</article-title>. <source>Neuroscience</source> <volume>136</volume>: <fpage>625</fpage>–<lpage>632</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.neuroscience.2005.06.093" xlink:type="simple">10.1016/j.neuroscience.2005.06.093</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Sarma1"><label>29</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sarma</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Kerwin</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Puelles</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Scott</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Strachan</surname><given-names>T</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>3D modelling, gene expression mapping and post-mapping image analysis in the developing human brain</article-title>. <source>Brain Res Bull</source> <volume>66</volume>: <fpage>449</fpage>–<lpage>453</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.brainresbull.2005.05.022" xlink:type="simple">10.1016/j.brainresbull.2005.05.022</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Kerwin2"><label>30</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kerwin</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Yang</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Merchan</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Sarma</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Thompson</surname><given-names>J</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>The HUDSEN Atlas: a three-dimensional (3D) spatial framework for studying gene expression in the developing human brain</article-title>. <source>J Anat</source> <volume>217</volume>: <fpage>289</fpage>–<lpage>299</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1469-7580.2010.01290.x" xlink:type="simple">10.1111/j.1469-7580.2010.01290.x</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Zygmunt1"><label>31</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zygmunt</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Trzaska</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Edelstein</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Walls</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Rajamani</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>“In parallel” interconnectivity of the dorsal longitudinal anastomotic vessels requires both VEGF signaling and circulatory flow</article-title>. <source>J Cell Sci</source> <volume>125</volume>: <fpage>5159</fpage>–<lpage>5167</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1242/jcs.108555" xlink:type="simple">10.1242/jcs.108555</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Takeuchi1"><label>32</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Takeuchi</surname><given-names>JK</given-names></name>, <name name-style="western"><surname>Lou</surname><given-names>X</given-names></name>, <name name-style="western"><surname>Alexander</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Sugizaki</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Delgado-Olguín</surname><given-names>P</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Chromatin remodelling complex dosage modulates transcription factor function in heart development</article-title>. <source>Nat Commun</source> <volume>2</volume>: <fpage>187</fpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/ncomms1187" xlink:type="simple">10.1038/ncomms1187</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Fauver1"><label>33</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fauver</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Seibel</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Rahn</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>Meyer</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Patten</surname><given-names>F</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Three-dimensional imaging of single isolated cell nuclei using optical projection tomography</article-title>. <source>Opt Express</source> <volume>13</volume>: <fpage>4210</fpage>–<lpage>4223</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0073491-Miao1"><label>34</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Miao</surname><given-names>Q</given-names></name>, <name name-style="western"><surname>Rahn</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>Tourovskaia</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Meyer</surname><given-names>MG</given-names></name>, <name name-style="western"><surname>Neumann</surname><given-names>T</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Dual-modal three-dimensional imaging of single cells with isometric high resolution using an optical projection tomography microscope</article-title>. <source>J Biomed Opt</source> <volume>14</volume>: <fpage>064035</fpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1117/1.3275470" xlink:type="simple">10.1117/1.3275470</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Gleave1"><label>35</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gleave</surname><given-names>JA</given-names></name>, <name name-style="western"><surname>Wong</surname><given-names>MD</given-names></name>, <name name-style="western"><surname>Dazai</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Altaf</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Mark Henkelman</surname><given-names>R</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Neuroanatomical phenotyping of the mouse brain with three-dimensional autofluorescence imaging</article-title>. <source>Physiological Genomics</source> <volume>44</volume>: <fpage>778</fpage>–<lpage>785</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1152/physiolgenomics.00055.2012" xlink:type="simple">10.1152/physiolgenomics.00055.2012</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Vinegoni1"><label>36</label>
+<mixed-citation publication-type="other" xlink:type="simple">Vinegoni C, Razansky D, Figueiredo J-L, Fexon L, Pivovarov M, <etal>et al</etal>.. (2009) Born normalization for fluorescence optical projection tomography for whole heart imaging. J Vis Exp. doi:10.3791/1389.</mixed-citation>
+</ref>
+<ref id="pone.0073491-Miller1"><label>37</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Miller</surname><given-names>SFC</given-names></name>, <name name-style="western"><surname>Summerhurst</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Rünker</surname><given-names>AE</given-names></name>, <name name-style="western"><surname>Kerjan</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Friedel</surname><given-names>RH</given-names></name>, <etal>et al</etal>. (<year>2007</year>) <article-title>Expression of Plxdc2/TEM7R in the developing nervous system of the mouse</article-title>. <source>Gene Expr Patterns</source> <volume>7</volume>: <fpage>635</fpage>–<lpage>644</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.modgep.2006.12.002" xlink:type="simple">10.1016/j.modgep.2006.12.002</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Lemos1"><label>38</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lemos</surname><given-names>MC</given-names></name>, <name name-style="western"><surname>Harding</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Reed</surname><given-names>AAC</given-names></name>, <name name-style="western"><surname>Jeyabalan</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Walls</surname><given-names>GV</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Genetic background influences embryonic lethality and the occurrence of neural tube defects in Men1 null mice: relevance to genetic modifiers</article-title>. <source>J Endocrinol</source> <volume>203</volume>: <fpage>133</fpage>–<lpage>142</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1677/JOE-09-0124" xlink:type="simple">10.1677/JOE-09-0124</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Sato1"><label>39</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sato</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Murphy</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Giles</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Bannigan</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Takayasu</surname><given-names>H</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>Visualizing expression patterns of Shh and Foxf1 genes in the foregut and lung buds by optical projection tomography</article-title>. <source>Pediatr Surg Int</source> <volume>24</volume>: <fpage>3</fpage>–<lpage>11</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s00383-007-2036-1" xlink:type="simple">10.1007/s00383-007-2036-1</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Sato2"><label>40</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sato</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Murphy</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Hajduk</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Takayasu</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Kitagawa</surname><given-names>H</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Sonic hedgehog gene expression in nitrofen induced hypoplastic lungs in mice</article-title>. <source>Pediatr Surg Int</source> <volume>25</volume>: <fpage>967</fpage>–<lpage>971</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s00383-009-2452-5" xlink:type="simple">10.1007/s00383-009-2452-5</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Freem1"><label>41</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Freem</surname><given-names>LJ</given-names></name>, <name name-style="western"><surname>Escot</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Tannahill</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Druckenbrod</surname><given-names>NR</given-names></name>, <name name-style="western"><surname>Thapar</surname><given-names>N</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>The intrinsic innervation of the lung is derived from neural crest cells as shown by optical projection tomography in Wnt1-Cre;YFP reporter mice</article-title>. <source>J Anat</source> <volume>217</volume>: <fpage>651</fpage>–<lpage>664</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1469-7580.2010.01295.x" xlink:type="simple">10.1111/j.1469-7580.2010.01295.x</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Hajduk1"><label>42</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hajduk</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Murphy</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Puri</surname><given-names>P</given-names></name> (<year>2010</year>) <article-title>Mesenchymal expression of Tbx4 gene is not altered in Adriamycin mouse model</article-title>. <source>Pediatr Surg Int</source> <volume>26</volume>: <fpage>407</fpage>–<lpage>411</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s00383-010-2580-y" xlink:type="simple">10.1007/s00383-010-2580-y</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Colas1"><label>43</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Colas</surname><given-names>J-F</given-names></name>, <name name-style="western"><surname>Sharpe</surname><given-names>J</given-names></name> (<year>2009</year>) <article-title>Live optical projection tomography</article-title>. <source>Organogenesis</source> <volume>5</volume>: <fpage>211</fpage>–<lpage>216</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0073491-Zhu1"><label>44</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhu</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Dong</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Birk</surname><given-names>UJ</given-names></name>, <name name-style="western"><surname>Rieckher</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Tavernarakis</surname><given-names>N</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Automated motion correction for in vivo optical projection tomography</article-title>. <source>IEEE Trans Med Imaging</source> <volume>31</volume>: <fpage>1358</fpage>–<lpage>1371</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1109/TMI.2012.2188836" xlink:type="simple">10.1109/TMI.2012.2188836</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Rieckher1"><label>45</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rieckher</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Birk</surname><given-names>UJ</given-names></name>, <name name-style="western"><surname>Meyer</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Ripoll</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Tavernarakis</surname><given-names>N</given-names></name> (<year>2011</year>) <article-title>Microscopic optical projection tomography in vivo</article-title>. <source>PLoS ONE</source> <volume>6</volume>: <fpage>e18963</fpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0018963" xlink:type="simple">10.1371/journal.pone.0018963</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Fieramonti1"><label>46</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fieramonti</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Bassi</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Foglia</surname><given-names>EA</given-names></name>, <name name-style="western"><surname>Pistocchi</surname><given-names>A</given-names></name>, <name name-style="western"><surname>D'Andrea</surname><given-names>C</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Time-gated optical projection tomography allows visualization of adult zebrafish internal structures</article-title>. <source>PLoS ONE</source> <volume>7</volume>: <fpage>e50744</fpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0050744" xlink:type="simple">10.1371/journal.pone.0050744</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Pitrone1"><label>47</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pitrone</surname><given-names>PG</given-names></name>, <name name-style="western"><surname>Schindelin</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Stuyvenberg</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Preibisch</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Weber</surname><given-names>M</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>OpenSPIM: an open-access light-sheet microscopy platform</article-title>. <source>Nat Methods</source> <volume>10</volume>: <fpage>598</fpage>–<lpage>599</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nmeth.2507" xlink:type="simple">10.1038/nmeth.2507</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Gualda1"><label>48</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gualda</surname><given-names>EJ</given-names></name>, <name name-style="western"><surname>Vale</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Almada</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Feijó</surname><given-names>JA</given-names></name>, <name name-style="western"><surname>Martins</surname><given-names>GG</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>OpenSpinMicroscopy: an open-source integrated microscopy platform</article-title>. <source>Nat Methods</source> <volume>10</volume>: <fpage>599</fpage>–<lpage>600</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nmeth.2508" xlink:type="simple">10.1038/nmeth.2508</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Anderson1"><label>49</label>
+<mixed-citation publication-type="other" xlink:type="simple">Anderson GA, Wong MD, Yang J, Henkelman RM (2013) 3D imaging, registration, and analysis of the early mouse embryonic vasculature. Dev Dyn. doi:10.1002/dvdy.23947.</mixed-citation>
+</ref>
+<ref id="pone.0073491-Walls2"><label>50</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Walls</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>Sled</surname><given-names>JG</given-names></name>, <name name-style="western"><surname>Sharpe</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Henkelman</surname><given-names>RM</given-names></name> (<year>2007</year>) <article-title>Resolution improvement in emission optical projection tomography</article-title>. <source>Phys Med Biol</source> <volume>52</volume>: <fpage>2775</fpage>–<lpage>2790</lpage> <comment>doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1088/0031-9155/52/10/010" xlink:type="simple">10.1088/0031-9155/52/10/010</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0073491-Adams1"><label>51</label>
+<mixed-citation publication-type="other" xlink:type="simple">Adams D, Baldock R, Bhattacharya S, Copp AJ, Dickinson M, <etal>et al</etal>.. (2013) Bloomsbury report on mouse embryo phenotyping: recommendations from the IMPC workshop on embryonic lethal screening. Dis Model Mech. doi:10.1242/dmm.011833.</mixed-citation>
+</ref>
+</ref-list></back>
+</article>

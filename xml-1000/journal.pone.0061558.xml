@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group>
+<journal-title>PLoS ONE</journal-title></journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-12-33587</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0061558</article-id>
+<article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Computational biology</subject><subj-group><subject>Genomics</subject><subj-group><subject>Genome sequencing</subject></subj-group></subj-group><subj-group><subject>Sequence analysis</subject></subj-group></subj-group><subj-group><subject>Genetics</subject><subj-group><subject>Gene expression</subject><subj-group><subject>DNA transcription</subject></subj-group></subj-group><subj-group><subject>Animal genetics</subject><subject>Gene networks</subject><subject>Gene splicing</subject></subj-group></subj-group><subj-group><subject>Genomics</subject><subj-group><subject>Genome analysis tools</subject><subj-group><subject>Gene ontologies</subject><subject>Genetic networks</subject><subject>Transcriptomes</subject></subj-group></subj-group><subj-group><subject>Genome expression analysis</subject></subj-group></subj-group><subj-group><subject>Model organisms</subject><subj-group><subject>Animal models</subject><subj-group><subject>Mouse</subject></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Transcriptome Profiling of the Murine Testis during the First Wave of Spermatogenesis</article-title>
+<alt-title alt-title-type="running-head">Transcriptome of the Mouse Testis</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Laiho</surname><given-names>Asta</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Kotaja</surname><given-names>Noora</given-names></name><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Gyenesei</surname><given-names>Attila</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Sironen</surname><given-names>Anu</given-names></name><xref ref-type="aff" rid="aff2"><sup>2</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+</contrib-group>
+<aff id="aff1"><label>1</label><addr-line>The Finnish Microarray and Sequencing Centre, Turku Centre for Biotechnology, University of Turku and Åbo Akademi University, Tykistökatu 6, Turku, Finland</addr-line></aff>
+<aff id="aff2"><label>2</label><addr-line>Agrifood Research Finland, Biotechnology and Food Research, Animal Genomics, Jokioinen, Finland</addr-line></aff>
+<aff id="aff3"><label>3</label><addr-line>Department of Physiology, Institute of Biomedicine, University of Turku, Turku, Finland</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Schlatt</surname><given-names>Stefan</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>University Hospital of Münster, Germany</addr-line></aff>
+<author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">anu.sironen@mtt.fi</email></corresp>
+<fn fn-type="conflict"><p>The authors have declared that no competing interests exist.</p></fn>
+<fn fn-type="con"><p>Conceived and designed the experiments: AL NK AG AS. Performed the experiments: AL NK AS. Analyzed the data: AL NK AS. Contributed reagents/materials/analysis tools: AL NK AG AS. Wrote the paper: AL NK AG AS.</p></fn>
+</author-notes>
+<pub-date pub-type="collection"><year>2013</year></pub-date>
+<pub-date pub-type="epub"><day>17</day><month>4</month><year>2013</year></pub-date>
+<volume>8</volume>
+<issue>4</issue>
+<elocation-id>e61558</elocation-id>
+<history>
+<date date-type="received"><day>29</day><month>10</month><year>2012</year></date>
+<date date-type="accepted"><day>11</day><month>3</month><year>2013</year></date>
+</history>
+<permissions>
+<copyright-year>2013</copyright-year>
+<copyright-holder>Laiho et al</copyright-holder><license xlink:type="simple"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions>
+<abstract>
+<p>Correct gene expression patterns form the basis for male germ cell differentiation and male fertility. Although previous studies have elucidated the importance of testis specific gene expression, the exact transcripts and comprehensive gene expression patterns remain unknown. Large scale sequencing techniques have enabled cost effective analysis of gene expression and isoform studies. Using the SOLiD 4 next-generation sequencing platform we have investigated the gene expression patterns at five different time points during the first wave on murine spermatogenesis. Our results highlight the upregulation of spermatogenesis related biological processes and associated cellular components. Elucidation of differential gene expression at important time points during the sperm development emphasizes the importance of correct timing of gene expression within biological processes. Differential gene level expression was analyzed with R/Bioconductor’s Limma package and isoform analysis was conducted with the Cufflinks pipeline. At gene level total of 2494 differentially expressed genes were identified and Cufflinks characterized over 160 000 gene isoforms, of which 29% were novel transcripts assigned to known genes. Isoforms were detected for 57% of expressed genes and in a total over 26 000 genes were expressed in the testis. Differential promoter and transcription start site usage appears also to play a role in regulation of gene expression during spermatogenesis. Furthermore, we identified 947 upregulated long non-coding RNAs during the first wave of spermatogenesis. These RNAs appeared to be highly specific to different time points. Transcriptomic analysis of testis tissue samples is highly informative due to the large number of expressed genes and identified isoforms. Our study provides a very valuable basis for investigation of gene isoforms and regulation and factors contributing to male fertility.</p>
+</abstract>
+<funding-group><funding-statement>This study was funded by the Academy of Finland (<ext-link ext-link-type="uri" xlink:href="http://www.aka.fi/eng" xlink:type="simple">http://www.aka.fi/eng</ext-link>). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="13"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>Spermatogenesis is a complex process, where spermatogonia develop into highly differentiated spermatozoa through several strictly controlled steps. Mouse spermatogenesis begins by mitotic proliferation of type A, Intermediate and type B spermatogonia. Type B spermatogonia then divide to form early spermatocytes, which marks the beginning of the meiotic phase of spermatogenesis. After the long-lasting prophase of the first meiotic division, the remainder of the cell division process is completed rapidly and two subsequent divisions produce haploid round spermatids. In the last differentiation phase (spermiogenesis), spermatids undergo dramatic cell transformation that includes chromatin condensation and nuclear shaping, removal of excess cytoplasm, and the acrosome and sperm tail formation. Finally, mature spermatozoa are released into the lumen of seminiferous epithelium and transported to the epididymis for further maturation. Development of spermatogonia to haploid spermatids takes approximately 35 days in mice <xref ref-type="bibr" rid="pone.0061558-Oakberg1">[1]</xref>, of which the spermiogenic phase lasts about 2–3 weeks <xref ref-type="bibr" rid="pone.0061558-Tanaka1">[2]</xref>.</p>
+<p>The first wave of spermatogenesis in mouse is initiated only a few days after birth and proceeds in a synchronized manner. Key time points for appearance of particular germ cell types are well defined during this first cycle of spermatogenesis. Seven-day-old mouse testes contain only Sertoli cells (SCs) and spermatogonia in the seminiferous tubules. At postnatal day (PND) 9 early spermatocytes appear, at PND 14 the pachytene stage of the first meiotic prophase is initiated, and at PND 18 late pachytene and diplotene spermatocytes are also present. As a result of meiotic divisions, round spermatids appear around PND 20 and at PND 30 spermatids have already reached the elongation phase and sperm tail accessory structures are being constructed <xref ref-type="bibr" rid="pone.0061558-Bellve1">[3]</xref>. Due to the synchronized progression of the first wave of spermatogenesis, it provides an excellent model system to study gene expression during sperm development.</p>
+<p>Gene expression during spermatogenesis is highly orchestrated and strictly regulated at transcriptional and posttranscriptional level. In order to complete the very complex development of spermatozoa, several specific transcriptional regulators are needed. Transcription is regulated both by epigenetic chromatin modifications and trans-acting factors that bind to the specific DNA sequences in the promoter regions <xref ref-type="bibr" rid="pone.0061558-Steger1">[4]</xref>–<xref ref-type="bibr" rid="pone.0061558-Meikar1">[6]</xref>. In late elongating spermatids transcription is largely silenced as a consequence of the chromatin condensation by histone-protamine transition. Most of the RNAs found in male germ cells during this phase are produced earlier and are translationally regulated in specific ribonucleoprotein particles <xref ref-type="bibr" rid="pone.0061558-Tanaka1">[2]</xref>.</p>
+<p>Previous studies of large scale gene expression in spermatogenesis have been conducted with microarray experiments. Several studies have been dedicated to the identification of gene expression differences in normal versus fertility defected patients (reviewed in <xref ref-type="bibr" rid="pone.0061558-Waclawska1">[7]</xref>). In addition, serial analysis of gene expression (SAGE) and microarray profiling of rodent testis samples and enriched cell populations have identified a large number of genes important for spermatogenesis <xref ref-type="bibr" rid="pone.0061558-Wu1">[8]</xref>–<xref ref-type="bibr" rid="pone.0061558-Eddy1">[15]</xref>. The most comprehensive map of the mammalian testicular expression program at a cell-type specific level identified 7066 genes, which were classified into somatic (1,684), mitotic (2,581), meiotic (1,809), and postmeiotic (1,435) expression clusters, however this classification does not necessarily reflect cell-type specific expression <xref ref-type="bibr" rid="pone.0061558-Chalmel1">[16]</xref>.</p>
+<p>Although these and single gene expression studies have been able to elucidate the stage specificity and complexity of testicular transcription machinery <xref ref-type="bibr" rid="pone.0061558-Wrobel1">[10]</xref>, the overall picture of the gene expression patterns and transcript variety during spermatogenesis is still largely unknown. Over 50% of all known mouse genes have been shown to be expressed during testicular development and over 47% of the expressed transcripts are uncharacterized <xref ref-type="bibr" rid="pone.0061558-Lee1">[17]</xref>. In addition, it has been evaluated that ∼30% of the murine genome is differentially expressed during testis development. Major periods of expressional change occur during the first few days after birth (PND 0–6), at the beginning of meiosis (PND 12–14), and along with the appearance of haploid gametes (around PND 20) <xref ref-type="bibr" rid="pone.0061558-Shima1">[14]</xref>. Microarray experiments are limited to known transcripts and the analysis is hindered by cross-hybridization and high signal to noise ratio. Next-generation sequencing (NGS) has enabled the extensive investigation of gene expression without any prior knowledge of transcript content in the sample. NGS can also identify and quantify rare transcripts and provides information regarding alternative splicing and sequence variation in identified genes.</p>
+<p>In this study, we have analyzed the gene expression differences during the first wave of murine spermatogenesis. Total testis tissue samples at critical time points during germ cell differentiation were collected at PND 7, 14, 17, 21 and 28. Since proper development of male germ cells requires correct function of testicular somatic cells and differences in gene expression may be affected by cell-cell interactions, the whole testis is a desirable sample type for investigation of gene expression during spermatogenesis. Replicate samples were sequenced with the SOLiD 4 platform and analyzed for detection of differential gene expression and splicing variants. In addition, functional annotation of identified gene expression differences highlighted biological processes important for correct sperm development.</p>
+</sec><sec id="s2" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<sec id="s2a">
+<title>Ethics Statement</title>
+<p>All mice were handled in accordance with the institutional animal care policies of the University of Turku. Mice were maintained in a specific pathogen-free stage at the Central Animal Laboratory of the University of Turku and sacrificed by CO<sub>2</sub> inhalation. The studies were approved by the Laboratory Animal Care and Use Committee of the University of Turku.</p>
+</sec><sec id="s2b">
+<title>Animals and Sample Preparation</title>
+<p>Whole testes from two C57BL/6NHsd mice (Mus musculus) of each time point were collected and snap frozen in liquid nitrogen and stored at −80°C prior to RNA extraction. The presence of specific cell types in the testis samples was confirmed with squash preparations of the pieces of the seminiferous tubules followed by phase contrast microscopy. A fraction of the testes was dissected and short tubule segments were cut in PBS <xref ref-type="bibr" rid="pone.0061558-Kotaja1">[18]</xref>. Tubule segments were transferred with a pipette on microscope slides in 15 µl of PBS. A coverslip was placed carefully onto the tubule segment, and the excess fluid was removed by blotting, which allowed the cells to float out from the tubule.</p>
+</sec><sec id="s2c">
+<title>RNA Extraction and Library Preparation</title>
+<p>Total RNA was extracted using RNeasy Midi kit (Qiagen) following the manufacturer’s instructions. The quality and concentrations of the RNA was checked with Agilent's 2100 Bioanalyzer (Agilent) and Nanodrop ND-2000 spectrophotometer (Thermo Scientific). Ribosomal RNA was removed with RibominusTM Eukaryote Kit for RNA-Seq (Invitrogen) and ribosomal RNA-depleted total RNA was fragmented using RNaseIII, to convert the whole transcriptome sample to RNA of a size appropriate for SOLiD™ System sequencing. After cleanup using the PurelinkTM RNA Micro kit, fragmented RNA samples with sufficient yield and an appropriate size distribution were ready for preparation of amplified cDNA libraries. Quality of the fragmentation was checked with Bioanalyzer. The fragmented RNA sample was hybridized and ligated with the Adaptor Mix. RNA population with ligated adaptors was reverse transcribed to generate single-stranded cDNA copies of the fragmented RNA molecules. After a cleanup step using the MinElute® PCR Purification Kit, the sample was subjected to denaturing gel electrophoresis, and gel slices containing cDNA in the desired size range were excised. The size-selected cDNA was amplified using 15 cycles of PCR that takes place in the gel slices. This step appends required terminal sequences to each molecule and generates sufficient template for SOLiD sequencing. After the PCR, the amplified cDNA was cleaned up using PureLinkTM PCR purification kit. Libraries were quantitated with two different methods; Qubit fluorometer (Invitrogen) and quantitative PCR to warrant the accuracy. SOLiD Library TaqMan Quantitation Kit was used for determining the molar concentration of amplified template in a SOLiD library. In qPCR, the standard and unknown library template are amplified using two sequence-specific primers with a TaqMan fluorogenic probe labeled with FAM™ dye and a dye quencher. The uniformity of fragment size of libraries was confirmed with Bioanalyzer. Templated bead preparation was performed by emulsion PCR (ePCR). SOLiD™ EZ Bead™ instrumentation was used for templated bead preparation.</p>
+</sec><sec id="s2d">
+<title>Transcriptomic Data Analysis</title>
+<p>The colorspace reads obtained from the SOLiD sequencer were aligned against the mouse reference genome (mm9 assembly) using the standard whole transcriptome pipeline and the colorspace alignment tool provided by Applied Biosystems and distributed with the instrument (LifeScope v2.1). Reads associated with ribosomal RNA, transfer RNA, repeats and other uninformative reads were filtered out during the process as well as reads with more than 10 potential alignments.</p>
+<p>After alignment to the reference genome, the unique reads were associated with known genes based on Ensembl annotations, and the number of reads aligned within each gene was counted. The counts are reported as RPKM (Reads Per Kilobase of exon model per Million mapped reads) values, which are used for normalizing the count values by taking the gene lengths into account. The values produced are also independent of the total number of the reads in each sample and thus make the data comparable across the sample set.</p>
+<p>Quality control for the data was performed using R/Bioconductor and R-package Limma was used for performing the statistical testing between the groups. Limma was tested with various data normalization and transformation methods, but the choice of preprocessing methods did not have a significant effect in the ranking of the result genes. The sample groups were compared in chronological order. P-value of at least 0.01 and an absolute fold-change of at least two was required for a gene to be called significantly differentially expressed between the groups. It was also required that the samples had at least 10 unit difference between the group mean expression values. TopGO and GOstats R/Bioconductor packages were used for functional enrichment analysis of the differentially expressed filtered gene lists towards KEGG pathways and Gene Ontology categories. Heat maps comparing the enrichment results across comparisons were produced with GENE-E tool (<ext-link ext-link-type="uri" xlink:href="http://www.broadinstitute.org/cancer/software/GENE-E/" xlink:type="simple">http://www.broadinstitute.org/cancer/software/GENE-E/</ext-link>) using pearson’s correlation metrics and average linkage distance metrics.</p>
+<p>Gene variant detection and differential transcript expression analysis were carried out using the Cufflinks pipeline <xref ref-type="bibr" rid="pone.0061558-Trapnell1">[19]</xref>. The LifeScope mapping results were used as an input also for the Cufflinks analysis. In the Cufflinks analysis the counts are reported as FPKM (Fragments Per Kilobase of exon model per Million mapped reads) values. GO enrichment analyses for Cufflinks results were carried out using GOrilla <xref ref-type="bibr" rid="pone.0061558-Eden1">[20]</xref>, <xref ref-type="bibr" rid="pone.0061558-Eden2">[21]</xref>.</p>
+</sec></sec><sec id="s3">
+<title>Results</title>
+<sec id="s3a">
+<title>Data Evaluation</title>
+<p>The samples were sequenced with the SOLiD 4 instrument at 50 bp read length. In total 10 samples were used for the study. Samples were collected at different time points during the first wave of mouse spermatogenesis. Each time point corresponds to specific cell content in the testis. First time point was at PND 7, when only somatic cells and spermatogonia are present in the testis. Thereafter additional cell types are present in selected samples in chronological order: PND 14 contains early spermatocytes, PND 17 late spermatocytes, PND 21 round spermatids and finally PND 28 elongating spermatids. The assumed cell content in each sample was also confirmed by phase contrast microscopy of squash preparations (<xref ref-type="supplementary-material" rid="pone.0061558.s001">Figure S1A</xref>). The analysis of squash preparations confirmed the expected and similar cell content in each sample group. In addition, the testicular weights within the groups were highly comparable (<xref ref-type="supplementary-material" rid="pone.0061558.s001">Figure S1B</xref>). Each time point was analyzed in two biological replicates and PND 7 samples were divided to two barcodes for technical reasons (<xref ref-type="table" rid="pone-0061558-t001">Table 1</xref>).</p>
+<table-wrap id="pone-0061558-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0061558.t001</object-id><label>Table 1</label><caption>
+<title>SOLiD 4 read counts and mapping statistics for individual samples.</title>
+</caption><alternatives><graphic id="pone-0061558-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0061558.t001" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Sample</td>
+<td align="left" rowspan="1" colspan="1">Total reads</td>
+<td align="left" rowspan="1" colspan="1">Mapped reads</td>
+<td align="left" rowspan="1" colspan="1">Mapping rate</td>
+<td align="left" rowspan="1" colspan="1">Total reads passing filters</td>
+<td align="left" rowspan="1" colspan="1">Counted onexons</td>
+<td align="left" rowspan="1" colspan="1">Counted on introns</td>
+<td align="left" rowspan="1" colspan="1">Counted on intergenic regions</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND_7_s1</td>
+<td align="left" rowspan="1" colspan="1">45,706,071</td>
+<td align="left" rowspan="1" colspan="1">21,230,399</td>
+<td align="left" rowspan="1" colspan="1">47%</td>
+<td align="left" rowspan="1" colspan="1">14,518,593</td>
+<td align="left" rowspan="1" colspan="1">9,476,631</td>
+<td align="left" rowspan="1" colspan="1">4,001,849</td>
+<td align="left" rowspan="1" colspan="1">1,040,113</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND_7_s2</td>
+<td align="left" rowspan="1" colspan="1">46,592,933</td>
+<td align="left" rowspan="1" colspan="1">16,249,678</td>
+<td align="left" rowspan="1" colspan="1">35%</td>
+<td align="left" rowspan="1" colspan="1">10,811,100</td>
+<td align="left" rowspan="1" colspan="1">6,911,439</td>
+<td align="left" rowspan="1" colspan="1">3,074,225</td>
+<td align="left" rowspan="1" colspan="1">825,436</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND_14_s1</td>
+<td align="left" rowspan="1" colspan="1">33,787,664</td>
+<td align="left" rowspan="1" colspan="1">16,249,484</td>
+<td align="left" rowspan="1" colspan="1">48%</td>
+<td align="left" rowspan="1" colspan="1">11,373,935</td>
+<td align="left" rowspan="1" colspan="1">7,657,560</td>
+<td align="left" rowspan="1" colspan="1">2,599,696</td>
+<td align="left" rowspan="1" colspan="1">1,116,679</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND_14_s2</td>
+<td align="left" rowspan="1" colspan="1">26,776,971</td>
+<td align="left" rowspan="1" colspan="1">13,525,537</td>
+<td align="left" rowspan="1" colspan="1">50%</td>
+<td align="left" rowspan="1" colspan="1">8,652,432</td>
+<td align="left" rowspan="1" colspan="1">6,946,490</td>
+<td align="left" rowspan="1" colspan="1">1,037,577</td>
+<td align="left" rowspan="1" colspan="1">668,365</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND_17_s1</td>
+<td align="left" rowspan="1" colspan="1">54,374,927</td>
+<td align="left" rowspan="1" colspan="1">25,471,965</td>
+<td align="left" rowspan="1" colspan="1">46%</td>
+<td align="left" rowspan="1" colspan="1">15,825,273</td>
+<td align="left" rowspan="1" colspan="1">13,133,830</td>
+<td align="left" rowspan="1" colspan="1">1,490,487</td>
+<td align="left" rowspan="1" colspan="1">1,200,956</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND_17_s2</td>
+<td align="left" rowspan="1" colspan="1">16,733,599</td>
+<td align="left" rowspan="1" colspan="1">7,235,322</td>
+<td align="left" rowspan="1" colspan="1">43%</td>
+<td align="left" rowspan="1" colspan="1">4,611,709</td>
+<td align="left" rowspan="1" colspan="1">3,890,612</td>
+<td align="left" rowspan="1" colspan="1">404,87</td>
+<td align="left" rowspan="1" colspan="1">316,227</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND_21_s1</td>
+<td align="left" rowspan="1" colspan="1">26,409,512</td>
+<td align="left" rowspan="1" colspan="1">8,475,148</td>
+<td align="left" rowspan="1" colspan="1">32%</td>
+<td align="left" rowspan="1" colspan="1">5,700,864</td>
+<td align="left" rowspan="1" colspan="1">3,961,522</td>
+<td align="left" rowspan="1" colspan="1">1,006,336</td>
+<td align="left" rowspan="1" colspan="1">733,006</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND_21_s2</td>
+<td align="left" rowspan="1" colspan="1">23,544,136</td>
+<td align="left" rowspan="1" colspan="1">11,445,588</td>
+<td align="left" rowspan="1" colspan="1">49%</td>
+<td align="left" rowspan="1" colspan="1">7,403,489</td>
+<td align="left" rowspan="1" colspan="1">6,150,493</td>
+<td align="left" rowspan="1" colspan="1">635,138</td>
+<td align="left" rowspan="1" colspan="1">617,858</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND_28_s1</td>
+<td align="left" rowspan="1" colspan="1">29,895,585</td>
+<td align="left" rowspan="1" colspan="1">15,482,573</td>
+<td align="left" rowspan="1" colspan="1">52%</td>
+<td align="left" rowspan="1" colspan="1">10,513,142</td>
+<td align="left" rowspan="1" colspan="1">8,709,227</td>
+<td align="left" rowspan="1" colspan="1">814,463</td>
+<td align="left" rowspan="1" colspan="1">989,452</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND_28_s2</td>
+<td align="left" rowspan="1" colspan="1">23,640,573</td>
+<td align="left" rowspan="1" colspan="1">9,106,849</td>
+<td align="left" rowspan="1" colspan="1">39%</td>
+<td align="left" rowspan="1" colspan="1">6,141,624</td>
+<td align="left" rowspan="1" colspan="1">5,064,489</td>
+<td align="left" rowspan="1" colspan="1">467,358</td>
+<td align="left" rowspan="1" colspan="1">609,777</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>Total number of reads varied from 18 to 54 million, the mapping rate of filtered reads being 32–52% (<xref ref-type="table" rid="pone-0061558-t001">Table 1</xref>). Most of the reads were mapped on exons (50%), although a high number of reads was also mapped on introns or intergenic regions (<xref ref-type="table" rid="pone-0061558-t001">Table 1</xref>). Some differences in read counts were observed between biological replicates, especially between PND_17_s1 and s2. The starting material (amount of total RNA) was identical in these samples, thus the differences arise possibly from the sample preparation and Solid run. However, the difference in total read counts do not significantly affect the expression analysis, since the RPKM and FPKM values are corrected with the total read count for each sample. Visualization with the IGV confirmed the even distribution of reads throughout the genome and at exonic regions (data not shown).</p>
+<p>For gene expression analysis, only those features were used, which had non-zero count values among the sample set (n = 26 789 genes). The results for total and mapped reads, mapping rate, total reads passing filters, counted exons, introns and intergenic regions are presented in <xref ref-type="table" rid="pone-0061558-t001">Table 1</xref>.</p>
+</sec><sec id="s3b">
+<title>Sample Correlations</title>
+<p>Pearson’s metrics was used to measure the similarity between samples. Correlations between replicate samples varied between 0.97 and 0.99 depicting very high reproducibility. The samples clustered according to the sample groups. PND 14 and 17 sample groups were highly similar to each other. Sample groups PND28 and PND7 were more distant to other groups. <xref ref-type="fig" rid="pone-0061558-g001">Figure 1A</xref> shows the hierarchical clustering of the individual samples.</p>
+<fig id="pone-0061558-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0061558.g001</object-id><label>Figure 1</label><caption>
+<title>Clustering of sample groups and overlapping DE genes.</title>
+<p>A. Hierarchical clustering for the normalized data. Biological replicate samples cluster closely together. Sample groups PND28 and PND7 are more distant to other groups and PND14 and PND17 are similar to each other based on the gene expression differences. B. Total number of overlapping DE genes between comparisons. C. Agreeing and overlapping upregulated genes between comparisons. D. Agreeing and overlapping downregulated genes between comparisons.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0061558.g001" position="float" xlink:type="simple"/></fig></sec><sec id="s3c">
+<title>Comparisons of the Sample Groups</title>
+<p>The sample groups were compared in chronological order using the R-package Limma. Comparison of PND 14 and PND 17 samples had the lowest amount of differentially expressed (DE) genes (<xref ref-type="table" rid="pone-0061558-t002">Table 2</xref>) consistent with the results obtained with hierarchical clustering (<xref ref-type="fig" rid="pone-0061558-g001">Figure 1A</xref>). A high number of DE genes were present between PND 7/14 and 17/21 and 21/28 (<xref ref-type="table" rid="pone-0061558-t002">Table 2</xref>) and most of the identified DE genes were specifically regulated in one comparison (<xref ref-type="fig" rid="pone-0061558-g001">Figure 1B</xref>). Highest difference in gene expression was detected between samples PND21 and PND28 during spermatid differentiation. Total number of 906 DE genes were found between these time points, and 612 of them were differentially expressed only in this comparison (<xref ref-type="table" rid="pone-0061558-t001">Table 1</xref> and <xref ref-type="fig" rid="pone-0061558-g001">Figure 1B</xref>). These results correlate with the expected pattern of gene expression during spermatogenesis. The most prominent morphological and biochemical changes in sperm development occur during spermatid differentiation starting from PND 20. Transcription of genes required for the construction of sperm-specific structures starts already in late spermatocytes and continues throughout the round spermatid phase and in early elongating spermatids. Most of the transcripts needed during the late steps of spermiogenesis have to be present in early elongating spermatids at PND 28 before the cease of transcription in condensing nucleus.</p>
+<table-wrap id="pone-0061558-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0061558.t002</object-id><label>Table 2</label><caption>
+<title>Total number of Ensemble annotated DE genes and up- and downregulated gene numbers between sample groups.</title>
+</caption><alternatives><graphic id="pone-0061558-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0061558.t002" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Tot</td>
+<td align="left" rowspan="1" colspan="1">Up</td>
+<td align="left" rowspan="1" colspan="1">Down</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND7/PND14</td>
+<td align="left" rowspan="1" colspan="1">724</td>
+<td align="left" rowspan="1" colspan="1">632</td>
+<td align="left" rowspan="1" colspan="1">92</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND14/PND17</td>
+<td align="left" rowspan="1" colspan="1">136</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">36</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND17/PND21</td>
+<td align="left" rowspan="1" colspan="1">728</td>
+<td align="left" rowspan="1" colspan="1">665</td>
+<td align="left" rowspan="1" colspan="1">63</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">PND21/PND28</td>
+<td align="left" rowspan="1" colspan="1">906</td>
+<td align="left" rowspan="1" colspan="1">838</td>
+<td align="left" rowspan="1" colspan="1">68</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>Highest correlation in gene expression differences was detected between sample comparison of PND 17/21 and PND 21/28 (total number of common DE genes 255, <xref ref-type="fig" rid="pone-0061558-g001">Figure 1B</xref>), where almost all common DE genes were regulated in the same direction in both comparisons (99%, <xref ref-type="fig" rid="pone-0061558-g001">Figure 1C and D</xref>). High number of overlapping (n = 203) and agreeing (98%) DE genes were also present in sample comparisons of PND 7/14 and PND 17/21 indicating a change in the transcription of same genes at early spermatocyte and spermatid level (<xref ref-type="fig" rid="pone-0061558-g001">Figure 1B–D</xref>). Comparison of PND 14/17 appeared to have more disagreeing DE genes when compared to other comparisons. Also a low number of shared genes with other comparisons were detected, probably due to the low total number of DE genes in this group. Different DE genes appeared also to be present in comparison of PND 7/14 and 21/28, which is expected. The numbers of overlapping differentially expressed features between the comparisons are presented in <xref ref-type="fig" rid="pone-0061558-g001">figure 1B</xref>, agreeing upregulated genes in <xref ref-type="fig" rid="pone-0061558-g001">Figure 1C</xref> and downregulated genes in 1D.</p>
+<p>At gene level highest ranked genes included several ribosomal and mitochondrial genes and non-coding RNAs, which expression was high in all sample groups. However, the amount of highly expressed testis specific genes and the level of expression increased during the progress of spermatogenesis. The twenty highest expressed genes at each time point are shown in <xref ref-type="supplementary-material" rid="pone.0061558.s005">Table S1</xref> and the full gene lists have been submitted to GEO-database (<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/" xlink:type="simple">http://www.ncbi.nlm.nih.gov/geo/</ext-link>) with accession number GSE39970.</p>
+<p>In our experimental setup, the whole testis RNA was used for sequencing, and the produced data includes both germ cell and somatic testicular cell derived transcripts. In order to understand the contribution of somatic cells in the gene expression differences, we analysed the expression patterns of previously identified SC and Leydig cell age specific genes <xref ref-type="bibr" rid="pone.0061558-Ryser1">[22]</xref>, <xref ref-type="bibr" rid="pone.0061558-Takahashi1">[23]</xref>. Very low expression of SC specific genes <italic>Pla2g4a, Gap43</italic> (<xref ref-type="supplementary-material" rid="pone.0061558.s002">Figure S2A</xref>) and no expression for <italic>Pap3</italic> were identified and no change in the expression pattern was detected. In addition, expression of SC secreted anti-Müllerian hormone (<italic>Amh</italic>), follicle-stimulating hormone receptor (<italic>Fshr</italic>) and SC specific cancer-associated genes <xref ref-type="bibr" rid="pone.0061558-Ryser1">[22]</xref> showed low level expression that decreased during the first wave of spermatogenesis, possibly reflecting the increase in germ cell population (<xref ref-type="supplementary-material" rid="pone.0061558.s002">Figure S2A</xref>). The analysis of gene expression of previously identified Leydig cell specific genes <xref ref-type="bibr" rid="pone.0061558-OShaughnessy1">[24]</xref>, <xref ref-type="bibr" rid="pone.0061558-OShaughnessy2">[25]</xref> showed some differences in post-natal gene expression pattern (<xref ref-type="supplementary-material" rid="pone.0061558.s002">Figure S2B</xref>). Two of the analyzed steroidogenic genes (<italic>Star and Vcam1</italic>) had highest expression at PND17 and Cytochrome P450 genes <italic>Cyp11a1</italic> and <italic>Cyp17a1</italic> at PND 28. Development of the adult population of Leydig cells occurs after PND 10 and the expression of steroidogenic genes increases reaching adult levels in the mouse by PND 25 <xref ref-type="bibr" rid="pone.0061558-OShaughnessy2">[25]</xref>, <xref ref-type="bibr" rid="pone.0061558-Vergouwen1">[26]</xref>. Thus, it is possible that some of the identified gene expression differences derive from somatic cells.</p>
+</sec><sec id="s3d">
+<title>Functional Analysis</title>
+<p>TopGO and GOstats R/Bioconductor packages were used for enrichment analysis of the differentially expressed filtered gene lists towards KEGG pathways and Gene Ontology categories. In general, a high number of enriched biological processes and cellular components were found. Analysis of molecular function GO terms resulted with only few significant enrichments. In total 97 GO terms under biological processes were significantly (p&lt;0.01) enriched during the first wave of spermatogenesis (<xref ref-type="fig" rid="pone-0061558-g002">Figure 2A</xref>). Although minor part of the differential gene expression may come from the somatic cells (<xref ref-type="supplementary-material" rid="pone.0061558.s002">Figure S2</xref>), germ cell development associated terms were highlighted in the enrichment analysis. DE genes during the transition from spermatogonia to early spermatocytes (PND7_vs_PND 14) were highly enriched in biological processed involved in mitotic and meiotic pathways. Also expression of genes involved in RNA processing and transport were significantly altered. During meiotic progress (PND 14_vs_PND 17) genes involved in pathways for chromosome organization and nucleus packing were further highlighted. At the onset of post-meiotic spermatid phase (PND 17_vs_PND 21) cell wall associated pathways, pyrimidine processing and ciliary motility were highlighted. Finally, the transition from round to elongating spermatids induced differential expression of genes important for fusion of sperm to egg. Throughout the first wave of spermatogenesis enriched GO terms in biological process were associated with spermatogenesis, reproduction, meiosis and fertilization (<xref ref-type="fig" rid="pone-0061558-g002">Figure 2A</xref>).</p>
+<fig id="pone-0061558-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0061558.g002</object-id><label>Figure 2</label><caption>
+<title>Highest ranked GO terms (p&lt;0.01) with differential expression between sample groups for GO biological processes (A) and cellular components (B) and for KEGG pathways (C).</title>
+<p>The relative significance of term enrichment is indicated by levels of red shading (the lower the p-value the darker shade of red colour). Heat map was produced with GENE-E (<ext-link ext-link-type="uri" xlink:href="http://www.broadinstitute.org/cancer/software/GENE-E/" xlink:type="simple">http://www.broadinstitute.org/cancer/software/GENE-E/</ext-link>) using pearson’s correlation metrics and average linkage distance metrics.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0061558.g002" position="float" xlink:type="simple"/></fig>
+<p>Enriched GO terms under cellular components included 60 different terms (p&lt;0.01, <xref ref-type="fig" rid="pone-0061558-g002">Figure 2B</xref>). Between PND 7 and 14 gene expression in RNA processing associated with chromatoid body, pi-body, p-granule and RNA granule was altered. Also microtubule and cilia related GO terms were enriched already in early spermatocytes (PND14) including centrosome, microtubule organizing center, microtubule cytoskeleton, primary cilium and dynein complex. Furthermore, GO terms related to chromosome organization appeared to be enriched already in early spermatocytes (<xref ref-type="fig" rid="pone-0061558-g002">Figure 2B</xref>). Nucleosomal genes were also differentially expressed already in early spermatocytes and further in late spermatocytes and elongating spermatids. Enriched GO terms between PND 17 and 21 included cilium, flagellum and acrosomal vesicle related terms, which were further enriched between PND 21 and 28 consistent with the sperm tail and acrosome formation in spermatids.</p>
+<p>Our analysis of the enrichment of DE genes in KEGG pathways revealed 13 pathways, which were enriched already between PND 7 and 14. p53 signalling, TCA cycle, cell cycle, basal transcription factors, oocyte meiosis and RNA transcription were mainly enriched in early spermatocytes (<xref ref-type="fig" rid="pone-0061558-g002">Figure 2C</xref>). mRNA surveillance pathway and glycolysis were enriched in all comparisons, but more significantly between PND 7/14 and 14/17 for mRNA and 7/14 and 17/21 for glycolysis. Glycerolipid metabolism and protein processing in endoplasmic reticulum were highly enriched between PND 7/14 and PND 21/28. Fructose and mannose metabolism and pentose phosphate pathway were enriched until PND28. In addition, metabolic pathways were enriched throughout the first wave of spermatogenesis (<xref ref-type="fig" rid="pone-0061558-g002">Figure 2C</xref>).</p>
+</sec><sec id="s3e">
+<title>Functional Comparison of Up- and Downregulated Genes</title>
+<p>Enrichments to GO terms were also analyzed separately for up- and downregulated genes in order to identify direction of gene expression in different terms. This analysis was carried out using GOrilla web tool <xref ref-type="bibr" rid="pone.0061558-Eden1">[20]</xref>, <xref ref-type="bibr" rid="pone.0061558-Eden2">[21]</xref>. <xref ref-type="supplementary-material" rid="pone.0061558.s003">Figure S3</xref> shows the overall distribution of identified GO terms among up- and downregulated gene lists. Consistently with the high number of upregulated genes in each comparison, most of the enriched GO terms of DE genes were identified in the upregulated gene groups. However, in the comparison of PND 14/17 enriched GO terms were statistically significant (p&lt;0.01) only in the downregulated genes. In this comparison, almost all upregulated genes were non-coding or spliceosomal RNA genes (<xref ref-type="supplementary-material" rid="pone.0061558.s006">Table S2</xref>).</p>
+<p>As most of the DE genes were upregulated, also the GO terms identified within the upregulated DE genes corresponded with the GO terms identified within the full set of DE genes (<xref ref-type="fig" rid="pone-0061558-g003">Figure 3</xref>). Gamete generation, germ cell development, sperm-egg recognition, fertilization and sperm motility related GO terms were upregulated in all comparisons (except PND 14/17) (<xref ref-type="fig" rid="pone-0061558-g003">Figure 3A,C and E</xref>). GO terms specific for spermatogonia early spermatocyte transition were cell cycle processes, chromosome organization, RNA transport, DNA metabolic processes (methylation and repair) and ATP and piRNA metabolic processes. Also, specific GO terms were identified for spermatid elongation phase between PND 21 and 28 and were mainly related to fertilization; egg activation, acrosome reaction and membrane fusion. Enriched cellular component terms of upregulated genes correlated with the BP terms (<xref ref-type="fig" rid="pone-0061558-g003">Figure 3B,D and F</xref>). The identified gene expression changes are consistent with the developmental processes in male germ cell maturation. Venn diagrams for sample group comparisons with enriched biological process and cellular component GO terms for upregulated genes are shown in <xref ref-type="supplementary-material" rid="pone.0061558.s004">figure S4</xref>.</p>
+<fig id="pone-0061558-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0061558.g003</object-id><label>Figure 3</label><caption>
+<title>Enriched biological process and cellular component GO terms among upregulated genes.</title>
+<p>Comparison of PND14/17 is not presented due to low number of DE genes. A. PND 7/14 biological processes, B. PND 7/14 cellular component, C. PND 17/21 biological processes, D. PND 17/21 cellular component, E. PND 21/28 biological processes and F. PND 21/28 cellular component. Only lower level GO terms are shown.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0061558.g003" position="float" xlink:type="simple"/></fig>
+<p>GO terms, which were enriched in all sample group comparisons (except PND 14/17) were investigated at gene level in order to see, if same genes are up or downregulated at different time points. Some of the upregulated genes were detected in several sequential group comparisons, but in general, highly specific gene expression was identified between the specific time point comparisons. PND 7/14 and 21/28 appeared to have the most different upregulated gene expression patterns (<xref ref-type="fig" rid="pone-0061558-g001">Figures 1</xref> and <xref ref-type="fig" rid="pone-0061558-g004">4</xref>). We analyzed the DE genes enriched under the GO term gamete generation more carefully and showed that developmental phase specific genes were upregulated in each comparison (<xref ref-type="fig" rid="pone-0061558-g004">Figure 4</xref>). The cellular compartment GO terms identified for these genes demonstrated that genes specifically upregulated in gamete generation between samples PND 7 and 14 (n = 28) were localized to nucleus, cytoplasm, chromatoid body, piP body, polysome, synaptonemal complex and condensed nuclear chromosome (<xref ref-type="fig" rid="pone-0061558-g004">Figure 4</xref>). Specific upregulated genes between PND 17 and 21 (n = 15) were localized in the flagellum and mitochondrial inner membrane peptidase complex and in comparison of PND 21/28 (n = 22) in the acrosomal vesicle, CatSper complex, flagellum and outer dense fiber (<xref ref-type="fig" rid="pone-0061558-g004">Figure 4</xref>). Genes upregulated in all comparisons (n = 6, <italic>Prm1, Tnp2, Tcp11, Spata24, Spata19</italic> and <italic>Tnp1</italic>) were associated with nucleus, nucleosome and chromosome.</p>
+<fig id="pone-0061558-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0061558.g004</object-id><label>Figure 4</label><caption>
+<title>Venn diagram and enriched cellular complex GO terms of upregulated genes in biological process GO term gamete generation.</title>
+<p>Only lower level GO terms are shown.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0061558.g004" position="float" xlink:type="simple"/></fig></sec><sec id="s3f">
+<title>Gene Variant Analysis</title>
+<p>Gene variant detection and differential transcript expression analysis was carried out using the Cufflinks pipeline <xref ref-type="bibr" rid="pone.0061558-Trapnell1">[19]</xref>. On average 17 000 genes, 50 000 known isoforms and 25 000 novel isoforms were expressed in each sample group (FPKM&gt;1, <xref ref-type="fig" rid="pone-0061558-g005">Figure 5A</xref>). Differential promoter and transcription start site usage were also analyzed between all sample groups highlighting 500–800 and 7 000 - 15 000 variants between sample comparisons, respectively (<xref ref-type="fig" rid="pone-0061558-g005">Figure 5B and C</xref>). Although the differential gene expression analysis with Limma showed a low number of DE genes between PND 14 and 17, a high difference in promoter and transcription start site usage was detected with Cufflinks (<xref ref-type="fig" rid="pone-0061558-g005">Figure 5B and C</xref>).</p>
+<fig id="pone-0061558-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0061558.g005</object-id><label>Figure 5</label><caption>
+<title>Gene and isoform counts and promoter and transcription start site usage in sample groups.</title>
+<p>A. Expressed gene, known and novel isoform counts at different time points during the first wave of spermatogenesis. FPKM &gt;1. B. Differential promoter usage in all sample group comparisons. C. Differential transcription start site usage between all sample groups. The comparisons in chronological order during the first wave of spermatogenesis are indicated in black (B and C).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0061558.g005" position="float" xlink:type="simple"/></fig>
+<p>The comparison between transcripts identified by Cufflinks and the Ensembl reference transcripts elucidated the previously unknown splicing events compared to known transcripts. Most of the Cufflinks transcripts (46%) had a complete match with a reference transcript (<xref ref-type="table" rid="pone-0061558-t003">Table 3</xref>). 28% of the identified transcripts were described as potentially novel isoforms and 25% had no match in gene or transcript level to the reference transcripts. Exonic overlap with reference on the opposite strand was found in 937 transcripts (<xref ref-type="table" rid="pone-0061558-t003">Table 3</xref>), which may correspond to potential antisense regulators of sense transcripts. Similar distribution of isoforms was detected for each sample group separately (data not shown). In total 161 362 transcripts were identified in the mouse testis.</p>
+<table-wrap id="pone-0061558-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0061558.t003</object-id><label>Table 3</label><caption>
+<title>Description of identified gene isoforms classes.</title>
+</caption><alternatives><graphic id="pone-0061558-t003-3" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0061558.t003" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Description</td>
+<td align="left" rowspan="1" colspan="1">Transcripts</td>
+<td align="left" rowspan="1" colspan="1">%</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">Exonic overlap with reference on the opposite strand</td>
+<td align="left" rowspan="1" colspan="1">937</td>
+<td align="left" rowspan="1" colspan="1">0.6</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Generic exonic overlap with a reference transcript</td>
+<td align="left" rowspan="1" colspan="1">692</td>
+<td align="left" rowspan="1" colspan="1">0.4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Potentially novel isoform: at least one splice junction is shared with a reference transcript</td>
+<td align="left" rowspan="1" colspan="1">45580</td>
+<td align="left" rowspan="1" colspan="1">28.2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Complete match</td>
+<td align="left" rowspan="1" colspan="1">74122</td>
+<td align="left" rowspan="1" colspan="1">45.9</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">No reference transcript overlap</td>
+<td align="left" rowspan="1" colspan="1">40030</td>
+<td align="left" rowspan="1" colspan="1">24.8</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Total number of transcripts</td>
+<td align="left" rowspan="1" colspan="1">161362</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>The GO term enrichment of the differentially expressed isoforms generated by differential promoter usage were analyzed using GOrilla with differences declared at high significance level (p&lt;10<sup>−6</sup>). Genes with differential promoter usage were associated with molecular function GO terms catalytic activity and binding (protein, ion, nucleotide) in all comparisons. On the whole, general biological processes were enriched within genes related to differential promoter usage (<xref ref-type="fig" rid="pone-0061558-g006">Figure 6A</xref>). Genes associated with enriched biological processes at each time point are presented in <xref ref-type="supplementary-material" rid="pone.0061558.s007">table S3</xref>. Corresponding enrichment pattern was also detected in cellular component GO terms (<xref ref-type="fig" rid="pone-0061558-g006">Figure 6B</xref>). Cytoplasm, nucleus, cytoplasmic part and protein complex were enriched in all comparisons. Genes associated with mitochondria were enriched between PND 14/17 and 17/21. Microtubule and cell projection related genes were enriched between PND 17/21 and cytoskeleton genes between PND 17/21 and 21/28. Finally, genes localized to centrosome were enriched between PND 21 and 28 (<xref ref-type="fig" rid="pone-0061558-g006">Figure 6B</xref>). Centrosome associated genes were involved in centrosome duplication, spindle organization, mitosis, protein localization, regulation of microtubule cytoskeleton organization and cilium assembly.</p>
+<fig id="pone-0061558-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0061558.g006</object-id><label>Figure 6</label><caption>
+<title>Enriched biological process (A) and cellular component (B) GO terms of genes with differential promoter usage between sample groups (p&lt;10<sup>−6</sup>).</title>
+<p>Only lower level terms are shown.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0061558.g006" position="float" xlink:type="simple"/></fig>
+<p>In total 81 genes were identified as differentially expressed specifically at isoform level (<xref ref-type="supplementary-material" rid="pone.0061558.s008">Table S4</xref>). Six of the identified genes (total n = 12) at early spermatogenesis were associated with protein binding (<xref ref-type="supplementary-material" rid="pone.0061558.s008">Table S4</xref>). Most of the DE isoforms (n = 23, not assigned <italic>Zfp706, Usp9x</italic> and <italic>Ifnar1</italic>) between PND 14 and 17 were involved in cellular processes and seven of these genes were associated with protein domain specific binding, nine with nucleotide binding and two with telomeric DNA binding (<xref ref-type="supplementary-material" rid="pone.0061558.s008">Table S4</xref>). DE isoforms between PND 17/21 and 21/28 did not show any significant enriched processes or functions. Although the expression pattern of isoforms generally correlated with the gene level expression patterns, a high number of isoforms identified in this analysis and differential expression patterns of some specific isoforms provide evidence for the complexity of gene expression in male germ cells.</p>
+</sec><sec id="s3g">
+<title>Expression of Non-coding RNAs</title>
+<p>For identification of long non-coding RNAs (lncRNAs) the colorspace reads were mapped against the NONCODERv3 lncRNA dataset using CLC Genomics Workbench (v.5.5.1). In total close to 30 000 ncRNAs were identified as expressed in the analysed sample groups. The ncRNAs with highest expression in all sample groups were mainly ribosomal RNAs with some protein transport (SRP_7SL), transcription elongation related (7SK) and mitochondrial RNAs (AK131596) (<xref ref-type="supplementary-material" rid="pone.0061558.s009">Table S5</xref>).</p>
+<p>The differential expression analysis of lncRNA highlighted specific groups of up- and downregulated genes at each time point during the first wave of spermatogenesis. In total of 108 downregulated (<xref ref-type="fig" rid="pone-0061558-g007">Figure 7A</xref>) and 947 upregulated lncRNAs (<xref ref-type="fig" rid="pone-0061558-g007">Figure 7B</xref>) were identified with high correlation between samples of the same group (<xref ref-type="fig" rid="pone-0061558-g007">Figure 7C</xref>). Highest number of upregulated DE lncRNAs was identified at critical phases of spermatogenesis during the appearance of spermatocytes (PND 7/14) and spermatid differentiation (PND 21/28) (<xref ref-type="fig" rid="pone-0061558-g007">Figure 7B</xref>). The highest number of down regulated genes was detected during early spermatogenesis (PND 7/14), and also between PND 17 and 21 during the transition from the meiotic to the post-meiotic program (<xref ref-type="fig" rid="pone-0061558-g007">Figure 7A</xref>). The downregulation fold change (FC) was low, although some statistically significant (p&lt;0.01, FC &gt;2) DE lncRNAs were identified (<xref ref-type="fig" rid="pone-0061558-g007">Figure 7A</xref>). Upregulated lncRNAs showed higher FCs and expression providing an interesting set of novel DE lncRNA genes during spermatogenesis (<xref ref-type="fig" rid="pone-0061558-g007">Figure 7B</xref>, <xref ref-type="supplementary-material" rid="pone.0061558.s009">Table S5</xref>). Most of the identified lncRNAs had no known function. Thus, the elucidation of the roles of these lncRNAs requires additional studies.</p>
+<fig id="pone-0061558-g007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0061558.g007</object-id><label>Figure 7</label><caption>
+<title>Differentially expressed lncRNAs.</title>
+<p>A. Venn diagram for all identified downregulated DE lncRNAs. B. Venn diagram for all identified upregulated DE lncRNAs. Comp1 =  PND7/14, Comp2 =  PND14/17, Comp3 =  PND17/21, Comp4 =  PND21/28. C. Heat maps for filtered (p&lt;0.01, FC &gt;2) DE lncRNAs between comparisons. Upregulated genes are indicated in red and downregulated in green.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0061558.g007" position="float" xlink:type="simple"/></fig></sec></sec><sec id="s4">
+<title>Discussion</title>
+<p>The first wave of spermatogenesis in the mouse provides an invaluable tool for characterization of gene expression and cellular events during spermatogenesis. Analyzing cells at their physiological environment eliminates the possible changes in expression level due to preparation procedures. However, the heterogeneity of tissue samples needs to be taken into account when interpreting the results. In this study we have extracted testis samples at five different time points during the first wave of spermatogenesis. The cell content in each sample was confirmed with squash preparations (<xref ref-type="supplementary-material" rid="pone.0061558.s001">Figure S1</xref>) and corresponded to expected distributions of the most mature cell types in the seminiferous epithelium: spermatogonia at PND 7, early pachytene spermatocytes at PND 14, late pachytene spermatocytes at PND 17, round spermatids at PND 21 and elongating spermatids at PND 28. In addition all samples contained somatic cells such as Sertoli and Leydig cells, which also contribute to the identified expression patterns and cannot be entirely distinguished from the gene expression in germ cells. The analysis of known genes expressed by SCs indicated that some of the DE downregulated genes may originate from these somatic cells. SCs differentiate until PND 15 and their gene expression also changes based on germ cell content in the seminiferous tubules <xref ref-type="bibr" rid="pone.0061558-Jegou1">[27]</xref>. However, only very low expression levels of SC specific genes were identified in the dataset and no expression difference was seen in previously reported DE Sertoli cell genes <xref ref-type="bibr" rid="pone.0061558-Ryser1">[22]</xref>, <xref ref-type="bibr" rid="pone.0061558-Takahashi1">[23]</xref>. The analysis of Leydig cell specific gene expression showed differential expression for some of the analyzed genes. The steroidogenesis takes place between PND 11 and 35 in the mouse testis inducing the expression of steroidogenic genes in the Leydig cells <xref ref-type="bibr" rid="pone.0061558-OShaughnessy2">[25]</xref>, <xref ref-type="bibr" rid="pone.0061558-Vergouwen1">[26]</xref>. However, the differential expression between consecutive groups was only detected for Cytochrome P450 genes <italic>Cyp11a1</italic> and <italic>Cyp17a1.</italic> Thus a minor part of the identified differential gene expression appears to come from somatic cells in addition to germ cells.</p>
+<p>The Ensemble database contains 37 315 annotated mouse genes (including protein-coding genes, long noncoding RNA genes, pseudogenes, and short noncoding RNA genes), of which we identified 26 789 genes in the mouse testis. This indicates that 72% of all annotated genes are expressed in the testis. In total 2494 DE genes were identified in the comparisons between the consecutive time points, thus 9% of identified genes were differentially expressed. However, in this study we used stringent filtering cutoffs in order to minimize the amount of false positive results and the DE gene counts especially at lower fold change level are substantially higher with less stringent cutoffs. Functional analysis of DE genes revealed enriched GO terms connected to spermatogenesis related processes such as meiosis, piRNA metabolism, nucleus condensation and flagella formation further supporting the correct experimental design. Genes involved in gamete generation, germ cell development, fertilization and sperm motility were upregulated throughout the first wave of spermatogenesis. However, specific set of genes for each GO term appeared to be upregulated in different time point comparisons. Comparisons of GO terms between different time points highlighted the processes and cellular structure characteristics for each phase of spermatogenesis. Cell cycle processes, chromosome organization, RNA transport, protein folding and piRNA processes were specifically upregulated during the transition from spermatogonia to early meiotic cell (PND 7 to PND 14). Acrosome reaction and sperm/egg fusion related terms were enriched during postmeiotic spermiogenesis (PND 21 to PND 28). Only a low number of genes were downregulated in analyzed comparisons. The identified low fold change downregulation may also be due to increase in total gene transcript amounts during progression of spermatogenesis. However, enriched GO terms between samples PND 14 and 17 were only found for downregulated genes. These included mRNA polyadenylation, chromosome condensation and sperm motility and were related to cellular components nucleosome, nucleus and chromosome.</p>
+<p>Previous microarray studies have provided valuable information regarding genes involved in spermatogenesis <xref ref-type="bibr" rid="pone.0061558-Waclawska1">[7]</xref>, <xref ref-type="bibr" rid="pone.0061558-Wrobel1">[10]</xref>, <xref ref-type="bibr" rid="pone.0061558-Chalmel1">[16]</xref>, <xref ref-type="bibr" rid="pone.0061558-Kokkinaki1">[28]</xref>–<xref ref-type="bibr" rid="pone.0061558-WaldmanBenAsher1">[33]</xref>. These studies have indicated the specificity of gene expression during spermatogenesis and possibility to find biomarkers for male infertility. Although microarray experiments have provided some interesting results, the comprehensive understanding of gene expression affecting sperm formation and male fertility requires a deep sequencing approach, which allows the identification of previously unknown transcripts as well as isoform detection.</p>
+<p>Large scale sequencing has enabled discovery of different splicing events and highlighted the high diversity and incidence of different gene isoforms. Previous RNA-seq studies in the human have suggested, that transcripts from approximately 95% of multiexon genes undergo alternative splicing and that there are approximately 100,000 intermediate to high abundance alternative splicing events in major human tissues <xref ref-type="bibr" rid="pone.0061558-Pan1">[34]</xref>. We identified a large number of gene isoforms in the testis during the first wave of spermatogenesis. Compared to the identified gene count (∼15 000, FPKM&gt;1) a considerably high number of gene isoforms (&gt;70 000, FPKM&gt;1) were detected with the Cufflinks package. In total over 160 000 isoforms were identified of which ∼40 000 did not have any reference overlap. Approximately 30% of gene assigned transcripts were characterized as possible novel isoforms and 57% of all expressed genes had at least two isoforms.</p>
+<p>The high isoform count indicates that differences in gene isoforms explain part of the specific events during spermatogenesis. Samples PND 14 and 17 did not have a high number of DE genes in the gene level analysis. However, the isoform analysis showed a considerable number of differential promoter and transcription start site usage events between PND 14 and 17. Thus, the meiosis related differential expression of genes may be more influenced by isoform differences and low level of DE at gene level. In addition, the analysis of lncRNA based on Noncode database highlighted phase specific expression of lncRNAs. Since these lncRNAs have a lower level expression, the comprehensive analysis of these genes requires deep sequencing of enriched cell population samples. Based on this study, it is clear that the identification of novel and tissue specific gene isoforms and ncRNAs is crucial for the comprehension of the complexity of transcriptomes and gene regulation. Our data elucidates the diversity of expressed genes and isoforms during spermatogenesis and lays the ground for further studies of specific factors contributing to male fertility.</p>
+</sec><sec id="s5">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0061558.s001" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0061558.s001" position="float" xlink:type="simple"><label>Figure S1</label><caption>
+<p><bold>Validation of the cell content in the testis tissue samples.</bold> A. Squash preparations of the samples at PND14, 17, 21 and 28. Each sample at specific time point contained similar cell population. Distinctive cell types of each time point are labeled. ePSc, early pachytene spermatocyte; lPSc, late pachytene spermatocyte; RS, round spermatid; ES, elongating spermatid. B. Testis weights at PND 7, 14, 17, 21 and 28. Very low variation was identified between samples at each time point (SD error bars).</p>
+<p>(TIFF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0061558.s002" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0061558.s002" position="float" xlink:type="simple"><label>Figure S2</label><caption>
+<p><bold>Somatic cell gene expression profiles during the first wave of spermatogenesis.</bold> A. Sertoli cell specific gene expression is low and decreases during the appearance of different germ cell populations. B. Leydig cell specific gene expression shows mainly low level expression with few DE genes at PND 28.</p>
+<p>(TIFF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0061558.s003" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0061558.s003" position="float" xlink:type="simple"><label>Figure S3</label><caption>
+<p><bold>Enriched GO terms for up- and downregulated DE genes (GOrilla).</bold> Most of the enriched GO terms were identified with upregulated genes except for comparison of PND 14 and 17.</p>
+<p>(TIFF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0061558.s004" mimetype="image/tiff" xlink:href="info:doi/10.1371/journal.pone.0061558.s004" position="float" xlink:type="simple"><label>Figure S4</label><caption>
+<p><bold>Venn diagrams for biological process (A) and cellular component (B) GO terms for upregulated genes.</bold> Most of the enriched GO terms were specific for the spermatogonia/spermatocyte transition. The terms enriched in all comparisons were related to male germ cell development and gamete generation.</p>
+<p>(TIF)</p>
+</caption></supplementary-material><supplementary-material id="pone.0061558.s005" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" xlink:href="info:doi/10.1371/journal.pone.0061558.s005" position="float" xlink:type="simple"><label>Table S1</label><caption>
+<p><bold>Twenty highest expressed genes at different time points during the first wave of spermatogenesis.</bold></p>
+<p>(DOCX)</p>
+</caption></supplementary-material><supplementary-material id="pone.0061558.s006" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" xlink:href="info:doi/10.1371/journal.pone.0061558.s006" position="float" xlink:type="simple"><label>Table S2</label><caption>
+<p><bold>Upregulated genes in comparison of PND14 and 17.</bold></p>
+<p>(XLSX)</p>
+</caption></supplementary-material><supplementary-material id="pone.0061558.s007" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" xlink:href="info:doi/10.1371/journal.pone.0061558.s007" position="float" xlink:type="simple"><label>Table S3</label><caption>
+<p><bold>Genes with differential promoter usage associated with specific GO terms.</bold></p>
+<p>(XLSX)</p>
+</caption></supplementary-material><supplementary-material id="pone.0061558.s008" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" xlink:href="info:doi/10.1371/journal.pone.0061558.s008" position="float" xlink:type="simple"><label>Table S4</label><caption>
+<p><bold>Genes identified specifically as differential expressed at isoform level.</bold> Genes in enriched GO terms are highlighted.</p>
+<p>(DOCX)</p>
+</caption></supplementary-material><supplementary-material id="pone.0061558.s009" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" xlink:href="info:doi/10.1371/journal.pone.0061558.s009" position="float" xlink:type="simple"><label>Table S5</label><caption>
+<p><bold>Upregulated DE lncRNAs in analysed comparisons.</bold></p>
+<p>(XLSX)</p>
+</caption></supplementary-material></sec></body>
+<back><ref-list>
+<title>References</title>
+<ref id="pone.0061558-Oakberg1"><label>1</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Oakberg</surname><given-names>EF</given-names></name> (<year>1957</year>) <article-title>Duration of spermatogenesis in the mouse</article-title>. <source>Nature</source> <volume>180</volume>: <fpage>1137</fpage>–<lpage>1138</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Tanaka1"><label>2</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tanaka</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Baba</surname><given-names>T</given-names></name> (<year>2005</year>) <article-title>Gene expression in spermiogenesis</article-title>. <source>Cell Mol Life Sci</source> <volume>62</volume>: <fpage>344</fpage>–<lpage>354</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Bellve1"><label>3</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bellve</surname><given-names>AR</given-names></name>, <name name-style="western"><surname>Cavicchia</surname><given-names>JC</given-names></name>, <name name-style="western"><surname>Millette</surname><given-names>CF</given-names></name>, <name name-style="western"><surname>O'Brien</surname><given-names>DA</given-names></name>, <name name-style="western"><surname>Bhatnagar</surname><given-names>YM</given-names></name>, <etal>et al</etal>. (<year>1977</year>) <article-title>Spermatogenic cells of the prepuberal mouse. isolation and morphological characterization</article-title>. <source>J Cell Biol</source> <volume>74</volume>: <fpage>68</fpage>–<lpage>85</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Steger1"><label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Steger</surname><given-names>K</given-names></name> (<year>1999</year>) <article-title>Transcriptional and translational regulation of gene expression in haploid spermatids</article-title>. <source>Anat Embryol (Berl)</source> <volume>199</volume>: <fpage>471</fpage>–<lpage>487</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-SassoneCorsi1"><label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sassone-Corsi</surname><given-names>P</given-names></name> (<year>1998</year>) <article-title>Coupling gene expression to cAMP signalling: Role of CREB and CREM</article-title>. <source>Int J Biochem Cell Biol</source> <volume>30</volume>: <fpage>27</fpage>–<lpage>38</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Meikar1"><label>6</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Meikar</surname><given-names>O</given-names></name>, <name name-style="western"><surname>Da Ros</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Kotaja</surname><given-names>N</given-names></name> (<year>2012</year>) <article-title>Epigenetic regulation of male germ cell differentiation</article-title>. <source>Subcell Biochem</source> <volume>61</volume>: <fpage>119</fpage>–<lpage>138</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Waclawska1"><label>7</label>
+<mixed-citation publication-type="other" xlink:type="simple">Waclawska A, Kurpisz M. (2012) Key functional genes of spermatogenesis identified by microarray analysis. Syst Biol Reprod Med.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Wu1"><label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wu</surname><given-names>SM</given-names></name>, <name name-style="western"><surname>Baxendale</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Chen</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Pang</surname><given-names>AL</given-names></name>, <name name-style="western"><surname>Stitely</surname><given-names>T</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Analysis of mouse germ-cell transcriptome at different stages of spermatogenesis by SAGE: Biological significance</article-title>. <source>Genomics</source> <volume>84</volume>: <fpage>971</fpage>–<lpage>981</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Chan1"><label>9</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chan</surname><given-names>WY</given-names></name>, <name name-style="western"><surname>Lee</surname><given-names>TL</given-names></name>, <name name-style="western"><surname>Wu</surname><given-names>SM</given-names></name>, <name name-style="western"><surname>Ruszczyk</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Alba</surname><given-names>D</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Transcriptome analyses of male germ cells with serial analysis of gene expression (SAGE)</article-title>. <source>Mol Cell Endocrinol</source> <volume>250</volume>: <fpage>8</fpage>–<lpage>19</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Wrobel1"><label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wrobel</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Primig</surname><given-names>M</given-names></name> (<year>2005</year>) <article-title>Mammalian male germ cells are fertile ground for expression profiling of sexual reproduction</article-title>. <source>Reproduction</source> <volume>129</volume>: <fpage>1</fpage>–<lpage>7</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Lin1"><label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lin</surname><given-names>YN</given-names></name>, <name name-style="western"><surname>Matzuk</surname><given-names>MM</given-names></name> (<year>2005</year>) <article-title>High-throughput discovery of germ-cell-specific genes</article-title>. <source>Semin Reprod Med</source> <volume>23</volume>: <fpage>201</fpage>–<lpage>212</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Schlecht1"><label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schlecht</surname><given-names>U</given-names></name>, <name name-style="western"><surname>Demougin</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Koch</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Hermida</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Wiederkehr</surname><given-names>C</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Expression profiling of mammalian male meiosis and gametogenesis identifies novel candidate genes for roles in the regulation of fertility</article-title>. <source>Mol Biol Cell</source> <volume>15</volume>: <fpage>1031</fpage>–<lpage>1043</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Schultz1"><label>13</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schultz</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Hamra</surname><given-names>FK</given-names></name>, <name name-style="western"><surname>Garbers</surname><given-names>DL</given-names></name> (<year>2003</year>) <article-title>A multitude of genes expressed solely in meiotic or postmeiotic spermatogenic cells offers a myriad of contraceptive targets</article-title>. <source>Proc Natl Acad Sci U S A</source> <volume>100</volume>: <fpage>12201</fpage>–<lpage>12206</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Shima1"><label>14</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Shima</surname><given-names>JE</given-names></name>, <name name-style="western"><surname>McLean</surname><given-names>DJ</given-names></name>, <name name-style="western"><surname>McCarrey</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>Griswold</surname><given-names>MD</given-names></name> (<year>2004</year>) <article-title>The murine testicular transcriptome: Characterizing gene expression in the testis during the progression of spermatogenesis</article-title>. <source>Biol Reprod</source> <volume>71</volume>: <fpage>319</fpage>–<lpage>330</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Eddy1"><label>15</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Eddy</surname><given-names>EM</given-names></name> (<year>2002</year>) <article-title>Male germ cell gene expression</article-title>. <source>Recent Prog Horm Res</source> <volume>57</volume>: <fpage>103</fpage>–<lpage>128</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Chalmel1"><label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chalmel</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Rolland</surname><given-names>AD</given-names></name>, <name name-style="western"><surname>Niederhauser-Wiederkehr</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Chung</surname><given-names>SS</given-names></name>, <name name-style="western"><surname>Demougin</surname><given-names>P</given-names></name>, <etal>et al</etal>. (<year>2007</year>) <article-title>The conserved transcriptome in human and rodent male gametogenesis</article-title>. <source>Proc Natl Acad Sci U S A</source> <volume>104</volume>: <fpage>8346</fpage>–<lpage>8351</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Lee1"><label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lee</surname><given-names>TL</given-names></name>, <name name-style="western"><surname>Rennert</surname><given-names>OM</given-names></name>, <name name-style="western"><surname>Chan</surname><given-names>WY</given-names></name> (<year>2012</year>) <article-title>Revealing the transcriptome landscape of mouse spermatogonial cells by tiling microarray</article-title>. <source>Methods Mol Biol</source> <volume>825</volume>: <fpage>75</fpage>–<lpage>92</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Kotaja1"><label>18</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kotaja</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Kimmins</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Brancorsini</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Hentsch</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Vonesch</surname><given-names>JL</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Preparation, isolation and characterization of stage-specific spermatogenic cells for cellular and molecular analysis</article-title>. <source>Nat Methods</source> <volume>1</volume>: <fpage>249</fpage>–<lpage>254</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Trapnell1"><label>19</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Trapnell</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Roberts</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Goff</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Pertea</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Kim</surname><given-names>D</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and cufflinks</article-title>. <source>Nat Protoc</source> <volume>7</volume>: <fpage>562</fpage>–<lpage>578</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Eden1"><label>20</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Eden</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Lipson</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Yogev</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Yakhini</surname><given-names>Z</given-names></name> (<year>2007</year>) <article-title>Discovering motifs in ranked lists of DNA sequences</article-title>. <source>PLoS Comput Biol</source> <volume>3</volume>: <fpage>e39</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Eden2"><label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Eden</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Navon</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Steinfeld</surname><given-names>I</given-names></name>, <name name-style="western"><surname>Lipson</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Yakhini</surname><given-names>Z</given-names></name> (<year>2009</year>) <article-title>GOrilla: A tool for discovery and visualization of enriched GO terms in ranked gene lists</article-title>. <source>BMC Bioinformatics</source> <volume>10</volume>: <fpage>48</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Ryser1"><label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ryser</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Glauser</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Vigier</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Zhang</surname><given-names>YQ</given-names></name>, <name name-style="western"><surname>Tachini</surname><given-names>P</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Gene expression profiling of rat spermatogonia and sertoli cells reveals signaling pathways from stem cells to niche and testicular cancer cells to surrounding stroma</article-title>. <source>BMC Genomics</source> <volume>12</volume>: <fpage>29</fpage>–<lpage>2164–12–29</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Takahashi1"><label>23</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Takahashi</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Tainaka</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Umezawa</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Takeda</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Tanaka</surname><given-names>H</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Evaluation of testicular toxicology of doxorubicin based on microarray analysis of testicular specific gene expression</article-title>. <source>J Toxicol Sci</source> <volume>36</volume>: <fpage>559</fpage>–<lpage>567</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-OShaughnessy1"><label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>O'Shaughnessy</surname><given-names>PJ</given-names></name>, <name name-style="western"><surname>Hu</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Baker</surname><given-names>PJ</given-names></name> (<year>2008</year>) <article-title>Effect of germ cell depletion on levels of specific mRNA transcripts in mouse sertoli cells and leydig cells</article-title>. <source>Reproduction</source> <volume>135</volume>: <fpage>839</fpage>–<lpage>850</lpage> 10.1530/REP-08-0012.</mixed-citation>
+</ref>
+<ref id="pone.0061558-OShaughnessy2"><label>25</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>O'Shaughnessy</surname><given-names>PJ</given-names></name>, <name name-style="western"><surname>Willerton</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Baker</surname><given-names>PJ</given-names></name> (<year>2002</year>) <article-title>Changes in leydig cell gene expression during development in the mouse</article-title>. <source>Biol Reprod</source> <volume>66</volume>: <fpage>966</fpage>–<lpage>975</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Vergouwen1"><label>26</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vergouwen</surname><given-names>RP</given-names></name>, <name name-style="western"><surname>Huiskamp</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Bas</surname><given-names>RJ</given-names></name>, <name name-style="western"><surname>Roepers-Gajadien</surname><given-names>HL</given-names></name>, <name name-style="western"><surname>Davids</surname><given-names>JA</given-names></name>, <etal>et al</etal>. (<year>1993</year>) <article-title>Postnatal development of testicular cell populations in mice</article-title>. <source>J Reprod Fertil</source> <volume>99</volume>: <fpage>479</fpage>–<lpage>485</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Jegou1"><label>27</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jegou</surname><given-names>B</given-names></name> (<year>1992</year>) <article-title>The sertoli cell</article-title>. <source>Baillieres Clin Endocrinol Metab</source> <volume>6</volume>: <fpage>273</fpage>–<lpage>311</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Kokkinaki1"><label>28</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kokkinaki</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Lee</surname><given-names>TL</given-names></name>, <name name-style="western"><surname>He</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Jiang</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Golestaneh</surname><given-names>N</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Age affects gene expression in mouse spermatogonial stem/progenitor cells</article-title>. <source>Reproduction</source> <volume>139</volume>: <fpage>1011</fpage>–<lpage>1020</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Liu1"><label>29</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Liu</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Yu</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Luo</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Zhang</surname><given-names>X</given-names></name>, <name name-style="western"><surname>Wu</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Gene expression profiling of rat testis development during the early post-natal stages</article-title>. <source>Reprod Domest Anim</source> <volume>47</volume>: <fpage>724</fpage>–<lpage>731</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Rossi1"><label>30</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rossi</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Dolci</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Sette</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Capolunghi</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Pellegrini</surname><given-names>M</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Analysis of the gene expression profile of mouse male meiotic germ cells</article-title>. <source>Gene Expr Patterns</source> <volume>4</volume>: <fpage>267</fpage>–<lpage>281</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-RoyChoudhury1"><label>31</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Roy Choudhury</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Small</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Mueller</surname><given-names>PR</given-names></name>, <name name-style="western"><surname>Rebel</surname><given-names>VI</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Microarray-based analysis of cell-cycle gene expression during spermatogenesis in the mouse</article-title>. <source>Biol Reprod</source> <volume>83</volume>: <fpage>663</fpage>–<lpage>675</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Takahashi2"><label>32</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Takahashi</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Tainaka</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Umezawa</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Takeda</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Tanaka</surname><given-names>H</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Evaluation of testicular toxicology of doxorubicin based on microarray analysis of testicular specific gene expression</article-title>. <source>J Toxicol Sci</source> <volume>36</volume>: <fpage>559</fpage>–<lpage>567</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-WaldmanBenAsher1"><label>33</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Waldman Ben-Asher</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Shahar</surname><given-names>I</given-names></name>, <name name-style="western"><surname>Yitzchak</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Mehr</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Don</surname><given-names>J</given-names></name> (<year>2010</year>) <article-title>Expression and chromosomal organization of mouse meiotic genes</article-title>. <source>Mol Reprod Dev</source> <volume>77</volume>: <fpage>241</fpage>–<lpage>248</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0061558-Pan1"><label>34</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pan</surname><given-names>Q</given-names></name>, <name name-style="western"><surname>Shai</surname><given-names>O</given-names></name>, <name name-style="western"><surname>Lee</surname><given-names>LJ</given-names></name>, <name name-style="western"><surname>Frey</surname><given-names>BJ</given-names></name>, <name name-style="western"><surname>Blencowe</surname><given-names>BJ</given-names></name> (<year>2008</year>) <article-title>Deep surveying of alternative splicing complexity in the human transcriptome by high-throughput sequencing</article-title>. <source>Nat Genet</source> <volume>40</volume>: <fpage>1413</fpage>–<lpage>1415</lpage>.</mixed-citation>
+</ref>
+</ref-list></back>
+</article>

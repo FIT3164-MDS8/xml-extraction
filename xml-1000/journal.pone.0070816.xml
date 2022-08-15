@@ -1,0 +1,1381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group>
+<journal-title>PLoS ONE</journal-title></journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-13-04054</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0070816</article-id>
+<article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Agriculture</subject><subj-group><subject>Crops</subject><subj-group><subject>Cereals</subject><subj-group><subject>Rice</subject></subj-group></subj-group><subj-group><subject>Crop management</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Ecology</subject><subj-group><subject>Ecological metrics</subject><subj-group><subject>Ecological yield</subject></subj-group></subj-group></subj-group><subj-group><subject>Plant science</subject><subj-group><subject>Agronomy</subject><subject>Plant growth and development</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Computer science</subject><subj-group><subject>Geoinformatics</subject><subj-group><subject>Remote sensing imagery</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Earth sciences</subject><subj-group><subject>Geography</subject><subj-group><subject>Geoinformatics</subject><subj-group><subject>Remote sensing imagery</subject></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Remotely Sensed Rice Yield Prediction Using Multi-Temporal NDVI Data Derived from NOAA's-AVHRR</article-title>
+<alt-title alt-title-type="running-head">Remotely Sensed Rice Yield Prediction</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Huang</surname><given-names>Jingfeng</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff2"><sup>2</sup></xref><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Wang</surname><given-names>Xiuzhen</given-names></name><xref ref-type="aff" rid="aff4"><sup>4</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Li</surname><given-names>Xinxing</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff2"><sup>2</sup></xref><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Tian</surname><given-names>Hanqin</given-names></name><xref ref-type="aff" rid="aff5"><sup>5</sup></xref><xref ref-type="aff" rid="aff6"><sup>6</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Pan</surname><given-names>Zhuokun</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib>
+</contrib-group>
+<aff id="aff1"><label>1</label><addr-line>Institute of Agricultural Remote Sensing &amp; Information Application, Zijingang Campus, Zhejiang University, Hangzhou, China</addr-line></aff>
+<aff id="aff2"><label>2</label><addr-line>China Ministry of Education Key Laboratory of Environmental Remediation and Ecological Health, Zhejiang University, Hangzhou, China</addr-line></aff>
+<aff id="aff3"><label>3</label><addr-line>Key Laboratory of Agricultural Remote Sensing and Information System, Zhejiang Province, China</addr-line></aff>
+<aff id="aff4"><label>4</label><addr-line>Institute of Remote Sensing and Earth Sciences, Hangzhou Normal University, Hangzhou, China</addr-line></aff>
+<aff id="aff5"><label>5</label><addr-line>International Center for Climate and Global Change Research, Auburn University, Auburn, Alabama, United States of America</addr-line></aff>
+<aff id="aff6"><label>6</label><addr-line>Ecosystem Dynamics and Global Ecology (EDGE) Laboratory, School of Forestry and Wildlife Sciences, Auburn University, Auburn, Alabama, United States of America</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Yan</surname><given-names>Wengui</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>National Rice Research Center, United States of America</addr-line></aff>
+<author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">wxz05160516@126.com</email></corresp>
+<fn fn-type="conflict"><p>The authors have declared that no competing interests exist.</p></fn>
+<fn fn-type="con"><p>Conceived and designed the experiments: JH XW. Performed the experiments: JH XL. Analyzed the data: JH XW XL. Wrote the paper: JH XW XL ZP. Reviewed and revised this manuscript: XL HT ZP.</p></fn>
+</author-notes>
+<pub-date pub-type="collection"><year>2013</year></pub-date>
+<pub-date pub-type="epub"><day>13</day><month>8</month><year>2013</year></pub-date>
+<volume>8</volume>
+<issue>8</issue>
+<elocation-id>e70816</elocation-id>
+<history>
+<date date-type="received"><day>24</day><month>1</month><year>2013</year></date>
+<date date-type="accepted"><day>24</day><month>6</month><year>2013</year></date>
+</history>
+<permissions>
+<copyright-year>2013</copyright-year>
+<copyright-holder>Huang et al</copyright-holder><license xlink:type="simple"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions>
+<abstract>
+<p>Grain-yield prediction using remotely sensed data have been intensively studied in wheat and maize, but such information is limited in rice, barley, oats and soybeans. The present study proposes a new framework for rice-yield prediction, which eliminates the influence of the technology development, fertilizer application, and management improvement and can be used for the development and implementation of provincial rice-yield predictions. The technique requires the collection of remotely sensed data over an adequate time frame and a corresponding record of the region's crop yields. Longer normalized-difference-vegetation-index (NDVI) time series are preferable to shorter ones for the purposes of rice-yield prediction because the well-contrasted seasons in a longer time series provide the opportunity to build regression models with a wide application range. A regression analysis of the yield versus the year indicated an annual gain in the rice yield of 50 to 128 kg ha<sup>−1</sup>. Stepwise regression models for the remotely sensed rice-yield predictions have been developed for five typical rice-growing provinces in China. The prediction models for the remotely sensed rice yield indicated that the influences of the NDVIs on the rice yield were always positive. The association between the predicted and observed rice yields was highly significant without obvious outliers from 1982 to 2004. Independent validation found that the overall relative error is approximately 5.82%, and a majority of the relative errors were less than 5% in 2005 and 2006, depending on the study area. The proposed models can be used in an operational context to predict rice yields at the provincial level in China. The methodologies described in the present paper can be applied to any crop for which a sufficient time series of NDVI data and the corresponding historical yield information are available, as long as the historical yield increases significantly.</p>
+</abstract>
+<funding-group><funding-statement>The authors' work was supported from National Key Technology R&amp;D Program of China Grant(2011BAD32B01), the National Natural Science Foundation of China (NSFC) grant (40875070 and 40871158) and Zhejiang Provincial Natural Science Foundation of China grant (Y5100021). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="13"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>Paddy rice is one of the most important and widely grown crops in China. The total paddy-rice production in 2009 reached 195.1 million tons, and it accounted for 40.5% of the total grain production in China (481.563 million tons) <xref ref-type="bibr" rid="pone.0070816-NationalBureauofStatisticsof1">[1]</xref>. Timely, objective and quantitative information regarding to paddy-rice yield can provide important information for government agencies and producers that can be used for planning harvest, storage and marketing activities. Therefore, paddy-rice-yield prediction is important for the food security of China and is considered to be one of the most challenging tasks in agricultural research <xref ref-type="bibr" rid="pone.0070816-Wang1">[2]</xref>. The traditional approach of crop-yield forecasting, the use of ground-based data collection is expensive, time-consuming, labor-intensive, and often difficult <xref ref-type="bibr" rid="pone.0070816-Prasad1">[3]</xref>. Crop-yield prediction using remotely sensed data has already represented a very active field of research and application <xref ref-type="bibr" rid="pone.0070816-Prasad1">[3]</xref>–<xref ref-type="bibr" rid="pone.0070816-Salazar1">[5]</xref>. Notable advances in remote-sensing technology over the last several decades are now providing scientists with valuable information for yield and production forecast. Time series of normalized-difference-vegetation-index (NDVI), derived from the satellite data, have been used for crop-yield predictions since the 1980's. Most of the studies that related NDVI measurements to crop yield have been concentrated on staple crops such as wheat <xref ref-type="bibr" rid="pone.0070816-Manjunath1">[4]</xref>, <xref ref-type="bibr" rid="pone.0070816-Zhang1">[6]</xref>–<xref ref-type="bibr" rid="pone.0070816-Balaghi1">[38]</xref> and maize <xref ref-type="bibr" rid="pone.0070816-Prasad1">[3]</xref>, <xref ref-type="bibr" rid="pone.0070816-Ren1">[13]</xref>, <xref ref-type="bibr" rid="pone.0070816-Mo1">[18]</xref>, <xref ref-type="bibr" rid="pone.0070816-Mika1">[20]</xref>, <xref ref-type="bibr" rid="pone.0070816-Maselli1">[21]</xref>, <xref ref-type="bibr" rid="pone.0070816-Kastens1">[24]</xref>, <xref ref-type="bibr" rid="pone.0070816-Ferencz1">[29]</xref>, <xref ref-type="bibr" rid="pone.0070816-Wannebo1">[39]</xref>–<xref ref-type="bibr" rid="pone.0070816-Funk1">[49]</xref> and rice <xref ref-type="bibr" rid="pone.0070816-Wang1">[2]</xref>, <xref ref-type="bibr" rid="pone.0070816-Prasad2">[15]</xref>, <xref ref-type="bibr" rid="pone.0070816-Bastiaanssen1">[37]</xref>, <xref ref-type="bibr" rid="pone.0070816-Quarmby1">[44]</xref>, <xref ref-type="bibr" rid="pone.0070816-Tennakoon1">[50]</xref>–<xref ref-type="bibr" rid="pone.0070816-Huang3">[52]</xref>. Many researchers have also found that NDVI variables are very good at grain yield predictors of millet <xref ref-type="bibr" rid="pone.0070816-Rasmussen1">[53]</xref>–<xref ref-type="bibr" rid="pone.0070816-Groten1">[57]</xref>, sorghum <xref ref-type="bibr" rid="pone.0070816-Kastens1">[24]</xref>, <xref ref-type="bibr" rid="pone.0070816-Maselli2">[56]</xref>, <xref ref-type="bibr" rid="pone.0070816-Potdar1">[58]</xref>, <xref ref-type="bibr" rid="pone.0070816-Fuller1">[59]</xref>, barley <xref ref-type="bibr" rid="pone.0070816-Mkhabela1">[19]</xref>, <xref ref-type="bibr" rid="pone.0070816-Kastens1">[24]</xref>, <xref ref-type="bibr" rid="pone.0070816-Ferencz1">[29]</xref>, <xref ref-type="bibr" rid="pone.0070816-Wendroth1">[60]</xref>, <xref ref-type="bibr" rid="pone.0070816-Weissteiner1">[61]</xref>, soybean <xref ref-type="bibr" rid="pone.0070816-Prasad1">[3]</xref>, <xref ref-type="bibr" rid="pone.0070816-Kastens1">[24]</xref>, <xref ref-type="bibr" rid="pone.0070816-Liu1">[62]</xref>, <xref ref-type="bibr" rid="pone.0070816-Esquerdo1">[63]</xref>, ground nut <xref ref-type="bibr" rid="pone.0070816-Rasmussen2">[54]</xref>, <xref ref-type="bibr" rid="pone.0070816-Fuller1">[59]</xref>, sugar beet <xref ref-type="bibr" rid="pone.0070816-Ferencz1">[29]</xref>, alfalfa <xref ref-type="bibr" rid="pone.0070816-Ferencz1">[29]</xref>, rye <xref ref-type="bibr" rid="pone.0070816-Ferencz1">[29]</xref>, pea <xref ref-type="bibr" rid="pone.0070816-Mkhabela1">[19]</xref>, <xref ref-type="bibr" rid="pone.0070816-Ferencz1">[29]</xref>, and canola <xref ref-type="bibr" rid="pone.0070816-Mkhabela1">[19]</xref> (Literature review was summarized in <xref ref-type="table" rid="pone-0070816-t001">Table 1</xref>). However, remotely sensed yield prediction appears limited in rice.</p>
+<table-wrap id="pone-0070816-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0070816.t001</object-id><label>Table 1</label><caption>
+<title>Relevant literatures that linked with crop yield forecast using remotely sensed data literatures are sorted according to the crop types.</title>
+</caption><alternatives><graphic id="pone-0070816-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0070816.t001" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Crop</td>
+<td align="left" rowspan="1" colspan="1">reference</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>wheat</bold></td>
+<td align="left" rowspan="1" colspan="1">MacDonald et al., 1980; Rudorff et al., 1991; , Bullock, 1992; Benedetti et al., 1993; Gupta et al., 1993; Benedetti et al., 1993; Cheng, 1994; Dubey et al., 1994; Sridhar et al., 1994; Doraiswamy et al., 1995, 2003; Smith et al., 1995; Hochheim et al., 1998; Huang et al., 1999; Maselli et al., 2001; Boken et al., 2002; Labus et al., 2002; Manjunath et al., 2002; Mika et al., 2002; Bastiaanssen, et al., 2003; Kalubarme et al., 2003; Ferencz et al., 2004; Zhang et al., 2004; Kastensa et al., 2005; Mo et al., 2005; Wang et al., 2005; Patel et al., 2006; Ren et al., 2006; Moriondo et al., 2007; Prasad et al., 2007; Balaghi et al., 2008; Ren et al., 2008; Wall et al., 2008; Schut et al., 2009; Becker-Reshef et al., 2010; Mkhabela et al., 2011</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>maize</bold></td>
+<td align="left" rowspan="1" colspan="1">Quarmby et al., 1993; Hayes et al., 1996; Unganai et al., 1998; Lewis et al., 1998; Lee et al., 1999; Reynolds et al., 2000; Seiler et al., 2000; Maselli et al.,2001; Mika et al., 2002; Wannebo et al., 2003; Ferencz et al., 2004; Kastensa et al., 2005; Mkhabela et al., 2005; Mo et al., 2005; Prasad et al., 2006; Rojas, 2007; Ren, et al., 2008; Funk et al., 2009</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>millet</bold></td>
+<td align="left" rowspan="1" colspan="1">Rasmussen, 1992, 1997, 1998; Groten, 1993; Maselli et al.,2000</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>sorghum</bold></td>
+<td align="left" rowspan="1" colspan="1">Potdar, 1993; Fuller, 1998; Maselli et al., 2000; Kastensa et al., 2005</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>barley</bold></td>
+<td align="left" rowspan="1" colspan="1">Wendroth et al., 2003; Ferencz et al., 2004; Kastensa et al., 2005; Weissteiner et al., 2005; Mkhabela et al., 2011</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>soybean</bold></td>
+<td align="left" rowspan="1" colspan="1">Liu et al., 2002; Kastensa et al., 2005; Prasad et al., 2006; Esquerdo et al., 2011</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>ground nut</bold></td>
+<td align="left" rowspan="1" colspan="1">Rasmussen, 1997; Fuller, 1998</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>sugar beet</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>Ferencz et al., 2004</italic></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>alfalfa</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>Ferencz et al., 2004</italic></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>rye</bold></td>
+<td align="left" rowspan="1" colspan="1">Ferencz et al., 2004</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>pea</bold></td>
+<td align="left" rowspan="1" colspan="1">Ferencz et al., 2004; Mkhabela et al., 2011</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>canola</bold></td>
+<td align="left" rowspan="1" colspan="1">Mkhabela et al., 2011</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>rice</bold></td>
+<td align="left" rowspan="1" colspan="1">Tennakoon et al., 1992; Quarmby et al., 1993; Huang et al., 2002; Wang et al., 2002; Bastiaanssen, et al., 2003; Prasad et al., 2007; Huang et al., 2010</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>Different methods have been developed to predict crop yields using remotely sensed data, and the most common approach is, by generating regression model, to develop direct empirical relationships between the NDVI measurements and the crop yield <xref ref-type="bibr" rid="pone.0070816-Prasad2">[15]</xref>, <xref ref-type="bibr" rid="pone.0070816-Mkhabela1">[19]</xref>, <xref ref-type="bibr" rid="pone.0070816-Mkhabela2">[45]</xref>, <xref ref-type="bibr" rid="pone.0070816-Groten1">[57]</xref>. These approaches assume that measures of the photosynthetic capacity from spectral-vegetation indices are directly related to crop yield. This assumption is used because many of the conditions that affect crop growth, development and ultimately yield could be captured through spectra measurements such as the NDVI <xref ref-type="bibr" rid="pone.0070816-Tucker1">[64]</xref>. By using long-term historical-yield data as a dependent variable and remotely sensed data as an independent variable, a statistical regression function was generated to perform crop-yield predictions, whereas the actual crop yields depend on many more factors than the presence of spectral-vegetation indices <xref ref-type="bibr" rid="pone.0070816-Bastiaanssen1">[37]</xref>. Tilman et al. <xref ref-type="bibr" rid="pone.0070816-Tilman1">[65]</xref> noted that increased yields in cereal are mainly the result of greater inputs of fertilizer, water and pesticides, new crop species, and the improvement of management over the last decades. For all developing countries, modern varieties accounted for 21% of the growth in crop yields during the early Green Revolution period <xref ref-type="bibr" rid="pone.0070816-Evenson1">[66]</xref>. In Asia, rice production has more than doubled as a result of the expansion of cultivated area, the adoption of modern cultivars, increased investments in irrigation, and an increased use of fertilizer over the past 4 decades <xref ref-type="bibr" rid="pone.0070816-Peng1">[67]</xref>. Hafner <xref ref-type="bibr" rid="pone.0070816-Hafner1">[68]</xref> found that linear growth has been the most common trend in maize, rice, and wheat yields for 188 nations over the past 40 years. This scenario also occurs in China. Although the inter-annual variability of NDVI (probably due to unexpected weather conditions or disasters) can reveal crop yield fluctuations <xref ref-type="bibr" rid="pone.0070816-Mkhabela1">[19]</xref>, <xref ref-type="bibr" rid="pone.0070816-Fuller1">[59]</xref>; however, remotely sensed-NDVI cannot detect those human-induced factors that resulted in increase of rice yield. Therefore, to monitor and predict crop-yield cannot use NDVI measurements solely.</p>
+<p>For unit-yield estimation, using one simple regression function (usually known as: Y = a+b * NDVI) would be incompatible as the advance of years, because simple regression would be likely neglect those man-induced factors in yield increase. However, few studies have analyzed the time trends of crop yields, which reflect the influence of technology development, fertilizer application, and management improvement. Moreover, the regression model between statistical data and NDVI cannot be extendable <xref ref-type="bibr" rid="pone.0070816-Mkhabela1">[19]</xref>, <xref ref-type="bibr" rid="pone.0070816-Mkhabela2">[45]</xref> because cropping system and rice yield level is natural condition-dependent in China.</p>
+<p>In consideration of social factors and regional differences for remotely sensed crop yield estimation in China, the objective of the present paper was to develop a methodological framework that may be adopted for the regional-, national- and international-scale prediction of crop yields. This methodology was based on a time series analysis of historical-yield information. Paddy rice was chosen to test the proposed methodology. To accomplish this objective, we needed to: (1) geographically regionalize rice cultivation area for remotely sensed monitoring; (2) analyze the historical trends in the grain yield of rice; (3) decompose the remotely sensed yield of rice from the long-term historical data; (4) select the optimal predictors, based on a correlation analysis between the remotely sensed yield and the AVHRR-derived NDVIs; (5) construct prediction models for rice yield; and (6) evaluate the potential for rice-grain-yield prediction in China using AVHRR NDVI data as predictors.</p>
+</sec><sec id="s2">
+<title>Materials and Methodology</title>
+<sec id="s2a">
+<title>2.1. The Remote-Sensing dataset</title>
+<p>The research presented in this paper relies on a time series of AVHRR NDVI composite imagery from July 1981 to December 2006, derived from the National Oceanic and Atmospheric Administration's (NOAA) series of Advanced Very High Resolution Radiometer (AVHRR) instruments, with a spatial resolution of 8 km, by the NASA Global Inventory Monitoring and Modeling Systems (GIMMS) group at the Laboratory for Terrestrial Physics. There are two 15-day composites per month: the first (15a) is a maximum value composite from the first day to 15<sup>th</sup>of the month; and the 15b composite is from days 16 till the end of the month. All data are available from the University of Maryland Global Land Cover Facility (<ext-link ext-link-type="uri" xlink:href="http://glcf.umiacs.umd.edu/data/gimms/" xlink:type="simple">http://glcf.umiacs.umd.edu/data/gimms/</ext-link>).</p>
+<p>Pinzon et al. <xref ref-type="bibr" rid="pone.0070816-Pinzon1">[69]</xref> and Tucker et al. <xref ref-type="bibr" rid="pone.0070816-Tucker2">[70]</xref> described in detail how the GIMMS data set was developed. A number of improvements have been made on the GIMMS NDVI database, with respect to previous NDVI data sets, including corrections for: (1) sensor degradation; (2) inter-sensor differences; (3) solar-illumination angle and sensor-view angle effects due to satellite drift; (4) volcanic stratospheric aerosol corrections for 1982–1984 and 1991–1994; (5) missing data in the Northern Hemisphere during winter, using interpolation; and (6) short-term atmospheric aerosol effects, atmospheric water-vapor effects, and cloud-cover physics <xref ref-type="bibr" rid="pone.0070816-Pinzon1">[69]</xref>, <xref ref-type="bibr" rid="pone.0070816-Tucker2">[70]</xref>. This data set is considered to be the most accurate, long-term AVHRR data record <xref ref-type="bibr" rid="pone.0070816-Fensholt1">[71]</xref>. By comparing these data to new, improved coarse-resolution remotely sensed data from SPOT Vegetation instrument and MODIS instruments, recent study confirmed its suitability for long-term vegetation studies <xref ref-type="bibr" rid="pone.0070816-Fensholt2">[72]</xref>.</p>
+</sec><sec id="s2b">
+<title>2.2. NDVI Variables</title>
+<p>A large number of studies found a close relationship between crop yields and NDVI variables. The theory is: the NDVI value presents the yield level corresponding to every single pixel. Therefore, a simple regression function can be explained the yield: yield  =  a*NDVI + b; then the total yield can be obtained by multiplying planting area. By literature review, previous studies suggest three types of NDVI variables: original NDVI <xref ref-type="bibr" rid="pone.0070816-Ren1">[13]</xref>, <xref ref-type="bibr" rid="pone.0070816-Labus1">[23]</xref>, <xref ref-type="bibr" rid="pone.0070816-Rojas1">[42]</xref>, <xref ref-type="bibr" rid="pone.0070816-Esquerdo1">[63]</xref>, cumulative NDVI <xref ref-type="bibr" rid="pone.0070816-Wall1">[8]</xref>, <xref ref-type="bibr" rid="pone.0070816-Labus1">[23]</xref>, <xref ref-type="bibr" rid="pone.0070816-Balaghi1">[38]</xref>, <xref ref-type="bibr" rid="pone.0070816-Rojas1">[42]</xref>, <xref ref-type="bibr" rid="pone.0070816-Mkhabela2">[45]</xref>, <xref ref-type="bibr" rid="pone.0070816-Esquerdo1">[63]</xref>, <xref ref-type="bibr" rid="pone.0070816-Genovese1">[73]</xref>, <xref ref-type="bibr" rid="pone.0070816-Freund1">[74]</xref>, and average NDVI <xref ref-type="bibr" rid="pone.0070816-Boken1">[34]</xref>, <xref ref-type="bibr" rid="pone.0070816-Mkhabela2">[45]</xref>, <xref ref-type="bibr" rid="pone.0070816-Esquerdo1">[63]</xref>. The cumulative NDVI and the corresponding average NDVI for the same period were highly correlated because of the linear nature of the operations involved. Only the original NDVIs and the average NDVIs were selected as input data for the prediction models in the present paper.</p>
+<p>NDVI variables around the time of the maximum are strongly correlated with final yields <xref ref-type="bibr" rid="pone.0070816-Doraiswamy1">[31]</xref>, <xref ref-type="bibr" rid="pone.0070816-Benedetti1">[35]</xref>, <xref ref-type="bibr" rid="pone.0070816-Tucker3">[75]</xref>. Specifically, the rice yield is most determined by crop conditions during the heading (i.e. peak phenological phase of growth); and yield-reflectance relationships are typically the strongest after mid-season. In contrast, NDVI value changes that occur outside of the rice-growing period maybe not positively related to yield <xref ref-type="bibr" rid="pone.0070816-Huang3">[52]</xref>. These relationships within changes of NDVI value suggests that the NDVIs during the mid-to-late growing period should be a good indicator of rice yield; meanwhile this phenomenon provides an approach to discriminate rice planting area from remote sensing image. Therefore, the first step of this study was to extract the maximum NDVI during the rice-growth period (<italic>NDVI<sub>max</sub></italic>) for each studied province from the remote sensing dataset from the year 1982 to 2006. The maximum NDVI is equal to the peak value of the seasonal NDVI profile. Then, six other original NDVIs were calculated: the first, second, third and fourth biweekly NDVIs prior to the NDVI<sub>max</sub> (<italic>NDVI<sub>maxb4</sub></italic>) and the first and second biweekly NDVIs after the NDVI<sub>max</sub> (<italic>NDVI<sub>maxa2</sub></italic>). These seven biweekly composites span 3 months of raw AVHRR imagery, corresponding to the rice-growth period. Focusing on the NDVI response during the rice-growth period helps to identify rice-specific vegetation changes.</p>
+<p>Hochheim and Barber <xref ref-type="bibr" rid="pone.0070816-Hochheim1">[27]</xref> also found that NDVI estimators with longer integration periods minimized variability in yield prediction. Therefore, based on the seven original NDVIs, twenty-one average NDVIs, clustered around the time of the peak NDVI, were calculated using a rigorous arithmetic mean framework (<xref ref-type="table" rid="pone-0070816-t002">Table 2</xref>). In total, 28 NDVI variables were generated. They include all of the possible combinations of the original seven NDVIs.</p>
+<table-wrap id="pone-0070816-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0070816.t002</object-id><label>Table 2</label><caption>
+<title>NVDI variables and their calculation formulas.</title>
+</caption><alternatives><graphic id="pone-0070816-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0070816.t002" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">NDVIs</td>
+<td align="left" rowspan="1" colspan="1">Description of formulas</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>1</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>NDVI<sub>maxb1</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">the first biweekly NDVI before NDVI<sub>max</sub></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>2</bold></td>
+<td align="left" rowspan="1" colspan="1">N<italic>DVImaxb2</italic></td>
+<td align="left" rowspan="1" colspan="1">the second biweekly NDVI before NDVI<sub>max</sub></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>3</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>NDVI<sub>maxb3</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">the third biweekly NDVI before NDVI<sub>max</sub></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>4</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>NDVI<sub>maxb4</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">the fourth biweekly NDVI before NDVI<sub>max</sub></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>5</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>NDVI<sub>max</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">the maximum NDVI during the growth period</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>6</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>NDVI<sub>maxa1</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">the first biweekly NDVI after NDVI<sub>max</sub></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>7</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>NDVI<sub>maxa2</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">the second biweekly NDVI after NDVI<sub>max</sub></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>8</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb4-b3</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb4</sub>+ NDVI<sub>maxb3</sub>)/2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>9</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb4-b2</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb4</sub>+ NDVI<sub>maxb3</sub>+ NDVI<sub>maxb2</sub>)/3</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>10</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>MNDVI<sub>maxb4-b1</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb4</sub>+ NDVI<sub>maxb3</sub>+ NDVI<sub>maxb2</sub>+ NDVI<sub>maxb1</sub>)/4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>11</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb4-max</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb4</sub>+ NDVI<sub>maxb3</sub>+ NDVI<sub>maxb2</sub>+ NDVI<sub>maxb1</sub>+ NDVI<sub>max</sub>)/5</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>12</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb4-a1</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb4</sub>+ NDVI<sub>maxb3</sub>+ NDVI<sub>maxb2</sub>+ NDVI<sub>maxb1</sub>+ NDVI<sub>max</sub>+ NDVI<sub>maxa1</sub>)/6</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>13</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb4-a2</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb4</sub>+ NDVI<sub>maxb3</sub>+ NDVI<sub>maxb2</sub>+ NDVI<sub>maxb1</sub>+ NDVI<sub>max</sub>+ NDVI<sub>maxa1</sub>+ NDVI<sub>maxa2</sub>)/7</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>14</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb3-b2</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb3</sub>+ NDVI<sub>maxb2</sub>)/2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>15</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb3-b1</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb3</sub>+ NDVI<sub>maxb2</sub>+ NDVI<sub>maxb1</sub>)/3</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>16</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb3-max</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb3</sub>+ NDVI<sub>maxb2</sub>+ NDVI<sub>maxb1</sub>+ NDVI<sub>max</sub>)/4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>17</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb3-a1</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb3</sub>+ NDVI<sub>maxb2</sub>+ NDVI<sub>maxb1</sub>+ NDVI<sub>max</sub>+ NDVI<sub>maxa1</sub>)/5</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>18</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb3-a2</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb3</sub>+ NDVI<sub>maxb2</sub>+ NDVI<sub>maxb1</sub>+ NDVI<sub>max</sub>+ NDVI<sub>maxa1</sub>+ NDVI<sub>maxa2</sub>)/6</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>19</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb2-b1</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb2</sub>+ NDVI<sub>maxb1</sub>)/2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>20</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb2-max</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb2</sub>+ NDVI<sub>maxb1</sub>+ NDVI<sub>max</sub>)/3</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>21</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb2-a1</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb2</sub>+ NDVI<sub>maxb1</sub>+ NDVI<sub>max</sub>+ NDVI<sub>maxa1</sub>)/4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>22</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb2-a2</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb2</sub>+ NDVI<sub>maxb1</sub>+ NDVI<sub>max</sub>+ NDVI<sub>maxa1</sub>+ NDVI<sub>maxa2</sub>)/5</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>23</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb1-max</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb1</sub>+ NDVI<sub>max</sub>)/2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>24</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb1-a1</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb1</sub>+ NDVI<sub>max</sub>+ NDVI<sub>maxa1</sub>)/3</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>25</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxb1-a2</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxb1</sub>+ NDVI<sub>max</sub>+ NDVI<sub>maxa1</sub>+ NDVI<sub>maxa2</sub>)/4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>26</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>max-a1</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>max</sub>+ NDVI<sub>maxa1</sub>)/2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>27</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>max-a2</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>max</sub>+ NDVI<sub>maxa1</sub>+ NDVI<sub>maxa2</sub>)/3</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>28</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>mNDVI<sub>maxa1-a2</sub></italic></td>
+<td align="left" rowspan="1" colspan="1">(NDVI<sub>maxa1</sub>+ NDVI<sub>maxa2</sub>)/2</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap></sec><sec id="s2c">
+<title>2.3. Official Statistical Data of Rice Yield</title>
+<p>Historical rice-yield data were acquired from the China Statistical Year Book by the National Bureau of Statistics of China (NBSC) from the years 1979 to 2009 <xref ref-type="bibr" rid="pone.0070816-NationalBureauofStatisticsof1">[1]</xref>. The NBSC is the agency responsible for collecting and publishing agricultural statistics at the national and provincial levels. The NBSC crop statistics are based on data obtained from sub-province sample surveys and released in official documents. Customarily, Chinese provinces have been geographically grouped into 7 regions to present a spatial pattern for paddy rice planting area: Northeastern China (Heilongjiang, Jilin, and Liaoning), Northern China (Inner Mongolia, Hebei, Shanxi, Beijing, and Tianjin), Northwestern China (Ningxia, Shaanxi, Gansu, Qinghai, and Xinjiang), Central China (Henan, Hunan, and Hubei), Eastern China (Shandong, Jiangsu, Shanghai, Zhejiang, Anhui, and Jiangxi), Southwestern China (Chongqing, Sichuan, Guizhou, Yunnan, and Xizang), Southern China (Guangdong, Guangxi, Hainan) (see <xref ref-type="fig" rid="pone-0070816-g001">Figure 1</xref>). Unfortunately, rice planting area and yield information for Hong Kong- Macao-Taiwan areas was not available. According to NBSC crop statistical data (see <xref ref-type="table" rid="pone-0070816-t003">Table 3</xref>), Eastern China was the region with the highest rice acreage and production levels (9808.60 kha and 64984.00 kt, respectively) in 2009. Central China ranked second in both rice acreage and production (6703.60 kha and 46215.00 kt, respectively). The third-largest rice cultivation and production area was Southwestern China (4448.10 kha and 31214.00 kt, respectively). Southern China and Northeastern China ranked fourth and fifth, respectively, in both rice acreage and production (4402.40 kha and 23499.00 kt; 3777.90 kha and 25855.00 kt, respectively). The total rice cultivation area in Eastern China, Central China, Southwestern China, Southern China, and Northeastern China is 29140.60 kha and accounts for 98.36% of the total rice cultivation area in the conterminous China. The total rice production in Eastern China, Central China, Southwestern China, Southern China, and Northeastern China was 191767.00 kt and accounted for 98.29% of the total rice production in the conterminous China in 2009. Northern China and Northwestern China constitute less than 2% of the national rice harvested area and production and were less important on a national scale in 2009.</p>
+<fig id="pone-0070816-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0070816.g001</object-id><label>Figure 1</label><caption>
+<title>The locations of the study areas within Mainland China.</title>
+<p>Heilongjiang is designated by HLJ, Jiangxi by JX, Guangxi by GX, Sichuan by SC, and Hunan by HN.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0070816.g001" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0070816-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0070816.t003</object-id><label>Table 3</label><caption>
+<title>Planted area and production changes for rice between 1979 and 2009 for different regions in the conterminous China.</title>
+</caption><alternatives><graphic id="pone-0070816-t003-3" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0070816.t003" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Regions</td>
+<td colspan="4" align="left" rowspan="1">Area (Kha)</td>
+<td colspan="4" align="left" rowspan="1">Production (Kt)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">1979</td>
+<td align="left" rowspan="1" colspan="1">% of China</td>
+<td align="left" rowspan="1" colspan="1">2009</td>
+<td align="left" rowspan="1" colspan="1">% of China</td>
+<td align="left" rowspan="1" colspan="1">1979</td>
+<td align="left" rowspan="1" colspan="1">% of China</td>
+<td align="left" rowspan="1" colspan="1">2009</td>
+<td align="left" rowspan="1" colspan="1">% of China</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Northeastern China</bold></td>
+<td align="left" rowspan="1" colspan="1">841.73</td>
+<td align="left" rowspan="1" colspan="1">2.49</td>
+<td align="left" rowspan="1" colspan="1">3777.90</td>
+<td align="left" rowspan="1" colspan="1">12.75</td>
+<td align="left" rowspan="1" colspan="1">3860.00</td>
+<td align="left" rowspan="1" colspan="1">2.69</td>
+<td align="left" rowspan="1" colspan="1">25855.00</td>
+<td align="left" rowspan="1" colspan="1">13.25</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Northern China</bold></td>
+<td align="left" rowspan="1" colspan="1">264.07</td>
+<td align="left" rowspan="1" colspan="1">0.78</td>
+<td align="left" rowspan="1" colspan="1">204.40</td>
+<td align="left" rowspan="1" colspan="1">0.69</td>
+<td align="left" rowspan="1" colspan="1">1165.00</td>
+<td align="left" rowspan="1" colspan="1">0.81</td>
+<td align="left" rowspan="1" colspan="1">1343.00</td>
+<td align="left" rowspan="1" colspan="1">0.69</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Northwestern China</bold></td>
+<td align="left" rowspan="1" colspan="1">315.27</td>
+<td align="left" rowspan="1" colspan="1">0.93</td>
+<td align="left" rowspan="1" colspan="1">281.70</td>
+<td align="left" rowspan="1" colspan="1">0.95</td>
+<td align="left" rowspan="1" colspan="1">1305.00</td>
+<td align="left" rowspan="1" colspan="1">0.91</td>
+<td align="left" rowspan="1" colspan="1">1993.00</td>
+<td align="left" rowspan="1" colspan="1">1.02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Central China</bold></td>
+<td align="left" rowspan="1" colspan="1">7639.13</td>
+<td align="left" rowspan="1" colspan="1">22.55</td>
+<td align="left" rowspan="1" colspan="1">6703.60</td>
+<td align="left" rowspan="1" colspan="1">22.63</td>
+<td align="left" rowspan="1" colspan="1">34260.00</td>
+<td align="left" rowspan="1" colspan="1">23.83</td>
+<td align="left" rowspan="1" colspan="1">46215.00</td>
+<td align="left" rowspan="1" colspan="1">23.69</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Eastern China</bold></td>
+<td align="left" rowspan="1" colspan="1">12926.33</td>
+<td align="left" rowspan="1" colspan="1">38.16</td>
+<td align="left" rowspan="1" colspan="1">9808.60</td>
+<td align="left" rowspan="1" colspan="1">33.11</td>
+<td align="left" rowspan="1" colspan="1">56230.00</td>
+<td align="left" rowspan="1" colspan="1">39.12</td>
+<td align="left" rowspan="1" colspan="1">64984.00</td>
+<td align="left" rowspan="1" colspan="1">33.31</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Southwestern China</bold></td>
+<td align="left" rowspan="1" colspan="1">4803.73</td>
+<td align="left" rowspan="1" colspan="1">14.18</td>
+<td align="left" rowspan="1" colspan="1">4448.10</td>
+<td align="left" rowspan="1" colspan="1">15.01</td>
+<td align="left" rowspan="1" colspan="1">21440.00</td>
+<td align="left" rowspan="1" colspan="1">14.91</td>
+<td align="left" rowspan="1" colspan="1">31214.00</td>
+<td align="left" rowspan="1" colspan="1">16.00</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Southern China</bold></td>
+<td align="left" rowspan="1" colspan="1">7082.40</td>
+<td align="left" rowspan="1" colspan="1">20.91</td>
+<td align="left" rowspan="1" colspan="1">4402.40</td>
+<td align="left" rowspan="1" colspan="1">14.86</td>
+<td align="left" rowspan="1" colspan="1">25490.00</td>
+<td align="left" rowspan="1" colspan="1">17.73</td>
+<td align="left" rowspan="1" colspan="1">23499.00</td>
+<td align="left" rowspan="1" colspan="1">12.04</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Total</bold></td>
+<td align="left" rowspan="1" colspan="1">33872.67</td>
+<td align="left" rowspan="1" colspan="1">100.00</td>
+<td align="left" rowspan="1" colspan="1">29626.70</td>
+<td align="left" rowspan="1" colspan="1">100.00</td>
+<td align="left" rowspan="1" colspan="1">143750.00</td>
+<td align="left" rowspan="1" colspan="1">100.00</td>
+<td align="left" rowspan="1" colspan="1">195103.00</td>
+<td align="left" rowspan="1" colspan="1">100.00</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap></sec><sec id="s2d">
+<title>2.4. Description of Study Area</title>
+<p>We divided China into 7 regions together with 5 representative provinces selected to convey the information of paddy rice planting area: Heilongjiang (HLJ) in Northeastern China, Hunan (HN) in Central China, Jiangxi (JX) in Eastern China, Sichuan (SC) in Southwestern China, and Guangxi (GX) in Southern China. These provinces were selected as the study areas for the present research because these locations: (1) represented the typical cropping system in China, (2) are located in primary rice-production regions, and (3) are geographically and climatologically different (see <xref ref-type="fig" rid="pone-0070816-g001">Figure 1</xref> and <xref ref-type="table" rid="pone-0070816-t004">Table 4</xref>). The life span, cropping system, and planting schedule are all depend on regional hydro-thermal condition. The general information on life span, cropping system, total annual rainfall (mm), annual accumulated temperature (°C), area (kha), and production levels (kt) for the selected provinces is shown in <xref ref-type="table" rid="pone-0070816-t004">Table 4</xref>. The total combined rice-cultivation area in Heilongjiang (HLJ), Hunan (HN), Jiangxi (JX), Sichuan (SC), and Guangxi (GX) is 13942.2 kha, and these regions accounted for 47.06% of the total rice-cultivation area in China in 2009. The total combined rice production in Heilongjiang (HLJ), Hunan (HN), Jiangxi (JX), Sichuan (SC), and Guangxi (GX) was 87251 kt and accounted for 44.72% of the total rice production in China in 2009. The time series of the NBSC province-level rice yields were used to train and develop the prediction models for these five provinces.</p>
+<table-wrap id="pone-0070816-t004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0070816.t004</object-id><label>Table 4</label><caption>
+<title>General information on Rice cropping system, Life span, Total annual rainfall (mm), Annual accumulated temperature (≥10°C), Area (kha) and Production (kt) for the study areas.</title>
+</caption><alternatives><graphic id="pone-0070816-t004-4" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0070816.t004" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Provinces</td>
+<td align="left" rowspan="1" colspan="1">Climate region</td>
+<td align="left" rowspan="1" colspan="1">Rice cropping system</td>
+<td align="left" rowspan="1" colspan="1">Life span</td>
+<td align="left" rowspan="1" colspan="1">Total annual rainfall (mm)</td>
+<td align="left" rowspan="1" colspan="1">Annual accumulated temperature (≥10 °C)</td>
+<td align="left" rowspan="1" colspan="1">Planting Area in 2009(kha)</td>
+<td align="left" rowspan="1" colspan="1">Percent age of  China (%)</td>
+<td align="left" rowspan="1" colspan="1">Production in 2009 (kt)</td>
+<td align="left" rowspan="1" colspan="1">Percenta ge of China (%)</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Heilongjiang</bold>  <bold>(HLJ)</bold></td>
+<td align="left" rowspan="1" colspan="1">Temperate continental monsoon climate</td>
+<td align="left" rowspan="1" colspan="1">Single cropping</td>
+<td align="left" rowspan="1" colspan="1">May – Oct</td>
+<td align="left" rowspan="1" colspan="1">450–650</td>
+<td align="left" rowspan="1" colspan="1">2000–3700</td>
+<td align="left" rowspan="1" colspan="1">2460.80</td>
+<td align="left" rowspan="1" colspan="1">8.31</td>
+<td align="left" rowspan="1" colspan="1">15745.00</td>
+<td align="left" rowspan="1" colspan="1">8.07</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Hunan</bold>  <bold>(HN)</bold></td>
+<td align="left" rowspan="1" colspan="1">Subtropical monsoon climate</td>
+<td align="left" rowspan="1" colspan="1">Double cropping</td>
+<td align="left" rowspan="1" colspan="1">Mar – Aug,  Jun – Nov</td>
+<td align="left" rowspan="1" colspan="1">1200–1700</td>
+<td align="left" rowspan="1" colspan="1">4500–6500</td>
+<td align="left" rowspan="1" colspan="1">4047.20</td>
+<td align="left" rowspan="1" colspan="1">13.66</td>
+<td align="left" rowspan="1" colspan="1">25786.00</td>
+<td align="left" rowspan="1" colspan="1">13.22</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Jiangxi</bold>   <bold>(JX)</bold></td>
+<td align="left" rowspan="1" colspan="1">Subtropical monsoon climate</td>
+<td align="left" rowspan="1" colspan="1">Double cropping</td>
+<td align="left" rowspan="1" colspan="1">Mar – Aug,  Jun - Nov</td>
+<td align="left" rowspan="1" colspan="1">1300–2000</td>
+<td align="left" rowspan="1" colspan="1">4500–6500</td>
+<td align="left" rowspan="1" colspan="1">3282.10</td>
+<td align="left" rowspan="1" colspan="1">11.08</td>
+<td align="left" rowspan="1" colspan="1">19059.00</td>
+<td align="left" rowspan="1" colspan="1">9.77</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Sichuan</bold>  <bold>(SC)</bold></td>
+<td align="left" rowspan="1" colspan="1">Subtropical humid climate</td>
+<td align="left" rowspan="1" colspan="1">Single cropping</td>
+<td align="left" rowspan="1" colspan="1">Mar - Aug</td>
+<td align="left" rowspan="1" colspan="1">950–1200 (Sichuan  Basin)</td>
+<td align="left" rowspan="1" colspan="1">4000–6000 (Sichuan Basin)</td>
+<td align="left" rowspan="1" colspan="1">2027.10</td>
+<td align="left" rowspan="1" colspan="1">6.84</td>
+<td align="left" rowspan="1" colspan="1">15202.00</td>
+<td align="left" rowspan="1" colspan="1">7.79</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Guangxi</bold>  <bold>(GX)</bold></td>
+<td align="left" rowspan="1" colspan="1">Subtropical monsoon climate</td>
+<td align="left" rowspan="1" colspan="1">Double cropping</td>
+<td align="left" rowspan="1" colspan="1">Mar – Aug,  Jun - Nov</td>
+<td align="left" rowspan="1" colspan="1">1300–2000</td>
+<td align="left" rowspan="1" colspan="1">5800–9300</td>
+<td align="left" rowspan="1" colspan="1">2125.00</td>
+<td align="left" rowspan="1" colspan="1">7.17</td>
+<td align="left" rowspan="1" colspan="1">11459.00</td>
+<td align="left" rowspan="1" colspan="1">5.87</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap></sec><sec id="s2e">
+<title>2.5. Calibration of Rice-Yield Prediction Models</title>
+<p>The gradual trend in yields is due to the influence of technological development, fertilizer application, and improved management on the rice cultivation. The results of this analysis suggest that the most common trend of rice yield is a linear growth. The province-specific intercepts account for spatial variations in rice management and soil quality; province-specific time trends account for yield growth due to technology gains. This indicates us the yield is composed from the intrinsic and extrinsic factors. Therefore, we decomposed the historical rice yield <italic>Y</italic> into the trend yield <italic>Y<sub>t</sub></italic> and the remotely sensed yield <italic>Y<sub>RS</sub></italic>, using the following equation:<disp-formula id="pone.0070816.e001"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0070816.e001" xlink:type="simple"/><label>(1)</label></disp-formula><italic>Y<sub>t</sub></italic>, represents the component that is regulated by agricultural technology, including (1) the usual biological-chemical technologies (new varieties, fertilizers, herbicides, insecticides, etc.) and the mechanical technologies (machinery, equipment, etc.); (2) the management practices, which involve changes such as the timing of field operations and other practices which may or may not be involved in the purchase of new inputs. <italic>Y<sub>RS</sub></italic> is defined as the component regulated by natural environmental conditions, such as temperature, precipitation, pests and disease; these environment factors can be detected by a remote sensor.</p>
+<p>To quantify past trends in yields, many different yield de-trend methods have been reported, including: least-squares regressions <xref ref-type="bibr" rid="pone.0070816-Dyson1">[76]</xref>, <xref ref-type="bibr" rid="pone.0070816-Clarke1">[77]</xref>, moving averages <xref ref-type="bibr" rid="pone.0070816-PeltonenSainio1">[78]</xref>, <xref ref-type="bibr" rid="pone.0070816-Epplin1">[79]</xref>, exponential algorithms <xref ref-type="bibr" rid="pone.0070816-Stergiou1">[80]</xref>, and polynomial regressions <xref ref-type="bibr" rid="pone.0070816-Foody1">[81]</xref>. For rice-yield predictions in the present investigation, a linear regression model and a moving average are both generated to fit each separated provincial rice dataset (also see in <xref ref-type="fig" rid="pone-0070816-g002">Figure 2</xref>):</p>
+<fig id="pone-0070816-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0070816.g002</object-id><label>Figure 2</label><caption>
+<title>Rice yield trends for the provinces' of Heilongjiang (HLJ), Hunan (HN), Jiangxi (JX), Sichuan (SC) and Guangxi (GX) from 1979 to 2006.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0070816.g002" position="float" xlink:type="simple"/></fig>
+<p><disp-formula id="pone.0070816.e002"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0070816.e002" xlink:type="simple"/><label>(2)</label></disp-formula>where <italic>Y<sub>t</sub></italic> is the trend yield in a given province during a given year (kg ha<sup>−1</sup>), <italic>t</italic> represents the year of harvest (the year 1979 was numeral 1979, 1980 was numeral 1980, etc., until 2009 was numeral 2009), α and β are the province-specific linear regression coefficients.</p>
+<p>In our study, a moving average is used with historical crop-yield data to smooth out short-term fluctuations and highlight longer-term trends. Rice yields were de-trended using their deviations from the 5-year moving average. The mean changes in provincial historical rice yield (Y), the trend yield (Y<sub>t</sub>) and the remotely sensed yield (Y<sub>RS</sub>) were calculated for each period as an average of the changes from each single preceding year to the next by using a moving average method. Generally, the moving average method is used to calculate arithmetic mean of each five of the entire dataset: <italic>y<sub>i-n</sub>, y<sub>i-n+1</sub>, …, y<sub>i</sub>, …., y<sub>i+n</sub></italic>. Such method has been usually employed in meteorological data analysis to remove the stochastic errors from long-time series of data. Hence, an algorithm for a 5-year moving average is as follows:<disp-formula id="pone.0070816.e003"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0070816.e003" xlink:type="simple"/><label>(3)</label></disp-formula>Where <italic>Y<sub>t, i</sub></italic> is the trend yield in a given province during a given year (kg ha<sup>−1</sup>); n represents the number of data points; <italic>i</italic> represents the year of the harvest (e.g. the year 1979 was numeral 1, 1980 was numeral 2, etc., until 2006 it should be numeral 31); <italic>Y<sub>t,1</sub></italic> and <italic>Y<sub>t,2</sub></italic> are the trend yields for the first two harvested years; then <italic>Y<sub>t, n-1</sub></italic> and <italic>Y<sub>t, n</sub></italic> are the trend yields for the last two harvested years within the 5 years.</p>
+<p>Consequently, the trend yield <italic>Y<sub>t</sub></italic> was obtained. To remove the technological influences, it is necessary to remove the yield trend to produce a new time series that is directly related to the NDVIs. We defined this new time series as the remotely sensed yield. According to Eq. (1), the remotely sensed yield can be calculated by the following equation:<disp-formula id="pone.0070816.e004"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0070816.e004" xlink:type="simple"/><label>(4)</label></disp-formula></p>
+<p>Next, correlation analysis was performed between the remotely sensed yield and the NDVI variables. The correlation coefficient is a measure of the strength and the direction of a linear relationship between two variables. The symbol <italic>r</italic> in Eq. (5) represents the samples' correlation coefficient; <italic>x</italic> and <italic>y</italic> represent the remotely sensed yield and the NDVI variables respectively; <italic>n</italic> is the number of data pairs.<disp-formula id="pone.0070816.e005"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0070816.e005" xlink:type="simple"/><label>(5)</label></disp-formula></p>
+<p>Statistical regression models are the most commonly used method for crop-yield prediction based on remotely sensed data <xref ref-type="bibr" rid="pone.0070816-Wall1">[8]</xref>, <xref ref-type="bibr" rid="pone.0070816-BeckerReshef1">[36]</xref>. They do not require numerous inputs and can be performed directly; also because it requires little computing power and the selected variables are distinctive and non-overlapping. Therefore, each of the provincial <italic>Y<sub>RS</sub></italic> and NDVI dataset was analyzed separately by means of stepwise regression techniques. These models were constructed via the ‘STEPWISE’ regression process which was available in software Statistical Product and Service Solutions (SPSS) 17.0 <xref ref-type="bibr" rid="pone.0070816-Sirkin1">[82]</xref>. The probability significance thresholds for the entry and retention of candidate independent variables in the model were both set to α = 5%.</p>
+</sec><sec id="s2f">
+<title>2.6. Evaluation of Rice-Yield Prediction Models</title>
+<p>The rice-yield prediction models were evaluated using the following indicators:</p>
+<p>Root mean square error (RMSE):<disp-formula id="pone.0070816.e006"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0070816.e006" xlink:type="simple"/><label>(6)</label></disp-formula></p>
+<p>Coefficient of determination (R<sup>2</sup>):<disp-formula id="pone.0070816.e007"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0070816.e007" xlink:type="simple"/><label>(7)</label></disp-formula></p>
+<p>F-value (F):<disp-formula id="pone.0070816.e008"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0070816.e008" xlink:type="simple"/><label>(8)</label></disp-formula></p>
+<p>and relative error (RE):<disp-formula id="pone.0070816.e009"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0070816.e009" xlink:type="simple"/><label>(9)</label></disp-formula></p>
+<p>Together with the above, where <italic>n</italic> is the number of comparisons; <italic>k</italic> is the number of predictors; <italic>Y<sub>i</sub></italic> is the statistical rice yield; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0070816.e010" xlink:type="simple"/></inline-formula> is the average rice yield, and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0070816.e011" xlink:type="simple"/></inline-formula> is the predicted yield.</p>
+</sec></sec><sec id="s3">
+<title>Results and Discussion</title>
+<sec id="s3a">
+<title>3.1. Rice Yield Trend Analysis</title>
+<p><xref ref-type="fig" rid="pone-0070816-g002">Figure 2</xref> presents the evolution of the average rice-grain yield in Heilongjiang (HLJ), Jiangxi (JX), Guangxi (GX), Sichuan (SC), and Hunan (HN) from 1979 to 2009; according to their R-square and RMSE, all rice yields showed a visible and significant growth trend over time. Understanding the past rice-yield trends can help us to gauge the importance of the preprocessing procedure for rice-yield prediction using remotely sensed data. The statistical data of rice yield together with average yield growth trend from 1979 to 2009 in five provinces of China is summarized in <xref ref-type="table" rid="pone-0070816-t005">Table 5</xref>.</p>
+<table-wrap id="pone-0070816-t005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0070816.t005</object-id><label>Table 5</label><caption>
+<title>Trends in rice yield for five selected-provinces in China from 1979 to 2009.</title>
+</caption><alternatives><graphic id="pone-0070816-t005-5" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0070816.t005" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Province</td>
+<td align="left" rowspan="1" colspan="1">Yield in 1979 (kgha<sup>−1</sup>)</td>
+<td align="left" rowspan="1" colspan="1">Yield in 2009(kgha<sup>−1</sup>)</td>
+<td align="left" rowspan="1" colspan="1">Annual increase, 1979–2009 (kgha<sup>−1</sup>yr<sup>−1</sup>)</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Heilongjiang (HLJ)</bold></td>
+<td align="left" rowspan="1" colspan="1">3480</td>
+<td align="left" rowspan="1" colspan="1">6398.3</td>
+<td align="left" rowspan="1" colspan="1">94.14</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Hunan (HN)</bold></td>
+<td align="left" rowspan="1" colspan="1">4440</td>
+<td align="left" rowspan="1" colspan="1">6371.3</td>
+<td align="left" rowspan="1" colspan="1">62.30</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Jiangxi (JX)</bold></td>
+<td align="left" rowspan="1" colspan="1">3645</td>
+<td align="left" rowspan="1" colspan="1">5807</td>
+<td align="left" rowspan="1" colspan="1">69.74</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Sichuan (SC)</bold></td>
+<td align="left" rowspan="1" colspan="1">4777.5</td>
+<td align="left" rowspan="1" colspan="1">7499.4</td>
+<td align="left" rowspan="1" colspan="1">87.80</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Guangxi (GX)</bold></td>
+<td align="left" rowspan="1" colspan="1">3562.5</td>
+<td align="left" rowspan="1" colspan="1">5392.5</td>
+<td align="left" rowspan="1" colspan="1">59.03</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>As analysis above (see <xref ref-type="fig" rid="pone-0070816-g002">Figure 2</xref>), the social input and advance of technology account for the linear trend of the rice-yield growth, whereas such human-induced factors could not be detected using remotely sensed data. To overcome this problem and make rice-yield prediction methods more robust and easily exportable, one possible strategy is to integrate remote-sensing data with the rice yield time series analysis. De-trending is necessary to properly identify the remote-sensible effects in these panel datasets. Therefore, before the rice-yield predicting models are established using remotely sensed variables as predictors, we suggest that the statistical yield should be decomposed into the trend yield and the remotely sensed yield, methodology was described in Section 2.5.</p>
+</sec><sec id="s3b">
+<title>3.2. Correlation Coefficients between the Remotely Sensed Yield and NDVI Variables</title>
+<p>The correlation coefficients between Y<sub>RS</sub> and the NDVI variables for the rice-growth period from the fourth 15-day period before <italic>NDVI<sub>max</sub></italic> (<italic>NDVI<sub>maxb4</sub></italic>) to the second 15-day period after <italic>NDVI<sub>max</sub></italic> (<italic>NDVI<sub>maxa2</sub></italic>) for each of the studied provinces are summarized in <xref ref-type="table" rid="pone-0070816-t006">Table 6</xref>. By comparing the correlation coefficients (Column 2 and 3 in <xref ref-type="table" rid="pone-0070816-t006">Table 6</xref>), the <italic>Y<sub>RS</sub></italic> that was de-trended by linear regression performed better than the Y<sub>RS</sub> that was de-trended by a 5-year moving average against the NDVI variables.</p>
+<table-wrap id="pone-0070816-t006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0070816.t006</object-id><label>Table 6</label><caption>
+<title>Correlation coefficient (R) between the remotely sensed yields and NDVI variables during the rice growth period.</title>
+</caption><alternatives><graphic id="pone-0070816-t006-6" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0070816.t006" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Variables</td>
+<td colspan="5" align="left" rowspan="1">the remotely sensed yields de-trended by linear models</td>
+<td colspan="5" align="left" rowspan="1">the remotely sensed yields de-trended by 5-year moving average</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">HLJ</td>
+<td align="left" rowspan="1" colspan="1">HN</td>
+<td align="left" rowspan="1" colspan="1">JX</td>
+<td align="left" rowspan="1" colspan="1">SC</td>
+<td align="left" rowspan="1" colspan="1">GX</td>
+<td align="left" rowspan="1" colspan="1">HLJ</td>
+<td align="left" rowspan="1" colspan="1">HN</td>
+<td align="left" rowspan="1" colspan="1">JX</td>
+<td align="left" rowspan="1" colspan="1">SC</td>
+<td align="left" rowspan="1" colspan="1">GX</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>NDVI<sub>maxb4</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.08</td>
+<td align="left" rowspan="1" colspan="1">0.05</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.68**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.24</td>
+<td align="left" rowspan="1" colspan="1">−0.12</td>
+<td align="left" rowspan="1" colspan="1">0.14</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.51**</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.54**</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>NDVI<sub>maxb3</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.16</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.14</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.73**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.36</td>
+<td align="left" rowspan="1" colspan="1">−0.21</td>
+<td align="left" rowspan="1" colspan="1">0.13</td>
+<td align="left" rowspan="1" colspan="1">0.10</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.46</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.52**</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>NDVI<sub>maxb2</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.08</td>
+<td align="left" rowspan="1" colspan="1">0.38</td>
+<td align="left" rowspan="1" colspan="1">0.21</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.57**</bold></td>
+<td align="left" rowspan="1" colspan="1">−0.14</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">0.34</td>
+<td align="left" rowspan="1" colspan="1">0.14</td>
+<td align="left" rowspan="1" colspan="1">0.39</td>
+<td align="left" rowspan="1" colspan="1">−0.30</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>NDVI<sub>maxb1</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.56**</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.42</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.32</td>
+<td align="left" rowspan="1" colspan="1">0.19</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">0.22</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+<td align="left" rowspan="1" colspan="1">0.16</td>
+<td align="left" rowspan="1" colspan="1">0.09</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>NDVI<sub>max</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.13</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.60**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.39</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+<td align="left" rowspan="1" colspan="1">0.20</td>
+<td align="left" rowspan="1" colspan="1">0.20</td>
+<td align="left" rowspan="1" colspan="1">0.10</td>
+<td align="left" rowspan="1" colspan="1">0.10</td>
+<td align="left" rowspan="1" colspan="1">−0.26</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>NDVI<sub>maxa1</sub></bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.42</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.62**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.28</td>
+<td align="left" rowspan="1" colspan="1">0.29</td>
+<td align="left" rowspan="1" colspan="1">−0.01</td>
+<td align="left" rowspan="1" colspan="1">0.35</td>
+<td align="left" rowspan="1" colspan="1">0.27</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">0.08</td>
+<td align="left" rowspan="1" colspan="1">−0.28</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>NDVI<sub>maxa2</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.20</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.49</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.32</td>
+<td align="left" rowspan="1" colspan="1">−0.11</td>
+<td align="left" rowspan="1" colspan="1">0.38</td>
+<td align="left" rowspan="1" colspan="1">0.28</td>
+<td align="left" rowspan="1" colspan="1">0.18</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−0.22</td>
+<td align="left" rowspan="1" colspan="1">0.39</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb4-b3</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.08</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">0.10</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.73**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.31</td>
+<td align="left" rowspan="1" colspan="1">−0.16</td>
+<td align="left" rowspan="1" colspan="1">0.14</td>
+<td align="left" rowspan="1" colspan="1">0.08</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.50</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.57**</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb4-b2</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+<td align="left" rowspan="1" colspan="1">0.12</td>
+<td align="left" rowspan="1" colspan="1">0.16</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.73**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.19</td>
+<td align="left" rowspan="1" colspan="1">−0.14</td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1">0.11</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.50</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.32</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb4-b1</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.08</td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1">0.26</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.66**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.22</td>
+<td align="left" rowspan="1" colspan="1">−0.13</td>
+<td align="left" rowspan="1" colspan="1">0.28</td>
+<td align="left" rowspan="1" colspan="1">0.08</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.43</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.30</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb4-max</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.07</td>
+<td align="left" rowspan="1" colspan="1">0.33</td>
+<td align="left" rowspan="1" colspan="1">0.29</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.64**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.22</td>
+<td align="left" rowspan="1" colspan="1">−0.11</td>
+<td align="left" rowspan="1" colspan="1">0.30</td>
+<td align="left" rowspan="1" colspan="1">0.09</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.44</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.26</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb4-a1</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.09</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.47</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.31</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.61**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.18</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+<td align="left" rowspan="1" colspan="1">0.33</td>
+<td align="left" rowspan="1" colspan="1">0.07</td>
+<td align="left" rowspan="1" colspan="1">0.39</td>
+<td align="left" rowspan="1" colspan="1">0.12</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb4-a2</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.15</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.56**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.33</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.54**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1">0.12</td>
+<td align="left" rowspan="1" colspan="1">0.35</td>
+<td align="left" rowspan="1" colspan="1">0.06</td>
+<td align="left" rowspan="1" colspan="1">0.31</td>
+<td align="left" rowspan="1" colspan="1">0.20</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb3-b2</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.14</td>
+<td align="left" rowspan="1" colspan="1">0.23</td>
+<td align="left" rowspan="1" colspan="1">0.20</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.70**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.10</td>
+<td align="left" rowspan="1" colspan="1">−0.15</td>
+<td align="left" rowspan="1" colspan="1">0.28</td>
+<td align="left" rowspan="1" colspan="1">0.14</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.46</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.06</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb3-b1</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.12</td>
+<td align="left" rowspan="1" colspan="1">0.37</td>
+<td align="left" rowspan="1" colspan="1">0.32</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.60**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.15</td>
+<td align="left" rowspan="1" colspan="1">−0.13</td>
+<td align="left" rowspan="1" colspan="1">0.30</td>
+<td align="left" rowspan="1" colspan="1">0.09</td>
+<td align="left" rowspan="1" colspan="1">0.38</td>
+<td align="left" rowspan="1" colspan="1">0.08</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb3-max</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.10</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.45</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.35</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.58**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.14</td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+<td align="left" rowspan="1" colspan="1">0.31</td>
+<td align="left" rowspan="1" colspan="1">0.10</td>
+<td align="left" rowspan="1" colspan="1">0.38</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb3-a1</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.13</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.57**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.35</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.55**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.09</td>
+<td align="left" rowspan="1" colspan="1">0.10</td>
+<td align="left" rowspan="1" colspan="1">0.34</td>
+<td align="left" rowspan="1" colspan="1">0.07</td>
+<td align="left" rowspan="1" colspan="1">0.33</td>
+<td align="left" rowspan="1" colspan="1">−0.10</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb3-a2</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.19</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.64**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.37</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.46</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.18</td>
+<td align="left" rowspan="1" colspan="1">0.19</td>
+<td align="left" rowspan="1" colspan="1">0.35</td>
+<td align="left" rowspan="1" colspan="1">0.06</td>
+<td align="left" rowspan="1" colspan="1">0.24</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb2-b1</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.08</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.51**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.35</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.47</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.00</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">0.33</td>
+<td align="left" rowspan="1" colspan="1">0.07</td>
+<td align="left" rowspan="1" colspan="1">0.29</td>
+<td align="left" rowspan="1" colspan="1">−0.15</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb2-max</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.59**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.38</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.44</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">−0.01</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">0.34</td>
+<td align="left" rowspan="1" colspan="1">0.08</td>
+<td align="left" rowspan="1" colspan="1">0.29</td>
+<td align="left" rowspan="1" colspan="1">−0.21</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb2-a1</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.66**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.37</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.43</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">−0.01</td>
+<td align="left" rowspan="1" colspan="1">0.23</td>
+<td align="left" rowspan="1" colspan="1">0.34</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1">−0.25</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb2-a2</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.27</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.69**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.38</td>
+<td align="left" rowspan="1" colspan="1">0.33</td>
+<td align="left" rowspan="1" colspan="1">0.10</td>
+<td align="left" rowspan="1" colspan="1">0.29</td>
+<td align="left" rowspan="1" colspan="1">0.33</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+<td align="left" rowspan="1" colspan="1">0.15</td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb1-max</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.64**</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.46</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1">0.13</td>
+<td align="left" rowspan="1" colspan="1">0.07</td>
+<td align="left" rowspan="1" colspan="1">0.24</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">0.17</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb1-a1</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.34</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.69**</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.42</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.30</td>
+<td align="left" rowspan="1" colspan="1">0.06</td>
+<td align="left" rowspan="1" colspan="1">0.31</td>
+<td align="left" rowspan="1" colspan="1">0.28</td>
+<td align="left" rowspan="1" colspan="1">−0.01</td>
+<td align="left" rowspan="1" colspan="1">0.15</td>
+<td align="left" rowspan="1" colspan="1">−0.19</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxb1-a2</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.30</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.69**</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.41</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">0.18</td>
+<td align="left" rowspan="1" colspan="1">0.19</td>
+<td align="left" rowspan="1" colspan="1">0.32</td>
+<td align="left" rowspan="1" colspan="1">0.27</td>
+<td align="left" rowspan="1" colspan="1">−0.01</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>max-a1</sub></bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.40</bold><xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.66**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.35</td>
+<td align="left" rowspan="1" colspan="1">0.23</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.36</td>
+<td align="left" rowspan="1" colspan="1">0.27</td>
+<td align="left" rowspan="1" colspan="1">0.00</td>
+<td align="left" rowspan="1" colspan="1">0.12</td>
+<td align="left" rowspan="1" colspan="1">−0.31</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>max-a2</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.33</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.66**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.37</td>
+<td align="left" rowspan="1" colspan="1">0.07</td>
+<td align="left" rowspan="1" colspan="1">0.16</td>
+<td align="left" rowspan="1" colspan="1">0.34</td>
+<td align="left" rowspan="1" colspan="1">0.26</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>mNDVI<sub>maxa1-a2</sub></bold></td>
+<td align="left" rowspan="1" colspan="1">0.32</td>
+<td align="left" rowspan="1" colspan="1"><bold>0.62**</bold></td>
+<td align="left" rowspan="1" colspan="1">0.32</td>
+<td align="left" rowspan="1" colspan="1">0.09</td>
+<td align="left" rowspan="1" colspan="1">0.19</td>
+<td align="left" rowspan="1" colspan="1">0.33</td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt101"><label>*</label><p>significant at 0.05 level; ** significant at 0.01 level, n = 23.</p></fn></table-wrap-foot></table-wrap>
+<p>The correlation coefficients between the Y<sub>RS</sub> that were de-trended by linear regression and the NDVI variables were generally high in HN and SC. According to <xref ref-type="table" rid="pone-0070816-t006">Table 6</xref>, for HN, the correlation coefficients were significant at the 0.01 level between the Y<sub>RS</sub> that was de-trended by linear regression and <italic>NDVI<sub>maxb1</sub>, NDVI<sub>max</sub>, NDVI<sub>maxa1</sub>, mNDVI<sub>maxb4-a2</sub>,mNDVI<sub>maxb3-a1</sub>, mNDVI<sub>maxb3-a2</sub>, mNDVI<sub>maxb2-b1</sub>, mNDVI<sub>maxb2-max</sub>, mNDVI<sub>maxb2-a1</sub>, mNDVI<sub>maxb2-a2</sub>, mNDVI<sub>maxb1-max</sub>, mNDVI<sub>maxb1-a1</sub>, mNDVI<sub>maxb1-a2</sub>, mNDVI<sub>max-a1</sub>, mNDVI<sub>max-a2</sub>,</italic> and <italic>mNDVI<sub>maxa1-a2</sub></italic>; the correlation coefficients were significant at the 0.05 level between the Y<sub>RS</sub> that was de-trended by linear regression and <italic>NDVI<sub>maxa2</sub>, mNDVI<sub>maxb4-a1</sub>,</italic> and <italic>mNDVI<sub>maxb3-max</sub></italic>. For SC, the correlation coefficients were significant at the 0.01 level between the Y<sub>RS</sub> that was de-trended by linear regression and <italic>NDVI<sub>maxb4</sub>, NDVI<sub>maxb3</sub>, NDVI<sub>maxb2</sub>,mNDVI<sub>maxb4-b3</sub>, mNDVI<sub>maxb4-b2</sub>, mNDVI<sub>maxb4-b1</sub>, mNDVI<sub>maxb4-max</sub>, mNDVI<sub>maxb4-a1</sub>, mNDVI<sub>maxb4-a2</sub>, mNDVI<sub>maxb3-b2</sub>, mNDVI<sub>maxb3-b1</sub>,</italic> and <italic>mNDVI<sub>maxb3-max</sub>, mNDVI<sub>maxb3-a1</sub></italic>; the correlation coefficients were significant at the 0.05 level between the Y<sub>RS</sub> that was de-trended by linear regression and <italic>mNDVI<sub>maxb3-a2</sub>, mNDVI<sub>maxb2-b1</sub>, mNDVI<sub>maxb2-max</sub>,</italic> and <italic>mNDVI<sub>maxb2-a1</sub></italic>. The highest correlation coefficient between the Y<sub>RS</sub> that was de-trended by linear regression and the NDVI variables occurred in the second 15-day period after <italic>NDVI<sub>max</sub></italic> (<italic>NDVI<sub>maxa2</sub></italic>) and was significant at the 0.05 level for HLJ. The correlation coefficients between the Y<sub>RS</sub> that was de-trended by linear regression and <italic>NDVI<sub>maxb1</sub>, mNDVI<sub>maxb1-max</sub>, mNDVI<sub>maxb1-a1</sub>,</italic> and <italic>mNDVI<sub>maxb1-a2</sub></italic> were significant at the 0.05 level in JX. The correlation coefficients between the Y<sub>RS</sub> that was de-trended by linear regression and the NDVI variables ranged from – 0.14 to 0.38 in GX.</p>
+<p>The correlation coefficients between the <italic>Y<sub>RS</sub></italic> that were de-trended by a 5-year moving average and the NDVI variables were generally low in HLJ, HN, and JX. For SC, the correlation coefficients were significant at the 0.01 level between the <italic>Y<sub>RS</sub></italic> that was de-trended by a 5-year moving average and <italic>NDVI<sub>maxb4</sub></italic>, and the correlation coefficients were significant at the 0.05 level between the <italic>Y<sub>RS</sub></italic> that was de-trended by a 5-year moving average and <italic>NDVI<sub>maxb3</sub>, mNDVI<sub>maxb4-b3</sub>, mNDVI<sub>maxb4-b2</sub>, mNDVI<sub>maxb4-b1</sub>, mNDVI<sub>maxb4-max</sub>,</italic> and <italic>mNDVI<sub>maxb3-b2</sub></italic>. The correlation coefficients were significant at the 0.01 level between the <italic>Y<sub>RS</sub></italic> that was de-trended by a 5-year moving average and <italic>NDVI<sub>maxb4</sub></italic>, <italic>NDVI<sub>maxb3</sub></italic>, and <italic>NDVI<sub>maxb4-b3</sub></italic>.</p>
+</sec><sec id="s3c">
+<title>3.3. Remotely Sensed Yield-Prediction Models</title>
+<p>Conclusions drawn in the yield-trend analysis and the correlation analysis between Y<sub>RS</sub> and the NDVI variables encouraged us to attempt to build a simple remotely sensed yield-prediction model for rice based on the NDVI variables. According to the correlation coefficient result summarized in <xref ref-type="table" rid="pone-0070816-t006">Table 6</xref>, the Y<sub>RS</sub> values that were de-trended by linear regression were used as dependent variables in HLJ, HN, JX, and SC. The Y<sub>RS</sub> values that were de-trended by a 5-year moving average were used as dependent variables in GX. The NDVIs were used as independent variables. These models were constructed through the ‘STEPWISE’ regression process in SPSS software. Each model contains variables using the data period from 1982 to 2004. The correlation coefficients of the selected models ranged from 0.42 to 0.92, and all models were significant at the 0.01 level, except for HLJ which is significant at the 0.05 level (see <xref ref-type="table" rid="pone-0070816-t007">Table 7</xref>). This means that increases in NDVI during the rice-growth period are generally related to the final rice-grain yield. The influence of NDVI always had a positive impact on yield. These results are consistent with numerous previous studies <xref ref-type="bibr" rid="pone.0070816-Boken1">[34]</xref>, <xref ref-type="bibr" rid="pone.0070816-BeckerReshef1">[36]</xref>, <xref ref-type="bibr" rid="pone.0070816-Rojas1">[42]</xref>, <xref ref-type="bibr" rid="pone.0070816-Tucker3">[75]</xref>. Data from 2005 to 2006 were used for model validation.</p>
+<table-wrap id="pone-0070816-t007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0070816.t007</object-id><label>Table 7</label><caption>
+<title>Results of the stepwise regression models for remotely sensed rice yield using AVHRR-derived NDVI measures as independent variables.</title>
+</caption><alternatives><graphic id="pone-0070816-t007-7" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0070816.t007" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Study areas</td>
+<td align="left" rowspan="1" colspan="1">Model</td>
+<td align="left" rowspan="1" colspan="1">R</td>
+<td align="left" rowspan="1" colspan="1">F-test value</td>
+<td align="left" rowspan="1" colspan="1">RMSE</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>HLJ</bold></td>
+<td align="left" rowspan="1" colspan="1">Y<sub>RS</sub> = −849.158+0.137NDVI<sub>maxa1</sub></td>
+<td align="left" rowspan="1" colspan="1">0.42<xref ref-type="table-fn" rid="nt103">*</xref></td>
+<td align="left" rowspan="1" colspan="1">4.508</td>
+<td align="left" rowspan="1" colspan="1">361.99</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>HN</bold></td>
+<td align="left" rowspan="1" colspan="1">Y<sub>RS</sub>  = −1240.690+0.229 mNDVI<sub>maxb1-a2</sub></td>
+<td align="left" rowspan="1" colspan="1">0.69**</td>
+<td align="left" rowspan="1" colspan="1">19.342</td>
+<td align="left" rowspan="1" colspan="1">114.57</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>JX</bold></td>
+<td align="left" rowspan="1" colspan="1">Y<sub>RS</sub>  = −1553.145+0.261 mNDVI<sub>maxb1-max</sub></td>
+<td align="left" rowspan="1" colspan="1">0.46**</td>
+<td align="left" rowspan="1" colspan="1">5.689</td>
+<td align="left" rowspan="1" colspan="1">166.38</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>SC</bold></td>
+<td align="left" rowspan="1" colspan="1">Y<sub>RS</sub>  = −1495.515+0.403 mNDVI<sub>maxb4-b3</sub></td>
+<td align="left" rowspan="1" colspan="1">0.73**</td>
+<td align="left" rowspan="1" colspan="1">24.238</td>
+<td align="left" rowspan="1" colspan="1">207.07</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>GX</bold></td>
+<td align="left" rowspan="1" colspan="1">Y<sub>RS</sub>  = −1832.285+1.138 mNDVI<sub>maxb4-b3</sub> + 0.214NDVI<sub>maxa2</sub> – 1.315 mNDVI<sub>maxb4-b2</sub>+0.307 mNDVI<sub>maxb2-b1</sub></td>
+<td align="left" rowspan="1" colspan="1">0.92**</td>
+<td align="left" rowspan="1" colspan="1">25.103</td>
+<td align="left" rowspan="1" colspan="1">87.70</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt102"><label/><p>R: multiple correlation coefficient.</p></fn><fn id="nt103"><label>*</label><p>significant at 0.05 level; ** significant at 0.01 level.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s3d">
+<title>3.4. Validation of Rice-Yield Prediction Models</title>
+<p>The remotely sensed yield (<italic>Y<sub>RS</sub></italic>) of rice was calculated using the NDVI variables required by each model described in <xref ref-type="table" rid="pone-0070816-t007">Table 7</xref>. The final rice yield (<italic>Y</italic>) was the sum of the trend yield (<italic>Y<sub>t</sub></italic>) and the remotely sensed yield (<italic>Y<sub>RS</sub></italic>). <xref ref-type="fig" rid="pone-0070816-g003">Figure 3</xref> shows a scatter plot of the predicted and observed final rice yields for HLJ, HN, JX, SC, and GX from 1982 to 2004, expressed in units of kilogram per hectare. The models performed well, showing a good similarity between the predicted values and the official statistical values in HLJ, HN, JX, SC, and GX from 1982 to 2004 and capturing the fluctuations of rice yields over time. The regression line between the predicted values and the observed values was close to the diagonal (intercept = 0, slope = 1), and the coefficients of determination for the five study areas ranged from 0.84 to 0.98, indicating that the reliability of the forecasts are very high.</p>
+<fig id="pone-0070816-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0070816.g003</object-id><label>Figure 3</label><caption>
+<title>Observed versus predicted yields of rice (kg/ha) for the provinces of Heilongjiang (HLJ), Hunan (HN), Jiangxi (JX), Sichuan (SC) and Guangxi (GX) over the period 1982–2004.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0070816.g003" position="float" xlink:type="simple"/></fig>
+<p>The yield data for 2005 and 2006 were not included in the model construction and instead were used to evaluate the prediction models independently. These data provide independent estimates of the predictive power of the selected models (<xref ref-type="table" rid="pone-0070816-t008">Table 8</xref>). The differences between the predicted values and the official statistical values were 5% or less in seven out of ten years. These results demonstrate the potential of a NDVI rice-yield estimate that is based on model calibration with historical data at the provincial level. However, it is noticeable that the predicted relative errors were greater than 10%, but less than 19% in both 2005 and 2006 for SC and in 2006 in HLJ when compared with the official statistical data. These error rates are likely due to a number of contamination sources that can confound the potential relationship between NDVIs and rice yield. For instance, cloud and atmospheric-moisture contamination can influence the NDVI signal. Vegetation signals from before or after the selected NDVIs can impact the final yield of rice.</p>
+<table-wrap id="pone-0070816-t008" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0070816.t008</object-id><label>Table 8</label><caption>
+<title>Observed and predicted rice yields (independent test).</title>
+</caption><alternatives><graphic id="pone-0070816-t008-8" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0070816.t008" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Provinces</td>
+<td align="left" rowspan="1" colspan="1">Year</td>
+<td align="left" rowspan="1" colspan="1">Observed(kg/ha)</td>
+<td align="left" rowspan="1" colspan="1">Predicted(kg/ha)</td>
+<td align="left" rowspan="1" colspan="1">Relative Error (%)</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Heilongjiang (HLJ)</bold></td>
+<td align="left" rowspan="1" colspan="1">2005</td>
+<td align="left" rowspan="1" colspan="1">6795.7</td>
+<td align="left" rowspan="1" colspan="1">6780.7</td>
+<td align="left" rowspan="1" colspan="1">−0.22</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">2006</td>
+<td align="left" rowspan="1" colspan="1">6261.3</td>
+<td align="left" rowspan="1" colspan="1">6897.8</td>
+<td align="left" rowspan="1" colspan="1">10.17</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Hunan (HN)</bold></td>
+<td align="left" rowspan="1" colspan="1">2005</td>
+<td align="left" rowspan="1" colspan="1">6050.3</td>
+<td align="left" rowspan="1" colspan="1">6337.5</td>
+<td align="left" rowspan="1" colspan="1">4.75</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">2006</td>
+<td align="left" rowspan="1" colspan="1">6141.3</td>
+<td align="left" rowspan="1" colspan="1">6441.2</td>
+<td align="left" rowspan="1" colspan="1">4.88</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Jiangxi (JX)</bold></td>
+<td align="left" rowspan="1" colspan="1">2005</td>
+<td align="left" rowspan="1" colspan="1">5328.2</td>
+<td align="left" rowspan="1" colspan="1">5545.9</td>
+<td align="left" rowspan="1" colspan="1">4.09</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">2006</td>
+<td align="left" rowspan="1" colspan="1">5475.1</td>
+<td align="left" rowspan="1" colspan="1">5634.9</td>
+<td align="left" rowspan="1" colspan="1">2.92</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Sichuan (SC)</bold></td>
+<td align="left" rowspan="1" colspan="1">2005</td>
+<td align="left" rowspan="1" colspan="1">7213.0</td>
+<td align="left" rowspan="1" colspan="1">8018.4</td>
+<td align="left" rowspan="1" colspan="1">11.17</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">2006</td>
+<td align="left" rowspan="1" colspan="1">6420.7</td>
+<td align="left" rowspan="1" colspan="1">7680.3</td>
+<td align="left" rowspan="1" colspan="1">19.62</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Guangxi (GX)</bold></td>
+<td align="left" rowspan="1" colspan="1">2005</td>
+<td align="left" rowspan="1" colspan="1">4953.0</td>
+<td align="left" rowspan="1" colspan="1">5028.98</td>
+<td align="left" rowspan="1" colspan="1">1.53</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">2006</td>
+<td align="left" rowspan="1" colspan="1">5088.0</td>
+<td align="left" rowspan="1" colspan="1">5053.44</td>
+<td align="left" rowspan="1" colspan="1">−0.68</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap></sec></sec><sec id="s4">
+<title>Conclusion</title>
+<p>This study focused on the obvious and important role that advance of technology plays in rice yields increase. The results of this analysis suggest that the most common trend of rice yields in China during the years 1979–2009 is a linear growth. In the light of rice-yield trend could not be detected directly by a satellite remote sensor therefore, yield de-trended analysis was necessary to properly identify the remote-sensible effects and obtain an accurate prediction for rice yield. Only with de-trending analysis could we interpret the NDVI's evolution as being mainly due to variations in the photosynthetic activity and growth conditions of rice and then predict the rice yield using NDVI variables.</p>
+<p>The AVHRR-based indices explored in the present research were useful for the remotely sensed rice yield-prediction in major rice cultivation areas of China. This method allowed us to have a fine provincial estimate which satellite image could be difficult to obtain, or else a similar cost and a similar time frame data is easily available. However, it is cautious to restrict these analysis to those areas where the common trend of the crop yield is linear growth for the period considered.</p>
+<p>The two steps for de-trending the statistical yield to obtain new time series, that are the trend yield (<italic>Y<sub>t</sub></italic>) and the remotely sensed yield (<italic>Y<sub>RS</sub></italic>); And by constructing the prediction models of <italic>Y<sub>RS</sub></italic> using NDVI variables enabled the development of a robust, simple, remotely sensed data-based model that was applicable at the provincial level in China. We believe the approach introduced here has a wide applicability to other rice-producing countries as well as other crops, such as wheat and corn.</p>
+<p>More empirical studies should be performed on the use of AVHRR-derived NDVI time series as predictors for crop yield to enhance the understanding its forecasting capacity and limitations, and to validate the methods of remotely sensed yield estimation further. A future study should also include the application of a longer AVHRR NDVI time series in combination with other data sets such as SPOT-VEG, MODIS and SeaWiFS, especially in the event of one of these dataset's unexpected absence.</p>
+</sec></body>
+<back>
+<ack>
+<p>We thank the NASA/GSFC Global Inventory Modeling and Mapping Studies (GIMMS) group for providing access to the AVHRR NDVI data and the National Bureau of Statistics of China for providing rice yield data. We also appreciate professor Jiwei (<email xlink:type="simple">jiwei@umkc.edu) and</email> anonymous reviewers who provided very valuable comments.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0070816-NationalBureauofStatisticsof1"><label>1</label>
+<mixed-citation publication-type="other" xlink:type="simple">National Bureau of Statistics of China (2010) China Statistical Year Book. Beijing: China Statistical Press.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Wang1"><label>2</label>
+<mixed-citation publication-type="other" xlink:type="simple">Wang RC, Huang JF (2002) Rice yield estimation using remote sensing data. Beijing: China Agriculture Press. 287 p. (in Chinese with English abstract).</mixed-citation>
+</ref>
+<ref id="pone.0070816-Prasad1"><label>3</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Prasad</surname><given-names>AK</given-names></name>, <name name-style="western"><surname>Chai</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Singh</surname><given-names>RP</given-names></name>, <name name-style="western"><surname>Kafatos</surname><given-names>M</given-names></name> (<year>2006</year>) <article-title>Crop yield estimation model for Iowa using remote sensing and surface parameters</article-title>. <source>International Journal of Applied Earth Observation and Geoinformation</source> <volume>8</volume>: <fpage>26</fpage>–<lpage>33</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Manjunath1"><label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Manjunath</surname><given-names>KR</given-names></name>, <name name-style="western"><surname>Potdar</surname><given-names>MB</given-names></name>, <name name-style="western"><surname>Purohit</surname><given-names>NL</given-names></name> (<year>2002</year>) <article-title>Large area operational wheat yield model development and validation based on spectral and meteorological data</article-title>. <source>International Journal of Remote Sensing</source> <volume>23</volume>: <fpage>3023</fpage>–<lpage>3038</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Salazar1"><label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Salazar</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Kogan</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Roytman</surname><given-names>L</given-names></name> (<year>2007</year>) <article-title>Use of remote sensing data for estimation of winter wheat yield in the United States</article-title>. <source>International Journal of Remote Sensing</source> <volume>28</volume>: <fpage>3795</fpage>–<lpage>3811</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Zhang1"><label>6</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhang</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Wu</surname><given-names>BF</given-names></name>, <name name-style="western"><surname>Luo</surname><given-names>ZM</given-names></name> (<year>2004</year>) <article-title>Winter wheat yield predicting for America using remote sensing data</article-title>. <source>Journal of remote sensing</source> <volume>8</volume>: <fpage>611</fpage>–<lpage>617</lpage> (in Chinese with English abstract)..</mixed-citation>
+</ref>
+<ref id="pone.0070816-Wang2"><label>7</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wang</surname><given-names>CY</given-names></name>, <name name-style="western"><surname>Lin</surname><given-names>WP</given-names></name> (<year>2005</year>) <article-title>Winter wheat yield estimation based on MODIS EVI</article-title>. <source>Transactions of the Chinese Society of Agricultural Engineering</source> <volume>21</volume>: <fpage>90</fpage>–<lpage>94</lpage> (in Chinese with English abstract)..</mixed-citation>
+</ref>
+<ref id="pone.0070816-Wall1"><label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wall</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Larocque</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Leger</surname><given-names>PM</given-names></name> (<year>2008</year>) <article-title>The early explanatory power of NDVI in crop yield modelling</article-title>. <source>International Journal of Remote Sensing</source> <volume>29</volume>: <fpage>2211</fpage>–<lpage>2225</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Sridhar1"><label>9</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sridhar</surname><given-names>VN</given-names></name>, <name name-style="western"><surname>Dadhwal</surname><given-names>VK</given-names></name>, <name name-style="western"><surname>Chaudhari</surname><given-names>KN</given-names></name>, <name name-style="western"><surname>Sharma</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Bairagi</surname><given-names>GD</given-names></name>, <etal>et al</etal>. (<year>1994</year>) <article-title>Wheat production forecasting for a predominantly unirrigated region in Madhya-Pradesh (India)</article-title>. <source>International Journal of Remote Sensing</source> <volume>15</volume>: <fpage>1307</fpage>–<lpage>1316</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Smith1"><label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Smith</surname><given-names>RCG</given-names></name>, <name name-style="western"><surname>Adams</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Stephens</surname><given-names>DJ</given-names></name>, <name name-style="western"><surname>Hick</surname><given-names>PT</given-names></name> (<year>1995</year>) <article-title>Forecasting wheat yield in a Mediterranean-type environment from the NOAA satellite</article-title>. <source>Australian Journal of Agricultural Research</source> <volume>46</volume>: <fpage>113</fpage>–<lpage>125</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Schut1"><label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schut</surname><given-names>AGT</given-names></name>, <name name-style="western"><surname>Stephens</surname><given-names>DJ</given-names></name>, <name name-style="western"><surname>Stovold</surname><given-names>RGH</given-names></name>, <name name-style="western"><surname>Adams</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Craig</surname><given-names>RL</given-names></name> (<year>2009</year>) <article-title>Improved wheat yield and production forecasting with a moisture stress index, AVHRR and MODIS data</article-title>. <source>Crop &amp; Pasture Science</source> <volume>60</volume>: <fpage>60</fpage>–<lpage>70</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Rudorff1"><label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rudorff</surname><given-names>BFT</given-names></name>, <name name-style="western"><surname>Batista</surname><given-names>GT</given-names></name> (<year>1991</year>) <article-title>Wheat yield estimation at the farm level using TM-Landsat and agrometeorological data</article-title>. <source>International Journal of Remote Sensing</source> <volume>12</volume>: <fpage>2477</fpage>–<lpage>2484</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Ren1"><label>13</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ren</surname><given-names>JQ</given-names></name>, <name name-style="western"><surname>Chen</surname><given-names>ZX</given-names></name>, <name name-style="western"><surname>Zhou</surname><given-names>QB</given-names></name>, <name name-style="western"><surname>Tang</surname><given-names>HJ</given-names></name> (<year>2008</year>) <article-title>Regional yield estimation for winter wheat with MODIS-NDVI data in Shandong, China</article-title>. <source>International Journal of Applied Earth Observation and Geoinformation</source> <volume>10</volume>: <fpage>403</fpage>–<lpage>413</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Ren2"><label>14</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ren</surname><given-names>JQ</given-names></name>, <name name-style="western"><surname>Chen</surname><given-names>ZX</given-names></name>, <name name-style="western"><surname>Tang</surname><given-names>HJ</given-names></name> (<year>2006</year>) <article-title>Regional scale remote sensing-based yield estimation of winter wheat by using MODIS-NDVI data: A case study of Jining City in Shandong Province</article-title>. <source>Chinese Journal of Applied Ecology</source> <volume>17</volume>: <fpage>2371</fpage>–<lpage>2375</lpage> (in Chinese with English abstract)..</mixed-citation>
+</ref>
+<ref id="pone.0070816-Prasad2"><label>15</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Prasad</surname><given-names>AK</given-names></name>, <name name-style="western"><surname>Singh</surname><given-names>RP</given-names></name>, <name name-style="western"><surname>Tare</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Kafatos</surname><given-names>M</given-names></name> (<year>2007</year>) <article-title>Use of vegetation index and meteorological parameters for the prediction of crop yield in India</article-title>. <source>International Journal of Remote Sensing</source> <volume>28</volume>: <fpage>5207</fpage>–<lpage>5235</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Patel1"><label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Patel</surname><given-names>NR</given-names></name>, <name name-style="western"><surname>Bhattacharjee</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Mohammed</surname><given-names>AJ</given-names></name>, <name name-style="western"><surname>Tanupriya</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Saha</surname><given-names>SK</given-names></name> (<year>2006</year>) <article-title>Remote sensing of regional yield assessment of wheat in Haryana, India</article-title>. <source>International Journal of Remote Sensing</source> <volume>27</volume>: <fpage>4071</fpage>–<lpage>4090</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Moriondo1"><label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Moriondo</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Maselli</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Bindi</surname><given-names>M</given-names></name> (<year>2007</year>) <article-title>A simple model of regional wheat yield based on NDVI data</article-title>. <source>European Journal of Agronomy</source> <volume>26</volume>: <fpage>266</fpage>–<lpage>274</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Mo1"><label>18</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mo</surname><given-names>X</given-names></name>, <name name-style="western"><surname>Liu</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Lin</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Xu</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Xiang</surname><given-names>Y</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Prediction of crop yield, water consumption and water use efficiency with a SVAT-crop growth model using remotely sensed data on the North China Plain</article-title>. <source>Ecological Modelling</source> <volume>183</volume>: <fpage>301</fpage>–<lpage>322</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Mkhabela1"><label>19</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mkhabela</surname><given-names>MS</given-names></name>, <name name-style="western"><surname>Bullock</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Raj</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Yang</surname><given-names>Y</given-names></name> (<year>2011</year>) <article-title>Crop yield forecasting on the Canadian Prairies using MODIS NDVI data</article-title>. <source>Agricultural and Forest Meteorology</source> <volume>151</volume>: <fpage>385</fpage>–<lpage>393</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Mika1"><label>20</label>
+<mixed-citation publication-type="other" xlink:type="simple">Mika J, Kerenyi J, Rimoczi-Paal A, Merza A, Szinell C, <etal>et al</etal>.. (2002) On correlation of maize and wheat yield with NDVI: Example of Hungary (1985–1998). In: Fellous JL, LeMarshall JF, Choudhury BJ, Menenti M, Paxton LJ <etal>et al</etal>.., editors. Earth's Atmosphere, Ocean and Surface Studies. 2399–2404.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Maselli1"><label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Maselli</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Rembold</surname><given-names>F</given-names></name> (<year>2001</year>) <article-title>Analysis of GAC NDVI data for cropland identification and yield forecasting in Mediterranean African countries</article-title>. <source>Photogrammetric Engineering and Remote Sensing</source> <volume>67</volume>: <fpage>593</fpage>–<lpage>602</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-MacDonald1"><label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>MacDonald</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Hall</surname><given-names>F</given-names></name> (<year>1980</year>) <article-title>Global crop forecasting</article-title>. <source>Science</source> <volume>208</volume>: <fpage>670</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Labus1"><label>23</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Labus</surname><given-names>MP</given-names></name>, <name name-style="western"><surname>Nielsen</surname><given-names>GA</given-names></name>, <name name-style="western"><surname>Lawrence</surname><given-names>RL</given-names></name>, <name name-style="western"><surname>Engel</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Long</surname><given-names>DS</given-names></name> (<year>2002</year>) <article-title>Wheat yield estimates using multi-temporal NDVI satellite imagery</article-title>. <source>International Journal of Remote Sensing</source> <volume>23</volume>: <fpage>4169</fpage>–<lpage>4180</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Kastens1"><label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kastens</surname><given-names>JH</given-names></name>, <name name-style="western"><surname>Kastens</surname><given-names>TL</given-names></name>, <name name-style="western"><surname>Kastens</surname><given-names>DLA</given-names></name>, <name name-style="western"><surname>Price</surname><given-names>KP</given-names></name>, <name name-style="western"><surname>Martinko</surname><given-names>EA</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Image masking for crop yield forecasting using AVHRR NDVI time series imagery</article-title>. <source>Remote Sensing of Environment</source> <volume>99</volume>: <fpage>341</fpage>–<lpage>356</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Kalubarme1"><label>25</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kalubarme</surname><given-names>AH</given-names></name>, <name name-style="western"><surname>Potdar</surname><given-names>MB</given-names></name>, <name name-style="western"><surname>Manjunath</surname><given-names>KR</given-names></name>, <name name-style="western"><surname>Mahey</surname><given-names>RK</given-names></name>, <name name-style="western"><surname>Siddhu</surname><given-names>SS</given-names></name> (<year>2003</year>) <article-title>Growth profile based crop yield models: a case study of large area wheat yield modelling and its extendibility using atmospheric corrected NOAA AVHRR data</article-title>. <source>International Journal of Remote Sensing</source> <volume>24</volume>: <fpage>2037</fpage>–<lpage>2054</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Huang1"><label>26</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Huang</surname><given-names>JF</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>RC</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>XZ</given-names></name>, <name name-style="western"><surname>Liu</surname><given-names>SM</given-names></name>, <name name-style="western"><surname>Zhang</surname><given-names>JH</given-names></name> (<year>1999</year>) <article-title>Study on multiple yield estimation models of winter wheat using remote sensing data</article-title>. <source>Journal of Zhejiang University (Agric &amp; Life Sci)</source> <volume>25</volume>: <fpage>519</fpage>–<lpage>523</lpage> (in Chinese with English abstract)..</mixed-citation>
+</ref>
+<ref id="pone.0070816-Hochheim1"><label>27</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hochheim</surname><given-names>KP</given-names></name>, <name name-style="western"><surname>Barber</surname><given-names>DG</given-names></name> (<year>1998</year>) <article-title>Spring wheat yield estimation for Western Canada using NOAA NDVI data</article-title>. <source>Canadian Journal of Remote Sensing</source> <volume>24</volume>: <fpage>17</fpage>–<lpage>27</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Gupta1"><label>28</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gupta</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Prasad</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Rao</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Nadham</surname><given-names>T</given-names></name> (<year>1993</year>) <article-title>District level wheat yield estimation using NOAA/AVHRR NDVI temporal profile</article-title>. <source>Advances in Space Research</source> <volume>13</volume>: <fpage>253</fpage>–<lpage>256</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Ferencz1"><label>29</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ferencz</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Bognar</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Lichtenberger</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Hamar</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Tarscai</surname><given-names>G</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Crop yield estimation by satellite remote sensing</article-title>. <source>International Journal of Remote Sensing</source> <volume>25</volume>: <fpage>4113</fpage>–<lpage>4149</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Dubey1"><label>30</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dubey</surname><given-names>RP</given-names></name>, <name name-style="western"><surname>Ajwani</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Kalubarme</surname><given-names>MH</given-names></name>, <name name-style="western"><surname>Sridhar</surname><given-names>VN</given-names></name>, <name name-style="western"><surname>Navalgund</surname><given-names>RR</given-names></name>, <etal>et al</etal>. (<year>1994</year>) <article-title>Preharvest wheat yield and production estimation for the Punjab, India</article-title>. <source>International Journal of Remote Sensing</source> <volume>15</volume>: <fpage>2137</fpage>–<lpage>2144</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Doraiswamy1"><label>31</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Doraiswamy</surname><given-names>PC</given-names></name>, <name name-style="western"><surname>Cook</surname><given-names>PW</given-names></name> (<year>1995</year>) <article-title>Spring wheat yield assessment using NOAA AVHRR data</article-title>. <source>Canadian Journal of Remote Sensing</source> <volume>21</volume>: <fpage>43</fpage>–<lpage>51</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Cheng1"><label>32</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cheng</surname><given-names>Q</given-names></name> (<year>1994</year>) <article-title>The use of vegetation index for monitoring drought and winter wheat yield estimation</article-title>. <source>Remote sensing technology and application</source> <volume>9</volume>: <fpage>12</fpage>–<lpage>18</lpage> (in Chinese with English abstract)..</mixed-citation>
+</ref>
+<ref id="pone.0070816-Bullock1"><label>33</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bullock</surname><given-names>PR</given-names></name> (<year>1992</year>) <article-title>Operational estimates of western Canadian grain production using NOAA AVHRR LAC data</article-title>. <source>Canadian Journal of Remote Sensing</source> <volume>18</volume>: <fpage>23</fpage>–<lpage>29</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Boken1"><label>34</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Boken</surname><given-names>VK</given-names></name>, <name name-style="western"><surname>Shaykewich</surname><given-names>CF</given-names></name> (<year>2002</year>) <article-title>Improving an operational wheat yield model using phenological phase-based Normalized Difference Vegetation Index</article-title>. <source>International Journal of Remote Sensing</source> <volume>23</volume>: <fpage>4155</fpage>–<lpage>4168</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Benedetti1"><label>35</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Benedetti</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Rossini</surname><given-names>P</given-names></name> (<year>1993</year>) <article-title>On the use of NDVI profiles as a tool for agricultural statistics: the case study of wheat yield estimate and forecast in Emilia Romagna</article-title>. <source>Remote Sensing of Environment</source> <volume>45</volume>: <fpage>311</fpage>–<lpage>326</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-BeckerReshef1"><label>36</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Becker-Reshef</surname><given-names>I</given-names></name>, <name name-style="western"><surname>Vermote</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Lindeman</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Justice</surname><given-names>C</given-names></name> (<year>2010</year>) <article-title>A generalized regression-based model for forecasting winter wheat yields in Kansas and Ukraine using MODIS data</article-title>. <source>Remote Sensing of Environment</source> <volume>114</volume>: <fpage>1312</fpage>–<lpage>1323</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Bastiaanssen1"><label>37</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bastiaanssen</surname><given-names>WGM</given-names></name>, <name name-style="western"><surname>Ali</surname><given-names>S</given-names></name> (<year>2003</year>) <article-title>A new crop yield forecasting model based on satellite measurements applied across the Indus Basin, Pakistan</article-title>. <source>Agriculture Ecosystems &amp; Environment</source> <volume>94</volume>: <fpage>321</fpage>–<lpage>340</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Balaghi1"><label>38</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Balaghi</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Tychon</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Eerens</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Jlibene</surname><given-names>M</given-names></name> (<year>2008</year>) <article-title>Empirical regression models using NDVI, rainfall and temperature data for the early prediction of wheat grain yields in Morocco</article-title>. <source>International Journal of Applied Earth Observation and Geoinformation</source> <volume>10</volume>: <fpage>438</fpage>–<lpage>452</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Wannebo1"><label>39</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wannebo</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Rosenzweig</surname><given-names>C</given-names></name> (<year>2003</year>) <article-title>Remote sensing of US cornbelt areas sensitive to the El Nino-Southern Oscillation</article-title>. <source>International Journal of Remote Sensing</source> <volume>24</volume>: <fpage>2055</fpage>–<lpage>2067</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Unganai1"><label>40</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Unganai</surname><given-names>LS</given-names></name>, <name name-style="western"><surname>Kogan</surname><given-names>FN</given-names></name> (<year>1998</year>) <article-title>Drought monitoring and corn yield estimation in Southern Africa from AVHRR data</article-title>. <source>Remote Sensing of Environment</source> <volume>63</volume>: <fpage>219</fpage>–<lpage>232</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Seiler1"><label>41</label>
+<mixed-citation publication-type="other" xlink:type="simple">Seiler RA, Kogan F, Wei G (2000) Monitoring weather impact and crop yield from NOAA AVHRR data in Argentina. In: Gupta RK, editor. Remote Sensing for Land Surface Characterisation. 1177–1185.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Rojas1"><label>42</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rojas</surname><given-names>O</given-names></name> (<year>2007</year>) <article-title>Operational maize yield model development and validation based on remote sensing and agro-meteorological data in Kenya</article-title>. <source>International Journal of Remote Sensing</source> <volume>28</volume>: <fpage>3775</fpage>–<lpage>3793</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Reynolds1"><label>43</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Reynolds</surname><given-names>CA</given-names></name>, <name name-style="western"><surname>Yitayew</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Slack</surname><given-names>DC</given-names></name>, <name name-style="western"><surname>Hutchinson</surname><given-names>CF</given-names></name>, <name name-style="western"><surname>Huete</surname><given-names>A</given-names></name>, <etal>et al</etal>. (<year>2000</year>) <article-title>Estimating crop yields and production by integrating the FAO Crop specific Water Balance model with real-time satellite data and ground-based ancillary data</article-title>. <source>International Journal of Remote Sensing</source> <volume>21</volume>: <fpage>3487</fpage>–<lpage>3508</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Quarmby1"><label>44</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Quarmby</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Milnes</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Hindle</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Silleos</surname><given-names>N</given-names></name> (<year>1993</year>) <article-title>The use of multi-temporal NDVI measurements from AVHRR data for crop yield estimation and prediction</article-title>. <source>International Journal of Remote Sensing</source> <volume>14</volume>: <fpage>199</fpage>–<lpage>210</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Mkhabela2"><label>45</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mkhabela</surname><given-names>MS</given-names></name>, <name name-style="western"><surname>Mashinini</surname><given-names>NN</given-names></name> (<year>2005</year>) <article-title>Early maize yield forecasting in the four agro-ecological regions of Swaziland using NDVI data derived from NOAAs-AVHRR</article-title>. <source>Agricultural and Forest Meteorology</source> <volume>129</volume>: <fpage>1</fpage>–<lpage>9</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Lewis1"><label>46</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lewis</surname><given-names>JE</given-names></name>, <name name-style="western"><surname>Rowland</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Nadeau</surname><given-names>A</given-names></name> (<year>1998</year>) <article-title>Estimating maize production in Kenya using NDVI: some statistical considerations</article-title>. <source>International Journal of Remote Sensing</source> <volume>19</volume>: <fpage>2609</fpage>–<lpage>2617</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Lee1"><label>47</label>
+<mixed-citation publication-type="other" xlink:type="simple">Lee R, Kastens D, Price K, Martinko E. Forecasting corn yield in Iowa using remotely sensed data and vegetation phenology information; 2000 January 10–12; Lake Buena Vista, Florida. 460–467.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Hayes1"><label>48</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hayes</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Decker</surname><given-names>W</given-names></name> (<year>1996</year>) <article-title>Using NOAA AVHRR data to estimate maize production in the United States Corn Belt</article-title>. <source>International Journal of Remote Sensing</source> <volume>17</volume>: <fpage>3189</fpage>–<lpage>3200</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Funk1"><label>49</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Funk</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Budde</surname><given-names>ME</given-names></name> (<year>2009</year>) <article-title>Phenologically-tuned MODIS NDVI-based production anomaly estimates for Zimbabwe</article-title>. <source>Remote Sensing of Environment</source> <volume>113</volume>: <fpage>115</fpage>–<lpage>125</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Tennakoon1"><label>50</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tennakoon</surname><given-names>SB</given-names></name>, <name name-style="western"><surname>Murty</surname><given-names>VVN</given-names></name>, <name name-style="western"><surname>Eiumnoh</surname><given-names>A</given-names></name> (<year>1992</year>) <article-title>Estimation of cropped area and grain-yield of rice using remote-sensing data</article-title>. <source>International Journal of Remote Sensing</source> <volume>13</volume>: <fpage>427</fpage>–<lpage>439</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Huang2"><label>51</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Huang</surname><given-names>JF</given-names></name>, <name name-style="western"><surname>Yang</surname><given-names>ZE</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>RC</given-names></name>, <name name-style="western"><surname>Xu</surname><given-names>HW</given-names></name>, <name name-style="western"><surname>Jiang</surname><given-names>HX</given-names></name> (<year>2002</year>) <article-title>The rice production forecasting models using NOAA/AVHRR data based on GIS</article-title>. <source>Remote sensing technology and application</source> <volume>17</volume>: <fpage>125</fpage>–<lpage>128</lpage> (in Chinese with English abstract)..</mixed-citation>
+</ref>
+<ref id="pone.0070816-Huang3"><label>52</label>
+<mixed-citation publication-type="other" xlink:type="simple">Huang JF, Wang FM, Wang XZ (2010) Hyperspectral experiment for paddy rice remote sensing; Huang JQ, Chen JY, editors. Hangzhou: Zhejiang University Press. 315 p. (in Chinese with English abstract).</mixed-citation>
+</ref>
+<ref id="pone.0070816-Rasmussen1"><label>53</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rasmussen</surname><given-names>MS</given-names></name> (<year>1998</year>) <article-title>Developing simple, operational, consistent NDVI-vegetation models by applying environmental and climatic information: Part I. Assessment of net primary production</article-title>. <source>International Journal of Remote Sensing</source> <volume>19</volume>: <fpage>97</fpage>–<lpage>117</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Rasmussen2"><label>54</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rasmussen</surname><given-names>MS</given-names></name> (<year>1997</year>) <article-title>Operational yield forecast using AVHRR NDVI data: Reduction of environmental and inter-annual variability</article-title>. <source>International Journal of Remote Sensing</source> <volume>18</volume>: <fpage>1059</fpage>–<lpage>1077</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Rasmussen3"><label>55</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rasmussen</surname><given-names>MS</given-names></name> (<year>1992</year>) <article-title>Assessment of millet yields and production in northern Burkina Faso using integrated NDVI from the AVHRR</article-title>. <source>International Journal of Remote Sensing</source> <volume>13</volume>: <fpage>3431</fpage>–<lpage>3442</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Maselli2"><label>56</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Maselli</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Romanelli</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Bottai</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Maracchi</surname><given-names>G</given-names></name> (<year>2000</year>) <article-title>Processing of GAC NDVI data for yield forecasting in the Sahelian region</article-title>. <source>International Journal of Remote Sensing</source> <volume>21</volume>: <fpage>3509</fpage>–<lpage>3523</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Groten1"><label>57</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Groten</surname><given-names>SME</given-names></name> (<year>1993</year>) <article-title>NDVI – Crop Monitoring and Early Yield Assessment of Burkina-Faso</article-title>. <source>International Journal of Remote Sensing</source> <volume>14</volume>: <fpage>1495</fpage>–<lpage>1515</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Potdar1"><label>58</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Potdar</surname><given-names>MB</given-names></name> (<year>1993</year>) <article-title>Sorghum yield modelling based on crop growth parameters determined from visible and near-IR channel NOAA AVHRR data</article-title>. <source>International Journal of Remote Sensing</source> <volume>14</volume>: <fpage>895</fpage>–<lpage>905</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Fuller1"><label>59</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fuller</surname><given-names>DO</given-names></name> (<year>1998</year>) <article-title>Trends in NDVI time series and their relation to rangeland and crop production in Senegal, 1987–1993</article-title>. <source>International Journal of Remote Sensing</source> <volume>19</volume>: <fpage>2013</fpage>–<lpage>2018</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Wendroth1"><label>60</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wendroth</surname><given-names>O</given-names></name>, <name name-style="western"><surname>Reuter</surname><given-names>HI</given-names></name>, <name name-style="western"><surname>Kersebaum</surname><given-names>KC</given-names></name> (<year>2003</year>) <article-title>Predicting yield of barley across a landscape: a state-space modeling approach</article-title>. <source>Journal of Hydrology</source> <volume>272</volume>: <fpage>250</fpage>–<lpage>263</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Weissteiner1"><label>61</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Weissteiner</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Kühbauch</surname><given-names>W</given-names></name> (<year>2005</year>) <article-title>Regional Yield Forecasts of Malting Barley (Hordeum vulgare L.) by NOAA-AVHRR Remote Sensing Data and Ancillary Data</article-title>. <source>Journal of agronomy and crop science</source> <volume>191</volume>: <fpage>308</fpage>–<lpage>320</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Liu1"><label>62</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Liu</surname><given-names>WT</given-names></name>, <name name-style="western"><surname>Kogan</surname><given-names>F</given-names></name> (<year>2002</year>) <article-title>Monitoring Brazilian soybean production using NOAA/AVHRR based vegetation condition indices</article-title>. <source>International Journal of Remote Sensing</source> <volume>23</volume>: <fpage>1161</fpage>–<lpage>1179</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Esquerdo1"><label>63</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Esquerdo</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Zullo</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Antunes</surname><given-names>JFG</given-names></name> (<year>2011</year>) <article-title>Use of NDVI/AVHRR time-series profiles for soybean crop monitoring in Brazil</article-title>. <source>International Journal of Remote Sensing</source> <volume>32</volume>: <fpage>3711</fpage>–<lpage>3727</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Tucker1"><label>64</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tucker</surname><given-names>CJ</given-names></name> (<year>1979</year>) <article-title>Red and photographic infrared linear combinations for monitoring vegetation</article-title>. <source>Remote Sensing of Environment</source> <volume>8</volume>: <fpage>127</fpage>–<lpage>150</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Tilman1"><label>65</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tilman</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Cassman</surname><given-names>KG</given-names></name>, <name name-style="western"><surname>Matson</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Naylor</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Polasky</surname><given-names>S</given-names></name> (<year>2002</year>) <article-title>Agricultural sustainability and intensive production practices</article-title>. <source>Nature</source> <volume>418</volume>: <fpage>671</fpage>–<lpage>677</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Evenson1"><label>66</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Evenson</surname><given-names>RE</given-names></name>, <name name-style="western"><surname>Gollin</surname><given-names>D</given-names></name> (<year>2003</year>) <article-title>Assessing the impact of the Green Revolution, 1960 to 2000</article-title>. <source>Science</source> <volume>300</volume>: <fpage>758</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Peng1"><label>67</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Peng</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Laza</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Visperas</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Sanico</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Cassman</surname><given-names>KG</given-names></name>, <etal>et al</etal>. (<year>2000</year>) <article-title>Grain yield of rice cultivars and lines developed in the Philippines since 1966</article-title>. <source>Crop Science</source> <volume>40</volume>: <fpage>307</fpage>–<lpage>314</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Hafner1"><label>68</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hafner</surname><given-names>S</given-names></name> (<year>2003</year>) <article-title>Trends in maize, rice, and wheat yields for 188 nations over the past 40 years: a prevalence of linear growth</article-title>. <source>Agriculture, ecosystems &amp; environment</source> <volume>97</volume>: <fpage>275</fpage>–<lpage>283</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Pinzon1"><label>69</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pinzon</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Brown</surname><given-names>ME</given-names></name>, <name name-style="western"><surname>Tucker</surname><given-names>CJ</given-names></name> (<year>2004</year>) <article-title>Satellite time series correction of orbital drift artifacts using empirical mode decomposition</article-title>. <source>Hilbert-Huang Transform: Introduction and Applications</source> <volume>10</volume>: <fpage>285</fpage>–<lpage>295</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Tucker2"><label>70</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tucker</surname><given-names>CJ</given-names></name>, <name name-style="western"><surname>Pinzon</surname><given-names>JE</given-names></name>, <name name-style="western"><surname>Brown</surname><given-names>ME</given-names></name>, <name name-style="western"><surname>Slayback</surname><given-names>DA</given-names></name>, <name name-style="western"><surname>Pak</surname><given-names>EW</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>An extended AVHRR 8-km NDVI dataset compatible with MODIS and SPOT vegetation NDVI data</article-title>. <source>International Journal of Remote Sensing</source> <volume>26</volume>: <fpage>4485</fpage>–<lpage>4498</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Fensholt1"><label>71</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fensholt</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Nielsen</surname><given-names>TT</given-names></name>, <name name-style="western"><surname>Stisen</surname><given-names>S</given-names></name> (<year>2006</year>) <article-title>Evaluation of AVHRR PAL and GIMMS 10-day composite NDVI time series products using SPOT-4 vegetation data for the African continent</article-title>. <source>International Journal of Remote Sensing</source> <volume>27</volume>: <fpage>2719</fpage>–<lpage>2733</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Fensholt2"><label>72</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fensholt</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Rasmussen</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Nielsen</surname><given-names>TT</given-names></name>, <name name-style="western"><surname>Mbow</surname><given-names>C</given-names></name> (<year>2009</year>) <article-title>Evaluation of earth observation based long term vegetation trends – Intercomparing NDVI time series trend analysis consistency of Sahel from AVHRR GIMMS, Terra MODIS and SPOT VGT data</article-title>. <source>Remote Sensing of Environment</source> <volume>113</volume>: <fpage>1886</fpage>–<lpage>1898</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Genovese1"><label>73</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Genovese</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Vignolles</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Negre</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Passera</surname><given-names>G</given-names></name> (<year>2001</year>) <article-title>A methodology for a combined use of normalised difference vegetation index and CORINE land cover data for crop yield monitoring and forecasting. A case study on Spain</article-title>. <source>Agronomie</source> <volume>21</volume>: <fpage>91</fpage>–<lpage>111</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Freund1"><label>74</label>
+<mixed-citation publication-type="book" xlink:type="simple">Freund JT (2005) Estimating Crop Production in Kenya: A Multi-Temporal Remote Sensing Approach [Masters]. Santa Barbara: University of California. 59 p.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Tucker3"><label>75</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tucker</surname><given-names>CJ</given-names></name>, <name name-style="western"><surname>Holben</surname><given-names>BN</given-names></name>, <name name-style="western"><surname>Elgin</surname><given-names>JH</given-names></name>, <name name-style="western"><surname>McMurtrey</surname><given-names>JE</given-names></name> (<year>1980</year>) <article-title>Relationship of spectral data to grain yield variation</article-title>. <source>Photogrammetric Engineering and Remote Sensing</source> <volume>46</volume>: <fpage>657</fpage>–<lpage>666</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Dyson1"><label>76</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dyson</surname><given-names>T</given-names></name> (<year>1999</year>) <article-title>World food trends and prospects to 2025</article-title>. <source>Proceedings of the National Academy of Sciences</source> <volume>96</volume>: <fpage>5929</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Clarke1"><label>77</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Clarke</surname><given-names>FR</given-names></name>, <name name-style="western"><surname>Baker</surname><given-names>RJ</given-names></name>, <name name-style="western"><surname>Depauw</surname><given-names>RM</given-names></name> (<year>1994</year>) <article-title>Moving mean and least-squares smoothing for analysis of grain-yield data</article-title>. <source>Crop Science</source> <volume>34</volume>: <fpage>1479</fpage>–<lpage>1483</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-PeltonenSainio1"><label>78</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Peltonen-Sainio</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Jauhiainen</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Laurila</surname><given-names>IP</given-names></name> (<year>2009</year>) <article-title>Cereal yield trends in northern European conditions: Changes in yield potential and its realisation</article-title>. <source>Field Crops Research</source> <volume>110</volume>: <fpage>85</fpage>–<lpage>90</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Epplin1"><label>79</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Epplin</surname><given-names>FM</given-names></name>, <name name-style="western"><surname>Peeper</surname><given-names>TF</given-names></name> (<year>1998</year>) <article-title>Influence of planting date and environment on Oklahoma wheat grain yield trend from 1963 to 1995</article-title>. <source>Canadian Journal of Plant Science</source> <volume>78</volume>: <fpage>71</fpage>–<lpage>77</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Stergiou1"><label>80</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Stergiou</surname><given-names>KI</given-names></name>, <name name-style="western"><surname>Christou</surname><given-names>ED</given-names></name> (<year>1996</year>) <article-title>Modelling and forecasting annual fisheries catches: Comparison of regression, univariate and multivariate time series methods</article-title>. <source>Fisheries Research</source> <volume>25</volume>: <fpage>105</fpage>–<lpage>138</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Foody1"><label>81</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Foody</surname><given-names>GM</given-names></name>, <name name-style="western"><surname>Boyd</surname><given-names>DS</given-names></name>, <name name-style="western"><surname>Cutler</surname><given-names>MEJ</given-names></name> (<year>2003</year>) <article-title>Predictive relations of tropical forest biomass from Landsat TM data and their transferability between regions</article-title>. <source>Remote Sensing of Environment</source> <volume>85</volume>: <fpage>463</fpage>–<lpage>474</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0070816-Sirkin1"><label>82</label>
+<mixed-citation publication-type="book" xlink:type="simple">Sirkin RM (2006) Statistics for the social sciences. Thousand OaksCalifornia: Sage Publications, Inc. 244 p.</mixed-citation>
+</ref>
+</ref-list></back>
+</article>

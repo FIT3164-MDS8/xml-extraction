@@ -1,0 +1,623 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1d3" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0179351</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-17-10858</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>Classical mechanics</subject><subj-group><subject>Continuum mechanics</subject><subj-group><subject>Fluid mechanics</subject><subj-group><subject>Fluid dynamics</subject><subj-group><subject>Fluid flow</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Astronomical sciences</subject><subj-group><subject>Space exploration</subject><subj-group><subject>Spaceflight</subject><subj-group><subject>Spacecraft</subject><subj-group><subject>Spacecraft propulsion</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Astronomical sciences</subject><subj-group><subject>Space exploration</subject><subj-group><subject>Spaceflight</subject><subj-group><subject>Spacecraft</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Mathematical and statistical techniques</subject><subj-group><subject>Statistical methods</subject><subj-group><subject>Monte Carlo method</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Statistics (mathematics)</subject><subj-group><subject>Statistical methods</subject><subj-group><subject>Monte Carlo method</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>States of matter</subject><subj-group><subject>Fluids</subject><subj-group><subject>Gases</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Engineering and technology</subject><subj-group><subject>Equipment</subject><subj-group><subject>Communication equipment</subject><subj-group><subject>Antennas</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>Classical mechanics</subject><subj-group><subject>Thrust</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Simulation and modeling</subject></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Comparison study of exhaust plume impingement effects of small mono- and bipropellant thrusters using parallelized DSMC method</article-title>
+<alt-title alt-title-type="running-head">Exhaust plume impingement effects of small mono- and bipropellant thrusters using parallelized DSMC method</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0002-0703-1323</contrib-id>
+<name name-style="western">
+<surname>Lee</surname>
+<given-names>Kyun Ho</given-names>
+</name>
+<xref ref-type="corresp" rid="cor001">*</xref>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+</contrib-group>
+<aff id="aff001"><addr-line>Department of Aerospace Engineering, Sejong University, Seoul, Republic of Korea</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Wang</surname>
+<given-names>Xiao-Dong</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>North China Electric Power University, CHINA</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The author has declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con">
+<p><list list-type="simple"><list-item>
+<p><bold>Conceptualization:</bold> KHL.</p></list-item><list-item>
+<p><bold>Formal analysis:</bold> KHL.</p></list-item><list-item>
+<p><bold>Funding acquisition:</bold> KHL.</p></list-item><list-item>
+<p><bold>Investigation:</bold> KHL.</p></list-item><list-item>
+<p><bold>Methodology:</bold> KHL.</p></list-item><list-item>
+<p><bold>Project administration:</bold> KHL.</p></list-item><list-item>
+<p><bold>Software:</bold> KHL.</p></list-item><list-item>
+<p><bold>Supervision:</bold> KHL.</p></list-item><list-item>
+<p><bold>Visualization:</bold> KHL.</p></list-item><list-item>
+<p><bold>Writing – original draft:</bold> KHL.</p></list-item></list>
+</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">khlee0406@sejong.ac.kr</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>21</day>
+<month>6</month>
+<year>2017</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2017</year>
+</pub-date>
+<volume>12</volume>
+<issue>6</issue>
+<elocation-id>e0179351</elocation-id>
+<history>
+<date date-type="received">
+<day>20</day>
+<month>3</month>
+<year>2017</year>
+</date>
+<date date-type="accepted">
+<day>26</day>
+<month>5</month>
+<year>2017</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2017</copyright-year>
+<copyright-holder>Kyun Ho Lee</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0179351"/>
+<abstract>
+<p>A space propulsion system is important for the normal mission operations of a spacecraft by adjusting its attitude and maneuver. Generally, a mono- and a bipropellant thruster have been mainly used for low thrust liquid rocket engines. But as the plume gas expelled from these small thrusters diffuses freely in a vacuum space along all directions, unwanted effects due to the plume collision onto the spacecraft surfaces can dramatically cause a deterioration of the function and performance of a spacecraft. Thus, aim of the present study is to investigate and compare the major differences of the plume gas impingement effects quantitatively between the small mono- and bipropellant thrusters using the computational fluid dynamics (CFD). For an efficiency of the numerical calculations, the whole calculation domain is divided into two different flow regimes depending on the flow characteristics, and then Navier-Stokes equations and parallelized Direct Simulation Monte Carlo (DSMC) method are adopted for each flow regime. From the present analysis, thermal and mass influences of the plume gas impingements on the spacecraft were analyzed for the mono- and the bipropellant thrusters. As a result, it is concluded that a careful understanding on the plume impingement effects depending on the chemical characteristics of different propellants are necessary for the efficient design of the spacecraft.</p>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100003621</institution-id>
+<institution>Ministry of Science, ICT and Future Planning</institution>
+</institution-wrap>
+</funding-source>
+<award-id>NRF-2013M1A3A3A02042426</award-id>
+<principal-award-recipient>
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0002-0703-1323</contrib-id>
+<name name-style="western">
+<surname>Lee</surname>
+<given-names>Kyun Ho</given-names>
+</name>
+</principal-award-recipient>
+</award-group>
+<funding-statement>This research is supported by the Space Core Technology Development Program of the National Research Foundation of Korea (NRF) funded by the Ministry of Science, ICT and Future Planning (MSIP) (NRF-2013M1A3A3A02042426). The funder had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="13"/>
+<table-count count="3"/>
+<page-count count="20"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>Generally, a space propulsion system generates a reaction force (thrust) to perform normal mission operations of a spacecraft through the ejection of a specific amount of a high speed propellant gas flow into a vacuum space environment. Among the various system types, a low thrust liquid rocket engine, or a small thruster, provides a precise thrust or/and impulse bit for attitude control, drag make-up and orbit transfer maneuvers of the spacecraft by generating the kinetic energy of the propellant gas flow through a nozzle expansion from the chemical reaction energy of the liquid propellants in the combustion chamber. This exhaust combustion gas flow in high-temperature and high-pressure is defined as the plume gas flow. Depending on the characteristics of the liquid propellants, the low thrust liquid rocket engines can be divided into two main types as seen in <xref ref-type="fig" rid="pone.0179351.g001">Fig 1</xref> [<xref ref-type="bibr" rid="pone.0179351.ref001">1</xref>]: a monopropellant thruster which needs one single fuel which decomposes into hot gas when in contact with the solid catalyst, and a bipropellant thruster which requires a fuel and oxidizer separately to generate a high-pressure hot combustion gas [<xref ref-type="bibr" rid="pone.0179351.ref001">1</xref>]. As the exhaust plume gas flow expands freely in a vacuum space environment along all directions and collides with spacecraft surfaces directly shown in <xref ref-type="fig" rid="pone.0179351.g002">Fig 2</xref> [<xref ref-type="bibr" rid="pone.0179351.ref002">2</xref>], the plume gas impingement can cause adverse influences during mission operations of the spacecraft, such as a disturbing force/torque, severe thermal loading, and critical contamination of sensitive components and sensors [<xref ref-type="bibr" rid="pone.0179351.ref002">2</xref>]. Since several failures of the function and performance of the spacecraft due to the plume effects have been reported, an accurate assessment and a minimization of undesirable plume impingement effects are a requisite verification process for the spacecraft design when using the low thrust liquid rocket engines [<xref ref-type="bibr" rid="pone.0179351.ref002">2</xref>]. For an efficient prediction, various numerical methods have been developed recently to simulate the physical characteristics of the plume gas flowfields rather than experimental approaches [<xref ref-type="bibr" rid="pone.0179351.ref002">2</xref>]. Among such numerical methods, the Direct Simulation Monte Carlo (DSMC) method [<xref ref-type="bibr" rid="pone.0179351.ref003">3</xref>,<xref ref-type="bibr" rid="pone.0179351.ref004">4</xref>] has been majorly used to analyze the plume gas flow because it can predict an accurate flowfields in a rarefied transition and a free molecular regime under a vacuum environment space by solving the Boltzmann equation statistically. Thus, various studies have investigated the exhaust plume gas flow behaviors of the small thrusters using the DSMC method [<xref ref-type="bibr" rid="pone.0179351.ref005">5</xref>–<xref ref-type="bibr" rid="pone.0179351.ref016">16</xref>].</p>
+<fig id="pone.0179351.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Examples of small mono- and bipropellant thrusters.</title>
+<p>(A) Monopropellant thruster (Hydrazine propellant) [<xref ref-type="bibr" rid="pone.0179351.ref001">1</xref>]. (B) Bipropellant thruster (MMH-NTO propellant) [<xref ref-type="bibr" rid="pone.0179351.ref001">1</xref>].</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g001" xlink:type="simple"/>
+</fig>
+<fig id="pone.0179351.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Plume impingement concept of small thruster [<xref ref-type="bibr" rid="pone.0179351.ref002">2</xref>].</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g002" xlink:type="simple"/>
+</fig>
+<p>However, the mono- and bipropellant thrusters have been employed as the representative space propulsion systems for the various spacecraft, quantitatively comparison studies of the exhaust plume flow impingement effects of small mono- and bipropellant thrusters have not been investigated yet based on a literature review. Actually, major selection criteria of the propellant and its operating system have been usually focused on the performance parameters such as a thrust level and a specific impulse, etc. rather than the exhaust plume effects. But as the plume gas flows generated from these two propellants have different characteristics in terms of chemical, thermal and fluid properties, it would be anticipated that their collisions consequently cause different impingement effects on the spacecraft. Because the evaluation of the plume gas flow influences is one of the essential design verification tasks, understanding fundamental characteristics of the overall plume impingement effects depending on the different propellant types can provide useful information for reducing a development cost and time at the initial design phase.</p>
+<p>Thus, the aim of the present study is to investigate and compare the major differences of the plume gas flow impingement effects quantitatively between small mono- and bipropellant thrusters using the computational fluid dynamics (CFD). For an efficiency of the numerical calculations, the whole calculation domain is divided into two different flow regimes depending on the flow characteristics, and then Navier-Stokes equations and parallelized Direct Simulation Monte Carlo (DSMC) method are adopted for each flow regime sequentially so that individually calculated results could be combined as boundary conditions for other methods. Through the present analysis results, thermal and mass influences of the plume gas impingements on the spacecraft including number flux and heat flux were investigated between the mono- and the bipropellant thrusters. As a result, it is anticipated that the present study could provide practically useful information to the related engineers on determining the proper propulsion system type and evaluating the spacecraft system design through investigations of the plume impingement effects of the mono- and bipropellant thrusters.</p>
+</sec>
+<sec id="sec002">
+<title>Numerical methodology</title>
+<sec id="sec003">
+<title>Parallel Direct Simulation Monte Carlo method</title>
+<p>The flow regimes can be generally characterized by the Knudsen number (<italic>Kn</italic>), which depicts a comparison between an actual characteristic length and a mean free path of gas particles. When the Knudsen number of a specific flow is greater than a unity, the mean free path of flow molecules can be comparable to an actual length of the physical problem. Therefore, a flow model based on a continuum assumption such as the N-S equation cannot be available for a good approximation any more in case of the high Knudsen number flow. Thus, a kind of molecular dynamic simulations with statistical methods should be employed for the rarefied flow regime to deal with the Boltzmann equation in a nonlinear form of Eq (<xref ref-type="disp-formula" rid="pone.0179351.e001">1</xref>) [<xref ref-type="bibr" rid="pone.0179351.ref003">3</xref>,<xref ref-type="bibr" rid="pone.0179351.ref004">4</xref>]
+<disp-formula id="pone.0179351.e001">
+<alternatives>
+<graphic id="pone.0179351.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0179351.e001" xlink:type="simple"/>
+<mml:math display="block" id="M1">
+<mml:mrow><mml:mfrac><mml:mo>∂</mml:mo><mml:mrow><mml:mo>∂</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>n</mml:mi><mml:mi>f</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mover accent="true"><mml:mi>v</mml:mi><mml:mo>→</mml:mo></mml:mover><mml:mfrac><mml:mo>∂</mml:mo><mml:mrow><mml:mo>∂</mml:mo><mml:mover accent="true"><mml:mi>r</mml:mi><mml:mo>→</mml:mo></mml:mover></mml:mrow></mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>n</mml:mi><mml:mi>f</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mover accent="true"><mml:mi>F</mml:mi><mml:mo>→</mml:mo></mml:mover><mml:mo>⋅</mml:mo><mml:mfrac><mml:mo>∂</mml:mo><mml:mrow><mml:mo>∂</mml:mo><mml:mover accent="true"><mml:mi>v</mml:mi><mml:mo>→</mml:mo></mml:mover></mml:mrow></mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>n</mml:mi><mml:mi>f</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mstyle displaystyle="true"><mml:mrow><mml:msubsup><mml:mo>∫</mml:mo><mml:mrow><mml:mo>−</mml:mo><mml:mi>∞</mml:mi></mml:mrow><mml:mi>∞</mml:mi></mml:msubsup><mml:mrow><mml:mstyle displaystyle="true"><mml:mrow><mml:msubsup><mml:mo>∫</mml:mo><mml:mn>0</mml:mn><mml:mrow><mml:mn>4</mml:mn><mml:mi>π</mml:mi></mml:mrow></mml:msubsup><mml:mrow><mml:msup><mml:mi>n</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msup><mml:mi>f</mml:mi><mml:mo>*</mml:mo></mml:msup><mml:msubsup><mml:mi>f</mml:mi><mml:mn>1</mml:mn><mml:mo>*</mml:mo></mml:msubsup><mml:mo>−</mml:mo><mml:mi>f</mml:mi><mml:msub><mml:mi>f</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:msub><mml:mi>v</mml:mi><mml:mrow><mml:mi>r</mml:mi></mml:mrow></mml:msub><mml:mi>σ</mml:mi><mml:mi>d</mml:mi><mml:mi>Ω</mml:mi><mml:mo> </mml:mo><mml:mi>d</mml:mi><mml:mover accent="true"><mml:mrow><mml:msub><mml:mi>v</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:mrow><mml:mo stretchy="true">→</mml:mo></mml:mover></mml:mrow></mml:mrow></mml:mstyle></mml:mrow></mml:mrow></mml:mstyle></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(1)</label>
+</disp-formula>
+In Eq (<xref ref-type="disp-formula" rid="pone.0179351.e001">1</xref>), <italic>n</italic>, <inline-formula id="pone.0179351.e002"><alternatives><graphic id="pone.0179351.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0179351.e002" xlink:type="simple"/><mml:math display="inline" id="M2"><mml:mover accent="true"><mml:mi>v</mml:mi><mml:mo>→</mml:mo></mml:mover></mml:math></alternatives></inline-formula>, <inline-formula id="pone.0179351.e003"><alternatives><graphic id="pone.0179351.e003g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0179351.e003" xlink:type="simple"/><mml:math display="inline" id="M3"><mml:mover accent="true"><mml:mi>r</mml:mi><mml:mo>→</mml:mo></mml:mover></mml:math></alternatives></inline-formula>, <italic>f</italic> and <italic>v</italic><sub><italic>r</italic></sub> are number density, velocity vector, position vector, probability density function and relative velocity of molecules, respectively. Also, <inline-formula id="pone.0179351.e004"><alternatives><graphic id="pone.0179351.e004g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0179351.e004" xlink:type="simple"/><mml:math display="inline" id="M4"><mml:mover accent="true"><mml:mi>F</mml:mi><mml:mo>→</mml:mo></mml:mover></mml:math></alternatives></inline-formula>, <inline-formula id="pone.0179351.e005"><alternatives><graphic id="pone.0179351.e005g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0179351.e005" xlink:type="simple"/><mml:math display="inline" id="M5"><mml:mrow><mml:mi>d</mml:mi><mml:mover accent="true"><mml:mrow><mml:msub><mml:mi>v</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:mrow><mml:mo stretchy="true">→</mml:mo></mml:mover></mml:mrow></mml:math></alternatives></inline-formula>, d<italic>Ω</italic> and <italic>σ</italic> are external force vector, molecules of class with velocity <italic>v</italic><sub>1</sub>, elementary solid angle and collision cross section [<xref ref-type="bibr" rid="pone.0179351.ref003">3</xref>]. Among various molecular dynamic simulation methods, the Direct Simulation Monte Carlo (DSMC) method proposed by Bird [<xref ref-type="bibr" rid="pone.0179351.ref003">3</xref>] is regarded as the most effective technique for solving the Boltzmann equation to deal with the rarefied flow. The DSMC is a statistical particle simulation method based on kinetic theory, which uses the representative particles to trace in space and time to simulate the physical behaviors of the real gas [<xref ref-type="bibr" rid="pone.0179351.ref003">3</xref>]. But the DSMC method has some drawbacks because it should evaluate numerous intermolecular interactions between all the simulated particles. For example, it is generally found that the DSMC method required a much longer computational time than the conventional continuum flow models because it considered all the interactions of every simulated molecules sequentially. As the present study intends to analyze the plume impinging influences on a complex three dimensional unstructured grids of the actual satellite configuration, a parallelized DSMC code was employed to increase computational efficiencies such as a faster calculation time with 28 CPU cores. The variable hard sphere (VHS) model [<xref ref-type="bibr" rid="pone.0179351.ref003">3</xref>] is used as the intermolecular-collision model and the no-time counter (NTC) method is for the collision sampling technique [<xref ref-type="bibr" rid="pone.0179351.ref003">3</xref>]. The Larsen-Borgnakke model [<xref ref-type="bibr" rid="pone.0179351.ref017">17</xref>] is employed to redistribute the translational and the internal energy exchange between the gas molecules. In addition, the unstructured three dimensional grid system of the computation domain was modeled using commercial software, GRIDGEN that adopts the Delaunay technique [<xref ref-type="bibr" rid="pone.0179351.ref018">18</xref>]. The parallel processing was made by dividing the computational domain into several subdomains by using the MeTiS library, which is based on the k-way, n-partitioning technique by Karypis [<xref ref-type="bibr" rid="pone.0179351.ref019">19</xref>]. After each time step of Δt = 1×10<sup>−7</sup> sec, information about the particles and their properties was exchanged through the subdomain boundary by using the Message Passing Interface (MPI) library [<xref ref-type="bibr" rid="pone.0179351.ref020">20</xref>]. Also, flow properties were averaged over a large number of sampling steps about 10,000 to minimize statistical scatter. A steady state was typically completed after 500 transient steps, and additional 5,000 sampling steps were conducted to obtain the time averaged flow properties.</p>
+</sec>
+</sec>
+<sec id="sec004" sec-type="conclusions">
+<title>Results and discussion</title>
+<p>For efficiency and accuracy of the numerical calculations, the calculation domain was composed of two different flow regimes depending on the flow characteristics, which were a 2-D axisymmetric continuum flow domain inside the nozzle and a 3-D rarefied plume gas flow domain under the vacuum environment, respectively. By doing this, appropriate numerical methods could be combined and applied to each subdomain sequentially to use numerical solutions obtained from one method as the boundary conditions for others.</p>
+<sec id="sec005">
+<title>Inlet and boundary conditions of plume simulation</title>
+<p>As the plume gas behaviors in the vacuum are dominantly affected by the continuum nozzle flow inside the thruster, an accurate estimation of the plume flowfields was required to define the inlet boundary condition at the nozzle exit plane for the plume analysis. Thus, the N–S equations were solved numerically to predict continuum gas flow distributions inside the thruster nozzle. The small thruster configuration considered in this study is illustrated in <xref ref-type="fig" rid="pone.0179351.g003">Fig 3</xref>. It has a conical nozzle with an expansion ratio of 50:1 and it assumed to be provide a five newton reaction force at the stagnated chamber pressure (<italic>p</italic><sub><italic>c</italic></sub>) = 1.45 MPa [<xref ref-type="bibr" rid="pone.0179351.ref016">16</xref>].</p>
+<fig id="pone.0179351.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Small thruster configuration [<xref ref-type="bibr" rid="pone.0179351.ref010">10</xref>,<xref ref-type="bibr" rid="pone.0179351.ref016">16</xref>].</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g003" xlink:type="simple"/>
+</fig>
+<p>For the boundary conditions, the stagnation conditions inside the chamber, such as mole fractions of the combustion gas species, molecular masses of gas mixture, and adiabatic flame temperatures, were calculated as given in <xref ref-type="table" rid="pone.0179351.t001">Table 1</xref> by solving the chemical equilibrium reaction equations and then they were specified as an inlet condition of the nozzle [<xref ref-type="bibr" rid="pone.0179351.ref016">16</xref>]. Also, ten kinds of product gas species in <xref ref-type="table" rid="pone.0179351.t001">Table 1</xref> were regarded as a mixture of perfect gases in Eq (<xref ref-type="disp-formula" rid="pone.0179351.e006">2</xref>), and their compositions were treated as a chemically frozen flow during the nozzle expansion process [<xref ref-type="bibr" rid="pone.0179351.ref016">16</xref>].
+<disp-formula id="pone.0179351.e006">
+<alternatives>
+<graphic id="pone.0179351.e006g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0179351.e006" xlink:type="simple"/>
+<mml:math display="block" id="M6">
+<mml:mrow><mml:mi>p</mml:mi><mml:mo>=</mml:mo><mml:mi>ρ</mml:mi><mml:mi>R</mml:mi><mml:mi>T</mml:mi><mml:munderover><mml:mstyle displaystyle="true" mathsize="140%"><mml:mo>∑</mml:mo></mml:mstyle><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>N</mml:mi></mml:munderover><mml:mfrac><mml:mrow><mml:msub><mml:mi>Y</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:mfrac></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(2)</label>
+</disp-formula>
+Here, <italic>Y</italic><sub><italic>i</italic></sub> and <italic>M</italic><sub><italic>i</italic></sub> are the mass fraction and the molecular mass [g/mol] of the product gases, and <italic>R</italic> is the universal gas constant (8314.41 J/kmol K), respectively.</p>
+<table-wrap id="pone.0179351.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.t001</object-id>
+<label>Table 1</label> <caption><title>Chemical equilibrium reaction results of hydrazine and MMH-NTO [<xref ref-type="bibr" rid="pone.0179351.ref001">1</xref><xref ref-type="bibr" rid="pone.0179351.ref006">6</xref>].</title></caption>
+<alternatives>
+<graphic id="pone.0179351.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.t001" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">Results</th>
+<th align="center">Hydrazine</th>
+<th align="center">MMH-NTO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Mole fractions of combustion gas species</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="center"><italic>H</italic><sub><italic>2</italic></sub></td>
+<td align="char" char=".">0.35761</td>
+<td align="char" char=".">0.15657</td>
+</tr>
+<tr>
+<td align="center"><italic>N</italic><sub><italic>2</italic></sub></td>
+<td align="char" char=".">0.27152</td>
+<td align="char" char=".">0.30513</td>
+</tr>
+<tr>
+<td align="center"><italic>NH</italic><sub><italic>3</italic></sub></td>
+<td align="char" char=".">0.37087</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center"><italic>H</italic><sub><italic>2</italic></sub><italic>O</italic></td>
+<td align="center">-</td>
+<td align="char" char=".">0.32741</td>
+</tr>
+<tr>
+<td align="center"><italic>CO</italic></td>
+<td align="center">-</td>
+<td align="char" char=".">0.13145</td>
+</tr>
+<tr>
+<td align="center"><italic>CO</italic><sub><italic>2</italic></sub></td>
+<td align="center">-</td>
+<td align="char" char=".">0.03628</td>
+</tr>
+<tr>
+<td align="center"><italic>H</italic></td>
+<td align="center">-</td>
+<td align="char" char=".">0.02133</td>
+</tr>
+<tr>
+<td align="center"><italic>NO</italic></td>
+<td align="center">-</td>
+<td align="char" char=".">0.00235</td>
+</tr>
+<tr>
+<td align="center"><italic>O</italic></td>
+<td align="center">-</td>
+<td align="char" char=".">0.00131</td>
+</tr>
+<tr>
+<td align="center"><italic>OH</italic></td>
+<td align="center">-</td>
+<td align="char" char=".">0.01709</td>
+</tr>
+<tr>
+<td align="center"><italic>O</italic><sub><italic>2</italic></sub></td>
+<td align="center">-</td>
+<td align="char" char=".">0.00108</td>
+</tr>
+<tr>
+<td align="center">Molecular mass of gas mixture [g/mol]</td>
+<td align="char" char=".">14.62</td>
+<td align="char" char=".">20.46</td>
+</tr>
+<tr>
+<td align="center">Adiabatic flame temperature [K]</td>
+<td align="char" char=".">1342.8</td>
+<td align="char" char=".">3087.4</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>As a result, the propellant gas flowfields at the nozzle exit plane can be plotted as <xref ref-type="fig" rid="pone.0179351.g004">Fig 4</xref> including the two velocity components, density, and temperature [<xref ref-type="bibr" rid="pone.0179351.ref016">16</xref>]. First, the temperature of the bipropellant gas is observed much higher than that of the monopropellant because the adiabatic temperature of MMH-NTO reaches about 3,087 K in the chamber while the decomposition temperature of the hydrazine is only about 1,343 K as seen in <xref ref-type="table" rid="pone.0179351.t001">Table 1</xref>. For example, the gas temperatures at the center of the nozzle exit plane were estimated roughly as 260 K for hydrazine and 690 K for MMH-NTO propellant, respectively. As a result, higher velocities were also estimated for the MMH-NTO thruster because the exhaust velocity tends to increase proportional to the chamber temperature based on the general rocket performance equation. However, a gas flow with a higher density was produced for the hydrazine decomposition opposite to the temperature distribution. The reason is that the internal nozzle flow was assumed to obey the perfect gas law in Eq (<xref ref-type="disp-formula" rid="pone.0179351.e006">2</xref>), which is defined as an inverse relation between the density and the temperature at a given pressure. Moreover, some drastic variations of the flowfields were found in the given profiles nearby the nozzle wall due to the boundary layer effect.</p>
+<fig id="pone.0179351.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Exhaust plume flowfields at the thruster nozzle exit plane by N-S equations [<xref ref-type="bibr" rid="pone.0179351.ref016">16</xref>].</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g004" xlink:type="simple"/>
+</fig>
+<p>For the three dimensional DSMC simulation of the present study, the nozzle exit plane is chosen as the breakdown face between the continuum flow and the rarefied flow domains, and this assumption is suitable for most nozzles when the exit-to-throat area ratio are not very large [<xref ref-type="bibr" rid="pone.0179351.ref009">9</xref>]. Then the continuum flowfield results at the nozzle exit in <xref ref-type="fig" rid="pone.0179351.g004">Fig 4</xref>, which were obtained by the N-S equations, were applied directly as the inflow boundary condition for the DSMC method together with the gas mixture compositions given in <xref ref-type="table" rid="pone.0179351.t001">Table 1</xref> using the Maxwell distribution function based on the previous researches [<xref ref-type="bibr" rid="pone.0179351.ref005">5</xref>–<xref ref-type="bibr" rid="pone.0179351.ref014">14</xref>]. In the present study, a steady state flow is considered and the plume flow is assumed as a mixture of single-phase ideal gases without any solid/liquid particulates. Also, a nozzle outside space is assumed as a vacuum condition while the gas pressures at the nozzle exit plane is much higher, which means there is no inverse flux of a free stream into the nozzle inside through the nozzle exit plane. And most of the exhaust flow at the nozzle exit plane is a supersonic condition while a subsonic flow region is very limited. As a result, one-way coupling approach is employed between the N-S equations and the DSMC interface based on the previous researches [<xref ref-type="bibr" rid="pone.0179351.ref005">5</xref>–<xref ref-type="bibr" rid="pone.0179351.ref014">14</xref>].</p>
+<p>For the three dimensional DSMC simulation of the present study, the continuum flowfield results at the nozzle exit in <xref ref-type="fig" rid="pone.0179351.g004">Fig 4</xref> were applied directly as inlet conditions together with the gas mixture compositions given in <xref ref-type="table" rid="pone.0179351.t001">Table 1</xref>. In the case of the solid boundaries, the satellite structure and components were all modeled as a diffusely reflected surface with complete energy accommodation. Additionally, the coldest surface temperatures of each component and the structure during satellite operation listed in <xref ref-type="table" rid="pone.0179351.t002">Table 2</xref>, which were obtained from an orbit simulation of the satellite, were used as a solid wall boundary temperature in the present DSMC analysis to estimate heat fluxes on the satellite surfaces and components caused by the impinging plume particles. The remaining boundaries were assumed to be a particle sink to simulate a vacuum condition.</p>
+<table-wrap id="pone.0179351.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.t002</object-id>
+<label>Table 2</label> <caption><title>Coldest Temperature of satellite components and structure.</title></caption>
+<alternatives>
+<graphic id="pone.0179351.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.t002" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">Satellite components</th>
+<th align="center">Temperature [K]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Thruster</td>
+<td align="char" char=".">158.0</td>
+</tr>
+<tr>
+<td align="center">Solar panel</td>
+<td align="char" char=".">200.0</td>
+</tr>
+<tr>
+<td align="center">POD antenna</td>
+<td align="char" char=".">155.0</td>
+</tr>
+<tr>
+<td align="center">S-band antenna</td>
+<td align="char" char=".">155.0</td>
+</tr>
+<tr>
+<td align="center">Bottom platform</td>
+<td align="char" char=".">142.0</td>
+</tr>
+<tr>
+<td align="center">Launch vehicle adapter ring</td>
+<td align="char" char=".">151.0</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+<sec id="sec006">
+<title>Plume flow impingement effects on spacecraft</title>
+<p>The overall configuration of the satellite considered in the present study is shown in <xref ref-type="fig" rid="pone.0179351.g005">Fig 5A</xref>. A large sized solar panel was installed onto the side of the satellite following a longitudinal axis direction to generate higher electrical power from the sun. A numerical grid system for the bottom platform of the satellite and the major components is given in <xref ref-type="fig" rid="pone.0179351.g005">Fig 5B</xref>. One S-band antenna and four reaction control thrusters were located on the bottom platform, which were surrounded by a launch vehicle interface ring. Additionally, two antenna modules for a precision orbit determination (POD) were modeled simply adjacent to the thrusters. Part of the solar panel was attached vertically to the bottom platform of the satellite outside the ring with a 1 m height. The nozzle exit plane of each thruster was canted outward to the vacuum space to provide the necessary thrust and momentum for efficient attitude control as shown in <xref ref-type="fig" rid="pone.0179351.g005">Fig 5C</xref>. The three-dimensional unstructured geometry was generated with the GRIDGEN commercial software [<xref ref-type="bibr" rid="pone.0179351.ref018">18</xref>] using about 24,000 nodes and 120,000 tetrahedron cells. The cell size at the vicinity of the thruster exit was generated sufficiently smaller than the local mean free path to guarantee good accuracy. To simulate the vacuum boundary condition, the computational domain was extended to 3.2 m in radius and 2.0 m in height from the center of the bottom platform of the satellite. Because the height of the solar panel is higher than the interface ring and two kinds of antennas were located beside the thrusters, all the components including the satellite structures have a strong possibility of being exposed directly to the exhausted plume gas flow. To reflect the maximum plume impingement effects, the present study considered a simultaneous firing condition of all four thrusters as a representative case.</p>
+<fig id="pone.0179351.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Calculation domain of plume impingement for DSMC method.</title>
+<p>(A) Example of the satellite configuration. (B) Computational grid with satellite bottom platform. (C) Detailed grid inside bottom platform.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g005" xlink:type="simple"/>
+</fig>
+<p>As a first outcome, the overall plume flow behaviors in the vacuum space, such as the velocity streamline, number density and overall temperature, were compared for both propellants. The velocity streamlines of the mono- and bipropellant plume gases at the center cross section of the platform are shown in <xref ref-type="fig" rid="pone.0179351.g006">Fig 6</xref>. Both hydrazine and MMH-NTO plume gases expanded with similar patterns as the simulated plume particles, which were initially injected from the four nozzle exits of the firing thrusters, spread primarily outward to the vacuum space far from the satellite. Because the plume particles expanded simultaneously, some portion of them merged together and formed a main flow stream at the center of the bottom platform for both propellants. Then, a considerable amount of the plume particles directly collided with the solar panel because a large portion of the panel area was exposed directly to a main stream of the exhaust plume flow. Thus, undesirable plume effects including disturbance force/torque, heat load, and chemical species deposition could become critical at the solar panel due to severe plume gas impingement. Moreover, it was predicted that a small amount of plume backflow, which was directed to the POD and S-band antenna components inside the interface ring, could cause additional impingement effects.</p>
+<fig id="pone.0179351.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>Velocity streamlines of plume gas flow.</title>
+<p>(A) Monopropellant hydrazine. (B) Bipropellant MMH-NTO.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g006" xlink:type="simple"/>
+</fig>
+<p>Regarding to the density distribution of the plume gas, <xref ref-type="fig" rid="pone.0179351.g007">Fig 7A</xref> shows that the monopropellant hydrazine plume gas flow spread more densely all over the calculation domain including the backflow regions inside the interface ring and outside the solar panel than that of the bipropellant MMH-NTO gas shown in <xref ref-type="fig" rid="pone.0179351.g007">Fig 7B</xref> because a higher density profile was initially applied at the inflow condition of the DSMC method based on the continuum flow results inside the thruster nozzle. This can be confirmed more clearly when converted into the number density distributions shown in <xref ref-type="fig" rid="pone.0179351.g008">Fig 8</xref>. It was estimated that the number density of the hydrazine plume particles ranged roughly between 1.0E+18 1/m<sup>3</sup> and 3.0E+19 1/m<sup>3</sup> near the antenna components and inside the interface ring shown in <xref ref-type="fig" rid="pone.0179351.g008">Fig 8A</xref>, while it was less than 1.0E+19 1/m<sup>3</sup> for the MMH-NTO plume gas from <xref ref-type="fig" rid="pone.0179351.g008">Fig 8B</xref>. Additionally, the order of the number density at the core region of the main plume stream was over 1.0E+20 1/m<sup>3</sup> for the hydrazine gas and 5.0E+19 1/m<sup>3</sup> for the MMH-NTO gas, respectively. As a result, a larger number of hydrazine plume particles were found to be distributed in the proximity of the solar panel and in the backflow regions inside the interface ring. Thus, it was anticipated that the high number density of the hydrazine plume particles could cause a significant increase in the collision possibility of the plume particles onto the spacecraft components and structure including the solar panel rather compared to the MMH-NTO plume gas.</p>
+<fig id="pone.0179351.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>Density distributions of plume gas flow [kg/m<sup>3</sup>].</title>
+<p>(A) Monopropellant hydrazine. (B) Bipropellant MMH-NTO.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g007" xlink:type="simple"/>
+</fig>
+<fig id="pone.0179351.g008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g008</object-id>
+<label>Fig 8</label>
+<caption>
+<title>Number density distributions of plume gas flow [1/m<sup>3</sup>].</title>
+<p>(A) Monopropellant hydrazine. (B) Bipropellant MMH-NTO.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g008" xlink:type="simple"/>
+</fig>
+<p>In addition, the difference in the overall temperatures between the hydrazine and MMH-NTO plume flow gases were compared in <xref ref-type="fig" rid="pone.0179351.g009">Fig 9</xref>. In contrast to the number density, a higher temperature plume gas for the MMH-NTO propellant was observed to be distributed over the whole calculation domain according to the continuum flow temperature profile at the nozzle exit plane shown in <xref ref-type="fig" rid="pone.0179351.g004">Fig 4</xref>. The MMH-NTO plume particles ranged between 600 K ~ 1,000 K around the antenna components inside the interface ring from <xref ref-type="fig" rid="pone.0179351.g009">Fig 9B</xref>, whereas lower temperatures were calculated for the hydrazine propellant that ranged between 200 K ~ 500 K as seen in <xref ref-type="fig" rid="pone.0179351.g009">Fig 9A</xref>. Moreover, high temperature regions were observed in the vicinity of the upper portion of the solar panel because a considerable amount of thermal energy from the plume gas molecules was converted from their reduced kinetic energy which was proportional to the increased collision of the plume particles on the surface of the solar panel. Thus, the plume gas temperature varied gradually from 300 K to 800 K for the hydrazine and from 400 K to 1,200 K for the MMH-NTO following the height of the solar panel. These results indicate that the plume gas temperature was greatly dependent on the amount of thermal energy released from the chemical reactions of the propellant. Thus, it was anticipated that plume gas impingement could exert a severe thermal loading influence on the spacecraft components and structure depending on the type of propellant used.</p>
+<fig id="pone.0179351.g009" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g009</object-id>
+<label>Fig 9</label>
+<caption>
+<title>Overall temperature distributions of plume gas flow [K].</title>
+<p>(A) Monopropellant hydrazine. (B) Bipropellant MMH-NTO.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g009" xlink:type="simple"/>
+</fig>
+<p>As a second outcome, distributions of the number flux and heat flux of the two plume gases on the satellite components and structure were investigated to compare the plume impingement influences. <xref ref-type="fig" rid="pone.0179351.g010">Fig 10</xref> clearly shows that a highly intensive gas particle distribution greater than 1E+22 1/m<sup>2</sup>·s was found on the upper regions of the solar panel and the S-band antenna because they were directly exposed to the plume flow. Especially, a larger number of the hydrazine plume gas particles were extensively distributed over the surfaces of the antenna components inside the interface ring and the solar panel compared to that of the MMH-NTO gas because a more dense combustion gas of the hydrazine propellant was exhausted from the thruster and collided onto the satellite as predicted from the streamline and density behaviors of the plume particles. Additionally, the surface heat flux on the solar panel was similar to the number flux result shown in <xref ref-type="fig" rid="pone.0179351.g011">Fig 11</xref> because its distribution is directly proportional to the number of plume particles impinged on the surfaces of the satellite. However, an intense heat flux over 2,000 W/m<sup>2</sup> was generated by the MMH-NTO plume gas on the upper area of the solar panel whereas the maximum value of the hydrazine gas was predicted to be less than about 1,500 W/m<sup>2</sup> which was not relatively high compared with the solar constant of <italic>q</italic><sub>sol</sub> = 1353 W/m<sup>2</sup> [<xref ref-type="bibr" rid="pone.0179351.ref021">21</xref>]. Therefore, it was anticipated that a more excessive thermal loading can be transferred to the spacecraft if the MMH-NTO thruster is used because of the higher chemical energy inherent in the bipropellant itself which is similar to the overall temperature results of the plume particles.</p>
+<fig id="pone.0179351.g010" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g010</object-id>
+<label>Fig 10</label>
+<caption>
+<title>Surface number flux distributions of plume gas flow [1/m<sup>2</sup>·s].</title>
+<p>(A) Monopropellant hydrazine. (B) Bipropellant MMH-NTO.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g010" xlink:type="simple"/>
+</fig>
+<fig id="pone.0179351.g011" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g011</object-id>
+<label>Fig 11</label>
+<caption>
+<title>Surface heat flux distributions of plume gas flow [W/m<sup>2</sup>].</title>
+<p>(A) Monopropellant hydrazine. (B) Bipropellant MMH-NTO.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g011" xlink:type="simple"/>
+</fig>
+<p>To consider the influence of the plume backflow in more detail, surface distributions of <italic>H</italic><sub><italic>2</italic></sub> species were investigated for both the propellants shown in <xref ref-type="fig" rid="pone.0179351.g012">Fig 12</xref>. Because it has the lightest molecular weight among the various gas compositions, previous studies revealed that <italic>H</italic><sub><italic>2</italic></sub> separated strongly from the main flow stream compared to other gas species, and thus, it was a main gas ingredient of the hydrazine plume backflow [<xref ref-type="bibr" rid="pone.0179351.ref010">10</xref>,<xref ref-type="bibr" rid="pone.0179351.ref012">12</xref>]. In the case of the hydrazine propellant, <xref ref-type="fig" rid="pone.0179351.g012">Fig 12A</xref> shows that <italic>H</italic><sub><italic>2</italic></sub> species was distributed more spaciously over not only the solar panel but also over the bottom platform region of the satellite inside the interface ring compared to the MMH-NTO propellant in <xref ref-type="fig" rid="pone.0179351.g012">Fig 12B</xref> because a larger mole numbers of <italic>H</italic><sub><italic>2</italic></sub> was produced initially from the chemical reaction process of the hydrazine propellant inside the thruster chamber as given in <xref ref-type="table" rid="pone.0179351.t001">Table 1</xref>. Accordingly, this chemical separation of <italic>H</italic><sub><italic>2</italic></sub> with the higher mole fraction contained in the hydrazine plume backflow also transferred the local heat flux over a more extensive area inside the interface ring compared to the MMH-NTO propellant from <xref ref-type="fig" rid="pone.0179351.g011">Fig 11B</xref>. As a consequence, it is predicted that the higher collisions of the hydrazine plume particles can cause more critical impacts on the spacecraft in terms of a disturbance force/torque and a contamination of the chemical species because a more dense decomposition gas is produced from the monopropellant hydrazine propellant. Moreover, the components and structures located adjacent to the hydrazine thruster will be influenced greatly by the <italic>H</italic><sub><italic>2</italic></sub> molecules because a relatively larger amount of <italic>H</italic><sub><italic>2</italic></sub> is separated from the main plume stream and included in the backflow as a major species. Thus, surface contamination by the deposition of the plume particles including a considerable amount of <italic>H</italic><sub><italic>2</italic></sub> onto the spacecraft could be a significant problem for sensitive equipment such as solar cells, optical equipment and GaAs microwave devices when the monopropellant hydrazine thruster is used.</p>
+<fig id="pone.0179351.g012" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g012</object-id>
+<label>Fig 12</label>
+<caption>
+<title>Surface number flux distributions of <italic>H</italic><sub><italic>2</italic></sub> species [1/m<sup>2</sup>·s].</title>
+<p>(A) Monopropellant hydrazine. (B) Bipropellant MMH-NTO.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g012" xlink:type="simple"/>
+</fig>
+<p>For a quantitative comparison, the number flux and the surface heat flux variations of the plume gas were measured at the center of the solar panel following the <italic>z</italic>-axis for both the propellants and plotted in <xref ref-type="fig" rid="pone.0179351.g013">Fig 13</xref>. Similar to the previously examined number density and overall temperature results, these surface flux variations of the two plume gases also increased gradually from the bottom to the top of the panel, while a higher level of the number flux was maintained for the hydrazine propellant and vice versa for the surface heat flux.</p>
+<fig id="pone.0179351.g013" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.g013</object-id>
+<label>Fig 13</label>
+<caption>
+<title>Surface flux distributions of the plume gas flow at the center of solar panel in <italic>z</italic>-axis.</title>
+<p>(A) Surface number flux [1/m<sup>2</sup>·s]. (B) Surface heat flux [W/m<sup>2</sup>].</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.g013" xlink:type="simple"/>
+</fig>
+<p>As a final result, the disturbance forces and torques induced by the thruster plume impingement was evaluated in <xref ref-type="table" rid="pone.0179351.t003">Table 3</xref> as relative values to absolute nominal ones. From the previous plume streamline and surface number flux distributions of the two propellants, the larger disturbance force and torque were predicted to be caused by the hydrazine plume impingement rather than by the MMH-NTO. From <xref ref-type="table" rid="pone.0179351.t003">Table 3</xref>, it could be inferred that the collision between the plume backflow and the satellite structure was more dominant for the hydrazine propellant because the disturbance forces of the hydrazine propellant were greater in the <italic>x</italic> and <italic>y</italic> axes due to the considerable amount of exhaust plume particles in the backflow regime with the separation of <italic>H</italic><sub><italic>2</italic></sub>. However, a main stream of the MMT-NTO plume gas with a lower density tended to flow straight following the axial direction of the nozzle rather than diffuse in the radial direction, which caused less plume backflow impingement on the satellite. Additionally, a larger number of the hydrazine plume particles induced a much more severe level of disturbance torques in the <italic>x</italic> and <italic>y</italic> axes than that of the MMT-NTO gas because of a direct plume impingement effect on the solar panel.</p>
+<table-wrap id="pone.0179351.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0179351.t003</object-id>
+<label>Table 3</label> <caption><title>Predictions of relative disturbance force and torque values of two plume gases.</title></caption>
+<alternatives>
+<graphic id="pone.0179351.t003g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0179351.t003" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<tbody>
+<tr>
+<td align="center">Disturbance Force</td>
+<td align="center"><italic>x</italic></td>
+<td align="center"><italic>y</italic></td>
+<td align="center"><italic>z</italic></td>
+</tr>
+<tr>
+<td align="center">Absolute Nominal Value [N]</td>
+<td align="center">0.000</td>
+<td align="center">0.000</td>
+<td align="center">19.404</td>
+</tr>
+<tr>
+<td align="center">Monopropellant Hydrazine [%]</td>
+<td align="center">0.103</td>
+<td align="center">42.753</td>
+<td align="center">0.269</td>
+</tr>
+<tr>
+<td align="center">Bipropellant MMH-NTO [%]</td>
+<td align="center">0.010</td>
+<td align="center">35.549</td>
+<td align="center">1.248</td>
+</tr>
+<tr>
+<td align="center">Disturbance Torque</td>
+<td align="center"><italic>x</italic></td>
+<td align="center"><italic>y</italic></td>
+<td align="center"><italic>z</italic></td>
+</tr>
+<tr>
+<td align="center">Absolute Nominal Value [N· m]</td>
+<td align="center">0.087</td>
+<td align="center">0.034</td>
+<td align="center">0.000</td>
+</tr>
+<tr>
+<td align="center">Monopropellant Hydrazine [%]</td>
+<td align="center">1079.057</td>
+<td align="center">17.416</td>
+<td align="center">0.974</td>
+</tr>
+<tr>
+<td align="center">Bipropellant MMH-NTO [%]</td>
+<td align="center">756.457</td>
+<td align="center">0.751</td>
+<td align="center">0.081</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+</sec>
+<sec id="sec007" sec-type="conclusions">
+<title>Conclusions</title>
+<p>The present study conducted numerical analysis to investigate and compare major differences of the plume gas flow impingement effects quantitatively between the small mono- and bipropellant thrusters. To increase an efficiency of the numerical calculations, the computational fluid dynamics (CFD) methods with the N–S equations and the parallelized DSMC method were employed for the different calculation flow regimes depending on the flow conditions. Major differences of the plume gas impingement effects between the two propellants were summarized from the present results.</p>
+<list list-type="order">
+<list-item><p>The monopropellant hydrazine plume gas flow spread more densely all over the calculation domain including the backflow region than that of the MMH-NTO gas because a combustion gas with a higher density was produced inside the chamber. Consequently, the higher collisions of the hydrazine plume particles caused more critical impacts for the spacecraft in terms of a disturbance force/torque and a contamination of the chemical species compared to the MMH-NTO propellant.</p></list-item>
+<list-item><p>Components and structures located adjacent to the hydrazine thruster was influenced greatly by the <italic>H</italic><sub><italic>2</italic></sub> molecules because a relatively larger amount of <italic>H</italic><sub><italic>2</italic></sub> was separated from the main plume stream and was included in the backflow as a major species. Thus, surface contamination by the plume molecule deposition including a considerable amount of <italic>H</italic><sub><italic>2</italic></sub> onto the spacecraft could be a significant problem for the any <italic>H</italic><sub><italic>2</italic></sub> sensitive equipment when the monopropellant hydrazine thruster is used.</p></list-item>
+<list-item><p>A much more excessive heat flux was transferred to the spacecraft when the MMH-NTO thruster was used because of a higher chemical energy inherent in the bipropellant itself. As the plume gas temperature was greatly dependent on the amount of thermal energy released from the chemical reactions of the propellant, it was anticipated that plume gas impingement could exert a severe thermal loading influence on the spacecraft components and structure depending on the type of propellant used.</p></list-item>
+</list>
+<p>From the present analysis results, it could be found that the impingement influences of the plume gas on the spacecraft components and structure were highly correlated with the chemical reaction characteristics of the propellant used. Thus, if small mono- and/or bipropellant thrusters are to be used, then a careful understanding of not only the performance characteristics of these two propellants but also the impinging effects of their plume gases is required to design the spacecraft efficiently. Consequently, it is anticipated that the present study could provide practically useful data to the related engineers on the optimized design philosophy of the spacecraft and the selection of the proper propulsion system through detailed investigations of the plume impingement effects of the mono- and bipropellant thrusters, which can finally lead to reduction of development costs and time from the initial design phase.</p>
+</sec>
+</body>
+<back>
+<glossary>
+<title>Abbreviations</title>
+<def-list>
+<def-item><term><inline-formula id="pone.0179351.e007"><alternatives><graphic id="pone.0179351.e007g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0179351.e007" xlink:type="simple"/><mml:math display="inline" id="M7"><mml:mrow><mml:mi>d</mml:mi><mml:mover accent="true"><mml:mrow><mml:msub><mml:mi>v</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:mrow><mml:mo stretchy="true">→</mml:mo></mml:mover></mml:mrow></mml:math></alternatives></inline-formula></term>
+<def><p>molecules of class with velocity <italic>v</italic><sub>1</sub></p></def>
+</def-item>
+<def-item><term><italic>dΩ</italic></term>
+<def><p>elementary solid angle</p></def>
+</def-item>
+<def-item><term><inline-formula id="pone.0179351.e008"><alternatives><graphic id="pone.0179351.e008g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0179351.e008" xlink:type="simple"/><mml:math display="inline" id="M8"><mml:mrow><mml:mover accent="true"><mml:mi>F</mml:mi><mml:mo stretchy="true">→</mml:mo></mml:mover></mml:mrow></mml:math></alternatives></inline-formula></term>
+<def><p>external force vector</p></def>
+</def-item>
+<def-item><term><italic>f</italic></term>
+<def><p>probability density function of molecules</p></def>
+</def-item>
+<def-item><term><italic>M</italic></term>
+<def><p>molecular mass [g/mol]</p></def>
+</def-item>
+<def-item><term><italic>m</italic></term>
+<def><p>mass [kg]</p></def>
+</def-item>
+<def-item><term><italic>n</italic></term>
+<def><p>number density [1/m<sup>3</sup>]</p></def>
+</def-item>
+<def-item><term><italic>p</italic></term>
+<def><p>pressure [N/m<sup>2</sup>]</p></def>
+</def-item>
+<def-item><term><italic>R</italic></term>
+<def><p>gas constant [8314 J/kmol K]</p></def>
+</def-item>
+<def-item><term><italic>r</italic></term>
+<def><p>radial direction distance [m]</p></def>
+</def-item>
+<def-item><term><inline-formula id="pone.0179351.e009"><alternatives><graphic id="pone.0179351.e009g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0179351.e009" xlink:type="simple"/><mml:math display="inline" id="M9"><mml:mrow><mml:mover accent="true"><mml:mi>r</mml:mi><mml:mo stretchy="true">→</mml:mo></mml:mover></mml:mrow></mml:math></alternatives></inline-formula></term>
+<def><p>position vector of molecules</p></def>
+</def-item>
+<def-item><term><italic>T</italic></term>
+<def><p>temperature [K]</p></def>
+</def-item>
+<def-item><term><italic>t</italic></term>
+<def><p>time [sec]</p></def>
+</def-item>
+<def-item><term><inline-formula id="pone.0179351.e010"><alternatives><graphic id="pone.0179351.e010g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0179351.e010" xlink:type="simple"/><mml:math display="inline" id="M10"><mml:mrow><mml:mover accent="true"><mml:mi>v</mml:mi><mml:mo stretchy="true">→</mml:mo></mml:mover></mml:mrow></mml:math></alternatives></inline-formula></term>
+<def><p>velocity vector of molecules</p></def>
+</def-item>
+<def-item><term><italic>v<sub>r</sub></italic></term>
+<def><p>relative velocity of molecules</p></def>
+</def-item>
+<def-item><term><italic>x</italic></term>
+<def><p><italic>x</italic> direction distance [m]</p></def>
+</def-item>
+<def-item><term><italic>Y</italic></term>
+<def><p>mass fraction</p></def>
+</def-item>
+<def-item><term><italic>y</italic></term>
+<def><p><italic>y</italic> direction distance [m]</p></def>
+</def-item>
+<def-item><term><italic>z</italic></term>
+<def><p><italic>z</italic> direction distance [m]</p></def>
+</def-item>
+<def-item><term><italic>ρ</italic></term>
+<def><p>density [kg/m<sup>3</sup>]</p></def>
+</def-item>
+<def-item><term><italic>σ</italic></term>
+<def><p>collision cross section</p></def>
+</def-item>
+<def-item><term>*</term>
+<def><p>post-collision value</p></def>
+</def-item>
+<def-item><term><italic>i</italic></term>
+<def><p><italic>i</italic><sup><italic>th</italic></sup> chemical species</p></def>
+</def-item>
+</def-list>
+</glossary>
+<ref-list>
+<title>References</title>
+<ref id="pone.0179351.ref001"><label>1</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Ley</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Wittmann</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Hallmann</surname> <given-names>W</given-names></name>, <source>Handbook of space technology</source>, <publisher-loc>West Sussex</publisher-loc>: <publisher-name>John Wiley &amp; Sons</publisher-name>; <year>2009</year>.</mixed-citation></ref>
+<ref id="pone.0179351.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dettleff</surname> <given-names>G</given-names></name>. <article-title>Plume flow and plume impingement in space technology</article-title>. <source>Prog Aerosp Sci</source>. <year>1991</year>; <volume>28</volume>: <fpage>1</fpage>–<lpage>71</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/0376-0421(91)90008-R" xlink:type="simple">10.1016/0376-0421(91)90008-R</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179351.ref003"><label>3</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Bird</surname> <given-names>GA</given-names></name>. <source>Molecular gas dynamics and the direct simulation of gas flows</source>. <publisher-loc>Oxford</publisher-loc>: <publisher-name>Clarendon Press</publisher-name>; <year>1992</year>.</mixed-citation></ref>
+<ref id="pone.0179351.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Balaja</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Roohia</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Akhlaghia</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Myong</surname> <given-names>RS</given-names></name>, <article-title>Investigation of convective heat transfer through constant wall heat flux micro/nano channels using DSMC</article-title>. <source>Int J Heat Mass Tran</source>. <year>2014</year>; <volume>71</volume>: <fpage>633</fpage>–<lpage>638</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.ijheatmasstransfer.2013.12.053" xlink:type="simple">10.1016/j.ijheatmasstransfer.2013.12.053</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179351.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Giordano</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Ivanov</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Kashkovsky</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Markelov</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Tumino</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Koppenwallner</surname> <given-names>G</given-names></name>, <article-title>Application of numerical multizone approach to the study of satellite thruster plumes</article-title>. <source>J Spacecraft Rockets</source>. <year>1998</year>; <volume>35</volume>: <fpage>502</fpage>–<lpage>508</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2514/2.3359" xlink:type="simple">10.2514/2.3359</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179351.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ivanov</surname> <given-names>MS</given-names></name>, <name name-style="western"><surname>Markelov</surname> <given-names>GN</given-names></name>, <name name-style="western"><surname>Gerasimov</surname> <given-names>YI</given-names></name>, <name name-style="western"><surname>Krylov</surname> <given-names>AN</given-names></name>, <name name-style="western"><surname>Mishina</surname> <given-names>LV</given-names></name>, <name name-style="western"><surname>Sokolov</surname> <given-names>EI</given-names></name>, <article-title>Free-flight experiment and numerical simulation for cold thruster plume</article-title>. <source>J Propul Power</source>. <year>1999</year>; <volume>15</volume>: <fpage>417</fpage>–<lpage>423</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2514/2.5460" xlink:type="simple">10.2514/2.5460</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179351.ref007"><label>7</label><mixed-citation publication-type="other" xlink:type="simple">Sholes B, Zeller C, Matheson B, Hydrazine thruster plume contamination analysis for the Kepler photometer. The 3rd European Workshop on Hydrazine, Sardinia, Italy: 2004.</mixed-citation></ref>
+<ref id="pone.0179351.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Park</surname> <given-names>JH</given-names></name>, <name name-style="western"><surname>Baek</surname> <given-names>SW</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>JS</given-names></name>, <article-title>Direct Simulation Monte Carlo analysis of thruster plumes/satellite base region interaction</article-title>. <source>AIAA J</source>. <year>2004</year>; <volume>42</volume>: <fpage>1622</fpage>–<lpage>1632</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2514/1.1975" xlink:type="simple">10.2514/1.1975</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179351.ref009"><label>9</label><mixed-citation publication-type="other" xlink:type="simple">Xiao Z, Cheng H, Zhou H, Plume interaction in parallel multi-thrusters propulsion system and the effect on backflow. 9th AIAA/ASME Joint Thermophysics and Heat Transfer Conference, Fluid Dynamics and Co-located Conferences, San Francisco, California; 2006 10.2514/6.2006–3599.</mixed-citation></ref>
+<ref id="pone.0179351.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lee</surname> <given-names>KH</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>SN</given-names></name>, <name name-style="western"><surname>Yu</surname> <given-names>MJ</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>SK</given-names></name>, <name name-style="western"><surname>Baek</surname> <given-names>SW</given-names></name>. <article-title>Combined analysis of thruster plume behavior in rarefied region by preconditioned Navier-Stokes and DSMC methods</article-title>. <source>Trans Jpn Soc Aeronaut Space Sci</source>. <year>2009</year>; <volume>52</volume>: <fpage>135</fpage>–<lpage>143</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2322/tjsass.52.135" xlink:type="simple">10.2322/tjsass.52.135</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179351.ref011"><label>11</label><mixed-citation publication-type="other" xlink:type="simple">Wartelski M, Scremin G, Theroude C, Astrium tools for plume-spacecraft interaction analysis. Space Propulsion 2010 Conference, San Sebastian, Spain: 2010.</mixed-citation></ref>
+<ref id="pone.0179351.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lee</surname> <given-names>KH</given-names></name>, <name name-style="western"><surname>Choi</surname> <given-names>SW</given-names></name>. <article-title>Interaction effect analysis of thruster plume on LEO satellite surface using parallel DSMC method</article-title>. <source>Comput Fluids</source> <year>2013</year>; <volume>80</volume>: <fpage>333</fpage>–<lpage>341</lpage></mixed-citation></ref>
+<ref id="pone.0179351.ref013"><label>13</label><mixed-citation publication-type="other" xlink:type="simple">Yim JT, Sibe F, Ierado N, Plume impingement analysis for the European service module propulsion system. 50th AIAA/ASME/SAE/ASEE Joint Propulsion Conference, Cleveland, Ohio; 2014 10.2514/6.2014–3883.</mixed-citation></ref>
+<ref id="pone.0179351.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jeon</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Baek</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Park</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Ha</surname> <given-names>D</given-names></name>, <article-title>Rocket Plume Analysis with DSMC Method</article-title>. <source>J Korean Soc Propuls Eng</source>. <year>2014</year>; <volume>18</volume>: <fpage>54</fpage>–<lpage>61</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.6108/KSPE.2014.18.5.054" xlink:type="simple">10.6108/KSPE.2014.18.5.054</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179351.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kashkovsky</surname> <given-names>AV</given-names></name>, <name name-style="western"><surname>Vashchenkov</surname> <given-names>PV</given-names></name>, <name name-style="western"><surname>Banyai</surname> <given-names>T</given-names></name>, <article-title>Modeling of reentry space vehicle aerodynamics with control thruster plume—free-stream interaction</article-title>. <source>Thermophys Aeromech+</source>. <year>2015</year>; <volume>21</volume>: <fpage>719</fpage>–<lpage>728</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1134/S0869864314060067" xlink:type="simple">10.1134/S0869864314060067</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179351.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lee</surname> <given-names>KH</given-names></name>. <article-title>Numerical comparison of exhaust plume flow behaviors of small monopropellant and bipropellant thrusters</article-title>. <source>PLoS One</source>. <year>2017</year>; <volume>12</volume>(<issue>5</issue>): <fpage>e0176423</fpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pone.0176423" xlink:type="simple">10.1371/journal.pone.0176423</ext-link></comment> <object-id pub-id-type="pmid">28481892</object-id></mixed-citation></ref>
+<ref id="pone.0179351.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Borgnakke</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Larsen</surname> <given-names>PS</given-names></name>. <article-title>Statistical collision model for Monte Carlo simulation of polyatomic gas mixture</article-title>. <source>J Comput Phys</source>. <year>1975</year>; <volume>18</volume>: <fpage>405</fpage>–<lpage>420</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/0021-9991(75)90094-7" xlink:type="simple">10.1016/0021-9991(75)90094-7</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179351.ref018"><label>18</label><mixed-citation publication-type="other" xlink:type="simple">Pointwise Inc.. Gridgen user manual. Pointwise Inc.; 1997.</mixed-citation></ref>
+<ref id="pone.0179351.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Karypis</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Kumar</surname> <given-names>V</given-names></name>, <article-title>Multilevel k-way partitioning scheme for irregular graphs</article-title>. <source>J Parallel Distrib Comput</source>. <year>1998</year>; <volume>48</volume>: <fpage>96</fpage>–<lpage>129</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1006/jpdc.1997.1404" xlink:type="simple">10.1006/jpdc.1997.1404</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179351.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gropp</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Lusk</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Doss</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Skjellum</surname> <given-names>A</given-names></name>, <article-title>A high-performance, portable implementation of the MPI message passing interface standard</article-title>. <source>Parallel Comput</source>. <year>1996</year>; <volume>22</volume>; <fpage>789</fpage>–<lpage>828</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/0167-8191(96)00024-5" xlink:type="simple">10.1016/0167-8191(96)00024-5</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0179351.ref021"><label>21</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Modest</surname> <given-names>MF</given-names></name>, <source>Radiative heat transfer</source>, <publisher-loc>New York</publisher-loc>: <publisher-name>McGraw–Hill</publisher-name>; <year>2003</year>.</mixed-citation></ref>
+</ref-list>
+</back>
+</article>

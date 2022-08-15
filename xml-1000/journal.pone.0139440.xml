@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0139440</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-15-02669</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>Prevalence of Prostate Cancer Clinical States and Mortality in the United States: Estimates Using a Dynamic Progression Model</article-title>
+<alt-title alt-title-type="running-head">Prostate Cancer Clinical States and Mortality in the United States</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Scher</surname>
+<given-names>Howard I.</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+<xref rid="cor001" ref-type="corresp">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Solo</surname>
+<given-names>Kirk</given-names>
+</name>
+<xref rid="aff002" ref-type="aff"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Valant</surname>
+<given-names>Jason</given-names>
+</name>
+<xref rid="aff002" ref-type="aff"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Todd</surname>
+<given-names>Mary B.</given-names>
+</name>
+<xref rid="aff003" ref-type="aff"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Mehra</surname>
+<given-names>Maneesha</given-names>
+</name>
+<xref rid="aff003" ref-type="aff"><sup>3</sup></xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Genitourinary Oncology Service, Department of Medicine, Sidney Kimmel Center for Prostate and Urologic Cancers, Memorial Sloan Kettering Cancer Center, and Department of Medicine, Weill Cornell Medical College, New York, New York, United States of America</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Lexidyne, Colorado Springs, Colorado, United States of America</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>Janssen Global Services, South Raritan, New Jersey, United States of America</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Filleur</surname>
+<given-names>Stephanie</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Texas Tech University Health Sciences Center, UNITED STATES</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>MT and MM are employees of Janssen Global Services, whose company provided funding towards this study. KS and JV are employees of Lexidyne acting as consultants to Janssen. HS has received research funding from the Prostate Cancer Foundation as well as from Aragon, Bristol-Myers Squibb, Exelixis, Janssen Research &amp; Development, Janssen Global Services, BIND Therapeutics, and Medivation; has acted as a compensated consultant/advisor to BIND Therapeutics, Dendreon, Endo/Orion Pharmaceuticals, Ferring Pharmaceuticals, Genentech, Novartis, Ortho Biotech Oncology Research &amp; Development (now Janssen Research &amp; Development; proceeds donated), Sanofi Aventis, and has acted as an uncompensated consultant/advisor to Aragon, Astellas, Astra Zeneca, Celgene, Endocyte, Exelixis, Foundation Medicine, Janssen, Johnson &amp; Johnson Pharmaceutical Research &amp; Development, Medivation, Millennium Pharmaceuticals, and Takeda Pharmaceutical Company, Pfizer. His institution, Memorial Sloan Kettering Cancer Center, has received research funding from the Prostate Cancer Foundation. There are no patents, products in development or marketed products related to this study to declare. This does not alter our adherence to all the PLOS ONE policies on sharing data and materials.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: HS, KS, JV, MT, MM. Performed the experiments: HS, KS, JV, MM. Analyzed the data: HS, KS, JV, MT, MM. Contributed reagents/materials/analysis tools: HS, KS, JV, MM. Wrote the paper: HS, KS, JV, MT, MM.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">scherh@mskcc.org</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>13</day>
+<month>10</month>
+<year>2015</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2015</year>
+</pub-date>
+<volume>10</volume>
+<issue>10</issue>
+<elocation-id>e0139440</elocation-id>
+<history>
+<date date-type="received">
+<day>19</day>
+<month>1</month>
+<year>2015</year>
+</date>
+<date date-type="accepted">
+<day>14</day>
+<month>9</month>
+<year>2015</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2015</copyright-year>
+<copyright-holder>Scher et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0139440" xlink:type="simple"/>
+<abstract>
+<sec id="sec001">
+<title>Objective</title>
+<p>To identify patient populations most in need of treatment across the prostate cancer disease continuum, we developed a novel dynamic transition model based on risk of disease progression and mortality.</p>
+</sec>
+<sec id="sec002">
+<title>Design and Outcome Measurements</title>
+<p>We modeled the flow of patient populations through eight prostate cancer clinical states (PCCS) that are characterized by the status of the primary tumor, presence of metastases, prior and current treatment, and testosterone levels. Simulations used published US incidence rates for each year from 1990. Progression and mortality rates were derived from published clinical trials, meta-analyses, and observational studies. Model outputs included the incidence, prevalence, and mortality for each PCCS. The impact of novel treatments was modeled in three distinct scenarios: metastatic castration-resistant prostate cancer (mCRPC), non-metastatic CRPC (nmCRPC), or both.</p>
+</sec>
+<sec id="sec003">
+<title>Results and Limitations</title>
+<p>The model estimated the prevalence of prostate cancer as 2,219,280 in the US in 2009 and 3,072,480 in 2020, and incidence of mCRPC as 36,100 and 42,970, respectively. All-cause mortality in prostate cancer was estimated at 168,290 in 2009 and 219,360 in 2020, with 20.5% and 19.5% of these deaths, respectively, occurring in men with mCRPC. The majority (86%) of incidence flow into mCRPC states was from the nmCRPC clinical state. In the scenario with novel interventions for nmCRPC states, the progression to mCRPC is reduced, thus decreasing mCRPC incidence by 12% in 2020, with a sustained decline in mCRPC mortality. A limitation of the model is that it does not estimate prostate cancer—specific mortality.</p>
+</sec>
+<sec id="sec004">
+<title>Conclusion</title>
+<p>The model informs clinical trial design for prostate cancer by quantifying outcomes in PCCS, and demonstrates the impact of an effective therapy applied in an earlier clinical state of nmCRPC on the incidence of mCRPC morbidity and subsequent mortality.</p>
+</sec>
+</abstract>
+<funding-group>
+<funding-statement>The analyses were funded by Janssen Global Services. Lexidyne provided support in the form of salaries for authors KS and JV, Janssen Global Services provided support in the form of salaries for authors MT and MM, but neither company had any additional role in the study design, data collection and analysis, decision to publish, or preparation of the manuscript. The specific roles of these authors are articulated in the ‘author contributions’ section.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="2"/>
+<table-count count="4"/>
+<page-count count="12"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability" xlink:type="simple">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its Supporting Information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec005" sec-type="intro">
+<title>Introduction</title>
+<p>Prostate cancer is a significant cause of morbidity and mortality in the United States. With an estimated incidence of 233,000 new cases and 29,480 deaths in 2014, it is the most frequently diagnosed cancer and second most frequent cause of cancer deaths in US males [<xref rid="pone.0139440.ref001" ref-type="bibr">1</xref>]. Prostate-specific antigen (PSA)-based detection strategies are now widely used in the United States, with the result that most men are diagnosed with the disease clinically confined to the gland [<xref rid="pone.0139440.ref002" ref-type="bibr">2</xref>]. This has also led to earlier intervention and, in parallel, declining mortality, although the overall impact of early detection is controversial [<xref rid="pone.0139440.ref003" ref-type="bibr">3</xref>]. Additionally, for many men diagnosed with prostate cancer, the risk of cancer-related symptoms, metastases, and death from disease is low. A challenge in setting expectations for clinical outcome and reliably assessing prognosis is that prostate cancer is a dynamic disease that changes over time as a function of the intrinsic properties of the tumor, patient factors, and the specific therapies to which the tumor has been exposed.</p>
+<p>Understanding the prognosis for patient populations at different points in the prostate cancer disease continuum is essential to guide management and improve patient outcomes, an issue not addressed by traditional staging systems or nomograms. In 2000, we proposed a dynamic progression model that partitioned both the untreated natural history and post-treatment history of the prostate cancer disease continuum from diagnosis to death into distinct clinical states [<xref rid="pone.0139440.ref004" ref-type="bibr">4</xref>]. Each state represents a clinically significant milestone and key decision point that is easily recognized by patients, physicians, and researchers. The dynamic progression of patients through these clinical states across the disease continuum has been described [<xref rid="pone.0139440.ref004" ref-type="bibr">4</xref>–<xref rid="pone.0139440.ref006" ref-type="bibr">6</xref>]. Here we present a dynamic model that quantifies the number of patients diagnosed with prostate cancer in each clinical state using published data on cumulative disease incidence, progression, and mortality. The objective was to develop a disease progression model to identify patient populations most at risk of disease progression and/or mortality and to thus focus clinical research. Used to explore different clinical scenarios, the model can help clarify the impact of novel therapeutics/diagnostics on future prostate cancer disease outlook. In three distinct hypothetical scenarios, we illustrate the impact of introducing novel life-prolonging therapy for non-metastatic and metastatic disease states. We demonstrate that developing interventions for non-metastatic castration-resistant prostate cancer (nmCRPC) should be a priority for clinical research.</p>
+</sec>
+<sec id="sec006" sec-type="materials|methods">
+<title>Methods</title>
+<sec id="sec007">
+<title>Prostate Cancer Clinical States and Data Sources</title>
+<p>The eight prostate cancer clinical disease states were updated from the original published description [<xref rid="pone.0139440.ref004" ref-type="bibr">4</xref>] and aligned with treatment algorithms of current clinical practice guidelines based on therapeutic advances [<xref rid="pone.0139440.ref002" ref-type="bibr">2</xref>]. The clinical state definitions are based on the status of the primary tumor, presence or absence of detectable metastases, prior and current treatment (including cytotoxic therapy), and serum testosterone levels (non-castrate/castrate). Individual trials were assigned to a specific state based on the study eligibility criteria. For systemic therapies, only those that had received regulatory approval by 2009 (the final year of model inputs) were included. A detailed definition of each prostate cancer clinical state is provided in <xref rid="pone.0139440.t001" ref-type="table">Table 1</xref>.</p>
+<table-wrap id="pone.0139440.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139440.t001</object-id>
+<label>Table 1</label> <caption><title>Definitions of prostate cancer clinical states comprising the dynamic transition model.</title></caption>
+<alternatives>
+<graphic id="pone.0139440.t001g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139440.t001" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Clinical state</th>
+<th align="left" rowspan="1" colspan="1">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" align="left" rowspan="1">Localized Prostate Cancer</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Newly diagnosed; localized disease</td>
+<td align="left" rowspan="1" colspan="1">• Newly diagnosed prostate cancer localized to the gland</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">• Treatment options include radical surgery, radiation therapy (by external beam, internal implants, or a combination of the two), or active surveillance</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">• These patients remain in this state after initial treatment until disease recurrence or death. An active surveillance patient who later requires treatment for worsening local disease remains classified in this state until disease recurrence and transition to the locally advanced disease state</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">• This state comprises the overwhelming majority of newly diagnosed prostate cancer patients in the United States</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Newly diagnosed; locally advanced disease</td>
+<td align="left" rowspan="1" colspan="1">• Newly diagnosed patients presenting with “high risk” locally advanced tumors that extend beyond the capsule of the prostate (infiltrating neighboring structures and involving regional lymph nodes, without distant metastases) or who have a predicted high probability of recurrence after local therapy alone, based on the combination of T stage, nodal status, Gleason score, and PSA levels at the time of diagnosis [<xref rid="pone.0139440.ref002" ref-type="bibr">2</xref>,<xref rid="pone.0139440.ref007" ref-type="bibr">7</xref>,<xref rid="pone.0139440.ref008" ref-type="bibr">8</xref>]</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">• Similar to the newly diagnosed, localized disease state, treatments are directed at the primary tumor (but more typically involve concurrent use of hormone therapies, particularly in patients treated with radiation therapy), and patients have not yet experienced a recurrence of their disease or died. Active surveillance is not appropriate</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">• In the United States, this patient population accounts for &lt;20% of the annual incidence of prostate cancer</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Rising PSA (non-castrate) (biochemical failure after local therapy)</td>
+<td align="left" rowspan="1" colspan="1">• Patients who have experienced biochemical failure after receiving local treatment for prostate cancer (i.e., surgery or radiation therapy) with non-castrate levels of testosterone and no detectable disease on imaging tests (bone scan, CT scan, or MRI)</td>
+</tr>
+<tr>
+<td colspan="2" align="left" rowspan="1">nmCRPC</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Rising PSA (non-castrate) (biochemical failure after hormonal therapy)</td>
+<td align="left" rowspan="1" colspan="1">• Patients with biochemical failure after local therapy or newly diagnosed, locally advanced disease who have received hormonal therapy and experienced biochemical failure despite castrate levels of testosterone (testosterone &lt;50 ng/dl) with no detectable disease on imaging scans (bone scan, CT scan, or MRI)</td>
+</tr>
+<tr>
+<td colspan="2" align="left" rowspan="1">Hormone-sensitive, metastatic prostate cancer</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Newly diagnosed; metastatic disease</td>
+<td align="left" rowspan="1" colspan="1">• Patients who have metastatic disease detectable on imaging (i.e., bone scan, CT scan, or MRI) at the time of first diagnosis. These patients have either not received or are continuing to respond (i.e., are not showing progression) to primary hormone therapy</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">• This state currently accounts for &lt;5% of the annual incidence of prostate cancer in the United States [<xref rid="pone.0139440.ref007" ref-type="bibr">7</xref>]</td>
+</tr>
+<tr>
+<td colspan="2" align="left" rowspan="1">mCRPC</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Asymptomatic/minimally symptomatic mCRPC that has not been treated with or not progressed on chemotherapy</td>
+<td align="left" rowspan="1" colspan="1">• Patients with mCRPC who have minimal or no symptoms (such as self-reported pain) and have either not received or not progressed on chemotherapy; currently approved therapies include androgen biosynthesis and androgen receptor signaling inhibitors, immunotherapy, and/or docetaxel-based chemotherapy*</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Symptomatic mCRPC that has not been treated with or not progressed on chemotherapy</td>
+<td align="left" rowspan="1" colspan="1">• Patients with mCRPC who have moderate to severe symptoms, have progressed on an androgen biosynthesis inhibitor and/or androgen receptor signaling inhibitor, and have either not received or not failed a chemotherapy treatment</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">mCRPC that progressed on/after first-line chemotherapy</td>
+<td align="left" rowspan="1" colspan="1">• Patients with metastatic disease who have failed at least one chemotherapy regimen</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t001fn001"><p>*Based on publications of trials focused on patients with or without symptoms.</p></fn>
+<fn id="t001fn002"><p>PSA, prostate-specific antigen; CT, computed tomography; MRI, magnetic resonance imaging; nmCRPC, non-metastatic castration-resistant prostate cancer; mCRPC, metastatic castration-resistant prostate cancer.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>Results of selected phase III trials, meta-analyses, and observational studies designed to establish new standards of care for the respective state were also considered (<xref rid="pone.0139440.t002" ref-type="table">Table 2</xref>). The data sources listed in <xref rid="pone.0139440.t002" ref-type="table">Table 2</xref> focused on large, contemporary, pivotal studies that met level I evidence criteria and impacted current clinical practice in the United States; several of the data sources were cited in the 2015 National Comprehensive Cancer Network guidelines [<xref rid="pone.0139440.ref002" ref-type="bibr">2</xref>]. For early-stage disease, a recent large meta-analysis of pivotal trials in early-stage disease was used [<xref rid="pone.0139440.ref009" ref-type="bibr">9</xref>]. Since Kaplan-Meier curves of overall survival (OS) and progression-free survival (PFS) were required as data inputs for the model, publications that did not contain this information were not considered. Each identified publication was subsequently reviewed in depth and the final selection was determined by how closely the respective patient population matched the defined clinical state. A summary of each publication is provided (Table A in <xref rid="pone.0139440.s001" ref-type="supplementary-material">S1 File</xref>).</p>
+<table-wrap id="pone.0139440.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139440.t002</object-id>
+<label>Table 2</label> <caption><title>Data sources used to determine the hazard rates for progression-free survival and overall survival associated with each clinical state, and the survival estimates derived from these publications for inclusion into the model.</title></caption>
+<alternatives>
+<graphic id="pone.0139440.t002g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139440.t002" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="1" colspan="1">Clinical state</th>
+<th align="center" rowspan="1" colspan="1">Treatment approach</th>
+<th align="center" rowspan="1" colspan="1">Data source</th>
+<th align="center" rowspan="1" colspan="1">Overall survival</th>
+<th align="center" rowspan="1" colspan="1">Progression-free survival</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" rowspan="1" colspan="1">Newly diagnosed prostate cancer; localized disease</td>
+<td align="center" rowspan="1" colspan="1">No treatment/watchful waiting</td>
+<td align="center" rowspan="1" colspan="1">Bill-Axelson et al 2008 [<xref rid="pone.0139440.ref010" ref-type="bibr">10</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.910</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.730</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.690</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.585</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">Surgery only</td>
+<td align="center" rowspan="1" colspan="1">Moreira et al 2009 [<xref rid="pone.0139440.ref011" ref-type="bibr">11</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.920</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.780</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.800</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.720</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">Radiation only</td>
+<td align="center" rowspan="1" colspan="1">D’Amico 2006 et al [<xref rid="pone.0139440.ref012" ref-type="bibr">12</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.890</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.260</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.600</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.070</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">Hormonal therapy only</td>
+<td align="center" rowspan="1" colspan="1">Antonarakis et al 2007 [<xref rid="pone.0139440.ref009" ref-type="bibr">9</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.704</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.565</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.487</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.318</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">Newly diagnosed prostate cancer; locally advanced disease</td>
+<td align="center" rowspan="1" colspan="1">No treatment/watchful waiting</td>
+<td align="center" rowspan="1" colspan="1">Shappley et al 2009 [<xref rid="pone.0139440.ref013" ref-type="bibr">13</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.636</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.510</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.354</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.300</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">Surgery plus hormonal therapy</td>
+<td align="center" rowspan="1" colspan="1">Antonarakis et al 2007 [<xref rid="pone.0139440.ref009" ref-type="bibr">9</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.888</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.649</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.791</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.415</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">Surgery plus radiation</td>
+<td align="center" rowspan="1" colspan="1">Bolla et al 2005 [<xref rid="pone.0139440.ref014" ref-type="bibr">14</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.908</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.745</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.821</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.565</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">Radiation only</td>
+<td align="center" rowspan="1" colspan="1">Bolla et al 2002 [<xref rid="pone.0139440.ref015" ref-type="bibr">15</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.799</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.452</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.559</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.093</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">Radiation plus hormonal therapy</td>
+<td align="center" rowspan="1" colspan="1">Antonarakis et al 2007 [<xref rid="pone.0139440.ref009" ref-type="bibr">9</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.824</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.525</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.684</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.276</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">Hormonal therapy only</td>
+<td align="center" rowspan="1" colspan="1">Antonarakis et al 2007 [<xref rid="pone.0139440.ref009" ref-type="bibr">9</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.704</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.565</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.487</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.318</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">Biochemical failure after local therapy/rising PSA</td>
+<td align="center" rowspan="1" colspan="1">NA (natural history)</td>
+<td align="center" rowspan="1" colspan="1">Antonarakis et al 2011 [<xref rid="pone.0139440.ref016" ref-type="bibr">16</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.882</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.315</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.778</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.099</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">nmCRPC</td>
+<td align="center" rowspan="1" colspan="1">NA (natural history)<xref rid="t002fn001" ref-type="table-fn">*</xref></td>
+<td align="center" rowspan="1" colspan="1">Smith et al 2011 [<xref rid="pone.0139440.ref017" ref-type="bibr">17</xref>]<xref rid="t002fn001" ref-type="table-fn">*</xref></td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.350</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.220</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.002</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.081</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">Newly diagnosed prostate cancer; metastatic disease</td>
+<td align="center" rowspan="1" colspan="1">Any (i.e., either no treatment, surgery plus hormonal therapy, radiation plus hormonal therapy, hormonal therapy, or chemotherapy)</td>
+<td align="center" rowspan="1" colspan="1">Tangen et al 2012 [<xref rid="pone.0139440.ref018" ref-type="bibr">18</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.430</td>
+<td align="center" rowspan="1" colspan="1">-</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.180</td>
+<td align="center" rowspan="1" colspan="1">-</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">Any (i.e., either no treatment, surgery plus hormonal therapy, radiation plus hormonal therapy, hormonal therapy, or chemotherapy)</td>
+<td align="center" rowspan="1" colspan="1">Noguchi et al 2004 [<xref rid="pone.0139440.ref019" ref-type="bibr">19</xref>]</td>
+<td align="center" rowspan="1" colspan="1">-</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.238</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">-</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.076</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">Asymptomatic/minimally symptomatic mCRPC that has not been treated with or has not progressed on chemotherapy</td>
+<td align="center" rowspan="1" colspan="1">Immunotherapy</td>
+<td align="center" rowspan="1" colspan="1">Small et al 2006 [<xref rid="pone.0139440.ref020" ref-type="bibr">20</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.106</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.000</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.023</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.000</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">Symptomatic mCRPC that has not been treated with or has not progressed on chemotherapy</td>
+<td align="center" rowspan="1" colspan="1">Chemotherapy</td>
+<td align="center" rowspan="1" colspan="1">Petrylak et al 2004 [<xref rid="pone.0139440.ref021" ref-type="bibr">21</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.054</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.000</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.003</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.000</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">mCRPC that progressed on/after first-line chemotherapy</td>
+<td align="center" rowspan="1" colspan="1">NA (natural history)</td>
+<td align="center" rowspan="1" colspan="1">de Bono et al 2011 [<xref rid="pone.0139440.ref022" ref-type="bibr">22</xref>]</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.016</td>
+<td align="center" rowspan="1" colspan="1">5-yr: 0.000</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.000</td>
+<td align="center" rowspan="1" colspan="1">10-yr: 0.000</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t002fn001"><p>*The distribution of patients flowing from nmCRPC to mCRPC that has not been treated with or not progressed on chemotherapy was determined based on Oudard et al 2009 [<xref rid="pone.0139440.ref023" ref-type="bibr">23</xref>].</p></fn>
+<fn id="t002fn002"><p>PSA, prostate-specific antigen; nmCRPC, non-metastatic castration-resistant prostate cancer; mCRPC, metastatic castration-resistant prostate cancer; NA, not applicable.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec008">
+<title>Model Summary</title>
+<p>The prostate cancer clinical states progression model simulated patient flow through the eight distinct prostate cancer clinical states over time using a novel dynamic modeling framework. These models were custom programmed in the Java programming language (Java SE 6; Oracle Corporation, Redwood City, CA, USA). Additional details on the modeling methodology and the underlying mathematical approach is presented in <xref rid="pone.0139440.s001" ref-type="supplementary-material">S1 File</xref>.</p>
+<p>The base-case model simulated the annual progression of prostate cancer patients through the eight clinical states from diagnosis to death over a 19-year period from 1990 to 2009 (<xref rid="pone.0139440.t003" ref-type="table">Table 3</xref>). The simulation started in 1990 with the diagnosed incidence of prostate cancer patients by stage (localized, locally advanced, and non-castrate metastatic disease); the annual incidence for each subsequent year by stage was then added. In addition, a forward-looking model was developed that used the Surveillance, Epidemiology and End Results Program (SEER) age-specific prostate cancer incidence rate data from 2008 to estimate prostate cancer incidence for each year from 2009 to 2020 (<xref rid="pone.0139440.t003" ref-type="table">Table 3</xref>). To validate the model, the final results were compared with published estimates of prostate cancer incidence and prevalence in the United States for 2009 and 2020 [<xref rid="pone.0139440.ref007" ref-type="bibr">7</xref>,<xref rid="pone.0139440.ref024" ref-type="bibr">24</xref>].</p>
+<table-wrap id="pone.0139440.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139440.t003</object-id>
+<label>Table 3</label> <caption><title>Annual progression and mortality rates for the base-case model in 2009 and 2020 projections.</title></caption>
+<alternatives>
+<graphic id="pone.0139440.t003g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139440.t003" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1"/>
+<th colspan="3" align="center" rowspan="1">Base-case model 2009</th>
+<th colspan="3" align="center" rowspan="1">2020 Projections</th>
+</tr>
+<tr>
+<th align="left" rowspan="1" colspan="1">Clinical state</th>
+<th align="center" rowspan="1" colspan="1">Incidence<xref rid="t003fn001" ref-type="table-fn">*</xref></th>
+<th align="center" rowspan="1" colspan="1">Prevalence</th>
+<th align="center" rowspan="1" colspan="1">Mortality</th>
+<th align="center" rowspan="1" colspan="1">Incidence<xref rid="t003fn001" ref-type="table-fn">*</xref></th>
+<th align="center" rowspan="1" colspan="1">Prevalence</th>
+<th align="center" rowspan="1" colspan="1">Mortality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">Newly diagnosed prostate cancer; localized disease<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="center" rowspan="1" colspan="1">194,765<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="center" rowspan="1" colspan="1">1,383,920</td>
+<td align="center" rowspan="1" colspan="1">73,485</td>
+<td align="center" rowspan="1" colspan="1">259,715<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="center" rowspan="1" colspan="1">2,075,945</td>
+<td align="center" rowspan="1" colspan="1">10,915</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Newly diagnosed prostate cancer; locally advanced disease<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="center" rowspan="1" colspan="1">27,555<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="center" rowspan="1" colspan="1">199,410</td>
+<td align="center" rowspan="1" colspan="1">12,845</td>
+<td align="center" rowspan="1" colspan="1">37,310<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="center" rowspan="1" colspan="1">237,515</td>
+<td align="center" rowspan="1" colspan="1">13,920</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Biochemical failure after local therapy/rising PSA<xref rid="t003fn002" ref-type="table-fn">**</xref></td>
+<td align="center" rowspan="1" colspan="1">83,260</td>
+<td align="center" rowspan="1" colspan="1">446,540</td>
+<td align="center" rowspan="1" colspan="1">26,510</td>
+<td align="center" rowspan="1" colspan="1">98,800</td>
+<td align="center" rowspan="1" colspan="1">528,770</td>
+<td align="center" rowspan="1" colspan="1">29,725</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Biochemical failure after hormonal therapy<xref rid="t003fn002" ref-type="table-fn">**</xref></td>
+<td align="center" rowspan="1" colspan="1">49,390</td>
+<td align="center" rowspan="1" colspan="1">91,780</td>
+<td align="center" rowspan="1" colspan="1">15,130</td>
+<td align="center" rowspan="1" colspan="1">58,960</td>
+<td align="center" rowspan="1" colspan="1">112,065</td>
+<td align="center" rowspan="1" colspan="1">18,615</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Newly diagnosed prostate cancer; metastatic disease<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="center" rowspan="1" colspan="1">9790<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="center" rowspan="1" colspan="1">35,520</td>
+<td align="center" rowspan="1" colspan="1">5795</td>
+<td align="center" rowspan="1" colspan="1">13,575<xref rid="t003fn001" ref-type="table-fn">*</xref></td>
+<td align="center" rowspan="1" colspan="1">41,495</td>
+<td align="center" rowspan="1" colspan="1">6565</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Asymptomatic/minimally symptomatic mCRPC that has not been treated with or not progressed on chemotherapy<xref rid="t003fn002" ref-type="table-fn">**</xref></td>
+<td align="center" rowspan="1" colspan="1">17,185</td>
+<td align="center" rowspan="1" colspan="1">6745</td>
+<td align="center" rowspan="1" colspan="1">2205</td>
+<td align="center" rowspan="1" colspan="1">20,255</td>
+<td align="center" rowspan="1" colspan="1">8320</td>
+<td align="center" rowspan="1" colspan="1">2785</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Symptomatic mCRPC that has not been treated with or not progressed on chemotherapy<xref rid="t003fn002" ref-type="table-fn">**</xref></td>
+<td align="center" rowspan="1" colspan="1">30,010</td>
+<td align="center" rowspan="1" colspan="1">32,145</td>
+<td align="center" rowspan="1" colspan="1">15,415</td>
+<td align="center" rowspan="1" colspan="1">36,640</td>
+<td align="center" rowspan="1" colspan="1">39,650</td>
+<td align="center" rowspan="1" colspan="1">18,600</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">mCRPC that progressed on/after first-line chemotherapy<xref rid="t003fn002" ref-type="table-fn">**</xref></td>
+<td align="center" rowspan="1" colspan="1">17,580</td>
+<td align="center" rowspan="1" colspan="1">23,220</td>
+<td align="center" rowspan="1" colspan="1">16,905</td>
+<td align="center" rowspan="1" colspan="1">21,700</td>
+<td align="center" rowspan="1" colspan="1">28,720</td>
+<td align="center" rowspan="1" colspan="1">21,235</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t003fn001"><p>*Incidence occurs with diagnosis of prostate cancer.</p></fn>
+<fn id="t003fn002"><p>**Incidence is derived from progression from earlier clinical states as shown in <xref rid="pone.0139440.g002" ref-type="fig">Fig 2</xref>.</p></fn>
+<fn id="t003fn003"><p>PSA, prostate-specific antigen; mCRPC, metastatic castration-resistant prostate cancer.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>The utility of the model as a scenario tool was tested in three hypothetical independent scenarios that evaluated the potential impact of a new treatment in the early nmCRPC and/or mCRPC states. In the early nmCRPC scenario, the novel therapy for nmCRPC has the same OS relative to other nmCRPC therapies, but a 25% improvement in PFS. In the mCRPC scenario, the novel therapy for mCRPC has the same PFS as other mCRPC therapies, but a 25% improvement in OS. In the third scenario (combined), novel therapies were introduced in both nmCRPC and mCRPC states, with the aforementioned assumptions.</p>
+</sec>
+</sec>
+<sec id="sec009" sec-type="results">
+<title>Results</title>
+<p>In 2009, the nmCRPC and mCRPC clinical states associated with castration-resistant disease had higher rates of mortality and annual progression relative to the localized or non-castrate states (Figure A in <xref rid="pone.0139440.s001" ref-type="supplementary-material">S1 File</xref>). The incidence, prevalence, and mortality associated with the distinctive clinical states in the current (base year 2009) and future (2020) prostate cancer landscape are shown (<xref rid="pone.0139440.t003" ref-type="table">Table 3</xref>, <xref rid="pone.0139440.g001" ref-type="fig">Fig 1</xref>). Based on the 19-year simulation, the base-case model estimated a prevalence of 2,219,280 men in the United States diagnosed with prostate cancer in 2009 (<xref rid="pone.0139440.g001" ref-type="fig">Fig 1</xref>). Of these, 2,121,650 (95.6%) presented with localized or locally advanced disease while 97,630 (4.4%) had metastatic prostate cancer (corresponding to non-castrate and mCRPC states). The base model estimated an mCRPC incidence of 36,100 in 2009. The nmCRPC clinical state contributed heavily to the mCRPC states (86%), while the incidence flow from the non-castrate state to mCRPC was &lt;15%. All-cause mortality in 2009 in the base-case model was estimated at 168,290 deaths, with 34,525 or 20.5% of these deaths in patients in mCRPC states.</p>
+<fig id="pone.0139440.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139440.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Structure and results of the dynamic progression model depicting patient flow between the distinct prostate cancer clinical states in the base-case model from 1990 to 2009.</title>
+<p>The model highlights movement to clinical states that have higher mortality rates. Improvement in progression-free survival of men in the nmCRPC scenario reduces the number of patients transitioning from nmCRPC into the mCRPC population, where mortality risk is highest and, as such, has a more permanent impact on mCRPC mortality. *Weighted averages of patents diagnosed with localized, locally advanced, and metastatic disease. **Localized disease or locally advanced disease. nmCRPC, non-metastatic castration-resistant prostate cancer; mCRPC, metastatic castration-resistant prostate cancer.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139440.g001" position="float" xlink:type="simple"/>
+</fig>
+<p>The model estimates for the year 2020 are based on existing/current (2009) disease incidence, diagnosis, and treatment patterns, and reflect demographic changes in the US population over time (e.g., the impact of the baby boomer population) (<xref rid="pone.0139440.t003" ref-type="table">Table 3</xref>). Corresponding estimates for each year between 2009 and 2020 are shown in Table B in <xref rid="pone.0139440.s001" ref-type="supplementary-material">S1 File</xref>. Notably, the total prevalence of patients with prostate cancer is estimated to increase to 3,072,480. In 2020, the model estimated mCRPC incidence at 42,970 cases. Similar to the base-case model, the majority of the mCRPC incidence was derived from the nmCRPC state (86%, or 36,870 cases), with &lt;15% from the non-castrate state. All-cause mortality in 2020 in the base-case model was estimated at 219,360 deaths, with 19.5% (or 42,680) of deaths occurring in the mCRPC states.</p>
+<p>To illustrate the practical applicability of the model, we estimated the impact of novel treatments in three scenarios: improved PFS in early nmCRPC, improved OS in mCRPC, and a combined scenario with improvements in PFS and OS for nmCRPC and mCRPC, respectively. In the nmCRPC scenario, a novel therapeutic agent associated with improved PFS introduced in 2015 results in lowering mCRPC incidence by 11.7% (5061 patients less) in 2020 (<xref rid="pone.0139440.t004" ref-type="table">Table 4</xref>) compared with the 2020 baseline mCRPC incidence of 43,211. This reduction in mCRPC incidence leads to a lower mCRPC prevalence and, hence, a sustained decline in mCRPC mortality (<xref rid="pone.0139440.g002" ref-type="fig">Fig 2</xref>). With improved PFS, prevalence of nmCRPC will be greater by 12% (13,922 more patients) relative to the 2020 baseline prevalence (<xref rid="pone.0139440.t004" ref-type="table">Table 4</xref>) of 112,410 patients. In the mCRPC scenario, a novel therapeutic introduced in 2015 associated with improved OS reduces mCRPC mortality, with 2032 fewer deaths in 2020 and a simultaneous increase in mCRPC prevalence of 13,448 patients (<xref rid="pone.0139440.t004" ref-type="table">Table 4</xref>). With the increase in mCRPC prevalence over time (due to the reduction in annual mortality outflow rate from 54% to 44% from the mCRPC clinical state), the volume/number of deaths after an initial decline will subsequently increase (<xref rid="pone.0139440.g002" ref-type="fig">Fig 2C</xref>). Finally, the combined scenario (simultaneous introduction of novel therapy in clinical state nmCRPC and mCRPC) results in a reduction of more than 6000 deaths from mCRPC in 2020.</p>
+<table-wrap id="pone.0139440.t004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139440.t004</object-id>
+<label>Table 4</label> <caption><title>Outcomes in hypothetical scenarios: novel therapy introduced in 2015 for early nmCRPC, mCRPC, or combined scenarios.</title></caption>
+<alternatives>
+<graphic id="pone.0139440.t004g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139440.t004" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1"/>
+<th colspan="4" align="center" rowspan="1">2017</th>
+<th colspan="4" align="center" rowspan="1">2020</th>
+</tr>
+<tr>
+<th align="left" rowspan="1" colspan="1"/>
+<th align="center" rowspan="1" colspan="1">Baseline</th>
+<th align="center" rowspan="1" colspan="1">mCRPC scenario</th>
+<th align="center" rowspan="1" colspan="1">nmCRPC scenario</th>
+<th align="center" rowspan="1" colspan="1">Combined scenario</th>
+<th align="center" rowspan="1" colspan="1">Baseline</th>
+<th align="center" rowspan="1" colspan="1">mCRPC scenario</th>
+<th align="center" rowspan="1" colspan="1">nmCRPC scenario</th>
+<th align="center" rowspan="1" colspan="1">Combined scenario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">mCRPC incidence</td>
+<td align="center" rowspan="1" colspan="1">41,721</td>
+<td align="center" rowspan="1" colspan="1">NA</td>
+<td align="center" rowspan="1" colspan="1">37,131</td>
+<td align="center" rowspan="1" colspan="1">37,708</td>
+<td align="center" rowspan="1" colspan="1">43,211</td>
+<td align="center" rowspan="1" colspan="1">NA</td>
+<td align="center" rowspan="1" colspan="1">38,150</td>
+<td align="center" rowspan="1" colspan="1">39,327</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">mCRPC prevalence</td>
+<td align="center" rowspan="1" colspan="1">72,677</td>
+<td align="center" rowspan="1" colspan="1">75,132</td>
+<td align="center" rowspan="1" colspan="1">68,837</td>
+<td align="center" rowspan="1" colspan="1">72,115</td>
+<td align="center" rowspan="1" colspan="1">76,431</td>
+<td align="center" rowspan="1" colspan="1">89,879</td>
+<td align="center" rowspan="1" colspan="1">67,796</td>
+<td align="center" rowspan="1" colspan="1">80,894</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">mCRPC mortality</td>
+<td align="center" rowspan="1" colspan="1">39,870</td>
+<td align="center" rowspan="1" colspan="1">36,657</td>
+<td align="center" rowspan="1" colspan="1">38,156</td>
+<td align="center" rowspan="1" colspan="1">34,926</td>
+<td align="center" rowspan="1" colspan="1">41,833</td>
+<td align="center" rowspan="1" colspan="1">39,801</td>
+<td align="center" rowspan="1" colspan="1">38,139</td>
+<td align="center" rowspan="1" colspan="1">35,370</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">nmCRPC</td>
+<td align="center" rowspan="1" colspan="1">107,124</td>
+<td align="center" rowspan="1" colspan="1">NA</td>
+<td align="center" rowspan="1" colspan="1">109,540</td>
+<td align="center" rowspan="1" colspan="1">110,954</td>
+<td align="center" rowspan="1" colspan="1">112,410</td>
+<td align="center" rowspan="1" colspan="1">NA</td>
+<td align="center" rowspan="1" colspan="1">126,332</td>
+<td align="center" rowspan="1" colspan="1">126,744</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t004fn001"><p>mCRPC, metastatic castration-resistant prostate cancer; nmCRPC, non-metastatic castration-resistant prostate cancer; NA, not applicable.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<fig id="pone.0139440.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139440.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Impact of hypothetical novel treatment in 2015 for early-stage nmCRPC, mCRPC, and combined scenario. (A) mCRPC incidence, (B) mCRPC prevalence, and (C) mCRPC mortality.</title>
+<p>The reduction in mCRPC incidence would lead to lower mCRPC prevalence and a sustained decline in mCRPC mortality. nmCRPC, non-metastatic castration-resistant prostate cancer; mCRPC, metastatic castration-resistant prostate cancer.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139440.g002" position="float" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec010" sec-type="conclusions">
+<title>Discussion</title>
+<p>This dynamic clinical states transition model for the United States estimated the point prevalence of prostate cancer as 2.2 million in 2009, which will increase to 3.07 million in 2020. These prevalence totals are the cumulative result of the inflow of newly diagnosed patients and outflow of patients who succumb from 1990 onward. A change in the input variables for the purpose of calibration was avoided in order to maintain a purely data-driven model. To ensure the accuracy of the cumulative flow approach, the results were compared and validated against reported epidemiological prevalence and mortality data. The SEER reported complete prevalence (&gt;35 years’ duration) for prostate cancer of 2.3 million in 2009 (vs. 2.2 million simulated) and the National Institutes of Health projected 3.11 million (vs. 3.07 million simulated) in 2020 in the trend incidence scenario [<xref rid="pone.0139440.ref024" ref-type="bibr">24</xref>]. The prevalence for 2009 was lower than that reported by SEER, in part because it did not account for prostate cancer incident cases diagnosed prior to 1990 [<xref rid="pone.0139440.ref007" ref-type="bibr">7</xref>]. The all-cause mortality of 168,290 deaths in 2009, with 34,525 deaths in the mCRPC population, projected by the model approximates the annual prostate cancer mortality of 30,000 reported by the American Cancer Society [<xref rid="pone.0139440.ref025" ref-type="bibr">25</xref>].</p>
+<p>Coupling (or using) the estimate of the number of patients at different points in the disease continuum along with what is known about the frequency of prostate cancer—specific morbidities that occur in a given state enables (i) a more global estimate of the morbidity and adverse impact of the disease, and (ii) the quantification of outcomes (mortality and progression) with the introduction of novel therapies for specific clinical states across the disease continuum. The information provides valuable insights into unmet needs short of an improvement in survival being the focus of future or new drug development efforts in a rapidly changing therapeutic landscape. The mCRPC state in which effective treatments were introduced with a targeted mortality reduction threshold of 25% in registration trials revealed a reduced mortality risk and substantially reduced mCRPC mortality, with ~2000 fewer deaths projected in 2020 (<xref rid="pone.0139440.t004" ref-type="table">Table 4</xref>). The decline in mCRPC mortality was temporary until the model reached equilibrium, which occurred quickly given the survival benefit of only 4 months.</p>
+<p>The advantage of applying an effective therapy earlier in the disease was shown by modeling the nmCRPC state. The model demonstrates that reducing the incidence of mCRPC with such an intervention would have a greater and more sustained impact on mCRPC mortality and morbidity. Based on prevalence, progression, and mortality associated with nmCRPC, men in this state of the disease represent a patient population for whom preventing or delaying a transition to mCRPC is a primary therapeutic objective, which could have a significant impact from a public health perspective. Importantly, the ability of the model to demonstrate an improvement in outcomes through a development program focused on a specific prostate cancer clinical state also provides a justification for committing the resources needed to complete such trials. Along these lines, it is notable that several clinical trials in this population are ongoing (Clinical Trials.gov: <ext-link ext-link-type="uri" xlink:href="https://clinicaltrials.gov/ct2/show/NCT01946204" xlink:type="simple">NCT01946204</ext-link>, <ext-link ext-link-type="uri" xlink:href="https://clinicaltrials.gov/ct2/show/NCT02003924" xlink:type="simple">NCT02003924</ext-link>, <ext-link ext-link-type="uri" xlink:href="https://clinicaltrials.gov/ct2/show/NCT01046916" xlink:type="simple">NCT01046916</ext-link>, <ext-link ext-link-type="uri" xlink:href="https://clinicaltrials.gov/ct2/show/NCT01703065" xlink:type="simple">NCT01703065</ext-link>, <ext-link ext-link-type="uri" xlink:href="https://clinicaltrials.gov/ct2/show/NCT01875250" xlink:type="simple">NCT01875250</ext-link>) and, once they are completed, their impact on disease mortality could be estimated using this dynamic model.</p>
+<p>As expected, the model also shows that all-cause mortality rates in prostate cancer patients increase with disease progression as defined by the clinical state. Patients with mCRPC in particular have a high risk of mortality and progression. While prostate cancer—specific mortality is not specified in this model and this is a limitation, the increase in mortality rate reported in the 2009 base model can be attributed to the increasing proportion of deaths due to or attributed to prostate cancer given the following reasoning: Based on US Census data, the all-cause mortality rate among males aged 65 and older was 5.67% in 2010 [<xref rid="pone.0139440.ref026" ref-type="bibr">26</xref>]. The average age of patients who are diagnosed with prostate cancer is 67 years [<xref rid="pone.0139440.ref007" ref-type="bibr">7</xref>] and, based on our 2009 model, the all-cause mortality rate among patients with prostate cancer is 7.6%. In the early stages of disease, the mortality rate of 5.7% is similar to the all-cause mortality rate in the US population aged 65 and older, indicating that only a small proportion (if any) of deaths in these clinical states is due to prostate cancer while the mortality rate of 55.3% for mCRPC is much higher (Figure B in <xref rid="pone.0139440.s001" ref-type="supplementary-material">S1 File</xref>). Applying the ratio of US all-cause mortality rate to the mCRPC mortality rate suggests that 90% (or ~31,000) of the 34,525 deaths in mCRPC patients can be attributed to prostate cancer, thus aligning with published estimates of annual prostate cancer—specific mortality in the United States. With regard to new prostate cancer therapies, OS will ultimately encompass both all-cause mortality rates and prostate cancer—specific mortality rates (with a delta between the two survival rates). In the model, the relationship between an improvement in PFS vs. OS is quantified and demonstrates the benefits and limitations of these two measures in the nmCRPC and mCRPC scenarios. Improvement in PFS of men in the nmCRPC scenario reduces the number of patients transitioning from nmCRPC into the mCRPC population, where mortality risk is highest. Thus, the ability to reduce patient transitions to a clinical state with higher mortality is based on the ability of new therapies to extend the duration of survival without disease progression (i.e., PFS). Improvements in PFS and OS in the mCRPC scenario essentially delay the inevitable, as following the initial reduction in mortality the levels rebound close to the base case. Thus, the nmCRPC scenario supports the use of PFS as an end point for trials in patient populations whose all-cause mortality outweighs prostate cancer—specific mortality, yet who have a higher risk of progression. These observations are consistent with the Prostate Cancer Clinical Trials Working Group recommendations [<xref rid="pone.0139440.ref027" ref-type="bibr">27</xref>].</p>
+<p>The existing model framework can be adapted to quantify changes in disease mortality and morbidity as a result of novel treatments or interventions, such as screening and diagnostics or for specific countries and different timeframes. In Europe, for example, a much higher proportion of patients present with metastatic disease at the time of diagnosis and the time of progression from the non-castrate state to mCRPC is generally much shorter [<xref rid="pone.0139440.ref028" ref-type="bibr">28</xref>]. Since this transition model quantifies the progression from early to more advanced disease states, it could help assess the overall impact of changes in routine PSA screening in Europe and the United States.</p>
+</sec>
+<sec id="sec011" sec-type="conclusions">
+<title>Conclusion</title>
+<p>We describe the first dynamic clinical states transition model that provides a quantitative assessment of the US prostate cancer disease landscape defined by eight distinct clinical states. The model indicates that US patients with nmCRPC and mCRPC are the populations in greatest need for new, more effective treatment options that prolong survival or delay disease progression. We also demonstrate the model’s ability to predict the future epidemiology of prostate cancer with the introduction of novel therapies, and to inform clinical trial design. These results also provide a framework to validate and qualify PFS as an end point that can lead to regulatory approvals and accelerate drug development.</p>
+</sec>
+<sec id="sec012">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0139440.s001" xlink:href="info:doi/10.1371/journal.pone.0139440.s001" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:type="simple">
+<label>S1 File</label>
+<caption>
+<title>Additional details on modeling methodology.</title>
+<p>Summary of publications used as data sources for the clinical states model (<bold>Table A</bold>). Prevalence of clinical states, incidence flow, and patient flows between the clinical states for each year from 2010 to 2020 (<bold>Table B</bold>). Incidence of prostate cancer in the United States between 1990 and 2009. Grouped by clinical state at the time of diagnosis according to the Surveillance Epidemiology and End Results database (<bold>Figure A</bold>). Annual all-cause mortality by clinical state, base-case model in 2009 (<bold>Figure B</bold>).</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>Writing support was provided by Dominik Wolf, Hajira Koeller, and Ann Tighe of PAREXEL.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0139440.ref001"><label>1</label><mixed-citation publication-type="book" xlink:type="simple"><collab xlink:type="simple">American Cancer Society</collab>. <source>Cancer Facts &amp; Figures 2014</source>. <publisher-loc>Atlanta</publisher-loc>: <publisher-name>American Cancer Society</publisher-name>; <year>2014</year>.</mixed-citation></ref>
+<ref id="pone.0139440.ref002"><label>2</label><mixed-citation publication-type="other" xlink:type="simple">Mohler JL, Armstrong AJ, Bahnson RR, Boston B, Busby JE, D'Amico AV, et al. NCCN clinical guidelines in oncology—prostate cancer. Version I.2015. National Comprehensive Cancer Network Web site. Available: <ext-link ext-link-type="uri" xlink:href="http://www.nccn.org/professionals/physician_gls/pdf/prostate.pdf" xlink:type="simple">http://www.nccn.org/professionals/physician_gls/pdf/prostate.pdf</ext-link>.</mixed-citation></ref>
+<ref id="pone.0139440.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Etzioni</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Tsodikov</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Mariotto</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Szabo</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Falcon</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Wegelin</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Quantifying the role of PSA screening in the US prostate cancer mortality decline</article-title>. <source>Cancer Causes Control</source>. <year>2008</year>;<volume>19</volume>(<issue>2</issue>): <fpage>175</fpage>–<lpage>81</lpage>. <object-id pub-id-type="pmid">18027095</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Scher</surname> <given-names>HI</given-names></name>, <name name-style="western"><surname>Heller</surname> <given-names>G</given-names></name>. <article-title>Clinical states in prostate cancer: toward a dynamic model of disease progression</article-title>. <source>Urology</source>. <year>2000</year>;<volume>55</volume>(<issue>3</issue>): <fpage>323</fpage>–<lpage>7</lpage>. <object-id pub-id-type="pmid">10699601</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Solo</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Mehra</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Dhawan</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Valant</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Scher</surname> <given-names>HI</given-names></name>. <article-title>Prevalence of prostate cancer (PC) clinical states (CS) in the United States: estimates using a dynamic progression model</article-title>. <source>J Clin Oncol</source>. <year>2011</year>;<volume>29</volume>(<issue>Suppl</issue>). Abstract 4637.</mixed-citation></ref>
+<ref id="pone.0139440.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Scher</surname> <given-names>HI</given-names></name>, <name name-style="western"><surname>Morris</surname> <given-names>MJ</given-names></name>, <name name-style="western"><surname>Basch</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Heller</surname> <given-names>G</given-names></name>. <article-title>End points and outcomes in castration-resistant prostate cancer: from clinical trials to clinical practice</article-title>. <source>J Clin Oncol</source>. <year>2011</year>;<volume>29</volume>(<issue>27</issue>): <fpage>3695</fpage>–<lpage>704</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1200/JCO.2011.35.8648" xlink:type="simple">10.1200/JCO.2011.35.8648</ext-link></comment> <object-id pub-id-type="pmid">21859988</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref007"><label>7</label><mixed-citation publication-type="book" xlink:type="simple"><collab xlink:type="simple">U.S. National Institutes of Health</collab>. <source>Surveillance Epidemiology and End Results</source>. <publisher-name>National Cancer Institute website</publisher-name>. Available: <ext-link ext-link-type="uri" xlink:href="http://seer.cancer.gov/" xlink:type="simple">http://seer.cancer.gov/</ext-link>.</mixed-citation></ref>
+<ref id="pone.0139440.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yossepowitch</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Eggener</surname> <given-names>SE</given-names></name>, <name name-style="western"><surname>Bianco</surname> <given-names>FJ</given-names> <suffix>Jr</suffix></name>, <name name-style="western"><surname>Carver</surname> <given-names>BS</given-names></name>, <name name-style="western"><surname>Serio</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Scardino</surname> <given-names>PT</given-names></name>, <etal>et al</etal>. <article-title>Radical prostatectomy for clinically localized, high risk prostate cancer: critical analysis of risk assessment methods</article-title>. <source>J Urol</source>. <year>2007</year>;<volume>178</volume>(<issue>2</issue>): <fpage>493</fpage>–<lpage>9</lpage>. <object-id pub-id-type="pmid">17561152</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Antonarakis</surname> <given-names>ES</given-names></name>, <name name-style="western"><surname>Blackford</surname> <given-names>AL</given-names></name>, <name name-style="western"><surname>Garrett-Mayer</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Eisenberger</surname> <given-names>MA</given-names></name>. <article-title>Survival in men with nonmetastatic prostate cancer treated with hormone therapy: a quantitative systematic review</article-title>. <source>J Clin Oncol</source>. <year>2007</year>;<volume>25</volume>(<issue>31</issue>): <fpage>4998</fpage>–<lpage>5008</lpage>. <object-id pub-id-type="pmid">17971600</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bill-Axelson</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Holmberg</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Filen</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Ruutu</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Garmo</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Busch</surname> <given-names>C</given-names></name>, <etal>et al</etal>. <article-title>Radical prostatectomy versus watchful waiting in localized prostate cancer: the Scandinavian prostate cancer group-4 randomized trial</article-title>. <source>J Natl Cancer Inst</source>. <year>2008</year>;<volume>100</volume>(<issue>16</issue>): <fpage>1144</fpage>–<lpage>54</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/jnci/djn255" xlink:type="simple">10.1093/jnci/djn255</ext-link></comment> <object-id pub-id-type="pmid">18695132</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Moreira</surname> <given-names>DM</given-names></name>, <name name-style="western"><surname>Presti</surname> <given-names>JC</given-names> <suffix>Jr.</suffix></name>, <name name-style="western"><surname>Aronson</surname> <given-names>WJ</given-names></name>, <name name-style="western"><surname>Terris</surname> <given-names>MK</given-names></name>, <name name-style="western"><surname>Kane</surname> <given-names>CJ</given-names></name>, <name name-style="western"><surname>Amling</surname> <given-names>CL</given-names></name>, <etal>et al</etal>. <article-title>Natural history of persistently elevated prostate specific antigen after radical prostatectomy: results from the SEARCH database</article-title>. <source>J Urol</source>. <year>2009</year>;<volume>182</volume>(<issue>5</issue>): <fpage>2250</fpage>–<lpage>5</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.juro.2009.07.022" xlink:type="simple">10.1016/j.juro.2009.07.022</ext-link></comment> <object-id pub-id-type="pmid">19758614</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>D'Amico</surname> <given-names>AV</given-names></name>, <name name-style="western"><surname>Hui-Chen</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Renshaw</surname> <given-names>AA</given-names></name>, <name name-style="western"><surname>Sussman</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Roehl</surname> <given-names>KA</given-names></name>, <name name-style="western"><surname>Catalona</surname> <given-names>WJ</given-names></name>. <article-title>Identifying men diagnosed with clinically localized prostate cancer who are at high risk for death from prostate cancer</article-title>. <source>J Urol</source>. <year>2006</year>;<volume>176</volume>(<issue>6 Pt 2</issue>): <fpage>S11</fpage>–<lpage>5</lpage>. <object-id pub-id-type="pmid">17084157</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Shappley</surname> <given-names>WV</given-names> <suffix>III</suffix></name>, <name name-style="western"><surname>Kenfield</surname> <given-names>SA</given-names></name>, <name name-style="western"><surname>Kasperzyk</surname> <given-names>JL</given-names></name>, <name name-style="western"><surname>Qiu</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Stampfer</surname> <given-names>MJ</given-names></name>, <name name-style="western"><surname>Sanda</surname> <given-names>MG</given-names></name>, <etal>et al</etal>. <article-title>Prospective study of determinants and outcomes of deferred treatment or watchful waiting among men with prostate cancer in a nationwide cohort</article-title>. <source>J Clin Oncol</source>. <year>2009</year>;<volume>27</volume>(<issue>30</issue>): <fpage>4980</fpage>–<lpage>5</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1200/JCO.2008.21.2613" xlink:type="simple">10.1200/JCO.2008.21.2613</ext-link></comment> <object-id pub-id-type="pmid">19720918</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bolla</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>van</surname> <given-names>PH</given-names></name>, <name name-style="western"><surname>Collette</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>van</surname> <given-names>CP</given-names></name>, <name name-style="western"><surname>Vekemans</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Da</surname> <given-names>PL</given-names></name>, <etal>et al</etal>. <article-title>Postoperative radiotherapy after radical prostatectomy: a randomised controlled trial (EORTC trial 22911)</article-title>. <source>Lancet</source>. <year>2005</year>;<volume>366</volume>(<issue>9485</issue>): <fpage>572</fpage>–<lpage>8</lpage>. <object-id pub-id-type="pmid">16099293</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bolla</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Collette</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Blank</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Warde</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Dubois</surname> <given-names>JB</given-names></name>, <name name-style="western"><surname>Mirimanoff</surname> <given-names>RO</given-names></name>, <etal>et al</etal>. <article-title>Long-term results with immediate androgen suppression and external irradiation in patients with locally advanced prostate cancer (an EORTC study): a phase III randomised trial</article-title>. <source>Lancet</source>. <year>2002</year>;<volume>360</volume>(<issue>9327</issue>): <fpage>103</fpage>–<lpage>6</lpage>. <object-id pub-id-type="pmid">12126818</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Antonarakis</surname> <given-names>ES</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Elsamanoudi</surname> <given-names>SI</given-names></name>, <name name-style="western"><surname>Brassell</surname> <given-names>SA</given-names></name>, <name name-style="western"><surname>Da Rocha</surname> <given-names>MV</given-names></name>, <name name-style="western"><surname>Eisenberger</surname> <given-names>MA</given-names></name>, <etal>et al</etal>. <article-title>Long-term overall survival and metastasis-free survival for men with prostate-specific antigen-recurrent prostate cancer after prostatectomy: analysis of the Center for Prostate Disease Research National Database</article-title>. <source>BJU Int</source>. <year>2011</year>;<volume>108</volume>(<issue>3</issue>): <fpage>378</fpage>–<lpage>85</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1464-410X.2010.09878.x" xlink:type="simple">10.1111/j.1464-410X.2010.09878.x</ext-link></comment> <object-id pub-id-type="pmid">21091976</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Smith</surname> <given-names>MR</given-names></name>, <name name-style="western"><surname>Cook</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>KA</given-names></name>, <name name-style="western"><surname>Nelson</surname> <given-names>JB</given-names></name>. <article-title>Disease and host characteristics as predictors of time to first bone metastasis and death in men with progressive castration-resistant nonmetastatic prostate cancer</article-title>. <source>Cancer</source>. <year>2011</year>;<volume>117</volume>(<issue>10</issue>): <fpage>2077</fpage>–<lpage>85</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/cncr.25762" xlink:type="simple">10.1002/cncr.25762</ext-link></comment> <object-id pub-id-type="pmid">21523719</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tangen</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Hussain</surname> <given-names>MH</given-names></name>, <name name-style="western"><surname>Higano</surname> <given-names>CS</given-names></name>, <name name-style="western"><surname>Eisenberger</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Small</surname> <given-names>EJ</given-names></name>, <name name-style="western"><surname>Wilding</surname> <given-names>G</given-names></name>, <etal>et al</etal>. <article-title>Improved overall survival trends of men with newly diagnosed M1 prostate cancer: a SWOG phase III trial experience (S8494, S8894 and S9346)</article-title>. <source>J Urol</source>. <year>2012</year>;<volume>188</volume>(<issue>4</issue>): <fpage>1164</fpage>–<lpage>9</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.juro.2012.06.046" xlink:type="simple">10.1016/j.juro.2012.06.046</ext-link></comment> <object-id pub-id-type="pmid">22921015</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Noguchi</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Noda</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Yoshida</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ueda</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Shiraishi</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Itoh</surname> <given-names>K</given-names></name>. <article-title>Chemohormonal therapy as primary treatment for metastatic prostate cancer: a randomized study of estramustine phosphate plus luteinizing hormone-releasing hormone agonist versus flutamide plus luteinizing hormone-releasing hormone agonist</article-title>. <source>Int J Urol</source>. <year>2004</year>;<volume>11</volume>(<issue>2</issue>): <fpage>103</fpage>–<lpage>9</lpage>. <object-id pub-id-type="pmid">14706014</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Small</surname> <given-names>EJ</given-names></name>, <name name-style="western"><surname>Schellhammer</surname> <given-names>PF</given-names></name>, <name name-style="western"><surname>Higano</surname> <given-names>CS</given-names></name>, <name name-style="western"><surname>Redfern</surname> <given-names>CH</given-names></name>, <name name-style="western"><surname>Nemunaitis</surname> <given-names>JJ</given-names></name>, <name name-style="western"><surname>Valone</surname> <given-names>FH</given-names></name>, <etal>et al</etal>. <article-title>Placebo-controlled phase III trial of immunologic therapy with sipuleucel-T (APC8015) in patients with metastatic, asymptomatic hormone refractory prostate cancer</article-title>. <source>J Clin Oncol</source>. <year>2006</year>;<volume>24</volume>(<issue>19</issue>): <fpage>3089</fpage>–<lpage>94</lpage>. <object-id pub-id-type="pmid">16809734</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Petrylak</surname> <given-names>DP</given-names></name>, <name name-style="western"><surname>Tangen</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Hussain</surname> <given-names>MH</given-names></name>, <name name-style="western"><surname>Lara</surname> <given-names>PN</given-names> <suffix>Jr.</suffix></name>, <name name-style="western"><surname>Jones</surname> <given-names>JA</given-names></name>, <name name-style="western"><surname>Taplin</surname> <given-names>ME</given-names></name>, <etal>et al</etal>. <article-title>Docetaxel and estramustine compared with mitoxantrone and prednisone for advanced refractory prostate cancer</article-title>. <source>N Engl J Med</source>. <year>2004</year>;<volume>351</volume>(<issue>15</issue>): <fpage>1513</fpage>–<lpage>20</lpage>. <object-id pub-id-type="pmid">15470214</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>de Bono</surname> <given-names>JS</given-names></name>, <name name-style="western"><surname>Logothetis</surname> <given-names>CJ</given-names></name>, <name name-style="western"><surname>Molina</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Fizazi</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>North</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Chu</surname> <given-names>L</given-names></name>, <etal>et al</etal>. <article-title>Abiraterone and increased survival in metastatic prostate cancer</article-title>. <source>N Engl J Med</source>. <year>2011</year>;<volume>364</volume>(<issue>21</issue>): <fpage>1995</fpage>–<lpage>2005</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1056/NEJMoa1014618" xlink:type="simple">10.1056/NEJMoa1014618</ext-link></comment> <object-id pub-id-type="pmid">21612468</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Oudard</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Banu</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Medioni</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Scotte</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Banu</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Levy</surname> <given-names>E</given-names></name>, <etal>et al</etal>. <article-title>What is the real impact of bone pain on survival in patients with metastatic hormone-refractory prostate cancer treated with docetaxel?</article-title> <source>BJU Int</source>. <year>2009</year>;<volume>103</volume>(<issue>12</issue>): <fpage>1641</fpage>–<lpage>6</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1464-410X.2008.08283.x" xlink:type="simple">10.1111/j.1464-410X.2008.08283.x</ext-link></comment> <object-id pub-id-type="pmid">19210673</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mariotto</surname> <given-names>AB</given-names></name>, <name name-style="western"><surname>Yabroff</surname> <given-names>KR</given-names></name>, <name name-style="western"><surname>Shao</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Feuer</surname> <given-names>EJ</given-names></name>, <name name-style="western"><surname>Brown</surname> <given-names>ML</given-names></name>. <article-title>Projections of the cost of cancer care in the United States: 2010–2020</article-title>. <source>J Natl Cancer Inst</source>. <year>2011</year>;<volume>103</volume>(<issue>2</issue>): <fpage>117</fpage>–<lpage>28</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/jnci/djq495" xlink:type="simple">10.1093/jnci/djq495</ext-link></comment> <object-id pub-id-type="pmid">21228314</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref025"><label>25</label><mixed-citation publication-type="book" xlink:type="simple"><collab xlink:type="simple">American Cancer Society</collab>. <source>Cancer facts &amp; figures</source> <year>2009</year>. <publisher-name>American Cancer Society website</publisher-name>. Available: <ext-link ext-link-type="uri" xlink:href="http://www.cancer.org/research/cancerfactsstatistics/cancerfactsfigures2009/index" xlink:type="simple">http://www.cancer.org/research/cancerfactsstatistics/cancerfactsfigures2009/index</ext-link>.</mixed-citation></ref>
+<ref id="pone.0139440.ref026"><label>26</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Murphy</surname> <given-names>SL</given-names></name>, <name name-style="western"><surname>Xu</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Kochanek</surname> <given-names>KD</given-names></name>. <chapter-title>Deaths: final data for 2010</chapter-title>. <source>National Vital Statistics Reports</source>. <publisher-name>Centers for Disease Control and Prevention Web site</publisher-name>. Available: <ext-link ext-link-type="uri" xlink:href="http://stacks.cdc.gov/view/cdc/21508" xlink:type="simple">http://stacks.cdc.gov/view/cdc/21508</ext-link>.</mixed-citation></ref>
+<ref id="pone.0139440.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Scher</surname> <given-names>HI</given-names></name>, <name name-style="western"><surname>Halabi</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Tannock</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Morris</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Sternberg</surname> <given-names>CN</given-names></name>, <name name-style="western"><surname>Carducci</surname> <given-names>MA</given-names></name>, <etal>et al</etal>. <article-title>Design and end points of clinical trials for patients with progressive prostate cancer and castrate levels of testosterone: recommendations of the Prostate Cancer Clinical Trials Working Group</article-title>. <source>J Clin Oncol</source>. <year>2008</year>;<volume>26</volume>(<issue>7</issue>): <fpage>1148</fpage>–<lpage>59</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1200/JCO.2007.12.4487" xlink:type="simple">10.1200/JCO.2007.12.4487</ext-link></comment> <object-id pub-id-type="pmid">18309951</object-id></mixed-citation></ref>
+<ref id="pone.0139440.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schroder</surname> <given-names>FH</given-names></name>, <name name-style="western"><surname>Hugosson</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Carlsson</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Tammela</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Maattanen</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Auvinen</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>Screening for prostate cancer decreases the risk of developing metastatic disease: findings from the European Randomized Study of Screening for Prostate Cancer (ERSPC)</article-title>. <source>Eur Urol</source>. <year>2012</year>;<volume>62</volume>(<issue>5</issue>): <fpage>745</fpage>–<lpage>752</lpage>.<object-id pub-id-type="pmid">22704366</object-id></mixed-citation></ref>
+</ref-list>
+</back>
+</article>

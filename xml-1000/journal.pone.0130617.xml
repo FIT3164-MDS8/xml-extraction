@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="3.0" xml:lang="en" article-type="research-article">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-14-28336</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0130617</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>The Fractal Patterns of Words in a Text: A Method for Automatic Keyword Extraction</article-title>
+<alt-title alt-title-type="running-head">The Fractal Patterns of Words in a Text</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Najafi</surname> <given-names>Elham</given-names></name>
+<xref ref-type="aff" rid="aff001"/>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Darooneh</surname> <given-names>Amir H.</given-names></name>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+</contrib-group>
+<aff id="aff001">
+<addr-line>Department of Physics, University of Zanjan, Zanjan, Iran</addr-line>
+</aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Esteban</surname> <given-names>Francisco J.</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1">
+<addr-line>University of Jaén, SPAIN</addr-line>
+</aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: EN AHD. Performed the experiments: EN AHD. Analyzed the data: EN AHD. Contributed reagents/materials/analysis tools: EN AHD. Wrote the paper: EN AHD.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">e.najafi@znu.ac.ir</email></corresp>
+</author-notes>
+<pub-date pub-type="collection">
+<year>2015</year>
+</pub-date>
+<pub-date pub-type="epub">
+<day>19</day>
+<month>6</month>
+<year>2015</year>
+</pub-date>
+<volume>10</volume>
+<issue>6</issue>
+<elocation-id>e0130617</elocation-id>
+<history>
+<date date-type="received">
+<day>25</day>
+<month>6</month>
+<year>2014</year>
+</date>
+<date date-type="accepted">
+<day>21</day>
+<month>5</month>
+<year>2015</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2015</copyright-year>
+<copyright-holder>Najafi, Darooneh</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0130617" xlink:type="simple"/>
+<abstract>
+<p>A text can be considered as a one dimensional array of words. The locations of each word type in this array form a fractal pattern with certain fractal dimension. We observe that important words responsible for conveying the meaning of a text have dimensions considerably different from one, while the fractal dimensions of unimportant words are close to one. We introduce an index quantifying the importance of the words in a given text using their fractal dimensions and then ranking them according to their importance. This index measures the difference between the fractal pattern of a word in the original text relative to a shuffled version. Because the shuffled text is meaningless (i.e., words have no importance), the difference between the original and shuffled text can be used to ascertain degree of fractality. The degree of fractality may be used for automatic keyword detection. Words with the degree of fractality higher than a threshold value are assumed to be the retrieved keywords of the text. We measure the efficiency of our method for keywords extraction, making a comparison between our proposed method and two other well-known methods of automatic keyword extraction.</p>
+</abstract>
+<funding-group>
+<funding-statement>The authors have no support or funding to report.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="10"/>
+<table-count count="4"/>
+<page-count count="18"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability" xlink:type="simple">
+<meta-name>Data Availability</meta-name>
+<meta-value>The sample text is available from <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.gutenberg.org/files/22764/">http://www.gutenberg.org/files/22764/</ext-link> and the glossary of the text is available from <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://literature.org/authors/darwin-charles/the-origin-of-species/glossary.html">http://literature.org/authors/darwin-charles/the-origin-of-species/glossary.html</ext-link>.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>Language is the human capability for communication via vocal or visual signs. Language can be regarded as a complex system [<xref ref-type="bibr" rid="pone.0130617.ref001">1</xref>], where words are constituents which interact with each other to form particular patterns. Such patterns represent human thoughts, feelings, will, and knowledge which are called meaning. Human language is unique among other communication systems, because there are a lots of words to express the immaterial and intellectual concepts. In addition, the existence of synonymy, polysemy and so on increases its complexity. Texts, as the written form of language, inherit its complexity. A text can be partially understood through regularities in spatial distribution of words and their frequencies. Research has shown that regularity in a text can be expressed as a power law relationship. One of the most well-known power laws is Zipf’s law, which shows that if we rank the words in a text from the most common to the least, the frequency of each word is inversely proportional to its rank [<xref ref-type="bibr" rid="pone.0130617.ref002">2</xref>]. A related law, Heaps’ law, shows another universal feature of texts: the number of distinct words in a text (i.e., number of word <italic>types</italic>), changes with the text size (i.e., the number of <italic>tokens</italic>) in the form of a power law [<xref ref-type="bibr" rid="pone.0130617.ref003">3</xref>]. Another level of regularity is evident only through the pattern of words throughout a text. A text is not just a random collection of words; we can only call this collection a text if it has meaning. In other words, the words in a text must be placed in a specific order to impart meaning. Many power laws cannot capture this fact: any random shuffling process drastically destroys the meaning of a text, but Zipf’s law remains unchanged and Heaps’ law changes only very slightly [<xref ref-type="bibr" rid="pone.0130617.ref004">4</xref>].</p>
+<p>The particular arrangement of words in a specific order arises for two reasons. First, grammatical rules determine where words should be placed within a sentence and specify the position of verbs, nouns, adverbs, and other parts of speech. Grammatical rules make short range correlations between the sequences of words in a sentence. Secondly, a text derives meaning from how the words are arranged throughout. This ordering is called semantic ordering, and acts across the whole range of the text, hence the long-range correlation can be seen between the positions of any word. The broad meaning of a text also means that different word types have different importance in a text. We can distinguish between two kinds of content words in a text: those which are related to the subject of the text (i.e., the important words), and all others that are irrelevant to it. For a text in cosmology, words like <italic>universe, space, big-bang</italic>, and <italic>inflation</italic> are important words. Other words such as <italic>is, fact, happening, etc</italic>., are irrelevant to the topic of the text. Finding an index for quantifying the importance of words in a given text is crucial to detecting keywords automatically, and provides a very useful starting point for text summarization, document categorization, machine translation and other matters related to automatic information retrieval. Automating these processes is of increasing importance given the increasing size of available information yet limited man-power.</p>
+<p>In the current paper, we use the concept of fractal to assign an importance value to every word in a given text. A fractal is a mathematical object (e.g., a set of points in Euclidean space) that has repeating patterns at every scales, it means at any magnification there is a smaller piece of the object that is similar to the whole; this property is called self-similarity. The fractal dimension shows how detail of a fractal pattern changes with scale. It is used as an index of complexity. The fractal dimension of a set is equal or less than the topological dimension of space that the set is embedded in it. We claim that the positions of a word type within the text array form a fractal pattern with a specified dimension that is a positive value less than or equal to one. Based on this fact, an index is presented for ranking the vocabulary words of a given text. The difference between the pattern of a word in the original text versus a randomly shuffled version shows its importance: words with a greater differential between the original and shuffled texts are more important. We compare this approach with other more well-known methods of keyword extraction.</p>
+<p>In the following section we review previous research reporting a kind of fractal structure in texts, in order to show that our method is novel. Then we review some basic ideas for keyword extraction which are useful for understanding the different principles currently at work in the field. Finally, we describe our method and how it could be evaluated, and report the results for a sample book.</p>
+</sec>
+<sec id="sec002">
+<title>Background and Related works</title>
+<sec id="sec003">
+<title>Fractal Structures in Texts</title>
+<p>In 1980 G. Altmann made a formula for quantifying of the Menzerath’s law [<xref ref-type="bibr" rid="pone.0130617.ref005">5</xref>]. Menzerath-Altmann law says there is a relation between size of a construct and size of its constituents. A system like a language has different levels or constructs, such as syllables, words, syntactic constructions, clauses, sentences and semantic constructs. According to Menzerath-Altmann law, when the size of a construct increases, the size of its constituents decreases, and this holds at every level. Thus, a certain kind of self-similarity exists for each level [<xref ref-type="bibr" rid="pone.0130617.ref006">6</xref>, <xref ref-type="bibr" rid="pone.0130617.ref007">7</xref>]. Fractal dimension can be calculated for each level. The fractal dimension of a given text is the average value of fractal dimension of levels [<xref ref-type="bibr" rid="pone.0130617.ref008">8</xref>].</p>
+<p>For quantitative calculations, texts are usually mapped into time series. A text can be considered as a one dimensional array where elements can be either characters, words or sentences. Ausloos built two time series by replacing each word in the text by their length or frequency [<xref ref-type="bibr" rid="pone.0130617.ref009">9</xref>, <xref ref-type="bibr" rid="pone.0130617.ref010">10</xref>]. He quantified the complexity in a written text by examining the fractal pattern of its corresponding length and frequency time series, discovering that resulting fractal patterns may be used as an authorship indicator. Furthermore, these length and frequency time series also gave indications of the semantic complexity of the text.</p>
+<p>Eftekhari worked on letters instead of words as the constituents of a text, finding that if letter types in a text are ranked from the most common to the least, the frequency of each letter type would be inversely proportional to its rank [<xref ref-type="bibr" rid="pone.0130617.ref011">11</xref>] (i.e., simillar to Zipf’s law). If frequency of letter types is plotted versus their ranks in a double logarithmic scale, a straight line is obtained. He called the slope of this line Zipf’s dimension. He also suggested a method for calculating fractal dimension of texts, declaring that if letter types are ranked in alphabetical order and frequency of letter types is plotted against their ranks, the slope of such a diagram would be fractal dimension of the literature. Nevertheless, since the data which is used is too disperse he used the so-defined fractal dimension. He also showed that texts exhibit changes in fractal dimension similar to corresponding Zipf’s dimension which vary according to the text’s size.</p>
+</sec>
+<sec id="sec004">
+<title>Principles for Keyword Extraction</title>
+<p>The first method based on Zipf’s analysis of word frequency for keyword extraction was proposed by Luhn [<xref ref-type="bibr" rid="pone.0130617.ref012">12</xref>]. He plotted the Zipf diagram of words, then eliminated words with high and low frequencies, and declared that the words remaining in the mid-range frequencies are the most important words of a text. There are some problems with this method; it omits some important words which have very low frequencies, and may also mistakenly take some common words with mid-range frequencies as keywords. To overcome this deficiency, Ortuño <italic>et al</italic>. proposed a method based on the concept that important words form clusters [<xref ref-type="bibr" rid="pone.0130617.ref013">13</xref>]. They used standard deviation of distance between consecutive occurrences of a particular word as a measure of word clustering. Words with large standard deviations tend to form clusters and so are more important. Carpena <italic>et al</italic>. improved this method and introduced the <italic>C Value</italic> for measuring the importance of words [<xref ref-type="bibr" rid="pone.0130617.ref014">14</xref>] based on their clustering distributions (we review this method in the appendix section in contrast to our own). Another method based on clustering was proposed by Zhou and Slater [<xref ref-type="bibr" rid="pone.0130617.ref015">15</xref>]. They used the density fluctuations of words as a measure of clustering. The method was useful to reduce significance of common words. Mihalcea and Tarau used a method based on the graph theory for detecting the keywords [<xref ref-type="bibr" rid="pone.0130617.ref016">16</xref>]. The text is regarded as a graph with word types nodes with edges occuring between two words where they are adjacent in the text. To extract keywords they introduced the concept of <italic>TextRank</italic>, calculated similarly to PageRank which is used in the Google search engine for ranking the web pages. TextRank works by counting the number and weight of links to a node to determine importance of the node. The more important nodes are likely to receive more links from other nodes. Words with higher values of TextRank are more important. Herrera and Pury suggested an entropic method for word ranking based on the relative frequency of words in each part of the text [<xref ref-type="bibr" rid="pone.0130617.ref017">17</xref>] (this method is also reviewed in the appendix in contrast to our own). Mehri and Darooneh used several entropic metrics to extract keywords [<xref ref-type="bibr" rid="pone.0130617.ref018">18</xref>]. In particular, they found that cumulative distribution of distances between consecutive occurrences of a word type follows:
+<disp-formula id="pone.0130617.e001"><alternatives><graphic id="pone.0130617.e001g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e001"/><mml:math id="M1" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>P</mml:mi> <mml:mo>=</mml:mo> <mml:msup><mml:mrow><mml:mo>[</mml:mo> <mml:mn>1</mml:mn> <mml:mo>+</mml:mo> <mml:mo>(</mml:mo> <mml:mi>q</mml:mi> <mml:mo>-</mml:mo> <mml:mn>1</mml:mn> <mml:mo>)</mml:mo> <mml:mi>β</mml:mi> <mml:mi>x</mml:mi> <mml:mo>]</mml:mo></mml:mrow> <mml:mfrac><mml:mn>1</mml:mn> <mml:mrow><mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:mi>q</mml:mi></mml:mrow></mml:mfrac></mml:msup></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(1)</label></disp-formula>
+where x is distance between consecutive occurrences of a word type, <italic>β</italic> is a constant, and <italic>q</italic> is a positive value. They ranked words according to <italic>q</italic> value. The value of <italic>q</italic> in the case of important words is larger than the case of common words [<xref ref-type="bibr" rid="pone.0130617.ref019">19</xref>].</p>
+</sec>
+</sec>
+<sec id="sec005" sec-type="materials|methods">
+<title>Methods</title>
+<sec id="sec006">
+<title>The Degree of Fractality</title>
+<p>Text is a certain arrangement of words in one dimensional array that carries a meaning. Any random shuffling of the words across the text significantly reduces its meaning, hence the ordering of the words is important for representation of the meaning. In other words, the meaning shows a kind of regularity in a text. This regularity also manifests itself in pattern of occurrences of each word in the text array. If we consider the text array as a one dimensional space, the spatial pattern of occurrences of any vocabulary word will form a fractal set or simply a fractal. We can assign a fractal dimension to any word in a given text using the practical method of Box Counting. Using this method, the fractal dimension of a word is generally between 0 and 1.</p>
+<p>In Box-Counting the space is divided into boxes. Each box that contains a component of the fractal set is called a filled box. The fractal law is a power law relationship between the number of filled boxes and the box-size [<xref ref-type="bibr" rid="pone.0130617.ref020">20</xref>].</p>
+<p>To calculate the fractal dimension of a word by box-counting method, the text array is divided into boxes of size <italic>s</italic>, we place each <italic>s</italic> consecutive words in a box. The number of such boxes is <italic>N</italic><sub><italic>s</italic></sub> = <italic>N</italic>/<italic>s</italic> where <italic>N</italic> is the length of the text. If the considered word appears in one of the boxes, that box is a filled box, <italic>N</italic><sub><italic>b</italic></sub>(<italic>s</italic>) stands for the number of filled boxes. A power law relationship exists between the number of filled boxes and the box size <italic>s</italic> as follows,
+<disp-formula id="pone.0130617.e002"><alternatives><graphic id="pone.0130617.e002g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e002"/><mml:math id="M2" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>N</mml:mi> <mml:mi>b</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>s</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>∝</mml:mo> <mml:msup><mml:mi>s</mml:mi> <mml:mrow><mml:mo>-</mml:mo> <mml:mi>D</mml:mi></mml:mrow></mml:msup></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(2)</label></disp-formula> <italic>D</italic> is the fractal dimension of the word. Fractal dimension is obtained by measuring the slope of log-log plot of <italic>N</italic><sub><italic>b</italic></sub>(<italic>s</italic>) versus <italic>s</italic>. It is worth noting that here the box size is an integer number, and in practice, we expect to see the power law behavior for the large box sizes.</p>
+<p>As we noted earlier, the fractal dimension for any word is between 0 and 1. When all occurrences of a word are distributed uniformly across the text, all of the boxes have the same probability of containing a token of the word. Therefore, in this particular case, the number of filled boxes has the maximum possible value. In other cases, some of the boxes may contain more than one occurrence; this results in some of the other boxes remaining empty, and the number of filled boxes is less than this limiting value.</p>
+<p>In a shuffled text, all of the words are distributed uniformly. For small scales, when the number of boxes is greater than the frequency of a word type, the number of filled boxes is expected to be approximately equal to the frequency of the word type. By increasing the box size, the number of filled boxes will be decreased. In large scales, the fact that the number of filled boxes is maximum makes the slope of the log-log plot of <italic>N</italic><sub><italic>b</italic></sub>(<italic>s</italic>) versus <italic>s</italic> close to one; the upper limit for slope. The following equation indicates our conjecture on the number of filled boxes for a word in the shuffled text against the box size, consistent with the above facts.
+<disp-formula id="pone.0130617.e003"><alternatives><graphic id="pone.0130617.e003g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e003"/><mml:math id="M3" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mi>N</mml:mi> <mml:mi>b</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>h</mml:mi> <mml:mo>.</mml:mo></mml:mrow></mml:msubsup> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>s</mml:mi> <mml:mo>,</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mfrac><mml:mi>M</mml:mi> <mml:mrow><mml:mn>1</mml:mn> <mml:mo>+</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mfrac><mml:mrow><mml:mi>M</mml:mi> <mml:mo>-</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mrow><mml:mi>N</mml:mi> <mml:mo>-</mml:mo> <mml:mn>1</mml:mn></mml:mrow></mml:mfrac> <mml:mo>)</mml:mo></mml:mrow> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>s</mml:mi> <mml:mo>-</mml:mo> <mml:mn>1</mml:mn> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(3)</label></disp-formula>
+where <italic>M</italic> is frequency of the word <italic>ω</italic>.</p>
+<p>The fractal dimension is the slope of the line of best fit on the log-log plot of the number of filled boxes against the box size. In practice, the choice of the fitting range is very important and definitely has influence on the value of the fractal dimension. Unfortunately, there is no way to automatically choose the most appropriate fitting range. Instead of the fractal dimension, we propose an index which is used to quantify the fractality of the word pattern in another way. The degree of fractality is defined as,
+<disp-formula id="pone.0130617.e004"><alternatives><graphic id="pone.0130617.e004g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e004"/><mml:math id="M4" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>d</mml:mi> <mml:mi>f</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:munder><mml:mo>∑</mml:mo> <mml:mi>s</mml:mi></mml:munder> <mml:mo form="prefix">log</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mfrac><mml:mrow><mml:msubsup><mml:mi>N</mml:mi> <mml:mi>b</mml:mi> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>h</mml:mi> <mml:mo>.</mml:mo></mml:mrow></mml:msubsup> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>s</mml:mi> <mml:mo>,</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow> <mml:mrow><mml:msub><mml:mi>N</mml:mi> <mml:mi>b</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>s</mml:mi> <mml:mo>,</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(4)</label></disp-formula>
+where <italic>ω</italic> is a particular word. The degree of fractality, <italic>d</italic><sub><italic>f</italic></sub>, measures the difference between the pattern of occurrences of a word in the original and shuffled text. We use the logarithm in the definition of this index to avoid domination of the values for small box sizes. The degree of fractality is a suitable quantity for ranking the words of a text. In computing the degree of fractality, we only need to find the number of filled boxes for any scale. Unlike the process of computation of the fractal dimension, data regression is not required. Moreover, we are not faced with the problem of determining the fitting range for each word. The larger value for the degree of fractality means the distribution pattern of a word has more differences with the uniform distribution.</p>
+</sec>
+<sec id="sec007">
+<title>Evaluation of the Method</title>
+<p>The degree of fractality gives an importance value for every word type in a given text. Using this value, we are able to list the words from greatest to least importance. The top-ranked words of the list are assumed as keywords.</p>
+<p>A comparison with a manually created list of keywords allows for an approximate evaluation of the efficiency of our method. It is important to know how the list of the relevant keywords is prepared for a given book. In our experience we assume that the manually created glossary of a book is a good candidate for providing the relevant keywords of the book. The glossary of a book should be prepared by author or some experts of the field thus it is reliable to be selected as our reference data.</p>
+<p>The following two issues are important when we have comparison between the list of relevant and retrieved keywords. First, it is important to compute how many words are common in the two lists if both of them have the same size. Second, what fraction of the retrieved list should be selected to include all the relevant keywords? In binary classification analysis, recall and precision are two metrics which consider the above issues respectively. The recall and precision are calculated as follows according to Herrera and Pury’s suggestion [<xref ref-type="bibr" rid="pone.0130617.ref017">17</xref>]. These are well-known metrics for evaluation of keyword extraction methods.
+<disp-formula id="pone.0130617.e005"><alternatives><graphic id="pone.0130617.e005g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e005"/><mml:math id="M5" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>R</mml:mi> <mml:mo>=</mml:mo> <mml:mfrac><mml:msub><mml:mi>N</mml:mi> <mml:mi>c</mml:mi></mml:msub> <mml:msub><mml:mi>N</mml:mi> <mml:mrow><mml:mi>g</mml:mi> <mml:mi>l</mml:mi> <mml:mi>o</mml:mi> <mml:mi>s</mml:mi> <mml:mi>s</mml:mi></mml:mrow></mml:msub></mml:mfrac></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(5)</label></disp-formula>
+<disp-formula id="pone.0130617.e006"><alternatives><graphic id="pone.0130617.e006g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e006"/><mml:math id="M6" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>P</mml:mi> <mml:mo>=</mml:mo> <mml:mfrac><mml:msub><mml:mi>N</mml:mi> <mml:mrow><mml:mi>g</mml:mi> <mml:mi>l</mml:mi> <mml:mi>o</mml:mi> <mml:mi>s</mml:mi> <mml:mi>s</mml:mi></mml:mrow></mml:msub> <mml:msub><mml:mi>N</mml:mi> <mml:mrow><mml:mi>l</mml:mi> <mml:mi>a</mml:mi> <mml:mi>s</mml:mi> <mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mfrac></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(6)</label></disp-formula>
+Where <italic>N</italic><sub><italic>gloss</italic></sub> is the size of list of relevant keywords (glossary), <italic>N</italic><sub><italic>c</italic></sub> is the number of common keywords in two lists, which have the rank less than <italic>N</italic><sub><italic>gloss</italic></sub> and <italic>N</italic><sub><italic>last</italic></sub> stands for the last position of relevant keywords in the list of retrieved words. It is worth noting again that these metrics cannot precisely determine the accuracy of the keyword detection methods. According to our experience, they depend on the data processed (selected book, its genre) and on how the list of relevant keywords is prepared.</p>
+<p>There is another method for calculating recall and precision that is suggested by Mehri and Darooneh [<xref ref-type="bibr" rid="pone.0130617.ref018">18</xref>]. In this method words with degree of fractality higher than a threshold value are selected as retrieved keywords. The threshold value is choosen such that some percentage of ranked list of words is selected as the retrieved keywords in each step. Then, number of keywords which is the same between glossary and this new list is counted. Recall and precision are calculated as follows.
+<disp-formula id="pone.0130617.e007"><alternatives><graphic id="pone.0130617.e007g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e007"/><mml:math id="M7" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>R</mml:mi> <mml:mo>=</mml:mo> <mml:mfrac><mml:msub><mml:mi>N</mml:mi> <mml:mi>c</mml:mi></mml:msub> <mml:msub><mml:mi>N</mml:mi> <mml:mrow><mml:mi>g</mml:mi> <mml:mi>l</mml:mi> <mml:mi>o</mml:mi> <mml:mi>s</mml:mi> <mml:mi>s</mml:mi></mml:mrow></mml:msub></mml:mfrac></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(7)</label></disp-formula>
+<disp-formula id="pone.0130617.e008"><alternatives><graphic id="pone.0130617.e008g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e008"/><mml:math id="M8" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>P</mml:mi> <mml:mo>=</mml:mo> <mml:mfrac><mml:msub><mml:mi>N</mml:mi> <mml:mi>c</mml:mi></mml:msub> <mml:msub><mml:mi>N</mml:mi> <mml:mrow><mml:mi>r</mml:mi> <mml:mi>e</mml:mi> <mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mfrac></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(8)</label></disp-formula>
+Again, <italic>N</italic><sub><italic>gloss</italic></sub> is the size of glossary and <italic>N</italic><sub><italic>c</italic></sub> is the number of keywords which are the same between glossary and selected percentage of retrieved list. <italic>N</italic><sub><italic>ret</italic></sub> is the size of the retrieved list to the whole vocabulary size in percent.</p>
+</sec>
+</sec>
+<sec id="sec008" sec-type="results">
+<title>Results</title>
+<sec id="sec009">
+<title>Universal Properties of Texts</title>
+<p>To explain more details, we apply our method to <italic>On The Origin of Species</italic> by Charles Darwin [<xref ref-type="bibr" rid="pone.0130617.ref021">21</xref>]. The book is about evolution of populations through a process of natural selection. A digital copy of this text is freely available on <italic>Project Gutenberg</italic> [<xref ref-type="bibr" rid="pone.0130617.ref022">22</xref>]. We only keep the main body of the text and leave the others (e.g., contents, index). No other preprocessing tasks are performed except deletion of the non-alphabetic characters. The book has a total of 191740 tokens and contains 8842 distinct word types. We examined two famous regularities of texts for this book, the Zipf’s and Heaps’ law. <xref ref-type="fig" rid="pone.0130617.g001">Fig 1</xref> shows Zipf’s law for the book; frequency of each word type is plotted against word rank on a double-logarithmic scale. A straight line is obtained with a slope of −1.01. <xref ref-type="fig" rid="pone.0130617.g002">Fig 2</xref> shows Heap’s law for the book; size of vocabulary is plotted versus size of text on a double-logarithmic scale. A straight line is obtained with a slope of 0.73.</p>
+<fig id="pone.0130617.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Zipf’s law for the book <italic>The Origin of Species</italic>.</title>
+<p>Frequency of each word is inversely proportional to its rank in form of power law. The Zipf curve follows a straight line with a slope of −1.01 when plotted on a double-logarithmic scale.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.g001"/>
+</fig>
+<fig id="pone.0130617.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Heap’s law for the book <italic>The Origin of Species</italic>.</title>
+<p>Size of vocabulary increases as size of text increases, in form of power law. The Heap curve follows a straight line with a slope of 0.73 when plotted on a double-logarithmic scale.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.g002"/>
+</fig>
+<p>As outlined earlier the spatial distribution or pattern of ocurrences of any word in a given text exhibits self-similarity. The box counting is a practical procedure for measuring this property. In this procedure, the text is divided into boxes of size <italic>s</italic>, that varies from 1 to the text size. <italic>s</italic> = 1 means each box contains only one word, <italic>s</italic> = 2 means each box contains two words, and so on. A box is called filled if it contains some instances of the considered word. We chose powers of 2 for our box sizes. As an example <xref ref-type="fig" rid="pone.0130617.g003">Fig 3</xref> illustrates division of a small part of our sample book into boxes with size 2, 4 and 8. In this example <sc>the</sc> appears in 3, 3, and 2 boxes for <italic>s</italic> = 2, 4, and 8 respectively.</p>
+<fig id="pone.0130617.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Schematic of how an instance text is devided into boxes.</title>
+<p>The number of words that is placed in a box, is the box-size. Box-Size for first row is equal to 2 and for the second and third rows are 4 and 8 respectively.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.g003"/>
+</fig>
+<p>Distribution of a word is self-similar if we see the same pattern for the word in all scales (in all <italic>s</italic>). In <xref ref-type="fig" rid="pone.0130617.g004">Fig 4</xref> the distribution of <sc>hybrid</sc>, one of the vocabulary words in our sample book is shown in three different scales <italic>s</italic> = 1, <italic>s</italic> = 256 and <italic>s</italic> = 1024. As is seen in this figure, distribution of <sc>hybrid</sc> is the same in these scales.</p>
+<fig id="pone.0130617.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Spatial distribution of HYBRID in the book, <italic>The Origin of Species</italic> for three different scales.</title>
+<p>As seen, distributions in all scales, <italic>s</italic> = 1, <italic>s</italic> = 256 and <italic>s</italic> = 1024, are statistically the same. They have similar clusters.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.g004"/>
+</fig>
+</sec>
+<sec id="sec010">
+<title>Ranking the words and keyword detection</title>
+<p>All words have a self-similar pattern in the text, but with different fractal dimensions. If the word is uniformly distributed along the text its fractal dimension is close to one. For words which are clustered in text the fractal dimension is substantially less than one. <xref ref-type="fig" rid="pone.0130617.g005">Fig 5</xref> shows distribution of two words of the instance book, <sc>hybrid</sc> and <sc>rarely</sc>. Both of them have the same frequency <italic>M</italic> = 45. Occurrences of <sc>hybrid</sc> form a cluster in the text while <sc>rarely</sc> has uniform distribution.</p>
+<fig id="pone.0130617.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Spatial distribution of two words, HYBRID and RARELY, in the book, <italic>The Origin of Species</italic>.</title>
+<p>According to subject of the book, <sc>hybrid</sc> is an important and the <sc>rarely</sc> is an irrelevant word, both of them have the same frequency equal to 45. <sc>rarely</sc> is distributed in the text, uniformly but,<sc>hybrid</sc> is clustered.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.g005"/>
+</fig>
+<p>In <xref ref-type="fig" rid="pone.0130617.g006">Fig 6</xref> we compute the fractal dimension for these words. <sc>hybrid</sc> has dimension 0.4 and dimension of <sc>rarely</sc> is 0.8. We also plot the results for other pair of words, <sc>cell</sc> and <sc>actually</sc> with 28 occurrences in the book for both of them. <sc>cell</sc> is clustered as same as <sc>hybrid</sc> and <sc>actually</sc> has uniform pattern like <sc>rarely</sc>.</p>
+<fig id="pone.0130617.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>Results of box counting for, HYBRID and RARELY.</title>
+<p>The dashed line and dash dotted line demonstrate the power law regression. The fractal dimension is about 0.4 for <sc>hybrid</sc> and is close to 0.8 for <sc>rarely</sc>. The box counting result of <sc>cell</sc> and <sc>actually</sc> is also showed. The fractal dimension is about 0.4 for <sc>cell</sc> and is close to 0.8 for <sc>actually</sc>.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.g006"/>
+</fig>
+<p>In the shuffled text all words are distributed more uniformly and clustered words do not occur. <xref ref-type="fig" rid="pone.0130617.g007">Fig 7</xref> illustrates the result of box counting for <sc>hybrid</sc> in our sample book and its shuffled version. Our conjecture on the number of filled boxes in the shuffled text is also plotted, showing that our conjecture has good agreement with the shuffled data.</p>
+<fig id="pone.0130617.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>Results of box counting for distribution of HYBRID in the original and shuffled text.</title>
+<p>
+<sc>hybrid</sc> is an important word in the book, <italic>The Origin of Species</italic>. So, there is a considerable difference between box-counting of this word in the original and shuffled text.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.g007"/>
+</fig>
+<p>The patterns of words that have uniform distributions change only slightly after the shuffling process, indicating that the words uniformly distributed in the original text are unimportant. The difference between patterns of a word in the original and shuffled text can be considered an indication of its importance. The degree of fractality which is defined in <xref ref-type="disp-formula" rid="pone.0130617.e004">Eq 4</xref> measures this difference. <xref ref-type="fig" rid="pone.0130617.g008">Fig 8</xref> shows the degree of fractality for two words, <sc>hybrid</sc> and <sc>cell</sc>. It is clear from this figure that <sc>cell</sc> is more important than <sc>hybrid</sc>. The degree of fractality of <sc>hybrid</sc> is 8.21 and is 12.71 in the case of <sc>cell</sc>. Now we can rank all of the words according to the degree of fractality. <xref ref-type="table" rid="pone.0130617.t001">Table 1</xref> reports the list of twenty top-ranked words and also the first twenty frequent words for comparison. According to the subject of the book, words such as, <sc>slaves, illegitimate, saliva,</sc> and <sc>pedicellariae</sc> are important words. They also have higher degree of fractality in comparison with other words. The irrelevant words like, <sc>the, of, and</sc>, and <sc>in</sc> have lower degree of fractality, though they are very frequent in the book. It is useful to point out that function words have the lowest degree of fractality overall, but unimportant content words still have lower fractality than important keywords.</p>
+<fig id="pone.0130617.g008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.g008</object-id>
+<label>Fig 8</label>
+<caption>
+<title>Area which is bounded between two curves for CELL and HYBRID in the box counting diagram.</title>
+<p>The curves correspond to box counting result for these two words in the original and shuffled text. The area corresponds to <sc>cell</sc> is bigger than the case of <sc>hybrid</sc>. <sc>cell</sc> is more important than <sc>hybrid</sc> in the book <italic>The Origin of Species</italic>.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.g008"/>
+</fig>
+<table-wrap id="pone.0130617.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.t001</object-id>
+<label>Table 1</label>
+<caption>
+<title>List of the twenty top-ranked words according to degree of fractality (left) and the first twenty frequent words (right) from the book <italic>The Origin of Species</italic>.</title>
+<p>Words with high degree of fractality are important words according to subject of the book and common words have low degree of fractality. The string <italic>un</italic> which is placed in the second row of list of top-ranked words is a French determinant which appears four times in a single sentence. So, it is highly clustered and has high value of fractality. Because we do not perform any pre-processing to eliminate foreign words, this word appears in the list.</p>
+</caption>
+<alternatives>
+<graphic id="pone.0130617.t001g" mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.t001"/>
+<table frame="box" rules="all" border="0">
+<colgroup span="1">
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Words</th>
+<th align="left" rowspan="1" colspan="1">Frequency</th>
+<th align="left" rowspan="1" colspan="1">Fractality</th>
+<th align="left" rowspan="1" colspan="1">Words</th>
+<th align="left" rowspan="1" colspan="1">Frequency</th>
+<th align="left" rowspan="1" colspan="1">Fractality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">slaves</td>
+<td align="left" rowspan="1" colspan="1">34</td>
+<td align="char" char="." rowspan="1" colspan="1">17.42</td>
+<td align="left" rowspan="1" colspan="1">the</td>
+<td align="left" rowspan="1" colspan="1">13368</td>
+<td align="char" char="." rowspan="1" colspan="1">2.54</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">un</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="char" char="." rowspan="1" colspan="1">16.70</td>
+<td align="left" rowspan="1" colspan="1">of</td>
+<td align="left" rowspan="1" colspan="1">9071</td>
+<td align="char" char="." rowspan="1" colspan="1">2.67</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">illegitimate</td>
+<td align="left" rowspan="1" colspan="1">21</td>
+<td align="char" char="." rowspan="1" colspan="1">16.52</td>
+<td align="left" rowspan="1" colspan="1">and</td>
+<td align="left" rowspan="1" colspan="1">5482</td>
+<td align="char" char="." rowspan="1" colspan="1">2.79</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">saliva</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="char" char="." rowspan="1" colspan="1">16.42</td>
+<td align="left" rowspan="1" colspan="1">in</td>
+<td align="left" rowspan="1" colspan="1">4973</td>
+<td align="char" char="." rowspan="1" colspan="1">2.97</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">pedicellariae</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="char" char="." rowspan="1" colspan="1">16.03</td>
+<td align="left" rowspan="1" colspan="1">to</td>
+<td align="left" rowspan="1" colspan="1">4477</td>
+<td align="char" char="." rowspan="1" colspan="1">2.79</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">floated</td>
+<td align="left" rowspan="1" colspan="1">18</td>
+<td align="char" char="." rowspan="1" colspan="1">15.98</td>
+<td align="left" rowspan="1" colspan="1">a</td>
+<td align="left" rowspan="1" colspan="1">3143</td>
+<td align="char" char="." rowspan="1" colspan="1">2.71</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">pupae</td>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="char" char="." rowspan="1" colspan="1">15.72</td>
+<td align="left" rowspan="1" colspan="1">that</td>
+<td align="left" rowspan="1" colspan="1">2612</td>
+<td align="char" char="." rowspan="1" colspan="1">2.77</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">wax</td>
+<td align="left" rowspan="1" colspan="1">42</td>
+<td align="char" char="." rowspan="1" colspan="1">15.65</td>
+<td align="left" rowspan="1" colspan="1">as</td>
+<td align="left" rowspan="1" colspan="1">2122</td>
+<td align="char" char="." rowspan="1" colspan="1">3.16</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">vibracula</td>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="char" char="." rowspan="1" colspan="1">15.54</td>
+<td align="left" rowspan="1" colspan="1">have</td>
+<td align="left" rowspan="1" colspan="1">2051</td>
+<td align="char" char="." rowspan="1" colspan="1">2.79</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">masters</td>
+<td align="left" rowspan="1" colspan="1">17</td>
+<td align="char" char="." rowspan="1" colspan="1">15.52</td>
+<td align="left" rowspan="1" colspan="1">be</td>
+<td align="left" rowspan="1" colspan="1">2045</td>
+<td align="char" char="." rowspan="1" colspan="1">2.78</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">avicularia</td>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="char" char="." rowspan="1" colspan="1">15.28</td>
+<td align="left" rowspan="1" colspan="1">is</td>
+<td align="left" rowspan="1" colspan="1">1975</td>
+<td align="char" char="." rowspan="1" colspan="1">2.80</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">dried</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="char" char="." rowspan="1" colspan="1">15.11</td>
+<td align="left" rowspan="1" colspan="1">species</td>
+<td align="left" rowspan="1" colspan="1">1745</td>
+<td align="char" char="." rowspan="1" colspan="1">2.42</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">movable</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="char" char="." rowspan="1" colspan="1">15.10</td>
+<td align="left" rowspan="1" colspan="1">by</td>
+<td align="left" rowspan="1" colspan="1">1665</td>
+<td align="char" char="." rowspan="1" colspan="1">2.82</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">segment</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="char" char="." rowspan="1" colspan="1">15.04</td>
+<td align="left" rowspan="1" colspan="1">which</td>
+<td align="left" rowspan="1" colspan="1">1646</td>
+<td align="char" char="." rowspan="1" colspan="1">2.76</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">caudicle</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="char" char="." rowspan="1" colspan="1">14.59</td>
+<td align="left" rowspan="1" colspan="1">are</td>
+<td align="left" rowspan="1" colspan="1">1556</td>
+<td align="char" char="." rowspan="1" colspan="1">2.69</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">neuters</td>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="char" char="." rowspan="1" colspan="1">14.93</td>
+<td align="left" rowspan="1" colspan="1">or</td>
+<td align="left" rowspan="1" colspan="1">1489</td>
+<td align="char" char="." rowspan="1" colspan="1">3.22</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">cuckoo</td>
+<td align="left" rowspan="1" colspan="1">32</td>
+<td align="char" char="." rowspan="1" colspan="1">14.89</td>
+<td align="left" rowspan="1" colspan="1">it</td>
+<td align="left" rowspan="1" colspan="1">1462</td>
+<td align="char" char="." rowspan="1" colspan="1">3.04</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">lamellae</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="char" char="." rowspan="1" colspan="1">14.67</td>
+<td align="left" rowspan="1" colspan="1">on</td>
+<td align="left" rowspan="1" colspan="1">1432</td>
+<td align="char" char="." rowspan="1" colspan="1">3.12</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">dun</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="char" char="." rowspan="1" colspan="1">14.60</td>
+<td align="left" rowspan="1" colspan="1">with</td>
+<td align="left" rowspan="1" colspan="1">1383</td>
+<td align="char" char="." rowspan="1" colspan="1">3.02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">bucket</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="char" char="." rowspan="1" colspan="1">14.59</td>
+<td align="left" rowspan="1" colspan="1">for</td>
+<td align="left" rowspan="1" colspan="1">1381</td>
+<td align="char" char="." rowspan="1" colspan="1">2.98</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>For small texts, word frequency becomes increasingly important. For taking into account the effect of frequency, we multiply log(<italic>M</italic>) by the degree of fractality, causing the most changes in degree of fractality rank in the middle of the list, while words at the top of the list have a small change in their rank. Other choices may change the rank of the words in all parts of the list significantly. <xref ref-type="table" rid="pone.0130617.t002">Table 2</xref> presents another retrieved list of words according to this Combined Measure. Now, words like <sc>slaves, wax, hybrids,</sc> and <sc>instincts</sc> are placed in the top. In this new ranking list, the word, <sc>hybrid</sc>, changes its place from 321 to 48, the word, <sc>rarely</sc> also moves from 2203 rank to 1011.</p>
+<table-wrap id="pone.0130617.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.t002</object-id>
+<label>Table 2</label>
+<caption>
+<title>List of the twenty top-ranked words according to Combined Measure from the book <italic>The Origin of Species</italic>.</title>
+<p>These words are important according to the subject of the book. The word, <italic>f</italic> is related to some classification of species such as f8, f10, f14, … and some proper names. <italic>f</italic> is kept because non-alphabetical characters are removed in our method.</p>
+</caption>
+<alternatives>
+<graphic id="pone.0130617.t002g" mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.t002"/>
+<table frame="box" rules="all" border="0">
+<colgroup span="1">
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Words</th>
+<th align="left" rowspan="1" colspan="1">Frequency</th>
+<th align="left" rowspan="1" colspan="1">Fractality</th>
+<th align="left" rowspan="1" colspan="1">Combined Measure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">slaves</td>
+<td align="left" rowspan="1" colspan="1">34</td>
+<td align="char" char="." rowspan="1" colspan="1">17.42</td>
+<td align="char" char="." rowspan="1" colspan="1">26.68</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">wax</td>
+<td align="left" rowspan="1" colspan="1">42</td>
+<td align="char" char="." rowspan="1" colspan="1">15.65</td>
+<td align="char" char="." rowspan="1" colspan="1">25.40</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">hybrids</td>
+<td align="left" rowspan="1" colspan="1">135</td>
+<td align="char" char="." rowspan="1" colspan="1">10.89</td>
+<td align="char" char="." rowspan="1" colspan="1">23.20</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">instincts</td>
+<td align="left" rowspan="1" colspan="1">87</td>
+<td align="char" char="." rowspan="1" colspan="1">11.85</td>
+<td align="char" char="." rowspan="1" colspan="1">23.00</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">sterility</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="char" char="." rowspan="1" colspan="1">11.27</td>
+<td align="char" char="." rowspan="1" colspan="1">22.53</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">cuckoo</td>
+<td align="left" rowspan="1" colspan="1">32</td>
+<td align="char" char="." rowspan="1" colspan="1">14.89</td>
+<td align="char" char="." rowspan="1" colspan="1">22.40</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">illegitimate</td>
+<td align="left" rowspan="1" colspan="1">21</td>
+<td align="char" char="." rowspan="1" colspan="1">16.52</td>
+<td align="char" char="." rowspan="1" colspan="1">21.85</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">floated</td>
+<td align="left" rowspan="1" colspan="1">18</td>
+<td align="char" char="." rowspan="1" colspan="1">15.98</td>
+<td align="char" char="." rowspan="1" colspan="1">20.07</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">instinct</td>
+<td align="left" rowspan="1" colspan="1">63</td>
+<td align="char" char="." rowspan="1" colspan="1">10.62</td>
+<td align="char" char="." rowspan="1" colspan="1">19.11</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">masters</td>
+<td align="left" rowspan="1" colspan="1">17</td>
+<td align="char" char="." rowspan="1" colspan="1">15.52</td>
+<td align="char" char="." rowspan="1" colspan="1">19.10</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">lamellae</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="char" char="." rowspan="1" colspan="1">14.67</td>
+<td align="char" char="." rowspan="1" colspan="1">19.09</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">pedicellariae</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="char" char="." rowspan="1" colspan="1">16.03</td>
+<td align="char" char="." rowspan="1" colspan="1">18.85</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">cell</td>
+<td align="left" rowspan="1" colspan="1">28</td>
+<td align="char" char="." rowspan="1" colspan="1">12.71</td>
+<td align="char" char="." rowspan="1" colspan="1">18.39</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">nest</td>
+<td align="left" rowspan="1" colspan="1">55</td>
+<td align="char" char="." rowspan="1" colspan="1">10.23</td>
+<td align="char" char="." rowspan="1" colspan="1">17.80</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">f</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="char" char="." rowspan="1" colspan="1">10.62</td>
+<td align="char" char="." rowspan="1" colspan="1">17.66</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">pupae</td>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="char" char="." rowspan="1" colspan="1">15.72</td>
+<td align="char" char="." rowspan="1" colspan="1">17.51</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">cells</td>
+<td align="left" rowspan="1" colspan="1">58</td>
+<td align="char" char="." rowspan="1" colspan="1">9.84</td>
+<td align="char" char="." rowspan="1" colspan="1">17.36</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">fertility</td>
+<td align="left" rowspan="1" colspan="1">80</td>
+<td align="char" char="." rowspan="1" colspan="1">9.08</td>
+<td align="char" char="." rowspan="1" colspan="1">17.27</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">spheres</td>
+<td align="left" rowspan="1" colspan="1">19</td>
+<td align="char" char="." rowspan="1" colspan="1">13.46</td>
+<td align="char" char="." rowspan="1" colspan="1">17.22</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">clover</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="char" char="." rowspan="1" colspan="1">14.55</td>
+<td align="char" char="." rowspan="1" colspan="1">17.11</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>In addition to the degree of fractality, there exist several methods that assign an importance value to any word in a given text. We can list the words in descending order of their importance. In this list the words that are placed in the top ranks are assumed to be keywords. By choosing a threshold value we can identify the list of keywords. In the following section we evaluate our proposed method for the keyword detection task.</p>
+</sec>
+<sec id="sec011">
+<title>Evaluation of Our Method</title>
+<p>The best way to evaluate the efficiency of our approach to keyword detection is comparing its results with other methods. We use two metrics in this comparison: precision and recall. These tell us to what extent the retrieved list of keywords conforms to the manually selected list as described in the previous section. In this work, we would like to compare our method with two efficient methods in keyword extraction, the <italic>C Value</italic> [<xref ref-type="bibr" rid="pone.0130617.ref014">14</xref>] and <italic>Entropy</italic> [<xref ref-type="bibr" rid="pone.0130617.ref017">17</xref>]. These methods are selected according to our experience. We found that C Value has the maximum amount of recall compared with other methods and entropy has maximum amount of precision compared with others [<xref ref-type="bibr" rid="pone.0130617.ref018">18</xref>, <xref ref-type="bibr" rid="pone.0130617.ref023">23</xref>] (these methods are reviewed in further detail in the appendix). To do the assessment we use the glossary written by W. S. Dallas [<xref ref-type="bibr" rid="pone.0130617.ref024">24</xref>]. Note that the choice of glossary has the potential to considerably alter the result of comparisons.</p>
+<p>Two points are relevant before proceeding to the comparison. First, the glossary of the book contains not only words, but also some phrases. To deal with multi-word keywords of the glossary we separate them into single words. For example we convert the phrase <sc>ganoid fishes</sc> to two separate words <sc>ganoid</sc> and <sc>fishes</sc> in the glossary. Second, in any method, a value is assigned to each vocabulary word, then we can sort the words from the highest value to the lowest. We give rank 1 to the first word in the sorted list, the second word takes rank 2 and so on. Unlike in Zipfian ranking, this ranking process allows for rank ties; in other words, if some words have the same assigned value, they should have the same rank. As an example, in <xref ref-type="table" rid="pone.0130617.t003">Table 3</xref> the words <sc>forward</sc> and <sc>months</sc> have equal values. In this case we assign them equal rank (2128) and the next word in the list will have rank 2130. There are two approaches for calculating recall and precision.</p>
+<table-wrap id="pone.0130617.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.t003</object-id>
+<label>Table 3</label>
+<caption>
+<title>List of ten words and their ranks from the book <italic>The Origin of Species</italic>.</title>
+<p>Words with equal Combined Measures take equal ranks.</p>
+</caption>
+<alternatives>
+<graphic id="pone.0130617.t003g" mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.t003"/>
+<table frame="box" rules="all" border="0">
+<colgroup span="1">
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Words</th>
+<th align="left" rowspan="1" colspan="1">Combined Measure</th>
+<th align="left" rowspan="1" colspan="1">rank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">forward</td>
+<td align="char" char="." rowspan="1" colspan="1">3.31199</td>
+<td align="left" rowspan="1" colspan="1">2128</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">months</td>
+<td align="char" char="." rowspan="1" colspan="1">3.31199</td>
+<td align="left" rowspan="1" colspan="1">2128</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">saved</td>
+<td align="char" char="." rowspan="1" colspan="1">3.31115</td>
+<td align="left" rowspan="1" colspan="1">2130</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">treat</td>
+<td align="char" char="." rowspan="1" colspan="1">3.31115</td>
+<td align="left" rowspan="1" colspan="1">2130</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">observers</td>
+<td align="char" char="." rowspan="1" colspan="1">3.30809</td>
+<td align="left" rowspan="1" colspan="1">2132</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">gone</td>
+<td align="char" char="." rowspan="1" colspan="1">3.30749</td>
+<td align="left" rowspan="1" colspan="1">2133</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">inferiority</td>
+<td align="char" char="." rowspan="1" colspan="1">3.30647</td>
+<td align="left" rowspan="1" colspan="1">2134</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">agree</td>
+<td align="char" char="." rowspan="1" colspan="1">3.30564</td>
+<td align="left" rowspan="1" colspan="1">2135</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">icebergs</td>
+<td align="char" char="." rowspan="1" colspan="1">3.30447</td>
+<td align="left" rowspan="1" colspan="1">2136</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">laying</td>
+<td align="char" char="." rowspan="1" colspan="1">3.30447</td>
+<td align="left" rowspan="1" colspan="1">2136</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">really</td>
+<td align="char" char="." rowspan="1" colspan="1">3.30164</td>
+<td align="left" rowspan="1" colspan="1">2138</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>In Herrera and Puri approach [<xref ref-type="bibr" rid="pone.0130617.ref017">17</xref>], they do not indicate any threshold. After ranking words according to an importance index, the last word of the glossary in the ranked list is found. Then, the number of words from the ranked list which include all the glossary words are selected as keywords. In this approach, they introduce a cut-off frequency; they keep only the words with frequencies greater or equal to the cut-off frequency both in ranked list and in the glossary and omit all other words with lower frequencies. For example cut-off frequency equal to 2 means only words with frequencies more than 1 are kept and other words are omitted. The number of words from ranked list and from the glossary for various choices of cut-off frequency are written in <xref ref-type="table" rid="pone.0130617.t004">Table 4</xref>. In <xref ref-type="fig" rid="pone.0130617.g009">Fig 9</xref>, the recall and precision are plotted against the cut-off frequency. According to <xref ref-type="fig" rid="pone.0130617.g009">Fig 9</xref>, recall for Combined Measure is higher than other methods for cut-off frequencies greater than 5. This means that the proposed fractal method is superior to the others as a method for keyword extraction. The precision of Combined Measure is higher than C Value for all cut-off frequencies.</p>
+<table-wrap id="pone.0130617.t004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.t004</object-id>
+<label>Table 4</label>
+<caption>
+<title>Number of vocabulary words and number of glossary words for various cut-off frequencies.</title>
+<p><italic>N</italic><sub><italic>v</italic></sub> and <italic>N</italic><sub><italic>g</italic></sub> are the number of vocabulary words from the book and number of glossary words for each cut-off frequency, respectively.</p>
+</caption>
+<alternatives>
+<graphic id="pone.0130617.t004g" mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.t004"/>
+<table frame="box" rules="all" border="0">
+<colgroup span="1">
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1"/>
+<th colspan="10" align="center" rowspan="1">Cut-off Frequency</th>
+</tr>
+<tr>
+<th align="left" rowspan="1" colspan="1"/>
+<th align="left" rowspan="1" colspan="1">1</th>
+<th align="left" rowspan="1" colspan="1">2</th>
+<th align="left" rowspan="1" colspan="1">3</th>
+<th align="left" rowspan="1" colspan="1">4</th>
+<th align="left" rowspan="1" colspan="1">5</th>
+<th align="left" rowspan="1" colspan="1">6</th>
+<th align="left" rowspan="1" colspan="1">7</th>
+<th align="left" rowspan="1" colspan="1">8</th>
+<th align="left" rowspan="1" colspan="1">9</th>
+<th align="left" rowspan="1" colspan="1">10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>N</italic><sub><italic>v</italic></sub></td>
+<td align="left" rowspan="1" colspan="1">8842</td>
+<td align="left" rowspan="1" colspan="1">5351</td>
+<td align="left" rowspan="1" colspan="1">4092</td>
+<td align="left" rowspan="1" colspan="1">3428</td>
+<td align="left" rowspan="1" colspan="1">2957</td>
+<td align="left" rowspan="1" colspan="1">2624</td>
+<td align="left" rowspan="1" colspan="1">2352</td>
+<td align="left" rowspan="1" colspan="1">2141</td>
+<td align="left" rowspan="1" colspan="1">1968</td>
+<td align="left" rowspan="1" colspan="1">1855</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>N</italic><sub><italic>g</italic></sub></td>
+<td align="left" rowspan="1" colspan="1">229</td>
+<td align="left" rowspan="1" colspan="1">157</td>
+<td align="left" rowspan="1" colspan="1">126</td>
+<td align="left" rowspan="1" colspan="1">109</td>
+<td align="left" rowspan="1" colspan="1">89</td>
+<td align="left" rowspan="1" colspan="1">79</td>
+<td align="left" rowspan="1" colspan="1">72</td>
+<td align="left" rowspan="1" colspan="1">65</td>
+<td align="left" rowspan="1" colspan="1">57</td>
+<td align="left" rowspan="1" colspan="1">54</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<fig id="pone.0130617.g009" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.g009</object-id>
+<label>Fig 9</label>
+<caption>
+<title>Results of calculating Recall and Precision with Herrera and Purri approach for the book <italic>The Origin of Species</italic> for 10 cut-off frequencies.</title>
+<p>The fractal method has the highest value of Recall in all frequencies and higher value of Precision than C Value method.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.g009"/>
+</fig>
+<p>If we rank the words according to their fractality we will find a power law relationship between the fractality of a word and its rank. Therefore, it is rational to choose the words with rank lesser than a specific value as the retrieved keywords list instead of using the fractality threshold. In Mehri and Darooneh approach [<xref ref-type="bibr" rid="pone.0130617.ref018">18</xref>], after ordering words due to their fractality, a percentage of words from the top of the ranked list are selected as keywords. In the first step, the top 2 percent of the ranked list are selected as keywords (the first 2 percent of 8842). In the next step, the top 4 percent of the list are selected as keywords, and so on. Also, in this approach all of the glossary words are selected as relevant keywords in all steps. In <xref ref-type="fig" rid="pone.0130617.g010">Fig 10</xref>, the recall and precision are plotted using Mehri and Darooneh approach. According to this figure recall for fractality for our method is higher than other methods for all retrieved list fractions. The precision of fractality for our method is higher than others for retrieved list fractions of more than 4 percent.</p>
+<fig id="pone.0130617.g010" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0130617.g010</object-id>
+<label>Fig 10</label>
+<caption>
+<title>Results of calculating Recall and Precision with Mehri and Darooneh approach for the book <italic>The Origin of Species</italic>.</title>
+<p>The fractal method has the highest value of Recall and precision in all vocabulary fractions.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0130617.g010"/>
+</fig>
+<p>The validity of our method also extends to other books. <italic>The First Three Minutes</italic> by Steven Weinberg [<xref ref-type="bibr" rid="pone.0130617.ref025">25</xref>] and <italic>A Brief History of Time</italic> by Stephen Hawking [<xref ref-type="bibr" rid="pone.0130617.ref026">26</xref>]. The value of recall for our method is higher than for C Value and entropy. The precision value obtained is higher than other methods for cut-off frequencies of more than 9 for Weinberg’s book, and more than 8 in the case of Hawking’s book.</p>
+</sec>
+</sec>
+<sec id="sec012" sec-type="conclusions">
+<title>Conclusion</title>
+<p>The pattern of occurrences of a word in a text can be considered as a fractal object with dimension between 1 and 0. We found that words related to the subject of the text have non-uniform spatial distributions and their dimensions are considerably less than one. In contrast, the irrelevant words are distributed uniformly with a dimension close to one. We introduced the concept of degree of fractality which measures the difference between distribution pattern of a word in the original text and randomly shuffled version. While in the shuffled texts all of the words are uniformly distributed across the text, the original text exhibits clustering of important words in particular. We used the degree of fractality in combination with a function of frequency for ranking words in <italic>The Origin of Species</italic> by Charles Darwin. The top words in the ranked list of the words was selected as the retrieved keywords of the text. The retrieved list of keywords was checked against the glossary of the book. For this checking we used two metrics: precision and recall, which are defined in the context of the binary classification analysis. Compared with two other representative methods in this area, the Entropy and C Value, our approach is more effective as a method for automatic keyword extraction.</p>
+<p>Future work should aim to examine the effectiveness of our method in keyword detection for smaller texts. This method could also be applied to key-phrase extraction. Finally, the general framework behind our method could be extended to explore the hidden secrets of genome, for instance by developing a way for data mining non-coding DNA.</p>
+</sec>
+<sec id="sec013">
+<title>Appendix. Description of related methods of word ranking</title>
+<sec id="sec014">
+<title>A C Value</title>
+<p>The C Value method is based on noticing distribution of the words in a text and word clustering [<xref ref-type="bibr" rid="pone.0130617.ref014">14</xref>]. To quantify the clustering of a word the parameter <italic>σ</italic> (the standard deviation of the normalized distance between consecutive occurrence of a word) is defined by
+<disp-formula id="pone.0130617.e009"><alternatives><graphic id="pone.0130617.e009g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e009"/><mml:math id="M9" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>σ</mml:mi> <mml:mo>=</mml:mo> <mml:msqrt><mml:mrow><mml:mo>&lt;</mml:mo> <mml:msup><mml:mi>s</mml:mi> <mml:mn>2</mml:mn></mml:msup> <mml:mo>&gt;</mml:mo> <mml:mo>-</mml:mo> <mml:msup><mml:mrow><mml:mo>&lt;</mml:mo> <mml:mi>s</mml:mi> <mml:mo>&gt;</mml:mo></mml:mrow> <mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:msqrt> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(9)</label></disp-formula>
+Where <italic>s</italic> is the normalized distance between consecutive occurrences, <italic>s</italic> = <italic>d</italic>/ &lt; <italic>d</italic> &gt;, and &lt; <italic>d</italic> &gt; is the average distance between occurrences. <italic>σ</italic> can be normalized with respect to standard deviation of the distance between consecutive occurrences of words in a random text, which has a geometrical spatial distribution of word types, <inline-formula id="pone.0130617.e010"><alternatives><graphic id="pone.0130617.e010g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e010"/><mml:math id="M10" display="inline" overflow="scroll"><mml:mrow><mml:msub><mml:mi>σ</mml:mi> <mml:mrow><mml:mi>g</mml:mi> <mml:mi>e</mml:mi> <mml:mi>o</mml:mi></mml:mrow></mml:msub> <mml:mo>=</mml:mo> <mml:msqrt><mml:mrow><mml:mn>1</mml:mn> <mml:mo>−</mml:mo> <mml:mi>P</mml:mi></mml:mrow></mml:msqrt></mml:mrow></mml:math></alternatives></inline-formula>. Where <italic>p</italic> = <italic>M</italic>/<italic>N</italic> is the probability of occurrence of a word type with frequency equal to M in a text with total N words,
+<disp-formula id="pone.0130617.e011"><alternatives><graphic id="pone.0130617.e011g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e011"/><mml:math id="M11" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>σ</mml:mi> <mml:mrow><mml:mi>n</mml:mi> <mml:mi>o</mml:mi> <mml:mi>r</mml:mi></mml:mrow></mml:msub> <mml:mo>=</mml:mo> <mml:mfrac><mml:mi>σ</mml:mi> <mml:msub><mml:mi>σ</mml:mi> <mml:mrow><mml:mi>g</mml:mi> <mml:mi>e</mml:mi> <mml:mi>o</mml:mi></mml:mrow></mml:msub></mml:mfrac> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(10)</label></disp-formula>
+<disp-formula id="pone.0130617.e012"><alternatives><graphic id="pone.0130617.e012g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e012"/><mml:math id="M12" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>C</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi>σ</mml:mi> <mml:mrow><mml:mi>n</mml:mi> <mml:mi>o</mml:mi> <mml:mi>r</mml:mi></mml:mrow></mml:msub> <mml:mo>,</mml:mo> <mml:mi>M</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mfrac><mml:mrow><mml:msub><mml:mi>σ</mml:mi> <mml:mrow><mml:mi>n</mml:mi> <mml:mi>o</mml:mi> <mml:mi>r</mml:mi></mml:mrow></mml:msub> <mml:mo>-</mml:mo> <mml:mo>&lt;</mml:mo> <mml:msub><mml:mi>σ</mml:mi> <mml:mrow><mml:mi>n</mml:mi> <mml:mi>o</mml:mi> <mml:mi>r</mml:mi></mml:mrow></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>M</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>&gt;</mml:mo></mml:mrow> <mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi>σ</mml:mi> <mml:mrow><mml:mi>n</mml:mi> <mml:mi>o</mml:mi> <mml:mi>r</mml:mi></mml:mrow></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>M</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(11)</label></disp-formula></p>
+<p>Where <inline-formula id="pone.0130617.e013"><alternatives><graphic id="pone.0130617.e013g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e013"/><mml:math id="M13" display="inline" overflow="scroll"><mml:mrow><mml:mo>&lt;</mml:mo> <mml:msub><mml:mi>σ</mml:mi> <mml:mrow><mml:mi>n</mml:mi> <mml:mi>o</mml:mi> <mml:mi>r</mml:mi></mml:mrow></mml:msub> <mml:mo>&gt;</mml:mo> <mml:mo>=</mml:mo> <mml:mfrac><mml:mrow><mml:mn>2</mml:mn> <mml:mi>M</mml:mi> <mml:mo>−</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mrow><mml:mn>2</mml:mn> <mml:mi>M</mml:mi> <mml:mo>+</mml:mo> <mml:mn>1</mml:mn></mml:mrow></mml:mfrac></mml:mrow></mml:math></alternatives></inline-formula> and <inline-formula id="pone.0130617.e014"><alternatives><graphic id="pone.0130617.e014g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e014"/><mml:math id="M14" display="inline" overflow="scroll"><mml:mrow><mml:mi>s</mml:mi> <mml:mi>d</mml:mi> <mml:mo stretchy="false">(</mml:mo> <mml:msub><mml:mi>σ</mml:mi> <mml:mrow><mml:mi>n</mml:mi> <mml:mi>o</mml:mi> <mml:mi>r</mml:mi></mml:mrow></mml:msub> <mml:mo stretchy="false">)</mml:mo> <mml:mo>=</mml:mo> <mml:mfrac><mml:mn>1</mml:mn> <mml:mrow><mml:msqrt><mml:mi>M</mml:mi></mml:msqrt> <mml:mo stretchy="false">(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>+</mml:mo> <mml:mn>2</mml:mn> <mml:mo>.</mml:mo> <mml:mn>8</mml:mn> <mml:msup><mml:mi>M</mml:mi> <mml:mrow><mml:mo>−</mml:mo> <mml:mn>0</mml:mn> <mml:mo>.</mml:mo> <mml:mn>865</mml:mn></mml:mrow></mml:msup> <mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mfrac></mml:mrow></mml:math></alternatives></inline-formula> are the mean value of the normalized standard deviation and standard deviation of the distribution of <italic>σ</italic><sub><italic>nor</italic></sub> in a random text, respectively. <italic>C</italic> = 0 means the word is distributed randomly in a text and <italic>C</italic> &gt; 0 means the word forms cluster.</p>
+</sec>
+<sec id="sec015">
+<title>B Entropy</title>
+<p>Entropy is another parameter used to rank the words of a text [<xref ref-type="bibr" rid="pone.0130617.ref017">17</xref>]. For this purpose a text with N words is devided into P parts. The <italic>i</italic>th part contains <italic>N</italic><sub><italic>i</italic></sub> words which <inline-formula id="pone.0130617.e015"><alternatives><graphic id="pone.0130617.e015g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e015"/><mml:math id="M15" display="inline" overflow="scroll"><mml:mrow><mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>i</mml:mi> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>P</mml:mi></mml:munderover> <mml:msub><mml:mi>N</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo>=</mml:mo> <mml:mi>N</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>. So the ralative frequency of occurrence of the word type <italic>ω</italic> in the part <italic>i</italic> is <inline-formula id="pone.0130617.e016"><alternatives><graphic id="pone.0130617.e016g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e016"/><mml:math id="M16" display="inline" overflow="scroll"><mml:mrow><mml:msub><mml:mi>f</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo stretchy="false">(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo stretchy="false">)</mml:mo> <mml:mo>=</mml:mo> <mml:mfrac><mml:mrow><mml:msub><mml:mi>M</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo stretchy="false">(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo stretchy="false">)</mml:mo></mml:mrow> <mml:mrow><mml:mi>M</mml:mi> <mml:mo stretchy="false">(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mfrac></mml:mrow></mml:math></alternatives></inline-formula>, where <italic>M</italic><sub><italic>i</italic></sub>(<italic>ω</italic>) and <italic>M</italic>(<italic>ω</italic>) are the frequency of word type <italic>ω</italic> in the ith part and in the whole text, respectively, where <inline-formula id="pone.0130617.e017"><alternatives><graphic id="pone.0130617.e017g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e017"/><mml:math id="M17" display="inline" overflow="scroll"><mml:mrow><mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>i</mml:mi> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>P</mml:mi></mml:munderover> <mml:msub><mml:mi>M</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo>=</mml:mo> <mml:mi>M</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>. With this explanation the probability measure over the partitions can be defined as
+<disp-formula id="pone.0130617.e018"><alternatives><graphic id="pone.0130617.e018g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e018"/><mml:math id="M18" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>p</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mfrac><mml:mrow><mml:msub><mml:mi>f</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow> <mml:mrow><mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>j</mml:mi> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>P</mml:mi></mml:munderover> <mml:msub><mml:mi>f</mml:mi> <mml:mi>j</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac> <mml:mo>.</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(12)</label></disp-formula></p>
+<p>The following relation is the Shannon’s information entropy for a discrete distribution <italic>p</italic><sub><italic>i</italic></sub>(<italic>ω</italic>)
+<disp-formula id="pone.0130617.e019"><alternatives><graphic id="pone.0130617.e019g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e019"/><mml:math id="M19" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>S</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mfrac><mml:mrow><mml:mo>-</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mrow><mml:mi>L</mml:mi> <mml:mi>n</mml:mi> <mml:mo>(</mml:mo> <mml:mi>P</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mfrac> <mml:mrow><mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>i</mml:mi> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>P</mml:mi></mml:munderover> <mml:msub><mml:mi>p</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mi>L</mml:mi> <mml:mi>n</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:msub><mml:mi>p</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>)</mml:mo></mml:mrow></mml:mrow> <mml:mo>.</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(13)</label></disp-formula></p>
+<p>There is a problem with this relation; it is zero for words with frequency equal to 1. To take into account the effect of frequency, the following relation seems to be a better choice
+<disp-formula id="pone.0130617.e020"><alternatives><graphic id="pone.0130617.e020g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e020"/><mml:math id="M20" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>E</mml:mi> <mml:mrow><mml:mi>n</mml:mi> <mml:mi>o</mml:mi> <mml:mi>r</mml:mi></mml:mrow></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mfrac><mml:mrow><mml:mi>M</mml:mi> <mml:mo>(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo> <mml:mo>[</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:mi>S</mml:mi> <mml:mo>(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo> <mml:mo>]</mml:mo></mml:mrow> <mml:mrow><mml:msub><mml:mi>E</mml:mi> <mml:mrow><mml:mi>r</mml:mi> <mml:mi>a</mml:mi> <mml:mi>n</mml:mi></mml:mrow></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(14)</label></disp-formula>
+where <inline-formula id="pone.0130617.e021"><alternatives><graphic id="pone.0130617.e021g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0130617.e021"/><mml:math id="M21" display="inline" overflow="scroll"><mml:mrow><mml:msub><mml:mi>E</mml:mi> <mml:mrow><mml:mi>r</mml:mi> <mml:mi>a</mml:mi> <mml:mi>n</mml:mi></mml:mrow></mml:msub> <mml:mo stretchy="false">(</mml:mo> <mml:mi>ω</mml:mi> <mml:mo stretchy="false">)</mml:mo> <mml:mo>=</mml:mo> <mml:mfrac><mml:mrow><mml:mi>P</mml:mi> <mml:mo>−</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mrow><mml:mn>2</mml:mn> <mml:mi>l</mml:mi> <mml:mi>n</mml:mi> <mml:mo stretchy="false">(</mml:mo> <mml:mi>P</mml:mi> <mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mfrac></mml:mrow></mml:math></alternatives></inline-formula> is the entropy of the word type <italic>ω</italic> in a random text.</p>
+</sec>
+</sec>
+</body>
+<back>
+<ack>
+<p>We acknowledge valuable comments from referees which substantially improved the paper.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0130617.ref001">
+<label>1</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Larsen-Freeman</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Cameron</surname> <given-names>L</given-names></name>. <source>Complex Systems and Applied Linguistics</source>. <publisher-loc>Oxford</publisher-loc>: <publisher-name>Oxford University Press</publisher-name>; <year>2008</year>.</mixed-citation>
+</ref>
+<ref id="pone.0130617.ref002">
+<label>2</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Zipf</surname> <given-names>GK</given-names></name>. <source>Human Behavior and the Principle of Least Effort: An introduction to Human Ecology</source>. <publisher-loc>Cambridge</publisher-loc>: <publisher-name>Addison-Wesley Press</publisher-name>; <year>1949</year>.</mixed-citation>
+</ref>
+<ref id="pone.0130617.ref003">
+<label>3</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Heaps</surname> <given-names>HS</given-names></name>. <source>Information Retrieval: Computational and Theoretical Aspects</source>. <publisher-loc>New York</publisher-loc>: <publisher-name>Academic Press</publisher-name>; <year>1978</year>.</mixed-citation>
+</ref>
+<ref id="pone.0130617.ref004">
+<label>4</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Sano</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Takayasu</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Takayasu</surname> <given-names>M</given-names></name>. <source>Progress of Theoretical Physics</source>, <issue>Supplement No. 194</issue>. <year>2012</year>: <fpage>202</fpage>–<lpage>209</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0130617.ref005">
+<label>5</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Altmann</surname> <given-names>G</given-names></name>. <article-title>Prolegomena to Menzerath’s law</article-title>. <source>Glottometrika</source> <volume>2</volume>. <year>1980</year>: <fpage>110</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0130617.ref006">
+<label>6</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Hrebíček</surname> <given-names>L</given-names></name>. <article-title>Fractals in Language</article-title>. <source>Journal of Quantitative Linguistics</source>, <volume>1</volume>(<issue>1</issue>). <year>1994</year>: <fpage>82</fpage>–<lpage>86</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1080/09296179408590001" xlink:type="simple">10.1080/09296179408590001</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref007">
+<label>7</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Andres</surname> <given-names>J</given-names></name>. <article-title>On a conjecture about the fractal structure of language</article-title>. <source>Journal of Quantitative Linguistics</source>, <volume>17</volume>(<issue>2</issue>). <year>2010</year>: <fpage>101</fpage>–<lpage>122</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1080/09296171003643189" xlink:type="simple">10.1080/09296171003643189</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref008">
+<label>8</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Andres</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Benešová</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Kubá</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Vrbková</surname> <given-names>J</given-names></name>. <article-title>Methodological Note on the Fractal Analysis of Texts</article-title>. <source>Journal of Quantitative Linguistics</source>, <volume>19</volume>(<issue>1</issue>). <year>2012</year>: <fpage>1</fpage>–<lpage>31</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1080/09296174.2011.608604" xlink:type="simple">10.1080/09296174.2011.608604</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref009">
+<label>9</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Ausloos</surname> <given-names>M</given-names></name>. <article-title>Generalized Hurst exponent and multifractal function of original and translated texts mapped into frequency and length time series</article-title>. <source>Phys. Rev. E</source>, <volume>86</volume>. <year>2012</year>: <fpage>031108</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1103/PhysRevE.86.031108" xlink:type="simple">10.1103/PhysRevE.86.031108</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref010">
+<label>10</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Ausloos</surname> <given-names>M</given-names></name>. <article-title>Measuring complexity with multifractals in texts</article-title>. <source>Translation effects. Chaos, Solitons and Fractals</source>, <volume>45</volume>. <year>2012</year>: <fpage>13491357</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0130617.ref011">
+<label>11</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Eftekhari</surname> <given-names>A</given-names></name>. <article-title>Fractal Geometry of Literature: First Attempt to Shakespear’s Works</article-title>. <source>Journal of Quantitative Linguistics</source>, <volume>13</volume>. <year>2006</year>: <fpage>177</fpage>–<lpage>193</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1080/09296170600850106" xlink:type="simple">10.1080/09296170600850106</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref012">
+<label>12</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Luhn</surname> <given-names>HP</given-names></name>. <article-title>The Automatic Creation of Literature Abstracts</article-title>. <source>IBM Journal of Research and Development</source>, <volume>2</volume>. <year>1958</year>: <fpage>159</fpage>–<lpage>165</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1147/rd.22.0159" xlink:type="simple">10.1147/rd.22.0159</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref013">
+<label>13</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Ortuño</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Carpena</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Bernaola-Galvan</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Munoz</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Somoza</surname> <given-names>AM</given-names></name>. <article-title>Keyword detection in natural languages and DNA</article-title>. <source>Europhysics Letters</source> <volume>57</volume>. <year>2002</year>: <fpage>759</fpage>–<lpage>764</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1209/epl/i2002-00528-3" xlink:type="simple">10.1209/epl/i2002-00528-3</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref014">
+<label>14</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Carpena</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Bernaola-Galvan</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Hackenberg</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Coronado</surname> <given-names>AV</given-names></name>, <name name-style="western"><surname>Oliver</surname> <given-names>JL</given-names></name>. <article-title>Level statistics of words: Finding keywords in literary texts and symbolic sequences</article-title>. <source>Physical Review E</source> <volume>79</volume>. <year>2009</year>: <fpage>035102</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1103/PhysRevE.79.035102" xlink:type="simple">10.1103/PhysRevE.79.035102</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref015">
+<label>15</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Zhou</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Slater</surname> <given-names>GW</given-names></name>. <article-title>A metric to search for relevant words</article-title>. <source>Physica A</source> <volume>329</volume>. <year>2003</year>: <fpage>309</fpage>–<lpage>327</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/S0378-4371(03)00625-3" xlink:type="simple">10.1016/S0378-4371(03)00625-3</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref016">
+<label>16</label>
+<mixed-citation xlink:type="simple" publication-type="other">Mihalcea R, Tarau P. TextRank: Bringing Order into Texts. Proceedings of conference on Empirical Methods in Natural Language Processing (EMNLP). 2004: 404–411.</mixed-citation>
+</ref>
+<ref id="pone.0130617.ref017">
+<label>17</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Herrera</surname> <given-names>JP</given-names></name>, <name name-style="western"><surname>Pury</surname> <given-names>PA</given-names></name>. <article-title>Statistical keyword detection in literary corpora</article-title>. <source>Eur. Phys. J. B</source> <volume>63</volume>. <year>2008</year>: <fpage>135</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1140/epjb/e2008-00206-x" xlink:type="simple">10.1140/epjb/e2008-00206-x</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref018">
+<label>18</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Mehri</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Darooneh</surname> <given-names>AH</given-names></name>. <article-title>The role of entropy in word ranking</article-title>. <source>Physica A</source> <volume>390</volume>. <year>2011</year>: <fpage>3157</fpage>–<lpage>3163</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.physa.2011.04.013" xlink:type="simple">10.1016/j.physa.2011.04.013</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref019">
+<label>19</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Mehri</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Darooneh</surname> <given-names>AH</given-names></name>. <article-title>Keyword extraction by nonextensivity measure</article-title>. <source>Physical Review E</source> <volume>83</volume>. <year>2011</year>: <fpage>056106</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1103/PhysRevE.83.056106" xlink:type="simple">10.1103/PhysRevE.83.056106</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref020">
+<label>20</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Gouyet</surname> <given-names>JF</given-names></name>. <source>Physics and fractal structures</source>. <publisher-loc>New york</publisher-loc>: <publisher-name>Masson Springer</publisher-name>; <year>1996</year>.</mixed-citation>
+</ref>
+<ref id="pone.0130617.ref021">
+<label>21</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Darwin</surname> <given-names>C</given-names></name>. <chapter-title>On the Origin of Species by Means of Natural Selection, or the Preservation of Favoured Races in the Struggle for Life</chapter-title>. <source>Nature</source>. <publisher-loc>London</publisher-loc>: <publisher-name>John Murray</publisher-name> <volume>5</volume>; <year>1859</year>.</mixed-citation>
+</ref>
+<ref id="pone.0130617.ref022">
+<label>22</label>
+<mixed-citation xlink:type="simple" publication-type="other">
+<ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.gutenberg.org/files/22764/">http://www.gutenberg.org/files/22764/</ext-link></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref023">
+<label>23</label>
+<mixed-citation xlink:type="simple" publication-type="other">Kord Delsame K. Ranking the Words in a Text by C Value method. MSc. Thesis (in persian). University of Zanjan. 2012.</mixed-citation>
+</ref>
+<ref id="pone.0130617.ref024">
+<label>24</label>
+<mixed-citation xlink:type="simple" publication-type="other">
+<ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://literature.org/authors/darwin-charles/the-origin-of-species/glossary.html">http://literature.org/authors/darwin-charles/the-origin-of-species/glossary.html</ext-link></mixed-citation>
+</ref>
+<ref id="pone.0130617.ref025">
+<label>25</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Weinberg</surname> <given-names>S</given-names></name>. <source>The First Three Minutes</source>. <publisher-loc>Cambridge</publisher-loc>: <publisher-name>Pegasus Press</publisher-name>; <year>1949</year>.</mixed-citation>
+</ref>
+<ref id="pone.0130617.ref026">
+<label>26</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Hawking</surname> <given-names>S</given-names></name>. <source>A Brief History of Time</source>. <publisher-name>Bantam Books</publisher-name>; <year>1988</year>.</mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

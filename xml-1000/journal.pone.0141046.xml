@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0141046</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-15-33683</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>Segmentation of Uterus Using Laparoscopic Ultrasound by an Image-Based Active Contour Approach for Guiding Gynecological Diagnosis and Surgery</article-title>
+<alt-title alt-title-type="running-head">Segmentation of Uterus Using an Active Contour Approach</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Gong</surname>
+<given-names>Xue-Hao</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Lu</surname>
+<given-names>Jun</given-names>
+</name>
+<xref rid="aff002" ref-type="aff"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Liu</surname>
+<given-names>Jin</given-names>
+</name>
+<xref rid="aff003" ref-type="aff"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Deng</surname>
+<given-names>Ying-Yuan</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Liu</surname>
+<given-names>Wei-Zong</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Huang</surname>
+<given-names>Xian</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Yang</surname>
+<given-names>Yong-Heng</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Xu</surname>
+<given-names>Qin</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Yu</surname>
+<given-names>Zhi-Ying</given-names>
+</name>
+<xref rid="aff003" ref-type="aff"><sup>3</sup></xref>
+<xref rid="cor001" ref-type="corresp">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Department of Ultrasound, First Affiliated Hospital of Shenzhen University, Second People’s Hospital of Shenzhen, Shenzhen, China</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Department of Ultrasound, Second Clinical College of Jinan University, People’s Hospital of Shenzhen, Shenzhen, China</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>Department of Obstetrics &amp; Gynecology, First Affiliated Hospital of Shenzhen University, Shenzhen, China</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Zhang</surname>
+<given-names>Heye</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Shenzhen institutes of advanced technology, CHINA</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: YHY. Performed the experiments: ZYY XHG. Analyzed the data: YHY QX. Contributed reagents/materials/analysis tools: WZL XH. Wrote the paper: XHG J. Lu J. Liu YYD.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">11519449@qq.com</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>30</day>
+<month>10</month>
+<year>2015</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2015</year>
+</pub-date>
+<volume>10</volume>
+<issue>10</issue>
+<elocation-id>e0141046</elocation-id>
+<history>
+<date date-type="received">
+<day>2</day>
+<month>8</month>
+<year>2015</year>
+</date>
+<date date-type="accepted">
+<day>2</day>
+<month>10</month>
+<year>2015</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2015</copyright-year>
+<copyright-holder>Gong et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0141046" xlink:type="simple"/>
+<abstract>
+<p>In laparoscopic gynecologic surgery, ultrasound has been typically implemented to diagnose urological and gynecological conditions. We applied laparoscopic ultrasonography (using Esaote 7.5~10MHz laparoscopic transducer) on the retrospective analyses of 42 women subjects during laparoscopic extirpation and excision of gynecological tumors in our hospital from August 2011 to August 2013. The objective of our research is to develop robust segmentation technique for isolation and identification of the uterus from the ultrasound images, so as to assess, locate and guide in removing the lesions during laparoscopic operations. Our method enables segmentation of the uterus by the active contour algorithm. We evaluated 42 in-vivo laparoscopic images acquired from the 42 patients (age 39.1 ± 7.2 years old) and selected images pertaining to 4 cases of congenital uterine malformations and 2 cases of pelvic adhesions masses. These cases (<italic>n</italic> = 6) were used for our uterus segmentation experiments. Based on them, the active contour method was compared with the manual segmentation method by a medical expert using linear regression and the Bland-Altman analysis (used to measure the correlation and the agreement). Then, the Dice and Jaccard indices are computed for measuring the similarity of uterus segmented between computational and manual methods. Good correlation was achieved whereby 84%–92% results fall within the 95% confidence interval in the Student t-test) and we demonstrate that the proposed segmentation method of uterus using laparoscopic images is effective.</p>
+</abstract>
+<funding-group>
+<funding-statement>This work was supported part by Grant No.201102054 from Shenzhen science and technology Bureau, and part by Grant JCYJ20140414170821285, CXZZ20140909004122087 from Shenzhen science and technology innovation Committee. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="4"/>
+<table-count count="2"/>
+<page-count count="15"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability" xlink:type="simple">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>The technological improvements of the endoscopic transducer has facilitated the application of B-scan laparoscopic ultrasound as a preoperative and intra operative device for supporting surgical management, as well as control and assessment. In the field of gynecologic surgery, it can be used to facilitate gynecologists to find small residual lesions under laparoscopic visualization apparently and diagnoses them accurately. The major positive aspect of laparoscopic ultrasound (LUS) is its ability to perform image representation beyond tissue boundaries. Laparoscopic operation was performed using a higher frequency and more close to pelvic organs via laparoscopic access, Characterization of the uterus and lesions is challenged when we want to achieve identification by automatic segmentation for medical applications such that we can locate residual lesions precisely and provide guidance for removal of residual tumor and eliminate its recurrence effectively. A sufficiently accurate segmentation algorithm provides safe and valuable assistance for clinical applications in laparoscopic gynecological surgery.</p>
+<p>Laparoscopic ultrasound can provide high-resolution images of the abdominal cavity and contribute to the direct examinations of morphologies and anatomical structures of abdominal viscera and their relative positions [<xref rid="pone.0141046.ref001" ref-type="bibr">1</xref>]. The acquisition of laparoscopic images via ultrasound is very useful for guiding the surgery in preoperative, intraoperative and postoperative procedures [<xref rid="pone.0141046.ref002" ref-type="bibr">2</xref>, <xref rid="pone.0141046.ref003" ref-type="bibr">3</xref>]. Therefore, the laparoscopic image has been widely applied to many parts of the human body for the diagnosis and treatment of disease on abdominal viscera due to the mini-invasive capability and the ability to obtain high-resolution images. For instance, the laparoscopic image can be used in the disease treatment on gallbladder, such as intraoperative cholangiography, cholecystectomy, choledochal cysts excision and biliary drainage [<xref rid="pone.0141046.ref004" ref-type="bibr">4</xref>, <xref rid="pone.0141046.ref005" ref-type="bibr">5</xref>]. And it also plays an important role in hepatectomy and hepatic cysts [<xref rid="pone.0141046.ref006" ref-type="bibr">6</xref>] and is significant in splenectomy, spleen fixation, pancreatectomy and pancreatic duct decompression [<xref rid="pone.0141046.ref007" ref-type="bibr">7</xref>]. In addition, it can be also applied in the assignment of the cancer stage, the diagnosis of intraperitoneal tuberculosis, the treatment of peritoneal adhesion, and the resection of various tumors on abdominal organs [<xref rid="pone.0141046.ref008" ref-type="bibr">8</xref>, <xref rid="pone.0141046.ref009" ref-type="bibr">9</xref>]. Recently, the computer-aided analysis of laparoscopic images has been developed rapidly be-cause the However, laparoscopic surgery presents some inherent limitations such as the lack of tactile feedback in laparoscopic procedures. Surgeons are unable to palpate invisible lesions and can only observe the surface of organ. In addition to the limited surgical field under laparoscopy, the lack of sense of 3-D space is a major problem since two-dimensional display on monitor cannot be seen under laparoscopic visualization or adjacent vessels and tissues injuries in operation [<xref rid="pone.0141046.ref010" ref-type="bibr">10</xref>, <xref rid="pone.0141046.ref011" ref-type="bibr">11</xref>].Therefore, it is easy to cause misdiagnosis or mistreatment to the lesions, and this motivates the use of an appropriate diagnostic tool in this paper.</p>
+<p>There even exists a new intra-operative imaging technique such as the combination of intra-operative ultrasound with laparoscopic surgery and extends tactile sensation. It helps surgeon to detect internal structure of target organ and also support in finding invisible lesions. Furthermore, it compensates defects of laparoscopic technique by two-dimensional cross-section image of ultrasound.</p>
+<p>Laparoscopic ultrasound (LUS) was initially used in1984 by Fukuda et al [<xref rid="pone.0141046.ref012" ref-type="bibr">12</xref>]. According to some articles, LUS is regarded as an important technique for laparoscopic surgeries such as liver tumor resection, suspected nodules (metastases) biopsy, and bile ducts detection as expressed in [<xref rid="pone.0141046.ref013" ref-type="bibr">13</xref>–<xref rid="pone.0141046.ref015" ref-type="bibr">15</xref>]. Despite its early introduction, it has been rarely implemented in the past two decades[<xref rid="pone.0141046.ref016" ref-type="bibr">16</xref>]. However, due to recent improvement in skill, equipment and technology, the laparoscopic surgery has been paid more attention by surgeons in clinical application. In addition, it is not only used for intra-operative diagnostic imaging, but also utilized for assisting in minimally invasive of laparoscopic surgery [<xref rid="pone.0141046.ref017" ref-type="bibr">17</xref>–<xref rid="pone.0141046.ref019" ref-type="bibr">19</xref>]. Generally, it has been observed that previous studies of this research field were focused on assessing clinical therapeutic effects such as reducing misdiagnosis, residual or recurrence of myoma with LUS from surgeon’s prospective[<xref rid="pone.0141046.ref010" ref-type="bibr">10</xref>, <xref rid="pone.0141046.ref011" ref-type="bibr">11</xref>, <xref rid="pone.0141046.ref019" ref-type="bibr">19</xref>].There are limited literature related to intra-operative ultrasonography based LUS technique including [<xref rid="pone.0141046.ref020" ref-type="bibr">20</xref>].</p>
+<p>In [<xref rid="pone.0141046.ref021" ref-type="bibr">21</xref>], laparoscopic ultrasound is utilized to identify patient’s pelvic nodal metastasis with initial period cervical carcinoma. On the basis of LUS identification, abnormal lymph nodes were eradicated laparoscopically for pathological verification by frozen segment. In the case of diagnosis of the nodal metastasis, radical hysterectomy can be terminated. This method is perceptive in discovering macroscopic but not for microscopic metastatic pelvic lymph nodes. The elimination of macroscopic metastatic nodes recognized by laparoscopic technique can be achieved in large proportion of patients. The authors utilized combination of LUS and laparoscopic pelvic lymphadenectomy for supervision of patients with cervical carcinoma [<xref rid="pone.0141046.ref022" ref-type="bibr">22</xref>]. The LUS was applied before performing pelvic lymphadenectomy either laparoscopically or laparotomy. The LUS calculations were evaluated and compared with pathologic results. The results suggest that LUS is extremely responsive in discovering metastatic pelvic lymph nodes. The recognition and elimination of metastatic pelvic lymph nodes laparoscopically permit rapid improvement from the operative process and early instigation of radiotherapy. The comparison of LUS and traditional laparotomy for supervising patients with tubo ovarian abscess (TOA) is explained [<xref rid="pone.0141046.ref023" ref-type="bibr">23</xref>].However, the utilization of TOA includes conventional medical cure with antibiotics, at the present it is believed that surgical intervention should be followed early after the identification. Therefore, open laparoscopy appears to be useful option to conservative laparotomy for management of patients.</p>
+<p>LUS is not extensively employed in gynecologic measures, even though the available research recommends that it could strongly be a supportive for determining lymph node metastases for cervical carcinoma, classifying myomas of the uterus if they are not overtly obvious during laparoscopic surgery and evaluating ovarian cysts. The major advantage of LUS is recovering analytical correctness compared to other radiologic methods. Along with that benefit risk factor during surgery is reduced by using LUS. These are the reasons that LUS is best option to use for several clinical applications. However, despite of increasing application laparoscopic ultrasound at abroad, it is less utilized for gynecologic laparoscopic surgery at domestic level. Therefore, in our research we have focused clinical applications that use laparoscopic ultrasound in gynecological laparoscopic surgery.</p>
+<p>In this study, we performed different tests for segmentation of the uterus and lesions based on laparoscopic ultrasound images, in order to explore its clinical value in gynecologic laparoscopic surgery, 30 patients for gynecologic laparoscopic surgery were recruited during experiment. Laparoscopic ultrasound examinations were performed in operation and results are summarized in this paper. Our study not only evaluates the intra-operative imaging technique with regards of facilitation of laparoscopic surgeries, but also focuses on depiction of acoustic characteristics of LUS. Along with the results churned from our experimentations, we compared these characteristics with those of trans-abdominal ultrasound (TAS) and trans-vaginal ultrasound (TVUS) to evaluate if LUS can give us more detailed diagnostic information than those of TAS and TVUS do on sonographer’s perspective. The LUS supported in conserving normal tissues as much as possible, preserving its function and lessening surgical trauma.</p>
+<p>The remainder of this paper is organized as follows; the second section presents the proposed method, including the detection of the uterus border by the active contour method, refinement of the uterus border, detection of the lumen border with the unsupervised clustering method, and curve smoothing for the two borders; the third section presents the results of the performance evaluation experiments; the fourth section discusses the proposed method in term of its accuracy, robustness, initialization, computational cost, and other issues; the final section gives our conclusions and we suggest possible future improvements to the method.</p>
+</sec>
+<sec id="sec002" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<sec id="sec003">
+<title>2.1 Procedural Flow Chart and Basic Methodology</title>
+<p>In this section, we introduce an method to segment uterus in laparoscopic images. <xref rid="pone.0141046.g001" ref-type="fig">Fig 1</xref> illustrates the flowchart of the proposed method. Firstly, the specular reflection components on the surface of organs and tissues in the gray laparoscopic image are removed for reduce the influence of position variance of the light source and the camera in the surgery. Then a thresholding algorithm is applied to divide the image into two classes for the purpose of finding the region of interest (ROI) containing uterus. Next, three kinds of features from uterus are extracted and then applied in the support vector machine in order to discriminate between the uterine region and non-uterine region. Finally, the snake algorithm is developed for detecting the edge of uterus.</p>
+<fig id="pone.0141046.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0141046.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>The flowchart of the study.</title>
+<p>The stages are as follows: laparoscopic ultrasound images provide the raw image of the uterus; detection of uterus border via an active contour model; outputting the outline of the detected uterus for laparoscopic diagnosis and surgical guidance and analysis (this may be used for detecting lesions on the uterus or determining the abnormality of the uterus).</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0141046.g001" position="float" xlink:type="simple"/>
+</fig>
+<p>In gynecologic laparoscopy, uterus segmentation plays a vital role in the computer-aided analysis of laparoscopic images, because uterus is an anatomical marker used to locate the surrounding organs and tissues, such as ovarium, uterine tube, bladder, etc. And it also administer to the discrimination of the uterine tumor. Moreover, it has the particular importance in 3D reconstruction required for augmented reality in laparoscopic surgery [<xref rid="pone.0141046.ref024" ref-type="bibr">24</xref>]. In this paper, we developed a method to segment the uterus in laparoscopic images based on the active contour algorithm and the SVM classifier using three kinds of image features. The performance evaluation of our method is tested over 100 images from 30 patients, and the results are acquired from the comparison between two methods: our method and the manual drawing method by one clinical doctor. This study was approved by The First affiliated hospital of Guangzhou University, Guangzhou, and written informed consent was obtained from each subject before attending this study. In the experiments, linear regression and Bland-Altman analysis are applied to respectively investigate the correlation and the agreement between two methods. In addition, the similarity of uterus segmented by the two methods are evaluated separately by Dice index and Jaccard index.</p>
+</sec>
+<sec id="sec004">
+<title>2.2 Laparoscopic Ultrasound (LUS)</title>
+<p>At the beginning of laparoscopic surgery or after the initial surgical procedure, laparoscopic ultrasound examinations were performed by two medical experts. Laparoscopic ultrasound probe was sterilized by epoxyhexane for the preparation of experiment. To complete experiment ultrasound device is operated by both gynecologist and sonographer. The gynecologist operated laparoscopic ultrasound probe on operating table and a sonographer coordinated with him closely for successful operation.</p>
+<p>In the LUS examinations, laparoscopic ultrasound probe was inserted via a trocar (10.0mm in diameter) and placed on pelvic organ surface to scan under direct laparoscopic visualization. The probe head could bend to the different axial both horizontally and vertically for multi-directions, multi-angles scanning in the pelvic cavity by manipulating the adjusting device on the probe handle. This is because the probe can be adjustable to 90°in four directions in order to allow maximum tissue contact. The instruments were adjusted in such a way so that pelvic organs and structures can be displayed on the monitor clearly.</p>
+<p>The Esaote Bio-sound MyLab 30CV portable ultrasound machine, abdominal transducer with multi-frequencies (3.5–6 MHz), atrans-vaginal transducer with multi-frequencies (5–7 MHz), a linear-arraylaparoscopic ultrasound transducer, dedicated model Esaote S.P.A, LP323 REP 9600162000 with multi-frequencies(7.5-10MHz) with range of 10.0mm in diameter.</p>
+</sec>
+<sec id="sec005">
+<title>2.3 Active contour model for uterus segmentation</title>
+<p>In order to improve the efficiency of the diagnosis in laparoscopic ultrasound examinations, computer-aided approaches are introduced to compute the size, number, shape, location and internal acoustic characteristics of the lesions were observed by two-dimensional gray-scale ultrasound.</p>
+<p>The gynecological region of interest (ROI) may be composed of disjunct regions, and one of them is the uterus region. Therefore we should find each separated subregion of ROI, and determine which subregion best represents the uterus. The border of uterus is determined by a coarse-to-fine strategy. A doctor draws points on the border of the uterus based on their specialized knowledge in order to determine the coarse location of the uterus border. And a convex polygon can be constructed by considering these points as the apexes. Then the boundary of the convex polygon can be considered as the initial front, which can be evolved by the active contour method–the snake algorithm [<xref rid="pone.0141046.ref024" ref-type="bibr">24</xref>]. In the proposed snake algorithm, the energy function of the contour can be divided into two parts: the internal energy E<sub>1</sub> and the image energy E<sub>2</sub>, formulated as
+<disp-formula id="pone.0141046.e001">
+<alternatives>
+<graphic id="pone.0141046.e001g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0141046.e001" xlink:type="simple"/>
+<mml:math display="block" id="M1" overflow="scroll">
+<mml:mrow><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mspace width="0.1em"/><mml:msubsup><mml:mi>∫</mml:mi><mml:mrow><mml:mn>0</mml:mn></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msubsup><mml:mspace width="0.25em"/><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mi>d</mml:mi><mml:mi>s</mml:mi><mml:mo>+</mml:mo><mml:mi>α</mml:mi><mml:mspace width="0.2em"/><mml:msubsup><mml:mi>∫</mml:mi><mml:mrow><mml:mn>0</mml:mn></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msubsup><mml:mspace width="0.25em"/><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mi>d</mml:mi><mml:mi>s</mml:mi><mml:mo>,</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(1)</label>
+</disp-formula>
+where <italic>α</italic> is the weight parameter set at 1.7, <italic>x</italic> is the coordinate vector, and <italic>s</italic> is the curve parameter. The internal Energy E<sub>1</sub> can describe the tension and the stiffness of the front, formulated as
+<disp-formula id="pone.0141046.e002">
+<alternatives>
+<graphic id="pone.0141046.e002g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0141046.e002" xlink:type="simple"/>
+<mml:math display="block" id="M2" overflow="scroll">
+<mml:mrow><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:mi>x</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>s</mml:mi></mml:mrow></mml:mfrac><mml:mo>+</mml:mo><mml:mspace width="0.25em"/><mml:mi>β</mml:mi><mml:mfrac><mml:mrow><mml:msup><mml:mrow><mml:mi>d</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mi>x</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:msup><mml:mrow><mml:mi>s</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mfrac><mml:mo>,</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(2)</label>
+</disp-formula>
+where <italic>β</italic> is the weight parameter set at 0.7.</p>
+<p>The image energy can describe the characteristics of image intensity and gradient around the border of lesion, formulated as
+<disp-formula id="pone.0141046.e003">
+<alternatives>
+<graphic id="pone.0141046.e003g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0141046.e003" xlink:type="simple"/>
+<mml:math display="block" id="M3" overflow="scroll">
+<mml:mrow><mml:msub><mml:mrow><mml:mi>E</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mfrac><mml:mrow><mml:mi>G</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="false">|</mml:mo><mml:mi>G</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo stretchy="false">|</mml:mo></mml:mrow></mml:mfrac><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>+</mml:mo><mml:mspace width="0.25em"/><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mfrac><mml:mrow><mml:mi>I</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="false">|</mml:mo><mml:mi>I</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo><mml:mo stretchy="false">|</mml:mo></mml:mrow></mml:mfrac><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>,</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(3)</label>
+</disp-formula>
+where G(x) and I(x) are the gradient value and pixel value at the coordinate x in the ultrasound image, respectively.</p>
+<p>The border of uterus can be considered as the front when the snake algorithm is converged, which indicate the segmentation region of the uterus.</p>
+</sec>
+<sec id="sec006">
+<title>2.4 Experiments</title>
+<p>This study was approved by The First affiliated hospital of Shenzhen University, Shenzhen. All the laparoscopic ultrasound images data were collected over a commercially available machine (Rudolf Corp., Rancho Cordova Germany). The laparoscopic images were then saved as AVI format into CDs for off-line analysis. All the codes in this work were implemented by Matlab 2013 on a desktop computer with Pentium(R) Dual-Core CPU (3 GHz) and 2 GB memory. All the experiments were tested on 100 in-vivo images acquired from 42 patients (age 36.8 ± 5.6 years old).</p>
+<p>In our experiment, 42 subject cases were analyzed under gynecologic laparoscopic surgery; intra-operative laparoscopic ultrasound examination was performed at our hospital from August 2011 to August 2013. The classification of intra-operative laparoscopic ultrasound examination of 30 women subjects is shown in <xref rid="pone.0141046.g002" ref-type="fig">Fig 2</xref>. The average age of the patients was 39 years old (range between 23 and 51). including: (a) 25 cases of uterine fibroids, all were multiple fibroids, diameter 6-65mm; (b) 4 cases of congenital uterine malformations, out of them 3 were incomplete mediastinal uterus and 1 was complete septate uterus, (c) 2 cases were bilateral (diameter 19-43mm), (d) 4 cases of ovarian endometriomas, (e) 2 cases of pelvic adhesions masses, (f) 2 cases of ruptured ectopic pregnancies; (g) 1 case of small nodules biopsy on pelvic wall. Routine preoperative abdominal or trans-vaginal ultrasound was performed, and postoperative pathologic results confirmed in all cases (<xref rid="pone.0141046.g002" ref-type="fig">Fig 2</xref>).</p>
+<fig id="pone.0141046.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0141046.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Classification of intra-operative laparoscopic ultrasound examination of 42 women subjects.</title>
+<p>The gynecological cases included: uterine fibroids (25 cases), congenital uterine malformations (4 cases), ovarian endometriomas (4 cases), pelvic adhesions masses (2 cases), ruptured ectopic pregnancies (2 cases), and small nodules biopsy on pelvic wall (1 case).</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0141046.g002" position="float" xlink:type="simple"/>
+</fig>
+<p>There are 4 cases of uterine congenital malformations diagnosed by preoperative ultrasound and scheduled for laparoscopically assisted vaginal hysteroscopic septum resection. Of these, 3 cases were of incomplete mediastinal uterus and dissected by LUS, and 1 case was of complete septate uterus. While one case with uneven thickness of mediastinum found by LUS examination, the upper segment of septum (adjacent to uterine fundus) was thicker than 18 mm, the lower segment (corpus segment) was thin like an “inverted triangle”. It is considered that only the lower part of the septum was resected in implementation of hysteroscopic septum resection. For our experiment on active contour segmentation of uterus, we decided to choose the 4 cases of congenital uterine malformations and 2 cases of pelvic adhesions masses, making a total of 6 cases altogether. The two types of cases were classified into Group A and Group B respectively.</p>
+</sec>
+</sec>
+<sec id="sec007" sec-type="results">
+<title>Results</title>
+<p>Based on the 6 human subjects with gynecological conditions, <xref rid="pone.0141046.g003" ref-type="fig">Fig 3</xref> shows some results of the uterus segmentation for each of these cases. We quantified four measurements to evaluate the performance of the proposed method: uterine area (UA), uterine maximum diameter (UMXD), uterine minimum diameter (UMID) and angle of the uterine long axis (AULA). UA is the area within the uterine. UMXD/UMID is the maximum/minimum diameter of the uterus border. AULA is the angle of the major axis of the ellipse which is fitted based on the least square criterion [<xref rid="pone.0141046.ref025" ref-type="bibr">25</xref>] by the uterus border. The above measurements acquired from two methods are compared: our method and the manual drawing method by one clinic doctor. And the latter is considered as the ground truth in our paper. Then the comparative results are analyzed by two evaluation approaches: the linear regression and the Bland-Altman analysis [<xref rid="pone.0141046.ref026" ref-type="bibr">26</xref>]. In the linear regression, we investigate the correlation coefficients <italic>r</italic> because this index represents the correlation between the two methods. For UA, UMXD, UMID and AULA shown in <xref rid="pone.0141046.t001" ref-type="table">Table 1</xref>, values of <italic>r</italic> ranges from 0.80 to 0.93. In the Bland-Altman analysis, the agreement between the two methods can be analyzed by the 95% confidence interval CI and the percentage of points r<sub>95%</sub> in CI. For the four measurements, the values of r<sub>95%</sub> ranges from 81.34% to 94.56% considering all of the case studies, and the values of root mean square error (RMSE) ranges from 8.34 to 10.72 for measurement UA, 0.46 to 0.71 for measurement of UMXD, 0.12 to 0.24 for measurement of UMID, and 7.89 to 10.3 for measurement of AULA, respectively. In addition, we use the Dice index [<xref rid="pone.0141046.ref027" ref-type="bibr">27</xref>]and the Jaccard index [<xref rid="pone.0141046.ref028" ref-type="bibr">28</xref>] to analyze the similarity of uterus segmented by the two methods. In <xref rid="pone.0141046.t002" ref-type="table">Table 2</xref>, the mean value and standard variation of the Dice index are 89.58% and 3.13% respectively, and those of the Jaccard index are 88.57% and 3.98% respectively.</p>
+<fig id="pone.0141046.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0141046.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Gynecology ultrasound scans with segmentation of uterus by active contour model.</title>
+<p>(a1), (b1), (c1), (d1), (e1) and (f1) in the first column -are original images. (a2), (b2), (c2), (d2), (e2) and (f2) in the second column are images with uterus edge drawn by the doctor. (a3), (b3), (c3), (d3), (e3) and (f3) are images with uterus edge detected by our method. (a) to (d) represents Group A, and (e) to (f) represents Group B of our experiment.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0141046.g003" position="float" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0141046.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0141046.t001</object-id>
+<label>Table 1</label> <caption><title>The results of the linear regression and the Bland-Altman analysis.</title></caption>
+<alternatives>
+<graphic id="pone.0141046.t001g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0141046.t001" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="1" colspan="1">No.</th>
+<th align="center" rowspan="1" colspan="1">Measurement</th>
+<th colspan="3" align="center" rowspan="1">Linear Regression</th>
+<th colspan="2" align="center" rowspan="1">Bland-Altman</th>
+</tr>
+<tr>
+<th align="center" rowspan="1" colspan="1"/>
+<th align="center" rowspan="1" colspan="1"/>
+<th align="center" rowspan="1" colspan="1">Linear Function</th>
+<th align="center" rowspan="1" colspan="1"><italic>r</italic></th>
+<th align="center" rowspan="1" colspan="1">RMSE</th>
+<th align="center" rowspan="1" colspan="1"><italic>r</italic><sub>95%</sub></th>
+<th align="center" rowspan="1" colspan="1">CI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td align="center" rowspan="1" colspan="1">UA</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.82<italic>x</italic>+1.19</td>
+<td align="center" rowspan="1" colspan="1">0.85</td>
+<td align="center" rowspan="1" colspan="1">10.72</td>
+<td align="center" rowspan="1" colspan="1">92.04%</td>
+<td align="center" rowspan="1" colspan="1">[-1.23,2.48]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">UMXD</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.93<italic>x</italic> -0.36</td>
+<td align="center" rowspan="1" colspan="1">0.88</td>
+<td align="center" rowspan="1" colspan="1">0.46</td>
+<td align="center" rowspan="1" colspan="1">82.45%</td>
+<td align="center" rowspan="1" colspan="1">[-0.34,0.45]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">UMID</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.85<italic>x</italic> -4.62</td>
+<td align="center" rowspan="1" colspan="1">0.91</td>
+<td align="center" rowspan="1" colspan="1">0.12</td>
+<td align="center" rowspan="1" colspan="1">94.56%</td>
+<td align="center" rowspan="1" colspan="1">[-2.45,1.46]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">AULA</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.87<italic>x</italic> +8.23</td>
+<td align="center" rowspan="1" colspan="1">0.89</td>
+<td align="center" rowspan="1" colspan="1">8.61</td>
+<td align="center" rowspan="1" colspan="1">92.04%</td>
+<td align="center" rowspan="1" colspan="1">[-2.75,0.45]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">2</td>
+<td align="center" rowspan="1" colspan="1">UA</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.78<italic>x</italic> -13.61</td>
+<td align="center" rowspan="1" colspan="1">0.81</td>
+<td align="center" rowspan="1" colspan="1">9.83</td>
+<td align="center" rowspan="1" colspan="1">87.12%</td>
+<td align="center" rowspan="1" colspan="1">[-1.23,1.36]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">UMXD</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.83<italic>x</italic> +3.63</td>
+<td align="center" rowspan="1" colspan="1">0.82</td>
+<td align="center" rowspan="1" colspan="1">0.70</td>
+<td align="center" rowspan="1" colspan="1">85.27%</td>
+<td align="center" rowspan="1" colspan="1">[-0.45,1.86]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">UMID</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.75<italic>x</italic> +19.26</td>
+<td align="center" rowspan="1" colspan="1">0.90</td>
+<td align="center" rowspan="1" colspan="1">0.21</td>
+<td align="center" rowspan="1" colspan="1">86.12%</td>
+<td align="center" rowspan="1" colspan="1">[-1.64,2.39]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">AULA</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.91<italic>x</italic> +10.41</td>
+<td align="center" rowspan="1" colspan="1">0.85</td>
+<td align="center" rowspan="1" colspan="1">9.32</td>
+<td align="center" rowspan="1" colspan="1">91.03%</td>
+<td align="center" rowspan="1" colspan="1">[-0.45,1.06]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">3</td>
+<td align="center" rowspan="1" colspan="1">UA</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.96<italic>x</italic> -0.35</td>
+<td align="center" rowspan="1" colspan="1">0.87</td>
+<td align="center" rowspan="1" colspan="1">10.2</td>
+<td align="center" rowspan="1" colspan="1">89.34%</td>
+<td align="center" rowspan="1" colspan="1">[-0.87,0.84]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">UMXD</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.83<italic>x</italic> 1.93</td>
+<td align="center" rowspan="1" colspan="1">0.80</td>
+<td align="center" rowspan="1" colspan="1">0.71</td>
+<td align="center" rowspan="1" colspan="1">81.34%</td>
+<td align="center" rowspan="1" colspan="1">[-1.38,1.58]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">UMID</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.81<italic>x</italic> -4.67</td>
+<td align="center" rowspan="1" colspan="1">0.91</td>
+<td align="center" rowspan="1" colspan="1">0.16</td>
+<td align="center" rowspan="1" colspan="1">90.34%</td>
+<td align="center" rowspan="1" colspan="1">[-0.98,2.49]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">AULA</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.79<italic>x</italic> +5.62</td>
+<td align="center" rowspan="1" colspan="1">0.93</td>
+<td align="center" rowspan="1" colspan="1">9.31</td>
+<td align="center" rowspan="1" colspan="1">86.45%</td>
+<td align="center" rowspan="1" colspan="1">[-2.34,0.47]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">4</td>
+<td align="center" rowspan="1" colspan="1">UA</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.70<italic>x</italic> -1.68</td>
+<td align="center" rowspan="1" colspan="1">0.84</td>
+<td align="center" rowspan="1" colspan="1">9.45</td>
+<td align="center" rowspan="1" colspan="1">83.00%</td>
+<td align="center" rowspan="1" colspan="1">[-2.85,3.14]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">UMXD</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.85<italic>x</italic> +18.54</td>
+<td align="center" rowspan="1" colspan="1">0.81</td>
+<td align="center" rowspan="1" colspan="1">0.68</td>
+<td align="center" rowspan="1" colspan="1">90.45%</td>
+<td align="center" rowspan="1" colspan="1">[-0.56,2.45]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">UMID</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.75<italic>x</italic> +7.23</td>
+<td align="center" rowspan="1" colspan="1">0.86</td>
+<td align="center" rowspan="1" colspan="1">0.24</td>
+<td align="center" rowspan="1" colspan="1">82.75%</td>
+<td align="center" rowspan="1" colspan="1">[-1.55,0.51]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">AULA</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.91<italic>x</italic> +0.47</td>
+<td align="center" rowspan="1" colspan="1">0.90</td>
+<td align="center" rowspan="1" colspan="1">10.3</td>
+<td align="center" rowspan="1" colspan="1">85.83%</td>
+<td align="center" rowspan="1" colspan="1">[-0.57,2.48]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">5</td>
+<td align="center" rowspan="1" colspan="1">UA</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.86<italic>x</italic> -3.46</td>
+<td align="center" rowspan="1" colspan="1">0.82</td>
+<td align="center" rowspan="1" colspan="1">8.34</td>
+<td align="center" rowspan="1" colspan="1">90.34%</td>
+<td align="center" rowspan="1" colspan="1">[-0.87,3.92]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">UMXD</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.79<italic>x</italic> +9.54</td>
+<td align="center" rowspan="1" colspan="1">0.93</td>
+<td align="center" rowspan="1" colspan="1">0.69</td>
+<td align="center" rowspan="1" colspan="1">87.23%</td>
+<td align="center" rowspan="1" colspan="1">[-0.91,3.18]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">UMID</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.97<italic>x</italic> +0.14</td>
+<td align="center" rowspan="1" colspan="1">0.81</td>
+<td align="center" rowspan="1" colspan="1">0.15</td>
+<td align="center" rowspan="1" colspan="1">86.24%</td>
+<td align="center" rowspan="1" colspan="1">[-1.06,2.35]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">AULA</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.92<italic>x</italic> -9.45</td>
+<td align="center" rowspan="1" colspan="1">0.92</td>
+<td align="center" rowspan="1" colspan="1">7.89</td>
+<td align="center" rowspan="1" colspan="1">90.07%</td>
+<td align="center" rowspan="1" colspan="1">[-2.56,0.34]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">6</td>
+<td align="center" rowspan="1" colspan="1">UA</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.77<italic>x</italic> +1.23</td>
+<td align="center" rowspan="1" colspan="1">0.84</td>
+<td align="center" rowspan="1" colspan="1">9.32</td>
+<td align="center" rowspan="1" colspan="1">87.23%</td>
+<td align="center" rowspan="1" colspan="1">[-0.91,1.46]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">UMXD</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.79<italic>x</italic> +9.45</td>
+<td align="center" rowspan="1" colspan="1">0.82</td>
+<td align="center" rowspan="1" colspan="1">0.62</td>
+<td align="center" rowspan="1" colspan="1">88.56%</td>
+<td align="center" rowspan="1" colspan="1">[-1.38,3.10]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">UMID</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.82<italic>x</italic> -6.45</td>
+<td align="center" rowspan="1" colspan="1">0.81</td>
+<td align="center" rowspan="1" colspan="1">0.13</td>
+<td align="center" rowspan="1" colspan="1">90.23%</td>
+<td align="center" rowspan="1" colspan="1">[-2.37,2.00]</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">AULA</td>
+<td align="center" rowspan="1" colspan="1"><italic>y</italic> = 0.85<italic>x</italic> +3.55</td>
+<td align="center" rowspan="1" colspan="1">0.93</td>
+<td align="center" rowspan="1" colspan="1">8.01</td>
+<td align="center" rowspan="1" colspan="1">87.12%</td>
+<td align="center" rowspan="1" colspan="1">[-1.57,1.39]</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<table-wrap id="pone.0141046.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0141046.t002</object-id>
+<label>Table 2</label> <caption><title>The results of the Dice index and Jaccard Index.</title></caption>
+<alternatives>
+<graphic id="pone.0141046.t002g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0141046.t002" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="1" colspan="1">No.</th>
+<th align="center" rowspan="1" colspan="1">Dice Index</th>
+<th align="center" rowspan="1" colspan="1">Jaccard Index</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" rowspan="1" colspan="1">1</td>
+<td align="center" rowspan="1" colspan="1">90.23% ± 3.42%</td>
+<td align="center" rowspan="1" colspan="1">87.13% ± 2.49%</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">2</td>
+<td align="center" rowspan="1" colspan="1">88.12% ± 4.21%</td>
+<td align="center" rowspan="1" colspan="1">89.21% ± 4.31%</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">3</td>
+<td align="center" rowspan="1" colspan="1">90.92% ± 1.35%</td>
+<td align="center" rowspan="1" colspan="1">89.31% ± 5.34%</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">4</td>
+<td align="center" rowspan="1" colspan="1">88.67% ± 2.32%</td>
+<td align="center" rowspan="1" colspan="1">88.21% ± 4.93%</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">5</td>
+<td align="center" rowspan="1" colspan="1">91.31% ± 2.57%</td>
+<td align="center" rowspan="1" colspan="1">90.21% ± 2.36%</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">6</td>
+<td align="center" rowspan="1" colspan="1">88.23% ± 4.93%</td>
+<td align="center" rowspan="1" colspan="1">87.35% ± 4.42%</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">Maximum deviation</td>
+<td align="center" rowspan="1" colspan="1">9.97%</td>
+<td align="center" rowspan="1" colspan="1">7.93%</td>
+</tr>
+<tr>
+<td align="center" rowspan="1" colspan="1">Mean</td>
+<td align="center" rowspan="1" colspan="1">89.58% ± 3.13%</td>
+<td align="center" rowspan="1" colspan="1">88.57% ± 3.98%</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>In addition, in order to choose the proper values of the parameters α in Eq (<xref rid="pone.0141046.e001" ref-type="disp-formula">1</xref>) and β in Eq (<xref rid="pone.0141046.e002" ref-type="disp-formula">2</xref>), we evaluated the influence from the variation of the two parameters on the performance of our method. We investigate the error variation in different values of α, where error is represented by the percentage that the area difference occupies in the image and area difference is the difference between areas separately computed by our method and drawn by manual. As seen in <xref rid="pone.0141046.g004" ref-type="fig">Fig 4</xref>, we can have the smaller values of error when <italic>α</italic> is close to 1.23. Thus we set <italic>α</italic> at 1.23 in our method. Similarly, we also study the error variation in different values of <italic>β</italic>. From the same Figure, we can have the smaller values of error when <italic>β</italic> is close to 0.91. Therefore, we set <italic>β</italic> at 0.91 in our method.</p>
+<fig id="pone.0141046.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0141046.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>The error variation in different values of <italic>α</italic> and <italic>β</italic>.</title>
+<p>The error is represented by the percentage that the area difference occupies in the image, where the area difference is the difference between areas computed by our method and drawn manually.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0141046.g004" position="float" xlink:type="simple"/>
+</fig>
+<p>The 2 cases of extensive pelvic adhesions with large “inflammatory mass” (diameter&gt;100mm) were observed under laparoscopic lysis surgery guided by LUS. It showed that the complex pelvic masses containing both solid and cystic components were adherent to pelvic organs and wall, which were distinguished from the normal pelvic anatomic structures by preoperative US. Additionally, the 2 cases of ruptured tubal pregnancy were detected and their sizes were about 55×30mm, 50×35mm. The hematoma-like masses with blurred boundaries were found under laparoscopic visualization. We performed the following operations: i) The swelling fallopian tubes that were mixed in the masses can be identified by LUS scanning; ii) we positioned the rupture of fallopian tubes; and facilitate their removal with LUS guidance.</p>
+<p>The checking of initial inflammatory effusion suggested that there was still 1 patient of pelvic nodules biopsy having larger cystic lesion. The preoperative diagnosis was corrected subsequently. Whereas, with the real-time LUS guidance, adhesions were lysed step by step, all effusion (thick, chocolate-like fluid) was aspirated and lesions were removed completely. In 1 case of laparoscopic ovarian tumor resection, several small nodules were found on the pelvic side wall adjacent to the ovarian mass and lymph node metastases were in suspicion. Intra-operative LUS examination was applied in assessment of suspicious nodules guiding to check the nodules in biopsy and inflammatory enlarged lymph nodes were confirmed subsequently.</p>
+</sec>
+<sec id="sec008" sec-type="conclusions">
+<title>Discussion</title>
+<p>This discussion section is divided into following two sections: a) evaluating the performance of the computational segmentation approach; and b) implementation of the technique and how it assists in gynecological diagnosis.</p>
+<sec id="sec009">
+<title>4.1 Accuracy and robustness of active contour segmentation of uterus</title>
+<p>In this section, we discuss the accuracy and robustness of our method. Our method’s accuracy is evaluated by comparing the performance of our method and the manual segmentation by one clinical doctor (ground truth), and the results from 100 laparoscopic images from 5 patients are investigated by two evaluation approaches (linear regression and Bland-Altman Analysis). In the linear analysis, the correlation coefficients are larger than 0.82 for the four measurements (UA, UMXD, UMID and AULA), representing that our method is well correlated with the manual method. And in the Bland-Altman analysis, most points (&gt;84%) fall in the 95% confidence interval, and it means that there is a good agreement between our method and manual method. In addition, Dice index and Jaccard Index can be used to describe the shape similarity between two uterus in the image, where one is segmented by our method, and other is traced by the doctor. The results show that the Dice index and Jaccard Index are 88.06% and 86.32%, respectively. Therefore, our method has similar performance comparing to the manual segmentation method by the clinical doctor.</p>
+<p>The features of uterus by (UA, UMXD, UMID and AULA) facilitate us to improve the performance of our method to discriminate between the uterus and other organs, tissues and lesions. In addition, in the border detection of uterus, the snake algorithm is used to make the initial contour approximate to the uterus border by the iterative process. It can adjust the contour evolution by the internal energy function to find the weak uterus border, which is caused by its relative position with other visual-similar tissues, the intervention by lesions and the luminance in-sufficiency resulting from the improper position of the camera in vivo. Furthermore, we investigate the between-patient difference of our method’s performance. <xref rid="pone.0141046.t001" ref-type="table">Table 1</xref> showed that the differences for the agreement and correlation between patients are smaller than 5% and 4.00 respectively. And in <xref rid="pone.0141046.t002" ref-type="table">Table 2</xref>, the maximum deviation of the Dice index and Jaccard index computed from different patients are 9.97% and 7.93%, respectively. So we can conclude that our method has approximately similar performance in the images from different patients.</p>
+</sec>
+<sec id="sec010">
+<title>4.2 Use of laparoscopic ultrasound image processing in diagnosing gynecologic conditions</title>
+<p>Laparoscopic ultrasonic probe has a higher frequency. In addition, it can be inserted into the pelvic cavity via trocar and to be placed directly on the surface of pelvic organs and for scanning. Owing to the non-interference of the abdominal wall and bowel gas, the border and internal acoustic characteristics of the uterine or ovarian tumors can be displayed by LUS much better than by TAS (transabdomialsonography) or TVUS (transvaginal ultrasound). Therefore, it is helpful in assessing the characteristics of tumor (benign or malignant) and its location. Our study showed that intra-operative LUS has not only helped in the diagnosis of pelvic lesions according to its sonographic appearances, but it was also useful in detecting more small residual lesions and determining the margin of surgical resection accurately under the premise of ensuring complete removal of the tumor and reducing the recurrence. It can assist in preserving normal tissues as much as possible, maintaining their physiological functions, and reducing surgical trauma [<xref rid="pone.0141046.ref029" ref-type="bibr">29</xref>].</p>
+<sec id="sec011">
+<title>4.2.1 Group A: Diagnosis of Congenital Malformations</title>
+<p>It was observed that when the probe was placed on the surface of the uterine fundus, the LUS could display the fundus, corpus and cavity of the uterus more clearly than TAS and TVUS. Therefore, it could be used to correct uterine congenital malformations in laparoscopic assisted vaginal hysteroscopy. The four cases for laparoscopic assisted vaginal hysteroscopic septum resection were scheduled in order to minimize the risk of uterine perforation. The LUS examinations were performed and intrauterine surgical procedures were monitored by real-time LUS. When the LUS probe was inserted into the pelvic cavity via corcar and placed on the surface of uterine fundus, the septum could be displayed extending from the fundus to cervix, and the uterine cavity was divided into two parts. The thickness and length of septum could be measured accurately. The 3 cases of septate uterus with uniform thickness of mediastinum and mediastinal excision were taken completely by hysteroscopy with the guidance of LUS.</p>
+<p>However, one case of uneven thickness of mediastinum was also observed. The thickest part of mediastinum (uterine fundus segment) was more than 18mm wide in comparison with the thinner uterine corpus segment as per display mentioned by LUS look like an “inverted triangle”. Taking into account of avoiding of uterine perforation, only the lower part of the corpus segment of septum was resected for treatment [<xref rid="pone.0141046.ref030" ref-type="bibr">30</xref>]. The ovary varies (morphological change occurs) during a menstrual cycle. Owing to the coverage of ovarian capsule, it is difficult to distinguish whether the ovarian mass was acting as physiological or pathological feature. The internal structure of ovary and small mass in the ovary were also displayed lucidly by LUS than preoperative TAS and TVUS.</p>
+</sec>
+<sec id="sec012">
+<title>4.2.2 Group B: Analysis of Pelvic Adhesions Masses</title>
+<p>Two patients of complex pelvic adhesions were observed having multiple pelvic organs with encapsulated effusion forming caused by the history of chronic inflammation, surgery or endometriosis. It was difficult to identify the anatomical relationship even directly under laparoscopic visualization. Laparoscopic lysis surgery was implemented in those two patients. Surgeons need to know about the local surgical anatomy, the vascular distribution, the tumor’s location and adjacent is in real time, because the blunt dissection of severe adhesion might damage the vital pelvic vessels and structure. Therefore, LUS was used in guiding the laparoscopic lysis surgery.</p>
+<p>Once the initial separation of adhesions and aspiration of effusion in one patient were obtained, LUS can be used to discover that there were still presences of larger endometrial lesion. LUS enhanced the surgeon’s confidence and helped them to recognize the pelvic structure and avoid vital vessels. In subsequent operation, It helped us continuously to find the appropriate path to separate the adhesions (cutting and burning) layer by layer, and also at the same time eliminate the residual lesions and avoid complications [<xref rid="pone.0141046.ref031" ref-type="bibr">31</xref>]. In one case of ovarian cystadenoma patients after laparoscopic resection, several small raised nodules to be found on pelvic wall near the ovarian masses having suspected metastases. The intra-operative LUS was applied for assisting in differential diagnosis of small lesions on pelvic wall. It showed that the nodules located under plasma membrane were hypoechoic with envelope and neat border. Moreover, following LUS guided biopsy, it was confirmed by pathologic results [<xref rid="pone.0141046.ref032" ref-type="bibr">32</xref>].</p>
+</sec>
+</sec>
+<sec id="sec013">
+<title>4.3 Improvements for intra-operative LUS examination</title>
+<p>Evidently, LUS could also be used in guiding laparoscopic surgery in real-time by defining the border of surgical resection precisely for assisting in surgical resection or biopsy. The LUS not only helped to correct preoperative diagnosis and to reduce misdiagnosis rate, but also eliminate lesions and diminish recurrence. Additionally, to minimize surgical trauma, to preserve organs function, reflect the less invasive criteria of laparoscopic surgery.</p>
+<p>The intra-operative LUS examination that was discussed above has many advantages. But during experiment of LUS examination, some problems were also observed which need to be resolved. The LUS linear-array scanning transducer was thin rod-shaped with a narrow head not easy to contact with organs surface closely. The size and number of ultrasonic transmission chips at the probe head were tiny and fewer in numbers, so the scope of sonographic deployment is limited. Interpretation of the sonography was still needed to be in adaptation. Due to these issues, we fixed LUS transducer on one hand and pushed the organ or lesions closely to the scanning plane of the probe head as possible on the other hand to scan the interested region for our experiment. In addition, saline injection into the space of pelvis was also taken for help in further lesion deployment. Overall, LUS examination is not standardized for reference yet and has very rare deployment in recent time.</p>
+</sec>
+</sec>
+<sec id="sec014" sec-type="conclusions">
+<title>Conclusion</title>
+<p>The uterus segmentation in gynecologic laparoscopy is of importance to quantitatively analyze the nearby organs, tissues and lesions. In this paper, we develop a method for the segmentation of uterus by the active contour technique based on the Knass snake algorithm. Then the proposed method is compared with the manual drawing method by one clinical doctor in order to evaluate our method’s performance. The results analyzed by linear regression, Bland-Altman analysis, Dice index and Jaccard index show that the accuracy and robustness of our method are at a high level.</p>
+<p>Our research has formulated a new approach of guiding laparoscopic surgery and gynecologic diagnosis. This study utilizes 42 women patients, among these subjects 6 cases corrected preoperative analyzes after LUS examination and 18 cases regulated actual surgical program consequently. In our conducted experiment, during laparoscopic operation when frequency is high or near to pelvic organs by accessing through laparoscopic, LUS assists gynecologists to determine tiny residual lesions using laparoscopic visualization clearly and analyzes them correctly by first locating the borders of the uterus accurately. Furthermore, LUS is also assisting to find residual lesions specifically and offer assistance to eradicate residual tumor and remove its reappearance effectually.</p>
+<p>The LUS has provided us a better intra-operative assessment of definite diagnosis, precise guidance in laparoscopic surgery and reduction of risk for laparoscopic ultrasound in gynecological laparoscopic surgery. During performing experiment, it was observed that LUS offers more protected and important support for clinical applications in laparoscopic gynecological surgery than trans-abdominal ultrasound (TAS) and trans-vaginal ultrasound (TVUS). In future, laparoscopic ultrasound will be based on high-quality vision technology in the field of “minimally invasive" in gynecologic surgery.</p>
+</sec>
+</body>
+<back>
+<ack>
+<p>This work was supported part by Grant No.201102054 from Shenzhen science and technology Bureau, and partly by Grant JCYJ20140414170821285, andCXZZ20140909004122087 from Shenzhen science and technology innovation Committee.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0141046.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chahed</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Mekki</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Mansour</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Brahim</surname> <given-names>MB</given-names></name>, <name name-style="western"><surname>Maazoun</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Hidouri</surname> <given-names>S</given-names></name>, <etal>et al</etal>., <article-title>Contribution of laparoscopy in the abdominal tuberculosis diagnosis: retrospective study of about 11 cases</article-title>. <source>Pediatric Surgery International</source>, <year>2010</year>. <volume>26</volume>(<issue>4</issue>): p. <fpage>413</fpage>–<lpage>418</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s00383-010-2555-z" xlink:type="simple">10.1007/s00383-010-2555-z</ext-link></comment> <object-id pub-id-type="pmid">20162421</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Seror</surname> <given-names>Julien</given-names></name>, <name name-style="western"><surname>Bats</surname> <given-names>Anne-Sophie</given-names></name>, <name name-style="western"><surname>Huchon</surname> <given-names>Cyrille</given-names></name>, <name name-style="western"><surname>Bensaïd</surname> <given-names>Chérazade</given-names></name>, <name name-style="western"><surname>Douay-Hauser</surname> <given-names>Nathalie</given-names></name>, <name name-style="western"><surname>Lécuru</surname> <given-names>Fabrice</given-names></name>, <article-title>Laparoscopy vs robotics in surgical management of endometrial cancer: comparison of intraoperative and postoperative complications</article-title>. <source>Journal of Minimally Invasive Gynecology</source>, <year>2013</year>. <volume>21</volume>(<issue>1</issue>): p. <fpage>120</fpage>–<lpage>125</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.jmig.2013.07.015" xlink:type="simple">10.1016/j.jmig.2013.07.015</ext-link></comment> <object-id pub-id-type="pmid">23994715</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhu</surname> <given-names>WB</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Tian</surname> <given-names>LF</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>K</given-names></name>, <article-title>A novel coronary artery skeleton extracting method based on multiple hypothesis tracking</article-title>. <source>Journal of Medical Imaging and Health Informatics</source>, <year>2014</year>. <volume>4</volume>: p. <fpage>832</fpage>–<lpage>839</lpage>.</mixed-citation></ref>
+<ref id="pone.0141046.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hay</surname> <given-names>S.A.</given-names></name>, <article-title>Laparoscopic mucosectomy for large choledochal cyst</article-title>. <source>Journal of Laparoendoscopic &amp; Advanced Surgery Techniques: Part A</source>, <year>2008</year>. <volume>18</volume>(<issue>5</issue>): p. <fpage>783</fpage>–<lpage>784</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1089/lap.2008.0008" xlink:type="simple">10.1089/lap.2008.0008</ext-link></comment> <object-id pub-id-type="pmid">18699754</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ayiguli</surname> <given-names>W</given-names></name>; <name name-style="western"><surname>Jia</surname> <given-names>ZH</given-names></name>; <name name-style="western"><surname>Qin</surname> <given-names>XZ</given-names></name>; <name name-style="western"><surname>Yang</surname> <given-names>J</given-names></name>; <name name-style="western"><surname>Nikola</surname> <given-names>K</given-names></name>, <article-title>Medical image enhancement based on shearlet transform and unsharp masking</article-title>. <source>Journal of Medical Imaging and Health Informatics</source>, <year>2014</year>. <volume>4</volume>: p. <fpage>814</fpage>–<lpage>818</lpage>.</mixed-citation></ref>
+<ref id="pone.0141046.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Majbar</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Souadka</surname> <given-names>A</given-names></name>, <article-title>Laparoscopic surgery in the treatment of liver hydatid cysts</article-title>. <source>Surgrey Endoscopy</source>, <year>2014</year>. <volume>28</volume>(<issue>3</issue>): p. <fpage>1048</fpage>–<lpage>1049</lpage>.</mixed-citation></ref>
+<ref id="pone.0141046.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhou</surname> <given-names>ZG</given-names></name>, <name name-style="western"><surname>Zhou</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Peng</surname> <given-names>B</given-names></name>, <article-title>Laparoscopic splenectomy for adult lymphangiomas of the spleen: case series and review of literature</article-title>. <source>Hepatogastroenterology</source>, <year>2014</year>. <volume>20</volume>(<issue>19</issue>): p. <fpage>285</fpage>–<lpage>290</lpage>.</mixed-citation></ref>
+<ref id="pone.0141046.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jerby</surname> <given-names>BL</given-names></name>, <name name-style="western"><surname>Milsom</surname> <given-names>JW</given-names></name>, <article-title>Role of laparoscopy in the staging of gastrointestinal cancer</article-title>. <source>Oncology</source>, <year>1998</year>. <volume>12</volume>(<issue>9</issue>): p. <fpage>1353</fpage>–<lpage>1360</lpage>. <object-id pub-id-type="pmid">9778683</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bibicu</surname> <given-names>LMD</given-names></name>, <name name-style="western"><surname>Biswas</surname> <given-names>A</given-names></name>, <article-title>Efficient segmentation using active contours embedded in an image feature</article-title>. <source>Journal of Medical Imaging and Health Informatics</source>, <year>2015</year>. <volume>5</volume>: p. <fpage>241</fpage>–<lpage>247</lpage>.</mixed-citation></ref>
+<ref id="pone.0141046.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fauconnier</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Chapron</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Babaki-Fard</surname> <given-names>K</given-names></name> and <name name-style="western"><surname>Jean-Bernard</surname> <given-names>Dubuisson JB</given-names></name>, <article-title>Recurrence of leiomyomata after myomectomy</article-title>. <source>Human reproduction update</source>, <year>2000</year>. <volume>6</volume>(<issue>6</issue>): p. <fpage>595</fpage>–<lpage>602</lpage>. <object-id pub-id-type="pmid">11129693</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rossetti</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Sizzi</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Soranna</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Cucinelli</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Mancuso</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Lanzone</surname> <given-names>A</given-names></name>, <article-title>Long-term results of laparoscopic myomectomy: recurrence rate in comparison with abdominal myomectomy</article-title>. <source>Human Reproduction</source>, <year>2001</year>. <volume>16</volume>(<issue>4</issue>): p. <fpage>770</fpage>–<lpage>774</lpage>. <object-id pub-id-type="pmid">11278231</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fukuda</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Mima</surname> <given-names>S</given-names></name>,<name name-style="western"><surname>Tanabe</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Haniu</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Suzuki</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Hirata</surname> <given-names>K</given-names></name>, <article-title>Endoscopic sonography of the liver—diagnostic application of the echolaparoscope to localize intrahepatic lesions</article-title>. <source>Scandinavian journal of gastroenterology</source>. <issue>Supplement</issue>, <year>1983</year>. <volume>102</volume>: p. <fpage>24</fpage>–<lpage>38</lpage>.</mixed-citation></ref>
+<ref id="pone.0141046.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>John</surname> <given-names>TG</given-names></name>, <name name-style="western"><surname>Greig</surname> <given-names>JD</given-names></name>, <name name-style="western"><surname>Crosbie</surname> <given-names>JL</given-names></name>, <name name-style="western"><surname>Anthony</surname> <given-names>Mile WF</given-names></name>, <name name-style="western"><surname>Garden</surname> <given-names>OJ</given-names></name>, <article-title>Superior staging of liver tumors with laparoscopy and laparoscopic ultrasound</article-title>. <source>Annals of surgery</source>, <year>1994</year>. <volume>220</volume>(<issue>6</issue>): p. <fpage>711</fpage>. <object-id pub-id-type="pmid">7986136</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Barbot</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>Marks</surname> <given-names>JH</given-names></name>, <name name-style="western"><surname>Feld</surname> <given-names>RI</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>JB</given-names></name>, <name name-style="western"><surname>Rosato</surname> <given-names>FE</given-names></name>, <article-title>Improved staging of liver tumors using laparoscopic intraoperative ultrasound</article-title>. <source>Journal of surgical oncology</source>, <year>1997</year>. <volume>64</volume>(<issue>1</issue>): p. <fpage>63</fpage>–<lpage>67</lpage>. <object-id pub-id-type="pmid">9040803</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Igawa</surname> <given-names>S</given-names></name>,<name name-style="western"><surname>Sakai</surname> <given-names>K</given-names></name>,<name name-style="western"><surname>Kinoshita</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Hirohashi</surname> <given-names>K</given-names></name>, <article-title>Intraoperative sonography: clinical usefulness in liver surgery</article-title>. <source>Radiology</source>, <year>1985</year>. <volume>156</volume>(<issue>2</issue>): p. <fpage>473</fpage>–<lpage>478</lpage>. <object-id pub-id-type="pmid">2989974</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>van Vledder</surname> <given-names>MG</given-names></name>, <name name-style="western"><surname>Pawlik</surname> <given-names>TM</given-names></name>, <name name-style="western"><surname>Munireddy</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Hamper</surname> <given-names>U</given-names></name>, <name name-style="western"><surname>de Jong</surname> <given-names>MC</given-names></name>, <name name-style="western"><surname>Choti</surname> <given-names>MA</given-names></name>, <article-title>Factors determining the sensitivity of intraoperative ultrasonography in detecting colorectal liver metastases in the modern era</article-title>. <source>Annals of surgical oncology</source>, <year>2010</year>. <volume>17</volume>(<issue>10</issue>): p. <fpage>2756</fpage>–<lpage>2763</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1245/s10434-010-1108-y" xlink:type="simple">10.1245/s10434-010-1108-y</ext-link></comment> <object-id pub-id-type="pmid">20517682</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Araki</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Conrad</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Ogiso</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Kuwano</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Gayet</surname> <given-names>B</given-names></name>, <article-title>Intraoperative ultrasonography of laparoscopic hepatectomy: key technique for safe liver transection</article-title>. <source>J Am Coll Surg</source>, <year>2014</year>. <volume>218</volume>: p. <fpage>e37</fpage>–<lpage>e41</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.jamcollsurg.2013.10.022" xlink:type="simple">10.1016/j.jamcollsurg.2013.10.022</ext-link></comment> <object-id pub-id-type="pmid">24315651</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Machi</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Johnson</surname> <given-names>JO</given-names></name>, <name name-style="western"><surname>Deziel</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>Soper</surname> <given-names>NJ</given-names></name>, <name name-style="western"><surname>Berber</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Siperstein</surname> <given-names>A</given-names></name>, <etal>et al</etal>., <article-title>The routine use of laparoscopic ultrasound decreases bile duct injury: a multicenter study</article-title>. <source>Surgical endoscopy</source>, <year>2009</year>. <volume>23</volume>(<issue>2</issue>): p. <fpage>384</fpage>–<lpage>388</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s00464-008-9985-x" xlink:type="simple">10.1007/s00464-008-9985-x</ext-link></comment> <object-id pub-id-type="pmid">18528611</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Våpenstad</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Rethy</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Langø</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Selbekk</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Ystgaard</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Hernes</surname> <given-names>TA</given-names></name>, <etal>et al</etal>., <article-title>Laparoscopic ultrasound: a survey of its current and future use, requirements, and integration with navigation technology</article-title>. <source>Surgical endoscopy</source>, <year>2010</year>. <volume>24</volume>(<issue>12</issue>): p. <fpage>2944</fpage>–<lpage>2953</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s00464-010-1135-6" xlink:type="simple">10.1007/s00464-010-1135-6</ext-link></comment> <object-id pub-id-type="pmid">20526622</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ferrero</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Lo Tesoriere</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Russolillo</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Viganò</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Forchino</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Capussotti</surname> <given-names>L</given-names></name>, <article-title>Ultrasound-guided laparoscopic liver resections</article-title>. <source>Surgical endoscopy</source>, <year>2014</year>: p. <fpage>1</fpage>–<lpage>4</lpage>.</mixed-citation></ref>
+<ref id="pone.0141046.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cheung</surname> <given-names>TH</given-names></name>, <name name-style="western"><surname>Lo</surname> <given-names>WK</given-names></name>, <name name-style="western"><surname>Yu</surname> <given-names>MY</given-names></name>, <name name-style="western"><surname>Yang</surname> <given-names>WT</given-names></name>, <name name-style="western"><surname>Ho</surname> <given-names>S</given-names></name>, <article-title>Extended experience in the use of laparoscopic ultrasound to detect pelvic nodal metastasis in patients with cervical carcinoma</article-title>. <source>Gynecologic oncology</source>, <year>2004</year>. <volume>92</volume>(<issue>3</issue>): p. <fpage>784</fpage>–<lpage>788</lpage>. <object-id pub-id-type="pmid">14984941</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cheung</surname> <given-names>TH</given-names></name>, <name name-style="western"><surname>Yang</surname> <given-names>WT</given-names></name>, <name name-style="western"><surname>Yu</surname> <given-names>MY</given-names></name>, <name name-style="western"><surname>Lo</surname> <given-names>WK</given-names></name>, <name name-style="western"><surname>Ho</surname> <given-names>S</given-names></name>, <article-title>New development of laparoscopic ultrasound and laparoscopic pelvic lymphadenectomy in the management of patients with cervical carcinoma</article-title>. <source>Gynecologic oncology</source>, <year>1998</year>. <volume>71</volume>(<issue>1</issue>): p. <fpage>87</fpage>–<lpage>93</lpage>. <object-id pub-id-type="pmid">9784325</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yang</surname> <given-names>CC</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Tseng</surname> <given-names>JY</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>PH</given-names></name>, <article-title>Advantages of open laparoscopic surgery over exploratory laparotomy in patients with tubo-ovarian abscess</article-title>. <source>The Journal of the American Association of Gynecologic Laparoscopists</source>, <year>2002</year>. <volume>9</volume>(<issue>3</issue>): p. <fpage>327</fpage>–<lpage>332</lpage>. <object-id pub-id-type="pmid">12101330</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref024"><label>24</label><mixed-citation publication-type="other" xlink:type="simple">Chhatkuli A, Bartoli A, Malti A, Collins T, Live image parsing in uterine laparoscopy. in The 11th International Symposium on Biomedical Imaging (ISBI). 2014.</mixed-citation></ref>
+<ref id="pone.0141046.ref025"><label>25</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Duda</surname> <given-names>RO</given-names></name>, <name name-style="western"><surname>Hart</surname> <given-names>PE</given-names></name>, <name name-style="western"><surname>Stork</surname> <given-names>DG</given-names></name>, <source>Pattern Classification</source>. <year>2000</year>: <publisher-name>Wiley-Interscience</publisher-name>.</mixed-citation></ref>
+<ref id="pone.0141046.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Altman</surname> <given-names>DG</given-names></name>, <name name-style="western"><surname>Bland</surname> <given-names>JM</given-names></name>, <article-title>Measurement in medicine: the analysis of method comparison studies</article-title>. <source>The Statistician</source>, <year>1983</year>. <volume>32</volume>: p. <fpage>307</fpage>–<lpage>317</lpage>.</mixed-citation></ref>
+<ref id="pone.0141046.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dice</surname> <given-names>LR</given-names></name>, <article-title>Measures of the amount of ecologic association between species</article-title>. <source>Ecology</source>, <year>1945</year>. <volume>26</volume>(<issue>3</issue>): p. <fpage>297</fpage>–<lpage>302</lpage>.</mixed-citation></ref>
+<ref id="pone.0141046.ref028"><label>28</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Tan</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Steinbach</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Kumar</surname> <given-names>V</given-names></name>, <source>Introduction to Data Mining</source>. <year>2005</year>: <publisher-name>Wiley-Interscience</publisher-name>.</mixed-citation></ref>
+<ref id="pone.0141046.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rane</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Kommu</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Sooriakumaran</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Ahmed</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Anderson</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Rimington</surname> <given-names>P</given-names></name>, <article-title>Abstract Index</article-title>. <source>Journal of Endourology</source>, <year>2010</year>. <volume>24</volume>(<issue>S1</issue>): p. <fpage>P14</fpage>–<lpage>P63</lpage>.</mixed-citation></ref>
+<ref id="pone.0141046.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Letterie</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Marshall</surname> <given-names>L</given-names></name>, <article-title>Evaluation of real‐time imaging using a laparoscopic ultrasound probe during operative endoscopic procedures</article-title>. <source>Ultrasound in obstetrics &amp; gynecology</source>, <year>2000</year>. <volume>16</volume>(<issue>1</issue>): p. <fpage>63</fpage>–<lpage>67</lpage>. <object-id pub-id-type="pmid">11084968</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref031"><label>31</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname> <given-names>SJ</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>XF</given-names></name>, <name name-style="western"><surname>Yang</surname> <given-names>LM</given-names></name>, <name name-style="western"><surname>Yan</surname> <given-names>YN</given-names></name>, <name name-style="western"><surname>Deng</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>QQ</given-names></name>, [<article-title>Applications of laparoscopic ultrasound in gynecological surgery</article-title>]. <source>Zhonghua yi xue za zhi</source>, <year>2013</year>. <volume>93</volume>(<issue>37</issue>): p. <fpage>2986</fpage>–<lpage>2988</lpage>. <object-id pub-id-type="pmid">24401591</object-id></mixed-citation></ref>
+<ref id="pone.0141046.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cheung</surname> <given-names>TH</given-names></name>, <name name-style="western"><surname>Lo</surname> <given-names>KW</given-names></name>, <name name-style="western"><surname>Yim</surname> <given-names>SF</given-names></name>, <name name-style="western"><surname>Ho</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Yu</surname> <given-names>MM</given-names></name>, <name name-style="western"><surname>Yang</surname> <given-names>WT</given-names></name>, <article-title>The Technique of Laparoscopic Pelvic Ultrasonography for Metastatic Lymph Node</article-title>. <source>Journal of Laparoendoscopic &amp; Advanced Surgical Techniques</source>, <year>2011</year>. <volume>21</volume>(<issue>1</issue>): p. <fpage>61</fpage>–<lpage>65</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1089/lap.2010.0336" xlink:type="simple">10.1089/lap.2010.0336</ext-link></comment> <object-id pub-id-type="pmid">21190479</object-id></mixed-citation></ref>
+</ref-list>
+</back>
+</article>

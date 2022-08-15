@@ -1,0 +1,1454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+      <journal-id journal-id-type="publisher-id">plos</journal-id>
+      <journal-id journal-id-type="pmc">plosone</journal-id>
+      <journal-title-group>
+        <journal-title>PLoS ONE</journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1932-6203</issn>
+      <publisher>
+        <publisher-name>Public Library of Science</publisher-name>
+        <publisher-loc>San Francisco, USA</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id">PONE-D-12-34758</article-id>
+      <article-id pub-id-type="doi">10.1371/journal.pone.0059110</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Biology</subject>
+          <subj-group>
+            <subject>Computational biology</subject>
+            <subj-group>
+              <subject>Population modeling</subject>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Ecology</subject>
+            <subj-group>
+              <subject>Global change ecology</subject>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Population biology</subject>
+          </subj-group>
+          <subj-group>
+            <subject>Zoology</subject>
+            <subj-group>
+              <subject>Ornithology</subject>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Earth sciences</subject>
+          <subj-group>
+            <subject>Atmospheric science</subject>
+            <subj-group>
+              <subject>Climatology</subject>
+              <subj-group>
+                <subject>Climate change</subject>
+              </subj-group>
+            </subj-group>
+            <subj-group>
+              <subject>Meteorology</subject>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Social and behavioral sciences</subject>
+          <subj-group>
+            <subject>Sociology</subject>
+            <subj-group>
+              <subject>Demography</subject>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Geography</subject>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline">
+          <subject>Computational Biology</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Multiple Weather Factors Affect Apparent Survival of European Passerine Birds</article-title>
+        <alt-title alt-title-type="running-head">Weather and Apparent Survival of Birds</alt-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Salewski</surname>
+            <given-names>Volker</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="corresp" rid="cor1">
+            <sup>*</sup>
+          </xref>
+          <xref ref-type="fn" rid="fn1">
+            <sup>¤</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Hochachka</surname>
+            <given-names>Wesley M.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Fiedler</surname>
+            <given-names>Wolfgang</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+      </contrib-group>
+      <aff id="aff1">
+        <label>1</label>
+        <addr-line>Department of Migration and Immuno-ecology, Max-Planck-Institute for Ornithology, Radolfzell, Germany</addr-line>
+      </aff>
+      <aff id="aff2">
+        <label>2</label>
+        <addr-line>Lab of Ornithology, Cornell University, Ithaca, New York, United States of America</addr-line>
+      </aff>
+      <contrib-group>
+        <contrib contrib-type="editor" xlink:type="simple">
+          <name name-style="western">
+            <surname>Peter</surname>
+            <given-names>Hans-Ulrich</given-names>
+          </name>
+          <role>Editor</role>
+          <xref ref-type="aff" rid="edit1"/>
+        </contrib>
+      </contrib-group>
+      <aff id="edit1">
+        <addr-line>Institute of Ecology, Germany</addr-line>
+      </aff>
+      <author-notes>
+        <corresp id="cor1">* E-mail: <email xlink:type="simple">volker.salewski@biologie.uni-osnabrueck.de</email></corresp>
+        <fn fn-type="conflict">
+          <p>The authors have declared that no competing interests exist.</p>
+        </fn>
+        <fn fn-type="con">
+          <p>Conceived and designed the experiments: VS WF. Performed the experiments: VS WF. Analyzed the data: VS WMH. Wrote the paper: VS WMH WF.</p>
+        </fn>
+        <fn id="fn1" fn-type="current-aff">
+          <label>¤</label>
+          <p>Current address: Department of Behavioural Biology, University of Osnabrück, Osnabrück, Germany</p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2013</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>8</day>
+        <month>4</month>
+        <year>2013</year>
+      </pub-date>
+      <volume>8</volume>
+      <issue>4</issue>
+      <elocation-id>e59110</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>5</day>
+          <month>11</month>
+          <year>2012</year>
+        </date>
+        <date date-type="accepted">
+          <day>11</day>
+          <month>2</month>
+          <year>2013</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-year>2013</copyright-year>
+        <copyright-holder>Salewski et al</copyright-holder>
+        <license xlink:type="simple">
+          <license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>Weather affects the demography of animals and thus climate change will cause local changes in demographic rates. In birds numerous studies have correlated demographic factors with weather but few of those examined variation in the impacts of weather in different seasons and, in the case of migrants, in different regions. Using capture-recapture models we correlated weather with apparent survival of seven passerine bird species with different migration strategies to assess the importance of selected facets of weather throughout the year on apparent survival. Contrary to our expectations weather experienced during the breeding season did not affect apparent survival of the target species. However, measures for winter severity were associated with apparent survival of a resident species, two short-distance/partial migrants and a long-distance migrant. Apparent survival of two short distance migrants as well as two long-distance migrants was further correlated with conditions experienced during the non-breeding season in Spain. Conditions in Africa had statistically significant but relatively minor effects on the apparent survival of the two long-distance migrants but also of a presumably short-distance migrant and a short-distance/partial migrant. In general several weather effects independently explained similar amounts of variation in apparent survival for the majority of species and single factors explained only relatively low amounts of temporal variation of apparent survival. Although the directions of the effects on apparent survival mostly met our expectations and there are clear predictions for effects of future climate we caution against simple extrapolations of present conditions to predict future population dynamics. Not only did weather explains limited amounts of variation in apparent survival, but future demographics will likely be affected by changing interspecific interactions, opposing effects of weather in different seasons, and the potential for phenotypic and microevolutionary adaptations.</p>
+      </abstract>
+      <funding-group>
+        <funding-statement>The study was entirely funded by the Max-Planck-Institue of Ornithology and the submitted manuscript will be a publication of this institute. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+      </funding-group>
+      <counts>
+        <page-count count="10"/>
+      </counts>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Introduction</title>
+      <p>Weather has important direct and indirect effects on the demography of organisms <xref ref-type="bibr" rid="pone.0059110-Moreno1">[1]</xref>. Thus changes in local weather through climate change will proximally affect demographic rates, and ultimately affect future global biodiversity and species assemblages <xref ref-type="bibr" rid="pone.0059110-ekerciolu1">[2]</xref>, <xref ref-type="bibr" rid="pone.0059110-Sther1">[3]</xref>. Therefore, identifying the effects of weather on demography is important for anticipating the effects of climate change. Seasonality complicates this process because influences of weather may differ among seasons, with survival or reproduction affected directly or indirectly through carry-over effects in which the consequences of non-lethal conditions in one season become manifested in another season <xref ref-type="bibr" rid="pone.0059110-Harrison1">[4]</xref>. For migratory animals, identification of key weather influences on demography requires examination of potentially important facets of weather in different times and regions, including effects that carry over from one season and location to the next <xref ref-type="bibr" rid="pone.0059110-Norris1">[5]</xref>.</p>
+      <p>To date, examinations of the influences of weather on population dynamics of birds have rarely considered these complexities, instead focussing on one or a small number of potential critical time periods or geographic locations rather than looking at the annual cycle as a whole. An example are the contrasting “tub” and “tap” hypotheses <xref ref-type="bibr" rid="pone.0059110-Sther2">[6]</xref>: the “tub” hypothesis is that fluctuations in population size are associated with weather variation in the non-breeding season, and the “tap” hypothesis that fluctuations depend on the weather during the breeding season. Sæther et al. <xref ref-type="bibr" rid="pone.0059110-Sther2">[6]</xref> found that in general the tub hypothesis was supported in northern temperate altricial birds whereas the tap hypothesis explained population fluctuations of many nidifugous species and of those living under arid conditions. However, these generalizations may obscure more complex patterns, as studies have shown that: conditions during the non-breeding season can have differing influences on geographically separated populations of the same species <xref ref-type="bibr" rid="pone.0059110-Pasinelli1">[7]</xref>; individual survival, but not population dynamics is correlated with conditions in the non-breeding season <xref ref-type="bibr" rid="pone.0059110-Szp1">[8]</xref>; and conditions in both non-breeding season and breeding season influence individual survival of migrating birds <xref ref-type="bibr" rid="pone.0059110-Schaub1">[9]</xref>, <xref ref-type="bibr" rid="pone.0059110-Stokke1">[10]</xref>.</p>
+      <p>Birds breeding in Central Europe experience fluctuating climatic conditions in seasonal environments throughout the annual cycle whether they are residents or migrants. While the demography of resident species is influenced by fluctuating conditions in only one region, migratory species experience influences of local weather at multiple locations. These migrants typically travel along a south-westerly route from their nesting grounds to southern wintering areas either in the western Mediterranean (short-distance migrants) or in the savanna zones of sub-Saharan West Africa (long-distance migrants). Current predictions for climate change during the breeding season of birds suggest warmer and drier conditions in Central Europe <xref ref-type="bibr" rid="pone.0059110-Rsinen1">[11]</xref>, <xref ref-type="bibr" rid="pone.0059110-Rowell1">[12]</xref>. Predictions for the non-breeding season of resident or migrating Central European bird species suggest increasing winter temperatures and precipitation will be encountered in Central Europe <xref ref-type="bibr" rid="pone.0059110-Rowell1">[12]</xref>, <xref ref-type="bibr" rid="pone.0059110-Giorgi1">[13]</xref> and increasing temperatures as well as decreasing precipitation in the western Mediterranean <xref ref-type="bibr" rid="pone.0059110-Rowell1">[12]</xref>. The non-breeding areas of long-distance migrants to West Africa are predicted to experience a general increase in temperature, but a decrease in precipitation of 10% to &gt;20% by the end of this century <xref ref-type="bibr" rid="pone.0059110-IPCC1">[14]</xref>. Given these scenarios, the predicted changes in climate may improve future breeding conditions for many species (but see <xref ref-type="bibr" rid="pone.0059110-Jiguet1">[15]</xref>). Furthermore, future conditions during the non-breeding season in Europe may be advantageous for resident birds. In contrast the predicted changes in West Africa during the non-breeding season may be disadvantageous to migrants' survival during the non-breeding period <xref ref-type="bibr" rid="pone.0059110-Kanyamibwa1">[16]</xref>–<xref ref-type="bibr" rid="pone.0059110-Eraud1">[18]</xref> as well as for reproduction in Europe because of negative carry-over effects <xref ref-type="bibr" rid="pone.0059110-Saino1">[19]</xref>, <xref ref-type="bibr" rid="pone.0059110-Schaub2">[20]</xref>. Given the contrasting predictions for climate change across the regions occupied by Central European birds throughout the year, any attempts to anticipate the impacts of climate change will require identification of the weather conditions and geographic locations for which variation in weather most influences population dynamics.</p>
+      <p>The aim of this study is to assess the relative importance of the variation of multiple facets of weather, recorded at locations at which birds breeding in Central Europe reside throughout the year. We relate these measures of weather to apparent survival of seven passerine bird species that have contrasting migration strategies, although all breed in the same geographic area (south-western Germany). This allows us to determine whether the same facets of weather are correlated with apparent survival of species with differing lengths of migratory travel and whether single weather factors can explain a high variation of apparent survival. We first identify which of a set of weather factors affect the bird species' apparent survival, specifically looking for evidence supporting three non-exclusive hypotheses: (1) all species have apparent survival rates that are affected by weather conditions on their breeding grounds; (2) both short- and long-distance migrants are affected by weather conditions in the Mediterranean and (3) apparent survival of long-distance migrants is affected by weather conditions in their sub-Saharan wintering grounds. Second, we determine whether any single weather feature explains a high variation in apparent survival compared to other factors. Finally we assess the implications of the identified impacts of weather variation for future population dynamics given the current prediction for the ongoing climate change.</p>
+    </sec>
+    <sec id="s2" sec-type="methods">
+      <title>Methods</title>
+      <sec id="s2a">
+        <title>Ethic statement</title>
+        <p>All handling of birds was carried out in strict compliance with the laws of Germany and the European Union. Trapping and banding birds for scientific purposes in Germany is subject of the species conservation legislation (§§ 38, 39 Bundesnaturschutzgesetz) and does not fall under the animal welfare legislation in the sense of an animal experiment (§ 7 Tierschutzgesetz). Therefore under German law approval of the study by an ethics committee is not required. All studies involving trapping and banding of birds are evaluated by the Bird Ringing Centre and the institutional Animal Welfare Officer or his deputy. Guidelines for the responsible handling of captured wild birds (issued by the Bird Ringing Centre) apply and all persons handling birds received training and supervision by licensed senior bird banders. The permit to trap and band birds within the framework of this study was issued by the responsible authority Regierungspräsidium Freiburg under the No. 56-8853.17/01.</p>
+      </sec>
+      <sec id="s2b">
+        <title>Study area and target species</title>
+        <p>Birds were captured as part of a monitoring programme on the Mettnau peninsula (47.729°N, 8.998°E), Lake Constance, near Radolfzell in south-western Germany. Starting in 1972, and between 30 June to 6 November inclusive, birds were captured in mist-nets following standardised methods <xref ref-type="bibr" rid="pone.0059110-Kaiser1">[21]</xref>. The early start of the netting season enabled the capture of local breeding birds as well as migrating individuals of most species. All captured birds were identified to species, banded and standard measurements were taken. Captured birds were handled within one hour and immediately released after measurements were taken. All recaptures were also recorded with at least date of recapture and band number noted. Birds were aged following the criteria in Svensson <xref ref-type="bibr" rid="pone.0059110-Svensson1">[22]</xref> and Jenni &amp; Winkler <xref ref-type="bibr" rid="pone.0059110-Jenni1">[23]</xref> as being in their first year (i.e. captured in their first year of life) or older. For this study we analysed data from bird captures in the years 1972 (1973 in blackbirds <italic>Turdus merula</italic>) through 2005, inclusive.</p>
+        <p>We went through several steps in order to select the species and ranges of capture dates for each species used in our analyses. We included only individuals that were in their first year of life when captured for the first time in order to consider only capture histories that potentially cover entire life spans. Our basic criterion for including a species in our analysis was that at least 1,000 first-year individuals were captured. Our second criterion was the presence of a relatively high inter-annual recapture rate; therefore we selected only species for which we had ≥2.5% inter-annual recaptures. Following Salewski et al. <xref ref-type="bibr" rid="pone.0059110-Salewski1">[24]</xref> we identified dates on which netted individuals of a species were likely to have originated from the immediate region and excluded putative non-regional migrating birds from our analyses.</p>
+        <p>The seven species in our final set (<xref ref-type="table" rid="pone-0059110-t001">Table 1</xref>) have a range of patterns of movement between summer and winter. In blackbirds the majority of first year birds are probably short-distance migrants whereas there is an increasing trend to be resident in older blackbirds especially in males <xref ref-type="bibr" rid="pone.0059110-Schwabl1">[25]</xref>. <italic>Dunnocks Prunella</italic> modularis are probably partial migrants with an unknown proportion migrating to areas as distant as the Mediterranean, while others winter much closer to the breeding grounds <xref ref-type="bibr" rid="pone.0059110-Bauer1">[26]</xref>. Blackcaps <italic>Sylvia atricapilla</italic> and reed buntings <italic>Emberiza schoeniclus</italic> are short distance migrants to the Mediterranean region <xref ref-type="bibr" rid="pone.0059110-Bauer1">[26]</xref>, but an increasing number of blackcaps spend the non-breeding season in Britain and Ireland <xref ref-type="bibr" rid="pone.0059110-Schlenker1">[27]</xref>, <xref ref-type="bibr" rid="pone.0059110-Bearhop1">[28]</xref>. The great majority of chiffchaffs <italic>Phylloscopus collybita</italic> from the study region are probably also short-distance migrants to the Mediterranean <xref ref-type="bibr" rid="pone.0059110-Zink1">[29]</xref>. Whether the increasing numbers of winter observations in the region <xref ref-type="bibr" rid="pone.0059110-Kolb1">[30]</xref> are of local breeders is unknown. Reed warblers <italic>Acrocephalus scirpaceus</italic> and willow warblers <italic>Phylloscopus trochilus</italic> are long-distance migrants to tropical Africa and band recoveries indicate that birds from western and central Europe spent the European winter months in the West African Guinea savanna zone south of 10°N <xref ref-type="bibr" rid="pone.0059110-Zink1">[29]</xref>, <xref ref-type="bibr" rid="pone.0059110-Prochzka1">[31]</xref>.</p>
+        <table-wrap id="pone-0059110-t001" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0059110.t001</object-id>
+          <label>Table 1</label>
+          <caption>
+            <title>Target species.</title>
+          </caption>
+          <alternatives>
+            <graphic id="pone-0059110-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0059110.t001" xlink:type="simple"/>
+            <table>
+              <colgroup span="1">
+                <col align="left" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Species</td>
+                  <td align="left" rowspan="1" colspan="1">n</td>
+                  <td align="left" rowspan="1" colspan="1">% recaptured</td>
+                  <td align="left" rowspan="1" colspan="1">Date after newly-captured considered to be non-local</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Dunnock <italic>Prunella modularis</italic></td>
+                  <td align="left" rowspan="1" colspan="1">596</td>
+                  <td align="left" rowspan="1" colspan="1">8.2</td>
+                  <td align="left" rowspan="1" colspan="1">6 September</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Blackbird <italic>Turdus merula</italic></td>
+                  <td align="left" rowspan="1" colspan="1">1178</td>
+                  <td align="left" rowspan="1" colspan="1">4.5</td>
+                  <td align="left" rowspan="1" colspan="1">25 September</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Reed Warbler <italic>Acrocephalus scirpaceus</italic></td>
+                  <td align="left" rowspan="1" colspan="1">1879</td>
+                  <td align="left" rowspan="1" colspan="1">6.3</td>
+                  <td align="left" rowspan="1" colspan="1">13 July</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Blackcap <italic>Sylvia atricapilla</italic></td>
+                  <td align="left" rowspan="1" colspan="1">4636</td>
+                  <td align="left" rowspan="1" colspan="1">2.5</td>
+                  <td align="left" rowspan="1" colspan="1">22 August</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Chiffchaff <italic>Phylloscopus collybita</italic></td>
+                  <td align="left" rowspan="1" colspan="1">9482</td>
+                  <td align="left" rowspan="1" colspan="1">2.9</td>
+                  <td align="left" rowspan="1" colspan="1">22 September</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Willow Warbler <italic>Phylloscopus trochilus</italic></td>
+                  <td align="left" rowspan="1" colspan="1">1734</td>
+                  <td align="left" rowspan="1" colspan="1">7.6</td>
+                  <td align="left" rowspan="1" colspan="1">22 July</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Reed Bunting <italic>Emberiza schoeniclus</italic></td>
+                  <td align="left" rowspan="1" colspan="1">4386</td>
+                  <td align="left" rowspan="1" colspan="1">7.1</td>
+                  <td align="left" rowspan="1" colspan="1">13 September</td>
+                </tr>
+              </tbody>
+            </table>
+          </alternatives>
+          <table-wrap-foot>
+            <fn id="nt101">
+              <p>Shown are the number of first year birds captured per species, percentage recaptures in a subsequent year and date after which an individual of the respective species was classified as a migrant and not considered in the analysis.</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+        <p>Although we did not consider an explicit breeding population, (i.e. birds marked in or at their nest), we considered only individuals that were initially banded within a short time after presumed fledging. Although we may have included juveniles performing premigratory dispersal movements apparent survival rates of first year individuals of most species and adult individuals of all species were comparable to those found in literature (unpubl. data). Therefore we are convinced that we have mainly considered locally raised birds.</p>
+      </sec>
+      <sec id="s2c">
+        <title>Apparent survival and the selection of weather variables</title>
+        <p>While our goal was to identify weather factors that affect survival of birds, we can only estimate apparent survival (Ф), which is <xref ref-type="bibr" rid="pone.0059110-Burnham1">[32]</xref> a function of true survival (S) and the probability of permanent emigration (d):<disp-formula id="pone.0059110.e001"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0059110.e001" xlink:type="simple"/></disp-formula></p>
+        <p>While a very large number of weather variables can be obtained or derived, we deliberately selected a small number to examine because: prior studies have already identified candidates, restricting the set of predictors that is examined will lower the probability of finding spurious correlations, and many variables describing weather are correlated and we did not want to include redundant predictors in the set that we examined. Whilst the relevance of any specific weather variables for prediction of survival can be debated, we describe the rationale for our choices in detail below. Most of the weather variables that we examine have been previously used, albeit as subsets of our entire set in any individual study, thus facilitating comparisons with previous studies.</p>
+        <p>Based on prior studies, we tested whether local precipitation (details below) during the breeding season as the feature of weather that potentially affects apparent survival. High local precipitation during the breeding season is typically associated with low breeding success in Central Europe <xref ref-type="bibr" rid="pone.0059110-Veistola1">[33]</xref>–<xref ref-type="bibr" rid="pone.0059110-Arlettaz1">[35]</xref>. Additionally, precipitation may affect dispersal, with breeding dispersal (dispersal from one breeding site to another) becoming lower with higher breeding success <xref ref-type="bibr" rid="pone.0059110-Schaub2">[20]</xref>, <xref ref-type="bibr" rid="pone.0059110-Greenwood1">[36]</xref>, <xref ref-type="bibr" rid="pone.0059110-Haas1">[37]</xref>. In general first year birds have a lower rate of philopatry to a breeding site than older birds <xref ref-type="bibr" rid="pone.0059110-Greenwood1">[36]</xref>: young birds have to disperse to breed elsewhere with higher philopatry of older birds. Therefore, we expected that higher precipitation during the breeding season would be associated with lower apparent survival for older birds but relatively increased apparent survival of first year birds.</p>
+        <p>Weather in the non-breeding season can have profound effects on birds' survival <xref ref-type="bibr" rid="pone.0059110-Sther2">[6]</xref> and low winter temperatures as well as snow cover may be associated with increased winter mortality and decreasing population sizes either because of thermoregulatory challenges or reduced food supply <xref ref-type="bibr" rid="pone.0059110-North1">[38]</xref>–<xref ref-type="bibr" rid="pone.0059110-Robinson1">[40]</xref>. Therefore we selected winter temperatures and days with snow cover as potential predictors of apparent survival due to their effects on winter survival for resident species, and we expected higher survival of these resident species with warmer winter temperatures and less snow. Prior work suggests that rainfall in wintering areas is a predictor of apparent survival for migrants <xref ref-type="bibr" rid="pone.0059110-Szp1">[8]</xref>, <xref ref-type="bibr" rid="pone.0059110-Kanyamibwa1">[16]</xref>, <xref ref-type="bibr" rid="pone.0059110-Boano1">[17]</xref>, and therefore we included in our models precipitation in Spain as well as in the African Sahel and Guinea savanna zones. We assumed a priori that dry conditions during winter in temperate Spain would be advantageous for insectivorous birds because their prey would be more active although we are not aware of any studies confirming our assumption explicitly. Although the Sahel zone is not the final non-breeding area of the two long-distance migrants considered here, at least willow warblers may stay there for a period of time after crossing the Sahara in autumn <xref ref-type="bibr" rid="pone.0059110-Salewski2">[41]</xref>. The African savanna zones may also play a role in premigratory fattening in spring for both species. Therefore we expected a higher survival with greater rainfall in Africa because increased precipitation is associated with higher primary production and insect abundance in African savannas <xref ref-type="bibr" rid="pone.0059110-Cheke1">[42]</xref>–<xref ref-type="bibr" rid="pone.0059110-Camberlin1">[44]</xref>.</p>
+        <p>Data on precipitation during the breeding season are standard daily measurements taken at Konstanz (47,667°N, 9,183°E) by the Deutscher Wetterdienst, approximately 18 km from the study site (<ext-link ext-link-type="uri" xlink:href="http://www.dwd.de/de/FundE/Klima/KLIS/daten/online/nat/index_standardformat.htm" xlink:type="simple">http://www.dwd.de/de/FundE/Klima/KLIS/daten/online/nat/index_standardformat.htm</ext-link>). From the sum of the daily values we calculated the mean daily precipitation for the period from 1 April to 30 June for each year. Local winter temperatures and days with snow cover were extracted from the same source. Daily mean temperatures were used to calculate the mean temperature between 1 December and the last day of February for each winter. For snow cover we used the sum of days with a closed snow cover (snow height ≥1 cm) between 1<sup>st</sup> October and 31<sup>st</sup> March as a second surrogate for winter severity. Extreme weather events or periods of adverse conditions may be more strongly correlated with apparent survival and population dynamics than multi-day averages <xref ref-type="bibr" rid="pone.0059110-Robinson1">[40]</xref>, <xref ref-type="bibr" rid="pone.0059110-Lahti1">[45]</xref>, <xref ref-type="bibr" rid="pone.0059110-Altwegg1">[46]</xref>. However, in our study area extremes and averages were correlated: mean daily winter temperature was significantly negatively associated with the number of consecutive days with a mean temperature below 0°C (linear model: df  = 31, adjusted r<sup>2</sup>  = 0.20, p = 0.005) and the mean number of days with snow cover per winter was significantly positively correlated with the maximum number of consecutive days with snow cover per winter (linear model: df  = 31, adjusted r<sup>2</sup>  = 0.65, p = &lt;0.001). Therefore, while we are using mean values as predictors in our analyses, interpretation of results needs to be made knowing that longer-term means as well as shorter-term extremes were described by our chosen measures of winter weather.</p>
+        <p>The Sahel precipitation-index was taken from the website of the Joint Institute for the Study of the Atmosphere and Ocean (<ext-link ext-link-type="uri" xlink:href="http://jisao.washington.edu/data/sahel/" xlink:type="simple">http://jisao.washington.edu/data/sahel/</ext-link>). No such precipitation indices covering the entire study period are available from the western Mediterranean and the Guinea Savanna-zone. Therefore we calculated precipitation indices from data from individual weather stations taken from the CISL Research Data Archive (<ext-link ext-link-type="uri" xlink:href="http://dss.ucar.edu/" xlink:type="simple">http://dss.ucar.edu/</ext-link>). For Spain we used precipitation data from five sites between 37.4°N and 41.7°N and between 6.1°W and 2.1°E (Alicante, Barcelona, Madrid, Seville, Valladolid). For the Guinea-index we used precipitation data for seven localities between 6.2°N and 8.0°N and between 10.4°W and 2.4°E. The latter were Roberts Field in Liberia; Atakpame, Lomé and Tabligbo in Togo and Bohincon, Cotonou and Savé in Benin. We used monthly data from November to February, inclusive, which is the main staging period of migrants in the respective regions. Data for a number of months were missing from a number of weather stations. We therefore needed to calculate an index of winter weather that interpolated over these missing data rather than calculating simple averages from only the available data. We used the parameter estimates for “winter” from an ANOVA with “precipitation” (monthly value) as the dependent variable and “winter”, “month” and “site” as the independent variable to correct precipitation data for site- and month-specific effects.</p>
+        <p>Large scale climate indices may predict ecological processes better than local weather data <xref ref-type="bibr" rid="pone.0059110-Hallett1">[47]</xref>. Additionally, for partial migrants (dunnock, blackbird) or for populations in which individuals migrate to different destinations (blackcap) a large scale index may describe apparent survival more adequately than a local factor that affects only a part of the population. Therefore, we also included the North Atlantic Oscillation Index (NAO) during the winter months (December – March, <xref ref-type="bibr" rid="pone.0059110-Hurrell1">[48]</xref>) in our set of factors potentially affecting apparent survival. A low NAO is associated with relatively colder drier winters and a higher index is associated with warmer, wetter winters in northern Europe. In the Mediterranean a low index is associated with drier winters <xref ref-type="bibr" rid="pone.0059110-Hurrell2">[49]</xref>. Therefore we predicted a higher apparent survival for resident birds and short distance migrants in association with a higher NAO index. As expected the NAO was significantly positively associated with the winter temperature (linear model: df  = 31, adjusted r<sup>2</sup>  = 0.12, p = 0.026) and negatively associated with snow cover (linear model: df  = 31, adjusted r<sup>2</sup>  = 0.09, p = 0.050) in the breeding area. The association of the NAO with the other weather variables were not statistically significant. The data for the NAO were downloaded from NASA's Global Change Master Directory (<ext-link ext-link-type="uri" xlink:href="http://gcmd.nasa.gov/KeywordSearch/Metadata.do?Portal=GCMD&amp;KeywordPath=&amp;NumericId=4689&amp;MetadataView=Full&amp;MetadataType=0&amp;lbnode=mdlb2" xlink:type="simple">http://gcmd.nasa.gov/KeywordSearch/Metadata.do?Portal=GCMD&amp;KeywordPath=&amp;NumericId=4689&amp;MetadataView=Full&amp;MetadataType=0&amp;lbnode=mdlb2</ext-link>).</p>
+        <p>Weather data from the breeding area were z-transformed prior to the analyses, but not the indices from the migration and wintering areas and the NAO. In our models the factors are denoted as follows: breeding season precipitation  =  bsp, local winter temperature  =  wt, local snow cover  =  sn, winter precipitation in Spain  =  pSp, precipitation in the African Sahel zone  =  pSz and precipitation in the Guinea savanna zone  =  pGz.</p>
+        <p>While we have specific expectations for how the selected facets of weather will have affected the birds that are wintering in the regions in which weather is described, weather effects may be more complex, with conditions in one time period in a region affecting population dynamics of bird populations although they are not present in the region at that particular time. For example, the population size for wood warblers <italic>Phylloscopus sibilatrix</italic>, a species that migrates to tropical Africa in the non-breeding season, shows declines correlated with severe winters in Europe <xref ref-type="bibr" rid="pone.0059110-Flade1">[50]</xref>. Because of the potential for these complex inter-relationships, we looked for evidence of relationships between all variables with apparent survival of all species irrespective of their non-breeding season distributions.</p>
+      </sec>
+      <sec id="s2d">
+        <title>Data analyses</title>
+        <p>It is important to test whether the mark-recapture models that we used were adequate descriptions of the processes that we want to describe. For this purpose we performed goodness-of-fit (GOF) tests using the program U-care <xref ref-type="bibr" rid="pone.0059110-Choquet1">[51]</xref>. The accepted significance level was p ≤0.05. The test 3.SR for transient and age effects was significant for all species except for the reed warbler (<xref ref-type="table" rid="pone-0059110-t002">Table 2</xref>). Therefore we incorporated age structuring (a<sub>2</sub>) in all our models. A goodness of fit test when all first captures were removed was never significant for either U-care's global test or for any of the specific tests, indicating that there is no over dispersion in the data. Therefore we did not correct our output statistics with a ĉ – value.</p>
+        <table-wrap id="pone-0059110-t002" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0059110.t002</object-id>
+          <label>Table 2</label>
+          <caption>
+            <title>Probabilities from goodness-of-fit tests.</title>
+          </caption>
+          <alternatives>
+            <graphic id="pone-0059110-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0059110.t002" xlink:type="simple"/>
+            <table>
+              <colgroup span="1">
+                <col align="left" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Species</td>
+                  <td align="left" rowspan="1" colspan="1">Statistic</td>
+                  <td colspan="5" align="left" rowspan="1">Test</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">Global</td>
+                  <td align="left" rowspan="1" colspan="1">3.SR</td>
+                  <td align="left" rowspan="1" colspan="1">3.SM</td>
+                  <td align="left" rowspan="1" colspan="1">2.CT</td>
+                  <td align="left" rowspan="1" colspan="1">2.CL</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Dunnock</td>
+                  <td align="left" rowspan="1" colspan="1">df</td>
+                  <td align="left" rowspan="1" colspan="1">37</td>
+                  <td align="left" rowspan="1" colspan="1">20</td>
+                  <td align="left" rowspan="1" colspan="1">7</td>
+                  <td align="left" rowspan="1" colspan="1">8</td>
+                  <td align="left" rowspan="1" colspan="1">2</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">χ<sup>2</sup></td>
+                  <td align="left" rowspan="1" colspan="1">34.611</td>
+                  <td align="left" rowspan="1" colspan="1">32.031</td>
+                  <td align="left" rowspan="1" colspan="1">0.000</td>
+                  <td align="left" rowspan="1" colspan="1">1.644</td>
+                  <td align="left" rowspan="1" colspan="1">0.936</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">p</td>
+                  <td align="left" rowspan="1" colspan="1">0.582</td>
+                  <td align="left" rowspan="1" colspan="1">0.043</td>
+                  <td align="left" rowspan="1" colspan="1">1.000</td>
+                  <td align="left" rowspan="1" colspan="1">0.990</td>
+                  <td align="left" rowspan="1" colspan="1">0.626</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Blackbird</td>
+                  <td align="left" rowspan="1" colspan="1">df</td>
+                  <td align="left" rowspan="1" colspan="1">54</td>
+                  <td align="left" rowspan="1" colspan="1">25</td>
+                  <td align="left" rowspan="1" colspan="1">7</td>
+                  <td align="left" rowspan="1" colspan="1">16</td>
+                  <td align="left" rowspan="1" colspan="1">6</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">χ<sup>2</sup></td>
+                  <td align="left" rowspan="1" colspan="1">54.848</td>
+                  <td align="left" rowspan="1" colspan="1">42.870</td>
+                  <td align="left" rowspan="1" colspan="1">0.096</td>
+                  <td align="left" rowspan="1" colspan="1">7.537</td>
+                  <td align="left" rowspan="1" colspan="1">3.516</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">p</td>
+                  <td align="left" rowspan="1" colspan="1">0.442</td>
+                  <td align="left" rowspan="1" colspan="1">0.014</td>
+                  <td align="left" rowspan="1" colspan="1">0.996</td>
+                  <td align="left" rowspan="1" colspan="1">0.961</td>
+                  <td align="left" rowspan="1" colspan="1">0.742</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Reed Warbler</td>
+                  <td align="left" rowspan="1" colspan="1">df</td>
+                  <td align="left" rowspan="1" colspan="1">55</td>
+                  <td align="left" rowspan="1" colspan="1">26</td>
+                  <td align="left" rowspan="1" colspan="1">8</td>
+                  <td align="left" rowspan="1" colspan="1">15</td>
+                  <td align="left" rowspan="1" colspan="1">6</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">χ<sup>2</sup></td>
+                  <td align="left" rowspan="1" colspan="1">25.902</td>
+                  <td align="left" rowspan="1" colspan="1">11.283</td>
+                  <td align="left" rowspan="1" colspan="1">0.936</td>
+                  <td align="left" rowspan="1" colspan="1">12.975</td>
+                  <td align="left" rowspan="1" colspan="1">0.708</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">p</td>
+                  <td align="left" rowspan="1" colspan="1">1.000</td>
+                  <td align="left" rowspan="1" colspan="1">0.995</td>
+                  <td align="left" rowspan="1" colspan="1">0.999</td>
+                  <td align="left" rowspan="1" colspan="1">0.604</td>
+                  <td align="left" rowspan="1" colspan="1">0.994</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Blackcap</td>
+                  <td align="left" rowspan="1" colspan="1">df</td>
+                  <td align="left" rowspan="1" colspan="1">73</td>
+                  <td align="left" rowspan="1" colspan="1">29</td>
+                  <td align="left" rowspan="1" colspan="1">11</td>
+                  <td align="left" rowspan="1" colspan="1">21</td>
+                  <td align="left" rowspan="1" colspan="1">12</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">χ<sup>2</sup></td>
+                  <td align="left" rowspan="1" colspan="1">57.163</td>
+                  <td align="left" rowspan="1" colspan="1">44.114</td>
+                  <td align="left" rowspan="1" colspan="1">3.490</td>
+                  <td align="left" rowspan="1" colspan="1">5.917</td>
+                  <td align="left" rowspan="1" colspan="1">3.641</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">p</td>
+                  <td align="left" rowspan="1" colspan="1">0.914</td>
+                  <td align="left" rowspan="1" colspan="1">0.036</td>
+                  <td align="left" rowspan="1" colspan="1">0.983</td>
+                  <td align="left" rowspan="1" colspan="1">0.999</td>
+                  <td align="left" rowspan="1" colspan="1">0.989</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Chiffchaff</td>
+                  <td align="left" rowspan="1" colspan="1">df</td>
+                  <td align="left" rowspan="1" colspan="1">63</td>
+                  <td align="left" rowspan="1" colspan="1">27</td>
+                  <td align="left" rowspan="1" colspan="1">12</td>
+                  <td align="left" rowspan="1" colspan="1">18</td>
+                  <td align="left" rowspan="1" colspan="1">6</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">χ<sup>2</sup></td>
+                  <td align="left" rowspan="1" colspan="1">69.501</td>
+                  <td align="left" rowspan="1" colspan="1">45.083</td>
+                  <td align="left" rowspan="1" colspan="1">8.450</td>
+                  <td align="left" rowspan="1" colspan="1">14.324</td>
+                  <td align="left" rowspan="1" colspan="1">1.644</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">p</td>
+                  <td align="left" rowspan="1" colspan="1">0.268</td>
+                  <td align="left" rowspan="1" colspan="1">0.016</td>
+                  <td align="left" rowspan="1" colspan="1">0.749</td>
+                  <td align="left" rowspan="1" colspan="1">0.708</td>
+                  <td align="left" rowspan="1" colspan="1">0.949</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Willow Warbler</td>
+                  <td align="left" rowspan="1" colspan="1">df</td>
+                  <td align="left" rowspan="1" colspan="1">45</td>
+                  <td align="left" rowspan="1" colspan="1">26</td>
+                  <td align="left" rowspan="1" colspan="1">10</td>
+                  <td align="left" rowspan="1" colspan="1">8</td>
+                  <td align="left" rowspan="1" colspan="1">1</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">χ<sup>2</sup></td>
+                  <td align="left" rowspan="1" colspan="1">62.644</td>
+                  <td align="left" rowspan="1" colspan="1">51.743</td>
+                  <td align="left" rowspan="1" colspan="1">3.540</td>
+                  <td align="left" rowspan="1" colspan="1">6.425</td>
+                  <td align="left" rowspan="1" colspan="1">0.936</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">p</td>
+                  <td align="left" rowspan="1" colspan="1">0.042</td>
+                  <td align="left" rowspan="1" colspan="1">0.002</td>
+                  <td align="left" rowspan="1" colspan="1">0.966</td>
+                  <td align="left" rowspan="1" colspan="1">0.600</td>
+                  <td align="left" rowspan="1" colspan="1">0.333</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Reed Bunting</td>
+                  <td align="left" rowspan="1" colspan="1">df</td>
+                  <td align="left" rowspan="1" colspan="1">97</td>
+                  <td align="left" rowspan="1" colspan="1">30</td>
+                  <td align="left" rowspan="1" colspan="1">21</td>
+                  <td align="left" rowspan="1" colspan="1">27</td>
+                  <td align="left" rowspan="1" colspan="1">19</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">χ<sup>2</sup></td>
+                  <td align="left" rowspan="1" colspan="1">116.547</td>
+                  <td align="left" rowspan="1" colspan="1">78.848</td>
+                  <td align="left" rowspan="1" colspan="1">6.858</td>
+                  <td align="left" rowspan="1" colspan="1">22.668</td>
+                  <td align="left" rowspan="1" colspan="1">8.174</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">p</td>
+                  <td align="left" rowspan="1" colspan="1">0.086</td>
+                  <td align="left" rowspan="1" colspan="1">&lt;0.001</td>
+                  <td align="left" rowspan="1" colspan="1">0.998</td>
+                  <td align="left" rowspan="1" colspan="1">0.703</td>
+                  <td align="left" rowspan="1" colspan="1">0.985</td>
+                </tr>
+              </tbody>
+            </table>
+          </alternatives>
+          <table-wrap-foot>
+            <fn id="nt102">
+              <p>Shown are the degrees of freedom, χ<sup>2</sup> and p-values for the global test as well as for the tests 3.SR, 3.SM, 2.CT and 2.CL.</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+        <p>We used the program MARK 4.2 <xref ref-type="bibr" rid="pone.0059110-White1">[52]</xref> to estimate rates of apparent survival (Φ) with mark-recapture analyses. We performed a three step analysis to limit the number of candidate models that we examined <xref ref-type="bibr" rid="pone.0059110-Lebreton1">[53]</xref>, <xref ref-type="bibr" rid="pone.0059110-Grebler1">[54]</xref>. Capture probabilities (p) are nuisance factors in our study, but inappropriate models of capture probabilities will bias apparent survival estimates of the model. Thus, our initial step was to determine the appropriate model descriptions of recapture probability, comparing models in which parameters for apparent survival were modelled as having an age structure and were time dependent and treated recapture probability as either: varying among years but with no linear trend, with a linear time trend or as invariant through time. Following Lebreton et al. <xref ref-type="bibr" rid="pone.0059110-Lebreton1">[53]</xref> these models are denoted as {Φ(a<sub>2</sub>*t) p(t)}, {Φ(a<sub>2</sub>*t) p(T)} and {Φ(a<sub>2</sub>*t) p(.)} respectively. The most parsimonious recapture model was the model {Φ(a<sub>2</sub>*t) p(.)} for all species except for the willow warbler for which the most parsimonious model was {Φ(a<sub>2</sub>*t) p(T)}, with a strong linear decline in between-year recapture probability throughout the study period. Therefore, except for the willow warbler, we kept the recapture probability constant in the second step of our analyses to model apparent survival probabilities using the logit link function in MARK. For the willow warbler we included a linear time trend for the recapture probability in all models. This second step compared a set of models, in which age (first year or older) was modelled as an interaction with either a single weather factor, time either as a categorical variable (t), or time as a linear trend (T), as well as a model in which age alone was a predictor. In a third step we then rerun the most parsimonious model from step two with the three capture probabilities that we examined in the first step, but this third step did not lead to a different model being selected. Therefore we do only present the results of the analyses after step two. The final set of models is found in <xref ref-type="table" rid="pone-0059110-t003">Table 3</xref>. Akaike's Information Criterion for small sample sizes (AIC<sub>C</sub>, <xref ref-type="bibr" rid="pone.0059110-Burnham2">[55]</xref>) was used to rank the models and the model with the lowest AIC<sub>C</sub>-value is the most parsimonious one that is best supported by the data. All models with a ΔAIC<sub>C</sub> ≤2 are treated as having similar support from the data compared to the most parsimonious model <xref ref-type="bibr" rid="pone.0059110-Burnham2">[55]</xref>.</p>
+        <table-wrap id="pone-0059110-t003" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0059110.t003</object-id>
+          <label>Table 3</label>
+          <caption>
+            <title>Apparent survival in relation to climate variables, calculated using capture-mark-recapture analyses, for seven passerine bird species.</title>
+          </caption>
+          <alternatives>
+            <graphic id="pone-0059110-t003-3" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0059110.t003" xlink:type="simple"/>
+            <table>
+              <colgroup span="1">
+                <col align="left" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Model</td>
+                  <td colspan="14" align="left" rowspan="1">Species</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td colspan="2" align="left" rowspan="1">Dunnock</td>
+                  <td colspan="2" align="left" rowspan="1">Blackbird</td>
+                  <td colspan="2" align="left" rowspan="1">Reed warbler</td>
+                  <td colspan="2" align="left" rowspan="1">Blackcap</td>
+                  <td colspan="2" align="left" rowspan="1">Chiffchaff</td>
+                  <td colspan="2" align="left" rowspan="1">Willow warbler</td>
+                  <td colspan="2" align="left" rowspan="1">Reed bunting</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">ΔAIC<sub>C</sub></td>
+                  <td align="left" rowspan="1" colspan="1">AIC<sub>C</sub>W</td>
+                  <td align="left" rowspan="1" colspan="1">ΔAIC<sub>C</sub></td>
+                  <td align="left" rowspan="1" colspan="1">AIC<sub>C</sub>W</td>
+                  <td align="left" rowspan="1" colspan="1">ΔAIC<sub>C</sub></td>
+                  <td align="left" rowspan="1" colspan="1">AIC<sub>C</sub>W</td>
+                  <td align="left" rowspan="1" colspan="1">ΔAIC<sub>C</sub></td>
+                  <td align="left" rowspan="1" colspan="1">AIC<sub>C</sub>W</td>
+                  <td align="left" rowspan="1" colspan="1">ΔAIC<sub>C</sub></td>
+                  <td align="left" rowspan="1" colspan="1">AIC<sub>C</sub>W</td>
+                  <td align="left" rowspan="1" colspan="1">ΔAIC<sub>C</sub></td>
+                  <td align="left" rowspan="1" colspan="1">AIC<sub>C</sub>W</td>
+                  <td align="left" rowspan="1" colspan="1">ΔAIC<sub>C</sub></td>
+                  <td align="left" rowspan="1" colspan="1">AIC<sub>C</sub>W</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Φ(a<sub>2</sub>)</td>
+                  <td align="left" rowspan="1" colspan="1">1.2</td>
+                  <td align="left" rowspan="1" colspan="1">0.153</td>
+                  <td align="left" rowspan="1" colspan="1">5.6</td>
+                  <td align="left" rowspan="1" colspan="1">0.035</td>
+                  <td align="left" rowspan="1" colspan="1">2.1</td>
+                  <td align="left" rowspan="1" colspan="1">0.113</td>
+                  <td align="left" rowspan="1" colspan="1">3.6</td>
+                  <td align="left" rowspan="1" colspan="1">0.084</td>
+                  <td align="left" rowspan="1" colspan="1">13.7</td>
+                  <td align="left" rowspan="1" colspan="1">0.001</td>
+                  <td align="left" rowspan="1" colspan="1">4.5</td>
+                  <td align="left" rowspan="1" colspan="1">0.034</td>
+                  <td align="left" rowspan="1" colspan="1">9.8</td>
+                  <td align="left" rowspan="1" colspan="1">0.007</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Φ(a<sub>2*bsp</sub>)</td>
+                  <td align="left" rowspan="1" colspan="1">3.1</td>
+                  <td align="left" rowspan="1" colspan="1">0.060</td>
+                  <td align="left" rowspan="1" colspan="1">2.8</td>
+                  <td align="left" rowspan="1" colspan="1">0.140</td>
+                  <td align="left" rowspan="1" colspan="1">5.2</td>
+                  <td align="left" rowspan="1" colspan="1">0.023</td>
+                  <td align="left" rowspan="1" colspan="1">6.7</td>
+                  <td align="left" rowspan="1" colspan="1">0.017</td>
+                  <td align="left" rowspan="1" colspan="1">11.9</td>
+                  <td align="left" rowspan="1" colspan="1">0.002</td>
+                  <td align="left" rowspan="1" colspan="1">2.3</td>
+                  <td align="left" rowspan="1" colspan="1">0.099</td>
+                  <td align="left" rowspan="1" colspan="1">10.6</td>
+                  <td align="left" rowspan="1" colspan="1">0.005</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Φ(a<sub>2*wt</sub>)</td>
+                  <td align="left" rowspan="1" colspan="1">0.1</td>
+                  <td align="left" rowspan="1" colspan="1">0.260</td>
+                  <td align="left" rowspan="1" colspan="1">0.0<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.556<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">4.6</td>
+                  <td align="left" rowspan="1" colspan="1">0.031</td>
+                  <td align="left" rowspan="1" colspan="1">5.2</td>
+                  <td align="left" rowspan="1" colspan="1">0.038</td>
+                  <td align="left" rowspan="1" colspan="1">7.0</td>
+                  <td align="left" rowspan="1" colspan="1">0.029</td>
+                  <td align="left" rowspan="1" colspan="1">4.5</td>
+                  <td align="left" rowspan="1" colspan="1">0.034</td>
+                  <td align="left" rowspan="1" colspan="1">13.0</td>
+                  <td align="left" rowspan="1" colspan="1">0.001</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Φ(a<sub>2*sn</sub>)</td>
+                  <td align="left" rowspan="1" colspan="1">4.8</td>
+                  <td align="left" rowspan="1" colspan="1">0.025</td>
+                  <td align="left" rowspan="1" colspan="1">2.0</td>
+                  <td align="left" rowspan="1" colspan="1">0.204</td>
+                  <td align="left" rowspan="1" colspan="1">3.2</td>
+                  <td align="left" rowspan="1" colspan="1">0.062</td>
+                  <td align="left" rowspan="1" colspan="1">4.5</td>
+                  <td align="left" rowspan="1" colspan="1">0.052</td>
+                  <td align="left" rowspan="1" colspan="1">0.0<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.958<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.0<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.319<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">11.5</td>
+                  <td align="left" rowspan="1" colspan="1">0.003</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Φ(a<sub>2*pSp</sub>)</td>
+                  <td align="left" rowspan="1" colspan="1">3.7</td>
+                  <td align="left" rowspan="1" colspan="1">0.045</td>
+                  <td align="left" rowspan="1" colspan="1">9.5</td>
+                  <td align="left" rowspan="1" colspan="1">0.005</td>
+                  <td align="left" rowspan="1" colspan="1">0.6</td>
+                  <td align="left" rowspan="1" colspan="1">0.239</td>
+                  <td align="left" rowspan="1" colspan="1">2.0</td>
+                  <td align="left" rowspan="1" colspan="1">0.187</td>
+                  <td align="left" rowspan="1" colspan="1">16.3</td>
+                  <td align="left" rowspan="1" colspan="1">&lt;0.001</td>
+                  <td align="left" rowspan="1" colspan="1">1.4</td>
+                  <td align="left" rowspan="1" colspan="1">0.159</td>
+                  <td align="left" rowspan="1" colspan="1">0.0<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.962<sup>1</sup></td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Φ(a<sub>2*pSz</sub>)</td>
+                  <td align="left" rowspan="1" colspan="1">1.8</td>
+                  <td align="left" rowspan="1" colspan="1">0.116</td>
+                  <td align="left" rowspan="1" colspan="1">6.8</td>
+                  <td align="left" rowspan="1" colspan="1">0.019</td>
+                  <td align="left" rowspan="1" colspan="1">1.4</td>
+                  <td align="left" rowspan="1" colspan="1">0.159</td>
+                  <td align="left" rowspan="1" colspan="1">6.9</td>
+                  <td align="left" rowspan="1" colspan="1">0.016</td>
+                  <td align="left" rowspan="1" colspan="1">14.8</td>
+                  <td align="left" rowspan="1" colspan="1">0.001</td>
+                  <td align="left" rowspan="1" colspan="1">1.7</td>
+                  <td align="left" rowspan="1" colspan="1">0.137</td>
+                  <td align="left" rowspan="1" colspan="1">9.4</td>
+                  <td align="left" rowspan="1" colspan="1">0.009</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Φ(a<sub>2*pGz</sub>)</td>
+                  <td align="left" rowspan="1" colspan="1">4.3</td>
+                  <td align="left" rowspan="1" colspan="1">0.032</td>
+                  <td align="left" rowspan="1" colspan="1">8.5</td>
+                  <td align="left" rowspan="1" colspan="1">0.008</td>
+                  <td align="left" rowspan="1" colspan="1">4.3</td>
+                  <td align="left" rowspan="1" colspan="1">0.036</td>
+                  <td align="left" rowspan="1" colspan="1">0.0<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.506<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">9.6</td>
+                  <td align="left" rowspan="1" colspan="1">0.008</td>
+                  <td align="left" rowspan="1" colspan="1">4.9</td>
+                  <td align="left" rowspan="1" colspan="1">0.028</td>
+                  <td align="left" rowspan="1" colspan="1">9.3</td>
+                  <td align="left" rowspan="1" colspan="1">0.009</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Φ(a<sub>2*NAO</sub>)</td>
+                  <td align="left" rowspan="1" colspan="1">0.0<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.280<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">9.3</td>
+                  <td align="left" rowspan="1" colspan="1">0.005</td>
+                  <td align="left" rowspan="1" colspan="1">0.0<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.316<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">3.7</td>
+                  <td align="left" rowspan="1" colspan="1">0.081</td>
+                  <td align="left" rowspan="1" colspan="1">16.2</td>
+                  <td align="left" rowspan="1" colspan="1">0.003</td>
+                  <td align="left" rowspan="1" colspan="1">4.3</td>
+                  <td align="left" rowspan="1" colspan="1">0.038</td>
+                  <td align="left" rowspan="1" colspan="1">13.5</td>
+                  <td align="left" rowspan="1" colspan="1">0.001</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Φ(a<sub>2*T</sub>)</td>
+                  <td align="left" rowspan="1" colspan="1">4.5</td>
+                  <td align="left" rowspan="1" colspan="1">0.030</td>
+                  <td align="left" rowspan="1" colspan="1">5.9</td>
+                  <td align="left" rowspan="1" colspan="1">0.029</td>
+                  <td align="left" rowspan="1" colspan="1">5.6</td>
+                  <td align="left" rowspan="1" colspan="1">0.019</td>
+                  <td align="left" rowspan="1" colspan="1">6.6</td>
+                  <td align="left" rowspan="1" colspan="1">0.012</td>
+                  <td align="left" rowspan="1" colspan="1">14.8</td>
+                  <td align="left" rowspan="1" colspan="1">0.001</td>
+                  <td align="left" rowspan="1" colspan="1">1.5</td>
+                  <td align="left" rowspan="1" colspan="1">0.153</td>
+                  <td align="left" rowspan="1" colspan="1">12.4</td>
+                  <td align="left" rowspan="1" colspan="1">0.002</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Φ(a<sub>2*t</sub>)</td>
+                  <td align="left" rowspan="1" colspan="1">80.1</td>
+                  <td align="left" rowspan="1" colspan="1">&lt;0.001</td>
+                  <td align="left" rowspan="1" colspan="1">85.7</td>
+                  <td align="left" rowspan="1" colspan="1">0.029</td>
+                  <td align="left" rowspan="1" colspan="1">56.0</td>
+                  <td align="left" rowspan="1" colspan="1">&lt;0.001</td>
+                  <td align="left" rowspan="1" colspan="1">57.9</td>
+                  <td align="left" rowspan="1" colspan="1">&lt;0.001</td>
+                  <td align="left" rowspan="1" colspan="1">19.8</td>
+                  <td align="left" rowspan="1" colspan="1">&lt;0.001</td>
+                  <td align="left" rowspan="1" colspan="1">34.1</td>
+                  <td align="left" rowspan="1" colspan="1">&lt;0.001</td>
+                  <td align="left" rowspan="1" colspan="1">49.6</td>
+                  <td align="left" rowspan="1" colspan="1">&lt;0.001</td>
+                </tr>
+              </tbody>
+            </table>
+          </alternatives>
+          <table-wrap-foot>
+            <fn id="nt103">
+              <p>Shown are the parameters included in each of the models that we used to predict apparent survival Φ, the ΔAIC values for small sample sizes (ΔAIC<sub>C</sub>) and the AIC weights (AIC<sub>C</sub>W) for all models. Recapture probability was always held constant {p(.), see <xref ref-type="sec" rid="s2">methods</xref>} except for the willow warbler where it was modelled to have a linear effect {p(T)}. See <xref ref-type="sec" rid="s2">methods</xref> for abbreviations of climate variables. <sup>1</sup>: the most parsimonious model for a species.</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+        <p>Mortality of birds is high during their first months of life <xref ref-type="bibr" rid="pone.0059110-NaefDaenzer1">[56]</xref>, <xref ref-type="bibr" rid="pone.0059110-Grebler2">[57]</xref> and natal dispersal is in general greater than breeding dispersal <xref ref-type="bibr" rid="pone.0059110-Paradis1">[58]</xref>. As both factors reduce the probability of apparent survival we assumed that apparent survival probability is lower for first year birds than for birds that have returned to the study site at least once. Apparent survival of first year birds is probably to a large extent explained by natal dispersal, but as birds tend to stay at the same breeding area once dispersed from the natal site <xref ref-type="bibr" rid="pone.0059110-Paradis1">[58]</xref> we assume that apparent survival of adult birds reflects mostly true survival, at least after breeding seasons with favourable breeding conditions.</p>
+        <p>In order to quantify the effect of the weather variables and the NAO on between-year apparent survival we calculated the proportion of deviance explained by these factors. According to Grosbois et al. <xref ref-type="bibr" rid="pone.0059110-Grosbois1">[59]</xref> the proportion of deviance of the temporal variance explained by a model including a weather factor or the NAO is:<disp-formula id="pone.0059110.e002"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0059110.e002" xlink:type="simple"/></disp-formula></p>
+        <p>where devMt and devM0 are the deviances of the models {Φ(a<sub>2*</sub>t)p(.)} and {Φ(a<sub>2</sub>)p(.)} ({Φ(a<sub>2*</sub>t)p(T)} and {Φ(a<sub>2</sub>)p(T)} for the willow warbler). The deviance for the respective models including the weather factor or the NAO is devMcf.</p>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Results</title>
+      <sec id="s3a">
+        <title>Importance of weather in different seasons and regions for apparent survival</title>
+        <p>Winter weather on the breeding grounds affected apparent survival of species with varying migration strategies, but rates of apparent survival were not influenced by precipitation during the breeding season for any species. This result (<xref ref-type="table" rid="pone-0059110-t003">Table 3</xref>) was contrary to our first hypothesis. Winter temperature at the study site was included in the most parsimonious model for the resident blackbird (AIC<sub>C</sub> weight  = 0.556) and had high support for the short distance migrant dunnock (AIC<sub>C</sub> weight  = 0.260, <xref ref-type="table" rid="pone-0059110-t003">Table 3</xref>). Snow cover was included in the most parsimonious models in the long-distance migrant willow warbler (AIC<sub>C</sub> weight  = 0.319) and the short-distance migrant chiffchaff (AIC<sub>C</sub> weight  = 0.958) and had high support for the resident blackbird (AIC<sub>C</sub> weight  = 0.204, <xref ref-type="table" rid="pone-0059110-t003">Table 3</xref>).</p>
+        <p>Our second hypothesis, that weather in the Mediterranean is an important predictor of apparent survival of both short- and long-distance migrants, was supported for four out of six migratory or partially migratory species (<xref ref-type="table" rid="pone-0059110-t003">Table 3</xref>, but not the blackbird for which a high proportion of the population is probably resident). Precipitation in Spain was included in the most parsimonious model for the short-distance migrant reed bunting (AIC<sub>C</sub> weight  = 0.962) and had high support for short-distance migrant blackcap (AIC<sub>C</sub>  = 0.187) and for the long-distance migrants reed warbler (AIC<sub>C</sub> weight  = 0.239) and willow warbler (AIC<sub>C</sub>  = 0.159). Furthermore, the NAO was included in the most parsimonious model for the short distance migrant dunnock (AIC<sub>C</sub> weight  = 0.280) and the long-distance migrant reed warbler (AIC<sub>C</sub>  = 0.316).</p>
+        <p>Our third hypothesis was also confirmed. The Sahel-index was included in the set of most parsimonious models (AIC<sub>C</sub> ≤2) in the long-distance migrants reed warbler (AIC<sub>C</sub>  = 0.159) and willow warbler (AIC<sub>C</sub> weight  = 0.137, <xref ref-type="table" rid="pone-0059110-t003">Table 3</xref>). However, the model including the Sahel-index was also amongst the most parsimonious models in the short-distance migrant dunnock (AIC<sub>C</sub>  = 0.116) and the Guinea-index was included in the most parsimonious model in the short-distance migrant blackcap (0.506).</p>
+      </sec>
+      <sec id="s3b">
+        <title>Effects of weather variables on apparent survival</title>
+        <p>When weather features were identified as being important predictors of apparent survival (the most parsimonious models and those with a ΔAIC ≤2), our a priori expectations about the directions of association of age and of the weather factors were met in the majority of cases (<xref ref-type="table" rid="pone-0059110-t004">Table 4</xref>). However, estimated magnitudes of weather effects were often small and standard errors relatively large. We expected apparent survival of first year birds to be lower than for birds that had already bred at the study site. This was the case in all of the sixteen models that had the highest support from the data. With respect to the weather factors, higher winter temperature (n = 4 species-age combinations, <xref ref-type="table" rid="pone-0059110-t004">Table 4</xref>) in the breeding area was almost always associated with higher apparent survival. Only in first year dunnocks was a higher winter temperature associated with lower apparent survival. An increasing number of days with snow cover was always associated with lower apparent survival (n = 6 species-age combinations). The NAO was associated with higher apparent survival for both age classes of the reed warbler as well as in adult dunnocks but associated with lower apparent survival of first year dunnocks. Apparent survival was lower with increased precipitation during winter in Spain in both age classes of the reed warbler and the reed bunting, consistent with our expectation. However, in adult blackcaps and willow warblers of both age classes apparent survival was higher with increased precipitation in Spain. For the willow warbler we also found a general linear increase in apparent survival throughout the study period for both first year and adult birds (<xref ref-type="table" rid="pone-0059110-t004">Table 4</xref>). With respect to precipitation on the wintering grounds of long-distance migrants, precipitation in the Sahel zone was positively correlated with apparent survival for both age classes of the reed warblers but only for adult willow warblers. Contrary to our expectation higher precipitation in the Guinea zone was associated with lower apparent survival of the blackcap. However, the support for this model for the latter species as well as the inclusion of the model including Sahel precipitation in the dunnock may be an artefact because this association makes little biological sense.</p>
+        <table-wrap id="pone-0059110-t004" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0059110.t004</object-id>
+          <label>Table 4</label>
+          <caption>
+            <title>ß-values (± se) of the models that included a weather variable with the highest support from the data.</title>
+          </caption>
+          <alternatives>
+            <graphic id="pone-0059110-t004-4" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0059110.t004" xlink:type="simple"/>
+            <table>
+              <colgroup span="1">
+                <col align="left" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">Dunnock</td>
+                  <td align="left" rowspan="1" colspan="1">Blackbird</td>
+                  <td align="left" rowspan="1" colspan="1">Reed Warbler</td>
+                  <td align="left" rowspan="1" colspan="1">Blackcap</td>
+                  <td align="left" rowspan="1" colspan="1">Chiffchaff</td>
+                  <td align="left" rowspan="1" colspan="1">Willow Warbler</td>
+                  <td align="left" rowspan="1" colspan="1">Reed Bunting</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Model 1</td>
+                  <td align="left" rowspan="1" colspan="1">Age<sub>NAO</sub>: −1.370±0.393<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">Age: −2.713±0.343<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">Age<sub>NAO</sub>: −0.788±0.383<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">Age: −2.275±0.312<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">Age: −1.433±0.216<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">Age: −1.374±0.225<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">Age: −1.374±0.169<sup>1</sup></td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">NAO<sub>fy</sub>: −0.171±0.085</td>
+                  <td align="left" rowspan="1" colspan="1">wt<sub>fy</sub>: 0.432±0.168<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">NAO<sub>fy</sub>: 0.137±0.062<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">pGz<sub>fy</sub>: −0.028±0.011</td>
+                  <td align="left" rowspan="1" colspan="1">sn<sub>fy</sub>: −0.255±0.070<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">sn<sub>fy</sub>: −0.154±0.099<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">pSp<sub>fy</sub>: −0.011±0.003<sup>1</sup></td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">NAO<sub>ad</sub>: 0.163±0.130<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">wt<sub>ad</sub>: 0.430±0.318<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">NAO<sub>ad</sub>: 0.068±0.091<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">pGz<sub>ad</sub>: −0.029±0.020</td>
+                  <td align="left" rowspan="1" colspan="1">sn<sub>ad</sub>: −0.247±0.158<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">sn<sub>ad</sub>: −0.413±0.180<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">pSp<sub>ad</sub>: −0.007±0.005<sup>1</sup></td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Model 2</td>
+                  <td align="left" rowspan="1" colspan="1">Age: −1.716±0.353<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">Age: −2.667±0.345<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">Age: −0.673±0.374<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">Age: −2.173±0.297<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">Age: −1.496±0.226<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">wt<sub>fy</sub>: −0.304±0.171</td>
+                  <td align="left" rowspan="1" colspan="1">sn<sub>fy</sub>: −0.131±0.672<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">pSp<sub>fy</sub>: −0.009±0.005<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">pSp<sub>fy</sub>: −0.009±0.004<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">pSp<sub>fy</sub>: 0.011±0.004</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">wt<sub>ad</sub>: 0.355±0.258<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">sn<sub>ad</sub>: −0.839±0.360<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">pSp<sub>ad</sub>: −0.013±0.009<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">pSp<sub>ad</sub>: 0.014±0.010</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">pSp<sub>ad</sub>: 0.003±0.008</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Model 3</td>
+                  <td align="left" rowspan="1" colspan="1">Age: −2.537±0.576<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">Age: −0.493±0.453<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">Age: −1.610±0.402<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">pSz<sub>fy</sub>: −0.002±0.005</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">pSz<sub>fy</sub>: 0.002±0.003<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">T<sub>fy</sub>: 0.037±&lt;0.001</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">pSz<sub>ad</sub>: 0.003±0.002<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">pSz<sub>ad</sub>: 0.001±0.001<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">T<sub>ad</sub>: 0.017±0.016</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Model 4</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">Age: −1.942±0.313<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">pSz<sub>fy</sub>: −0.002±0.003</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">pSz<sub>ad</sub>: 0.002±0.001<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+              </tbody>
+            </table>
+          </alternatives>
+          <table-wrap-foot>
+            <fn id="nt104">
+              <p>Shown are the ß-values for the factor age (negative values indicate a lower apparent survival probability of first year birds) and for the climate variable for both age classes (fy: first year birds, ad: adult birds) for the most parsimonious model (Model 1) of the species and for the models with a ΔAIC<sub>C</sub> ≤2.0 (Models 2–4). The models are indicated by the variables that are used to estimate apparent survival. <sup>1</sup>: regression coefficients whose signs are consistent with a priori expectations. Note that we had no a priori expectations for the sign of the coefficient for the model including a constant trend in survival probability for the willow warbler.</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </sec>
+      <sec id="s3c">
+        <title>Single weather factors do not explain a large amount of variation of apparent survival</title>
+        <p>For only two species did a single model containing a weather variable have high support, as evidence by one or more additional model with support (ΔAIC<sub>C</sub> &gt;2, <xref ref-type="table" rid="pone-0059110-t003">Table 3</xref>). The two species were the chiffchaff and the reed bunting, for which the model including snow cover on the breeding grounds and winter precipitation in Spain, respectively, had a higher support from the data than any other model. In the blackbird, however, the two models describing winter harshness (winter temperature, ΔAIC<sub>C</sub>  = 0.0, and snow cover, ΔAIC<sub>C</sub>  = 2.0) both explained a similar amount of apparent survival. Note, however, that in the dunnock models included variables (NAO, winter temperature) that were correlated with each other and some of the information in the model set may therefore be redundant.</p>
+        <p>None of the variables included in the most parsimonious models explained overwhelming proportions of the temporal variance of apparent survival of the target species (<xref ref-type="table" rid="pone-0059110-t005">Table 5</xref>). The highest values were reached in the blackbird, the reed bunting and the chiffchaff where the models containing winter temperature, precipitation in Spain and snow cover explained 19.5%, 15.7% and 14.7% of the temporal variance of apparent survival, respectively. Additionally the model containing snow cover explained 15.5% of the temporal variance of apparent survival in the blackbird. In all other species no model explained much more than 10% of the temporal variance of apparent survival. Relatively high values were reached in the blackcap for which the model containing the Guinea-zone precipitation index explained 10.3% of apparent survival. A relatively high amount of variation in apparent survival was explained by the models containing the NAO in the dunnock (8.5%) and the reed warbler (7.9%) as well as by the models containing winter temperature for the dunnock (8.3%), precipitation in Spain for the blackcap (7.6%) and the reed warbler (7.2%) and snow cover for the willow warbler (8.2%).</p>
+        <table-wrap id="pone-0059110-t005" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0059110.t005</object-id>
+          <label>Table 5</label>
+          <caption>
+            <title>Proportions of the temporal variance that can be explained by each of the climate factors.</title>
+          </caption>
+          <alternatives>
+            <graphic id="pone-0059110-t005-5" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0059110.t005" xlink:type="simple"/>
+            <table>
+              <colgroup span="1">
+                <col align="left" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Species</td>
+                  <td align="left" rowspan="1" colspan="1">Φ(NAO)</td>
+                  <td align="left" rowspan="1" colspan="1">Φ(wt)</td>
+                  <td align="left" rowspan="1" colspan="1">Φ(sn)</td>
+                  <td align="left" rowspan="1" colspan="1">Φ(bsp)</td>
+                  <td align="left" rowspan="1" colspan="1">Φ(pSp)</td>
+                  <td align="left" rowspan="1" colspan="1">Φ(pSz)</td>
+                  <td align="left" rowspan="1" colspan="1">Φ(pGz)</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Dunnock</td>
+                  <td align="left" rowspan="1" colspan="1">0.085<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.083<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.007</td>
+                  <td align="left" rowspan="1" colspan="1">0.035</td>
+                  <td align="left" rowspan="1" colspan="1">0.026</td>
+                  <td align="left" rowspan="1" colspan="1">0.056<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.015</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Blackbird</td>
+                  <td align="left" rowspan="1" colspan="1">0.006</td>
+                  <td align="left" rowspan="1" colspan="1">0.195<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.155<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.139</td>
+                  <td align="left" rowspan="1" colspan="1">0.001</td>
+                  <td align="left" rowspan="1" colspan="1">0.057</td>
+                  <td align="left" rowspan="1" colspan="1">0.021</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Reed Warbler</td>
+                  <td align="left" rowspan="1" colspan="1">0.079<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.019</td>
+                  <td align="left" rowspan="1" colspan="1">0.037</td>
+                  <td align="left" rowspan="1" colspan="1">0.012</td>
+                  <td align="left" rowspan="1" colspan="1">0.072<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.061<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.023</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Blackcap</td>
+                  <td align="left" rowspan="1" colspan="1">0.054</td>
+                  <td align="left" rowspan="1" colspan="1">0.033</td>
+                  <td align="left" rowspan="1" colspan="1">0.042</td>
+                  <td align="left" rowspan="1" colspan="1">0.012</td>
+                  <td align="left" rowspan="1" colspan="1">0.076<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.010</td>
+                  <td align="left" rowspan="1" colspan="1">0.103<sup>1</sup></td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Chiffchaff</td>
+                  <td align="left" rowspan="1" colspan="1">0.012</td>
+                  <td align="left" rowspan="1" colspan="1">0.089</td>
+                  <td align="left" rowspan="1" colspan="1">0.147<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.048</td>
+                  <td align="left" rowspan="1" colspan="1">0.012</td>
+                  <td align="left" rowspan="1" colspan="1">0.024</td>
+                  <td align="left" rowspan="1" colspan="1">0.067</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Willow Warbler</td>
+                  <td align="left" rowspan="1" colspan="1">0.041</td>
+                  <td align="left" rowspan="1" colspan="1">0.039</td>
+                  <td align="left" rowspan="1" colspan="1">0.082<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.060</td>
+                  <td align="left" rowspan="1" colspan="1">0.069<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.066<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.035</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Reed Bunting</td>
+                  <td align="left" rowspan="1" colspan="1">0.003</td>
+                  <td align="left" rowspan="1" colspan="1">0.009</td>
+                  <td align="left" rowspan="1" colspan="1">0.026</td>
+                  <td align="left" rowspan="1" colspan="1">0.037</td>
+                  <td align="left" rowspan="1" colspan="1">0.157<sup>1</sup></td>
+                  <td align="left" rowspan="1" colspan="1">0.050</td>
+                  <td align="left" rowspan="1" colspan="1">0.051</td>
+                </tr>
+              </tbody>
+            </table>
+          </alternatives>
+          <table-wrap-foot>
+            <fn id="nt105">
+              <p>Shown is the R<sup>2</sup><sub>dev</sub> for each factor for apparent survival Φ. <sup>1</sup>: climate variables included in the most supported models (ΔAIC<sub>C</sub> ≤2).</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </sec>
+    </sec>
+    <sec id="s4">
+      <title>Discussion</title>
+      <p>We found evidence that some facets of weather generally affected the apparent survival of the bird species that we examined: models containing measures of weather were in general better supported than models treating apparent survival as varying non-systematically over time or changing linearly through time. We showed that diverse facets of weather were associated with apparent survival. Nevertheless, our a priori hypotheses of specific effects of weather were not always met. Given the wide range of potential causes of mortality of wild birds throughout a year, we found that variation in our weather variables was not a dominant cause of inter-annual variation in apparent survival. Support of any model by the data was in general relatively low indicating that factors other than those considered by us are associated with apparent survival.</p>
+      <p>Contrary to our first hypothesis we found no support for effects of breeding-season weather on between-year apparent survival. Our results suggest that between-year apparent survival may depend more on weather affecting demography during the non-breeding season as in previous studies <xref ref-type="bibr" rid="pone.0059110-Stokke1">[10]</xref>, <xref ref-type="bibr" rid="pone.0059110-Robinson1">[40]</xref>, <xref ref-type="bibr" rid="pone.0059110-Jansson1">[60]</xref>, <xref ref-type="bibr" rid="pone.0059110-Robinson2">[61]</xref>. Overall, these results support the contention that population dynamics of birds may be more affected by conditions during the non-breeding season <xref ref-type="bibr" rid="pone.0059110-Schaub1">[9]</xref>, <xref ref-type="bibr" rid="pone.0059110-Jrvinen1">[62]</xref>–<xref ref-type="bibr" rid="pone.0059110-Peach1">[64]</xref>. However, we have no data on breeding success and no data on the influence of weather on the number of recruits into breeding populations. Therefore our approach cannot directly test whether the tub-hypothesis (winter weather affects population size) or the tap-hypothesis (summer weather affects population size) explains fluctuations of populations.</p>
+      <p>With respect to our second hypothesis apparent survival of most migrants was affected by weather conditions in the western Mediterranean. To our knowledge this is the first study that found a relationship between precipitation in the western Mediterranean and apparent survival of Central European migrating passerines, and indicates that conditions during the non-breeding season can be associated with apparent survival of short-distance as well as long-distance migrants.</p>
+      <p>Confirming our third hypothesis, the model including Sahel-zone precipitation was amongst the most parsimonious models for the two long-distance migrants reed warbler and willow warbler. With respect to the latter species our results contrasts with previous findings that rainfall in the Sahel zone does not account for variation in survival rates of reed warblers <xref ref-type="bibr" rid="pone.0059110-Thaxter1">[65]</xref>. Thus, our result is consistent with a number studies that have found that rainfall or its respective surrogates in the Sahel zone is associated with survival or population fluctuations of various migrating passerine species <xref ref-type="bibr" rid="pone.0059110-Szp1">[8]</xref>, <xref ref-type="bibr" rid="pone.0059110-Boano1">[17]</xref>, <xref ref-type="bibr" rid="pone.0059110-Foppen1">[63]</xref>, <xref ref-type="bibr" rid="pone.0059110-Winstanley1">[66]</xref>–<xref ref-type="bibr" rid="pone.0059110-Saino2">[68]</xref>. Although reed warblers and willow warblers spend the non-breeding season in more southern, moister savannas <xref ref-type="bibr" rid="pone.0059110-Urban1">[69]</xref>, conditions in the Sahel zone may be crucial for fuel accumulation before the crossing of the Sahara desert during spring migration. In line with our findings is that numbers of barn swallows <italic>Hirundo rustica</italic> breeding in the UK was correlated with rainfall in the western Sahel zone but not with rain fall in the winter quarters further south <xref ref-type="bibr" rid="pone.0059110-Robinson3">[70]</xref> and similar findings for the nightingale <xref ref-type="bibr" rid="pone.0059110-Boano1">[17]</xref>.</p>
+      <p>Unexpected was the high support of the model including the Guinea precipitation index by the data of the blackcap. Some blackcaps do winter in the African Guinea savanna zone <xref ref-type="bibr" rid="pone.0059110-Borrow1">[71]</xref>. A few band recoveries suggest those to be birds from the British Isles, France, Belgium or Germany <xref ref-type="bibr" rid="pone.0059110-Dowsett1">[72]</xref>, but the majority of blackcaps from south-western Germany are expected to winter mostly in the western Mediterranean or north-west Europe <xref ref-type="bibr" rid="pone.0059110-Bearhop1">[28]</xref>. Therefore the result for the blackcap suggests either that blackcaps from the study area spend the winter in hitherto unknown regions in Africa or that our result is an artefact, with the precipitation index from a region far away from the wintering grounds of German blackcaps being associated with an unknown variable important for the apparent survival of blackcaps. The latter is definitely the case for the association of rainfall in the Sahel zone with apparent survival of the dunnock as the species has never been recorded in sub-Saharan Africa <xref ref-type="bibr" rid="pone.0059110-Keith1">[73]</xref>.</p>
+      <sec id="s4a">
+        <title>Single weather factors do not explain a large amount of between-year apparent survival</title>
+        <p>No single facet of weather explained a high proportion of variance in apparent survival, which indicates the importance of any single aspect of weather on survival should not be over-generalized. Our results are in contrast to the conclusions of a number of previous studies <xref ref-type="bibr" rid="pone.0059110-Kanyamibwa1">[16]</xref>, <xref ref-type="bibr" rid="pone.0059110-Boano1">[17]</xref>, <xref ref-type="bibr" rid="pone.0059110-Eraud1">[18]</xref>, <xref ref-type="bibr" rid="pone.0059110-North1">[38]</xref>, <xref ref-type="bibr" rid="pone.0059110-Peach2">[67]</xref>. The reasons for the discrepancy could be that we have selected weather features that do not affect apparent survival to a large extent or that the spatial scale of weather variables as well as the birds' distribution is too large to reveal any association of weather with demography. However, most of the weather variables that we considered have also been associated either with apparent survival or with the population dynamics in previous studies using similar methodologies. However, many previous studies considered only a single weather variable or weather variables during a restricted period within the year. In contrast, studies considering various weather variables experienced throughout the annual cycle also found support for the influence of multiple factors on birds' demography and population dynamics <xref ref-type="bibr" rid="pone.0059110-Stokke1">[10]</xref>, <xref ref-type="bibr" rid="pone.0059110-Schaub2">[20]</xref>, <xref ref-type="bibr" rid="pone.0059110-Foppen1">[63]</xref>, <xref ref-type="bibr" rid="pone.0059110-Cowley1">[74]</xref>.</p>
+        <p>Our results suggest complex relationships between survival rates of birds and weather, and also indicate spatial and temporal variation in the effects of weather on survival. For migratory birds a significant correlation of the conditions in the wintering areas with apparent survival does not preclude the possibility that conditions experienced on migration or on the breeding grounds will account for a similar or higher proportion of the variation of apparent survival. For example, while survival of white storks was strongly associated with primary production in the African Sahel zone, precipitation during the breeding season also explained some variation of survival <xref ref-type="bibr" rid="pone.0059110-Schaub1">[9]</xref>. For the same species density on the breeding grounds was associated with precipitation in the Sahel region as well as with winter NAO that affects populations on the breeding grounds <xref ref-type="bibr" rid="pone.0059110-Nevoux1">[75]</xref>. Multiple factors may also affect populations whose members differ in migration routes and wintering areas. In line with this suggestion, models containing the large scale climate variable NAO received strong support for the partial migrant dunnock where individuals from the study site may migrate to different wintering areas <xref ref-type="bibr" rid="pone.0059110-Bauer1">[26]</xref> and for the long-distance migrant reed warbler.</p>
+      </sec>
+      <sec id="s4b">
+        <title>Implications for predicting effects of future climate change</title>
+        <p>The effects of important weather features were in the directions that we expected in most cases. Warmer winters and those with relatively fewer days with snow cover at the study site were associated with higher apparent survival of resident blackbirds as well as of the short-distance migrants dunnock (adults) and chiffchaff. Assuming that this association is due to reduced winter mortality under more benign conditions, this association may indicate a selective advantage under the predicted warmer winters for Central Europe <xref ref-type="bibr" rid="pone.0059110-Rowell1">[12]</xref> for resident species and individuals that avoid the costs of migration <xref ref-type="bibr" rid="pone.0059110-Robinson1">[40]</xref>. Analyses showing that blackbirds became less migratory in recent decades <xref ref-type="bibr" rid="pone.0059110-vanVliet1">[76]</xref> and an increasing number of winter observations of chiffchaffs in the vicinity of the study site <xref ref-type="bibr" rid="pone.0059110-Kolb1">[30]</xref> are consistent with the latter notion. However, although the great majority of chiffchaffs breeding in the study area and all individuals of the long-distance migrant willow warbler spend the winter months away from the study area, apparent survival of these species was associated with the number of days with snow cover on the breeding grounds. For another long-distance migrant warbler of the same genus, the wood warbler, the association of population size with winter severity in Europe has been discussed as being a response to delayed growth of vegetation in spring with a subsequently reduced breeding success <xref ref-type="bibr" rid="pone.0059110-Flade1">[50]</xref>. All three <italic>Phylloscopus</italic> warblers breed on the ground and breeding success may strongly depend on adequate nest concealment. Therefore a harsh winter may affect apparent survival of species similarly regardless of their migratoriness, but not necessarily by affecting survival directly via a higher mortality, but instead by inducing dispersal to more suitable breeding sites.</p>
+        <p>Winter precipitation in the western Mediterranean is expected to decrease <xref ref-type="bibr" rid="pone.0059110-Rowell1">[12]</xref>, <xref ref-type="bibr" rid="pone.0059110-IPCC1">[14]</xref>. According to our study this may increase the apparent survival probability of the short-distance migrant reed bunting and blackcap (first year birds) as well as the long-distance migrant reed warbler. This finding, as well as the linear increase in apparent survival of the willow warbler, would be counter-intuitive to suggestions that long-distance migrants are most likely to suffer from climate change <xref ref-type="bibr" rid="pone.0059110-Mller1">[77]</xref>, <xref ref-type="bibr" rid="pone.0059110-Both1">[78]</xref> (but see <xref ref-type="bibr" rid="pone.0059110-Schaefer1">[79]</xref> for reed warbler) and that decreases of willow warbler populations are caused by reduced survival during the non-breeding season <xref ref-type="bibr" rid="pone.0059110-Peach1">[64]</xref>, <xref ref-type="bibr" rid="pone.0059110-Foppen2">[80]</xref>. As predicted the Sahel precipitation index is included in the most parsimonious models for the two long-distance migrants, reed warbler and willow warbler. In general it is assumed that true survival of long-distance migrants is negatively affected by droughts in the Sahel region through reduced food supply <xref ref-type="bibr" rid="pone.0059110-Kanyamibwa1">[16]</xref>, <xref ref-type="bibr" rid="pone.0059110-Winstanley1">[66]</xref>, <xref ref-type="bibr" rid="pone.0059110-Cowley1">[74]</xref>, <xref ref-type="bibr" rid="pone.0059110-Foppen2">[80]</xref>, <xref ref-type="bibr" rid="pone.0059110-Szp2">[81]</xref> indicating reduced survival of migrants in times of predicted increasing droughts in this region <xref ref-type="bibr" rid="pone.0059110-IPCC1">[14]</xref>.</p>
+        <p>Although the directions of weather effects that we identified met our a priori expectations in the majority of cases and there are clear predictions for future climates, we caution against the use of simple associations to predict future fates of populations because: (1) Single climatic factors explained only a small proportion of variation in apparent survival and therefore the remaining variation in survival rates was either random or due to factors outside of the weather features that we and previous studies have suggested to be important determinants of survival. There is always the possibility that important weather factors were missed in our data set, but the inclusion of weather factors acting at different times of the annual cycle of multiple bird species, and correlations among facets of weather (see <xref ref-type="sec" rid="s2">Methods</xref>) suggest it is unlikely that our analyses entirely missed some important features of weather. This leaves a great deal of variation in survival rates that cannot be predicted by simple and direct changes in climate. (2) Birds have responded to the recent climate change by shifting areas of distribution, changes in reproductive phenology and changes in migratory behaviour <xref ref-type="bibr" rid="pone.0059110-Thomas1">[82]</xref>–<xref ref-type="bibr" rid="pone.0059110-Fiedler1">[84]</xref>. Therefore predictions based on the assumption of a stable association of demography with environmental conditions in a changing world ignore the high potential for phenotypic plasticity or evolutionary adaptation. (3) There may be a trade-off between benefits mediated by climate change in one season against disadvantages in another season, for example when the conditions for reproduction improve on the breeding grounds, but the conditions for survival deteriorate in the wintering areas of long-distance migrants as in our study. The outcome of this trade-off will be difficult to model when the magnitudes of change for several variables and the potentials for response are not known. Finally (4) predicting the future of populations of single species ignores potential interactions between species as community dynamics cannot be inferred from the sum of the predicted behaviours of single species <xref ref-type="bibr" rid="pone.0059110-Bretagnolle1">[85]</xref> (but see e.g. <xref ref-type="bibr" rid="pone.0059110-Mutshinda1">[86]</xref> for a community of moths). Giving these reasons the extrapolation of present conditions to future climate scenarios to explain fates of populations may not be adequate because multiple factors and new climates <xref ref-type="bibr" rid="pone.0059110-Williams1">[87]</xref> will create new no-analog communities and different behaviours and adaptations compared to present conditions <xref ref-type="bibr" rid="pone.0059110-Williams2">[88]</xref>.</p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>We thank the members of the Vogelwarte Radolfzell and the more than 200 volunteers who have been keeping the banding station on the Mettnau peninsula running for 35 years and who collected the data for this study. M. Schaub kindly improved our manuscript through comments on our analytical methods.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="pone.0059110-Moreno1">
+        <label>1</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Moreno</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Møller</surname><given-names>AP</given-names></name> (<year>2011</year>) <article-title>Extreme climatic events in relation to global change and their impact on life histories</article-title>. <source>Current Zoology</source> <volume>57</volume>: <fpage>375</fpage>–<lpage>389</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-ekerciolu1">
+        <label>2</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Şekercioğlu</surname><given-names>CH</given-names></name>, <name name-style="western"><surname>Schneider</surname><given-names>SH</given-names></name>, <name name-style="western"><surname>Fay</surname><given-names>JP</given-names></name>, <name name-style="western"><surname>Loarie</surname><given-names>SR</given-names></name> (<year>2008</year>) <article-title>Climate change, elevational range shifts, and bird extinctions</article-title>. <source>Conservation Biology</source> <volume>22</volume>: <fpage>140</fpage>–<lpage>150</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Sther1">
+        <label>3</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Sæther B-E, Engen S (2010) Population consequences of climate change. In: Møller AP, Fiedler W, Berthold P, editors. Effects of Climate Change on Birds. Oxford: Oxford University Press. 191–211.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Harrison1">
+        <label>4</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Harrison</surname><given-names>XA</given-names></name>, <name name-style="western"><surname>Blount</surname><given-names>JD</given-names></name>, <name name-style="western"><surname>Inger</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Norris</surname><given-names>DR</given-names></name>, <name name-style="western"><surname>Bearhop</surname><given-names>S</given-names></name> (<year>2011</year>) <article-title>Carry-over effects as drivers of fitness differences in animals</article-title>. <source>Journal of Animal Ecology</source> <volume>80</volume>: <fpage>4</fpage>–<lpage>18</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Norris1">
+        <label>5</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Norris</surname><given-names>DR</given-names></name>, <name name-style="western"><surname>Taylor</surname><given-names>CM</given-names></name> (<year>2006</year>) <article-title>Predicting the consequences of carry-over effects for migratory populations</article-title>. <source>Biology Letters</source> <volume>2</volume>: <fpage>148</fpage>–<lpage>151</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Sther2">
+        <label>6</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sæther</surname><given-names>B-E</given-names></name>, <name name-style="western"><surname>Sutherland</surname><given-names>WJ</given-names></name>, <name name-style="western"><surname>Engen</surname><given-names>S</given-names></name> (<year>2004</year>) <article-title>Climate influences on avian population dynamics</article-title>. <source>Advances in Ecological Research</source> <volume>35</volume>: <fpage>185</fpage>–<lpage>209</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Pasinelli1">
+        <label>7</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pasinelli</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Schaub</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Häfliger</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Frey</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Jakober</surname><given-names>H</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Impact of density and environmental factors on population fluctuations in a migratory passerine</article-title>. <source>Journal of Animal Ecology</source> <volume>80</volume>: <fpage>225</fpage>–<lpage>234</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Szp1">
+        <label>8</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Szép</surname><given-names>T</given-names></name> (<year>1995</year>) <article-title>Survival rates of Hungarian sand martins and their relationship with Sahel rainfall</article-title>. <source>Journal of Applied Statistics</source> <volume>22</volume>: <fpage>891</fpage>–<lpage>904</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Schaub1">
+        <label>9</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schaub</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Kania</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Köppen</surname><given-names>U</given-names></name> (<year>2005</year>) <article-title>Variation of primary production during winter induces synchrony in survival rates in migratory white storks <italic>Ciconia ciconia</italic></article-title>. <source>Journal of Animal Ecology</source> <volume>74</volume>: <fpage>656</fpage>–<lpage>666</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Stokke1">
+        <label>10</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Stokke</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Møller</surname><given-names>AP</given-names></name>, <name name-style="western"><surname>Sæther</surname><given-names>B-E</given-names></name>, <name name-style="western"><surname>Rheinwald</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Gutschner</surname><given-names>H</given-names></name> (<year>2005</year>) <article-title>Weather in the breeding area and during migration affects the demography of a small long-distance passerine migrant</article-title>. <source>Auk</source> <volume>122</volume>: <fpage>637</fpage>–<lpage>647</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Rsinen1">
+        <label>11</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Räsinen</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Hansson</surname><given-names>U</given-names></name>, <name name-style="western"><surname>Ullerstig</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Döscher</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Graham</surname><given-names>LP</given-names></name>, <etal>et al</etal>. (<year>2003</year>) <article-title>European climate in the late twenty-first century: regional simulations with two driving global models and two forcing scenarios</article-title>. <source>Climate Dynamics</source> <volume>22</volume>: <fpage>13</fpage>–<lpage>31</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Rowell1">
+        <label>12</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rowell</surname><given-names>DP</given-names></name> (<year>2005</year>) <article-title>A scenario of European climate change for the late twenty-first century: seasonal means and interannual variability</article-title>. <source>Climate Dynamics</source> <volume>25</volume>: <fpage>837</fpage>–<lpage>849</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Giorgi1">
+        <label>13</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Giorgi</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Lionello</surname><given-names>P</given-names></name> (<year>2008</year>) <article-title>Climate change projections for the Mediterranean region</article-title>. <source>Global and Planetary Change</source> <volume>63</volume>: <fpage>90</fpage>–<lpage>104</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-IPCC1">
+        <label>14</label>
+        <mixed-citation publication-type="other" xlink:type="simple">IPCC (2007) Climate Change 2007. Cambridge: Cambridge University Press.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Jiguet1">
+        <label>15</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jiguet</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Julliard</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Thomas</surname><given-names>CD</given-names></name>, <name name-style="western"><surname>Dehorter</surname><given-names>O</given-names></name>, <name name-style="western"><surname>Newson</surname><given-names>SE</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Thermal range predicts bird population resilience to extreme high temperatures</article-title>. <source>Ecology Letters</source> <volume>9</volume>: <fpage>1321</fpage>–<lpage>1330</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Kanyamibwa1">
+        <label>16</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kanyamibwa</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Schierer</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Pradel</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Lebreton</surname><given-names>J-D</given-names></name> (<year>1990</year>) <article-title>Changes in adult annual survival rates in a western European population of the White Stork <italic>Ciconia ciconia</italic></article-title>. <source>Ibis</source> <volume>132</volume>: <fpage>27</fpage>–<lpage>35</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Boano1">
+        <label>17</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Boano</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Bonardi</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Silvano</surname><given-names>F</given-names></name> (<year>2004</year>) <article-title>Nightingale <italic>Luscinia megarhynchos</italic> survival rates in relation to Sahel rainfall</article-title>. <source>Avocetta</source> <volume>28</volume>: <fpage>77</fpage>–<lpage>85</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Eraud1">
+        <label>18</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Eraud</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Boutin</surname><given-names>J-M</given-names></name>, <name name-style="western"><surname>Riviere</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Brun</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Barbraud</surname><given-names>C</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Survival of Turtle Doves <italic>Streptopelia turtur</italic> in relation to western Africa environmental conditions</article-title>. <source>Ibis</source> <volume>151</volume>: <fpage>186</fpage>–<lpage>190</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Saino1">
+        <label>19</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Saino</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Szép</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Romano</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Rubolini</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Spina</surname><given-names>F</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Ecological conditions during winter predict arrival date at the breeding quarters in a trans-Saharan migratory bird</article-title>. <source>Ecology Letters</source> <volume>7</volume>: <fpage>21</fpage>–<lpage>25</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Schaub2">
+        <label>20</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schaub</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Jakober</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Stauber</surname><given-names>W</given-names></name> (<year>2011</year>) <article-title>Demographic response to environmental variation in breeding, stopover and non-breeding areas in a migratory passerine</article-title>. <source>Oecologia</source> <volume>167</volume>: <fpage>445</fpage>–<lpage>459</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Kaiser1">
+        <label>21</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kaiser</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Berthold</surname><given-names>P</given-names></name> (<year>2004</year>) <article-title>A European example of standardized mist netting in population studies of birds</article-title>. <source>Studies in Avian Biology</source> <volume>29</volume>: <fpage>75</fpage>–<lpage>81</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Svensson1">
+        <label>22</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Svensson L (1992) Identification Guide to European Passerines. Stockholm: Lars Svensson.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Jenni1">
+        <label>23</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Jenni L, Winkler R (1994) Moult and Ageing of European Passerines. London, San Diego: Academic Press.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Salewski1">
+        <label>24</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Salewski</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Hochachka</surname><given-names>WM</given-names></name>, <name name-style="western"><surname>Fiedler</surname><given-names>W</given-names></name> (<year>2010</year>) <article-title>Global warming and Bergmann's rule: do central European passerines adjust their body size to rising temperatures</article-title>? <source>Oecologia</source> <volume>162</volume>: <fpage>247</fpage>–<lpage>260</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Schwabl1">
+        <label>25</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Schwabl H, Silverin B (1990) Control of partial migration and autumnal behavior. In: Gwinner E, editor. Bird Migration. Berlin: Springer Verlag. 144–155.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Bauer1">
+        <label>26</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Bauer H-G, Bezzel E, Fiedler W (2005) Das Kompendium der Vögel Mitteleuropas. Wiesbaden: AULA-Verlag.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Schlenker1">
+        <label>27</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schlenker</surname><given-names>R</given-names></name> (<year>1981</year>) <article-title>Verlagerung der Zugwege von Teilen der südwestdeutschen und österreichischen Mönchgrasmücken (<italic>Sylvia atricapilla</italic>) – Populationen</article-title>. <source>Ökologie der Vögel</source> <volume>3</volume>: <fpage>314</fpage>–<lpage>318</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Bearhop1">
+        <label>28</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bearhop</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Fiedler</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Furness</surname><given-names>RW</given-names></name>, <name name-style="western"><surname>Votier</surname><given-names>SC</given-names></name>, <name name-style="western"><surname>Waldron</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Assortative mating as a mechanism for rapid evolution of a migratory divide</article-title>. <source>Science</source> <volume>310</volume>: <fpage>502</fpage>–<lpage>504</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Zink1">
+        <label>29</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Zink G (1973) Der Zug europäischer Singvögel. 1. Lieferung. Möggingen: Vogelwarte Radolfzell.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Kolb1">
+        <label>30</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kolb</surname><given-names>H</given-names></name> (<year>1999</year>) <article-title>Zilzalp – <italic>Phylloscopus collybita</italic></article-title>. In: <source>Ludwigsburg: Ornithologische Jahreshefte für Baden-Württemberg</source> <name name-style="western"><surname>Heine</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Jacoby</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Leuzinger</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Stark</surname><given-names>H</given-names></name>, editors. Die Vögel des Bodenseegebietes. <volume>14/15</volume>: <fpage>651</fpage>–<lpage>653</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Prochzka1">
+        <label>31</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Procházka</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Hobson</surname><given-names>KA</given-names></name>, <name name-style="western"><surname>Karcza</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Kralj</surname><given-names>J</given-names></name> (<year>2008</year>) <article-title>Birds of a feather winter together: migratory connectivity in the Reed Warbler <italic>Acrocephalus scirpaceus</italic></article-title>. <source>Journal of Ornithology</source> <volume>149</volume>: <fpage>141</fpage>–<lpage>150</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Burnham1">
+        <label>32</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Burnham KP (1993) A theory for combined analysis of ring recovery and recapture data. In: Lebreton J-D, North PM, editors. Marked Individuals in the Study of Bird Populations. Basel: Birkhäuser Verlag. 199–213.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Veistola1">
+        <label>33</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Veistola</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Lehikoinen</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Eeva</surname><given-names>T</given-names></name> (<year>1997</year>) <article-title>Weather and breeding success at high latitudes – the pied flycatcher <italic>Ficedula hypoleuca</italic> and the Siberian tit <italic>Parus cinctus</italic></article-title>. <source>Ornis Fennica</source> <volume>74</volume>: <fpage>89</fpage>–<lpage>98</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Pavel1">
+        <label>34</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pavel</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Chutný</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Petrusková</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Petrusek</surname><given-names>A</given-names></name> (<year>2008</year>) <article-title>Blow fly <italic>Trypocalliphora braueri</italic> parasitism on Meadow Pipit and Bluethroat nestlings in Central Europe</article-title>. <source>Journal of Ornithology</source> <volume>149</volume>: <fpage>193</fpage>–<lpage>197</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Arlettaz1">
+        <label>35</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Arlettaz</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Schaad</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Reichlin</surname><given-names>TS</given-names></name>, <name name-style="western"><surname>Schaub</surname><given-names>M</given-names></name> (<year>2010</year>) <article-title>Impact of weather and climate variation on Hoopoe reproductive ecology and population growth</article-title>. <source>Journal of Ornithology</source> <volume>151</volume>: <fpage>889</fpage>–<lpage>899</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Greenwood1">
+        <label>36</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Greenwood</surname><given-names>PJ</given-names></name>, <name name-style="western"><surname>Harvey</surname><given-names>PH</given-names></name> (<year>1982</year>) <article-title>The natal and breeding dispersal of birds</article-title>. <source>Annual Review of Ecology and Systematics</source> <volume>13</volume>: <fpage>1</fpage>–<lpage>21</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Haas1">
+        <label>37</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Haas</surname><given-names>CA</given-names></name> (<year>1998</year>) <article-title>Effects of prior nesting success on site fidelity and breeding dispersal: an experimental approach</article-title>. <source>Auk</source> <volume>115</volume>: <fpage>929</fpage>–<lpage>936</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-North1">
+        <label>38</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>North</surname><given-names>PM</given-names></name> (<year>1979</year>) <article-title>Relating grey heron survival rates to winter weather conditions</article-title>. <source>Bird Study</source> <volume>26</volume>: <fpage>23</fpage>–<lpage>28</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Sther3">
+        <label>39</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sæther</surname><given-names>B-E</given-names></name>, <name name-style="western"><surname>Tufto</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Engen</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Jerstad</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Røstad</surname><given-names>OW</given-names></name>, <etal>et al</etal>. (<year>2000</year>) <article-title>Population dynamical consequences of climate change for a small temperate songbird</article-title>. <source>Science</source> <volume>287</volume>: <fpage>854</fpage>–<lpage>856</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Robinson1">
+        <label>40</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Robinson</surname><given-names>RA</given-names></name>, <name name-style="western"><surname>Baillie</surname><given-names>SR</given-names></name>, <name name-style="western"><surname>Crick</surname><given-names>HQP</given-names></name> (<year>2007</year>) <article-title>Weather-dependent survival: implications of climate change for passerine population processes</article-title>. <source>Ibis</source> <volume>149</volume>: <fpage>357</fpage>–<lpage>364</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Salewski2">
+        <label>41</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Salewski</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Bairlein</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Leisler</surname><given-names>B</given-names></name> (<year>2002</year>) <article-title>Different wintering strategies of two Palearctic migrants in West Africa – a consequence of foraging strategies</article-title>? <source>Ibis</source> <volume>144</volume>: <fpage>85</fpage>–<lpage>93</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Cheke1">
+        <label>42</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cheke</surname><given-names>RA</given-names></name>, <name name-style="western"><surname>Holt</surname><given-names>J</given-names></name> (<year>1993</year>) <article-title>Complex dynamics of desert locust plagues</article-title>. <source>Ecological Entomology</source> <volume>18</volume>: <fpage>109</fpage>–<lpage>115</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Todd1">
+        <label>43</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Todd</surname><given-names>MC</given-names></name>, <name name-style="western"><surname>Washington</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Cheke</surname><given-names>RA</given-names></name>, <name name-style="western"><surname>Kniveton</surname><given-names>D</given-names></name> (<year>2002</year>) <article-title>Brown locust outbreaks and climate variability in southern Africa</article-title>. <source>Journal of Applied Ecology</source> <volume>39</volume>: <fpage>31</fpage>–<lpage>42</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Camberlin1">
+        <label>44</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Camberlin</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Martiny</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Philippon</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Richard</surname><given-names>Y</given-names></name> (<year>2007</year>) <article-title>Determinants of the interannual relationships between remote sensed photosynthetic activity and rainfall in tropical Africa</article-title>. <source>Remote Sensing of Environment</source> <volume>106</volume>: <fpage>199</fpage>–<lpage>216</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Lahti1">
+        <label>45</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lahti</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Orell</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Rytkönen</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Koivula</surname><given-names>K</given-names></name> (<year>1998</year>) <article-title>Time and food dependence in willow tit winter survival</article-title>. <source>Ecology</source> <volume>79</volume>: <fpage>2904</fpage>–<lpage>2916</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Altwegg1">
+        <label>46</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Altwegg</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Roulin</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Kestenholz</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Jenni</surname><given-names>L</given-names></name> (<year>2006</year>) <article-title>Demographic effects of extreme winter weather in the barn owl</article-title>. <source>Oecologia</source> <volume>149</volume>: <fpage>44</fpage>–<lpage>51</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Hallett1">
+        <label>47</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hallett</surname><given-names>TB</given-names></name>, <name name-style="western"><surname>Coulson</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Pilkington</surname><given-names>JG</given-names></name>, <name name-style="western"><surname>Clutton-Brock</surname><given-names>TH</given-names></name>, <name name-style="western"><surname>Pemberton</surname><given-names>JM</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Why large-scale climate indices seem to predict ecological processes better than local weather</article-title>. <source>Nature</source> <volume>430</volume>: <fpage>71</fpage>–<lpage>75</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Hurrell1">
+        <label>48</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hurrell</surname><given-names>JW</given-names></name>, <name name-style="western"><surname>Kushnir</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Visbeck</surname><given-names>M</given-names></name> (<year>2001</year>) <article-title>The North Atlantic Oscillation</article-title>. <source>Science</source> <volume>291</volume>: <fpage>603</fpage>–<lpage>605</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Hurrell2">
+        <label>49</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hurrell</surname><given-names>JW</given-names></name> (<year>1995</year>) <article-title>Decadal trends in the North Atlantic Oscillation: regional temperatures and precipitation</article-title>. <source>Science</source> <volume>269</volume>: <fpage>676</fpage>–<lpage>679</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Flade1">
+        <label>50</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Flade</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Schwarz</surname><given-names>J</given-names></name> (<year>2004</year>) <article-title>Ergebnisse des DDA-Monitoringprogramms, Teil II: Bestandsentwicklung von Waldvögeln in Deutschland 1989–2003</article-title>. <source>Vogelwelt</source> <volume>125</volume>: <fpage>177</fpage>–<lpage>213</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Choquet1">
+        <label>51</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Choquet R, Reboulet AM, Pradel R, Lebreton JD (2003) U-CARE (utilities-capture-recapture) user's guide. Montpellier: CEFE/CNRS.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-White1">
+        <label>52</label>
+        <mixed-citation publication-type="other" xlink:type="simple">White GC, Burnham KP (1999) Program MARK: survival estimation from populations of marked animals. Bird Study 46 (Supplement): 120–139.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Lebreton1">
+        <label>53</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lebreton</surname><given-names>J-D</given-names></name>, <name name-style="western"><surname>Burnham</surname><given-names>KP</given-names></name>, <name name-style="western"><surname>Clobert</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Anderson</surname><given-names>DR</given-names></name> (<year>1992</year>) <article-title>Modelling survival and testing biological hypothesis using marked animals: a unified approach with case studies</article-title>. <source>Ecological Monographs</source> <volume>62</volume>: <fpage>67</fpage>–<lpage>118</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Grebler1">
+        <label>54</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Grüebler</surname><given-names>MU</given-names></name>, <name name-style="western"><surname>Naef-Daenzer</surname><given-names>B</given-names></name> (<year>2008</year>) <article-title>Fitness consequences of pre- and post-fledging timing decisions in a double-brooded passerine</article-title>. <source>Ecology</source> <volume>89</volume>: <fpage>2736</fpage>–<lpage>2745</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Burnham2">
+        <label>55</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Burnham KP, Anderson DR (2002) Model selection and multimodel inference: a practical information-theoretic approach. New York: Springer.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-NaefDaenzer1">
+        <label>56</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Naef-Daenzer</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Widmer</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Nuber</surname><given-names>M</given-names></name> (<year>2001</year>) <article-title>Differential post-fledging survival of great and coal tits in relation to their condition and fledging date</article-title>. <source>Journal of Animal Ecology</source> <volume>70</volume>: <fpage>730</fpage>–<lpage>738</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Grebler2">
+        <label>57</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Grüebler M (2007) Time constraints of breeding twice. On the fitness relevance of timing of reproduction and post-fledging parental investment in the Barn Swallow (<italic>Hirundo rustica</italic>). Ph-D thesis, Zürich: University of Zürich.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Paradis1">
+        <label>58</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Paradis</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Baillie</surname><given-names>SR</given-names></name>, <name name-style="western"><surname>Sutherland</surname><given-names>WJ</given-names></name>, <name name-style="western"><surname>Gregory</surname><given-names>RD</given-names></name> (<year>1998</year>) <article-title>Patterns of natal and breeding dispersal in birds</article-title>. <source>Journal of Animal Ecology</source> <volume>67</volume>: <fpage>518</fpage>–<lpage>536</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Grosbois1">
+        <label>59</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Grosbois</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Gimenez</surname><given-names>O</given-names></name>, <name name-style="western"><surname>Gaillard</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Pradel</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Barbraud</surname><given-names>C</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>Assessing the impact of climate variation on survival in vertebrate populations</article-title>. <source>Biological Reviews</source> <volume>83</volume>: <fpage>357</fpage>–<lpage>399</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Jansson1">
+        <label>60</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jansson</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Ekman</surname><given-names>J</given-names></name>, <name name-style="western"><surname>von Brömssen</surname><given-names>A</given-names></name> (<year>1981</year>) <article-title>Winter mortality and food supply in tits <italic>Parus</italic> spp</article-title>. <source>Oikos</source> <volume>37</volume>: <fpage>313</fpage>–<lpage>322</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Robinson2">
+        <label>61</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Robinson</surname><given-names>RA</given-names></name>, <name name-style="western"><surname>Balmer DE Marchant</surname><given-names>JH</given-names></name> (<year>2008</year>) <article-title>Survival rates of hirundines in relation to British and African rainfall</article-title>. <source>Ringing &amp; Migration</source> <volume>24</volume>: <fpage>1</fpage>–<lpage>6</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Jrvinen1">
+        <label>62</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Järvinen</surname><given-names>A</given-names></name> (<year>1987</year>) <article-title>Key-factor analyses of two Finnish hole-nesting passerines: comparisons between species and regions</article-title>. <source>Annales Zoologici Fennici</source> <volume>24</volume>: <fpage>275</fpage>–<lpage>280</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Foppen1">
+        <label>63</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Foppen</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Ter Braak</surname><given-names>CJF</given-names></name>, <name name-style="western"><surname>Verboom</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Reijnen</surname><given-names>R</given-names></name> (<year>1999</year>) <article-title>Dutch sedge warblers <italic>Acrocephalus schoenobaenus</italic> and west-African rainfall: empirical data and simulation modeling show low population resilience in fragmented marshlands</article-title>. <source>Ardea</source> <volume>87</volume>: <fpage>113</fpage>–<lpage>127</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Peach1">
+        <label>64</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Peach</surname><given-names>WJ</given-names></name>, <name name-style="western"><surname>Crick</surname><given-names>HQP</given-names></name>, <name name-style="western"><surname>Marchant</surname><given-names>JH</given-names></name> (<year>1995</year>) <article-title>The demography of the decline in the British willow warbler population</article-title>. <source>Journal of Applied Statistics</source> <volume>22</volume>: <fpage>905</fpage>–<lpage>922</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Thaxter1">
+        <label>65</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Thaxter</surname><given-names>CB</given-names></name>, <name name-style="western"><surname>Redfern</surname><given-names>CPF</given-names></name>, <name name-style="western"><surname>Bevan</surname><given-names>RM</given-names></name> (<year>2006</year>) <article-title>Survival rates of adult Reed Warblers <italic>Acrocephalus scirpaceus</italic> at a northern and a southern site in England</article-title>. <source>Ringing &amp; Migration</source> <volume>23</volume>: <fpage>65</fpage>–<lpage>79</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Winstanley1">
+        <label>66</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Winstanley</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Spencer</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Williamson</surname><given-names>K</given-names></name> (<year>1974</year>) <article-title>Where have all the whitethroats gone</article-title>? <source>Bird Study</source> <volume>21</volume>: <fpage>1</fpage>–<lpage>14</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Peach2">
+        <label>67</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Peach</surname><given-names>WJ</given-names></name>, <name name-style="western"><surname>Baillie</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Underhill</surname><given-names>LG</given-names></name> (<year>1991</year>) <article-title>Survival of British sedge warblers <italic>Acrocephalus schoenobaenus</italic> in relation to West African rainfall</article-title>. <source>Ibis</source> <volume>133</volume>: <fpage>300</fpage>–<lpage>305</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Saino2">
+        <label>68</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Saino</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Ambrosini</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Rubolini</surname><given-names>D</given-names></name>, <name name-style="western"><surname>von Hardenberg</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Provenzale</surname><given-names>A</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Climate warming, ecological mismatch at arrival and population decline in migratory birds</article-title>. <source>Proceedings of the Royal Society in London Series B-Biological Sciences</source> <volume>278</volume>: <fpage>835</fpage>–<lpage>842</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Urban1">
+        <label>69</label>
+        <mixed-citation publication-type="book" xlink:type="simple">Urban EK, Fry CH, Keith S (1997) The Birds of Africa. Vol. V. San Diego: Academic Press.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Robinson3">
+        <label>70</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Robinson</surname><given-names>RA</given-names></name>, <name name-style="western"><surname>Crick</surname><given-names>HQP</given-names></name>, <name name-style="western"><surname>Peach</surname><given-names>WJ</given-names></name> (<year>2003</year>) <article-title>Population trends of Swallows <italic>Hirundo rustica</italic> breeding in Britain</article-title>. <source>Bird Study</source> <volume>50</volume>: <fpage>1</fpage>–<lpage>7</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Borrow1">
+        <label>71</label>
+        <mixed-citation publication-type="book" xlink:type="simple">Borrow N, Demey R (2001) A Guide to the Birds of Western Africa. Princeton: Princeton University Press.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Dowsett1">
+        <label>72</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dowsett</surname><given-names>RJ</given-names></name>, <name name-style="western"><surname>Backhurst</surname><given-names>GC</given-names></name>, <name name-style="western"><surname>Oatley</surname><given-names>TB</given-names></name> (<year>1988</year>) <article-title>Afrotropical ringing recoveries of Palearctic migrants. 1. Passerines (Turdidae to Oriolidae)</article-title>. <source>Tauraco</source> <volume>1</volume>: <fpage>29</fpage>–<lpage>63</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Keith1">
+        <label>73</label>
+        <mixed-citation publication-type="book" xlink:type="simple">Keith S, Urban EK, Fry CH (1992) The Birds of Africa. Vol. IV. London: Academic Press.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Cowley1">
+        <label>74</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cowley</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Siriwardena</surname><given-names>GM</given-names></name> (<year>2005</year>) <article-title>Long-term variation in survival rates of Sand Martins <italic>Riparia riparia</italic>: dependence on breeding and wintering ground weather, age and sex, and their population consequences</article-title>. <source>Bird Study</source> <volume>52</volume>: <fpage>237</fpage>–<lpage>251</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Nevoux1">
+        <label>75</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nevoux</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Barbraud</surname><given-names>J-C</given-names></name>, <name name-style="western"><surname>Barbraud</surname><given-names>C</given-names></name> (<year>2008</year>) <article-title>Nonlinear impact of climate on survival in a migratory white stork population</article-title>. <source>Journal of Animal Ecology</source> <volume>77</volume>: <fpage>1143</fpage>–<lpage>1152</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-vanVliet1">
+        <label>76</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>van Vliet</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Musters</surname><given-names>CJM</given-names></name>, <name name-style="western"><surname>Ter Keurs</surname><given-names>WJ</given-names></name> (<year>2009</year>) <article-title>Changes in migration behaviour of Blackbirds <italic>Turdus merula</italic> from the Netherlands</article-title>. <source>Bird Study</source> <volume>56</volume>: <fpage>276</fpage>–<lpage>281</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Mller1">
+        <label>77</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Møller</surname><given-names>AP</given-names></name>, <name name-style="western"><surname>Rubolini</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Lehikoinen</surname><given-names>E</given-names></name> (<year>2008</year>) <article-title>Populations of migratory bird species that did not show a phenological response to climate change are declining</article-title>. <source>Proceedings of the National Academy of Sciences of the United States of America</source> <volume>105</volume>: <fpage>16195</fpage>–<lpage>16200</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Both1">
+        <label>78</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Both</surname><given-names>C</given-names></name>, <name name-style="western"><surname>van Turnhout</surname><given-names>CAM</given-names></name>, <name name-style="western"><surname>Bijlsma</surname><given-names>RG</given-names></name>, <name name-style="western"><surname>Siepel</surname><given-names>H</given-names></name>, <name name-style="western"><surname>van Strien</surname><given-names>AJ</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Avian population consequences of climate change are most severe for long-distance migrants in seasonal habitats</article-title>. <source>Proceedings of the Royal Society of London Series B-Biological Sciences</source> <volume>277</volume>: <fpage>1259</fpage>–<lpage>1266</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Schaefer1">
+        <label>79</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schaefer</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Ledebur</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Beier</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Leisler</surname><given-names>B</given-names></name> (<year>2006</year>) <article-title>Reproductive responses of two related coexisting songbird species to environmental changes: global warming, competition and population sizes</article-title>. <source>Journal of Ornithology</source> <volume>147</volume>: <fpage>47</fpage>–<lpage>56</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Foppen2">
+        <label>80</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Foppen</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Reijnen</surname><given-names>R</given-names></name> (<year>1996</year>) <article-title>De Fitis <italic>Phylloscopus trochilus</italic> in de problemen, Afrika in het spel</article-title>? <source>Limosa</source> <volume>69</volume>: <fpage>51</fpage>–<lpage>56</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Szp2">
+        <label>81</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Szép</surname><given-names>T</given-names></name> (<year>1995</year>) <article-title>Relationship between West African rainfall and the survival of central European Sand Martins <italic>Riparia riparia</italic></article-title>. <source>Ibis</source> <volume>137</volume>: <fpage>162</fpage>–<lpage>168</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Thomas1">
+        <label>82</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Thomas</surname><given-names>CD</given-names></name>, <name name-style="western"><surname>Lennon</surname><given-names>JJ</given-names></name> (<year>1999</year>) <article-title>Birds extend their ranges northwards</article-title>. <source>Nature</source> <volume>399</volume>: <fpage>213</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Dunn1">
+        <label>83</label>
+        <mixed-citation publication-type="book" xlink:type="simple">Dunn PO, Winkler DW (2010) Effects of climate change on timing of breeding and reproductive success in birds. In: Møller AP, Fiedler W, Berthold P, editors. Effects of Climate Change on Birds. Oxford: Oxford University Press. 113–128.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Fiedler1">
+        <label>84</label>
+        <mixed-citation publication-type="book" xlink:type="simple">Fiedler W (2003) Recent changes in migratory behaviour of birds: a compilation of field observations and ringing data. In: Berthold P, Gwinner E, Sonnenschein E, editors. Avian Migration. Berlin: Springer Verlag. 21–38.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Bretagnolle1">
+        <label>85</label>
+        <mixed-citation publication-type="book" xlink:type="simple">Bretagnolle V, Gillis H (2010) Predator-prey interactions and climate change. In: Møller AP, Fiedler W, Berthold P, editors. Effects of Climate Change on Birds. Oxford: Oxford University Press. 227–248.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Mutshinda1">
+        <label>86</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mutshinda</surname><given-names>CM</given-names></name>, <name name-style="western"><surname>O'Hara</surname><given-names>RB</given-names></name>, <name name-style="western"><surname>Woiwood</surname><given-names>IP</given-names></name> (<year>2011</year>) <article-title>A multispecies perspective on ecological impacts of climatic forcing</article-title>. <source>Journal of Animal Ecology</source> <volume>80</volume>: <fpage>101</fpage>–<lpage>107</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Williams1">
+        <label>87</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Williams</surname><given-names>JW</given-names></name>, <name name-style="western"><surname>Stephen</surname><given-names>TJ</given-names></name>, <name name-style="western"><surname>Kutzbach</surname><given-names>JE</given-names></name> (<year>2007</year>) <article-title>Projected distributions of novel and disappearing climates by 2100 AD</article-title>. <source>Proceedings of the National Academy of Sciences of the United States of America</source> <volume>104</volume>: <fpage>5738</fpage>–<lpage>5742</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0059110-Williams2">
+        <label>88</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Williams</surname><given-names>JW</given-names></name>, <name name-style="western"><surname>Jackson</surname><given-names>ST</given-names></name> (<year>2007</year>) <article-title>Novel climates, no-analog communities, and ecological surprises</article-title>. <source>Frontiers in Ecology and the Environment</source> <volume>5</volume>: <fpage>475</fpage>–<lpage>482</lpage>.</mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

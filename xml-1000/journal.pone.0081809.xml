@@ -1,0 +1,2480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group>
+<journal-title>PLoS ONE</journal-title></journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-13-16501</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0081809</article-id>
+<article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories>
+<title-group>
+<article-title>Next Generation Sequencing Analysis of Human Platelet PolyA+ mRNAs and rRNA-Depleted Total RNA</article-title>
+<alt-title alt-title-type="running-head">Platelet Transcriptome Analysis by NGS</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Kissopoulou</surname><given-names>Antheia</given-names></name><xref ref-type="aff" rid="aff1"/></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Jonasson</surname><given-names>Jon</given-names></name><xref ref-type="aff" rid="aff1"/></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Lindahl</surname><given-names>Tomas L.</given-names></name><xref ref-type="aff" rid="aff1"/></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Osman</surname><given-names>Abdimajid</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+</contrib-group>
+<aff id="aff1"><addr-line>Department of Clinical and Experimental Medicine, University of Linköping, Linköping, Sweden</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Rozen</surname><given-names>Steven George</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Duke-NUS, Singapore</addr-line></aff>
+<author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">Majid.Osman@lio.se</email></corresp>
+<fn fn-type="conflict"><p>The authors have declared that no competing interests exist.</p></fn>
+<fn fn-type="con"><p>Conceived and designed the experiments: JJ AK TL AO. Performed the experiments: AO. Analyzed the data: JJ AK AO. Contributed reagents/materials/analysis tools: AO JJ. Wrote the paper: JJ AO. Critically revised the manuscript: JJ AK TL AO.</p></fn>
+</author-notes>
+<pub-date pub-type="collection"><year>2013</year></pub-date>
+<pub-date pub-type="epub"><day>11</day><month>12</month><year>2013</year></pub-date>
+<volume>8</volume>
+<issue>12</issue>
+<elocation-id>e81809</elocation-id>
+<history>
+<date date-type="received"><day>23</day><month>4</month><year>2013</year></date>
+<date date-type="accepted"><day>16</day><month>10</month><year>2013</year></date>
+</history>
+<permissions>
+<copyright-year>2013</copyright-year>
+<copyright-holder>Kissopoulou et al</copyright-holder><license xlink:href="http://creativecommons.org/licenses/by/3.0/" xlink:type="simple"><license-p>This is an open-access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/3.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions>
+<abstract><sec>
+<title>Background</title>
+<p>Platelets are small anucleate cells circulating in the blood vessels where they play a key role in hemostasis and thrombosis. Here, we compared platelet RNA-Seq results obtained from polyA+ mRNA and rRNA-depleted total RNA.</p>
+</sec><sec>
+<title>Materials and Methods</title>
+<p>We used purified, CD45 depleted, human blood platelets collected by apheresis from three male and one female healthy blood donors. The Illumina HiSeq 2000 platform was employed to sequence cDNA converted either from oligo(dT) isolated polyA+ RNA or from rRNA-depleted total RNA. The reads were aligned to the GRCh37 reference assembly with the TopHat/Cufflinks alignment package using Ensembl annotations. A <italic>de novo</italic> assembly of the platelet transcriptome using the Trinity software package and RSEM was also performed. The bioinformatic tools HTSeq and DESeq from Bioconductor were employed for further statistical analyses of read counts.</p>
+</sec><sec>
+<title>Results</title>
+<p>Consistent with previous findings our data suggests that mitochondrially expressed genes comprise a substantial fraction of the platelet transcriptome. We also identified high transcript levels for protein coding genes related to the cytoskeleton function, chemokine signaling, cell adhesion, aggregation, as well as receptor interaction between cells. Certain transcripts were particularly abundant in platelets compared with other cell and tissue types represented by RNA-Seq data from the Illumina Human Body Map 2.0 project. Irrespective of the different library preparation and sequencing protocols, there was good agreement between samples from the 4 individuals. Eighteen differentially expressed genes were identified in the two sexes at 10% false discovery rate using DESeq.</p>
+</sec><sec>
+<title>Conclusion</title>
+<p>The present data suggests that platelets may have a unique transcriptome profile characterized by a relative over-expression of mitochondrially encoded genes and also of genomic transcripts related to the cytoskeleton function, chemokine signaling and surface components compared with other cell and tissue types. The <italic>in vivo</italic> functional significance of the non-mitochondrial transcripts remains to be shown.</p>
+</sec></abstract>
+<funding-group><funding-statement>The County Council of Östergötland (A.K., J.J. and A.O.) and the Scientific Research Council (T.L., project VR 521-2012-2729) supported this project. Sequencing was performed by the SNP&amp;SEQ Technology Platform, Science for Life Laboratory at Uppsala University, a national infrastructure supported by the Swedish Research Council (VR-RFI). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="16"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Background</title>
+<p>Produced by bone marrow megakaryocytes, platelets are small anucleate elements of the blood that play a pivotal role in hemostasis. They are involved in fibrinolysis and repair of the vessel wall, while circulating in the blood as sentinels of vascular integrity. Platelets lack genomic DNA but retain the ability for protein synthesis from cytoplasmic mRNA <xref ref-type="bibr" rid="pone.0081809-Kieffer1">[1]</xref>. Platelet mRNA was first isolated and converted to a cDNA library more than two decades ago <xref ref-type="bibr" rid="pone.0081809-Wicki1">[2]</xref>. In recent years, several studies utilizing genome-wide techniques for gene expression profiling, such as microarrays and Serial Analysis of Gene Expression (SAGE) in concert with computer-assisted bioinformatics, have reported that thousands of gene transcripts are present in human platelets <xref ref-type="bibr" rid="pone.0081809-Bugert1">[3]</xref>–<xref ref-type="bibr" rid="pone.0081809-Rox1">[7]</xref>. While microarrays and SAGE have made significant contributions to the characterization of the platelet transcriptome, they also have serious limitations. Hybridization-based approaches rely on probe-target binding of selected sequences and do not detect novel transcripts or unknown genes. In contrast, SAGE uses sequence tags from individual mRNAs and has an advantage over microarrays by detecting unknown genes but does not provide information on splice isoforms and is biased toward short tags, which cannot be uniquely mapped to the human genome <xref ref-type="bibr" rid="pone.0081809-Wang1">[8]</xref>. Recently, mass sequencing of transcripts (RNA-Seq) by next generation sequencing (NGS) technologies has emerged as a powerful approach for quantitative transcript discovery <xref ref-type="bibr" rid="pone.0081809-Heap1">[9]</xref>–<xref ref-type="bibr" rid="pone.0081809-Sultan1">[13]</xref>. RNA-Seq has clear advantages over other approaches <xref ref-type="bibr" rid="pone.0081809-Wilhelm1">[14]</xref> and shows higher levels of reproducibility for both technical and biological replicates <xref ref-type="bibr" rid="pone.0081809-Costa1">[15]</xref>. Two recently published studies used NGS technology to characterize the platelet transcriptome <xref ref-type="bibr" rid="pone.0081809-Bray1">[16]</xref>–<xref ref-type="bibr" rid="pone.0081809-Rowley1">[17]</xref>. One of these used cDNA from poly(dT) isolated mRNA and the other cDNA from ribosomal RNA-depleted total RNA. Both studies used relatively short reads (≤50 base pairs) for alignment to the human genome. In this context, we now report results from both polyA+ mRNA and rRNA-depleted total RNA approaches utilizing 100 bp long sequencing reads for investigating the transcriptional profile of unstimulated human platelets (<xref ref-type="fig" rid="pone-0081809-g001">Fig. 1</xref>). We have also for the first time applied a <italic>de novo</italic> assembly of platelet transcripts to confirm the reference-guided alignments. We believe that our data may provide important clues for understanding the elusive platelet transcriptome and its role in the coagulation system and hemostasis.</p>
+<fig id="pone-0081809-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g001</object-id><label>Figure 1</label><caption>
+<title>Schematic presentation of experimental plan used in this study.</title>
+<p>Samples from 4 platelet donors were investigated. One sample (S0) was used for isolation of polyA+ transcripts. The 3 other samples (S1, S2, and S3) were used for analysis of total RNA after depletion of ribosomal RNA (rRNA).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g001" position="float" xlink:type="simple"/></fig></sec><sec id="s2">
+<title>Results</title>
+<sec id="s2a">
+<title>Mapping of polyA+ mRNA (Sample S0)</title>
+<p>We tried three mapping strategies for polyA+ mRNA (<xref ref-type="fig" rid="pone-0081809-g002">Fig. 2</xref>).</p>
+<fig id="pone-0081809-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g002</object-id><label>Figure 2</label><caption>
+<title>Mapping strategies and abundance estimates.</title>
+<p>i) Alignment of reads (short red lines) to the human reference genome hg19 (thick blue line) using the TopHat program that aligns RNA-Seq reads to the genome while also attending to splice junction reads. Abundance estimates obtained by counting the number of reads that map within the coordinates defining the corresponding gene with RefSeq annotations; ii) Alignment of reads (short red lines) to human reference (RefSeq) mRNA (thick blue line with polyA tail) using the bwa software for abundance estimates; iii) Alignment of reads (short red lines) to a <italic>de novo</italic> assembled transcript reported by Trinity (thick red line with polyA tail and green SMARTer IIA oligonucleotide as 5′-leader sequence) using Blat for identification and RSEM for abundance estimates.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g002" position="float" xlink:type="simple"/></fig>
+<p>First, the 58,155,680 cleaned sequenced single-end reads with no strand-specificity were mapped to the human reference genome (GRCh37/hg19) using TopHat software (<ext-link ext-link-type="uri" xlink:href="http://tophat.cbcb.umd.edu/" xlink:type="simple">http://tophat.cbcb.umd.edu/</ext-link>) in order to identify exon-exon splice junctions (<xref ref-type="fig" rid="pone-0081809-g002">Fig. 2</xref> i). This resulted in 35,322,009 (60.7%) of uniquely mapped ∼100 bp long single-end reads. The aligned sequencing reads and the Homo_sapiens.GRCh37.71.gtf features were used to estimate the coverage of known genes and transcripts with the aid of bedtools-2.17.0 (<ext-link ext-link-type="uri" xlink:href="http://code.google.com/p/bedtools/" xlink:type="simple">http://code.google.com/p/bedtools/</ext-link>). A strong bias towards the 3′-UTR end of transcripts was clearly evident, which can be expected due to the library construction involving oligo-dT primed cDNA in the library preparation procedure (<xref ref-type="fig" rid="pone-0081809-g003">Fig. 3</xref>). The uniquely mapped read localizations on the different chromosomes are shown in <xref ref-type="table" rid="pone-0081809-t001">Table 1</xref>. Top 30 loci are shown in <xref ref-type="table" rid="pone-0081809-t002">Table 2</xref>. The HTSeq counts are shown in Table S1 in <xref ref-type="supplementary-material" rid="pone.0081809.s001">File S1</xref>.</p>
+<fig id="pone-0081809-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g003</object-id><label>Figure 3</label><caption>
+<title>Read start position density on <italic>ACTB</italic> mRNA.</title>
+<p>The horizontal axis shows the distance in nucleotides (bp) from the 5′-end of <italic>ACTB</italic> mRNA, and the vertical axis shows the natural logarithm of the number of uniquely mapped reads. The fitted red line calculated over the transcript body ignoring both ends corresponds to exponential decay of approximately 50% per 250 bp upstreams fom the polyA-site in the 3′-UTR. Correlation coefficient: 0.93, Slope: 0.0027638, Std error: 0.0002751, t value: -10.05, p-value: 4.70e-08 ***. (Statistics and graph generated by the R-program).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g003" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0081809-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.t001</object-id><label>Table 1</label><caption>
+<title>Distribution of mapped reads for samples S0, S1, S2 and S3.</title>
+</caption><alternatives><graphic id="pone-0081809-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.t001" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td colspan="2" align="left" rowspan="1">Transcript info</td>
+<td colspan="4" align="left" rowspan="1">No. Mapped reads per sample</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Chr</td>
+<td align="left" rowspan="1" colspan="1">Length (bp)</td>
+<td align="left" rowspan="1" colspan="1">S0</td>
+<td align="left" rowspan="1" colspan="1">S1</td>
+<td align="left" rowspan="1" colspan="1">S2</td>
+<td align="left" rowspan="1" colspan="1">S3</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">249250621</td>
+<td align="left" rowspan="1" colspan="1">1417879</td>
+<td align="left" rowspan="1" colspan="1">5604828</td>
+<td align="left" rowspan="1" colspan="1">6082062</td>
+<td align="left" rowspan="1" colspan="1">5836619</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">243199373</td>
+<td align="left" rowspan="1" colspan="1">839205</td>
+<td align="left" rowspan="1" colspan="1">4828700</td>
+<td align="left" rowspan="1" colspan="1">4942088</td>
+<td align="left" rowspan="1" colspan="1">5293788</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">198022430</td>
+<td align="left" rowspan="1" colspan="1">376751</td>
+<td align="left" rowspan="1" colspan="1">4053306</td>
+<td align="left" rowspan="1" colspan="1">3561770</td>
+<td align="left" rowspan="1" colspan="1">5497609</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">191154276</td>
+<td align="left" rowspan="1" colspan="1">1574321</td>
+<td align="left" rowspan="1" colspan="1">5304616</td>
+<td align="left" rowspan="1" colspan="1">5313861</td>
+<td align="left" rowspan="1" colspan="1">8582878</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">180915260</td>
+<td align="left" rowspan="1" colspan="1">987877</td>
+<td align="left" rowspan="1" colspan="1">2476361</td>
+<td align="left" rowspan="1" colspan="1">2751025</td>
+<td align="left" rowspan="1" colspan="1">2864982</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">171115067</td>
+<td align="left" rowspan="1" colspan="1">510420</td>
+<td align="left" rowspan="1" colspan="1">3116547</td>
+<td align="left" rowspan="1" colspan="1">3325548</td>
+<td align="left" rowspan="1" colspan="1">3279675</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">159138663</td>
+<td align="left" rowspan="1" colspan="1">534153</td>
+<td align="left" rowspan="1" colspan="1">2881230</td>
+<td align="left" rowspan="1" colspan="1">2900407</td>
+<td align="left" rowspan="1" colspan="1">3260889</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">146364022</td>
+<td align="left" rowspan="1" colspan="1">202649</td>
+<td align="left" rowspan="1" colspan="1">1788536</td>
+<td align="left" rowspan="1" colspan="1">1718024</td>
+<td align="left" rowspan="1" colspan="1">1966160</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">141213431</td>
+<td align="left" rowspan="1" colspan="1">182805</td>
+<td align="left" rowspan="1" colspan="1">2898002</td>
+<td align="left" rowspan="1" colspan="1">2193803</td>
+<td align="left" rowspan="1" colspan="1">4043810</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">135534747</td>
+<td align="left" rowspan="1" colspan="1">228845</td>
+<td align="left" rowspan="1" colspan="1">2687946</td>
+<td align="left" rowspan="1" colspan="1">2569453</td>
+<td align="left" rowspan="1" colspan="1">2952239</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1">135006516</td>
+<td align="left" rowspan="1" colspan="1">915079</td>
+<td align="left" rowspan="1" colspan="1">2259841</td>
+<td align="left" rowspan="1" colspan="1">1890737</td>
+<td align="left" rowspan="1" colspan="1">2206632</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="left" rowspan="1" colspan="1">133851895</td>
+<td align="left" rowspan="1" colspan="1">396073</td>
+<td align="left" rowspan="1" colspan="1">2337950</td>
+<td align="left" rowspan="1" colspan="1">2332903</td>
+<td align="left" rowspan="1" colspan="1">2698125</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="left" rowspan="1" colspan="1">115169878</td>
+<td align="left" rowspan="1" colspan="1">733311</td>
+<td align="left" rowspan="1" colspan="1">1026903</td>
+<td align="left" rowspan="1" colspan="1">1066507</td>
+<td align="left" rowspan="1" colspan="1">1135743</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">14</td>
+<td align="left" rowspan="1" colspan="1">107349540</td>
+<td align="left" rowspan="1" colspan="1">165457</td>
+<td align="left" rowspan="1" colspan="1">6691970</td>
+<td align="left" rowspan="1" colspan="1">4061007</td>
+<td align="left" rowspan="1" colspan="1">12098431</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">102531392</td>
+<td align="left" rowspan="1" colspan="1">1039909</td>
+<td align="left" rowspan="1" colspan="1">5280432</td>
+<td align="left" rowspan="1" colspan="1">5780695</td>
+<td align="left" rowspan="1" colspan="1">5035062</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">16</td>
+<td align="left" rowspan="1" colspan="1">90354753</td>
+<td align="left" rowspan="1" colspan="1">168779</td>
+<td align="left" rowspan="1" colspan="1">946256</td>
+<td align="left" rowspan="1" colspan="1">807193</td>
+<td align="left" rowspan="1" colspan="1">892257</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">17</td>
+<td align="left" rowspan="1" colspan="1">81195210</td>
+<td align="left" rowspan="1" colspan="1">440380</td>
+<td align="left" rowspan="1" colspan="1">1934478</td>
+<td align="left" rowspan="1" colspan="1">1881603</td>
+<td align="left" rowspan="1" colspan="1">2076841</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">18</td>
+<td align="left" rowspan="1" colspan="1">78077248</td>
+<td align="left" rowspan="1" colspan="1">92840</td>
+<td align="left" rowspan="1" colspan="1">1184820</td>
+<td align="left" rowspan="1" colspan="1">1263978</td>
+<td align="left" rowspan="1" colspan="1">1233671</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">19</td>
+<td align="left" rowspan="1" colspan="1">59128983</td>
+<td align="left" rowspan="1" colspan="1">257403</td>
+<td align="left" rowspan="1" colspan="1">860224</td>
+<td align="left" rowspan="1" colspan="1">632489</td>
+<td align="left" rowspan="1" colspan="1">900418</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">63025520</td>
+<td align="left" rowspan="1" colspan="1">425316</td>
+<td align="left" rowspan="1" colspan="1">1327116</td>
+<td align="left" rowspan="1" colspan="1">1295269</td>
+<td align="left" rowspan="1" colspan="1">1404632</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">21</td>
+<td align="left" rowspan="1" colspan="1">48129895</td>
+<td align="left" rowspan="1" colspan="1">92487</td>
+<td align="left" rowspan="1" colspan="1">741307</td>
+<td align="left" rowspan="1" colspan="1">599255</td>
+<td align="left" rowspan="1" colspan="1">624149</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">22</td>
+<td align="left" rowspan="1" colspan="1">51304566</td>
+<td align="left" rowspan="1" colspan="1">148511</td>
+<td align="left" rowspan="1" colspan="1">750870</td>
+<td align="left" rowspan="1" colspan="1">567420</td>
+<td align="left" rowspan="1" colspan="1">726189</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">X</td>
+<td align="left" rowspan="1" colspan="1">155270560</td>
+<td align="left" rowspan="1" colspan="1">1153342</td>
+<td align="left" rowspan="1" colspan="1">7951615</td>
+<td align="left" rowspan="1" colspan="1">6776104</td>
+<td align="left" rowspan="1" colspan="1">6929134</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Y</td>
+<td align="left" rowspan="1" colspan="1">59373566</td>
+<td align="left" rowspan="1" colspan="1">21311</td>
+<td align="left" rowspan="1" colspan="1">51658</td>
+<td align="left" rowspan="1" colspan="1">4949</td>
+<td align="left" rowspan="1" colspan="1">50979</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">MT</td>
+<td align="left" rowspan="1" colspan="1">16569</td>
+<td align="left" rowspan="1" colspan="1">22416906</td>
+<td align="left" rowspan="1" colspan="1">6781716</td>
+<td align="left" rowspan="1" colspan="1">9016861</td>
+<td align="left" rowspan="1" colspan="1">7198049</td>
+</tr>
+<tr>
+<td colspan="2" align="left" rowspan="1">Sum:</td>
+<td align="left" rowspan="1" colspan="1">35322009</td>
+<td align="left" rowspan="1" colspan="1">76000000</td>
+<td align="left" rowspan="1" colspan="1">73335011</td>
+<td align="left" rowspan="1" colspan="1">88788961</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap><table-wrap id="pone-0081809-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.t002</object-id><label>Table 2</label><caption>
+<title>TopHat alignment of PolyA + mRNA to genome.</title>
+</caption><alternatives><graphic id="pone-0081809-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.t002" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Ensembl id.</td>
+<td align="left" rowspan="1" colspan="1">Gene</td>
+<td align="left" rowspan="1" colspan="1">Locus</td>
+<td align="left" rowspan="1" colspan="1">NRC<xref ref-type="table-fn" rid="nt101">*</xref></td>
+<td align="left" rowspan="1" colspan="1">Rank</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210082</td>
+<td align="left" rowspan="1" colspan="1">MT-RNR2</td>
+<td align="left" rowspan="1" colspan="1">MT:1671–3229</td>
+<td align="left" rowspan="1" colspan="1">10000000</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000211459</td>
+<td align="left" rowspan="1" colspan="1">MT-RNR1</td>
+<td align="left" rowspan="1" colspan="1">MT:648–1601</td>
+<td align="left" rowspan="1" colspan="1">5000000</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000205542</td>
+<td align="left" rowspan="1" colspan="1">TMSB4X</td>
+<td align="left" rowspan="1" colspan="1">X:12993226–12995346</td>
+<td align="left" rowspan="1" colspan="1">1000000</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000166710</td>
+<td align="left" rowspan="1" colspan="1">B2M</td>
+<td align="left" rowspan="1" colspan="1">15:45003674–45011075</td>
+<td align="left" rowspan="1" colspan="1">862880</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198888</td>
+<td align="left" rowspan="1" colspan="1">MT-ND1</td>
+<td align="left" rowspan="1" colspan="1">MT:3306–4262</td>
+<td align="left" rowspan="1" colspan="1">833782</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000163736</td>
+<td align="left" rowspan="1" colspan="1">PPBP</td>
+<td align="left" rowspan="1" colspan="1">4:74852754–74853914</td>
+<td align="left" rowspan="1" colspan="1">555955</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198712</td>
+<td align="left" rowspan="1" colspan="1">MT-CO2</td>
+<td align="left" rowspan="1" colspan="1">MT:7585–8269</td>
+<td align="left" rowspan="1" colspan="1">534277</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000163737</td>
+<td align="left" rowspan="1" colspan="1">PF4</td>
+<td align="left" rowspan="1" colspan="1">4:74844540–74848796</td>
+<td align="left" rowspan="1" colspan="1">437842</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198763</td>
+<td align="left" rowspan="1" colspan="1">MT-ND2</td>
+<td align="left" rowspan="1" colspan="1">MT:4469–5511</td>
+<td align="left" rowspan="1" colspan="1">407889</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198886</td>
+<td align="left" rowspan="1" colspan="1">MT-ND4</td>
+<td align="left" rowspan="1" colspan="1">MT:10469–12137</td>
+<td align="left" rowspan="1" colspan="1">355599</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198899</td>
+<td align="left" rowspan="1" colspan="1">MT-ATP6</td>
+<td align="left" rowspan="1" colspan="1">MT:8365–9990</td>
+<td align="left" rowspan="1" colspan="1">303773</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198938</td>
+<td align="left" rowspan="1" colspan="1">MT-CO3</td>
+<td align="left" rowspan="1" colspan="1">MT:8365–9990</td>
+<td align="left" rowspan="1" colspan="1">303743</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198786</td>
+<td align="left" rowspan="1" colspan="1">MT-ND5</td>
+<td align="left" rowspan="1" colspan="1">MT:12336–14148</td>
+<td align="left" rowspan="1" colspan="1">287825</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198804</td>
+<td align="left" rowspan="1" colspan="1">MT-CO1</td>
+<td align="left" rowspan="1" colspan="1">MT:5903–7445</td>
+<td align="left" rowspan="1" colspan="1">282378</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198727</td>
+<td align="left" rowspan="1" colspan="1">MT-CYB</td>
+<td align="left" rowspan="1" colspan="1">MT:14746–15887</td>
+<td align="left" rowspan="1" colspan="1">217548</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000187514</td>
+<td align="left" rowspan="1" colspan="1">PTMA</td>
+<td align="left" rowspan="1" colspan="1">2:232571605–232578251</td>
+<td align="left" rowspan="1" colspan="1">210648</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000161570</td>
+<td align="left" rowspan="1" colspan="1">CCL5</td>
+<td align="left" rowspan="1" colspan="1">17:34195970–34212867</td>
+<td align="left" rowspan="1" colspan="1">185274</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000228474</td>
+<td align="left" rowspan="1" colspan="1">OST4</td>
+<td align="left" rowspan="1" colspan="1">2:27265231–27294641</td>
+<td align="left" rowspan="1" colspan="1">180079</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198695</td>
+<td align="left" rowspan="1" colspan="1">MT-ND6</td>
+<td align="left" rowspan="1" colspan="1">MT:14148–14673</td>
+<td align="left" rowspan="1" colspan="1">148341</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198840</td>
+<td align="left" rowspan="1" colspan="1">MT-ND3</td>
+<td align="left" rowspan="1" colspan="1">MT:10058–10404</td>
+<td align="left" rowspan="1" colspan="1">105928</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000212907</td>
+<td align="left" rowspan="1" colspan="1">MT-ND4L</td>
+<td align="left" rowspan="1" colspan="1">MT:10469–12137</td>
+<td align="left" rowspan="1" colspan="1">98894</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000075624</td>
+<td align="left" rowspan="1" colspan="1">ACTB</td>
+<td align="left" rowspan="1" colspan="1">7:5566781–5603415</td>
+<td align="left" rowspan="1" colspan="1">91079</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000127920</td>
+<td align="left" rowspan="1" colspan="1">GNG11</td>
+<td align="left" rowspan="1" colspan="1">7:93220884–93567791</td>
+<td align="left" rowspan="1" colspan="1">85225</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000204592</td>
+<td align="left" rowspan="1" colspan="1">HLA-E</td>
+<td align="left" rowspan="1" colspan="1">6:30457244–30461982</td>
+<td align="left" rowspan="1" colspan="1">82263</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000087086</td>
+<td align="left" rowspan="1" colspan="1">FTL</td>
+<td align="left" rowspan="1" colspan="1">19:49468558–49470135</td>
+<td align="left" rowspan="1" colspan="1">81047</td>
+<td align="left" rowspan="1" colspan="1">11</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000158710</td>
+<td align="left" rowspan="1" colspan="1">TAGLN2</td>
+<td align="left" rowspan="1" colspan="1">1:159887897–159895522</td>
+<td align="left" rowspan="1" colspan="1">77614</td>
+<td align="left" rowspan="1" colspan="1">12</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000120885</td>
+<td align="left" rowspan="1" colspan="1">CLU</td>
+<td align="left" rowspan="1" colspan="1">8:27454434–27472548</td>
+<td align="left" rowspan="1" colspan="1">72310</td>
+<td align="left" rowspan="1" colspan="1">13</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000168497</td>
+<td align="left" rowspan="1" colspan="1">SDPR</td>
+<td align="left" rowspan="1" colspan="1">2:192699027–193060435</td>
+<td align="left" rowspan="1" colspan="1">71863</td>
+<td align="left" rowspan="1" colspan="1">14</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000150681</td>
+<td align="left" rowspan="1" colspan="1">RGS18</td>
+<td align="left" rowspan="1" colspan="1">1:192127586–192154945</td>
+<td align="left" rowspan="1" colspan="1">65222</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000163041</td>
+<td align="left" rowspan="1" colspan="1">H3F3A</td>
+<td align="left" rowspan="1" colspan="1">1:226249552–226259702</td>
+<td align="left" rowspan="1" colspan="1">63326</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt101"><p>*NRC =  Normalized Read Counts calculated from transcript length (x) as NRC =  read_count*(1+e-0.0027638x).<sup/></p></fn></table-wrap-foot></table-wrap>
+<p>Second, to check the quality of the TopHat alignments the reads were also mapped against RefSeq mRNAs (<xref ref-type="fig" rid="pone-0081809-g002">Fig. 2</xref> ii) using bwa (<ext-link ext-link-type="uri" xlink:href="http://bio-bwa.sourceforge.net/" xlink:type="simple">http://bio-bwa.sourceforge.net/</ext-link>) and samtools (<ext-link ext-link-type="uri" xlink:href="http://samtools.sourceforge.net/" xlink:type="simple">http://samtools.sourceforge.net/</ext-link>) giving similar results (data not shown). PolyA-sites and the expression level of individual transcripts were visualized by plotting log coverage against the distance from the 5′-end of the RefSeq mRNA sequences (<xref ref-type="fig" rid="pone-0081809-g004">Fig. 4</xref>). Additional data is shown in Table S2 in <xref ref-type="supplementary-material" rid="pone.0081809.s001">File S1</xref>.</p>
+<fig id="pone-0081809-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g004</object-id><label>Figure 4</label><caption>
+<title>Mapping of S0 (poly(dT) selected transcripts) against RefSeq mRNA.</title>
+<p>The horizontal axis shows the distance in nucleotides from the 5′-end of the transcript (bin length  = 100 bp), and the vertical logarithmic axis shows the sum of uniquely mapped reads to each position of the bin. The slope of the dotted line corresponds to the exponential decay function derived in <xref ref-type="fig" rid="pone-0081809-g003">Fig. 3</xref>. The sudden “drops” correspond to polyA-sites. As seen in the figure NM_002704 (<italic>PPBP</italic>) has two polyA-sites which correspond to the known polyA-sites at positions 708 and 1307, respectively. The abundance of the longer <italic>PPBP</italic> transcript appears to be hundred-fold lower than that of the shorter transcript.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g004" position="float" xlink:type="simple"/></fig>
+<p>Finally, a detailed analysis of transcripts and assignment of mRNA isoforms was performed by <italic>de novo</italic> assembly of transcripts using Trinity RNA-Seq software from (<ext-link ext-link-type="uri" xlink:href="http://trinityrnaseq.sourceforge.net/" xlink:type="simple">http://trinityrnaseq.sourceforge.net/</ext-link>) followed by quantification of transcripts with RSEM (RNA-Seq by Expectation-Maximization) (<xref ref-type="fig" rid="pone-0081809-g002">Fig. 2</xref> iii). Identification of the <italic>de novo</italic> assembled transcripts was achieved by Blat and BLAST searches using the UCSC Browser and the NCBI Genome databases, respectively. <xref ref-type="table" rid="pone-0081809-t003">Table 3a</xref> shows the Top 25 out of 9077 reported <italic>de novo</italic> assembled polyA+ genomic transcripts with identification to locus; excluding the mitochondrial genome for clarity. Full-length transcripts could be identified by the presence of a SMARTer IIA 5′-leader sequence and a 3′-end polyA tail (<xref ref-type="fig" rid="pone-0081809-g005">Fig 5</xref>). The magnitude of expression of <italic>de novo</italic> assembled polyA+ transcripts correlated well (Spearman's rho  = 0.83) with the length normalized coverage by TopHat alignment of polyA+ cDNA reads to the human genome (compare <xref ref-type="table" rid="pone-0081809-t002">Tables 2</xref> and <xref ref-type="table" rid="pone-0081809-t003">3a</xref>).</p>
+<fig id="pone-0081809-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g005</object-id><label>Figure 5</label><caption>
+<title>Snapshot of UCSC Browser Blat alignment of <italic>de novo</italic> assembled transcript variant comp1_c0_seq1 mapping to TMSB4X.</title>
+<p>The 5′-leader sequence matches the SMARTer IIA oligonucleotide. The Trinity <italic>de novo</italic> assembled nucleotide sequence is identical to the GRCh37/hg19 reference. Part of the polyA tail is also included. Splice junctions are marked in turquoise.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g005" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0081809-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.t003</object-id><label>Table 3</label><caption>
+<title>de novo assembly of platelet transcripts.</title>
+</caption><alternatives><graphic id="pone-0081809-t003-3" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.t003" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td colspan="5" align="left" rowspan="1">Table 3a. Trinity/RSEM</td>
+<td colspan="5" align="left" rowspan="1">Table 3b. Trinity/RSEM</td>
+</tr>
+<tr>
+<td colspan="5" align="left" rowspan="1">de novo assembly of PolyA+ mRNA transcripts (MT-RNA excluded)</td>
+<td colspan="5" align="left" rowspan="1">de novo assembly of rRNA-depleted total RNA transcripts (MT-RNA excluded)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Rank</td>
+<td align="left" rowspan="1" colspan="1">Gene</td>
+<td align="left" rowspan="1" colspan="1">Length</td>
+<td align="left" rowspan="1" colspan="1">FPKM<xref ref-type="table-fn" rid="nt102">¶</xref></td>
+<td align="left" rowspan="1" colspan="1">NRC<xref ref-type="table-fn" rid="nt103">*</xref></td>
+<td align="left" rowspan="1" colspan="1">Rank<xref ref-type="table-fn" rid="nt104">§</xref></td>
+<td align="left" rowspan="1" colspan="1">Gene</td>
+<td align="left" rowspan="1" colspan="1">Length_mean</td>
+<td align="left" rowspan="1" colspan="1">FPKM<xref ref-type="table-fn" rid="nt102">¶</xref> _mean</td>
+<td align="left" rowspan="1" colspan="1">FPKM_sd</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">TMSB4X</td>
+<td align="left" rowspan="1" colspan="1">673</td>
+<td align="left" rowspan="1" colspan="1">67846</td>
+<td align="left" rowspan="1" colspan="1">1399035</td>
+<td align="left" rowspan="1" colspan="1">ncrna</td>
+<td align="left" rowspan="1" colspan="1">7SLRNA</td>
+<td align="left" rowspan="1" colspan="1">349</td>
+<td align="left" rowspan="1" colspan="1">295364</td>
+<td align="left" rowspan="1" colspan="1">120832</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">B2M</td>
+<td align="left" rowspan="1" colspan="1">992</td>
+<td align="left" rowspan="1" colspan="1">28110</td>
+<td align="left" rowspan="1" colspan="1">827815</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">TMSB4X</td>
+<td align="left" rowspan="1" colspan="1">646</td>
+<td align="left" rowspan="1" colspan="1">145005</td>
+<td align="left" rowspan="1" colspan="1">15806</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">PPBP</td>
+<td align="left" rowspan="1" colspan="1">1789</td>
+<td align="left" rowspan="1" colspan="1">10067</td>
+<td align="left" rowspan="1" colspan="1">524473</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">B2M</td>
+<td align="left" rowspan="1" colspan="1">990</td>
+<td align="left" rowspan="1" colspan="1">64093</td>
+<td align="left" rowspan="1" colspan="1">8783</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">PF4</td>
+<td align="left" rowspan="1" colspan="1">1035</td>
+<td align="left" rowspan="1" colspan="1">13004</td>
+<td align="left" rowspan="1" colspan="1">398344</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">PPBP</td>
+<td align="left" rowspan="1" colspan="1">2296</td>
+<td align="left" rowspan="1" colspan="1">22402</td>
+<td align="left" rowspan="1" colspan="1">12048</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">OST4</td>
+<td align="left" rowspan="1" colspan="1">470</td>
+<td align="left" rowspan="1" colspan="1">19998</td>
+<td align="left" rowspan="1" colspan="1">291396</td>
+<td align="left" rowspan="1" colspan="1">ncrna</td>
+<td align="left" rowspan="1" colspan="1">7SK-RNA</td>
+<td align="left" rowspan="1" colspan="1">330</td>
+<td align="left" rowspan="1" colspan="1">9981</td>
+<td align="left" rowspan="1" colspan="1">2495</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">CCL5</td>
+<td align="left" rowspan="1" colspan="1">777</td>
+<td align="left" rowspan="1" colspan="1">6289</td>
+<td align="left" rowspan="1" colspan="1">148021</td>
+<td align="left" rowspan="1" colspan="1">ncrna</td>
+<td align="left" rowspan="1" colspan="1">LSU-rRNA</td>
+<td align="left" rowspan="1" colspan="1">1032</td>
+<td align="left" rowspan="1" colspan="1">8029</td>
+<td align="left" rowspan="1" colspan="1">6510</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">FTH1</td>
+<td align="left" rowspan="1" colspan="1">961</td>
+<td align="left" rowspan="1" colspan="1">5068</td>
+<td align="left" rowspan="1" colspan="1">144939</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">FTH1</td>
+<td align="left" rowspan="1" colspan="1">955</td>
+<td align="left" rowspan="1" colspan="1">8008</td>
+<td align="left" rowspan="1" colspan="1">1385</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">SERF2</td>
+<td align="left" rowspan="1" colspan="1">598</td>
+<td align="left" rowspan="1" colspan="1">6988</td>
+<td align="left" rowspan="1" colspan="1">129001</td>
+<td align="left" rowspan="1" colspan="1">ncrna</td>
+<td align="left" rowspan="1" colspan="1">RNA45S5</td>
+<td align="left" rowspan="1" colspan="1">307</td>
+<td align="left" rowspan="1" colspan="1">6586</td>
+<td align="left" rowspan="1" colspan="1">4582</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">PTMA</td>
+<td align="left" rowspan="1" colspan="1">1036</td>
+<td align="left" rowspan="1" colspan="1">4101</td>
+<td align="left" rowspan="1" colspan="1">125730</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">PF4</td>
+<td align="left" rowspan="1" colspan="1">1201</td>
+<td align="left" rowspan="1" colspan="1">6367</td>
+<td align="left" rowspan="1" colspan="1">3351</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">H3F3B</td>
+<td align="left" rowspan="1" colspan="1">1087</td>
+<td align="left" rowspan="1" colspan="1">3849</td>
+<td align="left" rowspan="1" colspan="1">123435</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">SMARCA5</td>
+<td align="left" rowspan="1" colspan="1">510</td>
+<td align="left" rowspan="1" colspan="1">5991</td>
+<td align="left" rowspan="1" colspan="1">1417</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1">SH3BGRL3</td>
+<td align="left" rowspan="1" colspan="1">781</td>
+<td align="left" rowspan="1" colspan="1">4037</td>
+<td align="left" rowspan="1" colspan="1">95446</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">OST4</td>
+<td align="left" rowspan="1" colspan="1">492</td>
+<td align="left" rowspan="1" colspan="1">5765</td>
+<td align="left" rowspan="1" colspan="1">1800</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="left" rowspan="1" colspan="1">ACTB</td>
+<td align="left" rowspan="1" colspan="1">974</td>
+<td align="left" rowspan="1" colspan="1">3058</td>
+<td align="left" rowspan="1" colspan="1">88556</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">PF4V1</td>
+<td align="left" rowspan="1" colspan="1">530</td>
+<td align="left" rowspan="1" colspan="1">3609</td>
+<td align="left" rowspan="1" colspan="1">505</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="left" rowspan="1" colspan="1">FTL</td>
+<td align="left" rowspan="1" colspan="1">914</td>
+<td align="left" rowspan="1" colspan="1">3053</td>
+<td align="left" rowspan="1" colspan="1">83361</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">C21orf7</td>
+<td align="left" rowspan="1" colspan="1">1527</td>
+<td align="left" rowspan="1" colspan="1">3207</td>
+<td align="left" rowspan="1" colspan="1">912</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">14</td>
+<td align="left" rowspan="1" colspan="1">TAGLN2</td>
+<td align="left" rowspan="1" colspan="1">1414</td>
+<td align="left" rowspan="1" colspan="1">1866</td>
+<td align="left" rowspan="1" colspan="1">76941</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">ACTB</td>
+<td align="left" rowspan="1" colspan="1">1680</td>
+<td align="left" rowspan="1" colspan="1">2991</td>
+<td align="left" rowspan="1" colspan="1">637</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">GNG11</td>
+<td align="left" rowspan="1" colspan="1">876</td>
+<td align="left" rowspan="1" colspan="1">2804</td>
+<td align="left" rowspan="1" colspan="1">73644</td>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1">MYL6</td>
+<td align="left" rowspan="1" colspan="1">700</td>
+<td align="left" rowspan="1" colspan="1">2705</td>
+<td align="left" rowspan="1" colspan="1">678</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">16</td>
+<td align="left" rowspan="1" colspan="1">PTMA</td>
+<td align="left" rowspan="1" colspan="1">320</td>
+<td align="left" rowspan="1" colspan="1">6581</td>
+<td align="left" rowspan="1" colspan="1">62019</td>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="left" rowspan="1" colspan="1">CCL5</td>
+<td align="left" rowspan="1" colspan="1">777</td>
+<td align="left" rowspan="1" colspan="1">2569</td>
+<td align="left" rowspan="1" colspan="1">370</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">17</td>
+<td align="left" rowspan="1" colspan="1">RGS18</td>
+<td align="left" rowspan="1" colspan="1">4238</td>
+<td align="left" rowspan="1" colspan="1">485</td>
+<td align="left" rowspan="1" colspan="1">61271</td>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="left" rowspan="1" colspan="1">GNG11</td>
+<td align="left" rowspan="1" colspan="1">1004</td>
+<td align="left" rowspan="1" colspan="1">2493</td>
+<td align="left" rowspan="1" colspan="1">1019</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">18</td>
+<td align="left" rowspan="1" colspan="1">C21orf7</td>
+<td align="left" rowspan="1" colspan="1">1518</td>
+<td align="left" rowspan="1" colspan="1">1341</td>
+<td align="left" rowspan="1" colspan="1">59276</td>
+<td align="left" rowspan="1" colspan="1">14</td>
+<td align="left" rowspan="1" colspan="1">HSMAR1</td>
+<td align="left" rowspan="1" colspan="1">1756</td>
+<td align="left" rowspan="1" colspan="1">2456</td>
+<td align="left" rowspan="1" colspan="1">344</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">19</td>
+<td align="left" rowspan="1" colspan="1">SDPR</td>
+<td align="left" rowspan="1" colspan="1">2554</td>
+<td align="left" rowspan="1" colspan="1">774</td>
+<td align="left" rowspan="1" colspan="1">58065</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">RGS18</td>
+<td align="left" rowspan="1" colspan="1">4443</td>
+<td align="left" rowspan="1" colspan="1">2432</td>
+<td align="left" rowspan="1" colspan="1">160</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">TUBB1</td>
+<td align="left" rowspan="1" colspan="1">3109</td>
+<td align="left" rowspan="1" colspan="1">612</td>
+<td align="left" rowspan="1" colspan="1">56270</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+<td align="left" rowspan="1" colspan="1">H3F3A</td>
+<td align="left" rowspan="1" colspan="1">588</td>
+<td align="left" rowspan="1" colspan="1">2370</td>
+<td align="left" rowspan="1" colspan="1">736</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">21</td>
+<td align="left" rowspan="1" colspan="1">MYL6</td>
+<td align="left" rowspan="1" colspan="1">696</td>
+<td align="left" rowspan="1" colspan="1">2509</td>
+<td align="left" rowspan="1" colspan="1">53370</td>
+<td align="left" rowspan="1" colspan="1">17</td>
+<td align="left" rowspan="1" colspan="1">HIST1H2AC</td>
+<td align="left" rowspan="1" colspan="1">1744</td>
+<td align="left" rowspan="1" colspan="1">2280</td>
+<td align="left" rowspan="1" colspan="1">424</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">22</td>
+<td align="left" rowspan="1" colspan="1">CLU</td>
+<td align="left" rowspan="1" colspan="1">1769</td>
+<td align="left" rowspan="1" colspan="1">939</td>
+<td align="left" rowspan="1" colspan="1">48350</td>
+<td align="left" rowspan="1" colspan="1">18</td>
+<td align="left" rowspan="1" colspan="1">MYL12A</td>
+<td align="left" rowspan="1" colspan="1">1316</td>
+<td align="left" rowspan="1" colspan="1">2278</td>
+<td align="left" rowspan="1" colspan="1">552</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">23</td>
+<td align="left" rowspan="1" colspan="1">HLA-E</td>
+<td align="left" rowspan="1" colspan="1">1492</td>
+<td align="left" rowspan="1" colspan="1">1025</td>
+<td align="left" rowspan="1" colspan="1">44539</td>
+<td align="left" rowspan="1" colspan="1">19</td>
+<td align="left" rowspan="1" colspan="1">EFCAB13</td>
+<td align="left" rowspan="1" colspan="1">608</td>
+<td align="left" rowspan="1" colspan="1">2234</td>
+<td align="left" rowspan="1" colspan="1">704</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">24</td>
+<td align="left" rowspan="1" colspan="1">GPX1</td>
+<td align="left" rowspan="1" colspan="1">907</td>
+<td align="left" rowspan="1" colspan="1">1301</td>
+<td align="left" rowspan="1" colspan="1">35274</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">MORC3</td>
+<td align="left" rowspan="1" colspan="1">714</td>
+<td align="left" rowspan="1" colspan="1">2225</td>
+<td align="left" rowspan="1" colspan="1">834</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">25</td>
+<td align="left" rowspan="1" colspan="1">RGS10</td>
+<td align="left" rowspan="1" colspan="1">1001</td>
+<td align="left" rowspan="1" colspan="1">1136</td>
+<td align="left" rowspan="1" colspan="1">33743</td>
+<td align="left" rowspan="1" colspan="1">21</td>
+<td align="left" rowspan="1" colspan="1">PTMA</td>
+<td align="left" rowspan="1" colspan="1">1232</td>
+<td align="left" rowspan="1" colspan="1">2179</td>
+<td align="left" rowspan="1" colspan="1">667</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt102"><label>¶</label><p>Fragments Per Kilobase of transcript per Million mapped reads.</p></fn><fn id="nt103"><label/><p>*NRC =  Normalized Read Count calculated from transcript length (x) as NRC =  read_count*(1+e-0.0027638x).</p></fn><fn id="nt104"><label>§</label><p>Ranking of protein coding transcripts only.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s2b">
+<title>Mapping of rRNA-depleted total RNA (Samples S1, S2 and S3)</title>
+<p>The three barcoded rRNA-depleted total RNA libraries (S1,S2 and S3) resulted in 153 million pass filter strand-specific read pairs (QC data in Fig. S1 in <xref ref-type="supplementary-material" rid="pone.0081809.s001">File S1</xref>) which were mapped to the human reference genome (GRCh37/hg19) using TopHat. The uniquely mapped read localizations on the different chromosomes are shown in <xref ref-type="table" rid="pone-0081809-t001">Table 1</xref>. The aligned sequencing reads were assigned to the Homo_sapiens.GRCh37.71.gtf features as described above. Top 30 loci are shown in <xref ref-type="table" rid="pone-0081809-t004">Table 4</xref>. A full table of HTSeq counts is presented in Table S1 in <xref ref-type="supplementary-material" rid="pone.0081809.s001">File S1</xref>. The biological coefficient of variation as estimated by the edgeR software (<ext-link ext-link-type="uri" xlink:href="http://www.bioconductor.org/" xlink:type="simple">http://www.bioconductor.org/</ext-link>) is shown in <xref ref-type="fig" rid="pone-0081809-g006">figure 6</xref>. There was a linear dependence between FPKM (Fragments Per Kilobase of transcript per Million mapped reads)-values in samples S1, S2 and S3. <xref ref-type="fig" rid="pone-0081809-g007">Figure 7</xref> shows a pair-wise comparison of S1 (male) and S2 (female) rendering a Pearson's correlation coefficient of 0.99. These results were confirmed by <italic>de novo</italic> assembly using the Trinity software (<xref ref-type="table" rid="pone-0081809-t003">Table 3b</xref>).</p>
+<fig id="pone-0081809-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g006</object-id><label>Figure 6</label><caption>
+<title>Biological coefficient of variation of samples S1, S2 and S3 as estimated by TopHat/HTSeq/edgeR software.</title>
+<p>As expected the more highly expressed genes show much lower dispersion estimates than the mean value. “CPM” represents counts per million.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g006" position="float" xlink:type="simple"/></fig><fig id="pone-0081809-g007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g007</object-id><label>Figure 7</label><caption>
+<title>Plot showing the magnitude of FPKM gene expression in rRNA-depleted total RNA in pair-wise comparisons between sample S1 and sample S2.</title>
+<p>Each dot represents a S1/S2 pair for a gene that had detectable expression in both samples. Pearson's correlation coefficient  = 0.99. (TopHat/Cufflinks/Cuffdiff/CummeRbund software).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g007" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0081809-t004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.t004</object-id><label>Table 4</label><caption>
+<title>TopHat/Cufflinks alignment of rRNA-depleted total RNA to genome (excluding ncrna).</title>
+</caption><alternatives><graphic id="pone-0081809-t004-4" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.t004" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Ensembl id.</td>
+<td align="left" rowspan="1" colspan="1">Gene</td>
+<td align="left" rowspan="1" colspan="1">Locus</td>
+<td align="left" rowspan="1" colspan="1">S1_FPKM<xref ref-type="table-fn" rid="nt105">¶</xref></td>
+<td align="left" rowspan="1" colspan="1">S2_FPKM<xref ref-type="table-fn" rid="nt105">¶</xref></td>
+<td align="left" rowspan="1" colspan="1">S3_FPKM<xref ref-type="table-fn" rid="nt105">¶</xref></td>
+<td align="left" rowspan="1" colspan="1">Rank</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000205542</td>
+<td align="left" rowspan="1" colspan="1">TMSB4X</td>
+<td align="left" rowspan="1" colspan="1">X:12993226–12995346</td>
+<td align="left" rowspan="1" colspan="1">34973</td>
+<td align="left" rowspan="1" colspan="1">28506</td>
+<td align="left" rowspan="1" colspan="1">46120</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000163736</td>
+<td align="left" rowspan="1" colspan="1">PPBP</td>
+<td align="left" rowspan="1" colspan="1">4:74852754–74853914</td>
+<td align="left" rowspan="1" colspan="1">25489</td>
+<td align="left" rowspan="1" colspan="1">23607</td>
+<td align="left" rowspan="1" colspan="1">37832</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198804</td>
+<td align="left" rowspan="1" colspan="1">MT-CO1</td>
+<td align="left" rowspan="1" colspan="1">MT:5903–7445</td>
+<td align="left" rowspan="1" colspan="1">23594</td>
+<td align="left" rowspan="1" colspan="1">35045</td>
+<td align="left" rowspan="1" colspan="1">27213</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198888</td>
+<td align="left" rowspan="1" colspan="1">MT-ND1</td>
+<td align="left" rowspan="1" colspan="1">MT:3306–4262</td>
+<td align="left" rowspan="1" colspan="1">17087</td>
+<td align="left" rowspan="1" colspan="1">24640</td>
+<td align="left" rowspan="1" colspan="1">18055</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198938</td>
+<td align="left" rowspan="1" colspan="1">MT-CO3</td>
+<td align="left" rowspan="1" colspan="1">MT:8365–9990</td>
+<td align="left" rowspan="1" colspan="1">16415</td>
+<td align="left" rowspan="1" colspan="1">22715</td>
+<td align="left" rowspan="1" colspan="1">15566</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198840</td>
+<td align="left" rowspan="1" colspan="1">MT-ND3</td>
+<td align="left" rowspan="1" colspan="1">MT:10058–10404</td>
+<td align="left" rowspan="1" colspan="1">15273</td>
+<td align="left" rowspan="1" colspan="1">22805</td>
+<td align="left" rowspan="1" colspan="1">14332</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198886</td>
+<td align="left" rowspan="1" colspan="1">MT-ND4</td>
+<td align="left" rowspan="1" colspan="1">MT:10469–12137</td>
+<td align="left" rowspan="1" colspan="1">14039</td>
+<td align="left" rowspan="1" colspan="1">22467</td>
+<td align="left" rowspan="1" colspan="1">9924</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198899</td>
+<td align="left" rowspan="1" colspan="1">MT-ATP6</td>
+<td align="left" rowspan="1" colspan="1">MT:8365–9990</td>
+<td align="left" rowspan="1" colspan="1">12643</td>
+<td align="left" rowspan="1" colspan="1">15608</td>
+<td align="left" rowspan="1" colspan="1">11442</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198727</td>
+<td align="left" rowspan="1" colspan="1">MT-CYB</td>
+<td align="left" rowspan="1" colspan="1">MT:14746–15887</td>
+<td align="left" rowspan="1" colspan="1">13017</td>
+<td align="left" rowspan="1" colspan="1">15645</td>
+<td align="left" rowspan="1" colspan="1">10847</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000166710</td>
+<td align="left" rowspan="1" colspan="1">B2M</td>
+<td align="left" rowspan="1" colspan="1">15:45003674–45011075</td>
+<td align="left" rowspan="1" colspan="1">9394</td>
+<td align="left" rowspan="1" colspan="1">11022</td>
+<td align="left" rowspan="1" colspan="1">16484</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000212907</td>
+<td align="left" rowspan="1" colspan="1">MT-ND4L</td>
+<td align="left" rowspan="1" colspan="1">MT:10469–12137</td>
+<td align="left" rowspan="1" colspan="1">9394</td>
+<td align="left" rowspan="1" colspan="1">18469</td>
+<td align="left" rowspan="1" colspan="1">8991</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198786</td>
+<td align="left" rowspan="1" colspan="1">MT-ND5</td>
+<td align="left" rowspan="1" colspan="1">MT:12336–14148</td>
+<td align="left" rowspan="1" colspan="1">10900</td>
+<td align="left" rowspan="1" colspan="1">16518</td>
+<td align="left" rowspan="1" colspan="1">8191</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198712</td>
+<td align="left" rowspan="1" colspan="1">MT-CO2</td>
+<td align="left" rowspan="1" colspan="1">MT:7585–8269</td>
+<td align="left" rowspan="1" colspan="1">11460</td>
+<td align="left" rowspan="1" colspan="1">15423</td>
+<td align="left" rowspan="1" colspan="1">8156</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198763</td>
+<td align="left" rowspan="1" colspan="1">MT-ND2</td>
+<td align="left" rowspan="1" colspan="1">MT:4469–5511</td>
+<td align="left" rowspan="1" colspan="1">11304</td>
+<td align="left" rowspan="1" colspan="1">16506</td>
+<td align="left" rowspan="1" colspan="1">6650</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000228253</td>
+<td align="left" rowspan="1" colspan="1">MT-ATP8</td>
+<td align="left" rowspan="1" colspan="1">MT:8365–9990</td>
+<td align="left" rowspan="1" colspan="1">12611</td>
+<td align="left" rowspan="1" colspan="1">10792</td>
+<td align="left" rowspan="1" colspan="1">9831</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000163737</td>
+<td align="left" rowspan="1" colspan="1">PF4</td>
+<td align="left" rowspan="1" colspan="1">4:74844540–74848796</td>
+<td align="left" rowspan="1" colspan="1">5352</td>
+<td align="left" rowspan="1" colspan="1">5933</td>
+<td align="left" rowspan="1" colspan="1">9990</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000228474</td>
+<td align="left" rowspan="1" colspan="1">OST4</td>
+<td align="left" rowspan="1" colspan="1">2:27265231–27294641</td>
+<td align="left" rowspan="1" colspan="1">7326</td>
+<td align="left" rowspan="1" colspan="1">4882</td>
+<td align="left" rowspan="1" colspan="1">6268</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000180573</td>
+<td align="left" rowspan="1" colspan="1">HIST1H2AC</td>
+<td align="left" rowspan="1" colspan="1">6:26124372–26139344</td>
+<td align="left" rowspan="1" colspan="1">5539</td>
+<td align="left" rowspan="1" colspan="1">6458</td>
+<td align="left" rowspan="1" colspan="1">3635</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000150681</td>
+<td align="left" rowspan="1" colspan="1">RGS18</td>
+<td align="left" rowspan="1" colspan="1">1:192127586–192154945</td>
+<td align="left" rowspan="1" colspan="1">4310</td>
+<td align="left" rowspan="1" colspan="1">6219</td>
+<td align="left" rowspan="1" colspan="1">2841</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000075624</td>
+<td align="left" rowspan="1" colspan="1">ACTB</td>
+<td align="left" rowspan="1" colspan="1">7:5566781–5603415</td>
+<td align="left" rowspan="1" colspan="1">3375</td>
+<td align="left" rowspan="1" colspan="1">2548</td>
+<td align="left" rowspan="1" colspan="1">3199</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000167996</td>
+<td align="left" rowspan="1" colspan="1">FTH1</td>
+<td align="left" rowspan="1" colspan="1">11:61717292–61735132</td>
+<td align="left" rowspan="1" colspan="1">3044</td>
+<td align="left" rowspan="1" colspan="1">2459</td>
+<td align="left" rowspan="1" colspan="1">2413</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198695</td>
+<td align="left" rowspan="1" colspan="1">MT-ND6</td>
+<td align="left" rowspan="1" colspan="1">MT:14148–14673</td>
+<td align="left" rowspan="1" colspan="1">2741</td>
+<td align="left" rowspan="1" colspan="1">3190</td>
+<td align="left" rowspan="1" colspan="1">1528</td>
+<td align="left" rowspan="1" colspan="1">MT</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000127920</td>
+<td align="left" rowspan="1" colspan="1">GNG11</td>
+<td align="left" rowspan="1" colspan="1">7:93220884–93567791</td>
+<td align="left" rowspan="1" colspan="1">2369</td>
+<td align="left" rowspan="1" colspan="1">1585</td>
+<td align="left" rowspan="1" colspan="1">2850</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000168497</td>
+<td align="left" rowspan="1" colspan="1">SDPR</td>
+<td align="left" rowspan="1" colspan="1">2:192699027–193060435</td>
+<td align="left" rowspan="1" colspan="1">1809</td>
+<td align="left" rowspan="1" colspan="1">2832</td>
+<td align="left" rowspan="1" colspan="1">2040</td>
+<td align="left" rowspan="1" colspan="1">11</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000154146</td>
+<td align="left" rowspan="1" colspan="1">NRGN</td>
+<td align="left" rowspan="1" colspan="1">11:124609809–124636392</td>
+<td align="left" rowspan="1" colspan="1">2807</td>
+<td align="left" rowspan="1" colspan="1">1574</td>
+<td align="left" rowspan="1" colspan="1">2154</td>
+<td align="left" rowspan="1" colspan="1">12</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000101608</td>
+<td align="left" rowspan="1" colspan="1">MYL12A</td>
+<td align="left" rowspan="1" colspan="1">18:3247478–3261848</td>
+<td align="left" rowspan="1" colspan="1">2719</td>
+<td align="left" rowspan="1" colspan="1">1959</td>
+<td align="left" rowspan="1" colspan="1">1755</td>
+<td align="left" rowspan="1" colspan="1">13</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000180596</td>
+<td align="left" rowspan="1" colspan="1">HIST1H2BC</td>
+<td align="left" rowspan="1" colspan="1">6:26115100–26124154</td>
+<td align="left" rowspan="1" colspan="1">2897</td>
+<td align="left" rowspan="1" colspan="1">1822</td>
+<td align="left" rowspan="1" colspan="1">1525</td>
+<td align="left" rowspan="1" colspan="1">14</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000104904</td>
+<td align="left" rowspan="1" colspan="1">OAZ1</td>
+<td align="left" rowspan="1" colspan="1">19:2252251–2273487</td>
+<td align="left" rowspan="1" colspan="1">2003</td>
+<td align="left" rowspan="1" colspan="1">1762</td>
+<td align="left" rowspan="1" colspan="1">1954</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000163041</td>
+<td align="left" rowspan="1" colspan="1">H3F3A</td>
+<td align="left" rowspan="1" colspan="1">1:226249551–226259702</td>
+<td align="left" rowspan="1" colspan="1">1910</td>
+<td align="left" rowspan="1" colspan="1">1233</td>
+<td align="left" rowspan="1" colspan="1">1314</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000161570</td>
+<td align="left" rowspan="1" colspan="1">CCL5</td>
+<td align="left" rowspan="1" colspan="1">17:34195970–34212867</td>
+<td align="left" rowspan="1" colspan="1">1437</td>
+<td align="left" rowspan="1" colspan="1">1760</td>
+<td align="left" rowspan="1" colspan="1">1236</td>
+<td align="left" rowspan="1" colspan="1">17</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt105"><label>¶</label><p>Fragments Per Kilobase of transcript per Million mapped reads.</p></fn></table-wrap-foot></table-wrap>
+<p>Further analyses to reveal differential expression (DE) were performed with Cufflinks and the bioinformatic tools HTseq and DESeq from Bioconductor (<ext-link ext-link-type="uri" xlink:href="http://www.bioconductor.org/" xlink:type="simple">http://www.bioconductor.org/</ext-link>), which uses the R statistical programming language. <xref ref-type="fig" rid="pone-0081809-g008">Figure 8</xref> shows dispersion and log<sub>2</sub> fold change when comparing the two male samples S1 and S3 with the female sample S2 using DESeq. Eighteen differentially expressed genes were identified between the two sexes at 10% false discovery rate (FDR) using DESeq (<xref ref-type="fig" rid="pone-0081809-g008">Fig. 8</xref>, red dots). Not all of these genes were located on the Y chromosome (<xref ref-type="table" rid="pone-0081809-t005">Table 5</xref>.).</p>
+<fig id="pone-0081809-g008" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g008</object-id><label>Figure 8</label><caption>
+<title>Graphs showing the dispersion and log<sub>2</sub> fold change, respectively, when comparing the two male samples S1 and S3 with the female sample S2 using DESeq.</title>
+<p>The “dispersion” on the y-axis in the left-hand plot represents the square of the coefficient of biological variation, and the red “hockey-stick” line is a fitted curve through the estimates of the dispersion value for each gene. In the right-hand plot, the horizontal red line represents equal expression in male and female samples. Red dots represent differentially expressed genes at 10% FDR, and red triangles represent red dots that lie outside the graph (above or below). The identity of the differentially expressed genes and the corrresponding log<sub>2</sub> fold changes can be found in <xref ref-type="table" rid="pone-0081809-t005">Table 5</xref> (columns 2 and 8, respectively).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g008" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0081809-t005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.t005</object-id><label>Table 5</label><caption>
+<title>Significantly differentially expressed genes in male and female platelets at 10% FDR as estimated by DESeq.</title>
+</caption><alternatives><graphic id="pone-0081809-t005-5" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.t005" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Ensembl id.</td>
+<td align="left" rowspan="1" colspan="1">gene</td>
+<td align="left" rowspan="1" colspan="1">locus</td>
+<td align="left" rowspan="1" colspan="1">baseMean</td>
+<td align="left" rowspan="1" colspan="1">baseMeanA</td>
+<td align="left" rowspan="1" colspan="1">baseMeanB</td>
+<td align="left" rowspan="1" colspan="1">FC<xref ref-type="table-fn" rid="nt106">*</xref></td>
+<td align="left" rowspan="1" colspan="1">log2 FC<xref ref-type="table-fn" rid="nt106">*</xref></td>
+<td align="left" rowspan="1" colspan="1">pval<xref ref-type="table-fn" rid="nt107">¶</xref></td>
+<td align="left" rowspan="1" colspan="1">padj<xref ref-type="table-fn" rid="nt108">§</xref></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000183878</td>
+<td align="left" rowspan="1" colspan="1">UTY</td>
+<td align="left" rowspan="1" colspan="1">Y:15360259–15592553</td>
+<td align="left" rowspan="1" colspan="1">1511.7</td>
+<td align="left" rowspan="1" colspan="1">2265.7</td>
+<td align="left" rowspan="1" colspan="1">3.5</td>
+<td align="left" rowspan="1" colspan="1">0.002</td>
+<td align="left" rowspan="1" colspan="1">−9.3</td>
+<td align="left" rowspan="1" colspan="1">7.6E-27</td>
+<td align="left" rowspan="1" colspan="1">1.4E-22</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198692</td>
+<td align="left" rowspan="1" colspan="1">EIF1AY</td>
+<td align="left" rowspan="1" colspan="1">Y:22737611–22755040</td>
+<td align="left" rowspan="1" colspan="1">618.0</td>
+<td align="left" rowspan="1" colspan="1">925.3</td>
+<td align="left" rowspan="1" colspan="1">3.5</td>
+<td align="left" rowspan="1" colspan="1">0.004</td>
+<td align="left" rowspan="1" colspan="1">−8.0</td>
+<td align="left" rowspan="1" colspan="1">4.4E-19</td>
+<td align="left" rowspan="1" colspan="1">4.0E-15</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210082</td>
+<td align="left" rowspan="1" colspan="1">MT-RNR2</td>
+<td align="left" rowspan="1" colspan="1">MT:1671–3229</td>
+<td align="left" rowspan="1" colspan="1">160159.6</td>
+<td align="left" rowspan="1" colspan="1">50966.7</td>
+<td align="left" rowspan="1" colspan="1">378545.5</td>
+<td align="left" rowspan="1" colspan="1">7.427</td>
+<td align="left" rowspan="1" colspan="1">2.9</td>
+<td align="left" rowspan="1" colspan="1">3.5E-13</td>
+<td align="left" rowspan="1" colspan="1">2.2E-09</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000116117</td>
+<td align="left" rowspan="1" colspan="1">PARD3B</td>
+<td align="left" rowspan="1" colspan="1">2:205410516–206484886</td>
+<td align="left" rowspan="1" colspan="1">843.0</td>
+<td align="left" rowspan="1" colspan="1">153.2</td>
+<td align="left" rowspan="1" colspan="1">2222.5</td>
+<td align="left" rowspan="1" colspan="1">14.51</td>
+<td align="left" rowspan="1" colspan="1">3.9</td>
+<td align="left" rowspan="1" colspan="1">1.2E-12</td>
+<td align="left" rowspan="1" colspan="1">5.7E-09</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000154620</td>
+<td align="left" rowspan="1" colspan="1">TMSB4Y</td>
+<td align="left" rowspan="1" colspan="1">Y:15815447–15817904</td>
+<td align="left" rowspan="1" colspan="1">1407.2</td>
+<td align="left" rowspan="1" colspan="1">2107.9</td>
+<td align="left" rowspan="1" colspan="1">5.6</td>
+<td align="left" rowspan="1" colspan="1">0.003</td>
+<td align="left" rowspan="1" colspan="1">−8.5</td>
+<td align="left" rowspan="1" colspan="1">1.9E-12</td>
+<td align="left" rowspan="1" colspan="1">6.9E-09</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000196565</td>
+<td align="left" rowspan="1" colspan="1">HBG2</td>
+<td align="left" rowspan="1" colspan="1">11:5274420–5667019</td>
+<td align="left" rowspan="1" colspan="1">635.7</td>
+<td align="left" rowspan="1" colspan="1">908.0</td>
+<td align="left" rowspan="1" colspan="1">91.0</td>
+<td align="left" rowspan="1" colspan="1">0.100</td>
+<td align="left" rowspan="1" colspan="1">−3.3</td>
+<td align="left" rowspan="1" colspan="1">4.1E-10</td>
+<td align="left" rowspan="1" colspan="1">1.3E-06</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000067048</td>
+<td align="left" rowspan="1" colspan="1">DDX3Y</td>
+<td align="left" rowspan="1" colspan="1">Y:15016019–15032390</td>
+<td align="left" rowspan="1" colspan="1">884.4</td>
+<td align="left" rowspan="1" colspan="1">1323.8</td>
+<td align="left" rowspan="1" colspan="1">5.6</td>
+<td align="left" rowspan="1" colspan="1">0.004</td>
+<td align="left" rowspan="1" colspan="1">−7.9</td>
+<td align="left" rowspan="1" colspan="1">1.2E-09</td>
+<td align="left" rowspan="1" colspan="1">3.2E-06</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000100362</td>
+<td align="left" rowspan="1" colspan="1">PVALB</td>
+<td align="left" rowspan="1" colspan="1">22:37196728–37215523</td>
+<td align="left" rowspan="1" colspan="1">209.1</td>
+<td align="left" rowspan="1" colspan="1">296.0</td>
+<td align="left" rowspan="1" colspan="1">35.3</td>
+<td align="left" rowspan="1" colspan="1">0.119</td>
+<td align="left" rowspan="1" colspan="1">−3.1</td>
+<td align="left" rowspan="1" colspan="1">7.0E-09</td>
+<td align="left" rowspan="1" colspan="1">1.6E-05</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000113658</td>
+<td align="left" rowspan="1" colspan="1">SMAD5</td>
+<td align="left" rowspan="1" colspan="1">5:135468534–135524435</td>
+<td align="left" rowspan="1" colspan="1">1050.2</td>
+<td align="left" rowspan="1" colspan="1">384.3</td>
+<td align="left" rowspan="1" colspan="1">2382.0</td>
+<td align="left" rowspan="1" colspan="1">6.198</td>
+<td align="left" rowspan="1" colspan="1">2.6</td>
+<td align="left" rowspan="1" colspan="1">9.4E-09</td>
+<td align="left" rowspan="1" colspan="1">1.9E-05</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000135426</td>
+<td align="left" rowspan="1" colspan="1">TESPA1</td>
+<td align="left" rowspan="1" colspan="1">12:55341802–55378530</td>
+<td align="left" rowspan="1" colspan="1">321.0</td>
+<td align="left" rowspan="1" colspan="1">59.3</td>
+<td align="left" rowspan="1" colspan="1">844.6</td>
+<td align="left" rowspan="1" colspan="1">14.25</td>
+<td align="left" rowspan="1" colspan="1">3.8</td>
+<td align="left" rowspan="1" colspan="1">1.7E-08</td>
+<td align="left" rowspan="1" colspan="1">3.2E-05</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000077984</td>
+<td align="left" rowspan="1" colspan="1">CST7</td>
+<td align="left" rowspan="1" colspan="1">20:24929866–24940564</td>
+<td align="left" rowspan="1" colspan="1">140.5</td>
+<td align="left" rowspan="1" colspan="1">208.9</td>
+<td align="left" rowspan="1" colspan="1">3.5</td>
+<td align="left" rowspan="1" colspan="1">0.017</td>
+<td align="left" rowspan="1" colspan="1">−5.9</td>
+<td align="left" rowspan="1" colspan="1">2.6E-08</td>
+<td align="left" rowspan="1" colspan="1">4.4E-05</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000118946</td>
+<td align="left" rowspan="1" colspan="1">PCDH17</td>
+<td align="left" rowspan="1" colspan="1">13:58205944–58303445</td>
+<td align="left" rowspan="1" colspan="1">74.2</td>
+<td align="left" rowspan="1" colspan="1">0.88</td>
+<td align="left" rowspan="1" colspan="1">220.8</td>
+<td align="left" rowspan="1" colspan="1">251.4</td>
+<td align="left" rowspan="1" colspan="1">8.0</td>
+<td align="left" rowspan="1" colspan="1">6.0E-07</td>
+<td align="left" rowspan="1" colspan="1">9.2E-04</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000248527</td>
+<td align="left" rowspan="1" colspan="1">MTATP6P1</td>
+<td align="left" rowspan="1" colspan="1">1:569076–569756</td>
+<td align="left" rowspan="1" colspan="1">7122.7</td>
+<td align="left" rowspan="1" colspan="1">3712.0</td>
+<td align="left" rowspan="1" colspan="1">13944.1</td>
+<td align="left" rowspan="1" colspan="1">3.756</td>
+<td align="left" rowspan="1" colspan="1">1.9</td>
+<td align="left" rowspan="1" colspan="1">1.2E-06</td>
+<td align="left" rowspan="1" colspan="1">1.7E-03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000012817</td>
+<td align="left" rowspan="1" colspan="1">KDM5D</td>
+<td align="left" rowspan="1" colspan="1">Y:21865751–21906825</td>
+<td align="left" rowspan="1" colspan="1">149.8</td>
+<td align="left" rowspan="1" colspan="1">224.4</td>
+<td align="left" rowspan="1" colspan="1">0.71</td>
+<td align="left" rowspan="1" colspan="1">0.003</td>
+<td align="left" rowspan="1" colspan="1">−8.3</td>
+<td align="left" rowspan="1" colspan="1">1.5E-06</td>
+<td align="left" rowspan="1" colspan="1">2.0E-03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000114374</td>
+<td align="left" rowspan="1" colspan="1">USP9Y</td>
+<td align="left" rowspan="1" colspan="1">Y:14813160–14972764</td>
+<td align="left" rowspan="1" colspan="1">142.5</td>
+<td align="left" rowspan="1" colspan="1">213.4</td>
+<td align="left" rowspan="1" colspan="1">0.71</td>
+<td align="left" rowspan="1" colspan="1">0.003</td>
+<td align="left" rowspan="1" colspan="1">−8.2</td>
+<td align="left" rowspan="1" colspan="1">2.4E-06</td>
+<td align="left" rowspan="1" colspan="1">2.9E-03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000185736</td>
+<td align="left" rowspan="1" colspan="1">ADARB2</td>
+<td align="left" rowspan="1" colspan="1">10:1228073–1779670</td>
+<td align="left" rowspan="1" colspan="1">79.2</td>
+<td align="left" rowspan="1" colspan="1">118.8</td>
+<td align="left" rowspan="1" colspan="1">0.00</td>
+<td align="left" rowspan="1" colspan="1">0.000</td>
+<td align="left" rowspan="1" colspan="1">-Inf</td>
+<td align="left" rowspan="1" colspan="1">1.53E-05</td>
+<td align="left" rowspan="1" colspan="1">1.7E-02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000229308</td>
+<td align="left" rowspan="1" colspan="1">AC010084.1</td>
+<td align="left" rowspan="1" colspan="1">Y:3904538–3968361</td>
+<td align="left" rowspan="1" colspan="1">340.5</td>
+<td align="left" rowspan="1" colspan="1">492.35</td>
+<td align="left" rowspan="1" colspan="1">36.7</td>
+<td align="left" rowspan="1" colspan="1">0.075</td>
+<td align="left" rowspan="1" colspan="1">−3.75</td>
+<td align="left" rowspan="1" colspan="1">1.47E-05</td>
+<td align="left" rowspan="1" colspan="1">1.7E-02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000240356</td>
+<td align="left" rowspan="1" colspan="1">RPL23AP7</td>
+<td align="left" rowspan="1" colspan="1">2:114368079–114384667</td>
+<td align="left" rowspan="1" colspan="1">6531.0</td>
+<td align="left" rowspan="1" colspan="1">8750.85</td>
+<td align="left" rowspan="1" colspan="1">2091.0</td>
+<td align="left" rowspan="1" colspan="1">0.239</td>
+<td align="left" rowspan="1" colspan="1">−2.07</td>
+<td align="left" rowspan="1" colspan="1">1.62E-05</td>
+<td align="left" rowspan="1" colspan="1">1.7E-02</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt106"><label/><p>*Fold change;</p></fn><fn id="nt107"><label>¶</label><p>P-value;</p></fn><fn id="nt108"><label>§</label><p>Adjusted P-value.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s2c">
+<title>Differential expression at the gene level in polyA + mRNA vs total RNA</title>
+<p>Gene expression levels in total RNA samples are conventionally measured as RPKM (Reads Per Kilobase of transcript per Million mapped reads) or FPKM values assuming a rectangular distribution of reads covering the transcript coordinates, i.e. these measures are proportional to the number of reads divided by transcript lengths. The distribution of reads covering the transcript coordinates using oligo(dT) isolated mRNA is very different as it fits an exponential decay function from the 3′-end polyA site towards the 5′-end. (<xref ref-type="fig" rid="pone-0081809-g003">Fig. 3</xref> and <xref ref-type="fig" rid="pone-0081809-g004">Fig. 4</xref>). This makes RPKM and FPKM estimates less appropriate for comparison of gene expression levels in polyA + mRNA. Consequently, both transcript lengths and library preparation method ought to be taken into account. Otherwise, false differences will emerge. Adjusted bedcoverage data for the most abundant transcript of each gene is presented in Table S3 in <xref ref-type="supplementary-material" rid="pone.0081809.s001">File S1</xref> where columns S0, S1, S2, and S3 represent raw counts and columns S0_adj, and S1_adj to S3_adj represent Normalized Read Counts (NRC) and normalized FPKM figures, respectively (see <xref ref-type="table" rid="pone-0081809-t003">Table 3a</xref> for definition of NRC used in this context). <xref ref-type="table" rid="pone-0081809-t003">Table 3a</xref> demonstrates the fallaciousness of FPKM-values if used on poly(dT) selected transcripts. <xref ref-type="fig" rid="pone-0081809-g009">Figure 9</xref> shows a heatmap of such normalized levels of expression for the 30 most highly expressed genes across the samples from the 4 different patients. Altogether circa 500 differentially expressed genes were identified at 10% FDR comparing mRNA vs. totRNA using DESeq (<xref ref-type="fig" rid="pone-0081809-g010">Fig. 10</xref>). A full table of mRNA vs. totRNA comparisons is provided in Table S4 in <xref ref-type="supplementary-material" rid="pone.0081809.s001">File S1</xref>. As expected, most of this “DE”, which primarily should represent preparation method and mapping artefacts, was observed for non-coding transcripts, which were not present in the polyA+ mRNA preparation, and mitochondrial rRNA transcripts which were more abundant in the polyA+ mRNA sample (<xref ref-type="table" rid="pone-0081809-t006">Table 6</xref>). However, coding transcripts that lack a polyA-tail should also appear as differentially expressed.</p>
+<fig id="pone-0081809-g009" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g009</object-id><label>Figure 9</label><caption>
+<title>Heatmap showing normalized levels of expression for the 30 most highly expressed gene transcripts across mRNA and rRNA-depleted total RNA samples from the 4 different patients.</title>
+<p>Nearly all differences of intensity for a given gene are likely to represent preparation artefacts, i.e. due to the poly(dT) enrichment and rRNA-depletion, respectively. Sample names have a ‘C’ added to indicate that the intensities represent length- and method-adjusted counts (TopHat/bedtools/DESeq and “in-house” software).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g009" position="float" xlink:type="simple"/></fig><fig id="pone-0081809-g010" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g010</object-id><label>Figure 10</label><caption>
+<title>Histogram of p-values from the call to negative binomial test with DESeq comparing the length- and method-adjusted counts of polyA + mRNA sample S0 with the rRNA-depleted total RNA samples S1, S2 and S3.</title>
+<p>Most of the circa 500 remaining significant differences after length- and method-adjusted normalization presumably represent preparation artefacts, i.e. due to the poly(dT) enrichment and rRNA-depletion, respectively. However, protein coding transcripts lacking a polyA-tail should also appear as differentially expressed. Note that omission of the length- and method-adjusted normalization yields a couple of thousand “differentially expressed” genes (TopHat/bedtools/DESeq and “in-house” software).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g010" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0081809-t006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.t006</object-id><label>Table 6</label><caption>
+<title>Significant DE<xref ref-type="table-fn" rid="nt109">φ</xref> among the most abundant transcripts in polyA+ mRNA versus rRNA-depleted total RNA.</title>
+</caption><alternatives><graphic id="pone-0081809-t006-6" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.t006" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Ensembl id.</td>
+<td align="left" rowspan="1" colspan="1">gene</td>
+<td align="left" rowspan="1" colspan="1">locus</td>
+<td align="left" rowspan="1" colspan="1">baseMean</td>
+<td align="left" rowspan="1" colspan="1">baseMeanA</td>
+<td align="left" rowspan="1" colspan="1">baseMeanB</td>
+<td align="left" rowspan="1" colspan="1">FC<xref ref-type="table-fn" rid="nt110">*</xref></td>
+<td align="left" rowspan="1" colspan="1">log2 FC<xref ref-type="table-fn" rid="nt110">*</xref></td>
+<td align="left" rowspan="1" colspan="1">pval<xref ref-type="table-fn" rid="nt111">¶</xref></td>
+<td align="left" rowspan="1" colspan="1">padj<sup>§</sup></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210082</td>
+<td align="left" rowspan="1" colspan="1">MT-RNR2</td>
+<td align="left" rowspan="1" colspan="1">MT:1671–3229∶1</td>
+<td align="left" rowspan="1" colspan="1">16931163</td>
+<td align="left" rowspan="1" colspan="1">66886248</td>
+<td align="left" rowspan="1" colspan="1">279467</td>
+<td align="left" rowspan="1" colspan="1">0.004</td>
+<td align="left" rowspan="1" colspan="1">−7.9</td>
+<td align="left" rowspan="1" colspan="1">4.0E-23</td>
+<td align="left" rowspan="1" colspan="1">2.8E-20</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000266422</td>
+<td align="left" rowspan="1" colspan="1">RN7SL593P</td>
+<td align="left" rowspan="1" colspan="1">14:50053298–50053594∶1</td>
+<td align="left" rowspan="1" colspan="1">6392989</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">8523986</td>
+<td align="left" rowspan="1" colspan="1">Inf</td>
+<td align="left" rowspan="1" colspan="1">Inf</td>
+<td align="left" rowspan="1" colspan="1">5.7E-09</td>
+<td align="left" rowspan="1" colspan="1">3.1E-07</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000258486</td>
+<td align="left" rowspan="1" colspan="1">RN7SL1</td>
+<td align="left" rowspan="1" colspan="1">14:50053297–50053596∶1</td>
+<td align="left" rowspan="1" colspan="1">6329059</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">8438746</td>
+<td align="left" rowspan="1" colspan="1">Inf</td>
+<td align="left" rowspan="1" colspan="1">Inf</td>
+<td align="left" rowspan="1" colspan="1">5.8E-09</td>
+<td align="left" rowspan="1" colspan="1">3.1E-07</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000211459</td>
+<td align="left" rowspan="1" colspan="1">MT-RNR1</td>
+<td align="left" rowspan="1" colspan="1">MT:648–1601∶1</td>
+<td align="left" rowspan="1" colspan="1">6194782</td>
+<td align="left" rowspan="1" colspan="1">24607232</td>
+<td align="left" rowspan="1" colspan="1">57298</td>
+<td align="left" rowspan="1" colspan="1">0.002</td>
+<td align="left" rowspan="1" colspan="1">−8.75</td>
+<td align="left" rowspan="1" colspan="1">3.8E-27</td>
+<td align="left" rowspan="1" colspan="1">4.0E-24</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000265150</td>
+<td align="left" rowspan="1" colspan="1">RN7SL2</td>
+<td align="left" rowspan="1" colspan="1">14:50329271–50329567∶−1</td>
+<td align="left" rowspan="1" colspan="1">6165927</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">8221236</td>
+<td align="left" rowspan="1" colspan="1">Inf</td>
+<td align="left" rowspan="1" colspan="1">Inf</td>
+<td align="left" rowspan="1" colspan="1">3.2E-12</td>
+<td align="left" rowspan="1" colspan="1">4.1E-10</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198888</td>
+<td align="left" rowspan="1" colspan="1">MT-ND1</td>
+<td align="left" rowspan="1" colspan="1">MT:3307–4262∶1</td>
+<td align="left" rowspan="1" colspan="1">1690338</td>
+<td align="left" rowspan="1" colspan="1">5336127</td>
+<td align="left" rowspan="1" colspan="1">475075</td>
+<td align="left" rowspan="1" colspan="1">0.089</td>
+<td align="left" rowspan="1" colspan="1">−3.5</td>
+<td align="left" rowspan="1" colspan="1">6.8E-06</td>
+<td align="left" rowspan="1" colspan="1">1.9E-04</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000163737</td>
+<td align="left" rowspan="1" colspan="1">PF4</td>
+<td align="left" rowspan="1" colspan="1">4:74846794–74847841∶−1</td>
+<td align="left" rowspan="1" colspan="1">1375290</td>
+<td align="left" rowspan="1" colspan="1">3880989</td>
+<td align="left" rowspan="1" colspan="1">540057</td>
+<td align="left" rowspan="1" colspan="1">0.139</td>
+<td align="left" rowspan="1" colspan="1">−2.9</td>
+<td align="left" rowspan="1" colspan="1">1.7E-04</td>
+<td align="left" rowspan="1" colspan="1">3.3E-03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198763</td>
+<td align="left" rowspan="1" colspan="1">MT-ND2</td>
+<td align="left" rowspan="1" colspan="1">MT:4470–5511∶1</td>
+<td align="left" rowspan="1" colspan="1">1269252</td>
+<td align="left" rowspan="1" colspan="1">3375664</td>
+<td align="left" rowspan="1" colspan="1">567114</td>
+<td align="left" rowspan="1" colspan="1">0.168</td>
+<td align="left" rowspan="1" colspan="1">−2.6</td>
+<td align="left" rowspan="1" colspan="1">5.4E-04</td>
+<td align="left" rowspan="1" colspan="1">8.8E-03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198712</td>
+<td align="left" rowspan="1" colspan="1">MT-CO2</td>
+<td align="left" rowspan="1" colspan="1">MT:7586–8269∶1</td>
+<td align="left" rowspan="1" colspan="1">1191008</td>
+<td align="left" rowspan="1" colspan="1">3025844</td>
+<td align="left" rowspan="1" colspan="1">579396</td>
+<td align="left" rowspan="1" colspan="1">0.191</td>
+<td align="left" rowspan="1" colspan="1">−2.4</td>
+<td align="left" rowspan="1" colspan="1">1.3E-03</td>
+<td align="left" rowspan="1" colspan="1">1.8E-02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000228474</td>
+<td align="left" rowspan="1" colspan="1">OST4</td>
+<td align="left" rowspan="1" colspan="1">2:27293340–27294641∶−1</td>
+<td align="left" rowspan="1" colspan="1">896875</td>
+<td align="left" rowspan="1" colspan="1">2240352</td>
+<td align="left" rowspan="1" colspan="1">449050</td>
+<td align="left" rowspan="1" colspan="1">0.2</td>
+<td align="left" rowspan="1" colspan="1">−2.3</td>
+<td align="left" rowspan="1" colspan="1">1.7E-03</td>
+<td align="left" rowspan="1" colspan="1">2.3E-02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198899</td>
+<td align="left" rowspan="1" colspan="1">MT-ATP6</td>
+<td align="left" rowspan="1" colspan="1">MT:8527–9207∶1</td>
+<td align="left" rowspan="1" colspan="1">770469</td>
+<td align="left" rowspan="1" colspan="1">2046623</td>
+<td align="left" rowspan="1" colspan="1">345084</td>
+<td align="left" rowspan="1" colspan="1">0.169</td>
+<td align="left" rowspan="1" colspan="1">−2.6</td>
+<td align="left" rowspan="1" colspan="1">5.8E-04</td>
+<td align="left" rowspan="1" colspan="1">9.4E-03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198886</td>
+<td align="left" rowspan="1" colspan="1">MT-ND4</td>
+<td align="left" rowspan="1" colspan="1">MT:10760–12137∶1</td>
+<td align="left" rowspan="1" colspan="1">768789</td>
+<td align="left" rowspan="1" colspan="1">2051607</td>
+<td align="left" rowspan="1" colspan="1">341183</td>
+<td align="left" rowspan="1" colspan="1">0.166</td>
+<td align="left" rowspan="1" colspan="1">−2.6</td>
+<td align="left" rowspan="1" colspan="1">5.2E-04</td>
+<td align="left" rowspan="1" colspan="1">8.6E-03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198938</td>
+<td align="left" rowspan="1" colspan="1">MT-CO3</td>
+<td align="left" rowspan="1" colspan="1">MT:9207–9990∶1</td>
+<td align="left" rowspan="1" colspan="1">728578</td>
+<td align="left" rowspan="1" colspan="1">1653616</td>
+<td align="left" rowspan="1" colspan="1">420232</td>
+<td align="left" rowspan="1" colspan="1">0.254</td>
+<td align="left" rowspan="1" colspan="1">−2.0</td>
+<td align="left" rowspan="1" colspan="1">6.4E-03</td>
+<td align="left" rowspan="1" colspan="1">6.8E-02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000187514</td>
+<td align="left" rowspan="1" colspan="1">PTMA</td>
+<td align="left" rowspan="1" colspan="1">2:232571605–232578251∶1</td>
+<td align="left" rowspan="1" colspan="1">634893</td>
+<td align="left" rowspan="1" colspan="1">2086609</td>
+<td align="left" rowspan="1" colspan="1">150988</td>
+<td align="left" rowspan="1" colspan="1">0.072</td>
+<td align="left" rowspan="1" colspan="1">−3.8</td>
+<td align="left" rowspan="1" colspan="1">1.5E-06</td>
+<td align="left" rowspan="1" colspan="1">5.0E-05</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198786</td>
+<td align="left" rowspan="1" colspan="1">MT-ND5</td>
+<td align="left" rowspan="1" colspan="1">MT:12337–14148∶1</td>
+<td align="left" rowspan="1" colspan="1">605680</td>
+<td align="left" rowspan="1" colspan="1">1589548</td>
+<td align="left" rowspan="1" colspan="1">277724</td>
+<td align="left" rowspan="1" colspan="1">0.175</td>
+<td align="left" rowspan="1" colspan="1">−2.5</td>
+<td align="left" rowspan="1" colspan="1">7.2E-04</td>
+<td align="left" rowspan="1" colspan="1">1.1E-02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000263900</td>
+<td align="left" rowspan="1" colspan="1">AC006483.1</td>
+<td align="left" rowspan="1" colspan="1">7:5567734–5567817∶−1</td>
+<td align="left" rowspan="1" colspan="1">506347</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">675129</td>
+<td align="left" rowspan="1" colspan="1">Inf</td>
+<td align="left" rowspan="1" colspan="1">Inf</td>
+<td align="left" rowspan="1" colspan="1">5.6E-27</td>
+<td align="left" rowspan="1" colspan="1">5.0E-24</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210195</td>
+<td align="left" rowspan="1" colspan="1">MT-TT</td>
+<td align="left" rowspan="1" colspan="1">MT:15888–15953∶1</td>
+<td align="left" rowspan="1" colspan="1">466133</td>
+<td align="left" rowspan="1" colspan="1">82374</td>
+<td align="left" rowspan="1" colspan="1">594053</td>
+<td align="left" rowspan="1" colspan="1">7.21</td>
+<td align="left" rowspan="1" colspan="1">2.9</td>
+<td align="left" rowspan="1" colspan="1">1.1E-03</td>
+<td align="left" rowspan="1" colspan="1">1.6E-02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210049</td>
+<td align="left" rowspan="1" colspan="1">MT-TF</td>
+<td align="left" rowspan="1" colspan="1">MT:577–647∶1</td>
+<td align="left" rowspan="1" colspan="1">464726</td>
+<td align="left" rowspan="1" colspan="1">42641</td>
+<td align="left" rowspan="1" colspan="1">605420</td>
+<td align="left" rowspan="1" colspan="1">14.20</td>
+<td align="left" rowspan="1" colspan="1">3.8</td>
+<td align="left" rowspan="1" colspan="1">2.6E-05</td>
+<td align="left" rowspan="1" colspan="1">6.2E-04</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000161570</td>
+<td align="left" rowspan="1" colspan="1">CCL5</td>
+<td align="left" rowspan="1" colspan="1">17:34198495–34207797∶-1</td>
+<td align="left" rowspan="1" colspan="1">392953</td>
+<td align="left" rowspan="1" colspan="1">1050080</td>
+<td align="left" rowspan="1" colspan="1">173911</td>
+<td align="left" rowspan="1" colspan="1">0.166</td>
+<td align="left" rowspan="1" colspan="1">−2.6</td>
+<td align="left" rowspan="1" colspan="1">5.5E-04</td>
+<td align="left" rowspan="1" colspan="1">9.0E-03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198695</td>
+<td align="left" rowspan="1" colspan="1">MT-ND6</td>
+<td align="left" rowspan="1" colspan="1">MT:14149–14673∶−1</td>
+<td align="left" rowspan="1" colspan="1">390765</td>
+<td align="left" rowspan="1" colspan="1">897940</td>
+<td align="left" rowspan="1" colspan="1">221707</td>
+<td align="left" rowspan="1" colspan="1">0.247</td>
+<td align="left" rowspan="1" colspan="1">−2.0</td>
+<td align="left" rowspan="1" colspan="1">5.5E-03</td>
+<td align="left" rowspan="1" colspan="1">6.0E-02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000209082</td>
+<td align="left" rowspan="1" colspan="1">MT-TL1</td>
+<td align="left" rowspan="1" colspan="1">MT:3230–3304∶1</td>
+<td align="left" rowspan="1" colspan="1">337949</td>
+<td align="left" rowspan="1" colspan="1">774474</td>
+<td align="left" rowspan="1" colspan="1">192441</td>
+<td align="left" rowspan="1" colspan="1">0.248</td>
+<td align="left" rowspan="1" colspan="1">−2.0</td>
+<td align="left" rowspan="1" colspan="1">5.9E-03</td>
+<td align="left" rowspan="1" colspan="1">6.4E-02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000140264</td>
+<td align="left" rowspan="1" colspan="1">SERF2</td>
+<td align="left" rowspan="1" colspan="1">15:44069285–44094787∶1</td>
+<td align="left" rowspan="1" colspan="1">252646</td>
+<td align="left" rowspan="1" colspan="1">889675</td>
+<td align="left" rowspan="1" colspan="1">40303</td>
+<td align="left" rowspan="1" colspan="1">0.045</td>
+<td align="left" rowspan="1" colspan="1">−4.5</td>
+<td align="left" rowspan="1" colspan="1">2.8E-08</td>
+<td align="left" rowspan="1" colspan="1">1.3E-06</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000156265</td>
+<td align="left" rowspan="1" colspan="1">MAP3K7CL</td>
+<td align="left" rowspan="1" colspan="1">21:30449792–30548210∶1</td>
+<td align="left" rowspan="1" colspan="1">240370</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">320494</td>
+<td align="left" rowspan="1" colspan="1">Inf</td>
+<td align="left" rowspan="1" colspan="1">Inf</td>
+<td align="left" rowspan="1" colspan="1">1.4E-16</td>
+<td align="left" rowspan="1" colspan="1">3.8E-14</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210196</td>
+<td align="left" rowspan="1" colspan="1">MT-TP</td>
+<td align="left" rowspan="1" colspan="1">MT:15956–16023∶−1</td>
+<td align="left" rowspan="1" colspan="1">238130</td>
+<td align="left" rowspan="1" colspan="1">41112</td>
+<td align="left" rowspan="1" colspan="1">303802</td>
+<td align="left" rowspan="1" colspan="1">7.39</td>
+<td align="left" rowspan="1" colspan="1">2.9</td>
+<td align="left" rowspan="1" colspan="1">9.9E-04</td>
+<td align="left" rowspan="1" colspan="1">1.5E-02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000087086</td>
+<td align="left" rowspan="1" colspan="1">FTL</td>
+<td align="left" rowspan="1" colspan="1">19:49468558–49470135∶1</td>
+<td align="left" rowspan="1" colspan="1">167208</td>
+<td align="left" rowspan="1" colspan="1">518399</td>
+<td align="left" rowspan="1" colspan="1">50145</td>
+<td align="left" rowspan="1" colspan="1">0.097</td>
+<td align="left" rowspan="1" colspan="1">−3.4</td>
+<td align="left" rowspan="1" colspan="1">1.7E-05</td>
+<td align="left" rowspan="1" colspan="1">4.2E-04</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210077</td>
+<td align="left" rowspan="1" colspan="1">MT-TV</td>
+<td align="left" rowspan="1" colspan="1">MT:1602–1670∶1</td>
+<td align="left" rowspan="1" colspan="1">136962</td>
+<td align="left" rowspan="1" colspan="1">329425</td>
+<td align="left" rowspan="1" colspan="1">72807</td>
+<td align="left" rowspan="1" colspan="1">0.221</td>
+<td align="left" rowspan="1" colspan="1">−2.2</td>
+<td align="left" rowspan="1" colspan="1">3.3E-03</td>
+<td align="left" rowspan="1" colspan="1">3.9E-02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000142669</td>
+<td align="left" rowspan="1" colspan="1">SH3BGRL3</td>
+<td align="left" rowspan="1" colspan="1">1:26605667–26608007∶1</td>
+<td align="left" rowspan="1" colspan="1">136382</td>
+<td align="left" rowspan="1" colspan="1">503776</td>
+<td align="left" rowspan="1" colspan="1">13917</td>
+<td align="left" rowspan="1" colspan="1">0.028</td>
+<td align="left" rowspan="1" colspan="1">−5.2</td>
+<td align="left" rowspan="1" colspan="1">2.3E-10</td>
+<td align="left" rowspan="1" colspan="1">1.9E-08</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000169756</td>
+<td align="left" rowspan="1" colspan="1">LIMS1</td>
+<td align="left" rowspan="1" colspan="1">2:109150857–109303702∶1</td>
+<td align="left" rowspan="1" colspan="1">124932</td>
+<td align="left" rowspan="1" colspan="1">283811</td>
+<td align="left" rowspan="1" colspan="1">71972</td>
+<td align="left" rowspan="1" colspan="1">0.254</td>
+<td align="left" rowspan="1" colspan="1">−2.0</td>
+<td align="left" rowspan="1" colspan="1">7.1E-03</td>
+<td align="left" rowspan="1" colspan="1">7.4E-02</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000101608</td>
+<td align="left" rowspan="1" colspan="1">MYL12A</td>
+<td align="left" rowspan="1" colspan="1">18:3247479–3256234∶1</td>
+<td align="left" rowspan="1" colspan="1">122263</td>
+<td align="left" rowspan="1" colspan="1">3261</td>
+<td align="left" rowspan="1" colspan="1">161930</td>
+<td align="left" rowspan="1" colspan="1">49.66</td>
+<td align="left" rowspan="1" colspan="1">5.6</td>
+<td align="left" rowspan="1" colspan="1">2.5E-06</td>
+<td align="left" rowspan="1" colspan="1">7.9E-05</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000248527</td>
+<td align="left" rowspan="1" colspan="1">MTATP6P1</td>
+<td align="left" rowspan="1" colspan="1">1:569076–569756∶1</td>
+<td align="left" rowspan="1" colspan="1">122224</td>
+<td align="left" rowspan="1" colspan="1">401658</td>
+<td align="left" rowspan="1" colspan="1">29079</td>
+<td align="left" rowspan="1" colspan="1">0.072</td>
+<td align="left" rowspan="1" colspan="1">−3.8</td>
+<td align="left" rowspan="1" colspan="1">2.0E-06</td>
+<td align="left" rowspan="1" colspan="1">6.2E-05</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt109"><label>φ</label><p>Differential Expression;</p></fn><fn id="nt110"><label/><p>*Fold change;</p></fn><fn id="nt111"><label>¶</label><p>P-value; §Adjusted P-value.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s2d">
+<title>The platelet transcriptome</title>
+<p>The platelet transcriptome data was then compared with RNASeq data from Illumina's Human BodyMap 2.0 project. The Illumina data, generated on HiSeq 2000 instruments, consists of 16 human tissue types, including adrenal, adipose, brain, breast, colon, heart, kidney, liver, lung, lymph, ovary, prostate, skeletal muscle, testes, thyroid, and white blood cells. The heatmap in <xref ref-type="fig" rid="pone-0081809-g011">figure 11</xref> summarizes expression for this data integrated with the platelet raw data counts obtained with the HTSeq-counts program. The dendrogram at the top clearly shows that the platelet expression profile is unique because the samples S0,S1,S2 and S3 forms a cluster of its own from root level. As expected, the polyA+ mRNA sample S0 profile shows some DE when compared with the rRNA-depleted total RNA samples S1, S2, and S3. Thus, the present data suggests that platelets may have a unique transcriptome profile characterized by a relative over-expression of many mitochondrially encoded genes. Apart from MT-RNR1, MT-RNR2 and MT-TF, mitochondrially encoded gene expression levels were rather similar in totRNA and mRNA preparations (<xref ref-type="fig" rid="pone-0081809-g012">Fig. 12</xref> and <xref ref-type="table" rid="pone-0081809-t007">Table 7</xref>).</p>
+<fig id="pone-0081809-g011" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g011</object-id><label>Figure 11</label><caption>
+<title>The platelet transcriptome data compared with RNASeq data from Illumina's Human BodyMap 2.0 project.</title>
+<p>The integrated platelet data from samples S0, S1, S2, and S3 represent counts obtained with TopHat, Ensembl annotations, and the HTSeq-counts program. The Illumina codes are as follows. ERS025098 adipose, ERS025092 adrenal, ERS025085 brain, ERS025088 breast, ERS025089 colon, ERS025082 heart, ERS025081 kidney, ERS025096 liver, ERS025099 lung, ERS025086 lymphnode, ERS025084 mixture, ERS025087 mixture, ERS025093 mixture, ERS025083 ovary, ERS025095 prostate, ERS025097 skeletal_muscle, ERS025094 testes, ERS025090 thyroid, ERS025091 white_blood_cell.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g011" position="float" xlink:type="simple"/></fig><fig id="pone-0081809-g012" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g012</object-id><label>Figure 12</label><caption>
+<title>Differential expression of mitochondrial (MT)-genes in total RNA vs mRNA preparations.</title>
+<p>The figure shows that apart from MT-RNR1, MT-RNR2 and MT-TF, mitochondrially encoded gene expression levels were rather similar in rRNA-depleted total RNA and polyA + mRNA preparations (TopHat/HTSeq/edgeR software). “FC” denotes fold change whereas “CPM” represents counts per million.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g012" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0081809-t007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.t007</object-id><label>Table 7</label><caption>
+<title>Read count table for mitochondrially encoded genes for samples S0, S1, S2 and S3.</title>
+</caption><alternatives><graphic id="pone-0081809-t007-7" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.t007" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Ensembl id.</td>
+<td align="left" rowspan="1" colspan="1">gene</td>
+<td align="left" rowspan="1" colspan="1">locus</td>
+<td align="left" rowspan="1" colspan="1">length</td>
+<td align="left" rowspan="1" colspan="1">S0</td>
+<td align="left" rowspan="1" colspan="1">S1</td>
+<td align="left" rowspan="1" colspan="1">S2</td>
+<td align="left" rowspan="1" colspan="1">S3</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210049</td>
+<td align="left" rowspan="1" colspan="1">MT-TF</td>
+<td align="left" rowspan="1" colspan="1">MT:577–647∶1</td>
+<td align="left" rowspan="1" colspan="1">71</td>
+<td align="left" rowspan="1" colspan="1">4716</td>
+<td align="left" rowspan="1" colspan="1">72194</td>
+<td align="left" rowspan="1" colspan="1">45984</td>
+<td align="left" rowspan="1" colspan="1">42484</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000211459</td>
+<td align="left" rowspan="1" colspan="1">MT-RNR1</td>
+<td align="left" rowspan="1" colspan="1">MT:648–1601∶1</td>
+<td align="left" rowspan="1" colspan="1">954</td>
+<td align="left" rowspan="1" colspan="1">4626427</td>
+<td align="left" rowspan="1" colspan="1">98775</td>
+<td align="left" rowspan="1" colspan="1">54719</td>
+<td align="left" rowspan="1" colspan="1">51139</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210077</td>
+<td align="left" rowspan="1" colspan="1">MT-TV</td>
+<td align="left" rowspan="1" colspan="1">MT:1602–1670∶1</td>
+<td align="left" rowspan="1" colspan="1">69</td>
+<td align="left" rowspan="1" colspan="1">36340</td>
+<td align="left" rowspan="1" colspan="1">10399</td>
+<td align="left" rowspan="1" colspan="1">6856</td>
+<td align="left" rowspan="1" colspan="1">1215</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210082</td>
+<td align="left" rowspan="1" colspan="1">MT-RNR2</td>
+<td align="left" rowspan="1" colspan="1">MT:1671–3229∶1</td>
+<td align="left" rowspan="1" colspan="1">1559</td>
+<td align="left" rowspan="1" colspan="1">13296885</td>
+<td align="left" rowspan="1" colspan="1">250572</td>
+<td align="left" rowspan="1" colspan="1">1137529</td>
+<td align="left" rowspan="1" colspan="1">153605</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000209082</td>
+<td align="left" rowspan="1" colspan="1">MT-TL1</td>
+<td align="left" rowspan="1" colspan="1">MT:3230–3304∶1</td>
+<td align="left" rowspan="1" colspan="1">75</td>
+<td align="left" rowspan="1" colspan="1">86075</td>
+<td align="left" rowspan="1" colspan="1">20917</td>
+<td align="left" rowspan="1" colspan="1">13706</td>
+<td align="left" rowspan="1" colspan="1">19721</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198888</td>
+<td align="left" rowspan="1" colspan="1">MT-ND1</td>
+<td align="left" rowspan="1" colspan="1">MT:3307–4262∶1</td>
+<td align="left" rowspan="1" colspan="1">956</td>
+<td align="left" rowspan="1" colspan="1">1003620</td>
+<td align="left" rowspan="1" colspan="1">480131</td>
+<td align="left" rowspan="1" colspan="1">557853</td>
+<td align="left" rowspan="1" colspan="1">659073</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210100</td>
+<td align="left" rowspan="1" colspan="1">MT-TI</td>
+<td align="left" rowspan="1" colspan="1">MT:4263–4331∶1</td>
+<td align="left" rowspan="1" colspan="1">69</td>
+<td align="left" rowspan="1" colspan="1">19538</td>
+<td align="left" rowspan="1" colspan="1">21026</td>
+<td align="left" rowspan="1" colspan="1">11319</td>
+<td align="left" rowspan="1" colspan="1">7338</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210107</td>
+<td align="left" rowspan="1" colspan="1">MT-TQ</td>
+<td align="left" rowspan="1" colspan="1">MT:4329–4400∶−1</td>
+<td align="left" rowspan="1" colspan="1">72</td>
+<td align="left" rowspan="1" colspan="1">26650</td>
+<td align="left" rowspan="1" colspan="1">31551</td>
+<td align="left" rowspan="1" colspan="1">37167</td>
+<td align="left" rowspan="1" colspan="1">27844</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210112</td>
+<td align="left" rowspan="1" colspan="1">MT-TM</td>
+<td align="left" rowspan="1" colspan="1">MT:4402–4469∶1</td>
+<td align="left" rowspan="1" colspan="1">68</td>
+<td align="left" rowspan="1" colspan="1">53547</td>
+<td align="left" rowspan="1" colspan="1">40780</td>
+<td align="left" rowspan="1" colspan="1">53844</td>
+<td align="left" rowspan="1" colspan="1">59771</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198763</td>
+<td align="left" rowspan="1" colspan="1">MT-ND2</td>
+<td align="left" rowspan="1" colspan="1">MT:4470–5511∶1</td>
+<td align="left" rowspan="1" colspan="1">1042</td>
+<td align="left" rowspan="1" colspan="1">643951</td>
+<td align="left" rowspan="1" colspan="1">625223</td>
+<td align="left" rowspan="1" colspan="1">928642</td>
+<td align="left" rowspan="1" colspan="1">622441</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210117</td>
+<td align="left" rowspan="1" colspan="1">MT-TW</td>
+<td align="left" rowspan="1" colspan="1">MT:5512–5579∶1</td>
+<td align="left" rowspan="1" colspan="1">68</td>
+<td align="left" rowspan="1" colspan="1">7355</td>
+<td align="left" rowspan="1" colspan="1">19999</td>
+<td align="left" rowspan="1" colspan="1">8161</td>
+<td align="left" rowspan="1" colspan="1">3780</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210127</td>
+<td align="left" rowspan="1" colspan="1">MT-TA</td>
+<td align="left" rowspan="1" colspan="1">MT:5587–5655∶−1</td>
+<td align="left" rowspan="1" colspan="1">69</td>
+<td align="left" rowspan="1" colspan="1">6825</td>
+<td align="left" rowspan="1" colspan="1">13478</td>
+<td align="left" rowspan="1" colspan="1">5840</td>
+<td align="left" rowspan="1" colspan="1">3956</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210135</td>
+<td align="left" rowspan="1" colspan="1">MT-TN</td>
+<td align="left" rowspan="1" colspan="1">MT:5657–5729∶−1</td>
+<td align="left" rowspan="1" colspan="1">73</td>
+<td align="left" rowspan="1" colspan="1">8457</td>
+<td align="left" rowspan="1" colspan="1">11923</td>
+<td align="left" rowspan="1" colspan="1">4449</td>
+<td align="left" rowspan="1" colspan="1">4815</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210140</td>
+<td align="left" rowspan="1" colspan="1">MT-TC</td>
+<td align="left" rowspan="1" colspan="1">MT:5761–5826∶−1</td>
+<td align="left" rowspan="1" colspan="1">66</td>
+<td align="left" rowspan="1" colspan="1">12786</td>
+<td align="left" rowspan="1" colspan="1">7746</td>
+<td align="left" rowspan="1" colspan="1">3790</td>
+<td align="left" rowspan="1" colspan="1">3592</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210144</td>
+<td align="left" rowspan="1" colspan="1">MT-TY</td>
+<td align="left" rowspan="1" colspan="1">MT:5826–5891∶−1</td>
+<td align="left" rowspan="1" colspan="1">66</td>
+<td align="left" rowspan="1" colspan="1">8401</td>
+<td align="left" rowspan="1" colspan="1">8967</td>
+<td align="left" rowspan="1" colspan="1">4896</td>
+<td align="left" rowspan="1" colspan="1">4065</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198804</td>
+<td align="left" rowspan="1" colspan="1">MT-CO1</td>
+<td align="left" rowspan="1" colspan="1">MT:5904–7445∶1</td>
+<td align="left" rowspan="1" colspan="1">1542</td>
+<td align="left" rowspan="1" colspan="1">414158</td>
+<td align="left" rowspan="1" colspan="1">1257943</td>
+<td align="left" rowspan="1" colspan="1">1669453</td>
+<td align="left" rowspan="1" colspan="1">1633848</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210151</td>
+<td align="left" rowspan="1" colspan="1">MT-TS1</td>
+<td align="left" rowspan="1" colspan="1">MT:7446–7514∶−1</td>
+<td align="left" rowspan="1" colspan="1">69</td>
+<td align="left" rowspan="1" colspan="1">32507</td>
+<td align="left" rowspan="1" colspan="1">12569</td>
+<td align="left" rowspan="1" colspan="1">11010</td>
+<td align="left" rowspan="1" colspan="1">9894</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210154</td>
+<td align="left" rowspan="1" colspan="1">MT-TD</td>
+<td align="left" rowspan="1" colspan="1">MT:7518–7585∶1</td>
+<td align="left" rowspan="1" colspan="1">68</td>
+<td align="left" rowspan="1" colspan="1">7787</td>
+<td align="left" rowspan="1" colspan="1">7045</td>
+<td align="left" rowspan="1" colspan="1">6504</td>
+<td align="left" rowspan="1" colspan="1">4022</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198712</td>
+<td align="left" rowspan="1" colspan="1">MT-CO2</td>
+<td align="left" rowspan="1" colspan="1">MT:7586–8269∶1</td>
+<td align="left" rowspan="1" colspan="1">684</td>
+<td align="left" rowspan="1" colspan="1">529645</td>
+<td align="left" rowspan="1" colspan="1">397862</td>
+<td align="left" rowspan="1" colspan="1">485662</td>
+<td align="left" rowspan="1" colspan="1">598293</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210156</td>
+<td align="left" rowspan="1" colspan="1">MT-TK</td>
+<td align="left" rowspan="1" colspan="1">MT:8295–8364∶1</td>
+<td align="left" rowspan="1" colspan="1">70</td>
+<td align="left" rowspan="1" colspan="1">16629</td>
+<td align="left" rowspan="1" colspan="1">14388</td>
+<td align="left" rowspan="1" colspan="1">13232</td>
+<td align="left" rowspan="1" colspan="1">15576</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000228253</td>
+<td align="left" rowspan="1" colspan="1">MT-ATP8</td>
+<td align="left" rowspan="1" colspan="1">MT:8366–8572∶1</td>
+<td align="left" rowspan="1" colspan="1">207</td>
+<td align="left" rowspan="1" colspan="1">61948</td>
+<td align="left" rowspan="1" colspan="1">66353</td>
+<td align="left" rowspan="1" colspan="1">72109</td>
+<td align="left" rowspan="1" colspan="1">65706</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198899</td>
+<td align="left" rowspan="1" colspan="1">MT-ATP6</td>
+<td align="left" rowspan="1" colspan="1">MT:8527–9207∶1</td>
+<td align="left" rowspan="1" colspan="1">681</td>
+<td align="left" rowspan="1" colspan="1">357851</td>
+<td align="left" rowspan="1" colspan="1">277472</td>
+<td align="left" rowspan="1" colspan="1">294047</td>
+<td align="left" rowspan="1" colspan="1">304636</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198938</td>
+<td align="left" rowspan="1" colspan="1">MT-CO3</td>
+<td align="left" rowspan="1" colspan="1">MT:9207–9990∶1</td>
+<td align="left" rowspan="1" colspan="1">784</td>
+<td align="left" rowspan="1" colspan="1">298920</td>
+<td align="left" rowspan="1" colspan="1">387019</td>
+<td align="left" rowspan="1" colspan="1">407105</td>
+<td align="left" rowspan="1" colspan="1">435081</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210164</td>
+<td align="left" rowspan="1" colspan="1">MT-TG</td>
+<td align="left" rowspan="1" colspan="1">MT:9991–10058∶1</td>
+<td align="left" rowspan="1" colspan="1">68</td>
+<td align="left" rowspan="1" colspan="1">6289</td>
+<td align="left" rowspan="1" colspan="1">11269</td>
+<td align="left" rowspan="1" colspan="1">13275</td>
+<td align="left" rowspan="1" colspan="1">11525</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198840</td>
+<td align="left" rowspan="1" colspan="1">MT-ND3</td>
+<td align="left" rowspan="1" colspan="1">MT:10059–10404∶1</td>
+<td align="left" rowspan="1" colspan="1">346</td>
+<td align="left" rowspan="1" colspan="1">86378</td>
+<td align="left" rowspan="1" colspan="1">92634</td>
+<td align="left" rowspan="1" colspan="1">121847</td>
+<td align="left" rowspan="1" colspan="1">146128</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210174</td>
+<td align="left" rowspan="1" colspan="1">MT-TR</td>
+<td align="left" rowspan="1" colspan="1">MT:10405–10469∶1</td>
+<td align="left" rowspan="1" colspan="1">65</td>
+<td align="left" rowspan="1" colspan="1">8430</td>
+<td align="left" rowspan="1" colspan="1">11341</td>
+<td align="left" rowspan="1" colspan="1">17249</td>
+<td align="left" rowspan="1" colspan="1">19014</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000212907</td>
+<td align="left" rowspan="1" colspan="1">MT-ND4L</td>
+<td align="left" rowspan="1" colspan="1">MT:10470–10766∶1</td>
+<td align="left" rowspan="1" colspan="1">297</td>
+<td align="left" rowspan="1" colspan="1">111257</td>
+<td align="left" rowspan="1" colspan="1">118428</td>
+<td align="left" rowspan="1" colspan="1">203231</td>
+<td align="left" rowspan="1" colspan="1">207225</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198886</td>
+<td align="left" rowspan="1" colspan="1">MT-ND4</td>
+<td align="left" rowspan="1" colspan="1">MT:10760–12137∶1</td>
+<td align="left" rowspan="1" colspan="1">1378</td>
+<td align="left" rowspan="1" colspan="1">404373</td>
+<td align="left" rowspan="1" colspan="1">502675</td>
+<td align="left" rowspan="1" colspan="1">664748</td>
+<td align="left" rowspan="1" colspan="1">575461</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210176</td>
+<td align="left" rowspan="1" colspan="1">MT-TH</td>
+<td align="left" rowspan="1" colspan="1">MT:12138–12206∶1</td>
+<td align="left" rowspan="1" colspan="1">69</td>
+<td align="left" rowspan="1" colspan="1">10272</td>
+<td align="left" rowspan="1" colspan="1">14951</td>
+<td align="left" rowspan="1" colspan="1">7898</td>
+<td align="left" rowspan="1" colspan="1">7056</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210184</td>
+<td align="left" rowspan="1" colspan="1">MT-TS2</td>
+<td align="left" rowspan="1" colspan="1">MT:12207–12265∶1</td>
+<td align="left" rowspan="1" colspan="1">59</td>
+<td align="left" rowspan="1" colspan="1">8641</td>
+<td align="left" rowspan="1" colspan="1">6673</td>
+<td align="left" rowspan="1" colspan="1">7713</td>
+<td align="left" rowspan="1" colspan="1">13231</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210191</td>
+<td align="left" rowspan="1" colspan="1">MT-TL2</td>
+<td align="left" rowspan="1" colspan="1">MT:12266–12336∶1</td>
+<td align="left" rowspan="1" colspan="1">71</td>
+<td align="left" rowspan="1" colspan="1">8013</td>
+<td align="left" rowspan="1" colspan="1">8112</td>
+<td align="left" rowspan="1" colspan="1">9209</td>
+<td align="left" rowspan="1" colspan="1">12015</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198786</td>
+<td align="left" rowspan="1" colspan="1">MT-ND5</td>
+<td align="left" rowspan="1" colspan="1">MT:12337–14148∶1</td>
+<td align="left" rowspan="1" colspan="1">1812</td>
+<td align="left" rowspan="1" colspan="1">318124</td>
+<td align="left" rowspan="1" colspan="1">585691</td>
+<td align="left" rowspan="1" colspan="1">707224</td>
+<td align="left" rowspan="1" colspan="1">571473</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198695</td>
+<td align="left" rowspan="1" colspan="1">MT-ND6</td>
+<td align="left" rowspan="1" colspan="1">MT:14149–14673∶−1</td>
+<td align="left" rowspan="1" colspan="1">525</td>
+<td align="left" rowspan="1" colspan="1">146565</td>
+<td align="left" rowspan="1" colspan="1">167234</td>
+<td align="left" rowspan="1" colspan="1">175374</td>
+<td align="left" rowspan="1" colspan="1">85557</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210194</td>
+<td align="left" rowspan="1" colspan="1">MT-TE</td>
+<td align="left" rowspan="1" colspan="1">MT:14674–14742∶−1</td>
+<td align="left" rowspan="1" colspan="1">69</td>
+<td align="left" rowspan="1" colspan="1">7417</td>
+<td align="left" rowspan="1" colspan="1">14089</td>
+<td align="left" rowspan="1" colspan="1">15081</td>
+<td align="left" rowspan="1" colspan="1">13333</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000198727</td>
+<td align="left" rowspan="1" colspan="1">MT-CYB</td>
+<td align="left" rowspan="1" colspan="1">MT:14747–15887∶1</td>
+<td align="left" rowspan="1" colspan="1">1141</td>
+<td align="left" rowspan="1" colspan="1">220495</td>
+<td align="left" rowspan="1" colspan="1">447899</td>
+<td align="left" rowspan="1" colspan="1">453336</td>
+<td align="left" rowspan="1" colspan="1">452116</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210195</td>
+<td align="left" rowspan="1" colspan="1">MT-TT</td>
+<td align="left" rowspan="1" colspan="1">MT:15888–15953∶1</td>
+<td align="left" rowspan="1" colspan="1">66</td>
+<td align="left" rowspan="1" colspan="1">9053</td>
+<td align="left" rowspan="1" colspan="1">52084</td>
+<td align="left" rowspan="1" colspan="1">45617</td>
+<td align="left" rowspan="1" colspan="1">48793</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">ENSG00000210196</td>
+<td align="left" rowspan="1" colspan="1">MT-TP</td>
+<td align="left" rowspan="1" colspan="1">MT:15956–16023</td>
+<td align="left" rowspan="1" colspan="1">68</td>
+<td align="left" rowspan="1" colspan="1">4530</td>
+<td align="left" rowspan="1" colspan="1">31223</td>
+<td align="left" rowspan="1" colspan="1">21717</td>
+<td align="left" rowspan="1" colspan="1">24467</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Sum</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">22910855</td>
+<td align="left" rowspan="1" colspan="1">6198635</td>
+<td align="left" rowspan="1" colspan="1">8297396</td>
+<td align="left" rowspan="1" colspan="1">6919289</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Sum without rRNA</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">4987543</td>
+<td align="left" rowspan="1" colspan="1">5849288</td>
+<td align="left" rowspan="1" colspan="1">7105148</td>
+<td align="left" rowspan="1" colspan="1">6714545</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>As shown in <xref ref-type="fig" rid="pone-0081809-g011">Figure 11</xref> transcripts from some nuclear genes, particularly TMSB4X, were also more abundant in human platelets as compared to the other cells and tissues. TMSB4X plays a role in regulation of actin polymerization, and is involved in cell proliferation, migration, and differentiation <xref ref-type="bibr" rid="pone.0081809-Kaur1">[18]</xref>. Furthermore, several genes involved in signal transduction, including chemokines were also abundantly expressed, particularly <italic>PPBP</italic>. The protein encoded by this gene is a platelet-derived growth factor that belongs to the CXC chemokine family, and is a potent chemoattractant for neutrophils <xref ref-type="bibr" rid="pone.0081809-Schenk1">[19]</xref>. <italic>B2M</italic> (beta-2-microglogulin gene) encodes a serum protein found in association with the major histocompatibility complex (MHC) class I heavy chain on the surface of nearly all nucleated cells <xref ref-type="bibr" rid="pone.0081809-Hee1">[20]</xref>. The PF4 chemokine is released from the alpha granules of activated platelets in the form of a homotetramer, which has high affinity for heparin and is involved in platelet aggregation <xref ref-type="bibr" rid="pone.0081809-Farbiszewski1">[21]</xref>. ACTB is a major constituent of the contractile apparatus and one of the two nonmuscle cytoskeletal actins <xref ref-type="bibr" rid="pone.0081809-Perrin1">[22]</xref>.</p>
+<p>The full table of platelet RNASeq data integrated in Illumina's Human BodyMap 2.0 project is available in Table S5 in <xref ref-type="supplementary-material" rid="pone.0081809.s001">File S1</xref>.</p>
+</sec><sec id="s2e">
+<title>Functional classification of platelet coding transcripts</title>
+<p>We used the web-based PANTHER software (<ext-link ext-link-type="uri" xlink:href="http://www.pantherdb.org/about.jsp" xlink:type="simple">http://www.pantherdb.org/about.jsp</ext-link>) <xref ref-type="bibr" rid="pone.0081809-Thomas1">[23]</xref> to classify proteins coded by the top 50 platelet genes using either polyA+ or rRNA-depleted total RNA transcripts mapped against the reference genome. The corresponding genes were grouped into clusters representing gene ontology (GO) categories of molecular functions (<xref ref-type="fig" rid="pone-0081809-g013">Fig. 13</xref>). A major finding with this analysis was that the molecular function groups of the top 50 platelet genes for polyA+ enriched RNA (<xref ref-type="fig" rid="pone-0081809-g013">Fig. 13A</xref>) correlated remarkably well with those of rRNA-depleted total RNA (<xref ref-type="fig" rid="pone-0081809-g013">Fig. 13B</xref>) despite the two distinct approaches and different donors. Among the molecular function GO groups shown in <xref ref-type="fig" rid="pone-0081809-g013">Figure 13</xref>, the category b<italic>inding</italic> (GO:0005488) seems to dominate in each top 50 list. As shown in <xref ref-type="table" rid="pone-0081809-t008">Table 8</xref> most of the genes in this category belong to the <italic>protein binding</italic> subgroup, a class that is expected to play a prominent role in platelet functions. Another noticeable category is the <italic>structural molecule activity</italic> group. This category entails structural constituents of the cytoskeleton, and critical functions concerning cell motility and organization.</p>
+<fig id="pone-0081809-g013" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.g013</object-id><label>Figure 13</label><caption>
+<title>Classification of the proteins coded by the most abundant (top 50) coding transcripts of human platelets.</title>
+<p>Bars represent molecular function categories generated by the PANTHER gene ontology classification web-based tool. A) Sequencing was performed on polyA+ enriched RNA, whereas in B) rRNA-depleted total RNA was analyzed.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.g013" position="float" xlink:type="simple"/></fig><table-wrap id="pone-0081809-t008" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0081809.t008</object-id><label>Table 8</label><caption>
+<title>The function of the proteins coded by top 50 platelet genes, as provided by PANTHER gene ontology classification web-based tool.</title>
+</caption><alternatives><graphic id="pone-0081809-t008-8" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0081809.t008" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Nr.</td>
+<td align="left" rowspan="1" colspan="1">Molecular function category (GO term)</td>
+<td align="left" rowspan="1" colspan="1">Sub category (GO term)</td>
+<td align="left" rowspan="1" colspan="1">Number of genes</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">Antioxidant activity (GO:0016209)</td>
+<td align="left" rowspan="1" colspan="1">n.a.<xref ref-type="table-fn" rid="nt112">*</xref></td>
+<td align="left" rowspan="1" colspan="1">–</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">Binding (GO:0005488)</td>
+<td align="left" rowspan="1" colspan="1">Calcium ion binding (GO:0005509)</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Nucleic acid binding (GO:0003676)</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Protein binding (GO:0005515)</td>
+<td align="left" rowspan="1" colspan="1">14</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">Catalytic activity (GO:0003824)</td>
+<td align="left" rowspan="1" colspan="1">Hydrolase activity (GO:0016787)</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Ligase activity (GO:0016874)</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Oxidoreductase activity (GO:0016491)</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Transferase activity (GO:0016740)</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">Enzyme regulator activity (GO:0030234)</td>
+<td align="left" rowspan="1" colspan="1">Enzyme activator activity (GO:0008047)</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Enzyme inhibitor activity (GO:0004857)</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Kinase regulator activity (GO:0019207)</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Small GTPase regulator activity (GO:0005083)</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">Receptor activity (GO:0004872)</td>
+<td align="left" rowspan="1" colspan="1">n.a.<xref ref-type="table-fn" rid="nt112">*</xref></td>
+<td align="left" rowspan="1" colspan="1">–</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">Structural molecule activity (GO:0005198)</td>
+<td align="left" rowspan="1" colspan="1">Structural constituent of cytoskeleton (GO:0005200)</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">Transcription regulator activity (GO:0030528)</td>
+<td align="left" rowspan="1" colspan="1">Transcription cofactor activity (GO:0003712)</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Transcription factor activity (GO:0003700)</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">Transporter activity (GO:0005215)</td>
+<td align="left" rowspan="1" colspan="1">n.a.<xref ref-type="table-fn" rid="nt112">*</xref></td>
+<td align="left" rowspan="1" colspan="1">–</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt112"><label/><p>*Not available because of too few genes.</p></fn></table-wrap-foot></table-wrap></sec></sec><sec id="s3">
+<title>Discussion</title>
+<p>In the present study we have compared results of RNA-Seq mapping of polyA+ transcripts in purified blood platelets with those obtained with rRNA-depleted total RNA from healthy blood donors against the set of chromosomes of the Human Feb. 2009 (GRCh37/hg19) assembly (<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/" xlink:type="simple">http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/</ext-link>). Based on four individuals, the present data show an apparently unique transcriptome profile as compared with other tissues of the Illumina bodymap 2.0 project.</p>
+<p>In a typical RNA-Seq experiment, reads are sampled from RNA extracts and either mapped back to a reference genome or used for <italic>de novo</italic> assembly. Alignment and assembly of short or inaccurate reads poses a problem, which we have avoided by using 100 bp high quality Illumina reads. How closely the cDNA sequencing reflects the original RNA population is supposedly mainly determined in the library preparation step. As expected, our mapping of polyA+ reads showed a substantial bias for the 3′-end of gene transcripts due to the selection of mRNA using oligo-dT during the RNA extraction procedure and the following cDNA preparation step <xref ref-type="bibr" rid="pone.0081809-Cheung1">[24]</xref>. This 3′-UTR bias follows an exponential decay function. After length correction of coverage figures using that function for mRNA and FPKM-values for total RNA, we obtained a reasonably good agreement between quantitative estimates from mapping of polyA+ mRNA and rRNA-depleted total RNA reads to the human genome GRCh37/hg19. It is a notoriously difficult problem to assign reads to a particular isoform if there are many transcript variants with overlaps between them. Very high coverage figures are needed for satisfactory results. This is one of the reasons why RNA-Seq with low coverage has many of the same limitations as other RNA expression analysis pipelines.</p>
+<p>Obviously, mapping of reads against the human genome and also mapping against the human exome both rely on the accuracy of gene and transcript annotations. In order to fully characterize the platelet transcriptome without reference to previous results, including the possibility to detect and fully characterize novel transcripts, we also performed a <italic>de novo</italic> assembly of transcripts using Trinity RNA-Seq software (<ext-link ext-link-type="uri" xlink:href="http://trinityrnaseq.sourceforge.net/" xlink:type="simple">http://trinityrnaseq.sourceforge.net/</ext-link>). This software will extract full-length transcripts for alternatively spliced isoforms based on the generation and analysis of de Bruijn graphs. RSEM software with the bowtie aligner (<ext-link ext-link-type="uri" xlink:href="http://bowtie-bio.sourceforge.net/" xlink:type="simple">http://bowtie-bio.sourceforge.net/</ext-link>) was used for mapping the RNA-Seq reads back to the reported transcripts for abundance estimation. Identification of the transcripts was achieved by Blat and BLAST searches using the UCSC Browser and the NCBI Genome databases, respectively. These data fully supported our results obtained by mapping the reads to the human genome and exome, respectively, using gtf.guided assembly. However, even if transcript abundance figures agreed only the most abundant transcripts could be reliably reconstructed by the <italic>de novo</italic> assembly approach; presumably due to insufficient amounts of reads that were available.</p>
+<p>When we started this study there was no published RNA-Seq data on platelet gene expression although microarray based as well as SAGE and real-time PCR methods have been used in the past. However, two studies using RNA-Seq by NGS were published during the progress of this study. One of these studies was reported by Rowley et al. who used polyA+ enriched RNA to characterize the transcriptomes of human and mouse platelets <xref ref-type="bibr" rid="pone.0081809-Rowley1">[17]</xref>. In contrast, Bray et al. utilized rRNA-depleted total RNA and found that their data correlated with those of previously reported microarray transcriptome data at least for the well-expressed mRNAs <xref ref-type="bibr" rid="pone.0081809-Bray1">[16]</xref>. Both studies used relatively short sequence reads (≤50 bp for Rowley et al. and ≤40 bp for Bray et al.). The present study employed different strategies for library preparation in addition to the longer (100 bp) read length used for mapping. It is thus expected that there might exist some discrepancies between the current and the previously reported platelet transcript data. A notable difference is the “missed” NGRN transcripts (i.e. an at least tenfold lower amount) in our study when compared to the data of Rowley et al., which possibly could be due to differences of the sample preparation method. However, it should also be kept in mind that when adopting available NGS software for the RNA-seq analyses even small changes in parameter settings can produce a remarkably different result. We used settings of the Bowtie program allowing only 2 mismatches when aligning 100 bp reads to the reference sequence. Context sequencing errors (CSE) that are supposedly specific for the sequencing platform could obviously affect the read counts under such circumstances but a &gt;10-fold reduction seems unlikely because reads from the reverse strand in the mRNA sample S0 should not have been affected to the same extent. One could also speculate whether RNA editing might influence the mapping of our platelet RNA transcripts. Adenosine to inosine (A&gt;I) RNA editing occurs widely across the human transcriptome in certain tissues, especially in the brain <xref ref-type="bibr" rid="pone.0081809-Peng1">[25]</xref>. Although there is no data available regarding RNA editing in platelets, we cannot exclude that possibility. However, RNA editing of protein-coding regions appears to be relatively rare events, and may thus have had limited impact on the mapping of cDNA from platelet transcripts.</p>
+<p>The relative frequency of reads mapping uniquely to genes involved in platelet function and our molecular function protein classification by PANTHER software is consistent with but does not prove the notion that at least some mRNAs in platelets are not merely remnants from the megakaryocytes without function, but rather reflect an important role of mRNA in the physiological function of platelets. In this regard, it is not surprising that many of the proteins coded by top 50 platelet genes represent key platelet functions such as structural constituent of cytoskeleton, protein binding, calcium binding and signal transduction. On the other hand transcripts of some genes encoding prominent platelet receptors were missing or present with few sequence reads, suggesting that no further synthesis of such proteins is needed after platelet formation in the bone marrow. We also searched for transcript signal for tissue factor (TF) since this protein's eventual presence and function in platelets has been debated for years. However, we could not detect any transcripts encoding TF. Interestingly, Schwertz et al. reported that resting platelets contain TF pre-mRNA that, upon activation, is spliced into mature mRNA, indicating that only activated platelets express mature TF mRNA transcripts <xref ref-type="bibr" rid="pone.0081809-Schwertz1">[26]</xref>.</p>
+<p>Simultaneously, we have confirmed the dominant frequency of mitochondrially expressed genes comprising the platelet mRNA pool. Specifically in our polyA+ mRNA study, 22,416,906 out of 35,322,009 uniquely mapped reads represent MT-transcripts, apparently related to persistent MT-transcription in the absence of nuclear-derived transcription. This is not unexpected as platelets are metabolically adapted to rapidly expend large amounts of energy required for aggregation, granule release, and clot retraction.</p>
+</sec><sec id="s4">
+<title>Conclusions</title>
+<p>This study demonstrates that human platelets carry a unique signature of well-defined and highly abundant coding transcripts that are expressed at similar levels among individuals. However, the <italic>in vivo</italic> functional significance of nuclearly encoded platelet mRNAs remains to be shown. Future studies need to focus on establishing the biological and biochemical functions of the identified genes in the physiological and pathological regulation of platelets. The desired end point would be to define a platelet mRNA profile that is directly associated with athero-thrombotic disease, which could eventually lead to the identification of novel targets for anti-thrombotic agents.</p>
+</sec><sec id="s5" sec-type="methods">
+<title>Methods</title>
+<sec id="s5a">
+<title>Ethical statement</title>
+<p>The Regional Ethical Review Board in Linköping (EPN; <ext-link ext-link-type="uri" xlink:href="http://www.epn.se/start/startpage.aspx" xlink:type="simple">http://www.epn.se/start/startpage.aspx</ext-link>; Linköping, Sweden) granted an ethical permission for this study (permission number M74-09). Informed written consent was obtained from all participants involved in this study.</p>
+</sec><sec id="s5b">
+<title>Platelet preparation</title>
+<p>Non-irradiated apheresis platelets were collected from healthy blood donors. Platelets were collected by COBE Spectra system (Gambro BCT) as previously described <xref ref-type="bibr" rid="pone.0081809-Tynngard1">[27]</xref> and were used on the same collection day. Residual leukocytes were depleted with anti-CD45 conjugated Dynabeads, according to the manufacturer's recommendations (Pan Leukocyte; Invitrogen, Carlsbad, CA). The platelet suspension, with a volume of 30 mL and a platelet count of 1.4×10<sup>9</sup> cells/mL, was centrifuged at 800 g for 8 min and the supernatant was discarded. The platelet pellet was processed for leukocyte depletion, as recommended by the supplier of the Pan Leukocyte reagent (Invitrogen, Carlsbad, CA). Since leukocytes possess magnitudes of order more mRNA than platelets, the purification of platelets is a pivotal step. The leukocyte removal was performed at room temperature. Approximately 70–75% of the original platelets were recovered after the leukocyte depletion. To investigate the level of leukocyte contamination, we determined the level of CD45 (<italic>PTPRC</italic>) transcript in multiple platelet preparations (n = 6) by qPCR using TaqMan Gene Expression Assay for this gene according to the recommendations of the supplier (Assay ID: Hs00894713_m1; Applied Bioystems, Carlsbad, CA, USA).</p>
+</sec><sec id="s5c">
+<title>RNA extraction and cDNA synthesis</title>
+<p>The different strategies used for RNA-extraction, library preparation, sequencing and mapping are graphically depicted in <xref ref-type="fig" rid="pone-0081809-g001">Figure 1</xref>. For isolation of total RNA, we employed the miRVana RNA Extraction Kit as recommended by the supplier (Life Technologies). Isolation of polyA+ mRNA and synthesis of cDNA were performed by the method described by Rox et al. <xref ref-type="bibr" rid="pone.0081809-Perrin1">[22]</xref>, with the exception that we used Smarter PCR cDNA Synthesis kit for the cDNA synthesis (Clontech, Mountain View, CA, USA). Briefly, the leukocyte-depleted platelet suspension was centrifuged at 1000 g for 10 min and the supernatant was discarded. PolyA+ mRNA was isolated from the platelet cell pellet by using Dynabeads Oligo(dT)<sub>25</sub> according to the instruction of the manufacturer (Invitrogen, Carlsbad, CA, USA). To synthesize the first-strand cDNA, 3.5 µL of polyA+ mRNA was combined with 1 µL of 3′-Smart CDS primer II A (12 µM). After mixing the tube, the sample was incubated at 72 C for 3 min and then at 42 C for 2 min. This was followed by the addition of a master mix containing 2 µL of 5 First-Strand Buffer, 0.25 µL DTT (100 mM), 1 µL dNTP mix (10 mM), 1 µL SMARTer IIA oligonucleotide (12 µM), 0.25 µL RNase inhibitor, and 1 µL of SMARTScribe Reverse Transcriptase (100 U). The reverse transcription was run by incubating the tube at 42 C for 1 h before the reaction was terminated at 70 C for 10 min. The sample was then diluted with 90 µL of TE-buffer (10 nM Tris, 1 nM EDTA, pH 8.0). To run Long-Distance PCR, 10 µL of the diluted and reverse-transcribed platelet cDNA was mixed with 10 µL 10 Advantage 2 PCR buffer, 2 µL 50 dNTP mix (10 mM), 2 µL 5′PCR primer IIA (12 µM), 2 µL 50 Advantage 2 polymerase mix, and 74 µL of deionized water to a final volume of 100 µL. The sample was then incubated in a thermal cycler running a PCR program containing 95 C for 1 min, and then 20 cycles of 95 C for 15 s, 65 C for 30 s, and 68 C for 3 min. The synthesized platelet cDNA was purified with QIAquick PCR purification kit according to the manufacturer's instructions (Qiagen, Hilden, Germany), and the amount of cDNA was estimated on a Nanodrop spectrophotometer (ND1000; Saveen &amp; Werner, Limhamn, Sweden).</p>
+</sec><sec id="s5d">
+<title>Illumina HiSeq2000 sequencing</title>
+<p>The cDNA obtained from the platelet polyA+ mRNA sample was shotgun sequenced (1×100 bp single read module) with the Illumina HiSeq 2000® instrument (Illumina, San Diego, CA, USA) by using a customer sequencing service (Eurofins MWG Operon, Ebersberg, Germany) which also included nebulization and end repair of cDNA, ligation of adaptors, gel purification, PCR amplification and library purification. The number of raw sequencing reads was 65,111,491. Filtering to remove bad quality bases and reads resulted in 58,155,680 reads (89.3%). These sequences were then mapped against the set of chromosomes of the Human Feb. 2009 (GRCh37/hg19) assembly. Initially, the mapping was conducted using the software TopHat 1.2.0 (<ext-link ext-link-type="uri" xlink:href="http://tophat.cbcb.umd.edu" xlink:type="simple">http://tophat.cbcb.umd.edu</ext-link>). The post-processing of the mapping results was conducted using SamTools 0.1.12 a (<ext-link ext-link-type="uri" xlink:href="http://samtools.sourceforge.net" xlink:type="simple">http://samtools.sourceforge.net</ext-link>) and custom made Ruby 1.8.7 software. Bowtie <ext-link ext-link-type="uri" xlink:href="http://bowtie-bio.sourceforge.net/" xlink:type="simple">http://bowtie-bio.sourceforge.net/</ext-link> and bwa <ext-link ext-link-type="uri" xlink:href="http://bio-bwa.sourceforge.net/" xlink:type="simple">http://bio-bwa.sourceforge.net/</ext-link> were used for aligning to de novo assembled transcripts and RefSeq mRNA respectively.</p>
+<p>RNA samples from three platelet donors were prepared for total RNA sequencing. For these samples, ribosomal RNA was depleted with Ribo-Zero (Epicentre, Madison, WI, USA) and strand specific barcoded RNA-sequencing libraries were prepared using ScriptSeq v2 (Epicentre) according to manufacturers instructions. The barcoded libraries were run on a single lane paired end 100 bp on a HiSeq2000® (Illumina, San Diego, CA, USA), which resulted in 153 million pass filter read pairs. QC data can be found in Figure S1 in <xref ref-type="supplementary-material" rid="pone.0081809.s001">File S1</xref>. The TopHat2 software was used with the bowtie aligner.</p>
+</sec><sec id="s5e">
+<title>Submission of the sequencing data to public repository</title>
+<p>The complete sequencing data is publicly available at The European Nucleotide Archive (<ext-link ext-link-type="uri" xlink:href="http://www.ebi.ac.uk/ena/" xlink:type="simple">http://www.ebi.ac.uk/ena/</ext-link>) under the accession numbers E-MTAB-715 (polyA+ transcripts) and E-MTAB-1846 (total RNA transcripts). Both accession numbers are cross-referenced to one another.</p>
+</sec><sec id="s5f">
+<title>Assembly of reads and bioinformatics</title>
+<p><italic>de novo</italic> assembly of transcripts was performed using the Trinity RNA-Seq software (<ext-link ext-link-type="uri" xlink:href="http://trinityrnaseq.sourceforge.net" xlink:type="simple">http://trinityrnaseq.sourceforge.net</ext-link>).</p>
+</sec></sec><sec id="s6">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0081809.s001" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0081809.s001" position="float" xlink:type="simple"><label>File S1</label><caption>
+<p><bold>Contents</bold>: Table S1: HTSeq raw counts per gene in samples S0, S1, S2, and S3. Table S2: Mapping of S0 (poly(dT) selected transcripts) against RefSeq mRNA. Table S3: Length and method (NRC/FPKM) adjusted counts per gene as represented by the most abundant transcript in samples S0, S1, S2, and S3. Table S4: Differential expression of genes in polyA+ mRNA (A) versus rRNA-depleted total RNA (B). Table S5: The S0, S1, S2 and S3 RNA-Seq data integrated with Illumina's Human BodyMap 2.0 project raw data. Figure S1: QC report.</p>
+<p>(PDF)</p>
+</caption></supplementary-material></sec></body>
+<back>
+<ack>
+<p>We are grateful to Marie Trinks of the Blood Donation Centre, Linköping University Hospital, for her kind help with the sample collection.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0081809-Kieffer1"><label>1</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kieffer</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Guichard</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Farcet</surname><given-names>JP</given-names></name>, <name name-style="western"><surname>Vainchenker</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Breton-Gorius</surname><given-names>J</given-names></name> (<year>1987</year>) <article-title>Biosynthesis of major platelet proteins in human blood platelets</article-title>. <source>Eur J Biochem</source> <volume>164</volume>: <fpage>189</fpage>–<lpage>195</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Wicki1"><label>2</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wicki</surname><given-names>AN</given-names></name>, <name name-style="western"><surname>Walz</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Gerber-Huber</surname><given-names>SN</given-names></name>, <name name-style="western"><surname>Wenger</surname><given-names>RH</given-names></name>, <name name-style="western"><surname>Vornhagen</surname><given-names>R</given-names></name>, <etal>et al</etal>. (<year>1989</year>) <article-title>Isolation and characterization of human blood platelet mRNA and construction of a cDNA library in lambda gt11. Confirmation of the platelet derivation by identification of GPIb coding mRNA and cloning of a GPIb coding cDNA insert</article-title>. <source>Thromb Haemost</source> <volume>61</volume>: <fpage>448</fpage>–<lpage>453</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Bugert1"><label>3</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bugert</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Dugrillon</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Gunaydin</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Eichler</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Kluter</surname><given-names>H</given-names></name> (<year>2003</year>) <article-title>Messenger RNA profiling of human platelets by microarray hybridization</article-title>. <source>Thromb Haemost</source> <volume>90</volume>: <fpage>738</fpage>–<lpage>748</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Dittrich1"><label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dittrich</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Birschmann</surname><given-names>I</given-names></name>, <name name-style="western"><surname>Pfrang</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Herterich</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Smolenski</surname><given-names>A</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Analysis of SAGE data in human platelets: features of the transcriptome in an anucleate cell</article-title>. <source>Thromb Haemost</source> <volume>95</volume>: <fpage>643</fpage>–<lpage>651</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Gnatenko1"><label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gnatenko</surname><given-names>DV</given-names></name>, <name name-style="western"><surname>Dunn</surname><given-names>JJ</given-names></name>, <name name-style="western"><surname>McCorkle</surname><given-names>SR</given-names></name>, <name name-style="western"><surname>Weissmann</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Perrotta</surname><given-names>PL</given-names></name>, <etal>et al</etal>. (<year>2003</year>) <article-title>Transcript profiling of human platelets using microarray and serial analysis of gene expression</article-title>. <source>Blood</source> <volume>101</volume>: <fpage>2285</fpage>–<lpage>2293</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-McRedmond1"><label>6</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>McRedmond</surname><given-names>JP</given-names></name>, <name name-style="western"><surname>Park</surname><given-names>SD</given-names></name>, <name name-style="western"><surname>Reilly</surname><given-names>DF</given-names></name>, <name name-style="western"><surname>Coppinger</surname><given-names>JA</given-names></name>, <name name-style="western"><surname>Maguire</surname><given-names>PB</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Integration of proteomics and genomics in platelets: a profile of platelet proteins and platelet-specific genes</article-title>. <source>Mol Cell Proteomics</source> <volume>3</volume>: <fpage>133</fpage>–<lpage>144</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Rox1"><label>7</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rox</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Bugert</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Muller</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Schorr</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Hanfland</surname><given-names>P</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Gene expression analysis in platelets from a single donor: evaluation of a PCR-based amplification technique</article-title>. <source>Clin Chem</source> <volume>50</volume>: <fpage>2271</fpage>–<lpage>2278</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Wang1"><label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wang</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Gerstein</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Snyder</surname><given-names>M</given-names></name> (<year>2009</year>) <article-title>RNA-Seq: a revolutionary tool for transcriptomics</article-title>. <source>Nat Rev Genet</source> <volume>10</volume>: <fpage>57</fpage>–<lpage>63</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Heap1"><label>9</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Heap</surname><given-names>GA</given-names></name>, <name name-style="western"><surname>Yang</surname><given-names>JH</given-names></name>, <name name-style="western"><surname>Downes</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Healy</surname><given-names>BC</given-names></name>, <name name-style="western"><surname>Hunt</surname><given-names>KA</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Genome-wide analysis of allelic expression imbalance in human primary cells by high-throughput transcriptome resequencing</article-title>. <source>Hum Mol Genet</source> <volume>19</volume>: <fpage>122</fpage>–<lpage>134</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Katz1"><label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Katz</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>ET</given-names></name>, <name name-style="western"><surname>Airoldi</surname><given-names>EM</given-names></name>, <name name-style="western"><surname>Burge</surname><given-names>CB</given-names></name> (<year>2010</year>) <article-title>Analysis and design of RNA sequencing experiments for identifying isoform regulation</article-title>. <source>Nat Methods</source> <volume>7</volume>: <fpage>1009</fpage>–<lpage>1015</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Marguerat1"><label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Marguerat</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Bahler</surname><given-names>J</given-names></name> (<year>2010</year>) <article-title>RNA-seq: from technology to biology</article-title>. <source>Cell Mol Life Sci</source> <volume>67</volume>: <fpage>569</fpage>–<lpage>579</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Mortazavi1"><label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mortazavi</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Williams</surname><given-names>BA</given-names></name>, <name name-style="western"><surname>McCue</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Schaeffer</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Wold</surname><given-names>B</given-names></name> (<year>2008</year>) <article-title>Mapping and quantifying mammalian transcriptomes by RNA-Seq</article-title>. <source>Nat Methods</source> <volume>5</volume>: <fpage>621</fpage>–<lpage>628</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Sultan1"><label>13</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sultan</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Schulz</surname><given-names>MH</given-names></name>, <name name-style="western"><surname>Richard</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Magen</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Klingenhoff</surname><given-names>A</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>A global view of gene activity and alternative splicing by deep sequencing of the human transcriptome</article-title>. <source>Science</source> <volume>321</volume>: <fpage>956</fpage>–<lpage>960</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Wilhelm1"><label>14</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wilhelm</surname><given-names>BT</given-names></name>, <name name-style="western"><surname>Landry</surname><given-names>JR</given-names></name> (<year>2009</year>) <article-title>RNA-Seq-quantitative measurement of expression through massively parallel RNA-sequencing</article-title>. <source>Methods</source> <volume>48</volume>: <fpage>249</fpage>–<lpage>257</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Costa1"><label>15</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Costa</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Angelini</surname><given-names>C</given-names></name>, <name name-style="western"><surname>De Feis</surname><given-names>I</given-names></name>, <name name-style="western"><surname>Ciccodicola</surname><given-names>A</given-names></name> (<year>2010</year>) <article-title>Uncovering the complexity of transcriptomes with RNA-Seq</article-title>. <source>J Biomed Biotechnol</source> <volume>2010</volume>: <fpage>853916</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Bray1"><label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bray</surname><given-names>PF</given-names></name>, <name name-style="western"><surname>McKenzie</surname><given-names>SE</given-names></name>, <name name-style="western"><surname>Edelstein</surname><given-names>LC</given-names></name>, <name name-style="western"><surname>Nagalla</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Delgrosso</surname><given-names>K</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>The complex transcriptional landscape of the anucleate human platelet</article-title>. <source>BMC Genomics</source> <volume>14</volume>: <fpage>1</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Rowley1"><label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rowley</surname><given-names>JW</given-names></name>, <name name-style="western"><surname>Oler</surname><given-names>AJ</given-names></name>, <name name-style="western"><surname>Tolley</surname><given-names>ND</given-names></name>, <name name-style="western"><surname>Hunter</surname><given-names>BN</given-names></name>, <name name-style="western"><surname>Low</surname><given-names>EN</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Genome-wide RNA-seq analysis of human and mouse platelet transcriptomes</article-title>. <source>Blood</source> <volume>118</volume>: <fpage>e101</fpage>–<lpage>111</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Kaur1"><label>18</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kaur</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Mutus</surname><given-names>B</given-names></name> (<year>2012</year>) <article-title>Platelet function and thymosin beta4</article-title>. <source>Biol Chem</source> <volume>393</volume>: <fpage>595</fpage>–<lpage>598</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Schenk1"><label>19</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schenk</surname><given-names>BI</given-names></name>, <name name-style="western"><surname>Petersen</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Flad</surname><given-names>HD</given-names></name>, <name name-style="western"><surname>Brandt</surname><given-names>E</given-names></name> (<year>2002</year>) <article-title>Platelet-derived chemokines CXC chemokine ligand (CXCL)7, connective tissue-activating peptide III, and CXCL4 differentially affect and cross-regulate neutrophil adhesion and transendothelial migration</article-title>. <source>J Immunol</source> <volume>169</volume>: <fpage>2602</fpage>–<lpage>2610</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Hee1"><label>20</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hee</surname><given-names>CS</given-names></name>, <name name-style="western"><surname>Beerbaum</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Loll</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Ballaschk</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Schmieder</surname><given-names>P</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>Dynamics of free versus complexed beta2-microglobulin and the evolution of interfaces in MHC class I molecules</article-title>. <source>Immunogenetics</source> <volume>65</volume>: <fpage>157</fpage>–<lpage>172</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Farbiszewski1"><label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Farbiszewski</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Niewiarowski</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Worowski</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Lipinski</surname><given-names>B</given-names></name> (<year>1968</year>) <article-title>Release of platelet factor 4 in vivo during intravascular coagulation and in thrombotic states</article-title>. <source>Thromb Diath Haemorrh</source> <volume>19</volume>: <fpage>578</fpage>–<lpage>583</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Perrin1"><label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Perrin</surname><given-names>BJ</given-names></name>, <name name-style="western"><surname>Ervasti</surname><given-names>JM</given-names></name> (<year>2010</year>) <article-title>The actin gene family: function follows isoform</article-title>. <source>Cytoskeleton (Hoboken)</source> <volume>67</volume>: <fpage>630</fpage>–<lpage>634</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Thomas1"><label>23</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Thomas</surname><given-names>PD</given-names></name>, <name name-style="western"><surname>Campbell</surname><given-names>MJ</given-names></name>, <name name-style="western"><surname>Kejariwal</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Mi</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Karlak</surname><given-names>B</given-names></name>, <etal>et al</etal>. (<year>2003</year>) <article-title>PANTHER: a library of protein families and subfamilies indexed by function</article-title>. <source>Genome Res</source> <volume>13</volume>: <fpage>2129</fpage>–<lpage>2141</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Cheung1"><label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cheung</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Haas</surname><given-names>BJ</given-names></name>, <name name-style="western"><surname>Goldberg</surname><given-names>SM</given-names></name>, <name name-style="western"><surname>May</surname><given-names>GD</given-names></name>, <name name-style="western"><surname>Xiao</surname><given-names>Y</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Sequencing Medicago truncatula expressed sequenced tags using 454 Life Sciences technology</article-title>. <source>BMC Genomics</source> <volume>7</volume>: <fpage>272</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Peng1"><label>25</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Peng</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Cheng</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Tan</surname><given-names>BC</given-names></name>, <name name-style="western"><surname>Kang</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Tian</surname><given-names>Z</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Comprehensive analysis of RNA-Seq data reveals extensive RNA editing in a human transcriptome</article-title>. <source>Nat Biotechnol</source> <volume>30</volume>: <fpage>253</fpage>–<lpage>260</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Schwertz1"><label>26</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schwertz</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Tolley</surname><given-names>ND</given-names></name>, <name name-style="western"><surname>Foulks</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Denis</surname><given-names>MM</given-names></name>, <name name-style="western"><surname>Risenmay</surname><given-names>BW</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Signal-dependent splicing of tissue factor pre-mRNA modulates the thrombogenicity of human platelets</article-title>. <source>J Exp Med</source> <volume>203</volume>: <fpage>2433</fpage>–<lpage>2440</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0081809-Tynngard1"><label>27</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tynngard</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Lindahl</surname><given-names>TL</given-names></name>, <name name-style="western"><surname>Trinks</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Studer</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Berlin</surname><given-names>G</given-names></name> (<year>2008</year>) <article-title>The quality of platelet concentrates produced by COBE Spectra and Trima Accel cell separators during storage for 7 days as assessed by in vitro methods</article-title>. <source>Transfusion</source> <volume>48</volume>: <fpage>715</fpage>–<lpage>722</lpage>.</mixed-citation>
+</ref>
+</ref-list></back>
+</article>

@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+	<front>
+		<journal-meta>
+    <journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+    <journal-id journal-id-type="publisher-id">plos</journal-id>
+    <journal-id journal-id-type="pmc">plosone</journal-id>
+    <journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group>
+    <issn pub-type="epub">1932-6203</issn>
+    <publisher><publisher-name>Public Library of Science</publisher-name>
+    <publisher-loc>San Francisco, USA</publisher-loc></publisher>
+    </journal-meta><article-meta>
+			<article-id pub-id-type="publisher-id">PONE-D-13-29700</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0077724</article-id><article-categories><subj-group subj-group-type="heading">
+    <subject>Research Article</subject></subj-group></article-categories><title-group>
+				<article-title>Expansion of the Gateway MultiSite Recombination Cloning Toolkit</article-title>
+			<alt-title alt-title-type="running-head">Expanded Gateway MultiSite Toolkit</alt-title>
+      </title-group>
+			<contrib-group>
+				<contrib xlink:type="simple" contrib-type="author">
+					<name name-style="western">
+						<surname>Shearin</surname>
+						<given-names>Harold K.</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"/>
+				</contrib>
+				<contrib xlink:type="simple" contrib-type="author">
+					<name name-style="western">
+						<surname>Dvarishkis</surname>
+						<given-names>Alisa R.</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"/>
+				</contrib>
+				<contrib xlink:type="simple" contrib-type="author">
+					<name name-style="western">
+						<surname>Kozeluh</surname>
+						<given-names>Craig D.</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"/>
+				</contrib>
+				<contrib xlink:type="simple" contrib-type="author">
+					<name name-style="western">
+						<surname>Stowers</surname>
+						<given-names>R. Steven</given-names>
+					</name>
+					<xref ref-type="corresp" rid="cor1"><sup>*</sup></xref>
+					<xref ref-type="aff" rid="aff1"/>
+				</contrib>
+			</contrib-group>
+			<aff id="aff1"><addr-line>Department of Cell Biology and Neuroscience, Montana State University, Bozeman, Montana, United States of America</addr-line></aff>
+			<contrib-group><contrib contrib-type="editor" xlink:type="simple">
+          <name name-style="western">
+            <surname>McCabe</surname>
+            <given-names>Brian D.</given-names>
+          </name>
+          <role>Editor</role>
+          <xref ref-type="aff" rid="edit1"/>
+        </contrib>
+        </contrib-group><aff id="edit1"><addr-line>Columbia University, United States of America</addr-line></aff><author-notes>
+				<corresp id="cor1">* E-mail: <email xlink:type="simple">sstowers@montana.edu</email></corresp>
+			<fn fn-type="conflict"><p>The authors have declared that no competing interests exist.</p></fn><fn fn-type="con"><p>Conceived and designed the experiments: RSS. Performed the experiments: RSS HKS ARD CDK. Analyzed the data: RSS HKS. Contributed reagents/materials/analysis tools: RSS HKS ARD CDK. Wrote the manuscript: RSS. </p></fn></author-notes>
+			<pub-date pub-type="collection"><year>2013</year></pub-date><pub-date pub-type="epub">
+        <day>18</day>
+        <month>10</month>
+        <year>2013</year>
+      </pub-date>
+      <volume>8</volume><issue>10</issue><elocation-id>e77724</elocation-id><history><date date-type="received">
+          <day>18</day>
+          <month>7</month>
+          <year>2013</year>
+        </date>
+        <date date-type="accepted">
+          <day>3</day>
+          <month>9</month>
+          <year>2013</year>
+        </date>
+      </history><permissions>
+    <copyright-year>2013</copyright-year><copyright-holder>Shearin et al</copyright-holder><license xlink:type="simple"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license>
+    </permissions>
+    	<abstract>
+    		<p>Precise manipulation of transgene expression in genetic model organisms has led to advances in understanding fundamental mechanisms of development, physiology, and genetic disease.  Transgene construction is, however, a precondition of transgene expression, and often limits the rate of experimental progress.  Here we report an expansion of the modular Gateway MultiSite recombination-cloning platform for high efficiency transgene assembly.  The expansion includes two additional destination vectors and entry clones for the LexA binary transcription system, among others.  These new tools enhance the expression levels possible with Gateway MultiSite generated transgenes and make possible the generation of LexA drivers and reporters with Gateway MultiSite cloning.  <italic>In vivo</italic> data from transgenic <italic>Drosophila</italic> functionally validating each novel component are presented and include neuronal LexA drivers, LexAop2 red and green fluorescent synaptic vesicle reporters, TDC2 and TRH LexA, GAL4, and QF drivers, and LexAop2, UAS, and QUAS channelrhodopsin2 T159C reporters.</p>
+    	</abstract>
+    	<funding-group><funding-statement>This work received financial support from the Whitehall Foundation (<ext-link ext-link-type="uri" xlink:href="http://www.whitehall.org" xlink:type="simple">http://www.whitehall.org</ext-link>/). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group></article-meta>
+	</front>
+	<body>
+		<sec id="s1" sec-type="introduction">
+			<title>Introduction</title>
+			<p>     Transgene expression is an integral component of experimental approaches in genetic model organisms for addressing a wide variety of biological problems.  Sophisticated transgene expression experiments may require precise control of the timing, location, and level of transgene expression as well as independent control of expression of multiple transgenes simultaneously.  A prerequisite for experiments involving transgene expression is, however, the construction of transgenes using recombinant DNA methods.  Producing these transgenes is often a cumbersome and time-consuming process that has limited the rate of experimental progress due to the inefficiency of restriction enzyme-based cloning methods.  Previously, we reported the development of a starter toolkit for Gateway MultiSite recombination cloning that includes a detailed description of the methodology by which two, three, or four fragments can be simultaneously recombination-cloned into a destination vector to generate expression clones [<xref ref-type="bibr" rid="B1">1</xref>].  This recombinase-based cloning methodology is efficient and reliable, and represents a significant advance over restriction-enzyme based cloning in terms of the ease and speed with which transgenic constructs can be produced.  The Gateway MultiSite starter toolkit previously reported included a single destination vector and entry clones for the GAL4 and Q binary transcription systems, among others.  </p>
+			<p>     In this work we report an expansion of the Gateway MultiSite cloning platform including two new destination vectors that offer enhanced levels of transgene expression, entry clones for the LexA binary transcription system [<xref ref-type="bibr" rid="B2">2</xref>,<xref ref-type="bibr" rid="B3">3</xref>], and several additional entry clones.  The new destination vectors provide flexibility in dictating appropriate transgene expression levels as required for specific experiments.  Entry clones for the LexA system allow Gateway MultiSite construction of LexA drivers and reporters for experiments requiring independent control of expression of more than one transgene simultaneously.  The functionality of these new tools for Gateway MultiSite cloning is demonstrated <italic>in vivo</italic> using the <italic>Drosophila</italic> model system.  The fly strains demonstrating the functionality of these new Gateway MultiSite cloning tools include neuronal LexA drivers, LexAop2 red and green fluorescent synaptic vesicle reporters, tyrosine decarboxylase 2 (TDC2) and tryptophan hydroxylase (TRH) LexA, GAL4, and QF drivers, and LexAop2, UAS, and QUAS channelrhodopsin2 T159C reporters.       </p>
+		</sec>
+		<sec id="s2" sec-type="results">
+			<title>Results</title>
+			<sec id="s2.1">
+				<title>New Gateway MultiSite destination vectors with enhanced expression</title>
+				<p>     With the goal of enhancing transgene expression levels from expression clones generated via Gateway MultiSite cloning, two new <italic>Drosophila</italic> Gateway MultiSite destination vectors were constructed.  The previously introduced <italic>Drosophila</italic> Gateway MultiSite destination vector pDESThaw utilized the <italic>hsp70</italic> 3’ UTR [<xref ref-type="bibr" rid="B1">1</xref>].  A recent report characterizing transgene expression levels for several different 3’ UTRs [<xref ref-type="bibr" rid="B4">4</xref>] suggested higher levels of transgene expression would be possible with Gateway MultiSite cloning if Gateway MultiSite destination vectors with alternative 3’ UTRs were developed.  Two Gateway MultiSite destination vectors were assembled that utilize the <italic>SV40</italic> (pDESTsvaw) (<xref ref-type="fig" rid="pone-0077724-g001">Figure 1</xref>) or <italic>p10</italic> (pDESTp10aw) 3’UTRs [<xref ref-type="bibr" rid="B4">4</xref>].  These two destination vectors are identical except for the 3’ UTR and, like pDESThaw, contain a mini-white transgenesis marker, a <italic>PhiC31</italic> attB site for <italic>PhiC31</italic> recombinase-mediated transgenesis, and an attR1/attR2 Gateway cassette.   </p>
+				<fig id="pone-0077724-g001" position="float">
+					<object-id pub-id-type="doi">10.1371/journal.pone.0077724.g001</object-id><label>Figure 1</label>
+					<caption>
+						<title>The <italic>Drosophila</italic> Gateway MultiSite destination vector pDESTsvaw.</title><p>The pDESTsvaw destination vector contains a <italic>PhiC31</italic> attB site for <italic>PhiC31</italic> integrase-mediated site-specific transgenesis, a mini-white transformation marker, a Gateway cassette including flanking attR1 (blue) and attR2 (dark green) recombination sites, and an <italic>SV40</italic> 3’ UTR (red).  The pDESTp10aw destination vector described in the text is identical except the <italic>SV40</italic> 3’ UTR has been replaced by the <italic>p10</italic> 3’ UTR.  Both vectors are compatible with two-, three-, and four-fragment Gateway MultiSite cloning.  CmR-chloramphenicol resistance, AmpR-ampicillin resistance, svaw-<italic>SV40</italic>, <italic>PhiC31</italic> attB, white.   </p>
+					</caption>
+					<graphic xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0077724.g001"/>
+				</fig>
+				<p>     To assess the relative levels of transgene expression from the three Gateway MultiSite destination vectors, expression clones for each were generated that contain 13XLexAop2-GFPRab3.  The L1-13XLexAop2-L4 entry clone used in these constructs is newly reported here and is described below, as is the construction of 13LexAop2-GFPRab3.  To eliminate variability in expression levels due to position effects, all three constructs were inserted into the VK00027 landing site [<xref ref-type="bibr" rid="B5">5</xref>].  To quantitate expression levels, fly strains for each of the three 13XLexAop2-GFPRab3 constructs were crossed to a vGlut-LexA driver and the neuromuscular junctions innervating muscles 6 and 7, segment A4, of wandering third instar larva were imaged on a confocal microscope using identical settings.  Representative images for each genotype are shown in <xref ref-type="fig" rid="pone-0077724-g002">Figures 2A-C</xref>.  Three-dimensional reconstructions were generated and fluorescence intensities were quantitated using Imaris software.  The quantitation results are shown in the bar graph in <xref ref-type="fig" rid="pone-0077724-g002">Figure 2D</xref>.  The pDESTsvaw and pDESTp10aw destination vectors exhibited 2.26 and 1.78-fold higher expression levels, respectively, than pDESThaw.  </p>
+				<fig id="pone-0077724-g002" position="float">
+					<object-id pub-id-type="doi">10.1371/journal.pone.0077724.g002</object-id><label>Figure 2</label>
+					<caption>
+						<title>Quantitative comparison of motor neuron GFP-Rab3 expression levels in Gateway destination vectors with <italic>hsp70</italic>, <italic>SV40</italic>, and <italic>p10</italic> 3’ untranslated regions.</title><p>Representative confocal images of direct GFP fluorescence for (A) pDESThaw (<italic>hsp70</italic> 3’ UTR); (B) pDEST svaw (<italic>SV40</italic> 3’ UTR), and (C) pDESTp10aw (<italic>p10</italic> 3’ UTR).  All animals are of genotype <italic>yw</italic>; <italic>vGlut-LexA</italic>/<italic>+</italic>; <italic>13XLexAop2-GFP-Rab3</italic>/<italic>+</italic>.  All three reporter transgenes were targeted to the VK00027 landing site to eliminate position effects as a source of expression level variability.  The imaged neuromuscular junctions connected to muscles 6/7 on segment A4.  (D) Quantitation of data from A-C in arbitrary digitizer units.  pDESThaw 20.8 +/- 1.01 (SEM), pDESTsvaw 47.09 +/- 2.91, pDESTP10aw 36.99 +/- 1.72.  SEM-standard error of the mean. Scale bar: 50μm.</p>
+					</caption>
+					<graphic xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0077724.g002"/>
+				</fig>
+				<p>     To determine if the quantitative results obtained in motor neurons generalize to other neuron types, similar qualitative experiments were performed using the sensory neuron driver nompC-LexA, the interneuron driver TRH-LexA, and the pan-neuronal driver n-syb-LexA.  The construction of these three drivers is described below.  With all three drivers, the expression of GFP-Rab3 from pDESThaw (<xref ref-type="fig" rid="pone-0077724-g003">Figures 3A, D, G</xref>) was noticeably less than that of GFP-Rab3 from pDESTsvaw (<xref ref-type="fig" rid="pone-0077724-g003">Figures 3B, E, H</xref>) or pDESTp10aw (<xref ref-type="fig" rid="pone-0077724-g003">Figures 3C, F, I</xref>), which were comparable.  Although minor variations were observed, the trend in expression levels of GFP-Rab3 for sensory neurons, interneurons, and with pan-neuronal expression, was in general agreement with the quantitative results obtained for motor neurons.  This suggests the effect on expression levels of each of the three UTRs does not vary significantly across neuronal subtypes.  Overall, these quantitative and qualitative results demonstrate the new pDESTsvaw and pDESTp10aw destination vectors allow enhanced levels of transgene expression for Gateway MultiSite generated transgenes.</p>
+				<fig id="pone-0077724-g003" position="float">
+					<object-id pub-id-type="doi">10.1371/journal.pone.0077724.g003</object-id><label>Figure 3</label>
+					<caption>
+						<title>Qualitative comparison of sensory neuron, interneuron, and pan-neuronal GFP-Rab3 expression levels in Gateway destination vectors with <italic>hsp70</italic>, <italic>SV40</italic>, and <italic>p10</italic> 3’ untranslated regions.</title><p>Representative confocal images of direct GFP fluorescence for (A, D, G) pDESThaw (<italic>hsp70</italic> 3’ UTR); (B, E, H) pDESTsvaw (<italic>SV40</italic> 3’ UTR), and (C, F, I) pDESTp10aw (<italic>p10</italic> 3’ UTR).  (A-C) <italic>yw</italic>; <italic>nompC-LexA</italic>/<italic>+</italic>; <italic>13XLexAop2-GFP-Rab3</italic>/<italic>+</italic>; (D-F) <italic>yw</italic>; <italic>TRH-LexA</italic>/<italic>+</italic>; <italic>13XLexAop2-GFP-Rab3</italic>/<italic>+</italic>; (G-I) <italic>yw</italic>; <italic>n-syb-LexA</italic>/<italic>+</italic>; <italic>13XLexAop2-GFP-Rab3</italic>/<italic>+</italic>.  All three reporter transgenes were targeted to the VK00027 landing site to eliminate position effects as a source of expression level variability.  Expression of GFP-Rab3 with the <italic>hsp70</italic> 3’ UTR exhibits consistently lower expression levels than GFP-Rab3 with the <italic>SV40</italic> or <italic>p10</italic> 3’ UTRs which show comparable expression levels.  All images for a given driver were acquired using identical confocal settings.  Scale bar 100μm.</p>
+					</caption>
+					<graphic xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0077724.g003"/>
+				</fig>
+				<p>     The complete nucleotide sequences of the pDESTsvaw and pDESTp10aw destination vectors, as well as all entry clones described in this report, can be found at <ext-link ext-link-type="uri" xlink:href="http://www.gatewaymultisite.org" xlink:type="simple"><underline>www.gatewaymultisite.org</underline></ext-link>.  A complete list of all entry clones and fly strains newly described herein can be found in <xref ref-type="table" rid="pone-0077724-t001">Tables 1</xref> and <xref ref-type="table" rid="pone-0077724-t002">2</xref>, respectively.</p>
+				<table-wrap id="pone-0077724-t001" position="float">
+					<object-id pub-id-type="doi">10.1371/journal.pone.0077724.t001</object-id><label>Table 1</label>
+					<caption>
+						<title>Entry clones.</title>
+					</caption>
+					<table>
+						<colgroup span="1"><col span="1"/><col span="1"/></colgroup>
+						<thead>
+							<tr>
+								<th rowspan="1" colspan="1"><bold>Entry clones</bold></th>
+								<th rowspan="1" colspan="1"><bold>Insert size [bp]</bold></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="1" colspan="1">R4-LexAp65-R3</td>
+								<td rowspan="1" colspan="1">1448</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">L5-LexAp65-L2</td>
+								<td rowspan="1" colspan="1">1452</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">L1-13XLexAop2-L4</td>
+								<td rowspan="1" colspan="1">666</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">L1-13XLexAop2-R5</td>
+								<td rowspan="1" colspan="1">663</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">L1-<italic>TDC2</italic>-5'Reg-L4</td>
+								<td rowspan="1" colspan="1">4145</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">L3-<italic>TDC2</italic>-3'Reg-L2</td>
+								<td rowspan="1" colspan="1">4147</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">L1-<italic>n-syb</italic>-R5</td>
+								<td rowspan="1" colspan="1">878</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">L1-<italic>TRH</italic>-R5</td>
+								<td rowspan="1" colspan="1">1299</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">L5-2XHA-Rab3-L2</td>
+								<td rowspan="1" colspan="1">754</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">L5-Chr2 T159C-HA-L2</td>
+								<td rowspan="1" colspan="1">987</td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+				<table-wrap id="pone-0077724-t002" position="float">
+					<object-id pub-id-type="doi">10.1371/journal.pone.0077724.t002</object-id><label>Table 2</label>
+					<caption>
+						<title>Expression clones/Fly stocks.</title>
+					</caption>
+					<table>
+						<colgroup span="1"><col span="1"/><col span="1"/><col span="1"/></colgroup>
+						<thead>
+							<tr>
+								<th rowspan="1" colspan="1"><bold><underline>Construct</underline></bold></th>
+								<th rowspan="1" colspan="1"><bold><underline>Insertion site[s]</underline></bold></th>
+								<th rowspan="1" colspan="1"><bold><underline>Vector</underline></bold></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="1" colspan="1">13XLexAop2-GFP-Rab3</td>
+								<td rowspan="1" colspan="1">VK00027</td>
+								<td rowspan="1" colspan="1">pDESThaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">13XLexAop2-GFP-Rab3</td>
+								<td rowspan="1" colspan="1">VK00027</td>
+								<td rowspan="1" colspan="1">pDESTsvaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">13XLexAop2-GFP-Rab3</td>
+								<td rowspan="1" colspan="1">VK00027</td>
+								<td rowspan="1" colspan="1">pDESTP10aw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">nompC-LexAp65</td>
+								<td rowspan="1" colspan="1">VK00027/VK00018</td>
+								<td rowspan="1" colspan="1">pDESTP10aw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">TDC2-LexAp65</td>
+								<td rowspan="1" colspan="1">attP40</td>
+								<td rowspan="1" colspan="1">pDESTsvaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">TDC2-GAL4</td>
+								<td rowspan="1" colspan="1">attP2</td>
+								<td rowspan="1" colspan="1">pDESThaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">TDC2-QF</td>
+								<td rowspan="1" colspan="1">VK00027/attP33</td>
+								<td rowspan="1" colspan="1">pDESThaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">iav-LexAp65</td>
+								<td rowspan="1" colspan="1">VK00013</td>
+								<td rowspan="1" colspan="1">pDESTP10aw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">n-syb-LexAp65</td>
+								<td rowspan="1" colspan="1">VK00018</td>
+								<td rowspan="1" colspan="1">pDESTsvaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">TRH-LexAp65</td>
+								<td rowspan="1" colspan="1">attP40</td>
+								<td rowspan="1" colspan="1">pDESTsvaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">TRH-GAL4</td>
+								<td rowspan="1" colspan="1">attP2</td>
+								<td rowspan="1" colspan="1">pDESThaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">TRH-QF</td>
+								<td rowspan="1" colspan="1">VK00027/attP33</td>
+								<td rowspan="1" colspan="1">pDESThaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">13XLexAop2-mCherry-Rab3</td>
+								<td rowspan="1" colspan="1">VK00018</td>
+								<td rowspan="1" colspan="1">pDESTsvaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">13XLexAop2-n-syb-4XmCherry</td>
+								<td rowspan="1" colspan="1">VK00027/attP40</td>
+								<td rowspan="1" colspan="1">pDESTsvaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">13XLexAop2-2XHA-Rab3</td>
+								<td rowspan="1" colspan="1">VK00018</td>
+								<td rowspan="1" colspan="1">pDESTsvaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">20XUAS-2XHA-Rab3</td>
+								<td rowspan="1" colspan="1">VK00018</td>
+								<td rowspan="1" colspan="1">pDESTsvaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">10XQUAS-2XHA-Rab3</td>
+								<td rowspan="1" colspan="1">VK00018</td>
+								<td rowspan="1" colspan="1">pDESTsvaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">13XLexAop2-Chr2T159C-HA</td>
+								<td rowspan="1" colspan="1">VK00013</td>
+								<td rowspan="1" colspan="1">pDESTsvaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">20XUAS-Chr2T159C-HA</td>
+								<td rowspan="1" colspan="1">VK00018/VK00027</td>
+								<td rowspan="1" colspan="1">pDESTsvaw</td>
+							</tr>
+							<tr>
+								<td rowspan="1" colspan="1">10XQUAS-Chr2T159C-HA</td>
+								<td rowspan="1" colspan="1">VK00018/VK00027</td>
+								<td rowspan="1" colspan="1">pDESTsvaw</td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</sec>
+			<sec id="s2.2">
+				<title>Functional LexAp65 Gateway MultiSite entry clones</title>
+				<p>     L5-LexAp65-L2 (compatible with two-fragment Gateway MultiSite cloning) and R4-LexAp65-R3 (compatible with three- and four-fragment Gateway MultiSite recombination cloning) entry clones were constructed.  To assess the functionality, of the L5-LexAp65-L2 entry clone, it was combined with L1-iav 5’ Reg-R5 or L1-n-syb 5’ Reg-R5 in separate two-fragment LR reactions to generate the expression clones iav-LexAp65 and n-syb-LexAp65.  </p>
+				<p>     The third instar larval expression pattern of iav-LexAp65 is shown in <xref ref-type="fig" rid="pone-0077724-g004">Figure 4A</xref> using the reporter LexAop2-mCD8GFP.  Similar to the previously reported iav-GAL4 and iav-QF drivers [<xref ref-type="bibr" rid="B1">1</xref>], iav-LexAp65 expresses exclusively in the vchA, vchB, lch5, and lch1 chordotonal organs (arrows).  This chordotonal organ-specific expression pattern is consistent with the known role of the <italic>inactive</italic> (<italic>iav</italic>) gene in proprioception and hearing [<xref ref-type="bibr" rid="B6">6</xref>,<xref ref-type="bibr" rid="B7">7</xref>].  </p>
+				<fig id="pone-0077724-g004" position="float">
+					<object-id pub-id-type="doi">10.1371/journal.pone.0077724.g004</object-id><label>Figure 4</label>
+					<caption>
+						<title>Functional demonstration of the L1-LexAp65-R5 Gateway MultiSite entry clone.</title><p>Representative confocal images of third instar larval expression of (A) <italic>yw</italic>; <italic>iav-LexAp65</italic>/<italic>LexAop-mCD8GFP</italic>; (B-C) <italic>yw</italic>; <italic>n-syb-LexAp65</italic>/<italic>+</italic>; <italic>LexAop-mCD8GFP</italic>/<italic>+</italic>.  iav-LexAp65 expresses exclusively in chordotonal organs.  n-syb-LexAp65 expresses broadly in the CNS (B) and sensory and motor neurons (C).  Anti-GFP was used as the primary antibody for (A) and (C).  Direct GFP fluorescence was used for imaging (B).  Scale bars: (A) 200μm, (B) 100μm, (C) 200μm.</p>
+					</caption>
+					<graphic xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0077724.g004"/>
+				</fig>
+				<p>     The third instar larval expression pattern of n-syb-LexAp65 is shown in <xref ref-type="fig" rid="pone-0077724-g004">Figures 4B and C</xref> using the reporter LexAop2-mCD8GFP.  n-syb-LexAp65 expresses extensively in the nervous system as indicated by broad expression in both the ventral nerve cord (<xref ref-type="fig" rid="pone-0077724-g004">Figure 4B</xref>) and in the peripheral body wall (<xref ref-type="fig" rid="pone-0077724-g004">Figure 4C</xref>) where abundant neuromuscular junction and sensory neuron expression is observed.  The broad neuronal expression pattern of n-syb-LexAp65 is consistent with the known role of <italic>neuronal-synaptobrevin</italic> (<italic>n-syb</italic>) as a synaptic vesicle-specific SNARE protein required for synaptic vesicle fusion with the plasma membrane [<xref ref-type="bibr" rid="B8">8</xref>,<xref ref-type="bibr" rid="B9">9</xref>].  These results demonstrate the functionality of the L5-LexAp65-L2 and L1-n-syb 5’ Reg-R5 entry clones.</p>
+				<p>     To assess the functionality of the R4-LexAp65-R3 entry clone it was combined with L1-nompC 5’ Reg-L4 and L3-nompC 3’ Reg-L2 or L1-TDC2 5’ Reg’L4 and L3-TDC2 3’ Reg-L2 in separate three-fragment LR reactions to generate the expression clones nompC-LexAp65 and TDC2-LexAp65.  The third instar larval expression pattern of nompC-LexAp65 is shown in <xref ref-type="fig" rid="pone-0077724-g005">Figure 5A</xref> using the reporter LexAop2-mCD8GFP.  Similar to the previously reported nompC-GAL4 and nompC-QF drivers, nompC-LexAp65 exhibits expression specifically in class III larval sensory neurons (arrowhead) and chordotonal organs (arrow) [<xref ref-type="bibr" rid="B1">1</xref>], consistent with the known role of the  <italic>no mechanoreceptor potential C</italic> (<italic>nompC</italic>) gene in mechanosensation [<xref ref-type="bibr" rid="B10">10</xref>,<xref ref-type="bibr" rid="B11">11</xref>]. </p>
+				<fig id="pone-0077724-g005" position="float">
+					<object-id pub-id-type="doi">10.1371/journal.pone.0077724.g005</object-id><label>Figure 5</label>
+					<caption>
+						<title>Functional demonstration of the L1-LexAp65-L4 Gateway MultiSite entry clone.</title><p>Representative confocal images of third instar larva expression of (A) <italic>yw</italic>; <italic>nompC-LexAp65</italic>/<italic>LexAop-mCD8GFP</italic>; (B) <italic>yw</italic>; <italic>TDC2-LexAp65</italic>/<italic>+</italic>; <italic>LexAop-mCD8GFP</italic>/<italic>+</italic>; (C) <italic>yw</italic>; <italic>20XUAS-mCD8GFP</italic>/<italic>+</italic>;<italic>TDC2-GAL4</italic>/<italic>+</italic>; and (D) <italic>yw</italic>; <italic>QUAS-mtdTOM-3XHA</italic>/<italic>+</italic>; <italic>TDC2-QF</italic>/<italic>+</italic>.  <italic>nompC-LexAp65</italic> expresses in class III larval sensory neurons and chordotonal organs.  TDC2 drivers for LexAp65, GAL4, and QF express in presumptive tyraminergic and octopaminergic neurons.  Slight differences in expression for TDC2 between the different binary transcription systems is likely due to distinct subcellular distribution of the different plasma membrane reporters. Primary antibodies were anti-GFP or anti-HA.  Scale bars: (A) 200μm, (D) 100μm. </p>
+					</caption>
+					<graphic xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0077724.g005"/>
+				</fig>
+				<p>     The third instar larval ventral nerve cord expression pattern of TDC2-LexAp65 is shown in <xref ref-type="fig" rid="pone-0077724-g005">Figure 5B</xref> using the reporter LexAop2-mCD8GFP.  TDC2-LexAp65 exhibits a pattern highly reminiscent of the previously reported TDC2-GAL4 [<xref ref-type="bibr" rid="B12">12</xref>] in presumptive tyraminergic and octopaminergic neurons.  The TDC2 gene is believed to decarboxylate tyrosine to convert it to the neurotransmitter tyramine [<xref ref-type="bibr" rid="B13">13</xref>].  These results demonstrate the functionality of the R4-LexAp65-R3, L1-TDC2 5’ Reg-L4, and L3-TDC2 3’ Reg-L2 entry clones. </p>
+			</sec>
+			<sec id="s2.3">
+				<title>Functional 13XLexAop2 Gateway MultiSite entry clones</title>
+				<p>     L1-13XLexAop2-R5 (compatible with two- and four-fragment Gateway MultiSite cloning) and L1-13XLexAop2-L4 entry clones (compatible with three-fragment Gateway Multisite cloning) were constructed.  To assess the functionality of the L1-13XLexAop2-L4 entry clone it was combined with R4-GFP-R3 and L3-Rab3-L2, R4-mCherry-R3 and L3-Rab3-L2, or R4-n-syb-R3 and L3-4XmCherry-HA-L2 entry clones in separate three-fragment LR reactions to generate the expression clones 13XLexAop2-GFPRab3, 13XLexAop2-mCherryRab3, and 13XLexAop2-n-syb-4XmCherry-HA.  </p>
+				<p>     The third instar larval expression pattern of 13XLexAop2-GFPRab3 driven by nompC-LexAp65 is shown in <xref ref-type="fig" rid="pone-0077724-g006">Figure 6A</xref> as part of a double label experiment with the previously demonstrated synaptic vesicle reporter 5XQUAS-mCherryRab3 [<xref ref-type="bibr" rid="B1">1</xref>] driven with nompC-QF.  The observed expression of GFP-Rab3 demonstrates the functionality of the L1-13XLexAop2-L4 entry clone.  The localization of the vast majority of GFPRab3 to the presynaptic terminals of the chordotonal organs and class III sensory neurons in which the nompC-LexAp65 driver expresses indicates its utility as a synaptic vesicle marker.  For comparison, 13XLexAop2-GFPRab3 expression driven by nompC-LexAp65 is shown in <xref ref-type="fig" rid="pone-0077724-g006">Figure 6D</xref> in a double label experiment with the plasma membrane reporter UAS-mCD8.ChRFP driven by nompC-GAL4 as shown in <xref ref-type="fig" rid="pone-0077724-g006">Figure 6E</xref>.  While the mCD8.ChRFP plasma membrane marker shows significant localization to axons (arrow) and dendrites (arrowheads) the vast majority of GFPRab3 is restricted to the neuropil region of the larval ventral nerve cord where sensory neuron presynaptic terminals are located.  </p>
+				<fig id="pone-0077724-g006" position="float">
+					<object-id pub-id-type="doi">10.1371/journal.pone.0077724.g006</object-id><label>Figure 6</label>
+					<caption>
+						<title>Functional demonstration of the L1-13XLexAop2-L4 Gateway MultiSite entry clone.</title><p>Representative confocal images of third instar larval expression of (A-C) <italic>yw</italic>; <italic>nompC-LexAp65</italic>/<italic>5XQUAS-mCherryRab3</italic>; <italic>nompC-QF</italic>/<italic>13XLexAop2-GFPRab3</italic>; (D-F) <italic>yw</italic>; <italic>nompC-LexAp65</italic>/<italic>nompC-GAL4</italic>; <italic>13XLexAop2-GFPRab3</italic>/<italic>UAS-mCD8</italic>.<italic>chRFP</italic>.  GFPRab3 expression via 13XLexAop2 shown in (A) and (D) preferentially accumulates in the sensory neuron presynaptic terminals similarly to mCherryRab3 shown in (B and C), and minimally in axons and dendrites like the plasma membrane marker mCD8mCherry shown in (E and F).  Larvae were double-labeled with anti-GFP and anti-mCherry primary antibodies.  The 13XLexAop2-GFPRab3 construct shown utilized the pDESThaw destination vector. Scale bar: 100μm.</p>
+					</caption>
+					<graphic xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0077724.g006"/>
+				</fig>
+				<p>     The reason for the reduced expression of nompC-LexA driven GFP-Rab3 in the lateral regions of the neuropil in <xref ref-type="fig" rid="pone-0077724-g006">Figures 6A and 6D</xref> as compared to that seen with nompC-QF driven mCherry-Rab3 in <xref ref-type="fig" rid="pone-0077724-g006">Figure 6B</xref> and nompC-GAL4 driven mCD8.ChRFP in <xref ref-type="fig" rid="pone-0077724-g006">Figure 6E</xref> is not known.  Possible explanations include position effects of the insertion sites of the nompC-LexA driver or the LexAop2-GFP-Rab3 reporter, or that there is something intrinsic to the 13XLexAop2 operator sequence that results in reduced expression in the subset of neurons that innervate the lateral regions of the larval neuropil. </p>
+				<p>     Expression of the 13XLexAop2-mCherryRab3 and 13XLexAop2-n-syb-4X-mCherry-HA reporters in comparison to 13XLexAop2-GFPRab3 in double label experiments with the nompC-LexAp65 driver is shown in <xref ref-type="fig" rid="pone-0077724-g007">Figure 7</xref>.  mCherryRab3 localization in <xref ref-type="fig" rid="pone-0077724-g007">Figure 7B</xref> is nearly identical to GFPRab3 expression in <xref ref-type="fig" rid="pone-0077724-g007">Figure 7A</xref>, thus demonstrating the utility of mCherryRab3 as a synaptic vesicle marker.  The localization of n-syb-4X-mCherry-HA in <xref ref-type="fig" rid="pone-0077724-g007">Figure 7E</xref> also overlaps extensively with GFPRab3 in <xref ref-type="fig" rid="pone-0077724-g007">Figure 7D</xref> in sensory neuron presynaptic terminals, although weak expression of n-syb-4X-mCherry-HA can be seen in sensory neuron dendrites (arrowhead, 7E).  The stronger preferential localization of GFPRab3 and mCherryRab3 to presynaptic terminals, as compared to n-syb-4X-mCherry-HA, indicates the superiority of the former as synaptic vesicle markers.</p>
+				<fig id="pone-0077724-g007" position="float">
+					<object-id pub-id-type="doi">10.1371/journal.pone.0077724.g007</object-id><label>Figure 7</label>
+					<caption>
+						<title>Functional demonstration of the L1-13XLexAop2-R5 Gateway MultiSite entry clone.</title><p>Representative confocal images of third instar larval expression of (A-C) <italic>yw; nompC-LexAp65</italic>/<italic>13XLexAop2-mCherryRab3</italic>; <italic>13XLexAop2-GFPRab3</italic>/<italic>+</italic>; (D-F) <italic>yw</italic>; <italic>nompC-LexAp65</italic>/<italic>13XLexAop2-n-sys-4XmCherry-HA</italic>; <italic>13XLexAop2-GFPRab3</italic>; (G) <italic>yw</italic>; <italic>nompC-LexAp65</italic>/<italic>13XLexAop2-HA-Rab3</italic>; (H) <italic>yw</italic>; <italic>20XUAS-HA-Rab3</italic>/<italic>+</italic>; <italic>nompC-GAL4</italic>/<italic>+</italic>; (I) <italic>yw</italic>; <italic>10XQUAS-HA-Rab3</italic>/<italic>+</italic>; <italic>nompC-QF</italic>/<italic>+</italic>. mCherryRab3, n-syb-4XmCherry-HA, and 2XHA-Rab3 all localicalize prefentially to the presynaptic terminals of larval sensory neurons.  Primary antibodies were anti-GFP, anti-mCherry, or anti-HA.  Scale bar 100μm.</p>
+					</caption>
+					<graphic xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0077724.g007"/>
+				</fig>
+				<p>     To assess the functionality of the L1-13XLexAop2-R5 entry clone, it was combined with an L5-2XHA-Rab3-L2 entry clone in a two-fragment LR reaction to generate the 13XLexAop2-2XHA-Rab3 expression clone.  The expression of 13XLexAop2-2XHA-Rab3 driven by nompC-LexA is shown in <xref ref-type="fig" rid="pone-0077724-g007">Figure 7G</xref>, thus demonstrating the functionality of both the L1-13XLexAop2-R5 and L5-2XHA-Rab3-L2 entry clones.  2XHA-Rab3 localizes preferentially to the presynaptic terminals of sensory neurons (compare 2XHA-Rab3 in 7G to GFPRab3 in 7A, D) indicating 2XHA-Rab3 is also a reliable synaptic vesicle marker.  The lack of endogenous fluorescence from the HA tag, and the ability to detect it using anti-HA primary antibodies with secondary antibodies coupled to fluorophores of desired emission wavelength, make it compatible in multi-label experiments with other proteins having green and/or red fluorescent tags.</p>
+			</sec>
+			<sec id="s2.4">
+				<title>Utility of Gateway MultiSite cloning</title>
+				<p>     An advantage of Gateway MultiSite cloning is the ease with which compatible entry clones can be partnered in LR reactions in desired combinations to assemble expression clones.  The LexAp65 and LexAop2 entry clones reported here, in combination with the previously reported GAL4, QF, UAS, and QUAS entry clones [<xref ref-type="bibr" rid="B1">1</xref>], make a complete set of entry clones for generating drivers and reporters for all three <italic>Drosophila</italic> binary transcriptions systems [<xref ref-type="bibr" rid="B2">2</xref>,<xref ref-type="bibr" rid="B14">14</xref>,<xref ref-type="bibr" rid="B15">15</xref>] using Gateway MultiSite cloning.  With Gateway MultiSite entry clones for all three binary transcription systems now available, generating the same driver or reporter for all three transcription systems is simple and efficient.</p>
+				<p>     As an example, an L1-TRH 5’ Reg-R5 entry clone was developed that contains regulatory sequences upstream of the tryptophan hydroxylase [TRH] gene that is believed to convert tryptophan to the serotonin neurotransmitter precursor 5-hydroxy-tryptophan [5-HT] [<xref ref-type="bibr" rid="B16">16</xref>].  This entry clone was combined in separate LR reactions with each of the existing entry clones L5-LexAp65-L2, L5-GAL4-L2, and L5-QF-L2 to generate the expression clones TRH-LexAp65, TRH-GAL4, and TRH-QF.  </p>
+				<p>     Third instar larval ventral nerve cord expression of these expression clones using plasma membrane reporters is shown in <xref ref-type="fig" rid="pone-0077724-g008">Figure 8</xref> along with the localization of 5-HT in double-label experiments.  Comparison of the neuronal expression of TRH-LexAp65, TRH-GAL4, and TRH-QF as shown in <xref ref-type="fig" rid="pone-0077724-g008">Figures 8A, D</xref>, and G, respectively, with that of 5-HT as shown in <xref ref-type="fig" rid="pone-0077724-g008">Figures 8B, E</xref>, and H reveals complete overlap in neuronal expression between each of the drivers and 5-HT.  It should be noted that subcellular localization of 5-HT and the plasma membrane localized reporters used in these experiments would not be expected to exhibit precise subcellular overlap because they distribute to distinct subcellular regions.  The results of <xref ref-type="fig" rid="pone-0077724-g008">Figure 8</xref> thus demonstrate the TRH drivers for all three binary transcription systems accurately recapitulate expression in serotonergic neurons of third instar larva.</p>
+				<fig id="pone-0077724-g008" position="float">
+					<object-id pub-id-type="doi">10.1371/journal.pone.0077724.g008</object-id><label>Figure 8</label>
+					<caption>
+						<title>TRH drivers for the LexA, GAL4, and Q binary transcription systems express in 5-hydroxy-tryptophan neurons.</title><p>Representative confocal images of third instar larval ventral nerve cord expression of (A-C) <italic>yw</italic>; <italic>TRH-LexAp65</italic>/<italic>+</italic>; <italic>LexAop-mCD8GFP</italic>/<italic>+</italic>; (D-F) <italic>yw</italic>; <italic>TRH-GAL4</italic>/<italic>20XUAS-mCD8GFP</italic>; and (G-I) <italic>yw</italic>; <italic>TRH-QF</italic>/<italic>QUAS-mtdTOM-3XHA</italic>.  Ventral nerve cords were double-labeled with anti-5-HT and anti-GFP (A and D) or anti-HA (G) primary antibodies.  All three TRH drivers accurately recapitulate expression specifically in serotonergic neurons.  Scale bar: 100μm.   </p>
+					</caption>
+					<graphic xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0077724.g008"/>
+				</fig>
+				<p>     A similar approach was taken to generate TDC2 drivers for all three <italic>Drosophila</italic> binary transcription systems.  TDC2-LexAp65 has already been described above, but TDC2-GAL4 and TDC2-QF drivers were also generated using the same L1-TDC2 5’ Reg-L4 and L1-TDC2 3’ Reg-L4 entry clones in combination with either R4-GAL4-R3 or R4-QF-R3 in separate LR reactions to assemble the expression clones TDC2-GAL4 and TDC2-QF.  Third instar larval ventral nerve cord expression patterns of TDC2-GAL4 using the reporter 20XUAS-mCD8GFP and TDC2-QF using the reporter QUAS-mtdTOM-3XHA are shown in <xref ref-type="fig" rid="pone-0077724-g005">Figures 5C and 5D</xref>, respectively.  As with TDC2-LexAp65, the TDC2-GAL4 and TDC-QF drivers exhibit expression patterns highly reminiscent of the previously characterized TDC2-GAL4 [<xref ref-type="bibr" rid="B12">12</xref>].</p>
+				<p>     The ease with which reporters for all three <italic>Drosophila</italic> transcription systems can be generated using Gateway MultiSite recombination cloning was demonstrated for 2XHA-Rab3 and Chr2 T159C-HA.  The 13XLexAop2-2XHA-Rab3 synaptic vesicle reporter has already been described above, but the L5-2XHA-Rab3-L2 entry clone was also combined in separate LR reactions with the existing L1-20XUAS-R5 entry clone and a newly generated L1-10XQUAS-R5 entry clone to produce the expression clones 20XUAS-2XHA-Rab3 and 10XQUAS-2XHA-Rab3.  Third instar larval expression of 20XUAS-2XHA-Rab3 driven by nompC-GAL4 and 10XQUAS-2XHA-Rab3 by nompC-QF are shown in <xref ref-type="fig" rid="pone-0077724-g007">Figures 7H and I</xref>, respectively.  Similar to 13XLexAop2-2XHA-Rab3 (<xref ref-type="fig" rid="pone-0077724-g007">Figure 7G</xref>), they localize highly preferentially to the presynaptic terminals of larval sensory neurons (compare also to <xref ref-type="fig" rid="pone-0077724-g007">Figures 7A, D</xref>), thus demonstrating their utility as synaptic vesicle markers.  Expression from 10XQUAS-2XHA-Rab3 shown in <xref ref-type="fig" rid="pone-0077724-g007">Figure 7I</xref> also demonstrates the functionality of the L1-10XQUAS-R5 entry clone.</p>
+				<p>     Chr2 T159C-HA expression clones were also generated for all three <italic>Drosophila</italic> transcription systems.  The T159C mutation of Chr2 was reported to result in nearly a doubling of stationary photocurrent amplitude in hippocampal neurons as compared to wildtype Chr2 [<xref ref-type="bibr" rid="B17">17</xref>] and would thus be expected to more potently induce action potentials in <italic>Drosophila</italic> neurons as compared to wildtype Chr2.  An L5-Chr2 T159C-HA-L2 entry clone was generated (an HA epitope tag was added for assessing expression) and combined in separate LR reactions with L1-13XLexAop2-R5, L1-20XUAS-R5, or L1-10XQUAS-R5 entry clones to produce the expression clones 13XLexAop2-Chr2T159C-HA, 20XUAS-Chr2T159C-HA, and 10XQUAS-Chr2T159C-HA.  Third instar larval expression of 13XLexAop2-Chr2T159C driven by nompC-LexAp65 is shown in <xref ref-type="fig" rid="pone-0077724-g009">Figure 9A</xref>.  Chr2T159C-HA localizes predominantly to presynaptic terminals (arrowhead) with lower levels of expression in axons (arrow), and nearly undetectable levels in dendrites.  20XUAS-Chr2T159C-HA driven by nompC-GAL4 and 10XQUAS-Chr2T159C-HA driven by nompC-QF localize similarly as shown in <xref ref-type="fig" rid="pone-0077724-g009">Figures 9B, C and Figures 9D, E</xref>, respectively.</p>
+				<fig id="pone-0077724-g009" position="float">
+					<object-id pub-id-type="doi">10.1371/journal.pone.0077724.g009</object-id><label>Figure 9</label>
+					<caption>
+						<title>Expression of Channelrhodopsin T159C by the LexA, GAL4, and QF binary transcription systems.</title><p>Representative confocal images of third instar larval expression of (A) <italic>yw</italic>; <italic>nompC-LexAp65</italic>/<italic>+</italic>; <italic>13XLexAop2-Chr2T159C-HA</italic>/<italic>+</italic>; (B) <italic>yw</italic>; <italic>20XUAS-Chr2T159C-HA</italic>/<italic>+</italic>; <italic>nompC-GAL4</italic>/<italic>+</italic>; (C) <italic>yw</italic>; <italic>nompC-GAL4</italic>/<italic>+</italic>; <italic>20XUAS-Chr2T159C-HA</italic>/<italic>+</italic>; (D) <italic>yw</italic>; <italic>10XQUAS-Chr2T159C</italic>/<italic>+</italic>; <italic>nompC-QF</italic>/<italic>+</italic>; (E) <italic>yw</italic>; <italic>nompC-QF</italic>/<italic>+</italic>; <italic>10XQUAS-Chr2T159C-HA</italic>/<italic>+</italic>.  Chr2T159C-HA localizes preferentially to the cell bodies and pre-synaptic terminal of sensory neurons with weak localization to axons and almost no localization to dendrites. II-second chromosome insertion.  III-third chromosome insertion.  Anti-HA was used as the primary antibody.  Scale bar: 100μm.  </p>
+					</caption>
+					<graphic xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0077724.g009"/>
+				</fig>
+				<p>     To assess the functionality of these Chr2T159C-HA expression clones they were crossed to transcription system compatible nompC drivers and stimulated with blue light.  Channelrhodopsin-mediated excitation of class III sensory neurons has been previously reported to induce “accordion” behavior whereby larvae contract their bodies to approximately half their fully extended body length [<xref ref-type="bibr" rid="B18">18</xref>].  The fly strains for all five Chr2T159C-HA expression clones shown in <xref ref-type="fig" rid="pone-0077724-g009">Figure 9</xref> exhibited the expected “accordion” behavior upon stimulation with blue light (see <xref ref-type="supplementary-material" rid="pone.0077724.s001">videos S1</xref>-6 in Supporting Information) thus indicating all of them are functional.  It should be noted that although Chr2 T159C results in nearly a doubling of photocurrent as compared to wildtype Chr2, and thus is presumably more potent at inducing behavioral responses than wildtype Chr2, it also has a significant afterpotential [<xref ref-type="bibr" rid="B17">17</xref>] that may make it unsuitable for experiments involving high frequency stimulation.</p>
+			</sec>
+		</sec>
+		<sec id="s3" sec-type="discussion">
+			<title>Discussion</title><sec id="s3.1">
+				<title>New Gateway MultiSite destination vectors provide flexibility in transgene expression level</title>
+				<p>     The optimal level of transgene expression will vary for different experiments.  For example, high expression levels are desirable in experiments using RNAi for gene silencing, or in other experiments expressing inhibitors of specific proteins or cellular processes, such as inhibitors of synaptic transmission like tetanus toxin or temperature-sensitive <italic>shibire</italic> [<xref ref-type="bibr" rid="B19">19</xref>,<xref ref-type="bibr" rid="B20">20</xref>].  In contrast, for experiments that involve specific targeting of a reporter to subcellular organelles such as mitochondria, ER, Golgi, or synaptic vesicles, lower levels of transgene expression might be desirable because high expression levels of subcellular organelle reporters may cause them to localize outside their desired location and thus lose their specificity.  The pDESTsvaw and pDESTp10aw destination vectors make possible enhanced levels of transgene expression from Gateway MultiSite generated expression clones, each roughly doubling the level of transgene expression shown by the original <italic>Drosophila</italic> Gateway MultiSite vector pDESThaw.  Greater differences in transgene expression levels would presumably result if both driver as well as the reporter were constructed in the pDESTsvaw or pDESTp10aw destination vectors, as compared to if both were constructed in pDESThaw.  With these new Gateway MultiSite destination vectors now available, preference for transgene expression level can be dictated by choice of destination vector, depending on the needs of specific experiments.  Further manipulation of transgene expression levels may also be possible in the future by the development of UAS, QUAS, or LexAop2 operator entry clones for Gateway MultiSite cloning with increased or decreased numbers of operator repeat sequences, or by including in entry clones 5’ UTR sequences known to modulate levels of transgene expression [<xref ref-type="bibr" rid="B3">3</xref>].</p>
+				<p>     An unexpected result from our quantitative and qualitative comparisons of the expression levels of GFP-Rab3 from the pDESTsvaw and pDESTp10aw destination vectors was that resulting expression levels were approximately equivalent.  Our results contrast with a previous report in which the <italic>p10</italic> 3’ UTR was found to result in a more than10-fold enhancement of expression levels of cytoplasmic GFP as compared to the <italic>SV40</italic> 3’ UTR [<xref ref-type="bibr" rid="B4">4</xref>].  Reasons for this disparity are unknown, but could include that expression levels dictated by the different 3’ UTRs are gene or vector dependent, or that different methods of quantitation were used for the comparisons. </p>
+			</sec>
+			<sec id="s3.2">
+				<title>Gateway MultiSite cloning for the lexa binary transcription system</title>
+				<p>     The ability to independently express more than one transgene at a time is important for certain experiments such as optogenetic experiments where an excitatory channelrhodopsin is expressed in one set of neurons and a genetically-encoded calcium indicator in another [<xref ref-type="bibr" rid="B21">21</xref>], or GFP Reconstitution Across Synaptic Partners experiments where either of two fragments of GFP are expressed in distinct neuronal subsets [<xref ref-type="bibr" rid="B22">22</xref>].  Here we have reported the construction and functional demonstration of Gateway MultiSite entry clones for LexAp65 and 13XLexAop2.  This will make possible construction of LexA system driver and reporter expression clones using Gateway MultiSite cloning for experiments requiring more than one binary transcription system.  Such LexA system drivers and reporters can be used in conjunction with GAL4 or Q system drivers and reporters, or both, for experiments requiring independent control of expression of up to three transgenes simultaneously.  </p>
+			</sec>
+			<sec id="s3.3">
+				<title>Harnessing the potential of Gateway MultiSite cloning</title>
+				<p>     A key feature that underlies the power of Gateway MultiSite cloning is the modular nature of entry clones.  This modularity allows entry clones to be mixed and matched in compatible combinations in LR reactions to assemble expression clones.  With a platform of entry clones now in place for all three binary transcription systems in use with <italic>Drosophila</italic>, including entry clones for the transcription factors GAL4, LexAp65, and QF, and their operators UAS, LexAop2, and QUAS, the potential for exploiting the advantages of Gateway MultiSite cloning has been further enhanced.  </p>
+				<p>     For any given entry clone containing regulatory DNA directing a specific temporal and spatial expression pattern, it is of only a slight amount of additional effort to generate a driver for all three transcription systems, as compared to the effort required to generate that driver for one system, due to the efficiency and reliability of Gateway MultiSite LR reactions [<xref ref-type="bibr" rid="B1">1</xref>].  This was demonstrated using entry clones containing regulatory DNA for the TDC2 and TRH neurotransmitter synthesis enzymes in combination with compatible entry clones for the GAL4, LexAp65, and QF transcription factors to generate driver expression clones for each transcription system for both TDC2 and TRH.    </p>
+				<p>     Similarly, with a given compatible protein-coding entry clone only minimal additional effort is required to generate reporters for all three transcription systems.  This was demonstrated using entry clones containing 2XHA-Rab3 and Chr2T159C-HA in combination with compatible operator entry clones for UAS, LexAop2, and QUAS in LR reactions to generate reporter expression clones for all three transcription systems for both 2XHA-Rab3 and Chr2T159C-HA.</p>
+				<p>     For any existing regulatory DNA or protein-coding Gateway MultiSite entry clones, or those yet to be constructed, the capacity to easily and reliably generate driver and reporter expression clones for all three <italic>Drosophila</italic> binary transcription systems is now readily available.               </p>
+			</sec>
+			<sec id="s3.4">
+				<title>Concluding remarks</title>
+				<p>     Here we presented and demonstrated the functionality of two new <italic>Drosophila</italic> Gateway MultiSite destination vectors, entry clones for the LexA binary transcription system, and numerous additional entry clones.  These destination vectors and entry clones significantly enhance the utility of Gateway MultiSite cloning for generating expression clones for the <italic>Drosophila</italic> model system.  Since Gateway MultiSite entry clones are model system-independent, the potential of Gateway MultiSite cloning is also enhanced for other genetic model organisms including mouse, zebrafish, and <italic>C.elegans</italic> pending only the development of suitable model system-specific destination vectors. </p>
+			</sec>
+		</sec>
+		<sec id="s4" sec-type="materials|methods">
+			<title>Materials and Methods</title>
+			<sec id="s4.1">
+				<title>Molecular biology</title>
+				<p>     BP and LR reactions were performed as previously described [<xref ref-type="bibr" rid="B1">1</xref>].  Templates for entry clones were as follows: L1-LexAp65-L4 and L1-LexAp65-R5⇒pBPLexA::p65Uw [<xref ref-type="bibr" rid="B3">3</xref>], L1-<italic>13XLexAop2</italic>-L4 and L1-<italic>13XLexAop2</italic>-R5⇒pJFRC19-<italic>13XLexAop2</italic>-IVS-myr::GFP [<xref ref-type="bibr" rid="B3">3</xref>], L5-2XHA-Rab3-L2⇒L3-Rab3-L2 [<xref ref-type="bibr" rid="B1">1</xref>], L5-Chr2 T159C-HA-L2⇒pCI-synapsin-Chr2 T159C [<xref ref-type="bibr" rid="B17">17</xref>], L1-10XQUAS-R5⇒ a gift plasmid from Chris Potter containing the 10XQUAS operator sequence.  Inserts of all preceding entry clones were sequenced in their entirety to ensure no errors were introduced by PCR.  The templates for L1-TDC2-L4, L3-TDC2-L2, L1-TRH-R5, and L1-n-syb-R5 were genomic DNA isolated from the strain <italic>y; cn bw sp</italic> [<xref ref-type="bibr" rid="B23">23</xref>].   Inserts of all entry clones containing genomic DNA were sequenced at both ends and exhibited the predicted restriction patterns.  All other entry clones used herein were previously described [<xref ref-type="bibr" rid="B1">1</xref>].   </p>
+				<p>     The pDESTsvaw destination vector was constructed by excising a 2.1kb <italic>Hind III</italic>/<italic>Xba I</italic> fragment from JFRC7 [<xref ref-type="bibr" rid="B3">3</xref>] and ligating it to a 1.7kb PCR fragment of the Gateway cassette to which <italic>Hind III</italic> and <italic>Nhe I</italic> sites were incorporated at the termini.  The pDESTp10aw destination vector was constructed by excising a ~730bp <italic>Xho I</italic>/<italic>Eco RI</italic>-partial digest fragment containing the <italic>SV40</italic> 3’ UTR from pDESTsvaw, and ligating it to a ~700bp PCR fragment of the <italic>p10</italic> 3’ UTR to which <italic>Xho I</italic> and <italic>Eco RI</italic> sites were incorporated at the termini.  The template for the <italic>p10</italic> 3’ UTR PCR was JFRC28 [<xref ref-type="bibr" rid="B4">4</xref>].  Both destination vectors contain <italic>w</italic>+ as a transformation marker and a <italic>PhiC31</italic> attB site for <italic>PhiC31</italic>-mediated transformation. </p>
+				<p>     Fly stocks will be deposited at the Bloomington <italic>Drosophila</italic> stock center.  Select plasmids will be deposited at Addgene.</p>
+			</sec>
+			<sec id="s4.2">
+				<title><italic>Drosophila</italic> stocks</title>
+				<p>     Flies were reared at 25C and raised on standard cornmeal/molasses media.  Transgenic fly production was performed by Bestgene, Inc., Chino Hills, CA.  Other fly strains used in this study besides those newly described here with Bloomington stock numbers in parentheses: <italic>yw</italic>; <italic>QUAS-mtdTomato-3XHA</italic> [<xref ref-type="bibr" rid="B15">15</xref>] (30004; 30005), <italic>w</italic>; <italic>20XUAS-IVS-mCD8GFP</italic> [<xref ref-type="bibr" rid="B3">3</xref>] (32194), <italic>UAS-mCD8.ChRFP</italic> (27391; 27392; F. Schnoorer, unpublished) LexAop-mCD8GFP [<xref ref-type="bibr" rid="B4">4</xref>], vGlut-LexA [<xref ref-type="bibr" rid="B24">24</xref>], nompC-GAL4 (36361, 36369) [<xref ref-type="bibr" rid="B1">1</xref>], nompC-QF (34346, 34349) [<xref ref-type="bibr" rid="B1">1</xref>], and 5XQUAS-mCherryRab3 (36353, 35364) [<xref ref-type="bibr" rid="B1">1</xref>].</p>
+			</sec>
+			<sec id="s4.3">
+				<title>Immunohistochemistry</title>
+				<p>     Immunostaining was performed as previously described [<xref ref-type="bibr" rid="B1">1</xref>].  Images were collected on a Leica SP5 confocal microscope.  Primary antibodies used in this study were rabbit anti-GFP Abfinity mAb (Invitrogen-Cat # G10362; 1:200), Rat anti-HA mAb 3F10 (Roche-Cat # 11 867 423 001; 1:200), Mouse anti-HA (Covance-Cat # MMS-101P; 1:500), Mouse anti-mCherry (Biorbyt-Cat # orb66657; 1:200), anti-5-HT (Thermo Scientific-Cat # MS-1431-S; 1:50).  Secondary antibodies used in this study were goat anti-Rabbit Alexa Fluor 488 (Invitrogen-Cat # A-11034; 1:500), goat anti-mouse Alexa Fluor 488 (Invitrogen-Cat # A-11029; 1:500), goat anti-Mouse Alexa Fluor 568 (Invitrogen-Cat # A-11031; 1:500), goat anti-rat Alexa Fluor 488 (Invitrogen-Cat # A-11006; 1:500), and goat anti-rat Alexa Fluor 568 (Invitrogen-Cat # A-11077; 1:500).</p>
+			</sec>
+			<sec id="s4.4">
+				<title>Image Quantitation</title><p>     Imarus x64 software v7.5.2 was used for intensity quantification in <xref ref-type="fig" rid="pone-0077724-g002">Figure 2D</xref>.  Z-stacks were cropped to 512 X 1024 voxels and rendered as 3-dimensional surfaces using the Surpass feature.  Uniform creation parameters were used across all images to subtract background, with a minimum of 15 voxels per surface.  The Mean Intensity Maximum was thus averaged across all images for each genotype (two per animal, one on each side, n=5 animals for a total of 10 images per genotype).  Values are displayed in Arbitrary Digitizer Units (ADU).</p>
+			</sec>
+			<sec id="s4.5">
+				<title>Optogenetics</title>
+				<p>     Fly crosses for optogenetic behavioral experiments were cultured in vials on standard cornmeal/molasses media.  A thin layer of yeast paste containing 1mm all-trans retinal (ATR) was added to the top of the food 24-48hrs before an experiment.  Wandering third instar larva were used for all optogenetic experiments.  Light stimulation was provided by a manually controlled light guide attached to a Sutter Lambda DG-4 wavelength switcher with a 475-495nm single bandpass filter. </p>
+			</sec>
+		</sec>
+		<sec sec-type="supplementary-material">
+			<title>Supporting Information</title><supplementary-material xlink:type="simple" position="float" id="pone.0077724.s001" xlink:href="info:doi/10.1371/journal.pone.0077724.s001" mimetype="video/mp4">
+				<label>Video S1</label>
+				<caption>
+					<p><bold>Accordion behavior is not elicited by negative control (no all-trans retinal) larva expressing Chr2 T159C-HA in class III sensory neurons and chordotonal organs upon blue light stimulation.</bold> Genotype: <italic>yw</italic>; <italic>nompC-GAL4</italic>/+; <italic>20XUAS-Chr2</italic> <italic>T59C-HA</italic>/+. The presence of the blue rectangle indicates larvae are being stimulated with blue light.</p><p>(MP4)</p></caption>
+				</supplementary-material>
+			<supplementary-material xlink:type="simple" position="float" id="pone.0077724.s002" xlink:href="info:doi/10.1371/journal.pone.0077724.s002" mimetype="video/mp4">
+				<label>Video S2</label>
+				<caption>
+					<p><bold>Accordion behavior is elicited by larva expressing Chr2 T159C-HA under 13XLexAop2 control in class III sensory neurons and chordotonal organs upon blue light stimulation.</bold> Genotype: <italic>yw</italic>; <italic>nompC-LexAp65</italic>/<italic>13XLexAop2-Chr2</italic> <italic>T159C-HA</italic>.  The presence of the blue rectangle indicates larvae are being stimulated with blue light.</p><p>(MP4)</p></caption>
+				</supplementary-material>
+			<supplementary-material xlink:type="simple" position="float" id="pone.0077724.s003" xlink:href="info:doi/10.1371/journal.pone.0077724.s003" mimetype="video/mp4">
+				<label>Video S3</label>
+				<caption>
+					<p><bold>Accordion behavior is elicited by larva expressing Chr2 T159C-HA under 20XUAS control in class III sensory neurons and chordotonal organs upon blue light stimulation.</bold> Genotype:  <italic>yw</italic>; <italic>20XUAS-Chr2</italic> <italic>T159C-HA</italic>/<italic>+</italic>; <italic>nompC-GAL4</italic>/<italic>+</italic>.  The presence of the blue rectangle indicates larvae are being stimulated with blue light.</p>
+				<p>(MP4)</p></caption>
+			</supplementary-material>
+				<supplementary-material xlink:type="simple" position="float" id="pone.0077724.s004" xlink:href="info:doi/10.1371/journal.pone.0077724.s004" mimetype="video/mp4">
+					<label>Video S4</label>
+					<caption>
+						<p><bold>Accordion behavior is elicited by larva expressing Chr2 T159C-HA under 20XUAS control in class III sensory neurons and chordotonal organs upon blue light stimulation</bold>. Genotype:  <italic>yw</italic>; <italic>nompC-GAL4</italic>/<italic>+</italic>; <italic>20XUAS-Chr2</italic> <italic>T159C-HA</italic>/<italic>+</italic>. The presence of the blue rectangle indicates larvae are being stimulated with blue light.</p>
+						<p>(MP4)</p></caption>
+				</supplementary-material>
+			<supplementary-material xlink:type="simple" position="float" id="pone.0077724.s005" xlink:href="info:doi/10.1371/journal.pone.0077724.s005" mimetype="video/mp4">
+				<label>Video S5</label>
+				<caption>
+					<p><bold>Accordion behavior is elicited by larva expressing Chr2 T159C-HA under 10XQUAS control in class III sensory neurons and chordotonal organs upon blue light stimulation.</bold> Genotype: <italic>yw</italic>; <italic>10XQUAS-Chr2</italic> <italic>T159C-HA</italic>/<italic>+</italic>; <italic>nompC-QF</italic>/<italic>+</italic>. The presence of the blue rectangle indicates larvae are being stimulated with blue light.</p><p>(MP4)</p></caption>
+				</supplementary-material>
+			<supplementary-material xlink:type="simple" position="float" id="pone.0077724.s006" xlink:href="info:doi/10.1371/journal.pone.0077724.s006" mimetype="video/mp4">
+				<label>Video S6</label>
+				<caption>
+					<p><bold>Accordion behavior is elicited by larva expressing Chr2 T159C-HA under 10XQUAS control in class III sensory neurons and chordotonal organs upon blue light stimulation.</bold> Genotype:  <italic>yw</italic>; <italic>nompC-QF</italic>/<italic>+</italic>; <italic>10XQUAS-Chr2</italic> <italic>T159C-HA</italic>/<italic>+</italic>.  The presence of the blue rectangle indicates larvae are being stimulated with blue light.  </p><p>(MP4)</p></caption>
+				</supplementary-material>
+		</sec>
+	</body>
+	<back>
+		<ack>
+			<p>We are grateful to Brian McCabe for fly stocks and Chris Potter for plasmids.  </p>
+		</ack>
+		<ref-list>
+			<title>References</title>
+			<ref id="B1">
+				<label>1</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Petersen</surname><given-names>LK</given-names></name>, <name name-style="western"><surname>Stowers</surname><given-names>RS</given-names></name> (<year>2011</year>) <article-title>A Gateway MultiSite Recombination Cloning Toolkit</article-title>.  <source>PLOS ONE</source> <volume>6</volume>(<issue-id>9</issue-id>): <fpage>e24531</fpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0024531" xlink:type="simple">10.1371/journal.pone.0024531</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/21931740" xlink:type="simple">21931740</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B2">
+				<label>2</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lai</surname><given-names>SL</given-names></name>, <name name-style="western"><surname>Lee</surname><given-names>T</given-names></name> (<year>2006</year>) <article-title>Genetic mosaic with dual binary transcriptional systems in <italic>Drosophila</italic></article-title>. <source>Nat Neurosci</source> <volume>9</volume>: <fpage>703</fpage>-<lpage>709</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nn1681" xlink:type="simple">10.1038/nn1681</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/16582903" xlink:type="simple">16582903</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B3">
+				<label>3</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pfeiffer</surname><given-names>BD</given-names></name>, <name name-style="western"><surname>Ngo</surname><given-names>TT</given-names></name>, <name name-style="western"><surname>Hibbard</surname><given-names>KL</given-names></name>, <name name-style="western"><surname>Murphy</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Jenett</surname><given-names>A</given-names></name> <etal>et al.</etal> (<year>2010</year>) <article-title>Refinement of tools for targeted gene expression in <italic>Drosophila</italic></article-title>. <source>Genetics</source> <volume>186</volume>: <fpage>735</fpage>-<lpage>755</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1534/genetics.110.119917" xlink:type="simple">10.1534/genetics.110.119917</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/20697123" xlink:type="simple">20697123</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B4">
+				<label>4</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pfeiffer</surname><given-names>BD</given-names></name>, <name name-style="western"><surname>Truman</surname><given-names>JW</given-names></name>, <name name-style="western"><surname>Rubin</surname><given-names>GM</given-names></name>  (<year>2012</year>) <article-title>Using translational enhancers to increase transgene expression in <italic>Drosophila</italic></article-title>. <source>Proc Natl Acad Sci USA</source> <volume>109</volume>: <fpage>6626</fpage>-<lpage>6631</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.1204520109" xlink:type="simple">10.1073/pnas.1204520109</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/22493255" xlink:type="simple">22493255</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B5">
+				<label>5</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Venken</surname><given-names>KJT</given-names></name>, <name name-style="western"><surname>He</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Hoskins</surname><given-names>RA</given-names></name>, <name name-style="western"><surname>Bellen</surname><given-names>HJ</given-names></name> (<year>2006</year>) <article-title>P[acman]: A BAC transgenic platform for targeted insertion of large DNA fragments in <italic>D.</italic> <italic>melanogaster</italic></article-title>. <source>Science</source> <volume>314</volume>: <fpage>1747</fpage>-<lpage>1751</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1126/science.1134426" xlink:type="simple">10.1126/science.1134426</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/17138868" xlink:type="simple">17138868</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B6">
+				<label>6</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gong</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Son</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Chung</surname><given-names>YD</given-names></name>, <name name-style="western"><surname>Kim</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Shin</surname><given-names>DW</given-names></name> <etal>et al.</etal> (<year>2004</year>) <article-title>Two interdependent TRPV channel subunits, inactive and Nanchung, mediate hearing in <italic>Drosophila</italic></article-title>. <source>J Neurosci</source> <volume>24</volume>: <fpage>9059</fpage>-<lpage>9066</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1523/JNEUROSCI.1645-04.2004" xlink:type="simple">10.1523/JNEUROSCI.1645-04.2004</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/15483124" xlink:type="simple">15483124</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B7">
+				<label>7</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sun</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Liu</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Ben-Shahar</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Jacobs</surname><given-names>JS</given-names></name>, <name name-style="western"><surname>Eberl</surname><given-names>DF</given-names></name> <etal>et al.</etal>  (<year>2009</year>) <article-title>TRPA channels distinguish gravity sensing from hearing in Johnston’s organ</article-title>. <source>Proc Natl Acad Sci USA</source> <volume>106</volume>: <fpage>13606</fpage>-<lpage>13611</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.0906377106" xlink:type="simple">10.1073/pnas.0906377106</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/19666538" xlink:type="simple">19666538</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B8">
+				<label>8</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Deitcher</surname><given-names>DL</given-names></name>, <name name-style="western"><surname>Ueda</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Stewart</surname><given-names>BA</given-names></name>, <name name-style="western"><surname>Burgess</surname><given-names>RW</given-names></name>, <name name-style="western"><surname>Kidokoro</surname><given-names>Y</given-names></name> <etal>et al.</etal> (<year>1998</year>) <article-title>Distinct requirements for evoked and spontaneous release of neurotransmitter are revealed by mutations in the <italic>Drosophila</italic> gene neuronal-synaptobrevin</article-title>. <source>J Neurosci</source> <volume>18</volume>: <fpage>2028</fpage>-<lpage>2039</lpage>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/9482790" xlink:type="simple">9482790</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B9">
+				<label>9</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kidokoro</surname><given-names>Y</given-names></name> (<year>2003</year>) <article-title>Roles of SNARE proteins and synaptogagmin I in synaptic transmission: studies at the <italic>Drosophila</italic> neuromuscular synapse</article-title>. <source>Neurosignals</source> <volume>12</volume>: <fpage>13</fpage>-<lpage>30</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1159/000068912" xlink:type="simple">10.1159/000068912</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/12624525" xlink:type="simple">12624525</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B10">
+				<label>10</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Walker</surname><given-names>RG</given-names></name>, <name name-style="western"><surname>Willingham</surname><given-names>AT</given-names></name>, <name name-style="western"><surname>Zuker</surname><given-names>CS</given-names></name> (<year>2000</year>) <article-title>A Drosophila mechanosensory transduction channel</article-title>. <source>Science</source> <volume>287</volume>: <fpage>2229</fpage>-<lpage>2234</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1126/science.287.5461.2229" xlink:type="simple">10.1126/science.287.5461.2229</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/10744543" xlink:type="simple">10744543</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B11">
+				<label>11</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yan</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Zhang</surname><given-names>W</given-names></name>, <name name-style="western"><surname>He</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Gorczyca</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Xiang</surname><given-names>Y</given-names></name> <etal>et al.</etal> (<year>2013</year>) <article-title><italic>Drosophila</italic> NOMPC is a mechanotransduction channel subunit for gentle-touch sensation</article-title>. <source>Nature</source> <volume>493</volume>: <fpage>221</fpage>-<lpage>225</lpage>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23222543" xlink:type="simple">23222543</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B12">
+				<label>12</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vömel</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Wegener</surname><given-names>C</given-names></name> (<year>2008</year>) <article-title>Neuroarchitecture of aminergic systems in the larval ventral ganglion of <italic>Drosophila</italic> <italic>melanogaster</italic></article-title>. <source>PLOS ONE</source> <volume>3</volume>: <fpage>e1848</fpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0001848" xlink:type="simple">10.1371/journal.pone.0001848</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/18365004" xlink:type="simple">18365004</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B13">
+				<label>13</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cole</surname><given-names>SH</given-names></name>, <name name-style="western"><surname>Carney</surname><given-names>GE</given-names></name>, <name name-style="western"><surname>McClung</surname><given-names>CA</given-names></name>, <name name-style="western"><surname>Willard</surname><given-names>SS</given-names></name>, <name name-style="western"><surname>Taylor</surname><given-names>BJ</given-names></name> <etal>et al.</etal> (<year>2005</year>) <article-title>Two functional but noncomplementing <italic>Drosophila</italic> tyrosine decarboxylase genes: distinct roles for neural tyramine and octopamine in female fertility</article-title>. <source>J Biol Chem</source> <volume>280</volume>: <fpage>14948</fpage>-<lpage>14955</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1074/jbc.M414197200" xlink:type="simple">10.1074/jbc.M414197200</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/15691831" xlink:type="simple">15691831</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B14">
+				<label>14</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Brand</surname><given-names>AH</given-names></name>, <name name-style="western"><surname>Perrimon</surname><given-names>N</given-names></name> (<year>1993</year>) <article-title>Targeted gene expression as a means of altering cell fates and generating dominant phenotypes</article-title>. <source>Development</source> <volume>118</volume>: <fpage>401</fpage>-<lpage>415</lpage>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/8223268" xlink:type="simple">8223268</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B15">
+				<label>15</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Potter</surname><given-names>CJ</given-names></name>, <name name-style="western"><surname>Tasic</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Russler</surname><given-names>EV</given-names></name>, <name name-style="western"><surname>Liang</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Luo</surname><given-names>L</given-names></name> (<year>2010</year>) <article-title>The Q system: a repressible binary system for transgene expression, lineage tracing, and mosaic analysis</article-title>. <source>Cell</source> <volume>141</volume>: <fpage>536</fpage>-<lpage>548</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.cell.2010.02.025" xlink:type="simple">10.1016/j.cell.2010.02.025</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/20434990" xlink:type="simple">20434990</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B16">
+				<label>16</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Neckameyer</surname><given-names>WS</given-names></name>, <name name-style="western"><surname>White</surname><given-names>K</given-names></name> (<year>1992</year>) <article-title>A single locus encodes both phenylalanine hydroxylase and tryptophan hydroxylase activities in <italic>Drosophila</italic></article-title>. <source>J Biol Chem</source> <volume>267</volume>: <fpage>4199</fpage>-<lpage>4206</lpage>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/1371286" xlink:type="simple">1371286</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B17">
+				<label>17</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Berndt</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Schoenenberger</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Mattis</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Tye</surname><given-names>KM</given-names></name>, <name name-style="western"><surname>Deisseroth</surname><given-names>K</given-names></name> <etal>et al.</etal> (<year>2011</year>) <article-title>High-efficiency channelrhodopsins for fast neuronal stimulation at low light levels</article-title>. <source>Proc Natl Acad Sci USA</source> <volume>108</volume>: <fpage>7595</fpage>-<lpage>7600</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.1017210108" xlink:type="simple">10.1073/pnas.1017210108</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/21504945" xlink:type="simple">21504945</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B18">
+				<label>18</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hwang</surname><given-names>RY</given-names></name>, <name name-style="western"><surname>Zhong</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Xu</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Johnson</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Zhang</surname><given-names>F</given-names></name> <etal>et al.</etal> (<year>2007</year>) <article-title>Nociceptive neurons protect <italic>Drosophila</italic> larvae from parasitoid wasps</article-title>. <source>Curr Biol</source> <volume>17</volume>: <fpage>2105</fpage>-<lpage>2116</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.cub.2007.11.029" xlink:type="simple">10.1016/j.cub.2007.11.029</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/18060782" xlink:type="simple">18060782</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B19">
+				<label>19</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sweeney</surname><given-names>ST</given-names></name>, <name name-style="western"><surname>Broadie</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Keane</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Niemann</surname><given-names>H</given-names></name>, <name name-style="western"><surname>O’Kane</surname><given-names>CJ</given-names></name> (<year>1995</year>) <article-title>Targeted expression of tetanus toxin light chain in <italic>Drosophila</italic> specifically eliminates synaptic transmission and causes behavioral defects</article-title>. <source>Neuron</source> <volume>14</volume>: <fpage>341</fpage>-<lpage>351</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/0896-6273(95)90290-2" xlink:type="simple">10.1016/0896-6273(95)90290-2</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/7857643" xlink:type="simple">7857643</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B20">
+				<label>20</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kitamoto</surname><given-names>T</given-names></name> (<year>2001</year>) <article-title>Conditional modification of behavior in <italic>Drosophila</italic> by targeted expression of a temperature-sensitive shibire allele in defined neurons</article-title>. <source>J Neurobiol</source> <volume>47</volume>: <fpage>81</fpage>-<lpage>92</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/neu.1018" xlink:type="simple">10.1002/neu.1018</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/11291099" xlink:type="simple">11291099</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B21">
+				<label>21</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Akerboom</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Carreras Calderon</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Tian</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Wabnig</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Prigge</surname><given-names>M</given-names></name> <etal>et al.</etal> (<year>2013</year>) <article-title>Genetically endcoded calcium indicators for multi-color neural activity imaging and combination with optogenetics. Front</article-title>. <source>J Mol Neurosci</source> <volume>6</volume>: <fpage>2</fpage>.</mixed-citation>
+			</ref>
+			<ref id="B22">
+				<label>22</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gordon</surname><given-names>MD</given-names></name>, <name name-style="western"><surname>Scott</surname><given-names>K</given-names></name> (<year>2009</year>) <article-title>Motor control in a <italic>Drosophila</italic> taste circuit</article-title>. <source>Neuron</source> <volume>61</volume>: <fpage>373</fpage>-<lpage>384</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.neuron.2008.12.033" xlink:type="simple">10.1016/j.neuron.2008.12.033</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/19217375" xlink:type="simple">19217375</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B23">
+				<label>23</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Adams</surname><given-names>MD</given-names></name>, <name name-style="western"><surname>Celniker</surname><given-names>SE</given-names></name>, <name name-style="western"><surname>Holt</surname><given-names>RA</given-names></name>, <name name-style="western"><surname>Evans</surname><given-names>CA</given-names></name>, <name name-style="western"><surname>Gocayne</surname><given-names>JD</given-names></name> <etal>et al.</etal> (<year>2000</year>) <article-title>The genome sequence of <italic>Drosophila</italic> <italic>melanogaster</italic></article-title>. <source>Science</source> <volume>287</volume>: <fpage>2185</fpage>-<lpage>2195</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1126/science.287.5461.2185" xlink:type="simple">10.1126/science.287.5461.2185</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/10731132" xlink:type="simple">10731132</ext-link>.</mixed-citation>
+			</ref>
+			<ref id="B24">
+				<label>24</label>
+				<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Baek</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Enriquez</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Mann</surname><given-names>RS</given-names></name> (<year>2013</year>) <article-title>Dual role for Hox genes and Hox co-factors in conferring leg motoneuron survival and identy in <italic>Drosophila</italic></article-title>. <source>Development</source> <volume>140</volume>: <fpage>2027</fpage>-<lpage>2038</lpage>. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1242/dev.090902" xlink:type="simple">10.1242/dev.090902</ext-link>. PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23536569" xlink:type="simple">23536569</ext-link>.</mixed-citation>
+			</ref>
+		</ref-list>
+	</back>
+</article>

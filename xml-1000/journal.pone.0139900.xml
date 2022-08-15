@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="3.0" xml:lang="en" article-type="research-article">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-15-33523</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0139900</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>RNA 3D Modules in Genome-Wide Predictions of RNA 2D Structure</article-title>
+<alt-title alt-title-type="running-head">RNA 3D Modules in Genome-Wide Predictions of RNA 2D Structure</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Theis</surname> <given-names>Corinna</given-names></name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Zirbel</surname> <given-names>Craig L.</given-names></name>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>zu Siederdissen</surname> <given-names>Christian Höner</given-names></name>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+<xref ref-type="aff" rid="aff007"><sup>7</sup></xref>
+<xref ref-type="aff" rid="aff008"><sup>8</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Anthon</surname> <given-names>Christian</given-names></name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Hofacker</surname> <given-names>Ivo L.</given-names></name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+<xref ref-type="aff" rid="aff005"><sup>5</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Nielsen</surname> <given-names>Henrik</given-names></name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff006"><sup>6</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Gorodkin</surname> <given-names>Jan</given-names></name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001">
+<label>1</label>
+<addr-line>Center for non-coding RNA in Technology and Health, University of Copenhagen, Frederiksberg, Denmark</addr-line>
+</aff>
+<aff id="aff002">
+<label>2</label>
+<addr-line>Department of Veterinary Clinical and Animal Science, Faculty of Health and Medical Science, University of Copenhagen, Frederiksberg, Denmark</addr-line>
+</aff>
+<aff id="aff003">
+<label>3</label>
+<addr-line>Department of Mathematics and Statistics, Bowling Green State University, Bowling Green, Ohio, United States of America</addr-line>
+</aff>
+<aff id="aff004">
+<label>4</label>
+<addr-line>Institute for Theoretical Chemistry, University of Vienna, Vienna, Austria</addr-line>
+</aff>
+<aff id="aff005">
+<label>5</label>
+<addr-line>Research Group Bioinformatics and Computational Biology, University of Vienna, Vienna, Austria</addr-line>
+</aff>
+<aff id="aff006">
+<label>6</label>
+<addr-line>Department of Cellular and Molecular Medicine, The Panum Institute, University of Copenhagen, Copenhagen, Denmark</addr-line>
+</aff>
+<aff id="aff007">
+<label>7</label>
+<addr-line>Bioinformatics Group, Department of Computer Science, and Interdisciplinary Center for Bioinformatics, University of Leipzig, Leipzig, Germany</addr-line>
+</aff>
+<aff id="aff008">
+<label>8</label>
+<addr-line>Interdisciplinary Center for Bioinformatics, University of Leipzig, Leipzig, Germany</addr-line>
+</aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Barash</surname> <given-names>Danny</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1">
+<addr-line>Ben-Gurion University, ISRAEL</addr-line>
+</aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: CT CLZ CHzS CA ILH HN JG. Performed the experiments: CT CLZ CHzS CA. Analyzed the data: CT CLZ CHzS CA ILH HN JG. Contributed reagents/materials/analysis tools: CT CLZ CHzS CA. Wrote the paper: CT CLZ CHzS CA ILH HN JG. Design of main pipeline: CT. Genomic screen for 2D structure: CA CT. Curation of 3D modules: CT CLZ CHzS.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">gorodkin@rth.dk</email></corresp>
+</author-notes>
+<pub-date pub-type="collection">
+<year>2015</year>
+</pub-date>
+<pub-date pub-type="epub">
+<day>28</day>
+<month>10</month>
+<year>2015</year>
+</pub-date>
+<volume>10</volume>
+<issue>10</issue>
+<elocation-id>e0139900</elocation-id>
+<history>
+<date date-type="received">
+<day>30</day>
+<month>7</month>
+<year>2015</year>
+</date>
+<date date-type="accepted">
+<day>17</day>
+<month>8</month>
+<year>2015</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2015</copyright-year>
+<copyright-holder>Theis et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0139900" xlink:type="simple"/>
+<abstract>
+<p>Recent experimental and computational progress has revealed a large potential for RNA structure in the genome. This has been driven by computational strategies that exploit multiple genomes of related organisms to identify common sequences and secondary structures. However, these computational approaches have two main challenges: they are computationally expensive and they have a relatively high false discovery rate (FDR). Simultaneously, RNA 3D structure analysis has revealed modules composed of non-canonical base pairs which occur in non-homologous positions, apparently by independent evolution. These modules can, for example, occur inside structural elements which in RNA 2D predictions appear as internal loops. Hence one question is if the use of such RNA 3D information can improve the prediction accuracy of RNA secondary structure at a genome-wide level. Here, we use RNAz in combination with 3D module prediction tools and apply them on a 13-way vertebrate sequence-based alignment. We find that RNA 3D modules predicted by metaRNAmodules and JAR3D are significantly enriched in the screened windows compared to their shuffled counterparts. The initially estimated FDR of 47.0% is lowered to below 25% when certain 3D module predictions are present in the window of the 2D prediction. We discuss the implications and prospects for further development of computational strategies for detection of RNA 2D structure in genomic sequence.</p>
+</abstract>
+<funding-group>
+<funding-statement>This study was funded by the Danish Center for Scientific Computing (DCSC, DeiC) (JG) <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.dcsc.dk/">http://www.dcsc.dk/</ext-link> <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.deic.dk">http://www.deic.dk</ext-link>; Innovation Fund Denmark (Programme Commission on Strategic Growth Technologies) (09-067036 to JG) <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://innovationsfonden.dk/en">http://innovationsfonden.dk/en</ext-link>; Lundbeck Foundation (R19-A2306 to JG, HN) lundbeckfonden.dk; Austrian Fonds zur Förderung der wissenschaftlichen Forschung, project “SFB F43 RNA regulation of the transcriptome” (CHzS, IH) <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.fwf.ac.at">www.fwf.ac.at</ext-link>; Department of Health and Human Services, National Institutes of Health, NATIONAL INSTITUTE OF GENERAL MEDICAL SCIENCES (2R01GM085328-05 to CZ) <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://nih.gov/">http://nih.gov/</ext-link>. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="2"/>
+<table-count count="2"/>
+<page-count count="13"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability" xlink:type="simple">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its Supporting Information files. The raw data however is available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://rth.dk/resources/rna3din2d">http://rth.dk/resources/rna3din2d</ext-link>.
+</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>Recent studies have shown a large potential for RNA structure in eukaryotes through experimental strategies [<xref ref-type="bibr" rid="pone.0139900.ref001">1</xref>–<xref ref-type="bibr" rid="pone.0139900.ref004">4</xref>] as well as computational strategies [<xref ref-type="bibr" rid="pone.0139900.ref005">5</xref>]. The computational strategies were developed to search for novel RNA secondary structure by making use of comparative sequence information either from sequence based alignments or by RNA structural alignments directly [<xref ref-type="bibr" rid="pone.0139900.ref006">6</xref>–<xref ref-type="bibr" rid="pone.0139900.ref015">15</xref>]. While further development of these <italic>de novo</italic> methodologies is still needed, many methodologies for class specific searches, e.g. [<xref ref-type="bibr" rid="pone.0139900.ref016">16</xref>–<xref ref-type="bibr" rid="pone.0139900.ref019">19</xref>] and homology based approaches [<xref ref-type="bibr" rid="pone.0139900.ref020">20</xref>, <xref ref-type="bibr" rid="pone.0139900.ref021">21</xref>] for RNA structure are more specialized and mature. The need for improvements in RNA structure prediction is also supported by the discoveries of new RNA classes [<xref ref-type="bibr" rid="pone.0139900.ref022">22</xref>, <xref ref-type="bibr" rid="pone.0139900.ref023">23</xref>], and the expectation that many more structured RNAs are hidden in the genomes [<xref ref-type="bibr" rid="pone.0139900.ref024">24</xref>–<xref ref-type="bibr" rid="pone.0139900.ref027">27</xref>]. Of particular interest is the abundance of non-coding (nc)RNAs [<xref ref-type="bibr" rid="pone.0139900.ref028">28</xref>] and regulatory elements embedded in untranslated regions (UTR) of mRNAs, for example riboswitches that control gene expression [<xref ref-type="bibr" rid="pone.0139900.ref029">29</xref>]. In line with the RNA structure potential, further development of computational tools to screen for conserved structured RNAs is indeed desired. While there are many directions which can be pursued, here we consider identifying elements of RNA 3D structure in regions with apparent secondary structure.</p>
+<p>A main motivation is that both secondary and tertiary structural elements are key to understand RNA functions. Such structural elements are found in some classes of ncRNAs and the 5’ and 3’ UTRs of mRNA. The first step in searches for such structural elements has traditionally been by establishing a secondary structure diagram based on Watson-Crick (WC) base pairing locally (e.g. hairpins) or more distantly (e.g. pseudoknots). Secondary structure prediction is typically based on energy optimization often involving co-variation analyses as well. However, both co-variation and experimental analyses, including X-ray crystallography, have revealed the existence of non-WC base pairs that provide the RNA structure with architectural features in addition to the regular A-helices [<xref ref-type="bibr" rid="pone.0139900.ref030">30</xref>–<xref ref-type="bibr" rid="pone.0139900.ref033">33</xref>]. Defined sets of non-WC pairs embedded in WC pairs constitute 3D modules such as kink-turns, C-loops, sarcin-ricin motifs or GNRA hairpin loops that are key determinants of RNA structure and function.</p>
+<p>Note that <italic>(1)</italic> 3D modules are found in all domains of life (as an example, the kink-turn has been described in Bacteria [<xref ref-type="bibr" rid="pone.0139900.ref034">34</xref>], Archaea [<xref ref-type="bibr" rid="pone.0139900.ref035">35</xref>], and Eukarya [<xref ref-type="bibr" rid="pone.0139900.ref036">36</xref>]); <italic>(2)</italic> 3D modules occur in many different, and unrelated structured RNAs (e.g. riboswitches [<xref ref-type="bibr" rid="pone.0139900.ref037">37</xref>, <xref ref-type="bibr" rid="pone.0139900.ref038">38</xref>], rRNA [<xref ref-type="bibr" rid="pone.0139900.ref034">34</xref>], and snoRNA [<xref ref-type="bibr" rid="pone.0139900.ref039">39</xref>, <xref ref-type="bibr" rid="pone.0139900.ref040">40</xref>]); <italic>(3)</italic> The 3D modules function in all aspects of RNA structure and function, including initiation of folding, stabilization of the overall architecture, mediating RNA-protein interactions, binding of small molecule ligands, and catalysis [<xref ref-type="bibr" rid="pone.0139900.ref034">34</xref>, <xref ref-type="bibr" rid="pone.0139900.ref041">41</xref>–<xref ref-type="bibr" rid="pone.0139900.ref045">45</xref>]. Thus, 3D modules are recurrent building blocks inherent to RNA structure and function, and so we expect to find them in novel RNAs which function by virtue of their secondary and tertiary structure. Incorporating 3D modules into 2D structure prediction tools will therefore push the computational screens for structured RNAs in genomic sequences further towards functional relevancy.</p>
+<p>Although more recent development has shown progress with regard to combining 2D and 3D structure prediction, none seem feasible at a genome-wide level. Approaches such as RNA2D3D [<xref ref-type="bibr" rid="pone.0139900.ref046">46</xref>] and ASSEMBLE [<xref ref-type="bibr" rid="pone.0139900.ref047">47</xref>] are semi-automated where the user is in charge of modifying a given secondary structure by adding 3D modules or editing the backbone torsion angles. Combining 3D modules with RNA secondary structures is also used to improve and speed up tertiary structure predictions. Tertiary structure predictors are generally time-consuming and limited to small molecules. Laing and Schlick reviewed these where they explore new ideas towards 3D structure prediction [<xref ref-type="bibr" rid="pone.0139900.ref048">48</xref>]. Reinharz <italic>et al.</italic> [<xref ref-type="bibr" rid="pone.0139900.ref049">49</xref>] developed an automated pipeline, RNA-MoIP, for combining 2D and 3D information to refine tertiary predictions. In a first step, they use a classical secondary structure predictor to get a set of sub-optimal structures. In a second step, a scan for known 3D modules which exactly match portions of the input sequence provides potential insertion sites. Aligning potential 3D modules with the sub-structures by minimizing the number of free nucleotides (nts) results in a set of templates for the MC-Sym pipeline [<xref ref-type="bibr" rid="pone.0139900.ref050">50</xref>]. MC-Sym performs a fragment insertion simulation to build full-atom models of the given secondary structure and the putative module. One advantage of RNA-MoIP is that it uses an integer programming framework which supports the incorporation of more complex modules such as <italic>k</italic>-way junctions. However, with running times around one minute for each window, it is preferable to first develop fast screens for potential secondary and 3D structure before turning to a more detailed tool such as RNA-MoIP.</p>
+<p>Hence, including 3D modules in genome-wide screens for RNA 2D structure is a first step towards obtaining a better discrimination between predictions on real and randomized data. Here, we address this challenge by implementing a pipeline consisting of the RNAz tool for genome-wide 2D predictions in sequence based alignments [<xref ref-type="bibr" rid="pone.0139900.ref051">51</xref>] along with the 3D modules programs metaRNAmodules [<xref ref-type="bibr" rid="pone.0139900.ref052">52</xref>] and JAR3D [<xref ref-type="bibr" rid="pone.0139900.ref053">53</xref>], both of which are able to recognize known and novel sequence variants of RNA 3D modules. The pipeline is also run on shuffled alignments (randomized data) to estimate the discriminative power with and without 3D modules.</p>
+</sec>
+<sec id="sec002" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<p>The sequences used in this paper are based on a 13-way whole genome vertebrate alignment and a randomized version of the alignment (see below). Both alignments are screened by RNAz for stable and conserved structured regions. We further screen the original and the shuffled alignment with 63 metaRNAmodules models for internal loops, and 276 internal loop (IL) and 253 hairpin loop (HL) models from JAR3D. For further details see Figs <xref ref-type="fig" rid="pone.0139900.g001">1</xref> and <xref ref-type="fig" rid="pone.0139900.g002">2</xref>. The selected models are shown in Tables C, E, and G in <xref ref-type="supplementary-material" rid="pone.0139900.s005">S1 Text</xref>.</p>
+<fig id="pone.0139900.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139900.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Graphical outline of the approach.</title>
+<p>The 13-way alignment is sliced into windows of size 40–120 nts. The windows are shuffled by SISSIz and both the original and shuffled data are scanned by RNAz for thermodynamically stable and evolutionarily conserved candidates (p-score &gt; 0.9). For those windows the false discovery rate is estimated (FDR<sub><italic>rnaz</italic></sub>). Both the original and shuffled windows are also scanned by metaRNAmodules (mRm) and JAR3D for reliable 3D module predictions. The windows with and without 3D module predictions are counted for a Fisher’s exact test (FET). Windows with 3D module predictions are also used to estimate the FDR.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0139900.g001"/>
+</fig>
+<fig id="pone.0139900.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139900.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Details of the genome wide scan.</title>
+<p>(a) Windows (boxed) with the <italic>H. sapiens</italic> sequence as reference are screened with RNAz for (b) structural motifs. The metaRNAmodules models are applied on each sequence of the window (c) whereas the JAR3D models are applied on loop regions of the RNAz consensus structure (d). In both cases, predictions of different models can overlap. The same procedure is used to scan the shuffled data.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0139900.g002"/>
+</fig>
+<sec id="sec003">
+<title>Multiple alignments and sliding window construction</title>
+<p>For our analysis we use a whole genome alignment computed by MULTIz/Threaded Blockset Aligner [<xref ref-type="bibr" rid="pone.0139900.ref054">54</xref>] containing 13 vertebrate sequences (details in <xref ref-type="supplementary-material" rid="pone.0139900.s001">S1 Fig</xref>). These sequences are selected as a trade-off between width of the phylogenetic tree and alignment quality (e.g. low gap frequency). The human sequence is the reference sequence. Because the alignment still has low complexity regions, gap-rich regions, or dubious aligned fragments, further pre-processing steps are necessary to filter them out. This is done by using a bundle of auxiliary tools from RNAz [<xref ref-type="bibr" rid="pone.0139900.ref011">11</xref>]. <italic>rnazWindow</italic> is used to perform several filtering steps with default parameters (for details see [<xref ref-type="bibr" rid="pone.0139900.ref011">11</xref>] and the RNAz manual). The alignment is sliced into windows of size ∼ 40–120 nts that overlap to varying degrees. In case the number of sequences in the resulting windows is greater than six, they are reduced to six by optimizing the pairwise sequence identity to 80%. The windows are pre-filtered by pairwise sequence identity greater than or equal to 50% and a GC content in the range of 0.25 to 0.75. Only the forward strand is taken into account. By convention, the reference sequence is always in the selected set otherwise the window is discarded. To provide random background for comparison the windows are shuffled with SISSIz [<xref ref-type="bibr" rid="pone.0139900.ref055">55</xref>], a tool which preserves relevant characteristics of the data, such as gap and local conservation patterns and the dinucleotide content. The <italic>original</italic> and the <italic>shuffled</italic> windows are screened with RNAz for energetically stable and conserved structured regions.</p>
+</sec>
+<sec id="sec004">
+<title>Predicting secondary structures with RNAz</title>
+<p>RNAz version 2.1 predicts structural RNAs in multiple sequence alignments [<xref ref-type="bibr" rid="pone.0139900.ref051">51</xref>]. It is based on two characteristic features of structured RNAs: thermodynamic stability and evolutionarily conserved secondary structure elements of homologous sequences. The thermodynamic stability is measured by a <italic>z</italic>-score and the structural conservation index (SCI) measures the consistency between the average of the individual structures to the predicted consensus structure. Both measures result in a probability, called p-score, used for the classification of a prediction (on an input window of aligned sequences) as “structural RNA” or “other”. A p-score &gt;0.9 indicates high-confidence “structural RNA” candidates although the more relaxed criterion of 0.5 is sometimes used. In [<xref ref-type="bibr" rid="pone.0139900.ref051">51</xref>], the estimated false discovery rate (FDR) of RNAz 2.1 based on ENCODE regions and a dinucleotide background model is found to be 54% for p-score &gt;0.9. In the work reported here, RNAz is applied with default parameters on the pre-processed data. Of the original windows, 161 481 have RNAz p-score &gt;0.9, and of the shuffled windows, 66 891 have RNAz p-score &gt;0.9.</p>
+</sec>
+<sec id="sec005">
+<title>Eliminating overlapping windows</title>
+<p>Counting the number of 3D modules per window is complicated by the fact that the original windows overlap to varying degrees and some 3D modules are found in the overlapping regions. We remove overlapping original windows by listing them from highest RNAz p-score to lowest (all with RNAz p-score &gt;0.9) and report those results in the paper. In the Supplementary Material we show that two other ordering schemes (lowest to highest RNAz p-scores and random ordering) give similar results (see <xref ref-type="supplementary-material" rid="pone.0139900.s006">S2 Text</xref>, <xref ref-type="supplementary-material" rid="pone.0139900.s007">S3 Text</xref>, and <xref ref-type="supplementary-material" rid="pone.0139900.s008">S4 Text</xref>). Once an ordering is chosen, we go through the list and dismiss any original windows that overlap with a window that appears earlier in the list. This reduces the number of original windows to 142 517 but eliminates double-counting difficulties. No such procedure is needed for shuffled windows since they are shuffled independently and thus do not overlap one another.</p>
+</sec>
+<sec id="sec006">
+<title>Prediction of 3D modules</title>
+<p>The 3D module models for our approach are obtained from the metaRNAmodules pipeline as well as JAR3D. The metaRNAmodules pipeline version 1.02 [<xref ref-type="bibr" rid="pone.0139900.ref052">52</xref>] is based on the RMDetect framework [<xref ref-type="bibr" rid="pone.0139900.ref056">56</xref>] and builds probabilistic models for 3D internal loop modules from aligned sequences. 63 non-redundant models, mRm<sub><italic>IL</italic></sub>, were selected. New sequences can then be scored against these probabilistic models. Each of these models was used to screen the sequences in original and shuffled windows for matches to 3D modules. By inspection of the RMDetect score distributions we pragmatically find that the top 25% high scoring 3D modules on the original data make up a tail in the score distribution that separates from low-scoring (i.e. less reliable predictions) and from the score distribution over the shuffled windows (see <xref ref-type="supplementary-material" rid="pone.0139900.s002">S2 Fig</xref>). Thus, we have relative RMDetect score cut-offs for each of the 63 mRm<sub><italic>IL</italic></sub> models. Furthermore, the predictions were filtered for 3D modules that consistently (in location) match at least 50% of the sequences in the alignment. The resulting 3D module predictions themselves (see <xref ref-type="sec" rid="sec008">Results</xref> for details) are in the following referred to as M<sub><italic>mrmIL</italic></sub>.</p>
+<p>JAR3D [<xref ref-type="bibr" rid="pone.0139900.ref053">53</xref>] is based on Stochastic Context-Free Grammars and a Markov Random Field approach to build probabilistic models. We used version 1.13, which contains 276 IL and 253 HL models. JAR3D IL and HL include their flanking Watson-Crick basepairs in addition to the nucleotides interior to the loop. We extract internal loops with ≥ 10 nts and hairpin loops from the consensus structure of the RNAz predictions and submit the corresponding sequences from the six organisms to JAR3D. An input sequence is matched against each probabilistic model and evaluated in terms of the minimum interior edit distance (Levenshtein distance of the interior nts) and alignment score deficit. The alignment score deficit is the difference between the highest alignment score among 3D instances of a particular module and the alignment score of the input sequence. Each module has an acceptance region which favors low minimum interior edit distance and low alignment score deficit. The percentage of accepted sequences in a given position of a multiple alignment is referred to as passed cutoff percentage. We consider JAR3D IL and HL predictions as reliable when their mean interior edit distance is lower than or equal to 4 and at least 50% of the input sequences in the multiple alignment window match the module group (passed cutoff ≥ 50). We refer to those predictions as M<sub><italic>jarIL</italic></sub> and M<sub><italic>jarHL</italic></sub>.</p>
+<p>Of the original windows with RNAz p-score &gt;0.9 that match a 3D module prediction, 62 overlapped Rfam families with a human sequence, and two were found to overlap human ribosomal RNA sequences, and so these 62 windows were removed, leaving 142 455 original windows with RNAz p-score &gt;0.9.</p>
+</sec>
+<sec id="sec007">
+<title>Performance evaluation</title>
+<p>To evaluate the performance of RNAz we estimate the false discovery rate <inline-formula id="pone.0139900.e001"><alternatives><graphic id="pone.0139900.e001g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e001"/><mml:math id="M1" display="inline" overflow="scroll"><mml:mrow><mml:mover accent="true"><mml:mi>F</mml:mi> <mml:mo>^</mml:mo></mml:mover></mml:mrow></mml:math></alternatives></inline-formula> at a given RNAz p-score larger than a threshold <italic>θ</italic> and a given GC content between <italic>α</italic> and <italic>β</italic> inclusive as
+<disp-formula id="pone.0139900.e002"><alternatives><graphic id="pone.0139900.e002g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e002"/><mml:math id="M2" display="block" overflow="scroll"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mover accent="true"><mml:mi>F</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mrow><mml:mo>[</mml:mo> <mml:mi>α</mml:mi> <mml:mo>,</mml:mo> <mml:mi>β</mml:mi> <mml:mo>]</mml:mo></mml:mrow></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>θ</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mfrac><mml:mrow><mml:msub><mml:mi>N</mml:mi> <mml:msub><mml:mtext>shuf</mml:mtext> <mml:mrow><mml:mo>[</mml:mo> <mml:mi>α</mml:mi> <mml:mo>,</mml:mo> <mml:mi>β</mml:mi> <mml:mo>]</mml:mo></mml:mrow></mml:msub></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>θ</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow> <mml:mrow><mml:msub><mml:mi>N</mml:mi> <mml:msub><mml:mtext>ori</mml:mtext> <mml:mrow><mml:mo>[</mml:mo> <mml:mi>α</mml:mi> <mml:mo>,</mml:mo> <mml:mi>β</mml:mi> <mml:mo>]</mml:mo></mml:mrow></mml:msub></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>θ</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(1)</label></disp-formula>
+where <italic>N</italic><sub>shuf<sub>[<italic>α</italic>,<italic>β</italic>]</sub></sub>(<italic>θ</italic>) is the number of RNAz predictions with p-score &gt; <italic>θ</italic> and a GC content between <italic>α</italic> and <italic>β</italic> in shuffled windows and <italic>N</italic><sub>ori<sub>[<italic>α</italic>,<italic>β</italic>]</sub></sub>(<italic>θ</italic>) is the number of RNAz predictions with p-score &gt; <italic>θ</italic> and a GC content between <italic>α</italic> and <italic>β</italic> predicted in original windows, after dismissal of windows to prevent double counting.</p>
+<p>When combining RNAz predictions with the 3D module predictions we conduct a one-sided Fisher Exact Test (FET) on individual models to identify significantly enriched 3D modules. Each cell of the FET 2×2 contingency table contains counts of unique windows to preserve the assumption of independence of the observations. As explained above, we use criteria which are specific to mRm<sub><italic>IL</italic></sub> and JAR3D modules; these are listed in Tables A and B in <xref ref-type="supplementary-material" rid="pone.0139900.s005">S1 Text</xref>. The schemes show tests for the nonrandom association between windows predicted as high-confidence structured RNAs with and without 3D module predictions in original against SISSIz shuffled data. <xref ref-type="table" rid="pone.0139900.t001">Table 1</xref> shows an example of the counts of unique windows of a contingency table. Note that although the enrichment is modest for each individual module, such enrichment is observed consistently for a number of models (see <xref ref-type="sec" rid="sec008">Results</xref>). The FDR for an individual module is computed similarly, using the numbers in columns 2 and 3 of Tables I–K in <xref ref-type="supplementary-material" rid="pone.0139900.s005">S1 Text</xref>.</p>
+<table-wrap id="pone.0139900.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139900.t001</object-id>
+<label>Table 1</label>
+<caption>
+<title>Contingency table for mRm<sub><italic>IL</italic></sub> model RF00177_235_2HHH_1380_1383_1471_1475 showing the number of original (second column) and shuffled windows (third column) with the (“3D module+”) and without the module (“3D module–”).</title>
+<p>Furthermore, the respective fold change (the ratio of 3D module- and 3D module+ windows and the ratio between original and shuffled windows with and without 3D modules) and the sum (“Total”) of each row and column is shown. The adjusted p-value of the FET equals 9.8 × 10<sup>−4</sup> with an odds ratio of (227/111 833)/(62/53 326) = 1.746.</p>
+</caption>
+<alternatives>
+<graphic id="pone.0139900.t001g" mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0139900.t001"/>
+<table frame="box" rules="all" border="0">
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">FET</th>
+<th align="center" rowspan="1" colspan="1">original</th>
+<th align="center" rowspan="1" colspan="1">shuffled</th>
+<th align="center" rowspan="1" colspan="1">Fold change</th>
+<th align="center" rowspan="1" colspan="1">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>3D module+</bold></td>
+<td align="center" rowspan="1" colspan="1">227</td>
+<td align="center" rowspan="1" colspan="1">62</td>
+<td align="char" char="." rowspan="1" colspan="1">3.7</td>
+<td align="center" rowspan="1" colspan="1">289</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>3D module–</bold></td>
+<td align="center" rowspan="1" colspan="1">111833</td>
+<td align="center" rowspan="1" colspan="1">53326</td>
+<td align="char" char="." rowspan="1" colspan="1">2.1</td>
+<td align="center" rowspan="1" colspan="1">165159</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Fold change</bold></td>
+<td align="center" rowspan="1" colspan="1">492.7</td>
+<td align="center" rowspan="1" colspan="1">860.1</td>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1"/>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Total</bold></td>
+<td align="center" rowspan="1" colspan="1">112060</td>
+<td align="center" rowspan="1" colspan="1">53388</td>
+<td align="center" rowspan="1" colspan="1"/>
+<td align="center" rowspan="1" colspan="1">16548</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+</sec>
+<sec id="sec008" sec-type="results">
+<title>Results</title>
+<p>To investigate the relationship between the 2D and 3D predictions we address the following: (1) whether 3D modules are enriched in the original windows as opposed to the shuffled ones; (2) whether individual 3D modules can be seen to be enriched; (3) even more importantly, we investigate if these models have a collective effect in lowering the FDR compared to RNAz alone.</p>
+<sec id="sec009">
+<title>Enrichment of 3D modules in RNAz screens</title>
+<p>To address the question of whether 3D modules occur more frequently in original windows with RNAz p-score &gt;0.9 than in shuffled windows with RNAz p-score &gt;0.9, we consider if 3D modules occur in the original and shuffled windows at the same nominal rate. A higher rate in the original windows is equivalent to the odds ratio being greater than 1 in <xref ref-type="table" rid="pone.0139900.t001">Table 1</xref>. As a background we assume that there would be a 50% chance of seeing a higher rate in the original windows, and so the number of 3D modules with a higher rate in the original windows would have a binomial distribution with probability 0.5. The 3D modules that were not even found once in the original and shuffled windows were discarded. We find 74.1% (43 out of 58) mRm<sub><italic>IL</italic></sub> models that predict M<sub><italic>mrmIL</italic></sub> which are present at a higher rate in original windows (z-score = 3.6, p-value = 1.0 × 10<sup>−4</sup>). With JAR3D IL models, omitting 3D modules whose 3D sequences have average length &lt; 9 nts, we find 116 out of 173 (67.1%) models that predict M<sub><italic>jarIL</italic></sub> at a higher rate in original windows (z-score = 4.5, p-value = 2.0 × 10<sup>−6</sup>). Thus, the IL modules occur more often in the original windows than in shuffled windows, and so 3D IL modules are enriched in original sequences having apparent secondary structure as opposed to synthetic sequences meeting the same standard for secondary structure. However, the performance of M<sub><italic>jarHL</italic></sub>, predicted at a higher rate by 119 out of 246 JAR3D HL models (48.4%), is marginally lower than 50% (z-score = -0.5, p-value = 4.5 × 10<sup>−2</sup>). The number of models decreases when we increase the threshold for the odds ratio (see <xref ref-type="supplementary-material" rid="pone.0139900.s004">S4 Fig</xref>).</p>
+</sec>
+<sec id="sec010">
+<title>Enrichment of individual modules</title>
+<p>To address the second question, whether there are individual modules which are significantly enriched in original compared to shuffled windows, we conduct a one-sided Fisher’s exact enrichment test and correct for multiple testing. We refer to this test as FET<sub><italic>fixpscore</italic></sub>, where we count windows with the 3D module and windows without, cf. <xref ref-type="table" rid="pone.0139900.t001">Table 1</xref>. For M<sub><italic>mrmIL</italic></sub> we increase the list of top 25% highest scoring candidates (see <xref ref-type="sec" rid="sec002">Methods</xref>) to top 40% as we otherwise get low counts of many modules. We subject the FET results to a multiple testing correction using the Benjamini-Hochberg procedure [<xref ref-type="bibr" rid="pone.0139900.ref057">57</xref>] at a 5% false discovery rate and we only consider modules with adjusted p-value smaller than or equal to 0.05 to be significantly enriched.</p>
+<p>Generally, the results of the enrichment analysis show that a fraction of M<sub><italic>mrmIL</italic></sub>, M<sub><italic>jarIL</italic></sub>, and M<sub><italic>jarHL</italic></sub> are significantly enriched. The FET<sub><italic>fixpscore</italic></sub> identifies 8 out of 63 (12.7%) distinct mRm<sub><italic>IL</italic></sub>, 13 out of 276 (4.7%) JAR3D IL, and 28 out of 253 (11.1%) JAR3D HL models that predict 3D modules that are significantly enriched (adjusted p-value ≤ 0.05, see Tables C–H in <xref ref-type="supplementary-material" rid="pone.0139900.s005">S1 Text</xref>). Requiring an odds ratio of at least 1.25 results in 6 mRm<sub><italic>IL</italic></sub>, 8 JAR3D IL, and 4 JAR3D HL models (see <xref ref-type="supplementary-material" rid="pone.0139900.s003">S3</xref> and <xref ref-type="supplementary-material" rid="pone.0139900.s004">S4</xref> Figs).</p>
+</sec>
+<sec id="sec011">
+<title>The impact of 3D modules on the False Discovery Rate</title>
+<p>We evaluate the potential of 3D module predictions to lower the FDR in RNAz predictions. Our RNAz screen (p-score &gt;0.9 and a GC content in the range of 0.25 to 0.75) identifies 142 455 candidates in the original windows and 66 891 candidates in the shuffled windows. This corresponds to <inline-formula id="pone.0139900.e003"><alternatives><graphic id="pone.0139900.e003g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e003"/><mml:math id="M3" display="inline" overflow="scroll"><mml:mrow><mml:msub><mml:mover accent="true"><mml:mi>F</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mrow><mml:mi>r</mml:mi> <mml:mi>n</mml:mi> <mml:mi>a</mml:mi> <mml:mi>z</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> of 47.0%. For the estimation of combined 2D/3D FDRs we only consider module predictions made by models that are enriched and that have an odds ratio ≥ 1.25, because we want to include only the best modules. We refer to the FDRs of the different classes of 3D module prediction methods as <inline-formula id="pone.0139900.e004"><alternatives><graphic id="pone.0139900.e004g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e004"/><mml:math id="M4" display="inline" overflow="scroll"><mml:mrow><mml:msub><mml:mover accent="true"><mml:mi>F</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mrow><mml:mi>m</mml:mi> <mml:mi>r</mml:mi> <mml:mi>m</mml:mi> <mml:mi>I</mml:mi> <mml:mi>L</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>, <inline-formula id="pone.0139900.e005"><alternatives><graphic id="pone.0139900.e005g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e005"/><mml:math id="M5" display="inline" overflow="scroll"><mml:mrow><mml:msub><mml:mover accent="true"><mml:mi>F</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mrow><mml:mi>j</mml:mi> <mml:mi>a</mml:mi> <mml:mi>r</mml:mi> <mml:mi>I</mml:mi> <mml:mi>L</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>, and <inline-formula id="pone.0139900.e006"><alternatives><graphic id="pone.0139900.e006g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e006"/><mml:math id="M6" display="inline" overflow="scroll"><mml:mrow><mml:msub><mml:mover accent="true"><mml:mi>F</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mrow><mml:mi>j</mml:mi> <mml:mi>a</mml:mi> <mml:mi>r</mml:mi> <mml:mi>H</mml:mi> <mml:mi>L</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> and combinations of the methods are abbreviated as <inline-formula id="pone.0139900.e007"><alternatives><graphic id="pone.0139900.e007g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e007"/><mml:math id="M7" display="inline" overflow="scroll"><mml:mrow><mml:msub><mml:mover accent="true"><mml:mi>F</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mrow><mml:mi>j</mml:mi> <mml:mi>a</mml:mi> <mml:mi>r</mml:mi> <mml:mi>H</mml:mi> <mml:mi>L</mml:mi> <mml:mi>&amp;</mml:mi> <mml:mi>m</mml:mi> <mml:mi>r</mml:mi> <mml:mi>m</mml:mi> <mml:mi>I</mml:mi> <mml:mi>L</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>, <inline-formula id="pone.0139900.e008"><alternatives><graphic id="pone.0139900.e008g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e008"/><mml:math id="M8" display="inline" overflow="scroll"><mml:mrow><mml:msub><mml:mover accent="true"><mml:mi>F</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mrow><mml:mi>j</mml:mi> <mml:mi>a</mml:mi> <mml:mi>r</mml:mi> <mml:mi>I</mml:mi> <mml:mi>L</mml:mi> <mml:mi>&amp;</mml:mi> <mml:mi>m</mml:mi> <mml:mi>r</mml:mi> <mml:mi>m</mml:mi> <mml:mi>I</mml:mi> <mml:mi>L</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>, and <inline-formula id="pone.0139900.e009"><alternatives><graphic id="pone.0139900.e009g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e009"/><mml:math id="M9" display="inline" overflow="scroll"><mml:mrow><mml:msub><mml:mover accent="true"><mml:mi>F</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mrow><mml:mi>j</mml:mi> <mml:mi>a</mml:mi> <mml:mi>r</mml:mi> <mml:mi>H</mml:mi> <mml:mi>L</mml:mi> <mml:mi>&amp;</mml:mi> <mml:mi>j</mml:mi> <mml:mi>a</mml:mi> <mml:mi>r</mml:mi> <mml:mi>I</mml:mi> <mml:mi>L</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+<p>
+<xref ref-type="table" rid="pone.0139900.t002">Table 2</xref> shows the results of estimating the FDRs under the different scenarios comparing only windows with the presence of the respective types of 3D modules. M<sub><italic>jarIL</italic></sub> lower the FDR from 47.0% to 36.0%, M<sub><italic>mrmIL</italic></sub> present a reduction to 34.1% whilst M<sub><italic>jarHL</italic></sub> are able to lower the FDR to 37.0%. Windows that contain M<sub><italic>jarIL</italic></sub> and M<sub><italic>mrmIL</italic></sub> lower the FDR to 27.8%. A combination of M<sub><italic>jarIL</italic></sub> and M<sub><italic>jarHL</italic></sub> decrease the FDR to 26.4%. The combination of M<sub><italic>mrmIL</italic></sub> and M<sub><italic>jarHL</italic></sub> shows the best improvement, with a reduction from 47.0% to 24.8%.</p>
+<table-wrap id="pone.0139900.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139900.t002</object-id>
+<label>Table 2</label>
+<caption>
+<title>False discovery rates for RNAz candidates (p-score &gt; 0.9, 0.25 ≤ GC content ≤ 0.75) and 3D module predictions.</title>
+<p>Only 3D modules that are enriched and with an odds ratio ≥ 1.25 are taken into account. Furthermore, JAR3D IL modules have average 3D sequence length ≥ 9. Subscripts denote which method for module prediction is used. “win<sub><italic>shu</italic></sub>/win<sub><italic>ori</italic></sub>” shows the number of shuffled and original windows that match a 3D module.</p>
+</caption>
+<alternatives>
+<graphic id="pone.0139900.t002g" mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0139900.t002"/>
+<table frame="box" rules="all" border="0">
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1"/>
+<th align="center" rowspan="1" colspan="1">FDR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">
+<inline-formula id="pone.0139900.e010">
+<alternatives>
+<graphic id="pone.0139900.e010g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e010"/>
+<mml:math id="M10" display="inline" overflow="scroll">
+<mml:mrow>
+<mml:msub>
+<mml:mover accent="true">
+<mml:mi>F</mml:mi>
+<mml:mo>^</mml:mo>
+</mml:mover>
+<mml:mrow>
+<mml:mi>r</mml:mi>
+<mml:mi>n</mml:mi>
+<mml:mi>a</mml:mi>
+<mml:mi>z</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:mrow>
+</mml:math>
+</alternatives>
+</inline-formula>
+</td>
+<td align="center" rowspan="1" colspan="1">47.0%</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">
+<inline-formula id="pone.0139900.e011">
+<alternatives>
+<graphic id="pone.0139900.e011g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e011"/>
+<mml:math id="M11" display="inline" overflow="scroll">
+<mml:mrow>
+<mml:msub>
+<mml:mover accent="true">
+<mml:mi>F</mml:mi>
+<mml:mo>^</mml:mo>
+</mml:mover>
+<mml:mrow>
+<mml:mi>m</mml:mi>
+<mml:mi>r</mml:mi>
+<mml:mi>m</mml:mi>
+<mml:mi>I</mml:mi>
+<mml:mi>L</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:mrow>
+</mml:math>
+</alternatives>
+</inline-formula>
+</td>
+<td align="center" rowspan="1" colspan="1">34.1%</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">win<sub><italic>shu</italic></sub>/win<sub><italic>ori</italic></sub></td>
+<td align="center" rowspan="1" colspan="1">815/2390</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">
+<inline-formula id="pone.0139900.e012">
+<alternatives>
+<graphic id="pone.0139900.e012g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e012"/>
+<mml:math id="M12" display="inline" overflow="scroll">
+<mml:mrow>
+<mml:msub>
+<mml:mover accent="true">
+<mml:mi>F</mml:mi>
+<mml:mo>^</mml:mo>
+</mml:mover>
+<mml:mrow>
+<mml:mi>j</mml:mi>
+<mml:mi>a</mml:mi>
+<mml:mi>r</mml:mi>
+<mml:mi>I</mml:mi>
+<mml:mi>L</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:mrow>
+</mml:math>
+</alternatives>
+</inline-formula>
+</td>
+<td align="center" rowspan="1" colspan="1">36.0%</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">win<sub><italic>shu</italic></sub>/win<sub><italic>ori</italic></sub></td>
+<td align="center" rowspan="1" colspan="1">1224/3401</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">
+<inline-formula id="pone.0139900.e013">
+<alternatives>
+<graphic id="pone.0139900.e013g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e013"/>
+<mml:math id="M13" display="inline" overflow="scroll">
+<mml:mrow>
+<mml:msub>
+<mml:mover accent="true">
+<mml:mi>F</mml:mi>
+<mml:mo>^</mml:mo>
+</mml:mover>
+<mml:mrow>
+<mml:mi>j</mml:mi>
+<mml:mi>a</mml:mi>
+<mml:mi>r</mml:mi>
+<mml:mi>H</mml:mi>
+<mml:mi>L</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:mrow>
+</mml:math>
+</alternatives>
+</inline-formula>
+</td>
+<td align="center" rowspan="1" colspan="1">37.0%</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">win<sub><italic>shu</italic></sub>/win<sub><italic>ori</italic></sub></td>
+<td align="center" rowspan="1" colspan="1">2020/5465</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">
+<inline-formula id="pone.0139900.e014">
+<alternatives>
+<graphic id="pone.0139900.e014g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e014"/>
+<mml:math id="M14" display="inline" overflow="scroll">
+<mml:mrow>
+<mml:msub>
+<mml:mover accent="true">
+<mml:mi>F</mml:mi>
+<mml:mo>^</mml:mo>
+</mml:mover>
+<mml:mrow>
+<mml:mi>m</mml:mi>
+<mml:mi>R</mml:mi>
+<mml:mi>m</mml:mi>
+<mml:mi>I</mml:mi>
+<mml:mi>L</mml:mi>
+<mml:mi>&amp;</mml:mi>
+<mml:mi>j</mml:mi>
+<mml:mi>a</mml:mi>
+<mml:mi>r</mml:mi>
+<mml:mi>I</mml:mi>
+<mml:mi>L</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:mrow>
+</mml:math>
+</alternatives>
+</inline-formula>
+</td>
+<td align="center" rowspan="1" colspan="1">27.8%</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">win<sub><italic>shu</italic></sub>/win<sub><italic>ori</italic></sub></td>
+<td align="center" rowspan="1" colspan="1">25/90</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">
+<inline-formula id="pone.0139900.e015">
+<alternatives>
+<graphic id="pone.0139900.e015g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e015"/>
+<mml:math id="M15" display="inline" overflow="scroll">
+<mml:mrow>
+<mml:msub>
+<mml:mover accent="true">
+<mml:mi>F</mml:mi>
+<mml:mo>^</mml:mo>
+</mml:mover>
+<mml:mrow>
+<mml:mi>m</mml:mi>
+<mml:mi>R</mml:mi>
+<mml:mi>m</mml:mi>
+<mml:mi>I</mml:mi>
+<mml:mi>L</mml:mi>
+<mml:mi>&amp;</mml:mi>
+<mml:mi>j</mml:mi>
+<mml:mi>a</mml:mi>
+<mml:mi>r</mml:mi>
+<mml:mi>H</mml:mi>
+<mml:mi>L</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:mrow>
+</mml:math>
+</alternatives>
+</inline-formula>
+</td>
+<td align="center" rowspan="1" colspan="1">24.8%</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">win<sub><italic>shu</italic></sub>/win<sub><italic>ori</italic></sub></td>
+<td align="center" rowspan="1" colspan="1">25/101</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">
+<inline-formula id="pone.0139900.e016">
+<alternatives>
+<graphic id="pone.0139900.e016g" mimetype="image" xlink:type="simple" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0139900.e016"/>
+<mml:math id="M16" display="inline" overflow="scroll">
+<mml:mrow>
+<mml:msub>
+<mml:mover accent="true">
+<mml:mi>F</mml:mi>
+<mml:mo>^</mml:mo>
+</mml:mover>
+<mml:mrow>
+<mml:mi>j</mml:mi>
+<mml:mi>a</mml:mi>
+<mml:mi>r</mml:mi>
+<mml:mi>I</mml:mi>
+<mml:mi>L</mml:mi>
+<mml:mi>&amp;</mml:mi>
+<mml:mi>j</mml:mi>
+<mml:mi>a</mml:mi>
+<mml:mi>r</mml:mi>
+<mml:mi>H</mml:mi>
+<mml:mi>L</mml:mi>
+</mml:mrow>
+</mml:msub>
+</mml:mrow>
+</mml:math>
+</alternatives>
+</inline-formula>
+</td>
+<td align="center" rowspan="1" colspan="1">26.4%</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">win<sub><italic>shu</italic></sub>/win<sub><italic>ori</italic></sub></td>
+<td align="center" rowspan="1" colspan="1">37/140</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>Some individual modules have strong individual effects on the FDR. Pragmatically, we consider only modules that occur in at least six original windows (see Tables I–K in <xref ref-type="supplementary-material" rid="pone.0139900.s005">S1 Text</xref>) and models with an adjusted p-value ≤ 0.05 and odds ratio ≥ 1.25. With this we obtain 6 mRm<sub><italic>IL</italic></sub>, 8 JAR3D IL, and 4 JAR3D HL models that lower the FDR to 42.3% or lower and of these 3 mRm<sub><italic>IL</italic></sub>, 7 JAR3D IL, and 4 JAR3D HL lower the FDR to 37.6% or lower.</p>
+</sec>
+</sec>
+<sec id="sec012" sec-type="conclusions">
+<title>Discussion</title>
+<p>The reduction in the FDR shown here comes at the cost of a large reduction in the number of positive hits. This is due to the large number of 3D modules, each of which occurs with a low probability in a given structured RNA.</p>
+<p>Large well-structured module groups such as the sarcin-ricin and kink-turn do not occur often enough to achieve a low p-score for the Fisher exact test used for Table E in <xref ref-type="supplementary-material" rid="pone.0139900.s005">S1 Text</xref>. Nevertheless, they tend to have odds ratios above 1 and so occur more often in original alignments than shuffled alignments.</p>
+<p>The way that we restrict attention to internal loops with at least 10 columns in the alignment leads to a few odd-looking results in Table E in <xref ref-type="supplementary-material" rid="pone.0139900.s005">S1 Text</xref> in which JAR3D module groups with few nucleotides have a low p-value in the Fisher exact test. These occur because one of the six sequences has a long insertion relative to the others, making the internal loop appear to have 10 or more nucleotides, but then the other five sequences match a really small JAR3D module well. It is surprising that such situations appear to occur more often in original windows than in shuffled windows, because SISSIz is designed to preserve the gap distribution.</p>
+<p>When the secondary structure is predicted reliably and we can extract the correct loop regions, the use of JAR3D for the 3D module prediction is preferable. In contrast to JAR3D, module prediction with metaRNAmodules is purely based on the sequence and might be more powerful when the secondary structure is less reliably identified. For example, the opening of a few nucleotides of a stem increases the free energy, but the inclusion of a module might result in a more stable conformation.</p>
+</sec>
+<sec id="sec013" sec-type="conclusions">
+<title>Conclusion</title>
+<p>There exist different strategies to search for secondary structure in genomic sequences. Their application area is a trade-off between speed and alignment strategy, where some work within the regime of sequence based alignments, whereas others conduct structural RNA alignments at the expense of longer run times. However, these methods do typically not take 3D structure information into account. In contrast the 3D information is often essential and associated with function. Motivated by this we addressed the question of whether RNA 3D module information in combination with 2D genome-wide screens for 2D structure could make an impact.</p>
+<p>We employed RNAz for the genome-wide (windows based) screen for structured RNAs which take sequence based alignments as input. It uses RNAalifold [<xref ref-type="bibr" rid="pone.0139900.ref058">58</xref>] for the prediction of the consensus structure of the alignment and minimizes the free energy of a structure without taking either tertiary interactions or any energy contribution of non-canonical base pairs into account.</p>
+<p>We showed that the combination of 2D secondary structure predictions and 3D module predictions is useful to improve the structured RNAz predictions by lowering the false discovery rates of RNAz.</p>
+<p>We showed that some of the 3D modules are found at higher rates in original (unshuffled windows of) alignments than in shuffled ones. This gave rise to lowering the FDR substantially. Overall, the joint presence of 3D module predictions from mRm and JAR3D lowers the FDR below 28%, using 3D modules which occur at a much higher rate in original windows compared to shuffled ones (odds ratio ≥ 1.25).</p>
+<p>Thus, we have shown proof of concept that information of RNA 3D modules can enhance the prediction of RNA 2D structure over the use of RNAz alone. An enrichment test with conservative thresholds for secondary structures and 3D modules reveals individual models that have the potential to distinguish between original and shuffled data. Enriched modules with an odds ratio above a certain threshold are able to lower the FDR from 47.0% to around 25%.</p>
+</sec>
+<sec id="sec014">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0139900.s001" position="float" xlink:href="info:doi/10.1371/journal.pone.0139900.s001" mimetype="application/eps" xlink:type="simple">
+<label>S1 Fig</label>
+<caption>
+<title>Phylogenetic tree.</title>
+<p>(EPS)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0139900.s002" position="float" xlink:href="info:doi/10.1371/journal.pone.0139900.s002" mimetype="application/eps" xlink:type="simple">
+<label>S2 Fig</label>
+<caption>
+<title>Example of RMDetect score distribution.</title>
+<p>(EPS)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0139900.s003" position="float" xlink:href="info:doi/10.1371/journal.pone.0139900.s003" mimetype="application/eps" xlink:type="simple">
+<label>S3 Fig</label>
+<caption>
+<title>Odds ratio of Fisher’s exact tests.</title>
+<p>Number of models for increasing odds ratios for windows with RNAz p-score &gt; 0.9.</p>
+<p>(EPS)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0139900.s004" position="float" xlink:href="info:doi/10.1371/journal.pone.0139900.s004" mimetype="application/eps" xlink:type="simple">
+<label>S4 Fig</label>
+<caption>
+<title>Odds ratio of Fisher’s exact tests.</title>
+<p>Number of models with adjusted p-value ≤ 0.05 for increasing odds ratios for windows with RNAz p-score &gt; 0.9.</p>
+<p>(EPS)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0139900.s005" position="float" xlink:href="info:doi/10.1371/journal.pone.0139900.s005" mimetype="application/pdf" xlink:type="simple">
+<label>S1 Text</label>
+<caption>
+<title>Fisher’s exact test results and the estimation of the false discovery rates for ordering H.</title>
+<p>Fisher’s exact test schemes for mRm (Table A) and JAR3D (Table B) modules. Fisher’s exact test results for individual mRm (Table C), all mRm (Table D), individual JAR3D IL (Table E), all JAR3D IL (Table F), individual JAR3D HL (Table G), and all JAR3D HL (Table H) modules. False discovery rates for individual mRm (Table I), JAR3D IL (Table J), and JAR3D HL (Table K) modules.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0139900.s006" position="float" xlink:href="info:doi/10.1371/journal.pone.0139900.s006" mimetype="application/pdf" xlink:type="simple">
+<label>S2 Text</label>
+<caption>
+<title>Alternative approaches.</title>
+<p>The file contains the occurrence rates (Table A), number of significantly enriched modules (Table B), the number of modules that lower the false discovery rate by at least 10% and at least 20% (Table C), and false discovery rates of the different 3D module prediction methods (Table D) for the alternative approaches of ordering L and R.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0139900.s007" position="float" xlink:href="info:doi/10.1371/journal.pone.0139900.s007" mimetype="application/pdf" xlink:type="simple">
+<label>S3 Text</label>
+<caption>
+<title>Fisher’s exact test results of alternative approaches.</title>
+<p>Fisher’s exact test results for individual mRm modules of ordering L (Table A) and of ordering R (Table B), all mRm modules of ordering L and R (Table C), individual JAR3D IL modules of ordering L (Table D) and of ordering R (Table E), all JAR3D IL modules of ordering L and R (Table F), individual JAR3D HL modules of ordering L (Table G) and of ordering R (Table H), and all JAR3D HL modules of ordering L and R (Table I).</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0139900.s008" position="float" xlink:href="info:doi/10.1371/journal.pone.0139900.s008" mimetype="application/pdf" xlink:type="simple">
+<label>S4 Text</label>
+<caption>
+<title>False discovery rates of alternative approaches.</title>
+<p>False discovery rates for individual mRm modules of ordering L (Table A) and of ordering R (Table B), individual JAR3D IL modules of ordering L (Table C) and of ordering H (Table D), and individual JAR3D HL modules of ordering L (Table E) and of ordering R (Table F).</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ref-list>
+<title>References</title>
+<ref id="pone.0139900.ref001">
+<label>1</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Underwood</surname> <given-names>JG</given-names></name>, <name name-style="western"><surname>Uzilov</surname> <given-names>AV</given-names></name>, <name name-style="western"><surname>Katzman</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Onodera</surname> <given-names>CS</given-names></name>, <name name-style="western"><surname>Mainzer</surname> <given-names>JE</given-names></name>, <name name-style="western"><surname>Mathews</surname> <given-names>DH</given-names></name>, <etal>et al</etal>. <article-title>FragSeq: transcriptome-wide RNA structure probing using high-throughput sequencing</article-title>. <source>Nat Methods</source>. <year>2010</year> <month>Dec</month>;<volume>7</volume>(<issue>12</issue>):<fpage>995</fpage>–<lpage>1001</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nmeth.1529" xlink:type="simple">10.1038/nmeth.1529</ext-link></comment> <object-id pub-id-type="pmid">21057495</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref002">
+<label>2</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Kertesz</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Wan</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Mazor</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Rinn</surname> <given-names>JL</given-names></name>, <name name-style="western"><surname>Nutter</surname> <given-names>RC</given-names></name>, <name name-style="western"><surname>Chang</surname> <given-names>HY</given-names></name>, <etal>et al</etal>. <article-title>Genome-wide measurement of RNA secondary structure in yeast</article-title>. <source>Nature</source>. <year>2010</year> <month>Sep</month>;<volume>467</volume>(<issue>7311</issue>):<fpage>103</fpage>–<lpage>107</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nature09322" xlink:type="simple">10.1038/nature09322</ext-link></comment> <object-id pub-id-type="pmid">20811459</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref003">
+<label>3</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Wan</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Qu</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>QC</given-names></name>, <name name-style="western"><surname>Flynn</surname> <given-names>RA</given-names></name>, <name name-style="western"><surname>Manor</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Ouyang</surname> <given-names>Z</given-names></name>, <etal>et al</etal>. <article-title>Landscape and variation of RNA secondary structure across the human transcriptome</article-title>. <source>Nature</source>. <year>2014</year> <month>Jan</month>;<volume>505</volume>(<issue>7485</issue>):<fpage>706</fpage>–<lpage>709</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nature12946" xlink:type="simple">10.1038/nature12946</ext-link></comment> <object-id pub-id-type="pmid">24476892</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref004">
+<label>4</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Ding</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Tang</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Kwok</surname> <given-names>CK</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Bevilacqua</surname> <given-names>PC</given-names></name>, <name name-style="western"><surname>Assmann</surname> <given-names>SM</given-names></name>. <article-title>In vivo genome-wide profiling of RNA secondary structure reveals novel regulatory features</article-title>. <source>Nature</source>. <year>2014</year> <month>Jan</month>;<volume>505</volume>(<issue>7485</issue>):<fpage>696</fpage>–<lpage>700</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nature12756" xlink:type="simple">10.1038/nature12756</ext-link></comment> <object-id pub-id-type="pmid">24270811</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref005">
+<label>5</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Gorodkin</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Hofacker</surname> <given-names>IL</given-names></name>, <name name-style="western"><surname>Torarinsson</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Yao</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Havgaard</surname> <given-names>JH</given-names></name>, <name name-style="western"><surname>Ruzzo</surname> <given-names>WL</given-names></name>. <article-title>De novo prediction of structured RNAs from genomic sequences</article-title>. <source>Trends Biotechnol</source>. <year>2010</year> <month>Jan</month>;<volume>28</volume>(<issue>1</issue>):<fpage>9</fpage>–<lpage>19</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.tibtech.2009.09.006" xlink:type="simple">10.1016/j.tibtech.2009.09.006</ext-link></comment> <object-id pub-id-type="pmid">19942311</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref006">
+<label>6</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Washietl</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Hofacker</surname> <given-names>IL</given-names></name>, <name name-style="western"><surname>Stadler</surname> <given-names>PF</given-names></name>. <article-title>Fast and reliable prediction of noncoding RNAs</article-title>. <source>Proc Natl Acad Sci USA</source>. <year>2005</year>;<volume>102</volume>(<issue>7</issue>):<fpage>2454</fpage>–<lpage>2459</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.0409169102" xlink:type="simple">10.1073/pnas.0409169102</ext-link></comment> <object-id pub-id-type="pmid">15665081</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref007">
+<label>7</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Pedersen</surname> <given-names>JS</given-names></name>, <name name-style="western"><surname>Bejerano</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Siepel</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Rosenbloom</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Lindblad-Toh</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Lander</surname> <given-names>ES</given-names></name>, <etal>et al</etal>. <article-title>Identification and Classification of Conserved RNA Secondary Structures in the Human Genome</article-title>. <source>PLoS Comput Biol</source>. <year>2006</year> <month>04</month>;<volume>2</volume>(<issue>4</issue>):<fpage>e33</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pcbi.0020033" xlink:type="simple">10.1371/journal.pcbi.0020033</ext-link></comment> <object-id pub-id-type="pmid">16628248</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref008">
+<label>8</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Yao</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Weinberg</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Ruzzo</surname> <given-names>WL</given-names></name>. <article-title>CMfinder—a covariance model based RNA motif finding algorithm</article-title>. <source>Bioinformatics</source>. <year>2006</year>;<volume>22</volume>(<issue>4</issue>):<fpage>445</fpage>–<lpage>452</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/bioinformatics/btk008" xlink:type="simple">10.1093/bioinformatics/btk008</ext-link></comment> <object-id pub-id-type="pmid">16357030</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref009">
+<label>9</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Uzilov</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Keegan</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Mathews</surname> <given-names>D</given-names></name>. <article-title>Detection of non-coding RNAs on the basis of predicted secondary structure formation free energy change</article-title>. <source>BMC Bioinformatics</source>. <year>2006</year>;<volume>7</volume>(<issue>1</issue>):<fpage>173</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1471-2105-7-173" xlink:type="simple">10.1186/1471-2105-7-173</ext-link></comment> <object-id pub-id-type="pmid">16566836</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref010">
+<label>10</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Torarinsson</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Sawera</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Havgaard</surname> <given-names>JH</given-names></name>, <name name-style="western"><surname>Fredholm</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Gorodkin</surname> <given-names>J</given-names></name>. <article-title>Thousands of corresponding human and mouse genomic regions unalignable in primary sequence contain common RNA structure</article-title>. <source>Genome Res</source>. <year>2006</year>;<volume>16</volume>(<issue>7</issue>):<fpage>885</fpage>–<lpage>889</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1101/gr.5226606" xlink:type="simple">10.1101/gr.5226606</ext-link></comment> <object-id pub-id-type="pmid">16751343</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref011">
+<label>11</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Washietl</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Hofacker</surname> <given-names>IL</given-names></name>. <article-title>Consensus Folding of Aligned Sequences as a New Measure for the Detection of Functional RNAs by Comparative Genomics</article-title>. <source>J Mol Biol</source>. <year>2004</year>;<volume>342</volume>(<issue>1</issue>):<fpage>19</fpage>–<lpage>30</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.jmb.2004.07.018" xlink:type="simple">10.1016/j.jmb.2004.07.018</ext-link></comment> <object-id pub-id-type="pmid">15313604</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref012">
+<label>12</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Havgaard</surname> <given-names>JH</given-names></name>, <name name-style="western"><surname>Torarinsson</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Gorodkin</surname> <given-names>J</given-names></name>. <article-title>Fast pairwise structural RNA alignments by pruning of the dynamical programming matrix</article-title>. <source>PLoS Comput Biol</source>. <year>2007</year>;<volume>3</volume>(<issue>10</issue>):<fpage>1896</fpage>–<lpage>1908</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pcbi.0030193" xlink:type="simple">10.1371/journal.pcbi.0030193</ext-link></comment> <object-id pub-id-type="pmid">17937495</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref013">
+<label>13</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Torarinsson</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Yao</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Wiklund</surname> <given-names>ED</given-names></name>, <name name-style="western"><surname>Bramsen</surname> <given-names>JB</given-names></name>, <name name-style="western"><surname>Hansen</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Kjems</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Comparative genomics beyond sequence-based alignments: RNA structures in the ENCODE regions</article-title>. <source>Genome Res</source>. <year>2008</year> <month>Feb</month>;<volume>18</volume>(<issue>2</issue>):<fpage>242</fpage>–<lpage>251</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1101/gr.6887408" xlink:type="simple">10.1101/gr.6887408</ext-link></comment> <object-id pub-id-type="pmid">18096747</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref014">
+<label>14</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Weinberg</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Perreault</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Meyer</surname> <given-names>MM</given-names></name>, <name name-style="western"><surname>Breaker</surname> <given-names>RR</given-names></name>. <article-title>Exceptional structured noncoding RNAs revealed by bacterial metagenome analysis</article-title>. <source>Nature</source>. <year>2009</year> <month>Dec</month>;<volume>462</volume>(<issue>7273</issue>):<fpage>656</fpage>–<lpage>659</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nature08586" xlink:type="simple">10.1038/nature08586</ext-link></comment> <object-id pub-id-type="pmid">19956260</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref015">
+<label>15</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Smith</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Gesell</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Stadler</surname> <given-names>PF</given-names></name>, <name name-style="western"><surname>Mattick</surname> <given-names>JS</given-names></name>. <article-title>Widespread purifying selection on RNA structure in mammals</article-title>. <source>Nucleic Acids Res</source>. <year>2013</year> <month>Sep</month>;<volume>41</volume>(<issue>17</issue>):<fpage>8220</fpage>–<lpage>8236</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkt596" xlink:type="simple">10.1093/nar/gkt596</ext-link></comment> <object-id pub-id-type="pmid">23847102</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref016">
+<label>16</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Lowe</surname> <given-names>TM</given-names></name>, <name name-style="western"><surname>Eddy</surname> <given-names>SR</given-names></name>. <article-title>tRNAscan-SE: A program for improved detection of transfer RNA genes in genomic sequence</article-title>. <source>Nucleic Acids Res</source>. <year>1997</year>;<volume>25</volume>(<issue>5</issue>):<fpage>955</fpage>–<lpage>964</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/25.5.0955" xlink:type="simple">10.1093/nar/25.5.0955</ext-link></comment> <object-id pub-id-type="pmid">9023104</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref017">
+<label>17</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Edvardsson</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Gardner</surname> <given-names>PP</given-names></name>, <name name-style="western"><surname>Poole</surname> <given-names>AM</given-names></name>, <name name-style="western"><surname>Hendy</surname> <given-names>MD</given-names></name>, <name name-style="western"><surname>Penny</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Moulton</surname> <given-names>V</given-names></name>. <article-title>A search for H/ACA snoRNAs in yeast using MFE secondary structure prediction</article-title>. <source>Bioinformatics</source>. <year>2003</year>;<volume>19</volume>(<issue>7</issue>):<fpage>865</fpage>–<lpage>873</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/bioinformatics/btg080" xlink:type="simple">10.1093/bioinformatics/btg080</ext-link></comment> <object-id pub-id-type="pmid">12724297</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref018">
+<label>18</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Hertel</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Langenberger</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Stadler</surname> <given-names>PF</given-names></name>. <article-title>Computational prediction of microRNA genes</article-title>. <source>Methods Mol Biol</source>. <year>2014</year>;<volume>1097</volume>:<fpage>437</fpage>–<lpage>456</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/978-1-62703-709-9_20" xlink:type="simple">10.1007/978-1-62703-709-9_20</ext-link></comment> <object-id pub-id-type="pmid">24639171</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref019">
+<label>19</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Stadler</surname> <given-names>PF</given-names></name>. <article-title>Class-specific prediction of ncRNAs</article-title>. <source>Methods Mol Biol</source>. <year>2014</year>;<volume>1097</volume>:<fpage>199</fpage>–<lpage>213</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/978-1-62703-709-9_10" xlink:type="simple">10.1007/978-1-62703-709-9_10</ext-link></comment> <object-id pub-id-type="pmid">24639161</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref020">
+<label>20</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Nawrocki</surname> <given-names>EP</given-names></name>. <article-title>Annotating functional RNAs in genomes using Infernal</article-title>. <source>Methods Mol Biol</source>. <year>2014</year>;<volume>1097</volume>:<fpage>163</fpage>–<lpage>197</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/978-1-62703-709-9_9" xlink:type="simple">10.1007/978-1-62703-709-9_9</ext-link></comment> <object-id pub-id-type="pmid">24639160</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref021">
+<label>21</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Nawrocki</surname> <given-names>EP</given-names></name>, <name name-style="western"><surname>Eddy</surname> <given-names>SR</given-names></name>. <article-title>Infernal 1.1: 100-fold faster RNA homology searches</article-title>. <source>Bioinformatics</source>. <year>2013</year> <month>Nov</month>;<volume>29</volume>(<issue>22</issue>):<fpage>2933</fpage>–<lpage>2935</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/bioinformatics/btt509" xlink:type="simple">10.1093/bioinformatics/btt509</ext-link></comment> <object-id pub-id-type="pmid">24008419</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref022">
+<label>22</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Lin</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Kincaid</surname> <given-names>RP</given-names></name>, <name name-style="western"><surname>Arasappan</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Dowd</surname> <given-names>SE</given-names></name>, <name name-style="western"><surname>Hunicke-Smith</surname> <given-names>SP</given-names></name>, <name name-style="western"><surname>Sullivan</surname> <given-names>CS</given-names></name>. <article-title>Small RNA profiling reveals antisense transcription throughout the KSHV genome and novel small RNAs</article-title>. <source>RNA</source>. <year>2010</year>;<volume>16</volume>(<issue>8</issue>):<fpage>1540</fpage>–<lpage>1558</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1261/rna.1967910" xlink:type="simple">10.1261/rna.1967910</ext-link></comment> <object-id pub-id-type="pmid">20566670</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref023">
+<label>23</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Preker</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Almvig</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Christensen</surname> <given-names>MS</given-names></name>, <name name-style="western"><surname>Valen</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Mapendano</surname> <given-names>CK</given-names></name>, <name name-style="western"><surname>Sandelin</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>PROMoter uPstream Transcripts share characteristics with mRNAs and are produced upstream of all three major types of mammalian promoters</article-title>. <source>Nucleic Acids Res</source>. <year>2011</year>;<volume>39</volume>(<issue>16</issue>):<fpage>7179</fpage>–<lpage>7193</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkr370" xlink:type="simple">10.1093/nar/gkr370</ext-link></comment> <object-id pub-id-type="pmid">21596787</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref024">
+<label>24</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Kapranov</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Cheng</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Dike</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Nix</surname> <given-names>DA</given-names></name>, <name name-style="western"><surname>Duttagupta</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Willingham</surname> <given-names>AT</given-names></name>, <etal>et al</etal>. <article-title>RNA Maps Reveal New RNA Classes and a Possible Function for Pervasive Transcription</article-title>. <source>Science</source>. <year>2007</year>;<volume>316</volume>(<issue>5830</issue>):<fpage>1484</fpage>–<lpage>1488</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1126/science.1138341" xlink:type="simple">10.1126/science.1138341</ext-link></comment> <object-id pub-id-type="pmid">17510325</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref025">
+<label>25</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Dinger</surname> <given-names>ME</given-names></name>, <name name-style="western"><surname>Amaral</surname> <given-names>PP</given-names></name>, <name name-style="western"><surname>Mercer</surname> <given-names>TR</given-names></name>, <name name-style="western"><surname>Mattick</surname> <given-names>JS</given-names></name>. <article-title>Pervasive transcription of the eukaryotic genome: functional indices and conceptual implications</article-title>. <source>Briefings Funct Genomics Proteomics</source>. <year>2009</year>;<volume>8</volume>(<issue>6</issue>):<fpage>407</fpage>–<lpage>423</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/bfgp/elp038" xlink:type="simple">10.1093/bfgp/elp038</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref026">
+<label>26</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Mattick</surname> <given-names>JS</given-names></name>. <article-title>The genetic signature of noncoding RNAs</article-title>. <source>PLoS Genet</source>. <year>2009</year>;<volume>5</volume>(<issue>4</issue>):<fpage>e1000459</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pgen.1000459" xlink:type="simple">10.1371/journal.pgen.1000459</ext-link></comment> <object-id pub-id-type="pmid">19390609</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref027">
+<label>27</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Huang</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Yu</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Xu</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Cheng</surname> <given-names>X</given-names></name>. <article-title>Molecular functions of small regulatory noncoding RNA</article-title>. <source>Biochemistry (Moscow)</source>. <year>2013</year>;<volume>78</volume>(<issue>3</issue>):<fpage>221</fpage>–<lpage>230</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1134/S0006297913030024" xlink:type="simple">10.1134/S0006297913030024</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref028">
+<label>28</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Costa</surname> <given-names>FF</given-names></name>. <article-title>Non-coding RNAs: Lost in translation?</article-title> <source>Gene</source>. <year>2007</year>;<volume>386</volume>(<issue>1-2</issue>):<fpage>1</fpage>–<lpage>10</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.gene.2006.09.028" xlink:type="simple">10.1016/j.gene.2006.09.028</ext-link></comment> <object-id pub-id-type="pmid">17113247</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref029">
+<label>29</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Serganov</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Nudler</surname> <given-names>E</given-names></name>. <article-title>A Decade of Riboswitches</article-title>. <source>Cell</source>. <year>2013</year>;<volume>152</volume>:<fpage>17</fpage>–<lpage>24</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.cell.2012.12.024" xlink:type="simple">10.1016/j.cell.2012.12.024</ext-link></comment> <object-id pub-id-type="pmid">23332744</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref030">
+<label>30</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Ferré-D’Amaré</surname> <given-names>AR</given-names></name>, <name name-style="western"><surname>Doudna</surname> <given-names>JA</given-names></name>. <article-title>RNA FOLDS: Insights from Recent Crystal Structures</article-title>. <source>Annu Rev Biophys Biomol Struct</source>. <year>1999</year>;<volume>28</volume>(<issue>1</issue>):<fpage>57</fpage>–<lpage>73</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1146/annurev.biophys.28.1.57" xlink:type="simple">10.1146/annurev.biophys.28.1.57</ext-link></comment> <object-id pub-id-type="pmid">10410795</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref031">
+<label>31</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Nissen</surname> <given-names>P</given-names></name> and <name name-style="western"><surname>Ippolito</surname> <given-names>J A</given-names></name> and <name name-style="western"><surname>Ban</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Moore</surname> <given-names>P B</given-names></name> and <name name-style="western"><surname>Steitz</surname> <given-names>T A</given-names></name>. <article-title>RNA tertiary interactions in the large ribosomal subunit: The A-minor motif</article-title>. <source>Proc Natl Acad Sci USA</source>. <year>2001</year>;<volume>98</volume>(<issue>9</issue>):<fpage>4899</fpage>–<lpage>4903</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.081082398" xlink:type="simple">10.1073/pnas.081082398</ext-link></comment> <object-id pub-id-type="pmid">11296253</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref032">
+<label>32</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Peña</surname> <given-names>Mdl</given-names></name>, <name name-style="western"><surname>Dufour</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Gallego</surname> <given-names>J</given-names></name>. <article-title>Three-way RNA junctions with remote tertiary contacts: A recurrent and highly versatile fold</article-title>. <source>RNA</source>. <year>2009</year>;<volume>15</volume>(<issue>11</issue>):<fpage>1949</fpage>–<lpage>1964</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1261/rna.1889509" xlink:type="simple">10.1261/rna.1889509</ext-link></comment> <object-id pub-id-type="pmid">19741022</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref033">
+<label>33</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Leontis</surname> <given-names>NB</given-names></name>, <name name-style="western"><surname>Stombaugh</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Westhof</surname> <given-names>E</given-names></name>. <article-title>The non-Watson-Crick base pairs and their associated isostericity matrices</article-title>. <source>Nucleic Acids Res</source>. <year>2002</year>;<volume>30</volume>(<issue>16</issue>):<fpage>3497</fpage>–<lpage>3531</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkf481" xlink:type="simple">10.1093/nar/gkf481</ext-link></comment> <object-id pub-id-type="pmid">12177293</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref034">
+<label>34</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Klein</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>Schmeing</surname> <given-names>TM</given-names></name>, <name name-style="western"><surname>Moore</surname> <given-names>PB</given-names></name>, <name name-style="western"><surname>Steitz</surname> <given-names>TA</given-names></name>. <article-title>The kink-turn: a new RNA secondary structure motif</article-title>. <source>The EMBO Journal</source>. <year>2001</year>;<volume>20</volume>(<issue>15</issue>):<fpage>4214</fpage>–<lpage>4221</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/emboj/20.15.4214" xlink:type="simple">10.1093/emboj/20.15.4214</ext-link></comment> <object-id pub-id-type="pmid">11483524</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref035">
+<label>35</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Rozhdestvensky</surname> <given-names>TS</given-names></name>, <name name-style="western"><surname>Tang</surname> <given-names>TH</given-names></name>, <name name-style="western"><surname>Tchirkova</surname> <given-names>IV</given-names></name>, <name name-style="western"><surname>Brosius</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Bachellerie</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Hüttenhofer</surname> <given-names>A</given-names></name>. <article-title>Binding of L7Ae protein to the K-turn of archaeal snoRNAs: a shared RNA binding motif for C/D and H/ACA box snoRNAs in Archaea</article-title>. <source>Nucleic Acids Res</source>. <year>2003</year>;<volume>31</volume>(<issue>3</issue>):<fpage>869</fpage>–<lpage>877</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkg175" xlink:type="simple">10.1093/nar/gkg175</ext-link></comment> <object-id pub-id-type="pmid">12560482</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref036">
+<label>36</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Vidovic</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Nottrott</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Hartmuth</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Lührmann</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Ficner</surname> <given-names>R</given-names></name>. <article-title>Crystal Structure of the Spliceosomal 15.5kD Protein Bound to a U4 snRNA Fragment</article-title>. <source>Mol Cell</source>. <year>2000</year>;<volume>6</volume>(<issue>6</issue>):<fpage>1331</fpage>–<lpage>1342</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/S1097-2765(00)00131-3" xlink:type="simple">10.1016/S1097-2765(00)00131-3</ext-link></comment> <object-id pub-id-type="pmid">11163207</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref037">
+<label>37</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Blouin</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Lafontaine</surname> <given-names>DA</given-names></name>. <article-title>A loop–loop interaction and a K-turn motif located in the lysine aptamer domain are important for the riboswitch gene regulation control</article-title>. <source>RNA</source>. <year>2007</year>;<volume>13</volume>(<issue>8</issue>):<fpage>1256</fpage>–<lpage>1267</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1261/rna.560307" xlink:type="simple">10.1261/rna.560307</ext-link></comment> <object-id pub-id-type="pmid">17585050</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref038">
+<label>38</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Heppell</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Lafontaine</surname> <given-names>DA</given-names></name>. <article-title>Folding of the SAM Aptamer is Determined by the Formation of a K-turn-dependent Pseudoknot</article-title>. <source>Biochemistry</source>. <year>2008</year>;<volume>47</volume>(<issue>6</issue>):<fpage>1490</fpage>–<lpage>1499</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1021/bi701164y" xlink:type="simple">10.1021/bi701164y</ext-link></comment> <object-id pub-id-type="pmid">18205390</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref039">
+<label>39</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Szewczak</surname> <given-names>LBW</given-names></name>, <name name-style="western"><surname>Gabrielsen</surname> <given-names>JS</given-names></name>, <name name-style="western"><surname>Degregorio</surname> <given-names>SJ</given-names></name>, <name name-style="western"><surname>Strobel</surname> <given-names>SA</given-names></name>, <name name-style="western"><surname>Steits</surname> <given-names>JA</given-names></name>. <article-title>Molecular basis for RNA kink-turn recognition by the h15.5K small RNP protein</article-title>. <source>RNA</source>. <year>2005</year>;<volume>11</volume>(<issue>9</issue>):<fpage>1407</fpage>–<lpage>1419</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1261/rna.2830905" xlink:type="simple">10.1261/rna.2830905</ext-link></comment> <object-id pub-id-type="pmid">16120832</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref040">
+<label>40</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Youssef</surname> <given-names>OA</given-names></name>, <name name-style="western"><surname>Terns</surname> <given-names>RM</given-names></name>, <name name-style="western"><surname>Terns</surname> <given-names>MP</given-names></name>. <article-title>Dynamic interactions within sub-complexes of the H/ACA pseudouridylation guide RNP</article-title>. <source>Nucleic Acids Res</source>. <year>2007</year>;<volume>35</volume>(<issue>18</issue>):<fpage>6196</fpage>–<lpage>6206</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkm673" xlink:type="simple">10.1093/nar/gkm673</ext-link></comment> <object-id pub-id-type="pmid">17855403</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref041">
+<label>41</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Leontis</surname> <given-names>NB</given-names></name>, <name name-style="western"><surname>Westhof</surname> <given-names>E</given-names></name>. <article-title>A common motif organizes the structure of multi-helix loops in 16 S and 23 S ribosomal RNAs</article-title>. <source>J Mol Biol</source>. <year>1998</year>;<volume>283</volume>:<fpage>571</fpage>–<lpage>583</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1006/jmbi.1998.2106" xlink:type="simple">10.1006/jmbi.1998.2106</ext-link></comment> <object-id pub-id-type="pmid">9784367</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref042">
+<label>42</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Moore</surname> <given-names>PB</given-names></name>. <article-title>Structural motifs in RNA</article-title>. <source>Annu Rev Biochem</source>. <year>1999</year>;<volume>68</volume>(<issue>1</issue>):<fpage>287</fpage>–<lpage>300</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1146/annurev.biochem.68.1.287" xlink:type="simple">10.1146/annurev.biochem.68.1.287</ext-link></comment> <object-id pub-id-type="pmid">10872451</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref043">
+<label>43</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Pyle</surname> <given-names>AM</given-names></name>. <article-title>Metal ions in the structure and function of RNA</article-title>. <source>J Biol Inorg Chem</source>. <year>2002</year>;<volume>7</volume>(<issue>7-8</issue>):<fpage>679</fpage>–<lpage>90</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s00775-002-0387-6" xlink:type="simple">10.1007/s00775-002-0387-6</ext-link></comment> <object-id pub-id-type="pmid">12203005</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref044">
+<label>44</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Kuhn</surname> <given-names>JF</given-names></name>, <name name-style="western"><surname>Tran</surname> <given-names>EJ</given-names></name>, <name name-style="western"><surname>Maxwell</surname> <given-names>ES</given-names></name>. <article-title>Archaeal ribosomal protein L7 is a functional homolog of the eukaryotic 15.5kD/Snu13p snoRNP core protein</article-title>. <source>Nucleic Acids Res</source>. <year>2002</year>;<volume>30</volume>(<issue>4</issue>):<fpage>931</fpage>–<lpage>941</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/30.4.931" xlink:type="simple">10.1093/nar/30.4.931</ext-link></comment> <object-id pub-id-type="pmid">11842104</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref045">
+<label>45</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Hendrix</surname> <given-names>DK</given-names></name>, <name name-style="western"><surname>Brenner</surname> <given-names>SE</given-names></name>, <name name-style="western"><surname>Holbrook</surname> <given-names>SR</given-names></name>. <article-title>RNA structural motifs: building blocks of a modular biomolecule</article-title>. <source>Q Rev Biophys</source>. <year>2005</year>;<volume>38</volume>(<issue>3</issue>):<fpage>221</fpage>–<lpage>243</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1017/S0033583506004215" xlink:type="simple">10.1017/S0033583506004215</ext-link></comment> <object-id pub-id-type="pmid">16817983</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref046">
+<label>46</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Martinez</surname> <given-names>HM</given-names></name>, <name name-style="western"><surname>Maizel</surname> <given-names>JV</given-names> <suffix>Jr</suffix></name>, <name name-style="western"><surname>Shapiro</surname> <given-names>BA</given-names></name>. <article-title>RNA2D3D: a program for generating, viewing, and comparing 3-dimensional models of RNA</article-title>. <source>J Biomol Struct Dyn</source>. <year>2008</year>;<volume>25</volume>(<issue>6</issue>):<fpage>669</fpage>–<lpage>683</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1080/07391102.2008.10531240" xlink:type="simple">10.1080/07391102.2008.10531240</ext-link></comment> <object-id pub-id-type="pmid">18399701</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref047">
+<label>47</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Jossinet</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Ludwig</surname> <given-names>TE</given-names></name>, <name name-style="western"><surname>Westhof</surname> <given-names>E</given-names></name>. <article-title>Assemble: an interactive graphical tool to analyze and build RNA architectures at the 2D and 3D levels</article-title>. <source>Bioinformatics</source>. <year>2010</year>;<volume>26</volume>(<issue>16</issue>):<fpage>2057</fpage>–<lpage>2059</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/bioinformatics/btq321" xlink:type="simple">10.1093/bioinformatics/btq321</ext-link></comment> <object-id pub-id-type="pmid">20562414</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref048">
+<label>48</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Laing</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Schlick</surname> <given-names>T</given-names></name>. <article-title>Computational approaches to 3D modeling of RNA</article-title>. <source>J Phys: Condens Matter</source>. <year>2010</year>;<volume>22</volume>(<issue>28</issue>):<fpage>283101</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0139900.ref049">
+<label>49</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Reinharz</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Major</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Waldispühl</surname> <given-names>J</given-names></name>. <article-title>Towards 3D structure prediction of large RNA molecules: an integer programming framework to insert local 3D motifs in RNA secondary structure</article-title>. <source>Bioinformatics</source>. <year>2012</year>;<volume>28</volume>(<issue>12</issue>):<fpage>i207</fpage>–<lpage>i214</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/bioinformatics/bts226" xlink:type="simple">10.1093/bioinformatics/bts226</ext-link></comment> <object-id pub-id-type="pmid">22689763</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref050">
+<label>50</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Parisien</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Major</surname> <given-names>F</given-names></name>. <article-title>The MC-Fold and MC-Sym pipeline infers RNA structure from sequence data</article-title>. <source>Nature</source>. <year>2008</year>;<volume>452</volume>:<fpage>51</fpage>–<lpage>55</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nature06684" xlink:type="simple">10.1038/nature06684</ext-link></comment> <object-id pub-id-type="pmid">18322526</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref051">
+<label>51</label>
+<mixed-citation xlink:type="simple" publication-type="other">Gruber AR, Findeiß S, Washietl S, Hofacker IL, Stadler PF. 9. In: RNAZ 2.0: Improved noncoding RNA detection; 2010. p. 69–79.</mixed-citation>
+</ref>
+<ref id="pone.0139900.ref052">
+<label>52</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Theis</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Höner zu Siederdissen</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Hofacker</surname> <given-names>IL</given-names></name>, <name name-style="western"><surname>Gorodkin</surname> <given-names>J</given-names></name>. <article-title>Automated identification of RNA 3D modules with discriminative power in RNA structural alignments</article-title>. <source>Nucleic Acids Res</source>. <year>2013</year>;<volume>41</volume>(<issue>22</issue>):<fpage>9999</fpage>–<lpage>10009</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkt795" xlink:type="simple">10.1093/nar/gkt795</ext-link></comment> <object-id pub-id-type="pmid">24005040</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref053">
+<label>53</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Zirbel</surname> <given-names>CL</given-names></name>, <name name-style="western"><surname>Roll</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Petrov</surname> <given-names>AI</given-names></name>, <name name-style="western"><surname>Sweeney</surname> <given-names>BA</given-names></name>, <name name-style="western"><surname>Pirrung</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Leontis</surname> <given-names>NB</given-names></name>. <article-title>Identifying novel sequence variants of RNA 3D motifs</article-title>. <source>Nucleic Acids Res</source>. <year>2015</year>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkv651" xlink:type="simple">10.1093/nar/gkv651</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref054">
+<label>54</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Blanchette</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Kent</surname> <given-names>WJ</given-names></name>, <name name-style="western"><surname>Riemer</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Elnitski</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Smit</surname> <given-names>AFA</given-names></name>, <name name-style="western"><surname>Roskin</surname> <given-names>KM</given-names></name>, <etal>et al</etal>. <article-title>Aligning Multiple Genomic Sequences With the Threaded Blockset Aligner</article-title>. <source>Genome Res</source>. <year>2004</year>;<volume>14</volume>(<issue>4</issue>):<fpage>708</fpage>–<lpage>715</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1101/gr.1933104" xlink:type="simple">10.1101/gr.1933104</ext-link></comment> <object-id pub-id-type="pmid">15060014</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref055">
+<label>55</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Gesell</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Washietl</surname> <given-names>S</given-names></name>. <article-title>Dinucleotide controlled null models for comparative RNA gene prediction</article-title>. <source>BMC Bioinformatics</source>. <year>2008</year>;<volume>9</volume>(<issue>248</issue>). <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1471-2105-9-248" xlink:type="simple">10.1186/1471-2105-9-248</ext-link></comment> <object-id pub-id-type="pmid">18505553</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref056">
+<label>56</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Cruz</surname> <given-names>JA</given-names></name>, <name name-style="western"><surname>Westhof</surname> <given-names>E</given-names></name>. <article-title>Sequence-based identification of 3D structural modules in RNA with RMDetect</article-title>. <source>Nat Methods</source>. <year>2011</year>;<volume>8</volume>(<issue>6</issue>):<fpage>513</fpage>–<lpage>519</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nmeth.1603" xlink:type="simple">10.1038/nmeth.1603</ext-link></comment> <object-id pub-id-type="pmid">21552257</object-id></mixed-citation>
+</ref>
+<ref id="pone.0139900.ref057">
+<label>57</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Benjamin</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Hochberg</surname> <given-names>Y</given-names></name>. <article-title>Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing</article-title>. <source>Journal of the Royal Statistical Society Series B (Methodological)</source>. <year>1995</year>;<volume>57</volume>(<issue>1</issue>):<fpage>289</fpage>–<lpage>300</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0139900.ref058">
+<label>58</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Bernhart</surname> <given-names>SH</given-names></name>, <name name-style="western"><surname>Hofacker</surname> <given-names>IL</given-names></name>, <name name-style="western"><surname>Will</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Gruber</surname> <given-names>AR</given-names></name>, <name name-style="western"><surname>Stadler</surname> <given-names>PF</given-names></name>. <article-title>RNAalifold: improved consensus structure prediction for RNA alignments</article-title>. <source>BMC Bioinformatics</source>. <year>2008</year>;<volume>9</volume>:<fpage>474</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1471-2105-9-474" xlink:type="simple">10.1186/1471-2105-9-474</ext-link></comment> <object-id pub-id-type="pmid">19014431</object-id></mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

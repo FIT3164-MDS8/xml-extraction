@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0129396</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-15-02546</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>Transcriptional Slippage and RNA Editing Increase the Diversity of Transcripts in Chloroplasts: Insight from Deep Sequencing of <italic>Vigna radiata</italic> Genome and Transcriptome</article-title>
+<alt-title alt-title-type="running-head">Transcriptional Slippage and RNA Editing in Chloroplast Transcripts</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Lin</surname>
+<given-names>Ching-Ping</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+<xref rid="aff002" ref-type="aff"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Ko</surname>
+<given-names>Chia-Yun</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Kuo</surname>
+<given-names>Ching-I</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Liu</surname>
+<given-names>Mao-Sen</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Schafleitner</surname>
+<given-names>Roland</given-names>
+</name>
+<xref rid="aff003" ref-type="aff"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Chen</surname>
+<given-names>Long-Fang Oliver</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+<xref rid="cor001" ref-type="corresp">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Institute of Plant and Microbial Biology, Academia Sinica, Nankang, Taipei 11529, Taiwan</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Department of Earth and Life Science, University of Taipei, Taipei 10048, Taiwan</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>AVRDC—The World Vegetable Center, Shanhua, Tainan 74199, Taiwan</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Maas</surname>
+<given-names>Stefan</given-names>
+</name>
+<role>Academic Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>NIH, UNITED STATES</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: CPL CYK. Performed the experiments: CYK CPL. Analyzed the data: CPL. Contributed reagents/materials/analysis tools: CIK MSL RS LFOC. Wrote the paper: CPL. Revised manuscript and provided comments: CYK MSL RS LFOC.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">ochenlf@gate.sinica.edu.tw</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>15</day>
+<month>6</month>
+<year>2015</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2015</year>
+</pub-date>
+<volume>10</volume>
+<issue>6</issue>
+<elocation-id>e0129396</elocation-id>
+<history>
+<date date-type="received">
+<day>26</day>
+<month>1</month>
+<year>2015</year>
+</date>
+<date date-type="accepted">
+<day>7</day>
+<month>5</month>
+<year>2015</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2015</copyright-year>
+<copyright-holder>Lin et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0129396" xlink:type="simple"/>
+<abstract>
+<p>We performed deep sequencing of the nuclear and organellar genomes of three mungbean genotypes: <italic>Vigna radiata ssp</italic>. <italic>sublobata</italic> TC1966, <italic>V</italic>. <italic>radiata</italic> var. <italic>radiata</italic> NM92 and the recombinant inbred line RIL59 derived from a cross between TC1966 and NM92. Moreover, we performed deep sequencing of the RIL59 transcriptome to investigate transcript variability. The mungbean chloroplast genome has a quadripartite structure including a pair of inverted repeats separated by two single copy regions. A total of 213 simple sequence repeats were identified in the chloroplast genomes of NM92 and RIL59; 78 single nucleotide variants and nine indels were discovered in comparing the chloroplast genomes of TC1966 and NM92. Analysis of the mungbean chloroplast transcriptome revealed mRNAs that were affected by transcriptional slippage and RNA editing. Transcriptional slippage frequency was positively correlated with the length of simple sequence repeats of the mungbean chloroplast genome (R<sup>2</sup>=0.9911). In total, 41 C-to-U editing sites were found in 23 chloroplast genes and in one intergenic spacer. No editing site that swapped U to C was found. A combination of bioinformatics and experimental methods revealed that the plastid-encoded RNA polymerase-transcribed genes <italic>psbF</italic> and <italic>ndhA</italic> are affected by transcriptional slippage in mungbean and in main lineages of land plants, including three dicots (<italic>Glycine max</italic>, <italic>Brassica rapa</italic>, and <italic>Nicotiana tabacum</italic>), two monocots (<italic>Oryza sativa</italic> and <italic>Zea mays</italic>), two gymnosperms (<italic>Pinus taeda</italic> and <italic>Ginkgo biloba</italic>) and one moss (<italic>Physcomitrella patens</italic>). Transcript analysis of the <italic>rps2</italic> gene showed that transcriptional slippage could affect transcripts at single sequence repeat regions with poly-A runs. It showed that transcriptional slippage together with incomplete RNA editing may cause sequence diversity of transcripts in chloroplasts of land plants.</p>
+</abstract>
+<funding-group>
+<funding-statement>This work was supported by the Innovative Translational Agricultural Research Program (Project #2014CP04) Academia Sinica Taiwan (<ext-link ext-link-type="uri" xlink:href="http://itar.programs.sinica.edu.tw/index.php" xlink:type="simple">http://itar.programs.sinica.edu.tw/index.php</ext-link>) to LFOC. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="4"/>
+<table-count count="1"/>
+<page-count count="16"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability" xlink:type="simple">
+<meta-name>Data Availability</meta-name>
+<meta-value>All chloroplast genome sequences are available from the DDBJ database (accession number(s) AP014691, AP014692). RNA-seq data (NCBI SRA accession no.: SRR1867748).</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>The chloroplast (CP) genome originated from the genome of endosymbiontic cyanobacteria-like photosynthetic bacteria [<xref rid="pone.0129396.ref001" ref-type="bibr">1</xref>–<xref rid="pone.0129396.ref004" ref-type="bibr">4</xref>]. Most genes of the primitive CPs were transferred to the plant nuclear genome [<xref rid="pone.0129396.ref005" ref-type="bibr">5</xref>–<xref rid="pone.0129396.ref007" ref-type="bibr">7</xref>], consequently the modern CP genome is highly reduced in both size and gene content. Only about 4 rRNAs, 30 tRNAs and 100 protein-coding genes are retained in 120~210-kb DNA of CP genomes [<xref rid="pone.0129396.ref008" ref-type="bibr">8</xref>,<xref rid="pone.0129396.ref009" ref-type="bibr">9</xref>]. The CP genes carry out functions in photosynthesis (e.g., <italic>atp</italic>, <italic>pet</italic>, <italic>ndh</italic>, <italic>psa</italic> and <italic>psb</italic>), or are involved with bacteria-like transcription (e.g., <italic>rpoA</italic>, <italic>B</italic>, <italic>C1</italic>, <italic>C2</italic>) and translation (e.g., <italic>rpl</italic>, <italic>rps</italic>, <italic>tRNAs</italic>, <italic>rRNAs</italic>).</p>
+<p>In bacteria such as <italic>Escherichia coli</italic>, transcriptional slippage (TS) occurs at simple sequence repeat (SSR) regions, especially at poly-A or poly-T runs [<xref rid="pone.0129396.ref010" ref-type="bibr">10</xref>,<xref rid="pone.0129396.ref011" ref-type="bibr">11</xref>]. TS is mediated by the bacterial-type RNA polymerase, which leads to the incorporation of more or less nucleotides into the transcript, thereby producing a population of heterogeneous mRNA sequences. The heterogeneous transcripts include RNA sequences that are inconsistent with their DNA templates. If TS occurs in open reading frames, RNA transcripts of a gene are expected to encode different protein products. Both plastid-encoded RNA polymerase (PEP) and nuclear-encoded RNA polymerases (NEP) are active in CPs [<xref rid="pone.0129396.ref012" ref-type="bibr">12</xref>]. Unlike the phage-type NEP, PEP has a core enzyme like <italic>E</italic>. <italic>coli</italic> RNA polymerase [<xref rid="pone.0129396.ref013" ref-type="bibr">13</xref>,<xref rid="pone.0129396.ref014" ref-type="bibr">14</xref>], so TS is likely to occur in CPs. TS has been reported to occur in endosymbiontic bacteria such as <italic>Buchnera aphidicola</italic> and <italic>Blochmannia pennsylvanicus</italic> [<xref rid="pone.0129396.ref015" ref-type="bibr">15</xref>], but has not yet been found in CPs. Recently, several RNA-seq-based papers showed the genome-wide view of transcript variability in <italic>Arabidopsis thaliana</italic> [<xref rid="pone.0129396.ref016" ref-type="bibr">16</xref>–<xref rid="pone.0129396.ref018" ref-type="bibr">18</xref>] and ferns [<xref rid="pone.0129396.ref019" ref-type="bibr">19</xref>], but these studies focused on only RNA editing (RE), not TS.</p>
+<p>RE is a post-transcriptional modification in CPs that can change C to U residues or vice versa at specific sites of RNAs in both coding and noncoding regions, producing transcripts that are inconsistent with their DNA templates [<xref rid="pone.0129396.ref020" ref-type="bibr">20</xref>,<xref rid="pone.0129396.ref021" ref-type="bibr">21</xref>]. RE in coding regions can alter the amino acid sequence of proteins. For example, editing of the second position of the ACG codon at 5’ end of transcripts will create an AUG initiation codon [<xref rid="pone.0129396.ref022" ref-type="bibr">22</xref>,<xref rid="pone.0129396.ref023" ref-type="bibr">23</xref>], and editing of the first position of CAA, CAG and CGA will create stop codons [<xref rid="pone.0129396.ref023" ref-type="bibr">23</xref>]. RE is common in CPs and editing patterns have been studied in crops such as maize [<xref rid="pone.0129396.ref024" ref-type="bibr">24</xref>,<xref rid="pone.0129396.ref025" ref-type="bibr">25</xref>], sugarcane [<xref rid="pone.0129396.ref026" ref-type="bibr">26</xref>], rice [<xref rid="pone.0129396.ref027" ref-type="bibr">27</xref>], pea [<xref rid="pone.0129396.ref028" ref-type="bibr">28</xref>], tomato [<xref rid="pone.0129396.ref026" ref-type="bibr">26</xref>], cotton [<xref rid="pone.0129396.ref029" ref-type="bibr">29</xref>] and black pine [<xref rid="pone.0129396.ref030" ref-type="bibr">30</xref>].</p>
+<p>Mungbean (<italic>Vigna radiata</italic> L.), an increasingly important legume crop, is currently grown on 6 million hectares, mainly in Asia, but also in Australia and Canada. Genomics studies of this crop lag behind that of many other plants, although because of its short generation time and relative small genome size, mungbean could be a model legume plant for genomic analyses. In the present study, we used mungbean as a model plant to investigate TS and RE in CP genes. We compared the CP genomes of three mungbean genotypes based on the deep sequencing results and analysed low frequency sequence variations in the transcriptome of mungbean RIL59. RT-PCR, cloning and Sanger sequencing were used to validate the findings. The results were compared to CP transcriptome variations in the major lineages of land plants.</p>
+</sec>
+<sec id="sec002" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<sec id="sec003">
+<title>Plant material and genomic DNA purification</title>
+<p>The seeds of <italic>Vigna radiata</italic> var. <italic>sublobata</italic> TC1966, <italic>V</italic>. <italic>radiata</italic> var. <italic>radiata</italic> NM92 and RIL59, an F<sub>11</sub> recombinant inbred line derived from a cross of TC1966 x NM92, were obtained from AVRDC—The World Vegetable Center, Taiwan. The seed was germinated and planted in the greenhouse of the Institute of Plant Molecular Biology, Academia Sinica, Taiwan. Genomic DNA (gDNA) of TC1966, NM92 and RIL59 was extracted from 0.5 g of young leaves harvested from seedlings with use of the Plant Genomic DNA Extraction Minprep kit (Viogene-Biotek Corp. New Taipei City, Taiwan) following the manufacturer’s instructions. The integrity and purity of the extracted gDNAs were confirmed by gel electrophoresis and spectroscopy verifying that the ratio 260 to 280 nm is &gt; 1.8 and the 260 to 230 nm is &gt; 2.0.</p>
+</sec>
+<sec id="sec004">
+<title>Whole genome sequencing and read assembly</title>
+<p>The qualified gDNAs of mungbean lines were sequenced on an Illumina HiSeq 2000 sequencer (Genomics BioSci &amp; Tech Co., New Taipei City, Taiwan). Paired-end reads (2 x 100 bp) trimmed with an error probability &lt; 0.05 were collected for genome assembly. The CP genome was assembled by use of MIRA 4 [<xref rid="pone.0129396.ref031" ref-type="bibr">31</xref>] and MITObim 1.7 [<xref rid="pone.0129396.ref032" ref-type="bibr">32</xref>]. <italic>V</italic>. <italic>radiata</italic> var. <italic>radiata</italic> KPS1 CP genome (GenBank accession no. GQ893027 [<xref rid="pone.0129396.ref033" ref-type="bibr">33</xref>]) was used as a reference. The workflow of MITObim was described in detail in [<xref rid="pone.0129396.ref033" ref-type="bibr">33</xref>]. The CP draft sequences generated from MITObim were re-mapped by using bowtie2 2.2.1 [<xref rid="pone.0129396.ref034" ref-type="bibr">34</xref>] to check the accuracy of assembly. Re-mapping alignments were visualized with use of Integrative Genomics Viewer 2.3.32 [<xref rid="pone.0129396.ref035" ref-type="bibr">35</xref>,<xref rid="pone.0129396.ref036" ref-type="bibr">36</xref>], then manually inspected. Sites and regions with a depth lower than 1/100 of the average coverage or ambiguous sequences were considered as gaps and were verified by PCR and Sanger sequencing. The boundaries of inverted repeats (IRs) and single copy regions (SCs) were verified by PCR and Sanger sequencing. Calculation of the genome coverage and conversion of alignment formats were carried out by using SAMtools 1.1 [<xref rid="pone.0129396.ref037" ref-type="bibr">37</xref>]. The CP sequences were deposited at DDBJ (DNA Data Bank of Japan).</p>
+</sec>
+<sec id="sec005">
+<title>Sequence annotation</title>
+<p>Protein coding, ribosomal RNA (rRNA), and tRNA genes were annotated by use of DOGMA [<xref rid="pone.0129396.ref038" ref-type="bibr">38</xref>] and the annotation was confirmed by BLAST searches (<ext-link ext-link-type="uri" xlink:href="http://blast.ncbi.nlm.nih.gov/Blast.cgi" xlink:type="simple">http://blast.ncbi.nlm.nih.gov/Blast.cgi</ext-link>). All tRNA genes were further verified by use of tRNAscan-SE 1.21 [<xref rid="pone.0129396.ref039" ref-type="bibr">39</xref>]. The genome map was drawn with use of Circos 0.67 [<xref rid="pone.0129396.ref040" ref-type="bibr">40</xref>]. CP SSRs with length more than 8 bp were identified by use of MISA [<xref rid="pone.0129396.ref041" ref-type="bibr">41</xref>] with default parameters. The CP genomes of different mungbean lines were aligned by use of bl2seq included in NCBI BLAST (<ext-link ext-link-type="uri" xlink:href="http://blast.ncbi.nlm.nih.gov/Blast.cgi" xlink:type="simple">http://blast.ncbi.nlm.nih.gov/Blast.cgi</ext-link>).</p>
+</sec>
+<sec id="sec006">
+<title>RNA extraction and RNA-seq</title>
+<p>Total RNA was extracted from a whole plant of 1-month-old RIL59 seedling with a modified CTAB-based method [<xref rid="pone.0129396.ref042" ref-type="bibr">42</xref>]. The gDNA contaminants were removed from extracted RNA by use of Ambion TURBO DNA-free Kit (Life Technologies Co.). DNA-removed RNA samples were analysed on an RNA LabChip with Agilent 2100 Bioanalyzer. Samples with &gt;7.0 RNA integrity, &gt;1.4 rRNA ratio, and no DNA contamination were selected for experiments. The qualified RNA underwent ribosomal RNA depletion with TruSeq Stranded Total RNA with Ribo-Zero Plant Kit (Illumina, San Diego, CA, USA). The cDNA libraries were generated by RNA fragmentation, random hexamer-primed cDNA synthesis, linker ligation and PCR amplification. RNA-seq was carried out on an Illumina HiSeq 2000 system (Genomics BioSci &amp; Tech Co., New Taipei City, Taiwan). Three criteria were used to filter dirty raw reads: remove reads with sequence adaptors; remove reads with &gt; 2% 'N' bases; and remove low-quality reads, which have more than half of bases with QA ≤ 15. The RNA-seq data of RIL59 was uploaded to the NCBI Sequence Read Archive (accession no. SRR1867748).</p>
+</sec>
+<sec id="sec007">
+<title>Identification of transcript diversity</title>
+<p>The clean reads were mapped to the sequence of the RIL59 CP genome with use of TopHat2 [<xref rid="pone.0129396.ref043" ref-type="bibr">43</xref>]/bowtie2 [<xref rid="pone.0129396.ref034" ref-type="bibr">34</xref>]. The parameters for TopHat2 used in mapping were set to “-N 2—read-gap-length 2—max-insertion-length 3—max-deletion-length 3”. The RNA-seq alignment was visualized by use of Integrative Genomics Viewer 2.3.32 [<xref rid="pone.0129396.ref035" ref-type="bibr">35</xref>,<xref rid="pone.0129396.ref036" ref-type="bibr">36</xref>], then manually inspected. The RE was inferred from C-to-U substitutions with a cut-off value of at least 5% edited reads. Indel-containing reads in every SSR locus were assumed to be results from TS. The editing ratio and TS frequency were inferred from the number of substitution and indel reads to total aligned reads at RE and TS sites, respectively.</p>
+</sec>
+<sec id="sec008">
+<title>Verification of TS and RE sites</title>
+<p>First strand cDNA was synthesized with use of SuperScript III Reverse Transcriptase (Invitrogen) following the manufacturer's protocol with gene-specific primers (<xref rid="pone.0129396.s012" ref-type="supplementary-material">S1 Table</xref>). PCR and RT-PCR were performed with use of a high fidelity Taq polymerase <italic>Pfu</italic> (Invitrogen). Amplicons of RT-PCR were directly sequenced by use of ABI PRISM 3730xl. To further verify the TS and RE ratio, RT-PCR amplicons were cloned, then sequenced using ABI PRISM 3730xl. The TS and RE ratio was inferred from the ratio of different sequences of clones.</p>
+</sec>
+</sec>
+<sec id="sec009" sec-type="conclusions">
+<title>Results and Discussion</title>
+<sec id="sec010">
+<title>Sequencing and general features of the mungbean CP genome</title>
+<p>The whole genome shotgun sequencing (WGS) of three mungbean lines, NM92, TC1966 and RIL59, generated 34.17, 37.96 and 154.48 million clean paired-end reads, respectively. Through baiting and iterative mapping, CP sequence reads were extracted from the total read pools and assembled into whole CP genomes. The achieved read depth of the CP genomes of TC1966, NM92, and RIL59 were on average 5,168-, 6,409- and 7,914-fold (<xref rid="pone.0129396.s013" ref-type="supplementary-material">S2 Table</xref>), respectively. We compared the CP genomes of wild mungbean TC1966 (DDBJ accession no. AP014692), mungbean line NM92 (DDBJ accession no. AP014691), RIL59 (this study) and line KPS1 [<xref rid="pone.0129396.ref033" ref-type="bibr">33</xref>]. The length of the TC1966 CP genome was 151,283 bp, which is 12 bp longer than the CP genome of NM92 and RIL59 (<xref rid="pone.0129396.g001" ref-type="fig">Fig 1</xref>). Both NM92 and RIL59 CP genomes have identical sequences, of 151,281 bp, and are 10 bp larger than the CP genome sequence of KPS1. In total, 213 SSRs, including one dinucleotide repeat and 212 single nucleotide repeats, were identified in the CP genomes (<xref rid="pone.0129396.s014" ref-type="supplementary-material">S3 Table</xref>). Overall, 108 of the single nucleotide repeats are 8-mers, 66 are 9-mers, 17 are 10-mers, 12 are 11-mers, and 5 are 12-mers. SSRs from 13-mer to 16-mer represent one single nucleotide repeat each.</p>
+<fig id="pone.0129396.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0129396.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>CP genome map and comparisons of <italic>Vigna radiata</italic> var. <italic>sublobata</italic> TC1966.</title>
+<p>Four concentric circles from the outside to inside represent the TC1966 CP genome map, the variances between TC1966 and NM92 (RIL59), the variances between TC1966 and KPS1, and the length scale, respectively. The histograms on the outer and the inner circles of the TC1966 CP genome map denote the clockwise and the anticlockwise transcription of the genes, respectively.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0129396.g001" position="float" xlink:type="simple"/>
+</fig>
+<p>The mungbean CP genome has a quadripartite structure (<xref rid="pone.0129396.g001" ref-type="fig">Fig 1</xref>): a pair of inverted repeats (IRs) is separated by a large single copy (LSC) and a small single copy (SSC). The sizes of the IRs, LSC and SSC in the CP genomes of NM92 (RIL59), TC1966 and KPS1 differ. In the cultivated mungbean NM92 and RIL59, the IR, LSC and SSC contain 26,475, 80,901 and 17,430 bp, respectively, whereas in TC1966, these elements are 26,482 bp, 80,904 bp and 17,415 bp, respectively. CP genomes of TC1966, NM92 and RIL59 are predicted to encode 126 genes that are consistent with those in KPS1 [<xref rid="pone.0129396.ref033" ref-type="bibr">33</xref>]. Eighteen of these genes are duplicated in IRs: 7 protein-coding genes (<italic>rps19</italic>, <italic>rpl2</italic>, <italic>rpl23</italic>, <italic>ycf2</italic>, <italic>ndhB</italic>, <italic>rps7</italic> and 3’<italic>rps12</italic>), 7 tRNA genes (<italic>I</italic>-<italic>CAU</italic>, <italic>L</italic>-<italic>CAA</italic>, <italic>V</italic>-<italic>GAC</italic>, <italic>I</italic>-<italic>GAU</italic>, <italic>A</italic>-<italic>UGC</italic>, <italic>R</italic>-<italic>ACG</italic> and <italic>N</italic>-<italic>GUU</italic>), and 4 rRNA genes (<italic>rrn16</italic>, <italic>rrn23</italic>, <italic>rrn4</italic>.<italic>5</italic> and <italic>rrn5</italic>). Overall, 107 unique genes, including 29 tRNAs, 4 rRNAs and 74 proteins, are present as single copies in the mungbean CP genome.</p>
+</sec>
+<sec id="sec011">
+<title>SNVs, indels, and possibility of paternal leakage</title>
+<p>The four mungbean CP genomes were aligned for detailed sequence comparison. Between TC1966 and NM92 (RIL59) CP genomes, 78 single nucleotide variations (SNVs) and 9 indels contribute a 78-bp and 10-bp difference (<xref rid="pone.0129396.s015" ref-type="supplementary-material">S4</xref> and <xref rid="pone.0129396.s016" ref-type="supplementary-material">S5</xref> Tables), respectively. In total, 88 bp distinguish the CP genomes of TC1966 from NM92 (RIL59). Of the 78 SNVs, 13 are transitions and 65 are transversions. Of the nine indels, eight are 1-bp and one is 2-bp. As expected, the CP genome of the cultivated variety KPS1 is more distant from wild mungbean TC1966 than the other two cultivated mungbean genotypes NM92 and RIL59 (<xref rid="pone.0129396.s015" ref-type="supplementary-material">S4</xref> and <xref rid="pone.0129396.s016" ref-type="supplementary-material">S5</xref> Tables). The KPS1 CP genome contains all variants that distinguish NM92 (RIL59) from TC1966 and has 32 additional 1-bp indels as compared with TC1966 (<xref rid="pone.0129396.g001" ref-type="fig">Fig 1</xref>). Uniparental transmission of the CP genome via the female gametophyte is the most common mode of inheritance in angiosperms [<xref rid="pone.0129396.ref044" ref-type="bibr">44</xref>], but a low-frequency leakage of plastids via pollen seems to be universal in plants. Paternal leakage was assessed for the cross NM92 x TC1966 by in-depth comparison of the CP genome sequence polymorphisms between the parents and RIL59. The RIL59 CP genome was identical to its maternal parent NM92. No heteroplasmy pattern was observed in RIL59 after assessing all SNVs and indels documented for comparing of the CP genomes of TC1966 and NM92 at a sequencing depth from 7,762- to 7,998-fold. The absence of TC1966-specific variants suggested that the possibility of paternal leakage is low or even absent in RIL59.</p>
+</sec>
+<sec id="sec012">
+<title>Transcriptional slippage in the mungbean CP genome is positively correlated with SSR length</title>
+<p>TS takes place in bacteria at SSR tracts and alters the transcript size at SSRs. To study the TS pattern in the mungbean CP genome, we assessed transcript diversity at all SSRs present in the CP genome. For 213 CP SSRs, variation in SSR sequence length was observed in 0 to 73.86% of all transcripts from SSR-containing loci (<xref rid="pone.0129396.s017" ref-type="supplementary-material">S6 Table</xref>). The 13-, 14-, 15- and 16-bp-long SSRs presented in single locus. Excluding the single-locus SSRs that lack replicates in statistical analyses, the mean TS frequency was positively correlated with the length of the corresponding SSR motif (R<sup>2</sup> = 0.9911, <xref rid="pone.0129396.g002" ref-type="fig">Fig 2</xref>). Although the R<sup>2</sup> is close to 1, the standard errors are relative higher for longer SSRs, indicating TS frequency tends to be highly variable in longer SSRs. This finding suggested that several polymerases with different fidelity are subject to errors at longer SSR transcripts. The polymerases involved in this phenomenon are suggested to be PEP, NEP, and even the polymerases used in the RNA-seq experiments [<xref rid="pone.0129396.ref045" ref-type="bibr">45</xref>,<xref rid="pone.0129396.ref046" ref-type="bibr">46</xref>]. This suggestion is reasonable because genes in CP are transcribed by PEP, NEP only or both [<xref rid="pone.0129396.ref012" ref-type="bibr">12</xref>].</p>
+<fig id="pone.0129396.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0129396.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Correlation between transcriptional slippage (TS) frequency and simple sequence repeat (SSR) length.</title>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0129396.g002" position="float" xlink:type="simple"/>
+</fig>
+<p>Moreover, Taq polymerases and reverse transcriptases are possibly subject to errors at SSRs [<xref rid="pone.0129396.ref045" ref-type="bibr">45</xref>,<xref rid="pone.0129396.ref046" ref-type="bibr">46</xref>]. In order to minimize the risk that the indels detected in the transcriptome sequences were experimental artefacts, high fidelity polymerases such as <italic>Pfu</italic> and SuperScript III Reverse Transcriptase were used in the verification experiments. Nevertheless it cannot be excluded that indels introduced by the polymerase and reverse transcriptase contributed to the observed transcript variability.</p>
+</sec>
+<sec id="sec013">
+<title>Identification of RE sites</title>
+<p>RE sites were identified as mismatches between RNA-seq reads and the CP genome sequence. In total, 41 C-to-U editing sites were detected in transcripts of 23 CP genes (<xref rid="pone.0129396.t001" ref-type="table">Table 1</xref>), with no U-to-C editing identified. The editing sites were almost exclusively located in protein-coding regions, only one site was found in the intergenic region between <italic>rpl20</italic> and 5’<italic>rps12</italic> genes. Five editing sites altered the first nucleotide of a codon, 34 sites the second, and one site the third nucleotide of a codon. Altogether, 39 nonsynonymous and one synonymous substitutions were generated in the RIL59 CP genome by RE. The editing level was inferred from the C versus U ratio of the transcripts derived from the respective loci (<xref rid="pone.0129396.t001" ref-type="table">Table 1</xref>). Three sites located in <italic>atpA</italic>, <italic>ndhD</italic> and the intergenic region between <italic>rpl20</italic> and 5’<italic>rps12</italic> were edited at the lowest observed frequency (&lt; 33.3%). Five sites located in <italic>psbN</italic>, <italic>rpoA</italic>, <italic>petL</italic>, <italic>rpoB</italic> and <italic>rpoC1</italic> showed moderate editing levels (33.3–66.7%) and the remaining sites were edited at high levels (&gt; 66.7%).</p>
+<table-wrap id="pone.0129396.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0129396.t001</object-id>
+<label>Table 1</label> <caption><title>RNA editing pattern in the CP genome of mungbean accession RIL59.</title></caption>
+<alternatives>
+<graphic id="pone.0129396.t001g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0129396.t001" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Gene</th>
+<th colspan="2" align="center" rowspan="1">Genome</th>
+<th colspan="2" align="center" rowspan="1">Codon</th>
+<th align="left" rowspan="1" colspan="1">Codon position</th>
+<th colspan="2" align="center" rowspan="1">Amino acid</th>
+<th align="left" rowspan="1" colspan="1">Editing level</th>
+</tr>
+<tr>
+<th align="left" rowspan="1" colspan="1"/>
+<th align="left" rowspan="1" colspan="1">Position</th>
+<th align="left" rowspan="1" colspan="1">Strand</th>
+<th align="left" rowspan="1" colspan="1">from</th>
+<th align="left" rowspan="1" colspan="1">to</th>
+<th align="left" rowspan="1" colspan="1"/>
+<th align="left" rowspan="1" colspan="1">from</th>
+<th align="left" rowspan="1" colspan="1">to</th>
+<th align="left" rowspan="1" colspan="1">U/C (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhC</italic></td>
+<td align="left" rowspan="1" colspan="1">13922</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">84</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>rps14</italic></td>
+<td align="left" rowspan="1" colspan="1">26562</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">97</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>rpoB</italic></td>
+<td align="left" rowspan="1" colspan="1">37461</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCU</td>
+<td align="left" rowspan="1" colspan="1">UUU</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">F</td>
+<td align="left" rowspan="1" colspan="1">59</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>rpoB</italic></td>
+<td align="left" rowspan="1" colspan="1">37674</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">68</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>rpoB</italic></td>
+<td align="left" rowspan="1" colspan="1">37689</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCG</td>
+<td align="left" rowspan="1" colspan="1">UUG</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">80</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>rpoB</italic></td>
+<td align="left" rowspan="1" colspan="1">39123</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCU</td>
+<td align="left" rowspan="1" colspan="1">UUU</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">F</td>
+<td align="left" rowspan="1" colspan="1">73</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>rpoC1</italic></td>
+<td align="left" rowspan="1" colspan="1">40403</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">84</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>rpoC1</italic></td>
+<td align="left" rowspan="1" colspan="1">41679</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">67</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>rps2</italic></td>
+<td align="left" rowspan="1" colspan="1">47981</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">ACA</td>
+<td align="left" rowspan="1" colspan="1">AUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">T</td>
+<td align="left" rowspan="1" colspan="1">I</td>
+<td align="left" rowspan="1" colspan="1">97</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>rps2</italic></td>
+<td align="left" rowspan="1" colspan="1">48095</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">97</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>atpF</italic></td>
+<td align="left" rowspan="1" colspan="1">51307</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">CCA</td>
+<td align="left" rowspan="1" colspan="1">CUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">P</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">98</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>atpA</italic><sup>1</sup></td>
+<td align="left" rowspan="1" colspan="1">53350</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCC</td>
+<td align="left" rowspan="1" colspan="1">UCU</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>accD</italic></td>
+<td align="left" rowspan="1" colspan="1">59680</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCG</td>
+<td align="left" rowspan="1" colspan="1">UUG</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">96</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>psaI</italic></td>
+<td align="left" rowspan="1" colspan="1">60699</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">CAU</td>
+<td align="left" rowspan="1" colspan="1">UAU</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">H</td>
+<td align="left" rowspan="1" colspan="1">Y</td>
+<td align="left" rowspan="1" colspan="1">91</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>psbF</italic></td>
+<td align="left" rowspan="1" colspan="1">64845</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCU</td>
+<td align="left" rowspan="1" colspan="1">UUU</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">F</td>
+<td align="left" rowspan="1" colspan="1">96</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>psbE</italic></td>
+<td align="left" rowspan="1" colspan="1">64969</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">CCU</td>
+<td align="left" rowspan="1" colspan="1">UCU</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">P</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">98</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>petL</italic></td>
+<td align="left" rowspan="1" colspan="1">66108</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">CCC</td>
+<td align="left" rowspan="1" colspan="1">CUC</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">P</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">57</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>rps18</italic></td>
+<td align="left" rowspan="1" colspan="1">68155</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCG</td>
+<td align="left" rowspan="1" colspan="1">UUG</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">82</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Spacer<xref rid="t001fn001" ref-type="table-fn">*</xref></td>
+<td align="left" rowspan="1" colspan="1">68964</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">C</td>
+<td align="left" rowspan="1" colspan="1">U</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">27</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>clpP</italic></td>
+<td align="left" rowspan="1" colspan="1">70022</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">CAU</td>
+<td align="left" rowspan="1" colspan="1">UAU</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">H</td>
+<td align="left" rowspan="1" colspan="1">Y</td>
+<td align="left" rowspan="1" colspan="1">90</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>psbN</italic></td>
+<td align="left" rowspan="1" colspan="1">74413</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCU</td>
+<td align="left" rowspan="1" colspan="1">UUU</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">F</td>
+<td align="left" rowspan="1" colspan="1">31</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>petB</italic></td>
+<td align="left" rowspan="1" colspan="1">76357</td>
+<td align="left" rowspan="1" colspan="1">+</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">98</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>rpoA</italic></td>
+<td align="left" rowspan="1" colspan="1">78836</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">35</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>rpl23</italic></td>
+<td align="left" rowspan="1" colspan="1">83522</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">74</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhB</italic></td>
+<td align="left" rowspan="1" colspan="1">92403</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">CCA</td>
+<td align="left" rowspan="1" colspan="1">CUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">P</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">89</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhB</italic></td>
+<td align="left" rowspan="1" colspan="1">92629</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">CAU</td>
+<td align="left" rowspan="1" colspan="1">UAU</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">H</td>
+<td align="left" rowspan="1" colspan="1">Y</td>
+<td align="left" rowspan="1" colspan="1">95</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhB</italic></td>
+<td align="left" rowspan="1" colspan="1">92772</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">93</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhB</italic></td>
+<td align="left" rowspan="1" colspan="1">93048</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">84</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhB</italic></td>
+<td align="left" rowspan="1" colspan="1">93054</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">68</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhB</italic></td>
+<td align="left" rowspan="1" colspan="1">93830</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCU</td>
+<td align="left" rowspan="1" colspan="1">UUU</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">F</td>
+<td align="left" rowspan="1" colspan="1">92</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhB</italic></td>
+<td align="left" rowspan="1" colspan="1">93839</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">CCA</td>
+<td align="left" rowspan="1" colspan="1">CUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">P</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">84</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhB</italic></td>
+<td align="left" rowspan="1" colspan="1">93990</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">CAU</td>
+<td align="left" rowspan="1" colspan="1">UAU</td>
+<td align="left" rowspan="1" colspan="1">1</td>
+<td align="left" rowspan="1" colspan="1">H</td>
+<td align="left" rowspan="1" colspan="1">Y</td>
+<td align="left" rowspan="1" colspan="1">87</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhB</italic></td>
+<td align="left" rowspan="1" colspan="1">94034</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">ACG</td>
+<td align="left" rowspan="1" colspan="1">AUG</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">T</td>
+<td align="left" rowspan="1" colspan="1">M</td>
+<td align="left" rowspan="1" colspan="1">83</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhB</italic></td>
+<td align="left" rowspan="1" colspan="1">94427</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">96</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhD</italic></td>
+<td align="left" rowspan="1" colspan="1">112418</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">77</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhD</italic></td>
+<td align="left" rowspan="1" colspan="1">112622</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">95</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhD</italic></td>
+<td align="left" rowspan="1" colspan="1">112913</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">ACA</td>
+<td align="left" rowspan="1" colspan="1">AUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">T</td>
+<td align="left" rowspan="1" colspan="1">I</td>
+<td align="left" rowspan="1" colspan="1">97</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhD</italic></td>
+<td align="left" rowspan="1" colspan="1">113294</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">ACG</td>
+<td align="left" rowspan="1" colspan="1">AUG</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">T</td>
+<td align="left" rowspan="1" colspan="1">M</td>
+<td align="left" rowspan="1" colspan="1">14</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhE</italic></td>
+<td align="left" rowspan="1" colspan="1">114034</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">CCG</td>
+<td align="left" rowspan="1" colspan="1">CUG</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">P</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">86</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhA</italic></td>
+<td align="left" rowspan="1" colspan="1">115872</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCU</td>
+<td align="left" rowspan="1" colspan="1">UUU</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">F</td>
+<td align="left" rowspan="1" colspan="1">84</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>ndhA</italic></td>
+<td align="left" rowspan="1" colspan="1">117875</td>
+<td align="left" rowspan="1" colspan="1">-</td>
+<td align="left" rowspan="1" colspan="1">UCA</td>
+<td align="left" rowspan="1" colspan="1">UUA</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">S</td>
+<td align="left" rowspan="1" colspan="1">L</td>
+<td align="left" rowspan="1" colspan="1">93</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t001fn001"><p>* denotes a synonymous substitution.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec014">
+<title>U-indels overlapping with RE sites appear in transcripts of <italic>psbF</italic></title>
+<p>RNA-seq data suggested that 12.03% of <italic>psbF</italic> transcripts had a U-insertion or U-deletion near the editing site (<xref rid="pone.0129396.s001" ref-type="supplementary-material">S1 Fig</xref>). The observation was verified by RT-PCR and Sanger sequencing. The RT-PCR products showed sequencing “noise” at the editing sites and the end of the SSR (<xref rid="pone.0129396.g003" ref-type="fig">Fig 3</xref>). For further confirmation of the U-indels, the amplicons were cloned and 62 independent colonies were randomly chosen for Sanger sequencing. From these clones, 47 (75.81%) showed C to U editing, 5 (8.06%) had unedited sequences, and U-insertion and U-deletion sequences were found in 4 (6.45%) and 5 (8.06%) clones, respectively. One of the clones (1.61%) had an unedited C at the RE position but a U deletion nearby (<xref rid="pone.0129396.g003" ref-type="fig">Fig 3</xref> and <xref rid="pone.0129396.s002" ref-type="supplementary-material">S2 Fig</xref>). The similar percentage of indel revealed in the transcripts in both RNA-seq data and experimental verification with use of high fidelity polymerases suggests that TS indeed subjects indels at the locus rather than an artefact from Taq polymerase.</p>
+<fig id="pone.0129396.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0129396.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>RNA transcript variation of <italic>psbF</italic> gene.</title>
+<p>(A) CP genome sequence detected by direct sequencing of PCR amplicons. (B) The sequencing “noise” at the U-indel and RNA editing (RE) sites of the transcripts detected by direct sequencing of RT-PCR fragments. Five <italic>psbF</italic> sequence variants were obtained after sequence analysis of cloned RT-PCR amplicons. One predicted sequence, which could not be detected by sequencing of clones, is marked with a star.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0129396.g003" position="float" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec015">
+<title>Origin of the U-indel containing transcripts</title>
+<p>Horizontal gene transfer from CPs to the nucleus or to mitochondria has been documented for plants [<xref rid="pone.0129396.ref047" ref-type="bibr">47</xref>]. Nuclear plastid like (NUPT) and mitochondrial plastid like (MTPT) sequences generally accumulated substitutions and indels during their evolution. To test whether the U-indel <italic>psbF</italic> transcripts were derived from NUPTs or MTPTs and therefore not from the CP genome, we used bowtie2 with default parameters for mapping WGS and RNA-seq reads to the CP genome. The WGS reads, comprising 15.45 Gbp, covered the 579 Mbp mungbean genome [<xref rid="pone.0129396.ref048" ref-type="bibr">48</xref>] approximately 26.7-fold. For WGS read mapping, if reads from NUPTs and MTPTs were mapped to the CP genome, their depths should be approximately equal to or many times greater than 26.7-fold, depending on the copy numbers of NUPTs and MTPTs in mungbean. All WGS reads corresponding to <italic>psbF</italic> mapped to the CP genome without any U-indel (<xref rid="pone.0129396.s003" ref-type="supplementary-material">S3 Fig</xref>). In contrast, RNA-seq reads mapped by the same procedure showed C-to-U substitution and U-indel patterns (<xref rid="pone.0129396.s003" ref-type="supplementary-material">S3 Fig</xref>), which strongly indicates that the U-indels are derived from transcriptional processes at the CP genome level, not from NUPTs or MTPTs, which agrees with the <italic>psbF</italic> variants derived from the CP genome.</p>
+</sec>
+<sec id="sec016">
+<title>Relation of U-indels in <italic>psbF</italic> transcripts to RE</title>
+<p>C-to-U and U-to-C substitutions by RE are known processes in plant organelles [<xref rid="pone.0129396.ref024" ref-type="bibr">24</xref>,<xref rid="pone.0129396.ref025" ref-type="bibr">25</xref>], whereas U-indels have been detected in mitochondrial transcripts of Trypanosomatids and Myxomycota [<xref rid="pone.0129396.ref049" ref-type="bibr">49</xref>]. U-indels have not yet been analyzed in-depth for plants. To test whether U-indels in <italic>psbF</italic> transcripts are related to RE, we searched for evidence for these features in publicly available RNA-seq data for land plants. Transcriptome sequence data for four dicot species (Rosid: <italic>Glycine max</italic>, <italic>Arabidopsis thaliana</italic>, <italic>Brassica rapa</italic>; and Asterid: <italic>Nicotiana tabacum</italic>), two monocot species (<italic>Oryza sativa</italic> and <italic>Zea mays</italic>), two gymnosperm species (<italic>Pinus taeda</italic> and <italic>Ginkgo biloba</italic>) and a moss (<italic>Physcomitrella patens</italic>) available from the Sequence Read Archive (SRA) at NCBI were analyzed for presence of U-indels and RE in <italic>psbF</italic> transcripts (<xref rid="pone.0129396.s018" ref-type="supplementary-material">S7 Table</xref>). All tested Rosid species and <italic>G</italic>. <italic>biloba</italic> but not the remaining species shared the same editing site in <italic>psbF</italic> [<xref rid="pone.0129396.ref050" ref-type="bibr">50</xref>]. The SRA data for these nine species were mapped to the <italic>psbF</italic> sequences of the corresponding CP genomes, and the C-to-U editing pattern in these nine species was consistent with previous studies [<xref rid="pone.0129396.ref050" ref-type="bibr">50</xref>] (<xref rid="pone.0129396.s004" ref-type="supplementary-material">S4 Fig</xref>). Interestingly, the U-insertion and U-deletion patterns were present in tested species independent of whether the C-to-U RE site was present or not (<xref rid="pone.0129396.s004" ref-type="supplementary-material">S4 Fig</xref>). The U-insertion and U-deletion patterns in <italic>G</italic>. <italic>biloba</italic> and <italic>P</italic>. <italic>patens</italic> are possibly due to insufficient quantity of RNA-seq reads because the SRA datasets were generated from poly-A enrichment methods, not from rRNA depletion methods. The RNA-seq mapping results were validated by Sanger sequencing, which resulted in a similar sequence “noise” in <italic>psbF</italic> transcripts for <italic>G</italic>. <italic>max</italic>, <italic>A</italic>. <italic>thaliana</italic>, <italic>B</italic>. <italic>rapa</italic> and <italic>N</italic>. <italic>tabacum</italic> as in mungbean (<xref rid="pone.0129396.g004" ref-type="fig">Fig 4</xref>) and a weak “noise” peak in tested monocots, gymnosperms and moss.</p>
+<fig id="pone.0129396.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0129396.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title><italic>PsbF</italic> CP genome sequence and <italic>psbF</italic> transcript variation in main lineages of land plants.</title>
+<p>Sequence chromatograms of PCR and RT-PCR amplicons of <italic>psbF</italic> from <italic>Arabidopsis thaliana</italic> (AT), <italic>Brassica rapa</italic> (BR), <italic>Glycine max</italic> (GM), <italic>Nicotiana tabacum</italic> (NT), <italic>Oryza sativa</italic> (OS), <italic>Zea mays</italic> (ZM), <italic>Pinus taiwanensis</italic> (PT), <italic>Ginkgo biloba</italic> (GB), and <italic>Physcomitrella patens</italic> (PP) showing the RE and TS sites (as sequencing “noise”) in mapped transcripts.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0129396.g004" position="float" xlink:type="simple"/>
+</fig>
+<p>To further verify this finding, we randomly cloned and sequenced 80 of <italic>psbF</italic> RT-PCR amplicons from <italic>N</italic>. <italic>tabacum</italic>, which lacks the RE site in <italic>psbF</italic>, and found that two clones had an U-insertion and one clone an U-deletion (<xref rid="pone.0129396.s005" ref-type="supplementary-material">S5 Fig</xref>). Additionally, the <italic>psbF</italic> amplicons derived from <italic>P</italic>. <italic>patens</italic>, the most distant species of the chosen land plant set, were selected for cloning to ensure U-indels. From 155 sequenced <italic>psbF</italic> clones for this species, two clones (1.3%) showed U-indels at the poly-U SSR of the gene (<xref rid="pone.0129396.s006" ref-type="supplementary-material">S6 Fig</xref>). From the presence of U-indels in <italic>psbF</italic> transcripts for the two species that lack the RE site in this gene we concluded that C-to-U RE and U-indel generation in this gene are independent of each other. The sequence surrounding the RE site in <italic>psbF</italic> contains nine continual T residues in mungbean, suggesting that U-indels in <italic>psbF</italic> transcripts are generated by TS.</p>
+</sec>
+<sec id="sec017">
+<title>Sequence variation in <italic>psbF</italic> transcripts might lead to at least five different proteins sharing the same N-terminal</title>
+<p>The <italic>psbF</italic> gene is part of the <italic>psbE</italic> operon, which contains <italic>psbE</italic>, <italic>psbF</italic>, <italic>psbL</italic> and <italic>psbJ</italic> genes. The <italic>psbF</italic> transcripts encode a 39 amino acid protein, with an edited phenylalanine or an unedited serine codon in the 77th nucleotide. U-indels in <italic>psbF</italic> transcripts lead to frame shifts, resulting in aberrant termination of translation. U-insertion at this site in <italic>psbF</italic> transcripts would result in a longer protein variant with 42 instead of 39 amino acid residues. The first 27 N-terminal amino acid residues of this variant would correspond to those of the common <italic>psbF</italic> protein, whereas the 12 following amino acid residues would be altered by the frame shift. The common <italic>psbF</italic> stop codon would be bypassed, thus resulting in a <italic>psbF</italic> variant with three additional amino acid residues. U-deletion transcripts would also bypass the common <italic>psbF</italic> stop codon and extend the <italic>psbF</italic> open reading frame to the stop codon of <italic>psbL</italic>, thus resulting in a <italic>psbF</italic>-<italic>psbL</italic> fusion protein with 85 amino acids in length. Because RE and TS are independent mechanisms, six different <italic>psbF</italic> transcripts are expected to be generated, but only five were identified by our experiments (<xref rid="pone.0129396.g003" ref-type="fig">Fig 3</xref>). Further research at the protein level is needed to test whether every different transcript can be translated. Also, if transcripts are translated, the functions of the <italic>psbF</italic> protein variants <italic>in vivo</italic> would be of interest.</p>
+</sec>
+<sec id="sec018">
+<title>TS patterns in <italic>ndhA</italic> and <italic>rps2</italic> genes</title>
+<p>The <italic>psbE</italic> operon is conserved in land plants [<xref rid="pone.0129396.ref051" ref-type="bibr">51</xref>] and is mainly transcribed by PEP, an <italic>E</italic>. <italic>coli</italic>-like RNA polymerase. Similar to the <italic>psbF</italic> transcripts, TS may occur in other PEP transcribed genes. Like <italic>psbF</italic>, the <italic>ndhA</italic> is also mainly transcribed by PEP. The <italic>ndhA</italic> gene in land plants is conserved, except Pinaceae lack all <italic>ndh</italic> genes [<xref rid="pone.0129396.ref052" ref-type="bibr">52</xref>]. In addition, the <italic>ndhA</italic> has high TS frequency (22.37%) at a poly-U SSR with 9 bp in size (<xref rid="pone.0129396.s017" ref-type="supplementary-material">S6 Table</xref>). Therefore, we assessed the TS patterns of the <italic>ndhA</italic> gene in the main lineages of land plants using both bioinformatic and experimental methods.</p>
+<p>Although the SSR in <italic>ndhA</italic> is relatively short, 2.24% reads still revealed indels at WGS mapping result (<xref rid="pone.0129396.s007" ref-type="supplementary-material">S7 Fig</xref>). We searched the <italic>ndhA</italic> sequence against whole nuclear [<xref rid="pone.0129396.ref053" ref-type="bibr">53</xref>] and mitochondrial genomes [<xref rid="pone.0129396.ref054" ref-type="bibr">54</xref>] of mungbean by using blastn. Results showed that <italic>ndhA</italic>-like sequences were not found in mungbean nuclear and mitochondrial genomes. This suggested that the indel-reads originate from CP genome and possibly generated from a non-proofreading Taq used in library construction during WGS. A clear Sanger sequencing signal of amplicon from a proofreading <italic>Pfu</italic> further supported this suggestion (<xref rid="pone.0129396.s007" ref-type="supplementary-material">S7 Fig</xref>).</p>
+<p>The RNA-seq mapping results show an apparent signal of TS in <italic>V</italic>. <italic>radiata</italic> and <italic>G</italic>. <italic>max</italic>, but no or little signal in <italic>A</italic>. <italic>thaliana</italic>, <italic>B</italic>. <italic>rapa</italic>, <italic>N</italic>. <italic>tabacum</italic>, <italic>O</italic>. <italic>sativa</italic>, <italic>Z</italic>. <italic>mays</italic>, <italic>G</italic>. <italic>biloba</italic> and <italic>P</italic>. <italic>patens</italic> (<xref rid="pone.0129396.s008" ref-type="supplementary-material">S8 Fig</xref>). The reasons for lacking TS signals may be that the SSR was interrupted by a nucleotide in <italic>A</italic>. <italic>thaliana</italic>, <italic>B</italic>. <italic>rapa</italic>, <italic>N</italic>. <italic>tabacum</italic>, <italic>O</italic>. <italic>sativa</italic>, <italic>Z</italic>. <italic>mays</italic> and <italic>G</italic>. <italic>biloba</italic>, and the insufficient reads was aligned in <italic>P</italic>. <italic>patens</italic>. Sanger sequencing of RT-PCR amplicons was performed to verify this suggestion (<xref rid="pone.0129396.s009" ref-type="supplementary-material">S9 Fig</xref>). The “noise” peaks of sequencing were revealed in <italic>V</italic>. <italic>radiata</italic>, <italic>G</italic>. <italic>max</italic> and <italic>P</italic>. <italic>patens</italic> but not in <italic>A</italic>. <italic>thaliana</italic>, <italic>B</italic>. <italic>rapa</italic>, <italic>N</italic>. <italic>tabacum</italic>, <italic>O</italic>. <italic>sativa</italic>, <italic>Z</italic>. <italic>mays</italic> and <italic>G</italic>. <italic>biloba</italic>.</p>
+<p>Interestingly, a poly-A SSR in the <italic>ndhA</italic> intron of <italic>A</italic>. <italic>thaliana</italic> had a 6.3% of A-indel reads at that SSR. The <italic>rps2</italic> gene was selected to ensure whether TS could occur at poly-A type SSRs. The SSR region in <italic>rps2</italic> gene is conserved in Fabaceae but not in other land plants. Similar to the <italic>ndhA</italic> gene, 4.78% reads showed indels from mungbean WGS mapping result of <italic>rps2</italic> gene (<xref rid="pone.0129396.s010" ref-type="supplementary-material">S10 Fig</xref>). Also, the results from blastn and amplicon sequencing supported that the <italic>rps2</italic> gene only present in CP genome and the indel-read possibly generated from a non-proofreading Taq.</p>
+<p>At the results of RT-PCR amplicon sequencing, as expected, the “noise” peaks are revealed only in Fabaceae species, <italic>V</italic>. <italic>radiata</italic> and <italic>G</italic>. <italic>max</italic> (<xref rid="pone.0129396.s011" ref-type="supplementary-material">S11 Fig</xref>). Altogether, TS is associated with the SSR, especially in genes transcribed by PEP. Therefore, indels at SSR sites caused by TS are a common feature in land plants.</p>
+</sec>
+</sec>
+<sec id="sec019" sec-type="conclusions">
+<title>Conclusions</title>
+<p>The study demonstrated that deep RNA-seq is a powerful tool to obtain a detailed view of transcript variability and can detect sequence variations caused by TS and RE. TS is a common phenomenon in CP transcripts of plants. In mungbean, TS frequency in CP transcripts is highly positively associated with the CP SSR length. TS in CP transcription resembles TS in bacteria [<xref rid="pone.0129396.ref010" ref-type="bibr">10</xref>,<xref rid="pone.0129396.ref011" ref-type="bibr">11</xref>] and TS in CP may be a relict from the bacteria origin of these organelles. Our results demonstrated that TS and RE caused transcript diversity in the CP genome. The implication of the diversity on translation and protein function remains to be elucidated.</p>
+</sec>
+<sec id="sec020">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0129396.s001" xlink:href="info:doi/10.1371/journal.pone.0129396.s001" mimetype="application/pdf" position="float" xlink:type="simple">
+<label>S1 Fig</label>
+<caption>
+<title>Alignments of RNA-seq reads at the <italic>psbF</italic> gene of mungbean accession RIL59 by using TopHat2.</title>
+<p>The editing site is flanked by two vertical black lines. The read sequence at the flanked site is calculated and shown in the black square. The horizontal black line indicates deletions in a read, and the purple spots show insertions in overlapping reads.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s002" xlink:href="info:doi/10.1371/journal.pone.0129396.s002" mimetype="application/pdf" position="float" xlink:type="simple">
+<label>S2 Fig</label>
+<caption>
+<title>Sequence chromatograms of cloned mungbean <italic>psbF</italic> transcripts.</title>
+<p>Five kinds of sequences were identified: normal transcripts without (A) or with (B) editing, U-deletion transcripts without (C) or with (D) editing, and U-insertion transcripts with editing (E).</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s003" xlink:href="info:doi/10.1371/journal.pone.0129396.s003" mimetype="application/pdf" position="float" xlink:type="simple">
+<label>S3 Fig</label>
+<caption>
+<title>Alignments of WGS and RNA-seq reads at the <italic>psbF</italic> gene of mungbean accession RIL59 by using bowtie2.</title>
+<p>WGS (A) and RNA-seq (B) reads were mapped to the <italic>psbF</italic> gene. The editing site is flanked by two vertical dashed lines. The read sequence at the flanked site is calculated and shown in the black square. The horizontal black line indicates deletions in a read, and the purple spots show insertions in overlapping reads.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s004" xlink:href="info:doi/10.1371/journal.pone.0129396.s004" mimetype="application/pdf" position="float" xlink:type="simple">
+<label>S4 Fig</label>
+<caption>
+<title>Alignment of RNA-seq reads at the <italic>psbF</italic> gene.</title>
+<p><italic>G</italic>. <italic>max</italic> (A), <italic>A</italic>. <italic>thaliana</italic> (B), <italic>B</italic>. <italic>rapa</italic> (C), <italic>N</italic>. <italic>tabacum</italic> (D), <italic>O</italic>. <italic>sativa</italic> (E), <italic>Z</italic>. <italic>mays</italic> (F), <italic>P</italic>. <italic>taeda</italic> (G), <italic>G</italic>. <italic>biloba</italic> (H), and <italic>P</italic>. <italic>patens</italic> (I) were included in the analysis. The horizontal black line indicates a deletion, and the purple spot indicates an insertion. The black square denotes the count of read sequences at the site flanked by two vertical dashed lines.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s005" xlink:href="info:doi/10.1371/journal.pone.0129396.s005" mimetype="application/pdf" position="float" xlink:type="simple">
+<label>S5 Fig</label>
+<caption>
+<title>Sequence chromatograms of cloned tobacco <italic>psbF</italic> transcripts.</title>
+<p>Four kinds of sequences were identified: normal transcripts without (A) or with (B) editing, U-deletion transcripts without (C) editing, and U-insertion transcripts without editing (D).</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s006" xlink:href="info:doi/10.1371/journal.pone.0129396.s006" mimetype="application/pdf" position="float" xlink:type="simple">
+<label>S6 Fig</label>
+<caption>
+<title>Sequence chromatograms of cloned <italic>Physcomitrella psbF</italic> transcripts.</title>
+<p>Three kinds of sequences were identified: normal transcripts (A), U-deletion transcripts (B) and U-insertion transcripts (C).</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s007" xlink:href="info:doi/10.1371/journal.pone.0129396.s007" mimetype="application/pdf" position="float" xlink:type="simple">
+<label>S7 Fig</label>
+<caption>
+<title>WGS, RNA-seq mapping and PCR amplicon sequencing at <italic>ndhA</italic> gene.</title>
+<p>The alignments of WGS (A) and RNA-seq (B) were carried out by bowtie 2 and TopHat2, respectively. PCR amplicon (C) generated from high fidelity <italic>Pfu</italic> was directly sequenced using ABI PRISM 3730xl.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s008" xlink:href="info:doi/10.1371/journal.pone.0129396.s008" mimetype="application/pdf" position="float" xlink:type="simple">
+<label>S8 Fig</label>
+<caption>
+<title>Alignments of RNA-seq reads at the <italic>ndhA</italic> gene by using bowtie 2.</title>
+<p><italic>V</italic>. <italic>radiata</italic> (A), <italic>G</italic>. <italic>max</italic> (B), <italic>A</italic>. <italic>thaliana</italic> (C), <italic>B</italic>. <italic>rapa</italic> (D), <italic>N</italic>. <italic>tabacum</italic> (E), <italic>O</italic>. <italic>sativa</italic> (F), <italic>Z</italic>. <italic>mays</italic> (G), <italic>G</italic>. <italic>biloba</italic> (H), and <italic>P</italic>. <italic>patens</italic> (I) were included in the analysis. The black line indicates a deletion, and the purple I character indicates an insertion. The black square denotes the count of read sequences at the site flanked by two vertical dashed lines.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s009" xlink:href="info:doi/10.1371/journal.pone.0129396.s009" mimetype="application/pdf" position="float" xlink:type="simple">
+<label>S9 Fig</label>
+<caption>
+<title>Sequence chromatograms of <italic>ndhA</italic> RT-PCR amplicons.</title>
+<p><italic>V</italic>. <italic>radiata</italic> (A), <italic>G</italic>. <italic>max</italic> (B), <italic>A</italic>. <italic>thaliana</italic> (C), <italic>B</italic>. <italic>rapa</italic> (D), <italic>N</italic>. <italic>tabacum</italic> (E), <italic>O</italic>. <italic>sativa</italic> (F), <italic>Z</italic>. <italic>mays</italic> (G), <italic>G</italic>. <italic>biloba</italic> (H), and <italic>P</italic>. <italic>patens</italic> (I) were included in the analysis.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s010" xlink:href="info:doi/10.1371/journal.pone.0129396.s010" mimetype="application/pdf" position="float" xlink:type="simple">
+<label>S10 Fig</label>
+<caption>
+<title>WGS, RNA-seq mapping and PCR amplicon sequencing at <italic>rps2</italic> gene.</title>
+<p>The alignments of WGS (A) and RNA-seq (B) were carried out by bowtie 2 and TopHat2, respectively. PCR amplicon (C) generated from high fidelity <italic>Pfu</italic> was directly sequenced using ABI PRISM 3730xl.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s011" xlink:href="info:doi/10.1371/journal.pone.0129396.s011" mimetype="application/pdf" position="float" xlink:type="simple">
+<label>S11 Fig</label>
+<caption>
+<title>Sequence chromatograms of <italic>rps2</italic> RT-PCR amplicons.</title>
+<p><italic>V</italic>. <italic>radiata</italic> (A), <italic>G</italic>. <italic>max</italic> (B), <italic>A</italic>. <italic>thaliana</italic> (C), <italic>B</italic>. <italic>rapa</italic> (D) and <italic>N</italic>. <italic>tabacum</italic> (E) were included in the analysis.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s012" xlink:href="info:doi/10.1371/journal.pone.0129396.s012" mimetype="application/msword" position="float" xlink:type="simple">
+<label>S1 Table</label>
+<caption>
+<title>Primers used in this study.</title>
+<p>(DOC)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s013" xlink:href="info:doi/10.1371/journal.pone.0129396.s013" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:type="simple">
+<label>S2 Table</label>
+<caption>
+<title>Read statistics, error correction and trimming for gDNA samples</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s014" xlink:href="info:doi/10.1371/journal.pone.0129396.s014" mimetype="application/msword" position="float" xlink:type="simple">
+<label>S3 Table</label>
+<caption>
+<title>Distribution of different repeat types.</title>
+<p>(DOC)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s015" xlink:href="info:doi/10.1371/journal.pone.0129396.s015" mimetype="application/msword" position="float" xlink:type="simple">
+<label>S4 Table</label>
+<caption>
+<title>Summary of single nucleotide variations in <italic>V</italic>. <italic>radiata</italic> var. KPS1 and NM92 with TC1966 used as a reference.</title>
+<p>(DOC)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s016" xlink:href="info:doi/10.1371/journal.pone.0129396.s016" mimetype="application/msword" position="float" xlink:type="simple">
+<label>S5 Table</label>
+<caption>
+<title>Summary of indels in <italic>V</italic>. <italic>radiata</italic> var. KPS1 and NM92 with TC1966 used as a reference.</title>
+<p>(DOC)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s017" xlink:href="info:doi/10.1371/journal.pone.0129396.s017" mimetype="application/msword" position="float" xlink:type="simple">
+<label>S6 Table</label>
+<caption>
+<title>SSR loci and TS frequencies.</title>
+<p>(DOC)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0129396.s018" xlink:href="info:doi/10.1371/journal.pone.0129396.s018" mimetype="application/msword" position="float" xlink:type="simple">
+<label>S7 Table</label>
+<caption>
+<title>SRA data used in this study.</title>
+<p>(DOC)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>We thank Dr. H.-M. Chen, Dr. S.-L. Tu, Dr. C.-J. Wang, Dr. Y.-C. Tsai and the Transgenic Plant Core Laboratory of Academia Sinica for providing plant materials. We are grateful to the Academia Sinica Computing Center and IPMB DNA Microarray Core Laboratory for computing resource and RNA quality analysis, respectively.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0129396.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Deusch</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Landan</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Roettger</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Gruenheit</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Kowallik</surname> <given-names>KV</given-names></name>, <name name-style="western"><surname>Allen</surname> <given-names>JF</given-names></name>, <etal>et al</etal>. <article-title>Genes of cyanobacterial origin in plant nuclear genomes point to a heterocyst-forming plastid ancestor</article-title>. <source>Mol Biol Evol</source>. <year>2008</year>;<volume>25</volume>: <fpage>748</fpage>–<lpage>761</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/molbev/msn022" xlink:type="simple">10.1093/molbev/msn022</ext-link></comment> <object-id pub-id-type="pmid">18222943</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gould</surname> <given-names>SB</given-names></name>, <name name-style="western"><surname>Waller</surname> <given-names>RF</given-names></name>, <name name-style="western"><surname>McFadden</surname> <given-names>GI</given-names></name>. <article-title>Plastid evolution</article-title>. <source>Annu Rev Plant Biol</source>. <year>2008</year>;<volume>59</volume>: <fpage>491</fpage>–<lpage>517</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1146/annurev.arplant.59.032607.092915" xlink:type="simple">10.1146/annurev.arplant.59.032607.092915</ext-link></comment> <object-id pub-id-type="pmid">18315522</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Keeling</surname> <given-names>PJ</given-names></name>. <article-title>The endosymbiotic origin, diversification and fate of plastids</article-title>. <source>Philos Trans R Soc Lond B Biol Sci</source>. <year>2010</year>;<volume>365</volume>: <fpage>729</fpage>–<lpage>748</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1098/rstb.2009.0103" xlink:type="simple">10.1098/rstb.2009.0103</ext-link></comment> <object-id pub-id-type="pmid">20124341</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ochoa de Alda</surname> <given-names>JA</given-names></name>, <name name-style="western"><surname>Esteban</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Diago</surname> <given-names>ML</given-names></name>, <name name-style="western"><surname>Houmard</surname> <given-names>J</given-names></name>. <article-title>The plastid ancestor originated among one of the major cyanobacterial lineages</article-title>. <source>Nat Commun</source>. <year>2014</year>;<volume>5</volume>: <fpage>4937</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/ncomms5937" xlink:type="simple">10.1038/ncomms5937</ext-link></comment> <object-id pub-id-type="pmid">25222494</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gray</surname> <given-names>MW</given-names></name>. <article-title>Evolution of organellar genomes</article-title>. <source>Curr Opin Genet Dev</source>. <year>1999</year>;<volume>9</volume>: <fpage>678</fpage>–<lpage>687</lpage>. <object-id pub-id-type="pmid">10607615</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kleine</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Maier</surname> <given-names>UG</given-names></name>, <name name-style="western"><surname>Leister</surname> <given-names>D</given-names></name>. <article-title>DNA transfer from organelles to the nucleus: the idiosyncratic genetics of endosymbiosis</article-title>. <source>Annu Rev Plant Biol</source>. <year>2009</year>;<volume>60</volume>: <fpage>115</fpage>–<lpage>138</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1146/annurev.arplant.043008.092119" xlink:type="simple">10.1146/annurev.arplant.043008.092119</ext-link></comment> <object-id pub-id-type="pmid">19014347</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Martin</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Stoebe</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Goremykin</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Hapsmann</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Hasegawa</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Kowallik</surname> <given-names>KV</given-names></name>. <article-title>Gene transfer to the nucleus and the evolution of chloroplasts</article-title>. <source>Nature</source>. <year>1998</year>;<volume>393</volume>: <fpage>162</fpage>–<lpage>165</lpage>. <object-id pub-id-type="pmid">11560168</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Green</surname> <given-names>BR</given-names></name>. <article-title>Chloroplast genomes of photosynthetic eukaryotes</article-title>. <source>Plant J</source>. <year>2011</year>;<volume>66</volume>: <fpage>34</fpage>–<lpage>44</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1365-313X.2011.04541.x" xlink:type="simple">10.1111/j.1365-313X.2011.04541.x</ext-link></comment> <object-id pub-id-type="pmid">21443621</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Palmer</surname> <given-names>JD</given-names></name>. <article-title>Comparative organization of chloroplast genomes</article-title>. <source>Annu Rev Genet</source>. <year>1985</year>;<volume>19</volume>: <fpage>325</fpage>–<lpage>354</lpage>. <object-id pub-id-type="pmid">3936406</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Baranov</surname> <given-names>PV</given-names></name>, <name name-style="western"><surname>Hammer</surname> <given-names>AW</given-names></name>, <name name-style="western"><surname>Zhou</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Gesteland</surname> <given-names>RF</given-names></name>, <name name-style="western"><surname>Atkins</surname> <given-names>JF</given-names></name>. <article-title>Transcriptional slippage in bacteria: distribution in sequenced genomes and utilization in IS element gene expression</article-title>. <source>Genome Biol</source>. <year>2005</year>;<volume>6</volume>: <fpage>R25</fpage>. <object-id pub-id-type="pmid">15774026</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wagner</surname> <given-names>LA</given-names></name>, <name name-style="western"><surname>Weiss</surname> <given-names>RB</given-names></name>, <name name-style="western"><surname>Driscoll</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Dunn</surname> <given-names>DS</given-names></name>, <name name-style="western"><surname>Gesteland</surname> <given-names>RF</given-names></name>. <article-title>Transcriptional slippage occurs during elongation at runs of adenine or thymine in Escherichia coli</article-title>. <source>Nucleic Acids Res</source>. <year>1990</year>;<volume>18</volume>: <fpage>3529</fpage>–<lpage>3535</lpage>. <object-id pub-id-type="pmid">2194164</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref012"><label>12</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Börner</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Zhelyazkova</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Legen</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Schmitz-Linneweber</surname> <given-names>C</given-names></name>. <chapter-title>Chloroplast Gene Expression—RNA Synthesis and Processing</chapter-title>. In: <name name-style="western"><surname>Theg</surname> <given-names>SM</given-names></name>, <name name-style="western"><surname>Wollman</surname> <given-names>F-A</given-names></name>, editors. <chapter-title>Plastid Biology</chapter-title>. <source>Advances in Plant Biology</source>. <volume>5</volume>: <publisher-name>Springer</publisher-name> <publisher-loc>New York</publisher-loc>; <year>2014</year>. pp. <fpage>3</fpage>–<lpage>47</lpage>.</mixed-citation></ref>
+<ref id="pone.0129396.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Barkan</surname> <given-names>A</given-names></name>. <article-title>Expression of plastid genes: organelle-specific elaborations on a prokaryotic scaffold</article-title>. <source>Plant Physiol</source>. <year>2011</year>;<volume>155</volume>: <fpage>1520</fpage>–<lpage>1532</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1104/pp.110.171231" xlink:type="simple">10.1104/pp.110.171231</ext-link></comment> <object-id pub-id-type="pmid">21346173</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yagi</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Shiina</surname> <given-names>T</given-names></name>. <article-title>Recent advances in the study of chloroplast gene expression and its evolution</article-title>. <source>Front Plant Sci</source>. <year>2014</year>;<volume>5</volume>: <fpage>61</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.3389/fpls.2014.00061" xlink:type="simple">10.3389/fpls.2014.00061</ext-link></comment> <object-id pub-id-type="pmid">24611069</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tamas</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Wernegreen</surname> <given-names>JJ</given-names></name>, <name name-style="western"><surname>Nystedt</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Kauppinen</surname> <given-names>SN</given-names></name>, <name name-style="western"><surname>Darby</surname> <given-names>AC</given-names></name>, <name name-style="western"><surname>Gomez-Valero</surname> <given-names>L</given-names></name>, <etal>et al</etal>. <article-title>Endosymbiont gene functions impaired and rescued by polymerase infidelity at poly(A) tracts</article-title>. <source>Proc Natl Acad Sci U S A</source>. <year>2008</year>;<volume>105</volume>: <fpage>14934</fpage>–<lpage>14939</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.0806554105" xlink:type="simple">10.1073/pnas.0806554105</ext-link></comment> <object-id pub-id-type="pmid">18815381</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bentolila</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Oh</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Hanson</surname> <given-names>MR</given-names></name>, <name name-style="western"><surname>Bukowski</surname> <given-names>R</given-names></name>. <article-title>Comprehensive high-resolution analysis of the role of an Arabidopsis gene family in RNA editing</article-title>. <source>PLoS Genet</source>. <year>2013</year>;<volume>9</volume>: <fpage>e1003584</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pgen.1003584" xlink:type="simple">10.1371/journal.pgen.1003584</ext-link></comment> <object-id pub-id-type="pmid">23818871</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ruwe</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Castandet</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Schmitz-Linneweber</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Stern</surname> <given-names>DB</given-names></name>. <article-title>Arabidopsis chloroplast quantitative editotype</article-title>. <source>FEBS Lett</source>. <year>2013</year>;<volume>587</volume>: <fpage>1429</fpage>–<lpage>1433</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.febslet.2013.03.022" xlink:type="simple">10.1016/j.febslet.2013.03.022</ext-link></comment> <object-id pub-id-type="pmid">23523919</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sun</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Germain</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Giloteaux</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Hammani</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Barkan</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Hanson</surname> <given-names>MR</given-names></name>, <etal>et al</etal>. <article-title>An RNA recognition motif-containing protein is required for plastid RNA editing in Arabidopsis and maize</article-title>. <source>Proc Natl Acad Sci U S A</source>. <year>2013</year>;<volume>110</volume>(<issue>12</issue>): <fpage>E1169</fpage>–<lpage>1178</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.1220162110" xlink:type="simple">10.1073/pnas.1220162110</ext-link></comment> <object-id pub-id-type="pmid">23487777</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Guo</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Grewe</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Mower</surname> <given-names>JP</given-names></name>. <article-title>Variable frequency of plastid RNA editing among ferns and repeated loss of uridine-to-cytidine editing from vascular plants</article-title>. <source>PLoS One</source>. <year>2015</year>;<volume>10</volume>: <fpage>e0117075</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0117075" xlink:type="simple">10.1371/journal.pone.0117075</ext-link></comment> <object-id pub-id-type="pmid">25568947</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Freyer</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Kiefer-Meyer</surname> <given-names>MC</given-names></name>, <name name-style="western"><surname>Kossel</surname> <given-names>H</given-names></name>. <article-title>Occurrence of plastid RNA editing in all major lineages of land plants</article-title>. <source>Proc Natl Acad Sci U S A</source>. <year>1997</year>;<volume>94</volume>: <fpage>6285</fpage>–<lpage>6290</lpage>. <object-id pub-id-type="pmid">9177209</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Stern</surname> <given-names>DB</given-names></name>, <name name-style="western"><surname>Goldschmidt-Clermont</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Hanson</surname> <given-names>MR</given-names></name>. <article-title>Chloroplast RNA metabolism</article-title>. <source>Annu Rev Plant Biol</source>. <year>2010</year>;<volume>61</volume>: <fpage>125</fpage>–<lpage>155</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1146/annurev-arplant-042809-112242" xlink:type="simple">10.1146/annurev-arplant-042809-112242</ext-link></comment> <object-id pub-id-type="pmid">20192740</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hoch</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Maier</surname> <given-names>RM</given-names></name>, <name name-style="western"><surname>Appel</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Igloi</surname> <given-names>GL</given-names></name>, <name name-style="western"><surname>Kossel</surname> <given-names>H</given-names></name>. <article-title>Editing of a chloroplast mRNA by creation of an initiation codon</article-title>. <source>Nature</source>. <year>1991</year>;<volume>353</volume>: <fpage>178</fpage>–<lpage>180</lpage>. <object-id pub-id-type="pmid">1653905</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Neckermann</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Zeltz</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Igloi</surname> <given-names>GL</given-names></name>, <name name-style="western"><surname>Kossel</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Maier</surname> <given-names>RM</given-names></name>. <article-title>The role of RNA editing in conservation of start codons in chloroplast genomes</article-title>. <source>Gene</source>. <year>1994</year>;<volume>146</volume>: <fpage>177</fpage>–<lpage>182</lpage>. <object-id pub-id-type="pmid">8076816</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Maier</surname> <given-names>RM</given-names></name>, <name name-style="western"><surname>Neckermann</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Igloi</surname> <given-names>GL</given-names></name>, <name name-style="western"><surname>Kossel</surname> <given-names>H</given-names></name>. <article-title>Complete sequence of the maize chloroplast genome: gene content, hotspots of divergence and fine tuning of genetic information by transcript editing</article-title>. <source>J Mol Biol</source>. <year>1995</year>;<volume>251</volume>: <fpage>614</fpage>–<lpage>628</lpage>. <object-id pub-id-type="pmid">7666415</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Maier</surname> <given-names>RM</given-names></name>, <name name-style="western"><surname>Zeltz</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Kossel</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Bonnard</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Gualberto</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Grienenberger</surname> <given-names>JM</given-names></name>. <article-title>RNA editing in plant mitochondria and chloroplasts</article-title>. <source>Plant Mol Biol</source>. <year>1996</year>;<volume>32</volume>: <fpage>343</fpage>–<lpage>365</lpage>. <object-id pub-id-type="pmid">8980487</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kahlau</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Aspinall</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Gray</surname> <given-names>JC</given-names></name>, <name name-style="western"><surname>Bock</surname> <given-names>R</given-names></name>. <article-title>Sequence of the tomato chloroplast DNA and evolutionary comparison of solanaceous plastid genomes</article-title>. <source>J Mol Evol</source>. <year>2006</year>;<volume>63</volume>: <fpage>194</fpage>–<lpage>207</lpage>. <object-id pub-id-type="pmid">16830097</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Corneille</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Lutz</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Maliga</surname> <given-names>P</given-names></name>. <article-title>Conservation of RNA editing between rice and maize plastids: are most editing events dispensable?</article-title> <source>Mol Gen Genet</source>. <year>2000</year>;<volume>264</volume>: <fpage>419</fpage>–<lpage>424</lpage>. <object-id pub-id-type="pmid">11129045</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Inada</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Sasaki</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Yukawa</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Tsudzuki</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Sugiura</surname> <given-names>M</given-names></name>. <article-title>A systematic search for RNA editing sites in pea chloroplasts: an editing event causes diversification from the evolutionarily conserved amino acid sequence</article-title>. <source>Plant Cell Physiol</source>. <year>2004</year>;<volume>45</volume>: <fpage>1615</fpage>–<lpage>1622</lpage>. <object-id pub-id-type="pmid">15574837</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jiang</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Fan</surname> <given-names>SL</given-names></name>, <name name-style="western"><surname>Song</surname> <given-names>MZ</given-names></name>, <name name-style="western"><surname>Yu</surname> <given-names>JN</given-names></name>, <name name-style="western"><surname>Yu</surname> <given-names>SX</given-names></name>. <article-title>Identification of RNA editing sites in cotton (<italic>Gossypium hirsutum</italic>) chloroplasts and editing events that affect secondary and three-dimensional protein structures</article-title>. <source>Genet Mol Res</source>. <year>2012</year>;<volume>11</volume>: <fpage>987</fpage>–<lpage>1001</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.4238/2012.April.19.4" xlink:type="simple">10.4238/2012.April.19.4</ext-link></comment> <object-id pub-id-type="pmid">22576925</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wakasugi</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Hirose</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Horihata</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Tsudzuki</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Kossel</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Sugiura</surname> <given-names>M</given-names></name>. <article-title>Creation of a novel protein-coding region at the RNA level in black pine chloroplasts: the pattern of RNA editing in the gymnosperm chloroplast is different from that in angiosperms</article-title>. <source>Proc Natl Acad Sci U S A</source>. <year>1996</year>;<volume>93</volume>: <fpage>8766</fpage>–<lpage>8770</lpage>. <object-id pub-id-type="pmid">8710946</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref031"><label>31</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chevreux</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Wetter</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Suhai</surname> <given-names>S</given-names></name>. <article-title>Genome Sequence Assembly Using Trace Signals and Additional Sequence Information</article-title>. <source>Computer Science and Biology: Proceedings of the German Conference on Bioinformatics (GCB)</source> <volume>99</volume>. <year>1999</year>. p. <fpage>45</fpage>–<lpage>56</lpage>.</mixed-citation></ref>
+<ref id="pone.0129396.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hahn</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Bachmann</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Chevreux</surname> <given-names>B</given-names></name>. <article-title>Reconstructing mitochondrial genomes directly from genomic next-generation sequencing reads—a baiting and iterative mapping approach</article-title>. <source>Nucleic Acids Res</source>. <year>2013</year>;<volume>41</volume>: <fpage>e129</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkt371" xlink:type="simple">10.1093/nar/gkt371</ext-link></comment> <object-id pub-id-type="pmid">23661685</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref033"><label>33</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tangphatsornruang</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Sangsrakru</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Chanprasert</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Uthaipaisanwong</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Yoocha</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Jomchai</surname> <given-names>N</given-names></name>, <etal>et al</etal>. <article-title>The chloroplast genome sequence of mungbean (<italic>Vigna radiata</italic>) determined by high-throughput pyrosequencing: structural organization and phylogenetic relationships</article-title>. <source>DNA Res</source>. <year>2010</year>;<volume>17</volume>: <fpage>11</fpage>–<lpage>22</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/dnares/dsp025" xlink:type="simple">10.1093/dnares/dsp025</ext-link></comment> <object-id pub-id-type="pmid">20007682</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Langmead</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Salzberg</surname> <given-names>SL</given-names></name>. <article-title>Fast gapped-read alignment with Bowtie 2</article-title>. <source>Nat Methods</source>. <year>2012</year>;<volume>9</volume>: <fpage>357</fpage>–<lpage>359</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nmeth.1923" xlink:type="simple">10.1038/nmeth.1923</ext-link></comment> <object-id pub-id-type="pmid">22388286</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref035"><label>35</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Robinson</surname> <given-names>JT</given-names></name>, <name name-style="western"><surname>Thorvaldsdottir</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Winckler</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Guttman</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Lander</surname> <given-names>ES</given-names></name>, <name name-style="western"><surname>Getz</surname> <given-names>G</given-names></name>, <etal>et al</etal>. <article-title>Integrative genomics viewer</article-title>. <source>Nat Biotechnol</source>. <year>2011</year>;<volume>29</volume>: <fpage>24</fpage>–<lpage>26</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nbt.1754" xlink:type="simple">10.1038/nbt.1754</ext-link></comment> <object-id pub-id-type="pmid">21221095</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref036"><label>36</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Thorvaldsdottir</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Robinson</surname> <given-names>JT</given-names></name>, <name name-style="western"><surname>Mesirov</surname> <given-names>JP</given-names></name>. <article-title>Integrative Genomics Viewer (IGV): high-performance genomics data visualization and exploration</article-title>. <source>Brief Bioinform</source>. <year>2013</year>;<volume>14</volume>: <fpage>178</fpage>–<lpage>192</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/bib/bbs017" xlink:type="simple">10.1093/bib/bbs017</ext-link></comment> <object-id pub-id-type="pmid">22517427</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref037"><label>37</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Handsaker</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Wysoker</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Fennell</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Ruan</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Homer</surname> <given-names>N</given-names></name>, <etal>et al</etal>. <article-title>The Sequence Alignment/Map format and SAMtools</article-title>. <source>Bioinformatics</source>. <year>2009</year>;<volume>25</volume>: <fpage>2078</fpage>–<lpage>2079</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/bioinformatics/btp352" xlink:type="simple">10.1093/bioinformatics/btp352</ext-link></comment> <object-id pub-id-type="pmid">19505943</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref038"><label>38</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wyman</surname> <given-names>SK</given-names></name>, <name name-style="western"><surname>Jansen</surname> <given-names>RK</given-names></name>, <name name-style="western"><surname>Boore</surname> <given-names>JL</given-names></name>. <article-title>Automatic annotation of organellar genomes with DOGMA</article-title>. <source>Bioinformatics</source>. <year>2004</year>;<volume>20</volume>: <fpage>3252</fpage>–<lpage>3255</lpage>. <object-id pub-id-type="pmid">15180927</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref039"><label>39</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schattner</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Brooks</surname> <given-names>AN</given-names></name>, <name name-style="western"><surname>Lowe</surname> <given-names>TM</given-names></name>. <article-title>The tRNAscan-SE, snoscan and snoGPS web servers for the detection of tRNAs and snoRNAs</article-title>. <source>Nucleic Acids Res</source>. <year>2005</year>;<volume>33</volume>: <fpage>W686</fpage>–<lpage>689</lpage>. <object-id pub-id-type="pmid">15980563</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref040"><label>40</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Krzywinski</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Schein</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Birol</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Connors</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Gascoyne</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Horsman</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Circos: an information aesthetic for comparative genomics</article-title>. <source>Genome Res</source>. <year>2009</year>;<volume>19</volume>: <fpage>1639</fpage>–<lpage>1645</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1101/gr.092759.109" xlink:type="simple">10.1101/gr.092759.109</ext-link></comment> <object-id pub-id-type="pmid">19541911</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref041"><label>41</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Thiel</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Michalek</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Varshney</surname> <given-names>RK</given-names></name>, <name name-style="western"><surname>Graner</surname> <given-names>A</given-names></name>. <article-title>Exploiting EST databases for the development and characterization of gene-derived SSR-markers in barley (Hordeum vulgare L.)</article-title>. <source>Theor Appl Genet</source>. <year>2003</year>;<volume>106</volume>: <fpage>411</fpage>–<lpage>422</lpage>. <object-id pub-id-type="pmid">12589540</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref042"><label>42</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chang</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Puryear</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Cairney</surname> <given-names>J</given-names></name>. <article-title>A Simple and Efficient Method for Isolating RNA from Pine Trees</article-title>. <source>Plant Mol Biol Rep</source>. <year>1999</year>;<volume>11</volume>: <fpage>113</fpage>–<lpage>116</lpage>.</mixed-citation></ref>
+<ref id="pone.0129396.ref043"><label>43</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kim</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Pertea</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Trapnell</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Pimentel</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Kelley</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Salzberg</surname> <given-names>SL</given-names></name>. <article-title>TopHat2: accurate alignment of transcriptomes in the presence of insertions, deletions and gene fusions</article-title>. <source>Genome Biol</source>. <year>2013</year>;<volume>14</volume>: <fpage>R36</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/gb-2013-14-4-r36" xlink:type="simple">10.1186/gb-2013-14-4-r36</ext-link></comment> <object-id pub-id-type="pmid">23618408</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref044"><label>44</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhang</surname> <given-names>Q</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>Y</given-names></name>, <article-title>Sodmergen. Examination of the cytoplasmic DNA in male reproductive cells to determine the potential for cytoplasmic inheritance in 295 angiosperm species</article-title>. <source>Plant Cell Physiol</source>. <year>2003</year>;<volume>44</volume>: <fpage>941</fpage>–<lpage>951</lpage>. <object-id pub-id-type="pmid">14519776</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref045"><label>45</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Clarke</surname> <given-names>LA</given-names></name>, <name name-style="western"><surname>Rebelo</surname> <given-names>CS</given-names></name>, <name name-style="western"><surname>Goncalves</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Boavida</surname> <given-names>MG</given-names></name>, <name name-style="western"><surname>Jordan</surname> <given-names>P</given-names></name>. <article-title>PCR amplification introduces errors into mononucleotide and dinucleotide repeat sequences</article-title>. <source>Mol Pathol</source>. <year>2001</year>;<volume>54</volume>: <fpage>351</fpage>–<lpage>353</lpage>. <object-id pub-id-type="pmid">11577179</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref046"><label>46</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Falvey</surname> <given-names>AK</given-names></name>, <name name-style="western"><surname>Weiss</surname> <given-names>GB</given-names></name>, <name name-style="western"><surname>Krueger</surname> <given-names>LJ</given-names></name>, <name name-style="western"><surname>Kantor</surname> <given-names>JA</given-names></name>, <name name-style="western"><surname>Anderson</surname> <given-names>WF</given-names></name>. <article-title>Transcription of single base oligonucleotides by ribonucleic acid-directed deoxyribonucleic acid polymerase</article-title>. <source>Nucleic Acids Res</source>. <year>1976</year>;<volume>3</volume>(<issue>1</issue>): <fpage>79</fpage>–<lpage>88</lpage>. <object-id pub-id-type="pmid">55999</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref047"><label>47</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Smith</surname> <given-names>DR</given-names></name>, <name name-style="western"><surname>Crosby</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>RW</given-names></name>. <article-title>Correlation between nuclear plastid DNA abundance and plastid number supports the limited transfer window hypothesis</article-title>. <source>Genome Biol Evol</source>. <year>2011</year>;<volume>3</volume>: <fpage>365</fpage>–<lpage>371</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/gbe/evr001" xlink:type="simple">10.1093/gbe/evr001</ext-link></comment> <object-id pub-id-type="pmid">21292629</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref048"><label>48</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Arumuganathan</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Earle</surname> <given-names>ED</given-names></name>. <article-title>Nuclear DNA content of some important plant species</article-title>. <source>Plant Mol Biol Rep</source>. <year>1991</year>;<volume>9</volume>: <fpage>208</fpage>–<lpage>218</lpage>.</mixed-citation></ref>
+<ref id="pone.0129396.ref049"><label>49</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Knoop</surname> <given-names>V</given-names></name>. <article-title>When you can't trust the DNA: RNA editing changes transcript sequences</article-title>. <source>Cell Mol Life Sci</source>. <year>2011</year>;<volume>68</volume>: <fpage>567</fpage>–<lpage>586</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s00018-010-0538-9" xlink:type="simple">10.1007/s00018-010-0538-9</ext-link></comment> <object-id pub-id-type="pmid">20938709</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref050"><label>50</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bock</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Hagemann</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Kossel</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Kudla</surname> <given-names>J</given-names></name>. <article-title>Tissue- and stage-specific modulation of RNA editing of the <italic>psbF</italic> and <italic>psbL</italic> transcript from spinach plastids—a new regulatory mechanism?</article-title> <source>Mol Genet Genomics</source>. <year>1993</year>;<volume>240</volume>: <fpage>238</fpage>–<lpage>244</lpage>. <object-id pub-id-type="pmid">8355656</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref051"><label>51</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mor</surname> <given-names>TS</given-names></name>, <name name-style="western"><surname>Ohad</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Hirschberg</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Pakrasi</surname> <given-names>HB</given-names></name>. <article-title>An unusual organization of the genes encoding cytochrome b559 in <italic>Chlamydomonas reinhardtii</italic>: <italic>psbE</italic> and <italic>psbF</italic> genes are separately transcribed from different regions of the plastid chromosome</article-title>. <source>Mol Genet Genomics</source>. <year>1995</year>;<volume>246</volume>: <fpage>600</fpage>–<lpage>604</lpage>. <object-id pub-id-type="pmid">7700232</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref052"><label>52</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lin</surname> <given-names>CP</given-names></name>, <name name-style="western"><surname>Huang</surname> <given-names>JP</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>CS</given-names></name>, <name name-style="western"><surname>Hsu</surname> <given-names>CY</given-names></name>, <name name-style="western"><surname>Chaw</surname> <given-names>SM</given-names></name>. <article-title>Comparative chloroplast genomics reveals the evolution of Pinaceae genera and subfamilies</article-title>. <source>Genome Biol Evol</source>. <year>2010</year>;<volume>2</volume>: <fpage>504</fpage>–<lpage>517</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/gbe/evq036" xlink:type="simple">10.1093/gbe/evq036</ext-link></comment> <object-id pub-id-type="pmid">20651328</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref053"><label>53</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kang</surname> <given-names>YJ</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>SK</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>MY</given-names></name>, <name name-style="western"><surname>Lestari</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>KH</given-names></name>, <name name-style="western"><surname>Ha</surname> <given-names>BK</given-names></name>, <etal>et al</etal>. <article-title>Genome sequence of mungbean and insights into evolution within <italic>Vigna</italic> species</article-title>. <source>Nat Commun</source>. <year>2014</year>;<volume>5</volume>: <fpage>5443</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/ncomms6443" xlink:type="simple">10.1038/ncomms6443</ext-link></comment> <object-id pub-id-type="pmid">25384727</object-id></mixed-citation></ref>
+<ref id="pone.0129396.ref054"><label>54</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alverson</surname> <given-names>AJ</given-names></name>, <name name-style="western"><surname>Zhuo</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Rice</surname> <given-names>DW</given-names></name>, <name name-style="western"><surname>Sloan</surname> <given-names>DB</given-names></name>, <name name-style="western"><surname>Palmer</surname> <given-names>JD</given-names></name>. <article-title>The mitochondrial genome of the legume <italic>Vigna radiata</italic> and the analysis of recombination across short mitochondrial repeats</article-title>. <source>PLoS One</source>. <year>2011</year>;<volume>6</volume>: <fpage>e16404</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0016404" xlink:type="simple">10.1371/journal.pone.0016404</ext-link></comment> <object-id pub-id-type="pmid">21283772</object-id></mixed-citation></ref>
+</ref-list>
+</back>
+</article>

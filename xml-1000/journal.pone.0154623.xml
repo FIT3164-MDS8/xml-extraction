@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article article-type="research-article" dtd-version="1.1d3" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0154623</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-16-07233</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Pharmaceutics</subject><subj-group><subject>Dose prediction methods</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Pharmaceutics</subject><subj-group><subject>Dose prediction methods</subject><subj-group><subject>Adjustment of dosage at steady state</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Oncology</subject><subj-group><subject>Cancer treatment</subject><subj-group><subject>Chemoprevention</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Parasitic diseases</subject><subj-group><subject>Malaria</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Tropical diseases</subject><subj-group><subject>Malaria</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Toxicology</subject><subj-group><subject>Toxicity</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Pathology and laboratory medicine</subject><subj-group><subject>Toxicology</subject><subj-group><subject>Toxicity</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Microbiology</subject><subj-group><subject>Microbial control</subject><subj-group><subject>Antimicrobial resistance</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Pharmacology</subject><subj-group><subject>Antimicrobial resistance</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Health care</subject><subj-group><subject>Health care policy</subject><subj-group><subject>Treatment guidelines</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Parasitic diseases</subject></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Rethinking Dosing Regimen Selection of Piperaquine for Malaria Chemoprevention: A Simulation Study</article-title>
+<alt-title alt-title-type="running-head">Simulations of Piperaquine Chemoprevention Dosing Regimens</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Sambol</surname>
+<given-names>Nancy C.</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Tappero</surname>
+<given-names>Jordan W.</given-names>
+</name>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Arinaitwe</surname>
+<given-names>Emmanuel</given-names>
+</name>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Parikh</surname>
+<given-names>Sunil</given-names>
+</name>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Department of Bioengineering and Therapeutic Sciences, University of California San Francisco, San Francisco, California, United States of America</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Centers for Global Health, Centers for Disease Control and Prevention (CDC), Atlanta, Georgia, United States of America</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>Makerere University School of Medicine, Kampala, Uganda</addr-line></aff>
+<aff id="aff004"><label>4</label> <addr-line>Yale School of Public Health, New Haven, Connecticut, United States of America</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Gatton</surname>
+<given-names>Michelle Louise</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Quensland University of Technology, AUSTRALIA</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: SP NS. Performed the experiments: SP NS. Analyzed the data: SP NS. Contributed reagents/materials/analysis tools: SP NS. Wrote the paper: SP NS JWT EA. Conducted clinical study: SP EA JWT.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">sunil.parikh@yale.edu</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>16</day>
+<month>5</month>
+<year>2016</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2016</year>
+</pub-date>
+<volume>11</volume>
+<issue>5</issue>
+<elocation-id>e0154623</elocation-id>
+<history>
+<date date-type="received">
+<day>19</day>
+<month>2</month>
+<year>2016</year>
+</date>
+<date date-type="accepted">
+<day>17</day>
+<month>4</month>
+<year>2016</year>
+</date>
+</history>
+<permissions>
+<license xlink:href="https://creativecommons.org/publicdomain/zero/1.0/" xlink:type="simple">
+<license-p>This is an open access article, free of all copyright, and may be freely reproduced, distributed, transmitted, modified, built upon, or otherwise used by anyone for any lawful purpose. The work is made available under the <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/publicdomain/zero/1.0/" xlink:type="simple">Creative Commons CC0</ext-link> public domain dedication.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0154623"/>
+<abstract>
+<sec id="sec001">
+<title>Background</title>
+<p>The combination of short-acting dihydroartemisinin and long-acting piperaquine (DP) is among the first-line therapies for the treatment of uncomplicated <italic>Plasmodium falciparum malaria</italic>. Population pharmacokinetic models of piperaquine (PQ) based on data from acute treatment of young children can be used to predict exposure profiles of piperaquine under different DP chemoprevention regimens. The purpose of our study was to make such predictions in young children.</p>
+</sec>
+<sec id="sec002">
+<title>Methods</title>
+<p>Based on a prior population pharmacokinetic model of PQ in young Ugandan children, we simulated capillary plasma concentration-time profiles (including their variability) of candidate chemoprevention regimens for a reference population of 1–2 year olds weighing at least 11 kg. Candidate regimens that were tested included monthly administration of standard therapeutic doses, bimonthly dosing, and weekly dosing (with and without a loading dose).</p>
+</sec>
+<sec id="sec003">
+<title>Results</title>
+<p>Once daily doses of 320 mg for three days (960 mg total) at the beginning of each month are predicted to achieve an average steady-state trough capillary piperaquine concentration of 35 ng/mL, with 60% achieving a level of 30 ng/mL or higher. In contrast, weekly dosing of 320 mg (i.e., 33% higher amount per month) is predicted to approximately double the average steady-state trough concentration, increase the percent of children predicted to achieve 30 ng/mL or higher (94%), while at the same time lowering peak concentrations. Exposure at steady-state, reached at approximately 3 months of multiple dosing, is expected to be approximately 2-fold higher than exposure following initial dosing, due to accumulation. A loading dose improves early exposure, thereby reducing the risk of breakthrough infections at the initiation of chemoprevention.</p>
+</sec>
+<sec id="sec004">
+<title>Conclusions</title>
+<p>Once weekly chemoprevention of DP predicts favourable exposures with respect to both trough and peak concentrations. These predictions need to be verified, as well as safety evaluated, in field-based clinical studies of young children. Simulations based on prior knowledge provide a systematic information-driven approach to evaluate candidate DP chemopreventive regimens for future trial designs.</p>
+</sec>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/100000071</institution-id>
+<institution>National Institute of Child Health and Human Development</institution>
+</institution-wrap>
+</funding-source>
+<award-id>5R01HD68174</award-id>
+<principal-award-recipient>
+<name name-style="western">
+<surname>Parikh</surname>
+<given-names>Sunil</given-names>
+</name>
+</principal-award-recipient>
+</award-group>
+<award-group id="award002">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/100009054</institution-id>
+<institution>U.S. President’s Emergency Plan for AIDS Relief</institution>
+</institution-wrap>
+</funding-source>
+<award-id>U62P024421</award-id>
+</award-group>
+<funding-statement>This work was supported by funding by the National Institutes of Health (Parikh and Aweeka [grant number #5R01HD068174]). This research has also been supported by the President’s Emergency Plan for AIDS Relief (PEPFAR) through the Department of Health and Human Services/Centers for Disease Control and Prevention under the terms of U62P024421. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="2"/>
+<table-count count="3"/>
+<page-count count="13"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>The primary data for this paper was published in another journal. The reference for the publication is: Sambol NC, Yan L, Creek DJ, McCormack SA, Arinaitwe E, Bigira V, Wanzira H, Kakuru A, Tappero JW, Lindegardh N, Tarning J, Nosten F, Aweeka FT, Parikh S. Population pharmacokinetics of piperquine in young Ugandan children treated with dihydroartemisinin-piperaquine for uncomplicated malaria. Clinical Pharmacology and Therapeutics 2015: PID 25732044.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec005" sec-type="intro">
+<title>Introduction</title>
+<p>Over the past decade, the landscape of malaria therapy has undergone a dramatic shift to the use of artemisinin-based combination therapies (ACTs) as first-line treatment for uncomplicated <italic>Plasmodium falciparum</italic> malaria [<xref ref-type="bibr" rid="pone.0154623.ref001">1</xref>]. These drug regimens have proven to be highly effective, and their use has previously been restricted to the treatment of acute disease. While the short-acting artemisinin “backbone” rapidly reduces parasite burden, a longer-acting partner drug, such as piperaquine (PQ), serves to eliminate residual parasites and reduce the probability that resistance will emerge. Dihydroartemisinin-piperaquine (DHA-PQ; DP), the newest of the World Health Organizations (WHO) first-line recommended regimens for treatment, has been highly efficacious, although recent studies have already demonstrated the emergence of resistance to DHA and PQ in Southeast Asia [<xref ref-type="bibr" rid="pone.0154623.ref001">1</xref>–<xref ref-type="bibr" rid="pone.0154623.ref005">5</xref>].</p>
+<p>Concurrent to these developments, DP is under evaluation for chemoprevention, in large part due to the long half-life of PQ (approximately 1 month) [<xref ref-type="bibr" rid="pone.0154623.ref006">6</xref>–<xref ref-type="bibr" rid="pone.0154623.ref008">8</xref>]. Chemopreventive approaches include intermittent preventive treatment (IPT), which uses “therapeutic” doses of antimalarials given at predefined intervals and is directed at the high-risk groups of pregnant women and infants in endemic areas [<xref ref-type="bibr" rid="pone.0154623.ref001">1</xref>]. Seasonal malaria chemoprevention (SMC) uses treatment doses during specific high-risk months [<xref ref-type="bibr" rid="pone.0154623.ref008">8</xref>, <xref ref-type="bibr" rid="pone.0154623.ref009">9</xref>]. Chemopreventive DP regimens have been highly effective in children from Senegal [<xref ref-type="bibr" rid="pone.0154623.ref010">10</xref>], The Gambia [<xref ref-type="bibr" rid="pone.0154623.ref011">11</xref>], Burkina Faso[<xref ref-type="bibr" rid="pone.0154623.ref008">8</xref>], and Uganda [<xref ref-type="bibr" rid="pone.0154623.ref007">7</xref>, <xref ref-type="bibr" rid="pone.0154623.ref012">12</xref>, <xref ref-type="bibr" rid="pone.0154623.ref013">13</xref>]. In a recent study of monthly chemoprevention in Tororo, Uganda, DP was superior to alternative regimens (monthly sulfadoxine-pyrimethamine (SP) or daily trimethoprim-sulfamethoxazole (TS)) [<xref ref-type="bibr" rid="pone.0154623.ref007">7</xref>, <xref ref-type="bibr" rid="pone.0154623.ref013">13</xref>]. It is likely that higher resistance to the alternative regimens (SP or TS) and the extended half-life of PQ were key determinants of DP’s superior efficacy.</p>
+<p>Optimizing the exposure to DP in the preventive setting by improving adherence and fine-tuning the dosing regimen is likewise critical to ensuring its optimal efficacy, limiting its toxicity, and prolonging its useful therapeutic life span [<xref ref-type="bibr" rid="pone.0154623.ref014">14</xref>]. Despite the excellent chemopreventive efficacy of DP, adherence to monthly regimens of three consecutive daily doses of DP is challenging. Evidence from Senegal suggests that only 70% of all children received all 3 doses of IPT each month of the 3-month treatment [<xref ref-type="bibr" rid="pone.0154623.ref010">10</xref>]. A study from Uganda reported that 52% of PQ levels were below the limit of detection at the time malaria was diagnosed and PQ levels did not correlate with time since last reported dose, both of which suggest poor adherence [<xref ref-type="bibr" rid="pone.0154623.ref013">13</xref>]. In the setting of treatment, infants and young children have been shown to have lower DP exposure which correlates with higher rates of recurrent infection than in older children and adults [<xref ref-type="bibr" rid="pone.0154623.ref006">6</xref>, <xref ref-type="bibr" rid="pone.0154623.ref015">15</xref>–<xref ref-type="bibr" rid="pone.0154623.ref017">17</xref>]. As a result of these and other pharmacokinetic (PK) and pharmacodynamic (PD) studies of DP, recent 2015 WHO guidelines have recommended higher treatment doses of DP, particularly in young children (<xref ref-type="table" rid="pone.0154623.t001">Table 1</xref>) [<xref ref-type="bibr" rid="pone.0154623.ref001">1</xref>].</p>
+<table-wrap id="pone.0154623.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0154623.t001</object-id>
+<label>Table 1</label> <caption><title>DP weight-based dosing guidelines.</title></caption>
+<alternatives>
+<graphic id="pone.0154623.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0154623.t001" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="2">Body Weight (kg)</th>
+<th align="center" colspan="2">Recommended Dose (mg)</th>
+</tr>
+<tr>
+<th align="center">Former WHODP dosing regimen[<xref ref-type="bibr" rid="pone.0154623.ref022">22</xref>]</th>
+<th align="center">Revised WHO2015 DP dosing regimen[<xref ref-type="bibr" rid="pone.0154623.ref001">1</xref>]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><bold>5 to 7</bold></td>
+<td align="center"/>
+<td align="center">160</td>
+</tr>
+<tr>
+<td align="center"><bold>8 to 10</bold></td>
+<td align="center">160</td>
+<td align="center">240</td>
+</tr>
+<tr>
+<td align="center"><bold>11 to 14</bold></td>
+<td align="center">240</td>
+<td align="center">320</td>
+</tr>
+<tr>
+<td align="center"><bold>15 to 16</bold></td>
+<td align="center">320</td>
+<td align="center">320</td>
+</tr>
+<tr>
+<td align="center"><bold>17 to 19</bold></td>
+<td align="center">320</td>
+<td align="center">480</td>
+</tr>
+<tr>
+<td align="center"><bold>20 to 23</bold></td>
+<td align="center">400</td>
+<td align="center">480</td>
+</tr>
+<tr>
+<td align="center"><bold>24</bold></td>
+<td align="center">480</td>
+<td align="center">480</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>Significantly less attention has been focused on characterizing the exposure of DP with chemoprevention. A study in Thai adults found that monthly DP was superior to bimonthly DP for preventing uncomplicated malaria, likely due to a decline in PQ concentrations below a protective threshold in the second month after dosing with the latter [<xref ref-type="bibr" rid="pone.0154623.ref018">18</xref>]. In this study, all subjects with recurrent infection had trough venous plasma concentrations below 32 ng/mL. Similarly, in a Ugandan monthly DP chemoprevention study in children, PQ exposure was strongly predictive of protective efficacy [<xref ref-type="bibr" rid="pone.0154623.ref019">19</xref>]. On the other hand, a recent adult DP chemoprevention study was halted due to concerns of QT prolongation associated with high peak PQ levels [<xref ref-type="bibr" rid="pone.0154623.ref020">20</xref>].</p>
+<p>Assuming that a threshold concentration for effective preventive treatment exists, and that PK determines the profile of systemic exposure, we hypothesized that known (prior) PK can inform dosing of PQ-containing preventive regimens to optimize efficacy and limit toxicity. In the study reported herein, we use a population PK model from a study of DP treatment in children ages 6 months to 2 years in the high transmission area of Tororo, Uganda [<xref ref-type="bibr" rid="pone.0154623.ref006">6</xref>, <xref ref-type="bibr" rid="pone.0154623.ref015">15</xref>] to simulate PQ concentration-time profiles with various DP preventive regimens.</p>
+</sec>
+<sec id="sec006" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<sec id="sec007">
+<title>Pharmacokinetic Model</title>
+<p>Data were simulated based on a previously published model for the same population [<xref ref-type="bibr" rid="pone.0154623.ref006">6</xref>]. Briefly, the model was derived from a population PK study of 107 children 6 months to 2 years of age from Tororo, Uganda, that was part of a larger clinical trial comparing the efficacy of artemether-lumefantrine to DP for treatment of uncomplicated malaria [<xref ref-type="bibr" rid="pone.0154623.ref015">15</xref>, <xref ref-type="bibr" rid="pone.0154623.ref021">21</xref>]. DP was administered to children with food as a single treatment of 3 daily doses (20/160 mg DHA/PQ per dose for patients weighing 5.1–10.4 kg, and 30/240 mg DHA/PQ per dose for those weighing 10.5–14.5 kg), according to 2010 World Health Organization Malaria Treatment Guidelines (<xref ref-type="table" rid="pone.0154623.t001">Table 1</xref>) [<xref ref-type="bibr" rid="pone.0154623.ref022">22</xref>]. Capillary plasma samples for PK analysis were obtained during each episode (with an average 2 episodes per child). Population PK models were constructed using mixed effects modeling with the program NONMEM<sup>®</sup> [<xref ref-type="bibr" rid="pone.0154623.ref023">23</xref>]. The final model was a three-compartment open model with first-order absorption, unconditional allometric scaling of each of the three clearance and three volume of distribution parameters and a statistically significant age effect on <italic>CL</italic>/<italic>F</italic> [<xref ref-type="bibr" rid="pone.0154623.ref006">6</xref>]. The final model for <italic>CL</italic>/<italic>F</italic> was as follows:
+<disp-formula id="pone.0154623.e001">
+<alternatives>
+<graphic id="pone.0154623.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0154623.e001" xlink:type="simple"/>
+<mml:math display="block" id="M1">
+<mml:mrow><mml:mover accent="true"><mml:mrow><mml:mi>C</mml:mi><mml:mi>L</mml:mi><mml:mo>/</mml:mo><mml:mi>F</mml:mi></mml:mrow><mml:mo stretchy="true">˜</mml:mo></mml:mover><mml:mtext> [L/h]</mml:mtext><mml:mo>=</mml:mo><mml:mtext> </mml:mtext><mml:mn>6.39</mml:mn><mml:mtext> </mml:mtext><mml:mo>·</mml:mo><mml:mtext> </mml:mtext><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mrow><mml:mtext>W</mml:mtext><mml:msub><mml:mtext>T</mml:mtext><mml:mi>i</mml:mi></mml:msub></mml:mrow><mml:mrow><mml:mn>8.36</mml:mn></mml:mrow></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mn>0.75</mml:mn></mml:mrow></mml:msup><mml:mo>·</mml:mo><mml:mtext> </mml:mtext><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mrow><mml:mtext>AG</mml:mtext><mml:msub><mml:mtext>E</mml:mtext><mml:mi>i</mml:mi></mml:msub></mml:mrow><mml:mrow><mml:mn>12</mml:mn></mml:mrow></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mn>0.35</mml:mn></mml:mrow></mml:msup><mml:mo>,</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(1)</label>
+</disp-formula>
+in which WT<italic>i</italic> is the body weight (kg) and AGE<italic>i</italic> the age (month) of the <italic>i</italic>th child. Weight was centered at 8.36 kg (the approximately median value of a 1 year-old in this population), and age at 12 months for ease of interpretation.</p>
+</sec>
+<sec id="sec008">
+<title>Population PK Simulations</title>
+<p>Simulations of data sets with 2000 hypothetical 1–2 year olds weighing ≥ 11 kg were generated (referred to as the reference population). This population was selected, rather than simulate all ages/weight groups, for purposes of efficiency. Assuming that the ratio of doses in the preventive setting is similar to that in the acute setting, one can infer the required dose in non-simulated groups from that of the simulated reference group. To mimic the original data, a linear regression model was used to simulate weight [<xref ref-type="bibr" rid="pone.0154623.ref006">6</xref>]. This model included variability and a correlation (<italic>r</italic><sup>2</sup>) between age and weight of 0.21. An alternate method (not available at the time the simulation study began), would be to use published regional weight-for-age charts [<xref ref-type="bibr" rid="pone.0154623.ref024">24</xref>]. The first 2000 individuals with the combined age and weight that met the prescribed criterion were included in the capillary plasma concentration simulations. The program NONMEM<sup>®</sup>, Version 7.3 (ICON, Dublin, Ireland) [<xref ref-type="bibr" rid="pone.0154623.ref023">23</xref>] generated the predictions and the program R (version 2.15.0) was used to create the plots. Administered doses and PK were assumed to remain constant within an individual and we assumed the absence of any drug interaction as well as the absence of a disease (active malaria infection) effect. Considering that the drug may be used continuously in some settings, PK descriptors of particular interest included PQ capillary plasma trough concentration during the first 5 months (the time during which concentrations are increasing) and at steady-state (after 12 months of dosing). In addition, we summarized peak concentrations at steady-state and after a loading dose, overall concentration-time profile at steady-state, and overall concentration-time profile during the first month with and without a loading dose. For purposes of this study, a loading dose was defined as the standard three consecutive daily dose regimen.</p>
+<p>The regimen that served as a point of reference was 240 mg (standard dose for acute treatment in those weighing 10.5 to 14.5 kg per WHO 2010 guidelines) given daily for 3 days at the beginning of each month, as this schedule has been most studied in treatment and prevention trials [<xref ref-type="bibr" rid="pone.0154623.ref022">22</xref>]. An increased dosing regimen of 320 mg (new recommended dose for acute treatment in those weighing 11–16 kg per 2015 WHO guidelines) [<xref ref-type="bibr" rid="pone.0154623.ref001">1</xref>] was also simulated, as well as increasing the total dose <italic>level</italic> further by 25%, varying the dosing <italic>frequency</italic> [monthly, bimonthly (twice monthly), and weekly] and administering a <italic>loading dose</italic>.</p>
+<p>Given that precise target PQ concentrations in different endemic and demographic settings are still being evaluated in the setting of treatment, and with minimal data available in chemoprevention settings, we chose to focus on putative target capillary plasma trough (prior to each dose) steady-state concentrations of 10, 20 and 30 ng/mL, allowing one to compare exposure levels between different approaches. A trough PQ venous plasma level of 32 ng/mL was found to be associated with the risk of breakthrough malaria in Thai adults given DP chemoprevention [<xref ref-type="bibr" rid="pone.0154623.ref018">18</xref>]. Additionally, a day 7 capillary plasma level of 57 ng/mL (equating to a venous plasma level of 30 ng/mL) was selected as a target-of-interest, based on data from treatment studies showing that this threshold is predictive of the risk of recurrent malaria [<xref ref-type="bibr" rid="pone.0154623.ref017">17</xref>, <xref ref-type="bibr" rid="pone.0154623.ref025">25</xref>, <xref ref-type="bibr" rid="pone.0154623.ref026">26</xref>].</p>
+</sec>
+</sec>
+<sec id="sec009" sec-type="results">
+<title>Results</title>
+<sec id="sec010">
+<title>Effects of changing DP dose level on piperaquine exposure</title>
+<p><xref ref-type="fig" rid="pone.0154623.g001">Fig 1</xref> and <xref ref-type="table" rid="pone.0154623.t002">Table 2</xref> show the effects on PQ exposure seen with various changes in the DP regimen, including an increase in dose, while maintaining a consistent frequency. An increase in monthly PQ dose from 240 mg to 320 mg (given once daily x 3) was associated with a predicted PQ trough steady-state capillary plasma concentration that increased from 27 to 35 ng/mL. With an increase to 400 mg per dose, predicted PQ trough steady-state capillary plasma concentrations increased to 44 ng/mL. While all doses tested are predicted to achieve trough capillary plasma concentrations of 10 ng/mL in 93% or more individuals, differentiation among doses widens with target trough levels of 20 ng/mL and 30 ng/mL. Additionally, as compared with the 240 mg dose, a 50% increase in the number of individuals predicted to achieve day 7 levels of above 57 ng/mL is expected with a 400 mg dose.</p>
+<fig id="pone.0154623.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0154623.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Predicted capillary plasma PQ concentration versus time for various chemoprevention regimens of DP in 1–2 year olds weighing ≥ 11 kg.</title>
+<p>For each combination of dose (240 mg, 320 mg, or 400 mg) and schedule (3 times once monthly, once weekly, 2 times once monthly or once every 15 days), there is a set of 3 panels, with the left panel (box plots) showing trough concentrations at the end of the first 5 months, the middle panel the steady-state PK profile during the first 3 days after the first dose of the month, and the right panel the steady-state PK profile during days 3–30 (or days 3–28 for weekly dosing) relative to a first dose of the month. For the PK profiles, the middle line represents the population predictions, the grey shaded area the 50% prediction interval and the outer bounds the 90% prediction interval. The grey horizontal lines indicate capillary plasma concentrations of 10, 20, and 30 ng/mL (for putative trough targets), and a capillary plasma level of 57 ng/mL (for a putative day 7 target).</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0154623.g001" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0154623.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0154623.t002</object-id>
+<label>Table 2</label> <caption><title>Predictions related to trough and peak capillary plasma concentration of PQ at steady-state with various chemoprevention regimens of DP in 1–2 year olds weighing ≥ 11 kg.</title></caption>
+<alternatives>
+<graphic id="pone.0154623.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0154623.t002" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="3">Dose</th>
+<th align="center" rowspan="3">Frequency</th>
+<th align="center" colspan="2" rowspan="2">Predicted Trough (ng/mL)</th>
+<th align="center" colspan="4">Percent of Patient-Treatments with Predicted Capillary Concentration above Given Level</th>
+<th align="center" colspan="2" rowspan="2">Predicted Maximum Concentration (ng/mL)</th>
+</tr>
+<tr>
+<th align="center" colspan="3">Day 30 (Trough)<xref ref-type="table-fn" rid="t002fn001">*</xref></th>
+<th align="center">Day 7</th>
+</tr>
+<tr>
+<th align="center">Geometric Mean</th>
+<th align="center">90% prediction interval</th>
+<th align="center">10 ng/mL</th>
+<th align="center">20 ng/mL</th>
+<th align="center">30 ng/mL</th>
+<th align="center">57 ng/mL</th>
+<th align="center">Geometric Mean</th>
+<th align="center">90% prediction interval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">240 mg daily x 3</td>
+<td align="center">monthly</td>
+<td align="char" char=".">26.5</td>
+<td align="center">9.2, 75.7</td>
+<td align="center">93.3</td>
+<td align="char" char=".">66.8</td>
+<td align="char" char=".">42.8</td>
+<td align="center">58.3</td>
+<td align="char" char=".">408.2</td>
+<td align="center">185.9, 897.2</td>
+</tr>
+<tr>
+<td align="center">240 mg x 1</td>
+<td align="center">weekly</td>
+<td align="char" char=".">55.2</td>
+<td align="center">20.6, 147.2</td>
+<td align="center">99.7</td>
+<td align="char" char=".">95.3</td>
+<td align="char" char=".">83.7</td>
+<td align="center">NA</td>
+<td align="char" char=".">303.7</td>
+<td align="center">120.0, 722.3</td>
+</tr>
+<tr>
+<td align="center">320 mg daily x 3</td>
+<td align="center">monthly</td>
+<td align="char" char=".">35.3</td>
+<td align="center">12.2, 108.9</td>
+<td align="center">97.1</td>
+<td align="char" char=".">80.7</td>
+<td align="char" char=".">60.2</td>
+<td align="center">76.3</td>
+<td align="char" char=".">544.3</td>
+<td align="center">247.9, 1196.4</td>
+</tr>
+<tr>
+<td align="center">320 mg daily x 2</td>
+<td align="center">monthly</td>
+<td align="char" char=".">23.3</td>
+<td align="center">8.0, 66.6</td>
+<td align="center">89.5</td>
+<td align="char" char=".">59.2</td>
+<td align="char" char=".">36.4</td>
+<td align="center">45.3</td>
+<td align="char" char=".">441.5</td>
+<td align="center">173.7, 1007.9</td>
+</tr>
+<tr>
+<td align="center">320 mg x 1</td>
+<td align="center">twice monthly</td>
+<td align="char" char=".">29.1</td>
+<td align="center">10.1, 85.4</td>
+<td align="center">95.1</td>
+<td align="char" char=".">72.7</td>
+<td align="char" char=".">48.2</td>
+<td align="center">NA</td>
+<td align="char" char=".">334.7</td>
+<td align="center">124.6, 860.8</td>
+</tr>
+<tr>
+<td align="center">320 mg x 1</td>
+<td align="center">weekly</td>
+<td align="char" char=".">73.6</td>
+<td align="center">27.5, 196.2</td>
+<td align="center">100</td>
+<td align="char" char=".">98.1</td>
+<td align="char" char=".">93.5</td>
+<td align="center">NA</td>
+<td align="char" char=".">404.9</td>
+<td align="center">172.1, 963.1</td>
+</tr>
+<tr>
+<td align="center">400 mg daily x 3</td>
+<td align="center">monthly</td>
+<td align="char" char=".">44.2</td>
+<td align="center">15.3, 126.1</td>
+<td align="center">98.8</td>
+<td align="char" char=".">87.8</td>
+<td align="char" char=".">72.1</td>
+<td align="center">86.8</td>
+<td align="char" char=".">680.1</td>
+<td align="center">309.8, 1495.5</td>
+</tr>
+<tr>
+<td align="center">400 mg daily x 2</td>
+<td align="center">monthly</td>
+<td align="char" char=".">29.1</td>
+<td align="center">10.0, 83.2</td>
+<td align="center">95.1</td>
+<td align="char" char=".">71.2</td>
+<td align="char" char=".">48.9</td>
+<td align="center">60.6</td>
+<td align="char" char=".">551.9</td>
+<td align="center">217.1, 1259.8</td>
+</tr>
+<tr>
+<td align="center">400 mg x 1</td>
+<td align="center">twice monthly</td>
+<td align="char" char=".">36.3</td>
+<td align="center">12.6,106.7</td>
+<td align="center">97.8</td>
+<td align="char" char=".">82.9</td>
+<td align="char" char=".">62.4</td>
+<td align="center">41.6</td>
+<td align="char" char=".">418.4</td>
+<td align="center">155.8, 1076</td>
+</tr>
+<tr>
+<td align="center">400 mg x 1</td>
+<td align="center">weekly</td>
+<td align="char" char=".">92.0</td>
+<td align="center">34.3, 245.2</td>
+<td align="center">100</td>
+<td align="char" char=".">99.3</td>
+<td align="char" char=".">96.4</td>
+<td align="center">NA</td>
+<td align="char" char=".">506.1</td>
+<td align="center">215.0, 1203.9</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t002fn001"><p>*Day 30 except for weekly administration, in which case it is day 28</p></fn>
+<fn id="t002fn002"><p>NA = not applicable</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>Current chemoprevention trials have studied regimens of three consecutive doses given daily each month, though adherence to this regimen is suboptimal [<xref ref-type="bibr" rid="pone.0154623.ref010">10</xref>, <xref ref-type="bibr" rid="pone.0154623.ref013">13</xref>]. An alternative approach that may improve adherence is to either reduce the number of consecutive doses (two doses daily each month), or increase the frequency of dosing to either twice monthly/every two weeks or weekly (below). Reducing the number of consecutive doses to 2 doses while increasing the amount in each dose (to 320 mg or 400 mg) leads to predicted exposure that is comparable to the reference regimen (<xref ref-type="fig" rid="pone.0154623.g001">Fig 1</xref> and <xref ref-type="table" rid="pone.0154623.t002">Table 2</xref>).</p>
+</sec>
+<sec id="sec011">
+<title>Effects of changing the dosing frequency on piperaquine exposure</title>
+<p>Increasing the dosing frequency to twice monthly also leads to steady-state trough concentrations comparable to those of the reference. Compared to the reference regimen, 320 mg twice monthly achieves similar steady-state trough concentrations, while 400 mg twice monthly leads to a 36% increase in steady-state trough concentrations and a 46% increase in predicted percent of individuals with troughs above 30 ng/mL. A further increase in the dosing frequency to single weekly doses results in additional improvement in PQ trough exposure. Compared to the reference regimen, weekly 240 mg, 320 mg, and 400 mg doses increase the steady-state trough concentration by 2-fold, 2.8-fold, and 3.5-fold, respectively. In addition, even with a 240 mg dose, &gt;99% and &gt;84% of individuals are predicted to have trough concentrations above 10 ng/mL and 30 ng/mL, respectively.</p>
+</sec>
+<sec id="sec012">
+<title>Effects of dosing changes on peak plasma piperaquine concentration</title>
+<p>While no clear threshold peak concentration has been linked with toxicity, a recent trial reported that PQ exhibited a concentration-dependent effect on QT prolongation. Adults whose PQ venous plasma peaks were in the range of approximately 500 to 1000 ng/mL had a higher risk of cardiotoxicity [<xref ref-type="bibr" rid="pone.0154623.ref027">27</xref>]. Given this potential relationship, capillary plasma peaks were evaluated in our simulation study (<xref ref-type="fig" rid="pone.0154623.g001">Fig 1</xref> and <xref ref-type="table" rid="pone.0154623.t002">Table 2</xref>). While more frequent dosing results in higher troughs, mean predicted peak PQ capillary plasma concentration is substantially lower, going from 544 ng/mL to 340 ng/mL with monthly (x 3) versus once weekly dosing of 320 mg, respectively, despite higher total monthly doses with the later. Similar reductions in predicted peak concentrations are noted with the weekly 240 mg and 400 mg regimens. Peaks with the bimonthly regimens are likewise lower, in part due to the lower total monthly doses.</p>
+</sec>
+<sec id="sec013">
+<title>Effects of loading dose on piperquine exposure</title>
+<p>Simulations revealed that PQ capillary plasma concentrations with repeated dosing are expected to reach steady-state in approximately three months (Figs <xref ref-type="fig" rid="pone.0154623.g001">1</xref> and <xref ref-type="fig" rid="pone.0154623.g002">2</xref>). The PQ steady-state concentrations after multiple treatments relative to with a single treatment are approximately doubled due to accumulation. For example, after 3 consecutive daily doses of 240 mg, the average (geometric mean) predicted PQ trough capillary plasma concentration at the end of the first month is 13.2 ng/mL (95% prediction interval 5.1, 34.1 ng/mL), compared to steady-state trough levels of 26.5 ng/mL (95% prediction interval 9.2, 75.7 ng/mL) if this dose is given monthly. To address the reduced exposure in early months, we simulated the impact of a loading dose (three consecutive daily doses at the beginning of the first dosing month), followed by weekly dosing (<xref ref-type="fig" rid="pone.0154623.g002">Fig 2</xref> and <xref ref-type="table" rid="pone.0154623.t003">Table 3</xref>). The use of a 320 mg daily x 3 loading dose, followed by 240 mg weekly dosing, is predicted to increase trough levels to 55.2 ng/mL at the end of the first month (approximately the same value as the trough at steady-state), as compared to 41.2 ng/mL without a loading dose. Similarly, the use of this loading dose followed by a 320 mg weekly dose led to an 32% increase in the first-month trough level as compared to using the 320 mg weekly dose without a loading dose.</p>
+<fig id="pone.0154623.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0154623.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Predicted capillary plasma PQ concentration versus time for different doses of weekly chemoprevention regimens of DP without and with a loading dose in 1–2 year olds weighing ≥ 11 kg.</title>
+<p>For each combination of dose (240 mg, 320 mg, or 400 mg given weekly) and presence or absence of a loading dose, there is a set of 3 panels, with the left panel (box plots) showing trough concentrations of the first 5 months, the middle panel the PK profile during the first three days after the first dose, and the right panel the PK profile during days 3–28 relative to the first dose. For the PK profiles, the middle line represents the population predictions, the grey shaded area the 50% prediction interval and the outer bounds the 90% prediction interval. The grey horizontal lines indicate capillary plasma concentrations of 10, 20, and 30 ng/mL (for putative trough targets), and a capillary plasma level of 57 ng/mL (for a putative day 7 target).</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0154623.g002" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0154623.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0154623.t003</object-id>
+<label>Table 3</label> <caption><title>Comparative predicted capillary plasma PQ concentrations with and without a loading dose of DP and predicted maximum concentration with a loading dose of DP in 1–2 year olds weighing ≥ 11 kg.</title></caption>
+<alternatives>
+<graphic id="pone.0154623.t003g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0154623.t003" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="2">Maintenance Dose</th>
+<th align="center" rowspan="2">Loading Dose</th>
+<th align="center" colspan="2">Predicted Ratio of Day 7 Concentration after First Dose to Day 7 Concentration at Steady-State</th>
+<th align="center" colspan="2">Predicted Ratio of Day 28 Trough to Steady-State Trough</th>
+<th align="center" colspan="2">Predicted Maximum Concentration on Day 3</th>
+</tr>
+<tr>
+<th align="center">Without Loading Dose</th>
+<th align="center">With Loading Dose</th>
+<th align="center">Without Loading Dose</th>
+<th align="center">With Loading Dose</th>
+<th align="center">Geometric Mean</th>
+<th align="center">90% prediction interval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">240 mg weeklyweekly</td>
+<td align="center">320 mg daily x 3</td>
+<td align="center">0.75 (0.20, 2.85)</td>
+<td align="center">1.01 (0.27, 3.80)</td>
+<td align="center">0.50 (0.13, 1.86)</td>
+<td align="center">0.75 (0.19, 2.78)</td>
+<td align="char" char=".">494.3</td>
+<td align="center">200.6, 1116.3</td>
+</tr>
+<tr>
+<td align="center">320 mg weeklyweekl</td>
+<td align="center">320 mg daily x 3</td>
+<td align="center">0.21 (0.06, 0.79)</td>
+<td align="center">0.75 (0.20, 2.85)</td>
+<td align="center">0.50 (0.13, 1.86)</td>
+<td align="center">0.66 (0.17, 2.49)</td>
+<td align="char" char=".">494.3</td>
+<td align="center">200.6, 1116.3</td>
+</tr>
+<tr>
+<td align="center">400 mg weekly</td>
+<td align="center">320 mg daily x 3</td>
+<td align="center">0.21 (0.06, 0.79)</td>
+<td align="center">0.75 (0.20, 2.85)</td>
+<td align="center">0.50 (0.13, 1.87)</td>
+<td align="center">0.66 (0.17, 2.49)</td>
+<td align="char" char=".">617.9</td>
+<td align="center">250.8, 1395.5</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+</sec>
+<sec id="sec014" sec-type="conclusions">
+<title>Discussion</title>
+<p>A growing body of evidence supports the efficacy of monthly chemoprevention with DP in various epidemiologic settings [<xref ref-type="bibr" rid="pone.0154623.ref010">10</xref>–<xref ref-type="bibr" rid="pone.0154623.ref013">13</xref>, <xref ref-type="bibr" rid="pone.0154623.ref018">18</xref>, <xref ref-type="bibr" rid="pone.0154623.ref028">28</xref>]. While such an approach has been quite effective in tightly controlled research studies, challenges with adherence to monthly regimens, the emergence of resistance to DP in Southeast Asia, and concerns over the risk of cardiotoxicity with repeated monthly treatment doses [<xref ref-type="bibr" rid="pone.0154623.ref020">20</xref>] warrant characterization of the profile of DP with alternative chemoprevention regimens. The objective of this PK simulation study was to apply population PK model-derived information to predict exposure with alternative DP chemoprevention dosing regimens in young children. As precise PQ target levels for DP chemoprevention remain unclear, we simulated steady-state troughs (end of the month), day 7 concentrations (which are associated with the risk of recurrent infection after treatment), and peak concentrations (which may be predictive of toxicity) under differing dosing scenarios. Our results suggest that weekly single dose DP will lead to higher steady-state trough PQ concentrations, as well as the proportion of individuals reaching specified trough levels, while at the same time lowering the peak concentrations. Furthermore, the use of a loading dose is predicted to attain concentrations in the first several months following initiation of chemoprevention that are more in line with those seen at steady-state.</p>
+<p>Amongst our initial simulations was a comparison of previous mg/kg DP dosing regimens to the newly revised increased 2015 WHO regimen, as all published chemoprevention studies have been performed under earlier mg/kg dosing regimens (<xref ref-type="table" rid="pone.0154623.t001">Table 1</xref>) [<xref ref-type="bibr" rid="pone.0154623.ref001">1</xref>, <xref ref-type="bibr" rid="pone.0154623.ref022">22</xref>]. Relative to the former 240 mg dose (daily x 3 given monthly), the revised 320 mg per dose regimen in young children is predicted to provide a 38% increase in steady-state troughs with 60% of children maintaining capillary troughs above 30 ng/mL, as compared to 43% under prior dosing weight bands. These results are consistent with a recent simulation study utilizing the Thai adult chemoprevention data which found that the newly revised WHO dosing regimen provides a significant improvement in efficacy in all weight groups, but particularly in those weighing 8 to 12 kg [<xref ref-type="bibr" rid="pone.0154623.ref018">18</xref>, <xref ref-type="bibr" rid="pone.0154623.ref029">29</xref>].</p>
+<p>While it is anticipated that current increased DP mg/kg dosing guidelines will improve PK exposure in both treatment and chemopreventiion settings, adherence to the regimen for the latter, with three consecutive daily doses each month, is likely to be challenging [<xref ref-type="bibr" rid="pone.0154623.ref013">13</xref>, <xref ref-type="bibr" rid="pone.0154623.ref030">30</xref>]. A recent study in a high transmission region of Uganda found that while DP was the most efficacious of chemopreventive regimens studied, it was still only 58% effective with 52% of children having undetectable PQ at the time of diagnosis, suggesting a lack of adherence [<xref ref-type="bibr" rid="pone.0154623.ref013">13</xref>]. It is possible that the provision of single doses at a regular interval (particularly weekly) may improve adherence over a regimen that is administered for three consecutive days of each month, though this remains to be evaluated in field settings. Our simulated regimens thus included single dose twice monthly and weekly administration which may provide simplified dosing at regular intervals. Most promising was the provision of weekly chemoprevention, with an associated 2- to 3.5-fold increase in steady-state trough concentrations compared to monthly dosing. Notably, mean steady-state trough concentrations with all weekly doses are predicted to be higher than the protective venous trough level of 20 ng/mL reported recently (which is predicted to correspond to a capillary level of approximately 50 ng/mL) [<xref ref-type="bibr" rid="pone.0154623.ref017">17</xref>, <xref ref-type="bibr" rid="pone.0154623.ref029">29</xref>]. Splitting a total dose into two or more fractional doses (and giving more frequently) has the additional benefit that if a dose is missed, it does not have as much impact on the average systemic exposure [<xref ref-type="bibr" rid="pone.0154623.ref031">31</xref>]. If the same (or even greater) percentage of pills are missed overall relative to monthly dosing, dividing a similar total monthly dose into multiple doses throughout the month is still likely to result in higher PQ trough concentrations. In a trial comparing once daily to twice daily antiretroviral therapy, the probability of sustained virologic response was higher (89% versus 76%) with the latter, despite <italic>less</italic> adherence (80% versus 91%) because trough levels of the antiretroviral lopinovir were higher [<xref ref-type="bibr" rid="pone.0154623.ref032">32</xref>].</p>
+<p>Another potential weakness of current chemopreventive approaches is the time that is required to reach steady-state. With the provision of three consecutive daily doses, steady-state is projected to be achieved after a few months of dosing, placing individuals at a higher risk of breakthrough infections in the first few months after initiation. In the recent Thai adult study, 4 of 5 new infections occurred during the first 2 months of the trial before steady-state was achieved [<xref ref-type="bibr" rid="pone.0154623.ref018">18</xref>]. Additionally, 32 of the 40 infections during the every-2-month DP arm occurred in the second month after a dose, also supporting the notion that target concentrations need to be maintained for the duration of the dosing interval for optimal efficacy. To address this concern, we simulated the use of a loading dose (the standard three consecutive daily dose regimen), followed by a repeated weekly single 320 mg dose regimen (<xref ref-type="table" rid="pone.0154623.t003">Table 3</xref>, <xref ref-type="fig" rid="pone.0154623.g002">Fig 2</xref>). The use of a loading dose is predicted to increase PQ exposure closer to steady-state in the first few months, as compared to weekly dosing without the loading dose. Levels of PQ on day 7 of the 1<sup>st</sup> month are expected to be 75% of steady-state with the use of a loading dose as compared to 21% of steady-state without a loading dose. Improved exposure in the first two months of chemoprevention is particularly critical in high transmission settings and in the setting of SMC, where DP is only administered for a few months of the year.</p>
+<p>An obvious concern with certain alternative regimens is that of potentially greater toxicity, the most serious of which is corrected QT (QTc) interval prolongation [<xref ref-type="bibr" rid="pone.0154623.ref033">33</xref>]. Most notably, a recent trial was halted due to concerns of QT prolongation when a compressed monthly 2-day treatment was attempted in healthy adults, and that toxicity was felt to relate to PQ peak concentrations [<xref ref-type="bibr" rid="pone.0154623.ref020">20</xref>]. Importantly, our simulations suggest that weekly dosing <italic>decreases</italic> predicted peak levels, despite higher steady-state trough concentrations (Tables <xref ref-type="table" rid="pone.0154623.t002">2</xref> and <xref ref-type="table" rid="pone.0154623.t003">3</xref>). In other words, our simulations suggest that <italic>both</italic> improved efficacy and lower risks of toxicity may be achieved with this approach.</p>
+<p>An additional concern that one must consider with repeated dosing in chemoprevention is the potential for the emergence and selection of resistance [<xref ref-type="bibr" rid="pone.0154623.ref034">34</xref>]. Resistance to both artemisinins and PQ has been described in Asia, and the potential emergence or spread of resistance in Africa is of great concern [<xref ref-type="bibr" rid="pone.0154623.ref003">3</xref>–<xref ref-type="bibr" rid="pone.0154623.ref005">5</xref>, <xref ref-type="bibr" rid="pone.0154623.ref035">35</xref>–<xref ref-type="bibr" rid="pone.0154623.ref037">37</xref>]. While we did not model PK-resistance relationships in this study, regimens that provide higher steady-state troughs are those with shorter dosing intervals, resulting in concentrations that are more likely to be above a “protective” threshold where the development or selection for resistance may occur. Further, the use of twice monthly or weekly doses may be associated with “insufficient” exposure to PQ after the first dose(s), as compared with levels after a standard “treatment” dose, thereby placing one at risk for selection or emergence of resistant PQ parasites. The use of a “loading dose” at the start of chemoprevention improves the likelihood of parasite eradication in asymptomatically-infected individuals, thereby reducing this potential risk.</p>
+<p>An additional challenge in our PK simulation study was to define a target “protective” PQ concentration, as a clear target has not been described for chemoprevention. While data are emerging [<xref ref-type="bibr" rid="pone.0154623.ref018">18</xref>, <xref ref-type="bibr" rid="pone.0154623.ref029">29</xref>], multiple factors such as transmission intensity, presence of artemisinin or partner drug resistance, immunity of the population, age (adults vs children), and pregnancy status are likely to impact protective thresholds. In the absence of such PK/PD data, we chose to evaluate several PQ targets at troughs and at day 7 to allow for comparatives PK exposure profiles among dosing approaches. In the future, a fully systematic approach would be ideal, combining known PK models with mechanistic disease and drug-disease (i.e., PD) models to predict response under appropriate conditions and assumptions. Such mechanistic models for malaria and its treatment are being developed [<xref ref-type="bibr" rid="pone.0154623.ref029">29</xref>, <xref ref-type="bibr" rid="pone.0154623.ref038">38</xref>–<xref ref-type="bibr" rid="pone.0154623.ref044">44</xref>].</p>
+<p>A limitation of the current study is our focus on the long-acting partner drug PQ, without simulating exposure to the short-acting artemisinin, DHA. Most notably, the PD impact of altered DHA exposure under modified dosing regimens (bimonthly, weekly) is an important consideration. Currently, no PK data for artemisinins is available from chemoprevention studies, though a recent study has modeled DHA exposure and parasite killing rates under differing DP treatment regimens [<xref ref-type="bibr" rid="pone.0154623.ref045">45</xref>]. In addition, our study uses PK information from a diseased population to make predictions in a non-diseased population. While alterations in PK in the presence of malaria have been identified for some antimalarials, namely lumefantrine, [<xref ref-type="bibr" rid="pone.0154623.ref046">46</xref>] artusenate, [<xref ref-type="bibr" rid="pone.0154623.ref047">47</xref>–<xref ref-type="bibr" rid="pone.0154623.ref049">49</xref>] and halofantrine, [<xref ref-type="bibr" rid="pone.0154623.ref048">48</xref>], such data for PQ are limited, though some alteration in PK almost certainly is to be expected. Of note, a significant effect of baseline parasite density on drug clearance or relative bioavailability was not detected in the PQ data from which our model was derived [<xref ref-type="bibr" rid="pone.0154623.ref006">6</xref>].</p>
+<p>In summary, we believe that this or similar simulation approaches can be very beneficial in choosing dosing strategies for chemoprevention trials of DP and other antimalarial regimens. Our simulations predict that, in young children receiving a weekly single dose of DP, excellent exposure can be maintained throughout the dosing interval while lowering peak PQ concentrations, compared to current monthly “treatment” doses. Weekly dosing is also expected to maintain higher troughs when adherence is imperfect. The use of a loading dose may further enhance the potential for success through the “complete” eradication of parasites and reduction in breakthrough infections during the first month. It is critical that the impact of the predicted exposure (average, trough and peak) be considered in the context of patient- and regional-specific requirements for efficacy, toxicity, ease of administration, adherence, and risk of resistance.</p>
+</sec>
+</body>
+<back>
+<ack>
+<p>We are grateful to the children who participated in the primary efficacy and pharmacokinetic study, to their parents and guardians, and to the clinical study team for their support. The findings and conclusions in this paper are those of the authors and do not necessarily represent the views of the US Centers for Disease Control and Prevention.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0154623.ref001"><label>1</label><mixed-citation publication-type="book" xlink:type="simple"><publisher-name>World Health Organization</publisher-name>. <source>Guidelines for the Treatment of Malaria</source>—<edition>Third Edition</edition>. <publisher-loc>Geneva, Switzerland</publisher-loc>: <fpage>2015</fpage>.</mixed-citation></ref>
+<ref id="pone.0154623.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ashley</surname> <given-names>EA</given-names></name>, <name name-style="western"><surname>Dhorda</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Fairhurst</surname> <given-names>RM</given-names></name>, <name name-style="western"><surname>Amaratunga</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Lim</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Suon</surname> <given-names>S</given-names></name>, <etal>et al</etal>. <article-title>Spread of artemisinin resistance in Plasmodium falciparum malaria</article-title>. <source>N Engl J Med</source>. <year>2014</year>;<volume>371</volume>(<issue>5</issue>):<fpage>411</fpage>–<lpage>23</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1056/NEJMoa1314981" xlink:type="simple">10.1056/NEJMoa1314981</ext-link></comment> <object-id pub-id-type="pmid">25075834</object-id>; PubMed Central PMCID: PMCPMC4143591.</mixed-citation></ref>
+<ref id="pone.0154623.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Saunders</surname> <given-names>DL</given-names></name>, <name name-style="western"><surname>Vanachayangkul</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Lon</surname> <given-names>C</given-names></name>, <collab>Program USAMMR</collab>, <collab>National Center for Parasitology E, Malaria C</collab>, <etal>et al</etal>. <article-title>Dihydroartemisinin-piperaquine failure in Cambodia</article-title>. <source>N Engl J Med</source>. <year>2014</year>;<volume>371</volume>(<issue>5</issue>):<fpage>484</fpage>–<lpage>5</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1056/NEJMc1403007" xlink:type="simple">10.1056/NEJMc1403007</ext-link></comment> <object-id pub-id-type="pmid">25075853</object-id>.</mixed-citation></ref>
+<ref id="pone.0154623.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Leang</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Taylor</surname> <given-names>WR</given-names></name>, <name name-style="western"><surname>Bouth</surname> <given-names>DM</given-names></name>, <name name-style="western"><surname>Song</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Tarning</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Char</surname> <given-names>MC</given-names></name>, <etal>et al</etal>. <article-title>Evidence of Plasmodium falciparum Malaria Multidrug Resistance to Artemisinin and Piperaquine in Western Cambodia: Dihydroartemisinin-Piperaquine Open-Label Multicenter Clinical Assessment</article-title>. <source>Antimicrob Agents Chemother</source>. <year>2015</year>;<volume>59</volume>(<issue>8</issue>):<fpage>4719</fpage>–<lpage>26</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/AAC.00835-15" xlink:type="simple">10.1128/AAC.00835-15</ext-link></comment> <object-id pub-id-type="pmid">26014949</object-id>; PubMed Central PMCID: PMCPMC4505193.</mixed-citation></ref>
+<ref id="pone.0154623.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Amaratunga</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Lim</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Suon</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Sreng</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Mao</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Sopha</surname> <given-names>C</given-names></name>, <etal>et al</etal>. <article-title>Dihydroartemisinin-piperaquine resistance in Plasmodium falciparum malaria in Cambodia: a multisite prospective cohort study</article-title>. <source>Lancet Infect Dis</source>. <year>2016</year>;<volume>16</volume>(<issue>3</issue>):<fpage>357</fpage>–<lpage>65</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/S1473-3099(15)00487-9" xlink:type="simple">10.1016/S1473-3099(15)00487-9</ext-link></comment> <object-id pub-id-type="pmid">26774243</object-id>; PubMed Central PMCID: PMCPMC4792715.</mixed-citation></ref>
+<ref id="pone.0154623.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sambol</surname> <given-names>NC</given-names></name>, <name name-style="western"><surname>Yan</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Creek</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>McCormack</surname> <given-names>SA</given-names></name>, <name name-style="western"><surname>Arinaitwe</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Bigira</surname> <given-names>V</given-names></name>, <etal>et al</etal>. <article-title>Population Pharmacokinetics of Piperaquine in Young Ugandan Children Treated With Dihydroartemisinin-Piperaquine for Uncomplicated Malaria</article-title>. <source>Clin Pharmacol Ther</source>. <year>2015</year>;<volume>98</volume>(<issue>1</issue>):<fpage>87</fpage>–<lpage>95</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/cpt.104" xlink:type="simple">10.1002/cpt.104</ext-link></comment> <object-id pub-id-type="pmid">25732044</object-id>.</mixed-citation></ref>
+<ref id="pone.0154623.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kamya</surname> <given-names>MR</given-names></name>, <name name-style="western"><surname>Kapisi</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Bigira</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Clark</surname> <given-names>TD</given-names></name>, <name name-style="western"><surname>Kinara</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Mwangwa</surname> <given-names>F</given-names></name>, <etal>et al</etal>. <article-title>Efficacy and safety of three regimens for the prevention of malaria in young HIV-exposed Ugandan children: a randomized controlled trial</article-title>. <source>AIDS</source>. <year>2014</year>;<volume>28</volume>(<issue>18</issue>):<fpage>2701</fpage>–<lpage>9</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1097/QAD.0000000000000497" xlink:type="simple">10.1097/QAD.0000000000000497</ext-link></comment> <object-id pub-id-type="pmid">25493596</object-id>; PubMed Central PMCID: PMCPMC4487368.</mixed-citation></ref>
+<ref id="pone.0154623.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zongo</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Milligan</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Compaore</surname> <given-names>YD</given-names></name>, <name name-style="western"><surname>Some</surname> <given-names>AF</given-names></name>, <name name-style="western"><surname>Greenwood</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Tarning</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Randomized Noninferiority Trial of Dihydroartemisinin-Piperaquine Compared with Sulfadoxine-Pyrimethamine plus Amodiaquine for Seasonal Malaria Chemoprevention in Burkina Faso</article-title>. <source>Antimicrob Agents Chemother</source>. <year>2015</year>;<volume>59</volume>(<issue>8</issue>):<fpage>4387</fpage>–<lpage>96</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/AAC.04923-14" xlink:type="simple">10.1128/AAC.04923-14</ext-link></comment> <object-id pub-id-type="pmid">25918149</object-id>; PubMed Central PMCID: PMCPMC4505196.</mixed-citation></ref>
+<ref id="pone.0154623.ref009"><label>9</label><mixed-citation publication-type="book" xlink:type="simple"><collab>World Health Organization</collab>. <source>Seasonal malaria chemoprevention with sulfadoxine-pyrimethamine plus amodiaquine in children: A field guide</source>. <publisher-loc>Geneva, Switzerland</publisher-loc>: <fpage>2013</fpage>.</mixed-citation></ref>
+<ref id="pone.0154623.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cisse</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Cairns</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Faye</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>NDiaye</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Faye</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Cames</surname> <given-names>C</given-names></name>, <etal>et al</etal>. <article-title>Randomized trial of piperaquine with sulfadoxine-pyrimethamine or dihydroartemisinin for malaria intermittent preventive treatment in children</article-title>. <source>PLoS One</source>. <year>2009</year>;<volume>4</volume>(<issue>9</issue>):<fpage>e7164</fpage>. Epub 2009/09/29. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0007164" xlink:type="simple">10.1371/journal.pone.0007164</ext-link></comment> <object-id pub-id-type="pmid">19784374</object-id>; PubMed Central PMCID: PMCPMC2747010.</mixed-citation></ref>
+<ref id="pone.0154623.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bojang</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Akor</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Bittaye</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Conway</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Bottomley</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Milligan</surname> <given-names>P</given-names></name>, <etal>et al</etal>. <article-title>A randomised trial to compare the safety, tolerability and efficacy of three drug combinations for intermittent preventive treatment in children</article-title>. <source>PLoS One</source>. <year>2010</year>;<volume>5</volume>(<issue>6</issue>):<fpage>e11225</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0011225" xlink:type="simple">10.1371/journal.pone.0011225</ext-link></comment> <object-id pub-id-type="pmid">20574538</object-id>; PubMed Central PMCID: PMCPMC2888611.</mixed-citation></ref>
+<ref id="pone.0154623.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nankabirwa</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Brooker</surname> <given-names>SJ</given-names></name>, <name name-style="western"><surname>Clarke</surname> <given-names>SE</given-names></name>, <name name-style="western"><surname>Fernando</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Gitonga</surname> <given-names>CW</given-names></name>, <name name-style="western"><surname>Schellenberg</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Malaria in school-age children in Africa: an increasingly important challenge</article-title>. <source>Trop Med Int Health</source>. <year>2014</year>;<volume>19</volume>(<issue>11</issue>):<fpage>1294</fpage>–<lpage>309</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/tmi.12374" xlink:type="simple">10.1111/tmi.12374</ext-link></comment> <object-id pub-id-type="pmid">25145389</object-id>; PubMed Central PMCID: PMCPMC4285305.</mixed-citation></ref>
+<ref id="pone.0154623.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bigira</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Kapisi</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Clark</surname> <given-names>TD</given-names></name>, <name name-style="western"><surname>Kinara</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Mwangwa</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Muhindo</surname> <given-names>MK</given-names></name>, <etal>et al</etal>. <article-title>Protective efficacy and safety of three antimalarial regimens for the prevention of malaria in young Ugandan children: a randomized controlled trial</article-title>. <source>PLoS Med</source>. <year>2014</year>;<volume>11</volume>(<issue>8</issue>):<fpage>e1001689</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pmed.1001689" xlink:type="simple">10.1371/journal.pmed.1001689</ext-link></comment> <object-id pub-id-type="pmid">25093754</object-id>; PubMed Central PMCID: PMCPMC4122345.</mixed-citation></ref>
+<ref id="pone.0154623.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>White</surname> <given-names>NJ</given-names></name>. <article-title>Pharmacokinetic and pharmacodynamic considerations in antimalarial dose optimization</article-title>. <source>Antimicrob Agents Chemother</source>. <year>2013</year>;<volume>57</volume>(<issue>12</issue>):<fpage>5792</fpage>–<lpage>807</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/AAC.00287-13" xlink:type="simple">10.1128/AAC.00287-13</ext-link></comment> <object-id pub-id-type="pmid">24002099</object-id>; PubMed Central PMCID: PMCPMC3837842.</mixed-citation></ref>
+<ref id="pone.0154623.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Creek</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>Bigira</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>McCormack</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Arinaitwe</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Wanzira</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Kakuru</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>Pharmacokinetic predictors for recurrent malaria after dihydroartemisinin-piperaquine treatment of uncomplicated malaria in Ugandan infants</article-title>. <source>J Infect Dis</source>. <year>2013</year>;<volume>207</volume>(<issue>11</issue>):<fpage>1646</fpage>–<lpage>54</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/infdis/jit078" xlink:type="simple">10.1093/infdis/jit078</ext-link></comment> <object-id pub-id-type="pmid">23447696</object-id>; PubMed Central PMCID: PMCPMC4318925.</mixed-citation></ref>
+<ref id="pone.0154623.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><collab>WorldWide Antimalarial Resistance Network DP Study Group</collab>. <article-title>The effect of dosing regimens on the antimalarial efficacy of dihydroartemisinin-piperaquine: a pooled analysis of individual patient data</article-title>. <source>PLoS Med</source>. <year>2013</year>;<volume>10</volume>(<issue>12</issue>):<fpage>e1001564</fpage>; discussion e. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pmed.1001564" xlink:type="simple">10.1371/journal.pmed.1001564</ext-link></comment> <object-id pub-id-type="pmid">24311989</object-id>; PubMed Central PMCID: PMCPMC3848996.</mixed-citation></ref>
+<ref id="pone.0154623.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tarning</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Zongo</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Some</surname> <given-names>FA</given-names></name>, <name name-style="western"><surname>Rouamba</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Parikh</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Rosenthal</surname> <given-names>PJ</given-names></name>, <etal>et al</etal>. <article-title>Population pharmacokinetics and pharmacodynamics of piperaquine in children with uncomplicated falciparum malaria</article-title>. <source>Clin Pharmacol Ther</source>. <year>2012</year>;<volume>91</volume>(<issue>3</issue>):<fpage>497</fpage>–<lpage>505</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/clpt.2011.254" xlink:type="simple">10.1038/clpt.2011.254</ext-link></comment> <object-id pub-id-type="pmid">22258469</object-id>; PubMed Central PMCID: PMCPMC3736305.</mixed-citation></ref>
+<ref id="pone.0154623.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lwin</surname> <given-names>KM</given-names></name>, <name name-style="western"><surname>Phyo</surname> <given-names>AP</given-names></name>, <name name-style="western"><surname>Tarning</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Hanpithakpong</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Ashley</surname> <given-names>EA</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>SJ</given-names></name>, <etal>et al</etal>. <article-title>Randomized, double-blind, placebo-controlled trial of monthly versus bimonthly dihydroartemisinin-piperaquine chemoprevention in adults at high risk of malaria</article-title>. <source>Antimicrob Agents Chemother</source>. <year>2012</year>;<volume>56</volume>(<issue>3</issue>):<fpage>1571</fpage>–<lpage>7</lpage>. Epub 2012/01/19. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/AAC.05877-11" xlink:type="simple">10.1128/AAC.05877-11</ext-link></comment> <object-id pub-id-type="pmid">22252804</object-id>; PubMed Central PMCID: PMCPMC3294930.</mixed-citation></ref>
+<ref id="pone.0154623.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sundell</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Jagannathan</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Huang</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Bigira</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Kapisi</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Kakuru</surname> <given-names>MM</given-names></name>, <etal>et al</etal>. <article-title>Variable piperaquine exposure significantly impacts protective efficacy of monthly dihydroartemisinin-piperaquine for the prevention of malaria in Ugandan children</article-title>. <source>Malar J</source>. <year>2015</year>;<volume>14</volume>(<issue>1</issue>):<fpage>368</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/s12936-015-0908-8" xlink:type="simple">10.1186/s12936-015-0908-8</ext-link></comment> <object-id pub-id-type="pmid">26403465</object-id>; PubMed Central PMCID: PMCPMC4582734.</mixed-citation></ref>
+<ref id="pone.0154623.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Manning</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Vanachayangkul</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Lon</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Spring</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>So</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Sea</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Randomized, double-blind, placebo-controlled clinical trial of a two-day regimen of dihydroartemisinin-piperaquine for malaria prevention halted for concern over prolonged corrected QT interval</article-title>. <source>Antimicrob Agents Chemother</source>. <year>2014</year>;<volume>58</volume>(<issue>10</issue>):<fpage>6056</fpage>–<lpage>67</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/AAC.02667-14" xlink:type="simple">10.1128/AAC.02667-14</ext-link></comment> <object-id pub-id-type="pmid">25092702</object-id>; PubMed Central PMCID: PMCPMC4187937.</mixed-citation></ref>
+<ref id="pone.0154623.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Arinaitwe</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Sandison</surname> <given-names>TG</given-names></name>, <name name-style="western"><surname>Wanzira</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Kakuru</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Homsy</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Kalamya</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Artemether-lumefantrine versus dihydroartemisinin-piperaquine for falciparum malaria: a longitudinal, randomized trial in young Ugandan children</article-title>. <source>Clin Infect Dis</source>. <year>2009</year>;<volume>49</volume>(<issue>11</issue>):<fpage>1629</fpage>–<lpage>37</lpage>. Epub 2009/11/03. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1086/647946" xlink:type="simple">10.1086/647946</ext-link></comment> <object-id pub-id-type="pmid">19877969</object-id>.</mixed-citation></ref>
+<ref id="pone.0154623.ref022"><label>22</label><mixed-citation publication-type="book" xlink:type="simple"><collab>World Health Organization</collab>. <source>Guidelines for the Treatment of Malaria</source>—<edition>Second Edition</edition>. <publisher-loc>Geneva</publisher-loc>: <publisher-name>World Health Organization</publisher-name>, <year>2010</year>.</mixed-citation></ref>
+<ref id="pone.0154623.ref023"><label>23</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Beal</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Sheiner</surname> <given-names>LB</given-names></name>, <name name-style="western"><surname>Boeckmann</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Bauer</surname> <given-names>RJ</given-names></name>. <source>NONMEM User's Guide</source>. <publisher-loc>Ellicott City, Maryland</publisher-loc>: <publisher-name>Icon Developmnet Solutions</publisher-name>; <year>2009</year>.</mixed-citation></ref>
+<ref id="pone.0154623.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hayes</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>van Buuren</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>ter Kuile</surname> <given-names>FO</given-names></name>, <name name-style="western"><surname>Stasinopoulos</surname> <given-names>DM</given-names></name>, <name name-style="western"><surname>Rigby</surname> <given-names>RA</given-names></name>, <name name-style="western"><surname>Terlouw</surname> <given-names>DJ</given-names></name>. <article-title>Developing regional weight-for-age growth references for malaria-endemic countries to optimize age-based dosing of antimalarials</article-title>. <source>Bull World Health Organ</source>. <year>2015</year>;<volume>93</volume>(<issue>2</issue>):<fpage>74</fpage>–<lpage>83</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.2471/BLT.14.139113" xlink:type="simple">10.2471/BLT.14.139113</ext-link></comment> <object-id pub-id-type="pmid">25883400</object-id>; PubMed Central PMCID: PMCPMC4339962.</mixed-citation></ref>
+<ref id="pone.0154623.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Price</surname> <given-names>RN</given-names></name>, <name name-style="western"><surname>Hasugian</surname> <given-names>AR</given-names></name>, <name name-style="western"><surname>Ratcliff</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Siswantoro</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Purba</surname> <given-names>HL</given-names></name>, <name name-style="western"><surname>Kenangalem</surname> <given-names>E</given-names></name>, <etal>et al</etal>. <article-title>Clinical and pharmacological determinants of the therapeutic response to dihydroartemisinin-piperaquine for drug-resistant malaria</article-title>. <source>Antimicrob Agents Chemother</source>. <year>2007</year>;<volume>51</volume>(<issue>11</issue>):<fpage>4090</fpage>–<lpage>7</lpage>. Epub 2007/09/12. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/AAC.00486-07" xlink:type="simple">10.1128/AAC.00486-07</ext-link></comment> <object-id pub-id-type="pmid">17846129</object-id>; PubMed Central PMCID: PMCPMC2151469.</mixed-citation></ref>
+<ref id="pone.0154623.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tarning</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Rijken</surname> <given-names>MJ</given-names></name>, <name name-style="western"><surname>McGready</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Phyo</surname> <given-names>AP</given-names></name>, <name name-style="western"><surname>Hanpithakpong</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Day</surname> <given-names>NP</given-names></name>, <etal>et al</etal>. <article-title>Population pharmacokinetics of dihydroartemisinin and piperaquine in pregnant and nonpregnant women with uncomplicated malaria</article-title>. <source>Antimicrob Agents Chemother</source>. <year>2012</year>;<volume>56</volume>(<issue>4</issue>):<fpage>1997</fpage>–<lpage>2007</lpage>. Epub 2012/01/19. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/AAC.05756-11" xlink:type="simple">10.1128/AAC.05756-11</ext-link></comment> <object-id pub-id-type="pmid">22252822</object-id>; PubMed Central PMCID: PMCPMC3318332.</mixed-citation></ref>
+<ref id="pone.0154623.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Manning</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Vanachayangkul</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Lon</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Spring</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>So</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Sea</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Randomized, double-blind, placebo-controlled clinical trial of a two-day regimen of dihydroartemisinin-piperaquine for malaria prevention halted for concern of prolonged QTc interval</article-title>. <source>Antimicrob Agents Chemother</source>. <year>2014</year>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/AAC.02667-14" xlink:type="simple">10.1128/AAC.02667-14</ext-link></comment> <object-id pub-id-type="pmid">25092702</object-id>.</mixed-citation></ref>
+<ref id="pone.0154623.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nankabirwa</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Cundill</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Clarke</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Kabatereine</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Rosenthal</surname> <given-names>PJ</given-names></name>, <name name-style="western"><surname>Dorsey</surname> <given-names>G</given-names></name>, <etal>et al</etal>. <article-title>Efficacy, safety, and tolerability of three regimens for prevention of malaria: a randomized, placebo-controlled trial in Ugandan schoolchildren</article-title>. <source>PLoS One</source>. <year>2010</year>;<volume>5</volume>(<issue>10</issue>):<fpage>e13438</fpage>. Epub 2010/10/27. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0013438" xlink:type="simple">10.1371/journal.pone.0013438</ext-link></comment> <object-id pub-id-type="pmid">20976051</object-id>; PubMed Central PMCID: PMCPMC2957410.</mixed-citation></ref>
+<ref id="pone.0154623.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bergstrand</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Nosten</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Lwin</surname> <given-names>KM</given-names></name>, <name name-style="western"><surname>Karlsson</surname> <given-names>MO</given-names></name>, <name name-style="western"><surname>White</surname> <given-names>NJ</given-names></name>, <name name-style="western"><surname>Tarning</surname> <given-names>J</given-names></name>. <article-title>Characterization of an in vivo concentration-effect relationship for piperaquine in malaria chemoprevention</article-title>. <source>Science translational medicine</source>. <year>2014</year>;<volume>6</volume>(<issue>260</issue>):<fpage>260ra147</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1126/scitranslmed.3005311" xlink:type="simple">10.1126/scitranslmed.3005311</ext-link></comment> <object-id pub-id-type="pmid">25355697</object-id>.</mixed-citation></ref>
+<ref id="pone.0154623.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Checchi</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Piola</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Fogg</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Bajunirwe</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Biraro</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Grandesso</surname> <given-names>F</given-names></name>, <etal>et al</etal>. <article-title>Supervised versus unsupervised antimalarial treatment with six-dose artemether-lumefantrine: pharmacokinetic and dosage-related findings from a clinical trial in Uganda</article-title>. <source>Malar J</source>. <year>2006</year>;<volume>5</volume>:<fpage>59</fpage>. Epub 2006/07/21. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1475-2875-5-59" xlink:type="simple">10.1186/1475-2875-5-59</ext-link></comment> <object-id pub-id-type="pmid">16854236</object-id>; PubMed Central PMCID: PMCPMC1543643.</mixed-citation></ref>
+<ref id="pone.0154623.ref031"><label>31</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Blesius</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Chabaud</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Cucherat</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Mismetti</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Boissel</surname> <given-names>JP</given-names></name>, <name name-style="western"><surname>Nony</surname> <given-names>P</given-names></name>. <article-title>Compliance-guided therapy: a new insight into the potential role of clinical pharmacologists</article-title>. <source>Clinical pharmacokinetics</source>. <year>2006</year>;<volume>45</volume>(<issue>1</issue>):<fpage>95</fpage>–<lpage>104</lpage>. <object-id pub-id-type="pmid">16430314</object-id>.</mixed-citation></ref>
+<ref id="pone.0154623.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Flexner</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Tierney</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Gross</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Andrade</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Lalama</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Eshleman</surname> <given-names>SH</given-names></name>, <etal>et al</etal>. <article-title>Comparison of once-daily versus twice-daily combination antiretroviral therapy in treatment-naive patients: results of AIDS clinical trials group (ACTG) A5073, a 48-week randomized controlled trial</article-title>. <source>Clin Infect Dis</source>. <year>2010</year>;<volume>50</volume>(<issue>7</issue>):<fpage>1041</fpage>–<lpage>52</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1086/651118" xlink:type="simple">10.1086/651118</ext-link></comment> <object-id pub-id-type="pmid">20192725</object-id>; PubMed Central PMCID: PMCPMC2833234.</mixed-citation></ref>
+<ref id="pone.0154623.ref033"><label>33</label><mixed-citation publication-type="other" xlink:type="simple">Agency EM. Eurartesim (dihydroartemisinin/piperaquine phosphate): EU public assessment report [online].</mixed-citation></ref>
+<ref id="pone.0154623.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Barnes</surname> <given-names>KI</given-names></name>, <name name-style="western"><surname>Watkins</surname> <given-names>WM</given-names></name>, <name name-style="western"><surname>White</surname> <given-names>NJ</given-names></name>. <article-title>Antimalarial dosing regimens and drug resistance</article-title>. <source>Trends Parasitol</source>. <year>2008</year>;<volume>24</volume>(<issue>3</issue>):<fpage>127</fpage>–<lpage>34</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.pt.2007.11.008" xlink:type="simple">10.1016/j.pt.2007.11.008</ext-link></comment> <object-id pub-id-type="pmid">18262470</object-id>.</mixed-citation></ref>
+<ref id="pone.0154623.ref035"><label>35</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Takala-Harrison</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Jacob</surname> <given-names>CG</given-names></name>, <name name-style="western"><surname>Arze</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Cummings</surname> <given-names>MP</given-names></name>, <name name-style="western"><surname>Silva</surname> <given-names>JC</given-names></name>, <name name-style="western"><surname>Dondorp</surname> <given-names>AM</given-names></name>, <etal>et al</etal>. <article-title>Independent emergence of artemisinin resistance mutations among Plasmodium falciparum in Southeast Asia</article-title>. <source>J Infect Dis</source>. <year>2015</year>;<volume>211</volume>(<issue>5</issue>):<fpage>670</fpage>–<lpage>9</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/infdis/jiu491" xlink:type="simple">10.1093/infdis/jiu491</ext-link></comment> <object-id pub-id-type="pmid">25180241</object-id>; PubMed Central PMCID: PMCPMC4334802.</mixed-citation></ref>
+<ref id="pone.0154623.ref036"><label>36</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dondorp</surname> <given-names>AM</given-names></name>, <name name-style="western"><surname>Nosten</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Yi</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Das</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Phyo</surname> <given-names>AP</given-names></name>, <name name-style="western"><surname>Tarning</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Artemisinin resistance in Plasmodium falciparum malaria</article-title>. <source>N Engl J Med</source>. <year>2009</year>;<volume>361</volume>(<issue>5</issue>):<fpage>455</fpage>–<lpage>67</lpage>. Epub 2009/07/31. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1056/NEJMoa0808859" xlink:type="simple">10.1056/NEJMoa0808859</ext-link></comment> <object-id pub-id-type="pmid">19641202</object-id>; PubMed Central PMCID: PMCPMC3495232.</mixed-citation></ref>
+<ref id="pone.0154623.ref037"><label>37</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Conrad</surname> <given-names>MD</given-names></name>, <name name-style="western"><surname>LeClair</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Arinaitwe</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Wanzira</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Kakuru</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Bigira</surname> <given-names>V</given-names></name>, <etal>et al</etal>. <article-title>Comparative impacts over 5 years of artemisinin-based combination therapies on Plasmodium falciparum polymorphisms that modulate drug sensitivity in Ugandan children</article-title>. <source>J Infect Dis</source>. <year>2014</year>;<volume>210</volume>(<issue>3</issue>):<fpage>344</fpage>–<lpage>53</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/infdis/jiu141" xlink:type="simple">10.1093/infdis/jiu141</ext-link></comment> <object-id pub-id-type="pmid">24610872</object-id>; PubMed Central PMCID: PMCPMC4110461.</mixed-citation></ref>
+<ref id="pone.0154623.ref038"><label>38</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Patel</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Batty</surname> <given-names>KT</given-names></name>, <name name-style="western"><surname>Moore</surname> <given-names>BR</given-names></name>, <name name-style="western"><surname>Gibbons</surname> <given-names>PL</given-names></name>, <name name-style="western"><surname>Bulitta</surname> <given-names>JB</given-names></name>, <name name-style="western"><surname>Kirkpatrick</surname> <given-names>CM</given-names></name>. <article-title>Mechanism-based model of parasite growth and dihydroartemisinin pharmacodynamics in murine malaria</article-title>. <source>Antimicrobial agents and chemotherapy</source>. <year>2013</year>;<volume>57</volume>(<issue>1</issue>):<fpage>508</fpage>–<lpage>16</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/AAC.01463-12" xlink:type="simple">10.1128/AAC.01463-12</ext-link></comment> <object-id pub-id-type="pmid">23147722</object-id>; PubMed Central PMCID: PMC3535964.</mixed-citation></ref>
+<ref id="pone.0154623.ref039"><label>39</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Johnston</surname> <given-names>GL</given-names></name>, <name name-style="western"><surname>Smith</surname> <given-names>DL</given-names></name>, <name name-style="western"><surname>Fidock</surname> <given-names>DA</given-names></name>. <article-title>Malaria's missing number: calculating the human component of R0 by a within-host mechanistic model of Plasmodium falciparum infection and transmission</article-title>. <source>PLoS computational biology</source>. <year>2013</year>;<volume>9</volume>(<issue>4</issue>):<fpage>e1003025</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pcbi.1003025" xlink:type="simple">10.1371/journal.pcbi.1003025</ext-link></comment> <object-id pub-id-type="pmid">23637586</object-id>; PubMed Central PMCID: PMC3630126.</mixed-citation></ref>
+<ref id="pone.0154623.ref040"><label>40</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Eckhoff</surname> <given-names>PP</given-names></name>. <article-title>falciparum infection durations and infectiousness are shaped by antigenic variation and innate and adaptive host immunity in a mathematical model</article-title>. <source>PLoS One</source>. <year>2012</year>;<volume>7</volume>(<issue>9</issue>):<fpage>e44950</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0044950" xlink:type="simple">10.1371/journal.pone.0044950</ext-link></comment> <object-id pub-id-type="pmid">23028698</object-id>; PubMed Central PMCID: PMC3446976.</mixed-citation></ref>
+<ref id="pone.0154623.ref041"><label>41</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gordi</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Xie</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Jusko</surname> <given-names>WJ</given-names></name>. <article-title>Semi-mechanistic pharmacokinetic/pharmacodynamic modelling of the antimalarial effect of artemisinin</article-title>. <source>Br J Clin Pharmacol</source>. <year>2005</year>;<volume>60</volume>(<issue>6</issue>):<fpage>594</fpage>–<lpage>604</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1365-2125.2005.02508.x" xlink:type="simple">10.1111/j.1365-2125.2005.02508.x</ext-link></comment> <object-id pub-id-type="pmid">16305583</object-id>; PubMed Central PMCID: PMCPMC1884894.</mixed-citation></ref>
+<ref id="pone.0154623.ref042"><label>42</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kay</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Hastings</surname> <given-names>IM</given-names></name>. <article-title>Improving pharmacokinetic-pharmacodynamic modeling to investigate anti-infective chemotherapy with application to the current generation of antimalarial drugs</article-title>. <source>PLoS computational biology</source>. <year>2013</year>;<volume>9</volume>(<issue>7</issue>):<fpage>e1003151</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pcbi.1003151" xlink:type="simple">10.1371/journal.pcbi.1003151</ext-link></comment> <object-id pub-id-type="pmid">23874190</object-id>; PubMed Central PMCID: PMC3715401.</mixed-citation></ref>
+<ref id="pone.0154623.ref043"><label>43</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zaloumis</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Humberstone</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Charman</surname> <given-names>SA</given-names></name>, <name name-style="western"><surname>Price</surname> <given-names>RN</given-names></name>, <name name-style="western"><surname>Moehrle</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Gamo-Benito</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Assessing the utility of an anti-malarial pharmacokinetic-pharmacodynamic model for aiding drug clinical development</article-title>. <source>Malar J</source>. <year>2012</year>;<volume>11</volume>:<fpage>303</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1475-2875-11-303" xlink:type="simple">10.1186/1475-2875-11-303</ext-link></comment> <object-id pub-id-type="pmid">22931058</object-id>; PubMed Central PMCID: PMC3546862.</mixed-citation></ref>
+<ref id="pone.0154623.ref044"><label>44</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hietala</surname> <given-names>SF</given-names></name>, <name name-style="western"><surname>Martensson</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Ngasala</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Dahlstrom</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Lindegardh</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Annerberg</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>Population pharmacokinetics and pharmacodynamics of artemether and lumefantrine during combination treatment in children with uncomplicated falciparum malaria in Tanzania</article-title>. <source>Antimicrob Agents Chemother</source>. <year>2010</year>;<volume>54</volume>(<issue>11</issue>):<fpage>4780</fpage>–<lpage>8</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/AAC.00252-10" xlink:type="simple">10.1128/AAC.00252-10</ext-link></comment> <object-id pub-id-type="pmid">20713675</object-id>; PubMed Central PMCID: PMCPMC2976134.</mixed-citation></ref>
+<ref id="pone.0154623.ref045"><label>45</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kay</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Hodel</surname> <given-names>EM</given-names></name>, <name name-style="western"><surname>Hastings</surname> <given-names>IM</given-names></name>. <article-title>Altering Antimalarial Drug Regimens May Dramatically Enhance and Restore Drug Effectiveness</article-title>. <source>Antimicrob Agents Chemother</source>. <year>2015</year>;<volume>59</volume>(<issue>10</issue>):<fpage>6419</fpage>–<lpage>27</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1128/AAC.00482-15." xlink:type="simple">10.1128/AAC.00482-15.</ext-link></comment> <object-id pub-id-type="pmid">26239993</object-id>; PubMed Central PMCID: PMCPMC4576027.</mixed-citation></ref>
+<ref id="pone.0154623.ref046"><label>46</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ezzet</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Mull</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Karbwang</surname> <given-names>J</given-names></name>. <article-title>Population pharmacokinetics and therapeutic response of CGP 56697 (artemether + benflumetol) in malaria patients</article-title>. <source>British journal of clinical pharmacology</source>. <year>1998</year>;<volume>46</volume>(<issue>6</issue>):<fpage>553</fpage>–<lpage>61</lpage>. <object-id pub-id-type="pmid">9862244</object-id>; PubMed Central PMCID: PMC1873796.</mixed-citation></ref>
+<ref id="pone.0154623.ref047"><label>47</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>McGready</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Phyo</surname> <given-names>AP</given-names></name>, <name name-style="western"><surname>Rijken</surname> <given-names>MJ</given-names></name>, <name name-style="western"><surname>Tarning</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Lindegardh</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Hanpithakpon</surname> <given-names>W</given-names></name>, <etal>et al</etal>. <article-title>Artesunate/dihydroartemisinin pharmacokinetics in acute falciparum malaria in pregnancy: absorption, bioavailability, disposition and disease effects</article-title>. <source>Br J Clin Pharmacol</source>. <year>2012</year>;<volume>73</volume>(<issue>3</issue>):<fpage>467</fpage>–<lpage>77</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1365-2125.2011.04103.x" xlink:type="simple">10.1111/j.1365-2125.2011.04103.x</ext-link></comment> <object-id pub-id-type="pmid">21950338</object-id>; PubMed Central PMCID: PMCPMC3370352.</mixed-citation></ref>
+<ref id="pone.0154623.ref048"><label>48</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Klein</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Aarons</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Ter Kuile</surname> <given-names>FO</given-names></name>, <name name-style="western"><surname>Nosten</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>White</surname> <given-names>NJ</given-names></name>, <name name-style="western"><surname>Edstein</surname> <given-names>MD</given-names></name>, <etal>et al</etal>. <article-title>Population pharmacokinetics of halofantrine in healthy volunteers and patients with symptomatic falciparum malaria</article-title>. <source>The Journal of pharmacy and pharmacology</source>. <year>2012</year>;<volume>64</volume>(<issue>11</issue>):<fpage>1603</fpage>–<lpage>13</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.2042-7158.2012.01554.x" xlink:type="simple">10.1111/j.2042-7158.2012.01554.x</ext-link></comment> <object-id pub-id-type="pmid">23058047</object-id>.</mixed-citation></ref>
+<ref id="pone.0154623.ref049"><label>49</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kloprogge</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>McGready</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Phyo</surname> <given-names>AP</given-names></name>, <name name-style="western"><surname>Rijken</surname> <given-names>MJ</given-names></name>, <name name-style="western"><surname>Hanpithakpon</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Than</surname> <given-names>HH</given-names></name>, <etal>et al</etal>. <article-title>Opposite malaria and pregnancy effect on oral bioavailability of artesunate—a population pharmacokinetic evaluation</article-title>. <source>Br J Clin Pharmacol</source>. <year>2015</year>;<volume>80</volume>(<issue>4</issue>):<fpage>642</fpage>–<lpage>53</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/bcp.12660" xlink:type="simple">10.1111/bcp.12660</ext-link></comment> <object-id pub-id-type="pmid">25877779</object-id>; PubMed Central PMCID: PMCPMC4594700.</mixed-citation></ref>
+</ref-list>
+</back>
+</article>

@@ -1,0 +1,909 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1d3" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0199461</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-17-40761</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Mathematical and statistical techniques</subject><subj-group><subject>Statistical methods</subject><subj-group><subject>Meta-analysis</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Statistics (mathematics)</subject><subj-group><subject>Statistical methods</subject><subj-group><subject>Meta-analysis</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Gene expression</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Bioassays and physiological analysis</subject><subj-group><subject>Microarrays</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Computational biology</subject><subj-group><subject>Genome analysis</subject><subj-group><subject>Genome-wide association studies</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Genomics</subject><subj-group><subject>Genome analysis</subject><subj-group><subject>Genome-wide association studies</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Human genetics</subject><subj-group><subject>Genome-wide association studies</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Gene expression</subject><subj-group><subject>Gene regulation</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Proteins</subject><subj-group><subject>Post-translational modification</subject><subj-group><subject>Heme</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Proteins</subject><subj-group><subject>DNA-binding proteins</subject><subj-group><subject>Transcription factors</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Gene expression</subject><subj-group><subject>Gene regulation</subject><subj-group><subject>Transcription factors</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Proteins</subject><subj-group><subject>Regulatory proteins</subject><subj-group><subject>Transcription factors</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Anatomy</subject><subj-group><subject>Body fluids</subject><subj-group><subject>Blood</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Anatomy</subject><subj-group><subject>Body fluids</subject><subj-group><subject>Blood</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Physiology</subject><subj-group><subject>Body fluids</subject><subj-group><subject>Blood</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Physiology</subject><subj-group><subject>Body fluids</subject><subj-group><subject>Blood</subject></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>A common molecular signature of patients with sickle cell disease revealed by microarray meta-analysis and a genome-wide association study</article-title>
+<alt-title alt-title-type="running-head">Meta-analysis of sickle cell disease related data</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0003-0985-4881</contrib-id>
+<name name-style="western">
+<surname>Ben Hamda</surname>
+<given-names>Cherif</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Formal analysis</role>
+<role content-type="http://credit.casrai.org/">Investigation</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<role content-type="http://credit.casrai.org/">Validation</role>
+<role content-type="http://credit.casrai.org/">Visualization</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Sangeda</surname>
+<given-names>Raphael</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Formal analysis</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Mwita</surname>
+<given-names>Liberata</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Meintjes</surname>
+<given-names>Ayton</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Formal analysis</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<xref ref-type="aff" rid="aff005"><sup>5</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Nkya</surname>
+<given-names>Siana</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<role content-type="http://credit.casrai.org/">Resources</role>
+<role content-type="http://credit.casrai.org/">Validation</role>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Panji</surname>
+<given-names>Sumir</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff005"><sup>5</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Mulder</surname>
+<given-names>Nicola</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Funding acquisition</role>
+<role content-type="http://credit.casrai.org/">Project administration</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff005"><sup>5</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Guizani-Tabbane</surname>
+<given-names>Lamia</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+<xref ref-type="aff" rid="aff006"><sup>6</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Benkahla</surname>
+<given-names>Alia</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Makani</surname>
+<given-names>Julie</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Funding acquisition</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Ghedira</surname>
+<given-names>Kais</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Formal analysis</role>
+<role content-type="http://credit.casrai.org/">Investigation</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<role content-type="http://credit.casrai.org/">Supervision</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<collab>H3ABioNet Consortium</collab>
+<xref ref-type="fn" rid="fn001"><sup>¶</sup></xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Laboratory of Bioinformatics, Biomathematics and Biostatistics, Institute Pasteur of Tunis, Tunis, Tunisia</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>University of Tunis El Manar, Tunis, Tunisia</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>Faculty of Science of Bizerte, Jarzouna, University of Carthage, Tunisia</addr-line></aff>
+<aff id="aff004"><label>4</label> <addr-line>Muhimbili University of Health and Allied Sciences, Dar es Salaam, Tanzania</addr-line></aff>
+<aff id="aff005"><label>5</label> <addr-line>University of Cape Town, Cape Town, South Africa</addr-line></aff>
+<aff id="aff006"><label>6</label> <addr-line>Laboratory of Medical Parasitology, Biotechnology and Biomolecules, Institute Pasteur of Tunis, Tunis, Tunisia</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Abe</surname>
+<given-names>Keiko</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>The University of Tokyo, JAPAN</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors declare that they have no competing interests.</p>
+</fn>
+<fn fn-type="other" id="fn001">
+<p>¶ The complete membership of the H3ABioNet Consortium can be found in the Acknowledgments.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">kais.ghedira@pasteur.rns.tn</email> (KG); <email xlink:type="simple">cherifbenhamda@gmail.com</email> (CBH)</corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>6</day>
+<month>7</month>
+<year>2018</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2018</year>
+</pub-date>
+<volume>13</volume>
+<issue>7</issue>
+<elocation-id>e0199461</elocation-id>
+<history>
+<date date-type="received">
+<day>3</day>
+<month>1</month>
+<year>2018</year>
+</date>
+<date date-type="accepted">
+<day>7</day>
+<month>6</month>
+<year>2018</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2018</copyright-year>
+<copyright-holder>Ben Hamda et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0199461"/>
+<abstract>
+<p>A chronic inflammatory state to a large extent explains sickle cell disease (SCD) pathophysiology. Nonetheless, the principal dysregulated factors affecting this major pathway and their mechanisms of action still have to be fully identified and elucidated. Integrating gene expression and genome-wide association study (GWAS) data analysis represents a novel approach to refining the identification of key mediators and functions in complex diseases. Here, we performed gene expression meta-analysis of five independent publicly available microarray datasets related to homozygous SS patients with SCD to identify a consensus SCD transcriptomic profile. The meta-analysis conducted using the MetaDE R package based on combining p values (maxP approach) identified 335 differentially expressed genes (DEGs; 224 upregulated and 111 downregulated). Functional gene set enrichment revealed the importance of several metabolic pathways, of innate immune responses, erythrocyte development, and hemostasis pathways. Advanced analyses of GWAS data generated within the framework of this study by means of the atSNP R package and SIFT tool identified 60 regulatory single-nucleotide polymorphisms (rSNPs) occurring in the promoter of 20 DEGs and a deleterious SNP, affecting CAMKK2 protein function. This novel database of candidate genes, transcription factors, and rSNPs associated with SCD provides new markers that may help to identify new therapeutic targets.</p>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/100000051</institution-id>
+<institution>National Human Genome Research Institute</institution>
+</institution-wrap>
+</funding-source>
+<award-id>U41HG006941</award-id>
+<principal-award-recipient>
+<name name-style="western">
+<surname>Mulder</surname>
+<given-names>Nicola</given-names>
+</name>
+</principal-award-recipient>
+</award-group>
+<funding-statement>Research reported in this publication was supported by the National Institutes of Health Common Fund under grant number U41HG006941 (NM). The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="6"/>
+<table-count count="3"/>
+<page-count count="21"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its Supporting Information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>Sickle cell disease (SCD) is a rare hemoglobinopathy [<xref ref-type="bibr" rid="pone.0199461.ref001">1</xref>] characterized by high morbidity and mortality. It affects millions of people throughout the world, including 300 thousand newborns annually [<xref ref-type="bibr" rid="pone.0199461.ref002">2</xref>]. The disease represents a severe genetic blood disorder caused by a single mutation in β globin [<xref ref-type="bibr" rid="pone.0199461.ref003">3</xref>] that leads to a defective hemoglobin S (HBS) protein, which upon deoxygenation polymerizes rapidly [<xref ref-type="bibr" rid="pone.0199461.ref004">4</xref>] and gives red blood cells rigidity and sickle shape. Losing flexibility, the misshapen red blood cells obstruct blood flow, disrupt homeostasis, and promote chronic hemolysis. The released heme iron into plasma creates an oxidative microenvironment resulting in inflammation and endothelial-cell activation, leading to tissue damage in almost all organs and systems.</p>
+<p>The SCD pathophysiology is largely explained by the chronic inflammatory state [<xref ref-type="bibr" rid="pone.0199461.ref005">5</xref>] and partly by the dysregulated pro- and antiapoptotic agents [<xref ref-type="bibr" rid="pone.0199461.ref006">6</xref>]. Nonetheless, the principal dysregulated factors in these major pathways and their mechanisms of action still need to be fully identified and elucidated.</p>
+<p>Several technologies [<xref ref-type="bibr" rid="pone.0199461.ref007">7</xref>,<xref ref-type="bibr" rid="pone.0199461.ref008">8</xref>] have been developed to identify candidate markers and have highlighted potential molecular pathways related to SCD. Among the high-throughput genomic technologies that have contributed to the identification of candidate genes and to our understanding of complex interactions in multisystem diseases is the microarray technology. Indeed, a microarray is a gene expression profiling technology that is widely used to simultaneously assess the expression levels of thousands of genes [<xref ref-type="bibr" rid="pone.0199461.ref009">9</xref>] in different disease contexts. Such high-throughput technique is considered an important tool for clinical practice and for the development of diagnostics [<xref ref-type="bibr" rid="pone.0199461.ref010">10</xref>,<xref ref-type="bibr" rid="pone.0199461.ref011">11</xref>]. Thus, its massive use in biomedical studies in the last decade has resulted in a huge quantity of data for a large number of physiological states and disease conditions [<xref ref-type="bibr" rid="pone.0199461.ref012">12</xref>]. In parallel, the constant evolution of bioinformatics tools provided the scientific community with a more effective and reproducible meta-analysis workflow [<xref ref-type="bibr" rid="pone.0199461.ref013">13</xref>–<xref ref-type="bibr" rid="pone.0199461.ref020">20</xref>] allowing for better handling of differences in study design and platforms and providing enhancement of the analytical performance, which results in a more robust and reliable analysis of gene expression signatures [<xref ref-type="bibr" rid="pone.0199461.ref021">21</xref>–<xref ref-type="bibr" rid="pone.0199461.ref024">24</xref>].</p>
+<p>On the other hand, a genome wide association study (GWAS) is an approach that involves rapid scanning of markers (genetic variants) across the genomes of different individuals [<xref ref-type="bibr" rid="pone.0199461.ref025">25</xref>]. It focuses on association between genetic variations such as single-nucleotide polymorphisms (SNPs) and a specific disease. Recent studies have shown that integrative approach combining GWAS and gene expression data is more effective than analyzing each data type individually [<xref ref-type="bibr" rid="pone.0199461.ref026">26</xref>–<xref ref-type="bibr" rid="pone.0199461.ref029">29</xref>]. Indeed, SNPs present in the promoter regions of differentially expressed genes (DEGs) and more specifically in regulatory elements [<xref ref-type="bibr" rid="pone.0199461.ref030">30</xref>] are likely to be regulatory SNPs (rSNPs) that could mediate the binding of critical transcription factors (TFs) and consequently alter the expression of target genes [<xref ref-type="bibr" rid="pone.0199461.ref031">31</xref>]. Therefore, joint identification of rSNPs and a gene expression meta-signature will potentially advance the understanding of the disease mechanisms [<xref ref-type="bibr" rid="pone.0199461.ref030">30</xref>,<xref ref-type="bibr" rid="pone.0199461.ref031">31</xref>].</p>
+<p>In the present study, we performed a gene expression meta-analysis to identify a consensus transcriptomic profile related to SCD, and by means of GWAS data, we investigated the involvement of rSNPs in the expression of the identified key candidate genes.</p>
+</sec>
+<sec id="sec002" sec-type="materials|methods">
+<title>Materials and methods</title>
+<sec id="sec003">
+<title>Search criteria and data collection</title>
+<p>Analysis of the publicly available microarray datasets was carried out as per PRISMA guidelines [<xref ref-type="bibr" rid="pone.0199461.ref032">32</xref>] (<xref ref-type="supplementary-material" rid="pone.0199461.s001">S1 Table</xref> and <bold><xref ref-type="fig" rid="pone.0199461.g001">Fig 1</xref></bold>). A search involving a combination of the following keywords (“sickle cell disease” and “Homo sapiens”) was performed in two public microarray expression data repositories: NCBI Gene Expression Omnibus (GEO) Datasets [<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/" xlink:type="simple">http://www.ncbi.nlm.nih.gov/geo/</ext-link>] and ArrayExpress database [<ext-link ext-link-type="uri" xlink:href="http://www.ebi.ac.uk/arrayexpress/" xlink:type="simple">http://www.ebi.ac.uk/arrayexpress/</ext-link>]. Studies that were publicly available by September 2016 were extracted. “Globin depleted” and “Homozygote SS” were set as sample inclusion criteria. <xref ref-type="table" rid="pone.0199461.t001">Table 1</xref> provides details on all the datasets included in this study.</p>
+<fig id="pone.0199461.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0199461.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>A PRISMA flow diagram of a systematic database search.</title>
+<p>The selection process of eligible microarray datasets for meta-analysis of the shared transcriptomic signatures between Sickle cell disease patients, according to Prisma 2009 flow diagram.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.g001" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0199461.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0199461.t001</object-id>
+<label>Table 1</label> <caption><title>Characteristics of included individual microarray dataset.</title></caption>
+<alternatives>
+<graphic id="pone.0199461.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.t001" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">GEO Accession Number</th>
+<th align="center">Tissue</th>
+<th align="center">Number of samples<break/>(Control/Cases)</th>
+<th align="center">Microarray Platform</th>
+<th align="center">Reference study</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">GSE11524</td>
+<td align="center">Peripheral blood</td>
+<td align="center">30(12/18)</td>
+<td align="center">Affymetrix Human Genome U133 plus 2.0</td>
+<td align="center">[<xref ref-type="bibr" rid="pone.0199461.ref033">33</xref>]</td>
+</tr>
+<tr>
+<td align="center">GSE16728</td>
+<td align="center">Peripheral blood</td>
+<td align="center">20(10/10)<xref ref-type="table-fn" rid="t001fn002">*</xref></td>
+<td align="center">Affymetrix Human Genome U133 plus 2.1</td>
+<td align="center">[<xref ref-type="bibr" rid="pone.0199461.ref034">34</xref>]</td>
+</tr>
+<tr>
+<td align="center">GSE53441</td>
+<td align="center">Peripheral blood</td>
+<td align="center">34(10/24)</td>
+<td align="center">Affymetrix Human Genome U133 plus 2.2</td>
+<td align="center">[<xref ref-type="bibr" rid="pone.0199461.ref035">35</xref>]</td>
+</tr>
+<tr>
+<td align="center">GSE31757</td>
+<td align="center">Whole blood</td>
+<td align="center">8(3/5)</td>
+<td align="center">Affymetrix Human Exon 1.0 ST</td>
+<td align="center">[<xref ref-type="bibr" rid="pone.0199461.ref007">7</xref>]</td>
+</tr>
+<tr>
+<td align="center">GSE35007</td>
+<td align="center">Whole blood</td>
+<td align="center">251(61/190)</td>
+<td align="center">Illumina HumanHT-12 v4</td>
+<td align="center">[<xref ref-type="bibr" rid="pone.0199461.ref036">36</xref>]</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t001fn001"><p>Inclusion criteria: Only samples homozygotes SS and submitted to Globin reduction were selected.</p></fn>
+<fn id="t001fn002"><p>*: Consists of two studies with two datasets in total</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec004">
+<title>Data preparation and quality control</title>
+<p>Data preprocessing and meta-analysis were carried out using MetaQC [<xref ref-type="bibr" rid="pone.0199461.ref037">37</xref>] and MetaDE [<xref ref-type="bibr" rid="pone.0199461.ref018">18</xref>], respectively. These packages of the R suite were chosen for quality control (QC) and identification of differentially expressed genes (DEGs) in microarray meta-analysis. The input gene expression table was prepared from the downloaded raw data following MetaDE guidelines [<xref ref-type="bibr" rid="pone.0199461.ref018">18</xref>]. In brief, probe IDs of an individual study were annotated to retrieve their official gene symbols using Bioconductor. The interquartile range method was applied to select the probe ID with the largest interquartile range of expression values when multiple probes matched an identical gene symbol. Individual studies that contained samples from different populations were divided into substudies and treated as independent datasets during the meta-analysis. Afterwards, the processed data were analyzed with MetaQC to compute six QC measures: (1) internal homogeneity of coexpression structure among studies (IQC); (2) external consistency of coexpression structure correlating with a pathway database (EQC); (3) accuracy of DEG detection (AQCg) or pathway identification (AQCp); and (4) consistency of differential expression ranking of genes (CQCg) or pathways (CQCp). The datasets showing good performance on at least five QC criteria were retained. <xref ref-type="table" rid="pone.0199461.t002">Table 2</xref> presents the quantitative QC measures of each dataset.</p>
+<table-wrap id="pone.0199461.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0199461.t002</object-id>
+<label>Table 2</label> <caption><title>MetaQC quantitative quality control measures for gene expression data.</title></caption>
+<alternatives>
+<graphic id="pone.0199461.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.t002" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">Dataset</th>
+<th align="center">IQC</th>
+<th align="center">EQC</th>
+<th align="center">CQCg</th>
+<th align="center">CQCp</th>
+<th align="center">AQCg</th>
+<th align="center">AQCp</th>
+<th align="center">Rank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">GSE35007</td>
+<td align="center">2.53</td>
+<td align="center">3.7</td>
+<td align="center">301.34</td>
+<td align="center">307.65</td>
+<td align="center">145.57</td>
+<td align="center">220.18</td>
+<td align="center">2.17</td>
+</tr>
+<tr>
+<td align="center">GSE11524</td>
+<td align="center">5.33</td>
+<td align="center">3.6</td>
+<td align="center">148.75</td>
+<td align="center">307.65</td>
+<td align="center">101.43</td>
+<td align="center">210.4</td>
+<td align="center">2.5</td>
+</tr>
+<tr>
+<td align="center">GSE16728-A</td>
+<td align="center">3.58</td>
+<td align="center">3.7</td>
+<td align="center">145.79</td>
+<td align="center">307.65</td>
+<td align="center">78.46</td>
+<td align="center">157.71</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">GSE31757</td>
+<td align="center">3.97</td>
+<td align="center">1.17<xref ref-type="table-fn" rid="t002fn002">*</xref></td>
+<td align="center">102.06</td>
+<td align="center">307.65</td>
+<td align="center">44.78</td>
+<td align="center">138.97</td>
+<td align="center">3.92</td>
+</tr>
+<tr>
+<td align="center">GSE53441</td>
+<td align="center">7.02</td>
+<td align="center">3.82</td>
+<td align="center">58.5</td>
+<td align="center">73.32</td>
+<td align="center">27.43</td>
+<td align="center">37.71</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">GSE16728-B</td>
+<td align="center">0.41<xref ref-type="table-fn" rid="t002fn002">*</xref></td>
+<td align="center">3.6</td>
+<td align="center">33.06</td>
+<td align="center">212.76</td>
+<td align="center">18.27</td>
+<td align="center">88.93</td>
+<td align="center">5.42</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t002fn001"><p>Inclusion Criteria: Dataset with good performance in at least five quality control criteria</p></fn>
+<fn id="t002fn002"><p>*: Low performance</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec005">
+<title>Differential expression analysis</title>
+<p>DEG analysis was performed with Limma software package [<xref ref-type="bibr" rid="pone.0199461.ref038">38</xref>] for each dataset independently using an adjusted p value ≤0.05, based on Benjamini–Hochberg false discovery rate (FDR) and the moderated <italic>t</italic> test. In this meta-analysis, DEGs across diseases and healthy controls were selected by means of a maximum p value (maxP) [<xref ref-type="bibr" rid="pone.0199461.ref039">39</xref>]. This method combines p values and targets DEGs that have small p values in all studies (FDR &lt; 0.05). Significantly up- and downregulated DEGs were defined as those that showed a fold change (FC) greater than 1.4 in either direction.</p>
+</sec>
+<sec id="sec006">
+<title>Functional annotation and gene-regulatory network inference</title>
+<p>The candidate genes identified via our meta-signature were used as input for different bioinformatics enrichment tools. Gene Ontology (GO) terms were identified in the TRANSPATH database [<xref ref-type="bibr" rid="pone.0199461.ref040">40</xref>] on the geneXplain platform [<xref ref-type="bibr" rid="pone.0199461.ref041">41</xref>]; a different pathway gene set libraries (KEGG Pathway, Reactome, and Wiki pathway), were requested by means of the EnrichR web tool [<xref ref-type="bibr" rid="pone.0199461.ref042">42</xref>]. The selection criterion for significantly enriched pathways and GO terms was a p value of 0.05 or less. Furthermore, for better result interpretation, we constructed a biological network describing the most significant over-represented GO biological process terms obtained at the previous step. In brief, we conducted two-sided (enrichment/depletion) hypergeometric distribution tests, with a p value significance level of ≤0.05, followed by the Bonferroni adjustment using the ClueGO plugin [<xref ref-type="bibr" rid="pone.0199461.ref043">43</xref>] of the Cytoscape [<xref ref-type="bibr" rid="pone.0199461.ref044">44</xref>] software.</p>
+<p>Protein–protein (PP) interactions including physical and functional association across our set of genes were identified in stringdb 10.0 [<xref ref-type="bibr" rid="pone.0199461.ref045">45</xref>]. To gain more insights into post-transcriptional regulation of expression of DEGs, we used the complete list of our DEGs, their log FC, and the p value as input for the RNEA R [<xref ref-type="bibr" rid="pone.0199461.ref046">46</xref>] package to reconstruct a subnetwork of gene regulation.</p>
+</sec>
+<sec id="sec007">
+<title>GWAS data integration</title>
+<p>GWAS was carried out on 1,213 individuals (HbSS and HbSb0) and gave a collection of 15,153,765 SNPs and indels related to SCD [<xref ref-type="bibr" rid="pone.0199461.ref047">47</xref>]. From those we selected 1,000 SNPs (with the best p-value ranking) affecting the genes that we identified as DE by our meta-analysis. To identify the location of each SNP within the related candidate gene, we used the list of the 1,000 SNPs as input for the VariantAnnotation Bioconductor package with 2,000 as value representing the number of base pairs upstream of the 5’- gene end and 200 representing those downstream of the 3’- gene end. SNPs occurring in coding regions were used as input for SIFT (Sorting Intolerant from Tolerant) web server—able to identify nonsynonymous SNPs and predict the effect of coding variants on protein function. The remaining SNPs (occurring in non-coding regions) were used as input for atSNP (A:ffinity T:esting for regulatory SNP: s) R package [<xref ref-type="bibr" rid="pone.0199461.ref042">42</xref>] to predict the regulatory variants (rSNPs). This software later computes an affinity score for the genomic sequences around each SNP (±30 bp) against a library of TF motifs for both alleles (reference and SNP allele) using their corresponding position-weighted matrices (PWMs). SNPs with a significant change in the affinity scores between the reference and SNP alleles were then hypothesized as rSNPs. We selected ENCODE PWMs as a TF motif library and set a p value corrected by the Benjamini–Hochberg criterion in the rank test between alleles (pval_rank_bh) to less than 0.1 to select significant rSNPs.</p>
+<p>The main steps of the bioinformatics workflow integrating microarray meta-analysis and GWAS data are described in <bold><xref ref-type="fig" rid="pone.0199461.g002">Fig 2</xref></bold>.</p>
+<fig id="pone.0199461.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0199461.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Workflow of microarray meta-analysis integrating GWAS data.</title>
+<p>A flow diagram depicting the process involved in the meta-analysis of the selected microarray datasets with integration of GWAS data.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.g002" xlink:type="simple"/>
+</fig>
+</sec>
+</sec>
+<sec id="sec008" sec-type="results">
+<title>Results</title>
+<sec id="sec009">
+<title>Data mining and quality assessment</title>
+<p>Five case-control studies (GSE11524, GSE16728, GSE53441, GSE31757 and GSE35007) satisfying the fixed inclusion criteria were selected for this meta-analysis. GSE16728 includes two cohorts; each cohort was regarded as a different dataset and was analyzed separately. Sample sources were either peripheral blood or whole blood subjected to globin mRNA depletion [<xref ref-type="bibr" rid="pone.0199461.ref048">48</xref>]. The retained studies included 343 samples representing a total of 247 homozygous SCD patients and 96 healthy controls. <xref ref-type="table" rid="pone.0199461.t001">Table 1</xref> provides detailed information about the datasets, sample types, study references, and the microarray platforms used here. All expression-processed raw data that yielded a high score at the QC step are presented in <xref ref-type="table" rid="pone.0199461.t002">Table 2</xref>.</p>
+</sec>
+<sec id="sec010">
+<title>Identification of the gene expression meta-signature</title>
+<p>A shared transcriptional signature among SCD patients was identified by a meta-analysis of the retained datasets by combining p values according to the stringent maxP method [<xref ref-type="bibr" rid="pone.0199461.ref039">39</xref>]. The raw data were loaded into the R environment and analyzed using the R package MetaDE. Non-DEGs as well as those showing small variation and expression intensities across the majority of datasets and contributing to the FDR were filtered out. The statistical framework (maxP) identified highly significant biomarkers that are differentially expressed in all studies: 335 DEGs including 224 overexpressed and 111 underexpressed genes satisfying the significance threshold of FDR &lt; 0.05 (see <xref ref-type="supplementary-material" rid="pone.0199461.s002">S2 Table</xref>).</p>
+<p>The top 10 upregulated and top 10 downregulated DEGs are presented in <xref ref-type="table" rid="pone.0199461.t003">Table 3</xref>, along with the average FC in expression. Among these, DnaJ heat shock protein family (Hsp40) member C6 (<italic>DNAJC6</italic>), ring finger protein 182 (<italic>RNF182</italic>), and carbonic anhydrase I (<italic>CA1</italic>) were the most significantly overexpressed genes, whereas Wntless Wnt ligand secretion mediator (<italic>WLS</italic>), Transcription factor 7-like 2 (T-cell specific, HMG-box) (<italic>TCF7L2</italic>), and G protein-coupled receptor 171 (<italic>GPR171</italic>) were the most underexpressed genes (<xref ref-type="table" rid="pone.0199461.t003">Table 3</xref>).</p>
+<table-wrap id="pone.0199461.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0199461.t003</object-id>
+<label>Table 3</label> <caption><title>Top 20 shared DEGs identified in the meta-analysis ranked by average Log2FC.</title></caption>
+<alternatives>
+<graphic id="pone.0199461.t003g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.t003" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">Entrez Gene ID</th>
+<th align="center">HGNC Gene symbol</th>
+<th align="center">Gene Description</th>
+<th align="center">Average Log2FC</th>
+<th align="center">FDR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" colspan="5"><bold>Top 10 upregulated Genes</bold></td>
+</tr>
+<tr>
+<td align="center">9829</td>
+<td align="center"><italic>DNAJC6</italic></td>
+<td align="left">DnaJ heat shock protein family (Hsp40) member C6</td>
+<td align="center">4,938</td>
+<td align="center">0,017</td>
+</tr>
+<tr>
+<td align="center">221687</td>
+<td align="center"><italic>RNF182</italic></td>
+<td align="left">Ring finger protein 182</td>
+<td align="center">4,003</td>
+<td align="center">0,002</td>
+</tr>
+<tr>
+<td align="center">759</td>
+<td align="center"><italic>CA1</italic></td>
+<td align="left">carbonic anhydrase I</td>
+<td align="center">3,366</td>
+<td align="center">1,38E-18</td>
+</tr>
+<tr>
+<td align="center">3045</td>
+<td align="center"><italic>HBD</italic></td>
+<td align="left">Hemoglobin subunit delta</td>
+<td align="center">3,294</td>
+<td align="center">1,38E-18</td>
+</tr>
+<tr>
+<td align="center">2994</td>
+<td align="center"><italic>GYPB</italic></td>
+<td align="left">Glycophorin B (MNS blood group)</td>
+<td align="center">3,246</td>
+<td align="center">1,38E-18</td>
+</tr>
+<tr>
+<td align="center">9911</td>
+<td align="center"><italic>TMCC2</italic></td>
+<td align="left">Transmembrane and coiled-coil domain family 2</td>
+<td align="center">3,166</td>
+<td align="center">1,38E-18</td>
+</tr>
+<tr>
+<td align="center">2993</td>
+<td align="center"><italic>GYPA</italic></td>
+<td align="left">Glycophorin A (MNS blood group)</td>
+<td align="center">3,070</td>
+<td align="center">1,38E-18</td>
+</tr>
+<tr>
+<td align="center">8140</td>
+<td align="center"><italic>SLC7A5</italic></td>
+<td align="left">Solute carrier family 7 (amino acid transporter light chain, L system), member 5</td>
+<td align="center">2,999</td>
+<td align="center">0,0004</td>
+</tr>
+<tr>
+<td align="center">66008</td>
+<td align="center"><italic>TRAK2</italic></td>
+<td align="left">Trafficking protein, kinesin binding 2</td>
+<td align="center">2,985</td>
+<td align="center">0,023</td>
+</tr>
+<tr>
+<td align="center">493856</td>
+<td align="center"><italic>CISD2</italic></td>
+<td align="left">CDGSH iron sulfur domain 2</td>
+<td align="center">2,980</td>
+<td align="center">1,38E-18</td>
+</tr>
+<tr>
+<td align="left" colspan="5"><bold>Top 10 downregulated Genes</bold></td>
+</tr>
+<tr>
+<td align="center">79971</td>
+<td align="center"><italic>WLS</italic></td>
+<td align="left">Wntless Wnt ligand secretion mediator</td>
+<td align="center">-1,766</td>
+<td align="center">0,036</td>
+</tr>
+<tr>
+<td align="center">6934</td>
+<td align="center"><italic>TCF7L2</italic></td>
+<td align="left">Transcription factor 7-like 2 (T-cell specific, HMG-box)</td>
+<td align="center">-1,562</td>
+<td align="center">0,016</td>
+</tr>
+<tr>
+<td align="center">29909</td>
+<td align="center"><italic>GPR171</italic></td>
+<td align="left">G protein-coupled receptor 171</td>
+<td align="center">-1,523</td>
+<td align="center">0,027</td>
+</tr>
+<tr>
+<td align="center">79668</td>
+<td align="center"><italic>PARP8</italic></td>
+<td align="left">Poly(ADP-ribose) polymerase family member 8</td>
+<td align="center">-1,344</td>
+<td align="center">0,002</td>
+</tr>
+<tr>
+<td align="center">64167</td>
+<td align="center"><italic>ERAP2</italic></td>
+<td align="left">Endoplasmic reticulum aminopeptidase 2</td>
+<td align="center">-1,343</td>
+<td align="center">0,048</td>
+</tr>
+<tr>
+<td align="center">91526</td>
+<td align="center"><italic>ANKRD44</italic></td>
+<td align="left">Ankyrin repeat domain 44</td>
+<td align="center">-1,300</td>
+<td align="center">0,001</td>
+</tr>
+<tr>
+<td align="center">5788</td>
+<td align="center"><italic>PTPRC</italic></td>
+<td align="left">Protein tyrosine phosphatase, receptor type, C</td>
+<td align="center">-1,275</td>
+<td align="center">0,005</td>
+</tr>
+<tr>
+<td align="center">1362</td>
+<td align="center"><italic>CPD</italic></td>
+<td align="left">Carboxypeptidase D</td>
+<td align="center">-1,209</td>
+<td align="center">0,030</td>
+</tr>
+<tr>
+<td align="center">50852</td>
+<td align="center"><italic>TRAT1</italic></td>
+<td align="left">T cell receptor associated transmembrane adaptor 1</td>
+<td align="center">-1,169</td>
+<td align="center">0,009</td>
+</tr>
+<tr>
+<td align="center">23224</td>
+<td align="center"><italic>SYNE2</italic></td>
+<td align="left">Spectrin repeat containing, nuclear envelope 2</td>
+<td align="center">-1,159</td>
+<td align="center">0,047</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+<sec id="sec011">
+<title>Network construction</title>
+<p>PP interaction analysis was conducted to identify the key hub genes among our 335 DEGs. Using the STRING database [<xref ref-type="bibr" rid="pone.0199461.ref045">45</xref>], we generated a PP interaction network among 175 nodes with a high confidence score of 0.7. For better visualization of the network, we extracted the most connected components that represent the 139 major nodes of the network. These included 139 proteins and 278 edges representing the interactions within <bold><xref ref-type="fig" rid="pone.0199461.g003">Fig 3A</xref>.</bold> Based on network topology measures, a list of top 10 hub genes was compiled (see <xref ref-type="supplementary-material" rid="pone.0199461.s003">S3 Table</xref>). Four key hub genes that showed a higher score in both degree and betweenness-centrality metrics are coding for S-phase kinase-associated protein 1 (SKP1; degree = 15, betweenness centrality = 0.35), HECT and RLD domain-containing E3 ubiquitin protein ligase 5 (HERC5; degree = 13, betweenness centrality = 0.14), NSF attachment protein alpha (NAPA; degree = 12, betweenness centrality = 0.32), and erythrocyte membrane protein band 4.2 (EPB42; degree = 12, betweenness centrality = 0.22). Uploading the 139 proteins via the CytoCluster Cytoscape plugin extracted the top-ranked clusters as a subnetwork. These included SKP1 (25 nodes and 73 edges) and EPB42 (22 nodes and 52 edges). Both subnetworks are independent protein complexes with their interacting nodes likely to work collectively to perform biological functions listed in <xref ref-type="fig" rid="pone.0199461.g003">Fig 3B and 3C</xref>.</p>
+<fig id="pone.0199461.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0199461.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Network-based meta-analysis of hub genes.</title>
+<p><bold>A:</bold> Protein interaction network analysis indicates a central role for SKP1, NAPA, EPB42, and ARPC5 in SCD anemia. All 335 genes served as input for the STRING database with the high confidence interaction score 0.7, and a network was built by means of Cytoscape. The network topology was analyzed by the Cytoscape NetworkAnalyzer tool, and then network topology measures such as the degree (represented by the node size scale), betweenness (represented by police size scale), closeness centrality, and clustering coefficient were calculated. <bold>B and C:</bold> The top-ranked subnetwork identified by the OH-PIN algorithm (threshold: 2, overlapping score 0.5) using CytoCluster (a Cytoscape plugin).</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.g003" xlink:type="simple"/>
+</fig>
+<p>To gain insight into the regulatory system upstream of the identified DEGs, we employed the Regulatory Network Enrichment Analysis (RNEA) bioinformatics tool that extracts lists of prioritized TFs. A regulatory subnetwork showing the interaction of activated regulators with their target genes and with one another is shown in <bold><xref ref-type="fig" rid="pone.0199461.g004">Fig 4</xref></bold>.</p>
+<fig id="pone.0199461.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0199461.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Transcriptional regulatory subnetwork based on microarray meta-analysis.</title>
+<p>Regulatory network analysis was performed using RNEA R/package to determine the regulation complexes upstream of DEGs identified in the meta-analysis. Genes carrying in their promoter, a significant regulatory SNPs are marked by a yellow star. Each node represents a DEG or enriched transcription factor, depending on their shapes. The node size indicate greater significance of the enrichment. The edges reflect the relationships between the nodes.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.g004" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec012">
+<title>Identification of regulatory and nonsynonymous SNPs</title>
+<p>Identifying potential rSNPs is crucial for understanding disease mechanisms. From a subset of the most significant 1,000 DEGs associated SNPs (retrieved from GWAS data analysis based on P-value) and using the atSNP R package [<xref ref-type="bibr" rid="pone.0199461.ref015">15</xref>], we evaluated the regulatory potential of 789 SNPs (occurring in non-coding regions) by comparing them with a motif library of 2,065 PWMs from the ENCODE project [<xref ref-type="bibr" rid="pone.0199461.ref016">16</xref>]. The analysis revealed a total of 60 significant rSNPs that affect gene regulation of 20 candidate disease genes out of 335 DEGs. These SNPs affect binding affinity of TFs for their target promoter (full results are in <xref ref-type="supplementary-material" rid="pone.0199461.s004">S4 Table</xref>). Besides, we identified seven TFs (<xref ref-type="fig" rid="pone.0199461.g004">Fig 4</xref>) carrying rSNPs such as NFE2, which plays a prominent role in the hematopoietic stem cell differentiation pathway.</p>
+<p>We next evaluated the functional impact of the remaining coding variants (211 SNPs out of 1,000 SNPs) in the affected proteins. According to SIFT, one nonsynonymous SNP (rs1132780) was predicted as damaging with a significant score of 0.042 (results are in <xref ref-type="supplementary-material" rid="pone.0199461.s005">S5 Table</xref>). Rs1132780 occurs in the coding region of the calcium/calmodulin-dependent protein kinase kinase 2 (CAMKK2) gene and affects all its catalytic domain isoforms with an amino acid change from arginine to cysteine at position 363 of the protein.</p>
+</sec>
+<sec id="sec013">
+<title>Gene set enrichment analysis for identification of over-represented biological pathways and GO terms</title>
+<p>Enriched GO biological process terms and biological pathways associated with our complete list of DEGs and showing a p value &lt;0.05 were identified by means of both geneXplain and EnrichR tools (full results are in <xref ref-type="supplementary-material" rid="pone.0199461.s006">S6 Table</xref>). Among the top significant terms identified were those associated with an innate immune response, oxidative stress, hemostasis, and hemopoiesis (<bold><xref ref-type="fig" rid="pone.0199461.g005">Fig 5</xref></bold>). Relevant GO terms identified only on the basis of the list of DEGs carrying rSNPs were associated mainly with B-cell proliferation, T-cell differentiation, B-cell activation involved in an immune response, and T-cell lineage commitment.</p>
+<fig id="pone.0199461.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0199461.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Over-representation of pathways and GO categories in biological networks identified by the meta-analysis.</title>
+<p>Network representation of an enriched pathway integrating biological processes on the DEG list according to the ClueGO Cytoscape plugin. Hypergeometric (right-handed) enrichment distribution tests were conducted with a p value significance level of ≤0.05, followed by the Bonferroni adjustment for the terms, and thus leading term groups were selected based on the highest significance. Each node represents a biological process. The edges reflect the relationships between the terms based on the similarity of their associated genes. The node size and deeper color indicate greater significance of the enrichment.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.g005" xlink:type="simple"/>
+</fig>
+</sec>
+</sec>
+<sec id="sec014" sec-type="conclusions">
+<title>Discussion</title>
+<p>SCD is a monogenic disorder characterized by chronic hemolytic anemia and episodic vaso-occlusion. These major pathological signs are primarily triggered by the polymerization of defective hemoglobin S [<xref ref-type="bibr" rid="pone.0199461.ref049">49</xref>] and end with a sustained inflammatory response and tissue damage. Multiple cell types are involved in the chronic inflammatory state and are associated with SCD severity, including leukocytes, activated monocytes, neutrophils, and platelets [<xref ref-type="bibr" rid="pone.0199461.ref050">50</xref>–<xref ref-type="bibr" rid="pone.0199461.ref052">52</xref>]. In addition, SCD patients show higher levels of several molecules that promote inflammation, including heme and proinflammatory cytokines, such as TNF-α, IL-1β, and IL-8 [<xref ref-type="bibr" rid="pone.0199461.ref053">53</xref>–<xref ref-type="bibr" rid="pone.0199461.ref055">55</xref>], which enhance the vaso-occlusive process [<xref ref-type="bibr" rid="pone.0199461.ref053">53</xref>,<xref ref-type="bibr" rid="pone.0199461.ref056">56</xref>] and aggravate the disease.</p>
+<p>The inflammatory response thus plays a prominent role in SCD pathophysiology [<xref ref-type="bibr" rid="pone.0199461.ref051">51</xref>] and needs to be resolved to help control the disease and prevent the subsequent damage to organs. Nevertheless, the mechanisms that determine the appearance of the inflammatory response and its persistence (which exacerbates the symptoms of SCD patients) and the factors involved still need to be clarified.</p>
+<p>Here, we set up a full complete 'omics bioinformatics pipeline to further delineate the relation between SCD patients’ transcriptomics profile and the pathophysiology of the disease focusing especially on the inflammatory response.</p>
+<p>Several individual microarray-based gene expression studies related to SCD have been published in recent years and were made available for public reuse. On the other hand, the small number of individuals analyzed in each study is an obstacle for the identification of a consensus set of DEGs. A meta-analysis of the available data should reduce study bias, increase statistical power, and improve the overall biological-process understanding [<xref ref-type="bibr" rid="pone.0199461.ref057">57</xref>,<xref ref-type="bibr" rid="pone.0199461.ref058">58</xref>], which may lead to therapeutic-target discovery [<xref ref-type="bibr" rid="pone.0199461.ref059">59</xref>,<xref ref-type="bibr" rid="pone.0199461.ref060">60</xref>].</p>
+<p>In the present study, we not only increased the sample size of individuals subjected to the meta-analysis but also overcame the heterogeneity of the disease expression across both SCD patients and individual datasets by means of a bioinformatics approach that takes into account the between-study and within-study variation.</p>
+<p>Our meta-analysis, using all public eligible SCD raw data [<xref ref-type="bibr" rid="pone.0199461.ref007">7</xref>,<xref ref-type="bibr" rid="pone.0199461.ref033">33</xref>–<xref ref-type="bibr" rid="pone.0199461.ref036">36</xref>] produced a consensus shared DEG profile. Indeed, we identified 335 DEGs, which include 224 upregulated and 111 downregulated genes having FDR &lt; 0.05. Among these, we found the already known set of genes previously reported to be associated with SCD, e.g., <italic>KLF1</italic> (Krüppel-like factor 1) [<xref ref-type="bibr" rid="pone.0199461.ref061">61</xref>,<xref ref-type="bibr" rid="pone.0199461.ref062">62</xref>] and <italic>HBD</italic> (hemoglobin subunit delta), as well as more than 130 candidate genes found to be differentially expressed by a preceding meta-analysis despite a different statistical framework that was applied to only two datasets [<xref ref-type="bibr" rid="pone.0199461.ref063">63</xref>].</p>
+<p>The gene set enrichment and pathway analysis of our DEG set revealed the importance of <bold>innate immunity</bold> (regulation and activation of innate immune response “GO:0002218, GO:0045088,” innate immune system “R-HSA-168249,” interferon alpha/beta signaling “R-HSA-909733,” the type I interferon signaling pathway “GO:0060337,” and the IL-6 signaling pathway, <italic>Homo sapiens</italic> “WP364”), <bold>hemostasis</bold> (blood coagulation “GO:0007596,” platelet activation “hsa04611,” and positive regulation of the MAPK cascade “GO:0043410”), a <bold>response to stress</bold> (oxidative stress “WP408,” glutathione metabolism “WP100”) and <bold>hemopoiesis</bold> (erythrocyte development “GO:0048821,” myeloid cell development “GO:0061515”) pathways. <bold>Heme biosynthesis</bold> and <bold>apoptosis</bold> were also found among the significant biological terms (a complete list is provided in <xref ref-type="supplementary-material" rid="pone.0199461.s006">S6 Table</xref>).</p>
+<p>The results of the PP interaction analysis supported those obtained by the gene enrichment analysis. Indeed, among the top predicted hub genes sorted by degree and betweenness centrality, we found genes that play a prominent role in innate immunity pathways (<italic>HERC5</italic>, <italic>HERC6</italic>), hemopoiesis (<italic>AHSP</italic>), and heme biosynthesis (<italic>ALAS2</italic>). The latter (5'-aminolevulinate synthase) encodes a major regulatory enzyme in erythrocytes [<xref ref-type="bibr" rid="pone.0199461.ref064">64</xref>]. This protein is the rate-limiting enzyme in heme synthesis and contributes to regulation of heme (iron-containing molecule) synthesis preventing free-iron accumulation and subsequent organ damage [<xref ref-type="bibr" rid="pone.0199461.ref065">65</xref>].</p>
+<p>Our findings showing the increase in <italic>ALAS2</italic> transcription (logFC = 1.9) are in agreement with the previously reported higher heme concentration measured in SCD patients’ groups (steady state and crisis) when compared with healthy individuals [<xref ref-type="bibr" rid="pone.0199461.ref066">66</xref>]. This high heme level has been shown to induce inflammation and to increase vascular permeability, adhesion molecule expression, and leukocyte recruitment [<xref ref-type="bibr" rid="pone.0199461.ref067">67</xref>,<xref ref-type="bibr" rid="pone.0199461.ref068">68</xref>] and has been suggested to contribute to severe clinical manifestations of SCD [<xref ref-type="bibr" rid="pone.0199461.ref069">69</xref>]. Accordingly, we did not notice either the transcription of heme oxygenase gene (<italic>HMOX1</italic>; coding for the enzyme regulating catalytic cleavage of heme groups) or the expression of the master TF <italic>NRF2</italic> (its protein product regulates the transcription of most of antioxidant genes). This observation is in line with another study showing that a large proportion of SCD patients have a relatively modest HMOX1 plasma concentration due in part to a hyporesponsive <italic>HMOX1</italic> promoter [<xref ref-type="bibr" rid="pone.0199461.ref070">70</xref>]. Nevertheless, our results revealed transcriptional induction of other antioxidant genes such as <italic>GPX1</italic>, <italic>GCLC</italic>, <italic>CAT</italic>, <italic>PINK1</italic>, <italic>SESN3</italic>, <italic>UBQLN1</italic>, <italic>CD36</italic>, and <italic>SNCA</italic>.</p>
+<p>Carbon monoxide (CO), one of the products of HMOX1, has been widely studied for its therapeutic potential [<xref ref-type="bibr" rid="pone.0199461.ref071">71</xref>–<xref ref-type="bibr" rid="pone.0199461.ref075">75</xref>]. Indeed, administration of CO and biliverdin inhibits vascular inflammation and vaso-occlusion in mouse models of SCD [<xref ref-type="bibr" rid="pone.0199461.ref072">72</xref>]. Furthermore, HMOX1 induction has had a beneficial effect in several pathological conditions [<xref ref-type="bibr" rid="pone.0199461.ref076">76</xref>] including chronic nephropathy [<xref ref-type="bibr" rid="pone.0199461.ref077">77</xref>]: an SCD-related pathology. HMOX1 inducers may thus help to decrease heme concentration and consequently reduce the inflammatory responses that worsen the patients’ symptoms; i.e., HMOX1 inducers may be beneficial to SCD patients.</p>
+<p>For a better understanding of the transcriptional mechanisms that regulate our DEGs, we constructed a gene-regulatory subnetwork associated with SCD (<bold><xref ref-type="fig" rid="pone.0199461.g004">Fig 4</xref></bold>). According to the network topology analysis, the nuclear factor-kappa B (NF-κB) remained the top hub-enriched TF. NF-κB regulates several physiological responses, including transcription of a large set of proinflammatory-cytokine genes [<xref ref-type="bibr" rid="pone.0199461.ref078">78</xref>] usually upregulated in SCD [<xref ref-type="bibr" rid="pone.0199461.ref053">53</xref>–<xref ref-type="bibr" rid="pone.0199461.ref055">55</xref>]. Our results indicate the increased transcription of various proinflammatory-cytokine genes including <italic>IL-6</italic>, <italic>IL-12</italic>, and <italic>IL-18</italic> and cytokine receptor genes such as <italic>IL-17RD</italic> and <italic>IL-17RC</italic> even if the increased expression of these transcripts was below the cutoff.</p>
+<p>At the same time, using GWAS data, from the identified polymorphisms we extracted the rSNPs occurring in the promoter region of our DEGs and gained an important insight into the regulatory complexes governing these gene expression patterns. Our analysis revealed the occurrence of 60 rSNPs in promoter DNA sequences of 20 genes (<xref ref-type="supplementary-material" rid="pone.0199461.s004">S4 Table</xref>), including <italic>NFE2</italic>, <italic>HDAC4</italic>, <italic>PI3K</italic>δ, and <italic>PI3K</italic>γ.</p>
+<p>Among the top significant enriched GO terms and biological pathways associated with the subset of these 20 candidate disease-associated genes were those primarily related to T-cell activation/differentiation; alpha-beta, gamma-delta, and regulatory T-cell differentiation; T-cell lineage commitment; and B-cell proliferation or activation. This result is highly consistent with the alteration of a lymphocyte count [<xref ref-type="bibr" rid="pone.0199461.ref079">79</xref>], phenotype, and function associated with SCD [<xref ref-type="bibr" rid="pone.0199461.ref080">80</xref>]. This alteration in the acquired immunity may explain the increased risk of severe bacterial infections among these patients [<xref ref-type="bibr" rid="pone.0199461.ref081">81</xref>,<xref ref-type="bibr" rid="pone.0199461.ref082">82</xref>]. Indeed, different studies have shown that SCD patients have a decreased T-lymphocyte count and increased B-lymphocyte count either at baseline or in acute crisis [<xref ref-type="bibr" rid="pone.0199461.ref083">83</xref>]. Of note, T-cell lymphopenia–associated inflammatory responses have been previously linked to the inactivation of <italic>PI3K</italic>δ and <italic>PI3K</italic>γ [<xref ref-type="bibr" rid="pone.0199461.ref084">84</xref>], genes of two PI3K isoforms that we found to be significantly downregulated and to carry rSNPs (log<sub>2</sub>FC: -0.94 and -0.56, respectively) in this analysis. This finding suggests that the downregulation of these kinase genes, predominantly expressed in the hematopoietic system [<xref ref-type="bibr" rid="pone.0199461.ref085">85</xref>], may be implicated in the profound lymphopenia observed in SCD patients.</p>
+<p>Our gene-regulatory network also showed significant overexpression of the TF nuclear factor-erythroid 2 (<italic>NFE2</italic>). The expression of this TF is activated by CREB1 and repressed by MYC TFs. Promoter analysis revealed that <italic>NFE2</italic> is affected by five rSNPs including rs35702801 and rs34155291 (<xref ref-type="supplementary-material" rid="pone.0199461.s007">S7 Table</xref>) that are predicted to disrupt several MYC motifs but not to affect the affinity of CREB1 binding. These rSNPs by altering TF MYC binding may hence explain the overexpression of <italic>NFE2</italic> observed in SCD patients. Some studies have shown that elevated expression of <italic>NFE2</italic> modulates proinflammatory cytokine IL-8 expression in myeloid cells [<xref ref-type="bibr" rid="pone.0199461.ref086">86</xref>] and causes a high neutrophil count in a murine model [<xref ref-type="bibr" rid="pone.0199461.ref087">87</xref>]. We suggest here that overexpression of <italic>NFE2</italic> may contribute to the neutrophilia associated with the severity of SCD. This neutrophilia may be—as suggested by others—accentuated by the alteration of neutrophil apoptosis, which leads to neutrophil accumulation in blood [<xref ref-type="bibr" rid="pone.0199461.ref088">88</xref>]. Accordingly, our results reveal downregulation of the DEGs involved in the positive (“GO:1902043”) and negative (“GO:2001237”) regulation of the extrinsic apoptotic signaling pathway (<bold><xref ref-type="fig" rid="pone.0199461.g006">Fig 6</xref></bold>).</p>
+<fig id="pone.0199461.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0199461.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>Downregulated and upregulated DEGs involved in apoptosis pathways.</title>
+<p>The inner ring is a bar plot where the height of the bar indicates the significance of the term (−log<sub>10</sub> adjusted <italic>p</italic> value), and color corresponds to the <italic>z</italic>-score. The outer ring displays scatterplots of the expression levels (log2FC) for the genes in each term.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.g006" xlink:type="simple"/>
+</fig>
+<p>Additionally, the GWAS revealed a nonsynonymous SNP occurring in <italic>CAMKK2</italic>’s protein-coding region (<xref ref-type="supplementary-material" rid="pone.0199461.s005">S5 Table</xref>), transforming arginine to cysteine at position 363 present in all CAMKK2 protein isoforms including the active isoforms 1, 2, and 3. Thus, besides the downregulation, the amino acid change affecting the catalytic domain was predicted by the SIFT analysis to be a deleterious SNP with a significant damage score (0.041). CAMKK2 belongs to a family of Ca<sup>2+</sup>/CaM-dependent, highly versatile serine/threonine kinases that catalyze the phosphorylation of (and have high affinity for) mainly three substrates: CAMK1, CAMK4, and AKT. CAMKK2 was reported to be exclusively expressed in the myeloid lineage [<xref ref-type="bibr" rid="pone.0199461.ref089">89</xref>] and participates in the regulation of several relevant physiological and pathophysiological processes, including hematopoiesis, cancer, inflammation, and immune responses. It was recently reported that under stressful conditions in immune cells, the loss of CAMKK2 promotes differentiation (both in bone marrow and peripheral-blood cells) of common myeloid progenitors toward granulocyte and monocyte precursor cells rather than megakaryocytes or erythrocytes [<xref ref-type="bibr" rid="pone.0199461.ref089">89</xref>]. This nonsynonymous SNP occurring in <italic>CAMKK2</italic>’s protein-coding region may thus also contribute to the increase in the neutrophil number (the most abundant type of granulocytes). Yet, the granulopoiesis state can be reversed by the re-expression of <italic>CAMKK2</italic>. Further research is needed to determine whether the CAMKK2 protein present in the blood of SCD patients shows an altered activity.</p>
+<p>In conclusion, besides previously reported genes, our meta-signature contains a new subset of genes identified for the first time as associated with SCD. Among these, <italic>ALAS2</italic> belonging to heme metabolism is well known to be associated with SCD, as are PI3K delta and gamma isoforms involved in T-cell differentiation. The present analysis yielded a large database of rSNPs and candidate genes that may be helpful for future studies dealing with the pathogenesis and complexity of SCD.</p>
+</sec>
+<sec id="sec015">
+<title>Supporting information</title>
+<supplementary-material id="pone.0199461.s001" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.s001" xlink:type="simple">
+<label>S1 Table</label>
+<caption>
+<title>Preferred reporting items for systematic reviews and meta-analyses (PRISMA).</title>
+<p>Guidelines Checklist.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0199461.s002" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.s002" xlink:type="simple">
+<label>S2 Table</label>
+<caption>
+<title>Complete list of differentially-expressed genes obtained from the meta-analysis.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0199461.s003" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.s003" xlink:type="simple">
+<label>S3 Table</label>
+<caption>
+<title>Top 10 hub genes.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0199461.s004" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.s004" xlink:type="simple">
+<label>S4 Table</label>
+<caption>
+<title>The rSNPs located in the promoter region and altering TF-binding sites’ affinity identified by the atSNP R package.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0199461.s005" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.s005" xlink:type="simple">
+<label>S5 Table</label>
+<caption>
+<title>Evaluation of the functional impact of the coding variants in the affected candidate gene proteins using Sift software.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0199461.s006" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.s006" xlink:type="simple">
+<label>S6 Table</label>
+<caption>
+<title>Gene set enrichment analyses of biological processes and metabolic pathways using multiple tools.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0199461.s007" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0199461.s007" xlink:type="simple">
+<label>S7 Table</label>
+<caption>
+<title>rSNPs located in the promoter region of NFE2 and altering MYC-binding sites’ affinity.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>The authors would like to thank Pr. Faisal Fadlelmola and Dr. Amel Ghouila the chair and co-chair of the H3ABioNet Research and Tool Development Working Group for the follow up of the present project.</p>
+<p>The H3ABioNet Consortium comprises the following current members:</p>
+<p>Ezekiel Adebiyi, Jelili Oyelade, Victor Chukwudi Osamor, Itunuoluwa Isewon, Marion Adebiyi from Covenant University Bioinformatics Research (CUBRe) and Department of Computer and Information Sciences, Covenant University, Ota, Ogun State, Nigeria, P.M.B. 1023;</p>
+<p>Oyekanmi Nash, Raphael Isokpehi from National Biotechnology Development Agency, Abuja, Nigeria 10099;</p>
+<p>Raouf Alami from Centre National de Transfusion Sanguine, Rabat, Morocco 10100;</p>
+<p>Fatima Gaboun from Institut National de Recherche Agronomique, Rabat, Morocco 10000;</p>
+<p>Azeddine Ibrahimi from Faculté de Médecine et de Pharmacie de Rabat, Université Mohammed V Souissi, Rabat, Morocco 10100;</p>
+<p>Ahmed Moussa from Abdelmalek Essaadi University, ENSA, Tangier, Morocco 90000;</p>
+<p>Fouzia Radouani from Institut Pasteur du Maroc, Casablanca, Maroc, Morocco 20360;</p>
+<p>Hassan Ghazal from University Mohammed First, Oujda, Morocco 60000;</p>
+<p>Khalid Sadki from Faculty of Sciences of Rabat, University Mohammed V of Rabat, Rabat, Morocco 10000;</p>
+<p>Fouad Seghrouchni from Institut National d'Hygiène, Rabat, Morocco 10090;</p>
+<p>James Brandful from Noguchi Memorial Institute for Medical Research, University of Ghana, Ghana, LG;</p>
+<p>Seydou Doumbia and Mamadou Wele from University of Sciences, Techniques and Technology of Bamako, Bamako, Mali BPE 3206;</p>
+<p>Dean Everett, Maaike Alearts, Jennifer Cornick, Arox Kamng'ona from Malawi-Liverpool-Wellcome Trust Clinical Research Programme, Blantyre, Malawi, 3/Institute of Infection and Global Health, University of Liverpool, Liverpool L69 3BX, United Kingdom;</p>
+<p>Faisal M. Fadlelmola, Azza E. Ahmed, Somia A. Mohammed and Rehab I. Ahmed from Centre for Bioinformatics and Systems Biology, Faculty of Science, University of Khartoum/Future University of Sudan, Khartoum, Sudan 11115;</p>
+<p>Simani Gaseitsiwe from Botswana Harvard AIDS Institute Partnership, Gaborone, Botswana;</p>
+<p>Scott Hazelhurst, Shaun Aron, Anmol Kiran, Benjamin Kumwenda, Phelelani Mpangase, Chisomo Msefula, Patrick Musicha from Sydney Brenner Institute for Molecular Bioscience, University of the Witwatersrand, Johannesburg, South Africa 2193;</p>
+<p>Fourie Joubert from Department of Biochemistry, University of Pretoria, Pretoria, South Africa 0083;</p>
+<p>Judit Kumuthini, Radhika S. Khetani and Mamana Mbiyavanga from Centre for Proteomic and Genomic Research, Cape Town, South Africa 7925;</p>
+<p>Hugh Patterton University of the Free State, Bloemfontein, South Africa 9300;</p>
+<p>Özlem Tastan Bishop, David Brown from Research Unit in Bioinformatics, Department of Biochemistry and Microbiology, Rhodes University, Grahamstown, South Africa 6140;</p>
+<p>Nicki Tiffin, Peter Van Heusden, Hocine Bendou, Alan Christoffels, Jean-Baka Domelevo Entfellner, Junaid Gamieldien, Mahjoubeh Jalali Sefid Dashti, Junaid Gamieldien from South African National Bioinformatics Institute/Medical Research Council of South Africa Bioinformatics Unit, University of the Western Cape, Cape Town, South Africa 7530;</p>
+<p>Gustavo A. Salazar, Gerrit Botha, Emile Chimusa from Computational Biology Group, Department of Integrative Biomedical Sciences, Institute of Infectious Disease and Molecular Medicine, Faculty of Health Sciences, University of Cape Town, Cape Town, South Africa 7925;</p>
+<p>Winston Hide, Shannan Ho Sui from Harvard T.H. Chan School of Public Health, Boston, Massachusetts 02115, USA/Sheffield Institute for Translational Neuroscience, Department of Neuroscience, University of Sheffield, Sheffield S10 2HQ, United Kingdom;</p>
+<p>Yasmina Jaufeerally Fakim, Zahra Mungloo-Dilmohammud and Shakuntala Baichoo from University of Mauritius, Reduit, Mauritius 80837;</p>
+<p>C. Victor Jongeneel, Suresh Maslamoney, Dunfunk Mugutso, Victoria Nembaware from National Center for Supercomputing Applications and Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, Illinois 61801, USA;</p>
+<p>Samar Kassim from Medical Biochemistry and Molecular Biology Department, Faculty of Medicine, Ain Shams University, Cairo, Egypt 11566;</p>
+<p>Ahmed Mansour Alzohairy from Genetics Department, Faculty of Agriculture, Zagazig University, Sharkia, Egypt 44519;</p>
+<p>Jonathan Kayondo from Uganda Virus Research Institute, Entebbe, Uganda 31301;</p>
+<p>Sylvester Lyantagaye from University of Dar es Salaam, Dar es Salaam, Tanzania, 73;</p>
+<p>Daniel Masiga, Raphael Isokpehi, Benard Kulohoma and Anne Fischer from International Centre of Insect Physiology and Ecology, Nairobi, Kenya 00100;</p>
+<p>Odile Ouwe Missi Oukem-Boyer from Centre de Recherche Medicale et Sanitaire, Niamey, Niger, BP 10887;</p>
+<p>Ellis Owusu-Dabo Kumasi Centre for Collaborative Research in Tropical Medicine/Kwame Nkrumah University of Science and Technology, Kumasi, Ghana, PMB;</p>
+<p>Nzovu Ulenga from Management and Development for Health, Dar es Salaam, Tanzania, 61;</p>
+<p>Flora Elias Mlyango from University of Dar es Salaam, Dar es Salaam, Tanzania, 73;</p>
+<p>Bruno Mmbando from Muhimbili University of Health and Allied Sciences, Dar es Salaam, Tanzania 00255;</p>
+<p>Mohamed Alibi, Amel Ghouila and Oussema Souiai from Institute Pasteur of Tunis, Tunis, Tunisia 1002;</p>
+<p>Gloria Rendon, Chris Fields, Dan Lapine and Liudmila Sergeevna Mainzer from National Center for Supercomputing Applications and Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA;</p>
+<p>Samson Pandam Salifu from Kumasi Centre for Collaborative Research in Tropical Medicine/Kwame Nkrumah University of Science and Technology, Kumasi, Ghana, PMB.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0199461.ref001"><label>1</label><mixed-citation publication-type="other" xlink:type="simple">Orphanet [Internet]. [cited 2 Oct 2017]. Available: <ext-link ext-link-type="uri" xlink:href="http://www.orpha.net/consor/cgi-bin/index.php" xlink:type="simple">http://www.orpha.net/consor/cgi-bin/index.php</ext-link></mixed-citation></ref>
+<ref id="pone.0199461.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Piel</surname> <given-names>FB</given-names></name>, <name name-style="western"><surname>Patil</surname> <given-names>AP</given-names></name>, <name name-style="western"><surname>Howes</surname> <given-names>RE</given-names></name>, <name name-style="western"><surname>Nyangiri</surname> <given-names>OA</given-names></name>, <name name-style="western"><surname>Gething</surname> <given-names>PW</given-names></name>, <name name-style="western"><surname>Dewi</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>Global epidemiology of Sickle haemoglobin in neonates: A contemporary geostatistical model-based map and population estimates</article-title>. <source>Lancet</source>. <year>2013</year>;<volume>381</volume>: <fpage>142</fpage>–<lpage>151</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/S0140-6736(12)61229-X" xlink:type="simple">10.1016/S0140-6736(12)61229-X</ext-link></comment> <object-id pub-id-type="pmid">23103089</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Baralle</surname> <given-names>F</given-names></name>. <article-title>Complete nucleotide sequence of the 5’ noncoding region of human alpha-and beta-globin mRNA</article-title>. <source>Cell</source>. <year>1977</year>;<volume>12</volume>: <fpage>1085</fpage>–<lpage>1095</lpage>. doi:0092-8674(77)90171-4 [pii] <object-id pub-id-type="pmid">597858</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Browning</surname> <given-names>JA</given-names></name>, <name name-style="western"><surname>Staines</surname> <given-names>HM</given-names></name>, <name name-style="western"><surname>Robinson</surname> <given-names>HC</given-names></name>, <name name-style="western"><surname>Powell</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Ellory</surname> <given-names>JC</given-names></name>, <name name-style="western"><surname>Gibson</surname> <given-names>JS</given-names></name>. <article-title>The effect of deoxygenation on whole-cell conductance of red blood cells from healthy individuals and patients with sickle cell disease</article-title>. <source>Blood</source>. <year>2007</year>;<volume>109</volume>: <fpage>2622</fpage>–<lpage>2629</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1182/blood-2006-03-001404" xlink:type="simple">10.1182/blood-2006-03-001404</ext-link></comment> <object-id pub-id-type="pmid">17138828</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chies</surname> <given-names>J a</given-names></name>, <name name-style="western"><surname>Nardi</surname> <given-names>NB</given-names></name>. <article-title>Sickle cell disease: a chronic inflammatory condition</article-title>. <source>Med Hypotheses</source>. <year>2001</year>;<volume>57</volume>: <fpage>46</fpage>–<lpage>50</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1054/mehy.2000.1310" xlink:type="simple">10.1054/mehy.2000.1310</ext-link></comment> <object-id pub-id-type="pmid">11421623</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Solovey</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Gui</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Ramakrishnan</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Steinberg</surname> <given-names>MH</given-names></name>, <name name-style="western"><surname>Hebbel</surname> <given-names>RP</given-names></name>. <article-title>Sickle cell anemia as a possible state of enhanced anti-apoptotic tone: survival effect of vascular endothelial growth factor on circulating and unanchored endothelial cells</article-title>. <source>Blood</source>. <year>1999</year>;<volume>93</volume>: <fpage>3824</fpage>–<lpage>3830</lpage>. Available: <ext-link ext-link-type="uri" xlink:href="http://bloodjournal.hematologylibrary.org/content/93/11/3824.short%5Cnhttp://www.ncbi.nlm.nih.gov/pubmed/10339489" xlink:type="simple">http://bloodjournal.hematologylibrary.org/content/93/11/3824.short%5Cnhttp://www.ncbi.nlm.nih.gov/pubmed/10339489</ext-link> <object-id pub-id-type="pmid">10339489</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Raghavachari</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Barb</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Yang</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Woodhouse</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Levy</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>A systematic comparison and evaluation of high density exon arrays and RNA-seq technology used to unravel the peripheral blood transcriptome of sickle cell disease</article-title>. <source>BMC Med Genomics</source>. <year>2012</year>;<volume>5</volume>: <fpage>28</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1186/1755-8794-5-28" xlink:type="simple">10.1186/1755-8794-5-28</ext-link></comment> <object-id pub-id-type="pmid">22747986</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Desai</surname> <given-names>AA</given-names></name>, <name name-style="western"><surname>Lei</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Bahroos</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Maienschein-Cline</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Saraf</surname> <given-names>SL</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>X</given-names></name>, <etal>et al</etal>. <article-title>Association of circulating transcriptomic profiles with mortality in sickle cell disease</article-title>. <source>Blood</source>. <year>2017</year>;<volume>129</volume>: <fpage>3009</fpage>–<lpage>3016</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1182/blood-2016-11-752279" xlink:type="simple">10.1182/blood-2016-11-752279</ext-link></comment> <object-id pub-id-type="pmid">28373264</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schulze</surname> <given-names>a</given-names></name>, <name name-style="western"><surname>Downward</surname> <given-names>J</given-names></name>. <article-title>Navigating gene expression using microarrays—a technology review</article-title>. <source>Nat Cell Biol</source>. <year>2001</year>;<volume>3</volume>: <fpage>E190</fpage>–<lpage>E195</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/35087138" xlink:type="simple">10.1038/35087138</ext-link></comment> <object-id pub-id-type="pmid">11483980</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Trevino</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Falciani</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Barrera-Saldana</surname> <given-names>HA</given-names></name>. <article-title>DNA microarrays: a powerful genomic tool for biomedical and clinical research</article-title>. <source>Mol Med</source>. <year>2007</year>;<volume>13</volume>: <fpage>527</fpage>–<lpage>541</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2119/2006-00107.Trevino" xlink:type="simple">10.2119/2006-00107.Trevino</ext-link></comment> <object-id pub-id-type="pmid">17660860</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Quigg</surname> <given-names>RJ</given-names></name>, <name name-style="western"><surname>Zhou</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Gu</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Nagesh Rao</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Reed</surname> <given-names>EF</given-names></name>. <article-title>Clinical utility of microarrays: current status, existing challenges and future outlook</article-title>. <source>Curr Genomics</source>. <year>2008</year>;<volume>9</volume>: <fpage>466</fpage>–<lpage>474</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2174/138920208786241199" xlink:type="simple">10.2174/138920208786241199</ext-link></comment> <object-id pub-id-type="pmid">19506735</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rung</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Brazma</surname> <given-names>A</given-names></name>. <article-title>Reuse of public genome-wide gene expression data</article-title>. <source>Nat Rev Genet</source>. <year>2013</year>;<volume>14</volume>: <fpage>89</fpage>–<lpage>99</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nrg3394" xlink:type="simple">10.1038/nrg3394</ext-link></comment> <object-id pub-id-type="pmid">23269463</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Choi</surname> <given-names>JK</given-names></name>, <name name-style="western"><surname>Yu</surname> <given-names>U</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Yoo</surname> <given-names>OJ</given-names></name>. <article-title>Combining multiple microarray studies and modeling interstudy variation</article-title>. <source>Bioinformatics</source>. <year>2003</year>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/bioinformatics/btg1010" xlink:type="simple">10.1093/bioinformatics/btg1010</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0199461.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Smid</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Dorssers</surname> <given-names>LCJ</given-names></name>, <name name-style="western"><surname>Jenster</surname> <given-names>G</given-names></name>. <article-title>Venn Mapping: Clustering of heterologous microarray data based on the number of co-occurring differentially expressed genes</article-title>. <source>Bioinformatics</source>. <year>2003</year>;<volume>19</volume>: <fpage>2065</fpage>–<lpage>2071</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/bioinformatics/btg282" xlink:type="simple">10.1093/bioinformatics/btg282</ext-link></comment> <object-id pub-id-type="pmid">14594711</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Parmigiani</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Garrett-Mayer</surname> <given-names>ES</given-names></name>, <name name-style="western"><surname>Anbazhagan</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Gabrielson</surname> <given-names>E</given-names></name>. <article-title>A cross-study comparison of gene expression studies for the molecular classification of lung cancer</article-title>. <source>Clin Cancer Res</source>. <year>2004</year>;<volume>10</volume>: <fpage>2922</fpage>–<lpage>2927</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1158/1078-0432.CCR-03-0490" xlink:type="simple">10.1158/1078-0432.CCR-03-0490</ext-link></comment> <object-id pub-id-type="pmid">15131026</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>DeConde</surname> <given-names>RP</given-names></name>, <name name-style="western"><surname>Hawley</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Falcon</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Clegg</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Knudsen</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Etzioni</surname> <given-names>R</given-names></name>. <article-title>Combining Results of Microarray Experiments: A Rank Aggregation Approach</article-title>. <source>Stat Appl Genet Mol Biol</source>. <year>2006</year>;<volume>5</volume>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2202/1544-6115.1204" xlink:type="simple">10.2202/1544-6115.1204</ext-link></comment> <object-id pub-id-type="pmid">17049026</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zintzaras</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Ioannidis</surname> <given-names>JPA</given-names></name>. <article-title>Meta-analysis for ranked discovery datasets: Theoretical framework and empirical demonstration for microarrays</article-title>. <source>Comput Biol Chem</source>. <year>2008</year>;<volume>32</volume>: <fpage>38</fpage>–<lpage>46</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.compbiolchem.2007.09.003" xlink:type="simple">10.1016/j.compbiolchem.2007.09.003</ext-link></comment> <object-id pub-id-type="pmid">17988949</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wang</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Kang</surname> <given-names>DD</given-names></name>, <name name-style="western"><surname>Shen</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Song</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Lu</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Chang</surname> <given-names>LC</given-names></name>, <etal>et al</etal>. <article-title>An r package suite for microarray meta-analysis in quality control, differentially expressed gene analysis and pathway enrichment detection</article-title>. <source>Bioinformatics</source>. <year>2012</year>;<volume>28</volume>: <fpage>2534</fpage>–<lpage>2536</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/bioinformatics/bts485" xlink:type="simple">10.1093/bioinformatics/bts485</ext-link></comment> <object-id pub-id-type="pmid">22863766</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Xia</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Fjell</surname> <given-names>CD</given-names></name>, <name name-style="western"><surname>Mayer</surname> <given-names>ML</given-names></name>, <name name-style="western"><surname>Pena</surname> <given-names>OM</given-names></name>, <name name-style="western"><surname>Wishart</surname> <given-names>DS</given-names></name>, <name name-style="western"><surname>Hancock</surname> <given-names>REW</given-names></name>. <article-title>INMEX—a web-based tool for integrative meta-analysis of expression data</article-title>. <source>Nucleic Acids Res</source>. <year>2013</year>;<volume>41</volume>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/nar/gkt338" xlink:type="simple">10.1093/nar/gkt338</ext-link></comment> <object-id pub-id-type="pmid">23766290</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Xia</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Gill</surname> <given-names>EE</given-names></name>, <name name-style="western"><surname>Hancock</surname> <given-names>REW</given-names></name>. <article-title>NetworkAnalyst for statistical, visual and network-based meta-analysis of gene expression data</article-title>. <source>Nat Protoc</source>. <year>2015</year>;<volume>10</volume>: <fpage>823</fpage>–<lpage>844</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nprot.2015.052" xlink:type="simple">10.1038/nprot.2015.052</ext-link></comment> <object-id pub-id-type="pmid">25950236</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mayne</surname> <given-names>BT</given-names></name>, <name name-style="western"><surname>Bianco-Miotto</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Buckberry</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Breen</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Clifton</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Shoubridge</surname> <given-names>C</given-names></name>, <etal>et al</etal>. <article-title>Large scale gene expression meta-analysis reveals tissue-specific, sex-biased gene expression in humans</article-title>. <source>Front Genet</source>. <year>2016</year>;<volume>7</volume>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3389/fgene.2016.00183" xlink:type="simple">10.3389/fgene.2016.00183</ext-link></comment> <object-id pub-id-type="pmid">27790248</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jalili</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Salehzadeh-Yazdi</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Mohammadi</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Yaghmaie</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ghavamzadeh</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Alimoghaddam</surname> <given-names>K</given-names></name>. <article-title>Meta-analysis of gene expression profiles in acute promyelocytic leukemia reveals involved pathways</article-title>. <source>Int J Hematol Stem Cell Res</source>. <year>2017</year>;<volume>11</volume>: <fpage>1</fpage>–<lpage>12</lpage>.</mixed-citation></ref>
+<ref id="pone.0199461.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jha</surname> <given-names>PK</given-names></name>, <name name-style="western"><surname>Vijay</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Sahu</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Ashraf</surname> <given-names>MZ</given-names></name>. <article-title>Comprehensive Gene expression meta-analysis and integrated bioinformatic approaches reveal shared signatures between thrombosis and myeloproliferative disorders</article-title>. <source>Sci Rep</source>. <year>2016</year>;<volume>6</volume>: <fpage>37099</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/srep37099" xlink:type="simple">10.1038/srep37099</ext-link></comment> <object-id pub-id-type="pmid">27892526</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Likhitrattanapisal</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Tipanee</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Janvilisri</surname> <given-names>T</given-names></name>. <article-title>Meta-analysis of gene expression profiles identifies differential biomarkers for hepatocellular carcinoma and cholangiocarcinoma</article-title>. <source>Tumor Biol</source>. <year>2016</year>;<volume>37</volume>: <fpage>12755</fpage>–<lpage>12766</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s13277-016-5186-8" xlink:type="simple">10.1007/s13277-016-5186-8</ext-link></comment> <object-id pub-id-type="pmid">27448818</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bush</surname> <given-names>WS</given-names></name>, <name name-style="western"><surname>Moore</surname> <given-names>JH</given-names></name>. <article-title>Chapter 11: Genome-Wide Association Studies</article-title>. <source>PLoS Comput Biol</source>. <year>2012</year>;<volume>8</volume>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pcbi.1002822" xlink:type="simple">10.1371/journal.pcbi.1002822</ext-link></comment> <object-id pub-id-type="pmid">23300413</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Conde</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Bracci</surname> <given-names>PM</given-names></name>, <name name-style="western"><surname>Richardson</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Montgomery</surname> <given-names>SB</given-names></name>, <name name-style="western"><surname>Skibola</surname> <given-names>CF</given-names></name>. <article-title>Integrating GWAS and expression data for functional characterization of disease-associated SNPs: An application to follicular lymphoma</article-title>. <source>Am J Hum Genet</source>. <year>2013</year>;<volume>92</volume>: <fpage>126</fpage>–<lpage>130</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.ajhg.2012.11.009" xlink:type="simple">10.1016/j.ajhg.2012.11.009</ext-link></comment> <object-id pub-id-type="pmid">23246294</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gorlov</surname> <given-names>IP</given-names></name>, <name name-style="western"><surname>Gallick</surname> <given-names>GE</given-names></name>, <name name-style="western"><surname>Gorlova</surname> <given-names>OY</given-names></name>, <name name-style="western"><surname>Amos</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Logothetis</surname> <given-names>CJ</given-names></name>. <article-title>GWAS meets microarray: Are the results of genome-wide association studies and gene-expression profiling consistent? Prostate cancer as an example</article-title>. <source>PLoS One</source>. <year>2009</year>;<volume>4</volume>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pone.0006511" xlink:type="simple">10.1371/journal.pone.0006511</ext-link></comment> <object-id pub-id-type="pmid">19652704</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Becker</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Siegert</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Toliat</surname> <given-names>MR</given-names></name>, <name name-style="western"><surname>Du</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Casper</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Dolmans</surname> <given-names>GH</given-names></name>, <etal>et al</etal>. <article-title>Meta-analysis of genome-wide association studies and network analysis-based integration with gene expression data identify new suggestive loci and unravel a Wnt-centric network associated with Dupuytren’s disease</article-title>. <source>PLoS One</source>. <year>2016</year>;<volume>11</volume>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pone.0158101" xlink:type="simple">10.1371/journal.pone.0158101</ext-link></comment> <object-id pub-id-type="pmid">27467239</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jin</surname> <given-names>H-J</given-names></name>, <name name-style="western"><surname>Jung</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>DebRoy</surname> <given-names>AR</given-names></name>, <name name-style="western"><surname>Davuluri</surname> <given-names>R V</given-names></name>. <article-title>Identification and validation of regulatory SNPs that modulate transcription factor chromatin binding and gene expression in prostate cancer</article-title>. <source>Oncotarget</source>. <year>2016</year>;<volume>7</volume>: <fpage>54616</fpage>–<lpage>54626</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.18632/oncotarget.10520" xlink:type="simple">10.18632/oncotarget.10520</ext-link></comment> <object-id pub-id-type="pmid">27409348</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Maurano</surname> <given-names>MT</given-names></name>, <name name-style="western"><surname>Humbert</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Rynes</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Thurman</surname> <given-names>RE</given-names></name>, <name name-style="western"><surname>Haugen</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>H</given-names></name>, <etal>et al</etal>. <article-title>Systematic Localization of Common Disease-Associated Variation in Regulatory DNA</article-title>. <source>Science</source> (80-). <year>2012</year>;<volume>337</volume>: <fpage>1190</fpage>–<lpage>1195</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1126/science.1222794" xlink:type="simple">10.1126/science.1222794</ext-link></comment> <object-id pub-id-type="pmid">22955828</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref031"><label>31</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pai</surname> <given-names>AA</given-names></name>, <name name-style="western"><surname>Pritchard</surname> <given-names>JK</given-names></name>, <name name-style="western"><surname>Gilad</surname> <given-names>Y</given-names></name>. <article-title>The Genetic and Mechanistic Basis for Variation in Gene Regulation</article-title>. <source>PLoS Genet</source>. <year>2015</year>;<volume>11</volume>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pgen.1004857" xlink:type="simple">10.1371/journal.pgen.1004857</ext-link></comment> <object-id pub-id-type="pmid">25569255</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Moher</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Liberati</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Tetzlaff</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Altman</surname> <given-names>DG</given-names></name>. <article-title>Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement</article-title>. <source>BMJ</source>. <year>2009</year>;<volume>339</volume>: <fpage>b2535</fpage>–<lpage>b2535</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1136/bmj.b2535" xlink:type="simple">10.1136/bmj.b2535</ext-link></comment> <object-id pub-id-type="pmid">19622551</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref033"><label>33</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Raghavachari</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Xu</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Harris</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Villagra</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Logun</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Barb</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Amplified expression profiling of platelet transcriptome reveals changes in arginine metabolic pathways in patients with sickle cell disease</article-title>. <source>Circulation</source>. <year>2007</year>;<volume>115</volume>: <fpage>1551</fpage>–<lpage>1562</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1161/CIRCULATIONAHA.106.658641" xlink:type="simple">10.1161/CIRCULATIONAHA.106.658641</ext-link></comment> <object-id pub-id-type="pmid">17353439</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Raghavachari</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Xu</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Munson</surname> <given-names>PJ</given-names></name>, <name name-style="western"><surname>Gladwin</surname> <given-names>MT</given-names></name>. <article-title>Characterization of whole blood gene expression profiles as a sequel to globin mRNA reduction in patients with sickle cell disease</article-title>. <source>PLoS One</source>. <year>2009</year>;<volume>4</volume>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pone.0006484" xlink:type="simple">10.1371/journal.pone.0006484</ext-link></comment> <object-id pub-id-type="pmid">19649296</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref035"><label>35</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Van Beers</surname> <given-names>EJ</given-names></name>, <name name-style="western"><surname>Yang</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Raghavachari</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Tian</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Allen</surname> <given-names>DT</given-names></name>, <name name-style="western"><surname>Nichols</surname> <given-names>JS</given-names></name>, <etal>et al</etal>. <article-title>Iron, inflammation, and early death in adults with sickle cell disease</article-title>. <source>Circ Res</source>. <year>2015</year>;<volume>116</volume>: <fpage>298</fpage>–<lpage>306</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1161/CIRCRESAHA.116.304577" xlink:type="simple">10.1161/CIRCRESAHA.116.304577</ext-link></comment> <object-id pub-id-type="pmid">25378535</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref036"><label>36</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Quinlan</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Idaghdour</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Goulet</surname> <given-names>J-P</given-names></name>, <name name-style="western"><surname>Gbeha</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>de Malliard</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Bruat</surname> <given-names>V</given-names></name>, <etal>et al</etal>. <article-title>Genomic architecture of sickle cell disease in West African children</article-title>. <source>Front Genet</source>. <year>2014</year>;<volume>5</volume>: <fpage>26</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3389/fgene.2014.00026" xlink:type="simple">10.3389/fgene.2014.00026</ext-link></comment> <object-id pub-id-type="pmid">24592274</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref037"><label>37</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kang</surname> <given-names>DD</given-names></name>, <name name-style="western"><surname>Sibille</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Kaminski</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Tseng</surname> <given-names>GC</given-names></name>. <article-title>MetaQC: Objective quality control and inclusion/exclusion criteria for genomic meta-analysis</article-title>. <source>Nucleic Acids Res</source>. <year>2012</year>;<volume>40</volume>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/nar/gkr1071" xlink:type="simple">10.1093/nar/gkr1071</ext-link></comment> <object-id pub-id-type="pmid">22116060</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref038"><label>38</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Smyth</surname> <given-names>GK</given-names></name>. <article-title>Linear Models and Empirical Bayes Methods for Assessing Differential Expression in Microarray Experiments</article-title>. <source>Stat Appl Genet Mol Biol</source>. <year>2004</year>;<volume>3</volume>: <fpage>1</fpage>–<lpage>25</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2202/1544-6115.1027" xlink:type="simple">10.2202/1544-6115.1027</ext-link></comment> <object-id pub-id-type="pmid">16646809</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref039"><label>39</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lu</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Song</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Shen</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Tseng</surname> <given-names>GC</given-names></name>. <article-title>Biomarker detection in the integration of multiple multi-class genomic studies</article-title>. <source>Bioinformatics</source>. <year>2009</year>;<volume>26</volume>: <fpage>333</fpage>–<lpage>340</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/bioinformatics/btp669" xlink:type="simple">10.1093/bioinformatics/btp669</ext-link></comment> <object-id pub-id-type="pmid">19965884</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref040"><label>40</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Krull</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Voss</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Choi</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Pistor</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Potapov</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Wingender</surname> <given-names>E</given-names></name>. <article-title>TRANSPATH??: An integrated database on signal transduction and a tool for array analysis</article-title>. <source>Nucleic Acids Research</source>. <year>2003</year>. pp. <fpage>97</fpage>–<lpage>100</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/nar/gkg089" xlink:type="simple">10.1093/nar/gkg089</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0199461.ref041"><label>41</label><mixed-citation publication-type="other" xlink:type="simple">geneXplain. Available: <ext-link ext-link-type="uri" xlink:href="http://platform.genexplain.com/bioumlweb/" xlink:type="simple">http://platform.genexplain.com/bioumlweb/</ext-link></mixed-citation></ref>
+<ref id="pone.0199461.ref042"><label>42</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chen</surname> <given-names>EY</given-names></name>, <name name-style="western"><surname>Tan</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Kou</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Duan</surname> <given-names>Q</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Meirelles</surname> <given-names>G</given-names></name>, <etal>et al</etal>. <article-title>Enrichr: interactive and collaborative HTML5 gene list enrichment analysis tool</article-title>. <source>BMC Bioinformatics</source>. <year>2013</year>;<volume>14</volume>: <fpage>128</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1186/1471-2105-14-128" xlink:type="simple">10.1186/1471-2105-14-128</ext-link></comment> <object-id pub-id-type="pmid">23586463</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref043"><label>43</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bindea</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Mlecnik</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Hackl</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Charoentong</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Tosolini</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Kirilovsky</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>ClueGO: A Cytoscape plug-in to decipher functionally grouped gene ontology and pathway annotation networks</article-title>. <source>Bioinformatics</source>. <year>2009</year>;<volume>25</volume>: <fpage>1091</fpage>–<lpage>1093</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/bioinformatics/btp101" xlink:type="simple">10.1093/bioinformatics/btp101</ext-link></comment> <object-id pub-id-type="pmid">19237447</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref044"><label>44</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Shannon</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Markiel</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Ozier</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Baliga</surname> <given-names>NS</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>JT</given-names></name>, <name name-style="western"><surname>Ramage</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Cytoscape: A software Environment for integrated models of biomolecular interaction networks</article-title>. <source>Genome Res</source>. <year>2003</year>;<volume>13</volume>: <fpage>2498</fpage>–<lpage>2504</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1101/gr.1239303" xlink:type="simple">10.1101/gr.1239303</ext-link></comment> <object-id pub-id-type="pmid">14597658</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref045"><label>45</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Szklarczyk</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Franceschini</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Wyder</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Forslund</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Heller</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Huerta-Cepas</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>STRING v10: Protein-protein interaction networks, integrated over the tree of life</article-title>. <source>Nucleic Acids Res</source>. <year>2015</year>;<volume>43</volume>: <fpage>D447</fpage>–<lpage>D452</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/nar/gku1003" xlink:type="simple">10.1093/nar/gku1003</ext-link></comment> <object-id pub-id-type="pmid">25352553</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref046"><label>46</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chouvardas</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Kollias</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Nikolaou</surname> <given-names>C</given-names></name>. <article-title>Inferring active regulatory networks from gene expression data using a combination of prior knowledge and enrichment analysis</article-title>. <source>BMC Bioinformatics</source>. <year>2016</year>;<volume>17</volume> <issue>Suppl 5</issue>: <fpage>181</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1186/s12859-016-1040-7" xlink:type="simple">10.1186/s12859-016-1040-7</ext-link></comment> <object-id pub-id-type="pmid">27295045</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref047"><label>47</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mtatiro</surname> <given-names>SN</given-names></name>, <name name-style="western"><surname>Singh</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Rooks</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Mgaya</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Mariki</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Soka</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Genome wide association study of fetal hemoglobin in sickle cell Anemia in Tanzania</article-title>. <source>PLoS One</source>. <year>2014</year>;<volume>9</volume>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pone.0111464" xlink:type="simple">10.1371/journal.pone.0111464</ext-link></comment> <object-id pub-id-type="pmid">25372704</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref048"><label>48</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Liu</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Walter</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Stenger</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Thach</surname> <given-names>D</given-names></name>. <article-title>Effects of Globin mRNA Reduction Methods on Gene Expression Profiles from Whole Blood</article-title>. <source>J Mol Diagnostics</source>. <year>2006</year>;<volume>8</volume>: <fpage>551</fpage>–<lpage>558</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2353/jmoldx.2006.060021" xlink:type="simple">10.2353/jmoldx.2006.060021</ext-link></comment> <object-id pub-id-type="pmid">17065423</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref049"><label>49</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rees</surname> <given-names>DC</given-names></name>, <name name-style="western"><surname>Williams</surname> <given-names>TN</given-names></name>, <name name-style="western"><surname>Gladwin</surname> <given-names>MT</given-names></name>. <article-title>Sickle-cell disease</article-title>. <source>The Lancet</source>. <year>2010</year>. pp. <fpage>2018</fpage>–<lpage>2031</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/S0140-6736(10)61029-X" xlink:type="simple">10.1016/S0140-6736(10)61029-X</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0199461.ref050"><label>50</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hebbel</surname> <given-names>RP</given-names></name>. <article-title>Ischemia-reperfusion injury in sickle cell anemia: Relationship to acute chest syndrome, endothelial dysfunction, arterial vasculopathy, and inflammatory pain</article-title>. <source>Hematology/Oncology Clinics of North America</source>. <year>2014</year>. pp. <fpage>181</fpage>–<lpage>198</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.hoc.2013.11.005" xlink:type="simple">10.1016/j.hoc.2013.11.005</ext-link></comment> <object-id pub-id-type="pmid">24589261</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref051"><label>51</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hoppe</surname> <given-names>CC</given-names></name>. <article-title>Inflammatory mediators of endothelial injury in sickle cell disease</article-title>. <source>Hematology/Oncology Clinics of North America</source>. <year>2014</year>. pp. <fpage>265</fpage>–<lpage>286</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.hoc.2013.11.006" xlink:type="simple">10.1016/j.hoc.2013.11.006</ext-link></comment> <object-id pub-id-type="pmid">24589266</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref052"><label>52</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhang</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Xu</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Manwani</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Frenette</surname> <given-names>PS</given-names></name>. <article-title>Neutrophils, platelets, and inflammatory pathways at the nexus of sickle cell disease pathophysiology</article-title>. <source>Blood</source>. <year>2016</year>. pp. <fpage>801</fpage>–<lpage>809</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1182/blood-2015-09-618538" xlink:type="simple">10.1182/blood-2015-09-618538</ext-link></comment> <object-id pub-id-type="pmid">26758915</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref053"><label>53</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lanaro</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Franco-Penteado</surname> <given-names>CF</given-names></name>, <name name-style="western"><surname>Albuqueque</surname> <given-names>DM</given-names></name>, <name name-style="western"><surname>Saad</surname> <given-names>STO</given-names></name>, <name name-style="western"><surname>Conran</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Costa</surname> <given-names>FF</given-names></name>. <article-title>Altered levels of cytokines and inflammatory mediators in plasma and leukocytes of sickle cell anemia patients and effects of hydroxyurea therapy</article-title>. <source>J Leukoc Biol</source>. <year>2009</year>;<volume>85</volume>: <fpage>235</fpage>–<lpage>242</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1189/jlb.0708445" xlink:type="simple">10.1189/jlb.0708445</ext-link></comment> <object-id pub-id-type="pmid">19004988</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref054"><label>54</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sarray</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Saleh</surname> <given-names>LR</given-names></name>, <name name-style="western"><surname>Lisa Saldanha</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Al-Habboubi</surname> <given-names>HH</given-names></name>, <name name-style="western"><surname>Mahdi</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Almawi</surname> <given-names>WY</given-names></name>. <article-title>Serum IL-6, IL-10, and TNF?? levels in pediatric sickle cell disease patients during vasoocclusive crisis and steady state condition</article-title>. <source>Cytokine</source>. <year>2015</year>;<volume>72</volume>: <fpage>43</fpage>–<lpage>47</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.cyto.2014.11.030" xlink:type="simple">10.1016/j.cyto.2014.11.030</ext-link></comment> <object-id pub-id-type="pmid">25569375</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref055"><label>55</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Qari</surname> <given-names>MH</given-names></name>, <name name-style="western"><surname>Dier</surname> <given-names>U</given-names></name>, <name name-style="western"><surname>Mousa</surname> <given-names>SA</given-names></name>. <article-title>Biomarkers of inflammation, growth factor, and coagulation activation in patients with sickle cell disease</article-title>. <source>Clin Appl Thromb Hemost</source>. <year>2012</year>;<volume>18</volume>: <fpage>195</fpage>–<lpage>200</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1177/1076029611420992" xlink:type="simple">10.1177/1076029611420992</ext-link></comment> <object-id pub-id-type="pmid">21949038</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref056"><label>56</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Conran</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Franco-Penteado</surname> <given-names>CF</given-names></name>, <name name-style="western"><surname>Costa</surname> <given-names>FF</given-names></name>. <article-title>Newer aspects of the pathophysiology of sickle cell disease vaso-occlusion</article-title>. <source>Hemoglobin</source>. <year>2009</year>. pp. <fpage>1</fpage>–<lpage>16</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1080/03630260802625709" xlink:type="simple">10.1080/03630260802625709</ext-link></comment> <object-id pub-id-type="pmid">19205968</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref057"><label>57</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ramasamy</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Mondry</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Holmes</surname> <given-names>CC</given-names></name>, <name name-style="western"><surname>Altman</surname> <given-names>DG</given-names></name>. <article-title>Key issues in conducting a meta-analysis of gene expression microarray datasets</article-title>. <source>PLoS Medicine</source>. <year>2008</year>. pp. <fpage>1320</fpage>–<lpage>1332</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pmed.0050184" xlink:type="simple">10.1371/journal.pmed.0050184</ext-link></comment> <object-id pub-id-type="pmid">18767902</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref058"><label>58</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tseng</surname> <given-names>GC</given-names></name>, <name name-style="western"><surname>Ghosh</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Feingold</surname> <given-names>E</given-names></name>. <article-title>Comprehensive literature review and statistical considerations for microarray meta-analysis</article-title>. <source>Nucleic Acids Research</source>. <year>2012</year>. pp. <fpage>3785</fpage>–<lpage>3799</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/nar/gkr1265" xlink:type="simple">10.1093/nar/gkr1265</ext-link></comment> <object-id pub-id-type="pmid">22262733</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref059"><label>59</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kodama</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Toda</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Morinaga</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Yamada</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Butte</surname> <given-names>AJ</given-names></name>. <article-title>Anti-CD44 antibody treatment lowers hyperglycemia and improves insulin resistance, adipose inflammation, and hepatic steatosis in diet- induced obese mice</article-title>. <source>Diabetes</source>. <year>2015</year>;<volume>64</volume>: <fpage>867</fpage>–<lpage>875</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2337/db14-0149" xlink:type="simple">10.2337/db14-0149</ext-link></comment> <object-id pub-id-type="pmid">25294945</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref060"><label>60</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kodama</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Horikoshi</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Toda</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Yamada</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Hara</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Irie</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Expression-based genome-wide association study links the receptor CD44 in adipose tissue with type 2 diabetes</article-title>. <source>Proc Natl Acad Sci U S A</source>. <year>2012</year>;<volume>109</volume>: <fpage>7049</fpage>–<lpage>54</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.1114513109" xlink:type="simple">10.1073/pnas.1114513109</ext-link></comment> <object-id pub-id-type="pmid">22499789</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref061"><label>61</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Peralta</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Low</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Booten</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Zhou</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Freier</surname> <given-names>S</given-names></name>, <etal>et al</etal>. <article-title>Targeting KLF1 for the Treatment of Sickle Cell Disease Using Antisense Oligonucleotides</article-title> [Internet]. <source>Blood</source>. <year>2014</year>. Available: <ext-link ext-link-type="uri" xlink:href="http://www.bloodjournal.org/content/124/21/4038.abstract" xlink:type="simple">http://www.bloodjournal.org/content/124/21/4038.abstract</ext-link></mixed-citation></ref>
+<ref id="pone.0199461.ref062"><label>62</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gallienne</surname> <given-names>AE</given-names></name>, <name name-style="western"><surname>Dréau</surname> <given-names>HMP</given-names></name>, <name name-style="western"><surname>Schuh</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Old</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Henderson</surname> <given-names>S</given-names></name>. <article-title>Ten novel mutations in the erythroid transcription factor KLF1 gene associated with increased fetal hemoglobin levels in adults</article-title>. <source>Haematologica</source>. <year>2012</year>;<volume>97</volume>: <fpage>340</fpage>–<lpage>434</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3324/haematol.2011.055442" xlink:type="simple">10.3324/haematol.2011.055442</ext-link></comment> <object-id pub-id-type="pmid">22102705</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref063"><label>63</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hounkpe</surname> <given-names>BW</given-names></name>, <name name-style="western"><surname>Fiusa</surname> <given-names>MML</given-names></name>, <name name-style="western"><surname>Colella</surname> <given-names>MP</given-names></name>, <name name-style="western"><surname>da Costa</surname> <given-names>LNG</given-names></name>, <name name-style="western"><surname>Benatti R de</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Saad</surname> <given-names>STO</given-names></name>, <etal>et al</etal>. <article-title>Role of innate immunity-triggered pathways in the pathogenesis of Sickle Cell Disease: a meta-analysis of gene expression studies</article-title>. <source>Sci Rep</source>. <year>2015</year>;<volume>5</volume>: <fpage>17822</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/srep17822" xlink:type="simple">10.1038/srep17822</ext-link></comment> <object-id pub-id-type="pmid">26648000</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref064"><label>64</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chiabrando</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Mercurio</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Tolosano</surname> <given-names>E</given-names></name>. <article-title>Heme and erythropoieis: More than a structural role</article-title>. <source>Haematologica</source>. <year>2014</year>. pp. <fpage>973</fpage>–<lpage>983</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3324/haematol.2013.091991" xlink:type="simple">10.3324/haematol.2013.091991</ext-link></comment> <object-id pub-id-type="pmid">24881043</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref065"><label>65</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Steinbicker</surname> <given-names>AU</given-names></name>, <name name-style="western"><surname>Muckenthaler</surname> <given-names>MU</given-names></name>. <article-title>Out of balance-systemic iron homeostasis in iron-related disorders</article-title>. <source>Nutrients</source>. <year>2013</year>. pp. <fpage>3034</fpage>–<lpage>3061</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3390/nu5083034" xlink:type="simple">10.3390/nu5083034</ext-link></comment> <object-id pub-id-type="pmid">23917168</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref066"><label>66</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>C</surname> <given-names>M.O.S.</given-names></name>, <name name-style="western"><surname>R</surname> <given-names>L.C.</given-names></name>, <name name-style="western"><surname>R</surname> <given-names>J.H.O.</given-names></name>, <name name-style="western"><surname>DAS</surname> <given-names>T.</given-names></name>, <name name-style="western"><surname>DN</surname> <given-names>V.M.L.</given-names></name>, <name name-style="western"><surname>C</surname> <given-names>M.B.</given-names></name>, <etal>et al</etal>. <article-title>Heme concentration as a biomarker of sickle cell disease severity: Its role in steady-state and in crisis patients</article-title> [Internet]. <source>Blood</source>. <year>2015</year>. p. <fpage>975</fpage>. Available: <ext-link ext-link-type="uri" xlink:href="http://www.bloodjournal.org/content/126/23/975%5Cnhttp://ovidsp.ovid.com/ovidweb.cgi?T=JS&amp;PAGE=reference&amp;D=emed13&amp;NEWS=N&amp;AN=72171521" xlink:type="simple">http://www.bloodjournal.org/content/126/23/975%5Cnhttp://ovidsp.ovid.com/ovidweb.cgi?T=JS&amp;PAGE=reference&amp;D=emed13&amp;NEWS=N&amp;AN=72171521</ext-link></mixed-citation></ref>
+<ref id="pone.0199461.ref067"><label>67</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wagener</surname> <given-names>FADTG</given-names></name>, <name name-style="western"><surname>Eggert</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Boerman</surname> <given-names>OC</given-names></name>, <name name-style="western"><surname>Oyen</surname> <given-names>WJG</given-names></name>, <name name-style="western"><surname>Verhofstad</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Abraham</surname> <given-names>NG</given-names></name>, <etal>et al</etal>. <article-title>Heme is a potent inducer of inflammation in mice and is counteracted by heme oxygenase</article-title>. <source>Blood</source>. <year>2001</year>;<volume>98</volume>: <fpage>1802</fpage>–<lpage>1811</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1182/blood.V98.6.1802" xlink:type="simple">10.1182/blood.V98.6.1802</ext-link></comment> <object-id pub-id-type="pmid">11535514</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref068"><label>68</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Belcher</surname> <given-names>JD</given-names></name>, <name name-style="western"><surname>Beckman</surname> <given-names>JD</given-names></name>, <name name-style="western"><surname>Balla</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Balla</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Vercellotti</surname> <given-names>G</given-names></name>. <article-title>Heme degradation and vascular injury</article-title>. <source>Antioxid Redox Signal</source>. <year>2010</year>;<volume>12</volume>: <fpage>233</fpage>–<lpage>48</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1089/ars.2009.2822" xlink:type="simple">10.1089/ars.2009.2822</ext-link></comment> <object-id pub-id-type="pmid">19697995</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref069"><label>69</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sawicki</surname> <given-names>KT</given-names></name>, <name name-style="western"><surname>Shang</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Chang</surname> <given-names>HC</given-names></name>, <name name-style="western"><surname>Khechaduri</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Sato</surname> <given-names>T</given-names></name>, <etal>et al</etal>. <article-title>Increased Heme Levels in the Heart Lead to Exacerbated Ischemic Injury</article-title>. <source>J Am Heart Assoc</source>. <year>2015</year>;<volume>4</volume>: <fpage>e002272</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1161/JAHA.115.002272" xlink:type="simple">10.1161/JAHA.115.002272</ext-link></comment> <object-id pub-id-type="pmid">26231844</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref070"><label>70</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Owusu</surname> <given-names>BY</given-names></name>, <name name-style="western"><surname>Hu</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Ghosh</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Tan</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Sey</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Ekem</surname> <given-names>I</given-names></name>, <etal>et al</etal>. <article-title>Determinants Of Heme-Oxygenase-1 Upregulation In Patients With Sickle Cell Disease</article-title>. <name name-style="western"><surname>Adisa</surname> <given-names>O</given-names></name>, editor. <source>Blood</source>. <year>2013</year>;<volume>122</volume>: <fpage>2235 LP</fpage>–<lpage>2235</lpage>.</mixed-citation></ref>
+<ref id="pone.0199461.ref071"><label>71</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Belcher</surname> <given-names>JD</given-names></name>, <name name-style="western"><surname>Young</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Nguyen</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Burhop</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Tran</surname> <given-names>P</given-names></name>, <etal>et al</etal>. <article-title>MP4CO, a pegylated hemoglobin saturated with carbon monoxide, is a modulator of HO-1, inflammation, and vaso-occlusion in transgenic sickle mice</article-title>. <source>Blood</source>. <year>2013</year>;<volume>122</volume>: <fpage>2757</fpage>–<lpage>2764</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1182/blood-2013-02-486282" xlink:type="simple">10.1182/blood-2013-02-486282</ext-link></comment> <object-id pub-id-type="pmid">23908468</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref072"><label>72</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Belcher</surname> <given-names>JD</given-names></name>, <name name-style="western"><surname>Mahaseth</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Welch</surname> <given-names>TE</given-names></name>, <name name-style="western"><surname>Otterbein</surname> <given-names>LE</given-names></name>, <name name-style="western"><surname>Hebbel</surname> <given-names>RP</given-names></name>, <name name-style="western"><surname>Vercellotti</surname> <given-names>GM</given-names></name>. <article-title>Heme oxygenase-1 is a modulator of inflammation and vaso-occlusion in transgenic sickle mice</article-title>. <source>J Clin Invest</source>. <year>2006</year>;<volume>116</volume>: <fpage>808</fpage>–<lpage>816</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1172/JCI26857" xlink:type="simple">10.1172/JCI26857</ext-link></comment> <object-id pub-id-type="pmid">16485041</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref073"><label>73</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kim</surname> <given-names>KM</given-names></name>, <name name-style="western"><surname>Pae</surname> <given-names>H-O</given-names></name>, <name name-style="western"><surname>Zheng</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Park</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>Y-M</given-names></name>, <name name-style="western"><surname>Chung</surname> <given-names>H-T</given-names></name>. <article-title>Carbon monoxide induces heme oxygenase-1 via activation of protein kinase R-like endoplasmic reticulum kinase and inhibits endothelial cell apoptosis triggered by endoplasmic reticulum stress</article-title>. <source>Circ Res</source>. <year>2007</year>;<volume>101</volume>: <fpage>919</fpage>–<lpage>27</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1161/CIRCRESAHA.107.154781" xlink:type="simple">10.1161/CIRCRESAHA.107.154781</ext-link></comment> <object-id pub-id-type="pmid">17823375</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref074"><label>74</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Araujo</surname> <given-names>JA</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Yin</surname> <given-names>F</given-names></name>. <article-title>Heme oxygenase-1, oxidation, inflammation, and atherosclerosis</article-title>. <source>Frontiers in Pharmacology</source>. <year>2012</year>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3389/fphar.2012.00119" xlink:type="simple">10.3389/fphar.2012.00119</ext-link></comment> <object-id pub-id-type="pmid">22833723</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref075"><label>75</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Araujo</surname> <given-names>JA</given-names></name>. <article-title>HO-1 and CO: Fighters vs sickle cell disease?</article-title> <source>Blood</source>. <year>2013</year>. pp. <fpage>2535</fpage>–<lpage>2536</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1182/blood-2013-08-521922" xlink:type="simple">10.1182/blood-2013-08-521922</ext-link></comment> <object-id pub-id-type="pmid">24113796</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref076"><label>76</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Liu</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Peyton</surname> <given-names>KJ</given-names></name>, <name name-style="western"><surname>Ensenat</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Schafer</surname> <given-names>AI</given-names></name>, <name name-style="western"><surname>Alam</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Endoplasmic reticulum stress stimulates heme oxygenase-1 gene expression in vascular smooth muscle. Role in cell survival</article-title>. <source>J Biol Chem</source>. <year>2005</year>;<volume>280</volume>: <fpage>872</fpage>–<lpage>7</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1074/jbc.M410413200" xlink:type="simple">10.1074/jbc.M410413200</ext-link></comment> <object-id pub-id-type="pmid">15546873</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref077"><label>77</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nath</surname> <given-names>K a</given-names></name>, <name name-style="western"><surname>Grande</surname> <given-names>JP</given-names></name>, <name name-style="western"><surname>Haggard</surname> <given-names>JJ</given-names></name>, <name name-style="western"><surname>Croatt</surname> <given-names>a J</given-names></name>, <name name-style="western"><surname>Katusic</surname> <given-names>ZS</given-names></name>, <name name-style="western"><surname>Solovey</surname> <given-names>a</given-names></name>, <etal>et al</etal>. <article-title>Oxidative stress and induction of heme oxygenase-1 in the kidney in sickle cell disease</article-title>. <source>Am J Pathol</source>. <year>2001</year>;<volume>158</volume>: <fpage>893</fpage>–<lpage>903</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/S0002-9440(10)64037-0" xlink:type="simple">10.1016/S0002-9440(10)64037-0</ext-link></comment> <object-id pub-id-type="pmid">11238038</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref078"><label>78</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pahl</surname> <given-names>HL</given-names></name>. <article-title>Activators and target genes of Rel/NF-kappaB transcription factors</article-title>. <source>Oncogene</source>. <year>1999</year>;<volume>18</volume>: <fpage>6853</fpage>–<lpage>66</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/sj.onc.1203239" xlink:type="simple">10.1038/sj.onc.1203239</ext-link></comment> <object-id pub-id-type="pmid">10602461</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref079"><label>79</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vingert</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Tamagne</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Desmarets</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Pakdaman</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Elayeb</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Habibi</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>Partial dysfunction of Treg activation in sickle cell disease</article-title>. <source>Am J Hematol</source>. <year>2014</year>;<volume>89</volume>: <fpage>261</fpage>–<lpage>266</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/ajh.23629" xlink:type="simple">10.1002/ajh.23629</ext-link></comment> <object-id pub-id-type="pmid">24779034</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref080"><label>80</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Balandya</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Reynolds</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Obaro</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Makani</surname> <given-names>J</given-names></name>. <article-title>Alteration of lymphocyte phenotype and function in sickle cell anemia: Implications for vaccine responses</article-title>. <source>American Journal of Hematology</source>. <year>2016</year>. pp. <fpage>938</fpage>–<lpage>946</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/ajh.24438" xlink:type="simple">10.1002/ajh.24438</ext-link></comment> <object-id pub-id-type="pmid">27237467</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref081"><label>81</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Makani</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Mgaya</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Balandya</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Msami</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Soka</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Cox</surname> <given-names>SE</given-names></name>, <etal>et al</etal>. <article-title>Bacteraemia in sickle cell anaemia is associated with low haemoglobin: A report of 890 admissions to a tertiary hospital in Tanzania</article-title>. <source>Br J Haematol</source>. <year>2015</year>;<volume>171</volume>: <fpage>273</fpage>–<lpage>276</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1111/bjh.13553" xlink:type="simple">10.1111/bjh.13553</ext-link></comment> <object-id pub-id-type="pmid">26084722</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref082"><label>82</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ramakrishnan</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Mo??si</surname> <given-names>JC</given-names></name>, <name name-style="western"><surname>Klugman</surname> <given-names>KP</given-names></name>, <name name-style="western"><surname>Iglesias</surname> <given-names>JMF</given-names></name>, <name name-style="western"><surname>Grant</surname> <given-names>LR</given-names></name>, <name name-style="western"><surname>Mpoudi-Etame</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>Increased risk of invasive bacterial infections in African people with sickle-cell disease: A systematic review and meta-analysis</article-title>. <source>The Lancet Infectious Diseases</source>. <year>2010</year>. pp. <fpage>329</fpage>–<lpage>337</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/S1473-3099(10)70055-4" xlink:type="simple">10.1016/S1473-3099(10)70055-4</ext-link></comment> <object-id pub-id-type="pmid">20417415</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref083"><label>83</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Glassman</surname> <given-names>AB</given-names></name>, <name name-style="western"><surname>Deas</surname> <given-names>DV</given-names></name>, <name name-style="western"><surname>Berlinsky FS</surname> <given-names>BC</given-names></name>. <article-title>Lymphocyte blast transformation and peripheral lymphocyte percentages in patients with sickle cell disease</article-title>. <source>Ann O F Clin L A N D Lab SC IE N C E</source>. <year>1980</year>;Vol. <volume>10</volume>. Available: <ext-link ext-link-type="uri" xlink:href="https://www.ncbi.nlm.nih.gov/pubmed/?term=PMID%3A+6965833" xlink:type="simple">https://www.ncbi.nlm.nih.gov/pubmed/?term=PMID%3A+6965833</ext-link></mixed-citation></ref>
+<ref id="pone.0199461.ref084"><label>84</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ji</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Rintelen</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Waltzinger</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Bertschy Meier</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Bilancio</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Pearce</surname> <given-names>W</given-names></name>, <etal>et al</etal>. <article-title>Inactivation of PI3Kgamma and PI3Kdelta distorts T-cell development and causes multiple organ inflammation</article-title>. <source>Blood</source>. <year>2007</year>;<volume>110</volume>: <fpage>2940</fpage>–<lpage>2947</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1182/blood-2007-04-086751" xlink:type="simple">10.1182/blood-2007-04-086751</ext-link></comment> <object-id pub-id-type="pmid">17626838</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref085"><label>85</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fruman</surname> <given-names>DA</given-names></name>, <name name-style="western"><surname>Cantley</surname> <given-names>LC</given-names></name>. <article-title>Phosphoinositide 3-kinase in immunological systems</article-title>. <source>Semin Immunol</source>. <year>2002</year>;<volume>14</volume>: <fpage>7</fpage>–<lpage>18</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1006/smim.2001.0337" xlink:type="simple">10.1006/smim.2001.0337</ext-link></comment> <object-id pub-id-type="pmid">11884226</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref086"><label>86</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wehrle</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Seeger</surname> <given-names>TS</given-names></name>, <name name-style="western"><surname>Schwemmers</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Pfeifer</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Bulashevska</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Pahl</surname> <given-names>HL</given-names></name>. <article-title>Transcription factor nuclear factor erythroid-2 mediates expression of the cytokine interleukin 8, a known predictor of inferior outcome in patients with myeloproliferative Neoplasms</article-title>. <source>Haematologica</source>. <year>2013</year>;<volume>98</volume>: <fpage>1073</fpage>–<lpage>1080</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3324/haematol.2012.071183" xlink:type="simple">10.3324/haematol.2012.071183</ext-link></comment> <object-id pub-id-type="pmid">23445878</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref087"><label>87</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kaufmann</surname> <given-names>KB</given-names></name>, <name name-style="western"><surname>Gründer</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Hadlich</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Wehrle</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Gothwal</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Bogeska</surname> <given-names>R</given-names></name>, <etal>et al</etal>. <article-title>A novel murine model of myeloproliferative disorders generated by overexpression of the transcription factor NF-E2</article-title>. <source>J Exp Med</source>. <year>2012</year>;<volume>209</volume>: <fpage>35</fpage>–<lpage>50</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1084/jem.20110540" xlink:type="simple">10.1084/jem.20110540</ext-link></comment> <object-id pub-id-type="pmid">22231305</object-id></mixed-citation></ref>
+<ref id="pone.0199461.ref088"><label>88</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ozdogu</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Boga</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Sozer</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Sezgin</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Kizilkilic</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Maytalman</surname> <given-names>E</given-names></name>, <etal>et al</etal>. <article-title>The apoptosis of blood polymorphonuclear leukocytes in sickle cell disease</article-title>. <source>Cytom Part B—Clin Cytom</source>. <year>2007</year>;<volume>72</volume>: <fpage>276</fpage>–<lpage>280</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/cyto.b.2016" xlink:type="simple">10.1002/cyto.b.2016</ext-link></comment>0</mixed-citation></ref>
+<ref id="pone.0199461.ref089"><label>89</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Racioppi</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Noeldner</surname> <given-names>PK</given-names></name>, <name name-style="western"><surname>Lin</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Arvai</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Means</surname> <given-names>AR</given-names></name>. <article-title>Calcium/calmodulin-dependent protein kinase kinase 2 regulates macrophage-mediated inflammatory responses</article-title>. <source>J Biol Chem</source>. <year>2012</year>;<volume>287</volume>: <fpage>11579</fpage>–<lpage>91</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1074/jbc.M111.336032" xlink:type="simple">10.1074/jbc.M111.336032</ext-link></comment> <object-id pub-id-type="pmid">22334678</object-id></mixed-citation></ref>
+</ref-list>
+</back>
+</article>

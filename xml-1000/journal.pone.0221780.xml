@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article article-type="research-article" dtd-version="1.1d3" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0221780</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-19-08612</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Computer and information sciences</subject><subj-group><subject>Computer software</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Organisms</subject><subj-group><subject>Eukaryota</subject><subj-group><subject>Animals</subject><subj-group><subject>Vertebrates</subject><subj-group><subject>Amniotes</subject><subj-group><subject>Mammals</subject><subj-group><subject>Camels</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Computer and information sciences</subject><subj-group><subject>Artificial intelligence</subject><subj-group><subject>Machine learning</subject><subj-group><subject>Support vector machines</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Applied mathematics</subject><subj-group><subject>Algorithms</subject><subj-group><subject>Machine learning algorithms</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Simulation and modeling</subject><subj-group><subject>Algorithms</subject><subj-group><subject>Machine learning algorithms</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Computer and information sciences</subject><subj-group><subject>Artificial intelligence</subject><subj-group><subject>Machine learning</subject><subj-group><subject>Machine learning algorithms</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Engineering and technology</subject><subj-group><subject>Management engineering</subject><subj-group><subject>Decision analysis</subject><subj-group><subject>Decision trees</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Decision analysis</subject><subj-group><subject>Decision trees</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Computer and information sciences</subject><subj-group><subject>Software engineering</subject><subj-group><subject>Source code</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Engineering and technology</subject><subj-group><subject>Software engineering</subject><subj-group><subject>Source code</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Applied mathematics</subject><subj-group><subject>Algorithms</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Simulation and modeling</subject><subj-group><subject>Algorithms</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Computer and information sciences</subject><subj-group><subject>Artificial intelligence</subject><subj-group><subject>Machine learning</subject></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Mining version history to predict the class instability</article-title>
+<alt-title alt-title-type="running-head">Mining version history to predict the class instability</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0002-1006-8952</contrib-id>
+<name name-style="western">
+<surname>Hussain</surname>
+<given-names>Shahid</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Software</role>
+<role content-type="http://credit.casrai.org/">Supervision</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Afzal</surname>
+<given-names>Humaira</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Investigation</role>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Mufti</surname>
+<given-names>Muhammad Rafiq</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Imran</surname>
+<given-names>Muhammad</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Ali</surname>
+<given-names>Amjad</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Ahmad</surname>
+<given-names>Bashir</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<xref ref-type="aff" rid="aff005"><sup>5</sup></xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Department of Computer Science, COMSATS University, Islamabad, Pakistan</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Department of Computer Science, Bahauddin Zakariya University, Multan, Pakistan</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>Department of Computer Science, COMSATS University, Vehari, Pakistan</addr-line></aff>
+<aff id="aff004"><label>4</label> <addr-line>Department of Computer, University of Swat, Swat, Pakistan</addr-line></aff>
+<aff id="aff005"><label>5</label> <addr-line>Department of Computer Science, Qurtaba University, DIK, Pakistan</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Gu</surname>
+<given-names>Quanquan</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>UCLA, UNITED STATES</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">shussain@comsats.edu.pk</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>16</day>
+<month>9</month>
+<year>2019</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2019</year>
+</pub-date>
+<volume>14</volume>
+<issue>9</issue>
+<elocation-id>e0221780</elocation-id>
+<history>
+<date date-type="received">
+<day>22</day>
+<month>4</month>
+<year>2019</year>
+</date>
+<date date-type="accepted">
+<day>14</day>
+<month>8</month>
+<year>2019</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2019</copyright-year>
+<copyright-holder>Hussain et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0221780"/>
+<abstract>
+<p>While most of the existing class stability assessors just rely on structural information retrieved from a desired source code snapshot. However, class stability is intrinsically characterized by the evolution of a number of dependencies and change propagation factors which aid to promote the ripple effect. Identification of classes prone to ripple effect (instable classes) through mining the version history of change propagation factors can aid developers to reduce the efforts needed to maintain and evolve the system. We propose Historical Information for Class Stability Prediction (HICSP), an approach to exploit change history information to predict the instable classes based on its correlation with change propagation factors. Subsequently, we performed two empirical studies. In the first study, we evaluate the HICSP on the version history of 10 open source projects. Subsequently, in the second replicated study, we evaluate the effectiveness of HICSP by tuning the parameters of its stability assessors. We observed the 4 to 16 percent improvement in term of F-measure value to predict the instable classes through HICSP as compared to existing class stability assessors. The promising results indicate that HICSP is able to identify instable classes and can aid developers in their decision making.</p>
+</abstract>
+<funding-group>
+<funding-statement>The author(s) received no specific funding for this work.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="7"/>
+<table-count count="5"/>
+<page-count count="21"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its Supporting Information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>The prediction of any software module which is more sensitive to changes in the future versions can aid software maintainer to reduce the maintenance time and efforts. According to ISO-9126, the maintainability of modules prone to changes in the system is defined as “software quality characteristic concerning the effort needed to make specified modifications to an already implemented system”, and characterized as analyzability, changeability, testability, and stability. In this article, we focused on the term stability (the opposite term is instability), which is defined as “characterizes the sensitivity to change of a given system that is the negative impact that may be caused by system changes”. The researchers have concentrated on change proneness at the certain granularity of software such as attribute, statement, method, class and file in several studies, and investigated the change impact by applying different techniques. In a recent review study, B. Li, et al. [<xref ref-type="bibr" rid="pone.0221780.ref001">1</xref>] have investigated 23 Change Impact Analysis (CIA) techniques and group them as 1) the techniques which based on the analysis of information collected during the execution of a program, 2) the techniques which based on information mined from the software repositories, 3) the techniques which based on different types of coupling such as structural, conceptual, dynamic function, and relational, and 4) the techniques using hybrid approach by combining several change impact analysis techniques. Usually, changes in a class yield in the response of 1) adding new requirements, 2) to perform the debugging activities, and 3) propagated changes occur in other classes [<xref ref-type="bibr" rid="pone.0221780.ref002">2</xref>, <xref ref-type="bibr" rid="pone.0221780.ref003">3</xref>, <xref ref-type="bibr" rid="pone.0221780.ref004">4</xref>]. The change proneness referred as the measurement of all these changes while the stability only referred as the measurement of propagating changes occurs in other classes. Ampatzoglou et al. [<xref ref-type="bibr" rid="pone.0221780.ref005">5</xref>] define and measure the term instability (opposite of term stability) as “the degree to which a class is subject to change, due to changes in other related classes andconsidering the probability of such classes to change as equal to a certain value”. Subsequently, the authors reported that the instable classes are more prone to the ripple effect promoted due to change propagation factors.</p>
+<p>The researcher’s efforts are made in two aspects to assess whether a class is prone to ripple effect or not, 1) the probability of the source class undergoes a change is assessed by analyzing the source code change history, and 2) the dependencies that aid to propagate the changes to dependent classes and can be assess through potential metrics used in structural analysis. Generally, the coupling metrics are used to assess the structural complexity;. However, these coupling metrics cannot assess the class prone to the ripple effect [<xref ref-type="bibr" rid="pone.0221780.ref006">6</xref>]. In a recent study, Arvanitou et al. [<xref ref-type="bibr" rid="pone.0221780.ref007">7</xref>] describe a structural coupling metric named Ripple Effect Measure (REM) by estimating the number of dependencies and the probability of propagated change through these dependencies (i.e. Propagation factors). Subsequently, authors validate the capacity of REM as an assessor to estimate the probability of a class prone to the ripple effect.</p>
+<p>There are three types of class dependencies namely containment, generalization, and association [<xref ref-type="bibr" rid="pone.0221780.ref002">2</xref>], which can aid to evaluate the correlation between propagation factors and class instability. The containment dependency describe the “has-a” relationship which can propagate changes due to method calls of the container class to the public interface of the containee class (<xref ref-type="fig" rid="pone.0221780.g001">Fig 1C and 1D</xref>). The generalization dependency describe the “is-a” relationship and change propagation occur due to 1) access of protected attributes, 2) invocation of super methods and 3) overridden of abstract methods by a subclass (<xref ref-type="fig" rid="pone.0221780.g001">Fig 1A and 1B</xref>). The association type promotes the change propagation due to method calls from a class to another class through its public interface. In <xref ref-type="fig" rid="pone.0221780.g001">Fig 1</xref>, these propagation factors are formulated. For example, in <xref ref-type="fig" rid="pone.0221780.g001">Fig 1A</xref>, the stability of ‘ParentClass’ class depends on the realization of its method namely ‘DisplayMethod’ using the super method call in the derived class named ‘ChildClass’. The impact of this change propagation factor (i.e. Super method call) might be evolved in the subsequent releases due to increase in the number of derived classes. Consequently, we can conclude that the relationships among classes are considered as axes of change which can propagate changes from source classes to their dependent classes.</p>
+<fig id="pone.0221780.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0221780.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Realization of change propagation factors.</title>
+<p>a) Super method call, b) Overridden of abstract methods, c) Object creation as parameters of method of a container class d). Object creation in realization of method of a container class.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.g001" xlink:type="simple"/>
+</fig>
+<p>There exists a number of coupling metrics [<xref ref-type="bibr" rid="pone.0221780.ref008">8</xref>, <xref ref-type="bibr" rid="pone.0221780.ref009">9</xref>, <xref ref-type="bibr" rid="pone.0221780.ref010">10</xref>, <xref ref-type="bibr" rid="pone.0221780.ref011">11</xref>], which have been validated both theoretically and empirically to assess the class stability. For example, Coupling Between Object (CBO) and Response For a Class (RFC) from Chidamber and Kemerer’s metrics suit [<xref ref-type="bibr" rid="pone.0221780.ref009">9</xref>, <xref ref-type="bibr" rid="pone.0221780.ref011">11</xref>], Data Abstraction Coupling (DAC) and Measure of Aggregation (MOA) from QMOOD [<xref ref-type="bibr" rid="pone.0221780.ref010">10</xref>], Message Passing Coupling (MPC) [<xref ref-type="bibr" rid="pone.0221780.ref012">12</xref>] and REM [<xref ref-type="bibr" rid="pone.0221780.ref006">6</xref>]. These coupling metrics are based on method invocation and attributes references [<xref ref-type="bibr" rid="pone.0221780.ref013">13</xref>]. While the existing metrics exhibit good prediction of class stability by characterizing the source code snapshots. However, they still might not be adequate to capture the historical information about change propagation factors, including other factors (such as modification due to corrective maintenance) in order to predict the instable classes.</p>
+<p>In order to address this issue, we propose an approach namely Historical Information for Class Stability Prediction (HICSP) to predict the instable classes based on the historical information about change propagation factors mined from the versioning systems. The framework of HICSP is described in <xref ref-type="fig" rid="pone.0221780.g002">Fig 2</xref> and discussed in Section 3. In this paper, we perform two studies for the empirical investigation of the HICSP. In the first study, we performed experiments (with the same procedure) to evaluate the applicability and effectiveness of HICSP as compared to existing stability assessors on version history of 10 open source projects using widely-used evaluation criteria. The descriptive statistics about projects (under study) are shown in <xref ref-type="table" rid="pone.0221780.t001">Table 1</xref>. Subsequently, in the second replicated study, we empirically investigate the effect of parameters tuning on the performance of HICSP with the version history of an open source project named MongoDB Java driver. The significant results of both studies present the effectiveness and applicability of proposed approach HICSP in order to identify the instable classes.</p>
+<fig id="pone.0221780.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0221780.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Overview of HICSP.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.g002" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0221780.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0221780.t001</object-id>
+<label>Table 1</label> <caption><title>Descriptive statistics of projects.</title></caption>
+<alternatives>
+<graphic id="pone.0221780.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.t001" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">Project</th>
+<th align="center">artifactID</th>
+<th align="center">Time Slot</th>
+<th align="center">Total Snapshots</th>
+<th align="center">Classes in Snapshot s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">MongoDB Java Driver</td>
+<td align="center">mongo-Java-driver</td>
+<td align="center">Oct, 2009 to Apr, 2016</td>
+<td align="center">88</td>
+<td align="center">268</td>
+</tr>
+<tr>
+<td align="center">Apache CXF</td>
+<td align="center">cxf-xerces-xsd-validation</td>
+<td align="center">Apr, 2009 to Oct, 2015</td>
+<td align="center">83</td>
+<td align="center">976</td>
+</tr>
+<tr>
+<td align="center">Apache Lucene</td>
+<td align="center">lucene-memory</td>
+<td align="center">Jun, 2007 to Apr, 2016</td>
+<td align="center">59</td>
+<td align="center">20</td>
+</tr>
+<tr>
+<td align="center">Google Guava</td>
+<td align="center">guava</td>
+<td align="center">Apr, 2010 to Dec, 2015</td>
+<td align="center">43</td>
+<td align="center">469</td>
+</tr>
+<tr>
+<td align="center">Apache Camel</td>
+<td align="center">camel</td>
+<td align="center">Jul, 2009 to Apr, 2016</td>
+<td align="center">78</td>
+<td align="center">965</td>
+</tr>
+<tr>
+<td align="center">Tomcat Jasper</td>
+<td align="center">tomcat-jasper</td>
+<td align="center">Jul, 2010 to Jab, 2016</td>
+<td align="center">87</td>
+<td align="center">255</td>
+</tr>
+<tr>
+<td align="center">Apache Wicket</td>
+<td align="center">wicket-datetime</td>
+<td align="center">June, 2007 to Apr, 2016</td>
+<td align="center">110</td>
+<td align="center">17</td>
+</tr>
+<tr>
+<td align="center">Jetty SPDY</td>
+<td align="center">spdy-http-server</td>
+<td align="center">Sep, 2012 to Apr, 2016</td>
+<td align="center">52</td>
+<td align="center">47</td>
+</tr>
+<tr>
+<td align="center">Librato Metrics</td>
+<td align="center">metrics-librato</td>
+<td align="center">July, 2012 to Mar, 2016</td>
+<td align="center">34</td>
+<td align="center">17</td>
+</tr>
+<tr>
+<td align="center">Apache MyFaces</td>
+<td align="center">myfaces-impl</td>
+<td align="center">Jun, 2006 to Apr 2016</td>
+<td align="center">80</td>
+<td align="center">215</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>The rest of the paper is organized into eight sections. In section 2, we summarized the related work about the use of change impact analysis techniques and applicability of certain coupling metrics and tools. In section 3, we describe the structure of proposed approach HICSP. In section 4, we present our first study for empirical investigation to assess the effectiveness of HICSP. In section 5, we present our second replicated study to present the impact on the performance of HICSP, when the parameters of stability assessors are tuned. In sections 6 and 7, we formulate the results of both studies and present some implications for the researchers. Finally, in sections 8 and 9, we present some threats to the validity and the conclusion of our work respectively.</p>
+</sec>
+<sec id="sec002">
+<title>Related work</title>
+<p>We summarized and provide an overview of researcher’s previous efforts related to the existing approaches and structural coupling metrics. These techniques have been used to analyze and predict the classes prone to the ripple effect.</p>
+<sec id="sec003">
+<title>Change impact analysis</title>
+<p>Change Impact Analysis (CIA) techniques are applied to quantify the impact of changes across the parts of a system.</p>
+<p>The implication of change impact analysis techniques are valuable for effort estimation [<xref ref-type="bibr" rid="pone.0221780.ref014">14</xref>], program comprehension [<xref ref-type="bibr" rid="pone.0221780.ref015">15</xref>], to prioritize the test cases, and exhibit the relationship among the components [<xref ref-type="bibr" rid="pone.0221780.ref016">16</xref>].</p>
+<p>The term CIA is coined by Horowitz and Williamson [<xref ref-type="bibr" rid="pone.0221780.ref017">17</xref>]. However, in a recent review study, Li et al. [<xref ref-type="bibr" rid="pone.0221780.ref001">1</xref>] investigates 23 change impact analysis techniques. Subsequently, the authors of study [<xref ref-type="bibr" rid="pone.0221780.ref001">1</xref>] grouped the CIA techniques based on 1) the information collected from the execution of a program, 2) the information mined from software repositories, 3) the different types of coupling such as structural, conceptual, dynamic functional and relational, and 4) combining several change impact analysis techniques to present a hybrid approach. Ramanathan et al. [<xref ref-type="bibr" rid="pone.0221780.ref018">18</xref>] describes a tool namely Sieve which aims to detect the variation across the program versions by examining the execution of two binaries on the same test input and return the affected functions prone to changes. The experimental results suggest the applicability of Sieve to reduce the time and effort required for program testing and software maintenance. Law and Rothermel [<xref ref-type="bibr" rid="pone.0221780.ref019">19</xref>] focused on the limitation of three existing traditional dependency-based impact analysis techniques such as a call graph based analysis, static, and dynamic program slicing. In order to overcomethese issue, authors [<xref ref-type="bibr" rid="pone.0221780.ref019">19</xref>] present a whole path profiling based impact analysis technique. Subsequently, the proposed technique is based on the dynamic information obtained through simple program instrumentation and provides a different set of cost-benefits tradeoffs. The existing impact analysis techniques which based on dynamic information are either expensive in term of execution head or imprecision. However, in terms of precision and recall performance measure, Apiwattanapong et al. [<xref ref-type="bibr" rid="pone.0221780.ref020">20</xref>] present a new algorithm based technique which is more precise and efficient as compared to existing dynamic information based impact analysis techniques. The proposed technique collects the Execution-After sequence using a list of events, which is updated at each method entry and flow of control before control return to themethod call. Researchers have used historical data to understand programs and detect their evolution at certain granularity levels, such as coupling between files [<xref ref-type="bibr" rid="pone.0221780.ref021">21</xref>, <xref ref-type="bibr" rid="pone.0221780.ref022">22</xref>], classes [<xref ref-type="bibr" rid="pone.0221780.ref023">23</xref>], to detect coupling between fine-grained program entities functions and variables [<xref ref-type="bibr" rid="pone.0221780.ref024">24</xref>]. The objective of version history based approaches is to extract the co-change coupling between the files, classes or functions for change impact analysis through the use of different data mining techniques, such as authors of study[<xref ref-type="bibr" rid="pone.0221780.ref024">24</xref>] uses data mining techniques to obtain association rules from the version histories of eight projects. Subsequently, in contrast to [<xref ref-type="bibr" rid="pone.0221780.ref021">21</xref>, <xref ref-type="bibr" rid="pone.0221780.ref022">22</xref>, <xref ref-type="bibr" rid="pone.0221780.ref023">23</xref>, <xref ref-type="bibr" rid="pone.0221780.ref024">24</xref>], Torchiano and Ricca [<xref ref-type="bibr" rid="pone.0221780.ref025">25</xref>] used source code comments and changelogs in the software repository to extract the unstructured knowledge and support the change impact. Researchers have theoretically and empirically validated the use of metrics [<xref ref-type="bibr" rid="pone.0221780.ref008">8</xref>, <xref ref-type="bibr" rid="pone.0221780.ref009">9</xref>, <xref ref-type="bibr" rid="pone.0221780.ref010">10</xref>, <xref ref-type="bibr" rid="pone.0221780.ref011">11</xref>, <xref ref-type="bibr" rid="pone.0221780.ref012">12</xref>] to measure the certain types of coupling for the change impact analysis of program artifacts (such as classes) and the impact of static relationship between pattern and anti-pattern classes [<xref ref-type="bibr" rid="pone.0221780.ref026">26</xref>] on the quality attributes. These metrics aid to measure the structural coupling [<xref ref-type="bibr" rid="pone.0221780.ref011">11</xref>, <xref ref-type="bibr" rid="pone.0221780.ref027">27</xref>, <xref ref-type="bibr" rid="pone.0221780.ref028">28</xref>], dynamic coupling, evolutionary, logical coupling [<xref ref-type="bibr" rid="pone.0221780.ref029">29</xref>], and conceptual coupling [<xref ref-type="bibr" rid="pone.0221780.ref013">13</xref>, <xref ref-type="bibr" rid="pone.0221780.ref030">30</xref>].</p>
+</sec>
+<sec id="sec004">
+<title>Existing tools and coupling metrics for CIA</title>
+<p>The decision regarding making changes in a software module (e.g. A class) is subject to the various factors which can aid to predict the stability of the corresponding module. The probability of future change in a class depends on the likelihood of changes occurs inside the class besides inherit changes which occur in other related classes. Tsantalis et al. [<xref ref-type="bibr" rid="pone.0221780.ref007">7</xref>] used the term ‘axis of change’ for the dependencies between the classes, which can produce change propagation from a source class to the dependent class(es). Subsequently, the authors analyzed the axes of change with its corresponding class and calculate the instability acquired by each axis of change. Black [<xref ref-type="bibr" rid="pone.0221780.ref031">31</xref>] reformulates the original ripple effect algorithm (produced by Yaun and Collofello in 1978) using matrix arithmetic, implement it in his existing automatic tool named REST (Ripple Effect and Stability Tool), and compare its performance with existing automatic tools named DPUTE (Data-centered Program Understanding Tool Environment), SMIT and ChAT to trace the ripple effect. The measurement of dependencies between the program entities is an ironic and stimulating body of work. Such measurement results in various coupling metrics, which can be considered as assessor of design stability of classes, such as Coupling Between Object (CBO) and Response For a Class (RFC) from Chidamber and Kemerer’s metrics suit [<xref ref-type="bibr" rid="pone.0221780.ref009">9</xref>, <xref ref-type="bibr" rid="pone.0221780.ref011">11</xref>], Data Abstraction Coupling (DAC) and Measure of Aggregation (MOA) from QMOOD [<xref ref-type="bibr" rid="pone.0221780.ref010">10</xref>] and Message Passing Coupling (MPC) [<xref ref-type="bibr" rid="pone.0221780.ref012">12</xref>]. The aim of dependency analysis is to explore the ripple effect caused by a class change in the sense of change propagation across the system classes through their dependencies. The containment, generalization, and association are three common types of dependencies which can propagate changes across the system. Usually, structural coupling metrics used the method invocation and attributes referenced [<xref ref-type="bibr" rid="pone.0221780.ref013">13</xref>] to measure these propagated changes. For example, MPC and RFC measures based on method invocation only, whereas the CBO measure is based on both method invocation and attributes referenced.</p>
+<p>In a recent study, Ampatzoglou et al. [<xref ref-type="bibr" rid="pone.0221780.ref005">5</xref>] considered these change propagation factors and used a new measure Ripple Effect Measure (REM) to investigate the effect of the Gang-of-Four (GoF) design patterns on stability. Moreover, in their subsequent study, Arvantou et al. [<xref ref-type="bibr" rid="pone.0221780.ref006">6</xref>] theoretically and empirically investigate the impact of the REM measure in order to address the issue of change propagation occurs inside source classes. These studies provide evidence that class stability is assessed through a source code snapshot using coupling and change propagation metrics as assessors. However, it is still not reported that whether the historical information regarding change propagation factors and their correlation can aid to predict the class instability. In this paper, we follow the methodology [<xref ref-type="bibr" rid="pone.0221780.ref006">6</xref>] and introduce a new approach Historical Information for Class Stability Prediction (HICSP), to exploit change history information and predict the instable classes based on its correlation with the change propagation factors.</p>
+</sec>
+</sec>
+<sec id="sec005">
+<title>HICSP overview</title>
+<p>The key idea behind Historical Information for Class Stability Prediction (HICSP) is to predict the instable classes through exploiting the historical information of change propagation factors (For example, number of polymorphic methods, method calls, and number of protected attributes in case of generalization, containment, and association). These propagation factors are mined from a desire versioning system. Firstly, HICSP extract information (needed to predict the instable classes) from the versioning system through a component called Change History Extractor. The information about the change propagation factors of a class in each version is collected using the tool Percerons Client (<ext-link ext-link-type="uri" xlink:href="http://www.percerons.com/" xlink:type="simple">http://www.percerons.com/</ext-link>). In this study, we consider the number of polymorphic and total methods, protected attributes, and distinct method calls factors which can promote changes across the class relationships. Subsequently, the collected information and a classification algorithm are provided as an input to the stability assessor (component of HICSP) for the prediction of instable classes. In this paper, for each incorporated classifier, we used the term ‘Stability assessor’ and labelled with HICSP. For example, in section 4, we incorporate Random Forest (RF) classifier in the proposed approach HICSP and label it as HICSP+RF (stability assessor). We used same labelled convention for other incorporated classifiers (Section 4 for detail). The descriptions of components of HICSP are as follows.</p>
+<sec id="sec006">
+<title>Change history extractor</title>
+<p>This component of HICSP performs two tasks. The first task is to mined the desired versioning system (For example git, SVN or CVS) logs to report the entire change history of a system under analysis. This can be done by incorporating certain tools and repositories(<ext-link ext-link-type="uri" xlink:href="http://search.maven.org/" xlink:type="simple">http://search.maven.org/</ext-link>).</p>
+<p>The logs which are extracted from the first task report the code changes at the file granularity level. The second task is performed in the context of the Percerons Client<sup>1</sup> to analyze the change propagation factors and identify the class dependencies in a desired source code snapshot of a system. The Percerons Client provides a list of web services that aid developers to adopt different software engineering approaches in their product development. Currently, the services of Percerons are grouped into three categories, a) Percerons Reuse Repositories, b) Percerons Quality Dashboard, and c) Percerons Design Expert. Subsequently, Percerons Client performs these services using pattern-based and dependencies based search engines. These engins work at certain granularity levels such as attributes, methods, and classes. The extracted information is recorded into a dataset. The structure of a dataset is described in <xref ref-type="table" rid="pone.0221780.t002">Table 2</xref>. The recorded information about the change propagation factors of class might be remained constant and consider as a threat to the performance of a stability assessor component of HICSP. Consequently, in order to improve the data quality by removing data inconsistency [<xref ref-type="bibr" rid="pone.0221780.ref032">32</xref>], we recommend some pre-processing activities which could be performed before the classification decisions through stability assessors.</p>
+<table-wrap id="pone.0221780.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0221780.t002</object-id>
+<label>Table 2</label> <caption><title>Dataset structure.</title></caption>
+<alternatives>
+<graphic id="pone.0221780.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.t002" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">Variable</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">V1-V3</td>
+<td align="center">These demographic variables are used to record project name, version, and class name respectively.</td>
+</tr>
+<tr>
+<td align="center">V4-V7</td>
+<td align="center">These independent variables are used to record the ripple change propagation factors, such a Number of polymorphic and total methods, protected attributes, and distinct method call in case of class relationships.</td>
+</tr>
+<tr>
+<td align="center">V8-11</td>
+<td align="center">These variables are used to record the REM, CBO, RFC and MPC values respectively.</td>
+</tr>
+<tr>
+<td align="center">V12</td>
+<td align="center">This dependent variable is labeled 1 if a change in class is encountered between two consecutive versions due to ripple effect otherwise 0.</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+<sec id="sec007">
+<title>Stability assessor</title>
+<p>The Change History Extractor component of HICSP is used to extract and record the version history of each class of a system (under study). The recorded information about a class together with a classification algorithm is used as an input to the Stability assessor component. The Stability assessor incorporates a classification algorithm with its default parameters and named as a customize stability assessor. However, the performance can be improved by tuning the parameters of incorporated algorithms (objective of second study). Subsequently, the aim of stability assessor is to predictinstable classes in a current source code snapshot. The decision of stability assessors about the instability of a class (in a current version) depends on their learning regarding the version history (i.e. Prior versions) of change propagation factors of a class. For example, a system under study is represented as a set of N snapshots (i.e. Versions) which is described as <italic>S</italic> = {<italic>s</italic><sub>1</sub>,<italic>s</italic><sub>2</sub>,…,<italic>s</italic><sub><italic>N</italic></sub>}. Subsequently, each snapshot <italic>s</italic>∈<italic>S</italic> has a set of M classes which is described as <italic>C</italic> = {<italic>c</italic><sub>1</sub>,<italic>c</italic><sub>2</sub>,…,<italic>c</italic><sub><italic>M</italic></sub>}. The historical information of a system under study is formulated as <italic>S</italic>×<italic>C</italic> = {(<italic>s</italic><sub>1</sub>,<italic>c</italic><sub>1</sub>),(<italic>s</italic><sub>1</sub>,<italic>c</italic><sub>2</sub>),…,(<italic>s</italic><sub>1</sub>,<italic>c</italic><sub><italic>M</italic></sub>),(<italic>s</italic><sub>2</sub>,<italic>c</italic><sub>1</sub>),…,(<italic>s</italic><sub><italic>N</italic></sub>,<italic>c</italic><sub><italic>M</italic></sub>)} and record in the dataset (<xref ref-type="table" rid="pone.0221780.t002">Table 2</xref>). The decision of stability assessor regarding a class <italic>c</italic><sub>1</sub> in an ith snapshot <italic>s</italic><sub><italic>i</italic></sub>∈<italic>S</italic> (i.e. Testing dataset) depends on its learning on its change propagation factors in the prior (i-1) versions {<italic>s</italic><sub>1</sub>,<italic>s</italic><sub>2</sub>,…,<italic>s</italic><sub><italic>i</italic>−1</sub>}∈<italic>S</italic> (i.e. Training dataset).</p>
+</sec>
+</sec>
+<sec id="sec008">
+<title>Evaluation of HICSP (First study)</title>
+<p>The purpose of this study is to evaluate the HICSP in order to identify classes highly affected by ripple changes (or in other words to predict instable classes). The evaluation process of HICSP is described in the following subsections.</p>
+<sec id="sec009">
+<title>Context selection</title>
+<p>The context of the study consists of the version history of 10 open source software projects named MongoDB Java Driver, Apache CXF, Apache Lucene, Google Guava, Apache Camel, Tomcat Jasper, Apache Wicket, Jetty SPDY, Librato Metrics and Apache MyFaces. We used git versioning system to mined the version history of the systems. The list of projects, corresponding artifactID, time slot, total versions, and the number of classes for each system are shown in <xref ref-type="table" rid="pone.0221780.t001">Table 1</xref>. We collect version history of each project upto April, 2016. The brief description of selected projects is given as.</p>
+<p>1. <bold>MongoDB Java Driver:</bold> MongoDB Java Driver help to provide synchronous and asynchronous interaction with MongoDB. It includes the legacy API (Application Programming Interface) and a new generic MongoCollection interface to compile new cross-driver CRUD (acronym for Create, Read, Update and Delete) specification.</p>
+<p>2. <bold>Apache CXF:</bold> Apache CXF (as the product of two projects Celtix and XFire) is an open-source services framework which helps to build and develop services using JAX-WS (Java API for XML-Based Web Servies),JAX-RS (Java API for XML-Based RESTful Web Servies) APIs, and communicating protocols such as HTTP (Hype Text Transfer Protocol), SOAP(Simple Object Access Protocol), XML.HTTP, and CORBA (Common Object Request Broker Architecture).</p>
+<p>3. <bold>Apache Lucene</bold>: Apache Lucene is an open source, high performance, and text-based search engine written in Java. The scalability, high-performance indexing, cross-platform solution, and efficient searching algorithm are the powerful features of Apache Lucene.</p>
+<p>4. <bold>Google Guava:</bold> Google Guava is an open source set of libraries for Java to aid the developers. It includes 1) the utilities to reduce the menial labors to implement common methods and behavior, 2) An extended Java Collection Framework (JCF), and 3) the utilities to provide cache hashing and functional programming.</p>
+<p>5. <bold>Apache Camel:</bold> Apache Camel is a mediator and rule-based routing engine which can aid for object-based implementation of Enterprise Integration Patterns through APIs based on a domain specific language. Apache ActiveMQ and Apache ServiceMix are Companion of Apache Camel in order to develop the SOA (Service Oriented Architecture) based projects.</p>
+<p>6. <bold>Tomcat Jasper:</bold> Tomcat Jasper is a JSP Engine used to implement the Java Server Pages specification. It is developed and maintained by the Java Community Process. A Java Specification Request (JSR) is instantiated to start each specification.</p>
+<p>7. <bold>Apache Wicket:</bold> Apache Wicket is a lightweight component based web application framework which is used throgh Java programming language. In contrast to traditional MVC (Model View Controller) frameworks, apache wicket is more close to Swing as stateful GUI framework in term of the whole request and response pages.</p>
+<p>8. <bold>Jetty SPDY:</bold> SPDY (pronounced as speedy) is an open specification networking protocol developed by Google for transporting the web content and manipulating HTTP traffic. Jetty is a Java HTTP web server and servlet container which aid for the communication among machines of larger software frameworks. Subsequently, Jetty aid for a client and a server implementation of SPDY protocol using four modules spdy-core, spdy-jetty, spdy-jetty-http, and spdy-jetty-http-webapp modules.</p>
+<p>9. <bold>Librato Metrics:</bold> Librato Metrics gem is used to provide granular control for scripting interactions with the Metrics core API. In Librato, a metric referred as a variable to measure the CPU load on different servers. Subsequently, this gem is well suited for the scripts, integrations workers, and background jobs.</p>
+<p>10. <bold>Apache MyFaces:</bold> Apache software foundation introduces the project Apache MyFaces to host several JavaSever technologies related sub-projects. JavaServer is based on well-established standard MVC for the web based development frameworks in Java. Besides, Apache MyFaces provides several component libraries which contain UI widgets to develop the web-based application with JSF (JavaServer Faces), for example MyFaces Tomahawk and MyFaces Tobago.</p>
+<p>In order to simulate the use of HICSP, we recorded the history of subject systems into a dataset structure depicted in <xref ref-type="table" rid="pone.0221780.t002">Table 2</xref>.</p>
+</sec>
+<sec id="sec010">
+<title>Research objective and research questions (RQs)</title>
+<p>The existing structural coupling metrics are capable of measuring the relationship intensity of a class using method invocation and attributes referenced [<xref ref-type="bibr" rid="pone.0221780.ref013">13</xref>]. Subsequently, the metrics (such as REM) are used to measure the ripple effect of changes occurs in the dependent classes to analyze the stability of a source class. However, these metrics lack the ability to work in the capacity to use the historical information regarding change propagation factors of a class, and predict whether it is prone to ripple effect (i.e. Instable class) or not (i.e. Stable class). The primary objective of our study is to introduce and implement HICSP in order to predict the instable classes which are more prone to the ripple effect (changes occur in their dependent classes). Subsequently, we evaluate the HICSP’s performance as compared to existing coupling and ripple effect measures (recommended as stability assessors). Finally, in our replicated study, we evaluate the effect of parameters tuning on the effectiveness of HICSP. Through our objective statement, we extract and formulate three research questions.</p>
+<p><bold>RQ-1.</bold> How does HICSP perform in predicting the instable classes?</p>
+<p><bold>RQ-2.</bold> How HICSP outperform as compared to other class stability assessors.</p>
+<p><bold>RQ-3.</bold> How the performance of HICSP is influenced when the parameters of incorporated classifier are tuned.</p>
+<p>We respond to RQ-1 and RQ-2 in our first study, while in the second study, we respond to RQ-3.</p>
+</sec>
+<sec id="sec011">
+<title>Classifiers incorporated with HICSP</title>
+<p>Recently, MDelgado et al. [<xref ref-type="bibr" rid="pone.0221780.ref033">33</xref>] have evaluated the performance of 179 classifiers of 17 different families on 121 datasets (retrieved from the UCI database) to solve the real world classification problem. In their study, the authors concluded the variation in the performance of classifiers. However, Random Forests (RF), Support Vector Machines (SVM), C4.5 Decision Tree and Naïve Bayes are reported comparatively better than other classifiers. We used WEKA (Waikato Environment for Knowledge Analysis) an open source machine learning tool (<ext-link ext-link-type="uri" xlink:href="http://www.cs.waikato.ac.nz/ml/weka/" xlink:type="simple">http://www.cs.waikato.ac.nz/ml/weka/</ext-link>) and select four classifiers named Random Forest, SMO (an alternative of SVM in Weka), J48 (an alternative of C4.5) and Naïve Bayes. We incorporate these classifiers (with default parameters) in the stability assessor component of HICSP. Moreover, we labelled these classifiers as HICSP+RF. HICSP+SMO, HICSP+J48, and HICSP+NB. Numerous researchers have used these classifiers and report their effectiveness regarding classification decisions. For example, Catal and Diri [<xref ref-type="bibr" rid="pone.0221780.ref032">32</xref>] and Ma et al. [<xref ref-type="bibr" rid="pone.0221780.ref034">34</xref>] reported that Random Forests classification algorithm provides the best performance in terms of F-measure (evaluation parameter). Random Forest algorithm [<xref ref-type="bibr" rid="pone.0221780.ref035">35</xref>] implements tens or hundreds of trees depends on dataset characteristics and later use the results of these trees for the classification. Subsequently, Menzies et al. [<xref ref-type="bibr" rid="pone.0221780.ref036">36</xref>] stated that Naïve Bayes achieves better performance (especially with logNums filter) in terms of the probability of detection (pd) and probability of false alarm (pf) values. The brief description of selected classification algorithms is given as:</p>
+<p>1. <bold>Random Forests:</bold> Random Forest classification algorithm implements tens or hundreds of trees depends on the dataset characteristics and later use the results of these trees for the classification. In their study, Koprinska et al. [<xref ref-type="bibr" rid="pone.0221780.ref035">35</xref>] stated that Random Forest is a good choice for filing emails into corresponding folders and filtering of spam email. The authors reported the better performance of RF as compared to decision trees and Naïve Bayes, especially in terms of F-measure [<xref ref-type="bibr" rid="pone.0221780.ref032">32</xref>, <xref ref-type="bibr" rid="pone.0221780.ref034">34</xref>]. Subsequently, Random Forest builds each classification tree using a bootstrap sample of the dataset and the candidate set includes randomly selected variables at each split [<xref ref-type="bibr" rid="pone.0221780.ref037">37</xref>, <xref ref-type="bibr" rid="pone.0221780.ref038">38</xref>]. The best split based on the randomly selected variables in the training set.</p>
+<p>2. <bold>J48:</bold> J48 is a decision tree which based on Quinlan’s C4.5 algorithm [<xref ref-type="bibr" rid="pone.0221780.ref039">39</xref>] and implemented in Weka tool. The Australian Research Council has funded to conduct research on the C4.5 algorithm and introduce it as a well-known machine learning algorithm. The notation of J48 decision tree includes internal nodes, branches, and terminal nodes which represent the attributes, values associated with attributes, and classification results respectively.</p>
+<p>3. <bold>Naïve Bayes:</bold> Naïve Bayes is a well-known probabilistic classifier based on the Bayes theorem. Naïve Bayes classifier is implemented with strong independence assumptions, which mean the existence of a class’s feature does not depend on the existence of the other features. The Naïve Bayes classifier can estimate the parameters with small data quantity [<xref ref-type="bibr" rid="pone.0221780.ref040">40</xref>, <xref ref-type="bibr" rid="pone.0221780.ref041">41</xref>, <xref ref-type="bibr" rid="pone.0221780.ref042">42</xref>].</p>
+<p>4. <bold>SMO:</bold> Sequential Minimal Optimization (SMO) is an efficient classification algorithm implemented in Weka for training the support vector machines. Usually, support vector machine (SVM) is trained with a solution of a large Quadratic Programming (QP) optimization problem. Sequential Minimal Optimization (SMO) algorithm is used to solve the SVM quadratic problem without considering extra matrix storage and using numerical QP optimization procedures [<xref ref-type="bibr" rid="pone.0221780.ref043">43</xref>].</p>
+<p>The adjustment of parameter values of these classifiers (due to the existence of noise in the dataset) can aid to improve the effectiveness of HICSP. We have summarized the list of certain parameters of selected classifiers in <xref ref-type="table" rid="pone.0221780.t003">Table 3</xref>, which can be used to replicate the proposed study.</p>
+<table-wrap id="pone.0221780.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0221780.t003</object-id>
+<label>Table 3</label> <caption><title>Summary of parameters for stability assessors.</title></caption>
+<alternatives>
+<graphic id="pone.0221780.t003g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.t003" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">Stabilityassessors</th>
+<th align="center">Parameter</th>
+<th align="center">DefaultValue</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="3">Random Forest</td>
+<td align="left">Number of Iteration</td>
+<td align="left">100</td>
+<td align="left">This parameter is used to tune the number of trees in aconstructed forest.</td>
+</tr>
+<tr>
+<td align="left">Number of Attributes</td>
+<td align="left">0</td>
+<td align="left">This parameter is used to tune the number of features for aconstructed forest according to log2(M)+1.</td>
+</tr>
+<tr>
+<td align="left">Number of slots for execution</td>
+<td align="left">1</td>
+<td align="left">This parameter is used to auto tune the number of slotswith respect to max heap size.</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">J48</td>
+<td align="left">Confidence Factor</td>
+<td align="left">0.25</td>
+<td align="left">This parameter is used to tune the effectiveness of a postpruning method.</td>
+</tr>
+<tr>
+<td align="left">Number of Instances</td>
+<td align="left">2</td>
+<td align="left">This parameter is used to tune the number of instances forthe effectiveness of the on-line pruning method.</td>
+</tr>
+<tr>
+<td align="left">NaïveBayes</td>
+<td align="left">Type of Estimator</td>
+<td align="left">NormalDistribution</td>
+<td align="left">This parameter is used to tune the model through a kerneldensity estimator rather than a normal distribution.</td>
+</tr>
+<tr>
+<td align="left" rowspan="4">SMO</td>
+<td align="left">Complexity level</td>
+<td align="left">1</td>
+<td align="left">The high skewed data and overlap classes lead to thelonger time for the training. This parameter is tuned withrespect to data skewness and class overlapping.</td>
+</tr>
+<tr>
+<td align="left">Normalization</td>
+<td align="left">0</td>
+<td align="left">The normalized data aid to reduce training time. This parameter is tuned for normalization of training data.</td>
+</tr>
+<tr>
+<td align="left">Internal Cross-Validation</td>
+<td align="left">-1</td>
+<td align="left">This parameter is used to tune the number of folds forinternal validation of the constructed model.</td>
+</tr>
+<tr>
+<td align="left">Number of Iterations</td>
+<td align="left">-1</td>
+<td align="left">This parameter is used to tune the number of iterations</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+<sec id="sec012">
+<title>Experiments procedure</title>
+<p>We record the version history of each system with N snapshots and M classes (<xref ref-type="table" rid="pone.0221780.t001">Table 1</xref>) into dataset (<xref ref-type="table" rid="pone.0221780.t002">Table 2</xref>). Subsequently, in order to maintain accuracy in the obtained results, for each subject system, we record the version history of only those classes which are found in the first and a random snapshot selected for the analysis. The refactor and rename classes are not included in the analysis. In order to perform each experiment, we used the same procedure described as follows.</p>
+<p><bold>Step-1:</bold> Select the system S with N versions (i.e. Snapshots).</p>
+<p><bold>Setp-2:</bold> Retrieve the M classes exists in all versions of S.</p>
+<p><bold>Setp-3:</bold> Select the <sup>i</sup>th version randomly from N versions to predict the instable classes.</p>
+<p><bold>Step-4:</bold> Select a class from the <sup>i</sup>th version.</p>
+<p><bold>Step-5:</bold> In order to predict stability of the selected class, we train the stability assessors on (i-1) prior versions of the selected class.</p>
+<p><bold>Step-6:</bold> Repeat Step-4 and Step-5 for all classes.</p>
+<p>Subsequently, in each experiment, the training and testing procedure is described in <xref ref-type="fig" rid="pone.0221780.g003">Fig 3</xref>. The classifier’s decision regarding the instability of a class (in <sup>i</sup>th version) depends on its learning on the version history (i-1 prior versions) of propagation factors (associated with the corresponding class).</p>
+<fig id="pone.0221780.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0221780.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Working procedure of stability assessors in experiments.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.g003" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec013">
+<title>Evaluation criteria for HICSP</title>
+<p>In a recent study, Tantithamthavorn et al. [<xref ref-type="bibr" rid="pone.0221780.ref044">44</xref>] conduct an empirical study to empirically investigate the bias and variance of existing validation techniques which are used for the prediction models especially in the domain of defect prediction. In their study, author [<xref ref-type="bibr" rid="pone.0221780.ref044">44</xref>] reported that 49% studies have used of k-fold cross-validation to obtain results which are less prone to bias and variance. Consequently, we performed k-fold (i.e. k = 10) cross-validation for the precise learning of stability assessors on the training dataset. In order to evaluate the capacity of each stability assessor, we create a confusion matrix which includes True Positive (TP), True Negative (TN), False Positive (FP), and False Negative (FN).</p>
+<p>1. A class will be counted as True Positive (TP) if it is prone to ripple effect in reality and through the corresponding stability assessor it is also predicted as prone to the ripple effect.</p>
+<p>2. A class will be counted as True Negative (TN) if it is not prone to the ripple effect in reality and through the corresponding stability assessor it is also not predicted as prone to the ripple effect.</p>
+<p>3. A class will be counted as True Positive (FP) if it is prone to the ripple effect in reality and through the corresponding stability assessor it is not predicted as prone to the ripple effect.</p>
+<p>4. A class will be counted as True Negative (FN) if it is not prone to the ripple effect in reality and through the corresponding stability assessor it is predicted prone to the ripple effect.</p>
+<p>Subsequently, we used F-measure as an aggregate indicator harmonic mean of two widely adopted Information Retrieval (IR) metrics that is Precision and Recall [<xref ref-type="bibr" rid="pone.0221780.ref018">18</xref>]. The recall, precision, and F-measure are used to evaluate the performance of stability assessors, shown in Eqs <xref ref-type="disp-formula" rid="pone.0221780.e001">1</xref>–<xref ref-type="disp-formula" rid="pone.0221780.e003">3</xref> respectively.</p>
+<disp-formula id="pone.0221780.e001">
+<alternatives>
+<graphic id="pone.0221780.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0221780.e001" xlink:type="simple"/>
+<mml:math display="block" id="M1">
+<mml:mrow><mml:mi mathvariant="normal">Recall</mml:mi><mml:mo>=</mml:mo><mml:mi mathvariant="normal">TP</mml:mi><mml:mo>/</mml:mo><mml:mo>(</mml:mo><mml:mi mathvariant="normal">TP</mml:mi><mml:mo>+</mml:mo><mml:mi mathvariant="normal">FN</mml:mi><mml:mo>)</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(1)</label>
+</disp-formula>
+<disp-formula id="pone.0221780.e002">
+<alternatives>
+<graphic id="pone.0221780.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0221780.e002" xlink:type="simple"/>
+<mml:math display="block" id="M2">
+<mml:mrow><mml:mi mathvariant="normal">Precision</mml:mi><mml:mo>=</mml:mo><mml:mi mathvariant="normal">TP</mml:mi><mml:mo>/</mml:mo><mml:mo>(</mml:mo><mml:mi mathvariant="normal">TP</mml:mi><mml:mo>+</mml:mo><mml:mi mathvariant="normal">FP</mml:mi><mml:mo>)</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(2)</label>
+</disp-formula>
+<disp-formula id="pone.0221780.e003">
+<alternatives>
+<graphic id="pone.0221780.e003g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0221780.e003" xlink:type="simple"/>
+<mml:math display="block" id="M3">
+<mml:mrow><mml:mi mathvariant="normal">F</mml:mi><mml:mi mathvariant="normal">‐</mml:mi><mml:mi mathvariant="normal">measure</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo>×</mml:mo><mml:mo>(</mml:mo><mml:mi mathvariant="normal">Precision</mml:mi><mml:mo>×</mml:mo><mml:mi mathvariant="normal">Recall</mml:mi><mml:mo>)</mml:mo><mml:mo>/</mml:mo><mml:mo>(</mml:mo><mml:mi mathvariant="normal">Precision</mml:mi><mml:mo>+</mml:mo><mml:mi mathvariant="normal">Recall</mml:mi><mml:mo>)</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(3)</label>
+</disp-formula>
+</sec>
+<sec id="sec014">
+<title>Result discussion on effectiveness of HICSP</title>
+<p><bold>Respond to RQ-1:</bold>In order to respond RQ-1, we performed experiments by using the procedure described in the Section 4.4. For example, we record the history of MongoDB Java Driver with 88 versions (i.e. N = 88) and 268 classes (i.e. M = 268). Subsequently, we randomly select an ith git snapshot (i.e. <ext-link ext-link-type="uri" xlink:href="https://github.com/mongodb/mongo-java-driver/commit/e34e9798bfda30ef623f0bf98212cf33f0ce6ded" xlink:type="simple">e34e979</ext-link>) committed on 18, November 2015. We train the stability assessors on all prior snapshots delivered before November 2015 and evaluate their performance on the ith snapshot (i.e. <ext-link ext-link-type="uri" xlink:href="https://github.com/mongodb/mongo-java-driver/commit/e34e9798bfda30ef623f0bf98212cf33f0ce6ded" xlink:type="simple">e34e979</ext-link>). We evaluate the capacity of stability assessors using criteria described in Section 4.5 to predict the instable classes in the corresponding snapshot. In this regard, the main consequences are;</p>
+<list list-type="bullet">
+<list-item><p>The performance of each stability assessor varies across the projects due to differences in dataset characteristics such as the performance of HICSP+RF remain highest for Apache Camel and Tomcat Jasper (F-measure = 93%) as compared to rest of projects.</p></list-item>
+<list-item><p>We cannot recommend that all statbility assessors work same for a single dataset, which indicate the variation in influence of discriminative power of stability assessors, for example, for Apache CXF project, the performance of HICSP+RF(F-measure = 85%), HICSP+J48(F-measure = 82%), HICSP+SMO(F-measure = 80%), and HICSP+NB(F-measure = 81%) varies.</p></list-item>
+<list-item><p>Finally, we cannot benchmark the performance of stability assessors due to differences in their performance across the projects. Consequently, we need to use of non-parametric tests to benchmark their performance and recommend an outperformed stability assessor.</p></list-item>
+</list>
+<p>The comparative performance of stability assessors (HICSP+RF, HICSP+NB, HICSP+SMO, and HICSP+J48) in term of recall, precision and F-measure values is shown in <xref ref-type="table" rid="pone.0221780.t004">Table 4</xref>. Since the F-measure values achieved by HICSP+RF on all datasets is better with minor difference as compared to other stability assessors HICSP+J48, HICSP+SMO and HICSP+NB. Consequently, we perform three non-parametric Friedman, Nemenyi, and Analysis of Means (ANOM) tests to benchmark the outperform stability assessor. Firstly, we apply Friedman’s Test on the F-measure values of each stability assessor to achieve the chi-square at p-value = 0.05. The Friedman’s Test chi-square value 59.89 is greater than the critical value 7.68 with the degree of freedom (df) as 1, which suggest the rejection of the corresponding null hypothesis (H0: Stability assessors are evenly performed on all datasets). Consequently, we can report that there is a significant difference between the F-measure values of each stability assessor.</p>
+<table-wrap id="pone.0221780.t004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0221780.t004</object-id>
+<label>Table 4</label> <caption><title>Performance evaluation of stability assessors (HICSP with incorporated classifiers) in terms of f-measure.</title></caption>
+<alternatives>
+<graphic id="pone.0221780.t004g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.t004" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="2">Projects</th>
+<th align="center" colspan="3">HICSP+RF</th>
+<th align="center" colspan="3">HICSP+J48</th>
+<th align="center" colspan="3">HICSP+SMO</th>
+<th align="center" colspan="3">HICSP+NB</th>
+</tr>
+<tr>
+<th align="center">R</th>
+<th align="center">P</th>
+<th align="center">F</th>
+<th align="center">R</th>
+<th align="center">P</th>
+<th align="center">F</th>
+<th align="center">R</th>
+<th align="center">P</th>
+<th align="center">F</th>
+<th align="center">R</th>
+<th align="center">P</th>
+<th align="center">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">MongoDB Java Driver</td>
+<td align="center">80</td>
+<td align="center">82</td>
+<td align="center">81</td>
+<td align="center">78</td>
+<td align="center">80</td>
+<td align="center">79</td>
+<td align="center">75</td>
+<td align="center">76</td>
+<td align="center">76</td>
+<td align="center">78</td>
+<td align="center">79</td>
+<td align="center">79</td>
+</tr>
+<tr>
+<td align="center">Apache CXF</td>
+<td align="center">83</td>
+<td align="center">87</td>
+<td align="center">85</td>
+<td align="center">79</td>
+<td align="center">84</td>
+<td align="center">82</td>
+<td align="center">76</td>
+<td align="center">80</td>
+<td align="center">78</td>
+<td align="center">79</td>
+<td align="center">83</td>
+<td align="center">81</td>
+</tr>
+<tr>
+<td align="center">Apache Lucene</td>
+<td align="center">85</td>
+<td align="center">88</td>
+<td align="center">87</td>
+<td align="center">84</td>
+<td align="center">86</td>
+<td align="center">85</td>
+<td align="center">83</td>
+<td align="center">84</td>
+<td align="center">84</td>
+<td align="center">75</td>
+<td align="center">80</td>
+<td align="center">78</td>
+</tr>
+<tr>
+<td align="center">Google Guava</td>
+<td align="center">87</td>
+<td align="center">95</td>
+<td align="center">91</td>
+<td align="center">85</td>
+<td align="center">90</td>
+<td align="center">88</td>
+<td align="center">87</td>
+<td align="center">90</td>
+<td align="center">89</td>
+<td align="center">85</td>
+<td align="center">88</td>
+<td align="center">87</td>
+</tr>
+<tr>
+<td align="center">Apache Camel</td>
+<td align="center">90</td>
+<td align="center">96</td>
+<td align="center">93</td>
+<td align="center">88</td>
+<td align="center">92</td>
+<td align="center">90</td>
+<td align="center">87</td>
+<td align="center">89</td>
+<td align="center">88</td>
+<td align="center">80</td>
+<td align="center">88</td>
+<td align="center">84</td>
+</tr>
+<tr>
+<td align="center">Tomcat Jasper</td>
+<td align="center">91</td>
+<td align="center">95</td>
+<td align="center">93</td>
+<td align="center">90</td>
+<td align="center">94</td>
+<td align="center">92</td>
+<td align="center">84</td>
+<td align="center">89</td>
+<td align="center">87</td>
+<td align="center">79</td>
+<td align="center">85</td>
+<td align="center">82</td>
+</tr>
+<tr>
+<td align="center">Apache Wicket</td>
+<td align="center">89</td>
+<td align="center">94</td>
+<td align="center">92</td>
+<td align="center">82</td>
+<td align="center">89</td>
+<td align="center">86</td>
+<td align="center">84</td>
+<td align="center">90</td>
+<td align="center">87</td>
+<td align="center">81</td>
+<td align="center">84</td>
+<td align="center">83</td>
+</tr>
+<tr>
+<td align="center">Jetty SPDY</td>
+<td align="center">90</td>
+<td align="center">94</td>
+<td align="center">92</td>
+<td align="center">92</td>
+<td align="center">92</td>
+<td align="center">92</td>
+<td align="center">86</td>
+<td align="center">88</td>
+<td align="center">87</td>
+<td align="center">87</td>
+<td align="center">88</td>
+<td align="center">88</td>
+</tr>
+<tr>
+<td align="center">Librato Metrics</td>
+<td align="center">81</td>
+<td align="center">89</td>
+<td align="center">85</td>
+<td align="center">84</td>
+<td align="center">86</td>
+<td align="center">85</td>
+<td align="center">81</td>
+<td align="center">80</td>
+<td align="center">81</td>
+<td align="center">79</td>
+<td align="center">83</td>
+<td align="center">81</td>
+</tr>
+<tr>
+<td align="center">Apache MyFaces</td>
+<td align="center">86</td>
+<td align="center">90</td>
+<td align="center">88</td>
+<td align="center">82</td>
+<td align="center">86</td>
+<td align="center">84</td>
+<td align="center">80</td>
+<td align="center">78</td>
+<td align="center">79</td>
+<td align="center">80</td>
+<td align="center">79</td>
+<td align="center">80</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>Secondly, we apply post-hoc Nemenyi and ANOM tests on the F-measure values of each stability assessor to compare their performance and rank them accordingly. The ANOM and post-hoc Nemenyi test’s ranking results are shown in <xref ref-type="fig" rid="pone.0221780.g004">Fig 4A and 4B</xref> respectively. The ranking of each stability assessor outside the limits presents their performance significantly worse than the average of all other competitive stability assessors.</p>
+<fig id="pone.0221780.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0221780.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>ANOM and Nemenyi tests for stability assessors.</title>
+<p>a) ANOM test result b) Nemenyi test result.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.g004" xlink:type="simple"/>
+</fig>
+<p>The results of <xref ref-type="table" rid="pone.0221780.t004">Table 4</xref> and <xref ref-type="fig" rid="pone.0221780.g004">Fig 4</xref> suggest the applicability of HICSP to predict the instable classes especially when Random Forest is incorporated (i.e. HICSP+RF).</p>
+<p><bold>Respond to RQ-2:</bold> In order to respond RQ-2, we consider the CBO, RFC, REM and MPC stability assessors in the analysis. We record the values of selected stability assessors for each version of a system into a dataset (<xref ref-type="table" rid="pone.0221780.t002">Table 2</xref>). In order to evaluate the capacity of each stability assessor, again, we create a confusion matrix which includes True Positive (TP), True Negative (TN), False Positive (FP) and False Negative (FN). We execute CBO, RFC, REM and MPC stability assessors on the randomly selected ith snapshot (For example <ext-link ext-link-type="uri" xlink:href="https://github.com/mongodb/mongo-java-driver/commit/e34e9798bfda30ef623f0bf98212cf33f0ce6ded" xlink:type="simple">e34e979</ext-link> in case of the MongDB Java Driver) to predict the instable classes and compare with outperform stability assessor (i.e. HICSP+RF) reported in the response of RQ-1 (<xref ref-type="table" rid="pone.0221780.t004">Table 4</xref>). The comparison results in term of F-measure values are shown in <xref ref-type="table" rid="pone.0221780.t005">Table 5</xref>. In this regard, main consequences are;</p>
+<table-wrap id="pone.0221780.t005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0221780.t005</object-id>
+<label>Table 5</label> <caption><title>Performance evaluation of outperform stability assessor (HICSP+RF) besides other stability assessors in terms of f-measure.</title></caption>
+<alternatives>
+<graphic id="pone.0221780.t005g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.t005" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">Projects</th>
+<th align="center">HICSP+RF</th>
+<th align="center">CBO</th>
+<th align="center">MPC</th>
+<th align="center">REM</th>
+<th align="center">RFC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">MongoDB Java Driver</td>
+<td align="center">81%</td>
+<td align="center">76%</td>
+<td align="center">75%</td>
+<td align="center">79%</td>
+<td align="center">77%</td>
+</tr>
+<tr>
+<td align="center">Apache CXF</td>
+<td align="center">85%</td>
+<td align="center">77%</td>
+<td align="center">75%</td>
+<td align="center">81%</td>
+<td align="center">74%</td>
+</tr>
+<tr>
+<td align="center">Apache Lucene</td>
+<td align="center">87%</td>
+<td align="center">80%</td>
+<td align="center">79%</td>
+<td align="center">81%</td>
+<td align="center">77%</td>
+</tr>
+<tr>
+<td align="center">Google Guava</td>
+<td align="center">91%</td>
+<td align="center">81%</td>
+<td align="center">82%</td>
+<td align="center">84%</td>
+<td align="center">82%</td>
+</tr>
+<tr>
+<td align="center">Apache Camel</td>
+<td align="center">93%</td>
+<td align="center">80%</td>
+<td align="center">82%</td>
+<td align="center">90%</td>
+<td align="center">80%</td>
+</tr>
+<tr>
+<td align="center">Tomcat Jasper</td>
+<td align="center">93%</td>
+<td align="center">83%</td>
+<td align="center">80%</td>
+<td align="center">87%</td>
+<td align="center">82%</td>
+</tr>
+<tr>
+<td align="center">Apache Wicket</td>
+<td align="center">92%</td>
+<td align="center">83%</td>
+<td align="center">82%</td>
+<td align="center">87%</td>
+<td align="center">81%</td>
+</tr>
+<tr>
+<td align="center">Jetty SPDY</td>
+<td align="center">92%</td>
+<td align="center">84%</td>
+<td align="center">82%</td>
+<td align="center">85%</td>
+<td align="center">83%</td>
+</tr>
+<tr>
+<td align="center">Librato Metrics</td>
+<td align="center">85%</td>
+<td align="center">78%</td>
+<td align="center">78%</td>
+<td align="center">82%</td>
+<td align="center">78%</td>
+</tr>
+<tr>
+<td align="center">Apache MyFaces</td>
+<td align="center">88%</td>
+<td align="center">82%</td>
+<td align="center">81%</td>
+<td align="center">85%</td>
+<td align="center">81%</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<list list-type="bullet">
+<list-item><p>Like state of the art stability assessors, the proposed approach HICSP is effective in terms of predicting the stable classes, such as the performance of HICSP-RF remain greater than 80% across the all projects.</p></list-item>
+<list-item><p>Due to minor differences in their performance, we cannot benchmark the performance of HICSP. Consequently, no-parameteric tests are required to benchmark the performance of HICSP.</p></list-item>
+</list>
+<p>The F-measure achieved by HICSP+RF on all datasets is better with minor difference as compared to other stability assessors. Consequently, we perform three non-parametric Friedman, Nemenyi, and ANOM tests to benchmark the performance ourperform stability assessor. Firstly, we apply Friedman’s Test on the F-measure values of each stability assessor to achieve the chi-square at p-value = 0.05. The Friedman’s Test chi-square value 78.18 is greater than the critical value 12.44 with the degree of freedom (df) as 1, which suggest the rejection of the corresponding null hypothesis (H0: Stability Assessors are evenly performed on all dataset). Consequently, we can report that there is a significant difference on the achieved F-measure value of each stability assessor. Secondly, we apply post-hoc Nemenyi and ANOM tests on the achieved F-measure of each assessor in order to compare their performance and rank them accordingly. The ANOM and post-hoc Nemenyi test’s ranking results are shown in <xref ref-type="fig" rid="pone.0221780.g005">Fig 5A and 5B</xref> respectively. The ranking of stability assessors outside the limits presents their performance significantly worse than the average of all other competitive assessors. The results of <xref ref-type="table" rid="pone.0221780.t005">Table 5</xref> and <xref ref-type="fig" rid="pone.0221780.g005">Fig 5</xref> suggest that stability assessor HICSP+RF outperform than other stability assessors.</p>
+<fig id="pone.0221780.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0221780.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>ANOM and Nemenyi tests for stability assessor (HICSP+RF) and stability assessors. a) ANOM test result b) Nemenyi test result.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.g005" xlink:type="simple"/>
+</fig>
+</sec>
+</sec>
+<sec id="sec015">
+<title>Replicated study</title>
+<p>We replicate the first study in order to evaluate the impact of tuning the incorporated classifier’s parameters (in the stability assessor component of HICSP) on the effectiveness of proposed approach HICSP. Though, we have summarized the list of parameters related to the incorporated classifiers (Section 4.3) and shown in <xref ref-type="table" rid="pone.0221780.t003">Table 3</xref>, and performed certain experiments. However, in this replicated study, we only present stability assessor HICSP+J48 and investigate the effect of paramter’s tuning. We tune the confidence factor (i.e. for post-pruning) and minimum number of instances (i.e. for on-line pruning) of HICSP+J48, and apllied on the version history of MongoDB Java Driver open source project. In our first study, we have evaluated the effectiveness of HICSP+j48 with default value 0.25 and 2 of Confidence factor and minimum number of instances respectively. However, in this study, we performed a series of experiments by tuning these parameters and follow the same experimental procedure (mention in Section 4.4) and evaluation creteria (mention in Section 4.5).</p>
+<sec id="sec016">
+<title>Respond to RQ-3</title>
+<p>In order to respond RQ-3, we comparatively investigate the performance of HICSP+J48 with default and tuned values of Confidence Factor and Minimum Number of Instances parameters. The brief description of these parameters is as follows.</p>
+</sec>
+<sec id="sec017">
+<title>Tuning of confidence factor</title>
+<p>The confidence factor parameter is used to describe the effectiveness of post-pruning (i.e as pruning method) of j48. The post-pruning method in the C4.5 algorithm is regarded as the process of evaluating the decision error at each decision junction and its propagation. The decision error is computed through the <xref ref-type="disp-formula" rid="pone.0221780.e004">Eq 4</xref>.</p>
+<disp-formula id="pone.0221780.e004">
+<alternatives>
+<graphic id="pone.0221780.e004g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0221780.e004" xlink:type="simple"/>
+<mml:math display="block" id="M4">
+<mml:mi mathvariant="normal">E</mml:mi><mml:mo>=</mml:mo><mml:mo>(</mml:mo><mml:mi mathvariant="normal">e</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo>)</mml:mo><mml:mo>/</mml:mo><mml:mo>(</mml:mo><mml:mi mathvariant="normal">N</mml:mi><mml:mo>+</mml:mo><mml:mi mathvariant="normal">m</mml:mi><mml:mo>)</mml:mo>
+</mml:math>
+</alternatives>
+<label>(4)</label>
+</disp-formula>
+<p>In the <xref ref-type="disp-formula" rid="pone.0221780.e004">Eq 4</xref>, the term E, e, N and m referred as estimated error, misclassified instances, correctly classified and total instance of the given node. We performed experiments by ranging Confidence factor from 0.1 to 1.0, and keep the value 2 fixed for the minimum number of instance parameter of HICSP+j48. Subsequently, we performed each experiment with k-fold (i.e. k = 10) cross validation. The experimental results are summarized and depicted in <xref ref-type="fig" rid="pone.0221780.g006">Fig 6</xref>. The results of <xref ref-type="fig" rid="pone.0221780.g006">Fig 6</xref> indicate that learning performance (in term of F-measure) of HICSP+j48 on the training dataset increases upto 83% when confidence factor ranges from 0 to 0.5, however, by increasing confidence factor from 0.5 to onward, the performance of HICSP+j48 decreases, which might be the cause of over-training.</p>
+<fig id="pone.0221780.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0221780.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>Performance evaluation of HICSP+J48 by tuning confidence factor parameter.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.g006" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec018">
+<title>Tuning of minimum number of instances</title>
+<p>The minimum number of instance parameter of HICSP+J48 is used to describe the effectiveness of on-line pruning (i.e pruning method). The on-line pruning worked when decision tree is induced. The existing algorithms aid to divide the dataset on the attributes and provide information gain related to a class label. During the division process, a child’s leaf represents less than a minimum number of instances of a dataset. Subsequently, the parent and child nodes are combined and produce a single node. The compressing remains continue until the entire tree is created. We performed experiments by ranging minimum number of instances from 10 to 60, and keep the value 0.25 fixed for confidence factor parameter of HICSP+j48. Subsequently, we performed each experiment with k-fold (i.e. k = 10) cross validation. The experimental results are summarized and depicted in <xref ref-type="fig" rid="pone.0221780.g007">Fig 7</xref>. The results of <xref ref-type="fig" rid="pone.0221780.g007">Fig 7</xref> indicate that the learning performance (in term of F-measure) of HICSP+j48 on the training dataset decreases to 62% when the confidence factor ranges from 10 to 40. Subsequently, an increase in the number of minimum instances causes to increase the over-training error.</p>
+<fig id="pone.0221780.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0221780.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>Performance evaluation of HICSP+J48 by tuning minimum number of instances parameter.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.g007" xlink:type="simple"/>
+</fig>
+</sec>
+</sec>
+<sec id="sec019" sec-type="conclusions">
+<title>Results and discussion</title>
+<sec id="sec020">
+<title>First study</title>
+<p>The results shown in <xref ref-type="table" rid="pone.0221780.t004">Table 4</xref> and <xref ref-type="table" rid="pone.0221780.t005">Table 5</xref> suggest the applicability of proposed approach HICSP to predict the instable classes. In order to respond RQ1, the results (<xref ref-type="table" rid="pone.0221780.t004">Table 4</xref>) of our first study indicate that HICSP’s precision (When RF, J48, SMO, and NB are incorporated) is between 75 to 92 percent and its recall is between 76 to 96 percent. The best classifier incorporated with proposed approach HICSP is evaluated in term of F-measure. For example, the prediction accuracy of stability assessor HICSP+RF is between 81 to 93 percent which remained better than the prediction accuracy of other stability assessors. Subsequently, in order to respond RQ2, we compare the performance of outperform stability assessor that is HICSP+ RF with existing stability assessors CBO, MPC, REM, and RFC. We used recall, precision, and F-measure to compare and evaluate the prediction accuracy of all stability assessors. The F-measure values achieved by HICSP+RF are between 81 to 93 percent on 10 systems, which is comparatively better than the achieved F-measure values of CBO (76 to 84 percent), MPC (75 to 82 percent), REM (79 to 90 percent) and RFC (74 to 83 percent). In the term of F-measure, on some systems we did not find any significance difference between HICSP+RF and other stability assessors. For example, on MongoDB Java Driver, Apache CXF, Librato Metrics and Apache MyFaces datasets, there is the minor difference between the prediction accuracy of HICSP+RF and REM stability assessor.</p>
+</sec>
+<sec id="sec021">
+<title>Second study</title>
+<p>In the second study, we consider only HICSP+J48 and investigate the effect of tuning the two parameters Confidence Factor and Minimum Number of Instances on its effectiveness with MongoDB Java Driver dataset. The result shown in <xref ref-type="fig" rid="pone.0221780.g006">Fig 6</xref> and <xref ref-type="fig" rid="pone.0221780.g007">Fig 7</xref>, which indicates the significant increase (in term of F-measure) in the performance of HICSP+J48. For example, in case of HICSP+J48 with default parameter values (Confidence Factor as 0.25 and Minimum Number of Instances as 2), we have observed the performance 79% (shown in <xref ref-type="table" rid="pone.0221780.t004">Table 4</xref>). From the results shown in <xref ref-type="fig" rid="pone.0221780.g006">Fig 6</xref>, we observed a 5.06% increase in the performance of HICSP+J48 at the value 0.50 of confidence factor. Subsequently, from the results of <xref ref-type="fig" rid="pone.0221780.g007">Fig 7</xref>, we can observe a significant decrease in the performance of HICSP+J48, when the minimum number of instances are increased.</p>
+</sec>
+</sec>
+<sec id="sec022">
+<title>Implication for researchers</title>
+<p>Though, in this study, we exploit and model the evolution history of change propagation factors in order to predict the instable classes. However, we recommend certain dimensions for researchers about the use of the proposed approach.</p>
+<p>In this study, we cannot examine the explanatory variable (i.e. Change propagation factors) individually in the relation to the class instability. The proposed approach can be used to examine the influence of each propagation factor throughout the evolution of a class and predict the highly influential (i.e. Hotspot) change propagation factor. This will aid maintainers to reduce the time and efforts required to maintain the class and to understand certain aspects of instable classes.</p>
+<p>The proposed approach can be used to investigate the differences between pattern, anti-pattern, and pattern classes associated with at least one anti-pattern class in term of their stability. For example, the pattern classes are more stable than those pattern classes which are associated with at least one anti-pattern class [<xref ref-type="bibr" rid="pone.0221780.ref026">26</xref>].</p>
+<p>The proposed approach can be used to compare the quality differences between software libraries and standalone applications, because in case of software libraries it is generally believe that developers of software libraries followed the design guidelines due to need of continuous evolution.</p>
+</sec>
+<sec id="sec023">
+<title>Threats to validity</title>
+<p>In our study, we also find some threats. The first threat is related to external validity to generalize the results. The HICSP is evaluated with the version history of only ten projects. The prediction accuracy of HICSP can be analyzed to consider the long version history projects such as Apache OpenOffice in the study. Subsequently, the incorporation of more classification algorithms can present the variation in the performance results of HICSP. The second threat is related to the internal validity of factors, which could influence the results. We incorporate the classification algorithms with default parameters adjusted in Weka tool. However, the calibration of parameters of classification algorithms could improve the prediction accuracy of HICSP. Though, in the second study, we have empirically investigated the effect of tuned parameters (i.e Confidence Factor and Minimum Number of Instances) on the performance of HICSP+J48. However, we need to tune the parameters of other stability assessors in order to generalize the results.</p>
+</sec>
+<sec id="sec024">
+<title>Concluion and future work</title>
+<p>We presented HICSP (Historical Information for Class Stability Prediction), an approach aimed to predict the instable classes by exploiting history information of change propagation factors extracted from the versioning systems. In order to respond to our research questions, we conducted two empirical studies. The promising results are produced from both studies, which can suggest the developers to apply the HICSP in order to predict the instable classes (in terms of promoting the ripple effect) through the analyses of version history of its change propagation factors, such as a number of polymorphic methods, the number of protected attributes, and distinct methods calls. We incorporate four widely-used classification algorithms Random Forest (RF), J48, Sequential Minimal Optimization (SMO) as a variant of Support Vector Machine (SVM), and Naïve Bayes (NB) in the proposed approach HICSP as stability assessors and evaluate its prediction accuracy. In terms of precision, recall, and F-measure, we observed the significance prediction accuracy of HICSP especially when RF is incorporated. Such as, the performance of HICSP is reported in range from 81% to 93% across the all projects. Subsequently, in comparison with existing design class stability assessors REM, CBO, MPC, and RFC, we observe 4 to 16 percent (in term of F-measure) improvement in the prediction of instable classes. However, it can be improved by tuning the parameters to overcome the noise in the training data. For example, we observe the performance of HICSP+J48 as 79% in terms of F-measure with default parameters values (Confidence Factor = 0.25 and Number of Instancess = 2) on MongoDB Java Driver dataset. By tuning the Confidence Factor (from 0 to 0.50), we obervee approximaltely 5% (F-measure) increase in the performance. We are planning to incorporate Bayesian Vector Auto Regression (Bayesian VAR) with the proposed approach to estimate the stability of a class through interdependencies of change propagation factors and model the stability of a whole system.</p>
+</sec>
+<sec id="sec025">
+<title>Supporting information</title>
+<supplementary-material id="pone.0221780.s001" mimetype="application/x-rar-compressed" position="float" xlink:href="info:doi/10.1371/journal.pone.0221780.s001" xlink:type="simple">
+<label>S1 File</label>
+<caption>
+<title>Datasets used in study.</title>
+<p>(<ext-link ext-link-type="uri" xlink:href="https://drive.google.com/file/d/1TeV6pDRGVggT3uzFmfkhMPBlbiz6IlUJ/view?usp=sharing" xlink:type="simple">https://drive.google.com/file/d/1TeV6pDRGVggT3uzFmfkhMPBlbiz6IlUJ/view?usp=sharing</ext-link>)</p>
+<p>(RAR)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<glossary>
+<title>Abbreviations</title>
+<def-list>
+<def-item><term>CIA</term>
+<def><p>Change Impact Analysis</p></def>
+</def-item>
+<def-item><term>REM</term>
+<def><p>Ripple Effect Measure</p></def>
+</def-item>
+<def-item><term>CBO</term>
+<def><p>Coupling Between Object</p></def>
+</def-item>
+<def-item><term>RFC</term>
+<def><p>Response For a Class</p></def>
+</def-item>
+<def-item><term>DAC</term>
+<def><p>Data Abstraction Coupling</p></def>
+</def-item>
+<def-item><term>MOA</term>
+<def><p>Measure of Aggregation</p></def>
+</def-item>
+<def-item><term>MPC</term>
+<def><p>Message Passing Coupling</p></def>
+</def-item>
+<def-item><term>HICSP</term>
+<def><p>Historical Information for Class Stability Prediction</p></def>
+</def-item>
+<def-item><term>GoF</term>
+<def><p>Gang-of-Four</p></def>
+</def-item>
+<def-item><term>RF</term>
+<def><p>Random Forest</p></def>
+</def-item>
+<def-item><term>NB</term>
+<def><p>Naïve Bayes</p></def>
+</def-item>
+<def-item><term>SMO</term>
+<def><p>Sequential Minimal Optimization</p></def>
+</def-item>
+<def-item><term>Pd</term>
+<def><p>probability of detection</p></def>
+</def-item>
+<def-item><term>Pf</term>
+<def><p>probability of false alarm</p></def>
+</def-item>
+<def-item><term>TP</term>
+<def><p>True Positive</p></def>
+</def-item>
+<def-item><term>TN</term>
+<def><p>True Negative</p></def>
+</def-item>
+<def-item><term>FP</term>
+<def><p>False Positive</p></def>
+</def-item>
+<def-item><term>FN</term>
+<def><p>False Negative</p></def>
+</def-item>
+<def-item><term>ANOM</term>
+<def><p>Analysis of Means</p></def>
+</def-item>
+<def-item><term>E</term>
+<def><p>Estimated Error</p></def>
+</def-item>
+<def-item><term>E</term>
+<def><p>misclassified instances</p></def>
+</def-item>
+<def-item><term>N</term>
+<def><p>correctly classified</p></def>
+</def-item>
+<def-item><term>M</term>
+<def><p>Total Instances</p></def>
+</def-item>
+</def-list>
+</glossary>
+<ref-list>
+<title>References</title>
+<ref id="pone.0221780.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Sun</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Leung</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>S</given-names></name>. <article-title>A Survey of code-based change impact analysis techniques</article-title>, <source>Journal of Software Testing, Verification and Reliability</source>, <year>2013</year>; <volume>23</volume>(<issue>8</issue>): <fpage>613</fpage>–<lpage>646</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/stvr.1475" xlink:type="simple">10.1002/stvr.1475</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jaafar</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Gueheneuc</surname> <given-names>Y-G</given-names></name>. <name name-style="western"><surname>Hammel</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Antoniol</surname> <given-names>G</given-names></name>, <article-title>Detecting asynchrony and dephase change patterns by mining software repositories</article-title>, <source>Journal of Software: Evolution and Process</source>, <year>2014</year>; <volume>26</volume>(<issue>1</issue>): <fpage>77</fpage>–<lpage>106</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/smr.1635" xlink:type="simple">10.1002/smr.1635</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref003"><label>3</label><mixed-citation publication-type="other" xlink:type="simple">Penta MD, Cerulo L, Gueheneuc Y-G, Antoniol G, An empirical study of relationships between design pattern roles and class change proneness, Proceedings of 24th International Conference of Software Maintenance (ICSM’08), 2008: 217–226. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/SCIS.2007.367670" xlink:type="simple">10.1109/SCIS.2007.367670</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref004"><label>4</label><mixed-citation publication-type="other" xlink:type="simple">Aversano L, Canfora G, Cerulo L, Grosso CD, Penta MD, An empirical study on the evolution of design patterns, Proceedings of 6th Joint Meeting European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundation of Software Engineering (ESEC-FSE’07), 2007: 385–394. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1145/1287624.1287680" xlink:type="simple">10.1145/1287624.1287680</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ampatzoglou</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Chatzigeorgiou</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Charalampidou</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Avgeriou</surname> <given-names>P</given-names></name>, <article-title>The effect of GoF design patterns on stability: A case study,”</article-title> <source>IEEE Transactions on Software Engineering</source>, <year>2015</year>; <volume>41</volume>(<issue>8</issue>): <fpage>781</fpage>–<lpage>802</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TSE.2015.2414917" xlink:type="simple">10.1109/TSE.2015.2414917</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref006"><label>6</label><mixed-citation publication-type="other" xlink:type="simple">Arvanitou E-M, Ampatzoglou A, Chatzigeorgiou A and Avgeriou P, Introducing a Ripple Effect Measure: A theoretical and empirical validation, Proceeding of the 9th International Symposium on Empirical Software Engineering and Measurement (ESEM’15), 2015. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/ESEM.2015.7321204" xlink:type="simple">10.1109/ESEM.2015.7321204</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tsantalis</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Chatzigeorgiou</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Stephanides</surname> <given-names>G</given-names></name>, <article-title>Predicting the probability of change in Object-Oriented Systems,”</article-title> <source>IEEE Transactions on Software Engineering</source>, <year>2005</year>; <volume>31</volume>(<issue>7</issue>): <fpage>601</fpage>–<lpage>614</lpage>.</mixed-citation></ref>
+<ref id="pone.0221780.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alshayeb</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>W</given-names></name>, <article-title>An empirical study of system design instability metric and design evolution in an agile software process</article-title>, <source>Journal of Systems and Software</source>, <year>2005</year>; <volume>74</volume>(<issue>3</issue>): <fpage>269</fpage>–<lpage>274</lpage>. <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.jss.2004.02.002" xlink:type="simple">http://dx.doi.org/10.1016/j.jss.2004.02.002</ext-link>.</mixed-citation></ref>
+<ref id="pone.0221780.ref009"><label>9</label><mixed-citation publication-type="other" xlink:type="simple">Elish MO, Rine D, “Investigation of metrics for object-oriented design logical stability,” Proceeding of 7th European Conference on Software Maintenance and Reengineering (CSMR’03), 2003: 193–200.</mixed-citation></ref>
+<ref id="pone.0221780.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bansiya</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Davies</surname> <given-names>CG</given-names></name>, <article-title>A hierarchical model for object-oriented design quality assessment</article-title>, <source>IEEE Transactions on Software Engineering</source>, <year>2002</year>; <volume>28</volume>(<issue>1</issue>): <fpage>4</fpage>–<lpage>17</lpage>.</mixed-citation></ref>
+<ref id="pone.0221780.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chidamber</surname> <given-names>SR</given-names></name>, <name name-style="western"><surname>Kemerer</surname> <given-names>CF</given-names></name>, <article-title>A metrics suite for Object-Oriented design</article-title>,” <source>IEEE Transactions on Software Engineering</source>, <year>1994</year>; <volume>20</volume>(<issue>6</issue>): <fpage>476</fpage>–<lpage>493</lpage>.</mixed-citation></ref>
+<ref id="pone.0221780.ref012"><label>12</label><mixed-citation publication-type="other" xlink:type="simple">Hussain S, A methodology to predict the instable classes, 32nd ACM Symposium on Applied Computing (SAC) Morocco, 2017.</mixed-citation></ref>
+<ref id="pone.0221780.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Poshyvanyk</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Marcus</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Ferenc</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Gyimothy</surname> <given-names>T</given-names></name>, <article-title>Using information retrieval based coupling measures for impact analysis</article-title>, <source>Empirical Software Engineering</source>, <year>2009</year>; <volume>14</volume>(<issue>1</issue>); <fpage>5</fpage>–<lpage>32</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s10664-008-9088-2" xlink:type="simple">10.1007/s10664-008-9088-2</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref014"><label>14</label><mixed-citation publication-type="other" xlink:type="simple">Hassaine S, Boughanmi F, Gueheneuc Y-G, Hamel S, Antoniol G, A seismology-inspired approach to study change propagation, Proceedings of 27th International Conference on Software Maintenance (ICSM’ 11), 2011. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/ICSM.2011.6080772" xlink:type="simple">10.1109/ICSM.2011.6080772</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref015"><label>15</label><mixed-citation publication-type="other" xlink:type="simple">Bohner SA, “Impact analysis in the software change process: A year 2000 perspective,” Proceedings of the International Conference on Software Maintenance (ICSM’ 96), 1996: 42–51.</mixed-citation></ref>
+<ref id="pone.0221780.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rovegard</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Angelis</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Wohlin</surname> <given-names>C</given-names></name>, “<article-title>An empirical study on views of importance of change impact analysis issues</article-title>,” <source>IEEE Transactions on Software Engineering</source>, <year>2008</year>; <volume>34</volume>(<issue>4</issue>): <fpage>516</fpage>–<lpage>530</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TSE.2008.32" xlink:type="simple">10.1109/TSE.2008.32</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Horowitz</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Williamson</surname> <given-names>RC</given-names></name>, <article-title>SODOS: a software documentation support environment-It’s definition</article-title>, <source>IEEE Transactions on Software Engineering</source>, <year>1986</year>; <volume>12</volume>(<issue>8</issue>): <fpage>849</fpage>–<lpage>859</lpage>.</mixed-citation></ref>
+<ref id="pone.0221780.ref018"><label>18</label><mixed-citation publication-type="other" xlink:type="simple">Ramanathan M-K, Grama A, Jagannathan S, Sieve: a tool for automatically detecting variations across program versions, Proceedings of the 21st IEEE/ACM International Conference on Automated Software Engineering (ASE’06), 2006: 241–252. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/ASE.2006.61" xlink:type="simple">10.1109/ASE.2006.61</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref019"><label>19</label><mixed-citation publication-type="other" xlink:type="simple">Law J, Rothernel G, Whole program path-based dynamic impact analysis, Proceedings of the 25th International Conference on Software Engineering (ICSE’03), 2003: 308–318.</mixed-citation></ref>
+<ref id="pone.0221780.ref020"><label>20</label><mixed-citation publication-type="other" xlink:type="simple">Apiwattanapong T, Orso A, Harrold MJ, Efficient and precise dynamic impact analysis using execute-after sequences, Proceedings of the 27th International Conference on Software Engineering (ICSE’05), 2005: 432–441, <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1145/1062455.1062534" xlink:type="simple">10.1145/1062455.1062534</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref021"><label>21</label><mixed-citation publication-type="other" xlink:type="simple">Gall H, Hajek K, Jazayeri M, Detection of Logical coupling based on product release history, Proceedings of International Conference on Software Maintenance (ICSM ‘98), 1998: 190–198.</mixed-citation></ref>
+<ref id="pone.0221780.ref022"><label>22</label><mixed-citation publication-type="other" xlink:type="simple">Sherriff M, Williams L, Empirical software change impact analysis using singular value decomposition, Proceedings of the International Conference on Software Testing, Verification, and Validation, 2008: 268–277.</mixed-citation></ref>
+<ref id="pone.0221780.ref023"><label>23</label><mixed-citation publication-type="other" xlink:type="simple">Bieman JM, Andrews AA, Yang HJ. “Understanding change-proneness in OO software through visualization,” Proceedings of 11th International Workshop on Program Comprehension, 2003: 44–53.</mixed-citation></ref>
+<ref id="pone.0221780.ref024"><label>24</label><mixed-citation publication-type="other" xlink:type="simple">Zimmermann T, Weisgerber P, Diehl S, Zeller A, Mining version histories to guide software changes, Proceedings of the 26th International Conference on Software Engineering (ICSE’04), 2004: 563–572.</mixed-citation></ref>
+<ref id="pone.0221780.ref025"><label>25</label><mixed-citation publication-type="other" xlink:type="simple">Torchiano M, Ricca F, Impact analysis by means of unstructured knowledge in the context of bug repositories, Proceedings of the ACM-IEEE International Symposium on Empirical Software Engineering and Measurement, 2010: <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1145/1852786.1852847" xlink:type="simple">10.1145/1852786.1852847</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jaafar</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Gueheneuc</surname> <given-names>YG</given-names></name>, <name name-style="western"><surname>Hamel</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Khomh</surname> <given-names>F</given-names></name>, “<article-title>Analyzing anti-pattern static relationship with design patterns</article-title>,” <source>Electronic Communication of the EASST</source>, <year>2013</year>: <fpage>59</fpage>.</mixed-citation></ref>
+<ref id="pone.0221780.ref027"><label>27</label><mixed-citation publication-type="other" xlink:type="simple">Lee YS, Liang BS, Wu SF, Wang FJ, Measuring the coupling and cohesion of an Object-Oriented program based on information flow,” Proceedings of International Conference on Software Quality, 1995.</mixed-citation></ref>
+<ref id="pone.0221780.ref028"><label>28</label><mixed-citation publication-type="other" xlink:type="simple">Briand L-C, Devanbu P, Melo W-L, “An investigation into coupling measures for C++,” Proceedings of 19th International Conference on Software engineering (ICSE'97), 1997: 412–421. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1145/253228.253367" xlink:type="simple">10.1145/253228.253367</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref029"><label>29</label><mixed-citation publication-type="other" xlink:type="simple">Gall H, Jazayeri M, Krajewski J, CVS release history data for detecting logical couplings,” Proceedings of 6th International Workshop on Principles of Software Evolution (IWPSE'03), 2003: 13–23.</mixed-citation></ref>
+<ref id="pone.0221780.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hussain</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Keung</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Sohail</surname> <given-names>MK</given-names></name>, <name name-style="western"><surname>Ilahi</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Khan</surname> <given-names>AA</given-names></name>, <article-title>Automated framework for classification and selection of software design patterns</article-title>, <source>Applied Soft Computing</source>, <year>2019</year>; <volume>75</volume>: <fpage>1</fpage>–<lpage>20</lpage>.</mixed-citation></ref>
+<ref id="pone.0221780.ref031"><label>31</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Black</surname> <given-names>S</given-names></name>, <article-title>Deriving an approximation algorithm for automatic computation of ripple effect measures</article-title>, <source>Journal of Information and Software Technology</source>, <year>2008</year>; <volume>50</volume>(<issue>7</issue>): <fpage>723</fpage>–<lpage>736</lpage>, <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.infsof.2007.07.008" xlink:type="simple">10.1016/j.infsof.2007.07.008</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Catal</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Diri</surname> <given-names>B</given-names></name>, <article-title>Investigating the effect of dataset size, metrics sets, and feature selection techniques on software fault prediction problem</article-title>, <source>Journal of Information Sciences</source>, <year>2009</year>; <volume>179</volume>(<issue>8</issue>): <fpage>1040</fpage>–<lpage>1058</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.ins.2008.12.001" xlink:type="simple">10.1016/j.ins.2008.12.001</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref033"><label>33</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fernández-Delgado</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Cernadas</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Barro</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Amorim</surname> <given-names>D</given-names></name>, <article-title>Do we need hundreds of classifiers to solve real world classification problems</article-title>, <source>Journal of Machine Learning Research</source>, <year>2014</year>; <volume>15</volume>(<issue>1</issue>): <fpage>3133</fpage>–<lpage>3181</lpage>.</mixed-citation></ref>
+<ref id="pone.0221780.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ma</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Guo</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Cukic</surname> <given-names>B</given-names></name>, <article-title>A Statistical framework for the prediction of fault-proneness</article-title>, <source>Proceedings of Advances in Machine Learning Application in Software Engineering</source>, <year>2006</year>: <fpage>237</fpage>–<lpage>265</lpage>.</mixed-citation></ref>
+<ref id="pone.0221780.ref035"><label>35</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Koprinska</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Poon</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Clark</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Chan</surname> <given-names>J</given-names></name>, <article-title>Learning to classify e-mail</article-title>, <source>Jounrnal of Information Sciences</source>, <year>2007</year>; <volume>177</volume>(<issue>10</issue>): <fpage>2167</fpage>–<lpage>2187</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.ins.2006.12.005" xlink:type="simple">10.1016/j.ins.2006.12.005</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref036"><label>36</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Menzies</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Greenwald</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Frank</surname> <given-names>A</given-names></name>, <article-title>Data mining static code attributes to learn defect predictors</article-title>, <source>IEEE Transactions on Software Engineering</source>, <year>2007</year>; <volume>33</volume>(<issue>1</issue>): <fpage>2</fpage>–<lpage>13</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1109/TSE.2007.10" xlink:type="simple">10.1109/TSE.2007.10</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref037"><label>37</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hussain</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Keung</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Khan</surname> <given-names>AA</given-names></name>, <article-title>Software design patterns classification and selection using text categorization approach</article-title>, <source>Applied Soft Computing</source>, <year>2017</year>; <volume>58</volume>: <fpage>225</fpage>–<lpage>244</lpage>.</mixed-citation></ref>
+<ref id="pone.0221780.ref038"><label>38</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Breiman</surname> <given-names>L</given-names></name>, <article-title>Random Forests</article-title>, <source>Journal of Machine Learning</source>, <year>2001</year>; <volume>45</volume>(<issue>1</issue>): <fpage>5</fpage>–<lpage>32</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1023/A:1010933404324" xlink:type="simple">10.1023/A:1010933404324</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0221780.ref039"><label>39</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Quinlan</surname> <given-names>JR</given-names></name>, <source>C4.5: Programs for machine learning</source>, <publisher-name>Morgan Kaufmann Publishers</publisher-name> <publisher-loc>San Francisco, CA, USA</publisher-loc>, ISBN: 1558602402, <year>1993</year>.</mixed-citation></ref>
+<ref id="pone.0221780.ref040"><label>40</label><mixed-citation publication-type="other" xlink:type="simple">John GH, Langley P, Estimating continuous distributions in bayesian classifiers, Proceedings of 11th Conference on Uncertainity in Artificial Intelligence, 1995: 338–345.</mixed-citation></ref>
+<ref id="pone.0221780.ref041"><label>41</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Muzammal</surname> <given-names>SM</given-names></name>, <name name-style="western"><surname>Shah</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Khatak</surname> <given-names>HA</given-names></name>, <name name-style="western"><surname>Ahmad</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Hussain</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Khalid</surname> <given-names>S</given-names></name> <etal>et al</etal>., <article-title>Counter meauring conceiable security threats on smart healthcare devices</article-title>, <source>IEEE Access</source>, <year>2018</year>.</mixed-citation></ref>
+<ref id="pone.0221780.ref042"><label>42</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nasir</surname> <given-names>JA</given-names></name>, <name name-style="western"><surname>Hussain</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Dang</surname> <given-names>H</given-names></name>, <article-title>Integrated planning approach towards home health care, telehealth and patients group based care</article-title>, <source>Journal of Network and Computer Applications</source>, <year>2018</year>; <volume>117</volume>: <fpage>31</fpage>–<lpage>40</lpage>.</mixed-citation></ref>
+<ref id="pone.0221780.ref043"><label>43</label><mixed-citation publication-type="other" xlink:type="simple">Platt J, Sequential Minimal Optimization: A fast algorithm for training Support Vector Machines, Technical Report: MSR-TR-98-14, 1998.</mixed-citation></ref>
+<ref id="pone.0221780.ref044"><label>44</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tantithamthavorn</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Mclntosh</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Hassan</surname> <given-names>AE</given-names></name>, <name name-style="western"><surname>Matsumoto</surname> <given-names>K</given-names></name>, <article-title>An Emperical Comparison of Model Validation Techniques for Defect Prediction Models</article-title>, <source>IEEE Transactions on Software Engneering</source>, PP(<issue>99</issue>), <year>2016</year>.</mixed-citation></ref>
+</ref-list>
+</back>
+</article>

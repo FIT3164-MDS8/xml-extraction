@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="3.0" xml:lang="en" article-type="research-article">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-14-52522</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0122278</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>Quantifying Regional Differences in the Length of Twitter Messages</article-title>
+<alt-title alt-title-type="running-head">Quantifying Regional Differences in the Length of Twitter Messages</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Alis</surname> <given-names>Christian M.</given-names></name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Lim</surname> <given-names>May T.</given-names></name>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Moat</surname> <given-names>Helen Susannah</given-names></name>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Barchiesi</surname> <given-names>Daniele</given-names></name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Preis</surname> <given-names>Tobias</given-names></name>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Bishop</surname> <given-names>Steven R.</given-names></name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+</contrib-group>
+<aff id="aff001">
+<label>1</label>
+<addr-line>Department of Mathematics, University College London, London, United Kingdom</addr-line>
+</aff>
+<aff id="aff002">
+<label>2</label>
+<addr-line>National Institute of Physics, University of the Philippines Diliman, Quezon City, Philippines</addr-line>
+</aff>
+<aff id="aff003">
+<label>3</label>
+<addr-line>Warwick Business School, University of Warwick, Coventry, United Kingdom</addr-line>
+</aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Braunstein</surname> <given-names>Lidia Adriana</given-names></name>
+<role>Academic Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1">
+<addr-line>UNMdP-CONICET, ARGENTINA</addr-line>
+</aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: CMA MTL HSM DB TP SRB. Performed the experiments: CMA. Analyzed the data: CMA MTL HSM DB TP SRB. Contributed reagents/materials/analysis tools: CMA MTL HSM TP. Wrote the paper: CMA MTL HSM TP SRB.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">c.alis@ucl.ac.uk</email></corresp>
+</author-notes>
+<pub-date pub-type="collection">
+<year>2015</year>
+</pub-date>
+<pub-date pub-type="epub">
+<day>8</day>
+<month>4</month>
+<year>2015</year>
+</pub-date>
+<volume>10</volume>
+<issue>4</issue>
+<elocation-id>e0122278</elocation-id>
+<history>
+<date date-type="received">
+<day>22</day>
+<month>11</month>
+<year>2014</year>
+</date>
+<date date-type="accepted">
+<day>17</day>
+<month>2</month>
+<year>2015</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2015</copyright-year>
+<copyright-holder>Alis et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0122278" xlink:type="simple"/>
+<abstract>
+<p>The increasing usage of social media for conversations, together with the availability of its data to researchers, provides an opportunity to study human conversations on a large scale. <italic>Twitter</italic>, which allows its users to post messages of up to a limit of 140 characters, is one such social media. Previous studies of utterances in books, movies and <italic>Twitter</italic> have shown that most of these utterances, when transcribed, are much shorter than 140 characters. Furthermore, the median length of <italic>Twitter</italic> messages was found to vary across US states. Here, we investigate whether the length of <italic>Twitter</italic> messages varies across different regions in the UK. We find that the median message length, depending on grouping, can differ by up to 2 characters.</p>
+</abstract>
+<funding-group>
+<funding-statement>C. M. A., H. S. M., D. B., T. P. and S. R. B. acknowledge funding from Research Councils United Kingdom via the Digital Economy theme (grant EP/KO 39830/1). The funder had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="6"/>
+<table-count count="2"/>
+<page-count count="10"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability" xlink:type="simple">
+<meta-name>Data Availability</meta-name>
+<meta-value>Data are available from Twitter, from which the underlying data was taken. Tweet IDs may be distributed, but not the entire raw content of the tweets. Only public tweets are analysed in the paper. All of the underlying data can be retrieved given the tweet IDs, which are deposited into figshare (<ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://dx.doi.org/10.6084/m9.figshare.1249692">http://dx.doi.org/10.6084/m9.figshare.1249692</ext-link>).</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>As more people turn online to communicate or to seek information, the possibility of understanding their offline behaviour by means of their online digital traces becomes more appealing. Previous studies employing these digital traces allowed researchers to test hypotheses on happiness [<xref ref-type="bibr" rid="pone.0122278.ref001">1</xref>], social influence [<xref ref-type="bibr" rid="pone.0122278.ref002">2</xref>, <xref ref-type="bibr" rid="pone.0122278.ref003">3</xref>] and social organization [<xref ref-type="bibr" rid="pone.0122278.ref004">4</xref>], gain insights on decision making in stock markets [<xref ref-type="bibr" rid="pone.0122278.ref005">5</xref>–<xref ref-type="bibr" rid="pone.0122278.ref007">7</xref>] and elections [<xref ref-type="bibr" rid="pone.0122278.ref008">8</xref>], and quantify social phenomena [<xref ref-type="bibr" rid="pone.0122278.ref009">9</xref>]. Online social media and search engine query data not only allow researchers to detect events happening in the present [<xref ref-type="bibr" rid="pone.0122278.ref010">10</xref>–<xref ref-type="bibr" rid="pone.0122278.ref013">13</xref>], but also enable them to make predictions about the future [<xref ref-type="bibr" rid="pone.0122278.ref014">14</xref>, <xref ref-type="bibr" rid="pone.0122278.ref015">15</xref>]. The ubiquity of social media has been useful in investigating disasters [<xref ref-type="bibr" rid="pone.0122278.ref016">16</xref>, <xref ref-type="bibr" rid="pone.0122278.ref017">17</xref>], which may help in saving human lives (see [<xref ref-type="bibr" rid="pone.0122278.ref018">18</xref>] for a review). Indeed, datasets generated from online activities of people are important resources in the field of computational social science [<xref ref-type="bibr" rid="pone.0122278.ref019">19</xref>, <xref ref-type="bibr" rid="pone.0122278.ref020">20</xref>]. Even the digitisation of large amounts of offline information is also useful as it has enabled researchers to study language [<xref ref-type="bibr" rid="pone.0122278.ref021">21</xref>] and scientific progress [<xref ref-type="bibr" rid="pone.0122278.ref022">22</xref>, <xref ref-type="bibr" rid="pone.0122278.ref023">23</xref>],</p>
+<p><italic>Twitter</italic> is a social media platform that allows its users to post messages (<italic>tweets</italic>) of up to 140 characters, which are public by default. It is one of the most popular online social media with 255 million average monthly users as of 31 March 2014 [<xref ref-type="bibr" rid="pone.0122278.ref024">24</xref>]. According to the Ipsos MediaCT Tech Tracker report [<xref ref-type="bibr" rid="pone.0122278.ref025">25</xref>], 18% of adults in the UK visited Twitter in the third quarter of 2014. Owing to its popularity and availability of data, <italic>Twitter</italic> is being used as a tool to study social systems [<xref ref-type="bibr" rid="pone.0122278.ref001">1</xref>, <xref ref-type="bibr" rid="pone.0122278.ref004">4</xref>, <xref ref-type="bibr" rid="pone.0122278.ref026">26</xref>–<xref ref-type="bibr" rid="pone.0122278.ref031">31</xref>] and language [<xref ref-type="bibr" rid="pone.0122278.ref032">32</xref>–<xref ref-type="bibr" rid="pone.0122278.ref035">35</xref>].</p>
+<p>The 140-character length limit of tweets does not seem to affect the length of most conversation messages on <italic>Twitter</italic>. In <italic>Twitter</italic>, the median conversational message length is 38 characters while in books it is 48 characters, and 25 characters in movies [<xref ref-type="bibr" rid="pone.0122278.ref036">36</xref>]. If the same length limit of 140 characters was imposed on books and movies, then only 8.96% of the messages in the former and 0.012% of messages in the latter would reach the limit.</p>
+<p>Public conversations on <italic>Twitter</italic> are typically performed using replies, which are tweets that start with the usernames of the recipients. An analysis of the content of tweets posted in the US [<xref ref-type="bibr" rid="pone.0122278.ref037">37</xref>] showed regional variations in slang while an analysis of replies posted in the US [<xref ref-type="bibr" rid="pone.0122278.ref038">38</xref>] found correlation of message lengths to a particular demographic variable instead of location.</p>
+<p>Several studies in England [<xref ref-type="bibr" rid="pone.0122278.ref039">39</xref>–<xref ref-type="bibr" rid="pone.0122278.ref041">41</xref>] have shown economic and health differences between the north and south. There are critics, however, opposing the idea of the existence of a North-South divide because boundaries of different language features do not coincide [<xref ref-type="bibr" rid="pone.0122278.ref042">42</xref>] or the boundary changes depending on the political motives of the one assigning it [<xref ref-type="bibr" rid="pone.0122278.ref043">43</xref>].</p>
+<p>In England there is also a common stereotype that people in the North talk more than those in the South. The perception is that people living north of some, possibly indeterminate, line that separates north from south, are friendlier than their southern counterparts and hence end up talking more. Motivated by the availability of data and the possibility of observing a North-South divide which provides evidence of the stereotype around chattiness, we looked at how the lengths of the messages in conversational tweets (replies) differ across various geographical groupings. We were able to consider 3,443,773 messages posted throughout the various regions of the UK. However, we found no significant evidence of a North-South divide in the message lengths.</p>
+</sec>
+<sec id="sec002" sec-type="results">
+<title>Results</title>
+<sec id="sec003">
+<title>Message length in terms of absolute length</title>
+<p>Although the median message length of conversational tweets (replies) from administrative districts in the UK ranged from 30 to 57.5 characters, 90% of the districts have median message lengths between 39 to 50 characters, and 50% are between 43 to 47 characters. Visualisation of the median message length across administrative districts in the UK does not show any obvious grouping of districts (<xref ref-type="fig" rid="pone.0122278.g001">Fig. 1a</xref>) even in Greater London (<xref ref-type="fig" rid="pone.0122278.g001">Fig. 1b</xref>). As previously observed [<xref ref-type="bibr" rid="pone.0122278.ref036">36</xref>, <xref ref-type="bibr" rid="pone.0122278.ref038">38</xref>], the message length distributions are skewed (<xref ref-type="supplementary-material" rid="pone.0122278.s001">S1 Fig</xref>.). At least 75% of the messages in each district have a message length of at most 90 characters, which is 64% of the length limit, or 73% of the available limit after subtracting the 15-character limit of a <italic>Twitter</italic> username and one @ sign.</p>
+<fig id="pone.0122278.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0122278.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Message lengths, in characters, of different districts in UK.</title>
+<p>Although the median message lengths ranged from 30 to 57.5 characters, 90% are within 11 characters and 50% are within 4 characters. This homogeneity in the median message length is observed when plotted on a map of the (a) entire United Kingdom and of the (b) boroughs of Greater London. There is also no apparent grouping of districts, by latitude or otherwise.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0122278.g001"/>
+</fig>
+<p>Grouping the tweets into Southern England, the Midlands and Northern UK (that is, Northern England, Scotland and Northern Ireland) reveals a 1-character difference in the median message length (<xref ref-type="fig" rid="pone.0122278.g002">Fig. 2a</xref>) of the Midlands (44 characters) compared to the rest of UK, which is very small but statistically significant (Kruskal-Wallis, <italic>H</italic> = 471.2, <italic>p</italic> &lt; 0.001, <italic>n</italic> = 3, <italic>N</italic> = 3,443,773). Note that for all statistics reported throughout this manuscript, <italic>p</italic> refers to the <italic>p</italic>-value associated with the reported statistic. We also investigate the properties of a Northern Great Britain group, created by excluding Northern Ireland from the Northern UK group. However, this results in the same median message length (<xref ref-type="fig" rid="pone.0122278.g002">Fig. 2b</xref>) as for Northern UK. Further excluding Scotland and Wales from the Northern Great Britain group yields a median message length (<xref ref-type="fig" rid="pone.0122278.g002">Fig. 2c</xref>) of 46 characters, which is greater than both the Midlands and Southern England, and almost consistent with the stereotype.</p>
+<fig id="pone.0122278.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0122278.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Median message lengths, in characters, for different groupings of districts.</title>
+<p>Combining Northern England with other parts of UK to form (a) Northern UK and (b) Northern Great Britain results in median message lengths equal to that of Southern England. (c) Northern England, by itself, would have the longest median message length but (d) grouping it with the Midlands results in the same median message length as for Southern England. The median message length of the (e) union of the Midlands and Southern England is smaller by one character than that of Northern England, consistent with the stereotype. Computing the median message lengths of the (f) other home countries yields three groups: Southern England, Wales and Northern Ireland, the Midlands and Scotland, and Northern England.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0122278.g002"/>
+</fig>
+<p>Combining the Midlands with Northern England as in Ref. [<xref ref-type="bibr" rid="pone.0122278.ref041">41</xref>], results in both Northern and Southern England groups (<xref ref-type="fig" rid="pone.0122278.g002">Fig. 2d</xref>) having the same median message length of 45 characters. On the other hand, combining the Midlands with Southern England (<xref ref-type="fig" rid="pone.0122278.g002">Fig. 2e</xref>) results in the median message length for Northern England being larger by one character, consistent with the stereotype. However, we note that this difference is extremely small.</p>
+<p>These results suggest that the grouping is perhaps not between North and South but something else. With that in mind, we repeat the analysis but this time treat Wales, Scotland and Northern Ireland as separate from Northern England, the Midlands and Southern England. The median message lengths of this new grouping are shown in <xref ref-type="fig" rid="pone.0122278.g002">Fig. 2f</xref>, which implies three groups: Southern England, Wales and Northern Ireland, the Midlands and Scotland, and Northern Ireland.</p>
+<p>Grouping the tweets by latitude (<xref ref-type="fig" rid="pone.0122278.g003">Fig. 3</xref>) further emphasises that those posted from the Midlands are shorter than those from the rest of UK. The characteristic shorter tweets from Scotland, which made it similar to the Midlands, turn out to be valid only for Southern Scotland.</p>
+<fig id="pone.0122278.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0122278.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Median message length, in characters, by latitude.</title>
+<p>Partitioning the tweets into 20 latitude bins of about 10<sup>5</sup> tweets and 10<sup>4</sup> users each does not show any North-South division, however, the similarity of the Midlands and Southern Scotland becomes more prominent. Changing the number of bins does not result in drastic qualitative changes.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0122278.g003"/>
+</fig>
+<p>The distribution of the number of tweets per user in the dataset (<xref ref-type="supplementary-material" rid="pone.0122278.s002">S2 Fig</xref>.) is very skewed with 39% of users having only one tweet in the dataset whilst one particular user has 4,178 tweets. To check the robustness of the results, we impose minimum and maximum thresholds per user and then analyse only tweets from users who passed the thresholds. The results of applying a range of thresholds are tabulated in <xref ref-type="table" rid="pone.0122278.t001">Table 1</xref>. It is worth noting that the threshold of at least 20 tweets per user was imposed in the study on geographical lexical variation by Eisenstein et al. [<xref ref-type="bibr" rid="pone.0122278.ref037">37</xref>].</p>
+<table-wrap id="pone.0122278.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0122278.t001</object-id>
+<label>Table 1</label>
+<caption>
+<title>Median message length, in characters, for different geographical regions after imposing user tweet count thresholds.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0122278.t001g" mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0122278.t001"/>
+<table frame="box" rules="all" border="0">
+<colgroup span="1">
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Region</th>
+<th colspan="7" align="center" rowspan="1">Allowed number of tweets per user</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">&gt; 0</td>
+<td align="left" rowspan="1" colspan="1">5–10</td>
+<td align="left" rowspan="1" colspan="1">≥ 5</td>
+<td align="left" rowspan="1" colspan="1">5–20</td>
+<td align="left" rowspan="1" colspan="1">≥ 10</td>
+<td align="left" rowspan="1" colspan="1">10–20</td>
+<td align="left" rowspan="1" colspan="1">≥ 20</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Southern England</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">47</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">The Midlands</td>
+<td align="left" rowspan="1" colspan="1">44</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">44</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">44</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">43</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Northern UK</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Northern GB</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Northern England</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">47</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">47</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">47</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Wales</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">44</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">44</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Scotland</td>
+<td align="left" rowspan="1" colspan="1">44</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">44</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">44</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">44</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Northern Ireland</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">47</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">47</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">47</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Total tweets</td>
+<td align="left" rowspan="1" colspan="1">3,443,773</td>
+<td align="left" rowspan="1" colspan="1">374,202</td>
+<td align="left" rowspan="1" colspan="1">2,988,695</td>
+<td align="left" rowspan="1" colspan="1">742,393</td>
+<td align="left" rowspan="1" colspan="1">2,664,913</td>
+<td align="left" rowspan="1" colspan="1">418,611</td>
+<td align="left" rowspan="1" colspan="1">2,274,762</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>The median message lengths do not remain constant when we impose these thresholds, but varies by as much as 2 characters for most of the imposed thresholds. Nevertheless, the main observations that Southern and Northern England, and the Midlands and Scotland, have the same or almost the same median message lengths remains.</p>
+<p>The use of characters as unit of message length is especially suitable for tweets because there is a 140-character limit. It is also more sensitive to differences in orthography, making it easier to detect differences in language. Indeed, using the number of words as unit would result to almost all groups having a median message length of 9 words (<xref ref-type="table" rid="pone.0122278.t002">Table 2</xref>). Only the Midlands has some variation, having a median message length of 8 words for three tweet count thresholds (≥ 5, ≥ 10 and ≥ 20 tweets per user). In all pairs of user count thresholds, the median message lengths of Southern England and Northern England are the same.</p>
+<table-wrap id="pone.0122278.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0122278.t002</object-id>
+<label>Table 2</label>
+<caption>
+<title>Median message length, in words, for different geographical regions after imposing user tweet count thresholds.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0122278.t002g" mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0122278.t002"/>
+<table frame="box" rules="all" border="0">
+<colgroup span="1">
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+<col align="left" valign="top" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Region</th>
+<th colspan="7" align="center" rowspan="1">Allowed number of tweets per user</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">&gt; 0</td>
+<td align="left" rowspan="1" colspan="1">5–10</td>
+<td align="left" rowspan="1" colspan="1">≥ 5</td>
+<td align="left" rowspan="1" colspan="1">5–20</td>
+<td align="left" rowspan="1" colspan="1">≥ 10</td>
+<td align="left" rowspan="1" colspan="1">10–20</td>
+<td align="left" rowspan="1" colspan="1">≥ 20</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Southern England</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">The Midlands</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Northern UK</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Northern GB</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Northern England</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Wales</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Scotland</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Northern Ireland</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+<sec id="sec004">
+<title>Message length in terms of available space</title>
+<p>Although a tweet can be up to 140 characters long, here we only consider replies. The maximum length of a message is therefore smaller than 140 characters because the recipient usernames which begin a reply take up some of the available space. A user may then be forced to shorten their message because of the reduced space.</p>
+<p>When measuring the message lengths in terms of the available space, we do not find any obvious North-South division in the districts of the entire UK (<xref ref-type="fig" rid="pone.0122278.g004">Fig. 4a</xref>) or even in the boroughs of Greater London (<xref ref-type="fig" rid="pone.0122278.g004">Fig. 4b</xref>). The median message lengths of each district measured by characters and by available space are almost perfectly correlated (Spearman <italic>ρ</italic> = 0.99, <italic>n</italic> = 404, <italic>p</italic> &lt; 0.001). Both Northern UK (<xref ref-type="fig" rid="pone.0122278.g005">Fig. 5a</xref>) and Northern Great Britain (<xref ref-type="fig" rid="pone.0122278.g005">Fig. 5b</xref>) have smaller median message lengths than that of Southern England but longer than that of the Midlands. Unlike in <xref ref-type="fig" rid="pone.0122278.g002">Fig. 2c</xref> where the median message length of Northern England is longer than that of Southern England, in <xref ref-type="fig" rid="pone.0122278.g005">Fig. 5c</xref> the median message length of Northern England is the same as that of Southern England. Unlike before, the median message length (<xref ref-type="fig" rid="pone.0122278.g005">Fig. 5d</xref>) of Scotland is within the same range (36–37% available space) of Wales instead of the Midlands. Binning the tweets into latitudes (<xref ref-type="fig" rid="pone.0122278.g006">Fig. 6</xref>) does not reveal any qualitative difference from <xref ref-type="fig" rid="pone.0122278.g003">Fig. 3</xref>. The median message length per latitude bin measured by characters and by available space are almost perfectly correlated (Spearman <italic>ρ</italic> = 0.97, <italic>n</italic> = 20, <italic>p</italic> &lt; 0.001).</p>
+<fig id="pone.0122278.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0122278.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Message lengths, in terms of available space, of different districts in UK.</title>
+<p>The median message length, in terms of available space, of each administrative district in the (a) entire United Kingdom hardly varies even across the (b) boroughs of Greater London. The median message lengths of each district measured by characters and by available space are almost perfectly correlated (Spearman <italic>ρ</italic> = 0.99, <italic>n</italic> = 404, <italic>p</italic> &lt; 0.001).</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0122278.g004"/>
+</fig>
+<fig id="pone.0122278.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0122278.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Median message lengths, in terms of available space, for different groupings of districts.</title>
+<p>Combining Northern England with other parts of UK to form (a) Northern UK and (b) Northern Great Britain results in median message lengths equal to that of Southern England. (c) Northern England, by itself, also has the same median message length as for Southern England. Computing the median message lengths of the (d) other home countries and doing pairwise Kolmogorov-Smirnov tests with Bonferroni correction (<italic>α</italic> = 0.05, <italic>n</italic> = 15) yields three clusters: the Midlands and Scotland, Wales, and rest of UK.</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0122278.g005"/>
+</fig>
+<fig id="pone.0122278.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0122278.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>Median message length, in characters, by latitude.</title>
+<p>Partitioning the tweets into 20 latitude bins of about 10<sup>5</sup> tweets as in <xref ref-type="fig" rid="pone.0122278.g003">Fig. 3</xref> similarly did not show any North-South division. The median message length per latitude bin measured by characters and by available space are also almost perfectly correlated (Spearman <italic>ρ</italic> = 0.97, <italic>n</italic> = 20, <italic>p</italic> &lt; 0.001).</p>
+</caption>
+<graphic mimetype="image" xlink:type="simple" position="float" xlink:href="info:doi/10.1371/journal.pone.0122278.g006"/>
+</fig>
+<p>The median message lengths in terms of available space are always below 50%. That is, there is ample space for messages despite being shortened by leading usernames in the tweet. The percentages of messages that used up at least 90% of the available space is only 10%. Considering that the median message lengths of conversations in unconstrained media are 48 characters for books and 25 characters for movies, and that 8.96% and 0.012% of the conversational messages in those media, respectively, exceed 140 characters, the low utilisation of available space is not surprising. The length limit of tweets is simply enough for most tweets.</p>
+</sec>
+</sec>
+<sec id="sec005" sec-type="conclusions">
+<title>Discussion</title>
+<p>We did not find evidence of a difference in the length of tweets between the North and South of the UK within our sample of Twitter messages. At best, the divide is not between North and South, but the Midlands and Scotland, and the rest of UK. The difference we found in these cases, however, is only 1 or 2 characters.</p>
+</sec>
+<sec id="sec006" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<p>Using the <italic>Twitter</italic> application programming interface [<xref ref-type="bibr" rid="pone.0122278.ref044">44</xref>], we retrieved, depending on the date, 1% to 15% of public tweets from 19 November 2009, the first day that tweet coordinates were provided, to 20 December 2012. Due to data collection issues, there were missing days in the collection period but only days that were complete were considered in the data analysis, resulting in 839 days analysed. The dataset was then filtered for conversational tweets (replies) posted from the United Kingdom. The list of tweet IDs analysed in this paper was deposited on figshare (<ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://dx.doi.org/10.6084/m9.figshare.1249692">http://dx.doi.org/10.6084/m9.figshare.1249692</ext-link>)</p>
+<p>The message of each filtered tweet was extracted by removing all leading @usernames, and leading and trailing whitespaces of the remaining text. Leading whitespaces were not removed when the message length was measured in terms of the available space because some tweets do not use whitespaces to separate the @usernames with the message. Messages with a length, in characters, of zero or greater than 140 (maximum allowed length of tweets) were then discarded resulting in a total of 3,443,773 tweets posted by 372,783 users, suitable for analysis by region. The length of messages in words was determined by calculating the number of chunks after splitting the message by whitespaces.</p>
+<p>The posting location of a tweet was determined by using its <monospace>geo</monospace>, <monospace>coordinates</monospace> and <monospace>place</monospace> metadata (geotags), where these fields were considered in this order. Tweets were then assigned to individual districts based on boundary data provided by the UK Ordnance Survey.</p>
+<p>Tweets that only have place information were considered to be from UK if the <monospace>country</monospace> attribute of <monospace>place</monospace> was <monospace>United Kingdom</monospace>. The centroid of the <monospace>bounding_box</monospace> attribute, if it existed, were then used to determine the districts. Otherwise, the tweet was assigned to the <monospace>name</monospace> of the <monospace>place</monospace> if the <monospace>place_type</monospace> was <monospace>city</monospace> or <monospace>admin</monospace>. A tweet with no coordinates and only <monospace>England</monospace> as its <monospace>place</monospace> was excluded because the location information was too coarse to determine if it came from Northern England, Southern England or the Midlands. Note that <italic>Twitter</italic> users must opt-in to have their location information included in their tweet metadata.</p>
+</sec>
+<sec id="sec007">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0122278.s001" position="float" xlink:href="info:doi/10.1371/journal.pone.0122278.s001" mimetype="image/tiff" xlink:type="simple">
+<label>S1 Fig</label>
+<caption>
+<title>Message length distribution for each district in the United Kingdom, arranged by increasing median message length.</title>
+<p>The dark blue center line indicates the median while the lighter blue region is bounded by the 25th to 75th percentiles. The lightest blue region is bounded by the extrema. At least 75% of the messages in each district have a message length of at most 90 characters, which is 64% of the length limit, or 73% of the available limit after subtracting the 15-character limit of a <italic>Twitter</italic> username and one @ sign.</p>
+<p>(TIF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0122278.s002" position="float" xlink:href="info:doi/10.1371/journal.pone.0122278.s002" mimetype="image/tiff" xlink:type="simple">
+<label>S2 Fig</label>
+<caption>
+<title>Number of tweets per user in the dataset.</title>
+<p>As expected, both (a) histogram and (b) complementary cumulative distribution exhibit a skewness in the distribution of number of tweets per user.</p>
+<p>(TIF)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ref-list>
+<title>References</title>
+<ref id="pone.0122278.ref001">
+<label>1</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Golder</surname> <given-names>SA</given-names></name>, <name name-style="western"><surname>Macy</surname> <given-names>MW</given-names></name>. <article-title>Diurnal and Seasonal Mood Vary with Work, Sleep, and Daylength Across Diverse Cultures</article-title>. <source>Science</source>. <year>2011</year>;<volume>333</volume>(<issue>6051</issue>):<fpage>1878</fpage>–<lpage>1881</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.sciencemag.org/content/333/6051/1878.abstract">http://www.sciencemag.org/content/333/6051/1878.abstract</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref002">
+<label>2</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Bond</surname> <given-names>RM</given-names></name>, <name name-style="western"><surname>Fariss</surname> <given-names>CJ</given-names></name>, <name name-style="western"><surname>Jones</surname> <given-names>JJ</given-names></name>, <name name-style="western"><surname>Kramer</surname> <given-names>ADI</given-names></name>, <name name-style="western"><surname>Marlow</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Settle</surname> <given-names>JE</given-names></name>, <etal>et al</etal>. <article-title>A 61-million-person experiment in social influence and political mobilization</article-title>. <source>Nature</source>. <year>2012</year> <month>Sep</month>;<volume>489</volume>(<issue>7415</issue>):<fpage>295</fpage>–<lpage>298</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/nature/journal/v489/n7415/full/nature11421.html">http://www.nature.com/nature/journal/v489/n7415/full/nature11421.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref003">
+<label>3</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Kramer</surname> <given-names>ADI</given-names></name>, <name name-style="western"><surname>Guillory</surname> <given-names>JE</given-names></name>, <name name-style="western"><surname>Hancock</surname> <given-names>JT</given-names></name>. <article-title>Experimental evidence of massive-scale emotional contagion through social networks</article-title>. <source>Proceedings of the National Academy of Sciences</source>. <year>2014</year> <month>Jun</month>;<volume>111</volume>(<issue>24</issue>):<fpage>8788</fpage>–<lpage>8790</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.pnas.org/content/111/24/8788.abstract">http://www.pnas.org/content/111/24/8788.abstract</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref004">
+<label>4</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Gonçalves</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Perra</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Vespignani</surname> <given-names>A</given-names></name>. <article-title>Modeling Users’ Activity on Twitter Networks: Validation of Dunbar’s Number</article-title>. <source>PLoS ONE</source>. <year>2011</year>;<volume>6</volume>(<issue>8</issue>):<fpage>e22656</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://dx.doi.org/10.1371/journal.pone.0022656">http://dx.doi.org/10.1371/journal.pone.0022656</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref005">
+<label>5</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Bordino</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Battiston</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Caldarelli</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Cristelli</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ukkonen</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Weber</surname> <given-names>I</given-names></name>. <article-title>Web Search Queries Can Predict Stock Market Volumes</article-title>. <source>PLoS ONE</source>. <year>2012</year> <month>Jul</month>;<volume>7</volume>(<issue>7</issue>):<fpage>e40014</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://dx.doi.org/10.1371/journal.pone.0040014">http://dx.doi.org/10.1371/journal.pone.0040014</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref006">
+<label>6</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Preis</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Moat</surname> <given-names>HS</given-names></name>, <name name-style="western"><surname>Stanley</surname> <given-names>HE</given-names></name>. <article-title>Quantifying Trading Behavior in Financial Markets Using Google Trends</article-title>. <source>Scientific Reports</source>. <year>2013</year> <month>Apr</month>;<volume>3</volume>:<fpage>1684</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/srep/2013/130425/srep01684/full/srep01684.html">http://www.nature.com/srep/2013/130425/srep01684/full/srep01684.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref007">
+<label>7</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Moat</surname> <given-names>HS</given-names></name>, <name name-style="western"><surname>Curme</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Avakian</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Kenett</surname> <given-names>DY</given-names></name>, <name name-style="western"><surname>Stanley</surname> <given-names>HE</given-names></name>, <name name-style="western"><surname>Preis</surname> <given-names>T</given-names></name>. <article-title>Quantifying Wikipedia Usage Patterns Before Stock Market Moves</article-title>. <source>Scientific Reports</source>. <year>2013</year> <month>May</month>;<volume>3</volume>:<fpage>1801</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/srep/2013/130508/srep01801/full/srep01801.html">http://www.nature.com/srep/2013/130508/srep01801/full/srep01801.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref008">
+<label>8</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Caldarelli</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Chessa</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Pammolli</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Pompa</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Puliga</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Riccaboni</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>A Multi-Level Geographical Study of Italian Political Elections from Twitter Data</article-title>. <source>PLoS ONE</source>. <year>2014</year> <month>May</month>;<volume>9</volume>(<issue>5</issue>):<fpage>e95809</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://dx.doi.org/10.1371/journal.pone.0095809">http://dx.doi.org/10.1371/journal.pone.0095809</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref009">
+<label>9</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Preis</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Moat</surname> <given-names>HS</given-names></name>, <name name-style="western"><surname>Stanley</surname> <given-names>HE</given-names></name>, <name name-style="western"><surname>Bishop</surname> <given-names>SR</given-names></name>. <article-title>Quantifying the Advantage of Looking Forward</article-title>. <source>Scientific Reports</source>. <year>2012</year> <month>Apr</month>;<volume>2</volume>:<fpage>350</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/srep/2012/120405/srep00350/full/srep00350.html">http://www.nature.com/srep/2012/120405/srep00350/full/srep00350.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref010">
+<label>10</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Ginsberg</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Mohebbi</surname> <given-names>MH</given-names></name>, <name name-style="western"><surname>Patel</surname> <given-names>RS</given-names></name>, <name name-style="western"><surname>Brammer</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Smolinski</surname> <given-names>MS</given-names></name>, <name name-style="western"><surname>Brilliant</surname> <given-names>L</given-names></name>. <article-title>Detecting influenza epidemics using search engine query data</article-title>. <source>Nature</source>. <year>2009</year> <month>Feb</month>;<volume>457</volume>(<issue>7232</issue>):<fpage>1012</fpage>–<lpage>1014</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/nature/journal/v457/n7232/abs/nature07634.html">http://www.nature.com/nature/journal/v457/n7232/abs/nature07634.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref011">
+<label>11</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Earle</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Guy</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Buckmaster</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Ostrum</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Horvath</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Vaughan</surname> <given-names>A</given-names></name>. <article-title>OMG Earthquake! Can Twitter Improve Earthquake Response?</article-title> <source>Seismological Research Letters</source>. <year>2010</year> <month>Mar</month>;<volume>81</volume>(<issue>2</issue>):<fpage>246</fpage>–<lpage>251</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://srl.geoscienceworld.org/content/81/2/246">http://srl.geoscienceworld.org/content/81/2/246</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref012">
+<label>12</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Preis</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Moat</surname> <given-names>HS</given-names></name>, <name name-style="western"><surname>Bishop</surname> <given-names>SR</given-names></name>, <name name-style="western"><surname>Treleaven</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Stanley</surname> <given-names>HE</given-names></name>. <article-title>Quantifying the Digital Traces of Hurricane Sandy on Flickr</article-title>. <source>Scientific Reports</source>. <year>2013</year> <month>Nov</month>;<volume>3</volume>:<fpage>3141</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/srep/2013/131105/srep03141/full/srep03141.html">http://www.nature.com/srep/2013/131105/srep03141/full/srep03141.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref013">
+<label>13</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Preis</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Moat</surname> <given-names>HS</given-names></name>. <article-title>Adaptive nowcasting of influenza outbreaks using Google searches</article-title>. <source>Royal Society Open Science</source>. <year>2014</year> <month>Oct</month>;<volume>1</volume>(<issue>2</issue>):<fpage>140095</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://rsos.royalsocietypublishing.org/content/1/2/140095">http://rsos.royalsocietypublishing.org/content/1/2/140095</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref014">
+<label>14</label>
+<mixed-citation xlink:type="simple" publication-type="other">Asur S, Huberman BA. Predicting the Future with Social Media. In: 2010 IEEE/WIC/ACM International Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT). vol. 1; 2010. p. 492–499.</mixed-citation>
+</ref>
+<ref id="pone.0122278.ref015">
+<label>15</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Bollen</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Mao</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Zeng</surname> <given-names>X</given-names></name>. <article-title>Twitter mood predicts the stock market</article-title>. <source>Journal of Computational Science</source>. <year>2011</year> <month>Mar</month>;<volume>2</volume>(<issue>1</issue>):<fpage>1</fpage>–<lpage>8</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.sciencedirect.com/science/article/pii/S187775031100007X">http://www.sciencedirect.com/science/article/pii/S187775031100007X</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref016">
+<label>16</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Wang</surname> <given-names>Q</given-names></name>, <name name-style="western"><surname>Taylor,</surname> <given-names>JE</given-names></name>. <article-title>Quantifying Human Mobility Perturbation and Resilience in Hurricane Sandy</article-title>. <source>PLoS ONE</source>. <year>2014</year> <month>Nov</month>;<volume>9</volume>(<issue>11</issue>):<fpage>e112608</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://dx.doi.org/10.1371/journal.pone.0112608">http://dx.doi.org/10.1371/journal.pone.0112608</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref017">
+<label>17</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Lu</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Brelsford</surname> <given-names>C</given-names></name>. <article-title>Network Structure and Community Evolution on Twitter: Human Behavior Change in Response to the 2011 Japanese Earthquake and Tsunami</article-title>. <source>Scientific Reports</source>. <year>2014</year> <month>Oct</month>;<volume>4</volume>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/srep/2014/141027/srep06773/full/srep06773.html">http://www.nature.com/srep/2014/141027/srep06773/full/srep06773.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref018">
+<label>18</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Helbing</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Brockmann</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Chadefaux</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Donnay</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Blanke</surname> <given-names>U</given-names></name>, <name name-style="western"><surname>Woolley-Meza</surname> <given-names>O</given-names></name>, <etal>et al</etal>. <article-title>Saving Human Lives: What Complexity Science and Information Systems can Contribute</article-title>. <source>Journal of Statistical Physics</source>. <year>2014</year> <month>Jun</month>;p. <fpage>1</fpage>–<lpage>47</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://link.springer.com/article/10.1007/s10955-014-1024-9">http://link.springer.com/article/10.1007/s10955-014-1024-9</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref019">
+<label>19</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Lazer</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Pentland</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Adamic</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Aral</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Barabási</surname> <given-names>AL</given-names></name>, <name name-style="western"><surname>Brewer</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Computational Social Science</article-title>. <source>Science</source>. <year>2009</year> <month>Feb</month>;<volume>323</volume>(<issue>5915</issue>):<fpage>721</fpage>–<lpage>723</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.sciencemag.org/content/323/5915/721.short">http://www.sciencemag.org/content/323/5915/721.short</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref020">
+<label>20</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Moat</surname> <given-names>HS</given-names></name>, <name name-style="western"><surname>Preis</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Olivola</surname> <given-names>CY</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Chater</surname> <given-names>N</given-names></name>. <article-title>Using big data to predict collective behavior in the real world</article-title>. <source>Behavioral and Brain Sciences</source>. <year>2014</year> <month>Feb</month>;<volume>37</volume>(<issue>01</issue>):<fpage>92</fpage>–<lpage>93</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://journals.cambridge.org/article_S0140525X13001817">http://journals.cambridge.org/article_S0140525X13001817</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref021">
+<label>21</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Michel</surname> <given-names>JB</given-names></name>, <name name-style="western"><surname>Shen</surname> <given-names>YK</given-names></name>, <name name-style="western"><surname>Aiden</surname> <given-names>AP</given-names></name>, <name name-style="western"><surname>Veres</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Gray</surname> <given-names>MK</given-names></name>, <name name-style="western"><surname>Team</surname> <given-names>TGB</given-names></name>, <etal>et al</etal>. <article-title>Quantitative Analysis of Culture Using Millions of Digitized Books</article-title>. <source>Science</source>. <year>2011</year> <month>Jan</month>;<volume>331</volume>(<issue>6014</issue>):<fpage>176</fpage>–<lpage>182</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.sciencemag.org/content/early/2010/12/15/science.1199644.abstract">http://www.sciencemag.org/content/early/2010/12/15/science.1199644.abstract</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref022">
+<label>22</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Perc</surname> <given-names>M</given-names></name>. <article-title>Self-organization of progress across the century of physics</article-title>. <source>Scientific Reports</source>. <year>2013</year> <month>Apr</month>;<volume>3</volume>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/srep/2013/130424/srep01720/full/srep01720.html">http://www.nature.com/srep/2013/130424/srep01720/full/srep01720.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref023">
+<label>23</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Kuhn</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Perc</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Helbing</surname> <given-names>D</given-names></name>. <article-title>Inheritance Patterns in Citation Networks Reveal Scientific Memes</article-title>. <source>Physical Review X</source>. <year>2014</year> <month>Nov</month>;<volume>4</volume>(<issue>4</issue>):<fpage>041036</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://link.aps.org/doi/10.1103/PhysRevX.4.041036">http://link.aps.org/doi/10.1103/PhysRevX.4.041036</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref024">
+<label>24</label>
+<mixed-citation xlink:type="simple" publication-type="book"><collab xlink:type="simple">Twitter</collab>. <source>Quarterly report pursuant to section 13 or 15(d) of the Securities Exchange Act of 1934 for quarterly period ended March 31, 2014</source>. <publisher-loc>Washington, DC, USA</publisher-loc>; <year>2014</year>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.sec.gov/Archives/edgar/data/1418091/000156459014001959/\twtr-10q_20140331.htm">http://www.sec.gov/Archives/edgar/data/1418091/000156459014001959/\twtr-10q_20140331.htm</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref025">
+<label>25</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<collab xlink:type="simple">Ipsos MediaCT</collab>. <source>Ipsos MediaCT Tech Tracker Q3 2014</source>. <publisher-loc>London</publisher-loc>: <publisher-name>Ipsos MORI</publisher-name>; <year>2014</year>.</mixed-citation>
+</ref>
+<ref id="pone.0122278.ref026">
+<label>26</label>
+<mixed-citation xlink:type="simple" publication-type="other"><name name-style="western"><surname>Miller</surname> <given-names>G</given-names></name>. <article-title>Social Scientists Wade Into the Tweet Stream</article-title>. <source>Science</source>. <year>2011</year>;<volume>333</volume>(<issue>6051</issue>):<fpage>1814</fpage>–<lpage>1815</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.sciencemag.org/content/333/6051/1814.short">http://www.sciencemag.org/content/333/6051/1814.short</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref027">
+<label>27</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Weng</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Flammini</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Vespignani</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Menczer</surname> <given-names>F</given-names></name>. <article-title>Competition among memes in a world with limited attention</article-title>. <source>Scientific Reports</source>. <year>2012</year> <month>Mar</month>;<volume>2</volume>:<fpage>335</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/srep/2012/120329/srep00335/full/srep00335.html">http://www.nature.com/srep/2012/120329/srep00335/full/srep00335.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref028">
+<label>28</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>De Domenico</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Lima</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Mougel</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Musolesi</surname> <given-names>M</given-names></name>. <article-title>The Anatomy of a Scientific Rumor</article-title>. <source>Scientific Reports</source>. <year>2013</year> <month>Oct</month>;<volume>3</volume>:<fpage>2980</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/srep/2013/131018/srep02980/full/srep02980.html">http://www.nature.com/srep/2013/131018/srep02980/full/srep02980.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref029">
+<label>29</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Sasahara</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Hirata</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Toyoda</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Kitsuregawa</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Aihara</surname> <given-names>K</given-names></name>. <article-title>Quantifying Collective Attention from Tweet Stream</article-title>. <source>PLoS ONE</source>. <year>2013</year> <month>Apr</month>;<volume>8</volume>(<issue>4</issue>):<fpage>e61823</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://dx.doi.org/10.1371/journal.pone.0061823">http://dx.doi.org/10.1371/journal.pone.0061823</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref030">
+<label>30</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Hodas</surname> <given-names>NO</given-names></name>, <name name-style="western"><surname>Lerman</surname> <given-names>K</given-names></name>. <article-title>The Simple Rules of Social Contagion</article-title>. <source>Scientific Reports</source>. <year>2014</year> <month>Mar</month>;<volume>4</volume>:<fpage>4343</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/srep/2014/140311/srep04343/full/srep04343.html">http://www.nature.com/srep/2014/140311/srep04343/full/srep04343.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref031">
+<label>31</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Frank</surname> <given-names>MR</given-names></name>, <name name-style="western"><surname>Mitchell</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Dodds</surname> <given-names>PS</given-names></name>, <name name-style="western"><surname>Danforth</surname> <given-names>CM</given-names></name>. <article-title>Happiness and the Patterns of Life: A Study of Geolocated Tweets</article-title>. <source>Scientific Reports</source>. <year>2013</year> <month>Sep</month>;<volume>3</volume>:<fpage>2625</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/srep/2013/130911/srep02625/full/srep02625.html">http://www.nature.com/srep/2013/130911/srep02625/full/srep02625.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref032">
+<label>32</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Kloumann</surname> <given-names>IM</given-names></name>, <name name-style="western"><surname>Danforth</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Harris</surname> <given-names>KD</given-names></name>, <name name-style="western"><surname>Bliss</surname> <given-names>CA</given-names></name>, <name name-style="western"><surname>Dodds</surname> <given-names>PS</given-names></name>. <article-title>Positivity of the English Language</article-title>. <source>PLoS ONE</source>. <year>2012</year> <month>Jan</month>;<volume>7</volume>(<issue>1</issue>):<fpage>e29484</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://dx.doi.org/10.1371/journal.pone.0029484">http://dx.doi.org/10.1371/journal.pone.0029484</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref033">
+<label>33</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Mathiesen</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Yde</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Jensen,</surname> <given-names>MH</given-names></name>. <article-title>Modular networks of word correlations on Twitter</article-title>. <source>Scientific Reports</source>. <year>2012</year> <month>Nov</month>;<volume>2</volume>:<fpage>814</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.nature.com/srep/2012/121108/srep00814/full/srep00814.html">http://www.nature.com/srep/2012/121108/srep00814/full/srep00814.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref034">
+<label>34</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Mocanu</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Baronchelli</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Perra</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Gonçalves</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>Q</given-names></name>, <name name-style="western"><surname>Vespignani</surname> <given-names>A</given-names></name>. <article-title>The Twitter of Babel: Mapping World Languages through Microblogging Platforms</article-title>. <source>PLoS ONE</source>. <year>2013</year> <month>Apr</month>;<volume>8</volume>(<issue>4</issue>):<fpage>e61981</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://dx.doi.org/10.1371/journal.pone.0061981">http://dx.doi.org/10.1371/journal.pone.0061981</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref035">
+<label>35</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Bryden</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Funk</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Jansen</surname> <given-names>VA</given-names></name>. <article-title>Word usage mirrors community structure in the online social network Twitter</article-title>. <source>EPJ Data Science</source>. <year>2013</year> <month>Dec</month>;<volume>2</volume>(<issue>1</issue>):<fpage>3</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://epjds.epj.org/articles/epjdata/abs/2013/01/13688_2012_Article_15/13688_2012_Article_15.html">http://epjds.epj.org/articles/epjdata/abs/2013/01/13688_2012_Article_15/13688_2012_Article_15.html</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref036">
+<label>36</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Alis</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Lim</surname> <given-names>MT</given-names></name>. <article-title>Adaptation of fictional and online conversations to communication media</article-title>. <source>The European Physical Journal B</source>. <year>2012</year> <month>Dec</month>;<volume>85</volume>(<issue>12</issue>):<fpage>1</fpage>–<lpage>7</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://link.springer.com/article/10.1140/epjb/e2012-30711-0">http://link.springer.com/article/10.1140/epjb/e2012-30711-0</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref037">
+<label>37</label>
+<mixed-citation xlink:type="simple" publication-type="other">Eisenstein J, O’Connor B, Smith NA, Xing EP. A latent variable model for geographic lexical variation. In: Proceedings of the 2010 Conference on Empirical Methods in Natural Language Processing; 2010. p. 1277–1287. Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://dl.acm.org/citation.cfm?id = 1870782">http://dl.acm.org/citation.cfm?id = 1870782</ext-link>.</mixed-citation>
+</ref>
+<ref id="pone.0122278.ref038">
+<label>38</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Alis</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Lim</surname> <given-names>MT</given-names></name>. <article-title>Spatio-Temporal Variation of Conversational Utterances on Twitter</article-title>. <source>PLoS ONE</source>. <year>2013</year> <month>Oct</month>;<volume>8</volume>(<issue>10</issue>):<fpage>e77793</fpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://dx.doi.org/10.1371/journal.pone.0077793">http://dx.doi.org/10.1371/journal.pone.0077793</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref039">
+<label>39</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Blackaby</surname> <given-names>DH</given-names></name>, <name name-style="western"><surname>Murphy</surname> <given-names>PD</given-names></name>. <article-title>Earnings, Unemployment and Britain’s North-South Divide: Real or Imaginary?</article-title> <source>Oxford Bulletin of Economics and Statistics</source>. <year>1995</year> <month>Nov</month>;<volume>57</volume>(<issue>4</issue>):<fpage>487</fpage>–<lpage>512</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://onlinelibrary.wiley.com/doi/10.1111/j.1468-0084.1995.tb00036.x/abstract">http://onlinelibrary.wiley.com/doi/10.1111/j.1468-0084.1995.tb00036.x/abstract</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref040">
+<label>40</label>
+<mixed-citation xlink:type="simple" publication-type="book">
+<name name-style="western"><surname>Baker</surname> <given-names>ARH</given-names></name>, <name name-style="western"><surname>Billinge</surname> <given-names>M</given-names></name>. <source>Geographies of England: The North-South Divide, Material and Imagined</source>. <publisher-loc>Cambridge</publisher-loc>: <publisher-name>Cambridge University Press</publisher-name>; <year>2004</year>.</mixed-citation>
+</ref>
+<ref id="pone.0122278.ref041">
+<label>41</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>Hacking</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Muller</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Buchan,</surname> <given-names>IE</given-names></name>. <article-title>Trends in mortality from 1965 to 2008 across the English north-south divide: comparative observational study</article-title>. <source>BMJ</source>. <year>2011</year> <month>Feb</month>;<volume>342</volume>(<issue>feb15 2</issue>):<fpage>d508</fpage>–<lpage>d508</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://www.bmj.com/content/342/bmj.d508">http://www.bmj.com/content/342/bmj.d508</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref042">
+<label>42</label>
+<mixed-citation xlink:type="simple" publication-type="journal">
+<name name-style="western"><surname>Wales</surname> <given-names>K</given-names></name>. <article-title>North and South: An English linguistic divide?</article-title> <source>English Today</source>. <year>2000</year>;<volume>16</volume>(<issue>01</issue>):<fpage>4</fpage>–<lpage>15</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1017/S0266078400011378" xlink:type="simple">10.1017/S0266078400011378</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref043">
+<label>43</label>
+<mixed-citation xlink:type="simple" publication-type="journal"><name name-style="western"><surname>González</surname> <given-names>S</given-names></name>. <article-title>The North/South divide in Italy and England: Discursive construction of regional inequality</article-title>. <source>European Urban and Regional Studies</source>. <year>2011</year> <month>Jan</month>;<volume>18</volume>(<issue>1</issue>):<fpage>62</fpage>–<lpage>76</lpage>. <comment>Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://eur.sagepub.com/content/18/1/62">http://eur.sagepub.com/content/18/1/62</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0122278.ref044">
+<label>44</label>
+<mixed-citation xlink:type="simple" publication-type="other">Kalucki J. Streaming API Documentation; 2010. Available from: <ext-link ext-link-type="uri" xlink:type="simple" xlink:href="http://apiwiki.twitter.com/\w/page/22554673/Streaming-API-Documentation?rev = 1268351420">http://apiwiki.twitter.com/\w/page/22554673/Streaming-API-Documentation?rev = 1268351420</ext-link>.</mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

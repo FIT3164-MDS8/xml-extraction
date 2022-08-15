@@ -1,0 +1,600 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1d3" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-17-26887</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0191899</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Computational biology</subject><subj-group><subject>Comparative genomics</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Genomics</subject><subj-group><subject>Comparative genomics</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Genomics</subject><subj-group><subject>Structural genomics</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Cell biology</subject><subj-group><subject>Chromosome biology</subject><subj-group><subject>Chromosomes</subject><subj-group><subject>Chromosome structure and function</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Database and informatics methods</subject><subj-group><subject>Bioinformatics</subject><subj-group><subject>Sequence analysis</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Algebra</subject><subj-group><subject>Linear algebra</subject><subj-group><subject>Eigenvectors</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Genetic loci</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Genomics</subject><subj-group><subject>Functional genomics</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Applied mathematics</subject><subj-group><subject>Algorithms</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Simulation and modeling</subject><subj-group><subject>Algorithms</subject></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Sequence-based multiscale modeling for high-throughput chromosome conformation capture (Hi-C) data analysis</article-title>
+<alt-title alt-title-type="running-head">Sequence-based multiscale modeling for Hi-C data analysis</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0003-4183-0943</contrib-id>
+<name name-style="western">
+<surname>Xia</surname> <given-names>Kelin</given-names></name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Formal analysis</role>
+<role content-type="http://credit.casrai.org/">Funding acquisition</role>
+<role content-type="http://credit.casrai.org/">Investigation</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<role content-type="http://credit.casrai.org/">Project administration</role>
+<role content-type="http://credit.casrai.org/">Resources</role>
+<role content-type="http://credit.casrai.org/">Software</role>
+<role content-type="http://credit.casrai.org/">Supervision</role>
+<role content-type="http://credit.casrai.org/">Validation</role>
+<role content-type="http://credit.casrai.org/">Visualization</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001">
+<label>1</label>
+<addr-line>Division of Mathematical Sciences, School of Physical and Mathematical Sciences, Nanyang Technological University, Singapore 637371, Singapore</addr-line>
+</aff>
+<aff id="aff002">
+<label>2</label>
+<addr-line>School of Biological Sciences, Nanyang Technological University, Singapore 637371, Singapore</addr-line>
+</aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Qin</surname> <given-names>Zhaohui</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1">
+<addr-line>Emory University Rollins School of Public Health, UNITED STATES</addr-line>
+</aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The author has declared that no competing interests exist.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">xiakelin@ntu.edu.sg</email></corresp>
+</author-notes>
+<pub-date pub-type="collection">
+<year>2018</year>
+</pub-date>
+<pub-date pub-type="epub">
+<day>6</day>
+<month>2</month>
+<year>2018</year>
+</pub-date>
+<volume>13</volume>
+<issue>2</issue>
+<elocation-id>e0191899</elocation-id>
+<history>
+<date date-type="received">
+<day>18</day>
+<month>7</month>
+<year>2017</year>
+</date>
+<date date-type="accepted">
+<day>12</day>
+<month>1</month>
+<year>2018</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2018</copyright-year>
+<copyright-holder>Kelin Xia</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0191899"/>
+<abstract>
+<p>In this paper, we introduce sequence-based multiscale modeling for biomolecular data analysis. We employ spectral clustering method in our modeling and reveal the difference between sequence-based global scale clustering and local scale clustering. Essentially, two types of distances, i.e., Euclidean (or spatial) distance and genomic (or sequential) distance, can be used in data clustering. Clusters from sequence-based global scale models optimize spatial distances, meaning spatially adjacent loci are more likely to be assigned into the same cluster. Sequence-based local scale models, on the other hand, result in clusters that optimize genomic distances. That is to say, in these models, sequentially adjoining loci tend to be cluster together. We propose two sequence-based multiscale models (SeqMMs) for the study of chromosome hierarchical structures, including genomic compartments and topological associated domains (TADs). We find that genomic compartments are determined only by global scale information in the Hi-C data. The removal of all the local interactions within a band region as large as 10 Mb in genomic distance has almost no significant influence on the final compartment results. Further, in TAD analysis, we find that when the sequential scale is small, a tiny variation of diagonal band region in a contact map will result in a great change in the predicted TAD boundaries. When the scale value is larger than a threshold value, the TAD boundaries become very consistent. This threshold value is highly related to TAD sizes. By the comparison of our results with those previously obtained using a spectral clustering model, we find that our method is more robust and reliable. Finally, we demonstrate that almost all TAD boundaries from both clustering methods are local minimum of a TAD summation function.</p>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100001475</institution-id>
+<institution>Nanyang Technological University</institution>
+</institution-wrap>
+</funding-source>
+<award-id>SUG-M4081842.110</award-id>
+<principal-award-recipient>
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0003-4183-0943</contrib-id>
+<name name-style="western">
+<surname>Xia</surname> <given-names>Kelin</given-names></name>
+</principal-award-recipient>
+</award-group>
+<award-group id="award002">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100001459</institution-id>
+<institution>Ministry of Education - Singapore</institution>
+</institution-wrap>
+</funding-source>
+<award-id>M401110000</award-id>
+<principal-award-recipient>
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0003-4183-0943</contrib-id>
+<name name-style="western">
+<surname>Xia</surname> <given-names>Kelin</given-names></name>
+</principal-award-recipient>
+</award-group>
+<funding-statement>This work was supported by Nanyang Technological University (<ext-link ext-link-type="uri" xlink:href="http://www.ntu.edu.sg/" xlink:type="simple">http://www.ntu.edu.sg/</ext-link>) Startup Grant M4081842.110 and Singapore Ministry of Education (<ext-link ext-link-type="uri" xlink:href="https://www.moe.gov.sg/" xlink:type="simple">https://www.moe.gov.sg/</ext-link>) Academic Research Fund Tier 1 M401110000. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="10"/>
+<table-count count="0"/>
+<page-count count="16"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its Supporting Information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>The chromosome, the physical realization of genetic information, is one of the most complex and important cellular entities [<xref ref-type="bibr" rid="pone.0191899.ref001">1</xref>–<xref ref-type="bibr" rid="pone.0191899.ref007">7</xref>]. Over the past few decades, the significance of its three-dimensional architecture for supporting essential biological functions, such as DNA replication, transcription, repair of DNA damage and chromosome translocation, has gradually been realized [<xref ref-type="bibr" rid="pone.0191899.ref008">8</xref>–<xref ref-type="bibr" rid="pone.0191899.ref011">11</xref>]. Chromosome conformations are found to be deeply involved in the development of epigenetic organizations, the regulation of genome functions and the epigenetic inheritance of various cell states [<xref ref-type="bibr" rid="pone.0191899.ref008">8</xref>]. A thorough understanding of the chromosome three-dimensional structure is of fundamental importance to the decryption and interpretation of genetic information, and has become one of the most important topics in genomic and epigenetic research. Chromosome conformation capture (3C) technique [<xref ref-type="bibr" rid="pone.0191899.ref012">12</xref>, <xref ref-type="bibr" rid="pone.0191899.ref013">13</xref>] and its derived methods, including chromosome conformation capture-on-chip (4C) [<xref ref-type="bibr" rid="pone.0191899.ref014">14</xref>, <xref ref-type="bibr" rid="pone.0191899.ref015">15</xref>], chromosome conformation capture carbon copy (5C) [<xref ref-type="bibr" rid="pone.0191899.ref016">16</xref>] and high-throughput chromosome conformation capture (Hi-C) [<xref ref-type="bibr" rid="pone.0191899.ref017">17</xref>], have been developed and begun to uncover general features of genome organization [<xref ref-type="bibr" rid="pone.0191899.ref017">17</xref>–<xref ref-type="bibr" rid="pone.0191899.ref025">25</xref>].</p>
+<p>Recent studies on Hi-C data have demonstrated the existence of two types of structures known as topologically associating domains (TADs) [<xref ref-type="bibr" rid="pone.0191899.ref018">18</xref>, <xref ref-type="bibr" rid="pone.0191899.ref019">19</xref>] and genomic compartments [<xref ref-type="bibr" rid="pone.0191899.ref017">17</xref>]. TADs are chromosome components that are about 200 kilobases(Kb) to 2 megabases(Mb). They are originally found as the contiguous square regions along the diagonal Hi-C maps with large contact values. More importantly, TADs are very consistent between different cell types and species and their spatial distributions are highly correlated with many genomic features such as histone modifications, coordinated gene expression, lamina and DNA replication timing. Through principle component analysis, two types of genomic compartments, i.e., A and B, have been identified [<xref ref-type="bibr" rid="pone.0191899.ref017">17</xref>]. More specifically, the compartment B is more densely packed with higher contact frequencies. On the contrary, the compartment A is chromosome regions that are more open and accessible. It strongly correlates with the gene loci and higher gene expression. More recently, analysis on the 1Kb resolution Hi-C data indicates the existence of six different subcompartments [<xref ref-type="bibr" rid="pone.0191899.ref026">26</xref>].</p>
+<p>Based on Hi-C data, various algorithms and models are proposed to study the hierarchical structure of chromosomes [<xref ref-type="bibr" rid="pone.0191899.ref017">17</xref>, <xref ref-type="bibr" rid="pone.0191899.ref018">18</xref>, <xref ref-type="bibr" rid="pone.0191899.ref027">27</xref>–<xref ref-type="bibr" rid="pone.0191899.ref035">35</xref>]. Since TADs are essential to the understanding of relationship between chromosome structure and gene transcription, developing efficient algorithms to detect TADs is an important topic in Hi-C data analysis. Computationally, hidden Markov models (HMMs) are the first method to identify TADs [<xref ref-type="bibr" rid="pone.0191899.ref018">18</xref>]. Based on the contacts located 2Mb upstream and downstream, a directionality index of a locus is calculated in this model and used to capture the sharp transitions at TADs boundaries. After that, the arrowhead algorithm with a “corner score” is proposed [<xref ref-type="bibr" rid="pone.0191899.ref026">26</xref>]. This special score indicates the likelihood of each locus to be at a TAD boundary and can be efficiently evaluated by using dynamic programming. Meanwhile, a resolution parameter is considered to identify TADs at various scales. This algorithm has been incorporated into the software Armatus [<xref ref-type="bibr" rid="pone.0191899.ref027">27</xref>]. Further, a block-wise segmentation model called HiCseg [<xref ref-type="bibr" rid="pone.0191899.ref028">28</xref>] is proposed. This method reduces the problem of maximizing the likelihood with respect to the block boundaries into a 1D segmentation problem, and then employ the standard dynamic programming. More recently, a spectral graph theory based model is developed for the identification of TADs [<xref ref-type="bibr" rid="pone.0191899.ref036">36</xref>]. In this model, Laplacian based graph segmentation is applied iteratively to obtain TADs at the given compactness level. All the above mentioned methods can be roughly divided into two categories, optimization based local models and graph based global models. In local models, TAD indicators, including directionality index, corner score, likelihood of TAD boundaries, block-segmentation, are all evaluated locally within a certain region. In global models, TAD indicators, including eigenvectors, within-cluster variance, cluster distances, among others, are all evaluated globally in the whole domain of Hi-C data.</p>
+<p>In this paper, two sequence-based multiscale models (SeqMMs) are introduced. Unlike previous clustering models, we measure the “similarity” of loci by not only their spatial distances but also their sequential distances. With the combination of spectral graph method, we find that clusters from sequence-based global scale models optimize Euclidean distance relations, and these models can be used in genomic compartment analysis. In contrast, clusters from local scale models optimize genomic distance relations, and these models can be used in TAD analysis. Essentially, our SeqMMs provide a way to explore the hierarchical structures of chromosomes.</p>
+<p>Mathematically, genomic compartments are defined from principal component analysis [<xref ref-type="bibr" rid="pone.0191899.ref017">17</xref>], they are global structural features. The loci in the same genomic compartment are spatially close to each other. But their sequential distances can be very large. Based on global scale clustering, we design Type-1 SeqMM and use it for genomic compartment analysis. In contrast, TADs are local structural features. The loci in the same TAD are not only spatially close to each other, but also sequentially adjacent to each other. Their sequential distances are usually within a certain genomic distance. Based on local scale clustering, we introduce Type-2 SeqMM and use it in TAD analysis.</p>
+</sec>
+<sec id="sec002" sec-type="materials|methods">
+<title>Methods</title>
+<p>As a discrete representation of geometries, manifolds, high-dimensional structures, abstract relations and complicated subjects, point cloud data (PCD) are widely used in computer science, engineering, scientific computing and data science. Particularly, PCD and PCD based classification or clustering methods [<xref ref-type="bibr" rid="pone.0191899.ref037">37</xref>], including K-means, hierarchical clustering, spectral clustering, modularity, graph centrality, network approaches, etc, have been constantly used in biomolecular data analysis. However, as demonstrated in <xref ref-type="fig" rid="pone.0191899.g001">Fig 1</xref>, biomolecular structure data are essentially different from the general PCD, as they incorporate a unique sequential information. The simulated structure corresponds to chromosome 22 from Human ES Cell line and is generated by using software shRec3D [<xref ref-type="bibr" rid="pone.0191899.ref033">33</xref>].</p>
+<fig id="pone.0191899.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0191899.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>The comparison between point cloud data and biomolecular data.</title>
+<p>The simulated configuration of Human ES Cell chromosome 22 are generated by using the software shRec3D [<xref ref-type="bibr" rid="pone.0191899.ref033">33</xref>].</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0191899.g001" xlink:type="simple"/>
+</fig>
+<p>To have an intuitive understanding of the sequential information in PCD analysis, we consider a DNA structure with PDB ID 1ZEW. Using atomic coordinates, a weight matrix is constructed. The weight values are defined by using the rigidity function [<xref ref-type="bibr" rid="pone.0191899.ref038">38</xref>],
+<disp-formula id="pone.0191899.e001"><alternatives><graphic id="pone.0191899.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0191899.e001" xlink:type="simple"/><mml:math display="block" id="M1"><mml:mrow><mml:mrow><mml:mi>M</mml:mi><mml:mo>=</mml:mo><mml:mo>{</mml:mo><mml:msub><mml:mi>M</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mo>−</mml:mo><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>/</mml:mo><mml:mi>η</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:msup><mml:mo>|</mml:mo><mml:mspace width="2pt"/><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>N</mml:mi><mml:mo>;</mml:mo><mml:mspace width="2pt"/><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mi>N</mml:mi><mml:mo>}</mml:mo><mml:mo>,</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives> <label>(1)</label></disp-formula>
+where <italic>r</italic><sub><italic>ij</italic></sub> is the Euclidean distance between <italic>i</italic>-th and <italic>j</italic>-th atoms, <italic>N</italic> is the total number of atoms and <italic>η</italic> is the scale parameter that controls the influence range of each atom. In this case, we choose <italic>η</italic> = 8 Å. The weight matrix is illustrated in <xref ref-type="fig" rid="pone.0191899.g002">Fig 2(<bold>c</bold><sub>2</sub>)</xref>. Two more matrices are constructed by dividing the weight matrix into a diagonal band region as in <xref ref-type="fig" rid="pone.0191899.g002">Fig 2(<bold>a</bold><sub>2</sub>)</xref> and the remaining off-diagonal regions as in <xref ref-type="fig" rid="pone.0191899.g002">Fig 2(<bold>b</bold><sub>2</sub>)</xref>. Based on these three matrices, we can decompose the DNA structure into two parts using the spectral clustering method [<xref ref-type="bibr" rid="pone.0191899.ref037">37</xref>, <xref ref-type="bibr" rid="pone.0191899.ref039">39</xref>]. Results are illustrated in <xref ref-type="fig" rid="pone.0191899.g002">Fig 2(<bold>a</bold><sub>1</sub>), 2(<bold>b</bold><sub>1</sub>) and 2(<bold>c</bold><sub>1</sub>)</xref>. It can be seen that, if we only consider relations between sequentially adjacent atoms, which are represented in the diagonal region, the DNA structure will be clustered into two complementary helix chains. However, if we use the whole matrix or only off-diagonal regions, the DNA structure will be divided in the middle region with two chains in each cluster.</p>
+<fig id="pone.0191899.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0191899.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>The illustration of two essential different clustering approaches, local scale clustering and global scale clustering.</title>
+<p>The local scale clustering optimizes sequential distances and is suitable for TAD analysis. The global scale clustering only considers spatial information and can be used in genomic compartment analysis.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0191899.g002" xlink:type="simple"/>
+</fig>
+<p>Generally speaking, <xref ref-type="fig" rid="pone.0191899.g002">Fig 2</xref> demonstrates two types of sequence-based models, i.e., sequence-based local models and sequence-based global models. It can be seen that their properties in structure decomposition differ greatly. In the first type, atoms with shorter sequential distances are more likely to be grouped into the same cluster. In the second one, spatially close atoms, i.e., atoms with large weight values, are more likely to be assigned to the same cluster. Mathematically, the sequence-based local model optimizes sequential distances, while the global model optimizes spatial distances or Euclidian distances. All PCD based classification and clustering methods belong to the second type. Therefore, the direct application of these methods in biomolecular data analysis may have some limitations.</p>
+<p>In Hi-C data analysis, sequential information is usually highly relevant. <xref ref-type="fig" rid="pone.0191899.g003">Fig 3</xref> demonstrates a potential problem for global scale clustering in TAD analysis. In this figure, genomic loci are represented by red pentagons. It can be seen that the spatial distance between the two loci in any red circle is much shorter than the one in green circles, while sequential distances are exactly the opposite. If we use the traditional PCD based clustering methods, two loci in the same red circle will always have priority to be clustered into the same TAD. Obviously, this will cause serious interpretation problems, as the sequential distance between the two loci can be much larger than the size of a TAD.</p>
+<fig id="pone.0191899.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0191899.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>A potential problem for global scale clustering in TAD analysis.</title>
+<p>Each locus is represented by a red pentagon. Global scale clustering considers only spatial relations, thus groups loci in each red dash circle as a cluster. Biologically, loci in each green circle are more favorable to be clustered into the same TAD, as their sequential distances are much shorter. The missing of sequential information in global scale clustering will cause problems in the TAD analysis.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0191899.g003" xlink:type="simple"/>
+</fig>
+<sec id="sec003">
+<title>Sequence-based multiscale modeling</title>
+<p>It should be noticed that two distance definitions, i.e., Euclidean distance and sequential distance, are greatly different and matter a lot in multiscale modeling. The Euclidean distance is just the three dimensional distance between two elements. In Hi-C data, Euclidean distance between genomic loci is inversely related to their contact frequencies [<xref ref-type="bibr" rid="pone.0191899.ref035">35</xref>]. In contrast, the sequential distance is defined between two elements on chains or polymers. If sequential numbers are assigned to elements, a sequential distance is just the difference between these two integers and it is always an integer. In Hi-C data, sequential distance between two loci is their genomic distance.</p>
+<p>Even though graph and network based multiscale models are widely used in biomolecular structure and function analysis [<xref ref-type="bibr" rid="pone.0191899.ref040">40</xref>–<xref ref-type="bibr" rid="pone.0191899.ref049">49</xref>], the measurement defined in these models are in terms of the Euclidean distance. To be more specific, when we discuss atomic scale, residue scale, second structure scale, tertiary structure scale, etc, we are analyzing structural elements based on their sizes measured in Euclidean distances.</p>
+<p>In this section, the sequence-based multiscale modeling is proposed for biomolecular data analysis, particularly for Hi-C data analysis. In our multiscale models, a scale parameter <italic>N</italic><sub><italic>b</italic></sub> is defined not from the Euclidean distance but from the sequential distance. The parameter <italic>N</italic><sub><italic>b</italic></sub> can be viewed as a cut-off sequential distance. In Hi-C matrices, the parameter <italic>N</italic><sub><italic>b</italic></sub> specifies the size of the diagonal band region. Further, two sequence-based multiscale models are proposed for analyzing chromosome genomic compartments and TADs. These two models, denoted as Type-1 SeqMM and Type-2 SeqMM, are derived from the perspective of local scale clustering and global scale clustering, respectively.</p>
+<sec id="sec004">
+<title>Type-1 SeqMM</title>
+<p>In Type-1 SeqMM, we remove sequentially short-range interactions by changing the value of scale parameter <italic>N</italic><sub><italic>b</italic></sub>. More specifically, for a Hi-C matrix, a diagonal band region with size <italic>N</italic><sub><italic>b</italic></sub> is systematically removed from the model, resulting a new Hi-C matrix as following,
+<disp-formula id="pone.0191899.e002"><alternatives><graphic id="pone.0191899.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0191899.e002" xlink:type="simple"/><mml:math display="block" id="M2"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mi>M</mml:mi> <mml:mrow><mml:mi>i</mml:mi> <mml:mi>j</mml:mi></mml:mrow> <mml:mo>Seq</mml:mo></mml:msubsup> <mml:mo>=</mml:mo> <mml:mo>{</mml:mo> <mml:mtable><mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:mtable><mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:msub><mml:mi>M</mml:mi> <mml:mrow><mml:mi>i</mml:mi> <mml:mi>j</mml:mi></mml:mrow></mml:msub> <mml:mo>,</mml:mo></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mrow><mml:mo>|</mml:mo> <mml:mi>i</mml:mi> <mml:mo>-</mml:mo> <mml:mi>j</mml:mi> <mml:mo>|</mml:mo></mml:mrow> <mml:mo>≥</mml:mo> <mml:msub><mml:mi>N</mml:mi> <mml:mi>b</mml:mi></mml:msub></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:mn>0</mml:mn> <mml:mo>,</mml:mo></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mrow><mml:mo>|</mml:mo> <mml:mi>i</mml:mi> <mml:mo>-</mml:mo> <mml:mi>j</mml:mi> <mml:mo>|</mml:mo> <mml:mo>&lt;</mml:mo></mml:mrow> <mml:msub><mml:mi>N</mml:mi> <mml:mi>b</mml:mi></mml:msub></mml:mrow></mml:mtd></mml:mtr></mml:mtable> <mml:mo>.</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable> <mml:mo/></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(2)</label></disp-formula>
+Here <italic>M</italic><sub><italic>ij</italic></sub> can be the original or normalized contact frequencies. It can seen that our Type-1 SeqMM is defined by taking away the local interactions from the model and is designed for global scale clustering. An example can be found in Fig 6(<bold>a</bold>) to 6(<bold>c</bold>). We suggest that it can be used in chromosome genomic compartment analysis.</p>
+</sec>
+<sec id="sec005">
+<title>Type-2 SeqMM</title>
+<p>In Type-1 SeqMM, when short-range interactions are systematically removed from the biomolecular data, long-range interactions are preserved. Type-2 SeqMM is designed in the exact opposite way,
+<disp-formula id="pone.0191899.e003"><alternatives><graphic id="pone.0191899.e003g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0191899.e003" xlink:type="simple"/><mml:math display="block" id="M3"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msubsup><mml:mi>M</mml:mi> <mml:mrow><mml:mi>i</mml:mi> <mml:mi>j</mml:mi></mml:mrow> <mml:mo>Seq</mml:mo></mml:msubsup> <mml:mo>=</mml:mo> <mml:mo>{</mml:mo> <mml:mtable><mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:mtable><mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:msub><mml:mi>M</mml:mi> <mml:mrow><mml:mi>i</mml:mi> <mml:mi>j</mml:mi></mml:mrow></mml:msub> <mml:mo>,</mml:mo></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mrow><mml:mo>|</mml:mo> <mml:mi>i</mml:mi> <mml:mo>-</mml:mo> <mml:mi>j</mml:mi> <mml:mo>|</mml:mo> <mml:mo>&gt;</mml:mo> <mml:mn>0</mml:mn> <mml:mspace width="3.33333pt"/><mml:mo>and</mml:mo> <mml:mspace width="3.33333pt"/><mml:mo>|</mml:mo> <mml:mi>i</mml:mi> <mml:mo>-</mml:mo> <mml:mi>j</mml:mi> <mml:mo>|</mml:mo></mml:mrow> <mml:mo>⩽</mml:mo> <mml:msub><mml:mi>N</mml:mi> <mml:mi>b</mml:mi></mml:msub></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:mn>0</mml:mn> <mml:mo>,</mml:mo></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mrow><mml:mo>|</mml:mo> <mml:mi>i</mml:mi> <mml:mo>-</mml:mo> <mml:mi>j</mml:mi> <mml:mo>|</mml:mo> <mml:mo>&gt;</mml:mo></mml:mrow> <mml:msub><mml:mi>N</mml:mi> <mml:mi>b</mml:mi></mml:msub></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="left"><mml:mrow><mml:mo>-</mml:mo> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>i</mml:mi> <mml:mo>≠</mml:mo> <mml:mi>j</mml:mi></mml:mrow> <mml:mi>N</mml:mi></mml:munderover> <mml:msubsup><mml:mi>M</mml:mi> <mml:mrow><mml:mi>i</mml:mi> <mml:mi>j</mml:mi></mml:mrow> <mml:mo>Seq</mml:mo></mml:msubsup> <mml:mo>,</mml:mo></mml:mrow></mml:mtd> <mml:mtd columnalign="left"><mml:mrow><mml:mi>i</mml:mi> <mml:mo>=</mml:mo> <mml:mi>j</mml:mi></mml:mrow></mml:mtd></mml:mtr></mml:mtable> <mml:mo>.</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable> <mml:mo/></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(3)</label></disp-formula>
+The scale parameter <italic>N</italic><sub><italic>b</italic></sub> controls the size of the diagonal band region.</p>
+<p>Mathematically, our SeqMM matrix in <xref ref-type="disp-formula" rid="pone.0191899.e003">Eq (3)</xref> is a weighted Laplacian matrix, which plays an important role in graph representation and spectral clustering [<xref ref-type="bibr" rid="pone.0191899.ref037">37</xref>, <xref ref-type="bibr" rid="pone.0191899.ref039">39</xref>, <xref ref-type="bibr" rid="pone.0191899.ref050">50</xref>]. The second smallest eigenvalue and its associated eigenvector from the Laplacian matrix, are known as the Fiedler value (or algebraic connectivity) and the Fiedler vector, respectively. The Fiedler value is an important measurement of the general topological connectivity of a graph. The Fiedler vector gives an optimized classification of a graph into two separated domains [<xref ref-type="bibr" rid="pone.0191899.ref039">39</xref>, <xref ref-type="bibr" rid="pone.0191899.ref050">50</xref>]. In our Type-2 SeqMM, the local interaction region can be systematically enlarged to model the different scales of interactions.</p>
+<p>Type-2 SeqMM is proposed for chromosome TAD analysis. After Hi-C data preprocessing, a weighted Laplacian matrix can be generated by using a suitable scale value <italic>N</italic><sub><italic>b</italic></sub>. The TAD number in the data is estimated based on size and resolution of the Hi-C matrix. We assume the size of TAD to be around 2Mb, and TAD number <italic>N</italic><sub><italic>c</italic></sub> can be roughly calculated by dividing the total length over 2Mb. The basic procedure is presented in <bold>Algorithm 1</bold>. It should be noticed that the final number of TADs is usually larger than <italic>N</italic><sub><italic>c</italic></sub>. The Code is available at <xref ref-type="supplementary-material" rid="pone.0191899.s001">S1 File</xref>.</p>
+<p><bold>Algorithm 1</bold> Type-2 SeqMM for TAD analysis</p>
+<p specific-use="line"><bold>Pre-processing</bold>: Remove all rows and columns, that summed together equal to zero (or smaller than a pre-defined range); Transform the Hi-C contact frequencies to spatial distances (default function <italic>f</italic>(<italic>x</italic>) = <italic>log</italic>(1 + <italic>x</italic>));</p>
+<p specific-use="line"><bold>Step 1</bold>: Choose a scale parameter <italic>N</italic><sub><italic>b</italic></sub> to construct a weighted Laplacian matrix as in <xref ref-type="disp-formula" rid="pone.0191899.e003">Eq 3</xref>;</p>
+<p specific-use="line"><bold>Step 2</bold>: Calculate the first <italic>N</italic><sub><italic>c</italic></sub> eigenvectors. Here <italic>N</italic><sub><italic>c</italic></sub> is the estimated number of TADs;</p>
+<p specific-use="line"><bold>Step 3</bold>: Employ the K-means algorithm on the <italic>N</italic><sub><italic>c</italic></sub> eigenvectors to identify <italic>N</italic><sub><italic>c</italic></sub> clusters;</p>
+<p specific-use="line"><bold>Step 4</bold>: Subdivide each cluster into several TADs until the loci in each TAD are sequentially contiguous.</p>
+</sec>
+</sec>
+</sec>
+<sec id="sec006" sec-type="results">
+<title>Results</title>
+<sec id="sec007">
+<title>Genomic compartments</title>
+<p>The genomic compartment is defined from the principal component analysis of Hi-C data. Mathematically, the principal component captures the global shape of a structure. In Chen’s spectral method [<xref ref-type="bibr" rid="pone.0191899.ref036">36</xref>], it shows that the genomic compartment results from the first principal component (FPC) are identical to the predictions made from the lowest-frequency eigenvector of weighted Laplacian matrices. More interesting, as proved in the elastic network model and normal mode analysis, these lowest-frequency eigenvectors are uniquely determined by the global geometric information of structures [<xref ref-type="bibr" rid="pone.0191899.ref051">51</xref>–<xref ref-type="bibr" rid="pone.0191899.ref054">54</xref>].</p>
+<p>Since the FPC describes the global properties of a structure, we use the Type-1 SeqMM for our genomic compartment analysis. We consider the GM06990 chromosome 14 data with resolution 100Kb. This is a classic example used for genomic compartment analysis [<xref ref-type="bibr" rid="pone.0191899.ref017">17</xref>]. Before the principal component analysis (PCA), the chromosome 14 Hi-C matrix is processed. We remove all columns and rows with all zero values and normalize the matrix using the Toeplitz matrix [<xref ref-type="bibr" rid="pone.0191899.ref017">17</xref>]. After that, we construct a new matrix by removing the diagonal band region with <italic>N</italic><sub><italic>b</italic></sub> = 60 from the normalized Hi-C matrix, and calculate its FPC. Further, we compare this new FPC with the original one. Results are shown in <xref ref-type="fig" rid="pone.0191899.g004">Fig 4</xref>. The blue line represents the FPC from the original Hi-C matrix and red line represents the FPC from the off-diagonal matrix. It can be seen that they are almost identical to each other. Actually, the Pearson correlation coefficient (PCC) between the two FPCs is as high as 0.991, meaning that the removal of the diagonal band region have almost no influence to the FPC.</p>
+<fig id="pone.0191899.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0191899.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>The irrelevance of local interactions in genomic compartment analysis.</title>
+<p>(<bold>a</bold>) The 100Kb resolution Hi-C data for GM06990 chromosome 14. (<bold>b</bold>) The chromosome 14 Hi-C data with zero contact frequencies in the diagonal band region. The band size, or scale parameter, <italic>N</italic><sub><italic>b</italic></sub> equal to 60, which amounts to 6 Mb genomic distance. (<bold>c</bold>) The principal components from the two matrices, blue line for (<bold>a</bold>) and red line for (<bold>b</bold>), have almost the same behavior. The Pearson correlation coefficient between these two first principal components is 0.991.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0191899.g004" xlink:type="simple"/>
+</fig>
+<p>To have a more quantitative understanding of the FPC and Hi-C diagonal regions, we continuously change the value of the scale parameter <italic>N</italic><sub><italic>b</italic></sub> to generate a series of Hi-C matrices at different scales. Then we systematically calculate their FPCs and measure the similarity between these FPCs with the original one by PCCs. Results are shown in <xref ref-type="fig" rid="pone.0191899.g005">Fig 5</xref>. It can be seen that PCCs changes very slowly when scale parameter is smaller than 100, which is 10 Mb in genomic distance. State differently, we can get almost the same genomic compartment even when we remove all the Hi-C data within the 10 Mb band region. It should be noticed that almost all the largest Hi-C value, i.e., contact frequencies, are located within this 10 Mb band. These values, however, are irrelevant to the chromosome genomic compartment!</p>
+<fig id="pone.0191899.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0191899.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>The Type-1 SeqMM for genomic compartment analysis of GM06990 chromosome 14.</title>
+<p>It is found that the local interactions within a band size around 10 Mb genomic distance contribute very little to genomic compartments. (<bold>a</bold>)-(<bold>c</bold>) The illustration of the Hi-C matrices in Type-1 SeqMM. The sizes of the diagonal band region removed from the Hi-C data go from <italic>N</italic><sub><italic>b</italic></sub> = 50, <italic>N</italic><sub><italic>b</italic></sub> = 150 to <italic>N</italic><sub><italic>b</italic></sub> = 250. (<bold>d</bold>) The PCCs between the first principal components from the original Hi-C matrix and the Hi-C matrices from our Type-1 SeqMM. A high PCC value is observed when the band size is smaller than 10 Mb, meaning the removal of data in this band region has almost no significant influence in the genomic compartments.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0191899.g005" xlink:type="simple"/>
+</fig>
+<p>We further test our SeqMM on other GM06990 chromosomes. A very consistent pattern can be observed. Results of chromosomes 1, 5, 9 and 13 are illustrated in <xref ref-type="fig" rid="pone.0191899.g006">Fig 6</xref>. It can be seen that the shape decrease of PCCs is usually found at around 100 locus (10 Mb in genomic distance). This indicates a transition between local scales to global scales. Further studies are needed to explain its biological implications.</p>
+<fig id="pone.0191899.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0191899.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>The Type-1 SeqMM for genomic compartment analysis of GM06990 chromosomes 1, 5, 9 and 13.</title>
+<p>(<bold>a</bold>)-(<bold>d</bold>) The PCCs between the first principal components from the original Hi-C matrix and the Hi-C matrices from our Type-1 SeqMM. Form (<bold>a</bold>) to (<bold>d</bold>), the PCC results are for GM06990 chromosomes 1, 5, 9 and 13, respectively. A consistent behavior has been observed. High PCCs are obtained when band sizes are smaller than around 10 Mb genomic distance. The results confirm our finding that local interactions within a special band region have very little contribution to genomic compartments.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0191899.g006" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec008">
+<title>Topological associated domain</title>
+<p>Another very important finding in Hi-C data analysis is the topological associated domain. TADs are megabase-sized local chromatin interaction domains. They have loop structures and are highly stable and conserved across various cell types and species. TAD boundaries are found to be enriched with the protein CTCF, housekeeping genes, transfer RNAs and short interspersed element (SINE) retrotransposons [<xref ref-type="bibr" rid="pone.0191899.ref018">18</xref>, <xref ref-type="bibr" rid="pone.0191899.ref023">23</xref>, <xref ref-type="bibr" rid="pone.0191899.ref024">24</xref>, <xref ref-type="bibr" rid="pone.0191899.ref026">26</xref>]. These components play important roles in establishing and supporting TADs and other architectural structures of the chromosome. Due to the structural and functional importance of TADs, various algorithms have been proposed for the identification of TADs as stated in the introduction part. However, the sequential information is not considered in any of these models.</p>
+<p>In this section, Type-2 SeqMM is used to study chromosome TADs. In our Type-2 SeqMM, the clustering is done by using K-means method on eigenvectors from spectral graph model. The basic procedure of the algorithm is illustrated in <bold>Algorithm 1</bold>. To explore the relation between the band size and TAD boundaries from the clustering, we consider a 100Kb resolution Hi-C matrix for chromosome 22 from IMR90 cell line. We systematically change the band size <italic>N</italic><sub><italic>b</italic></sub> from 20, 80, 140 to 200. The corresponding TAD boundaries are illustrated in <xref ref-type="fig" rid="pone.0191899.g007">Fig 7</xref>. It can be seen that the TAD regions evaluated from different scales are not exactly the same and have some variations. Particularly when the band size <italic>N</italic><sub><italic>b</italic></sub> change from 20 to 80, the calculated TAD regions are quite different. Further, when the band size is larger than 80, although the TAD boundaries are still not the same, they share more and more common values.</p>
+<fig id="pone.0191899.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0191899.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>The illustration of TADs calculated for our Type-2 SeqMM.</title>
+<p>The 100Kb resolution Hi-C matrix for chromosome 22 from IMR90 cell line is considered. All predicted TAD boundaries are marked by blue lines. From <bold>(a)</bold> to <bold>(d)</bold>, the band sizes are <italic>N</italic><sub><italic>b</italic></sub> = 20, 80, 140 and 200, respectively. The predicted TAD boundaries are relatively consistent when <italic>N</italic><sub><italic>b</italic></sub> is larger than 80. To facilitate a better visualization, the matrices values are correlation coefficients of the normalized Hi-C matrix [<xref ref-type="bibr" rid="pone.0191899.ref017">17</xref>].</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0191899.g007" xlink:type="simple"/>
+</fig>
+<p>To have a more quantitative understanding of this, we systematically change the scale parameter <italic>N</italic><sub><italic>b</italic></sub> from 2 to 351 (the size of the normalized Hi-C matrix) and calculate the TAD boundaries. Results are shown in <xref ref-type="fig" rid="pone.0191899.g008">Fig 8</xref>. We can find that when the value of scale parameter <italic>N</italic><sub><italic>b</italic></sub> is small, a tiny change of its value can result in huge variations of the predicted TAD boundaries. However, when the scale parameter is larger than a certain value, the fluctuations in the predicted TAD boundaries are greatly reduced. The threshold value is roughly about 20, which is 2 Mb in genomic distance.</p>
+<fig id="pone.0191899.g008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0191899.g008</object-id>
+<label>Fig 8</label>
+<caption>
+<title>The illustration of TAD boundaries calculated by our Type-2 SeqMM.</title>
+<p>The 100Kb resolution Hi-C matrix for chromosome 22 from IMR90 cell line is considered. All predicted TAD boundaries are marked by the blue color. It can be seen that, the predicted TAD boundaries are relatively consistent.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0191899.g008" xlink:type="simple"/>
+</fig>
+<p>We further apply the spectral approach used in Chen’s method [<xref ref-type="bibr" rid="pone.0191899.ref036">36</xref>] on the multiscale Laplacian matrices in <xref ref-type="disp-formula" rid="pone.0191899.e003">Eq (3)</xref>. Results are shown in <xref ref-type="fig" rid="pone.0191899.g009">Fig 9</xref>. It can be seen that the variation of the predicted TAD boundaries by his method is much larger than that of our Type-2 SeqMM. More interestingly, the amplitude of variation below the threshold (2 Mb) is much larger than the one after the threshold, which is the same as in our model. Biologically, the threshold value should be highly related to the TAD properties. This is because when the band sizes <italic>N</italic><sub><italic>b</italic></sub> of our multiscale matrices are smaller than the size of TADs, local interactions within TADs are removed from our models, resulting in a much larger variation in predicted TAD boundaries. However, when the band size is larger than 2Mb, all TAD-related local interactions will be considered, thus a much consistent TAD boundaries should be expected. Stated differently, since TADs are mainly determined by local interactions within the 2Mb band region, the calculated TAD boundaries should always be the same for multiscale matrices with <italic>N</italic><sub><italic>b</italic></sub> larger than 2Mb. In this sense, our Type-2 SeqMM is much more robust and reliable than Chen’s method [<xref ref-type="bibr" rid="pone.0191899.ref036">36</xref>] as a much smaller variation is observed in our model when <italic>N</italic><sub><italic>b</italic></sub> is larger than 2Mb. Mathematically, in Chen’s spectral method, the global scale clustering is iteratively used to subdivide contact matrix or matrix region into two subregions until the algebraic connectivities within the submatrices are all smaller than certain threshold. Therefore, this method optimizes only spatial distances between different loci.</p>
+<fig id="pone.0191899.g009" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0191899.g009</object-id>
+<label>Fig 9</label>
+<caption>
+<title>The illustration of TAD boundaries calculated by Chen’s spectral method [<xref ref-type="bibr" rid="pone.0191899.ref036">36</xref>] for our Type-2 sequence-based Hi-C matrix models.</title>
+<p>The 100Kb resolution Hi-C matrix for chromosome 22 from IMR90 cell line is considered. All predicted TAD boundaries are marked by the blue color. It can be seen that, the predicted TAD boundaries have a much larger variation compared with our results in <xref ref-type="fig" rid="pone.0191899.g008">Fig 8</xref>.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0191899.g009" xlink:type="simple"/>
+</fig>
+<p>Further, even with the difference between the two models, both methods capture the local minimum of a TAD summation function. We consider the 100Kb resolution Hi-C matrix for chromosome 22 from IMR90 cell line. The band size <italic>N</italic><sub><italic>b</italic></sub> is chosen as 60, which is amount to 6 Mb in genomic sequence. We summarize the contact matric values along the direction that is perpendicular to the matrix diagonal. Results are shown as the black lines in <xref ref-type="fig" rid="pone.0191899.g010">Fig 10(<bold>a</bold>) and 10(<bold>b</bold>)</xref>. The TAD boundaries from Chen’s method and our Type-2 SeqMM are illustrated by blue and red lines. It can be seen that nearly all of these lines are located at the local minima of the summation function. More interestingly, the two methods share many common TAD boundaries. This indicates that the situation illustrated in <xref ref-type="fig" rid="pone.0191899.g003">Fig 3</xref> does not widely exist. This can also be confirmed from the behavior of off-diagonal values. Usually, the off-diagonal values decrease very quickly outside the TAD regions, meaning the distance between a locus from a TAD and a locus outside this TAD is usually very large.</p>
+<fig id="pone.0191899.g010" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0191899.g010</object-id>
+<label>Fig 10</label>
+<caption>
+<title>The comparison of the predicted TAD boundaries from Chen’s spectral method [<xref ref-type="bibr" rid="pone.0191899.ref036">36</xref>] (blue lines) and our Type-2 SeqMM (red lines).</title>
+<p>Even though the predicted TAD boundaries from two methods vary a lot, almost all of them are local minimal values of a TAD summation function. <bold>(a)</bold> The blue lines are TAD boundaries calculated from Chen’s method [<xref ref-type="bibr" rid="pone.0191899.ref036">36</xref>]. <bold>(b)</bold> The red lines are TAD boundaries calculated from our Type-2 SeqMM with band size 6Mb. <bold>(c)</bold> The diagonal band region from the normalized Hi-C matrix. Again the band size is 6 Mb. We summarize the Hi-C values along the direction that is perpendicular to the matrix diagonal, as indicated by the black dash line. The summation results are represented by the black lines in both <bold>(a)</bold> and <bold>(b)</bold>.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0191899.g010" xlink:type="simple"/>
+</fig>
+</sec>
+</sec>
+<sec id="sec009" sec-type="conclusions">
+<title>Conclusion</title>
+<p>In this paper, we discuss a sequence-based multiscale clustering model for biomolecular data analysis. Biomolecules and their complexes are hierarchical structures made from one or several polymer chains. With the sequential information embedded in these polymer chains, biomolecular data are fundamentally different from the general point cloud data. Traditional clustering methods derived from point cloud data, fall short when sequential information matters. To overcome this problem, we propose a sequence-based multiscale model for biomolecular structure analysis. We generate a series of structural matrices by gradually and systematically removing the short-range or long-range interactions. These new matrices focus on different sequential scales and their clustering has different biological interpretations. Two SeqMMs have been applied to Hi-C data analysis. We find that the genomic compartments only relate to the global scale information. The removal of a diagonal band region as large as 10 Mb has very little influence to the finally compartment results. Further, we study TADs with our local scale models. We find that when sequence scale is small, a tiny variation of its value will result in great changes in TAD boundaries. However, when the scale value is larger than a threshold value, the TAD boundaries become very consistent. This threshold value is highly related to the sizes of TADs. Interestingly, our method is much more robust than a previous spectral clustering method in the TAD analysis.</p>
+</sec>
+<sec id="sec010">
+<title>Supporting information</title>
+<supplementary-material id="pone.0191899.s001" mimetype="application/zip" position="float" xlink:href="info:doi/10.1371/journal.pone.0191899.s001" xlink:type="simple">
+<label>S1 File</label>
+<caption>
+<title/>
+<p>(ZIP)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>The author would like to thank Amartya Sanyal for valuable discussions. This work was supported in part by Nanyang Technological University Startup Grant M4081842.110 and Singapore Ministry of Education Academic Research fund Tier 1 M401110000.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0191899.ref001">
+<label>1</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Bolzer</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Kreth</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Solovei</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Koehler</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Saracoglu</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Fauth</surname> <given-names>C</given-names></name>, <etal>et al</etal>. <article-title>Three-dimensional maps of all chromosomes in human male fibroblast nuclei and prometaphase rosettes</article-title>. <source>PLoS biology</source>. <year>2005</year>;<volume>3</volume>(<issue>5</issue>):<fpage>e157</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0191899.ref002">
+<label>2</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Hou</surname> <given-names>CH</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Qin</surname> <given-names>ZS</given-names></name>, <name name-style="western"><surname>Corces</surname> <given-names>VG</given-names></name>. <article-title>Gene density, transcription, and insulators contribute to the partition of the Drosophila genome into physical domains</article-title>. <source>Molecular cell</source>. <year>2012</year>;<volume>48</volume>(<issue>3</issue>):<fpage>471</fpage>–<lpage>484</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.molcel.2012.08.031" xlink:type="simple">10.1016/j.molcel.2012.08.031</ext-link></comment> <object-id pub-id-type="pmid">23041285</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref003">
+<label>3</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Duan</surname> <given-names>ZJ</given-names></name>, <name name-style="western"><surname>Andronescu</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Schutz</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>McIlwain</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>YJ</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>C</given-names></name>, <etal>et al</etal>. <article-title>A three-dimensional model of the yeast genome</article-title>. <source>Nature</source>. <year>2010</year>;<volume>465</volume>(<issue>7296</issue>):<fpage>363</fpage>–<lpage>367</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nature08973" xlink:type="simple">10.1038/nature08973</ext-link></comment> <object-id pub-id-type="pmid">20436457</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref004">
+<label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Sexton</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Yaffe</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Kenigsberg</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Bantignies</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Leblanc</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Hoichman</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>Three-dimensional folding and functional organization principles of the Drosophila genome</article-title>. <source>Cell</source>. <year>2012</year>;<volume>148</volume>(<issue>3</issue>):<fpage>458</fpage>–<lpage>472</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.cell.2012.01.010" xlink:type="simple">10.1016/j.cell.2012.01.010</ext-link></comment> <object-id pub-id-type="pmid">22265598</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref005">
+<label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Tanizawa</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Iwasaki</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Tanaka</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Capizzi</surname> <given-names>JR</given-names></name>, <name name-style="western"><surname>Wickramasinghe</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>Mapping of long-range associations throughout the fission yeast genome reveals global genome organization linked to transcriptional regulation</article-title>. <source>Nucleic acids research</source>. <year>2010</year>;<volume>38</volume>(<issue>22</issue>):<fpage>8164</fpage>–<lpage>8177</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/nar/gkq955" xlink:type="simple">10.1093/nar/gkq955</ext-link></comment> <object-id pub-id-type="pmid">21030438</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref006">
+<label>6</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Zhang</surname> <given-names>YB</given-names></name>, <name name-style="western"><surname>Wong</surname> <given-names>CH</given-names></name>, <name name-style="western"><surname>Birnbaum</surname> <given-names>RY</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>GL</given-names></name>, <name name-style="western"><surname>Favaro</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Ngan</surname> <given-names>CY</given-names></name>, <etal>et al</etal>. <article-title>Chromatin connectivity maps reveal dynamic promoter-enhancer long-range associations</article-title>. <source>Nature</source>. <year>2013</year>;<volume>504</volume>(<issue>7479</issue>):<fpage>306</fpage>–<lpage>310</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nature12716" xlink:type="simple">10.1038/nature12716</ext-link></comment> <object-id pub-id-type="pmid">24213634</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref007">
+<label>7</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Sanyal</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Baù</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Martí-Renom</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Dekker</surname> <given-names>J</given-names></name>. <article-title>Chromatin globules: a common motif of higher order chromosome structure?</article-title> <source>Current opinion in cell biology</source>. <year>2011</year>;<volume>23</volume>(<issue>3</issue>):<fpage>325</fpage>–<lpage>331</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.ceb.2011.03.009" xlink:type="simple">10.1016/j.ceb.2011.03.009</ext-link></comment> <object-id pub-id-type="pmid">21489772</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref008">
+<label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Cavalli</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Misteli</surname> <given-names>T</given-names></name>. <article-title>Functional implications of genome topology</article-title>. <source>Nature structural &amp; molecular biology</source>. <year>2013</year>;<volume>20</volume>(<issue>3</issue>):<fpage>290</fpage>–<lpage>299</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nsmb.2474" xlink:type="simple">10.1038/nsmb.2474</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref009">
+<label>9</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Chen</surname> <given-names>HM</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Muir</surname> <given-names>LA</given-names></name>, <name name-style="western"><surname>Ronquist</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Meixner</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Ljungman</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>Functional organization of the human 4D Nucleome</article-title>. <source>Proceedings of the National Academy of Sciences</source>. <year>2015</year>;<volume>112</volume>(<issue>26</issue>):<fpage>8002</fpage>–<lpage>8007</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.1505822112" xlink:type="simple">10.1073/pnas.1505822112</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref010">
+<label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Le Dily</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Baù</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Pohl</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Vicent</surname> <given-names>GP</given-names></name>, <name name-style="western"><surname>Serra</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Soronellas</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Distinct structural transitions of chromatin topological domains correlate with coordinated hormone-induced gene regulation</article-title>. <source>Genes &amp; development</source>. <year>2014</year>;<volume>28</volume>(<issue>19</issue>):<fpage>2151</fpage>–<lpage>2162</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1101/gad.241422.114" xlink:type="simple">10.1101/gad.241422.114</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref011">
+<label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Pope</surname> <given-names>BD</given-names></name>, <name name-style="western"><surname>Ryba</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Dileep</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Yue</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>WS</given-names></name>, <name name-style="western"><surname>Denas</surname> <given-names>O</given-names></name>, <etal>et al</etal>. <article-title>Topologically associating domains are stable units of replication-timing regulation</article-title>. <source>Nature</source>. <year>2014</year>;<volume>515</volume>(<issue>7527</issue>):<fpage>402</fpage>–<lpage>405</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nature13986" xlink:type="simple">10.1038/nature13986</ext-link></comment> <object-id pub-id-type="pmid">25409831</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref012">
+<label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Dekker</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Rippe</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Dekker</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Kleckner</surname> <given-names>N</given-names></name>. <article-title>Capturing chromosome conformation</article-title>. <source>science</source>. <year>2002</year>;<volume>295</volume>(<issue>5558</issue>):<fpage>1306</fpage>–<lpage>1311</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1126/science.1067799" xlink:type="simple">10.1126/science.1067799</ext-link></comment> <object-id pub-id-type="pmid">11847345</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref013">
+<label>13</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>de Wit</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>de Laat</surname> <given-names>W</given-names></name>. <article-title>A decade of 3C technologies: insights into nuclear organization</article-title>. <source>Genes &amp; development</source>. <year>2012</year>;<volume>26</volume>(<issue>1</issue>):<fpage>11</fpage>–<lpage>24</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1101/gad.179804.111" xlink:type="simple">10.1101/gad.179804.111</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref014">
+<label>14</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Simonis</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Klous</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Splinter</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Moshkin</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Willemsen</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>De Wit</surname> <given-names>E</given-names></name>, <etal>et al</etal>. <article-title>Nuclear organization of active and inactive chromatin domains uncovered by chromosome conformation capture–on-chip (4C)</article-title>. <source>Nature genetics</source>. <year>2006</year>;<volume>38</volume>(<issue>11</issue>):<fpage>1348</fpage>–<lpage>1354</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/ng1896" xlink:type="simple">10.1038/ng1896</ext-link></comment> <object-id pub-id-type="pmid">17033623</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref015">
+<label>15</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Zhao</surname> <given-names>ZH</given-names></name>, <name name-style="western"><surname>Tavoosidana</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Sjölinder</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Göndör</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Mariano</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>S</given-names></name>, <etal>et al</etal>. <article-title>Circular chromosome conformation capture (4C) uncovers extensive networks of epigenetically regulated intra-and interchromosomal interactions</article-title>. <source>Nature genetics</source>. <year>2006</year>;<volume>38</volume>(<issue>11</issue>):<fpage>1341</fpage>–<lpage>1347</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/ng1891" xlink:type="simple">10.1038/ng1891</ext-link></comment> <object-id pub-id-type="pmid">17033624</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref016">
+<label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Dostie</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Richmond</surname> <given-names>TA</given-names></name>, <name name-style="western"><surname>Arnaout</surname> <given-names>RA</given-names></name>, <name name-style="western"><surname>Selzer</surname> <given-names>RR</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>WL</given-names></name>, <name name-style="western"><surname>Honan</surname> <given-names>TA</given-names></name>, <etal>et al</etal>. <article-title>Chromosome Conformation Capture Carbon Copy (5C): a massively parallel solution for mapping interactions between genomic elements</article-title>. <source>Genome research</source>. <year>2006</year>;<volume>16</volume>(<issue>10</issue>):<fpage>1299</fpage>–<lpage>1309</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1101/gr.5571506" xlink:type="simple">10.1101/gr.5571506</ext-link></comment> <object-id pub-id-type="pmid">16954542</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref017">
+<label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Lieberman-Aiden</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Van Berkum</surname> <given-names>NL</given-names></name>, <name name-style="western"><surname>Williams</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Imakaev</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ragoczy</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Telling</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>Comprehensive mapping of long-range interactions reveals folding principles of the human genome</article-title>. <source>science</source>. <year>2009</year>;<volume>326</volume>(<issue>5950</issue>):<fpage>289</fpage>–<lpage>293</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1126/science.1181369" xlink:type="simple">10.1126/science.1181369</ext-link></comment> <object-id pub-id-type="pmid">19815776</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref018">
+<label>18</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Dixon</surname> <given-names>JR</given-names></name>, <name name-style="western"><surname>Selvaraj</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Yue</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Shen</surname> <given-names>Y</given-names></name>, <etal>et al</etal>. <article-title>Topological domains in mammalian genomes identified by analysis of chromatin interactions</article-title>. <source>Nature</source>. <year>2012</year>;<volume>485</volume>(<issue>7398</issue>):<fpage>376</fpage>–<lpage>380</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nature11082" xlink:type="simple">10.1038/nature11082</ext-link></comment> <object-id pub-id-type="pmid">22495300</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref019">
+<label>19</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Nora</surname> <given-names>EP</given-names></name>, <name name-style="western"><surname>Lajoie</surname> <given-names>BR</given-names></name>, <name name-style="western"><surname>Schulz</surname> <given-names>EG</given-names></name>, <name name-style="western"><surname>Giorgetti</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Okamoto</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Servant</surname> <given-names>N</given-names></name>, <etal>et al</etal>. <article-title>Spatial partitioning of the regulatory landscape of the X-inactivation centre</article-title>. <source>Nature</source>. <year>2012</year>;<volume>485</volume>(<issue>7398</issue>):<fpage>381</fpage>–<lpage>385</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nature11049" xlink:type="simple">10.1038/nature11049</ext-link></comment> <object-id pub-id-type="pmid">22495304</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref020">
+<label>20</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Dryden</surname> <given-names>NH</given-names></name>, <name name-style="western"><surname>Broome</surname> <given-names>LR</given-names></name>, <name name-style="western"><surname>Dudbridge</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Johnson</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Orr</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Schoenfelder</surname> <given-names>S</given-names></name>, <etal>et al</etal>. <article-title>Unbiased analysis of potential targets of breast cancer susceptibility loci by Capture Hi-C</article-title>. <source>Genome research</source>. <year>2014</year>;<volume>24</volume>(<issue>11</issue>):<fpage>1854</fpage>–<lpage>1868</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1101/gr.175034.114" xlink:type="simple">10.1101/gr.175034.114</ext-link></comment> <object-id pub-id-type="pmid">25122612</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref021">
+<label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Dixon</surname> <given-names>JR</given-names></name>, <name name-style="western"><surname>Jung</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Selvaraj</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Shen</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Antosiewicz-Bourget</surname> <given-names>JE</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>AY</given-names></name>, <etal>et al</etal>. <article-title>Chromatin architecture reorganization during stem cell differentiation</article-title>. <source>Nature</source>. <year>2015</year>;<volume>518</volume>(<issue>7539</issue>):<fpage>331</fpage>–<lpage>336</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nature14222" xlink:type="simple">10.1038/nature14222</ext-link></comment> <object-id pub-id-type="pmid">25693564</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref022">
+<label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Schoenfelder</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Furlan-Magaril</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Mifsud</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Tavares-Cadete</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Sugar</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Javierre</surname> <given-names>BM</given-names></name>, <etal>et al</etal>. <article-title>The pluripotent regulatory circuitry connecting promoters to their long-range interacting elements</article-title>. <source>Genome research</source>. <year>2015</year>;<volume>25</volume>(<issue>4</issue>):<fpage>582</fpage>–<lpage>597</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1101/gr.185272.114" xlink:type="simple">10.1101/gr.185272.114</ext-link></comment> <object-id pub-id-type="pmid">25752748</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref023">
+<label>23</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Bonev</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Cavalli</surname> <given-names>G</given-names></name>. <article-title>Organization and function of the 3D genome</article-title>. <source>Nature Reviews Genetics</source>. <year>2016</year>;<volume>17</volume>(<issue>11</issue>):<fpage>661</fpage>–<lpage>678</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nrg.2016.112" xlink:type="simple">10.1038/nrg.2016.112</ext-link></comment> <object-id pub-id-type="pmid">27739532</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref024">
+<label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Schmitt</surname> <given-names>AD</given-names></name>, <name name-style="western"><surname>Hu</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ren</surname> <given-names>B</given-names></name>. <article-title>Genome-wide mapping and analysis of chromosome architecture</article-title>. <source>Nature Reviews Molecular Cell Biology</source>. <year>2016</year>;<volume>17</volume>:<fpage>743</fpage>–<lpage>755</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nrm.2016.104" xlink:type="simple">10.1038/nrm.2016.104</ext-link></comment> <object-id pub-id-type="pmid">27580841</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref025">
+<label>25</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Nagano</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Lubling</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Stevens</surname> <given-names>TJ</given-names></name>, <name name-style="western"><surname>Schoenfelder</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Yaffe</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Dean</surname> <given-names>W</given-names></name>, <etal>et al</etal>. <article-title>Single-cell Hi-C reveals cell-to-cell variability in chromosome structure</article-title>. <source>Nature</source>. <year>2013</year>;<volume>502</volume>(<issue>7469</issue>):<fpage>59</fpage>–<lpage>64</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nature12593" xlink:type="simple">10.1038/nature12593</ext-link></comment> <object-id pub-id-type="pmid">24067610</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref026">
+<label>26</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Rao</surname> <given-names>SS</given-names></name>, <name name-style="western"><surname>Huntley</surname> <given-names>MH</given-names></name>, <name name-style="western"><surname>Durand</surname> <given-names>NC</given-names></name>, <name name-style="western"><surname>Stamenova</surname> <given-names>EK</given-names></name>, <name name-style="western"><surname>Bochkov</surname> <given-names>ID</given-names></name>, <name name-style="western"><surname>Robinson</surname> <given-names>JT</given-names></name>, <etal>et al</etal>. <article-title>A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping</article-title>. <source>Cell</source>. <year>2014</year>;<volume>159</volume>(<issue>7</issue>):<fpage>1665</fpage>–<lpage>1680</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.cell.2014.11.021" xlink:type="simple">10.1016/j.cell.2014.11.021</ext-link></comment> <object-id pub-id-type="pmid">25497547</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref027">
+<label>27</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Filippova</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Patro</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Duggal</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Kingsford</surname> <given-names>C</given-names></name>. <article-title>Identification of alternative topological domains in chromatin</article-title>. <source>Algorithms for Molecular Biology</source>. <year>2014</year>;<volume>9</volume>(<issue>1</issue>):<fpage>14</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1186/1748-7188-9-14" xlink:type="simple">10.1186/1748-7188-9-14</ext-link></comment> <object-id pub-id-type="pmid">24868242</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref028">
+<label>28</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Lévy-Leduc</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Delattre</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Mary-Huard</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Robin</surname> <given-names>S</given-names></name>. <article-title>Two-dimensional segmentation for analyzing Hi-C data</article-title>. <source>Bioinformatics</source>. <year>2014</year>;<volume>30</volume>(<issue>17</issue>):<fpage>i386</fpage>–<lpage>i392</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/bioinformatics/btu443" xlink:type="simple">10.1093/bioinformatics/btu443</ext-link></comment> <object-id pub-id-type="pmid">25161224</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref029">
+<label>29</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Baù</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Sanyal</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Lajoie</surname> <given-names>BR</given-names></name>, <name name-style="western"><surname>Capriotti</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Byron</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Lawrence</surname> <given-names>JB</given-names></name>, <etal>et al</etal>. <article-title>The three-dimensional folding of the <italic>α</italic>-globin gene domain reveals formation of chromatin globules</article-title>. <source>Nature structural &amp; molecular biology</source>. <year>2011</year>;<volume>18</volume>(<issue>1</issue>):<fpage>107</fpage>–<lpage>114</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nsmb.1936" xlink:type="simple">10.1038/nsmb.1936</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref030">
+<label>30</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Hu</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Deng</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Qin</surname> <given-names>ZH</given-names></name>, <name name-style="western"><surname>Dixon</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Selvaraj</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Fang</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Bayesian inference of spatial organizations of chromosomes</article-title>. <source>PLoS Comput Biol</source>. <year>2013</year>;<volume>9</volume>(<issue>1</issue>):<fpage>e1002893</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pcbi.1002893" xlink:type="simple">10.1371/journal.pcbi.1002893</ext-link></comment> <object-id pub-id-type="pmid">23382666</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref031">
+<label>31</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Zhang</surname> <given-names>ZZ</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>GL</given-names></name>, <name name-style="western"><surname>Toh</surname> <given-names>KC</given-names></name>, <name name-style="western"><surname>Sung</surname> <given-names>WK</given-names></name>. <article-title>3D chromosome modeling with semi-definite programming and Hi-C data</article-title>. <source>Journal of computational biology</source>. <year>2013</year>;<volume>20</volume>(<issue>11</issue>):<fpage>831</fpage>–<lpage>846</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1089/cmb.2013.0076" xlink:type="simple">10.1089/cmb.2013.0076</ext-link></comment> <object-id pub-id-type="pmid">24195706</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref032">
+<label>32</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Segal</surname> <given-names>MR</given-names></name>, <name name-style="western"><surname>Xiong</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Capurso</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Vazquez</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Arsuaga</surname> <given-names>J</given-names></name>. <article-title>Reproducibility of 3D chromatin configuration reconstructions</article-title>. <source>Biostatistics</source>. <year>2014</year>;<volume>15</volume>(<issue>3</issue>):<fpage>442</fpage>–<lpage>456</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/biostatistics/kxu003" xlink:type="simple">10.1093/biostatistics/kxu003</ext-link></comment> <object-id pub-id-type="pmid">24519450</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref033">
+<label>33</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Lesne</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Riposo</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Roger</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Cournac</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Mozziconacci</surname> <given-names>J</given-names></name>. <article-title>3D genome reconstruction from chromosomal contacts</article-title>. <source>Nature methods</source>. <year>2014</year>;<volume>11</volume>(<issue>11</issue>):<fpage>1141</fpage>–<lpage>1143</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nmeth.3104" xlink:type="simple">10.1038/nmeth.3104</ext-link></comment> <object-id pub-id-type="pmid">25240436</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref034">
+<label>34</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Zhang</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Wolynes</surname> <given-names>PG</given-names></name>. <article-title>Topology, structures, and energy landscapes of human chromosomes</article-title>. <source>Proceedings of the National Academy of Sciences</source>. <year>2015</year>;<volume>112</volume>(<issue>19</issue>):<fpage>6062</fpage>–<lpage>6067</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.1506257112" xlink:type="simple">10.1073/pnas.1506257112</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref035">
+<label>35</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Imakaev</surname> <given-names>MV</given-names></name>, <name name-style="western"><surname>Fudenberg</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Mirny</surname> <given-names>LA</given-names></name>. <article-title>Modeling chromosomes: Beyond pretty pictures</article-title>. <source>FEBS letters</source>. <year>2015</year>;<volume>589</volume>(<issue>20PartA</issue>):<fpage>3031</fpage>–<lpage>3036</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.febslet.2015.09.004" xlink:type="simple">10.1016/j.febslet.2015.09.004</ext-link></comment> <object-id pub-id-type="pmid">26364723</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref036">
+<label>36</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Chen</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Hero</surname> <given-names>AO</given-names></name>, <name name-style="western"><surname>Rajapakse</surname> <given-names>I</given-names></name>. <article-title>Spectral identification of topological domains</article-title>. <source>Bioinformatics</source>. <year>2016</year>; p. <fpage>1</fpage>–<lpage>7</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0191899.ref037">
+<label>37</label>
+<mixed-citation publication-type="other" xlink:type="simple">Xia KL, Wei GW. A review of geometric, topological and graph theory apparatuses for the modeling and analysis of biomolecular data. arXiv preprint arXiv:161201735. 2016;.</mixed-citation>
+</ref>
+<ref id="pone.0191899.ref038">
+<label>38</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Opron</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Xia</surname> <given-names>KL</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>GW</given-names></name>. <article-title>Fast and anisotropic flexibility-rigidity index for protein flexibility and fluctuation analysis</article-title>. <source>Journal of Chemical Physics</source>. <year>2014</year>;<volume>140</volume>:<fpage>234105</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1063/1.4882258" xlink:type="simple">10.1063/1.4882258</ext-link></comment> <object-id pub-id-type="pmid">24952521</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref039">
+<label>39</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Von Luxburg</surname> <given-names>U</given-names></name>. <article-title>A tutorial on spectral clustering</article-title>. <source>Statistics and computing</source>. <year>2007</year>;<volume>17</volume>(<issue>4</issue>):<fpage>395</fpage>–<lpage>416</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s11222-007-9033-z" xlink:type="simple">10.1007/s11222-007-9033-z</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref040">
+<label>40</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Xia</surname> <given-names>KL</given-names></name>, <name name-style="western"><surname>Feng</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Tong</surname> <given-names>YY</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>GW</given-names></name>. <article-title>Multiscale geometric modeling of macromolecules I: Cartesian representation</article-title>. <source>Journal of Computational Physics</source>. <year>2014</year>;<volume>275</volume>:<fpage>912</fpage>–<lpage>936</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.jcp.2013.09.034" xlink:type="simple">10.1016/j.jcp.2013.09.034</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref041">
+<label>41</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Feng</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Xia</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Tong</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>GW</given-names></name>. <article-title>Geometric modeling of subcellular structures, organelles and large multiprotein complexes</article-title>. <source>International Journal for Numerical Methods in Biomedical Engineering</source>. <year>2012</year>;<volume>28</volume>:<fpage>1198</fpage>–<lpage>1223</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/cnm.2532" xlink:type="simple">10.1002/cnm.2532</ext-link></comment> <object-id pub-id-type="pmid">23212797</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref042">
+<label>42</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Xia</surname> <given-names>KL</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>GW</given-names></name>. <article-title>Persistent homology analysis of protein structure, flexibility and folding</article-title>. <source>International Journal for Numerical Methods in Biomedical Engineerings</source>. <year>2014</year>;<volume>30</volume>:<fpage>814</fpage>–<lpage>844</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/cnm.2655" xlink:type="simple">10.1002/cnm.2655</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref043">
+<label>43</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Xia</surname> <given-names>KL</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>GW</given-names></name>. <article-title>Multidimensional persistence in biomolecular data</article-title>. <source>Journal Computational Chemistry</source>. <year>2015</year>;<volume>36</volume>:<fpage>1502</fpage>–<lpage>1520</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/jcc.23953" xlink:type="simple">10.1002/jcc.23953</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref044">
+<label>44</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Xia</surname> <given-names>KL</given-names></name>, <name name-style="western"><surname>Opron</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>GW</given-names></name>. <article-title>Multiscale multiphysics and multidomain models— Flexibility and Rigidity</article-title>. <source>Journal of Chemical Physics</source>. <year>2013</year>;<volume>139</volume>:<fpage>194109</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1063/1.4830404" xlink:type="simple">10.1063/1.4830404</ext-link></comment> <object-id pub-id-type="pmid">24320318</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref045">
+<label>45</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Xia</surname> <given-names>KL</given-names></name>, <name name-style="western"><surname>Opron</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>GW</given-names></name>. <article-title>Multiscale Gaussian network model (mGNM) and multiscale anisotropic network model (mANM)</article-title>. <source>The Journal of chemical physics</source>. <year>2015</year>;<volume>143</volume>(<issue>20</issue>):<fpage>204106</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1063/1.4936132" xlink:type="simple">10.1063/1.4936132</ext-link></comment> <object-id pub-id-type="pmid">26627949</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref046">
+<label>46</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Xia</surname> <given-names>KL</given-names></name>, <name name-style="western"><surname>Zhao</surname> <given-names>ZX</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>GW</given-names></name>. <article-title>Multiresolution topological simplification</article-title>. <source>Journal Computational Biology</source>. <year>2015</year>;<volume>22</volume>:<fpage>1</fpage>–<lpage>5</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1089/cmb.2015.0104" xlink:type="simple">10.1089/cmb.2015.0104</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref047">
+<label>47</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Cang</surname> <given-names>ZX</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>GW</given-names></name>. <article-title>Element specific persistent homology for the analysis and prediction of protein folding stability upon mutation</article-title>. <source>Bioinformatics</source>. <year>2017</year>;<volume>33</volume>:<fpage>3549</fpage>–<lpage>3557</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0191899.ref048">
+<label>48</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Cang</surname> <given-names>ZX</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>GW</given-names></name>. <article-title>TopologyNet: Topology based deep convolutional and multi-task neural networks for biomolecular property predictions</article-title>. <source>PLOS Computational Biology</source>. <year>2017</year>;<volume>13</volume>(<issue>7</issue>):<fpage>e1005690</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pcbi.1005690" xlink:type="simple">10.1371/journal.pcbi.1005690</ext-link></comment> <object-id pub-id-type="pmid">28749969</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref049">
+<label>49</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Cang</surname> <given-names>ZX</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>GW</given-names></name>. <article-title>Integration of element specific persistent homology and machine learning for protein-ligand binding affinity prediction</article-title>. <source>International Journal for Numerical Methods in Biomedical Engineering</source>. <year>2017</year>; <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/cnm.2914" xlink:type="simple">10.1002/cnm.2914</ext-link></comment> <object-id pub-id-type="pmid">28677268</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref050">
+<label>50</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Chung</surname> <given-names>F</given-names></name>. <source>Spectral graph theory</source>. <publisher-name>American Mathematical Society</publisher-name>; <year>1997</year>.</mixed-citation>
+</ref>
+<ref id="pone.0191899.ref051">
+<label>51</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Lu</surname> <given-names>MY</given-names></name>, <name name-style="western"><surname>Ma</surname> <given-names>JP</given-names></name>. <article-title>The role of shape in determining molecular motions</article-title>. <source>Biophysical journal</source>. <year>2005</year>;<volume>89</volume>(<issue>4</issue>):<fpage>2395</fpage>–<lpage>2401</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1529/biophysj.105.065904" xlink:type="simple">10.1529/biophysj.105.065904</ext-link></comment> <object-id pub-id-type="pmid">16055547</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref052">
+<label>52</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Ming</surname> <given-names>DM</given-names></name>, <name name-style="western"><surname>Kong</surname> <given-names>YF</given-names></name>, <name name-style="western"><surname>Lambert</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Huang</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Ma</surname> <given-names>JP</given-names></name>. <article-title>How to describe protein motion without amino acid sequence and atomic coordinates</article-title>. <source>Proceedings of the National Academy of Sciences</source>. <year>2002</year>;<volume>99</volume>(<issue>13</issue>):<fpage>8620</fpage>–<lpage>8625</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.082148899" xlink:type="simple">10.1073/pnas.082148899</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref053">
+<label>53</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Tama</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Brooks</surname> <given-names>CL</given-names> <suffix>III</suffix></name>. <article-title>Symmetry, form, and shape: guiding principles for robustness in macromolecular machines</article-title>. <source>Annu Rev Biophys Biomol Struct</source>. <year>2006</year>;<volume>35</volume>:<fpage>115</fpage>–<lpage>133</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1146/annurev.biophys.35.040405.102010" xlink:type="simple">10.1146/annurev.biophys.35.040405.102010</ext-link></comment> <object-id pub-id-type="pmid">16689630</object-id></mixed-citation>
+</ref>
+<ref id="pone.0191899.ref054">
+<label>54</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Xia</surname> <given-names>KL</given-names></name>. <article-title>Multiscale virtual particle based elastic network model (MVP-ENM) for biomolecular normal mode analysis</article-title>. <source>Physical Chemistry Chemical Physics</source>, <year>2017</year>;<volume>20</volume>(<issue>1</issue>):<fpage>658</fpage>–<lpage>669</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1039/C7CP07177A" xlink:type="simple">10.1039/C7CP07177A</ext-link></comment> <object-id pub-id-type="pmid">29227479</object-id></mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

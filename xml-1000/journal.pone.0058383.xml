@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+      <journal-id journal-id-type="publisher-id">plos</journal-id>
+      <journal-id journal-id-type="pmc">plosone</journal-id>
+      <journal-title-group>
+        <journal-title>PLoS ONE</journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1932-6203</issn>
+      <publisher>
+        <publisher-name>Public Library of Science</publisher-name>
+        <publisher-loc>San Francisco, USA</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id">PONE-D-12-28425</article-id>
+      <article-id pub-id-type="doi">10.1371/journal.pone.0058383</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Biology</subject>
+          <subj-group>
+            <subject>Biotechnology</subject>
+            <subj-group>
+              <subject>Bioengineering</subject>
+              <subj-group>
+                <subject>Biomedical engineering</subject>
+              </subj-group>
+            </subj-group>
+            <subj-group>
+              <subject>Pharmacogenomics</subject>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Computational biology</subject>
+            <subj-group>
+              <subject>Genomics</subject>
+              <subj-group>
+                <subject>Pharmacogenomics</subject>
+              </subj-group>
+            </subj-group>
+            <subj-group>
+              <subject>Microarrays</subject>
+              <subject>Systems biology</subject>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Genomics</subject>
+            <subj-group>
+              <subject>Genomic medicine</subject>
+              <subj-group>
+                <subject>Pharmacogenomics</subject>
+              </subj-group>
+            </subj-group>
+            <subj-group>
+              <subject>Pharmacogenomics</subject>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Computer science</subject>
+          <subj-group>
+            <subject>Algorithms</subject>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Medicine</subject>
+          <subj-group>
+            <subject>Clinical genetics</subject>
+            <subj-group>
+              <subject>Personalized medicine</subject>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline">
+          <subject>Genetics and Genomics</subject>
+          <subject>Biotechnology</subject>
+          <subject>Computational Biology</subject>
+          <subject>Computer Science</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Classification of Time Series Gene Expression in Clinical Studies via Integration of Biological Network</article-title>
+        <alt-title alt-title-type="running-head">Classification of Time Series Gene Expression</alt-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Qian</surname>
+            <given-names>Liwei</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Zheng</surname>
+            <given-names>Haoran</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff3">
+            <sup>3</sup>
+          </xref>
+          <xref ref-type="corresp" rid="cor1">
+            <sup>*</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Zhou</surname>
+            <given-names>Hong</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Qin</surname>
+            <given-names>Ruibin</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Li</surname>
+            <given-names>Jinlong</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+      </contrib-group>
+      <aff id="aff1">
+        <label>1</label>
+        <addr-line>School of Computer Science and Technology, University of Science and Technology of China, Hefei, People's Republic of China</addr-line>
+      </aff>
+      <aff id="aff2">
+        <label>2</label>
+        <addr-line>Anhui Key Laboratory of Software Engineering in Computing and Communication, University of Science and Technology of China, Hefei, People's Republic of China</addr-line>
+      </aff>
+      <aff id="aff3">
+        <label>3</label>
+        <addr-line>Department of Systems Biology, University of Science and Technology of China, Hefei, People's Republic of China</addr-line>
+      </aff>
+      <contrib-group>
+        <contrib contrib-type="editor" xlink:type="simple">
+          <name name-style="western">
+            <surname>Chen</surname>
+            <given-names>Luonan</given-names>
+          </name>
+          <role>Editor</role>
+          <xref ref-type="aff" rid="edit1"/>
+        </contrib>
+      </contrib-group>
+      <aff id="edit1">
+        <addr-line>Chinese Academy of Sciences, China</addr-line>
+      </aff>
+      <author-notes>
+        <corresp id="cor1">* E-mail: <email xlink:type="simple">hrzheng@ustc.edu.cn</email></corresp>
+        <fn fn-type="conflict">
+          <p>The authors have declared that no competing interests exist.</p>
+        </fn>
+        <fn fn-type="con">
+          <p>Conceived and designed the experiments: LWQ HZ HRZ. Performed the experiments: LWQ. Analyzed the data: LWQ RBQ. Wrote the paper: LWQ JLL.</p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="collection">
+        <year>2013</year>
+      </pub-date>
+      <pub-date pub-type="epub">
+        <day>13</day>
+        <month>3</month>
+        <year>2013</year>
+      </pub-date>
+      <volume>8</volume>
+      <issue>3</issue>
+      <elocation-id>e58383</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>18</day>
+          <month>9</month>
+          <year>2012</year>
+        </date>
+        <date date-type="accepted">
+          <day>4</day>
+          <month>2</month>
+          <year>2013</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-year>2013</copyright-year>
+        <copyright-holder>Qian et al</copyright-holder>
+        <license xlink:type="simple">
+          <license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>The increasing availability of time series expression datasets, although promising, raises a number of new computational challenges. Accordingly, the development of suitable classification methods to make reliable and sound predictions is becoming a pressing issue. We propose, here, a new method to classify time series gene expression via integration of biological networks. We evaluated our approach on 2 different datasets and showed that the use of a hidden Markov model/Gaussian mixture models hybrid explores the time-dependence of the expression data, thereby leading to better prediction results. We demonstrated that the biclustering procedure identifies function-related genes as a whole, giving rise to high accordance in prognosis prediction across independent time series datasets. In addition, we showed that integration of biological networks into our method significantly improves prediction performance. Moreover, we compared our approach with several state-of–the-art algorithms and found that our method outperformed previous approaches with regard to various criteria. Finally, our approach achieved better prediction results on early-stage data, implying the potential of our method for practical prediction.</p>
+      </abstract>
+      <funding-group>
+        <funding-statement>The authors gratefully acknowledge funding support from the National Key Technologies R&amp;D Program (2011CB910200). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+      </funding-group>
+      <counts>
+        <page-count count="12"/>
+      </counts>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Introduction</title>
+      <p>In the last decade, the development of a variety of techniques, such as microarray-based techniques, has enabled instant measurement of the expression of up to thousands of genes. The use of gene expression profiling allows clinical diagnosis to be made on a molecular level, thereby facilitating the choice of treatment based on the patients' genetic traits <xref ref-type="bibr" rid="pone.0058383-Ostrowski1">[1]</xref>. Some of these methods have been commercialized, creating tools for expression-based diagnosis and treatment prognosis <xref ref-type="bibr" rid="pone.0058383-Parker1">[2]</xref>, <xref ref-type="bibr" rid="pone.0058383-Cardoso1">[3]</xref>.</p>
+      <p>In the past few years, gene expression experiments have been limited to static analysis <xref ref-type="bibr" rid="pone.0058383-Cleator1">[4]</xref>, <xref ref-type="bibr" rid="pone.0058383-Hess1">[5]</xref>, in which only a snapshot of gene expression for a set of samples is available. Recently, many research groups have proposed the combination of static gene expression measurements with biological networks, such as protein-protein interaction and metabolic networks, and have verified that integrative approaches can achieve better classification results than approaches that analyze only static gene expression data <xref ref-type="bibr" rid="pone.0058383-Rapaport1">[6]</xref>, <xref ref-type="bibr" rid="pone.0058383-Goldenberg1">[7]</xref>, <xref ref-type="bibr" rid="pone.0058383-Chuang1">[8]</xref>, <xref ref-type="bibr" rid="pone.0058383-Taylor1">[9]</xref>, <xref ref-type="bibr" rid="pone.0058383-Junjie1">[10]</xref>, <xref ref-type="bibr" rid="pone.0058383-Dao1">[11]</xref>.</p>
+      <p>Although static analyses are appropriate for many cases, they are less appropriate for longer-term follow-up <xref ref-type="bibr" rid="pone.0058383-Lin1">[12]</xref>. In the case of transplant patients, for example, physicians need to determine whether or when patients' bodies start rejecting the new organ, in order to determine whether treatment with immunosuppressant drugs is required. In this scenario, classification can be improved if one takes into account not only the current state of the patient but also their past state and the changes that have occurred over time. Accounting for the temporal dynamics of gene expression affords a novel perspective on clinical studies, such as drug response prediction. Although time series analysis is promising, it also raises a number of new computational challenges. A unique challenge for clinical time series expression classification is to take into account the patient-specific rate of disease development or treatment response <xref ref-type="bibr" rid="pone.0058383-Kaminski1">[13]</xref>. Another challenge is that clinical data usually have very peculiar characteristics: typically, only a small number of samples (patients) are available, each containing a large number of features (genes) <xref ref-type="bibr" rid="pone.0058383-Lottaz1">[14]</xref>. As a result, in order to make reliable and sound predictions, careful development of suitable classification methods becomes a pressing issue.</p>
+      <p>Over the past several years, a few methods for classifying time series expression data have been reported, including an exhaustive search strategy to identify genes for a Bayesian classifier <xref ref-type="bibr" rid="pone.0058383-Lottaz1">[14]</xref>, an SVM method based on dynamic systems kernels <xref ref-type="bibr" rid="pone.0058383-Ro1">[15]</xref>, a classifier based on hidden Markov models and discriminative learning <xref ref-type="bibr" rid="pone.0058383-Lin1">[12]</xref>, a series of biclustering-based classification algorithms <xref ref-type="bibr" rid="pone.0058383-LangerGould1">[16]</xref>, and a tensor decomposition method to classify time series expression data <xref ref-type="bibr" rid="pone.0058383-Baranzini1">[17]</xref>. One major problem of these approaches is that they merely analyze genome-wide expression profiles, which contain inherent measurement noise. Heterogeneity across samples further aggravates this problem. Moreover, gene markers selected by these approaches may be function-related and hence contain redundant information. Collectively, these factors lead to the degradation of the overall classification performance <xref ref-type="bibr" rid="pone.0058383-Chuang1">[8]</xref>, <xref ref-type="bibr" rid="pone.0058383-Junjie1">[10]</xref>.</p>
+      <p>Motivated by limitations of current classification methods in time series data and the good performance of network integration approaches in static gene expression, our aim in this study was to classify time series gene expression via integration of biological networks. To our knowledge, this study is the first attempt at integration of biological networks for classification of time series data. We emphasize that integration approaches in static analysis cannot be directly applied to time series data. In order to reduce the effect of the measurement noise, we have introduced a hybrid model of hidden Markov model/Gaussian mixture model (HMM/GMM) into our approach, converting the original gene expression value, which contains noise, into a discrete gene state that represents the qualitative assessment of the gene expression level. The HMM/GMM hybrid model also takes into consideration time-dependence, which is a special property of time series data. Instead of using single gene markers that may be function-related, we regard genes that show similar expression pattern as a whole (bicluster) with the hypothesis that these genes may share a common biological function. Because genes sharing an expression pattern are likely, but not certain, to be function-related, we integrated biological networks into our approach, weighting a bicluster according to its connected genes in the network. The more closely connected the genes, the more likely the genes share a common biological function, and the higher the weight. Every sample (patient) is denoted as a point in the bicluster space. Similarity between samples (distance between points in the space) can be calculated as the weighted sum of bicluster similarity. We classified a sample based on its similarity to other samples.</p>
+      <p>Here, we investigated the classification of Multiple Sclerosis (MS) patients with respect to their response to interferon beta (IFN-β) treatment. MS is one of the most prevalent autoimmune disorders, and treatment with IFN-β is widely applied to reduce the intensity and frequency of symptoms. Nevertheless, almost 50% of patients do not respond to the therapy <xref ref-type="bibr" rid="pone.0058383-Ro1">[15]</xref>. To exacerbate matters, IFN-β therapy has been associated with a number of adverse reactions, including flu-like symptoms, transient laboratory abnormalities, menstrual disorders, increased spasticity, and dermal reactions <xref ref-type="bibr" rid="pone.0058383-LangerGould1">[16]</xref>. Accordingly, it is of great importance to accurately predict patients' response to therapy ahead of, or at an early stage in treatment. In this paper, we evaluated our approach on 2 different MS datasets and compared the results of our GMM/HMM model with other discretization methods. We investigated the contribution of integrating networks within our approach and compared our method with several state-of-the-art algorithms with respect to various performance criteria. Finally, we demonstrated the potential of our approach in practical prediction.</p>
+    </sec>
+    <sec id="s2" sec-type="materials|methods">
+      <title>Materials and Methods</title>
+      <p>The prediction process primarily consists of 4 steps (<xref ref-type="fig" rid="pone-0058383-g001">Figure 1</xref>). Firstly, gene states are inferred by an HMM/GMM hybrid model. Secondly, the QL-biclustering algorithm extracts biclusters of every patient from the gene state matrix. Thirdly, every bicluster is scored according to its genes' connection in the protein-protein interaction (PPI) network. Finally, the label of every test patient is predicted by PPI-SVM-KNN based on patient similarity, taking into account both bicluster similarity and its score. The software is available at <ext-link ext-link-type="uri" xlink:href="http://home.ustc.edu.cn/~lwqian/PPI-SVM-KNN/PPI.html" xlink:type="simple">http://home.ustc.edu.cn/~lwqian/PPI-SVM-KNN/PPI.html</ext-link>.</p>
+      <fig id="pone-0058383-g001" position="float">
+        <object-id pub-id-type="doi">10.1371/journal.pone.0058383.g001</object-id>
+        <label>Figure 1</label>
+        <caption>
+          <title>Schematic overview of classification of time series gene expression.</title>
+          <p>The prediction process primarily consists of 4 or 5 steps. Firstly, gene states are inferred by an HMM/GMM hybrid model. Secondly, the QL-biclustering algorithm extracts biclusters of every patient from the gene state matrix. Thirdly, every bicluster is scored according to its genes' connection in the protein-protein interaction (PPI) network. Finally, the label of every test patient is predicted by PPI-SVM-KNN based on patient similarity, taking into account both bicluster similarity and its PPIScore.</p>
+        </caption>
+        <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0058383.g001" position="float" xlink:type="simple"/>
+      </fig>
+      <sec id="s2a">
+        <title>1. Dataset</title>
+        <sec id="s2a1">
+          <title>1.1 Time series gene expression dataset</title>
+          <p>We tested our approach on 2 different sets of time series microarray expression data from Baranzini and Goertsches <xref ref-type="bibr" rid="pone.0058383-Baranzini1">[17]</xref>, <xref ref-type="bibr" rid="pone.0058383-Goertsches1">[18]</xref> to predict whether MS patients <xref ref-type="bibr" rid="pone.0058383-Hemmer1">[19]</xref> will respond positively to treatment with recombinant human IFN-β (rIFN-β). The Baranzini dataset contains time expression profiles of 52 multiple sclerosis patients, of which 33 responded well, and 19 responded poorly to rIFN-β. Expression profiles of 70 genes were measured up to 7 times per patient. The first 5 observations were at a regular intervals of 3 months apart, whereas the last 2 observations were spaced 6 months apart. Seventeen patients missed a test, and hence, we have only 6 measurements. Eight patients missed 2 tests, and hence, we have only 5 measurements. All missing values are filled with a weighted mean of the 3 closest neighboring values after data normalization. The Goertsches dataset contains 25 patients, out of which 15 responded well and 10 responded poorly to rIFN-β. Expression profiles of genes were measured 5 times per patient. Here, we used the expression values of 58 genes that were also measured in Baranzini dataset. It should be mentioned here that Baranzini dataset is based on one-step kinetic reverse-transcription PCR experiments. The Goertsches dataset is based on Affymetrix DNA microarrays.</p>
+        </sec>
+        <sec id="s2a2">
+          <title>1.2 PPI network</title>
+          <p>The protein-protein interaction network obtained from a public human PPI database (HPRD) <xref ref-type="bibr" rid="pone.0058383-Prasad1">[20]</xref> was used here, excluding those PPIs not related to the genes of MS dataset. After excluding those interactions not related to genes in the dataset, we obtained 121 binary protein-protein interactions. The selected human protein-protein interaction network is shown in <xref ref-type="supplementary-material" rid="pone.0058383.s001">Figure S1</xref>.</p>
+        </sec>
+      </sec>
+      <sec id="s2b">
+        <title>2. Inference of gene states via the HMM/GMM hybrid model</title>
+        <p>The HMM/GMM hybrid model is a classical method in speech recognition <xref ref-type="bibr" rid="pone.0058383-Rodrguez1">[21]</xref>. In the present study, we introduced the model to process time series gene expression data. It is known that genome-wide expression profiles contain inherent measurement noise. In order to reduce the effect of this noise, we introduced an HMM/GMM hybrid model into our approach, converting the original gene expression value, which contains noise, into a discrete gene state that represents the qualitative assessment of the gene expression level. Moreover, the HMM/GMM hybrid model takes into account time-dependence, which is a special property of time series data.</p>
+        <p>A standard continuous HMM is characterized by the following elements <xref ref-type="bibr" rid="pone.0058383-Rabiner1">[22]</xref>: (1) Q, the number of hidden states; (2) A = [a<sub>ij</sub>], the state transition probability distribution, where a<sub>ij</sub> is the transition probability from state i to j; (3) B = {b<sub>j</sub>(x)}, the emission probability distribution, where b<sub>j</sub>(x) is the emission probability of observing x in state j; and (4) π = {π<sub>i</sub>}, the initial state distribution, where π<sub>i</sub> is the start point probability of the state i.</p>
+        <p>An HMM is often simply notated as λ = (A,B,π). The HMM/GMM hybrid model is a specific form of the HMM model, in which the emission probability distribution can be modeled by a mixture of Gaussian functions: <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0058383.e001" xlink:type="simple"/></inline-formula> where n is the mixture number, w<sub>ji</sub> is the mixture weight, and g<sub>ji</sub> is the component Gaussian function with expected value μ<sub>ji</sub> and standard deviation σ<sub>ji</sub>.</p>
+        <p>We assume that expression values of each gene are from a Markov process, which is widely used by many existing methods <xref ref-type="bibr" rid="pone.0058383-Schliep1">[23]</xref>. In the model, a state represents the qualitative assessment of gene expression level, reflecting contiguous regions of a time series with similar levels of expression <xref ref-type="bibr" rid="pone.0058383-Schliep2">[24]</xref>. Each gene remains in one state at a time point. The gene can remain in the same state or switch to other states in the next time point (the number of states is Q). The model is initialized as follows: the initial state distribution (π), state transition probability distribution (A), and mixture weight distribution (w) are set to uniform distribution. The expression values of all genes are divided into Q bins. Each bin has the same number of expression values. The mixture number n is equal to the number of genes. μ<sub>ji</sub> and σ<sub>ji</sub> denote the mean and standard deviation of expression values in the jth bin of gene i, respectively. When the initialization process is complete, the model parameter is trained by EM algorithm <xref ref-type="bibr" rid="pone.0058383-Friedman1">[25]</xref>. Finally, the Viterbi algorithm <xref ref-type="bibr" rid="pone.0058383-ForneyJr1">[26]</xref> is applied to infer the hidden state sequences for all genes.</p>
+        <p>
+          <bold>Algorithm 1:QL_Biclustering Algorithm</bold>
+        </p>
+        <p>Input: ml, mo, gene state matrix</p>
+        <p>Output: biclusters</p>
+        <list list-type="order">
+          <list-item>
+            <p><bold>for</bold> each gene expression sequence</p>
+          </list-item>
+          <list-item>
+            <p> Construct all responding suffix strings (SA).</p>
+          </list-item>
+          <list-item>
+            <p>
+              <bold>end for</bold>
+            </p>
+          </list-item>
+          <list-item>
+            <p>Sort all the suffix strings in SA by MSD (most significant digit) radix sort method.</p>
+          </list-item>
+          <list-item>
+            <p><bold>for</bold> every 2 adjacent suffix strings</p>
+          </list-item>
+          <list-item>
+            <p> Compute longest common prefix and store the longest common prefix length (LCP_Length).</p>
+          </list-item>
+          <list-item>
+            <p>
+              <bold>end for</bold>
+            </p>
+          </list-item>
+          <list-item>
+            <p><bold>for</bold> each distinct value i in LCP_Length</p>
+          </list-item>
+          <list-item>
+            <p><bold> for</bold> each occurrence (j) of i in LCP_Length</p>
+          </list-item>
+          <list-item>
+            <p>  pos(i, j) = pinpoint(LCP_Length, i, j)</p>
+          </list-item>
+          <list-item>
+            <p>  if i&lt;ml then {Blcp[pos(i,j)] = 1; continue; }</p>
+          </list-item>
+          <list-item>
+            <p>  l = max{k| k&lt;pos(i,j) and Blcp[k] = 1}+1</p>
+          </list-item>
+          <list-item>
+            <p>  r = min{k| k&gt;pos(i,j) and Blcp[k] = 1}</p>
+          </list-item>
+          <list-item>
+            <p>  Blcp[pos(i,j)] = 1</p>
+          </list-item>
+          <list-item>
+            <p>  if (r−l+1)&lt;mo then continue;</p>
+          </list-item>
+          <list-item>
+            <p>  if &gt;1 &amp;&amp; LCP_Length [l -1] =  = i then continue;</p>
+          </list-item>
+          <list-item>
+            <p>  Bicluster:</p>
+          </list-item>
+          <list-item>
+            <p>   Gene set (G): Gene [l … r];</p>
+          </list-item>
+          <list-item>
+            <p>   J(Timepoint (T) and corresponding expression state (S)): SA(pos(i,j), 1...i)</p>
+          </list-item>
+          <list-item>
+            <p> <bold>end for</bold></p>
+          </list-item>
+          <list-item>
+            <p>
+              <bold>end for</bold>
+            </p>
+          </list-item>
+        </list>
+      </sec>
+      <sec id="s2c">
+        <title>3. Extraction of biclusters through a new biclustering algorithm</title>
+        <p>Previous approaches of classifying time series expression data have been limited to analysis of genome-wide expression profiles. Gene markers selected by these approaches may be function-related and hence contain redundant information, leading to the degradation of the overall classification performance. Accordingly, it is more effective to regard function-related genes as a whole. We, therefore, extracted biclusters from the gene state sequences of each patient. Biological processes start and finish in a contiguous, but unknown, period, leading to increased activity of sets of genes that can be identified as biclusters with continuous time points. Several authors have previously pointed out the importance of biclusters and their relevance in the identification of biological processes <xref ref-type="bibr" rid="pone.0058383-Ji1">[27]</xref>, <xref ref-type="bibr" rid="pone.0058383-Zhang1">[28]</xref>.</p>
+        <p>Biclustering algorithms identify groups of genes that show similar expression patterns under a specific subset of the experimental conditions <xref ref-type="bibr" rid="pone.0058383-Madeira1">[29]</xref>. Given a gene expression matrix with n genes (rows) and m time points (columns), the temporal biclustering problem is to find a subset of genes G and a continuous segment of time points T, the expression values of genes G follow a desired profile S under time points T, as shown in <xref ref-type="supplementary-material" rid="pone.0058383.s002">Figure S2</xref>. A bicluster is often simply notated as B(G, J(T, S)). Madeira et al. <xref ref-type="bibr" rid="pone.0058383-Madeira2">[30]</xref> proposed a suffix tree based CCC-Biclustering method. Suffix tree-based methods are characterized by high space complexity and are difficult for biologists to fully understand. Qu et al. <xref ref-type="bibr" rid="pone.0058383-Qu1">[31]</xref> introduced a method based on pairwise alignment of all gene pairs, which can be more easily interpreted, although its time complexity is relatively high.</p>
+        <p>Here, a new biclustering algorithm, named QL_Biclustering, is proposed to extract biclusters from the gene state matrix obtained in the previous step. In order to differentiate a specific time point, a transformation is introduced, appending a time point to each gene state. For example, given the gene state sequence of a certain gene at each of the first 3 time points S = {3, 2, 1}, the transformed state sequence is J (T, S) = {13, 22, 31}.</p>
+        <p>QL_Biclustering algorithm (Algorithm 1) is based on the suffix string and longest common prefix. The input is the gene state matrix, ml (minimum number of continuous time points), mo (minimum number of genes). The output is all biclusters satisfying the user's requirements. The algorithm traverses all the values in LCP_Length from the smallest to the largest. For each occurrence of each different value in LCP_Length, QL_Biclustering processes it as follows. At step 10, the jth occurrence position of value i in LCP_Length is pinpointed and stored in pos(i,j). The number of time points of the current bicluster is ensured to be not less than ml at step 11. The algorithm finds an interval [l, r] at steps 12–13, the suffix strings among which share a common prefix with length i. Any bicluster, the gene number of which is less than mo, is ignored at step 15. Step 16 verifies whether the candidate bicluster can be extended to the left. If it does, the candidate bicluster will be discarded because it is not a maximal bicluster.</p>
+        <p>The QL_Biclustering algorithm is simple but efficient in aspects of both time and space and is linear on the size of the gene state matrix (<xref ref-type="supplementary-material" rid="pone.0058383.s011">Supplemental Material S1</xref>). In addition, a linear structure is employed to implement our algorithm that, we believe, will be more accessible to biologists.</p>
+      </sec>
+      <sec id="s2d">
+        <title>4. Integration of biological network by hypergeometric distribution</title>
+        <p>In the previous step, we extracted biclusters in which genes showed a similar expression pattern. Genes in a bicluster obtained according to their gene expression values are supposed, but not certain, to be function-related (<xref ref-type="supplementary-material" rid="pone.0058383.s011">Supplemental Material S1</xref>, <xref ref-type="supplementary-material" rid="pone.0058383.s003">Figure S3</xref>). Here, we weight a bicluster according to its genes' connection in biological network. In this study, the PPI network is used solely as an illustration: the proposed method is independent of the nature of the network and can be extended to many other biological networks, for example, metabolic networks.</p>
+        <p>It is known that the distances among genes that are regulated by the same transcription factors in a PPI network are 2 because they have common upstream factors. The distance among genes that belong to a protein complex in a PPI network are 1, as genes represented in a complex are adjacent <xref ref-type="bibr" rid="pone.0058383-Qu1">[31]</xref>. Hence, generally, the more closely connected genes in the network, the more likely the genes share a common biological function. In view of this, among all biclusters extracted at a previous step, biclusters in which genes are highly connected relative to overall connectivity in the PPI network are more preferable. Hypergeometric distribution is employed to model the association between gene i and the gene set of bicluster B.</p>
+        <p><disp-formula id="pone.0058383.e002"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0058383.e002" xlink:type="simple"/><label>(1)</label></disp-formula>particularly, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0058383.e003" xlink:type="simple"/></inline-formula> where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0058383.e004" xlink:type="simple"/></inline-formula> is the set of all genes except genes in bicluster B, n<sub>i-&gt;B</sub> is the number of network interactions between gene i and genes in bicluster B, the remaining notations may be deduced by analogy.</p>
+        <p>For each bicluster B, its preference (PPIScore) is scored as follows:<disp-formula id="pone.0058383.e005"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0058383.e005" xlink:type="simple"/><label>(2)</label></disp-formula></p>
+      </sec>
+      <sec id="s2e">
+        <title>5. Classification of time series gene expression via integration of PPI network</title>
+        <sec id="s2e1">
+          <title>5.1 Computation of similarity between 2 patients based on bicluster similarity and PPIScore</title>
+          <p><italic>The</italic> Jaccard Index <xref ref-type="bibr" rid="pone.0058383-Madeira2">[30]</xref> is used to compute the similarity measure Sim(B<sub>i</sub>,B<sub>j</sub>) between 2 biclusters B<sub>i</sub>(G<sub>i</sub>,J<sub>i</sub>) and B<sub>j</sub>(G<sub>j</sub>,J<sub>j</sub>):<disp-formula id="pone.0058383.e006"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0058383.e006" xlink:type="simple"/><label>(3)</label></disp-formula></p>
+          <p>where |B<sub>i</sub>∩B<sub>j</sub>| = |G<sub>i</sub>∩G<sub>j</sub>|×|J<sub>i</sub>∩J<sub>j</sub>|, |B<sub>i</sub>∪B<sub>j</sub>| = |B<sub>i</sub>|+|B<sub>j</sub>|-|B<sub>i</sub>∩B<sub>j</sub>|, |B<sub>i</sub>| = |G<sub>i</sub>|×|J<sub>i</sub>|, |B<sub>j</sub>| = |G<sub>j</sub>|×|J<sub>j</sub>|.</p>
+          <p>Given 2 patients, P<sub>1</sub> and P<sub>2</sub>, firstly, we normalize the PPIScore of all biclusters in P<sub>1</sub> and P<sub>2</sub>, respectively. Then, the similarity between the 2 patients can be calculated as follows: <disp-formula id="pone.0058383.e007"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0058383.e007" xlink:type="simple"/><label>(4)</label></disp-formula>n, m is the number of biclusters in P<sub>1</sub>, P<sub>2</sub>, respectively. B<sub>1i</sub>, B<sub>2j</sub> denotes the ith bicluster in P<sub>1</sub>, the jth bicluster in P<sub>2</sub>, respectively.</p>
+          <p>The above formula bears 2 properties, which are crucial to following classifier design:</p>
+          <p>PPISim(A,A) = 1; (5)</p>
+          <p>PPISim(A,B) = PPISim(B,A);</p>
+        </sec>
+        <sec id="s2e2">
+          <title>5.2 PPI-SVM-KNN classifier</title>
+          <p>An SVM <xref ref-type="bibr" rid="pone.0058383-Cortes1">[32]</xref> and KNN <xref ref-type="bibr" rid="pone.0058383-Cover1">[33]</xref> hybrid classifier integrating a PPI network named PPI-SVM-KNN (Algorithm 2) is proposed here. The KNN classifier is used at the initial stage, after which an SVM classifier is trained on the collection of K-nearest neighbors. Training an SVM on the entire data set is slow, and the extension of SVM to multiple classes is not as natural as KNN. However, in the neighborhood of a small number of samples, SVM, more often than not, performs better than other classification methods. This is a process with a coarse and quick categorization followed by a finer but slower classification, which inherits the advantages of both SVM and KNN classifiers <xref ref-type="bibr" rid="pone.0058383-Zhang2">[34]</xref>. In detail, a linear SVM with slack variables was utilized in our approach. PPISim among different patients that satisfies a symmetrical property is used as the kernel matrix (<xref ref-type="supplementary-material" rid="pone.0058383.s011">Supplemental Material S1</xref>). Because experimental results have shown that nonlinear SVMs, such as the SVM with Gaussian kernel, do not lead to a better performance, we used the simplest linear kernel.</p>
+          <p>
+            <bold>Algorithm 2: PPI-SVM-KNN</bold>
+          </p>
+          <p>Input: C, K</p>
+          <p>Output: predictClass</p>
+          <list list-type="order">
+            <list-item>
+              <p><bold>for</bold> each test patient P do</p>
+            </list-item>
+            <list-item>
+              <p> Calculate the similarity between all patients in the training set and the test patient P and rank those training patients by similarity measure; add the top K patients to kPatients.</p>
+            </list-item>
+            <list-item>
+              <p><bold>if</bold> the label of all the patients in kPatients is class_i</p>
+            </list-item>
+            <list-item>
+              <p>  predictClass = class_i;</p>
+            </list-item>
+            <list-item>
+              <p>
+                <bold>else</bold>
+              </p>
+            </list-item>
+            <list-item>
+              <p>  Compute similarity matrix PPISim among patients in kPatients.</p>
+            </list-item>
+            <list-item>
+              <p>  Train linear SVM with slack variable classifier by using PPISim as kernel and predict the label of test patient P.</p>
+            </list-item>
+            <list-item>
+              <p> <bold>end if</bold></p>
+            </list-item>
+            <list-item>
+              <p>
+                <bold>end for</bold>
+              </p>
+            </list-item>
+          </list>
+          <p>The model of linear SVM with slack variables:<disp-formula id="pone.0058383.e008"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0058383.e008" xlink:type="simple"/><label>(6)</label></disp-formula>subject to: <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0058383.e009" xlink:type="simple"/></inline-formula>; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0058383.e010" xlink:type="simple"/></inline-formula></p>
+          <p>where <disp-formula id="pone.0058383.e011"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0058383.e011" xlink:type="simple"/></disp-formula></p>
+          <p>X is the matrix of training samples, y is the vector of corresponding labels, n is the number of samples.</p>
+          <p>PPISim is calculated as described above.</p>
+          <p>The label of a new sample P can be predicted as follows: <disp-formula id="pone.0058383.e012"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0058383.e012" xlink:type="simple"/><label>(7)</label></disp-formula>where SV (Support Vector) = {i| α<sub>i</sub> ≠ 0}</p>
+          <p><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0058383.e013" xlink:type="simple"/></inline-formula> for any i such that α<sub>i</sub> ≠ 0.</p>
+          <p>The parameter C can be viewed as a way to control “softness”: it trades off between maximizing the margin and fitting the training data (minimizing the error). The larger the value of C is, the less likely the classifier is to misclassify samples in the training set. The parameter K specifies the classifier's dependence on the choice of the number of neighbors. When K is small, the algorithm behaves like a straightforward KNN classifier. When K is large enough, our method is totally an SVM. A commonly used strategy to evaluate classification performance is the k-fold cross validation (CV) scheme. In this work, we use 10 repetitions of 4-fold CV, which was also used in previous approaches.</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Results and Discussion</title>
+      <sec id="s3a">
+        <title>1. The HMM/GMM hybrid model is conducive to dealing with time series gene expression</title>
+        <p>In order to reduce the effect of the measurement noise, we introduced an HMM/GMM hybrid model into our approach, converting the original gene expression value, which contains noise, into a discrete gene state that represents the qualitative assessment of gene expression level. The HMM/GMM hybrid model also takes into consideration time-dependence, which is a special property of time series data. We compared the HMM/GMM hybrid model with many other discretization methods, including Average, Mid-Range, Max-X%Max, Top X%, EFP <xref ref-type="bibr" rid="pone.0058383-Madeira3">[35]</xref>. The Average All, Average Row, and Average Col discretization methods use the average expression value computed using all the values in the matrix, by row and by column, respectively, to discretize the expression matrix, and the remainder may be deduced by analogy. First, we compared the classification results of distinct discretization methods. The results (<xref ref-type="table" rid="pone-0058383-t001">Table 1</xref>, <xref ref-type="supplementary-material" rid="pone.0058383.s004">Table S1</xref>) indicate that the HMM/GMM hybrid model yields a better classification performance. Furthermore, we demonstrated the advantages of the GMM/HMM hybrid model in processing time series data from the perspective of class distance. The similarity among all good responders (Pos), among all bad responders (Neg) and between good responders and bad responders (PosNeg) was computed according to Eq.4. D is the ratio of average similarity among patients of the same class and that of different classes. <xref ref-type="supplementary-material" rid="pone.0058383.s005">Table S2</xref> indicates that the HMM/GMM hybrid model bears the largest D value among all methods. In other words, when the HMM/GMM hybrid model is employed, the inter-class distances are much larger than intra-class distances, thus leading to better classification results.</p>
+        <table-wrap id="pone-0058383-t001" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0058383.t001</object-id>
+          <label>Table 1</label>
+          <caption>
+            <title>Classification accuracies of different discretization methods for Baranzini dataset and Goertsches dataset: average (AVG) and standard deviation (SD).</title>
+          </caption>
+          <alternatives>
+            <graphic id="pone-0058383-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0058383.t001" xlink:type="simple"/>
+            <table>
+              <colgroup span="1">
+                <col align="left" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Method</td>
+                  <td colspan="2" align="left" rowspan="1">AVG/SD</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1">Baranzini Dataset</td>
+                  <td align="left" rowspan="1" colspan="1">Goertsches Dataset</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">
+                    <bold>
+                      <italic>HMM/GMM</italic>
+                    </bold>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1">
+                    <bold>
+                      <italic>86.20/2.98</italic>
+                    </bold>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1">
+                    <bold>
+                      <italic>78.57/8.19</italic>
+                    </bold>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Average All</td>
+                  <td align="left" rowspan="1" colspan="1">79.00/3.81</td>
+                  <td align="left" rowspan="1" colspan="1">55.46/7.67</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Average Col</td>
+                  <td align="left" rowspan="1" colspan="1">76.18/3.26</td>
+                  <td align="left" rowspan="1" colspan="1">50.86/8.56</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Average Row</td>
+                  <td align="left" rowspan="1" colspan="1">81.86/4.85</td>
+                  <td align="left" rowspan="1" colspan="1">67.91/8.29</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">MidRange All</td>
+                  <td align="left" rowspan="1" colspan="1">68.39/1.95</td>
+                  <td align="left" rowspan="1" colspan="1">55.67/5.61</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">MidRange Col</td>
+                  <td align="left" rowspan="1" colspan="1">65.07/2.89</td>
+                  <td align="left" rowspan="1" colspan="1">50.30/9.76</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">MidRange Row</td>
+                  <td align="left" rowspan="1" colspan="1">72.03/3.73</td>
+                  <td align="left" rowspan="1" colspan="1">59.55/8.99</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Max-X%Max All</td>
+                  <td align="left" rowspan="1" colspan="1">63.48/0.02</td>
+                  <td align="left" rowspan="1" colspan="1">41.37/2.69</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Max-X%Max Col</td>
+                  <td align="left" rowspan="1" colspan="1">53.97/5.40</td>
+                  <td align="left" rowspan="1" colspan="1">44.32/6.98</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Max-X%Max Row</td>
+                  <td align="left" rowspan="1" colspan="1">71.34/5.85</td>
+                  <td align="left" rowspan="1" colspan="1">58.67/8.72</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">EFP All</td>
+                  <td align="left" rowspan="1" colspan="1">75.16/5.21</td>
+                  <td align="left" rowspan="1" colspan="1">61.21/7.47</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">EFP Col</td>
+                  <td align="left" rowspan="1" colspan="1">72.33/3.84</td>
+                  <td align="left" rowspan="1" colspan="1">62.10/3.87</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">EFP Row</td>
+                  <td align="left" rowspan="1" colspan="1">78.47/6.04</td>
+                  <td align="left" rowspan="1" colspan="1">73.50/5.01</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Top X% All</td>
+                  <td align="left" rowspan="1" colspan="1">60.57/2.38</td>
+                  <td align="left" rowspan="1" colspan="1">54.32/9.26</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Top X% Col</td>
+                  <td align="left" rowspan="1" colspan="1">52.44/4.96</td>
+                  <td align="left" rowspan="1" colspan="1">36.02/7.48</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Top X% Row</td>
+                  <td align="left" rowspan="1" colspan="1">65.46/3.70</td>
+                  <td align="left" rowspan="1" colspan="1">52.51/6.35</td>
+                </tr>
+              </tbody>
+            </table>
+          </alternatives>
+        </table-wrap>
+      </sec>
+      <sec id="s3b">
+        <title>2. The biclustering <italic>procedure</italic> regards function-related genes as a whole and takes the time course information into consideration as well</title>
+        <p>Instead of using single gene markers that may be function-related leading to degradation of classification result, the proposed approach regards function-related genes as a whole through biclustering. The biclustering procedure identifies groups of genes that show similar expression patterns under a contiguous segment of time points, which takes the time course information into consideration as well. On average, the number of biclusters inferred from Baranzini dataset is 24 per patient; the number of biclusters inferred from Goertsches dataset is 64 per patient. We randomly selected bicluster examples from each of the two datasets, which are shown in <xref ref-type="fig" rid="pone-0058383-g002">Figure 2</xref>. As shown in <xref ref-type="fig" rid="pone-0058383-g002">Figure 2(A)</xref>, the expression values of gene ITGAL and ITGB1 are consistent from time point 1 to time point 7. Therefore, the state transitions of the two genes are the same, changing from state 1 to state 2 at time point 5 (<xref ref-type="fig" rid="pone-0058383-g002">Figure 2(C)</xref>). The biclustering procedure identifies the two genes as a whole from time point 1 to time point 7. In order to check whether the two genes are function-related or not, function enrichment analysis was conducted. As shown in <xref ref-type="supplementary-material" rid="pone.0058383.s006">Table S3</xref>, ITGAL and ITGB1 share 8 functions (p-value&lt;0.05).The PPIScore of this bicluster from Baranzini dataset is 0.675. As is shown in <xref ref-type="fig" rid="pone-0058383-g002">Figure 2(B)</xref>, the expression values of gene CASP5 and CASP1 are consistent from time point 1 to time point 3. Hence, the state transitions of the two genes are the same, changing from state 1 to state 2 at time point 3 (<xref ref-type="fig" rid="pone-0058383-g002">Figure 2(D)</xref>). These 2 genes share 6 functions (<xref ref-type="supplementary-material" rid="pone.0058383.s006">Table S3</xref>). The PPIScore of this bicluster from Goertsches dataset is 1. It is worth mentioning that the expression value of gene CASP5 increases significantly from −1 to 0.6 at time point 4. In contrast, the expression value of gene CASP1 increases marginally from −0.6 to −0.2 at time point 4. Therefore, the biclustering procedure only regards the 2 genes as a whole from time point 1 to time point 3.</p>
+        <fig id="pone-0058383-g002" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0058383.g002</object-id>
+          <label>Figure 2</label>
+          <caption>
+            <title>Randomly selected biclustering examples from Baranzini dataset and Goertsches dataset.</title>
+            <p>The expression values of genes in each bicluster are shown in (A) and (B). The state transitions of genes in each bicluster are shown in (C) and (D). The bicluster from Baranzini dataset consists of gene ITGAL and gene ITGB1 and their state transitions from time point 1 to time point 7. The bicluster from Goertsches dataset consists of gene CASP5 and gene CASP1 and their state transitions from time point 1 to time point 3.</p>
+          </caption>
+          <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0058383.g002" position="float" xlink:type="simple"/>
+        </fig>
+        <p>Many works on static gene expression <xref ref-type="bibr" rid="pone.0058383-Chuang1">[8]</xref>, <xref ref-type="bibr" rid="pone.0058383-Li1">[36]</xref> have reported that multi-gene modules can achieve higher accordance across datasets. For example, Li et al. <xref ref-type="bibr" rid="pone.0058383-Li1">[36]</xref> achieved an average accuracy of 70% across static microarray datasets in prediction of colorectal cancer. Here, we also tested the proposed approach across Baranzini dataset and Goertsches dataset although they are based on different platforms. The two independent datasets were mixed. We randomly selected 75% of the mixed dataset (3 folds) as training set and tested the proposed model on the remaining data (1 fold of the mixed dataset). Ten repetition experiments were executed. Our method achieved an average Accuracy of 77.02%, Precision of 80.12%, Recall of 85.21% and F1Score of 82.15%. These results suggest our prediction through biclustering, which regards function-related genes as a whole, can achieve highly reproducible and acceptable performance across different time series datasets. We also trained the proposed model on Baranzini dataset and tested it on Goertsches dataset, and vice versa. The proposed model achieved an average accuracy of 64.80% and 52.69%, precision of 64.13% and 66.37%, recall of 94.00% and 51.82%, and F1Score of 76.22% and 58.17%. When the model was trained on Goertsches dataset and tested on Baranzini dataset, we found that the average test accuracy is lower than the average training accuracy (which is as high as 80%). One possible reason is that the number of training samples (25) is far less than that of test samples (52). The heterogeneity of the two datasets further aggravates this problem.</p>
+      </sec>
+      <sec id="s3c">
+        <title>3. Integration of PPI network into classification of time series gene expression data significantly improves prediction performances</title>
+        <p>We next investigated the contribution of integrating PPI network in our method. In the proposed method, we regarded genes that had a similar expression pattern (bicluster) as a whole. Because genes showing similar expression pattern are likely, but not certain to be, function-related, we integrated a PPI network into our approach, weighting a bicluster according to its genes' connection in the network. The more closely connected the genes, the more likely the genes share a common biological function and the higher the weight. We compared the results of integrating a PPI network (PPI-SVM-KNN) to those obtained when no PPI network was integrated (SVM-KNN). As shown in <xref ref-type="fig" rid="pone-0058383-g003">Figure 3</xref> (<xref ref-type="supplementary-material" rid="pone.0058383.s007">Table S4</xref>), prediction performances are much improved when integrating a PPI network with all other parts unchanged. Integration of PPI network into our approach therefore plays an important role in improving prediction results. Complex diseases arise from the accumulation of both genetic factors and environmental exposition. The environmental signals change the biological information at each level of the hierarchical life system. Data integration approach <xref ref-type="bibr" rid="pone.0058383-Weston1">[37]</xref> minimizes the noise that is inherent in data generated through large scale, high-throughput biology. This might explain that integration of PPI network improves prediction performance.</p>
+        <fig id="pone-0058383-g003" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0058383.g003</object-id>
+          <label>Figure 3</label>
+          <caption>
+            <title>Prediction accuracies of integration (PPI-SVM-KNN) and non-integration (SVM-KNN) of a PPI network.</title>
+            <p>The bars and error ticks represent mean values and standard deviations respectively. The blue bar represents the accuracy of integration PPI network. The orange bar represents the accuracy of non-integration of PPI network.</p>
+          </caption>
+          <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0058383.g003" position="float" xlink:type="simple"/>
+        </fig>
+      </sec>
+      <sec id="s3d">
+        <title>4. PPI-SVM-KNN bears clear advantages in classification of time series gene expression</title>
+        <p>PPI-SVM-KNN employs the HMM/GMM hybrid model to explore the time-dependence property of the data and integrates PPI networks favoring those biclusters that are more likely to share a common biological function, resulting in clear advantages in the classification of time series gene expression. We next demonstrated its advantages in the following aspects: Sensitivity, Accuracy, Precision, Recall and F-measure.</p>
+        <p>We first checked the influence of parameters C and K on classification performances. The parameter C of PPI-SVM-KNN trades off between maximizing the margin and fitting the training data (minimizing the error). The larger the value of C is, the less likely the classifier is to misclassify samples in the training set. The parameter K specifies the classifier's dependence on choice of the number of neighbors. When K is small, the algorithm behaves like a straightforward KNN classifier. When K is large enough, our method is totally an SVM. As shown in <xref ref-type="fig" rid="pone-0058383-g004">Figure 4</xref> and <xref ref-type="fig" rid="pone-0058383-g005">Figure 5</xref> (<xref ref-type="supplementary-material" rid="pone.0058383.s008">Table S5</xref> and <xref ref-type="supplementary-material" rid="pone.0058383.s009">Table S6</xref>), classification results hardly vary and therefore are not very sensitive to the changes of K and C, respectively. In terms of the Baranzini dataset, the accuracy of our approach tends to increase modestly with the growth of C. On the contrary, with regard to Goertsches dataset, the accuracy of our approach tends to decrease marginally with the growth of C. In other words, in order to achieve high accuracy on Goertsches dataset, we need to allow misclassification of some samples in the training set in order to maximize the margin. This, to some extent, indicates that Goertsches dataset might contain noise or that outliers exist in the dataset. Hence, samples in the Goertsches dataset are difficult to classify. Many papers <xref ref-type="bibr" rid="pone.0058383-Etienne1">[38]</xref>, <xref ref-type="bibr" rid="pone.0058383-Moreau1">[39]</xref>, <xref ref-type="bibr" rid="pone.0058383-Dallas1">[40]</xref> reported that gene expression measurement of a sample between RT-PCR and Affymetrix microarrays often had reduced agreement, especially for those genes with high or low levels of expression. Here, those samples of Baranzini dataset and Goertsches dataset are different. The disagreement between the two dataset might be more obvious. This might be a reason for the different transition of accuracy on the two datasets with the growth of parameter C. It is worth mentioning that, in all other experiments of this work, the parameter C and K are selected by cross validation.</p>
+        <fig id="pone-0058383-g004" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0058383.g004</object-id>
+          <label>Figure 4</label>
+          <caption>
+            <title>Classification accuracies of PPI-SVM-KNN with the change of parameter K from 3 to 9.</title>
+            <p>The bars and error ticks represent mean values and standard deviations respectively. (A) shows the result for Baranzini dataset. (B) shows the result for Goertsches dataset.</p>
+          </caption>
+          <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0058383.g004" position="float" xlink:type="simple"/>
+        </fig>
+        <fig id="pone-0058383-g005" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0058383.g005</object-id>
+          <label>Figure 5</label>
+          <caption>
+            <title>Classification accuracies of PPI-SVM-KNN with the change of parameter C.</title>
+            <p>The bars and error ticks represent mean values and standard deviations respectively. (A) shows the result for Baranzini dataset. (B) shows the result for Goertsches dataset.</p>
+          </caption>
+          <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0058383.g005" position="float" xlink:type="simple"/>
+        </fig>
+        <p><xref ref-type="table" rid="pone-0058383-t002">Table 2</xref> demonstrates the classification accuracy of distinct methods in 2 different MS patient response datasets. We compared our method with several state-of-the-art algorithms <xref ref-type="bibr" rid="pone.0058383-Lin1">[12]</xref>, <xref ref-type="bibr" rid="pone.0058383-Baranzini1">[17]</xref>, <xref ref-type="bibr" rid="pone.0058383-Li2">[41]</xref>, <xref ref-type="bibr" rid="pone.0058383-Carreiro1">[42]</xref>, <xref ref-type="bibr" rid="pone.0058383-Costa1">[43]</xref>, <xref ref-type="bibr" rid="pone.0058383-Borgwardt1">[44]</xref>, as well as with standard classifiers SVM and random forest (The results of other common classifiers on Baranzini dataset have been reported in the work of Carreiro et al. <xref ref-type="bibr" rid="pone.0058383-Carreiro1">[42]</xref>). The dataset used in standard classifiers consists of a single matrix where each row represents the data for a single patient. The results of all those methods listed here are based on 70 genes (Baranzini dataset) or 58 genes (Goertsches dataset) without any further feature selection, with the exception of the IBIS method, which used only the first time point expression data and 3 selected genes. The source code of IBIS is not available and the HMMConst3 source code does not work; hence, we listed only their original results on the Baranzini dataset. For other approaches that were available, we evaluated them on both the Baranzini and Goertsches datasets. As shown in <xref ref-type="table" rid="pone-0058383-t002">Table 2</xref>, PPI-SVM-KNN outperformed previous methods that are based solely on gene expression profiles with regard to accuracy. As for Goertsches dataset that is noisier than the Baranzini dataset and consists of fewer samples, the classification accuracy of the dsSVM, HMMClass, SVM methods is markedly low. However, PPI-SVM-KNN still achieved good classification performance on the noisier and smaller Goertsches dataset. Hence, compared with previous approaches, our method achieved more stability in prediction accuracy across 2 different datasets.</p>
+        <table-wrap id="pone-0058383-t002" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0058383.t002</object-id>
+          <label>Table 2</label>
+          <caption>
+            <title>Classification accuracies of distinct classification methods for Baranzini dataset and Goertsches dataset: average (AVG) and standard deviation (SD).</title>
+          </caption>
+          <alternatives>
+            <graphic id="pone-0058383-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0058383.t002" xlink:type="simple"/>
+            <table>
+              <colgroup span="1">
+                <col align="left" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Method</td>
+                  <td align="left" rowspan="1" colspan="1">AVG/SD</td>
+                  <td align="left" rowspan="1" colspan="1">Reference</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Baranzini dataset</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">IBIS</td>
+                  <td align="left" rowspan="1" colspan="1">74.20</td>
+                  <td align="left" rowspan="1" colspan="1">Baranzini, et al., 2004</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">dsSVM</td>
+                  <td align="left" rowspan="1" colspan="1">73.44/2.56</td>
+                  <td align="left" rowspan="1" colspan="1">Borgwardt, et al., 2006</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Meta-Profiles</td>
+                  <td align="left" rowspan="1" colspan="1">59.42/6.17</td>
+                  <td align="left" rowspan="1" colspan="1">Carreiro, et al., 2011</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">HMMConst3</td>
+                  <td align="left" rowspan="1" colspan="1">81.38/10.00</td>
+                  <td align="left" rowspan="1" colspan="1">Costa, et al., 2009</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">HMMClass</td>
+                  <td align="left" rowspan="1" colspan="1">78.42/3.44</td>
+                  <td align="left" rowspan="1" colspan="1">Lin, et al., 2008</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">uHONMFtf</td>
+                  <td align="left" rowspan="1" colspan="1">60.97/2.91</td>
+                  <td align="left" rowspan="1" colspan="1">Li and Ngom, 2011</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Random forest</td>
+                  <td align="left" rowspan="1" colspan="1">70.19/5.39</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">SVM</td>
+                  <td align="left" rowspan="1" colspan="1">67.47/1.90</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">
+                    <bold>
+                      <italic>PPI-SVM-KNN</italic>
+                    </bold>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1">
+                    <bold>
+                      <italic>86.20/2.98</italic>
+                    </bold>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">
+                    <bold>Goertsches dataset</bold>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">dsSVM</td>
+                  <td align="left" rowspan="1" colspan="1">55.75/3.28</td>
+                  <td align="left" rowspan="1" colspan="1">Borgwardt, et al., 2006</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Meta-Profiles</td>
+                  <td align="left" rowspan="1" colspan="1">64.00/4.62</td>
+                  <td align="left" rowspan="1" colspan="1">Carreiro, et al., 2011</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">uHONMFtf</td>
+                  <td align="left" rowspan="1" colspan="1">53.37/6.94</td>
+                  <td align="left" rowspan="1" colspan="1">Li and Ngom, 2011</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">HMMClass</td>
+                  <td align="left" rowspan="1" colspan="1">45.82/4.30</td>
+                  <td align="left" rowspan="1" colspan="1">Lin, et al., 2008</td>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">Random forest</td>
+                  <td align="left" rowspan="1" colspan="1">52.39/3.24</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">SVM</td>
+                  <td align="left" rowspan="1" colspan="1">57.26/4.21</td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" rowspan="1" colspan="1">
+                    <bold>
+                      <italic>PPI-SVM-KNN</italic>
+                    </bold>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1">
+                    <bold>
+                      <italic>78.57/8.19</italic>
+                    </bold>
+                  </td>
+                  <td align="left" rowspan="1" colspan="1"/>
+                </tr>
+              </tbody>
+            </table>
+          </alternatives>
+        </table-wrap>
+        <p>Because the prediction accuracy <italic>per se</italic> is insufficient to comprehensively measure the quality of a classifier, other commonly used performance criteria such as Recall, Precision, and F-measure <xref ref-type="bibr" rid="pone.0058383-Olson1">[45]</xref> were tested. We noticed, however, that only prediction accuracy was reported in the papers of the state-of-the-art methods. Recall is the ratio of correctly detected good responders to all patients that actually are good responders. Precision is the ratio of correctly predicted good responders to all predicted good responders. F-measure is the harmonic mean of precision and recall. As shown in <xref ref-type="fig" rid="pone-0058383-g006">Figure 6</xref>, our approach performed well with regard to all of the above metrics, and outperformed other methods in terms of F-measure and Precision. The Recall value of our approach on Goertsches dataset is slightly lower than that of dsSVM and SVM. In other words, compared with dsSVM and SVM, the prediction of a truly good responder as a bad responder would more likely happen in our approach. In general, the approach we report here is an improvement on other previous methods based on overall consideration of Accuracy, Precision, Recall, and F-measure.</p>
+        <fig id="pone-0058383-g006" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0058383.g006</object-id>
+          <label>Figure 6</label>
+          <caption>
+            <title>Precision, Recall and F-measure of different classification approaches.</title>
+            <p>The bars and error ticks represent mean values and standard deviations respectively. (A) shows the result for Baranzini dataset. (B) shows the result for Goertsches dataset.</p>
+          </caption>
+          <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0058383.g006" position="float" xlink:type="simple"/>
+        </fig>
+      </sec>
+      <sec id="s3e">
+        <title>5. PPI-SVM-KNN achieved better prediction results on early-stage data</title>
+        <p>Considering that accurate prediction from early-stage data is of great significance in clinical diagnosis, we evaluated the influence of the number of measurements on classification performances and compared it with other methods. We repeated our classification experiment considering the first n measurements (for all n ≥ 3). As expected, classification performances increase as the number of measurements grows (<xref ref-type="fig" rid="pone-0058383-g007">Figure 7</xref>, <xref ref-type="supplementary-material" rid="pone.0058383.s010">Table S7</xref>). In comparison with other methods, our approach almost outperformed them at all values of n. We emphasize that our method achieved good results even on early-stage data (n = 3, 4), implying the potential of our approach in practical prediction. After patients have been treated with rIFN-β for a short period, for example, (n = 3), our approach can predict their probable responses, offering suggestions to those patients as to whether they should continue to receive the drug therapy or not.</p>
+        <fig id="pone-0058383-g007" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0058383.g007</object-id>
+          <label>Figure 7</label>
+          <caption>
+            <title>Prediction accuracies of different classification approaches with the change of measurements.</title>
+            <p>The points in the figure represent mean values. (A) shows the accuracies from time point 3 to time point 7 for Baranzini dataset. (B) shows the accuracies from time point 3 to time point 5 for Goertsches dataset.</p>
+          </caption>
+          <graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0058383.g007" position="float" xlink:type="simple"/>
+        </fig>
+      </sec>
+      <sec id="s3f">
+        <title>6. Discussion and future work</title>
+        <p>Personalized medicine, the use of marker-assisted diagnosis and targeted therapies derived from individual's molecular profile, is involving in the pharmaceutical industry and medical practice and it is likely to affect many aspects of society<xref ref-type="bibr" rid="pone.0058383-Ginsburg1">[46]</xref>. Currently, many works have been proposed to predict individual's therapy response based on static gene expression <xref ref-type="bibr" rid="pone.0058383-Huang1">[47]</xref>, <xref ref-type="bibr" rid="pone.0058383-Koczan1">[48]</xref>, including the work of Ruiz-Peña et al. <xref ref-type="bibr" rid="pone.0058383-RuizPea1">[49]</xref>, which has been put into clinical practice. However, the accuracy of those approaches is, at best, at the 80 percent level. Further improvements are required before these methods can be widely used in clinical application. The main challenges in personalized medicine are as follows. Firstly, gene signatures have been developed using a number of different platforms and with samples coming from different clinical series <xref ref-type="bibr" rid="pone.0058383-Espinosa1">[50]</xref>. Secondly, in clinical studies, samples are often limited. Noise is inherent in data generated through large-scale, high throughput experiments. Finally, complex diseases arise from the accumulation of both genetic factors and environmental exposition. The environmental signals change the biological information at each level of the hierarchical system. Therefore, understanding of complex disease requires the integration of different data types arising from DNA, RNA, protein, metabolites, small molecules and many different aspects of phenotype <xref ref-type="bibr" rid="pone.0058383-Weston1">[37]</xref>, <xref ref-type="bibr" rid="pone.0058383-Nicholson1">[51]</xref>.</p>
+        <p>Here, we developed a novel method to predict the MS patients' response to IFN-Beta, which is a work toward personalized medicine. The proposed approach is based on the idea of integrating two hierarchies of life system-gene and protein. For this specific MS prediction problem, we did not design a feature selection component. The 70 genes were selected by Baranzini <xref ref-type="bibr" rid="pone.0058383-Baranzini1">[17]</xref> on the basis of their presumed biological action. The feature set includes genes coding for type I and II IFN-responsive molecules, cytokine receptors, members of the interferon (IFN) signaling and apoptosis pathways, and several transcriptions factors involve in immune regulation. In a word, the author selected the genes that are closely related to MS and the medicine (IFN-Beta). It is worth pointing out that the feature selection component is needed when the proposed method is applied to other prediction problems. Feature selection can be performed either by the similar method mentioned in the work of Baranzini, or by some other widely used methods in clinical studies <xref ref-type="bibr" rid="pone.0058383-Parker1">[2]</xref>, such as “N” t test statistics <xref ref-type="bibr" rid="pone.0058383-Storey1">[52]</xref>, cluster index scores <xref ref-type="bibr" rid="pone.0058383-Dudoit1">[53]</xref> and the modified t test statistics <xref ref-type="bibr" rid="pone.0058383-Tibshirani1">[54]</xref>. In addition, in order to achieve better prediction on the patients' therapy response, we are striving to integrate metabolic profiles into our model since metabolomics is considered the one that comes closest to expressing phenotype <xref ref-type="bibr" rid="pone.0058383-Baraldi1">[55]</xref>.</p>
+      </sec>
+    </sec>
+    <sec id="s4">
+      <title>Conclusion</title>
+      <p>In this paper, we presented a sound and reliable methodology for the classification of clinical time series data based on the novel idea of integrating biological networks. Admittedly, there are few points that we would like to improve in the near future. For example, during the process of data discretization (HMM/GMM hybrid model), time course information of the data is, more or less, lost. However, our method outperformed prior approaches that do not consider biological networks with regard to various performance criteria. Compared with other approaches, our method achieved more stability in prediction across 2 different datasets. Moreover, the proposed method achieved high accordance in prognosis prediction across independent time series datasets. Finally, we found that our approach achieved better prediction performances on early-stage data, implying that our method has great potential in clinical prediction. All the results on the 2 independent datasets have indicated that integration of the network into classification of time series significantly improves prediction performance, which is similar to that of static gene expression demonstrated by recent research groups <xref ref-type="bibr" rid="pone.0058383-Chuang1">[8]</xref>.</p>
+    </sec>
+    <sec id="s5">
+      <title>Supporting Information</title>
+      <supplementary-material id="pone.0058383.s001" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0058383.s001" position="float" xlink:type="simple">
+        <label>Figure S1</label>
+        <caption>
+          <p><bold>The selected binary protein protein interaction network.</bold> Each node represents a gene. Each edge represents a protein protein interaction, i.e. there exists a interaction between the two proteins which are encoded by the two genes the edge connects.</p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0058383.s002" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0058383.s002" position="float" xlink:type="simple">
+        <label>Figure S2</label>
+        <caption>
+          <p><bold>Biclustering process.</bold> Biclusters were extracted from (A) the gene state matrix. In order to differentiate specific time point, a transformation is introduced, appending time point to each gene state (B). Biclusters extracted from gene state matrix are shown in (C).</p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0058383.s003" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0058383.s003" position="float" xlink:type="simple">
+        <label>Figure S3</label>
+        <caption>
+          <p><bold>Functional enrichment analysis of genes in each Bicluster.</bold> The function of genes in each bicluster was analyzed. (A) is the result of Baranzini Dataset; (B) is the result of Goertsches Dataset. In (A) and (B), the horizontal axis represents the range of function count; the left vertical axis represents the number of biclusters; the right vertical axis represents the cumulative frequency. The height of each bar represents the number of biclusters. The x-axis label of each bar represents function counts (e.g. the left most bar of (A) indicates that there are nearly 30% biclusters associating with 1∼50 functions). The line represents cumulative frequency of corresponding bar in the Figures.</p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0058383.s004" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0058383.s004" position="float" xlink:type="simple">
+        <label>Table S1</label>
+        <caption>
+          <p>
+            <bold>Precision, Recall and F-measure of different discretization methods on Baranzini dataset and Goertsches dataset: average (AVG) and standard deviation (SD).</bold>
+          </p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0058383.s005" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0058383.s005" position="float" xlink:type="simple">
+        <label>Table S2</label>
+        <caption>
+          <p>
+            <bold>Patient similarity of different discretization methods on Baranzini dataset and Goertsches dataset.</bold>
+          </p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0058383.s006" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0058383.s006" position="float" xlink:type="simple">
+        <label>Table S3</label>
+        <caption>
+          <p><bold>Function enrichment analysis of the bicluster examples on Baranzini dataset and Goertsches dataset.</bold> Gene functions with p-value &lt;0.05 are selected here.</p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0058383.s007" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0058383.s007" position="float" xlink:type="simple">
+        <label>Table S4</label>
+        <caption>
+          <p>
+            <bold>Precision, Recall and F-measure of integration versus non-integration of PPI network on Baranzini dataset and Goertsches dataset: average (AVG) and standard deviation (SD).</bold>
+          </p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0058383.s008" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0058383.s008" position="float" xlink:type="simple">
+        <label>Table S5</label>
+        <caption>
+          <p>
+            <bold>Precision, Recall and F-measure of PPI-SVM-KNN with the change of K from 3 to 9: average (AVG) and standard deviation (SD).</bold>
+          </p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0058383.s009" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0058383.s009" position="float" xlink:type="simple">
+        <label>Table S6</label>
+        <caption>
+          <p>
+            <bold>Precision, Recall and F-measure of PPI-SVM-KNN with the change of C from 0.1 to 1000: average (AVG) and standard deviation (SD).</bold>
+          </p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0058383.s010" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0058383.s010" position="float" xlink:type="simple">
+        <label>Table S7</label>
+        <caption>
+          <p>
+            <bold>Precision, Recall and F-measure of distinct approaches with the change of measurements: average (AVG) and standard deviation (SD).</bold>
+          </p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0058383.s011" mimetype="application/pdf" xlink:href="info:doi/10.1371/journal.pone.0058383.s011" position="float" xlink:type="simple">
+        <label>Supplemental Material S1</label>
+        <caption>
+          <p>
+            <bold>1. Complexity analysis of the proposed biclustering algorithm and its comparison with CCC-Biclustering; 2. Function enrichment analysis of bicluster; 3. Kernel validation.</bold>
+          </p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>The authors would like to thank the reviewers for their helpful comments, thank Dr. Yifeng Li for providing the source code of SVM using dynamic systems kernel and thank Dr. Michael Hecker for providing test dataset.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="pone.0058383-Ostrowski1">
+        <label>1</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ostrowski</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Wyrwicz</surname><given-names>LS</given-names></name> (<year>2009</year>) <article-title>Integrating genomics, proteomics and bioinformatics in translational studies of molecular medicine</article-title>. <source>Expert review of molecular diagnostics</source> <volume>9</volume>: <fpage>623</fpage>–<lpage>630</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Parker1">
+        <label>2</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Parker</surname><given-names>JS</given-names></name>, <name name-style="western"><surname>Mullins</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Cheang</surname><given-names>MCU</given-names></name>, <name name-style="western"><surname>Leung</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Voduc</surname><given-names>D</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Supervised risk predictor of breast cancer based on intrinsic subtypes</article-title>. <source>Journal of clinical oncology</source> <volume>27</volume>: <fpage>1160</fpage>–<lpage>1167</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Cardoso1">
+        <label>3</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cardoso</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Van't Veer</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Rutgers</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Loi</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Mook</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>Clinical application of the 70-gene profile: the MINDACT trial</article-title>. <source>Journal of clinical oncology</source> <volume>26</volume>: <fpage>729</fpage>–<lpage>735</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Cleator1">
+        <label>4</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cleator</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Tsimelzon</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Ashworth</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Dowsett</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Dexter</surname><given-names>T</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Gene expression patterns for doxorubicin (Adriamycin) and cyclophosphamide (cytoxan)(AC) response and resistance</article-title>. <source>Breast cancer research and treatment</source> <volume>95</volume>: <fpage>229</fpage>–<lpage>233</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Hess1">
+        <label>5</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hess</surname><given-names>KR</given-names></name>, <name name-style="western"><surname>Anderson</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Symmans</surname><given-names>WF</given-names></name>, <name name-style="western"><surname>Valero</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Ibrahim</surname><given-names>N</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Pharmacogenomic predictor of sensitivity to preoperative chemotherapy with paclitaxel and fluorouracil, doxorubicin, and cyclophosphamide in breast cancer</article-title>. <source>Journal of clinical oncology</source> <volume>24</volume>: <fpage>4236</fpage>–<lpage>4244</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Rapaport1">
+        <label>6</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rapaport</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Zinovyev</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Dutreix</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Barillot</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Vert</surname><given-names>JP</given-names></name> (<year>2007</year>) <article-title>Classification of microarray data using gene networks</article-title>. <source>BMC Bioinformatics</source> <volume>8</volume>: <fpage>35</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Goldenberg1">
+        <label>7</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Goldenberg</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Mostafavi</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Quon</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Boutros</surname><given-names>PC</given-names></name>, <name name-style="western"><surname>Morris</surname><given-names>QD</given-names></name> (<year>2011</year>) <article-title>Unsupervised detection of genes of influence in lung cancer using biological networks</article-title>. <source>Bioinformatics</source> <volume>27</volume>: <fpage>3166</fpage>–<lpage>3172</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Chuang1">
+        <label>8</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Chuang HY, Lee E, Liu YT, Lee D, Ideker T (2007) Network-based classification of breast cancer metastasis. Molecular systems biology 3.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Taylor1">
+        <label>9</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Taylor</surname><given-names>IW</given-names></name>, <name name-style="western"><surname>Linding</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Warde-Farley</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Liu</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Pesquita</surname><given-names>C</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Dynamic modularity in protein interaction networks predicts breast cancer outcome</article-title>. <source>Nature biotechnology</source> <volume>27</volume>: <fpage>199</fpage>–<lpage>204</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Junjie1">
+        <label>10</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Junjie S, Byung-Jun Y, Edward D (2010) Identification of diagnostic subnetwork markers for cancer in human protein-protein interaction network. BMC Bioinformatics 11.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Dao1">
+        <label>11</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dao</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Collins</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Ester</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Lapuk</surname><given-names>A</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Optimally discriminative subnetwork markers predict response to chemotherapy</article-title>. <source>Bioinformatics</source> <volume>27</volume>: <fpage>i205</fpage>–<lpage>i213</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Lin1">
+        <label>12</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lin</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Kaminski</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Bar-Joseph</surname><given-names>Z</given-names></name> (<year>2008</year>) <article-title>Alignment and classification of time series gene expression in clinical studies</article-title>. <source>Bioinformatics</source> <volume>24</volume>: <fpage>i147</fpage>–<lpage>i155</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Kaminski1">
+        <label>13</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kaminski</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Bar-Joseph</surname><given-names>Z</given-names></name> (<year>2007</year>) <article-title>A patient-gene model for temporal expression profiles in clinical studies</article-title>. <source>Journal of Computational Biology</source> <volume>14</volume>: <fpage>324</fpage>–<lpage>338</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Lottaz1">
+        <label>14</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lottaz</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Kostka</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Markowetz</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Spang</surname><given-names>R</given-names></name> (<year>2008</year>) <article-title>Computational diagnostics with gene expression profiles</article-title>. <source>Methods Mol Biol</source> <volume>453</volume>: <fpage>281</fpage>–<lpage>296</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Ro1">
+        <label>15</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Río</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Nos</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Tintoré</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Borrás</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Galán</surname><given-names>I</given-names></name>, <etal>et al</etal>. (<year>2002</year>) <article-title>Assessment of different treatment failure criteria in a cohort of relapsing–remitting multiple sclerosis patients treated with interferon β: Implications for clinical trials</article-title>. <source>Annals of neurology</source> <volume>52</volume>: <fpage>400</fpage>–<lpage>406</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-LangerGould1">
+        <label>16</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Langer-Gould</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Moses</surname><given-names>HH</given-names></name>, <name name-style="western"><surname>Murray</surname><given-names>TJ</given-names></name> (<year>2004</year>) <article-title>Strategies for managing the side effects of treatments for multiple sclerosis</article-title>. <source>Neurology</source> <volume>63</volume>: <fpage>S35</fpage>–<lpage>S41</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Baranzini1">
+        <label>17</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Baranzini</surname><given-names>SE</given-names></name>, <name name-style="western"><surname>Mousavi</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Rio</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Caillier</surname><given-names>SJ</given-names></name>, <name name-style="western"><surname>Stillman</surname><given-names>A</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Transcription-based prediction of response to IFNβ using supervised computational methods</article-title>. <source>PLoS Biology</source> <volume>3</volume>: <fpage>e2</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Goertsches1">
+        <label>18</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Goertsches</surname><given-names>RH</given-names></name>, <name name-style="western"><surname>Hecker</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Koczan</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Serrano-Fernandez</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Moeller</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Long-term genome-wide blood RNA expression profiles yield novel molecular response candidates for IFN-β-1b treatment in relapsing remitting MS</article-title>. <source>Pharmacogenomics</source> <volume>11</volume>: <fpage>147</fpage>–<lpage>161</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Hemmer1">
+        <label>19</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hemmer</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Archelos</surname><given-names>JJ</given-names></name>, <name name-style="western"><surname>Hartung</surname><given-names>HP</given-names></name> (<year>2002</year>) <article-title>New concepts in the immunopathogenesis of multiple sclerosis</article-title>. <source>Nature Reviews Neuroscience</source> <volume>3</volume>: <fpage>291</fpage>–<lpage>301</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Prasad1">
+        <label>20</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Prasad</surname><given-names>TSK</given-names></name>, <name name-style="western"><surname>Goel</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Kandasamy</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Keerthikumar</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Kumar</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Human protein reference database—2009 update</article-title>. <source>Nucleic acids research</source> <volume>37</volume>: <fpage>D767</fpage>–<lpage>D772</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Rodrguez1">
+        <label>21</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Rodríguez E, Ruíz B, García-Crespo Á, García F. Speech/speaker recognition using a HMM/GMM hybrid model; 1997. Springer. pp. 227–234.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Rabiner1">
+        <label>22</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rabiner</surname><given-names>LR</given-names></name> (<year>1989</year>) <article-title>A tutorial on hidden Markov models and selected applications in speech recognition</article-title>. <source>Proceedings of the IEEE</source> <volume>77</volume>: <fpage>257</fpage>–<lpage>286</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Schliep1">
+        <label>23</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schliep</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Schönhuth</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Steinhoff</surname><given-names>C</given-names></name> (<year>2003</year>) <article-title>Using hidden Markov models to analyze gene expression time course data</article-title>. <source>Bioinformatics</source> <volume>19</volume>: <fpage>i255</fpage>–<lpage>i263</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Schliep2">
+        <label>24</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schliep</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Costa</surname><given-names>IG</given-names></name>, <name name-style="western"><surname>Steinhoff</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Schonhuth</surname><given-names>A</given-names></name> (<year>2005</year>) <article-title>Analyzing gene expression time-courses</article-title>. <source>Computational Biology and Bioinformatics, IEEE/ACM Transactions on</source> <volume>2</volume>: <fpage>179</fpage>–<lpage>193</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Friedman1">
+        <label>25</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Friedman J, Hastie T, Tibshirani R (2001) The elements of statistical learning: Springer Series in Statistics.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-ForneyJr1">
+        <label>26</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Forney Jr</surname><given-names>GD</given-names></name> (<year>1973</year>) <article-title>The viterbi algorithm</article-title>. <source>Proceedings of the IEEE</source> <volume>61</volume>: <fpage>268</fpage>–<lpage>278</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Ji1">
+        <label>27</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ji</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Tan</surname><given-names>KL</given-names></name> (<year>2005</year>) <article-title>Identifying time-lagged gene clusters using gene expression data</article-title>. <source>Bioinformatics</source> <volume>21</volume>: <fpage>509</fpage>–<lpage>516</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Zhang1">
+        <label>28</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Zhang Y, Zha H, Chu CH (2005) A time-series biclustering algorithm for revealing co-regulated genes. Information Technology: Coding and Computing, IEEE International Conference on: IEEE pp. 32–37 Vol. 31.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Madeira1">
+        <label>29</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Madeira</surname><given-names>SC</given-names></name>, <name name-style="western"><surname>Oliveira</surname><given-names>AL</given-names></name> (<year>2004</year>) <article-title>Biclustering algorithms for biological data analysis: a survey</article-title>. <source>Computational Biology and Bioinformatics, IEEE/ACM Transactions on</source> <volume>1</volume>: <fpage>24</fpage>–<lpage>45</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Madeira2">
+        <label>30</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Madeira</surname><given-names>SC</given-names></name>, <name name-style="western"><surname>Teixeira</surname><given-names>MC</given-names></name>, <name name-style="western"><surname>Sa-Correia</surname><given-names>I</given-names></name>, <name name-style="western"><surname>Oliveira</surname><given-names>AL</given-names></name> (<year>2010</year>) <article-title>Identification of regulatory modules in time series gene expression data using a linear time biclustering algorithm</article-title>. <source>Computational Biology and Bioinformatics, IEEE/ACM Transactions on</source> <volume>7</volume>: <fpage>153</fpage>–<lpage>165</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Qu1">
+        <label>31</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Qu JB, Zhang XS, Wu LY, Wang Y, Chen L (2011) Detecting coherent local patterns from time series gene expression data by a temporal biclustering method. Systems Biology (ISB), 2011 IEEE International Conference on: IEEE. pp. 388–393.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Cortes1">
+        <label>32</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cortes</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Vapnik</surname><given-names>V</given-names></name> (<year>1995</year>) <article-title>Support-vector networks</article-title>. <source>Machine learning</source> <volume>20</volume>: <fpage>273</fpage>–<lpage>297</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Cover1">
+        <label>33</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cover</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Hart</surname><given-names>P</given-names></name> (<year>1967</year>) <article-title>Nearest neighbor pattern classification</article-title>. <source>Information Theory, IEEE Transactions on</source> <volume>13</volume>: <fpage>21</fpage>–<lpage>27</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Zhang2">
+        <label>34</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Zhang H, Berg AC, Maire M, Malik J (2006) SVM-KNN: Discriminative nearest neighbor classification for visual category recognition. Computer Vision and Pattern Recognition, 2006 IEEE Computer Society Conference on: IEEE. pp. 2126–2136.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Madeira3">
+        <label>35</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Madeira SC, Oliveira AL (2005) An evaluation of discretization methods for non-supervised analysis of time-series gene expression data. Instituto de Engenharia de Sistemas e Computadores Investigacao e Desenvolvimento, Technical Report 42.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Li1">
+        <label>36</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Yan</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Bai</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Sun</surname><given-names>Z</given-names></name> (<year>2012</year>) <article-title>High Accordance in Prognosis Prediction of Colorectal Cancer across Independent Datasets by Multi-Gene Module Expression Profiles</article-title>. <source>Plos One</source> <volume>7</volume>: <fpage>e33653</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Weston1">
+        <label>37</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Weston</surname><given-names>AD</given-names></name>, <name name-style="western"><surname>Hood</surname><given-names>L</given-names></name> (<year>2004</year>) <article-title>Systems biology, proteomics, and the future of health care: toward predictive, preventative, and personalized medicine</article-title>. <source>Journal of proteome research</source> <volume>3</volume>: <fpage>179</fpage>–<lpage>196</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Etienne1">
+        <label>38</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Etienne</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Meyer</surname><given-names>MH</given-names></name>, <name name-style="western"><surname>Peppers</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Meyer</surname><given-names>RA</given-names></name> (<year>2004</year>) <article-title>Comparison of mRNA gene expression by RT-PCR and DNA microarray</article-title>. <source>Biotechniques</source> <volume>36</volume>: <fpage>618</fpage>–<lpage>627</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Moreau1">
+        <label>39</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Moreau</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Aerts</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Moor</surname><given-names>BD</given-names></name>, <name name-style="western"><surname>Strooper</surname><given-names>BD</given-names></name>, <name name-style="western"><surname>Dabrowski</surname><given-names>M</given-names></name> (<year>2003</year>) <article-title>Comparison and meta-analysis of microarray data: from the bench to the computer desk</article-title>. <source>TRENDS in Genetics</source> <volume>19</volume>: <fpage>570</fpage>–<lpage>577</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Dallas1">
+        <label>40</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dallas</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Gottardo</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Firth</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Beesley</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Hoffmann</surname><given-names>K</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Gene expression levels assessed by oligonucleotide microarray analysis and quantitative real-time RT-PCR–how well do they correlate?</article-title> <source>Bmc Genomics</source> <volume>6</volume>: <fpage>59</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Li2">
+        <label>41</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Li Y, Ngom A (2011) Classification of clinical gene-sample-time microarray expression data via tensor decomposition methods. Computational Intelligence Methods for Bioinformatics and Biostatistics: 275–286.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Carreiro1">
+        <label>42</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Carreiro</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Anunciação</surname><given-names>O</given-names></name>, <name name-style="western"><surname>Carriço</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Madeira</surname><given-names>S</given-names></name> (<year>2011</year>) <article-title>Prognostic Prediction through Biclustering-Based Classification of Clinical Gene Expression Time Series</article-title>. <source>Journal of integrative bioinformatics</source> <volume>8</volume>: <fpage>175</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Costa1">
+        <label>43</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Costa</surname><given-names>IG</given-names></name>, <name name-style="western"><surname>Schönhuth</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Hafemeister</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Schliep</surname><given-names>A</given-names></name> (<year>2009</year>) <article-title>Constrained mixture estimation for analysis and robust classification of clinical time series</article-title>. <source>Bioinformatics</source> <volume>25</volume>: <fpage>i6</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Borgwardt1">
+        <label>44</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Borgwardt K, Vishwanathan S, Kriegel H (2006) Class prediction from time series gene expression profiles using dynamical systems kernels. Pacific Symposium on Biocomputing. pp. 547.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Olson1">
+        <label>45</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Olson DL, Delen D (2008) Advanced data mining techniques: Springer Verlag.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Ginsburg1">
+        <label>46</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ginsburg</surname><given-names>GS</given-names></name>, <name name-style="western"><surname>McCarthy</surname><given-names>JJ</given-names></name> (<year>2001</year>) <article-title>Personalized medicine: revolutionizing drug discovery and patient care</article-title>. <source>TRENDS in Biotechnology</source> <volume>19</volume>: <fpage>491</fpage>–<lpage>496</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Huang1">
+        <label>47</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Huang</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Cui</surname><given-names>WR</given-names></name>, <name name-style="western"><surname>Hu</surname><given-names>LL</given-names></name>, <name name-style="western"><surname>Feng</surname><given-names>KY</given-names></name>, <name name-style="western"><surname>Li</surname><given-names>YX</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Prediction of pharmacological and xenobiotic responses to drugs based on time course gene expression profiles</article-title>. <source>Plos One</source> <volume>4</volume>: <fpage>e8126</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Koczan1">
+        <label>48</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Koczan</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Drynda</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Hecker</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Drynda</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Guthke</surname><given-names>R</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>Molecular discrimination of responders and nonresponders to anti-TNFalpha therapy in rheumatoid arthritis by etanercept</article-title>. <source>Arthritis Res Ther</source> <volume>10</volume>: <fpage>R50</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-RuizPea1">
+        <label>49</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ruiz-Peña</surname><given-names>JL</given-names></name>, <name name-style="western"><surname>Duque</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Izquierdo</surname><given-names>G</given-names></name> (<year>2008</year>) <article-title>Optimization of treatment with interferon beta in multiple sclerosis. Usefulness of automatic system application criteria</article-title>. <source>BMC neurology</source> <volume>8</volume>: <fpage>3</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Espinosa1">
+        <label>50</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Espinosa E, Gámez-Pozo A, Sánchez-Navarro I, Pinto A, Castañeda C, <etal>et al</etal>.. (2012) The present and future of gene profiling in breast cancer. Cancer and Metastasis Reviews: 1–6.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Nicholson1">
+        <label>51</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Nicholson JK (2006) Global systems biology, personalized medicine and molecular epidemiology. Molecular systems biology 2.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Storey1">
+        <label>52</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Storey</surname><given-names>JD</given-names></name>, <name name-style="western"><surname>Tibshirani</surname><given-names>R</given-names></name> (<year>2003</year>) <article-title>Statistical methods for identifying differentially expressed genes in DNA microarrays</article-title>. <source>Methods in molecular biology (Clifton, NJ)</source> <volume>224</volume>: <fpage>149</fpage>–<lpage>158</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Dudoit1">
+        <label>53</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dudoit</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Fridlyand</surname><given-names>J</given-names></name> (<year>2002</year>) <article-title>A prediction-based resampling method for estimating the number of clusters in a dataset</article-title>. <source>Genome biology</source> <volume>3</volume>: <fpage>research0036</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Tibshirani1">
+        <label>54</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tibshirani</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Hastie</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Narasimhan</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Chu</surname><given-names>G</given-names></name> (<year>2002</year>) <article-title>Diagnosis of multiple cancer types by shrunken centroids of gene expression</article-title>. <source>Proceedings of the National Academy of Sciences</source> <volume>99</volume>: <fpage>6567</fpage>–<lpage>6572</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0058383-Baraldi1">
+        <label>55</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Baraldi</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Carraro</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Giordano</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Reniero</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Perilongo</surname><given-names>G</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Metabolomics: moving towards personalized medicine</article-title>. <source>Ital J Pediatr</source> <volume>35</volume>: <fpage>30</fpage>.</mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

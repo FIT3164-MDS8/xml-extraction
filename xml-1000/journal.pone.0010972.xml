@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="EN">
+<front>
+<journal-meta><journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><!--===== Grouping journal title elements =====--><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta>
+<article-meta><article-id pub-id-type="publisher-id">10-PONE-RA-17485R1</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0010972</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline"><subject>Biochemistry/Bioinformatics</subject><subject>Biochemistry/Drug Discovery</subject><subject>Biochemistry/Protein Chemistry</subject><subject>Computational Biology/Systems Biology</subject><subject>Pharmacology/Drug Development</subject></subj-group></article-categories><title-group><article-title>Analysis and Prediction of the Metabolic Stability of Proteins Based on Their Sequential Features, Subcellular Locations and Interaction Networks</article-title><alt-title alt-title-type="running-head">Metabolic Stability Prediction</alt-title></title-group><contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Huang</surname><given-names>Tao</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff2"><sup>2</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Shi</surname><given-names>Xiao-He</given-names></name><xref ref-type="aff" rid="aff4"><sup>4</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Wang</surname><given-names>Ping</given-names></name><xref ref-type="aff" rid="aff4"><sup>4</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>He</surname><given-names>Zhisong</given-names></name><xref ref-type="aff" rid="aff5"><sup>5</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Feng</surname><given-names>Kai-Yan</given-names></name><xref ref-type="aff" rid="aff2"><sup>2</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Hu</surname><given-names>LeLe</given-names></name><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Kong</surname><given-names>Xiangyin</given-names></name><xref ref-type="aff" rid="aff4"><sup>4</sup></xref><xref ref-type="aff" rid="aff6"><sup>6</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Li</surname><given-names>Yi-Xue</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff2"><sup>2</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Cai</surname><given-names>Yu-Dong</given-names></name><xref ref-type="aff" rid="aff3"><sup>3</sup></xref><xref ref-type="aff" rid="aff7"><sup>7</sup></xref><xref ref-type="aff" rid="aff8"><sup>8</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Chou</surname><given-names>Kuo-Chen</given-names></name><xref ref-type="aff" rid="aff8"><sup>8</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+</contrib-group><aff id="aff1"><label>1</label><addr-line>Key Laboratory of Systems Biology, Shanghai Institutes for Biological Sciences, Chinese Academy of Sciences, Shanghai, People's Republic of China</addr-line>       </aff><aff id="aff2"><label>2</label><addr-line>Shanghai Center for Bioinformation Technology, Shanghai, People's Republic of China</addr-line>       </aff><aff id="aff3"><label>3</label><addr-line>Institute of Systems Biology, Shanghai University, Shanghai, People's Republic of China</addr-line>       </aff><aff id="aff4"><label>4</label><addr-line>Institute of Health Sciences, Shanghai Institutes for Biological Sciences, Chinese Academy of Sciences and Shanghai Jiao Tong University School of Medicine, Shanghai, People's Republic of China</addr-line>       </aff><aff id="aff5"><label>5</label><addr-line>CAS-MPG Partner Institute for Computational Biology, Shanghai Institutes for Biological Sciences, Chinese Academy of Sciences, Shanghai, People's Republic of China</addr-line>       </aff><aff id="aff6"><label>6</label><addr-line>State Key Laboratory of Medical Genomics, Ruijin Hospital, Shanghai Jiaotong University, Shanghai, People's Republic of China</addr-line>       </aff><aff id="aff7"><label>7</label><addr-line>Centre for Computational Systems Biology, Fudan University, Shanghai, People's Republic of China</addr-line>       </aff><aff id="aff8"><label>8</label><addr-line>Gordon Life Science Institute, San Diego, California, United States of America</addr-line>       </aff><contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Hofmann</surname><given-names>Andreas</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group><aff id="edit1">Griffith University, Australia</aff><author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">xykong@sibs.ac.cn</email> (XYK); <email xlink:type="simple">yxli@sibs.ac.cn</email> (YXL); <email xlink:type="simple">cai_yud@yahoo.com.cn</email> (YDC); <email xlink:type="simple">kcchou@gordonlifescience.org</email> (KCC)</corresp>
+<fn fn-type="con"><p>Conceived and designed the experiments: XK YXL YDC KCC. Performed the experiments: TH PW. Analyzed the data: TH ZH. Contributed reagents/materials/analysis tools: LH. Wrote the paper: TH XHS KYF.</p></fn>
+<fn fn-type="conflict"><p>The authors have declared that no competing interests exist.</p></fn></author-notes><pub-date pub-type="collection"><year>2010</year></pub-date><pub-date pub-type="epub"><day>4</day><month>6</month><year>2010</year></pub-date><volume>5</volume><issue>6</issue><elocation-id>e10972</elocation-id><history>
+<date date-type="received"><day>29</day><month>3</month><year>2010</year></date>
+<date date-type="accepted"><day>14</day><month>5</month><year>2010</year></date>
+</history><!--===== Grouping copyright info into permissions =====--><permissions><copyright-year>2010</copyright-year><copyright-holder>Huang et al</copyright-holder><license><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions><abstract>
+<p>The metabolic stability is a very important idiosyncracy of proteins that is related to their global flexibility, intramolecular fluctuations, various internal dynamic processes, as well as many marvelous biological functions. Determination of protein's metabolic stability would provide us with useful information for in-depth understanding of the dynamic action mechanisms of proteins. Although several experimental methods have been developed to measure protein's metabolic stability, they are time-consuming and more expensive. Reported in this paper is a computational method, which is featured by (1) integrating various properties of proteins, such as biochemical and physicochemical properties, subcellular locations, network properties and protein complex property, (2) using the mRMR (Maximum Relevance &amp; Minimum Redundancy) principle and the IFS (Incremental Feature Selection) procedure to optimize the prediction engine, and (3) being able to identify proteins among the four types: “short”, “medium”, “long”, and “extra-long” half-life spans. It was revealed through our analysis that the following seven characters played major roles in determining the stability of proteins: (1) KEGG enrichment scores of the protein and its neighbors in network, (2) subcellular locations, (3) polarity, (4) amino acids composition, (5) hydrophobicity, (6) secondary structure propensity, and (7) the number of protein complexes the protein involved. It was observed that there was an intriguing correlation between the predicted metabolic stability of some proteins and the real half-life of the drugs designed to target them. These findings might provide useful insights for designing protein-stability-relevant drugs. The computational method can also be used as a large-scale tool for annotating the metabolic stability for the avalanche of protein sequences generated in the post-genomic age.</p>
+</abstract><funding-group><funding-statement>This work was supported by grants from the National High Technology Research and Development Program of China (2006AA02A301), the National Basic Research Program of China (No. 2007CB512202), the Knowledge Innovation Program of the Chinese Academy of Sciences (Grant No. KSCX1-YW-R-74) and Key Research Program (CAS) (KSCX2-YW-R-112). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="9"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>Proteins are inherently dynamic molecules of marginal stability. Many marvelous biological functions of proteins are realized through their internal motions <xref ref-type="bibr" rid="pone.0010972-Chou1">[1]</xref>, <xref ref-type="bibr" rid="pone.0010972-Madkan1">[2]</xref>, <xref ref-type="bibr" rid="pone.0010972-Schnell1">[3]</xref>, <xref ref-type="bibr" rid="pone.0010972-Martel1">[4]</xref>. The physicochemical stability and flexibility are balanced with each other. They are also thought as intimately correlated with their intramolecular fluctuations and various other dynamic processes <xref ref-type="bibr" rid="pone.0010972-Kamerzell1">[5]</xref>. Protein flexibility facilitates adaptation and recognition <xref ref-type="bibr" rid="pone.0010972-Chou2">[6]</xref> in diverse molecular events, such as switch between active and inactive states <xref ref-type="bibr" rid="pone.0010972-Chou3">[7]</xref>, allosteric transition <xref ref-type="bibr" rid="pone.0010972-Chou4">[8]</xref>, intercalation of drugs into DNA <xref ref-type="bibr" rid="pone.0010972-Chou5">[9]</xref>, cooperative effects <xref ref-type="bibr" rid="pone.0010972-Chou6">[10]</xref>, and assembly of microtubules <xref ref-type="bibr" rid="pone.0010972-Chou7">[11]</xref>. It is also essential for in-depth understanding the M2 proton channel gating and inhibition mechanism <xref ref-type="bibr" rid="pone.0010972-Schnell1">[3]</xref>, <xref ref-type="bibr" rid="pone.0010972-Pielak1">[12]</xref>, <xref ref-type="bibr" rid="pone.0010972-Huang1">[13]</xref>, <xref ref-type="bibr" rid="pone.0010972-Du1">[14]</xref>, the switch mechanism of human Rab5a <xref ref-type="bibr" rid="pone.0010972-Wang1">[15]</xref>, the inhibition mechanism of PTP1B <xref ref-type="bibr" rid="pone.0010972-Wang2">[16]</xref>, the metabolic mechanism <xref ref-type="bibr" rid="pone.0010972-Wang3">[17]</xref>, and the action mechanism of calmodulin <xref ref-type="bibr" rid="pone.0010972-Chou8">[18]</xref>, <xref ref-type="bibr" rid="pone.0010972-Li1">[19]</xref>. These properties present unique challenges to the pharmaceutical scientists attempting to develop protein-stability-relevant drugs <xref ref-type="bibr" rid="pone.0010972-Wei1">[20]</xref>, <xref ref-type="bibr" rid="pone.0010972-Gong1">[21]</xref>, <xref ref-type="bibr" rid="pone.0010972-Wang4">[22]</xref>.</p>
+<p>Traditional methods of measuring protein's metabolic stability rely on either pulse-chase metabolic labeling or administration of protein synthesis inhibitors followed by half-life biochemical analysis of the abundance of the protein concerned at multiple time points during the chase period. Highly regulated proteins tend to be present in low amounts. Since even mass spectrometry plus failed to detect low-abundance proteins, study about protein's metabolic stability remains far from complete yet although it is of critical importance for drug development. Recently, it was reported that high-throughput systematic approaches for the analysis of global metabolic stability were taken by using a fluorescence-based system to monitor metabolic stability at the single-cell level <xref ref-type="bibr" rid="pone.0010972-Yen1">[23]</xref>. In this regard, however, computational approaches would be much more efficient not only in timely providing the information about the stability of query proteins but also in helping analyze what factors play major roles to the metabolic stability. This study was initiated in an attempt to develop a computational method for investigating the metabolic stability of proteins in terms of their biochemical and physicochemical properties or features. Our results suggest that KEGG enrichment scores, subcellular locations, polarity, amino acids composition, hydrophobicity, secondary structure propensity, and number of protein complexes, play irreplaceable roles for protein's metabolic stability. Moreover, we predicted the metabolic stability of drug target proteins using the selected features and found an intriguing correlation between the predicted metabolic stability of some proteins and the real half-life of the drugs designed to target them.</p>
+</sec><sec id="s2" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<sec id="s2a">
+<title>Data set</title>
+<p>As elucidated in a recent review <xref ref-type="bibr" rid="pone.0010972-Chou9">[24]</xref>, to develop an effective statistical method for predicting protein attributes, one of the indispensable things is a valid benchmark dataset. Here, protein stability data were taken from Yen's work <xref ref-type="bibr" rid="pone.0010972-Yen1">[23]</xref>. We downloaded ORFs from hORFeome v5.1 library (<ext-link ext-link-type="uri" xlink:href="http://horfdb.dfci.harvard.edu/" xlink:type="simple">http://horfdb.dfci.harvard.edu/</ext-link>), and translated ORFs to protein sequences using transeq in Emboss <xref ref-type="bibr" rid="pone.0010972-Rice1">[25]</xref>. Proteins with the length shorter than 50 and longer than 2700, were excluded. In Yen's work, protein samples were divided into four groups according to their PSI (protein stability index): (1) short half-life (PSI&lt;2), (2) medium half-life (2≤PSI&lt;3), (3) long half-life (3≤PSI&lt;4), and (4) extra-long half-life (PSI≥4). After being thus processed, our dataset consist of 223 short half-life proteins, 446 medium half-life proteins, 706 long half-life proteins and 496 extra-long half-life proteins. For reader's convenience, these sequences (classified into above four groups) are given in <xref ref-type="supplementary-material" rid="pone.0010972.s001"><underline>Dataset S1</underline></xref>.</p>
+</sec><sec id="s2b">
+<title>Biochemical and physicochemical description of proteins</title>
+<p>In order to formulate protein samples of different sequence lengths with vectors of a uniform dimension, let us adopt the concept of pseudo amino acid composition (PseAAC) <xref ref-type="bibr" rid="pone.0010972-Chou9">[24]</xref>, <xref ref-type="bibr" rid="pone.0010972-Chou10">[26]</xref>, <xref ref-type="bibr" rid="pone.0010972-Chou11">[27]</xref>. The concrete procedures are that the biochemical and physicochemical properties <xref ref-type="bibr" rid="pone.0010972-Dubchak1">[28]</xref>, <xref ref-type="bibr" rid="pone.0010972-Niu1">[29]</xref>, <xref ref-type="bibr" rid="pone.0010972-Xiao1">[30]</xref>, <xref ref-type="bibr" rid="pone.0010972-Zhang1">[31]</xref> are singled out from a protein sequence according to the following seven aspects: (1) amino acid composition (AAC) <xref ref-type="bibr" rid="pone.0010972-Chou12">[32]</xref>, (2) secondary structure propensity, (3) hydrophobicity, (4) polarizability, (5) solvent accessibility, (6) normalized van der Waals volume, and (7) polarity <xref ref-type="bibr" rid="pone.0010972-Dubchak2">[33]</xref>.</p>
+<p>Of the above seven types of properties, except for AAC (the occurrence frequencies of the 20 native amino acids for a given protein <xref ref-type="bibr" rid="pone.0010972-Chou13">[34]</xref>) that is an extensive quantity reflecting the global or overall feature of a protein, all the other six types are associated with a single amino acid in a given protein sequence position and hence belong to a localized quantity.</p>
+<p>The six local types of properties can each be classified into two or three categories. For example, for the secondary structure propensity, each amino acid can be classified as: helix, strand or coil, as predicted by SSpro <xref ref-type="bibr" rid="pone.0010972-Pollastri1">[35]</xref>. For solvent accessibility: buried or exposed to solvent, as predicted by ACCpro <xref ref-type="bibr" rid="pone.0010972-Pollastri2">[36]</xref>. For the other four types of properties, i.e., hydrophobicity, polarizability, normalized van der Waals volume and polarity, each of the constituent amino acids can also be classified into three categories in a similar way according to their values. In terms of hydrophobicity, there are three groups of amino acid: polar (R, K, E, D, Q, N), neutral (G, A, S, T, P, H, Y) and hydrophobic (C, V, L, I, M, F, W) <xref ref-type="bibr" rid="pone.0010972-Chothia1">[37]</xref>. In terms of polarizability, there are three groups of amino acid: 0–0.108 (G, A, S, D, T), 0.128–0.186 (C, P, N, V, E, Q, I, L) and 0.219–0.409 (K, M, H, F, R, Y, W) <xref ref-type="bibr" rid="pone.0010972-Fauchere1">[38]</xref>. In terms of normalized van der Waals volume, there are three groups of amino acid: 0–2.78 (G, A, S, C, T, P, D), 2.95–4.0 (N, V, E, Q, I, L) and 4.43–8.08 (M, H, K, F, R, Y, W) <xref ref-type="bibr" rid="pone.0010972-Fauchere1">[38]</xref>. In terms of polarity, there are three groups of amino acid: 4.9–6.2 (L, I, F, W, C, M, V, Y), 8.0–9.2 (P, A, T, G, S) and 10.4–13.0 (H, Q, R, K, N, E, D) <xref ref-type="bibr" rid="pone.0010972-Grantham1">[39]</xref>.</p>
+<p>Now, the problem is how to generate the corresponding global quantity by integrating the localized quantities over an entire protein sequence. To realize this, let us consider the hydrophobicity first. In this study, the hydrophobicity of an amino acid is classified as: P (polar), N (neutral), or H (hydrophobic). Thus, for a protein sequence, say, “MSDKPDMAEIEKFSKETIEQEKQAGESTQEKNPLPMLLPATDKSKLKKTE”, it can be coded as “HNPPNPHNPHPPHNPPNHPPPPPNNPNNPPPPNHNHHHNNNPPNPHPPNP”.</p>
+<p>For the above coded sequence, the following three extensive quantities can be derived: <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e001" xlink:type="simple"/></inline-formula> (composition), <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e002" xlink:type="simple"/></inline-formula> (transition), and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e003" xlink:type="simple"/></inline-formula> (distribution). <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e004" xlink:type="simple"/></inline-formula> refers to the global percent composition of each of the three groups (i.e., P, N, and H) in the coded sequence; <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e005" xlink:type="simple"/></inline-formula> to the percent frequencies with which the code letter changes to another along the entire length of the coded sequence; and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e006" xlink:type="simple"/></inline-formula> to the distribution pattern of the code letters along the sequence, measuring the percentage of the sequence length within which the first, 25%, 50%, 75%, and 100% of each of the three code letters is located.</p>
+<p>Take the above coded sequence of 50 letters as an example. It is composed of 10 Hs, 16 Ns and 24 Ps, as shown in <xref ref-type="fig" rid="pone-0010972-g001"><bold>Figure 1</bold></xref>. Thus, we have the composition <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e007" xlink:type="simple"/></inline-formula> = (10/50 = 20.0%, 16/50 = 32%, 24/50 = 48%) for H, N and P respectively. For the transition feature <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e008" xlink:type="simple"/></inline-formula>, there are totally 31 transitions in the sequence, with 8 between H and N, 16 between N and P, and 7 between H and P, so that we have <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e009" xlink:type="simple"/></inline-formula> = (8/31 = 25.81%, 16/31 = 51.61% and 7/31 = 22.58%). As for the distribution <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e010" xlink:type="simple"/></inline-formula>, the first, 25%, 50%, 75% and 100% of H are located at the positions of 1st, 10th, 18th, 37th, and 46th in the coded sequence, respectively. Thus, the distribution <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e011" xlink:type="simple"/></inline-formula> for H is 1/50 = 2%, 10/50 = 20%, 18/50 = 36%, 37/50 = 74%, and 46/50 = 92%. Likewise, the distribution <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e012" xlink:type="simple"/></inline-formula> for N is 4%, 28%, 54%, 78%, and 98%; and that for P is 6%, 24%, 44%, 64%, and 100%. Accordingly, we have <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e013" xlink:type="simple"/></inline-formula> = (2%, 20%, 36%, 74%, 92%, 4%, 28%, 54%, 78%, 98%, 6%, 24%, 44%, 64%, and 100%). Combining <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e014" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e015" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e016" xlink:type="simple"/></inline-formula>, we have a total of 21 elements.</p>
+<fig id="pone-0010972-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0010972.g001</object-id><label>Figure 1</label><caption>
+<title>How to compute the 21 hydrophobic feature components from protein sequence.</title>
+<p>According to the hydrophobicity of each amino acid, the protein sequence “MSDKPDMAEIEKFSKETIEQEKQAGESTQEKNPLPMLLPATDKSKLKKTE” was converted to a hydrophobic sequence “HNPPNPHNPHPPHNPPNHPPPPPNNPNNPPPPNHNHHHNNNPPNPHPPNP”. It is composed of 10 Hs, 16 Ns and 24 Ps. There are totally 31 transitions in the sequence, with 8 between H and N, 16 between N and P, and 7 between H and P. Based on the composition, transition, and distribution of H, N, P, 21 hydrophobic feature components of this protein can be calculated.</p>
+</caption><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.g001" xlink:type="simple"/></fig>
+<p>For the “secondary structure”, “polarizability”, “normalized van der Waals volume” and “polarity”, each of them is also classified into three categories and hence would also generate <bold>21</bold> elements in a similarly way as described above for the case of “hydrophobicity”.</p>
+<p>For the “solvent accessibility”, since it is classified into two categories, the combination of <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e017" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e018" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e019" xlink:type="simple"/></inline-formula> for the sequence coded according to the “solvent accessibility” would only generate 7 elements rather than 21.</p>
+<p>Now for the “AAC” we have 20 elements <xref ref-type="bibr" rid="pone.0010972-Chou13">[34]</xref>; for the “solvent accessibility”, 7 elements; and for each of all the other five types of protein properties, 21 elements. Combining all these extensive quantities together, we have an augmented extensive quantity containing (5×21+20+7) = 132 elements, as listed in <xref ref-type="table" rid="pone-0010972-t001"><bold>Table 1</bold></xref> for the details. Furthermore, some more elements should also be included as will be illustrated below.</p>
+<table-wrap id="pone-0010972-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0010972.t001</object-id><label>Table 1</label><caption>
+<title>The 132 biochemical and physicochemical feature components of proteins.</title>
+</caption><!--===== Grouping alternate versions of objects =====--><alternatives><graphic id="pone-0010972-t001-1" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.t001" xlink:type="simple"/><table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" colspan="1" rowspan="1">Biochemical and physicochemical description</td>
+<td align="left" colspan="1" rowspan="1">Vector index</td>
+<td align="left" colspan="1" rowspan="1">Amino acid category</td>
+<td align="left" colspan="1" rowspan="1">Protein Feature category</td>
+<td align="left" colspan="1" rowspan="1">Protein Feature description</td>
+<td align="left" colspan="1" rowspan="1">Number of vector components</td>
+<td align="left" colspan="1" rowspan="1">Index of vector components</td>
+<td align="left" colspan="1" rowspan="1">Total Number</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" colspan="1" rowspan="1">Hydrophobicity</td>
+<td align="left" colspan="1" rowspan="1">V1:V21</td>
+<td align="left" colspan="1" rowspan="1">P: r|k|e|d|q|n</td>
+<td align="left" colspan="1" rowspan="1"><italic>C</italic> (composition)</td>
+<td align="left" colspan="1" rowspan="1">Composition of P, N, H</td>
+<td align="left" colspan="1" rowspan="1">3</td>
+<td align="left" colspan="1" rowspan="1">V1:V3</td>
+<td align="left" colspan="1" rowspan="1">21</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">N: g|a|s|t|p|h|y</td>
+<td align="left" colspan="1" rowspan="1"><italic>T</italic> (transition)</td>
+<td align="left" colspan="1" rowspan="1">Transition of PN, PH, NH</td>
+<td align="left" colspan="1" rowspan="1">3</td>
+<td align="left" colspan="1" rowspan="1">V4:V6</td>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">H: c|v|l|i|m|f|w</td>
+<td align="left" colspan="1" rowspan="1"><italic>D</italic> (distribution)</td>
+<td align="left" colspan="1" rowspan="1">Distribution of P, N, H</td>
+<td align="left" colspan="1" rowspan="1">15</td>
+<td align="left" colspan="1" rowspan="1">V7:V21</td>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Secondary structure</td>
+<td align="left" colspan="1" rowspan="1">V22:V42</td>
+<td align="left" colspan="1" rowspan="1">SSpro</td>
+<td align="left" colspan="1" rowspan="1"><italic>C</italic> (composition)</td>
+<td align="left" colspan="1" rowspan="1">Composition of H, E, C</td>
+<td align="left" colspan="1" rowspan="1">3</td>
+<td align="left" colspan="1" rowspan="1">V22:V24</td>
+<td align="left" colspan="1" rowspan="1">21</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">H: helix</td>
+<td align="left" colspan="1" rowspan="1"><italic>T</italic> (transition)</td>
+<td align="left" colspan="1" rowspan="1">Transition of HE, HC, EC</td>
+<td align="left" colspan="1" rowspan="1">3</td>
+<td align="left" colspan="1" rowspan="1">V25:V27</td>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">E: strand</td>
+<td align="left" colspan="1" rowspan="1"><italic>D</italic> (distribution)</td>
+<td align="left" colspan="1" rowspan="1">Distribution of H, E, C</td>
+<td align="left" colspan="1" rowspan="1">15</td>
+<td align="left" colspan="1" rowspan="1">V28:V42</td>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">C:coil</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Solvent accessibility</td>
+<td align="left" colspan="1" rowspan="1">V43:V49</td>
+<td align="left" colspan="1" rowspan="1">ACCpro</td>
+<td align="left" colspan="1" rowspan="1"><italic>C</italic> (composition)</td>
+<td align="left" colspan="1" rowspan="1">Composition of H</td>
+<td align="left" colspan="1" rowspan="1">1</td>
+<td align="left" colspan="1" rowspan="1">V43</td>
+<td align="left" colspan="1" rowspan="1">7</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">H: hidden</td>
+<td align="left" colspan="1" rowspan="1"><italic>T</italic> (transition)</td>
+<td align="left" colspan="1" rowspan="1">Transition of HE</td>
+<td align="left" colspan="1" rowspan="1">1</td>
+<td align="left" colspan="1" rowspan="1">V44</td>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">E: exposed</td>
+<td align="left" colspan="1" rowspan="1"><italic>D</italic> (distribution)</td>
+<td align="left" colspan="1" rowspan="1">Distribution of H</td>
+<td align="left" colspan="1" rowspan="1">5</td>
+<td align="left" colspan="1" rowspan="1">V45:V49</td>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Normalized van der Waals volume</td>
+<td align="left" colspan="1" rowspan="1">V50:V70</td>
+<td align="left" colspan="1" rowspan="1">H: g|a|s|c|t|d|p</td>
+<td align="left" colspan="1" rowspan="1"><italic>C</italic> (composition)</td>
+<td align="left" colspan="1" rowspan="1">Composition of H, E, C</td>
+<td align="left" colspan="1" rowspan="1">3</td>
+<td align="left" colspan="1" rowspan="1">V50:V52</td>
+<td align="left" colspan="1" rowspan="1">21</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">E: n|v|e|q|i|l</td>
+<td align="left" colspan="1" rowspan="1"><italic>T</italic> (transition)</td>
+<td align="left" colspan="1" rowspan="1">Transition of HE, HC, EC</td>
+<td align="left" colspan="1" rowspan="1">3</td>
+<td align="left" colspan="1" rowspan="1">V53:V55</td>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">C:m|h|k|f|r|y|w</td>
+<td align="left" colspan="1" rowspan="1"><italic>D</italic> (distribution)</td>
+<td align="left" colspan="1" rowspan="1">Distribution of H, E, C</td>
+<td align="left" colspan="1" rowspan="1">15</td>
+<td align="left" colspan="1" rowspan="1">V56:V70</td>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Polarity</td>
+<td align="left" colspan="1" rowspan="1">V71:V91</td>
+<td align="left" colspan="1" rowspan="1">H: l|i|f|w|c|m|v|y</td>
+<td align="left" colspan="1" rowspan="1"><italic>C</italic> (composition)</td>
+<td align="left" colspan="1" rowspan="1">Composition of H, E, C</td>
+<td align="left" colspan="1" rowspan="1">3</td>
+<td align="left" colspan="1" rowspan="1">V71:V73</td>
+<td align="left" colspan="1" rowspan="1">21</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">E: g|a|t|p|s</td>
+<td align="left" colspan="1" rowspan="1"><italic>T</italic> (transition)</td>
+<td align="left" colspan="1" rowspan="1">Transition of HE, HC, EC</td>
+<td align="left" colspan="1" rowspan="1">3</td>
+<td align="left" colspan="1" rowspan="1">V74:V76</td>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">C: h|q|r|k|n|e|d</td>
+<td align="left" colspan="1" rowspan="1"><italic>D</italic> (distribution)</td>
+<td align="left" colspan="1" rowspan="1">Distribution of H, E, C</td>
+<td align="left" colspan="1" rowspan="1">15</td>
+<td align="left" colspan="1" rowspan="1">V77:V91</td>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Polarizability</td>
+<td align="left" colspan="1" rowspan="1">V92:V112</td>
+<td align="left" colspan="1" rowspan="1">H: g|a|s|d|t</td>
+<td align="left" colspan="1" rowspan="1"><italic>C</italic> (composition)</td>
+<td align="left" colspan="1" rowspan="1">Composition of H, E, C</td>
+<td align="left" colspan="1" rowspan="1">3</td>
+<td align="left" colspan="1" rowspan="1">V92:V94</td>
+<td align="left" colspan="1" rowspan="1">21</td>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">E: c|p|n|v|e|q|i|l</td>
+<td align="left" colspan="1" rowspan="1"><italic>T</italic> (transition)</td>
+<td align="left" colspan="1" rowspan="1">Transition of HE, HC, EC</td>
+<td align="left" colspan="1" rowspan="1">3</td>
+<td align="left" colspan="1" rowspan="1">V95:V97</td>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1">C: k|m|h|f|r|y|w</td>
+<td align="left" colspan="1" rowspan="1"><italic>D</italic> (distribution)</td>
+<td align="left" colspan="1" rowspan="1">Distribution of H, E, C</td>
+<td align="left" colspan="1" rowspan="1">15</td>
+<td align="left" colspan="1" rowspan="1">V98:V112</td>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+<tr>
+<td align="left" colspan="1" rowspan="1">Amino Acids Composition</td>
+<td align="left" colspan="1" rowspan="1">V113:V132</td>
+<td align="left" colspan="1" rowspan="1">r, k, e, d, q, n, g, a, s, t, p, h, y, c, v, l, i, m, f, w</td>
+<td align="left" colspan="1" rowspan="1"><italic>C</italic> (composition)</td>
+<td align="left" colspan="1" rowspan="1">20</td>
+<td align="left" colspan="1" rowspan="1">20</td>
+<td align="left" colspan="1" rowspan="1"/>
+<td align="left" colspan="1" rowspan="1"/>
+</tr>
+</tbody>
+</table></alternatives></table-wrap></sec><sec id="s2c">
+<title>Subcellular location description of proteins</title>
+<p>The function of a protein is closely correlated with its subcellular location <xref ref-type="bibr" rid="pone.0010972-Chou14">[40]</xref>, <xref ref-type="bibr" rid="pone.0010972-Chou15">[41]</xref>. In view of this, the prediction power would be improved by incorporating the protein subcellular location information. Unfortunately, only a small amount of proteins have subcellular locations annotated in UniProt <xref ref-type="bibr" rid="pone.0010972-The1">[42]</xref>. To make up this, the subcellular locations for most proteins were predicted based on the sequence similarity evaluated by BLAST <xref ref-type="bibr" rid="pone.0010972-Altschul1">[43]</xref>. If the BLAST score of a query protein with a location-known protein was greater than 120, they were considered similar with the query protein. The subcellular locations of the query protein were the intersection of subcellular locations of its sequence similar location-known proteins. Since there were 22 subcellular locations, the subcellular location features of each protein can be represented by a 22-dimensional vector, namely <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e020" xlink:type="simple"/></inline-formula>, where <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e021" xlink:type="simple"/></inline-formula> if the protein is located at the <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e022" xlink:type="simple"/></inline-formula> subcellular location site; otherwise, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e023" xlink:type="simple"/></inline-formula>. It is instructive to point out that one can also use the web-server predictor Euk-mPLoc <xref ref-type="bibr" rid="pone.0010972-Chou16">[44]</xref> to get the desired information for those proteins without subcellular location annotated in UniProt database. The updated website address for Euk-mPLoc can be found in the Cell-PLoc package <xref ref-type="bibr" rid="pone.0010972-Chou15">[41]</xref> as well as in Table 3 of <xref ref-type="bibr" rid="pone.0010972-Chou17">[45]</xref>. The good thing about Euk-mPLoc is that it not only can cover up to 22 subcellular location sites but is also able to identify proteins with multiple location sites, which is particularly useful for drug development as elaborated recently by Smith <xref ref-type="bibr" rid="pone.0010972-Biocompare1">[46]</xref>.</p>
+</sec><sec id="s2d">
+<title>KEGG enrichment scores of proteins</title>
+<p>The simplest and most direct method for predicting the function of a query protein based on the training dataset of function-known proteins is the immediate neighborhood method <xref ref-type="bibr" rid="pone.0010972-Sharan1">[47]</xref>. The information of the neighbor proteins is also an important environmental feature to the protein concerned. Actually, the neighbor proteins are in interaction with each other in the STRING network <xref ref-type="bibr" rid="pone.0010972-Jensen1">[48]</xref>. The KEGG enrichment score of the protein and its neighbors was defined as the −log<sub>10</sub> of the p value generated by hypergeometric test on KEGG pathway. The larger enrichment score means more overrepresentation. There were 220 KEGG enrichment scores for each of the proteins investigated here.</p>
+</sec><sec id="s2e">
+<title>Number of protein complexes</title>
+<p>If a protein can form a complex with other proteins, it will be more stable and have longer half-life. Therefore, the number of this kind of complexes a protein can form is a feature relevant to its stability, and should be counted in prediction as well. We downloaded the protein complex dataset from CORUM <xref ref-type="bibr" rid="pone.0010972-Ruepp1">[49]</xref>, which is a comprehensive resource of mammalian protein complexes.</p>
+</sec><sec id="s2f">
+<title>Feature space of proteins</title>
+<p>As mentioned above, the 7 types of biochemical and physicochemical properties would contribute 132 components to describe a protein. In addition, its length could also be counted as a component, its occurrences in the 22 subcellular location sites as 22 components, its 220 KEGG enrichment scores as 220 components, and its number in forming protein-protein complexes as a component, the total components used in this study to represent a protein sample would be (132+1+22+220+1) = 376 components. For the list of the 376 feature components, see the <underline><xref ref-type="supplementary-material" rid="pone.0010972.s002">Table S1</xref></underline>.</p>
+<p>Thus, the <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e024" xlink:type="simple"/></inline-formula> protein sample <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e025" xlink:type="simple"/></inline-formula> should be formulated as a vector in a 376-D (dimensional) space; i.e.,<disp-formula><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.e026" xlink:type="simple"/><label>(1)</label></disp-formula>where <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e027" xlink:type="simple"/></inline-formula> is the <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e028" xlink:type="simple"/></inline-formula> <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e029" xlink:type="simple"/></inline-formula> component of the <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e030" xlink:type="simple"/></inline-formula> protein sample <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e031" xlink:type="simple"/></inline-formula> and can be derived by following the procedures as elaborated above.</p>
+<p>Note that before performing prediction, each of the 376 components in Eq.1 should undergo the following standard conversion procedure:<disp-formula><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.e032" xlink:type="simple"/><label>(1a)</label></disp-formula>where <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e033" xlink:type="simple"/></inline-formula> is the number of the total proteins in the training dataset, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e034" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e035" xlink:type="simple"/></inline-formula> are the mean and standard deviation of the <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e036" xlink:type="simple"/></inline-formula> component over the <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e037" xlink:type="simple"/></inline-formula> protein samples. The converted values obtained by Eq.1a will have a zero mean value over the <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e038" xlink:type="simple"/></inline-formula> protein samples, and will remain unchanged if going through the same conversion procedure again <xref ref-type="bibr" rid="pone.0010972-Chou9">[24]</xref>, <xref ref-type="bibr" rid="pone.0010972-Chou10">[26]</xref>.</p>
+</sec><sec id="s2g">
+<title>mRMR method</title>
+<p>The “maximum relevance &amp; minimum redundancy” (mRMR) method was originally developed by Peng et al. <xref ref-type="bibr" rid="pone.0010972-Peng1">[50]</xref> to deal with the microarray data processing. In their method, each feature is ranked according to its relevance to the target and redundancy with other features. A “good” feature is defined as the one that has the best trade-off between maximizing the relevance to the target and minimizing the redundancy within the features. To quantify both the relevance and redundancy, the following mutual information (MI) is defined to estimate how one vector is related to another:<disp-formula><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.e039" xlink:type="simple"/><label>(2)</label></disp-formula>where <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e040" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e041" xlink:type="simple"/></inline-formula> are two vectors, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e042" xlink:type="simple"/></inline-formula> is the joint probabilistic density, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e043" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e044" xlink:type="simple"/></inline-formula> are the marginal probabilistic densities.</p>
+<p>Suppose <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e045" xlink:type="simple"/></inline-formula> denotes the entire space containing all the aforementioned 376 components, and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e046" xlink:type="simple"/></inline-formula> denotes the space contains <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e047" xlink:type="simple"/></inline-formula> components selected from <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e048" xlink:type="simple"/></inline-formula>. The space to be identified is denoted by <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e049" xlink:type="simple"/></inline-formula> that contains <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e050" xlink:type="simple"/></inline-formula> components. The relevance <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e051" xlink:type="simple"/></inline-formula> of the feature <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e052" xlink:type="simple"/></inline-formula> in <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e053" xlink:type="simple"/></inline-formula> with the target <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e054" xlink:type="simple"/></inline-formula> can be calculated by:<disp-formula><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.e055" xlink:type="simple"/><label>(3)</label></disp-formula>And the redundancy <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e056" xlink:type="simple"/></inline-formula> of the feature <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e057" xlink:type="simple"/></inline-formula> in <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e058" xlink:type="simple"/></inline-formula> with all the features in <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e059" xlink:type="simple"/></inline-formula> can be calculated by:<disp-formula><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.e060" xlink:type="simple"/><label>(4)</label></disp-formula>To obtain a feature <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e061" xlink:type="simple"/></inline-formula> in <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e062" xlink:type="simple"/></inline-formula> with maximum relevance and minimum redundancy, Eqs.3 and 4 are combined with the mRMR function:<disp-formula><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.e063" xlink:type="simple"/><label>(5)</label></disp-formula></p>
+<p>For a feature set with <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e064" xlink:type="simple"/></inline-formula> components, the feature evaluation will continue for 376 rounds. After these evaluations, a feature set <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e065" xlink:type="simple"/></inline-formula> can be obtained by the mRMR method as formulated below:<disp-formula><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.e066" xlink:type="simple"/><label>(6)</label></disp-formula>where each feature in <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e067" xlink:type="simple"/></inline-formula> has an subscript index, indicating at which round that the feature is selected. The better a feature is, the earlier it will satisfy Eq.5 and be selected, and the smaller its subscript index will be.</p>
+</sec><sec id="s2h">
+<title>Nearest Neighbor Algorithm</title>
+<p>In our study, the Nearest Neighbor (NN) algorithm or NNA is used to classify a protein as either labile or a stable one. NNA makes its decision by calculating the “distances” of a query protein with all the proteins in the training dataset one-by-one. Varieties of distance scales can be used for this purpose, such as Euclidean distance <xref ref-type="bibr" rid="pone.0010972-Chou18">[51]</xref>, Hamming distance <xref ref-type="bibr" rid="pone.0010972-Chou19">[52]</xref>, and Mahalanobis distance <xref ref-type="bibr" rid="pone.0010972-Chou13">[34]</xref>. In the current study, the distance between the query protein <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e068" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e069" xlink:type="simple"/></inline-formula>, the <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e070" xlink:type="simple"/></inline-formula> protein in the training dataset, is defined by <xref ref-type="bibr" rid="pone.0010972-Qian1">[53]</xref>, <xref ref-type="bibr" rid="pone.0010972-Huang2">[54]</xref>, <xref ref-type="bibr" rid="pone.0010972-Chou20">[55]</xref>:<disp-formula><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.e071" xlink:type="simple"/><label>(7)</label></disp-formula>Where <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e072" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e073" xlink:type="simple"/></inline-formula> are the feature component vector of query protein and the <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e074" xlink:type="simple"/></inline-formula> protein in the training dataset (cf. Eq.1); <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e075" xlink:type="simple"/></inline-formula> is the inner product of <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e076" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e077" xlink:type="simple"/></inline-formula>; <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e078" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e079" xlink:type="simple"/></inline-formula> represent the modules of vectors <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e080" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e081" xlink:type="simple"/></inline-formula>. The smaller <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e082" xlink:type="simple"/></inline-formula> is, the more similar <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e083" xlink:type="simple"/></inline-formula> to <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e084" xlink:type="simple"/></inline-formula> is. According to the NN rule, given a training set <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e085" xlink:type="simple"/></inline-formula>, the query protein <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e086" xlink:type="simple"/></inline-formula> will be predicted belonging to the same class of <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e087" xlink:type="simple"/></inline-formula> that is the closest to <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e088" xlink:type="simple"/></inline-formula>. In other words, if<disp-formula><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.e089" xlink:type="simple"/><label>(8)</label></disp-formula>where <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e090" xlink:type="simple"/></inline-formula> is the argument of <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e091" xlink:type="simple"/></inline-formula> that minimizes <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e092" xlink:type="simple"/></inline-formula>, and if <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e093" xlink:type="simple"/></inline-formula> belongs to <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e094" xlink:type="simple"/></inline-formula> class, then the query protein <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e095" xlink:type="simple"/></inline-formula> should also belong to the same class.</p>
+</sec><sec id="s2i">
+<title>Jackknife Cross-Validation Method</title>
+<p>In biological literatures, the independent dataset test, subsampling or K-fold (such as 5-fold and 10-fold) test, and jackknife test are the three cross-validation methods often used to examine the accuracy of a statistical predictor <xref ref-type="bibr" rid="pone.0010972-Chou19">[52]</xref>. Of these three, however, the jackknife is thought the most objective as elucidated in <xref ref-type="bibr" rid="pone.0010972-Chou15">[41]</xref> and elaborated in <xref ref-type="bibr" rid="pone.0010972-Chou14">[40]</xref>. Therefore, the jackknife cross-validation has been increasingly adopted to examine the power of various predictors (see, e.g., <xref ref-type="bibr" rid="pone.0010972-Huang2">[54]</xref>, <xref ref-type="bibr" rid="pone.0010972-Lin1">[56]</xref>, <xref ref-type="bibr" rid="pone.0010972-Chen1">[57]</xref>, <xref ref-type="bibr" rid="pone.0010972-Ding1">[58]</xref>, <xref ref-type="bibr" rid="pone.0010972-Li2">[59]</xref>, <xref ref-type="bibr" rid="pone.0010972-Lin2">[60]</xref>) and will be used in this study as well. During jackknifing, each protein sample in the benchmark dataset is in turn singled out to test using the rule parameters trained by the remaining protein samples. For clarity to describe the test process, let us define<disp-formula><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.e096" xlink:type="simple"/><label>(9)</label></disp-formula>where <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e097" xlink:type="simple"/></inline-formula> is the benchmark dataset used in this study (cf. <xref ref-type="supplementary-material" rid="pone.0010972.s001"><underline>Dataset S1</underline></xref>), <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e098" xlink:type="simple"/></inline-formula> the sub-dataset containing only the “short” or medium” half-life proteins, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e099" xlink:type="simple"/></inline-formula> only the “long” and “extra-long” half-life proteins, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e100" xlink:type="simple"/></inline-formula> only the “short” half-life proteins, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e101" xlink:type="simple"/></inline-formula> only the “medium” half-life proteins, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e102" xlink:type="simple"/></inline-formula> only the “long” half-life proteins, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e103" xlink:type="simple"/></inline-formula> only the “extra-long” half-life proteins, and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e104" xlink:type="simple"/></inline-formula> the union symbol in the set theory. The jackknife success rates were examined according to the following equations:<disp-formula><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.e105" xlink:type="simple"/><label>(10)</label></disp-formula>where <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e106" xlink:type="simple"/></inline-formula> is the overall success rate in identifying proteins in <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e107" xlink:type="simple"/></inline-formula> as “short/medium” or “long/extra-long” type (see the 1<sup>st</sup> equation of Eq.9), <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e108" xlink:type="simple"/></inline-formula> the number of corrected predictions for the “short/medium” type, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e109" xlink:type="simple"/></inline-formula> the number of corrected predictions for the “long/extra-long” type, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e110" xlink:type="simple"/></inline-formula> the number of total proteins in <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e111" xlink:type="simple"/></inline-formula>, and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e112" xlink:type="simple"/></inline-formula> the number of total proteins in <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e113" xlink:type="simple"/></inline-formula>; <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e114" xlink:type="simple"/></inline-formula> the success rate in identifying proteins in <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e115" xlink:type="simple"/></inline-formula> as “short” or “medium” type (see the 2<sup>nd</sup> equation of Eq.9); <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e116" xlink:type="simple"/></inline-formula> the success rate in identifying proteins in <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e117" xlink:type="simple"/></inline-formula> as “long” or “extra-long” type (see the 3<sup>rd</sup> equation of Eq.9).</p>
+</sec><sec id="s2j">
+<title>Feature Selection</title>
+<p>Although the mRMR step could arrange the feature components according to some sort of ranks, it is not sufficient for us to determine which feature components should be selected to optimize the performance of our predictor. To solve the problem, the IFS (incremental feature selection) method is adopted as illustrated below.</p>
+<p>Based on the ranked features obtained from the mRMR step, we can construct 376 feature component sets by adding one component at a time in an ascending order, with the <italic>i</italic>-th set given by<disp-formula><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.e118" xlink:type="simple"/><label>(11)</label></disp-formula>For each of such <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e119" xlink:type="simple"/></inline-formula> feature component sets, an NNA predictor was constructed and its jackknife success rate derived. Finally, we obtained a curve, called the IFS curve, with the subscript index <italic>i</italic> in Eq.11 as its <italic>X</italic>-axis and the corresponding jackknife success rate as its <italic>Y</italic>-axis. The feature set, say <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e120" xlink:type="simple"/></inline-formula>, would be deemed as the optimal one if the IFS curve has a peak at <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e121" xlink:type="simple"/></inline-formula>.</p>
+</sec><sec id="s2k">
+<title>Predict metabolic stability of drug target proteins</title>
+<p>We predicted the stability of 170 proteins targeted by 332 drugs with known half-life. The drug-target pairs and half-life of drugs were downloaded from DrugBank <xref ref-type="bibr" rid="pone.0010972-Wishart1">[61]</xref>. Only the drugs with well-defined target proteins and half-life were analyzed. To unify the time unit, the half-life spans of all the drugs investigated were uniformly converted to minutes. As formulated in Eqs.8 and 9, the test procedures are as follows. A query drug target protein was first identified as “short/medium” half-life and “long/extra-long” half-life. If it turned out to “short/medium” half-life, the predictor would automatically continue to classify it as “short” half-life or “medium” half-life; otherwise, classify it as “long” half-life or “extra-long” half-life. Finally, each of the drug target proteins investigated was assigned as “short”, “medium”, “long”, or “extra-long” half-life, respectively.</p>
+</sec></sec><sec id="s3">
+<title>Results</title>
+<sec id="s3a">
+<title>mRMR results</title>
+<p>The mRMR program in this study was downloaded from <ext-link ext-link-type="uri" xlink:href="http://penglab.janelia.org/proj/mRMR/" xlink:type="simple">http://penglab.janelia.org/proj/mRMR/</ext-link>. We set the parameter <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e122" xlink:type="simple"/></inline-formula> to characterize our data into three groups according to their values which are: (1) smaller than <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e123" xlink:type="simple"/></inline-formula>, (2) between <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e124" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e125" xlink:type="simple"/></inline-formula>, and (3) greater than <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e126" xlink:type="simple"/></inline-formula>. In the above criteria, <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e127" xlink:type="simple"/></inline-formula> is the average value of the features in all samples, and <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e128" xlink:type="simple"/></inline-formula> the standard deviation. In addition to the list generated by the mRMR to show the index of each feature described above, mRMR also output a table called MaxRel list that contains the relevance of features to their target, as defined in Eq.3. In this study, only the mRMR list was used in the feature selection procedure.</p>
+</sec><sec id="s3b">
+<title>IFS results</title>
+<p>In the IFS procedure, we built 376 feature sets based on the ordered feature set <italic>S</italic> obtained in the mRMR step. Accordingly, 376 prediction models were constructed and tested as described above. Shown in <xref ref-type="fig" rid="pone-0010972-g002"><bold>Figure 2</bold></xref> is the IFS curve for (A) all the proteins in <inline-formula><inline-graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0010972.e129" xlink:type="simple"/></inline-formula> (cf. the 1<sup>st</sup> equation of Eq.9), (B) only the “short” and “medium” half-life proteins (cf. the 2<sup>nd</sup> equation of Eq.9), (C) only the “long” and “extra-long” half-life proteins (cf. the 3<sup>rd</sup> equation of Eq.9). As shown in <xref ref-type="fig" rid="pone-0010972-g002"><bold>Figure 2</bold></xref> (A), the overall accuracy reached its peak of 72.8% when the number of feature component used was 62. The 62 feature components selected by mRMR would constitute the optimal feature set for the “short/medium”-“long/extra-long” classifier. The optimal feature set for the “short”-medium” classifier contained 43 feature components, with the peak success rate of 69.8%; while the optimal feature set for the “long”-“extra-long” classifier contained 122 feature components, with the peak success rate of 67.8%. The optimal feature components were extracted according to their impact to the success rates in predicting stability of proteins. The aforementioned 62, 43, and 122 optimal feature components are provided in the <underline><xref ref-type="supplementary-material" rid="pone.0010972.s003">Table S2</xref></underline> (A), (B), and (C), respectively.</p>
+<fig id="pone-0010972-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0010972.g002</object-id><label>Figure 2</label><caption>
+<title>The IFS curves of protein's metabolic stability predictions.</title>
+<p>The IFS curves for (A) all the proteins in <italic>S</italic> (cf. Eq. 9), (B) only the “short” and “medium” half-life proteins in <italic>S</italic><sub>short/medium</sub>, and (C) only the “long” and “extra-long” half-life proteins in <italic>S</italic><sub>long/extra-long</sub>. The overall accuracy reached its peak of 72.8% when the number of feature components used for the classifier between “short/medium” half-life and “long/extra-long” half-life was 62. The corresponding accuracy peak and featured component number for the case of panel B are 69.8% and 43, while those for the case of panel C are 67.8% and 122.</p>
+</caption><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.g002" xlink:type="simple"/></fig></sec><sec id="s3c">
+<title>Analysis of optimal feature components</title>
+<p>To investigate what kinds of features are critical for protein stability, we extracted the optimal feature components and counted the numbers of each kind of features. Shown in <xref ref-type="fig" rid="pone-0010972-g003"><bold>Figure 3</bold></xref> is the numbers of each kind of features in (A) the 62 feature components for the “short/medium”-“long/extra-long” classifier, (B) the 43 feature components for the “short”-“medium” classifier, and (C) the 122 feature components for the “long”-“extra-long” classifier, respectively. As we can see from <xref ref-type="fig" rid="pone-0010972-g003"><bold>Figure 3</bold></xref>, the following seven kinds of features play the major roles in affecting the protein stability: (1) KEGG enrichment scores, (2) subcellular locations, (3) polarity, (4) amino acids composition, (5) hydrophobicity, (6) secondary structure propensity, and (7) the number of protein complexes.</p>
+<fig id="pone-0010972-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0010972.g003</object-id><label>Figure 3</label><caption>
+<title>The numbers of each kind of features in optimal feature sets.</title>
+<p>The numbers of each kind of features for (A) the 62 feature components in the optimal “short/medium”-“long/extra-long” classifier, (B) the 43 feature components in the optimal “short”-“medium” classifier, and (C) the 122 feature components in the optimal “long”-“extra-long” classifier.</p>
+</caption><graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.g003" xlink:type="simple"/></fig>
+<p>In a recent work Yen et al. <xref ref-type="bibr" rid="pone.0010972-Yen1">[23]</xref> discovered that protein stability was correlated with amino acid composition. Our results have further confirmed their finding. These authors also found that the short half-life group and medium half-life group had a larger proportion of the unstable “cell cycle control” proteins, and that the long half-life group had a larger fraction of “mitosis” proteins consisting of actins, tubulins, septins, and so forth. Interestingly, our studies indicate that the metabolic stability of a protein is associated with its subcellular location, such as whether it is located in nucleus, cytoplasm, extracellular, or cell membrane, quite consistent with their findings <xref ref-type="bibr" rid="pone.0010972-Yen1">[23]</xref> as well. Meanwhile, it was found that the enrichment of degradation, metabolism and signaling pathways could help predict protein's metabolic stability (see <underline><xref ref-type="supplementary-material" rid="pone.0010972.s003">Table S2</xref></underline>), which is quite sensible as well.</p>
+<p>Proteins bound with ligands or proteins not prone to be denatured, are usually more stable. This would logically require them to have proper fold patterns or microenvironments. The reason why membrane proteins are relatively more stable is that their folding process involves binding with, transmembrane helix insertion into (see, e.g., <xref ref-type="bibr" rid="pone.0010972-Schnell1">[3]</xref>, <xref ref-type="bibr" rid="pone.0010972-Wang5">[62]</xref>, <xref ref-type="bibr" rid="pone.0010972-Oxenoid1">[63]</xref>), and helix-helix interactions with the presence of bilayer interfaces <xref ref-type="bibr" rid="pone.0010972-Cristian1">[64]</xref>, <xref ref-type="bibr" rid="pone.0010972-White1">[65]</xref>, <xref ref-type="bibr" rid="pone.0010972-Chou21">[66]</xref>. Membrane protein fold topology may be categorized into two basic secondary structural motifs, namely α-helices and β-barrels <xref ref-type="bibr" rid="pone.0010972-Chou22">[67]</xref>. Stability is a consequence of the low electrostatic potential energy of small substructures called knots and is opposed by the stress developed in contraction of the large substructures called matrices <xref ref-type="bibr" rid="pone.0010972-Lumry1">[68]</xref>. The features investigated in this study have provided useful insight regarding the energetics of driving forces governing folding, assembly, insertion, and translocation of membrane proteins <xref ref-type="bibr" rid="pone.0010972-Minetti1">[69]</xref>. The knowledge of inter-residue interactions in proteins structures is very useful for understanding the mechanism of protein folding and stability. Also, the secondary structure propensity of amino acids in a protein, as well as their polarity and hydrophobicity, would play an important role to the inter-residue interactions, and hence to its fold pattern <xref ref-type="bibr" rid="pone.0010972-Shen1">[70]</xref>, folding rate <xref ref-type="bibr" rid="pone.0010972-Shen2">[71]</xref>, <xref ref-type="bibr" rid="pone.0010972-Chou23">[72]</xref>, and stability as well <xref ref-type="bibr" rid="pone.0010972-Gromiha1">[73]</xref>. Furthermore, driven by the hydrophobic force, a protein could overcome the entropic barrier and fold from a random coiled state into some type of topological shape, with disulfide bonding, hydrogen bonding, ion-pairs, and van der Waals interactions defining the shape and keeping it from falling apart <xref ref-type="bibr" rid="pone.0010972-Fields1">[74]</xref>.</p>
+<p>A general solution for predicting the metabolic stability of proteins, even with a moderate success rate, is an extremely difficult and complicated problem. However, any progress in this regard would provide us with very useful insights for in-depth researches in protein science and developing new strategy for drug design.</p>
+</sec><sec id="s3d">
+<title>The predicted metabolic stability of drug target proteins</title>
+<p>It is interesting to predict the metabolic stability of drug target proteins and compare the results with the half-life spans of the corresponding drugs. Although there were many factors that can affect the half-life of a drug, we found that the stability of its target protein is a quite important one. For demonstration, the predicted metabolic stability outcomes for some drug target proteins and the real half-life spans of their corresponding drugs are given in the <underline><xref ref-type="supplementary-material" rid="pone.0010972.s004">Table S3</xref></underline>, from which we found some intriguing correlations. The half-life of drugs targeted to proteins with predicted “short or medium half-life” (with median of 420 minutes) was shorter than the half-life of drugs targeted to proteins with predicted “long or extra-long half-life” (with median of 709 minutes). The median of the half-life of drugs targeted to proteins with predicted “short half-life”, “medium half-life”, “long half-life” and “extra-long half-life” were 303, 510, 540 and 1080 minutes, respectively.</p>
+<p>For instance, Dinoprostone (DrugBank accession number DB00917) is a prescription drug used, as a vaginal suppository, to prepare the cervix for labour and to induce labour. The half-life of Dinoprostone is less than 5 minutes. The predicted stability results for its target proteins PTGER1 (UniProtKB/Swiss-Prot ID P34995) and PTGER2 (UniProtKB/Swiss-Prot ID P43116) were both “short” half-life. Again, Clorazepate (DrugBank accession number DB00628) is for treating anxiety. It also has the function for muscle relaxant and anticonvulsant. Its half-life is about 2 days (1,440 minutes), and the predicted stability for its target proteins BZRP (UniProtKB/Swiss-Prot ID P30536) and GABRA1 (UniProtKB/Swiss-Prot ID P14867) were “long” and “extra-long”, respectively, fully consistent with the sense that the more stable a protein is, the longer half-life drug is needed for effectively targeting it; and vice versa.</p>
+</sec></sec><sec id="s4">
+<title>Discussion</title>
+<p>We have developed a new method for predicting the metabolic stability of proteins by integrating their various biochemical and physicochemical features. It is indicated by the rigorous jackknife cross-validation test that the predictor can achieve an overall success rate of 72.8%. With the feature selection approach based on the mRMR method and IFS procedure, we found that the following seven features would play the major roles in determining the stability of proteins: KEGG enrichment scores, subcellular locations, polarity, amino acids composition, hydrophobicity, secondary structure propensity, and the number of protein complexes. These findings might provide useful information for drug development. The method presented in this paper might also become a high throughput tool for large-scale annotating the metabolic stability of proteins.</p>
+</sec><sec id="s5">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0010972.s001" mimetype="text/plain" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.s001" xlink:type="simple"><label>Dataset S1</label><caption>
+<p>The sequences of benchmark dataset.</p>
+<p>(0.71 MB TXT)</p>
+</caption></supplementary-material><supplementary-material id="pone.0010972.s002" mimetype="application/x-excel" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.s002" xlink:type="simple"><label>Table S1</label><caption>
+<p>List of the 376 feature components.</p>
+<p>(0.10 MB XLS)</p>
+</caption></supplementary-material><supplementary-material id="pone.0010972.s003" mimetype="application/x-excel" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.s003" xlink:type="simple"><label>Table S2</label><caption>
+<p>The optimal feature components.</p>
+<p>(0.05 MB XLS)</p>
+</caption></supplementary-material><supplementary-material id="pone.0010972.s004" mimetype="application/x-excel" position="float" xlink:href="info:doi/10.1371/journal.pone.0010972.s004" xlink:type="simple"><label>Table S3</label><caption>
+<p>The predicted metabolic stability for drug target proteins.</p>
+<p>(0.10 MB XLS)</p>
+</caption></supplementary-material></sec></body>
+<back>
+<ack>
+<p>The authors wish to thank the two Reviewers for their constructive comments, which are very helpful for strengthening the presentation of this study.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0010972-Chou1"><label>1</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>1988</year>             <article-title>Review: Low-frequency collective motion in biomacromolecules and its biological functions.</article-title>             <source>Biophysical Chemistry</source>             <volume>30</volume>             <fpage>3</fpage>             <lpage>48</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Madkan1"><label>2</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Madkan</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Blank</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Elson</surname><given-names>E</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Geddis</surname><given-names>MS</given-names></name>
+<etal/></person-group>             <year>2009</year>             <article-title>Steps to the clinic with ELF EMF.</article-title>             <source>Natural Science</source>             <volume>1</volume>             <fpage>157</fpage>             <lpage>165</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Schnell1"><label>3</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Schnell</surname><given-names>JR</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>JJ</given-names></name>
+</person-group>             <year>2008</year>             <article-title>Structure and mechanism of the M2 proton channel of influenza A virus.</article-title>             <source>Nature</source>             <volume>451</volume>             <fpage>591</fpage>             <lpage>595</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Martel1"><label>4</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Martel</surname><given-names>P</given-names></name>
+</person-group>             <year>1992</year>             <article-title>Biophysical aspects of neutron scattering from vibrational modes of proteins.</article-title>             <source>Prog Biophys Mol Biol</source>             <volume>57</volume>             <fpage>129</fpage>             <lpage>179</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Kamerzell1"><label>5</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Kamerzell</surname><given-names>TJ</given-names></name>
+<name name-style="western"><surname>Middaugh</surname><given-names>CR</given-names></name>
+</person-group>             <year>2008</year>             <article-title>The complex inter-relationships between protein flexibility and stability.</article-title>             <source>J Pharm Sci</source>             <volume>97</volume>             <fpage>3494</fpage>             <lpage>3517</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou2"><label>6</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>NY</given-names></name>
+</person-group>             <year>1977</year>             <article-title>The biological functions of low-frequency phonons.</article-title>             <source>Scientia Sinica</source>             <volume>20</volume>             <fpage>447</fpage>             <lpage>457</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou3"><label>7</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>1984</year>             <article-title>The biological functions of low-frequency phonons: 4. Resonance effects and allosteric transition.</article-title>             <source>Biophysical Chemistry</source>             <volume>20</volume>             <fpage>61</fpage>             <lpage>71</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou4"><label>8</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>1987</year>             <article-title>The biological functions of low-frequency phonons: 6. A possible dynamic mechanism of allosteric transition in antibody molecules.</article-title>             <source>Biopolymers</source>             <volume>26</volume>             <fpage>285</fpage>             <lpage>295</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou5"><label>9</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Mao</surname><given-names>B</given-names></name>
+</person-group>             <year>1988</year>             <article-title>Collective motion in DNA and its role in drug intercalation.</article-title>             <source>Biopolymers</source>             <volume>27</volume>             <fpage>1795</fpage>             <lpage>1815</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou6"><label>10</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>1989</year>             <article-title>Low-frequency resonance and cooperativity of hemoglobin.</article-title>             <source>Trends in Biochemical Sciences</source>             <volume>14</volume>             <fpage>212</fpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou7"><label>11</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>CT</given-names></name>
+<name name-style="western"><surname>Maggiora</surname><given-names>GM</given-names></name>
+</person-group>             <year>1994</year>             <article-title>Solitary wave dynamics as a mechanism for explaining the internal motion during microtubule growth.</article-title>             <source>Biopolymers</source>             <volume>34</volume>             <fpage>143</fpage>             <lpage>153</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Pielak1"><label>12</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Pielak</surname><given-names>RM</given-names></name>
+<name name-style="western"><surname>Jason</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Schnell</surname><given-names>JR</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>JJ</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Mechanism of drug inhibition and drug resistance of influenza A M2 channel.</article-title>             <source>Proceedings of National Academy of Science, USA</source>             <volume>106</volume>             <fpage>7379</fpage>             <lpage>7384</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Huang1"><label>13</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Huang</surname><given-names>RB</given-names></name>
+<name name-style="western"><surname>Du</surname><given-names>QS</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>CH</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2008</year>             <article-title>An in-depth analysis of the biological functional studies based on the NMR M2 channel structure of influenza A virus.</article-title>             <source>Biochem Biophys Res Comm</source>             <volume>377</volume>             <fpage>1243</fpage>             <lpage>1247</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Du1"><label>14</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Du</surname><given-names>QS</given-names></name>
+<name name-style="western"><surname>Huang</surname><given-names>RB</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>CH</given-names></name>
+<name name-style="western"><surname>Li</surname><given-names>XM</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Energetic analysis of the two controversial drug binding sites of the M2 proton channel in influenza A virus.</article-title>             <source>Journal of Theoretical Biology</source>             <volume>259</volume>             <fpage>159</fpage>             <lpage>164</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Wang1"><label>15</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Wang</surname><given-names>JF</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Insight into the molecular switch mechanism of human Rab5a from molecular dynamics simulations.</article-title>             <source>Biochemical and Biophysical Research Communications</source>             <volume>390</volume>             <fpage>608</fpage>             <lpage>612</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Wang2"><label>16</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Wang</surname><given-names>JF</given-names></name>
+<name name-style="western"><surname>Gong</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Wei</surname><given-names>DQ</given-names></name>
+<name name-style="western"><surname>Li</surname><given-names>YX</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Molecular dynamics studies on the interactions of PTP1B with inhibitors: from the first phosphate binding site to the second one.</article-title>             <source>Protein Engineering Design and Selection</source>             <volume>22</volume>             <fpage>349</fpage>             <lpage>355</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Wang3"><label>17</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Wang</surname><given-names>JF</given-names></name>
+<name name-style="western"><surname>Yan</surname><given-names>JY</given-names></name>
+<name name-style="western"><surname>Wei</surname><given-names>DQ</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Binding of CYP2C9 with diverse drugs and its implications for metabolic mechanism.</article-title>             <source>Medicinal Chemistry</source>             <volume>5</volume>             <fpage>263</fpage>             <lpage>270</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou8"><label>18</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>JJ</given-names></name>
+<name name-style="western"><surname>Li</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Klee</surname><given-names>CB</given-names></name>
+<name name-style="western"><surname>Bax</surname><given-names>A</given-names></name>
+</person-group>             <year>2001</year>             <article-title>Solution structure of Ca2+-calmodulin reveals flexible hand-like properties of its domains.</article-title>             <source>Nature Structural Biology</source>             <volume>8</volume>             <fpage>990</fpage>             <lpage>997</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Li1"><label>19</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Li</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Wei</surname><given-names>DQ</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>JF</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2007</year>             <article-title>Computational studies of the binding mechanism of calmodulin with chrysin.</article-title>             <source>Biochem Biophys Res Comm</source>             <volume>358</volume>             <fpage>1102</fpage>             <lpage>1107</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Wei1"><label>20</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Wei</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>CH</given-names></name>
+<name name-style="western"><surname>Du</surname><given-names>QS</given-names></name>
+<name name-style="western"><surname>Meng</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Investigation into adamantane-based M2 inhibitors with FB-QSAR.</article-title>             <source>Medicinal Chemistry</source>             <volume>5</volume>             <fpage>305</fpage>             <lpage>317</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Gong1"><label>21</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Gong</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Li</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Wang</surname><given-names>JF</given-names></name>
+<name name-style="western"><surname>Cheng</surname><given-names>F</given-names></name>
+<name name-style="western"><surname>Wei</surname><given-names>DQ</given-names></name>
+<etal/></person-group>             <year>2009</year>             <article-title>Binding mechanism of H5N1 influenza virus neuraminidase with ligands and its implication for drug design.</article-title>             <source>Medicinal Chemistry</source>             <volume>5</volume>             <fpage>242</fpage>             <lpage>249</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Wang4"><label>22</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Wang</surname><given-names>JF</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>CC</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Wei</surname><given-names>DQ</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Review: Structure of cytochrome P450s and personalized drug.</article-title>             <source>Current Medicinal Chemistry</source>             <volume>16</volume>             <fpage>232</fpage>             <lpage>244</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Yen1"><label>23</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Yen</surname><given-names>HC</given-names></name>
+<name name-style="western"><surname>Xu</surname><given-names>Q</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>DM</given-names></name>
+<name name-style="western"><surname>Zhao</surname><given-names>Z</given-names></name>
+<name name-style="western"><surname>Elledge</surname><given-names>SJ</given-names></name>
+</person-group>             <year>2008</year>             <article-title>Global protein stability profiling in mammalian cells.</article-title>             <source>Science</source>             <volume>322</volume>             <fpage>918</fpage>             <lpage>923</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou9"><label>24</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Pseudo amino acid composition and its applications in bioinformatics, proteomics and system biology.</article-title>             <source>Current Proteomics</source>             <volume>6</volume>             <fpage>262</fpage>             <lpage>274</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Rice1"><label>25</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Rice</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Longden</surname><given-names>I</given-names></name>
+<name name-style="western"><surname>Bleasby</surname><given-names>A</given-names></name>
+</person-group>             <year>2000</year>             <article-title>EMBOSS: the European Molecular Biology Open Software Suite.</article-title>             <source>Trends Genet</source>             <volume>16</volume>             <fpage>276</fpage>             <lpage>277</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou10"><label>26</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2001</year>             <article-title>Prediction of protein cellular attributes using pseudo amino acid composition.</article-title>             <source>PROTEINS: Structure, Function, and Genetics (Erratum: ibid, 2001, Vol44, 60)</source>             <volume>43</volume>             <fpage>246</fpage>             <lpage>255</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou11"><label>27</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2005</year>             <article-title>Using amphiphilic pseudo amino acid composition to predict enzyme subfamily classes.</article-title>             <source>Bioinformatics</source>             <volume>21</volume>             <fpage>10</fpage>             <lpage>19</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Dubchak1"><label>28</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Dubchak</surname><given-names>I</given-names></name>
+<name name-style="western"><surname>Muchnik</surname><given-names>I</given-names></name>
+<name name-style="western"><surname>Mayor</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Dralyuk</surname><given-names>I</given-names></name>
+<name name-style="western"><surname>Kim</surname><given-names>SH</given-names></name>
+</person-group>             <year>1999</year>             <article-title>Recognition of a protein fold in the context of the SCOP classification.</article-title>             <source>Proteins-Structure Function and Genetics</source>             <volume>35</volume>             <fpage>401</fpage>             <lpage>407</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Niu1"><label>29</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Niu</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Jin</surname><given-names>Y</given-names></name>
+<name name-style="western"><surname>Lu</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Fen</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Gu</surname><given-names>L</given-names></name>
+<etal/></person-group>             <year>2009</year>             <article-title>Prediction of interaction between small molecule and enzyme using AdaBoost.</article-title>             <source>Mol Divers</source>             <volume>13</volume>             <fpage>313</fpage>             <lpage>320</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Xiao1"><label>30</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Xiao</surname><given-names>X</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2007</year>             <article-title>Digital coding of amino acids based on hydrophobic index.</article-title>             <source>Protein &amp; Peptide Letters</source>             <volume>14</volume>             <fpage>871</fpage>             <lpage>875</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Zhang1"><label>31</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Zhang</surname><given-names>TL</given-names></name>
+<name name-style="western"><surname>Ding</surname><given-names>YS</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2008</year>             <article-title>Prediction protein structural classes with pseudo amino acid composition: approximate entropy and hydrophobicity pattern.</article-title>             <source>Journal of Theoretical Biology</source>             <volume>250</volume>             <fpage>186</fpage>             <lpage>193</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou12"><label>32</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>CT</given-names></name>
+</person-group>             <year>1994</year>             <article-title>Predicting protein folding types by distance functions that make allowances for amino acid interactions.</article-title>             <source>Journal of Biological Chemistry</source>             <volume>269</volume>             <fpage>22014</fpage>             <lpage>22020</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Dubchak2"><label>33</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Dubchak</surname><given-names>I</given-names></name>
+<name name-style="western"><surname>Muchnik</surname><given-names>I</given-names></name>
+<name name-style="western"><surname>Mayor</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Dralyuk</surname><given-names>I</given-names></name>
+<name name-style="western"><surname>Kim</surname><given-names>SH</given-names></name>
+</person-group>             <year>1999</year>             <article-title>Recognition of a protein fold in the context of the Structural Classification of Proteins (SCOP) classification.</article-title>             <source>Proteins: Structure, Function, and Genetics</source>             <volume>35</volume>             <fpage>401</fpage>             <lpage>407</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou13"><label>34</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>1995</year>             <article-title>A novel approach to predicting protein structural classes in a (20-1)-D amino acid composition space.</article-title>             <source>Proteins: Structure, Function &amp; Genetics</source>             <volume>21</volume>             <fpage>319</fpage>             <lpage>344</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Pollastri1"><label>35</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Pollastri</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Przybylski</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Rost</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Baldi</surname><given-names>P</given-names></name>
+</person-group>             <year>2002</year>             <article-title>Improving the prediction of protein secondary structure in three and eight classes using recurrent neural networks and profiles.</article-title>             <source>Proteins-Structure Function and Genetics</source>             <volume>47</volume>             <fpage>228</fpage>             <lpage>35</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Pollastri2"><label>36</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Pollastri</surname><given-names>G</given-names></name>
+<name name-style="western"><surname>Baldi</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Fariselli</surname><given-names>P</given-names></name>
+<name name-style="western"><surname>Casadio</surname><given-names>R</given-names></name>
+</person-group>             <year>2002</year>             <article-title>Prediction of coordination number and relative solvent accessibility in proteins.</article-title>             <source>Proteins-Structure Function and Genetics</source>             <volume>47</volume>             <fpage>142</fpage>             <lpage>53</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chothia1"><label>37</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chothia</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Finkelstein</surname><given-names>AV</given-names></name>
+</person-group>             <year>1990</year>             <article-title>The classification and origins of protein folding patterns.</article-title>             <source>Annu Rev Biochem</source>             <volume>59</volume>             <fpage>1007</fpage>             <lpage>1039</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Fauchere1"><label>38</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Fauchere</surname><given-names>JL</given-names></name>
+<name name-style="western"><surname>Charton</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Kier</surname><given-names>LB</given-names></name>
+<name name-style="western"><surname>Verloop</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Pliska</surname><given-names>V</given-names></name>
+</person-group>             <year>1988</year>             <article-title>Amino acid side chain parameters for correlation studies in biology and pharmacology.</article-title>             <source>International Journal of Peptide and Protein Research</source>             <volume>32</volume>             <fpage>269</fpage>             <lpage>278</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Grantham1"><label>39</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Grantham</surname><given-names>R</given-names></name>
+</person-group>             <year>1974</year>             <article-title>Amino acid difference formula to help explain protein evolution.</article-title>             <source>Science</source>             <volume>185</volume>             <fpage>862</fpage>             <lpage>864</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou14"><label>40</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Shen</surname><given-names>HB</given-names></name>
+</person-group>             <year>2007</year>             <article-title>Review: Recent progresses in protein subcellular location prediction.</article-title>             <source>Analytical Biochemistry</source>             <volume>370</volume>             <fpage>1</fpage>             <lpage>16</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou15"><label>41</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Shen</surname><given-names>HB</given-names></name>
+</person-group>             <year>2008</year>             <article-title>Cell-PLoc: A package of web-servers for predicting subcellular localization of proteins in various organisms.</article-title>             <source>Nature Protocols</source>             <volume>3</volume>             <fpage>153</fpage>             <lpage>162</lpage>          </element-citation></ref>
+<ref id="pone.0010972-The1"><label>42</label><element-citation publication-type="journal" xlink:type="simple">             <collab xlink:type="simple">The UniProt Consortium</collab>             <year>2009</year>             <article-title>The Universal Protein Resource (UniProt) 2009.</article-title>             <source>Nucl Acids Res</source>             <volume>37</volume>             <fpage>D169</fpage>             <lpage>174</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Altschul1"><label>43</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Altschul</surname><given-names>SF</given-names></name>
+<name name-style="western"><surname>Gish</surname><given-names>W</given-names></name>
+<name name-style="western"><surname>Miller</surname><given-names>W</given-names></name>
+<name name-style="western"><surname>Myers</surname><given-names>EW</given-names></name>
+<name name-style="western"><surname>Lipman</surname><given-names>DJ</given-names></name>
+</person-group>             <year>1990</year>             <article-title>Basic local alignment search tool.</article-title>             <source>J Mol Biol</source>             <volume>215</volume>             <fpage>403</fpage>             <lpage>410</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou16"><label>44</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Shen</surname><given-names>HB</given-names></name>
+</person-group>             <year>2010</year>             <article-title>A new method for predicting the subcellular localization of eukaryotic proteins with both single and multiple sites: Euk-mPLoc 2.0.</article-title>             <source>PLoS ONE</source>             <volume>5</volume>             <fpage>e9931</fpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou17"><label>45</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Shen</surname><given-names>HB</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Review: recent advances in developing web-servers for predicting protein attributes.</article-title>             <source>Natural Science</source>             <volume>2</volume>             <fpage>63</fpage>             <lpage>92</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Biocompare1"><label>46</label><element-citation publication-type="other" xlink:type="simple">             <collab xlink:type="simple">Biocompare website</collab>             <year>2010</year>             <comment><ext-link ext-link-type="uri" xlink:href="http://www.biocompare.com/Articles/FeaturedArticle/976/Subcellular-Targeting-Of-Proteins-And-Drugs.html" xlink:type="simple">http://www.biocompare.com/Articles/FeaturedArticle/976/Subcellular-Targeting-Of-Proteins-And-Drugs.html</ext-link></comment>          </element-citation></ref>
+<ref id="pone.0010972-Sharan1"><label>47</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Sharan</surname><given-names>R</given-names></name>
+<name name-style="western"><surname>Ulitsky</surname><given-names>I</given-names></name>
+<name name-style="western"><surname>Shamir</surname><given-names>R</given-names></name>
+</person-group>             <year>2007</year>             <article-title>Network-based prediction of protein function.</article-title>             <source>Mol Syst Biol</source>             <volume>3</volume>             <fpage>88</fpage>          </element-citation></ref>
+<ref id="pone.0010972-Jensen1"><label>48</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Jensen</surname><given-names>LJ</given-names></name>
+<name name-style="western"><surname>Kuhn</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Stark</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Chaffron</surname><given-names>S</given-names></name>
+<name name-style="western"><surname>Creevey</surname><given-names>C</given-names></name>
+<etal/></person-group>             <year>2009</year>             <article-title>STRING 8–a global view on proteins and their functional interactions in 630 organisms.</article-title>             <source>Nucleic Acids Research</source>             <volume>37</volume>             <fpage>D412</fpage>             <lpage>416</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Ruepp1"><label>49</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Ruepp</surname><given-names>A</given-names></name>
+<name name-style="western"><surname>Waegele</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Lechner</surname><given-names>M</given-names></name>
+<name name-style="western"><surname>Brauner</surname><given-names>B</given-names></name>
+<name name-style="western"><surname>Dunger-Kaltenbach</surname><given-names>I</given-names></name>
+<etal/></person-group>             <year>2010</year>             <article-title>CORUM: the comprehensive resource of mammalian protein complexes–2009.</article-title>             <source>Nucleic Acids Research</source>             <volume>38</volume>             <fpage>D497</fpage>             <lpage>501</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Peng1"><label>50</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Peng</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Long</surname><given-names>F</given-names></name>
+<name name-style="western"><surname>Ding</surname><given-names>C</given-names></name>
+</person-group>             <year>2005</year>             <article-title>Feature selection based on mutual information: criteria of max-dependency, max-relevance, and min-redundancy.</article-title>             <source>IEEE Trans Pattern Anal Mach Intell</source>             <volume>27</volume>             <fpage>1226</fpage>             <lpage>1238</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou18"><label>51</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>CT</given-names></name>
+</person-group>             <year>1992</year>             <article-title>A correlation coefficient method to predicting protein structural classes from amino acid compositions.</article-title>             <source>European Journal of Biochemistry</source>             <volume>207</volume>             <fpage>429</fpage>             <lpage>433</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou19"><label>52</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>CT</given-names></name>
+</person-group>             <year>1995</year>             <article-title>Review: Prediction of protein structural classes.</article-title>             <source>Critical Reviews in Biochemistry and Molecular Biology</source>             <volume>30</volume>             <fpage>275</fpage>             <lpage>349</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Qian1"><label>53</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Qian</surname><given-names>Z</given-names></name>
+<name name-style="western"><surname>Cai</surname><given-names>YD</given-names></name>
+<name name-style="western"><surname>Li</surname><given-names>Y</given-names></name>
+</person-group>             <year>2006</year>             <article-title>A novel computational method to predict transcription factor DNA binding preference.</article-title>             <source>Biochem Biophys Res Commun</source>             <volume>348</volume>             <fpage>1034</fpage>             <lpage>1037</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Huang2"><label>54</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Huang</surname><given-names>T</given-names></name>
+<name name-style="western"><surname>Cui</surname><given-names>W</given-names></name>
+<name name-style="western"><surname>Hu</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Feng</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Li</surname><given-names>YX</given-names></name>
+<etal/></person-group>             <year>2009</year>             <article-title>Prediction of pharmacological and xenobiotic responses to drugs based on time course gene expression profiles.</article-title>             <source>PLoS One</source>             <volume>4</volume>             <fpage>e8126</fpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou20"><label>55</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Cai</surname><given-names>YD</given-names></name>
+</person-group>             <year>2003</year>             <article-title>A new hybrid approach to predict subcellular localization of proteins by incorporating gene ontology.</article-title>             <source>Biochemical and Biophysical Research Communications</source>             <volume>311</volume>             <fpage>743</fpage>             <lpage>747</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Lin1"><label>56</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Lin</surname><given-names>H</given-names></name>
+</person-group>             <year>2008</year>             <article-title>The modified Mahalanobis discriminant for predicting outer membrane proteins by using Chou's pseudo amino acid composition.</article-title>             <source>Journal of Theoretical Biology</source>             <volume>252</volume>             <fpage>350</fpage>             <lpage>356</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chen1"><label>57</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chen</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Chen</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Zou</surname><given-names>X</given-names></name>
+<name name-style="western"><surname>Cai</surname><given-names>P</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Prediction of protein secondary structure content by using the concept of Chou's pseudo amino acid composition and support vector machine.</article-title>             <source>Protein &amp; Peptide Letters</source>             <volume>16</volume>             <fpage>27</fpage>             <lpage>31</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Ding1"><label>58</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Ding</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Luo</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Lin</surname><given-names>H</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Prediction of cell wall lytic enzymes using Chou's amphiphilic pseudo amino acid composition.</article-title>             <source>Protein &amp; Peptide Letters</source>             <volume>16</volume>             <fpage>351</fpage>             <lpage>355</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Li2"><label>59</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Li</surname><given-names>FM</given-names></name>
+<name name-style="western"><surname>Li</surname><given-names>QZ</given-names></name>
+</person-group>             <year>2008</year>             <article-title>Predicting protein subcellular location using Chou's pseudo amino acid composition and improved hybrid approach.</article-title>             <source>Protein &amp; Peptide Letters</source>             <volume>15</volume>             <fpage>612</fpage>             <lpage>616</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Lin2"><label>60</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Lin</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Ding</surname><given-names>H</given-names></name>
+<name name-style="western"><surname>Feng-Biao Guo</surname><given-names>FB</given-names></name>
+<name name-style="western"><surname>Zhang</surname><given-names>AY</given-names></name>
+<name name-style="western"><surname>Huang</surname><given-names>J</given-names></name>
+</person-group>             <year>2008</year>             <article-title>Predicting subcellular localization of mycobacterial proteins by using Chou's pseudo amino acid composition.</article-title>             <source>Protein &amp; Peptide Letters</source>             <volume>15</volume>             <fpage>739</fpage>             <lpage>744</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Wishart1"><label>61</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Wishart</surname><given-names>DS</given-names></name>
+<name name-style="western"><surname>Knox</surname><given-names>C</given-names></name>
+<name name-style="western"><surname>Guo</surname><given-names>AC</given-names></name>
+<name name-style="western"><surname>Cheng</surname><given-names>D</given-names></name>
+<name name-style="western"><surname>Shrivastava</surname><given-names>S</given-names></name>
+<etal/></person-group>             <year>2008</year>             <article-title>DrugBank: a knowledgebase for drugs, drug actions and drug targets.</article-title>             <source>Nucleic Acids Research</source>             <volume>36</volume>             <fpage>D901</fpage>             <lpage>906</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Wang5"><label>62</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Wang</surname><given-names>J</given-names></name>
+<name name-style="western"><surname>Pielak</surname><given-names>RM</given-names></name>
+<name name-style="western"><surname>McClintock</surname><given-names>MA</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>JJ</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Solution structure and functional analysis of the influenza B proton channel.</article-title>             <source>Nat Struct Mol Biol</source>             <volume>16</volume>             <fpage>1267</fpage>             <lpage>1271</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Oxenoid1"><label>63</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Oxenoid</surname><given-names>K</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>JJ</given-names></name>
+</person-group>             <year>2005</year>             <article-title>The structure of phospholamban pentamer reveals a channel-like architecture in membranes.</article-title>             <source>Proceedings of the National Academy of Sciences of the United States of America</source>             <volume>102</volume>             <fpage>10870</fpage>             <lpage>10875</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Cristian1"><label>64</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Cristian</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Lear</surname><given-names>JD</given-names></name>
+<name name-style="western"><surname>DeGrado</surname><given-names>WF</given-names></name>
+</person-group>             <year>2003</year>             <article-title>Determination of membrane protein stability via thermodynamic coupling of folding to thiol-disulfide interchange.</article-title>             <source>Protein Sci</source>             <volume>12</volume>             <fpage>1732</fpage>             <lpage>1740</lpage>          </element-citation></ref>
+<ref id="pone.0010972-White1"><label>65</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>White</surname><given-names>SH</given-names></name>
+<name name-style="western"><surname>Wimley</surname><given-names>WC</given-names></name>
+</person-group>             <year>1999</year>             <article-title>Membrane protein folding and stability: physical principles.</article-title>             <source>Annu Rev Biophys Biomol Struct</source>             <volume>28</volume>             <fpage>319</fpage>             <lpage>365</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou21"><label>66</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Carlacci</surname><given-names>L</given-names></name>
+<name name-style="western"><surname>Maggiora</surname><given-names>GM</given-names></name>
+<name name-style="western"><surname>Parodi</surname><given-names>LA</given-names></name>
+<name name-style="western"><surname>Schultz</surname><given-names>MW</given-names></name>
+</person-group>             <year>1992</year>             <article-title>An energy-based approach to packing the 7-helix bundle of bacteriorhodopsin.</article-title>             <source>Protein Science</source>             <volume>1</volume>             <fpage>810</fpage>             <lpage>827</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou22"><label>67</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Carlacci</surname><given-names>L</given-names></name>
+</person-group>             <year>1991</year>             <article-title>Energetic approach to the folding of alpha/beta barrels.</article-title>             <source>Proteins: Structure, Function, and Genetics</source>             <volume>9</volume>             <fpage>280</fpage>             <lpage>295</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Lumry1"><label>68</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Lumry</surname><given-names>R</given-names></name>
+</person-group>             <year>2002</year>             <article-title>Protein substructures and folded stability.</article-title>             <source>Biophys Chem</source>             <volume>101–102</volume>             <fpage>81</fpage>             <lpage>92</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Minetti1"><label>69</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Minetti</surname><given-names>CA</given-names></name>
+<name name-style="western"><surname>Remeta</surname><given-names>DP</given-names></name>
+</person-group>             <year>2006</year>             <article-title>Energetics of membrane protein folding and stability.</article-title>             <source>Arch Biochem Biophys</source>             <volume>453</volume>             <fpage>32</fpage>             <lpage>53</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Shen1"><label>70</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Shen</surname><given-names>HB</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Predicting protein fold pattern with functional domain and sequential evolution information.</article-title>             <source>Journal of Theoretical Biology</source>             <volume>256</volume>             <fpage>441</fpage>             <lpage>446</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Shen2"><label>71</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Shen</surname><given-names>HB</given-names></name>
+<name name-style="western"><surname>Song</surname><given-names>JN</given-names></name>
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+</person-group>             <year>2009</year>             <article-title>Prediction of protein folding rates from primary sequence by fusing multiple sequential features.</article-title>             <source>Journal of Biomedical Science and Engineering (JBiSE)</source>             <volume>2</volume>             <fpage>136</fpage>             <lpage>143</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Chou23"><label>72</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Chou</surname><given-names>KC</given-names></name>
+<name name-style="western"><surname>Shen</surname><given-names>HB</given-names></name>
+</person-group>             <year>2009</year>             <article-title>FoldRate: A web-server for predicting protein folding rates from primary sequence.</article-title>             <source>The Open Bioinformatics Journal</source>             <volume>3</volume>             <fpage>31</fpage>             <lpage>50</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Gromiha1"><label>73</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Gromiha</surname><given-names>MM</given-names></name>
+<name name-style="western"><surname>Selvaraj</surname><given-names>S</given-names></name>
+</person-group>             <year>2004</year>             <article-title>Inter-residue interactions in protein folding and stability.</article-title>             <source>Prog Biophys Mol Biol</source>             <volume>86</volume>             <fpage>235</fpage>             <lpage>277</lpage>          </element-citation></ref>
+<ref id="pone.0010972-Fields1"><label>74</label><element-citation publication-type="journal" xlink:type="simple">             <person-group person-group-type="author">
+<name name-style="western"><surname>Fields</surname><given-names>PA</given-names></name>
+</person-group>             <year>2001</year>             <article-title>Review: Protein function at thermal extremes: balancing stability and flexibility.</article-title>             <source>Comp Biochem Physiol A Mol Integr Physiol</source>             <volume>129</volume>             <fpage>417</fpage>             <lpage>431</lpage>          </element-citation></ref>
+</ref-list>
+
+</back>
+</article>

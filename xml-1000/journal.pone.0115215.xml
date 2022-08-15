@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group>
+<journal-title>PLoS ONE</journal-title></journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-14-26846</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0115215</article-id>
+<article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Brain mapping</subject><subj-group><subject>Functional magnetic resonance imaging</subject></subj-group></subj-group><subj-group><subject>Cognitive science</subject><subj-group><subject>Cognitive psychology</subject><subj-group><subject>Language</subject></subj-group></subj-group></subj-group><subj-group><subject>Neuroimaging</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Computer and information sciences</subject><subj-group><subject>Graph theory</subject></subj-group><subj-group><subject>Network analysis</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Medicine and health sciences</subject><subj-group><subject>Diagnostic medicine</subject><subj-group><subject>Diagnostic radiology</subject></subj-group></subj-group><subj-group><subject>Radiology and imaging</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Research and analysis methods</subject><subj-group><subject>Research assessment</subject><subj-group><subject>Reproducibility</subject></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Reproducibility and Robustness of Graph Measures of the Associative-Semantic Network</article-title>
+<alt-title alt-title-type="running-head">Reproducibility and Robustness of Graph Measures</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Wang</surname><given-names>Yu</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Nelissen</surname><given-names>Natalie</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Adamczuk</surname><given-names>Katarzyna</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>De Weer</surname><given-names>An-Sofie</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Vandenbulcke</surname><given-names>Mathieu</given-names></name><xref ref-type="aff" rid="aff3"><sup>3</sup></xref><xref ref-type="aff" rid="aff6"><sup>6</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Sunaert</surname><given-names>Stefan</given-names></name><xref ref-type="aff" rid="aff4"><sup>4</sup></xref><xref ref-type="aff" rid="aff5"><sup>5</sup></xref><xref ref-type="aff" rid="aff6"><sup>6</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Vandenberghe</surname><given-names>Rik</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff2"><sup>2</sup></xref><xref ref-type="aff" rid="aff6"><sup>6</sup></xref></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Dupont</surname><given-names>Patrick</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff4"><sup>4</sup></xref><xref ref-type="aff" rid="aff6"><sup>6</sup></xref><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+</contrib-group>
+<aff id="aff1"><label>1</label><addr-line>Laboratory for Cognitive Neurology, Department of Neurosciences, KU Leuven, Leuven, Belgium</addr-line></aff>
+<aff id="aff2"><label>2</label><addr-line>Neurology Department, University Hospitals Leuven, Leuven, Belgium</addr-line></aff>
+<aff id="aff3"><label>3</label><addr-line>Psychiatry Department, University Hospitals Leuven, Leuven, Belgium</addr-line></aff>
+<aff id="aff4"><label>4</label><addr-line>Medical Imaging Research Center (MIRC), University of Leuven and University Hospitals Leuven, Leuven, Belgium</addr-line></aff>
+<aff id="aff5"><label>5</label><addr-line>Radiology Department, University Hospitals Leuven, Leuven, Belgium</addr-line></aff>
+<aff id="aff6"><label>6</label><addr-line>Alzheimer Research Centre KU Leuven, Leuven Institute for Neuroscience and Disease, Leuven, Belgium</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Hayasaka</surname><given-names>Satoru</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Wake Forest School of Medicine, United States of America</addr-line></aff>
+<author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">patrick.dupont@med.kuleuven.be</email></corresp>
+<fn fn-type="conflict"><p>The authors have declared that no competing interests exist.</p></fn>
+<fn fn-type="con"><p>Conceived and designed the experiments: YW RV PD. Performed the experiments: YW NN KA ADW MV. Analyzed the data: YW PD. Contributed reagents/materials/analysis tools: YW SS RV PD. Wrote the paper: YW NN KA RV PD.</p></fn>
+</author-notes>
+<pub-date pub-type="collection"><year>2014</year></pub-date>
+<pub-date pub-type="epub"><day>12</day><month>12</month><year>2014</year></pub-date>
+<volume>9</volume>
+<issue>12</issue>
+<elocation-id>e115215</elocation-id>
+<history>
+<date date-type="received"><day>18</day><month>6</month><year>2014</year></date>
+<date date-type="accepted"><day>19</day><month>11</month><year>2014</year></date>
+</history>
+<permissions>
+<copyright-year>2014</copyright-year>
+<copyright-holder>Wang et al</copyright-holder><license xlink:type="simple"><license-p>This is an open-access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions>
+<abstract>
+<p>Graph analysis is a promising tool to quantify brain connectivity. However, an essential requirement is that the graph measures are reproducible and robust. We have studied the reproducibility and robustness of various graph measures in group based and in individual binary and weighted networks derived from a task fMRI experiment during explicit associative-semantic processing of words and pictures. The nodes of the network were defined using an independent study and the connectivity was based on the partial correlation of the time series between any pair of nodes. The results showed that in case of binary networks, global graph measures exhibit a good reproducibility and robustness for networks which are not too sparse and these figures of merit depend on the graph measure and on the density of the network. Furthermore, group based binary networks should be derived from groups of sufficient size and the lower the density the more subjects are required to obtain robust values. Local graph measures are very variable in terms of reproducibility and should be interpreted with care. For weighted networks, we found good reproducibility (average test-retest variability &lt;5% and ICC values &gt;0.4) when using subject specific networks and this will allow us to relate network properties to individual subject information.</p>
+</abstract>
+<funding-group><funding-statement>This work was supported by Research Foundation Flanders (FWO) [G0660.09 &amp; G0A0913N to RV and PD], KU Leuven [OT/12/097 to RV and PD], Federaal Wetenschapsbeleid belspo [IAP-VII P7/11] and Stichting voor Alzheimer Onderzoek (SAO11020 &amp; 13007). YW has a grant from the Chinese Scholarship Council, KA is a doctoral fellow of the FWO and RV is a senior clinical investigator of the FWO. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="28"/></counts><custom-meta-group><custom-meta id="data-availability" xlink:type="simple"><meta-name>Data Availability</meta-name><meta-value>The authors confirm that all data underlying the findings are fully available without restriction. All relevant data are available as matlab.mat files and matlab.m scripts and can be found at DOI: 10.5281/zenodo.12500.</meta-value></custom-meta></custom-meta-group></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>There is a surge of interest in mapping and modelling the complicated networks within the brain. Functional connectivity analyses of neuroimaging data are based on the concept of synchrony between the signal responses in spatially distinct brain regions <xref ref-type="bibr" rid="pone.0115215-Niu1">[1]</xref>. Analysing networks extracted from functional imaging data has proven to be a promising tool to investigate the complex functional structure of the human brain that influences the dynamics underlying cognition <xref ref-type="bibr" rid="pone.0115215-Bullmore1">[2]</xref>–<xref ref-type="bibr" rid="pone.0115215-Rubinov1">[4]</xref>.</p>
+<p>A promising tool to rigorously study the problem is graph analysis. This provides a framework to characterize and to quantify networks <xref ref-type="bibr" rid="pone.0115215-Achard1">[5]</xref>–<xref ref-type="bibr" rid="pone.0115215-He1">[9]</xref>. Many non-trivial graph characteristics, such as small-worldness, modularity and highly connected hubs, have been observed in human brain networks. Differences in graph properties have been found in people with Alzheimer's disease <xref ref-type="bibr" rid="pone.0115215-Wang1">[10]</xref> and schizophrenia <xref ref-type="bibr" rid="pone.0115215-Micheloyannis1">[6]</xref>, <xref ref-type="bibr" rid="pone.0115215-VandenHeuvel2">[11]</xref>, <xref ref-type="bibr" rid="pone.0115215-Ma1">[12]</xref>, and also in association with age <xref ref-type="bibr" rid="pone.0115215-Micheloyannis2">[7]</xref>, <xref ref-type="bibr" rid="pone.0115215-Wang2">[13]</xref>. Changes in graph measures were also found during motor learning <xref ref-type="bibr" rid="pone.0115215-Heitger1">[14]</xref> and taking nicotine <xref ref-type="bibr" rid="pone.0115215-Wylie1">[15]</xref>. All these studies suggest that graph analysis can be a promising tool in clinical and basic research to characterize brain connectivity in a way that is both biologically meaningful and related to normal and abnormal function. However, an essential requirement when using this type of quantification is that the different measures are reproducible and robust.</p>
+<p>The reproducibility of graph measures has already been investigated in a number of studies looking at binarized networks derived from structural MRI <xref ref-type="bibr" rid="pone.0115215-Tijms1">[16]</xref>, <xref ref-type="bibr" rid="pone.0115215-Bernhardt1">[17]</xref>, diffusion-weighted MRI <xref ref-type="bibr" rid="pone.0115215-Vaessen1">[18]</xref>–<xref ref-type="bibr" rid="pone.0115215-Bassett1">[21]</xref>, resting state fMRI <xref ref-type="bibr" rid="pone.0115215-Wang1">[10]</xref>, <xref ref-type="bibr" rid="pone.0115215-Telesford1">[22]</xref>, <xref ref-type="bibr" rid="pone.0115215-Weber1">[23]</xref>, MEG <xref ref-type="bibr" rid="pone.0115215-Deuker1">[24]</xref> and resting-state functional near infrared spectroscopy <xref ref-type="bibr" rid="pone.0115215-Niu2">[25]</xref>. Only one study has looked at the reproducibility of graph measures when using task fMRI <xref ref-type="bibr" rid="pone.0115215-Weber1">[23]</xref>. Graph measures using task fMRI is expected to be different compared to resting state fMRI since functional connectivity between two nodes depend on the context (i.e. resting state versus a specific task context). Furthermore, the reproducibility of weighted graph measures has received very little attention: only two studies are available which addressed this problem and both were using graphs derived from diffusion-weighted MRI <xref ref-type="bibr" rid="pone.0115215-Owen1">[26]</xref>, <xref ref-type="bibr" rid="pone.0115215-Buchanan1">[27]</xref>. Therefore, we investigated the reproducibility and the robustness of graph measures of weighted and binarized networks derived from a task fMRI during explicit associative-semantic processing of words and pictures. This task activates a distributed set of brain areas that has been replicated across a wide range of studies <xref ref-type="bibr" rid="pone.0115215-Vandenberghe1">[28]</xref>–<xref ref-type="bibr" rid="pone.0115215-Wagner1">[38]</xref>. Previously, we have applied graph analysis to examine the structure of this network <xref ref-type="bibr" rid="pone.0115215-Vandenberghe2">[39]</xref>.</p>
+</sec><sec id="s2" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<sec id="s2a">
+<title>Participants</title>
+<p>A group of 54 healthy elderly participants (age (mean <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e001" xlink:type="simple"/></inline-formula> std): 65.2 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e002" xlink:type="simple"/></inline-formula> 5.6 yrs; 31 male) <xref ref-type="bibr" rid="pone.0115215-Adamczuk1">[40]</xref> performed an associative-semantic judgement task. Twenty-eight subjects were scanned on a 3T Philips Intera system equipped with an 8-channel receive-only head coil (Philips SENSitivity Encoding head coil). Twenty-six subjects could not undergo the fMRI in the Intera system due to space limitation in the scanner lumen in combination with the screen. These subjects were scanned on a 3T Philips Achieva system equipped with a 32-channel receive-only head coil (Philips 10 SENSitivity Encoding head coil) which used a screen placed behind the individual's head for the projection.</p>
+<p>The protocol was approved by the Ethics Committee University Hospitals Leuven (EudraCT: 2009-014475-45) and written informed consent was obtained from all subjects in accordance with the Declaration of Helsinki.</p>
+</sec><sec id="s2b">
+<title>Experimental design</title>
+<p>Stimuli were projected onto a screen (resolution of 1024×768 pixels, refresh rate 60 Hz) using Presentation 14.8 (NeuroBehavioural Systems, Albany, CA, USA). The design of the fMRI experiment was factorial <xref ref-type="bibr" rid="pone.0115215-Vandenberghe1">[28]</xref>–<xref ref-type="bibr" rid="pone.0115215-Nelissen2">[31]</xref>. The first factor, task, had two levels: associative-semantic versus visuoperceptual judgement. The second factor, input modality, also had two levels: pictures versus printed words. During a trial of the associative-semantic condition, a triplet of stimuli was presented for 5250 ms, one stimulus on top (the sample stimulus) and one in each lower quadrant (the test stimuli), at 4.6° eccentricity, followed by a 1500 ms interstimulus interval. Subjects had to press a left- or right-hand key depending on which of the two test stimuli matched the sample stimulus more closely in meaning. A given triplet was presented either as pictures or as words and this was counterbalanced across subjects. In the visuoperceptual control condition, a picture or word stimulus was presented in three different sizes (mean picture size was 3.7° and mean letter size 1.2°). Subjects had to press a left- or right-hand key depending on which of the two test stimuli matched the sample stimulus more closely in size on the screen. An epoch, i.e. a block of trials belonging to the same condition, consisted of four trials (total duration 27 s). The fifth condition consisted of a resting baseline condition during which a fixation point was presented in the centre of the screen. During each fMRI run (5 runs in total), a series of the 5 epoch types, was replicated 3 times. The order of conditions was pseudorandom and differed across runs of the same subject. Subjects received a practice session before entering the scanner. In this session we determined which size difference (9%, 6%, 3%, or 1%) for the visuoperceptual conditions was needed for each individual subject to obtain comparable accuracies as for the associative-semantic conditions.</p>
+</sec><sec id="s2c">
+<title>Preprocessing of the data</title>
+<p>Image analysis was performed using Statistical Parametric Mapping (SPM8, Wellcome Department of Cognitive Neurology, London, UK. <ext-link ext-link-type="uri" xlink:href="http://www.fil.ion.ucl.ac.uk/spm" xlink:type="simple">http://www.fil.ion.ucl.ac.uk/spm</ext-link>). Functional images of each subject were realigned to correct for small head motion during each run. The anatomical <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e003" xlink:type="simple"/></inline-formula>-weighted image was coregistered to the average of the realigned functional volumes and non-linearly normalized to Montreal Neurological Institute (MNI) space using the unified segmentation approach <xref ref-type="bibr" rid="pone.0115215-Ashburner1">[41]</xref> and the resulting transformation was used to spatially normalize the functional images. The voxel size of the images in MNI space was 3×3×3 mm<sup>3</sup>. Images were smoothed using a 6×6×6 mm<sup>3</sup> Full Width at Half Maximum (FWHM) Gaussian kernel. We also applied a temporal high-pass filter (cutoff 270s) and a low-pass filter consisting of the canonical hemodynamic response function. The epoch-related response was modelled by a canonical hemodynamic response function convolved with a boxcar.</p>
+</sec><sec id="s2d">
+<title>Network construction</title>
+<p>Volumes of interests (VOI) were taken from a previously published study on the associative-semantic network <xref ref-type="bibr" rid="pone.0115215-Vandenberghe2">[39]</xref>, namely fifty-seven spheres (radius 6 mm) located at least 20 mm apart. The spheres were centred on group-specific activation maxima (from the main effect of task) determined from this previous study. Note that the position of the VOIs was identical as in the previous study, i.e. the functional information in the current study was not used to position the VOIs. We have previously shown that the nodes of the associative semantic network have a low anatomical inter-subject variability <xref ref-type="bibr" rid="pone.0115215-Dupont1">[42]</xref>.</p>
+<p>For each subject, we applied each of these VOIs to the current dataset and we extracted the time series after whitening, filtering and removing effects of no interest (session specific effects) using code from statistical parametric mapping software (SPM8; Wellcome Department of Cognitive Neurology, London, UK; <ext-link ext-link-type="uri" xlink:href="http://www.fil.ion.ucl.ac.uk/spm" xlink:type="simple">http://www.fil.ion.ucl.ac.uk/spm</ext-link>). Finally, the average time series in the VOI was calculated as the mean of the time series over all voxels in the VOI. Time series of different runs were concatenated. It is important to note that we used the whole time series, i.e. it includes all the different conditions as well as the null condition.</p>
+<p>Based on the average time series, partial correlation coefficients between volumes of interest were calculated. Partial correlation was used to obtain the degree of association between regions, with the effect of other regions removed <xref ref-type="bibr" rid="pone.0115215-Marrelec1">[43]</xref>, <xref ref-type="bibr" rid="pone.0115215-Smith1">[44]</xref>. Among the methods evaluating functional interdependencies between functional MRI time courses in different regions, partial correlations have a high sensitivity to network connection detection <xref ref-type="bibr" rid="pone.0115215-Smith1">[44]</xref>. An association matrix was defined in which each element represents the association strength between two regions. The association strength is defined as the absolute value of the z-score which is calculated from the partial correlation using the Fisher r-to-z transform <xref ref-type="bibr" rid="pone.0115215-Finn1">[45]</xref>: <disp-formula id="pone.0115215.e004"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0115215.e004" xlink:type="simple"/><label>(1)</label></disp-formula>in which <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e005" xlink:type="simple"/></inline-formula> is the partial correlation, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e006" xlink:type="simple"/></inline-formula> the number of data points in the time series and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e007" xlink:type="simple"/></inline-formula> the number of nodes.</p>
+<p>The great majority of network analysis in systems neuroscience relies on the construction of undirected and unweighted graphs through thresholding of the association matrix <xref ref-type="bibr" rid="pone.0115215-Bullmore2">[3]</xref>, <xref ref-type="bibr" rid="pone.0115215-Rubinov1">[4]</xref>. The thresholded association matrix represents a binary adjacency matrix with 1 indicating the presence and 0 indicating the absence of an edge (connection) between two vertices (nodes/regions). A possible approach to define the threshold is to fix the network's edge density (also referred to as wiring cost), i.e. the number of existing edges divided by the number of possible edges. In order to investigate changes in the network topology as a function of network density, we thresholded the association matrix at network densities ranging from 5% to 45%, in steps of 5%. Densities below 5% are considered too sparse and densities above 50% are less likely to be biological <xref ref-type="bibr" rid="pone.0115215-Kaiser1">[46]</xref>, <xref ref-type="bibr" rid="pone.0115215-Hosseini1">[47]</xref>. Furthermore, we also included a density of 7.8% corresponding to the density of the associative-semantic network in the previously published study <xref ref-type="bibr" rid="pone.0115215-Vandenberghe2">[39]</xref>.</p>
+<p>The binarization of connections has one major drawback: it enhances scale contrast by underrating (overrating) connections because connections around the threshold may vary considerably between subjects. To avoid this problem, weighted graph analysis <xref ref-type="bibr" rid="pone.0115215-VandenHeuvel2">[11]</xref>, <xref ref-type="bibr" rid="pone.0115215-Li2">[48]</xref>–<xref ref-type="bibr" rid="pone.0115215-VanWijk1">[51]</xref>, which preserves all the edge information, is also used. To obtain weights <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e008" xlink:type="simple"/></inline-formula> with <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e009" xlink:type="simple"/></inline-formula>, we applied a nonlinear mapping of z score to weight: <disp-formula id="pone.0115215.e010"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0115215.e010" xlink:type="simple"/><label>(2)</label></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e011" xlink:type="simple"/></inline-formula> is the cumulative distribution function of the standard normal distribution.</p>
+</sec><sec id="s2e">
+<title>Graph-theoretical analysis</title>
+<p>Local and global graph measures were calculated for the binary network (at different densities) as well as for the weighted network using the brain connectivity toolbox version 2013_12_25 (<ext-link ext-link-type="uri" xlink:href="https://sites.google.com/a/brain-connectivity-toolbox.net/bct/Home" xlink:type="simple">https://sites.google.com/a/brain-connectivity-toolbox.net/bct/Home</ext-link>; <xref ref-type="bibr" rid="pone.0115215-Rubinov1">[4]</xref>). We calculated the following local graph measures for node <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e012" xlink:type="simple"/></inline-formula>: node degree <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e013" xlink:type="simple"/></inline-formula>, average path length <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e014" xlink:type="simple"/></inline-formula>, local clustering coefficient <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e015" xlink:type="simple"/></inline-formula>, local efficiency <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e016" xlink:type="simple"/></inline-formula>, efficiency <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e017" xlink:type="simple"/></inline-formula> and betweenness centrality <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e018" xlink:type="simple"/></inline-formula>. Global measures included characteristic path length <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e019" xlink:type="simple"/></inline-formula>, mean clustering coefficient <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e020" xlink:type="simple"/></inline-formula>, mean local efficiency <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e021" xlink:type="simple"/></inline-formula>, global efficiency <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e022" xlink:type="simple"/></inline-formula> and mean betweenness centrality <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e023" xlink:type="simple"/></inline-formula>. For the definition of these network measures, we refer to <xref ref-type="bibr" rid="pone.0115215-Rubinov1">[4]</xref>. It should be noted that isolated nodes can be present when the density of the network is very low. In that case, these nodes were not taking into account when calculating the network measures.</p>
+<p>The network itself was either defined at the individual level (for every subject separately) or at the group level (after averaging the association matrices across the subjects belonging to that group).</p>
+</sec><sec id="s2f">
+<title>Reproducibility at the individual level</title>
+<p>To look at the intra-subject reproducibility, two groups were constructed by evenly splitting each subject's time series into two parts by randomly assigning four of the five runs to one of the two even parts. This corresponds to the situation in which each subject is measured twice under the same conditions. In this way we constructed two groups of paired subjects. We refer to this situation as the <italic>split-half</italic> case. A partial correlation based network and corresponding graph measures were obtained for each subject in each group across a range of densities or using the weights of the network.</p>
+<p>The intraclass correlation coefficient (ICC) was used to analyse reproducibility of the network <xref ref-type="bibr" rid="pone.0115215-Telesford2">[52]</xref>. More specifically, values were merged into a 2×54 matrix (number of measurements x subjects). The total variance was split into the between-subject (BMS) and the residual (EMS) variance. ICC values were calculated according to the equation <xref ref-type="bibr" rid="pone.0115215-Shrout1">[53]</xref>: <disp-formula id="pone.0115215.e024"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0115215.e024" xlink:type="simple"/><label>(3)</label></disp-formula></p>
+<p>By randomly switching (100 random realizations) time series parts between the two measurements, we can calculate the mean and variance of the ICC for each graph measure. ICC <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e025" xlink:type="simple"/></inline-formula> is usually considered as a cut-off for a fairly reliable measure <xref ref-type="bibr" rid="pone.0115215-Faria1">[54]</xref>.</p>
+<p>We also calculated the test-retest value between the two measurements of the same subject and averaged this over all subjects to obtain the average test-retest value. The test-retest <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e026" xlink:type="simple"/></inline-formula> was calculated as: <disp-formula id="pone.0115215.e027"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0115215.e027" xlink:type="simple"/><label>(4)</label></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e028" xlink:type="simple"/></inline-formula> denotes the absolute value and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e029" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e030" xlink:type="simple"/></inline-formula> are the values of the graph measure under investigation obtained in the first and second measurement respectively.</p>
+</sec><sec id="s2g">
+<title>Reproducibility for group-based graph measures</title>
+<p>Averaging the association matrices across subjects summarizes the overall characteristics of the group <xref ref-type="bibr" rid="pone.0115215-Rubinov2">[55]</xref>, <xref ref-type="bibr" rid="pone.0115215-Power1">[56]</xref>. To study the reproducibility for group-based graph measures, we looked at the test-retest <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e031" xlink:type="simple"/></inline-formula> calculated as <xref ref-type="disp-formula" rid="pone.0115215.e027">equation 4</xref> except that <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e032" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e033" xlink:type="simple"/></inline-formula> represent the measures obtained for the first and second group. Mean and variance of each graph measure were calculated based upon the 100 random realizations of switching time series parts.</p>
+<p>However, a more challenging situation occurs when we want to compare two independent groups which are scanned on MR scanners with different field strength and which differ slightly in the fMRI paradigm. This is the case when we want to compare the results of the current group with the results of our previous study <xref ref-type="bibr" rid="pone.0115215-Vandenberghe2">[39]</xref>. In that study we used the same paradigm (except that we did not include a null condition in our measurement). Furthermore, the data of this group (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e034" xlink:type="simple"/></inline-formula>) were acquired on a 1.5 T Siemens Sonata. Age (67.2 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e035" xlink:type="simple"/></inline-formula> 8.5 years) and gender (19 M/14 F) were similar to the current study. We refer in the remaining of the paper to the comparison of these two studies as the <italic>between-independent groups</italic> case. The test-retest values were calculated according to <xref ref-type="disp-formula" rid="pone.0115215.e027">equation 4</xref>.</p>
+</sec><sec id="s2h">
+<title>Hubs and community structure</title>
+<p>We also assessed the reproducibility of the community structure and the identification of hubs for binary and weighted networks at the individual and the group level.</p>
+<p>The identification of hubs was based on a hub score <xref ref-type="bibr" rid="pone.0115215-Bullmore1">[2]</xref>, <xref ref-type="bibr" rid="pone.0115215-VandenHeuvel2">[11]</xref>, <xref ref-type="bibr" rid="pone.0115215-Heitger1">[14]</xref>, <xref ref-type="bibr" rid="pone.0115215-Vandenberghe2">[39]</xref>, <xref ref-type="bibr" rid="pone.0115215-Wu1">[57]</xref>–<xref ref-type="bibr" rid="pone.0115215-Fornito1">[59]</xref>, which is the sum of dummy values for four criteria. We gave a score of 1 or 0 depending on whether or not the node belongs to the top 20% of nodes with 1) the highest node degree, 2) the highest betweenness centrality, 3) the lowest local cluster coefficient (limited to nodes with a degree <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e036" xlink:type="simple"/></inline-formula>), and 4) the lowest average path length. Nodes with a hub score <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e037" xlink:type="simple"/></inline-formula> were considered hubs.</p>
+<p>We evaluated the consistency of hubs by measuring the co-occurrence of hubs (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e038" xlink:type="simple"/></inline-formula>) across networks. If <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e039" xlink:type="simple"/></inline-formula> is a list of hubs in network A and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e040" xlink:type="simple"/></inline-formula> in network B, the co-occurrence is calculated as <disp-formula id="pone.0115215.e041"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0115215.e041" xlink:type="simple"/><label>(5)</label></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e042" xlink:type="simple"/></inline-formula> denotes the cardinality of the set. A value of 1 corresponds to a perfect agreement of hubs while 0 reflects no agreement at all.</p>
+<p>To determine the community structure of the network, we used the algorithm of Newman <xref ref-type="bibr" rid="pone.0115215-Newman1">[60]</xref> as implemented in the Brain Connectivity Toolbox. The algorithm starts from a random order of the nodes which lead to a slightly different community structure each time the algorithm is applied. To generate a consensus assignment of nodes to communities, we used a two step procedure <xref ref-type="bibr" rid="pone.0115215-Barnes1">[61]</xref>. In the first step, we computed a co-assignment matrix represented as an <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e043" xlink:type="simple"/></inline-formula> matrix, where cell <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e044" xlink:type="simple"/></inline-formula> was equal to 1 if node i and node j were assigned to the same community. During the second step, a probabilistic co-assignment matrix is then obtained by averaging 100 realizations of co-assignment matrices.</p>
+<p>The consistency of the community structure of the network was assessed by probabilistic scaled inclusivity (pSI), a metric quantifying the consistency of communities across multiple networks and which is an extension of the scaled inclusivity SI <xref ref-type="bibr" rid="pone.0115215-Steen1">[62]</xref>, <xref ref-type="bibr" rid="pone.0115215-Moussa1">[63]</xref>. SI is calculated by measuring the overlap of modules across multiple networks while penalizing for disjunction of modules. For example, a node <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e045" xlink:type="simple"/></inline-formula> is part of module <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e046" xlink:type="simple"/></inline-formula> in network A and module <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e047" xlink:type="simple"/></inline-formula> in network B. Then SI for node <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e048" xlink:type="simple"/></inline-formula>, denoted as <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e049" xlink:type="simple"/></inline-formula>, is calculated as <disp-formula id="pone.0115215.e050"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0115215.e050" xlink:type="simple"/><label>(6)</label></disp-formula>where <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e051" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e052" xlink:type="simple"/></inline-formula> denote sets of nodes in modules <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e053" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e054" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e055" xlink:type="simple"/></inline-formula> denotes the cardinality of a set. If the two modules <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e056" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e057" xlink:type="simple"/></inline-formula> consist of an identical set of nodes, then <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e058" xlink:type="simple"/></inline-formula>. The SI value between two networks is a value between 0 and 1; if <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e059" xlink:type="simple"/></inline-formula> at a particular node, it means that the node is in the same module with exactly the same set of nodes in the two networks. A problem with this way of calculating the SI value is that it requires a final assignment of nodes to a community. This can be done based upon the probabilistic co-assignment matrix but may lead to different results depending on the algorithm to assign the final community to each node. An alternative is to use the probabilistic co-assignment matrix directly to calculate a probabilistic SI value. This is done as follows: <disp-formula id="pone.0115215.e060"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0115215.e060" xlink:type="simple"/><label>(7)</label></disp-formula>in which <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e061" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e062" xlink:type="simple"/></inline-formula> are the probability co-assignment between nodes <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e063" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e064" xlink:type="simple"/></inline-formula> in network <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e065" xlink:type="simple"/></inline-formula> and network <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e066" xlink:type="simple"/></inline-formula>.</p>
+<p>To further characterize the consistent parts of the communities, we averaged the co-assignment matrices for the two groups in the <italic>between-independent groups</italic> case or across every possible pair in the <italic>split-half</italic> case.</p>
+<p>There's no established rule to define which <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e067" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e068" xlink:type="simple"/></inline-formula> are sufficiently high to ensure consistency between networks but we can determine if it is significantly different from the value obtained under random conditions by comparing it to the distribution of values obtained from null networks, i.e. networks with the same number of nodes and connections which were generated by randomly (1000 realizations) rewiring the observed network <xref ref-type="bibr" rid="pone.0115215-Zalesky1">[64]</xref>. The weighted null network is obtained by randomly rewiring connections with the same distribution of weights.</p>
+</sec><sec id="s2i">
+<title>Robustness of the data</title>
+<sec id="s2i1">
+<title>Group size effect</title>
+<p>We applied a bootstrapping procedure (100 realizations) to calculate graph measures as a function of group size. More specifically, we created random subsamples from our 54 subjects, each time creating a subgroup with a certain number of subjects, and we repeated this for subgroup sizes ranging from 10 to 53. Results were calculated as the relative change (in %) taking the values of the complete group of 54 subjects as the reference.</p>
+</sec><sec id="s2i2">
+<title>Network robustness</title>
+<p>When we identify the nodes of the network, we may not have captured all nodes. The question then arises, in how far is this affecting the quantification of the network. To address this question, we assume that the 57 nodes represent all nodes of the underlying network and we removed nodes from this network to investigate the impact when nodes were not captured. The procedure is similar to network robustness analysis against random failures and targeted attacks <xref ref-type="bibr" rid="pone.0115215-Achard1">[5]</xref>, <xref ref-type="bibr" rid="pone.0115215-Bernhardt1">[17]</xref>, <xref ref-type="bibr" rid="pone.0115215-Albert1">[65]</xref> although the interpretation is clearly different. Since it is more likely to miss the least significant nodes, we conducted our analysis by removing nodes based on their significance in the main effect of task in the fMRI study starting by removing the least significant ones. The degree of tolerance will be expressed as the relative change of the graph measures compared to values of the network with all 57 nodes.</p>
+</sec></sec><sec id="s2j">
+<title>Statistics</title>
+<p>To evaluate if ICC values were significantly higher than 0.4, we performed a one-sample t-test. The same test was used to evaluate if the test-retest variability was <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e069" xlink:type="simple"/></inline-formula> 5% or <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e070" xlink:type="simple"/></inline-formula> 10%. The comparison between subject-specific graph measures obtained in two independent groups was assessed by a two-sample t-test. To test the relation between test-retest variability of global graph measures and density, we first log-transformed the test-retest values and performed a linear regression.</p>
+<p>The statistical threshold to reach significance was set to <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e071" xlink:type="simple"/></inline-formula>. We corrected for the number of densities under investigation in case of global graph measures and additionally for the number of nodes in case of local graph measures.</p>
+</sec></sec><sec id="s3">
+<title>Results</title>
+<p>In <xref ref-type="table" rid="pone-0115215-t001">table 1</xref> a summary of the main findings is given.</p>
+<table-wrap id="pone-0115215-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.t001</object-id><label>Table 1</label><caption>
+<title>Summary of the main findings.</title>
+</caption><alternatives><graphic id="pone-0115215-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.t001" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/></colgroup>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><underline><bold>Subject-specific networks</bold></underline></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Binary networks</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• Global efficiency, characteristic path length and mean betweenness centrality are reproducible only when the network density is high.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• The intra subject split-half test-retest values of global graph measures decreases with the increase of density.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Weighted networks</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• Global graph measures are reproducible for all the measures investigated.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• The intra subject split-half test-retest values of global graph measures were very low.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• The test-retest values of the mean of the global graph measures derived from subject-specific weighted networks for two independent groups varied between 7 and 17%.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• Communities are consistent for both intra-subject (in the split-half case) and inter-subject comparisons.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• The average global graph measures are not critically depending on the group size.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• The average global graph measures show robustness against missing nodes.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><underline><bold>Group-based networks</bold></underline></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Binary and weighted networks</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• In the split-half case, all graph measures show test-retest variability <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e072" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• Hubs show a significant high consistency in the split-half case compared to the values obtained from random null networks.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• Communities show consistency for both the split-half case and when comparing independent groups</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• A sufficiently large group size is required to obtain reliable results.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• Global efficiency and characteristic path length are more robust for the group size.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• Global efficiency, characteristic path length, mean local efficiency and clustering coefficient are more robust against missing nodes compared to the mean betweenness centrality</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Binary networks</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• Test-retest variability of global graph measures decreases as the network becomes more dense.</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Weighted networks</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">• The global efficiency and the characteristic path length have the smallest overall test-retest variability.</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap><sec id="s3a">
+<title>Reproducibility at the individual level (subject-specific networks)</title>
+<p>Averaged global ICC across all randomizations are shown in <xref ref-type="fig" rid="pone-0115215-g001">Fig. 1</xref> for binary (over a range of densities) and weighted networks. For binary networks, global efficiency <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e073" xlink:type="simple"/></inline-formula>, characteristic path length <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e074" xlink:type="simple"/></inline-formula> and mean betweenness centrality <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e075" xlink:type="simple"/></inline-formula> show significant (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e076" xlink:type="simple"/></inline-formula>) reproducibility (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e077" xlink:type="simple"/></inline-formula>) when the network density is high (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e078" xlink:type="simple"/></inline-formula>40%). This is not the case for the mean cluster coefficient and the mean local efficiency. Weighted global graph measures show significant (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e079" xlink:type="simple"/></inline-formula>) reproducibility (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e080" xlink:type="simple"/></inline-formula>) for all the measures investigated (<xref ref-type="fig" rid="pone-0115215-g001">Fig. 1</xref>).</p>
+<fig id="pone-0115215-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.g001</object-id><label>Figure 1</label><caption>
+<title>Reproducibility at the individual level.</title>
+<p>ICC for the global efficiency (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e081" xlink:type="simple"/></inline-formula>), the characteristic path length (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e082" xlink:type="simple"/></inline-formula>), the mean betweenness centrality (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e083" xlink:type="simple"/></inline-formula>), the mean local efficiency (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e084" xlink:type="simple"/></inline-formula>) and the mean clustering coefficient (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e085" xlink:type="simple"/></inline-formula>). The results are shown for binary (over a range of densities) and weighted (w) networks. Error bars denote the standard deviation. Values significantly (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e086" xlink:type="simple"/></inline-formula>) higher than <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e087" xlink:type="simple"/></inline-formula> are indicated with *.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.g001" position="float" xlink:type="simple"/></fig>
+<p>As can be expected, reproducibility at the nodal level exhibits heterogeneity across graph measures and nodes (see <xref ref-type="supplementary-material" rid="pone.0115215.s004">S1 Table</xref>). Efficiency <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e088" xlink:type="simple"/></inline-formula> and average path length <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e089" xlink:type="simple"/></inline-formula> are the most reproducible nodal graph measures (although only in 2 nodes a significant (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e090" xlink:type="simple"/></inline-formula>) ICC value <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e091" xlink:type="simple"/></inline-formula> 0.4 was found) in contrast to the betweenness centrality <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e092" xlink:type="simple"/></inline-formula> which is the least reproducible one. In case of weighted local graph measures, we observed the folowing range of averaged (across subjects) ICC values: <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e093" xlink:type="simple"/></inline-formula>; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e094" xlink:type="simple"/></inline-formula>; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e095" xlink:type="simple"/></inline-formula>; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e096" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e097" xlink:type="simple"/></inline-formula>.</p>
+<p>The intra subject split-half test-retest values (TRT) for global graph measures are shown for binary and weighted networks (<xref ref-type="fig" rid="pone-0115215-g002">Fig. 2</xref>). The test-retest values of global graph measures decreases with the increase of density in case of binary networks (for all global graph measures under investigation <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e098" xlink:type="simple"/></inline-formula>). For weighted networks, the test-retest values were excellent (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e099" xlink:type="simple"/></inline-formula> 5%): <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e100" xlink:type="simple"/></inline-formula>:1.12% (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e101" xlink:type="simple"/></inline-formula>);<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e102" xlink:type="simple"/></inline-formula>: 1.11% (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e103" xlink:type="simple"/></inline-formula>); <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e104" xlink:type="simple"/></inline-formula>: 4.09% (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e105" xlink:type="simple"/></inline-formula>); <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e106" xlink:type="simple"/></inline-formula>: 1.93% (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e107" xlink:type="simple"/></inline-formula>) and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e108" xlink:type="simple"/></inline-formula>: 2.40% (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e109" xlink:type="simple"/></inline-formula>).</p>
+<fig id="pone-0115215-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.g002</object-id><label>Figure 2</label><caption>
+<title>Intra-subject split-half test-retest variability (%).</title>
+<p>The results are shown for binary (over a range of densities) and weighted (w) networks. Error bars refer to the standard deviation across all randomization and subjects. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e110" xlink:type="simple"/></inline-formula>: global efficiency; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e111" xlink:type="simple"/></inline-formula>: the characteristic path length; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e112" xlink:type="simple"/></inline-formula>: the mean betweenness centrality; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e113" xlink:type="simple"/></inline-formula>: the mean local efficiency; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e114" xlink:type="simple"/></inline-formula>: the mean clustering coefficient. Test-retest variabilities significantly (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e115" xlink:type="simple"/></inline-formula>) lower than 10% are indicated with *.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.g002" position="float" xlink:type="simple"/></fig>
+<p>In <xref ref-type="table" rid="pone-0115215-t002">table 2</xref>, we show the comparison of the global graph measures derived from subject-specific weighted networks for the two independent groups. The values in the current group are significantly different from those obtained in our previous study <xref ref-type="bibr" rid="pone.0115215-Vandenberghe2">[39]</xref> and the test-retest values of the mean of the global graph measures derived from subject-specific weighted networks for two independent groups varied between 7 and 17% (<xref ref-type="table" rid="pone-0115215-t002">table 2</xref>).</p>
+<table-wrap id="pone-0115215-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.t002</object-id><label>Table 2</label><caption>
+<title>Comparison of global graph measures derived from subject-specific weighted networks between two independent groups.</title>
+</caption><alternatives><graphic id="pone-0115215-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.t002" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">Current study mean <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e116" xlink:type="simple"/></inline-formula> std</td>
+<td align="left" rowspan="1" colspan="1">Previous study <xref ref-type="bibr" rid="pone.0115215-Vandenberghe2">[39]</xref> mean <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e117" xlink:type="simple"/></inline-formula> std</td>
+<td align="left" rowspan="1" colspan="1">TRT of the mean %</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">mean clustering coefficient</td>
+<td align="left" rowspan="1" colspan="1">0.588 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e118" xlink:type="simple"/></inline-formula> 0.020</td>
+<td align="left" rowspan="1" colspan="1">0.520 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e119" xlink:type="simple"/></inline-formula> 0.022</td>
+<td align="left" rowspan="1" colspan="1">12</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">characteristic path length</td>
+<td align="left" rowspan="1" colspan="1">1.444 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e120" xlink:type="simple"/></inline-formula> 0.028</td>
+<td align="left" rowspan="1" colspan="1">1.544 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e121" xlink:type="simple"/></inline-formula> 0.034</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">global efficiency</td>
+<td align="left" rowspan="1" colspan="1">0.739 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e122" xlink:type="simple"/></inline-formula> 0.014</td>
+<td align="left" rowspan="1" colspan="1">0.690 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e123" xlink:type="simple"/></inline-formula> 0.016</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">mean local efficiency</td>
+<td align="left" rowspan="1" colspan="1">0.629 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e124" xlink:type="simple"/></inline-formula> 0.018</td>
+<td align="left" rowspan="1" colspan="1">0.566 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e125" xlink:type="simple"/></inline-formula> 0.020</td>
+<td align="left" rowspan="1" colspan="1">11</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">mean betweenness centrality</td>
+<td align="left" rowspan="1" colspan="1">0.0057 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e126" xlink:type="simple"/></inline-formula> 0.0003</td>
+<td align="left" rowspan="1" colspan="1">0.0067 <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e127" xlink:type="simple"/></inline-formula> 0.0004</td>
+<td align="left" rowspan="1" colspan="1">17</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt101"><label/><p>TRT: test-retest variability.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s3b">
+<title>Reproducibility for group-based graph measures</title>
+<p>Test-retest variability for the different global graph measures are shown for the <italic>split-half</italic> case (<xref ref-type="fig" rid="pone-0115215-g003">Fig. 3</xref>) and the <italic>between-independent groups</italic> case (<xref ref-type="fig" rid="pone-0115215-g004">Fig. 4</xref>) for binary and weighted networks.</p>
+<fig id="pone-0115215-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.g003</object-id><label>Figure 3</label><caption>
+<title>Test-retest variability (%) for the split-half case.</title>
+<p>The results are shown for binary (over a range of densities) and weighted (w) networks. Error bars refer to the standard deviation. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e128" xlink:type="simple"/></inline-formula>: global efficiency; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e129" xlink:type="simple"/></inline-formula>: the characteristic path length; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e130" xlink:type="simple"/></inline-formula>: the mean betweenness centrality; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e131" xlink:type="simple"/></inline-formula>: the mean local efficiency; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e132" xlink:type="simple"/></inline-formula>: the mean clustering coefficient. Test-retest variabilities significantly (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e133" xlink:type="simple"/></inline-formula>) lower than 10% are indicated with *.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.g003" position="float" xlink:type="simple"/></fig><fig id="pone-0115215-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.g004</object-id><label>Figure 4</label><caption>
+<title>Test-retest variability (%) between independent groups for binary (over a range of densities) and weighted (w) networks.</title>
+<p><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e134" xlink:type="simple"/></inline-formula>: global efficiency; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e135" xlink:type="simple"/></inline-formula>: the characteristic path length; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e136" xlink:type="simple"/></inline-formula>: the mean betweenness centrality; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e137" xlink:type="simple"/></inline-formula>: the mean local efficiency; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e138" xlink:type="simple"/></inline-formula>: the mean clustering coefficient.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.g004" position="float" xlink:type="simple"/></fig>
+<p>In the <italic>split-half</italic> case (<xref ref-type="fig" rid="pone-0115215-g003">Fig. 3</xref>), all graph measures show a significantly (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e139" xlink:type="simple"/></inline-formula>) small test-retest variability (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e140" xlink:type="simple"/></inline-formula>) for binary (with densities <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e141" xlink:type="simple"/></inline-formula>) and weighted networks. The global graph measures showing the smallest overall test-retest variability are the global efficiency and the characteristic path length. For binary networks, test-retest variability of global graph measures decreases as the network becomes more dense (for all global graph measures under investigation: <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e142" xlink:type="simple"/></inline-formula>). When looking at the local graph measures (<xref ref-type="table" rid="pone-0115215-t003">table 3</xref>), we observe that the efficiency and average path length in the majority of nodes show a significantly (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e143" xlink:type="simple"/></inline-formula> 0.05) small test-retest variability (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e144" xlink:type="simple"/></inline-formula>) for both binary (with densities <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e145" xlink:type="simple"/></inline-formula>) and weighted networks. On the other hand, betweenness centrality has the largest test-retest variability.</p>
+<table-wrap id="pone-0115215-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.t003</object-id><label>Table 3</label><caption>
+<title>The split-half case: the test-retest variability of local graph measures across densities.</title>
+</caption><alternatives><graphic id="pone-0115215-t003-3" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.t003" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<tbody>
+<tr>
+<td colspan="12" align="left" rowspan="1"><bold>% of nodes with a significant (</bold><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e146" xlink:type="simple"/></inline-formula><bold> 0.05) test-retest variability </bold><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e147" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">density%</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">7.8</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">25</td>
+<td align="left" rowspan="1" colspan="1">30</td>
+<td align="left" rowspan="1" colspan="1">35</td>
+<td align="left" rowspan="1" colspan="1">40</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">w</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">node degree</td>
+<td align="left" rowspan="1" colspan="1">28</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">98</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">cluster coefficient</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="left" rowspan="1" colspan="1">37</td>
+<td align="left" rowspan="1" colspan="1">75</td>
+<td align="left" rowspan="1" colspan="1">98</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">average path length</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">53</td>
+<td align="left" rowspan="1" colspan="1">91</td>
+<td align="left" rowspan="1" colspan="1">95</td>
+<td align="left" rowspan="1" colspan="1">98</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">efficiency</td>
+<td align="left" rowspan="1" colspan="1">23</td>
+<td align="left" rowspan="1" colspan="1">65</td>
+<td align="left" rowspan="1" colspan="1">89</td>
+<td align="left" rowspan="1" colspan="1">95</td>
+<td align="left" rowspan="1" colspan="1">96</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">local efficiency</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">21</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">79</td>
+<td align="left" rowspan="1" colspan="1">95</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">98</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">betweenness centrality</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td colspan="12" align="left" rowspan="1"><bold>median test-retest variability (%)</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">density%</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">7.8</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">25</td>
+<td align="left" rowspan="1" colspan="1">30</td>
+<td align="left" rowspan="1" colspan="1">35</td>
+<td align="left" rowspan="1" colspan="1">40</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">w</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">node degree</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">18</td>
+<td align="left" rowspan="1" colspan="1">18</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">14</td>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">cluster coefficient</td>
+<td align="left" rowspan="1" colspan="1">56</td>
+<td align="left" rowspan="1" colspan="1">41</td>
+<td align="left" rowspan="1" colspan="1">31</td>
+<td align="left" rowspan="1" colspan="1">24</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">average path length</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">efficiency</td>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">local efficiency</td>
+<td align="left" rowspan="1" colspan="1">58</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">34</td>
+<td align="left" rowspan="1" colspan="1">23</td>
+<td align="left" rowspan="1" colspan="1">14</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">betweenness centrality</td>
+<td align="left" rowspan="1" colspan="1">90</td>
+<td align="left" rowspan="1" colspan="1">69</td>
+<td align="left" rowspan="1" colspan="1">58</td>
+<td align="left" rowspan="1" colspan="1">52</td>
+<td align="left" rowspan="1" colspan="1">49</td>
+<td align="left" rowspan="1" colspan="1">44</td>
+<td align="left" rowspan="1" colspan="1">40</td>
+<td align="left" rowspan="1" colspan="1">37</td>
+<td align="left" rowspan="1" colspan="1">33</td>
+<td align="left" rowspan="1" colspan="1">29</td>
+<td align="left" rowspan="1" colspan="1">42</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap>
+<p>In the <italic>between-independent groups</italic> situation, there was a trend that the test-retest variability of global graph measures in case of binary networks (<xref ref-type="fig" rid="pone-0115215-g004">Fig. 4</xref>) decreases as the network becomes more dense (for all global graph measures under investigation: uncorrected <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e148" xlink:type="simple"/></inline-formula>). Furthermore, the test-retest variability for graph measures of weighted networks in this situation are mostly above <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e149" xlink:type="simple"/></inline-formula>. When looking at the local graph measures (<xref ref-type="table" rid="pone-0115215-t004">table 4</xref>), we observe that the efficiency and average path length in the majority of nodes show small test-retest variability (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e150" xlink:type="simple"/></inline-formula>) for binary networks with densities <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e151" xlink:type="simple"/></inline-formula>.</p>
+<table-wrap id="pone-0115215-t004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.t004</object-id><label>Table 4</label><caption>
+<title>Between independent groups: the test-retest variability of local graph measures across densities.</title>
+</caption><alternatives><graphic id="pone-0115215-t004-4" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.t004" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<tbody>
+<tr>
+<td colspan="12" align="left" rowspan="1"><bold>% of nodes with a test-retest variability </bold><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e152" xlink:type="simple"/></inline-formula></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">density%</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">7.8</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">25</td>
+<td align="left" rowspan="1" colspan="1">30</td>
+<td align="left" rowspan="1" colspan="1">35</td>
+<td align="left" rowspan="1" colspan="1">40</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">w</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">node degree</td>
+<td align="left" rowspan="1" colspan="1">26</td>
+<td align="left" rowspan="1" colspan="1">18</td>
+<td align="left" rowspan="1" colspan="1">25</td>
+<td align="left" rowspan="1" colspan="1">19</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+<td align="left" rowspan="1" colspan="1">23</td>
+<td align="left" rowspan="1" colspan="1">21</td>
+<td align="left" rowspan="1" colspan="1">26</td>
+<td align="left" rowspan="1" colspan="1">35</td>
+<td align="left" rowspan="1" colspan="1">25</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">cluster coefficient</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="left" rowspan="1" colspan="1">14</td>
+<td align="left" rowspan="1" colspan="1">19</td>
+<td align="left" rowspan="1" colspan="1">19</td>
+<td align="left" rowspan="1" colspan="1">32</td>
+<td align="left" rowspan="1" colspan="1">53</td>
+<td align="left" rowspan="1" colspan="1">53</td>
+<td align="left" rowspan="1" colspan="1">75</td>
+<td align="left" rowspan="1" colspan="1">26</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">average path length</td>
+<td align="left" rowspan="1" colspan="1">23</td>
+<td align="left" rowspan="1" colspan="1">47</td>
+<td align="left" rowspan="1" colspan="1">46</td>
+<td align="left" rowspan="1" colspan="1">60</td>
+<td align="left" rowspan="1" colspan="1">65</td>
+<td align="left" rowspan="1" colspan="1">72</td>
+<td align="left" rowspan="1" colspan="1">79</td>
+<td align="left" rowspan="1" colspan="1">84</td>
+<td align="left" rowspan="1" colspan="1">81</td>
+<td align="left" rowspan="1" colspan="1">75</td>
+<td align="left" rowspan="1" colspan="1">30</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">efficiency</td>
+<td align="left" rowspan="1" colspan="1">30</td>
+<td align="left" rowspan="1" colspan="1">44</td>
+<td align="left" rowspan="1" colspan="1">53</td>
+<td align="left" rowspan="1" colspan="1">60</td>
+<td align="left" rowspan="1" colspan="1">65</td>
+<td align="left" rowspan="1" colspan="1">68</td>
+<td align="left" rowspan="1" colspan="1">72</td>
+<td align="left" rowspan="1" colspan="1">77</td>
+<td align="left" rowspan="1" colspan="1">72</td>
+<td align="left" rowspan="1" colspan="1">75</td>
+<td align="left" rowspan="1" colspan="1">35</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">local efficiency</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+<td align="left" rowspan="1" colspan="1">26</td>
+<td align="left" rowspan="1" colspan="1">40</td>
+<td align="left" rowspan="1" colspan="1">53</td>
+<td align="left" rowspan="1" colspan="1">70</td>
+<td align="left" rowspan="1" colspan="1">88</td>
+<td align="left" rowspan="1" colspan="1">98</td>
+<td align="left" rowspan="1" colspan="1">100</td>
+<td align="left" rowspan="1" colspan="1">30</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">betweenness centrality</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1">12</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+<td align="left" rowspan="1" colspan="1">14</td>
+</tr>
+<tr>
+<td colspan="12" align="left" rowspan="1"><bold>median test-retest variability (%)</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">density%</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">7.8</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">25</td>
+<td align="left" rowspan="1" colspan="1">30</td>
+<td align="left" rowspan="1" colspan="1">35</td>
+<td align="left" rowspan="1" colspan="1">40</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">w</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">node degree</td>
+<td align="left" rowspan="1" colspan="1">40</td>
+<td align="left" rowspan="1" colspan="1">40</td>
+<td align="left" rowspan="1" colspan="1">29</td>
+<td align="left" rowspan="1" colspan="1">25</td>
+<td align="left" rowspan="1" colspan="1">27</td>
+<td align="left" rowspan="1" colspan="1">29</td>
+<td align="left" rowspan="1" colspan="1">24</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">18</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+<td align="left" rowspan="1" colspan="1">18</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">cluster coefficient</td>
+<td align="left" rowspan="1" colspan="1">129</td>
+<td align="left" rowspan="1" colspan="1">73</td>
+<td align="left" rowspan="1" colspan="1">57</td>
+<td align="left" rowspan="1" colspan="1">26</td>
+<td align="left" rowspan="1" colspan="1">26</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">13</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">19</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">average path length</td>
+<td align="left" rowspan="1" colspan="1">18</td>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">7</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">4</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">16</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">efficiency</td>
+<td align="left" rowspan="1" colspan="1">17</td>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1">9</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">6</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">local efficiency</td>
+<td align="left" rowspan="1" colspan="1">133</td>
+<td align="left" rowspan="1" colspan="1">79</td>
+<td align="left" rowspan="1" colspan="1">53</td>
+<td align="left" rowspan="1" colspan="1">22</td>
+<td align="left" rowspan="1" colspan="1">17</td>
+<td align="left" rowspan="1" colspan="1">8</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">3</td>
+<td align="left" rowspan="1" colspan="1">2</td>
+<td align="left" rowspan="1" colspan="1">18</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">betweenness centrality</td>
+<td align="left" rowspan="1" colspan="1">116</td>
+<td align="left" rowspan="1" colspan="1">118</td>
+<td align="left" rowspan="1" colspan="1">105</td>
+<td align="left" rowspan="1" colspan="1">91</td>
+<td align="left" rowspan="1" colspan="1">60</td>
+<td align="left" rowspan="1" colspan="1">62</td>
+<td align="left" rowspan="1" colspan="1">58</td>
+<td align="left" rowspan="1" colspan="1">52</td>
+<td align="left" rowspan="1" colspan="1">44</td>
+<td align="left" rowspan="1" colspan="1">37</td>
+<td align="left" rowspan="1" colspan="1">67</td>
+</tr>
+</tbody>
+</table>
+</alternatives></table-wrap></sec><sec id="s3c">
+<title>Hubs and communities</title>
+<p>We analysed the hubs and community structure for binary and weighted networks at the individual and group-averaged level.</p>
+<p>At the group-averaged level, <xref ref-type="table" rid="pone-0115215-t005">table 5</xref> shows the co-occurrence of hubs <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e153" xlink:type="simple"/></inline-formula> in the <italic>split-half</italic> case and in the comparison between independent groups. For binary and weighted networks, hubs show a significant (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e154" xlink:type="simple"/></inline-formula>) high consistency in the <italic>split-half</italic> case compared to the values obtained from random null networks. However, when comparing two independent groups the consistency of the hubs is clearly reduced.</p>
+<table-wrap id="pone-0115215-t005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.t005</object-id><label>Table 5</label><caption>
+<title>Co-occurrence of hubs <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e155" xlink:type="simple"/></inline-formula>.</title>
+</caption><alternatives><graphic id="pone-0115215-t005-5" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.t005" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<tbody>
+<tr>
+<td colspan="12" align="left" rowspan="1"><bold>Split-half case</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">density%</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">7.8</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">25</td>
+<td align="left" rowspan="1" colspan="1">30</td>
+<td align="left" rowspan="1" colspan="1">35</td>
+<td align="left" rowspan="1" colspan="1">40</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">w</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>H<sub>c</sub></italic></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.62</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.70</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.78</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.75</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.73</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.70</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.68</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.66</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.64</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.62</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.79</bold></td>
+</tr>
+<tr>
+<td colspan="12" align="left" rowspan="1"><bold>Between-independent groups</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">density%</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">7.8</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">25</td>
+<td align="left" rowspan="1" colspan="1">30</td>
+<td align="left" rowspan="1" colspan="1">35</td>
+<td align="left" rowspan="1" colspan="1">40</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">w</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><italic>H<sub>c</sub></italic></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.43</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.32</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.52</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.31</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.31</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.30</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.41</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.30</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.34</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.40</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.43</bold></td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt102"><label/><p><italic>Bold: Values which are significantly (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e156" xlink:type="simple"/></inline-formula>) different from the value obtained from null networks (see text). Italic: <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e157" xlink:type="simple"/></inline-formula>.</italic></p></fn></table-wrap-foot></table-wrap>
+<p>The results for the consistency of the community structure are given in <xref ref-type="table" rid="pone-0115215-t006">table 6</xref> as the mean pSI for both binary and weighted networks. Communities show consistency for both the <italic>split-half</italic> case and when comparing independent groups, i.e. the pSI values are significantly different from those obtained from random null networks. When we look at groups of nodes which are consistently assigned (average value in the co-assignment matrix <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e158" xlink:type="simple"/></inline-formula> 0.95) to the same module between the two independent groups at the density <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e159" xlink:type="simple"/></inline-formula>, we find the following groups: 1) nodes in the dorsomedial prefrontal gyrus, the left superior frontal gyrus, the left supplementary motor area, the left anterior and the right cingulate gyrus; 2) nodes in the left inferior frontal gyrus pars orbitalis, the left posterior middle temporal gyrus, the left anterior and posterior superior temporal sulcus and the left supramarginal gyrus; 3) nodes in the left lingual gyrus, the left intraparietal sulcus and the left middle occipital gyrus; 4) nodes in the left superior frontal gyrus and the left medial frontal; 5) nodes in the right caudate, the left anterior thalamus and posterior thalamus; 6) nodes in the right inferior and middle occipital gyrus.</p>
+<table-wrap id="pone-0115215-t006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.t006</object-id><label>Table 6</label><caption>
+<title>Mean pSI.</title>
+</caption><alternatives><graphic id="pone-0115215-t006-6" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.t006" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<tbody>
+<tr>
+<td colspan="12" align="left" rowspan="1"><bold>Split-half case</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">density%</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">7.8</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">25</td>
+<td align="left" rowspan="1" colspan="1">30</td>
+<td align="left" rowspan="1" colspan="1">35</td>
+<td align="left" rowspan="1" colspan="1">40</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">w</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e160" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.31</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.35</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.40</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.42</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.42</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.47</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.50</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.56</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.54</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.49</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.50</bold></td>
+</tr>
+<tr>
+<td colspan="12" align="left" rowspan="1"><bold>Between-independent groups</bold></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">density%</td>
+<td align="left" rowspan="1" colspan="1">5</td>
+<td align="left" rowspan="1" colspan="1">7.8</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+<td align="left" rowspan="1" colspan="1">20</td>
+<td align="left" rowspan="1" colspan="1">25</td>
+<td align="left" rowspan="1" colspan="1">30</td>
+<td align="left" rowspan="1" colspan="1">35</td>
+<td align="left" rowspan="1" colspan="1">40</td>
+<td align="left" rowspan="1" colspan="1">45</td>
+<td align="left" rowspan="1" colspan="1">w</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e161" xlink:type="simple"/></inline-formula></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.14</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.13</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.15</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.18</bold></td>
+<td align="left" rowspan="1" colspan="1"><italic>0.14</italic></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.29</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.23</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.35</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.33</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.37</bold></td>
+<td align="left" rowspan="1" colspan="1"><bold>0.44</bold></td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt103"><label/><p><italic>Bold: Values which are significantly (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e162" xlink:type="simple"/></inline-formula>) different from the value obtained from null networks (see text). Italic: <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e163" xlink:type="simple"/></inline-formula>.</italic></p></fn></table-wrap-foot></table-wrap>
+<p>At the individual level for weigthed networks in the split-half case, the mean intra-subject co-occurrence of hubs <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e164" xlink:type="simple"/></inline-formula> across all 54 subjects and 100 randomization is <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e165" xlink:type="simple"/></inline-formula> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e166" xlink:type="simple"/></inline-formula>) while the mean inter-subject <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e167" xlink:type="simple"/></inline-formula> across all pairs of subjects is <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e168" xlink:type="simple"/></inline-formula> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e169" xlink:type="simple"/></inline-formula>). The mean intra-subject consistency of the community structure <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e170" xlink:type="simple"/></inline-formula> across all 54 subjects and 100 randomization is <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e171" xlink:type="simple"/></inline-formula> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e172" xlink:type="simple"/></inline-formula>) while the mean inter-subject <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e173" xlink:type="simple"/></inline-formula> across all pairs of subjects is <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e174" xlink:type="simple"/></inline-formula> (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e175" xlink:type="simple"/></inline-formula>).</p>
+<p>At the individual level for weigthed networks in the comparison of two independent groups, the mean inter-subject <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e176" xlink:type="simple"/></inline-formula> across all pairs of subjects was <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e177" xlink:type="simple"/></inline-formula> for the current study and this was not significantly different form <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e178" xlink:type="simple"/></inline-formula> obtained from the data of the previous study <xref ref-type="bibr" rid="pone.0115215-Vandenberghe2">[39]</xref>. However, the mean inter-subject <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e179" xlink:type="simple"/></inline-formula> across all pairs of subjects was significantly (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e180" xlink:type="simple"/></inline-formula>) different: <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e181" xlink:type="simple"/></inline-formula> for the current study versus <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e182" xlink:type="simple"/></inline-formula> for the previous study <xref ref-type="bibr" rid="pone.0115215-Vandenberghe2">[39]</xref>.</p>
+</sec><sec id="s3d">
+<title>Group size effect</title>
+<p>For group based networks, the relative change of global graph measures as a function of group size are shown in <xref ref-type="fig" rid="pone-0115215-g005">Fig. 5</xref> for networks with a density of 5%, 20%, 45% as well as for the weighted network. Overall, the relative difference in graph measures when taken the complete group (54 subjects) as the reference, decreases when the number of participants and/or the density increase. Furthermore, some binary graph measures are more robust for the group size: the absolute value of the relative error of global efficiency and characteristic path length are significantly (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e183" xlink:type="simple"/></inline-formula>) smaller than 10% even for smaller group sizes (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e184" xlink:type="simple"/></inline-formula> subjects) for all densities <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e185" xlink:type="simple"/></inline-formula>. The mean betweenness centrality, the mean local efficiency and the mean clustering coefficient show a similar behaviour but for minimum group sizes of respectively 17, 38 and 44 subjects for a binary network at a density of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e186" xlink:type="simple"/></inline-formula>. At a density of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e187" xlink:type="simple"/></inline-formula>, the minimum group size to obtain relative errors significantly (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e188" xlink:type="simple"/></inline-formula>) smaller than 10% in absolute value, could only be determined for <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e189" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e190" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e191" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e192" xlink:type="simple"/></inline-formula> and this size was respectively 42, 44, 44 and 49 subjects. For the weighted network, the minimum group size is 13, 14, 19, 20 and 23 for <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e193" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e194" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e195" xlink:type="simple"/></inline-formula>, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e196" xlink:type="simple"/></inline-formula> and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e197" xlink:type="simple"/></inline-formula> respectively.</p>
+<fig id="pone-0115215-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.g005</object-id><label>Figure 5</label><caption>
+<title>Group size effect for group based networks.</title>
+<p>The effect of group size for networks at a density of 5% (top row), 20% (second row), 45% (third row) and the weighted network (bottom row). A bootstrapping procedure was used (100 realizations) to randomly group the subjects with increasing group size. For graph measures the relative change (%) to the reference value (which is obtained when taking the complete group) are shown. Full lines denote the mean (bold) and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e198" xlink:type="simple"/></inline-formula> standard deviation of the metric. Dotted lines represent a relative change of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e199" xlink:type="simple"/></inline-formula> 10%. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e200" xlink:type="simple"/></inline-formula>: global efficiency; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e201" xlink:type="simple"/></inline-formula>: the characteristic path length; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e202" xlink:type="simple"/></inline-formula>: the mean betweenness centrality; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e203" xlink:type="simple"/></inline-formula>: the mean local efficiency and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e204" xlink:type="simple"/></inline-formula>: the mean clustering coefficient.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.g005" position="float" xlink:type="simple"/></fig>
+<p>At the individual level for weigthed networks, all the average global graph measures showed a small relative error (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e205" xlink:type="simple"/></inline-formula> in absolute value, <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e206" xlink:type="simple"/></inline-formula>) as a result of the smaller group size even for groups as small as 10 subjects (<xref ref-type="fig" rid="pone-0115215-g006">Fig. 6</xref>).</p>
+<fig id="pone-0115215-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.g006</object-id><label>Figure 6</label><caption>
+<title>Group size effect for groups of individual networks.</title>
+<p>The average across subjects of the weighted graph measures determined from the individual's network is shown as function of group size. A bootstrapping procedure was used (100 realizations) to randomly group the subjects with increasing group size. For graph measures the relative change (%) to the reference value (which is obtained by averaging across all subjects) are shown. Full lines denote the mean (bold) <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e207" xlink:type="simple"/></inline-formula> standard deviation of the metric. Dotted lines represent a relative change of <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e208" xlink:type="simple"/></inline-formula> 10%. <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e209" xlink:type="simple"/></inline-formula>: global efficiency; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e210" xlink:type="simple"/></inline-formula>: the characteristic path length; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e211" xlink:type="simple"/></inline-formula>: the mean betweenness centrality; <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e212" xlink:type="simple"/></inline-formula>: the mean local efficiency and <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e213" xlink:type="simple"/></inline-formula>: the mean clustering coefficient.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.g006" position="float" xlink:type="simple"/></fig></sec><sec id="s3e">
+<title>Network robustness</title>
+<p>For group based networks, the robustness of graph measures in case we missed the least significant nodes is shown in <xref ref-type="fig" rid="pone-0115215-g007">Fig. 7</xref> for binary (with an initial density of 5%, 20%, 45%) and weighted networks. The robustness depends on the network measure under investigation. Global efficiency, characteristic path length, mean local efficiency and clustering coefficient are more robust compared to the mean betweenness centrality.</p>
+<fig id="pone-0115215-g007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.g007</object-id><label>Figure 7</label><caption>
+<title>Robustness to missing nodes for networks with an initial density of 5% (top row), 20% (second row), 45% (third row) and the weighted network (bottom row).</title>
+<p>The relative change (%) to the value obtained when taking the intact network as the reference is shown. The nodes were removed based on their significance in the main effect of task (starting with the least significant ones). Dotted lines indicate the <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e215" xlink:type="simple"/></inline-formula> 10% interval. Relative changes significantly (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e216" xlink:type="simple"/></inline-formula>) lower than 10% in absolute value are indicated with *.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.g007" position="float" xlink:type="simple"/></fig>
+<p>At the individual level for weigthed networks, the robustness to missing nodes remains within 10% error (<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e214" xlink:type="simple"/></inline-formula>) up to removal of the 8 least significant nodes (<xref ref-type="fig" rid="pone-0115215-g008">Fig. 8</xref>).</p>
+<fig id="pone-0115215-g008" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0115215.g008</object-id><label>Figure 8</label><caption>
+<title>Robustness to missing nodes for individual weighted networks.</title>
+<p>The relative change (%) to the value obtained when taking the intact network as the reference is shown. The nodes were removed based on their significance in the main effect of task (starting with the least significant ones). Full lines denote the mean (bold) <inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e217" xlink:type="simple"/></inline-formula> standard deviation of the metric across all subjects.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0115215.g008" position="float" xlink:type="simple"/></fig></sec></sec><sec id="s4">
+<title>Discussion</title>
+<p>In this work, reproducibility and robustness of the functional connectivity network associated with an associative-semantic task was examined by studying local and global graph measures, hubs and the community structure. The nodes of the associative-semantic network were taken from a previous study <xref ref-type="bibr" rid="pone.0115215-Vandenberghe2">[39]</xref>. The paradigm that we used gives a highly consistent activation pattern using univariate analyses and this is replicated in our and other centers <xref ref-type="bibr" rid="pone.0115215-Vandenberghe1">[28]</xref>–<xref ref-type="bibr" rid="pone.0115215-Wagner1">[38]</xref>. Furthermore, we have shown previously that the nodes have a low anatomical inter-subject variability <xref ref-type="bibr" rid="pone.0115215-Dupont1">[42]</xref>. This consistency and reproducibility at the nodal level is essential when looking at the network measures.</p>
+<sec id="s4a">
+<title>Choice of connectivity measure</title>
+<p>A network is dependent on the choice of the measure of connectivity between different brain regions. Many groups investigating functional networks in the human brain use the Pearson correlation coefficient <xref ref-type="bibr" rid="pone.0115215-VandenHeuvel1">[8]</xref>, <xref ref-type="bibr" rid="pone.0115215-Schwarz1">[50]</xref>, <xref ref-type="bibr" rid="pone.0115215-Hayasaka1">[66]</xref>. Other similarity measures have also been used, including the correlation between wavelet components <xref ref-type="bibr" rid="pone.0115215-Achard1">[5]</xref>, <xref ref-type="bibr" rid="pone.0115215-Wang1">[10]</xref>, <xref ref-type="bibr" rid="pone.0115215-Achard2">[67]</xref> and mutual information <xref ref-type="bibr" rid="pone.0115215-Smith1">[44]</xref>. However, constructing a network by correlation or mutual information does not necessarily imply that the functional connection between two nodes is direct. The distinction between direct and indirect functional relationships between areas is very important in terms of correctly estimating the network. Hence, partial correlation became a hot topic in recent years (e.g.<xref ref-type="bibr" rid="pone.0115215-Marrelec1">[43]</xref>, <xref ref-type="bibr" rid="pone.0115215-Soranzo1">[68]</xref>, <xref ref-type="bibr" rid="pone.0115215-Stifanelli1">[69]</xref>). Partial correlation provides a convenient summary of conditional independence and turns out to be an effective way to model the connectivity <xref ref-type="bibr" rid="pone.0115215-Smith1">[44]</xref>. In our work, partial correlations are used to remove mutual dependencies on common influences from other brain areas. By conditioning the dependencies between two nodes on other nodes, the functional connectivity (i.e. partial correlation) reflects a quantity that is more closely related to direct interaction, taking the analysis of functional connectivity closer to the characterization of functional interactions in terms of effective connectivity. It is data-driven in the sense that, unlike existing methods such as structural equation modelling (SEM) and dynamic causal modelling (DCM), it does not require any prior information regarding functional interactions.</p>
+</sec><sec id="s4b">
+<title>Split-half variability versus comparison of two independent groups</title>
+<p>In this work, we have studied two situations which reflect two complete different situations when looking at the variability of the measurement. The first situation is the one in which we have split the timeseries in two even parts to assess the split-half variability. This corresponds to a situation in which subjects are measured twice under almost similar conditions (i.e. exactly the same scanner, the same sequence, the same paradigm) within one session and assuming no time effects. The limitation of this approach is that we have violated the temporal order of the runs and that the number of runs in the newly composed parts is small. The other situation corresponds to the measurement of two independent groups on different scanners using a slightly different paradigm. As can be expected, the test-retest variability in the latter case is larger than the split-half variability in case of weighted networks and for most densities. The test-retest values of the mean of the global graph measures derived from subject-specific weighted networks for two independent groups varied between 7 and 17%. However, the values were significantly different between both groups most likely due to the inclusion of a null condition in the current study.</p>
+</sec><sec id="s4c">
+<title>Reproducibility</title>
+<p>For binary group based networks, we observed that the reproducibility improves when the density of the network increases. Networks with high density, weighted group based networks and weigthed individual networks show all a very good reprodubility for the global graph measures. Only when we compared two independent groups, the weighted group based network showed a weaker reproducibility. Networks with low density (e.g. 5%), showed weak reproducibility and this was depending on the graph measure itself.</p>
+<p>Local graph measures showed weak reproducibility in almost all situations for most nodes and therefore quantification of local graph properties needs to be interpreted with care.</p>
+</sec><sec id="s4d">
+<title>Hubs and community structure</title>
+<p>A node playing a pivotal role in the flow of information is called a hub but the operational definition of a hub differs between studies. In the current study, we have taken a similar approach as <xref ref-type="bibr" rid="pone.0115215-VandenHeuvel2">[11]</xref>. We observe a high co-occurrence in the <italic>split-half</italic> case but a low co-occurrence for the comparison between independent groups. We also observe that the co-occurrence is relatively stable over the different densities and this is also the case for the weighted graph measures. The average inter-subject and intra-subject co-occurrence of hubs in case of individual weighted networks is somewhat lower and this is probably due to the higher variability which one can expect in individual networks compared to group based networks.</p>
+<p>The community structure represents how nodes are separated into interacting (integrated) but distinct (segregated) functional modules. A major challenge in examining network module organization is the reproducibility of modules and how to measure this reproducibility. Several studies compared modularity Q and number of communities to achieve this goal <xref ref-type="bibr" rid="pone.0115215-Wang3">[49]</xref>, <xref ref-type="bibr" rid="pone.0115215-Schwarz1">[50]</xref>, <xref ref-type="bibr" rid="pone.0115215-Braun1">[70]</xref>. However, the value of Q only gives a sense of the network strength in dividing itself into modules. One could easily have two networks which may be considerably different, yet sharing the same number of communities and similar Q values. A more appropriate measure is to use scaled inclusivity which is a measure for the overlap of modules across networks while penalizing for disjunction of modules <xref ref-type="bibr" rid="pone.0115215-Steen1">[62]</xref>, <xref ref-type="bibr" rid="pone.0115215-Moussa1">[63]</xref>. The calculation requires a final assignment of nodes to a community. In this work, we have extended this formula so that it is now directly based on the probabilistic co-assignment matrix without the need to assign each node to a community. In case the co-assignment matrix is binarized (which is similar to assigning each node to a community) it reduces to the original formula. We found that the reproducibility of the community structure of weighted group based networks was similar or even better compared to the values for dense binarized networks. When looking at the average intra- and intersubject probabilistic scaled inclusivity, we observed smaller values most likely again due to the higher variability which you can expect in individual networks compared to group based networks.</p>
+</sec><sec id="s4e">
+<title>Group size effect</title>
+<p>An important issue relates to the number of subjects required to obtain robust graph measures. In a recent study <xref ref-type="bibr" rid="pone.0115215-Button1">[71]</xref>, it was emphasized that a small sample size undermines the reproducibility of neuroscience. We found that in low density networks, a large number of subjects is required to obtain robust values and this depends on the graph measure under investigation (global efficiency and characteristic path being the most stable measures). The use of weighted graph measures leads to robust values. This is also true for the averaged graph measures in case of individual weighted networks.</p>
+</sec><sec id="s4f">
+<title>Robustness against missing nodes</title>
+<p>If we have not captured all nodes of the network, the question is in how far graph measures will be influenced. Indeed, some nodes are only weakly activitated in an fMRI experiment and the choice of selection of inclusion of nodes can be based on a statistical criterion. We found that all graph measures, except the mean betweenness centrality, are robust even if we didn't include several of these weaker nodes.</p>
+</sec><sec id="s4g">
+<title>Binary versus weighted networks</title>
+<p>The popularity of binary network analysis may arise from the fact that in most cases it is simpler to characterize<xref ref-type="bibr" rid="pone.0115215-Rubinov1">[4]</xref>. In our previous study <xref ref-type="bibr" rid="pone.0115215-Vandenberghe2">[39]</xref>, we have binarized the network based on a statistical criterion (significant association values). If we would have applied the same criterion in our current study, we would have found much more significant connections (and therefore a higher density) because of the larger cohort size, the inclusion of a null condition and the use of an MRI scanner with a higher magnetic field. Networks with different densities can have different properties <xref ref-type="bibr" rid="pone.0115215-VanWijk1">[51]</xref>. To overcome this problem, we used an equi-density thresholding <xref ref-type="bibr" rid="pone.0115215-Achard2">[67]</xref>, <xref ref-type="bibr" rid="pone.0115215-He2">[72]</xref> and we have studied the networks at different densities like most other studies <xref ref-type="bibr" rid="pone.0115215-Wang2">[13]</xref>, <xref ref-type="bibr" rid="pone.0115215-Schwarz1">[50]</xref>, <xref ref-type="bibr" rid="pone.0115215-Hayasaka1">[66]</xref>, <xref ref-type="bibr" rid="pone.0115215-Achard2">[67]</xref>. Another problem with the use of a threshold to binarize the network is that a small change in the association (connectivity) strength can lead to a change in connectivity (just below versus just above a threshold).</p>
+<p>To overcome these problems, one can define a weighted network. The question is then how to define these weights. Some groups take the connection with the highest connectivity value and set this to one and scale the remaining connections accordingly <xref ref-type="bibr" rid="pone.0115215-VandenHeuvel2">[11]</xref>. This approach is straightforward and simple but it is also more sensitive to noise. We propose an approach which is based on the fact that the partial correlations were transformed to a Z-score using a Fisher r-to-Z transform and by applying a non-linear transform based on the cumulative distribution of the standard normal distribution. This approach is less sensitive to noise (or to outliers) in connection strength and it leads in a natural way to positive weights between 0 and 1.</p>
+</sec><sec id="s4h">
+<title>Subject specific versus group based networks</title>
+<p>When studying brain networks in a group of subjects we have two possible approaches: 1) define the network for each subject, calculate the variables of interest (e.g. network measures) and use these values for further analysis or 2) define the network based upon the group itself by e.g. averaging the association matrices across the subjects of the group and by calculating the network (and the corresponding measures) based upon this averaged association matrix. The first approach gives information about the individual variability and we can relate directly graph measures to other subject specific information. This is important especially in the light of comparing and quantifying networks in normals and patients. However, the disadvantage is that the results are more sensitive to noise in the measurements. On the other hand, the notion that averaging connection strengths across subjects summarizes the overall characteristics of the group is widely accepted <xref ref-type="bibr" rid="pone.0115215-Rubinov2">[55]</xref>, <xref ref-type="bibr" rid="pone.0115215-Power1">[56]</xref>.</p>
+<p>Based on the ICC values and on the intra-subject test-retest results, weighted individual networks can be realiably determined. The fact that the identification of hubs and communities is more variable compared to the group based networks is less important since it may also be a result of subject specific behaviour and in that sense it may capture the underlying biological variability.</p>
+</sec></sec><sec id="s5">
+<title>Conclusions</title>
+<p>We have studied the reproducibility and robustness of various graph measures in group based and in individual binary and weighted networks derived from an fMRI experiment using an associative-semantic paradigm. We have shown that global graph measures exhibit a good reproducibility and robustness but the results depend on the graph measure itself and on the density in case of binary networks. Group based binary networks should be derived from groups of sufficient size and the lower the density the more subjects are required to obtain robust values. Local graph measures are very variable in terms of reproducibility and should be interpreted with care. For weighted networks, we found good reproducibility when using subject specific networks and this will allow us to relate network properties to individual subject information.</p>
+</sec><sec id="s6">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0115215.s001" mimetype="image/jpeg" xlink:href="info:doi/10.1371/journal.pone.0115215.s001" position="float" xlink:type="simple"><label>S1 Figure</label><caption>
+<p>Graph of the associative-semantic network. The connection strength is determined by the partial correlation. Only connections which are significant at uncorrected p<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e218" xlink:type="simple"/></inline-formula>0.05 are shown. The density is 42.6%.</p>
+<p>(JPG)</p>
+</caption></supplementary-material><supplementary-material id="pone.0115215.s002" mimetype="image/jpeg" xlink:href="info:doi/10.1371/journal.pone.0115215.s002" position="float" xlink:type="simple"><label>S2 Figure</label><caption>
+<p>Graph of the associative-semantic network. The connection strength is determined by the partial correlation. Only connections which are significant at corrected (for the number of possible connections) p<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e219" xlink:type="simple"/></inline-formula>0.05 are shown. The density is 14%.</p>
+<p>(JPG)</p>
+</caption></supplementary-material><supplementary-material id="pone.0115215.s003" mimetype="image/jpeg" xlink:href="info:doi/10.1371/journal.pone.0115215.s003" position="float" xlink:type="simple"><label>S3 Figure</label><caption>
+<p>Correlation between the average contrast values (based on the beta values and the main contrast of task) of any pair of nodes and the strength of the functional connectivity (expressed as the Z-values obtained from the partial correlations after a Fisher r-to-z transform) between these nodes to investigate if there is a relation between GLM results and the likelihood of having an edge. Values are plotted for every connection and every subject. The correlation is weak (r = 0.027) but very significant (p<inline-formula><inline-graphic xlink:href="info:doi/10.1371/journal.pone.0115215.e220" xlink:type="simple"/></inline-formula>).</p>
+<p>(JPG)</p>
+</caption></supplementary-material><supplementary-material id="pone.0115215.s004" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" xlink:href="info:doi/10.1371/journal.pone.0115215.s004" position="float" xlink:type="simple"><label>S1 Table</label><caption>
+<p>ICC values for each node for different graph measures at different densities and for the weighted network.</p>
+<p>(XLSX)</p>
+</caption></supplementary-material></sec></body>
+<back><ref-list>
+<title>References</title>
+<ref id="pone.0115215-Niu1"><label>1</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Niu</surname><given-names>H</given-names></name>, <name name-style="western"><surname>He</surname><given-names>Y</given-names></name> (<year>2013</year>) <article-title>Resting-State Functional Brain Connectivity Lessons from Functional Near-Infrared Spectroscopy</article-title>. <source>The Neuroscientist</source> <volume>20</volume>:<fpage>173</fpage>–<lpage>188</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Bullmore1"><label>2</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bullmore</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Sporns</surname><given-names>O</given-names></name> (<year>2012</year>) <article-title>The economy of brain network organization</article-title>. <source>Nat Rev Neurosci</source> <volume>13</volume>:<fpage>336</fpage>–<lpage>349</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Bullmore2"><label>3</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bullmore</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Sporns</surname><given-names>O</given-names></name> (<year>2009</year>) <article-title>Complex brain networks: graph theoretical analysis of structural and functional systems</article-title>. <source>Nat Rev Neurosci</source> <volume>10</volume>:<fpage>186</fpage>–<lpage>198</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Rubinov1"><label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rubinov</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Sporns</surname><given-names>O</given-names></name> (<year>2010</year>) <article-title>Complex network measures of brain connectivity: uses and interpretations</article-title>. <source>NeuroImage</source> <volume>52</volume>:<fpage>1059</fpage>–<lpage>1069</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Achard1"><label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Achard</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Salvador</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Whitcher</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Suckling</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Bullmore</surname><given-names>E</given-names></name> (<year>2006</year>) <article-title>A resilient, low-frequency, small-world human brain functional network with highly connected association cortical hubs</article-title>. <source>J Neurosci</source> <volume>26</volume>:<fpage>63</fpage>–<lpage>72</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Micheloyannis1"><label>6</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Micheloyannis</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Pachou</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Stam</surname><given-names>CJ</given-names></name>, <name name-style="western"><surname>Breakspear</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Bitsios</surname><given-names>P</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Small-world networks and disturbed functional connectivity in schizophrenia</article-title>. <source>Schizophr Res</source> <volume>87</volume>:<fpage>60</fpage>–<lpage>66</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Micheloyannis2"><label>7</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Micheloyannis</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Vourkas</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Tsirka</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Karakonstantaki</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Kanatsouli</surname><given-names>K</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>The influence of ageing on complex brain networks: a graph theoretical analysis</article-title>. <source>Hum Brain Mapp</source> <volume>30</volume>:<fpage>200</fpage>–<lpage>208</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-VandenHeuvel1"><label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Van den Heuvel</surname><given-names>MP</given-names></name>, <name name-style="western"><surname>Stam</surname><given-names>CJ</given-names></name>, <name name-style="western"><surname>Boersma</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Hulshoff Pol</surname><given-names>HE</given-names></name> (<year>2008</year>) <article-title>Small-world and scale-free organization of voxel-based resting-state functional connectivity in the human brain</article-title>. <source>NeuroImage</source> <volume>43</volume>:<fpage>528</fpage>–<lpage>539</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-He1"><label>9</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>He</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Chen</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Evans</surname><given-names>A</given-names></name> (<year>2007</year>) <article-title>Small-world anatomical networks in the human brain revealed by cortical thickness from MRI</article-title>. <source>Cereb Cortex</source> <volume>17</volume>:<fpage>2407</fpage>–<lpage>2419</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Wang1"><label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wang</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Zuo</surname><given-names>X</given-names></name>, <name name-style="western"><surname>Dai</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Xia</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Zhao</surname><given-names>Z</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>Disrupted functional brain connectome in individuals at risk for alzheimer's disease</article-title>. <source>Biological psychiatry</source> <volume>73</volume>:<fpage>472</fpage>–<lpage>481</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-VandenHeuvel2"><label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Van den Heuvel</surname><given-names>MP</given-names></name>, <name name-style="western"><surname>Mandl</surname><given-names>RC</given-names></name>, <name name-style="western"><surname>Stam</surname><given-names>CJ</given-names></name>, <name name-style="western"><surname>Kahn</surname><given-names>RS</given-names></name>, <name name-style="western"><surname>Pol</surname><given-names>HEH</given-names></name> (<year>2010</year>) <article-title>Aberrant frontal and temporal complex network structure in schizophrenia: a graph theoretical analysis</article-title>. <source>J Neurosci</source> <volume>30</volume>:<fpage>15915</fpage>–<lpage>15926</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Ma1"><label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ma</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Calhoun</surname><given-names>VD</given-names></name>, <name name-style="western"><surname>Eichele</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Du</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Adal</surname><given-names>T</given-names></name> (<year>2012</year>) <article-title>Modulations of functional connectivity in the healthy and schizophrenia groups during task and rest</article-title>. <source>NeuroImage</source> <volume>62</volume>:<fpage>1694</fpage>–<lpage>1704</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Wang2"><label>13</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wang</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Li</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Metzak</surname><given-names>P</given-names></name>, <name name-style="western"><surname>He</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Woodward</surname><given-names>T</given-names></name> (<year>2010</year>) <article-title>Age-related changes in topological patterns of large-scale brain functional networks during memory encoding and recognition</article-title>. <source>NeuroImage</source> <volume>50</volume>:<fpage>862</fpage>–<lpage>872</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Heitger1"><label>14</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Heitger</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Ronsse</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Dhollander</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Dupont</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Caeyenberghs</surname><given-names>K</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Motor learning-induced changes in functional brain connectivity as revealed by means of graph-theoretical network analysis</article-title>. <source>NeuroImage</source> <volume>61</volume>:<fpage>633</fpage>–<lpage>650</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Wylie1"><label>15</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wylie</surname><given-names>KP</given-names></name>, <name name-style="western"><surname>Rojas</surname><given-names>DC</given-names></name>, <name name-style="western"><surname>Tanabe</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Martin</surname><given-names>LF</given-names></name>, <name name-style="western"><surname>Tregellas</surname><given-names>JR</given-names></name> (<year>2012</year>) <article-title>Nicotine increases brain functional network efficiency</article-title>. <source>NeuroImage</source> <volume>63</volume>:<fpage>73</fpage>–<lpage>80</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Tijms1"><label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tijms</surname><given-names>BM</given-names></name>, <name name-style="western"><surname>Seriès</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Willshaw</surname><given-names>DJ</given-names></name>, <name name-style="western"><surname>Lawrie</surname><given-names>SM</given-names></name> (<year>2012</year>) <article-title>Similarity-based extraction of individual networks from gray matter MRI scans</article-title>. <source>Cereb Cortex</source> <volume>22</volume>:<fpage>1530</fpage>–<lpage>1541</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Bernhardt1"><label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bernhardt</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Chen</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>He</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Evans</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Bernasconi</surname><given-names>N</given-names></name> (<year>2011</year>) <article-title>Graph-theoretical analysis reveals disrupted small-world organization of cortical thickness correlation networks in temporal lobe epilepsy</article-title>. <source>Cereb Cortex</source> <volume>21</volume>:<fpage>2147</fpage>–<lpage>2157</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Vaessen1"><label>18</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vaessen</surname><given-names>MJ</given-names></name>, <name name-style="western"><surname>Hofman</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Tijssen</surname><given-names>HN</given-names></name>, <name name-style="western"><surname>Aldenkamp</surname><given-names>AP</given-names></name>, <name name-style="western"><surname>Jansen</surname><given-names>JF</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>The effect and reproducibility of different clinical DTI gradient sets on small world brain connectivity measures</article-title>. <source>NeuroImage</source> <volume>51</volume>:<fpage>1106</fpage>–<lpage>1116</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Li1"><label>19</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Rilling</surname><given-names>JK</given-names></name>, <name name-style="western"><surname>Preuss</surname><given-names>TM</given-names></name>, <name name-style="western"><surname>Glasser</surname><given-names>MF</given-names></name>, <name name-style="western"><surname>Damen</surname><given-names>FW</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Quantitative assessment of a framework for creating anatomical brain networks via global tractography</article-title>. <source>NeuroImage</source> <volume>61</volume>:<fpage>1017</fpage>–<lpage>1030</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Liu1"><label>20</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Liu</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Zhao</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Nan</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Li</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Xiong</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>The trade-off between wiring cost and network topology in white matter structural networks in health and migraine</article-title>. <source>Exp Neurol</source> <volume>248</volume>:<fpage>196</fpage>–<lpage>204</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Bassett1"><label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bassett</surname><given-names>DS</given-names></name>, <name name-style="western"><surname>Brown</surname><given-names>JA</given-names></name>, <name name-style="western"><surname>Deshpande</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Carlson</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Grafton</surname><given-names>ST</given-names></name> (<year>2011</year>) <article-title>Conserved and variable architecture of human white matter connectivity</article-title>. <source>NeuroImage</source> <volume>54</volume>:<fpage>1262</fpage>–<lpage>1279</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Telesford1"><label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Telesford</surname><given-names>QK</given-names></name>, <name name-style="western"><surname>Morgan</surname><given-names>AR</given-names></name>, <name name-style="western"><surname>Hayasaka</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Simpson</surname><given-names>SL</given-names></name>, <name name-style="western"><surname>Barret</surname><given-names>W</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Reproducibility of graph metrics in fMRI networks</article-title>. <source>Front Neuroinform</source> <volume>4</volume>:<fpage>117</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Weber1"><label>23</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Weber</surname><given-names>MJ</given-names></name>, <name name-style="western"><surname>Detre</surname><given-names>JA</given-names></name>, <name name-style="western"><surname>Thompson-Schill</surname><given-names>SL</given-names></name>, <name name-style="western"><surname>Avants</surname><given-names>BB</given-names></name> (<year>2013</year>) <article-title>Reproducibility of functional network metrics and network structure: a comparison of task-related BOLD, resting ASL with BOLD contrast, and resting cerebral blood flow</article-title>. <source>Cogn Affect Behav Neurosci</source> <volume>13</volume>:<fpage>627</fpage>–<lpage>640</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Deuker1"><label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Deuker</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Bullmore</surname><given-names>ET</given-names></name>, <name name-style="western"><surname>Smith</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Christensen</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Nathan</surname><given-names>PJ</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Reproducibility of graph metrics of human brain functional networks</article-title>. <source>NeuroImage</source> <volume>47</volume>:<fpage>1460</fpage>–<lpage>1468</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Niu2"><label>25</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Niu</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Li</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Liao</surname><given-names>X</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Zhao</surname><given-names>T</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>Test-retest reliability of graph metrics in functional brain networks: a resting-state fNIRS study</article-title>. <source>PLoS One</source> <volume>8</volume>:<fpage>e72425</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Owen1"><label>26</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Owen</surname><given-names>JP</given-names></name>, <name name-style="western"><surname>Ziv</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Bukshpun</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Pojman</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Wakahiro</surname><given-names>M</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>Test-retest reliability of computational network measurements derived from the structural connectome of the human brain</article-title>. <source>Brain Connect</source> <volume>3</volume>:<fpage>160</fpage>–<lpage>176</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Buchanan1"><label>27</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Buchanan</surname><given-names>CR</given-names></name>, <name name-style="western"><surname>Pernet</surname><given-names>CR</given-names></name>, <name name-style="western"><surname>Gorgolewski</surname><given-names>KJ</given-names></name>, <name name-style="western"><surname>Storkey</surname><given-names>AJ</given-names></name>, <name name-style="western"><surname>Bastin</surname><given-names>ME</given-names></name> (<year>2014</year>) <article-title>Test-retest reliability of structural brain networks from diffusion MRI</article-title>. <source>NeuroImage</source> <volume>86</volume>:<fpage>231</fpage>–<lpage>243</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Vandenberghe1"><label>28</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vandenberghe</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Price</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Wise</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Josephs</surname><given-names>O</given-names></name>, <name name-style="western"><surname>Frackowiak</surname><given-names>RS</given-names></name> (<year>1996</year>) <article-title>Functional anatomy of a common semantic system for words and pictures</article-title>. <source>Nature</source> <volume>383</volume>:<fpage>254</fpage>–<lpage>256</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Vandenbulcke1"><label>29</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vandenbulcke</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Peeters</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Dupont</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Van Hecke</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Vandenberghe</surname><given-names>R</given-names></name> (<year>2007</year>) <article-title>Word reading and posterior temporal dysfunction in amnestic mild cognitive impairment</article-title>. <source>Cereb Cortex</source> <volume>17</volume>:<fpage>542</fpage>–<lpage>551</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Nelissen1"><label>30</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nelissen</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Vandenbulcke</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Fannes</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Verbruggen</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Peeters</surname><given-names>R</given-names></name>, <etal>et al</etal>. (<year>2007</year>) <article-title>A<italic>β</italic> amyloid deposition in the language system and how the brain responds</article-title>. <source>Brain</source> <volume>130</volume>:<fpage>2055</fpage>–<lpage>2069</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Nelissen2"><label>31</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nelissen</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Dupont</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Vandenbulcke</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Tousseyn</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Peeters</surname><given-names>R</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Right hemisphere recruitment during language processing in frontotemporal lobar degeneration and alzheimer's disease</article-title>. <source>J Mol Neurosci</source> <volume>45</volume>:<fpage>637</fpage>–<lpage>647</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Buckner1"><label>32</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Buckner</surname><given-names>RL</given-names></name>, <name name-style="western"><surname>Koutstaal</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Schacter</surname><given-names>DL</given-names></name>, <name name-style="western"><surname>Rosen</surname><given-names>BR</given-names></name> (<year>2000</year>) <article-title>Functional MRI evidence for a role of frontal and inferior temporal cortex in amodal components of priming</article-title>. <source>Brain</source> <volume>123</volume>:<fpage>620</fpage>–<lpage>640</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-VanDoren1"><label>33</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Van Doren</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Dupont</surname><given-names>P</given-names></name>, <name name-style="western"><surname>De Grauwe</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Peeters</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Vandenberghe</surname><given-names>R</given-names></name> (<year>2010</year>) <article-title>The amodal system for conscious word and picture identification in the absence of a semantic task</article-title>. <source>NeuroImage</source> <volume>49</volume>:<fpage>3295</fpage>–<lpage>3307</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Seghier1"><label>34</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Seghier</surname><given-names>ML</given-names></name>, <name name-style="western"><surname>Price</surname><given-names>CJ</given-names></name> (<year>2011</year>) <article-title>Explaining left lateralization for words in the ventral occipitotemporal cortex</article-title>. <source>J Neurosci</source> <volume>31</volume>:<fpage>14745</fpage>–<lpage>14753</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Whitney1"><label>35</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Whitney</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Kirk</surname><given-names>M</given-names></name>, <name name-style="western"><surname>O′Sullivan</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Lambon Ralph</surname><given-names>MA</given-names></name>, <name name-style="western"><surname>Jefferies</surname><given-names>E</given-names></name> (<year>2011</year>) <article-title>The neural organization of semantic control: Tms evidence for a distributed network in left inferior frontal and posterior middle temporal gyrus</article-title>. <source>Cereb Cortex</source> <volume>21</volume>:<fpage>1066</fpage>–<lpage>1075</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Goldberg1"><label>36</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Goldberg</surname><given-names>RF</given-names></name>, <name name-style="western"><surname>Perfetti</surname><given-names>CA</given-names></name>, <name name-style="western"><surname>Fiez</surname><given-names>JA</given-names></name>, <name name-style="western"><surname>Schneider</surname><given-names>W</given-names></name> (<year>2007</year>) <article-title>Selective retrieval of abstract semantic knowledge in left prefrontal cortex</article-title>. <source>J Neurosci</source> <volume>27</volume>:<fpage>3790</fpage>–<lpage>3798</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Binder1"><label>37</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Binder</surname><given-names>JR</given-names></name>, <name name-style="western"><surname>Desai</surname><given-names>RH</given-names></name>, <name name-style="western"><surname>Graves</surname><given-names>WW</given-names></name>, <name name-style="western"><surname>Conant</surname><given-names>LL</given-names></name> (<year>2009</year>) <article-title>Where is the semantic system? a critical review and meta-analysis of 120 functional neuroimaging studies</article-title>. <source>Cereb Cortex</source> <volume>19</volume>:<fpage>2767</fpage>–<lpage>2796</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Wagner1"><label>38</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wagner</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Desmond</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Demb</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Glover</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Gabrieli</surname><given-names>J</given-names></name> (<year>1997</year>) <article-title>Semantic repetition priming for verbal and pictorial knowledge: A functional MRI study of left inferior prefrontal cortex</article-title>. <source>J Cognitive Neurosci</source> <volume>9</volume>:<fpage>714</fpage>–<lpage>726</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Vandenberghe2"><label>39</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vandenberghe</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Nelissen</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Vandenbulcke</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Dhollander</surname><given-names>T</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>The associative-semantic network for words and pictures: Effective connectivity and graph analysis</article-title>. <source>Brain Lang</source> <volume>127</volume>(<issue>2</issue>):<fpage>264</fpage>–<lpage>72</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Adamczuk1"><label>40</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Adamczuk</surname><given-names>K</given-names></name>, <name name-style="western"><surname>De Weer</surname><given-names>AS</given-names></name>, <name name-style="western"><surname>Nelissen</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Chen</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Sleegers</surname><given-names>K</given-names></name>, <etal>et al</etal>. <article-title>2013) Polymorphism of brain derived neurotrophic factor influences amyloid load in cognitively intact apolipoprotein e 4 carriers</article-title>. <source>NeuroImage: Clinical</source> <volume>2</volume>:<fpage>512</fpage>–<lpage>520</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Ashburner1"><label>41</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ashburner</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Friston</surname><given-names>KJ</given-names></name> (<year>2005</year>) <article-title>Unified segmentation</article-title>. <source>NeuroImage</source> <volume>26</volume>:<fpage>839</fpage>–<lpage>851</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Dupont1"><label>42</label>
+<mixed-citation publication-type="other" xlink:type="simple">Dupont P, Nelissen N, Vandenbulcke M, Vandenberghe R (2008) The anatomical variability of the associative-semantic network. Program No. 868.18. 2008 Neuroscience Meeting Planner. Washington, DC: Society for Neuroscience, 2008. Online.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Marrelec1"><label>43</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Marrelec</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Krainik</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Duffau</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Plgrini-Issac</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Lehricy</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Partial correlation for functional brain interactivity investigation in functional MRI</article-title>. <source>NeuroImage</source> <volume>32</volume>:<fpage>228</fpage>–<lpage>237</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Smith1"><label>44</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Smith</surname><given-names>SM</given-names></name>, <name name-style="western"><surname>Miller</surname><given-names>KL</given-names></name>, <name name-style="western"><surname>Salimi-Khorshidi</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Webster</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Beckmann</surname><given-names>CF</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Network modelling methods for fMRI</article-title>. <source>NeuroImage</source> <volume>54</volume>:<fpage>875</fpage>–<lpage>891</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Finn1"><label>45</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Finn</surname><given-names>JD</given-names></name> (<year>1974</year>) <article-title>A general model for multivariate analysis</article-title>. <source>Holt, Rinehart &amp; Winston</source> <fpage>182</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Kaiser1"><label>46</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kaiser</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Hilgetag</surname><given-names>CC</given-names></name> (<year>2006</year>) <article-title>Nonoptimal component placement, but short processing paths, due to long-distance projections in neural systems</article-title>. <source>PloS Computational Biology</source> <volume>2</volume>:<fpage>e95</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Hosseini1"><label>47</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hosseini</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Black</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Soriano</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Bugescu</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Martinez</surname><given-names>R</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>Topological properties of large-scale structural brain networks in children with familial risk for reading difficulties</article-title>. <source>NeuroImage</source> <volume>71</volume>:<fpage>260</fpage>–<lpage>274</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Li2"><label>48</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Xue</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Ellmore</surname><given-names>TM</given-names></name>, <name name-style="western"><surname>Frye</surname><given-names>RE</given-names></name>, <name name-style="western"><surname>Wong</surname><given-names>ST</given-names></name> (<year>2014</year>) <article-title>Network-based analysis reveals stronger local diffusion-based connectivity and different correlations with oral language skills in brains of children with high functioning autism spectrum disorders</article-title>. <source>Hum Brain Mapp</source> <volume>35</volume>:<fpage>396</fpage>–<lpage>413</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Wang3"><label>49</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wang</surname><given-names>JH</given-names></name>, <name name-style="western"><surname>Zuo</surname><given-names>XN</given-names></name>, <name name-style="western"><surname>Gohel</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Milham</surname><given-names>MP</given-names></name>, <name name-style="western"><surname>Biswal</surname><given-names>BB</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Graph theoretical analysis of functional brain networks: test-retest evaluation on short- and long-term resting-state functional MRI data</article-title>. <source>PLoS One</source> <volume>6</volume>:<fpage>e21976</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Schwarz1"><label>50</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schwarz</surname><given-names>AJ</given-names></name>, <name name-style="western"><surname>McGonigle</surname><given-names>J</given-names></name> (<year>2011</year>) <article-title>Negative edges and soft thresholding in complex network analysis of resting state functional connectivity data</article-title>. <source>NeuroImage</source> <volume>55</volume>:<fpage>1132</fpage>–<lpage>1146</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-VanWijk1"><label>51</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Van Wijk</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Stam</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Daffertshofer</surname><given-names>A</given-names></name> (<year>2010</year>) <article-title>Comparing brain networks of different size and connectivity density using graph theory</article-title>. <source>PLoS One</source> <volume>5</volume>:<fpage>e13701</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Telesford2"><label>52</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Telesford</surname><given-names>QK</given-names></name>, <name name-style="western"><surname>Burdette</surname><given-names>JH</given-names></name>, <name name-style="western"><surname>Laurienti</surname><given-names>PJ</given-names></name> (<year>2013</year>) <article-title>An exploration of graph metric reproducibility in complex brain networks</article-title>. <source>Frontiers in neuroscience</source> <volume>7</volume>:<fpage>67</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Shrout1"><label>53</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Shrout</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Fleiss</surname><given-names>J</given-names></name> (<year>1979</year>) <article-title>Intraclass correlations: uses in assessing rater reliability</article-title>. <source>Psychological bulletin</source> <volume>86</volume>:<fpage>420</fpage>–<lpage>428</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Faria1"><label>54</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Faria</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Joel</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Zhang</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Oishi</surname><given-names>K</given-names></name>, <name name-style="western"><surname>van Zjil</surname><given-names>P</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Atlas-based analysis of resting-state functional connectivity: Evaluation for reproducibility and multi-modal anatomy-function correlation studies</article-title>. <source>NeuroImage</source> <volume>61</volume>:<fpage>613</fpage>–<lpage>621</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Rubinov2"><label>55</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rubinov</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Sporns</surname><given-names>O</given-names></name> (<year>2011</year>) <article-title>Weight-conserving characterization of complex functional brain networks</article-title>. <source>NeuroImage</source> <volume>56</volume>:<fpage>2068</fpage>–<lpage>2079</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Power1"><label>56</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Power</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Cohen</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Nelson</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Wig</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Barnes</surname><given-names>K</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Functional network organization of the human brain</article-title>. <source>Neuron</source> <volume>72</volume>:<fpage>665</fpage>–<lpage>678</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Wu1"><label>57</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wu</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Stramaglia</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Chen</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Liao</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Marinazzo</surname><given-names>M</given-names></name> (<year>2013</year>) <article-title>Mapping the voxel-wise effective connectome in resting state fMRI</article-title>. <source>PloS one</source> <volume>8</volume>:<fpage>e73670</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Shi1"><label>58</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Shi</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Chu</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Liu</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Xiong</surname><given-names>Y</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>Abnormal organization of white matter network in patients with no dementia after ischemic stroke</article-title>. <source>PloS one</source> <volume>8</volume>:<fpage>e81388</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Fornito1"><label>59</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fornito</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Bullmore</surname><given-names>E</given-names></name> (<year>2015</year>) <article-title>Reconciling abnormalities of brain network structure and function in schizophrenia</article-title>. <source>Current opinion in neurobiology</source> <volume>30</volume>:<fpage>44</fpage>–<lpage>50</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Newman1"><label>60</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Newman</surname><given-names>M</given-names></name> (<year>2006</year>) <article-title>Finding community structure in networks using the eigenvectors of matrices</article-title>. <source>Physical review E</source> <volume>74</volume>:<fpage>036104</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Barnes1"><label>61</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Barnes</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Nelson</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Cohen</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Power</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Coalson</surname><given-names>R</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Parcellation in left lateral parietal cortex is similar in adults and children</article-title>. <source>Cerebral Cortex</source> <volume>22</volume>:<fpage>1148</fpage>–<lpage>1158</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Steen1"><label>62</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Steen</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Hayasaka</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Joyce</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Laurienti</surname><given-names>P</given-names></name> (<year>2011</year>) <article-title>Assessing the consistency of community structure in complex networks</article-title>. <source>Physical Review E</source> <volume>84</volume>:<fpage>016111</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Moussa1"><label>63</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Moussa</surname><given-names>MN</given-names></name>, <name name-style="western"><surname>Steen</surname><given-names>MR</given-names></name>, <name name-style="western"><surname>Laurienti</surname><given-names>PJ</given-names></name>, <name name-style="western"><surname>Hayasaka</surname><given-names>S</given-names></name> (<year>2012</year>) <article-title>Consistency of network modules in resting-state fMRI connectome data</article-title>. <source>PLoS ONE</source> <volume>7</volume>:<fpage>e44428</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Zalesky1"><label>64</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zalesky</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Fornito</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Bullmore</surname><given-names>E</given-names></name> (<year>2012</year>) <article-title>On the use of correlation as a measure of network connectivity</article-title>. <source>NeuroImage</source> <volume>60</volume>:<fpage>2096</fpage>–<lpage>2106</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Albert1"><label>65</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Albert</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Barabási</surname><given-names>AL</given-names></name> (<year>2002</year>) <article-title>Statistical mechanics of complex networks</article-title>. <source>Reviews of modern physics</source> <volume>74</volume>:<fpage>47</fpage>–<lpage>97</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Hayasaka1"><label>66</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hayasaka</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Laurienti</surname><given-names>PJ</given-names></name> (<year>2010</year>) <article-title>Comparison of characteristics between region-and voxel-based network analyses in resting-state fMRI data</article-title>. <source>NeuroImage</source> <volume>50</volume>:<fpage>499</fpage>–<lpage>508</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Achard2"><label>67</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Achard</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Bullmore</surname><given-names>E</given-names></name> (<year>2007</year>) <article-title>Efficiency and cost of economical brain functional networks</article-title>. <source>PLoS computational biology</source> <volume>3</volume>:<fpage>e17</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Soranzo1"><label>68</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Soranzo</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Bianconi</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Altafini</surname><given-names>C</given-names></name> (<year>2007</year>) <article-title>Comparing association network algorithms for reverse engineering of large-scale gene regulatory networks: synthetic versus real data</article-title>. <source>Bioinformatics</source> <volume>23</volume>:<fpage>1640</fpage>–<lpage>1647</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Stifanelli1"><label>69</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Stifanelli</surname><given-names>PF</given-names></name>, <name name-style="western"><surname>Creanza</surname><given-names>TM</given-names></name>, <name name-style="western"><surname>Anglani</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Liuzzi</surname><given-names>VC</given-names></name>, <name name-style="western"><surname>Mukherjee</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>A comparative study of covariance selection models for the inference of gene regulatory networks</article-title>. <source>Journal of biomedical informatics</source> <volume>46</volume>:<fpage>894</fpage>–<lpage>904</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Braun1"><label>70</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Braun</surname><given-names>U</given-names></name>, <name name-style="western"><surname>Plichta</surname><given-names>MM</given-names></name>, <name name-style="western"><surname>Esslinger</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Sauer</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Haddad</surname><given-names>L</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Test–retest reliability of resting-state connectivity network characteristics using fMRI and graph theoretical measures</article-title>. <source>NeuroImage</source> <volume>59</volume>:<fpage>1404</fpage>–<lpage>1412</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-Button1"><label>71</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Button</surname><given-names>KS</given-names></name>, <name name-style="western"><surname>Ioannidis</surname><given-names>JP</given-names></name>, <name name-style="western"><surname>Mokrysz</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Nosek</surname><given-names>BA</given-names></name>, <name name-style="western"><surname>Flint</surname><given-names>J</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>Power failure: why small sample size undermines the reliability of neuroscience</article-title>. <source>Nat Rev Neurosci</source> <volume>14</volume>:<fpage>365</fpage>–<lpage>376</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0115215-He2"><label>72</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>He</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Chen</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Evans</surname><given-names>A</given-names></name> (<year>2008</year>) <article-title>Structural insights into aberrant topological patterns of large-scale cortical networks in alzheimer's disease</article-title>. <source>J Neurosci</source> <volume>28</volume>:<fpage>4756</fpage>–<lpage>4766</lpage>.</mixed-citation>
+</ref>
+</ref-list></back>
+</article>

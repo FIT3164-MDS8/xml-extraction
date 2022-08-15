@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" article-type="research-article" dtd-version="3.0" xml:lang="en">
+  <front>
+    <journal-meta><journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><issn pub-type="epub">1932-6203</issn><publisher>
+        <publisher-name>Public Library of Science</publisher-name>
+        <publisher-loc>San Francisco, USA</publisher-loc>
+      </publisher></journal-meta>
+    <article-meta><article-id pub-id-type="publisher-id">PONE-D-12-10216</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0044196</article-id><article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject>
+        </subj-group>
+        <subj-group subj-group-type="Discipline-v2">
+          <subject>Biology</subject>
+          <subj-group>
+            <subject>Computational biology</subject>
+            <subj-group>
+              <subject>Genomics</subject>
+              <subj-group>
+                <subject>Epigenomics</subject>
+              </subj-group>
+            </subj-group>
+            <subj-group>
+              <subject>Macromolecular structure analysis</subject>
+              <subj-group>
+                <subject>DNA structure</subject>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Genetics</subject>
+            <subj-group>
+              <subject>Epigenetics</subject>
+              <subj-group>
+                <subject>Chromatin</subject>
+              </subj-group>
+            </subj-group>
+            <subj-group>
+              <subject>Human genetics</subject>
+              <subj-group>
+                <subject>Chromosomal disorders</subject>
+                <subj-group>
+                  <subject>Translocations</subject>
+                </subj-group>
+              </subj-group>
+            </subj-group>
+            <subj-group>
+              <subject>Cancer genetics</subject>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Genomics</subject>
+            <subj-group>
+              <subject>Chromosome biology</subject>
+              <subj-group>
+                <subject>Chromatin</subject>
+                <subject>Chromosome structure and function</subject>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+          <subj-group>
+            <subject>Molecular cell biology</subject>
+            <subj-group>
+              <subject>Chromosome biology</subject>
+              <subj-group>
+                <subject>Chromatin</subject>
+              </subj-group>
+            </subj-group>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="Discipline">
+          <subject>Genetics and Genomics</subject>
+          <subject>Computational Biology</subject>
+          <subject>Cell Biology</subject>
+        </subj-group>
+      </article-categories><title-group><article-title>Three-Dimensional Genome Architecture Influences Partner Selection for Chromosomal Translocations in Human Disease</article-title><alt-title alt-title-type="running-head">3-D Genome Architecture Influences Translocations</alt-title></title-group><contrib-group>
+        <contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+          <name name-style="western">
+            <surname>Engreitz</surname>
+            <given-names>Jesse M.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+          <name name-style="western">
+            <surname>Agarwala</surname>
+            <given-names>Vineeta</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff3">
+            <sup>3</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author" xlink:type="simple">
+          <name name-style="western">
+            <surname>Mirny</surname>
+            <given-names>Leonid A.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+          <xref ref-type="aff" rid="aff4">
+            <sup>4</sup>
+          </xref>
+          <xref ref-type="corresp" rid="cor1">
+            <sup>*</sup>
+          </xref>
+        </contrib>
+      </contrib-group><aff id="aff1">
+        <label>1</label>
+        <addr-line>Harvard-MIT Division of Health Sciences and Technology, MIT, Cambridge, Massachusetts, United States of America</addr-line>
+      </aff><aff id="aff2">
+        <label>2</label>
+        <addr-line>Broad Institute, Cambridge, Massachusetts, United States of America</addr-line>
+      </aff><aff id="aff3">
+        <label>3</label>
+        <addr-line>Biophysics Program, Graduate School of Arts and Sciences, Harvard University, Cambridge, Massachusetts, United States of America</addr-line>
+      </aff><aff id="aff4">
+        <label>4</label>
+        <addr-line>Department of Physics, MIT, Cambridge, Massachusetts, United States of America</addr-line>
+      </aff><contrib-group>
+        <contrib contrib-type="editor" xlink:type="simple">
+          <name name-style="western">
+            <surname>Ahmed</surname>
+            <given-names>Shawn</given-names>
+          </name>
+          <role>Editor</role>
+          <xref ref-type="aff" rid="edit1"/>
+        </contrib>
+      </contrib-group><aff id="edit1">
+        <addr-line>University of North Carolina, United States of America</addr-line>
+      </aff><author-notes>
+        <corresp id="cor1">* E-mail: <email xlink:type="simple">leonid@mit.edu</email></corresp>
+        <fn fn-type="conflict">
+          <p>The authors have declared that no competing interests exist.</p>
+        </fn>
+        <fn fn-type="con">
+          <p>Conceived and designed the experiments: JE VA LM. Performed the experiments: JE VA. Analyzed the data: JE VA. Wrote the paper: JE VA LM.</p>
+        </fn>
+      </author-notes><pub-date pub-type="collection">
+        <year>2012</year>
+      </pub-date><pub-date pub-type="epub">
+        <day>28</day>
+        <month>9</month>
+        <year>2012</year>
+      </pub-date><volume>7</volume><issue>9</issue><elocation-id>e44196</elocation-id><history>
+        <date date-type="received">
+          <day>10</day>
+          <month>4</month>
+          <year>2012</year>
+        </date>
+        <date date-type="accepted">
+          <day>30</day>
+          <month>7</month>
+          <year>2012</year>
+        </date>
+      </history><permissions>
+        
+        <copyright-holder>Engreitz et al</copyright-holder>
+        <license xlink:type="simple">
+          <license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+        </license>
+      </permissions><abstract>
+        <p>Chromosomal translocations are frequent features of cancer genomes that contribute to disease progression. These rearrangements result from formation and illegitimate repair of DNA double-strand breaks (DSBs), a process that requires spatial colocalization of chromosomal breakpoints. The “contact first” hypothesis suggests that translocation partners colocalize in the nuclei of normal cells, prior to rearrangement. It is unclear, however, the extent to which spatial interactions based on three-dimensional genome architecture contribute to chromosomal rearrangements in human disease. Here we intersect Hi-C maps of three-dimensional chromosome conformation with collections of 1,533 chromosomal translocations from cancer and germline genomes. We show that many translocation-prone pairs of regions genome-wide, including the cancer translocation partners <italic>BCR-ABL</italic> and <italic>MYC-IGH</italic>, display elevated Hi-C contact frequencies in normal human cells. Considering tissue specificity, we find that translocation breakpoints reported in human hematologic malignancies have higher Hi-C contact frequencies in lymphoid cells than those reported in sarcomas and epithelial tumors. However, translocations from multiple tissue types show significant correlation with Hi-C contact frequencies, suggesting that both tissue-specific and universal features of chromatin structure contribute to chromosomal alterations. Our results demonstrate that three-dimensional genome architecture shapes the landscape of rearrangements directly observed in human disease and establish Hi-C as a key method for dissecting these effects.</p>
+      </abstract><funding-group>
+        <funding-statement>JE was supported by the National Human Genome Research Institute (grant T32 HG002295), the National Defense Science and Engineering Graduate Fellowship Program, and the Fannie and John Hertz Foundation. VA was supported by the Medical Scientist Training Program and the National Institute of General Medical Sciences (grant 5T32 GM008313). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+      </funding-group><counts>
+        <page-count count="9"/>
+      </counts></article-meta>
+  </front>
+  <body>
+    <sec id="s1">
+      <title>Introduction</title>
+      <p>Chromosomal translocations affect cellular function by changing gene copy number, creating fusion genes with aberrant function, or repositioning regulatory elements. Classic examples of recurrent genomic rearrangements in cancer are the <italic>BCR</italic>-<italic>ABL</italic> translocation (observed in &gt;90% of cases of chronic myeloid leukemia) and the <italic>MYC-IGH</italic> fusion (observed in ∼90% of cases of Burkitt's lymphoma) <xref ref-type="bibr" rid="pone.0044196-Nowell1">[1]</xref>–<xref ref-type="bibr" rid="pone.0044196-arRushdi1">[4]</xref>. While these alterations play important roles in driving tumorigenesis <xref ref-type="bibr" rid="pone.0044196-Daley1">[5]</xref> and directing targeted therapy in cancer patients <xref ref-type="bibr" rid="pone.0044196-Druker1">[6]</xref>, the factors that contribute to the formation of the thousands of translocations observed in human disease are not fully understood <xref ref-type="bibr" rid="pone.0044196-Mani1">[7]</xref>.</p>
+      <p>Repeated observation of specific translocations, as well as the existence of rearrangement hotspots in cancer <xref ref-type="bibr" rid="pone.0044196-De1">[8]</xref>, suggests that intrinsic cellular and genomic features predispose certain regions to translocate. Since fusion of two DSBs requires spatial contact, one attractive hypothesis is that higher-order genome organization – that is, the physical proximity of chromosomes in the nucleus <italic>prior</italic> to translocation – contributes to the occurrence of specific translocations <xref ref-type="bibr" rid="pone.0044196-Luksov1">[9]</xref>, <xref ref-type="bibr" rid="pone.0044196-Meaburn1">[10]</xref>. Indeed, work over the last decade has used fluorescence <italic>in situ</italic> hybridization (FISH) to show that the genes involved in several recurrent translocations are positioned relatively close to one another in the nuclei of normal cells <xref ref-type="bibr" rid="pone.0044196-Luksov1">[9]</xref>–<xref ref-type="bibr" rid="pone.0044196-Mani2">[14]</xref>. However, current imaging methods lack the throughput needed to determine whether this phenomenon is broadly applicable, beyond anecdotal examples, to the thousands of translocations observed in cancer. In addition, the size of genomic regions involved in these interactions, as well as their tissue-specificity, remains uncharacterized.</p>
+      <p>While answers to these questions on a genome scale were previously unattainable, Dekker and colleagues recently developed a next-generation sequencing-based method, Hi-C, to describe contact probabilities across the entire human genome <xref ref-type="bibr" rid="pone.0044196-LiebermanAiden1">[15]</xref>, providing a powerful new tool to investigate the relationship between 3D chromatin structure and translocation partner preferences. The combination of Hi-C and high-throughput translocation sequencing in a mouse pro-B cell line revealed that, given a uniform distribution of DSBs induced by random mutagenesis, frequencies of translocations between chromosomes are correlated with Hi-C contact probability prior to selection <xref ref-type="bibr" rid="pone.0044196-Zhang1">[16]</xref>. This result provided the first genome-wide demonstration that spatial proximity of loci influences patterns of translocations. However, the contributions of genome architecture to translocations observed in primary disease, as opposed to translocations induced experimentally, remains unclear.</p>
+      <p>To address this question, we leverage Hi-C to systematically test the hypothesis that human disease translocations occur between spatially proximal regions of the genome, integrating a total of 1,533 chromosomal rearrangements from both cytogenetic and sequencing-derived datasets. We find that many translocation partners are located in broad chromatin domains that are spatially proximal in normal cells, thus predisposing them to chromosomal rearrangements. Hi-C also identifies existing rearrangements in malignant cells and enables fine-mapping of chromosomal breakpoints. Our results support a broad role for three-dimensional genome structure in translocation-partner selection and establish Hi-C as a key method for dissecting the structural features of the genome that contribute to human disease.</p>
+    </sec>
+    <sec id="s2">
+      <title>Results</title>
+      <sec id="s2a">
+        <title>Strategy</title>
+        <p>Although previous studies have demonstrated that genome organization influences translocation partner selection, we wondered whether genome architecture contributes to rearrangements observed in human disease. To address this question systematically and on a genome-wide basis, we set out to test large human translocation datasets for evidence of proximity-mediated contact in genome-wide interaction maps for GM06990 lymphoblastoid and K562 erythroleukemic cell lines (<xref ref-type="fig" rid="pone-0044196-g001">Figure 1</xref>) <xref ref-type="bibr" rid="pone.0044196-LiebermanAiden1">[15]</xref>. Previous iterations of chromosome conformation capture technology have succeeded in identifying proximities between genes and regulatory elements <xref ref-type="bibr" rid="pone.0044196-Tolhuis1">[17]</xref>, <xref ref-type="bibr" rid="pone.0044196-Spilianakis1">[18]</xref> as well as between actively transcribed or repressed genes <xref ref-type="bibr" rid="pone.0044196-Osborne1">[19]</xref>, <xref ref-type="bibr" rid="pone.0044196-Dekker1">[20]</xref>. It was unclear, however, whether Hi-C could detect spatial proximities between translocation-prone loci (henceforth <italic>translocation partners</italic>). Thus we began by analyzing Hi-C data at translocation loci whose spatial relationships have been previously established by FISH.</p>
+        <fig id="pone-0044196-g001" orientation="portrait" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0044196.g001</object-id>
+          <label>Figure 1</label>
+          <caption>
+            <title>Schematic diagram of our approach.</title>
+          </caption>
+          <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.g001" xlink:type="simple"/>
+        </fig>
+      </sec>
+      <sec id="s2b">
+        <title>Validating Hi-C as a method for detecting proximity of translocation partners</title>
+        <p>Generated through a combination of proximity-mediated ligation and high-throughput sequencing, Hi-C interaction maps provide two-dimensional matrices of contact scores between megabase-sized regions on chromosome pairs. To verify that Hi-C faithfully detects proximity of known translocation loci, we first examined the canonical translocation partners <italic>BCR</italic> and <italic>ABL</italic>, which form an unbalanced, often-amplified rearrangement in the K562 human cancer cell line (<xref ref-type="fig" rid="pone-0044196-g002">Figure 2A</xref>) and have been shown by FISH to colocalize in the nuclei of multiple normal hematopoietic cell types prior to the translocation event <xref ref-type="bibr" rid="pone.0044196-Luksov1">[9]</xref>, <xref ref-type="bibr" rid="pone.0044196-Neves1">[21]</xref>. In K562 cells, where the <italic>BCR-ABL</italic> translocation has already occurred, Hi-C detected strong signal (1,996 reads) in the 1-Mb bin containing <italic>BCR-ABL</italic> (<xref ref-type="fig" rid="pone-0044196-g002">Figure 2B</xref>). We used Hi-C data to refine the likely breakpoint interval to the 50-kb regions chr9:132,550,000–132,600,000 and chr22:21,950,000–22,000,000, consistent with prior breakpoint identification for the BCR-ABL translocation <xref ref-type="bibr" rid="pone.0044196-Ge1">[22]</xref>. Interestingly, the raw observed Hi-C counts showed a characteristic pattern for an unbalanced translocation, with peak signal at a corner decaying in a single direction along both chromosomes (<xref ref-type="supplementary-material" rid="pone.0044196.s006">Text S1</xref>, <xref ref-type="supplementary-material" rid="pone.0044196.s001">Figure S1</xref>). This signature was also present at two other genomic loci at which translocations have been previously reported in cytogenetic studies of the K562 cell line; Hi-C data enabled the fine-mapping of the likely breakpoint regions for these potentially functional rearrangements for the first time (<xref ref-type="supplementary-material" rid="pone.0044196.s006">Text S1</xref>, <xref ref-type="supplementary-material" rid="pone.0044196.s001">Figure S1</xref>, <xref ref-type="supplementary-material" rid="pone.0044196.s002">Figure S2</xref>, <xref ref-type="supplementary-material" rid="pone.0044196.s007">Table S1</xref>).</p>
+        <fig id="pone-0044196-g002" orientation="portrait" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0044196.g002</object-id>
+          <label>Figure 2</label>
+          <caption>
+            <title>Hi-C detects interaction between known translocation partners <italic>BCR</italic>-<italic>ABL</italic> and <italic>MYC</italic>-<italic>IGH.</italic></title>
+            <p>(<bold>A</bold>) Chromosomes 9 and 22 are physically joined in K562 (left), but not in GM06990 (right). (<bold>B</bold>) Hi-C contact map of chromosomes 9 and 22 in K562 cells. Inset shows the chromosomal bands containing <italic>BCR</italic> (22q11) and <italic>ABL</italic> (9q34). High read counts identify the site of the <italic>BCR-ABL</italic> translocation. (<bold>C</bold>) Hi-C contact maps of chromosomes 9 and 22 in GM06990 cells, which show a relatively low read count in the <italic>BCR-ABL</italic> megabase bin compared to K562. (<bold>D</bold>) Normalized Hi-C contact map for chromosomes 9 and 22 in GM06990 shows elevated signal in the chromosomal bands containing <italic>BCR</italic> and <italic>ABL</italic>. (<bold>E</bold>) Centered interaction scores for the chromosomal bands containing the translocation partners <italic>MYC-IGH</italic> as well as the control partners <italic>MYC-TGFBR2</italic> and <italic>IGH-TGFBR2</italic>, compared to the background distribution of scores on the same chromosome pairs. Error bars represent the 5<sup>th</sup> and 95<sup>th</sup> percentiles.</p>
+          </caption>
+          <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.g002" xlink:type="simple"/>
+        </fig>
+        <p>Having demonstrated that the Hi-C data provides robust evidence for translocations that have already occurred, we asked whether there would be evidence for spatial proximity of <italic>BCR</italic> and <italic>ABL</italic> in cells <italic>prior</italic> to translocation. In immortalized, karyotypically normal lymphoblastoid cells (GM06990) that do not harbor the translocation (<xref ref-type="fig" rid="pone-0044196-g002">Figure 2A</xref>), the signal in the megabase-bin containing <italic>BCR</italic>-<italic>ABL</italic> was markedly reduced (10 reads, <xref ref-type="fig" rid="pone-0044196-g002">Figure 2C</xref>) as compared to the signal seen in K562 cells. We expected this large difference in raw read counts between the two cell lines because these regions of chromosomes 9 and 22 interact in <italic>cis</italic> in K562 and <italic>trans</italic> in GM06990.</p>
+        <p>While the raw read data hinted at an enrichment of contact frequency between the <italic>BCR</italic> and <italic>ABL</italic> loci (<xref ref-type="fig" rid="pone-0044196-g002">Figure 2C</xref>), the read count observed in a 1-Mb bin in Hi-C is affected by confounding factors such as GC content, abundance of restriction enzyme sites, and sequence mappability <xref ref-type="bibr" rid="pone.0044196-LiebermanAiden1">[15]</xref>, <xref ref-type="bibr" rid="pone.0044196-Yaffe1">[23]</xref>. To account for these biases in Hi-C data, we applied the normalization scheme developed by Yaffe and Tanay <xref ref-type="bibr" rid="pone.0044196-Yaffe1">[23]</xref>. In the rest of this work, we represent proximities using the <italic>Hi-C Score,</italic> defined as the <italic>log2</italic> enrichment of observed reads to expected reads using a probabilistic correction model as described <xref ref-type="bibr" rid="pone.0044196-Yaffe1">[23]</xref>. We note, however, that we obtained similar results with the original approach to Hi-C normalization described by Dekker and colleagues (data not shown) <xref ref-type="bibr" rid="pone.0044196-LiebermanAiden1">[15]</xref>.</p>
+        <p>Using a normalized contact map of Hi-C scores, we again examined <italic>BCR-ABL</italic> in GM06990 cells (<xref ref-type="fig" rid="pone-0044196-g002">Figure 2D</xref>). In the karyotypically normal GM06990 cell line, the megabase bins containing <italic>BCR</italic> and <italic>ABL</italic> displayed higher proximity compared to other sites on the same chromosomes. Furthermore, the region of high proximity extended to include much of 9q34 and 22q11. Compared to random regions of the same size on chromosomes 9 and 22, the chromosomal bands containing <italic>BCR</italic> and <italic>ABL</italic> fell above the 95th percentile of proximity scores in GM06990 cells. This suggested that Hi-C detected significant contact frequencies between the translocation-prone <italic>BCR</italic> and <italic>ABL</italic> loci in normal cells above the background distribution of Hi-C scores between loci on chromosomes 9 and 22.</p>
+        <p>As an additional validation that Hi-C could accurately detect the spatial proximity of translocation-prone loci, we examined the loci involved in the t(8;14)(q24;q32) translocation, a rearrangement associated with Burkitt's lymphoma that brings the oncogene <italic>MYC</italic> under the control of activating enhancer elements at the <italic>IGH</italic> locus. Osborne and colleagues demonstrated by FISH that induction of B lymphocytes causes relocation of <italic>Myc</italic> and <italic>Igh</italic> to common transcription factories, bringing these translocating regions into close proximity <xref ref-type="bibr" rid="pone.0044196-Osborne2">[24]</xref>. In Hi-C data derived from lymphoblastoid cells, the chromosomal bands including <italic>MYC</italic> and <italic>IGH</italic> showed higher contact frequency than other regions of the same size on the same chromosome pair, thus representing a local hotspot of proximity between chromosomes 8 and 14 (<xref ref-type="fig" rid="pone-0044196-g002">Figure 2E</xref>). In comparison, the proximity scores for the control loci <italic>MYC-TGFBR2</italic> and <italic>IGH-TGFBR2</italic>, which are not observed to translocate in cancer, did not differ significantly from background. Notably, these results exactly paralleled the FISH results obtained for the same loci in a similar cell type <xref ref-type="bibr" rid="pone.0044196-Roix1">[12]</xref>. We conclude that Hi-C can specifically detect the proximity of translocation partners in karyotypically normal cells.</p>
+      </sec>
+      <sec id="s2c">
+        <title>Many translocation partners are spatially proximal in the nucleus</title>
+        <p>Having found that Hi-C is suitable for examination of proximity-mediated interactions between translocation-prone loci, we then proceeded to test the main hypothesis of this study: that spatial proximity influences the formation of many translocations observed in human disease genome-wide. First, we gathered four datasets totaling 1,533 human chromosomal rearrangements (<xref ref-type="table" rid="pone-0044196-t001">Table 1</xref>). Identified by cytogenetic and high-throughput sequencing modalities in cancer and germline genomes from multiple tissues, these four genome-wide datasets broadly sampled the space of chromosomal translocations observed in human disease (Methods). Importantly, the Mitelman Database and multiple myeloma datasets contained hundreds of inter-chromosomal translocations from lymphoid-derived malignancies, matching the cell lineage of our lymphoblastoid Hi-C data. For each human disease translocation, we mapped the chromosomal bands implicated (typically representing multi-megabase-sized regions) to genomic coordinates, and then calculated average Hi-C contact frequencies across each pair of partner regions. To statistically evaluate sets of translocations for evidence of increased spatial proximity, we devised a permutation-based approach that corrected for potential biases including 1) systematic differences in association between pairs of chromosomes, 2) regions of the genome that have strong proximity signal with many other regions, 3) sizes and positional biases of regions in our translocation sets, and 4) broad chromatin features (<xref ref-type="fig" rid="pone-0044196-g001">Figure 1</xref>, Methods).</p>
+        <table-wrap id="pone-0044196-t001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0044196.t001</object-id><label>Table 1</label><caption>
+            <title>Translocation datasets and permutation results.</title>
+          </caption><alternatives>
+            <graphic id="pone-0044196-t001-1" mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.t001" xlink:type="simple"/>
+            <table>
+              <colgroup span="1">
+                <col align="left" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+                <col align="center" span="1"/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <td align="left" colspan="1" rowspan="1">Dataset</td>
+                  <td align="left" colspan="1" rowspan="1">Mean Hi-C Score (Translocations)<xref ref-type="table-fn" rid="nt101">*</xref></td>
+                  <td align="left" colspan="1" rowspan="1">Mean Hi-C Score (Permutations)<xref ref-type="table-fn" rid="nt101">*</xref></td>
+                  <td align="left" colspan="1" rowspan="1">Permutation  P-Value</td>
+                  <td align="left" colspan="1" rowspan="1">Rank-Sum P-Value</td>
+                  <td align="left" colspan="1" rowspan="1">Individual Significant Translocations</td>
+                  <td align="left" colspan="1" rowspan="1">Total Unique Translocations</td>
+                  <td align="left" colspan="1" rowspan="1">% Genome Covered</td>
+                  <td align="left" colspan="1" rowspan="1">% Interactions Covered<xref ref-type="table-fn" rid="nt102">**</xref></td>
+                  <td align="left" colspan="1" rowspan="1">Source</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" colspan="1" rowspan="1">Mitelman Database</td>
+                  <td align="left" colspan="1" rowspan="1">0.17±0.03</td>
+                  <td align="left" colspan="1" rowspan="1">0.052±0.001</td>
+                  <td align="left" colspan="1" rowspan="1">&lt;0.001</td>
+                  <td align="left" colspan="1" rowspan="1">6.42E-23</td>
+                  <td align="left" colspan="1" rowspan="1">7</td>
+                  <td align="left" colspan="1" rowspan="1">577</td>
+                  <td align="left" colspan="1" rowspan="1">79.7%</td>
+                  <td align="left" colspan="1" rowspan="1">1.12%</td>
+                  <td align="left" colspan="1" rowspan="1">Mitelman et al. 2011</td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="1" rowspan="1">
+                    <italic>Blood</italic>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">0.19±0.03</td>
+                  <td align="left" colspan="1" rowspan="1">0.063±0.001</td>
+                  <td align="left" colspan="1" rowspan="1">&lt;0.001</td>
+                  <td align="left" colspan="1" rowspan="1">2.13E-20</td>
+                  <td align="left" colspan="1" rowspan="1">6</td>
+                  <td align="left" colspan="1" rowspan="1">440</td>
+                  <td align="left" colspan="1" rowspan="1">72.4%</td>
+                  <td align="left" colspan="1" rowspan="1">0.87%</td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" colspan="1" rowspan="1">
+                    <italic>Non-Blood</italic>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">0.10±0.05</td>
+                  <td align="left" colspan="1" rowspan="1">0.018±0.001</td>
+                  <td align="left" colspan="1" rowspan="1">&lt;0.001</td>
+                  <td align="left" colspan="1" rowspan="1">1.78E-04</td>
+                  <td align="left" colspan="1" rowspan="1">1</td>
+                  <td align="left" colspan="1" rowspan="1">137</td>
+                  <td align="left" colspan="1" rowspan="1">45.2%</td>
+                  <td align="left" colspan="1" rowspan="1">0.27%</td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr>
+                  <td align="left" colspan="1" rowspan="1">Multiple Myeloma</td>
+                  <td align="left" colspan="1" rowspan="1">0.17±0.09</td>
+                  <td align="left" colspan="1" rowspan="1">0.039±0.002</td>
+                  <td align="left" colspan="1" rowspan="1">&lt;0.001</td>
+                  <td align="left" colspan="1" rowspan="1">7.27E-03</td>
+                  <td align="left" colspan="1" rowspan="1">2</td>
+                  <td align="left" colspan="1" rowspan="1">89</td>
+                  <td align="left" colspan="1" rowspan="1">22.9%</td>
+                  <td align="left" colspan="1" rowspan="1">0.03%</td>
+                  <td align="left" colspan="1" rowspan="1">Chapman et al. 2011</td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="1" rowspan="1">Prostate Cancer</td>
+                  <td align="left" colspan="1" rowspan="1">0.07±0.04</td>
+                  <td align="left" colspan="1" rowspan="1">0.002±0.001</td>
+                  <td align="left" colspan="1" rowspan="1">&lt;0.001</td>
+                  <td align="left" colspan="1" rowspan="1">7.92E-04</td>
+                  <td align="left" colspan="1" rowspan="1">0</td>
+                  <td align="left" colspan="1" rowspan="1">89</td>
+                  <td align="left" colspan="1" rowspan="1">21.9%</td>
+                  <td align="left" colspan="1" rowspan="1">0.03%</td>
+                  <td align="left" colspan="1" rowspan="1">Berger et al. 2011</td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="1" rowspan="1">Mendelian</td>
+                  <td align="left" colspan="1" rowspan="1">0.04±0.02</td>
+                  <td align="left" colspan="1" rowspan="1">0.006±0.001</td>
+                  <td align="left" colspan="1" rowspan="1">&lt;0.001</td>
+                  <td align="left" colspan="1" rowspan="1">4.05E-03</td>
+                  <td align="left" colspan="1" rowspan="1">1</td>
+                  <td align="left" colspan="1" rowspan="1">779</td>
+                  <td align="left" colspan="1" rowspan="1">91.5%</td>
+                  <td align="left" colspan="1" rowspan="1">0.79%</td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <ext-link ext-link-type="uri" xlink:href="https://www1.hgu.mrc.ac.uk/Softdata/Translocation/" xlink:type="simple">https://www1.hgu.mrc.ac.uk/Softdata/Translocation/</ext-link>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </alternatives><table-wrap-foot>
+            <fn id="nt101">
+              <label>*</label>
+              <p>Bounds represent a 95% confidence interval.</p>
+            </fn>
+            <fn id="nt102">
+              <label>**</label>
+              <p>Percentage of inter-chromosomal 1-Mb bins that are covered by translocations.</p>
+            </fn>
+          </table-wrap-foot></table-wrap>
+        <p>In all four translocation sets tested (Mitelman recurrent cancer, multiple myeloma, prostate cancer, and rare Mendelian translocations), we found that translocation partners have higher Hi-C contact frequencies than permuted regions with similar characteristics (<xref ref-type="table" rid="pone-0044196-t001">Table 1</xref>, <xref ref-type="supplementary-material" rid="pone.0044196.s003">Figure S3</xref>). This signal was present in Hi-C contact maps from the karyotypically-normal GM06990 lymphoblastoid cells, suggesting that spatial proximity of disease translocation partners precedes the rearrangement. Although the magnitude of the effect was incremental compared to the overall distribution of <italic>trans</italic> Hi-C scores (<xref ref-type="supplementary-material" rid="pone.0044196.s004">Figure S4</xref>), the finding was statistically significant (<italic>P</italic>&lt;0.001, permutation test) in all four datasets (<xref ref-type="table" rid="pone-0044196-t001">Table 1</xref>; <xref ref-type="fig" rid="pone-0044196-g003">Figure 3A, C</xref>). A closer examination of the distribution of proximity scores for true and permuted translocations showed that this signal arose from the sum of small effects across a broad range of translocations, rather than from large effects from a smaller number of rearrangements (<xref ref-type="fig" rid="pone-0044196-g003">Figure 3B, D</xref>; <xref ref-type="supplementary-material" rid="pone.0044196.s003">Figure S3</xref>). When we performed the same analysis using the Hi-C contact map generated with a different restriction enzyme in the same cell line, we observed nearly identical results (<xref ref-type="supplementary-material" rid="pone.0044196.s008">Table S2</xref>).</p>
+        <fig id="pone-0044196-g003" orientation="portrait" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0044196.g003</object-id>
+          <label>Figure 3</label>
+          <caption>
+            <title>Many translocation partners exhibit high contact frequencies in the normal nucleus.</title>
+            <p>Permutation test results for blood translocations from the Mitelman (<bold>A and B</bold>, <italic>n</italic> = 577) and multiple myeloma datasets (<bold>C and D</bold>, <italic>n</italic> = 89). Histograms (<bold>A and C</bold>) represent the distribution of the mean proximity score within each of 1,000 permuted sets of <italic>n</italic> translocations that preserve the characteristics of the true set (Permutation Method 1, see Methods). Red arrow indicates the mean of the proximity scores for <italic>n</italic> real translocations. Cumulative distribution plots (<bold>B and D</bold>) compare the distribution of the <italic>n</italic> scores for real translocations versus the distribution of the 1000<italic>n</italic> scores for permuted translocations. Heatmaps show Hi-C contact maps in GM06990 cells for two significant individual translocations: t(12;19)(q13;p13) (<bold>E</bold>) in the Mitelman Database and t(4;14)(p16.3;q32.33) (<bold>F</bold>) in the multiple myeloma dataset. Black boxes indicate the chromosomal bands containing the translocation breakpoints.</p>
+          </caption>
+          <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.g003" xlink:type="simple"/>
+        </fig>
+        <p>In addition to examining sets of translocations, we tested individual translocation partners for increased spatial proximity by generating permuted regions for each translocation. Consistent with the observation that the significant group signal was due to a sum of small effects, relatively few translocations showed individually significant contact frequencies (<xref ref-type="supplementary-material" rid="pone.0044196.s009">Table S3</xref>). For those translocations that were individually significant, spatial proximity may play a particularly important role in their formation. Two of the high-scoring translocations included 19p13, the site of the <italic>TCF3</italic> gene, which is frequently found translocated in acute lymphoblastic leukemia (<xref ref-type="fig" rid="pone-0044196-g003">Figure 3E</xref>) <xref ref-type="bibr" rid="pone.0044196-Khalidi1">[25]</xref>. One individually significant translocation involved the chromosomal band containing the <italic>IGH</italic> locus: t(4;14)(p16;q32) is frequently found in multiple myeloma patients, causing dysregulated expression of <italic>FGFR3</italic> and/or <italic>WHSC1</italic> (<xref ref-type="fig" rid="pone-0044196-g003">Figure 3F</xref>) <xref ref-type="bibr" rid="pone.0044196-Chesi1">[26]</xref>, <xref ref-type="bibr" rid="pone.0044196-Malgeri1">[27]</xref>. Our results suggest that for these individual translocations, spatial proximity prior to translocation may be especially important. These may be strong candidate translocations for experimental investigation of this phenomenon.</p>
+        <p>Our analysis supports a model where translocation partners reside in broad interacting domains that span multi-megabase chromosomal regions (<xref ref-type="fig" rid="pone-0044196-g003">Figure 3E, F</xref>). These broad interactions, occurring across an aggregate cell population, bring translocation partners into close spatial proximity, increasing the likelihood of rearrangement. Still, we wondered whether Hi-C might detect significant smaller-scale proximities, on the scale of a megabase. We mapped translocations from the whole-genome sequencing studies to megabase-sized bins and reran our four permutation tests on this dataset, comparing each translocation to other megabase-sized pairs of regions. We found that the one-megabase-bins containing translocation breakpoints were more spatially proximal than expected by chance in both multiple myeloma and prostate cancer (<xref ref-type="supplementary-material" rid="pone.0044196.s003">Figure S3</xref>). While suggestive, we cannot definitively conclude that the 1-Mb bins containing the translocations are more frequently in contact than the broader chromosomal bands containing them due to the sparse read-density at this scale.</p>
+      </sec>
+      <sec id="s2d">
+        <title>Tissue-specific effects</title>
+        <p>Multiple lines of evidence suggest that genome organization is tissue-specific and context-dependent. Gene-level or chromosomal contacts exhibit reproducible changes across tissue types, time points <xref ref-type="bibr" rid="pone.0044196-Neves1">[21]</xref>, <xref ref-type="bibr" rid="pone.0044196-Parada1">[28]</xref>, <xref ref-type="bibr" rid="pone.0044196-Hou1">[29]</xref>, and perturbations <xref ref-type="bibr" rid="pone.0044196-Mani2">[14]</xref>, <xref ref-type="bibr" rid="pone.0044196-Hu1">[30]</xref>. We therefore hypothesized that evidence for spatial proximity in Hi-C data from a lymphoblastoid cell line would be highest for translocation partners observed in hematologic malignancies. Indeed, we found that recurrent translocations observed in blood cancers in the Mitelman database displayed higher Hi-C contact frequencies than translocations observed in non-blood tumors (<italic>P</italic> = 2×10<sup>−3</sup>, Wilcoxon rank-sum test). For example, the translocation partners for t(12;15)(p13;q15), a rearrangement found in acute lymphoblastic leukemia and lymphoblastic lymphoma, showed much more significant proximity (<italic>P</italic>&lt;0.05, permutation test) in GM06990 cells than another pair of translocating loci on the same chromosomes, t(12;15)(p13;q26), found in fibrosarcoma (<italic>P</italic> = 0.28, permutation test). These results suggest that tissue-specific changes in genome organization may predispose specific regions to translocate in different malignancies. At the same time, however, the significantly elevated Hi-C contact frequencies between translocation partners in non-matching cell types implies the presence of universal features of spatial genome organization. Additional Hi-C experiments in multiple matched cell types may help to elucidate lineage-dependent variation in global chromosomal conformation and its contribution to translocation partner selection.</p>
+      </sec>
+      <sec id="s2e">
+        <title>Genomic features of translocation breakpoints</title>
+        <p>One explanation for the observed spatial proximity between translocation partners is that these regions have preferentially high gene content, or lie in the open chromatin compartment, rendering them easily accessible and mutable. We tested this and found that translocation breakpoints were significantly enriched for gene-rich, euchromatic regions in all four datasets (<xref ref-type="fig" rid="pone-0044196-g004">Figure 4A, B</xref>), consistent with the biased occurrence of DSBs in transcriptionally active chromatin <xref ref-type="bibr" rid="pone.0044196-Chiarle1">[31]</xref>, <xref ref-type="bibr" rid="pone.0044196-Klein1">[32]</xref>. To determine whether translocations partners have higher contact frequencies compared to other regions of similar chromatin state, we repeated our permutation tests controlling for chromatin compartment (open versus closed, see Methods). We found that translocation partners still are more spatially proximal than expected by chance, although the significance of this finding was reduced across all datasets (<xref ref-type="supplementary-material" rid="pone.0044196.s010">Table S4</xref>). Translocations whose partners resided in the open chromatin compartment were more significantly spatially proximal than translocations with one or both partners in the closed compartment (<xref ref-type="fig" rid="pone-0044196-g004">Figure 4C</xref>). The increased contact frequencies and DSB occurrences in transcriptionally active chromatin may contribute to the observation that tissue-matched translocations correlate more closely with Hi-C signal.</p>
+        <fig id="pone-0044196-g004" orientation="portrait" position="float">
+          <object-id pub-id-type="doi">10.1371/journal.pone.0044196.g004</object-id>
+          <label>Figure 4</label>
+          <caption>
+            <title>Features of translocation breakpoints.</title>
+            <p>Comparison of average (<bold>A</bold>) gene content (% bases spanned by transcripts; includes both exons and introns) and (<bold>B</bold>) chromatin compartment score for Mitelman database translocations (red) and 1,000 permuted sets, each of size <italic>n</italic> = 571, that preserve the characteristics of the true set. Chromatin compartment scores are calculated using the first eigenvector of the Tanay-normalized correlation matrix (see Methods). Positive and negative scores indicate open and closed chromatin compartments, respectively. (<bold>C</bold>) Mean Hi-C interaction scores for Mitelman blood translocations (red dots) compared to sets of permuted regions selected from the same chromatin compartments (gray boxplots).</p>
+          </caption>
+          <graphic mimetype="image" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.g004" xlink:type="simple"/>
+        </fig>
+      </sec>
+    </sec>
+    <sec id="s3">
+      <title>Discussion</title>
+      <p>In this work, we provide evidence that many translocation breakpoints observed in human diseases have high Hi-C contact frequencies in normal cells, suggesting a broad role for 3D chromatin organization in determining the frequency of translocations between partner loci. Previous data about this phenomenon is derived primarily from FISH <xref ref-type="bibr" rid="pone.0044196-Luksov1">[9]</xref>, <xref ref-type="bibr" rid="pone.0044196-Roix1">[12]</xref>–<xref ref-type="bibr" rid="pone.0044196-Mani2">[14]</xref>, <xref ref-type="bibr" rid="pone.0044196-Branco1">[33]</xref>, a technique that, although revealing, can investigate only a limited number of loci simultaneously. Chromosome conformation capture with Hi-C, in contrast, allows genome-wide, unbiased investigation of proximity-mediated interactions between translocation partners <xref ref-type="bibr" rid="pone.0044196-Zhang1">[16]</xref>. Since Hi-C measures contact frequencies rather than average nuclear distances, this approach provides a test for the “contact first” model of genomic rearrangements.</p>
+      <p>We find that Hi-C detects frequent proximity of hundreds of translocation-prone loci, including 1) translocations recurrently observed by cytogenetics in primary cancers from multiple tissues, 2) unbiased collections of rearrangements detected in tumors by next-generation sequencing, and 3) translocations associated with rare Mendelian disorders. In all cases, we detect a subtle but significant enrichment for translocation-partner contacts when compared to a null distribution. Recurrent translocations from a matched cell lineage (hematopoietic malignancies) show a stronger Hi-C contact signal than translocations from tumors derived from other lineages, suggesting that tissue-specific chromosome conformation may contribute to rearrangement partner selection. We also identify several individual translocations that show particularly strong Hi-C contact frequencies, including t(12;19)(p13;p13) and t(4;14)(p16.3;q32.33), which are both recurrently found in multiple hematopoietic tumor types. We thus predict that these individual translocations, particularly those that do not involve the <italic>IGH</italic> locus (see below), have a particularly high probability of rearrangement due to their increased frequency of contact.</p>
+      <p>Although translocations often occur in areas of high Hi-C contact frequency, many translocations occur in areas of low or average Hi-C contact frequency. This may occur for several reasons. First, it is possible that even though the “contact first” model is responsible for the occurrence of some translocations, this signal cannot be detected in Hi-C data from a population of cells. Spatial genome organization may be unique to individual cells or sub-populations of cells, and thus aggregate Hi-C signal may fail to capture spatial interaction occurring in only a few cells (and it may be these cells that go on to form translocations under strong positive selection in the cancer).</p>
+      <p>Second, translocations that do not show an elevated Hi-C signal in our analysis may have occurred for reasons entirely unrelated to spatial co-localization. While we directly test the “contact first” model, spatial proximity is certainly not a sufficient condition for observing a translocation in disease genomes <xref ref-type="bibr" rid="pone.0044196-Mani1">[7]</xref>. Some translocations may occur under a “breakage-first” model, whereby cellular mechanisms exist to co-localize DSB ends following breakage <xref ref-type="bibr" rid="pone.0044196-Aten1">[34]</xref>. The frequency of observed translocation is also affected by multiple other factors, potentially including DSB susceptibility <xref ref-type="bibr" rid="pone.0044196-Zhang1">[16]</xref>, DSB mobility <xref ref-type="bibr" rid="pone.0044196-Aten1">[34]</xref>, spatial heterogeneity among cells, positive selection, and ascertainment bias. To dissect the contributions of other cellular processes to translocation partner selection, investigators will need to examine concurrent genome-wide profiles of these phenomena in the same cellular system.</p>
+      <p>It is also worth nothing that while we detect a significant enrichment of spatial proximity between observed translocation partners, the datasets analyzed here were not sufficient to directly test whether the formation frequencies of these translocations are correlated with the contact frequencies between genomic partners, as has been shown experimentally for induced translocations <xref ref-type="bibr" rid="pone.0044196-Zhang1">[16]</xref>. This is because the true frequency with which translocations <italic>form</italic> is quite different from the frequency with which they have been <italic>observed</italic> in clinical databases. Observed frequencies are biased by factors including positive selection during neoplastic progression, the limited sensitivity of current methods to detect rare rearrangements in clinical samples, and ascertainment biases intrinsic to non-whole genome testing and clinical sample collection. While we do, despite these factors, observe significant correlation between the number of reports of a translocation in the Mitelman database and the Hi-C interaction score (<xref ref-type="supplementary-material" rid="pone.0044196.s005">Figure S5</xref>), we do not detect significant correlation (<italic>T</italic>-test <italic>p</italic>-value  = 0.532) between the number of observations of a translocation and the Hi-C interaction permutation <italic>p</italic>-value (the more robust measure of spatial proximity).</p>
+      <p>In lymphoid malignancies, the spectrum of observed translocations is drastically altered by the presence of the DSB-inducing enzyme AID, which contributes to the formation of rearrangements involving loci throughout the genome, particularly the Ig locus <xref ref-type="bibr" rid="pone.0044196-Chiarle1">[31]</xref>, <xref ref-type="bibr" rid="pone.0044196-Klein1">[32]</xref>. The formation of DSBs in these regions may then be a dominant force in determining which loci rearrange. Our results suggest that proximity plays a role in the formation of translocations in other tumor types as well. Indeed, given the absence of AID in non-lymphoid tissues, proximity might play a relatively larger role in determining the landscape of observed rearrangements in non-lymphoid cancers. Thus we suggest that future investigations of spatial proximity in cancer will benefit from examination of chromatin architecture in non-lymphoid tissues.</p>
+      <p>In an important methodological demonstration, we show the utility of Hi-C data in the discovery and fine-mapping of existing translocations in malignant cells genome-wide (<xref ref-type="fig" rid="pone-0044196-g002">Figure 2B</xref>, <xref ref-type="supplementary-material" rid="pone.0044196.s001">Figure S1</xref>), in accord with previous work using the targeted 4C method <xref ref-type="bibr" rid="pone.0044196-Simonis1">[35]</xref>. This finding has two key implications for future genome-wide analyses of chromatin structure in cancer cells. First, Hi-C data is able to accurately detect translocation breakpoints, allowing genome-wide analysis of structural rearrangements. Indeed, Hi-C data may be able to reconstruct the complete karyotype of a cancer cell, including deletions, amplifications, inversions, and other chromosomal alterations. Second, this analysis will be critical in filtering out the effects of chromosomal translocations that might interfere with the study of other <italic>trans</italic> proximity-mediated interactions in future Hi-C studies.</p>
+      <p>Given the role of spatial proximity in translocation partner selection demonstrated in this study, the molecular mechanisms that govern three-dimensional genomic architecture in normal and cancerous cells may prove important in our understanding of cancer etiology. Work to characterize the interactions between chromosome conformation and triggers for rearrangements will help to untangle the molecular processes of damage and aberrant repair that contribute to oncogenic transformation.</p>
+    </sec>
+    <sec id="s4" sec-type="methods">
+      <title>Methods</title>
+      <sec id="s4a">
+        <title>Hi-C chromosomal conformation capture</title>
+        <p>We used public Hi-C data (GEO accession GSE18199) generated to interrogate the long-range genomic interactions in the GM06990 lymphoblastoid and K562 erythroleukemic cell lines <xref ref-type="bibr" rid="pone.0044196-LiebermanAiden1">[15]</xref>. For raw count data, we used the mapped reads and the one-megabase binning scheme for the data generated using HindIII as described <xref ref-type="bibr" rid="pone.0044196-LiebermanAiden1">[15]</xref>. To control for differences in coverage, location of restriction enzyme recognition sites, mappability, and other features unique to each one-megabase bin, we obtained the normalized contact maps generated by Yaffe and Tanay <xref ref-type="bibr" rid="pone.0044196-Yaffe1">[23]</xref>. Briefly, this normalization method learns a probabilistic correction model based on uniquely-mapped reads in each Hi-C dataset, then applies a linear smoothing filter to calculate the number of reads expected in each 1-Mb bin. When compared to previous normalization approaches, this method significantly improves the correlation of the 1-Mb genome-wide contact maps generated with different restriction enzymes. We call the <italic>log</italic> ratio of observed to expected read counts under this model the <italic>Hi-C Score</italic>. We applied the <italic>log</italic> variance-stabilizing transformation to reduce the contributions of strong outliers when calculating summary statistics over a region.</p>
+      </sec>
+      <sec id="s4b">
+        <title>Translocation datasets</title>
+        <p>We collected four large inter-chromosomal translocation datasets, derived both from karyotyping and high-throughput sequencing studies. First, we collected a set of recurrent <italic>trans</italic>-chromosomal cancer translocations that have been observed in multiple patient cases <xref ref-type="bibr" rid="pone.0044196-Mitelman1">[36]</xref>. The Mitelman Database describes translocations using chromosomal bands; precise breakpoints were not available. The average size of defined chromosomal translocation bands in this database was large (∼10 Mb). While positive selection modifies the frequency of cancer translocations, particularly driver rearrangements, we expected that many of these recurrent translocations were predisposed to recur due to factors such as genome organization.</p>
+        <p>Translocations from multiple myeloma and prostate cancer were identified from whole-genome or exome sequences using the <italic>dRanger</italic> algorithm <xref ref-type="bibr" rid="pone.0044196-Berger1">[37]</xref>, <xref ref-type="bibr" rid="pone.0044196-Chapman1">[38]</xref>. We used translocations with at least three supporting reads in our analysis. Compared to the Mitelman Database, we expected catalogs of translocations in primary tumors to contain a higher frequency of passenger rearrangements, as well as a higher proportion of private mutations that occurred stochastically rather than systematically due to predisposing factors.</p>
+        <p>Finally, we collected all two-partner inter-chromosomal translocations (<italic>n</italic> = 947) associated with Mendelian syndromes from the Disease Associated Chromosomal Rearrangement Database (<ext-link ext-link-type="uri" xlink:href="https://www1.hgu.mrc.ac.uk/Softdata/Translocation/" xlink:type="simple">https://www1.hgu.mrc.ac.uk/Softdata/Translocation/</ext-link>). Again, precise breakpoints were not available for this dataset. Because these translocations can cause severe phenotypes, many of these mutations are not transmitted through generations: these diseases, though rare, are caused by recurrent <italic>de novo</italic> translocations. In addition, these genomic rearrangements do not experience the same positive selective pressures as the cancer translocations, complementing the previous datasets.</p>
+        <p>For the first Mitelman and Mendelian translocation databases, we mapped the cytogenetic bands (e.g. t(9;22)(p13;q13)) to human genome coordinates using the UCSC Genome Browser Build hg18. We considered 3-way translocations as 3 distinct two-way translocations, and excluded all translocations involving more than 3 partners. We also excluded translocations involving entire chromosomal arms, and did not include any intra-chromosomal rearrangements (<italic>e.g.</italic>, duplications or inversions).</p>
+      </sec>
+      <sec id="s4c">
+        <title>Chromatin compartment and gene content</title>
+        <p>We assigned regions to chromatin compartments using principal component analysis on the Tanay-normalized contact map as described <xref ref-type="bibr" rid="pone.0044196-LiebermanAiden1">[15]</xref>. Positive and negative scores indicate open and closed chromatin compartments, respectively, and correlate with other genomic features such as gene content, histone modification, and DNase I hypersensitivity. For each translocation region, we calculated a compartment score as the mean of the principal component values for all overlapping megabase bins. We represented gene content as the percentage of bases covered by RefSeq genes, including both exons and introns.</p>
+      </sec>
+      <sec id="s4d">
+        <title>Permutation testing</title>
+        <p>We employed a permutation strategy to search Hi-C data for evidence of proximity between translocation breakpoints. We calculated the <italic>proximity score</italic> for each translocation region as the mean normalized Hi-C score of all 1-Mb bins overlapping the chromosomal band involved in the translocation. When calculating these summary statistics, we did not include bins that 1) overlapped centromeres or 2) had no coverage across the entire dataset. To assess the significance of individual translocations, we generated a null distribution by considering 1,000 random pairs of regions with one of four permutation methods:</p>
+        <list list-type="order">
+          <list-item>
+            <p>We selected regions of identical size from the same chromosome pair. This within-chromosome permutation scheme controlled for the systematic differences in association between pairs of chromosomes: smaller, gene-rich chromosomes, for instance, tend to group together <xref ref-type="bibr" rid="pone.0044196-LiebermanAiden1">[15]</xref>.</p>
+          </list-item>
+          <list-item>
+            <p>We fixed one region, and selected as a partner a random region of identical size on the same chromosome. This controlled for features of the translocation partners that might predispose them to interact with many other regions on the same chromosome.</p>
+          </list-item>
+          <list-item>
+            <p>We fixed one region, and selected as a partner a random region of identical size on any other chromosome. This controlled for features of the translocation partners that might predispose them to interact with many other regions across the genome.</p>
+          </list-item>
+          <list-item>
+            <p>We fixed one region, and selected as a partner a random region from the entire set of translocations partners that did not fall on the same chromosome as the fixed partner.</p>
+          </list-item>
+        </list>
+        <p>We observed similar results for all four permutation methods (<xref ref-type="supplementary-material" rid="pone.0044196.s010">Table S4</xref>); we present results from Permutation Method 1 in the main text. In all cases where we selected random regions, we required that less than 50% of the bins in the random region overlapped with centromeric regions or bins with no coverage across the entire dataset.</p>
+        <p>For each individual translocation, we calculated the <italic>p</italic>-value for each translocation as the fraction of permuted locations that exceeded its proximity score, and corrected for multiple hypothesis testing using the Benjamini-Hochberg method. We assessed the significance of each translocation dataset as a group using a similar approach. For each of our four datasets, we generated 1,000 randomized datasets that preserved the overall properties of the group of translocations: the chromosome pairings and region sizes matched the original set. We calculated a summary score for each of these randomized datasets that represented the mean interaction score across all translocations, and calculated a <italic>p</italic>-value by comparing these statistics to the null distributions. We also assessed the differences between the proximity scores of the true and randomized data distributions using the two-sided Student's <italic>t</italic> test and Wilcoxon rank sum test to monitor the degree to which outliers drove the result in the permutation scheme.</p>
+      </sec>
+      <sec id="s4e">
+        <title>Permutations within chromatin compartment</title>
+        <p>We also evaluated the significance of our results by controlling for chromatin compartment in Permutation Methods 1–3. To accomplish this, we allowed swapping only within compartments. For each translocation partner, we calculated the chromatin score and chosen randomly from similarly-sized regions whose chromatin scores had the same sign.</p>
+      </sec>
+      <sec id="s4f">
+        <title>Fine mapping</title>
+        <p>To identify likely chromosomal breakpoints responsible for previously reported translocations, we first identified the 1 Mb×1 Mb bin across the chromosome pair with the highest total normalized read count. We then selected all reads mapping to a 3 Mb×3 Mb window around this bin. We then counted the number of observed reads mapping to 50 Kb×50 Kb bins, and looked for a pattern characteristic of unbalanced translocation. We then selected the corner-most 50 Kb bin, and counted reads mapping to 1 Kb×1 Kb regions within this larger bin. In some cases, the read count was sufficient to allow breakpoint identification at this fine scale, but in other cases read coverage was too sparse to further localize the breakpoint. In all cases, resolution is limited by the density of HindIII restriction sites.</p>
+      </sec>
+    </sec>
+    <sec id="s5">
+      <title>Supporting Information</title>
+      <supplementary-material id="pone.0044196.s001" mimetype="application/postscript" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.s001" xlink:type="simple">
+        <label>Figure S1</label>
+        <caption>
+          <p>Fine mapping of previously-reported inter-chromosome translocations in K562. Heatmaps showing the observed number of reads mapping to 50 kb×50 kb bins at the <italic>BCR</italic>-<italic>ABL</italic> locus (<bold>A</bold>), the <italic>CDC25A</italic>-<italic>GRID1</italic> locus (<bold>B</bold>), the <italic>NUP214</italic>-<italic>XKR3</italic> locus (<bold>C</bold>), three sites of previously reported inter-chromosomal translocations in the K562 cell line.</p>
+          <p>(EPS)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0044196.s002" mimetype="application/postscript" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.s002" xlink:type="simple">
+        <label>Figure S2</label>
+        <caption>
+          <p>Fine mapping of previously reported translocations in the K562 cell line. Heatmaps showing the observed number of reads mapping to 50 Kb bins at selected regions of (<bold>A</bold>) <italic>BCR</italic>-<italic>ABL</italic> and (<bold>B</bold>) the novel t(3;10) <italic>CDC25A</italic>-<italic>GRID1</italic> translocation. (<bold>C</bold>) Gene expression for dysregulated translocation partners (1), normally-regulated translocation partners (2), and constitutively-expressed myeloid genes (3) in MV4-11 (AML) and K562 (CML) cell lines. Expression values for each gene are normalized to the median expression for all genes. Note that <italic>XKR3</italic>, the translocation partner of <italic>NUP214</italic>, is not assayed on this microarray platform. (<bold>D</bold>) CML-to-AML log<sub>2</sub> fold-change for all assayed genes, sorted in increasing order. Red lines indicate the fold-change for labeled genes. The dysregulated translocation partners <italic>CDC25A</italic>, <italic>NUP214</italic>, and <italic>ABL1</italic> are highly upregulated in CML, all falling in the upper quartile of genes in terms of fold-change. (<bold>E</bold>) ENCODE ChIP-seq data for transcription factors and H3K4me1 near the predicted <italic>GRID1</italic> breakpoint <xref ref-type="bibr" rid="pone.0044196-The1">[39]</xref>. Color for H3K4me1 corresponds to cell type. Color for transcription factor data is proportional to the ChIP-seq signal. Data was viewed with the UCSC Genome Browser, genome build <italic>hg18.</italic></p>
+          <p>(EPS)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0044196.s003" mimetype="image/tiff" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.s003" xlink:type="simple">
+        <label>Figure S3</label>
+        <caption>
+          <p>Permutation test results for all databases. Histograms (gray) represent the mean proximity scores within each of 1,000 permuted sets of translocations (Permutation Method 1) that preserve the characteristics of the true set. Red line denotes the mean proximity score of the true translocation set. Cumulative frequency plots compare the score distributions for observed and permuted translocations.</p>
+          <p>(TIFF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0044196.s004" mimetype="image/tiff" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.s004" xlink:type="simple">
+        <label>Figure S4</label>
+        <caption>
+          <p>Distribution of Hi-C Scores for all <italic>trans</italic> bins. Histogram of Hi-C scores (<italic>log<sub>2</sub></italic> observed/expected read counts) for all one-megabase <italic>trans</italic>-chromosomal bins in GM06990. Expected read counts are calculated on a per-bin basis to control for differences in coverage, mappability, and HindIII restriction sites (see Methods).</p>
+          <p>(TIFF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0044196.s005" mimetype="application/postscript" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.s005" xlink:type="simple">
+        <label>Figure S5</label>
+        <caption>
+          <p>Correlation between translocation frequency and contact frequency for Mitelman translocations. Boxplots of (A) permutation <italic>p</italic>-values and (<bold>B</bold>) normalized Hi-C scores for translocations binned by number of occurrences in the Mitelman database.</p>
+          <p>(EPS)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0044196.s006" mimetype="application/pdf" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.s006" xlink:type="simple">
+        <label>Text S1</label>
+        <caption>
+          <p>Hi-C fine-mapping of translocations in the K562 cell line.</p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0044196.s007" mimetype="application/pdf" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.s007" xlink:type="simple">
+        <label>Table S1</label>
+        <caption>
+          <p>Fine-mapping known K562 translocations.</p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0044196.s008" mimetype="application/pdf" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.s008" xlink:type="simple">
+        <label>Table S2</label>
+        <caption>
+          <p>Individual translocation-prone loci that significantly colocalize in normal nuclei.</p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0044196.s009" mimetype="application/pdf" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.s009" xlink:type="simple">
+        <label>Table S3</label>
+        <caption>
+          <p>Permutation results for NcoI Hi-C data.</p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+      <supplementary-material id="pone.0044196.s010" mimetype="application/pdf" orientation="portrait" position="float" xlink:href="info:doi/10.1371/journal.pone.0044196.s010" xlink:type="simple">
+        <label>Table S4</label>
+        <caption>
+          <p>Permutation results after controlling for chromatin compartment (HindIII).</p>
+          <p>(PDF)</p>
+        </caption>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>The authors thank Job Dekker, Geoffrey Fudenberg, Maxim Imakaev, Levi Garraway, and Rachel McCord for discussions and critiques.</p>
+    </ack>
+    <ref-list>
+      <title>References</title>
+      <ref id="pone.0044196-Nowell1">
+        <label>1</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nowell</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Hungerford</surname><given-names>D</given-names></name> (<year>1960</year>) <article-title>A minute chromosome in human chronic granulocytic leukemia</article-title>. <source>Science</source> <volume>132</volume>: <fpage>1497</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Rowley1">
+        <label>2</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rowley</surname><given-names>JD</given-names></name> (<year>1980</year>) <article-title>Chromosome abnormalities in human leukemia</article-title>. <source>Annu Rev Genet</source> <volume>14</volume>: <fpage>17</fpage>–<lpage>39</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Koeffler1">
+        <label>3</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Koeffler</surname><given-names>HP</given-names></name>, <name name-style="western"><surname>Golde</surname><given-names>DW</given-names></name> (<year>1981</year>) <article-title>Chronic myelogenous leukemia--new concepts (first of two parts)</article-title>. <source>N Engl J Med</source> <volume>304</volume>: <fpage>1201</fpage>–<lpage>9</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-arRushdi1">
+        <label>4</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>ar-Rushdi</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Nishikura</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Erikson</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Watt</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Rovera</surname><given-names>G</given-names></name>, <etal>et al</etal>. (<year>1983</year>) <article-title>Differential expression of the translocated and the untranslocated c-myc oncogene in Burkitt lymphoma</article-title>. <source>Science</source> <volume>222</volume>: <fpage>390</fpage>–<lpage>3</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Daley1">
+        <label>5</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Daley</surname><given-names>GQ</given-names></name>, <name name-style="western"><surname>Van Etten</surname><given-names>RA</given-names></name>, <name name-style="western"><surname>Baltimore</surname><given-names>D</given-names></name> (<year>1990</year>) <article-title>Induction of chronic myelogenous leukemia in mice by the P210bcr/abl gene of the Philadelphia chromosome</article-title>. <source>Science</source> <volume>247</volume>: <fpage>824</fpage>–<lpage>30</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Druker1">
+        <label>6</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Druker</surname><given-names>BJ</given-names></name>, <name name-style="western"><surname>Talpaz</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Resta</surname><given-names>DJ</given-names></name>, <name name-style="western"><surname>Peng</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Buchdunger</surname><given-names>E</given-names></name>, <etal>et al</etal>. (<year>2001</year>) <article-title>Efficacy and safety of a specific inhibitor of the BCR-ABL tyrosine kinase in chronic myeloid leukemia</article-title>. <source>N Engl J Med</source> <volume>344</volume>: <fpage>1031</fpage>–<lpage>7</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Mani1">
+        <label>7</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mani</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Chinnaiyan</surname><given-names>AM</given-names></name> (<year>2010</year>) <article-title>Triggers for genomic rearrangements: insights into genomic, cellular and environmental influences</article-title>. <source>Nat Rev Genet</source> <volume>11</volume>: <fpage>819</fpage>–<lpage>29</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-De1">
+        <label>8</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>De</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Michor</surname><given-names>F</given-names></name> (<year>2011</year>) <article-title>DNA secondary structures and epigenetic determinants of cancer genome evolution</article-title>. <source>Nat Struct Mol Biol</source> <volume>18</volume>: <fpage>950</fpage>–<lpage>5</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Luksov1">
+        <label>9</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lukásová</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Kozubek</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Kozubek</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Kjeronská</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Rýznar</surname><given-names>L</given-names></name>, <etal>et al</etal>. (<year>1997</year>) <article-title>Localisation and distance between ABL and BCR genes in interphase nuclei of bone marrow cells of control donors and patients with chronic myeloid leukaemia</article-title>. <source>Hum Genet</source> <volume>100</volume>: <fpage>525</fpage>–<lpage>35</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Meaburn1">
+        <label>10</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Meaburn</surname><given-names>KJ</given-names></name>, <name name-style="western"><surname>Misteli</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Soutoglou</surname><given-names>E</given-names></name> (<year>2007</year>) <article-title>Spatial genome organization in the formation of chromosomal translocations</article-title>. <source>Semin Cancer Biol</source> <volume>17</volume>: <fpage>80</fpage>–<lpage>90</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Kozubek1">
+        <label>11</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kozubek</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Lukásová</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Marecková</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Skalníková</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Kozubek</surname><given-names>M</given-names></name>, <etal>et al</etal>. (<year>1999</year>) <article-title>The topological organization of chromosomes 9 and 22 in cell nuclei has a determinative role in the induction of t(9,22) translocations and in the pathogenesis of t(9,22) leukemias</article-title>. <source>Chromosoma</source> <volume>108</volume>: <fpage>426</fpage>–<lpage>35</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Roix1">
+        <label>12</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Roix</surname><given-names>JJ</given-names></name>, <name name-style="western"><surname>McQueen</surname><given-names>PG</given-names></name>, <name name-style="western"><surname>Munson</surname><given-names>PJ</given-names></name>, <name name-style="western"><surname>Parada</surname><given-names>LA</given-names></name>, <name name-style="western"><surname>Misteli</surname><given-names>T</given-names></name> (<year>2003</year>) <article-title>Spatial proximity of translocation-prone gene loci in human lymphomas</article-title>. <source>Nat Genet</source> <volume>34</volume>: <fpage>287</fpage>–<lpage>91</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Mathas1">
+        <label>13</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mathas</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Kreher</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Meaburn</surname><given-names>KJ</given-names></name>, <name name-style="western"><surname>Jöhrens</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Lamprecht</surname><given-names>B</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Gene deregulation and spatial genome reorganization near breakpoints prior to formation of translocations in anaplastic large cell lymphoma</article-title>. <source>Proc Natl Acad Sci U S A</source> <volume>106</volume>: <fpage>5831</fpage>–<lpage>6</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Mani2">
+        <label>14</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mani</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Tomlins</surname><given-names>SA</given-names></name>, <name name-style="western"><surname>Callahan</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Ghosh</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Nyati</surname><given-names>MK</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Induced chromosomal proximity and gene fusions in prostate cancer</article-title>. <source>Science</source> <volume>326</volume>: <fpage>1230</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-LiebermanAiden1">
+        <label>15</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lieberman-Aiden</surname><given-names>E</given-names></name>, <name name-style="western"><surname>van Berkum</surname><given-names>NL</given-names></name>, <name name-style="western"><surname>Williams</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Imakaev</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Ragoczy</surname><given-names>T</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>Comprehensive mapping of long-range interactions reveals folding principles of the human genome</article-title>. <source>Science</source> <volume>326</volume>: <fpage>289</fpage>–<lpage>93</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Zhang1">
+        <label>16</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhang</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>McCord</surname><given-names>RP</given-names></name>, <name name-style="western"><surname>Ho</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Lajoie</surname><given-names>BR</given-names></name>, <name name-style="western"><surname>Hildebrand</surname><given-names>DG</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Spatial organization of the mouse genome and its role in recurrent chromosomal translocations</article-title>. <source>Cell</source> <volume>148</volume>: <fpage>908</fpage>–<lpage>21</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Tolhuis1">
+        <label>17</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tolhuis</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Palstra</surname><given-names>RJ</given-names></name>, <name name-style="western"><surname>Splinter</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Grosveld</surname><given-names>F</given-names></name>, <name name-style="western"><surname>de Laat</surname><given-names>W</given-names></name> (<year>2002</year>) <article-title>Looping and interaction between hypersensitive sites in the active beta-globin locus</article-title>. <source>Mol Cell</source> <volume>10</volume>: <fpage>1453</fpage>–<lpage>65</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Spilianakis1">
+        <label>18</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Spilianakis</surname><given-names>CG</given-names></name>, <name name-style="western"><surname>Flavell</surname><given-names>RA</given-names></name> (<year>2004</year>) <article-title>Long-range intrachromosomal interactions in the T helper type 2 cytokine locus</article-title>. <source>Nat Immunol</source> <volume>5</volume>: <fpage>1017</fpage>–<lpage>27</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Osborne1">
+        <label>19</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Osborne</surname><given-names>CS</given-names></name>, <name name-style="western"><surname>Chakalova</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Brown</surname><given-names>KE</given-names></name>, <name name-style="western"><surname>Carter</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Horton</surname><given-names>A</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Active genes dynamically colocalize to shared sites of ongoing transcription</article-title>. <source>Nat Genet</source> <volume>36</volume>: <fpage>1065</fpage>–<lpage>71</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Dekker1">
+        <label>20</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dekker</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Rippe</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Dekker</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Kleckner</surname><given-names>N</given-names></name> (<year>2002</year>) <article-title>Capturing chromosome conformation</article-title>. <source>Science</source> <volume>295</volume>: <fpage>1306</fpage>–<lpage>11</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Neves1">
+        <label>21</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Neves</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Ramos</surname><given-names>C</given-names></name>, <name name-style="western"><surname>da Silva</surname><given-names>MG</given-names></name>, <name name-style="western"><surname>Parreira</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Parreira</surname><given-names>L</given-names></name> (<year>1999</year>) <article-title>The nuclear topography of ABL, BCR, PML, and RARalpha genes: evidence for gene proximity in specific phases of the cell cycle and stages of hematopoietic differentiation</article-title>. <source>Blood</source> <volume>93</volume>: <fpage>1197</fpage>–<lpage>207</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Ge1">
+        <label>22</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ge</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Liu</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Juan</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Fang</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Newman</surname><given-names>M</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>FusionMap: detecting fusion genes from next-generation sequencing data at base-pair resolution</article-title>. <source>Bioinformatics</source> <volume>27</volume>: <fpage>1922</fpage>–<lpage>1928</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Yaffe1">
+        <label>23</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yaffe</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Tanay</surname><given-names>A</given-names></name> (<year>2011</year>) <article-title>Probabilistic modeling of Hi-C contact maps eliminates systematic biases to characterize global chromosomal architecture</article-title>. <source>Nat Genet</source> <volume>43</volume>: <fpage>1059</fpage>–<lpage>65</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Osborne2">
+        <label>24</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Osborne</surname><given-names>CS</given-names></name>, <name name-style="western"><surname>Chakalova</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Mitchell</surname><given-names>JA</given-names></name>, <name name-style="western"><surname>Horton</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Wood</surname><given-names>AL</given-names></name>, <etal>et al</etal>. (<year>2007</year>) <article-title>Myc dynamically and preferentially relocates to a transcription factory occupied by Igh</article-title>. <source>PLoS Biol</source> <volume>5</volume>: <fpage>e192</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Khalidi1">
+        <label>25</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Khalidi</surname><given-names>HS</given-names></name>, <name name-style="western"><surname>O'Donnell</surname><given-names>MR</given-names></name>, <name name-style="western"><surname>Slovak</surname><given-names>ML</given-names></name>, <name name-style="western"><surname>Arber</surname><given-names>DA</given-names></name> (<year>1999</year>) <article-title>Adult precursor-B acute lymphoblastic leukemia with translocations involving chromosome band 19p13 is associated with poor prognosis</article-title>. <source>Cancer Genet Cytogenet</source> <volume>109</volume>: <fpage>58</fpage>–<lpage>65</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Chesi1">
+        <label>26</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chesi</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Nardini</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Brents</surname><given-names>LA</given-names></name>, <name name-style="western"><surname>Schröck</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Ried</surname><given-names>T</given-names></name>, <etal>et al</etal>. (<year>1997</year>) <article-title>Frequent translocation t(4;14)(p16.3;q32.3) in multiple myeloma is associated with increased expression and activating mutations of fibroblast growth factor receptor 3</article-title>. <source>Nat Genet</source> <volume>16</volume>: <fpage>260</fpage>–<lpage>4</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Malgeri1">
+        <label>27</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Malgeri</surname><given-names>U</given-names></name>, <name name-style="western"><surname>Baldini</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Perfetti</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Fabris</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Vignarelli</surname><given-names>MC</given-names></name>, <etal>et al</etal>. (<year>2000</year>) <article-title>Detection of t(4;14)(p16.3;q32) chromosomal translocation in multiple myeloma by reverse transcription-polymerase chain reaction analysis of IGH-MMSET fusion transcripts</article-title>. <source>Cancer Res</source> <volume>60</volume>: <fpage>4058</fpage>–<lpage>61</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Parada1">
+        <label>28</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Parada</surname><given-names>LA</given-names></name>, <name name-style="western"><surname>McQueen</surname><given-names>PG</given-names></name>, <name name-style="western"><surname>Misteli</surname><given-names>T</given-names></name> (<year>2004</year>) <article-title>Tissue-specific spatial organization of genomes</article-title>. <source>Genome Biol</source> <volume>5</volume>: <fpage>R44</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Hou1">
+        <label>29</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hou</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Dale</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Dean</surname><given-names>A</given-names></name> (<year>2010</year>) <article-title>Cell type specificity of chromatin organization mediated by CTCF and cohesin</article-title>. <source>Proc Natl Acad Sci U S A</source> <volume>107</volume>: <fpage>3651</fpage>–<lpage>6</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Hu1">
+        <label>30</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hu</surname><given-names>Q</given-names></name>, <name name-style="western"><surname>Kwon</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Nunez</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Cardamone</surname><given-names>MD</given-names></name>, <name name-style="western"><surname>Hutt</surname><given-names>KR</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>Enhancing nuclear receptor-induced transcription requires nuclear motor and LSD1-dependent gene networking in interchromatin granules</article-title>. <source>Proc Natl Acad Sci U S A</source> <volume>105</volume>: <fpage>19199</fpage>–<lpage>204</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Chiarle1">
+        <label>31</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chiarle</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Zhang</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Frock</surname><given-names>RL</given-names></name>, <name name-style="western"><surname>Lewis</surname><given-names>SM</given-names></name>, <name name-style="western"><surname>Molinie</surname><given-names>B</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Genome-wide translocation sequencing reveals mechanisms of chromosome breaks and rearrangements in B cells</article-title>. <source>Cell</source> <volume>147</volume>: <fpage>107</fpage>–<lpage>19</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Klein1">
+        <label>32</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Klein</surname><given-names>IA</given-names></name>, <name name-style="western"><surname>Resch</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Jankovic</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Oliveira</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Yamane</surname><given-names>A</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Translocation-capture sequencing reveals the extent and nature of chromosomal rearrangements in B lymphocytes</article-title>. <source>Cell</source> <volume>147</volume>: <fpage>95</fpage>–<lpage>106</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Branco1">
+        <label>33</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Branco</surname><given-names>MR</given-names></name>, <name name-style="western"><surname>Pombo</surname><given-names>A</given-names></name> (<year>2006</year>) <article-title>Intermingling of chromosome territories in interphase suggests role in translocations and transcription-dependent associations</article-title>. <source>PLoS Biol</source> <volume>4</volume>: <fpage>e138</fpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Aten1">
+        <label>34</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Aten</surname><given-names>JA</given-names></name>, <name name-style="western"><surname>Stap</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Krawczyk</surname><given-names>PM</given-names></name>, <name name-style="western"><surname>van Oven</surname><given-names>CH</given-names></name>, <name name-style="western"><surname>Hoebe</surname><given-names>RA</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Dynamics of DNA double-strand breaks revealed by clustering of damaged chromosome domains</article-title>. <source>Science</source> <volume>303</volume>: <fpage>92</fpage>–<lpage>5</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Simonis1">
+        <label>35</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Simonis</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Klous</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Homminga</surname><given-names>I</given-names></name>, <name name-style="western"><surname>Galjaard</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Rijkers</surname><given-names>E</given-names></name>, <etal>et al</etal>. (<year>2009</year>) <article-title>High-resolution identification of balanced and complex chromosomal rearrangements by 4C technology</article-title>. <source>Nat Methods</source> <volume>6</volume>: <fpage>837</fpage>–<lpage>42</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Mitelman1">
+        <label>36</label>
+        <mixed-citation publication-type="other" xlink:type="simple">Mitelman F, Johannson B, Mertens FE (Eds.). Mitelman Database of Chromosome Aberrations and Gene Fusions in Cancer. Available: <ext-link ext-link-type="uri" xlink:href="http://cgap.nci.nih.gov/Chromosomes/Mitelman" xlink:type="simple">http://cgap.nci.nih.gov/Chromosomes/Mitelman</ext-link>. Accessed 2010 Oct.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Berger1">
+        <label>37</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Berger</surname><given-names>MF</given-names></name>, <name name-style="western"><surname>Lawrence</surname><given-names>MS</given-names></name>, <name name-style="western"><surname>Demichelis</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Drier</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Cibulskis</surname><given-names>K</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>The genomic complexity of primary human prostate cancer</article-title>. <source>Nature</source> <volume>470</volume>: <fpage>214</fpage>–<lpage>20</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-Chapman1">
+        <label>38</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chapman</surname><given-names>MA</given-names></name>, <name name-style="western"><surname>Lawrence</surname><given-names>MS</given-names></name>, <name name-style="western"><surname>Keats</surname><given-names>JJ</given-names></name>, <name name-style="western"><surname>Cibulskis</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Sougnez</surname><given-names>C</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Initial genome sequencing and analysis of multiple myeloma</article-title>. <source>Nature</source> <volume>471</volume>: <fpage>467</fpage>–<lpage>72</lpage>.</mixed-citation>
+      </ref>
+      <ref id="pone.0044196-The1">
+        <label>39</label>
+        <mixed-citation publication-type="journal" xlink:type="simple"><collab xlink:type="simple">The ENCODE Project Consortium</collab> (<year>2011</year>) <article-title>A user's guide to the encyclopedia of DNA elements (ENCODE)</article-title>. <source>PLoS Biol</source> <volume>9</volume>: <fpage>e1001046</fpage>.</mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

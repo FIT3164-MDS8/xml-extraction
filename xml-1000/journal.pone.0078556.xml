@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group>
+<journal-title>PLoS ONE</journal-title></journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, USA</publisher-loc></publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-13-19495</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0078556</article-id>
+<article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories>
+<title-group>
+<article-title>Ponatinib Is a Pan-BCR-ABL Kinase Inhibitor: MD Simulations and SIE Study</article-title>
+<alt-title alt-title-type="running-head">BCR-ABL Inhibition by Ponatinib</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Tanneeru</surname><given-names>Karunakar</given-names></name><xref ref-type="aff" rid="aff1"/></contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Guruprasad</surname><given-names>Lalitha</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="corresp" rid="cor1"><sup>*</sup></xref></contrib>
+</contrib-group>
+<aff id="aff1"><addr-line>School of Chemistry, University of Hyderabad, Hyderabad, India</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple"><name name-style="western"><surname>Zheng</surname><given-names>Jie</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>University of Akron, United States of America</addr-line></aff>
+<author-notes>
+<corresp id="cor1">* E-mail: <email xlink:type="simple">lgpsc@uohyd.ernet.in</email></corresp>
+<fn fn-type="conflict"><p>The authors have declared that no competing interests exist.</p></fn>
+<fn fn-type="con"><p>Conceived and designed the experiments: LG. Performed the experiments: LG KT. Analyzed the data: LG KT. Contributed reagents/materials/analysis tools: LG KT. Wrote the paper: KT LG.</p></fn>
+</author-notes>
+<pub-date pub-type="collection"><year>2013</year></pub-date>
+<pub-date pub-type="epub"><day>13</day><month>11</month><year>2013</year></pub-date>
+<volume>8</volume>
+<issue>11</issue>
+<elocation-id>e78556</elocation-id>
+<history>
+<date date-type="received"><day>12</day><month>5</month><year>2013</year></date>
+<date date-type="accepted"><day>20</day><month>9</month><year>2013</year></date>
+</history>
+<permissions>
+<copyright-year>2013</copyright-year>
+<copyright-holder>Tanneeru, Guruprasad</copyright-holder><license xlink:type="simple"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions>
+<abstract>
+<p>BCR-ABL kinase domain inhibition can be used to treat chronic myeloid leukemia. The inhibitors such as imatinib, dasatinib and nilotinib are effective drugs but are resistant to some BCR-ABL mutations. The pan-BCR-ABL kinase inhibitor ponatinib exhibits potent activity against native, T315I, and all other clinically relevant mutants, and showed better inhibition than the previously known inhibitors. We have studied the molecular dynamics simulations and calculated solvated interaction energies of native and fourteen mutant BCR-ABL kinases (M244V, G250E, Q252H, Y253F, Y253H, E255K, E255V, T315A, T315I, F317L, F317V, M351T, F359V and H396P) complexed with ponatinib. These studies revealed that the interactions between ponatinib and individual residues in BCR-ABL kinase are also affected due to the remote residue mutations. We report that some residues, Met244, Lys245, Gln252, Gly254, Leu370 and Leu298 do not undergo any conformational changes, while the fluctuations in residues from P-loop, β3-, β5- strands and αC- helix are mainly responsible for ponatinib binding to native and all mutant BCR-ABL kinases. Our work provides the molecular mechanisms of native and mutant BCR-ABL kinases inhibition by ponatinib at atomic level that has not been studied before.</p>
+</abstract>
+<funding-group><funding-statement>This work was supported by CSIR, Government of India, No. 02(0036)/11/EMR-II. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="10"/></counts></article-meta>
+</front>
+<body><sec id="s1">
+<title>Introduction</title>
+<p>The breakpoint cluster region-Abelson (BCR-ABL) is the cytoplasmic fusion oncoprotein with constitutive tyrosine kinase activity, associated with Philadelphia chromosome responsible for acute lymphoblastic and chronic myeloid leukemias <xref ref-type="bibr" rid="pone.0078556-Allen1">[1]</xref>–<xref ref-type="bibr" rid="pone.0078556-Daley2">[4]</xref>. Chronic myeloid leukemia (CML) is characterized by the reciprocal chromosomal translocation t (9;22) (q34;q11) that leads to produce the BCR-ABL <xref ref-type="bibr" rid="pone.0078556-Kurzrock1">[5]</xref>–<xref ref-type="bibr" rid="pone.0078556-Melo1">[10]</xref>. Inhibitors of ABL kinase domain can be used to treat most chronic-phase of CML <xref ref-type="bibr" rid="pone.0078556-Ren1">[11]</xref>. The drug resistance can be caused by amplification of the oncogenic protein kinase gene <xref ref-type="bibr" rid="pone.0078556-Gorre1">[12]</xref> or some other mechanisms. But in most cases, resistance can be traced to the selection of cancer cells with secondary mutations in the targeted kinase. These resistance mutations often appear in the kinase catalytic domain to weaken or prevent interactions with inhibitor <xref ref-type="bibr" rid="pone.0078556-Carter1">[13]</xref>. The development of multiple generations of BCR-ABL kinase inhibitors serves as an important model for understanding and addressing resistance in other targets <xref ref-type="bibr" rid="pone.0078556-Zhou1">[14]</xref>. The ABL kinase inhibitor imatinib is effective drug with impressive response and survival rates in the chronic phase of disease <xref ref-type="bibr" rid="pone.0078556-Deininger2">[15]</xref>, <xref ref-type="bibr" rid="pone.0078556-Druker2">[16]</xref>. Though imatinib is most effective in many cases, mutations in BCR-ABL often lead to resistance. The cells get resistance to imatinib in the case of threonine to isoleucine mutation at position 315 (T315I) in active site and some other P-loop mutations <xref ref-type="bibr" rid="pone.0078556-RocheLestienne1">[17]</xref>–<xref ref-type="bibr" rid="pone.0078556-Roumiantsev1">[20]</xref>. The development of second-generation ABL inhibitors like nilotinib and dasatinib are active against many imatinib-resistant mutants <xref ref-type="bibr" rid="pone.0078556-Kantarjian1">[21]</xref>–<xref ref-type="bibr" rid="pone.0078556-Weisberg1">[23]</xref>. Ponatinib (AP24534), a third generation pan-BCR-ABL kinase inhibitor generated from the structure-guided drug design strategy, is able to inhibit native BCR-ABL kinase, most of the clinically relevant mutants including T315I mutation <xref ref-type="bibr" rid="pone.0078556-Zhou1">[14]</xref>.</p>
+<p>Zhou et al., solved the crystal structure and made significant analysis of ponatinib in complex with native and ABL<sup>T315I</sup> mutant kinases (PDB_IDs: 3OXZ and 3IK3) <xref ref-type="bibr" rid="pone.0078556-Zhou1">[14]</xref>. The crystal structures provide valuable information; the overall protein structures, the position of ponatinib and its interaction pattern with both native and mutant ABL<sup>T315I</sup> kinases is highly similar. However, the crystal structure is a static and average structure that does not necessarily represent the true structure, where certainly the structure undergoes a rapid equilibrium within few conformations. Even though the crystal structures are closer to the structure <italic>in vivo</italic> or <italic>in vitro</italic>, possibly they differ significantly from the true structure; because experimental conditions of a crystal structure differ from real-life conditions. The mutational analysis from the static structure normally ignores short or long range conformational changes and they do not include the dynamic effects caused by thermal motions <xref ref-type="bibr" rid="pone.0078556-Lee1">[24]</xref>.</p>
+<p>The molecular dynamics (MD) simulations and molecular mechanics-Poisson-Boltzmann surface area (MM-PBSA) calculations on the problem of imatinib resistance by various BCR-ABL mutations has been studied by Lee et al., <xref ref-type="bibr" rid="pone.0078556-Lee1">[24]</xref>. Computational simulations can provide atomic level description of structural details, energy landscape, dynamic behaviours, and other properties which are difficult to be obtained from the experimental studies. Here, we report the MD simulations, solvated interaction energies (SIE) free energy calculations of ponatinib with native and mutants of BCR-ABL kinase. We have also calculated the contributions from individual amino acid residues in the active site of all complexes to provide the molecular basis for inhibition. To our knowledge these studies have not been carried out before and our results provide detailed information about the molecular mechanisms of inhibition of native and various mutant BCR-ABL tyrosine kinases when bound to ponatinib.</p>
+</sec><sec id="s2" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<p>The 3D crystal structure of ABL kinase domain complexed with ponatinib was used as the initial structure (PDB_ID: 3OXZ) <xref ref-type="bibr" rid="pone.0078556-Zhou1">[14]</xref>. In this structure, the kinase domain spans the region from 242–493 amino acid residues. All crystal water molecules were removed and the missing amino acid residues in the structure were built based on its protein sequence using Discovery Studio 2.1 (D.S 2.1; Accelrys Software Inc., San Diego, CA). Single amino acid mutations were incorporated in ABL kinase using “protein modeling” protocol, “build mutation” module in D.S 2.1 and the structures were optimized using D.S 2.1. All MD simulations were performed using GROMACS 4.5.4 package <xref ref-type="bibr" rid="pone.0078556-Hess1">[25]</xref>, <xref ref-type="bibr" rid="pone.0078556-vanderSpoel1">[26]</xref> with Amber ff99SB force field <xref ref-type="bibr" rid="pone.0078556-Hornak1">[27]</xref>. The ligand parameter files with Amber ff99SB and GAFF force fields using antechamber <xref ref-type="bibr" rid="pone.0078556-Wang1">[28]</xref>, <xref ref-type="bibr" rid="pone.0078556-Wang2">[29]</xref> were generated by using ACPYPE script <xref ref-type="bibr" rid="pone.0078556-SousadaSilva1">[30]</xref>. The complexes were subjected to MD simulations for 25 nano seconds (ns) at isothermal-isobaric conditions in a periodic cubic box with an edge length of approximately 10 Å. The protein was solvated in the cubic box using explicit solvent- SPC/E model water molecules around protein complex and its charge was neutralized using sodium ions. The native and mutant systems were neutralized; E255K with 10 Na<sup>+</sup>, E255V with 11 Na<sup>+</sup>, G250E with 13 Na<sup>+</sup>, and remaining mutants were neutralized with 12 Na<sup>+</sup> ions. During the MD simulations, we initially performed 5000 steps of steepest descent minimization and 1000 pico seconds (ps) position restrained dynamics to distribute water molecules throughout the system. Finally we performed MD simulations of the whole system for 25 ns, using 0.002 ps time step. The Particle Mesh Ewald (PME) summation method <xref ref-type="bibr" rid="pone.0078556-Darden1">[31]</xref>, <xref ref-type="bibr" rid="pone.0078556-Essmann1">[32]</xref> was employed for the calculation of electrostatics, with a real space cut-off of 10 Å, PME order of 6 and a relative tolerance between long and short range energies of 10<sup>−6</sup>. Short range interactions were evaluated using a neighbour list of 10 Å updated every 10 steps, and the Lennard-Jones (LJ) interactions and the real space electrostatic interactions were truncated at 9 Å. The V-rescale thermostat <xref ref-type="bibr" rid="pone.0078556-Bussi1">[33]</xref> was used to maintain the temperature; the Parrinello-Rahman algorithm <xref ref-type="bibr" rid="pone.0078556-Parrinello1">[34]</xref> was employed to maintain the pressure at 1 atm and hydrogen bonds were constrained using LINCS algorithm <xref ref-type="bibr" rid="pone.0078556-Hess2">[35]</xref>. The trajectory file obtained from MD simulations was used for calculation of free energy of binding and other analysis. The RMSD (root mean square deviation) of certain atoms in a molecule with respect to a reference structure can be calculated with the program g_rms of GROMACS by least-square fitting the structure to the reference structure. The hydrogen bonding interactions between ponatinib and ABL kinase were calculated using program g_hbond of GROMACS.</p>
+<sec id="s2a">
+<title>Solvated interaction energies</title>
+<p>The SIE values were calculated using parameters that have been fitted to reproduce binding free energies for a data set of 99 protein-ligand complexes <xref ref-type="bibr" rid="pone.0078556-Nam1">[36]</xref>, <xref ref-type="bibr" rid="pone.0078556-Sulea1">[37]</xref>. It is an end-point physics-based, force-field-based scoring function for predicting ligand-binding affinities. This approximation to binding free energy in solution resembles the formalism used in other binding free energy end-point calculation methods, including MM-PB (GB)/SA <xref ref-type="bibr" rid="pone.0078556-Zou1">[38]</xref>–<xref ref-type="bibr" rid="pone.0078556-Gohlke1">[41]</xref> and Linear Interaction Energy (LIE) <xref ref-type="bibr" rid="pone.0078556-Aqvist1">[42]</xref>. Binding free energies (ΔG) for all protein-ponatinib complexes were estimated using sietraj program <xref ref-type="bibr" rid="pone.0078556-Nam1">[36]</xref>, <xref ref-type="bibr" rid="pone.0078556-Cui1">[43]</xref>. Sietraj (<ext-link ext-link-type="uri" xlink:href="http://www.bri.nrc.ca/ccb/pub" xlink:type="simple">http://www.bri.nrc.ca/ccb/pub</ext-link>) is a set of scripts and executables for carrying out the SIE calculation on a MD trajectory or single snapshot of a target-ligand complex. This program calculates ΔG for snapshot structures from MD simulation with a rigid infinite separation of protein and ligand <xref ref-type="bibr" rid="pone.0078556-Nam1">[36]</xref>. The ΔG is a sum of intermolecular van der Waals (vdW) and coulomb interactions plus change in the reaction field energy (determined by solving the Poisson–Boltzmann equation) and non-polar solvation energy (proportional to the solvent-accessible surface area) <xref ref-type="bibr" rid="pone.0078556-Nam1">[36]</xref>. Sietraj is an alternative to the MM-PBSA software provided by AMBER distribution and SIE treats the protein-ligand system in atomistic detail and solvation effects implicitly. The free energy of binding between inhibitor and protein is computed by:</p>
+<p><disp-formula id="pone.0078556.e001"><graphic position="anchor" xlink:href="info:doi/10.1371/journal.pone.0078556.e001" xlink:type="simple"/><label>(1)</label></disp-formula>Where ΔE<sub>vdW</sub> and ΔE<sub>Coul</sub> are the intermolecular vdW and coulomb interaction energies between protein and ligand, ΔG<sub>RF</sub> (ρ,D<sub>in</sub>) is the difference in reaction-field energy between bound and free state of protein-ligand complex as calculated by solving Poisson equation with BRIBEM <xref ref-type="bibr" rid="pone.0078556-Purisima1">[44]</xref>–<xref ref-type="bibr" rid="pone.0078556-Lill1">[46]</xref>. The term ΔSA (ρ) is the difference in molecular surface area between bound and free state of protein and cavity energy is change in the molecular surface area ΔSA that is calculated from γΔSA (ρ). The default values of parameters are: ρ = 1.1, D<sub>in</sub>  = 2.25, γ = 0.0129 kcal/(mol<sup>3</sup> A<sup>2</sup>), C = −2.89 kcal/mol, and α = 0.1048. The ΔG is then scaled by an empirically determined factor and the five parameters in eq. 1 were fitted to the obtained absolute ΔG by fitting to a training set of 99 protein-ligand complexes <xref ref-type="bibr" rid="pone.0078556-Nam1">[36]</xref>. The linear scaling factor ρ is the vdW radii of AMBER99 force field, D<sub>in</sub> is the solute interior dielectric constant, the coefficient γ is molecular surface tension coefficient describing the non-polar component of solvation free energy, and the prefactor α implicitly quantifies the loss of entropy upon binding, also known as entropy-enthalpy compensation, and a constant C that includes protein-dependent contributions not explicitly modeled by SIE methodology, i.e., the change in protein internal energy upon ligand binding. The scaling can be considered as a crude treatment of entropy–enthalpy compensation containing the caveats of implicit solvation and neglecting the vibrational entropy <xref ref-type="bibr" rid="pone.0078556-Nam1">[36]</xref>, <xref ref-type="bibr" rid="pone.0078556-Chen1">[47]</xref>. Here, we estimated ΔG averaging 250 structures from 25 ns of selected MD snapshots and averaging over the resulting free energies obtained from each snapshot. The individual residue contributions could help in estimating the corresponding amino acid effects on drug binding and also in the studies of drug resistance problems. Using sietraj program, we have calculated each amino acid residue contribution from electrostatic and vdW energies as the components of free energy binding of ponatinib to native and mutant BCR-ABL kinases.</p>
+<p>The ineffective pairs of protein-inhibitor complexes were studied using imatinib and dasatinib complexed with BCR-ABL<sup>T315I</sup>. For these studies, we have used similar conditions of MD simulations and analyses described above.</p>
+</sec></sec><sec id="s3">
+<title>Results and Discussion</title>
+<p>The native and mutant ABL kinase – ponatinib complexes with explicit water molecules and sodium ions for charge neutralization were subjected to 25 ns MD simulations. The fourteen BCR-ABL mutants studied in this work collectively represent more than 95% of clinically observed mutations that are imatinib resistant. With the exception of T315I, most BCR-ABL mutations are inhibited by dasatinib and nilotinib. Ponatinib inhibits native and all mutant ABL kinases with high affinity <xref ref-type="bibr" rid="pone.0078556-Zhou1">[14]</xref>, although some mutants have slightly greater inhibition than the others. The ATP competitive inhibitors of ABL kinase are classified into DFG-in or DFG-out classes depending on their binding interactions with kinase domain. Ponatinib binds to ABL kinase domain with a DFG-out conformation (PDB_ID: 3OXZ and 3IK3) and serves to distribute binding energy over a wide range of amino acid residues in the active site as shown in <xref ref-type="fig" rid="pone-0078556-g001">Figure 1</xref>. The presence of such optimized and distributed binding interactions has the potential to allow ponatinib to withstand modest reduction in potency caused by single mutation. For our convenience; we grouped these mutations by the region of their location in ABL kinase structure. These regions include the P-loop mutants M244V, G250E, Q252H, Y253F, Y253H, E255K, and E255V; gatekeeper residue mutants T315A and T315I; hinge region mutants F317L and F317V; activation loop mutant H396P and other mutants M351T and F359V. The location of mutations in BCR-ABL kinase is shown in <xref ref-type="fig" rid="pone-0078556-g002">Figure 2</xref>.</p>
+<fig id="pone-0078556-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078556.g001</object-id><label>Figure 1</label><caption>
+<title>The amino acid residues of BCR-ABL kinase in the ponatinib binding site.</title>
+<p>Amino acid side chain carbons are shown in orange and ponatinib carbons are show in green; oxygen-red; nitrogen-blue; fluorine-cyan.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0078556.g001" position="float" xlink:type="simple"/></fig><fig id="pone-0078556-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078556.g002</object-id><label>Figure 2</label><caption>
+<title>3D schematic representation of BCR-ABL kinase (purple) with most frequent mutations shown as ball and stick models with atom color representation: orange-carbon, red-oxygen, blue-nitrogen and yellow-sulphur.</title>
+<p>Ponatinib in the active site is shown as solvent accessible surface (green) covered ball and stick model.</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0078556.g002" position="float" xlink:type="simple"/></fig>
+<p>In the ABL kinase, amino acid residues Tyr253, Thr315, Phe317 and Phe359 are located in close contact with ponatinib and therefore affect the binding and activity of inhibitor. The P-loop mutant residues Gly250, Gln252 and Glu255 are not in direct contact with ponatinib, but share non-bonding interactions with inhibitor. The rest of the mutations Met244, Met351 and His396 are located away from inhibitor binding site, but intriguingly display ponatinib based inhibition.</p>
+<sec id="s3a">
+<title>Molecular dynamics simulations and SIE binding free energy</title>
+<p>The 3D structures of native and mutant ABL kinases complexed with ponatinib were subjected to MD simulations to find optimal interactions and molecular basis for binding. Examination of the residue-wise RMSD showed that C-terminal part of the non-kinase region (501–511) had high variability. In some BCR-ABL 3D structures this C-terminal region is missing (PDB_ID: 2V7A, 3QRJ) <xref ref-type="bibr" rid="pone.0078556-Modugno1">[48]</xref>, <xref ref-type="bibr" rid="pone.0078556-Chan1">[49]</xref> or was shown to have variable conformations (PDB_ID: 1OPK, 3K5V) <xref ref-type="bibr" rid="pone.0078556-Nagar1">[50]</xref>, <xref ref-type="bibr" rid="pone.0078556-Zhang1">[51]</xref>. Hence for analysis of MD results in this work, we deleted the highly fluctuating non-kinase region from 501–511 amino acid residues in BCR-ABL 3D structure (PDB_ID: 3OXZ). The RMSD plots for ponatinib complexed with various ABL mutants shown in <xref ref-type="fig" rid="pone-0078556-g003">Figure 3</xref> revealed that protein structures finally converged to less than 4 Å RMSD and ponatinib had nearly 1 Å RMSD. These plots show that ponatinib remains bound to native and mutant ABL kinases near the preferential binding position and experiences fewer fluctuations during MD simulations with respect to its initial position.</p>
+<fig id="pone-0078556-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078556.g003</object-id><label>Figure 3</label><caption>
+<title>The RMSD plots of the native and mutant BCR-ABL kinases (black) complexed with ponatinib (red).</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0078556.g003" position="float" xlink:type="simple"/></fig>
+<p>SIE calculations from MD trajectories measure the free energy of complex formation. <xref ref-type="table" rid="pone-0078556-t001">Table 1</xref> shows the calculated free energies for native and 14 mutant BCR-ABL – ponatinib complexes. The intermolecular vdW, intermolecular coulomb and change in surface area are shown in <xref ref-type="table" rid="pone-0078556-t001">Table 1</xref>. This table indicates that IC50 values <xref ref-type="bibr" rid="pone.0078556-Zhou1">[14]</xref> vary from 0.5 nM to 36 nM and SIE values calculated from this work are in the range −10.03 kcal/mol to −10.67 kcal/mol. Though there is no direct correlation between IC50 and SIE values, it can be observed that their respective values lie within a narrow range.</p>
+<table-wrap id="pone-0078556-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078556.t001</object-id><label>Table 1</label><caption>
+<title>List of ponatinib inhibition (IC50), binding free energies with native and mutant BCR-ABL kinases.</title>
+</caption><alternatives><graphic id="pone-0078556-t001-1" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0078556.t001" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">IC50</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">RF</td>
+<td align="left" rowspan="1" colspan="1">Cavity</td>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">ΔG</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Mutant</td>
+<td align="left" rowspan="1" colspan="1">(nM)</td>
+<td align="left" rowspan="1" colspan="1">(kcal/mol)</td>
+<td align="left" rowspan="1" colspan="1">(kcal/mol)</td>
+<td align="left" rowspan="1" colspan="1">(kcal/mol)</td>
+<td align="left" rowspan="1" colspan="1">(kcal/mol)</td>
+<td align="left" rowspan="1" colspan="1">Const</td>
+<td align="left" rowspan="1" colspan="1">(kcal/mol)</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">Native</td>
+<td align="left" rowspan="1" colspan="1">0.5</td>
+<td align="left" rowspan="1" colspan="1">−69.67</td>
+<td align="left" rowspan="1" colspan="1">−6.17</td>
+<td align="left" rowspan="1" colspan="1">16.21</td>
+<td align="left" rowspan="1" colspan="1">−12.16</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.41</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">M244V</td>
+<td align="left" rowspan="1" colspan="1">2.2</td>
+<td align="left" rowspan="1" colspan="1">−70.71</td>
+<td align="left" rowspan="1" colspan="1">−5.34</td>
+<td align="left" rowspan="1" colspan="1">15.11</td>
+<td align="left" rowspan="1" colspan="1">−12.21</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.55</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">G250E</td>
+<td align="left" rowspan="1" colspan="1">4.1</td>
+<td align="left" rowspan="1" colspan="1">−69.8</td>
+<td align="left" rowspan="1" colspan="1">−6.26</td>
+<td align="left" rowspan="1" colspan="1">16.19</td>
+<td align="left" rowspan="1" colspan="1">−12.14</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.43</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Q252H</td>
+<td align="left" rowspan="1" colspan="1">2.2</td>
+<td align="left" rowspan="1" colspan="1">−69.62</td>
+<td align="left" rowspan="1" colspan="1">−5.87</td>
+<td align="left" rowspan="1" colspan="1">16.64</td>
+<td align="left" rowspan="1" colspan="1">−12.41</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.36</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Y253F</td>
+<td align="left" rowspan="1" colspan="1">2.8</td>
+<td align="left" rowspan="1" colspan="1">−68.12</td>
+<td align="left" rowspan="1" colspan="1">−5.63</td>
+<td align="left" rowspan="1" colspan="1">18.15</td>
+<td align="left" rowspan="1" colspan="1">−12.59</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Y253H</td>
+<td align="left" rowspan="1" colspan="1">6.2</td>
+<td align="left" rowspan="1" colspan="1">−69.66</td>
+<td align="left" rowspan="1" colspan="1">−5.77</td>
+<td align="left" rowspan="1" colspan="1">17.01</td>
+<td align="left" rowspan="1" colspan="1">−12.44</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.31</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">E255K</td>
+<td align="left" rowspan="1" colspan="1">14</td>
+<td align="left" rowspan="1" colspan="1">−70.74</td>
+<td align="left" rowspan="1" colspan="1">−4.64</td>
+<td align="left" rowspan="1" colspan="1">13.46</td>
+<td align="left" rowspan="1" colspan="1">−12.37</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.67</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">E255V</td>
+<td align="left" rowspan="1" colspan="1">36</td>
+<td align="left" rowspan="1" colspan="1">−67.75</td>
+<td align="left" rowspan="1" colspan="1">−5.46</td>
+<td align="left" rowspan="1" colspan="1">15.23</td>
+<td align="left" rowspan="1" colspan="1">−12.34</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.26</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">T315A</td>
+<td align="left" rowspan="1" colspan="1">1.6</td>
+<td align="left" rowspan="1" colspan="1">−69.74</td>
+<td align="left" rowspan="1" colspan="1">−6.22</td>
+<td align="left" rowspan="1" colspan="1">16.36</td>
+<td align="left" rowspan="1" colspan="1">−12.45</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.44</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">T315I</td>
+<td align="left" rowspan="1" colspan="1">11</td>
+<td align="left" rowspan="1" colspan="1">−68.6</td>
+<td align="left" rowspan="1" colspan="1">−7.01</td>
+<td align="left" rowspan="1" colspan="1">16.57</td>
+<td align="left" rowspan="1" colspan="1">−12.19</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.35</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">F317L</td>
+<td align="left" rowspan="1" colspan="1">1.1</td>
+<td align="left" rowspan="1" colspan="1">−68.52</td>
+<td align="left" rowspan="1" colspan="1">−6.75</td>
+<td align="left" rowspan="1" colspan="1">16.72</td>
+<td align="left" rowspan="1" colspan="1">−12.17</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.3</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">F317V</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">−68.89</td>
+<td align="left" rowspan="1" colspan="1">−5.69</td>
+<td align="left" rowspan="1" colspan="1">16.4</td>
+<td align="left" rowspan="1" colspan="1">−12.38</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.28</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">M351T</td>
+<td align="left" rowspan="1" colspan="1">1.5</td>
+<td align="left" rowspan="1" colspan="1">−69.47</td>
+<td align="left" rowspan="1" colspan="1">−5.85</td>
+<td align="left" rowspan="1" colspan="1">15.68</td>
+<td align="left" rowspan="1" colspan="1">−12.19</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.41</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">F359V</td>
+<td align="left" rowspan="1" colspan="1">10</td>
+<td align="left" rowspan="1" colspan="1">−69.53</td>
+<td align="left" rowspan="1" colspan="1">−5.78</td>
+<td align="left" rowspan="1" colspan="1">16.29</td>
+<td align="left" rowspan="1" colspan="1">−11.97</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.33</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">H396P</td>
+<td align="left" rowspan="1" colspan="1">1.1</td>
+<td align="left" rowspan="1" colspan="1">−68.93</td>
+<td align="left" rowspan="1" colspan="1">−6.19</td>
+<td align="left" rowspan="1" colspan="1">16.77</td>
+<td align="left" rowspan="1" colspan="1">−12.32</td>
+<td align="left" rowspan="1" colspan="1">−2.89</td>
+<td align="left" rowspan="1" colspan="1">−10.29</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt101"><label/><p>The SIE binding free energy (ΔG) and its components van der Waal – vdW; Coulomb interaction – Coul; Reaction Field-RF.</p></fn></table-wrap-foot></table-wrap>
+<p>Many patients eventually developed imatinib resistance, usually associated with above mentioned mutations in ABL kinase domain that either directly or indirectly effects the binding affinity of imatinib to ABL <xref ref-type="bibr" rid="pone.0078556-Gorre1">[12]</xref>, <xref ref-type="bibr" rid="pone.0078556-Ottmann1">[52]</xref>. The most common gatekeeper residue mutation T315I that accounts for 15–20% of clinically observed mutations is completely resistant to imatinib, nilotinib and dasatinib <xref ref-type="bibr" rid="pone.0078556-Chan1">[49]</xref>. Native and T315I BCR-ABL kinases complexed with dasatinib are subjected to 25 ns of MD simulations and SIE binding free energies are calculated. The analysis of dasatinib complexed with native and T315I mutant BCR-ABL kinases revealed that native complex has relatively higher SIE free energy (−9.53 kcal/mol) than when complexed with T315I (−8.44 kcal/mol) that signifies the greater affinity of dasatinib for native compared to mutant BCR-ABL kinase.</p>
+<p>The RMSD of BCR-ABL kinase – ponatinib complexes shown in <xref ref-type="fig" rid="pone-0078556-g003">Figure 3</xref> indicated that in the native complex, ABL kinase converged from 2.5 ns of MD and ponatinib converged from 1 ns to the end of simulations. The SIE calculated free energy for native complex is −10.41 kcal/mol. The gatekeeper mutant T315I has a longer side chain and the less common gatekeeper mutant T315A has a smaller side chain when compared to Thr315. The calculated free energies correlate with experimentally measured IC50 values and comparably ponatinib has better binding towards the mutation T315A (−10.44 kcal/mol) than T315I (−10.35 kcal/mol). The free energy of BCR-ABL<sup>T315I</sup> complexed with imatinib is −9.89 kcal/mol indicating that ponatinib has higher binding towards T315I mutation compared to imatinib.</p>
+<p><xref ref-type="table" rid="pone-0078556-t001">Table 1</xref> shows the distribution of electrostatic potential and contribution from neighbouring residues during MD simulations that are responsible for this free energy change. The mutation Y253F and Y253H present on the P-loop is in close contact with imidazo [1,2b] pyridazine of ponatinib. The Y253F mutation has 2 fold greater activity than Y253H <xref ref-type="bibr" rid="pone.0078556-Zhou1">[14]</xref>, although the net SIE values for both complexes do not correlate with observed experimental values. These mutations show decrease in intermolecular coulomb energies (Y253F is −5.63 kcal/mol and Y253H is −5.77 kcal/mol) compared to native kinase (intermolecular coulomb value −6.17 kcal/mol) and Y253F mutation shows decreased vdW interaction energies (−68.12 kcal/mol). Phe317 located at middle of the hinge region is in ATP binding site, imidazo [1,2b] pyridazine ring of ponatinib interacts with Phe317 via pi-pi stacking and vdW contacts. From the analysis of MD simulations of F317V BCR-ABL kinase – ponatinib complex, we observed slightly increased intermolecular vdW energy (−68.89 kcal/mol) and cavity value (−12.38 kcal/mol) and decreased intermolecular coulomb value (−5.69 kcal/mol). The SIE free energy for F317V BCR-ABL kinase – ponatinib complex is (−10.28 kcal/mol) which is close to the SIE free energy of F317L (−10.30 kcal/mol).</p>
+<p>The residue Phe359 is located on turn region at the end of αC- helix and is involved in the formation of a hydrophobic core with several residues from αC- helix including hydrophobic amino acids Val289 and Ile293. The F359V is adjacent to piperazine solubilization group of ponatinib and forms weak vdW interactions. The SIE binding free energy (−10.33 kcal/mol) was observed for this complex. In spite of side chains being oriented away from the binding site of ponatinib, the P-loop mutations E255K and E255V are closer to ponatinib effecting its activity. The residues G250E and Q252H are also present on the P-loop region but are not in direct contact to affect ponatinib binding. The remaining three mutants (M351T, H396P and M244V) in ABL kinase structure are located away from ponatinib binding site but are inhibited by ponatinib. The binding free energies calculated from SIE indicated that these mutants may be involved in the long range interactions with ponatinib. The free energies and reaction field energies from <xref ref-type="table" rid="pone-0078556-t001">Table 1</xref> explain the important contributions from these mutant residues.</p>
+</sec><sec id="s3b">
+<title>Intermolecular hydrogen bonding</title>
+<p>The hydrogen bonding interactions between ponatinib with various mutants in ABL kinase domain also explain the binding affinity. A maximum of three hydrogen bonds are observed between protein and ponatinib. From the crystal structure of ponatinib bound ABL kinase, imidazo [1,2b] pyridazine ring of ponatinib nitrogen forms hydrogen bond with main chain NH of Met318. This hydrogen bond remained constant throughout 25 ns of MD simulation for native and all fourteen mutant complexes. The amide linker between ring A and ring B (<xref ref-type="fig" rid="pone-0078556-g004">Figure 4</xref>) of ponatinib forms two hydrogen bonds with residues in kinase ATP binding site. From the crystal structure, carbonyl group of the amide linker forms hydrogen bond with main chain NH of Asp381 from DFG motif and NH of the amide forms hydrogen bond with side chain of Glu286 on the αC- helix, although these hydrogen bonds exchange with some other hydrogen bonds during MD simulations. The number of hydrogen bonding interactions in each of the complexes is shown in <xref ref-type="supplementary-material" rid="pone.0078556.s001">Figure S1</xref>.</p>
+<fig id="pone-0078556-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078556.g004</object-id><label>Figure 4</label><caption>
+<title>3D structural alignment of the imatinib (green) and ponatinib (gray) and the ring A and ring B are shown in red colour circles.</title>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0078556.g004" position="float" xlink:type="simple"/></fig></sec><sec id="s3c">
+<title>Energy contribution from individual active site residues in native and mutant BCR-ABL – ponatinib complexes</title>
+<p>The free energy binding changes of protein – inhibitor complex with mutation provides an overall estimate of the increased or decreased affinity in complex formation. In this work, we observed that SIE free energy of binding does not vary appreciably in all complexes which are indicative that ponatinib is an effective inhibitor of native and all mutant BCR-ABL kinases which is in agreement with the experimental results <xref ref-type="bibr" rid="pone.0078556-Zhou1">[14]</xref>. Therefore, in order to decipher the contributions from each residue in ponatinib binding region, we have deconvoluted the energy contributions for interactions between ponatinib and BCR-ABL kinase into electrostatic and vdW type. The electrostatic part represents columbic interactions that include charge-charge and other multipole interactions. The vdW part is van der Waals forces of attraction or contact energy term. These two terms represent major part of non-bonding interactions in MD simulations <xref ref-type="bibr" rid="pone.0078556-Lee1">[24]</xref>. In general terms, a positive value indicates a reduction in binding energy where as negative energy indicates that the binding is stronger.</p>
+<p>The values of energy contribution from individual amino acid residues in ponatinib binding pocket are shown in <xref ref-type="table" rid="pone-0078556-t002">Table 2</xref> and the active site amino acid residues with ponatinib are shown in <xref ref-type="fig" rid="pone-0078556-g001">Figure 1</xref>. The mutations F317V, Y253F, Y253H and E255K experience increased vdW interactions with residue Leu248. The mutations E255K, F317L and F317V experience increased electrostatic interactions with Tyr253. Nearly all mutations experience variable vdW interactions ranging from −0.99 to −2.15 kcal/mol with Tyr253 indicating variable conformations adopted by the side chain owing to mutations but still retains the binding to ponatinib. Similarly, all mutations experience variable vdW interactions ranging from −2.96 to −3.82 kcal/mol with Phe382 and −2.13 to −3.46 kcal/mol with Phe359. The mutations T315I, E255V, F317L and F317V contribute to decreased vdW interactions with Ala269. The mutations E255K and T315A experience increased vdW interactions with Leu354. All mutations experience variations in electrostatic interactions ranging from −4.95 to −6.71 kcal/mol with Glu286, in particular, Q252H, Y253H, T315I and F317L experience increased electrostatic interactions with Glu286. The mutations E255V, M244V, T315A, Y253H, experience increased vdW interactions with Met290 and the mutation M244V experiences increased vdW interactions with Ile293. The mutations G250E, Y253H and T315I experience decreased vdW interactions with Phe359. The mutations Y253F, E255V and H396P experience decreased vdW interactions with Phe382. The mutation Y253H experiences decreased vdW interactions with Phe317, while structurally these two side chains are located on either side of imidazo [1,2b] pyridazine ring.</p>
+<table-wrap id="pone-0078556-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078556.t002</object-id><label>Table 2</label><caption>
+<title>The contribution from van der Waals (vdW) and coulombic (Coul) interaction energies to SIE binding free energy of ponatinib for different mutants from selected binding site residues.</title>
+</caption><alternatives><graphic id="pone-0078556-t002-2" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0078556.t002" xlink:type="simple"/>
+<table><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup>
+<thead>
+<tr>
+<td align="left" rowspan="1" colspan="1">Residue</td>
+<td colspan="2" align="left" rowspan="1">Native</td>
+<td colspan="2" align="left" rowspan="1">M244V</td>
+<td colspan="2" align="left" rowspan="1">G250E</td>
+<td colspan="2" align="left" rowspan="1">Q252H</td>
+<td colspan="2" align="left" rowspan="1">Y253H</td>
+<td colspan="2" align="left" rowspan="1">Y253F</td>
+<td colspan="2" align="left" rowspan="1">E255K</td>
+<td colspan="2" align="left" rowspan="1">E255V</td>
+<td colspan="2" align="left" rowspan="1">T315A</td>
+<td colspan="2" align="left" rowspan="1">T315I</td>
+<td colspan="2" align="left" rowspan="1">F317V</td>
+<td colspan="2" align="left" rowspan="1">F317L</td>
+<td colspan="2" align="left" rowspan="1">M351T</td>
+<td colspan="2" align="left" rowspan="1">F359V</td>
+<td colspan="2" align="left" rowspan="1">H396P</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"/>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+<td align="left" rowspan="1" colspan="1">vdW</td>
+<td align="left" rowspan="1" colspan="1">Coul</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1">M244</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">−0.01</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.01</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">K245</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.26</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.22</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.26</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.26</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.24</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.21</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.21</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.18</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.2</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.23</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.24</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.21</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">L248</td>
+<td align="left" rowspan="1" colspan="1">−2.11</td>
+<td align="left" rowspan="1" colspan="1">0.16</td>
+<td align="left" rowspan="1" colspan="1">−2.14</td>
+<td align="left" rowspan="1" colspan="1">0.12</td>
+<td align="left" rowspan="1" colspan="1">−2.36</td>
+<td align="left" rowspan="1" colspan="1">0.05</td>
+<td align="left" rowspan="1" colspan="1">−2.39</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−2.46</td>
+<td align="left" rowspan="1" colspan="1">0.12</td>
+<td align="left" rowspan="1" colspan="1">−2.63</td>
+<td align="left" rowspan="1" colspan="1">0.05</td>
+<td align="left" rowspan="1" colspan="1">−2.71</td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1">−2.29</td>
+<td align="left" rowspan="1" colspan="1">0.09</td>
+<td align="left" rowspan="1" colspan="1">−2.13</td>
+<td align="left" rowspan="1" colspan="1">0.1</td>
+<td align="left" rowspan="1" colspan="1">−2.14</td>
+<td align="left" rowspan="1" colspan="1">0.12</td>
+<td align="left" rowspan="1" colspan="1">−3.07</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">−2.33</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−2</td>
+<td align="left" rowspan="1" colspan="1">0.23</td>
+<td align="left" rowspan="1" colspan="1">−2.06</td>
+<td align="left" rowspan="1" colspan="1">0.07</td>
+<td align="left" rowspan="1" colspan="1">−2.07</td>
+<td align="left" rowspan="1" colspan="1">0.19</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">G250</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">−0.32</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−2.67</td>
+<td align="left" rowspan="1" colspan="1">−5.46</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Q252</td>
+<td align="left" rowspan="1" colspan="1">−0.11</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+<td align="left" rowspan="1" colspan="1">−0.13</td>
+<td align="left" rowspan="1" colspan="1">−0.01</td>
+<td align="left" rowspan="1" colspan="1">−0.13</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+<td align="left" rowspan="1" colspan="1">−0.12</td>
+<td align="left" rowspan="1" colspan="1">0.12</td>
+<td align="left" rowspan="1" colspan="1">−0.13</td>
+<td align="left" rowspan="1" colspan="1">0.23</td>
+<td align="left" rowspan="1" colspan="1">−0.1</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.13</td>
+<td align="left" rowspan="1" colspan="1">0.07</td>
+<td align="left" rowspan="1" colspan="1">−0.12</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+<td align="left" rowspan="1" colspan="1">−0.13</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.11</td>
+<td align="left" rowspan="1" colspan="1">0.08</td>
+<td align="left" rowspan="1" colspan="1">−0.14</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.13</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−0.12</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.13</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">Y253</td>
+<td align="left" rowspan="1" colspan="1">−1.9</td>
+<td align="left" rowspan="1" colspan="1">0.22</td>
+<td align="left" rowspan="1" colspan="1">−2.05</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">−1.96</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−1.97</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">−1.31</td>
+<td align="left" rowspan="1" colspan="1">−0.3</td>
+<td align="left" rowspan="1" colspan="1">−1.74</td>
+<td align="left" rowspan="1" colspan="1">−0.22</td>
+<td align="left" rowspan="1" colspan="1">−0.99</td>
+<td align="left" rowspan="1" colspan="1">−0.12</td>
+<td align="left" rowspan="1" colspan="1">−1.92</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">−2.15</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">−2.14</td>
+<td align="left" rowspan="1" colspan="1">−0.08</td>
+<td align="left" rowspan="1" colspan="1">−1.93</td>
+<td align="left" rowspan="1" colspan="1">−0.29</td>
+<td align="left" rowspan="1" colspan="1">−1.89</td>
+<td align="left" rowspan="1" colspan="1">−0.11</td>
+<td align="left" rowspan="1" colspan="1">−2.12</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">−2</td>
+<td align="left" rowspan="1" colspan="1">0.08</td>
+<td align="left" rowspan="1" colspan="1">−2.1</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">G254</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">0.05</td>
+<td align="left" rowspan="1" colspan="1">−0.07</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">0</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">0.02</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+<td align="left" rowspan="1" colspan="1">−0.07</td>
+<td align="left" rowspan="1" colspan="1">0.05</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">0.04</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">E255</td>
+<td align="left" rowspan="1" colspan="1">−0.1</td>
+<td align="left" rowspan="1" colspan="1">−0.59</td>
+<td align="left" rowspan="1" colspan="1">−0.1</td>
+<td align="left" rowspan="1" colspan="1">−0.5</td>
+<td align="left" rowspan="1" colspan="1">−0.1</td>
+<td align="left" rowspan="1" colspan="1">−0.57</td>
+<td align="left" rowspan="1" colspan="1">−0.11</td>
+<td align="left" rowspan="1" colspan="1">−0.51</td>
+<td align="left" rowspan="1" colspan="1">−0.1</td>
+<td align="left" rowspan="1" colspan="1">−0.54</td>
+<td align="left" rowspan="1" colspan="1">−0.11</td>
+<td align="left" rowspan="1" colspan="1">−0.54</td>
+<td align="left" rowspan="1" colspan="1">−0.12</td>
+<td align="left" rowspan="1" colspan="1">0.35</td>
+<td align="left" rowspan="1" colspan="1">−0.11</td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+<td align="left" rowspan="1" colspan="1">−0.49</td>
+<td align="left" rowspan="1" colspan="1">−0.1</td>
+<td align="left" rowspan="1" colspan="1">−0.55</td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+<td align="left" rowspan="1" colspan="1">−0.52</td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+<td align="left" rowspan="1" colspan="1">−0.49</td>
+<td align="left" rowspan="1" colspan="1">−0.1</td>
+<td align="left" rowspan="1" colspan="1">−0.5</td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+<td align="left" rowspan="1" colspan="1">−0.56</td>
+<td align="left" rowspan="1" colspan="1">−0.1</td>
+<td align="left" rowspan="1" colspan="1">−0.47</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">A269</td>
+<td align="left" rowspan="1" colspan="1">−2.56</td>
+<td align="left" rowspan="1" colspan="1">−0.18</td>
+<td align="left" rowspan="1" colspan="1">−2.41</td>
+<td align="left" rowspan="1" colspan="1">−0.19</td>
+<td align="left" rowspan="1" colspan="1">−2.28</td>
+<td align="left" rowspan="1" colspan="1">−0.11</td>
+<td align="left" rowspan="1" colspan="1">−2.24</td>
+<td align="left" rowspan="1" colspan="1">−0.14</td>
+<td align="left" rowspan="1" colspan="1">−2.24</td>
+<td align="left" rowspan="1" colspan="1">−0.19</td>
+<td align="left" rowspan="1" colspan="1">−2.25</td>
+<td align="left" rowspan="1" colspan="1">−0.12</td>
+<td align="left" rowspan="1" colspan="1">−2.3</td>
+<td align="left" rowspan="1" colspan="1">−0.16</td>
+<td align="left" rowspan="1" colspan="1">−2.09</td>
+<td align="left" rowspan="1" colspan="1">−0.15</td>
+<td align="left" rowspan="1" colspan="1">−2.55</td>
+<td align="left" rowspan="1" colspan="1">−0.24</td>
+<td align="left" rowspan="1" colspan="1">−2.12</td>
+<td align="left" rowspan="1" colspan="1">−0.13</td>
+<td align="left" rowspan="1" colspan="1">−2.11</td>
+<td align="left" rowspan="1" colspan="1">−0.12</td>
+<td align="left" rowspan="1" colspan="1">−1.95</td>
+<td align="left" rowspan="1" colspan="1">−0.11</td>
+<td align="left" rowspan="1" colspan="1">−2.35</td>
+<td align="left" rowspan="1" colspan="1">−0.17</td>
+<td align="left" rowspan="1" colspan="1">−2.64</td>
+<td align="left" rowspan="1" colspan="1">−0.2</td>
+<td align="left" rowspan="1" colspan="1">−2.25</td>
+<td align="left" rowspan="1" colspan="1">−0.18</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">E286</td>
+<td align="left" rowspan="1" colspan="1">−2.66</td>
+<td align="left" rowspan="1" colspan="1">−5.29</td>
+<td align="left" rowspan="1" colspan="1">−2.91</td>
+<td align="left" rowspan="1" colspan="1">−5.23</td>
+<td align="left" rowspan="1" colspan="1">−2.61</td>
+<td align="left" rowspan="1" colspan="1">−5.43</td>
+<td align="left" rowspan="1" colspan="1">−2.66</td>
+<td align="left" rowspan="1" colspan="1">−5.97</td>
+<td align="left" rowspan="1" colspan="1">−2.44</td>
+<td align="left" rowspan="1" colspan="1">−6.52</td>
+<td align="left" rowspan="1" colspan="1">−2.55</td>
+<td align="left" rowspan="1" colspan="1">−4.95</td>
+<td align="left" rowspan="1" colspan="1">−2.67</td>
+<td align="left" rowspan="1" colspan="1">−5.46</td>
+<td align="left" rowspan="1" colspan="1">−2.75</td>
+<td align="left" rowspan="1" colspan="1">−5.14</td>
+<td align="left" rowspan="1" colspan="1">−2.76</td>
+<td align="left" rowspan="1" colspan="1">−5.51</td>
+<td align="left" rowspan="1" colspan="1">−2.73</td>
+<td align="left" rowspan="1" colspan="1">−6.71</td>
+<td align="left" rowspan="1" colspan="1">−2.6</td>
+<td align="left" rowspan="1" colspan="1">−5.11</td>
+<td align="left" rowspan="1" colspan="1">−2.73</td>
+<td align="left" rowspan="1" colspan="1">−5.79</td>
+<td align="left" rowspan="1" colspan="1">−2.7</td>
+<td align="left" rowspan="1" colspan="1">−5.27</td>
+<td align="left" rowspan="1" colspan="1">−2.74</td>
+<td align="left" rowspan="1" colspan="1">−5.32</td>
+<td align="left" rowspan="1" colspan="1">−2.63</td>
+<td align="left" rowspan="1" colspan="1">−5.52</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">M290</td>
+<td align="left" rowspan="1" colspan="1">−3.96</td>
+<td align="left" rowspan="1" colspan="1">−0.71</td>
+<td align="left" rowspan="1" colspan="1">−4.54</td>
+<td align="left" rowspan="1" colspan="1">−0.64</td>
+<td align="left" rowspan="1" colspan="1">−4.13</td>
+<td align="left" rowspan="1" colspan="1">−0.66</td>
+<td align="left" rowspan="1" colspan="1">−4.01</td>
+<td align="left" rowspan="1" colspan="1">−0.64</td>
+<td align="left" rowspan="1" colspan="1">−4.25</td>
+<td align="left" rowspan="1" colspan="1">−0.57</td>
+<td align="left" rowspan="1" colspan="1">−4.21</td>
+<td align="left" rowspan="1" colspan="1">−0.74</td>
+<td align="left" rowspan="1" colspan="1">−4.08</td>
+<td align="left" rowspan="1" colspan="1">−0.71</td>
+<td align="left" rowspan="1" colspan="1">−4.29</td>
+<td align="left" rowspan="1" colspan="1">−0.67</td>
+<td align="left" rowspan="1" colspan="1">−4.28</td>
+<td align="left" rowspan="1" colspan="1">−0.67</td>
+<td align="left" rowspan="1" colspan="1">−4.23</td>
+<td align="left" rowspan="1" colspan="1">−0.51</td>
+<td align="left" rowspan="1" colspan="1">−4.1</td>
+<td align="left" rowspan="1" colspan="1">−0.76</td>
+<td align="left" rowspan="1" colspan="1">−4.15</td>
+<td align="left" rowspan="1" colspan="1">−0.68</td>
+<td align="left" rowspan="1" colspan="1">−4.02</td>
+<td align="left" rowspan="1" colspan="1">−0.76</td>
+<td align="left" rowspan="1" colspan="1">−4.22</td>
+<td align="left" rowspan="1" colspan="1">−0.7</td>
+<td align="left" rowspan="1" colspan="1">−4.02</td>
+<td align="left" rowspan="1" colspan="1">−0.75</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">I293</td>
+<td align="left" rowspan="1" colspan="1">−1.73</td>
+<td align="left" rowspan="1" colspan="1">−0.08</td>
+<td align="left" rowspan="1" colspan="1">−2.57</td>
+<td align="left" rowspan="1" colspan="1">0.07</td>
+<td align="left" rowspan="1" colspan="1">−1.73</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+<td align="left" rowspan="1" colspan="1">−1.6</td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+<td align="left" rowspan="1" colspan="1">−2.1</td>
+<td align="left" rowspan="1" colspan="1">0.16</td>
+<td align="left" rowspan="1" colspan="1">−1.81</td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+<td align="left" rowspan="1" colspan="1">−1.63</td>
+<td align="left" rowspan="1" colspan="1">−0.07</td>
+<td align="left" rowspan="1" colspan="1">−1.6</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">−1.86</td>
+<td align="left" rowspan="1" colspan="1">0.06</td>
+<td align="left" rowspan="1" colspan="1">−1.82</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−1.71</td>
+<td align="left" rowspan="1" colspan="1">−0.07</td>
+<td align="left" rowspan="1" colspan="1">−1.7</td>
+<td align="left" rowspan="1" colspan="1">−0.08</td>
+<td align="left" rowspan="1" colspan="1">−1.64</td>
+<td align="left" rowspan="1" colspan="1">−0.08</td>
+<td align="left" rowspan="1" colspan="1">−1.88</td>
+<td align="left" rowspan="1" colspan="1">0.09</td>
+<td align="left" rowspan="1" colspan="1">−1.75</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">L298</td>
+<td align="left" rowspan="1" colspan="1">−1.17</td>
+<td align="left" rowspan="1" colspan="1">−0.5</td>
+<td align="left" rowspan="1" colspan="1">−1.11</td>
+<td align="left" rowspan="1" colspan="1">−0.45</td>
+<td align="left" rowspan="1" colspan="1">−1.34</td>
+<td align="left" rowspan="1" colspan="1">−0.5</td>
+<td align="left" rowspan="1" colspan="1">−1.22</td>
+<td align="left" rowspan="1" colspan="1">−0.49</td>
+<td align="left" rowspan="1" colspan="1">−1.02</td>
+<td align="left" rowspan="1" colspan="1">−0.48</td>
+<td align="left" rowspan="1" colspan="1">−1.15</td>
+<td align="left" rowspan="1" colspan="1">−0.46</td>
+<td align="left" rowspan="1" colspan="1">−1.23</td>
+<td align="left" rowspan="1" colspan="1">−0.49</td>
+<td align="left" rowspan="1" colspan="1">−1.15</td>
+<td align="left" rowspan="1" colspan="1">−0.49</td>
+<td align="left" rowspan="1" colspan="1">−1.37</td>
+<td align="left" rowspan="1" colspan="1">−0.49</td>
+<td align="left" rowspan="1" colspan="1">−1.23</td>
+<td align="left" rowspan="1" colspan="1">−0.46</td>
+<td align="left" rowspan="1" colspan="1">−1.31</td>
+<td align="left" rowspan="1" colspan="1">−0.51</td>
+<td align="left" rowspan="1" colspan="1">−1.2</td>
+<td align="left" rowspan="1" colspan="1">−0.48</td>
+<td align="left" rowspan="1" colspan="1">−1.12</td>
+<td align="left" rowspan="1" colspan="1">−0.46</td>
+<td align="left" rowspan="1" colspan="1">−1.32</td>
+<td align="left" rowspan="1" colspan="1">−0.51</td>
+<td align="left" rowspan="1" colspan="1">−1.29</td>
+<td align="left" rowspan="1" colspan="1">−0.48</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">T315</td>
+<td align="left" rowspan="1" colspan="1">−3.37</td>
+<td align="left" rowspan="1" colspan="1">−0.27</td>
+<td align="left" rowspan="1" colspan="1">−3.31</td>
+<td align="left" rowspan="1" colspan="1">0.05</td>
+<td align="left" rowspan="1" colspan="1">−3.42</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">−3.26</td>
+<td align="left" rowspan="1" colspan="1">0.05</td>
+<td align="left" rowspan="1" colspan="1">−3.18</td>
+<td align="left" rowspan="1" colspan="1">0.09</td>
+<td align="left" rowspan="1" colspan="1">−3.42</td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+<td align="left" rowspan="1" colspan="1">−3.13</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−3.3</td>
+<td align="left" rowspan="1" colspan="1">0.01</td>
+<td align="left" rowspan="1" colspan="1">−2.05</td>
+<td align="left" rowspan="1" colspan="1">−0.09</td>
+<td align="left" rowspan="1" colspan="1">−4.11</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+<td align="left" rowspan="1" colspan="1">−3.26</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+<td align="left" rowspan="1" colspan="1">−3.2</td>
+<td align="left" rowspan="1" colspan="1">0.07</td>
+<td align="left" rowspan="1" colspan="1">−3.35</td>
+<td align="left" rowspan="1" colspan="1">0.1</td>
+<td align="left" rowspan="1" colspan="1">−3.43</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">−3.49</td>
+<td align="left" rowspan="1" colspan="1">0.03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">F317</td>
+<td align="left" rowspan="1" colspan="1">−2.64</td>
+<td align="left" rowspan="1" colspan="1">−0.58</td>
+<td align="left" rowspan="1" colspan="1">−2.58</td>
+<td align="left" rowspan="1" colspan="1">−0.48</td>
+<td align="left" rowspan="1" colspan="1">−2.55</td>
+<td align="left" rowspan="1" colspan="1">−0.35</td>
+<td align="left" rowspan="1" colspan="1">−2.45</td>
+<td align="left" rowspan="1" colspan="1">−0.35</td>
+<td align="left" rowspan="1" colspan="1">−2.09</td>
+<td align="left" rowspan="1" colspan="1">−0.36</td>
+<td align="left" rowspan="1" colspan="1">−2.37</td>
+<td align="left" rowspan="1" colspan="1">−0.34</td>
+<td align="left" rowspan="1" colspan="1">−2.34</td>
+<td align="left" rowspan="1" colspan="1">−0.39</td>
+<td align="left" rowspan="1" colspan="1">−2.47</td>
+<td align="left" rowspan="1" colspan="1">−0.48</td>
+<td align="left" rowspan="1" colspan="1">−2.62</td>
+<td align="left" rowspan="1" colspan="1">−0.50</td>
+<td align="left" rowspan="1" colspan="1">−2.38</td>
+<td align="left" rowspan="1" colspan="1">−0.53</td>
+<td align="left" rowspan="1" colspan="1">−1.65</td>
+<td align="left" rowspan="1" colspan="1">−0.40</td>
+<td align="left" rowspan="1" colspan="1">−2.09</td>
+<td align="left" rowspan="1" colspan="1">−0.54</td>
+<td align="left" rowspan="1" colspan="1">−2.60</td>
+<td align="left" rowspan="1" colspan="1">−0.44</td>
+<td align="left" rowspan="1" colspan="1">−2.69</td>
+<td align="left" rowspan="1" colspan="1">−0.62</td>
+<td align="left" rowspan="1" colspan="1">−2.59</td>
+<td align="left" rowspan="1" colspan="1">−0.44</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">L354</td>
+<td align="left" rowspan="1" colspan="1">−1.29</td>
+<td align="left" rowspan="1" colspan="1">−0.2</td>
+<td align="left" rowspan="1" colspan="1">−1.49</td>
+<td align="left" rowspan="1" colspan="1">−0.2</td>
+<td align="left" rowspan="1" colspan="1">−1.5</td>
+<td align="left" rowspan="1" colspan="1">−0.22</td>
+<td align="left" rowspan="1" colspan="1">−1.42</td>
+<td align="left" rowspan="1" colspan="1">−0.23</td>
+<td align="left" rowspan="1" colspan="1">−1.14</td>
+<td align="left" rowspan="1" colspan="1">−0.19</td>
+<td align="left" rowspan="1" colspan="1">−1.16</td>
+<td align="left" rowspan="1" colspan="1">−0.19</td>
+<td align="left" rowspan="1" colspan="1">−1.63</td>
+<td align="left" rowspan="1" colspan="1">−0.23</td>
+<td align="left" rowspan="1" colspan="1">−1.43</td>
+<td align="left" rowspan="1" colspan="1">−0.23</td>
+<td align="left" rowspan="1" colspan="1">−1.81</td>
+<td align="left" rowspan="1" colspan="1">−0.2</td>
+<td align="left" rowspan="1" colspan="1">−1.49</td>
+<td align="left" rowspan="1" colspan="1">−0.22</td>
+<td align="left" rowspan="1" colspan="1">−1.5</td>
+<td align="left" rowspan="1" colspan="1">−0.23</td>
+<td align="left" rowspan="1" colspan="1">−1.54</td>
+<td align="left" rowspan="1" colspan="1">−0.21</td>
+<td align="left" rowspan="1" colspan="1">−1.19</td>
+<td align="left" rowspan="1" colspan="1">−0.21</td>
+<td align="left" rowspan="1" colspan="1">−1.25</td>
+<td align="left" rowspan="1" colspan="1">−0.19</td>
+<td align="left" rowspan="1" colspan="1">−1.41</td>
+<td align="left" rowspan="1" colspan="1">−0.21</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">F359</td>
+<td align="left" rowspan="1" colspan="1">−3.35</td>
+<td align="left" rowspan="1" colspan="1">−0.5</td>
+<td align="left" rowspan="1" colspan="1">−3.33</td>
+<td align="left" rowspan="1" colspan="1">−0.42</td>
+<td align="left" rowspan="1" colspan="1">−2.86</td>
+<td align="left" rowspan="1" colspan="1">−0.44</td>
+<td align="left" rowspan="1" colspan="1">−3.12</td>
+<td align="left" rowspan="1" colspan="1">−0.47</td>
+<td align="left" rowspan="1" colspan="1">−2.41</td>
+<td align="left" rowspan="1" colspan="1">−0.32</td>
+<td align="left" rowspan="1" colspan="1">−3.46</td>
+<td align="left" rowspan="1" colspan="1">−0.43</td>
+<td align="left" rowspan="1" colspan="1">−3.04</td>
+<td align="left" rowspan="1" colspan="1">−0.43</td>
+<td align="left" rowspan="1" colspan="1">−3.11</td>
+<td align="left" rowspan="1" colspan="1">−0.46</td>
+<td align="left" rowspan="1" colspan="1">−3.18</td>
+<td align="left" rowspan="1" colspan="1">−0.53</td>
+<td align="left" rowspan="1" colspan="1">−2.93</td>
+<td align="left" rowspan="1" colspan="1">−0.46</td>
+<td align="left" rowspan="1" colspan="1">−3.13</td>
+<td align="left" rowspan="1" colspan="1">−0.51</td>
+<td align="left" rowspan="1" colspan="1">−3.38</td>
+<td align="left" rowspan="1" colspan="1">−0.52</td>
+<td align="left" rowspan="1" colspan="1">−3.43</td>
+<td align="left" rowspan="1" colspan="1">−0.5</td>
+<td align="left" rowspan="1" colspan="1">−2.13</td>
+<td align="left" rowspan="1" colspan="1">−0.16</td>
+<td align="left" rowspan="1" colspan="1">−3.25</td>
+<td align="left" rowspan="1" colspan="1">−0.54</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">I360</td>
+<td align="left" rowspan="1" colspan="1">−1.31</td>
+<td align="left" rowspan="1" colspan="1">0.18</td>
+<td align="left" rowspan="1" colspan="1">−1.1</td>
+<td align="left" rowspan="1" colspan="1">0.36</td>
+<td align="left" rowspan="1" colspan="1">−1.3</td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1">−1.11</td>
+<td align="left" rowspan="1" colspan="1">0.3</td>
+<td align="left" rowspan="1" colspan="1">−1.26</td>
+<td align="left" rowspan="1" colspan="1">0.37</td>
+<td align="left" rowspan="1" colspan="1">−1.1</td>
+<td align="left" rowspan="1" colspan="1">0.31</td>
+<td align="left" rowspan="1" colspan="1">−1.11</td>
+<td align="left" rowspan="1" colspan="1">0.34</td>
+<td align="left" rowspan="1" colspan="1">−1.26</td>
+<td align="left" rowspan="1" colspan="1">0.32</td>
+<td align="left" rowspan="1" colspan="1">−1.21</td>
+<td align="left" rowspan="1" colspan="1">0.24</td>
+<td align="left" rowspan="1" colspan="1">−1.34</td>
+<td align="left" rowspan="1" colspan="1">0.27</td>
+<td align="left" rowspan="1" colspan="1">−1.18</td>
+<td align="left" rowspan="1" colspan="1">0.31</td>
+<td align="left" rowspan="1" colspan="1">−1.28</td>
+<td align="left" rowspan="1" colspan="1">0.25</td>
+<td align="left" rowspan="1" colspan="1">−1.25</td>
+<td align="left" rowspan="1" colspan="1">0.3</td>
+<td align="left" rowspan="1" colspan="1">−1.11</td>
+<td align="left" rowspan="1" colspan="1">0.38</td>
+<td align="left" rowspan="1" colspan="1">−1.22</td>
+<td align="left" rowspan="1" colspan="1">0.28</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">L370</td>
+<td align="left" rowspan="1" colspan="1">−3.57</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+<td align="left" rowspan="1" colspan="1">−3.48</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">−3.51</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+<td align="left" rowspan="1" colspan="1">−3.42</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">−3.70</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">−3.43</td>
+<td align="left" rowspan="1" colspan="1">−0.05</td>
+<td align="left" rowspan="1" colspan="1">−3.62</td>
+<td align="left" rowspan="1" colspan="1">−0.06</td>
+<td align="left" rowspan="1" colspan="1">−3.49</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+<td align="left" rowspan="1" colspan="1">−3.45</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+<td align="left" rowspan="1" colspan="1">−3.43</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+<td align="left" rowspan="1" colspan="1">−3.35</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+<td align="left" rowspan="1" colspan="1">−3.52</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+<td align="left" rowspan="1" colspan="1">−3.53</td>
+<td align="left" rowspan="1" colspan="1">−0.04</td>
+<td align="left" rowspan="1" colspan="1">−3.44</td>
+<td align="left" rowspan="1" colspan="1">−0.02</td>
+<td align="left" rowspan="1" colspan="1">−3.41</td>
+<td align="left" rowspan="1" colspan="1">−0.03</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">F382</td>
+<td align="left" rowspan="1" colspan="1">−3.63</td>
+<td align="left" rowspan="1" colspan="1">−0.3</td>
+<td align="left" rowspan="1" colspan="1">−3.57</td>
+<td align="left" rowspan="1" colspan="1">−0.31</td>
+<td align="left" rowspan="1" colspan="1">−3.36</td>
+<td align="left" rowspan="1" colspan="1">−0.34</td>
+<td align="left" rowspan="1" colspan="1">−3.31</td>
+<td align="left" rowspan="1" colspan="1">−0.38</td>
+<td align="left" rowspan="1" colspan="1">−3.75</td>
+<td align="left" rowspan="1" colspan="1">−0.31</td>
+<td align="left" rowspan="1" colspan="1">−3.11</td>
+<td align="left" rowspan="1" colspan="1">−0.35</td>
+<td align="left" rowspan="1" colspan="1">−3.63</td>
+<td align="left" rowspan="1" colspan="1">−0.32</td>
+<td align="left" rowspan="1" colspan="1">−2.96</td>
+<td align="left" rowspan="1" colspan="1">−0.38</td>
+<td align="left" rowspan="1" colspan="1">−3.44</td>
+<td align="left" rowspan="1" colspan="1">−0.36</td>
+<td align="left" rowspan="1" colspan="1">−3.82</td>
+<td align="left" rowspan="1" colspan="1">−0.4</td>
+<td align="left" rowspan="1" colspan="1">−3.52</td>
+<td align="left" rowspan="1" colspan="1">−0.4</td>
+<td align="left" rowspan="1" colspan="1">−3.34</td>
+<td align="left" rowspan="1" colspan="1">−0.37</td>
+<td align="left" rowspan="1" colspan="1">−3.52</td>
+<td align="left" rowspan="1" colspan="1">−0.35</td>
+<td align="left" rowspan="1" colspan="1">−3.52</td>
+<td align="left" rowspan="1" colspan="1">−0.36</td>
+<td align="left" rowspan="1" colspan="1">−3.17</td>
+<td align="left" rowspan="1" colspan="1">−0.38</td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot><fn id="nt102"><label/><p>The vdW and coulomb energies are calculated in kcal/mol.</p></fn></table-wrap-foot></table-wrap>
+<p>The T315I mutation experiences increased (−4.11 kcal/mol) and T315A mutation experiences decreased electrostatic interactions (−2.05 kcal/mol), and the mutation G250E contributes increased electrostatic interaction (−0.32 kcal/mol) while binding to ponatinib. The mutation F359V experiences decreased vdW (−2.13 kcal/mol) and electrostatic interactions (−0.16 kcal/mol), while decreased electrostatic interactions are experienced due to mutations E255K (0.35 kcal/mol) and E255V (−0.09 kcal/mol). The mutation Y253F (−0.22 kcal/mol) experiences increased electrostatic interactions, Y253H experiences increased electrostatic interactions (−0.3 kcal/mol) and decreased vdW (−1.31 kcal/mol) when binding to ponatinib. The F317 mutation experiences decreased electrostatic interactions −1.65 kcal/mol and −2.09 kcal/mol due to mutations F317V and F317L respectively.</p>
+<p>From these results we observed that the P-loop residues Leu248 and Tyr253 that closely interact with ponatinib undergo highly fluctuating conformational changes affecting the contribution from some residues in active site. In an analogous manner, the active site residue Ala269 located on the β3- strand from N- terminal domain also has conformational changes while interacting with ponatinib. The amino acid Glu286 from the αC- helix also has variable electrostatic interactions due to mutations in BCR-ABL kinase domain. The Phe359 caps ponatinib binding site close to the activation loop and undergoes conformational changes with most mutations in particular, the P-loop residues (G250E and Y253H) and the gatekeeper mutation T315I on the β5- strand. The Phe382 from the DFG motif undergoes conformational changes with most mutations in particular; the P-loop residues (Y253F and E255V) and the activation loop residue H396P. The fluctuations in residues from P-loop, β3-, β5- strands and αC- helix are mainly responsible for ponatinib binding to native and all mutant BCR-ABL kinases.</p>
+<p>Lee <italic>et al</italic>., proposed that T315I mutation leads to significant conformational changes and therefore a decrease in the binding affinity between imatinib and ABL kinase domain. Importantly, the αC- helix is flexible and residues Glu286 and Met290 located at ligand entrance site show reduced interactions with T315I. Also decrease in electrostatic interactions for E255, Q252 and Y253 are responsible for imatinib resistance <xref ref-type="bibr" rid="pone.0078556-Lee1">[24]</xref>. In this study of ponatinib binding to native and mutant BCR-ABL kinases, we have also observed high fluctuations of Glu286 and Met290 amino acid residues while binding to ponatinib, although the effect of Met290 is lower compared to Glu286. Similarly, Tyr253 undergoes high conformational changes due to mutations while no significant alterations were observed with Glu255 and Gln252.</p>
+<p>The crystal structures of BCR-ABL kinase bound to imatinib (1IEP_A) and ponatinib (3OXZ_A) superimpose with 0.355 Å RMSD is shown in <xref ref-type="fig" rid="pone-0078556-g005">Figure 5</xref>, N-terminal domain has slightly higher displacement than C-terminal domain. The αC- helix in both structures is highly superimposable as shown in <xref ref-type="supplementary-material" rid="pone.0078556.s002">Figures S2A and S2B</xref>, only side chains have slightly altered conformations. Similarly the DFG motif is in inactive conformation with only slightly altered conformations (<xref ref-type="supplementary-material" rid="pone.0078556.s002">Figure S2C</xref>). These features are indicative of similar BCR-ABL kinase structure in binding to both inhibitors.</p>
+<fig id="pone-0078556-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078556.g005</object-id><label>Figure 5</label><caption>
+<title>Structure alignment of imatinib bound BCR-ABL kinase (PDB_ID: 1IEP) (green) and ponatinib bound BCR-ABL kinase (PDB_ID: 3OXZ) (blue).</title>
+<p>The imatinib and ponatinib are represented in ball and stick models covered by solvent accessible surface (orange).</p>
+</caption><graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0078556.g005" position="float" xlink:type="simple"/></fig>
+<p>The structure superposition of ponatinib and imatinib is shown in <xref ref-type="fig" rid="pone-0078556-g004">Figure 4</xref> and both inhibitors bind BCR-ABL kinase at exactly the same location. Further despite the peptide bond swap, both inhibitors vary only in two locations. 1. The presence of CF<sub>3</sub> group on piperazine substituted phenyl ring. 2. The presence of acetylene linked imidazo [1,2b] pyridazine ring. The CF<sub>3</sub> group makes close contacts with hydrophobic side chains of Leu298 and Leu354. From <xref ref-type="table" rid="pone-0078556-t002">Table 2</xref>, we observed that Leu298 has stable interactions with CF<sub>3</sub> throughout MD simulations in all mutations, while Leu354 experiences increased vdW interactions with mutations E255K and T315A. Thr315 is close to acetylene link of ponatinib and imidazo [1,2b] pyridazine ring is in a hydrophobic cavity that is enclosed by Leu248, Tyr253, Phe382, Phe317 and Leu370. Among these, Leu370 makes stable CH-pi interactions with imidazo [1,2b] pyridazine ring contributing to the stability of native and mutant complexes. The other four residues (Leu248, Tyr253, Phe382 and Phe317) in most BCR-ABL kinase mutants when bound to ponatinib undergo high conformational changes during MD simulations. We believe that these conformational changes are responsible for ponatinib binding and inhibition of native and mutant BCR-ABL kinases.</p>
+</sec></sec><sec id="s4">
+<title>Conclusions</title>
+<p>The pan-BCR-ABL kinase inhibitor, ponatinib is most popular for its inhibition of ABL<sup>T315I</sup> mutation at nano molar concentrations. Fourteen mutant ABL kinase structures complexed with ponatinib were modeled and we performed 25 ns of MD simulations to study the structural changes of protein when complexed with ponatinib within its binding site. Using the SIE method, we calculated binding free energies and its component of non bonding energies such as intermolecular vdW energies and reaction field energies. Further, coulomb and vdW contributions from individual amino acid residues in active site were calculated. The calculated SIE values are in the range −10.03 kcal/mol to −10.67 kcal/mol and correspond with the narrow range of IC50 values (0.5 nM to 36 nM) of native and mutant BCR-ABL kinase inhibition by ponatinib. From these MD simulations, we observed that fluctuations in residues from P-loop, β3-, β5- strands and αC- helix are mainly responsible for ponatinib binding to native and all mutant BCR-ABL kinases. Further, amino acid residues Met244, Lys245, Gln252, Gly254, Leu370 and Leu298 did not undergo any conformational changes due to mutations. The rest of the mutations effect ponatinib binding free energy calculations with its component energies evidently correlating with their activities. These studies explain the atomistic details of ponatinib binding to native and mutant BCR-ABL kinases and the results will be helpful in future modifications of ponatinib and binding calculations of new mutant ABL kinase or new inhibitors.</p>
+</sec><sec id="s5">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0078556.s001" mimetype="application/msword" xlink:href="info:doi/10.1371/journal.pone.0078556.s001" position="float" xlink:type="simple"><label>Figure S1</label><caption>
+<p><bold>Number of hydrogen bonds formed between ponatinib- native and mutant BCR-ABL kinases during 25 ns of simulations.</bold></p>
+<p>(DOC)</p>
+</caption></supplementary-material><supplementary-material id="pone.0078556.s002" mimetype="application/msword" xlink:href="info:doi/10.1371/journal.pone.0078556.s002" position="float" xlink:type="simple"><label>Figure S2</label><caption>
+<p>The alignment of the C-alpha helix from imatinib bound BCR-ABL PDB_ID:1IEP (magenta) and Ponatinib bound BCR_ABL PDB_ID:3OXZ (Cyan) (A). The side chains orientations of the both C-alpha helices (B). DFG motif side chain conformations in both imatinib and ponatinib bound BCR-ABL kinase (C).</p>
+<p>(DOC)</p>
+</caption></supplementary-material></sec></body>
+<back>
+<ack>
+<p>The authors thank CMSD, University of Hyderabad for providing the computational facility. KT thanks CSIR, India for research fellowship.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0078556-Allen1"><label>1</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Allen</surname><given-names>PB</given-names></name>, <name name-style="western"><surname>Morgan</surname><given-names>GJ</given-names></name>, <name name-style="western"><surname>Wiedemann</surname><given-names>LM</given-names></name> (<year>1992</year>) <article-title>Philadelphia chromosome-positive leukaemia: the translocated genes and their gene products</article-title>. <source>Baillieres Clin Haematol</source> <volume>5</volume>: <fpage>897</fpage>–<lpage>930</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Pendergast1"><label>2</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pendergast</surname><given-names>AM</given-names></name>, <name name-style="western"><surname>Witte</surname><given-names>ON</given-names></name> (<year>1987</year>) <article-title>Role of the ABL oncogene tyrosine kinase activity in human leukaemia</article-title>. <source>Baillieres Clin Haematol</source> <volume>1</volume>: <fpage>1001</fpage>–<lpage>1020</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Daley1"><label>3</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Daley</surname><given-names>GQ</given-names></name>, <name name-style="western"><surname>Van Etten</surname><given-names>RA</given-names></name>, <name name-style="western"><surname>Baltimor</surname><given-names>D</given-names></name> (<year>1990</year>) <article-title>Induction of chronic myelogenous leukemia in mice by the p210 BCR-ABL gene of the Philadelphia chromosome</article-title>. <source>Science</source> <volume>247</volume>: <fpage>824</fpage>–<lpage>830</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Daley2"><label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Daley</surname><given-names>GQ</given-names></name>, <name name-style="western"><surname>Ben-Neriah</surname><given-names>Y</given-names></name> (<year>1991</year>) <article-title>Implicating the bcr/abl gene in the pathogenesis of Philadelphia chromosome-positive human leukemia</article-title>. <source>Adv Cancer Res</source> <volume>57</volume>: <fpage>151</fpage>–<lpage>184</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Kurzrock1"><label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kurzrock</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Gutterman</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Talpaz</surname><given-names>M</given-names></name> (<year>1988</year>) <article-title>The molecular genetics of Philadelphia chromosome-positive leukemias</article-title>. <source>N Engl J Med</source> <volume>319</volume>: <fpage>990</fpage>–<lpage>998</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Faderl1"><label>6</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Faderl</surname><given-names>S</given-names></name> (<year>1999</year>) <article-title>The biology of chronic myeloid leukemia</article-title>. <source>N Engl J Med</source> <volume>341</volume>: <fpage>164</fpage>–<lpage>172</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Deininger1"><label>7</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Deininger</surname><given-names>MW</given-names></name>, <name name-style="western"><surname>Goldman</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Melo</surname><given-names>JV</given-names></name> (<year>2000</year>) <article-title>The molecular biology of chronic myeloid leukemia</article-title>. <source>Blood</source> <volume>96</volume>: <fpage>3343</fpage>–<lpage>3356</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Goldman1"><label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Goldman</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Druker</surname><given-names>BJ</given-names></name> (<year>2001</year>) <article-title>Chronic myeloid leukemia: current treatment options</article-title>. <source>Blood</source> <volume>98</volume>: <fpage>2039</fpage>–<lpage>2042</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Druker1"><label>9</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Druker</surname><given-names>BJ</given-names></name>, <name name-style="western"><surname>O'Brien</surname><given-names>SG</given-names></name>, <name name-style="western"><surname>Cortes</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Radich</surname><given-names>J</given-names></name> (<year>2002</year>) <article-title>Chronic myelogenous leukemia</article-title>. <source>Hematology (Am Soc Hematol Educ Program)</source> <volume>1</volume>: <fpage>111</fpage>–<lpage>135</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Melo1"><label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Melo</surname><given-names>JV</given-names></name> (<year>1996</year>) <article-title>The diversity of BCR-ABL fusion proteins and their relationship to leukemia phenotype</article-title>. <source>Blood</source> <volume>88</volume>: <fpage>2375</fpage>–<lpage>2384</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Ren1"><label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ren</surname><given-names>R</given-names></name> (<year>2005</year>) <article-title>Mechanisms of BCR-ABL in the pathogenesis of chronic myelogenous leukaemia</article-title>. <source>Nat Rev Cancer</source> <volume>5</volume>: <fpage>172</fpage>–<lpage>183</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Gorre1"><label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gorre</surname><given-names>ME</given-names></name>, <name name-style="western"><surname>Mohammed</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Ellwood</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Hsu</surname><given-names>N</given-names></name>, <name name-style="western"><surname>Paquette</surname><given-names>R</given-names></name>, <etal>et al</etal>. (<year>2001</year>) <article-title>Clinical resistance to STI-571 cancer therapy caused by BCR-ABL gene mutation or amplification</article-title>. <source>Science</source> <volume>293</volume>: <fpage>876</fpage>–<lpage>880</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Carter1"><label>13</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Carter</surname><given-names>TA</given-names></name>, <name name-style="western"><surname>Wodicka</surname><given-names>LM</given-names></name>, <name name-style="western"><surname>Shah</surname><given-names>NP</given-names></name>, <name name-style="western"><surname>Velasco</surname><given-names>AM</given-names></name>, <name name-style="western"><surname>Fabian</surname><given-names>MA</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Inhibition of drug-resistant mutants of ABL, KIT, and EGF receptor kinases</article-title>. <source>PNAS</source> <volume>102</volume>: <fpage>11011</fpage>–<lpage>11016</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Zhou1"><label>14</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhou</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Commodore</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Huang</surname><given-names>WS</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Thomas</surname><given-names>N</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Structural Mechanism of the Pan-BCR-ABL Inhibitor Ponatinib (AP24534): Lessons for Overcoming Kinase Inhibitor Resistance</article-title>. <source>Chem Biol Drug Des</source> <volume>77</volume>: <fpage>1</fpage>–<lpage>11</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Deininger2"><label>15</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Deininger</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Buchdunger</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Druker</surname><given-names>BJ</given-names></name> (<year>2005</year>) <article-title>The development of imatinib as a therapeutic agent for chronic myeloid leukemia</article-title>. <source>Blood</source> <volume>105</volume>: <fpage>2640</fpage>–<lpage>2653</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Druker2"><label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Druker</surname><given-names>BJ</given-names></name>, <name name-style="western"><surname>Talpaz</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Resta</surname><given-names>DJ</given-names></name>, <name name-style="western"><surname>Peng</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Buchdunger</surname><given-names>E</given-names></name>, <etal>et al</etal>. (<year>2001</year>) <article-title>Efficacy and safety of a specific inhibitor of the BCR-ABL tyrosine kinase in chronic myeloid leukemia</article-title>. <source>N Engl J Med</source> <volume>344</volume>: <fpage>1031</fpage>–<lpage>1037</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-RocheLestienne1"><label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Roche-Lestienne</surname><given-names>C</given-names></name> (<year>2002</year>) <article-title>Several types of mutations of the ABL gene can be found in chronic myeloid leukemia patients resistant to STI571, and they can pre-exist to the onset of treatment</article-title>. <source>Blood</source> <volume>100</volume>: <fpage>1014</fpage>–<lpage>1018</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Branford1"><label>18</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Branford</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Rudzki</surname><given-names>Z</given-names></name>, <name name-style="western"><surname>Walsh</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Parkinson</surname><given-names>I</given-names></name>, <name name-style="western"><surname>Grigg</surname><given-names>A</given-names></name>, <etal>et al</etal>. (<year>2003</year>) <article-title>Detection of BCR-ABL mutations in patients with CML treated with imatinib is virtually always accompanied by clinical resistance, and mutations in the ATP phosphate-binding loop (P-loop) are associated with a poor prognosis</article-title>. <source>Blood</source> <volume>102</volume>: <fpage>276</fpage>–<lpage>283</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Shah1"><label>19</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Shah</surname><given-names>NP</given-names></name>, <name name-style="western"><surname>Nicoll</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Nagar</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Gorre</surname><given-names>ME</given-names></name>, <name name-style="western"><surname>Paquette</surname><given-names>RL</given-names></name>, <etal>et al</etal>. (<year>2002</year>) <article-title>Multiple BCR-ABL kinase domain mutations confer polyclonal resistance to the tyrosine kinase inhibitor imatinib (STI571) in chronic phase and blast crisis chronic myeloid leukemia</article-title>. <source>Cancer Cell</source> <volume>2</volume>: <fpage>117</fpage>–<lpage>125</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Roumiantsev1"><label>20</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Roumiantsev</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Shah</surname><given-names>NP</given-names></name>, <name name-style="western"><surname>Gorre</surname><given-names>ME</given-names></name>, <name name-style="western"><surname>Nicoll</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Brasher</surname><given-names>BB</given-names></name>, <etal>et al</etal>. (<year>2002</year>) <article-title>Clinical resistance to the kinase inhibitor STI-571 in chronic myeloid leukemia by mutation of Tyr-253 in the ABL kinase domain P-loop</article-title>. <source>Proc Natl Acad Sci USA</source> <volume>99</volume>: <fpage>10700</fpage>–<lpage>10705</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Kantarjian1"><label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kantarjian</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Giles</surname><given-names>F</given-names></name>, <name name-style="western"><surname>Wunderle</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Bhalla</surname><given-names>K</given-names></name>, <name name-style="western"><surname>O'Brien</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Nilotinib in imatinib-resistant CML and Philadelphia chromosome-positive ALL</article-title>. <source>N Engl J Med</source> <volume>354</volume>: <fpage>2542</fpage>–<lpage>2551</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Shah2"><label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Shah</surname><given-names>NP</given-names></name>, <name name-style="western"><surname>Tran</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Lee</surname><given-names>FY</given-names></name>, <name name-style="western"><surname>Chen</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Norris</surname><given-names>D</given-names></name>, <etal>et al</etal>. (<year>2004</year>) <article-title>Overriding imatinib resistance with a novel ABL kinase inhibitor</article-title>. <source>Science</source> <volume>305</volume>: <fpage>399</fpage>–<lpage>401</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Weisberg1"><label>23</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Weisberg</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Manley</surname><given-names>PW</given-names></name>, <name name-style="western"><surname>Cowan-Jacob</surname><given-names>SW</given-names></name>, <name name-style="western"><surname>Hochhaus</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Griffin</surname><given-names>JD</given-names></name> (<year>2007</year>) <article-title>Second generation inhibitors of BCR-ABL for the treatment of imatinib-resistant chronic myeloid leukaemia</article-title>. <source>Nat Rev Cancer</source> <volume>7</volume>: <fpage>345</fpage>–<lpage>356</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Lee1"><label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lee</surname><given-names>TS</given-names></name>, <name name-style="western"><surname>Potts</surname><given-names>SJ</given-names></name>, <name name-style="western"><surname>Kantarjian</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Cortes</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Giles</surname><given-names>F</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>Molecular Basis Explanation for Imatinib Resistance of BCR-ABL Due to T315I and P-Loop Mutations From Molecular Dynamics Simulations</article-title>. <source>Cancer</source> <volume>112</volume>: <fpage>1744</fpage>–<lpage>1753</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Hess1"><label>25</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hess</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Kutzner</surname><given-names>C</given-names></name>, <name name-style="western"><surname>van der Spoel</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Lindahl</surname><given-names>E</given-names></name> (<year>2008</year>) <article-title>GROMACS 4: Algorithms for Highly Efficient, Load-Balanced, and Scalable Molecular Simulation</article-title>. <source>J Chem Theory Comput</source> <volume>4</volume>: <fpage>435</fpage>–<lpage>447</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-vanderSpoel1"><label>26</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>van der Spoel</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Lindahl</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Hess</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Groenhof</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Mark</surname><given-names>AE</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>GROMACS: Fast, Flexible, and Free</article-title>. <source>J Comput Chem</source> <volume>26</volume>: <fpage>1701</fpage>–<lpage>1718</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Hornak1"><label>27</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hornak</surname><given-names>V</given-names></name>, <name name-style="western"><surname>Abel</surname><given-names>R</given-names></name>, <name name-style="western"><surname>Okur</surname><given-names>A</given-names></name>, <name name-style="western"><surname>Strockbine</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Roitberg</surname><given-names>A</given-names></name>, <etal>et al</etal>. (<year>2006</year>) <article-title>Comparison of multiple Amber force fields and development of improved protein backbone parameters</article-title>. <source>Proteins</source> <volume>65</volume>: <fpage>712</fpage>–<lpage>725</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Wang1"><label>28</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wang</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Wolf</surname><given-names>RM</given-names></name>, <name name-style="western"><surname>Caldwell</surname><given-names>JW</given-names></name>, <name name-style="western"><surname>Kollman</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Case</surname><given-names>DA</given-names></name> (<year>2004</year>) <article-title>Development and testing of a general amber force field</article-title>. <source>J Comput Chem</source> <volume>25</volume>: <fpage>1157</fpage>–<lpage>1174</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Wang2"><label>29</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wang</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Wang</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Kollman</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Case</surname><given-names>DA</given-names></name> (<year>2006</year>) <article-title>Automatic atom type and bond type perception in molecular mechanical calculations</article-title>. <source>J Mol Graph Model</source> <volume>25</volume>: <fpage>247</fpage>–<lpage>260</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-SousadaSilva1"><label>30</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sousa da Silva</surname><given-names>AW</given-names></name>, <name name-style="western"><surname>Vranken</surname><given-names>WF</given-names></name> (<year>2012</year>) <article-title>ACPYPE – AnteChamber PYthon Parser interfacE</article-title>. <source>BMC Res Notes</source> <volume>5</volume>: <fpage>367</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Darden1"><label>31</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Darden</surname><given-names>T</given-names></name>, <name name-style="western"><surname>York</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Pedersen</surname><given-names>L</given-names></name> (<year>1993</year>) <article-title>Particle mesh Ewald: an Nlog (N) method for Ewald sums in large systems</article-title>. <source>J Chem Phys</source> <volume>98</volume>: <fpage>10089</fpage>–<lpage>10092</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Essmann1"><label>32</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Essmann</surname><given-names>U</given-names></name>, <name name-style="western"><surname>Perera</surname><given-names>L</given-names></name>, <name name-style="western"><surname>Berkowitz</surname><given-names>ML</given-names></name>, <name name-style="western"><surname>Darden</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Lee</surname><given-names>H</given-names></name>, <etal>et al</etal>. (<year>1995</year>) <article-title>A smooth particle meshes Ewald method</article-title>. <source>J Chem Phys</source> <volume>103</volume>: <fpage>8577</fpage>–<lpage>8593</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Bussi1"><label>33</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bussi</surname><given-names>G</given-names></name>, <name name-style="western"><surname>Donadio</surname><given-names>D</given-names></name>, <name name-style="western"><surname>Parrinello</surname><given-names>M</given-names></name> (<year>2007</year>) <article-title>Canonical sampling through velocity-rescaling</article-title>. <source>J Chem Phys</source> <volume>126</volume>: <fpage>014101</fpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Parrinello1"><label>34</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Parrinello</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Rahman</surname><given-names>A</given-names></name> (<year>1981</year>) <article-title>Polymorphic transitions in single crystals: A new molecular dynamics method</article-title>. <source>J Appl Phys</source> <volume>52</volume>: <fpage>7182</fpage>–<lpage>7190</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Hess2"><label>35</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hess</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Bekker</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Berendsen</surname><given-names>HJC</given-names></name>, <name name-style="western"><surname>Fraaije</surname><given-names>JGEM</given-names></name> (<year>1997</year>) <article-title>LINCS: a linear constraint solver for molecular simulations</article-title>. <source>J Comput Chem</source> <volume>18</volume>: <fpage>1463</fpage>–<lpage>1472</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Nam1"><label>36</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Naïm</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Bhat</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Rankin</surname><given-names>KN</given-names></name>, <name name-style="western"><surname>Dennis</surname><given-names>S</given-names></name>, <name name-style="western"><surname>Chowdhury</surname><given-names>SF</given-names></name>, <etal>et al</etal>. (<year>2007</year>) <article-title>Solvated interaction energy (SIE) for scoring protein-ligand binding affinities. 1. Exploring the parameter space</article-title>. <source>J Chem Inf Model</source> <volume>47</volume>: <fpage>122</fpage>–<lpage>133</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Sulea1"><label>37</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sulea</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Cui</surname><given-names>Q</given-names></name>, <name name-style="western"><surname>Purisima</surname><given-names>EO</given-names></name> (<year>2011</year>) <article-title>Solvated interaction energy (SIE) for scoring protein-ligand binding affinities. 2. Benchmark in the CSAR-2010 scoring exercise</article-title>. <source>J Chem Inf Model</source> <volume>51(9)</volume>: <fpage>2066</fpage>–<lpage>2681</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Zou1"><label>38</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zou</surname><given-names>X</given-names></name>, <name name-style="western"><surname>Sun</surname><given-names>Y</given-names></name>, <name name-style="western"><surname>Kuntz</surname><given-names>ID</given-names></name> (<year>1999</year>) <article-title>Inclusion of Solvation in Ligand Binding Free Energy Calculations Using the Generalized-Born Model</article-title>. <source>J Am Chem Soc</source> <volume>121</volume>: <fpage>8033</fpage>–<lpage>8043</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Kollman1"><label>39</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kollman</surname><given-names>PA</given-names></name>, <name name-style="western"><surname>Massova</surname><given-names>I</given-names></name>, <name name-style="western"><surname>Reyes</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Kuhn</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Huo</surname><given-names>S</given-names></name>, <etal>et al</etal>. (<year>2000</year>) <article-title>Calculating Structures and Free Energies of Complex Molecules: Combining Molecular Mechanics and Continuum Models, Acc Chem Res</article-title>. <volume>33</volume>: <fpage>889</fpage>–<lpage>897</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Kuhn1"><label>40</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kuhn</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Gerber</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Schulz-Gasch</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Stahl</surname><given-names>M</given-names></name> (<year>2005</year>) <article-title>Validation and Use of the MM-PBSA Approach for Drug Discovery</article-title>. <source>J Med Chem</source> <volume>48</volume>: <fpage>4040</fpage>–<lpage>4048</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Gohlke1"><label>41</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gohlke</surname><given-names>H</given-names></name>, <name name-style="western"><surname>Case</surname><given-names>DA</given-names></name> (<year>2004</year>) <article-title>Converging free energy estimates:MM-PB (GB) SA studies on the protein-protein complex Ras-Raf</article-title>. <source>J Comput Chem</source> <volume>25</volume>: <fpage>238</fpage>–<lpage>250</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Aqvist1"><label>42</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Aqvist</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Luzhkov</surname><given-names>VB</given-names></name>, <name name-style="western"><surname>Brandsdal</surname><given-names>BO</given-names></name> (<year>2002</year>) <article-title>Ligand binding affinities from MD simulations</article-title>. <source>Acc Chem Res</source> <volume>35</volume>: <fpage>358</fpage>–<lpage>365</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Cui1"><label>43</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cui</surname><given-names>Q</given-names></name>, <name name-style="western"><surname>Sulea</surname><given-names>T</given-names></name>, <name name-style="western"><surname>Schrag</surname><given-names>JD</given-names></name>, <name name-style="western"><surname>Munger</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Hung</surname><given-names>MN</given-names></name>, <etal>et al</etal>. (<year>2008</year>) <article-title>Molecular dynamics-solvatedinteraction energy studies of protein-protein interactions: theMP1-p14 scaffolding complex</article-title>. <source>J Mol Biol</source> <volume>379</volume>: <fpage>787</fpage>–<lpage>802</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Purisima1"><label>44</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Purisima</surname><given-names>EO</given-names></name>, <name name-style="western"><surname>Nilar</surname><given-names>SH</given-names></name> (<year>1995</year>) <article-title>A Simple Yet Accurate Boundary-Element Method for Continuum Dielectric Calculations</article-title>. <source>J Comput Chem</source> <volume>16</volume>: <fpage>681</fpage>–<lpage>689</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Purisima2"><label>45</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Purisima</surname><given-names>EO</given-names></name> (<year>1998</year>) <article-title>Fast summation boundary element method for calculating solvation free energies of macromolecules</article-title>. <source>J Comput Chem 1998</source> <volume>19</volume>: <fpage>1494</fpage>–<lpage>1504</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Lill1"><label>46</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lill</surname><given-names>MA</given-names></name>, <name name-style="western"><surname>Thompson</surname><given-names>JJ</given-names></name> (<year>2011</year>) <article-title>Solvent interaction energy calculations on molecular dynamics trajectories: increasing the efficiency using systematic frame selection</article-title>. <source>J Chem Inf Model</source> <volume>51</volume>: <fpage>2680</fpage>–<lpage>2689</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Chen1"><label>47</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chen</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Chang</surname><given-names>CE</given-names></name>, <name name-style="western"><surname>Gilson</surname><given-names>MK</given-names></name> (<year>2004</year>) <article-title>Calculation of cyclodextrin binding affinities: energy, entropy, and implications for drug design</article-title>. <source>Biophys J</source> <volume>87</volume>: <fpage>3035</fpage>–<lpage>3049</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Modugno1"><label>48</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Modugno</surname><given-names>M</given-names></name>, <name name-style="western"><surname>Casale</surname><given-names>E</given-names></name>, <name name-style="western"><surname>Soncini</surname><given-names>C</given-names></name>, <name name-style="western"><surname>Rosettani</surname><given-names>P</given-names></name>, <name name-style="western"><surname>Colombo</surname><given-names>R</given-names></name>, <etal>et al</etal>. (<year>2007</year>) <article-title>Crystal structure of the T315I Abl mutant in complex with the aurora kinases inhibitor PHA-739358</article-title>. <source>Cancer Res</source> <volume>67</volume>: <fpage>7987</fpage>–<lpage>7990</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Chan1"><label>49</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chan</surname><given-names>WW</given-names></name>, <name name-style="western"><surname>Wise</surname><given-names>SC</given-names></name>, <name name-style="western"><surname>Kaufman</surname><given-names>MD</given-names></name>, <name name-style="western"><surname>Ahn</surname><given-names>YM</given-names></name>, <etal>et al</etal>. (<year>2011</year>) <article-title>Conformational control inhibition of the BCR-ABL1 tyrosine kinase, including the gatekeeper T315I mutant, by the switch-control inhibitor DCC-2036</article-title>. <source>Cancer Cell</source> <volume>19</volume>: <fpage>556</fpage>–<lpage>568</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Nagar1"><label>50</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nagar</surname><given-names>B</given-names></name>, <name name-style="western"><surname>Hantschel</surname><given-names>O</given-names></name>, <name name-style="western"><surname>Young</surname><given-names>MA</given-names></name>, <name name-style="western"><surname>Scheffzek</surname><given-names>K</given-names></name>, <name name-style="western"><surname>Veach</surname><given-names>D</given-names></name>, <etal>et al</etal>. (<year>2003</year>) <article-title>Structural basis for the autoinhibition of c-Abl tyrosine kinase</article-title>. <source>Cell</source> <volume>112</volume>: <fpage>859</fpage>–<lpage>871</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Zhang1"><label>51</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhang</surname><given-names>J</given-names></name>, <name name-style="western"><surname>Adrián</surname><given-names>FJ</given-names></name>, <name name-style="western"><surname>Jahnke</surname><given-names>W</given-names></name>, <name name-style="western"><surname>Cowan-Jacob</surname><given-names>SW</given-names></name>, <name name-style="western"><surname>Li</surname><given-names>AG</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Targeting Bcr-Abl by combining allosteric with ATP-binding-site inhibitors</article-title>. <source>Nature</source> <volume>463</volume>: <fpage>501</fpage>–<lpage>506</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0078556-Ottmann1"><label>52</label>
+<mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ottmann</surname><given-names>OG</given-names></name>, <name name-style="western"><surname>Druker</surname><given-names>BJ</given-names></name>, <name name-style="western"><surname>Sawyers</surname><given-names>CL</given-names></name>, <name name-style="western"><surname>Goldman</surname><given-names>JM</given-names></name>, <name name-style="western"><surname>Reiffers</surname><given-names>J</given-names></name>, <etal>et al</etal>. (<year>2002</year>) <article-title>A phase 2 study of imatinib in patients with relapsed or refractory Philadelphia chromosomepositive acute lymphoid leukemias</article-title>. <source>Blood</source> <volume>100</volume>: <fpage>1965</fpage>–<lpage>1971</lpage>.</mixed-citation>
+</ref>
+</ref-list></back>
+</article>

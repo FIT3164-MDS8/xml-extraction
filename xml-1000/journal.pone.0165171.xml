@@ -1,0 +1,1645 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1d3" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0165171</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-16-07555</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Cognitive science</subject><subj-group><subject>Cognition</subject><subj-group><subject>Decision making</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Simulation and modeling</subject><subj-group><subject>Agent-based modeling</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Computer and information sciences</subject><subj-group><subject>Systems science</subject><subj-group><subject>Agent-based modeling</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Systems science</subject><subj-group><subject>Agent-based modeling</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Economics</subject><subj-group><subject>Economic agents</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Simulation and modeling</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Economics</subject><subj-group><subject>Experimental economics</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Economics</subject><subj-group><subject>Economic models</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Computer and information sciences</subject><subj-group><subject>Computer architecture</subject><subj-group><subject>Computer hardware</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Economics</subject></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Experimental Evaluation of Suitability of Selected Multi-Criteria Decision-Making Methods for Large-Scale Agent-Based Simulations</article-title>
+<alt-title alt-title-type="running-head">Suitability of Multi-Criteria Decision-Making Methods in Large-Scale Agent Models</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Tučník</surname>
+<given-names>Petr</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+<contrib contrib-type="author" corresp="yes" equal-contrib="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0001-7788-7445</contrib-id>
+<name name-style="western">
+<surname>Bureš</surname>
+<given-names>Vladimír</given-names>
+</name>
+<xref ref-type="corresp" rid="cor001">*</xref>
+<xref ref-type="aff" rid="aff001"/>
+</contrib>
+</contrib-group>
+<aff id="aff001"><addr-line>Faculty of Informatics and Management, University of Hradec Králové, Rokitanského 62, Hradec Králové, Czech Republic</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Amblard</surname>
+<given-names>Frederic</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Universite Toulouse 1 Capitole, FRANCE</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con">
+<p><list list-type="simple">
+<list-item><p><bold>Conceptualization:</bold> PT VB.</p></list-item>
+<list-item><p><bold>Data curation:</bold> PT.</p></list-item>
+<list-item><p><bold>Formal analysis:</bold> VB.</p></list-item>
+<list-item><p><bold>Funding acquisition:</bold> VB.</p></list-item>
+<list-item><p><bold>Investigation:</bold> PT.</p></list-item>
+<list-item><p><bold>Methodology:</bold> PT VB.</p></list-item>
+<list-item><p><bold>Project administration:</bold> PT.</p></list-item>
+<list-item><p><bold>Resources:</bold> PT VB.</p></list-item>
+<list-item><p><bold>Software:</bold> PT.</p></list-item>
+<list-item><p><bold>Supervision:</bold> PT.</p></list-item>
+<list-item><p><bold>Validation:</bold> VB.</p></list-item>
+<list-item><p><bold>Visualization:</bold> VB.</p></list-item>
+<list-item><p><bold>Writing – original draft:</bold> PT VB.</p></list-item>
+<list-item><p><bold>Writing – review &amp; editing:</bold> VB PT.</p></list-item></list></p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">vladimir.bures@uhk.cz</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>2</day>
+<month>11</month>
+<year>2016</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2016</year>
+</pub-date>
+<volume>11</volume>
+<issue>11</issue>
+<elocation-id>e0165171</elocation-id>
+<history>
+<date date-type="received">
+<day>22</day>
+<month>2</month>
+<year>2016</year>
+</date>
+<date date-type="accepted">
+<day>8</day>
+<month>10</month>
+<year>2016</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2016</copyright-year>
+<copyright-holder>Tučník, Bureš</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0165171"/>
+<abstract>
+<p>Multi-criteria decision-making (MCDM) can be formally implemented by various methods. This study compares suitability of four selected MCDM methods, namely WPM, TOPSIS, VIKOR, and PROMETHEE, for future applications in agent-based computational economic (ACE) models of larger scale (i.e., over 10 000 agents in one geographical region). These four MCDM methods were selected according to their appropriateness for computational processing in ACE applications. Tests of the selected methods were conducted on four hardware configurations. For each method, 100 tests were performed, which represented one testing iteration. With four testing iterations conducted on each hardware setting and separated testing of all configurations with the–server parameter de/activated, altogether, 12800 data points were collected and consequently analyzed. An illustrational decision-making scenario was used which allows the mutual comparison of all of the selected decision making methods. Our test results suggest that although all methods are convenient and can be used in practice, the VIKOR method accomplished the tests with the best results and thus can be recommended as the most suitable for simulations of large-scale agent-based models.</p>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100001824</institution-id>
+<institution>Grantová Agentura České Republiky</institution>
+</institution-wrap>
+</funding-source>
+<award-id>GA15-11724S</award-id>
+</award-group>
+<funding-statement>This work was supported by the Grantová Agentura České Republiky (GAČR) scientific project GA15-11724S DEPIES—Decision Processes in Intelligent Environments. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="5"/>
+<table-count count="8"/>
+<page-count count="24"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its Supporting Information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>In the realm of socio-economic systems, problem solving is mostly related to the necessity for individual agents to make right decisions. In most cases, the operational level of decision-making can be handled by standard optimization algorithms, as these problems mostly require only the optimized solution, and decision-making is generally specialized and not overwhelmingly complex. Nevertheless, decision-making on both tactical and strategic levels is generally dependent on a large number of factors and is characterized by the pursuit of parallel goals, and the decision-making component is expected to adapt to changing conditions because economic environments are typically dynamic and complex in nature. Therefore, these environments are modelled with the help of various techniques or approaches. The traditional analytical approach to modelling of economic systems has several weak points [<xref ref-type="bibr" rid="pone.0165171.ref001">1</xref>]. Therefore, modelling based on systems dynamics principles [<xref ref-type="bibr" rid="pone.0165171.ref002">2</xref>] or agent-based techniques has recently emerged as a viable alternative. Tied to the latter, a new discipline termed Agent-based Computational Economics (ACE) has been established. In this field of study, multi-agent economic systems comprise multiple intelligent agents that interact to solve problems that might be beyond the capabilities of a single agent or system [<xref ref-type="bibr" rid="pone.0165171.ref003">3</xref>]. Hence, individual agents represent economic entities of various types, and the performance of the whole system is the result of a large number of their mutual interactions. ACE models are constructed through a bottom-up approach, i.e., there is no centralized control or decision-making. However, this approach causes one of the main issues of the agent-based approach, especially when large-scale models are developed and used for simulations. As the square law of computation indicates [<xref ref-type="bibr" rid="pone.0165171.ref004">4</xref>], as the number of agents increases, the computation complexity rises disproportionately. This limitation forces users to apply as effective methods or techniques as possible. In case of decision-making agents it encourages the exploration of the possibility of applying multi-criteria decision-making as the main control mechanism on both the individual and collective level of multi-agent systems. Unfortunately, there is a very limited number of studies published that would explicitly deal with application of multi-criteria decision-making (MCDM) methods in multi-agent models. However, there are studies connecting decision-making at the general level and agent-based modelling. For instance, while Yu and Xu [<xref ref-type="bibr" rid="pone.0165171.ref005">5</xref>] deal with graph-based multi-agent decision making, Nguyen et al. [<xref ref-type="bibr" rid="pone.0165171.ref006">6</xref>] investigate decision-making agents in rice pest risk management. Obviously, exploration of suitability of particular MCDM methods for large-scale agent-based simulations represents a significant research gap and associated experiments can offer results with a high level of value added and novelty.</p>
+<p>This study follows the seminal work of Triantaphyllou [<xref ref-type="bibr" rid="pone.0165171.ref007">7</xref>], who states that the fundamental research question is "which is the best method for a given problem?” Similarly, Peng et al. [<xref ref-type="bibr" rid="pone.0165171.ref008">8</xref>] state that “it is a challenging task to decide, which MCDM method(s) are suitable for a problem”. In case of this study, the problem is a decision-making process performed by agents in large-scale agent-based systems, which represents the main research construct of this study. Thus, rather than development of a new MCDM method suitable for decision-making in multi-agent systems or adjustment of the existing one, it is more suitable to focus on several existing formal methods that might be applied in this specific decision-making environment. This study is based on two main assumptions, which existence and thus relevancy was verified by review of research papers published in three scientific databases–Scopus, ScienceDirect and Web of Knowledge. First, no study comparing the computational effectiveness of selected multi-criteria decision-making methods in large-scale agent-based systems has been conducted yet. Second, agent-based models are mostly developed and simulated on standard personal computers, laptops, or notebooks. Although there is an intensive research focused on usage of distributed environments, high performance (HPC) and high throughput (HTC) compute platforms, Grid or clouds ([<xref ref-type="bibr" rid="pone.0165171.ref009">9</xref>] or [<xref ref-type="bibr" rid="pone.0165171.ref010">10</xref>]), we consider it as specific and mostly associated with particular research conducted in the information technology realm. It can be assumed that agent-based models are mostly built and simulated on commodity compute resources and large-scale models are mostly developed and simulated with the help of similar configurations as well. Although the aforementioned review of studies revealed that absolute majority of models are presented without description of hardware configurations that was used for modelling and simulations, there are two main prevailing reasons for this assumption. First, Anylogic as one of the leading agent-based platform provider states system requirements at its web pages. Even when AnyLogic represents quite sophisticated set of tools that focus on various modelling paradigms, requirements are in concordance with equipment of standard low-cost computers or laptops (dated to 2015/2016). Second, existing literature supports this assumption as well. For instance, the international group of researchers states that “recent advances in computing hardware such as the wide availability of multi-core CPUs and increased main memory capacities make it possible to investigate population-scale phenomena using commodity compute resources.” [<xref ref-type="bibr" rid="pone.0165171.ref011">11</xref>]. Based on these two assumptions the main research question is formulated as follows: Which from the selected MCDM methods is the most suitable (least time demanding) for application in large-scale agent-based simulations using commodity compute resources? The main objective of this manuscript is to compare computational effectiveness of the WPM, TOPSIS, VIKOR and PROMETHEE methods during the simulation of a specific decision making situation in economic the large-scale agent-based system. In this context, the suitability constitutes time demands associated with runtimes required for execution of the method. The main working hypothesis states that among these four methods, one surpasses the others in terms of suitability as defined above. The subsequent parts of the paper are structured as follows. After the introductory section, the materials and methods are presented. More specifically, the agent-based computational economy used as a platform for the experiments is introduced and the specific experimental software and hardware settings are described. Further, description of the theoretical basis of the decision-making methods applied in this study is provided. The third section presents the results and discusses them in a broader context. Consequently, study limitations and further research paths are outlined. The final section presents the conclusions.</p>
+</sec>
+<sec id="sec002" sec-type="materials|methods">
+<title>Materials and Methods</title>
+<p>At the beginning of the research, several platforms for development of multi-agent systems were available for the implementation of the model. In order to find the most suitable platform, following criteria were defined, according to basic requirements:</p>
+<list list-type="bullet">
+<list-item><p>Geographical Information Systems (GIS) data support, Win OS compatibility,</p></list-item>
+<list-item><p>orientation on economic models (preferably),</p></list-item>
+<list-item><p>capacity to handle large-scale models, i.e. models with several thousands of agents or more,</p></list-item>
+<list-item><p>deliberative (or variable) decision-making support,</p></list-item>
+<list-item><p>object-oriented structure, preferably Java-based,</p></list-item>
+<list-item><p>various simulation approaches,</p></list-item>
+<list-item><p>built-in optimization support for experiments.</p></list-item>
+</list>
+<p>Based upon these requirements, several platforms were taken into consideration.</p>
+<list list-type="order">
+<list-item><p>NetLogo (<ext-link ext-link-type="uri" xlink:href="https://ccl.northwestern.edu/netlogo/" xlink:type="simple">https://ccl.northwestern.edu/netlogo/</ext-link>)–the NetLogo platform is a tool for development of agent-based models, available free of charge at the Northwestern Center for Connected Learning and Computer Based Modeling. NetLogo uses simplified representation of the environment (patches organized into a grid) and agents (turtles) and while it is in general possible to use GIS data and employ large number of agents in a model at the same time, it does not offer sufficient complexity for decision making capabilities of agents for the intended purposes and extent of the model. Although implementation is relatively easy, NetLogo can be perceived as slightly obsolete today. While unsuitable for our needs, many successful models were implemented in NetLogo, and developer provides extensive library of implemented models for the user`s convenience.</p></list-item>
+<list-item><p>JADE (<ext-link ext-link-type="uri" xlink:href="http://jade.tilab.com/" xlink:type="simple">http://jade.tilab.com/</ext-link>)–JADE (Java Agent Development Framework) is an open source platform fully implemented in Java language. It also fully complies with the FIPA specifications and offers distribution of models over several machines, if needed. However, for the large-scale models, a communication bottleneck exists since all requests are handled by single facilitator entity at certain point (which is an integral part of the Jade communication protocol). Although environment works efficiently with smaller number of agents, for higher number of agents (100k and more) there are severe limitations in model performance. JADE also lacks native support for the GIS data processing.</p></list-item>
+<list-item><p>EKI One/MASA platforms (<ext-link ext-link-type="uri" xlink:href="http://masa-group.biz/" xlink:type="simple">http://masa-group.biz/</ext-link>)–the commercial EKI One platform—originally developed by Artificial Technology GmbH—had integrated Unity support, a Sandbox module for prototyping, and used Lua programming language for scripting. The first version of the model has been partially implemented in this environment, but since the developer company was bought by a competitor (MASA), this platform`s support and further development was terminated. A triplet of platforms was later introduced by the MASA group, namely SWORD (specialized on military logistics and simulations), LIFE (character design and behavior), and SYNERGY (development of DSS for emergency management). Being out of scope for our research, this branch of platforms is no longer used for implementation.</p></list-item>
+<list-item><p>AnyLogic (<ext-link ext-link-type="uri" xlink:href="http://www.anylogic.com/" xlink:type="simple">http://www.anylogic.com/</ext-link>)–AnyLogic is a general purpose agent-oriented commercial platform which supports three of the most common modeling paradigms today: (i) agent-based modeling, (ii) discrete event, and (iii) system dynamics simulations. Similar to NetLogo in provision of library of examples and excellent technical support for users, AnyLogic allows implementation of models of various complexity and scale. Supply chain and logistics, manufacturing and production, transportation and warehousing, social processes, or strategic planning and management represent intended application areas for this platform. Moreover, variety of basic functionalities is already well-prepared in AnyLogic libraries, such as pathfinding, GIS support, distribution functions, etc. which makes development of models faster and easier. Altogether, AnyLogic is found to be the most suitable, modern platform available, well-fitting to the needs determined by this study requirements.</p></list-item>
+</list>
+<p>The list of agent-based modeling platforms is obviously not complete, for there is a plethora of platforms and toolkits (ADK, Brahms, GAMA, MASON etc.) available on the market. The selection of methods applied in this manuscript covers only platforms closely related to this particular research. The list actually represents only a tip of an iceberg, since multi-agent modeling has become very popular recently and there are literally dozens of platforms available. More thorough survey of agent-based modeling software in general is provided by Nicolai &amp; Madey [<xref ref-type="bibr" rid="pone.0165171.ref012">12</xref>]. Less general and more domain-oriented is recent paper of Hmida that focuses on implementing various MAS architectures in supply chains [<xref ref-type="bibr" rid="pone.0165171.ref013">13</xref>]. Interesting perspective also offers Wang`s paper [<xref ref-type="bibr" rid="pone.0165171.ref014">14</xref>], which deals with smart factories and a strategic initiative called “Industrie 4.0” (German equivalent to Industry 4.0 in English), which was proposed and adopted by the German government as part of the “High-Tech Strategy 2020 Action Plan” [<xref ref-type="bibr" rid="pone.0165171.ref015">15</xref>]. Other studies utilizing agent approach focus mainly on various sub-topics which may be also considered relevant, e.g. more technical view with emphasis on application of engineering approaching in developing simulation models [<xref ref-type="bibr" rid="pone.0165171.ref016">16</xref>], management of SME`s supply chains via MAS outsourcing [<xref ref-type="bibr" rid="pone.0165171.ref017">17</xref>], or MAS supply networks in Industry 4.0 [<xref ref-type="bibr" rid="pone.0165171.ref018">18</xref>].</p>
+<sec id="sec003">
+<title>Simulation platform</title>
+<p>The experiment addresses the computational effectiveness of single multi-criteria decision-making methods without strict relation to other aspects of the economic model. As the model’s functionality, usability, validity, and robustness have already been proved, only a brief description is provided in this section. Additional details associated with the platform can be found in [<xref ref-type="bibr" rid="pone.0165171.ref001">1</xref>].</p>
+<p>The economic system has been developed for several months in the AnyLogic software package, v. 7.1.2 x64, with the intention to create a model of real economic systems for use as a suitable platform for various experiments. The main purpose of the model is to represent/emulate an economy at the macro-level, with attention focused especially on the formation of supply chains, consumption, and market interactions. The model implements several types of agents representing:</p>
+<list list-type="bullet">
+<list-item><p>consumers (C-agents who consume goods and services and generate a workforce),</p></list-item>
+<list-item><p>production units (M-agents who harvest and mine the basic production inputs, and industrial F-agents who transform inputs and semi-products to semi-products and products),</p></list-item>
+<list-item><p>services providers (S-agents offer various services),</p></list-item>
+<list-item><p>energy providers (E-agents who generate energy for all other agents),</p></list-item>
+<list-item><p>transportation units (T-agents who ensure transport services).</p></list-item>
+</list>
+<p>Furthermore, there is a meta-agent available in a form of colony (COL, who provides public services on macro-level, such as social and health care services, or security, collect taxes and realize public policies). The model requirements and its particularization progressively lead to the implementation of decision-making performed at the individual, group and collective levels. To respect basic prerequisites of ACE model development [<xref ref-type="bibr" rid="pone.0165171.ref019">19</xref>], the government level (COL) does not play the role of a centralized control entity but creates general constrictions or support according to selected policies or priorities (e.g., tax levels, tax relief, support of green technologies, subsidies for selected investments).</p>
+<p>The most relevant features of the model are as follows:</p>
+<list list-type="bullet">
+<list-item><p>The model consists of a large number of agents (one geographical region is typically represented by more than 10.000 agents).</p></list-item>
+<list-item><p>The model has complete numerical and symbolic representation.</p></list-item>
+<list-item><p>From the macro-economic perspective, the variety of possible actions of given economic entities in the model can be perceived as limited.</p></list-item>
+<list-item><p>Optimization problems at the operational level are handled by standard techniques and algorithms associated with operations management.</p></list-item>
+</list>
+<p>Although there are three levels of decision-making in the system, and each level is specific with regard to the input data used and the variety of solutions considered, the mechanics of decision-making remains basically the same, and thus the same decision-making principle is intended for application at all three levels (with respective variations of input data, decision criteria, variants etc.). The main design principle of the model is grounded in the repeated use of standardized modules of identical (or very similar) construction, which makes consequent testing, verification, and overall implementation significantly easier.</p>
+</sec>
+<sec id="sec004">
+<title>Experimental set-up</title>
+<p>The experimental testing of the selected methods is associated with the decision-making of companies (Factory-agents/Mining-agents/Store-agents/Energy-agents/Transport-agents) who need to select the most appropriate candidates for a working position, i.e. decide upon set of agents (Consumer-agents) available in the economic model, who are offered through the labor market, and select the best one according to specialization and work-experience requirements specific for the respective job. Similar approach is used in the model e.g. for establishment of the optimal consumption of goods and services (i.e. consumer basket related decisions), establishing business relationships between agents, such as finding the best supplier, and other decision making situations of economic nature.</p>
+<p>The decision-making scenario used for experiments was adopted from Ishizaka &amp; Nemery [<xref ref-type="bibr" rid="pone.0165171.ref020">20</xref>], and generalized in description. Values taken from the original recruitment case study describe selection among four candidates with criteria: personality (weight = 0.1), living abroad (weight 0.4), written test (weight = 0.3), and work experience (weight = 0.2). The case study values were given for criteria personality/living abroad/written test/work experience (respectively): Person #1: 7/9/9/8; Person #2: 8/7/8/7; Person #3: 9/6/7/12; Person #4: 6/11/9/12. Only indifference (Q) and preference (P) thresholds (see the description of the Promethee method below) were determined by the authors. Values of Q and P for criteria Communication skills (score 1–10), Years of living abroad (years), Written test (score 1–10), and Work experience (years) were set to 1;2, 2,4; 1,2; and 2,3 respectively.</p>
+<p>In practice, the process is implemented with the help of the abstract class <bold><italic>DecisionMethod</italic></bold>. This class contains attributes of a decision-making table (alternatives, criteria, criteria weights and values). However, information about maximization or minimization is not included in this class because not all methods need it for their calculations. Furthermore, elements related to the results of multi-criteria decision-making are included. Whereas <bold><italic>result</italic></bold> represents the best compromise alternative, <bold><italic>listOfResults</italic></bold> provides the complete list of alternatives based on the results obtained. Next, the class comprises methods for the access and setting of particular attributes. Naturally, this class represents the parent class of further classes associated with particular decision-making methods. These specific classes also implement the interface <bold><italic>IDecision</italic></bold> for interaction of the user with the simulation environment.</p>
+<p>More specifically, all specific classes associated with particular decision-making methods implement given algorithms (see section Calculations below). In the case of the <bold><italic>Wpm</italic></bold> class, the constructor requires alternatives, criteria, criteria weights and information about minimization or maximization. Moreover, parameters in the form of a list are required due to the possibility of relatively high numbers of both alternatives and criteria. In addition to the <bold><italic>Wpm</italic></bold> class, the <bold><italic>Topsis</italic></bold> class addresses normalization. Ideal normalization is selected for the experiment. The selection of the best and the worst evaluations of single criteria form the normalized weighted matrix, which is used for the determination of ideal and negative solutions. The constructor of the <bold><italic>Vikor</italic></bold> class requires identical parameters to the <bold><italic>Topsis</italic></bold> class. In addition to all previous classes, the <bold><italic>Promethee</italic></bold> class constructor requires preference and indifference values in the form of a two-dimensional array. While the array’s first column comprises indifference borders of particular criteria, the second column contains preference borders.</p>
+<p>The user interface and available settings modes were created. Furthermore, a menu for the determination of a specific decision-making method and the number of conducted experimental runs was developed.</p>
+<p>As already stated in the introductory section of this paper, description of hardware settings applied in published studies is very often missing. Therefore, the experimental testing was performed on four hardware settings (HWs) in order to outline influence of hardware on simulation results. The virtual environment was the only application running on the HWs during the experiment. HWs details are presented in <xref ref-type="table" rid="pone.0165171.t001">Table 1</xref>.</p>
+<table-wrap id="pone.0165171.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.t001</object-id>
+<label>Table 1</label> <caption><title>Hardware settings.</title></caption>
+<alternatives>
+<graphic id="pone.0165171.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.t001" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"/>
+<th align="left">CPU</th>
+<th align="left">RAM</th>
+<th align="left">OS</th>
+<th align="left">Anylogic</th>
+<th align="left">Heap size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">PC1</td>
+<td align="left">i5 4690 (3.5 GHz)</td>
+<td align="left">16 GB</td>
+<td align="left">Win 10 Pro x64</td>
+<td align="left">7.3.5 x64</td>
+<td align="left">3 641 MB</td>
+</tr>
+<tr>
+<td align="left">PC2</td>
+<td align="left">i3 530 (2.93 GHz)</td>
+<td align="left">4 GB</td>
+<td align="left">Win 10 Home x64</td>
+<td align="left">7.3.5 x64</td>
+<td align="left">3 641 MB</td>
+</tr>
+<tr>
+<td align="left">NTB</td>
+<td align="left">i5 3210M (2.5 GHz)</td>
+<td align="left">8 GB</td>
+<td align="left">Win 10 Home x64</td>
+<td align="left">7.3.5 x64</td>
+<td align="left">3 641 MB</td>
+</tr>
+<tr>
+<td align="left">PC-J19</td>
+<td align="left">AMD FX-6300 (3.5 GHz)</td>
+<td align="left">16 GB</td>
+<td align="left">Win 7 Ent x64</td>
+<td align="left">7.3.5 x64</td>
+<td align="left">3 641 MB</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>For each method, 100 tests were conducted, which represented one testing iteration. Four testing iterations were conducted on each HW setting in order to find out whether there are any internal effects influencing acquired results. Furthermore, the existence of the "-server" parameter in the Java Virtual Machine (JVM) had to be taken into consideration. The -server parameter causes aggressive code optimization and is a standard setting in JVM benchmarks. Thus, the influence of application of -server parameter in the source code had to be verified because just-in-time compilation adds very large variance to execution time [<xref ref-type="bibr" rid="pone.0165171.ref021">21</xref>]. Thus, tests were conducted on single HWs also with the–server parameter applied. Based on recommendations focused on testing in the Java environment published by Georges et al. [<xref ref-type="bibr" rid="pone.0165171.ref021">21</xref>], the first 100 data points associated with the initialization process (“warm-up” period) were removed from the analysis. Altogether, 12800 data points were collected and consequently analyzed (these data are available in the Supplemental file <xref ref-type="supplementary-material" rid="pone.0165171.s001">S1 Dataset</xref>). The length of one test was set to 2592000 seconds of modelled time during which 432000 decision-making moments were performed. This period of 30 days (1 month of the model runtime) was selected because it provides sufficient volume of data for subsequent analysis. In average, there is a decision made every 6 second of virtual (model) time. Analyzed real-time runtimes were monitored in seconds.</p>
+</sec>
+<sec id="sec005">
+<title>Evaluated multi-criteria decision-making methods</title>
+<p>The performed literature review reveals that there is a lack of research papers or studies covering area of computational effectiveness of MCDM methods in general. Relevant studies mostly compare selected MCDM methods based on their application in various specialized domains, such as housing affordability [<xref ref-type="bibr" rid="pone.0165171.ref022">22</xref>], decision support in financial services [<xref ref-type="bibr" rid="pone.0165171.ref023">23</xref>], maintenance delivery in engineering industry [<xref ref-type="bibr" rid="pone.0165171.ref024">24</xref>], bio-energy systems [<xref ref-type="bibr" rid="pone.0165171.ref025">25</xref>], fuzzy logic [<xref ref-type="bibr" rid="pone.0165171.ref026">26</xref>], development of food products [<xref ref-type="bibr" rid="pone.0165171.ref027">27</xref>], or students`career preference models [<xref ref-type="bibr" rid="pone.0165171.ref028">28</xref>]. When the methods are mutually compared, the computational effectiveness is not included as a criterion. For instance, Thor et al. [<xref ref-type="bibr" rid="pone.0165171.ref029">29</xref>] focus on consistency of methods as the main criterion. Peniwati [<xref ref-type="bibr" rid="pone.0165171.ref030">30</xref>] offers quite complex comparison based on 16 criteria used for evaluation of 16 group decision-making methods (outranking, goal programming, MAUT, or AHP included). These range from technical to psychophysical or social ones. However, computational effectiveness is not included. There are also relevant papers published in the economic modeling domain, which might be referenced. For example a study presented by Tan, Lee and Goh [<xref ref-type="bibr" rid="pone.0165171.ref031">31</xref>] that focuses on empirical evaluation of MCDM techniques in business-to-business (B2B) collaboration in supply chains, or Rezaei’s paper dealing with MCDM application in reverse logistics [<xref ref-type="bibr" rid="pone.0165171.ref032">32</xref>] are worth noticing. The evaluation of computational effectiveness is regrettably omitted. Furthermore, it seems that there is a strong tendency to apply MCDM in a form of hybrid solutions (e.g. [<xref ref-type="bibr" rid="pone.0165171.ref033">33</xref>, <xref ref-type="bibr" rid="pone.0165171.ref034">34</xref>], [<xref ref-type="bibr" rid="pone.0165171.ref035">35</xref>], [<xref ref-type="bibr" rid="pone.0165171.ref036">36</xref>], etc.), which makes mutual comparison of MCDM methods even more difficult, if not straightforwardly impossible. Other papers are focused on comparison of application areas, e.g. [<xref ref-type="bibr" rid="pone.0165171.ref037">37</xref>], but this approach leads even more towards listing of case studies for applications rather than their explicit comparison.</p>
+<p>Lack of literature and resources on computational effectiveness might be partially related to scarce applications of MCDM in large scale simulations and models where the effectiveness and computational requirements are very important. In smaller models, other aspects of decision making such as precision and quality of decision making, robustness of the DM method, or problems related to description of task environment, usually play more important roles.</p>
+<p>From a large number of possibilities, four multi-criteria decision-making (MCDM) methods were implemented and tested, namely the following:</p>
+<list list-type="bullet">
+<list-item><p>Weighted Product Method (WPM);</p></list-item>
+<list-item><p>Technique of Order Preference Similarity to the Ideal Solution (TOPSIS);</p></list-item>
+<list-item><p>Vise Kriterijumska Optimizacja I Kompromisno Resenje (VIKOR);</p></list-item>
+<list-item><p>Preference Ranking Organization Method for Enriched Evaluation (PROMETHEE).</p></list-item>
+</list>
+<p>These methods were selected based on their suitability for use in the model. Although decision-making support is mostly aimed at individuals or groups of individuals as the ultimate target users, it is generally perceived as desirable to minimize the participation of human element in the decision-making process and respective data preparation due to human-related issues such as subjectivity, emotions, or biases [<xref ref-type="bibr" rid="pone.0165171.ref038">38</xref>]. Methods requiring interaction with the user/operator or such that would be difficult to process in the model, e.g., containing pairwise comparison, evaluation scales, or the autonomous construction of fitness functions, were omitted from the testing. Examples of omitted methods are AHP, ANP, MAUT/UTA, MACBETH, ELECTRE, CBA, COMET, AIRM, GRA, NATA, PAPRIKA and others. The WSM method, as described in the following section, was omitted because of difficulties related to the handling of different units of measure and problems with multidimensional decision-making situations.</p>
+<sec id="sec006">
+<title>Weighted Sum Model and Weighted Product Model</title>
+<p>Because there is a generally prevalent approach to start with the simplest alternative, the Weighted Sum Method (WSM) was considered as the first option for the application. WSM is a straightforward decision-making method, usually applied to one-dimensional problems. Under the assumption of <italic>m</italic> alternatives and <italic>n</italic> criteria, the best option is selected by application of the following expression (according to Fishburn [<xref ref-type="bibr" rid="pone.0165171.ref039">39</xref>]):
+<disp-formula id="pone.0165171.e001">
+<alternatives>
+<graphic id="pone.0165171.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e001" xlink:type="simple"/>
+<mml:math display="block" id="M1">
+<mml:mtable columnalign="left"><mml:mtr><mml:mtd><mml:msubsup><mml:mrow><mml:mi>A</mml:mi></mml:mrow><mml:mrow><mml:mi>w</mml:mi><mml:mi>s</mml:mi><mml:mi>m</mml:mi></mml:mrow><mml:mrow><mml:mi>*</mml:mi></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:mi>m</mml:mi><mml:mi>a</mml:mi><mml:mi>x</mml:mi><mml:mspace width="0.05em"/><mml:mrow><mml:mstyle displaystyle="false"><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msubsup></mml:mstyle><mml:mrow><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mspace width="0.25em"/><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>m</mml:mi><mml:mo>,</mml:mo></mml:mtd></mml:mtr></mml:mtable>
+</mml:math>
+</alternatives>
+<label>(1)</label>
+</disp-formula></p>
+<p>A*<sub>wsm</sub> denotes best alternative score,</p>
+<p><italic>a</italic><sub><italic>ij</italic></sub> denotes value of i-th alternative with consideration of j-th criterion,</p>
+<p><italic>w</italic><sub><italic>j</italic></sub> denotes weight of j-th criterion.</p>
+<p>However, Triantaphyllou [<xref ref-type="bibr" rid="pone.0165171.ref040">40</xref>] states that <italic>“</italic>…<italic>in single-dimensional cases</italic>, <italic>where all units are the same</italic>, <italic>WSM can be used without difficulty</italic>. <italic>Difficulty with this method emerges when it is applied to multi-dimensional MCDM problems</italic>. <italic>Then</italic>, <italic>in combining different dimensions</italic>, <italic>and consequently different units</italic>, <italic>the additive utility assumption is violated</italic>.<italic>”</italic> For this reason, the Weighted Product Model (WPM) was used instead. The Weighted Product Model (WPM) is similar to WSM but uses multiplication instead of addition (Bridgman [<xref ref-type="bibr" rid="pone.0165171.ref041">41</xref>] and Miller and Starr [<xref ref-type="bibr" rid="pone.0165171.ref042">42</xref>]). We may suppose that a given problem is defined on <italic>m</italic> alternatives and <italic>n</italic> decision criteria. Moreover, we may assume all the criteria to be considered as benefit criteria (i.e. the higher the values, the better). Then, if a decision-maker wants to compare the two alternatives <italic>A</italic><sub><italic>K</italic></sub> and <italic>A</italic><sub><italic>L</italic></sub> (where <italic>m</italic> ≥ <italic>K</italic>, <italic>L</italic> ≥ 1), then the following equation needs to be calculated:
+<disp-formula id="pone.0165171.e002">
+<alternatives>
+<graphic id="pone.0165171.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e002" xlink:type="simple"/>
+<mml:math display="block" id="M2">
+<mml:mi>R</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>A</mml:mi></mml:mrow><mml:mrow><mml:mi>K</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>A</mml:mi></mml:mrow><mml:mrow><mml:mi>L</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfrac><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mrow><mml:mstyle displaystyle="false"><mml:msubsup><mml:mo>∏</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msubsup></mml:mstyle><mml:mrow><mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>K</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>L</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msup></mml:mrow></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(2)</label>
+</disp-formula></p>
+<p><italic>n</italic> is the best alternative score,</p>
+<p><italic>a</italic><sub><italic>ij</italic></sub> is actual value of i-th alternative in terms of j-th criterion,</p>
+<p><italic>w</italic><sub><italic>j</italic></sub> is weight of importance of the j-th criterion.</p>
+<p>If the term <inline-formula id="pone.0165171.e003"><alternatives><graphic id="pone.0165171.e003g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e003" xlink:type="simple"/><mml:math display="inline" id="M3"><mml:mi>R</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>A</mml:mi></mml:mrow><mml:mrow><mml:mi>K</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>A</mml:mi></mml:mrow><mml:mrow><mml:mi>L</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfrac><mml:mo>)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula> is greater or equal to one, then alternative <italic>A</italic><sub><italic>K</italic></sub> is more desirable than <italic>A</italic><sub><italic>L</italic></sub>. The best alternative is better than or at least equal to all other alternatives [<xref ref-type="bibr" rid="pone.0165171.ref040">40</xref>]. The structure of the method eliminates any units of measure, allowing its use in both single- and multi-dimensional problems.</p>
+</sec>
+<sec id="sec007">
+<title>Technique for Order Preference by Similarity to Ideal Solution (TOPSIS)</title>
+<p>The Technique for Order Preference by Similarity to Ideal Solution (TOPSIS) method was developed by Hwang and Yoon in 1981 [<xref ref-type="bibr" rid="pone.0165171.ref043">43</xref>]. This method is based on the concept that the chosen alternative should have the shortest Euclidean distance from the ideal solution and the farthest Euclidean distance from the negative ideal solution. The ideal solution is a hypothetical solution for which all attribute values correspond to the maximum attribute values in the database comprising the satisfying solutions; the negative ideal solution is the hypothetical solution for which all attribute values correspond to the minimum attribute values in the database. TOPSIS thus gives a solution that is not only the closest to the hypothetically best but is also the farthest from the hypothetically worst [<xref ref-type="bibr" rid="pone.0165171.ref044">44</xref>]. The TOPSIS procedure consists of the following steps (all adopted from [<xref ref-type="bibr" rid="pone.0165171.ref044">44</xref>]):</p>
+<list list-type="order">
+<list-item><p>Calculate the normalized decision matrix from the evaluation matrix consisting of <italic>m</italic> alternatives and <italic>n</italic> criteria, with the intersection of each alternative and criteria given as f<sub>ij</sub>, we therefore have a matrix (f<sub>ij</sub>). The normalized value <italic>r</italic><sub><italic>ij</italic></sub> is calculated as</p>
+<p><disp-formula id="pone.0165171.e004">
+<alternatives>
+<graphic id="pone.0165171.e004g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e004" xlink:type="simple"/>
+<mml:math display="block" id="M4">
+<mml:mtable columnalign="left"><mml:mtr><mml:mtd><mml:msub><mml:mrow><mml:mi>r</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:msqrt><mml:mrow><mml:mstyle displaystyle="false"><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>J</mml:mi></mml:mrow></mml:msubsup></mml:mstyle><mml:mrow><mml:msubsup><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup></mml:mrow></mml:mrow></mml:msqrt></mml:mrow></mml:mfrac></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>J</mml:mi><mml:mo>;</mml:mo><mml:mspace width="0.25em"/><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>n</mml:mi><mml:mo>.</mml:mo></mml:mtd></mml:mtr></mml:mtable>
+</mml:math>
+</alternatives>
+<label>(3)</label>
+</disp-formula></p></list-item>
+<list-item><p>Calculate the weighted normalized decision matrix. The weighted normalized value <italic>v</italic><sub><italic>ij</italic></sub> is calculated as</p>
+<p><disp-formula id="pone.0165171.e005">
+<alternatives>
+<graphic id="pone.0165171.e005g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e005" xlink:type="simple"/>
+<mml:math display="block" id="M5">
+<mml:mtable columnalign="left"><mml:mtr><mml:mtd><mml:mrow><mml:msub><mml:mi>v</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>w</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:msub><mml:mi>r</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>,</mml:mo></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>J</mml:mi><mml:mo>;</mml:mo><mml:mspace width="0.25em"/><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>n</mml:mi><mml:mo>,</mml:mo></mml:mtd></mml:mtr></mml:mtable>
+</mml:math>
+</alternatives>
+<label>(4)</label>
+</disp-formula>
+where <italic>w</italic><sub><italic>i</italic></sub> is the weight of the i-th attribute or criterion, and <inline-formula id="pone.0165171.e006"><alternatives><graphic id="pone.0165171.e006g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e006" xlink:type="simple"/><mml:math display="inline" id="M6"><mml:mrow><mml:mstyle displaystyle="false"><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msubsup></mml:mstyle><mml:mrow><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>.</p></list-item>
+<list-item><p>Determine the ideal and negative-ideal solutions</p>
+<p><disp-formula id="pone.0165171.e007">
+<alternatives>
+<graphic id="pone.0165171.e007g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e007" xlink:type="simple"/>
+<mml:math display="block" id="M7">
+<mml:msup><mml:mrow><mml:mi>A</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">*</mml:mi></mml:mrow></mml:msup><mml:mo>=</mml:mo><mml:mo>{</mml:mo><mml:mrow><mml:msubsup><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">*</mml:mi></mml:mrow></mml:msubsup><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:msubsup><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">*</mml:mi></mml:mrow></mml:msubsup></mml:mrow><mml:mo>}</mml:mo><mml:mo>=</mml:mo><mml:mrow><mml:mo>{</mml:mo><mml:mo>(</mml:mo><mml:mrow><mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi mathvariant="normal">max</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>|</mml:mo><mml:mi>i</mml:mi><mml:mo>∈</mml:mo><mml:msup><mml:mrow><mml:mi>I</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">′</mml:mi></mml:mrow></mml:msup></mml:mrow></mml:mrow></mml:mrow><mml:mo>)</mml:mo><mml:mo>,</mml:mo><mml:mo>(</mml:mo><mml:mrow><mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi mathvariant="normal">min</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>|</mml:mo><mml:mi>i</mml:mi><mml:mo>∈</mml:mo><mml:msup><mml:mrow><mml:mi>I</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">″</mml:mi></mml:mrow></mml:msup></mml:mrow></mml:mrow></mml:mrow><mml:mo>)</mml:mo><mml:mo>}</mml:mo></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(5)</label>
+</disp-formula>
+where <italic>I’</italic> is associated with benefit criteria, and <italic>I”</italic> is associated with cost criteria.</p></list-item>
+<list-item><p>Calculate the separation measures using the <italic>n</italic>-dimensional Euclidean distance. The separation of each alternative from the ideal solution is given as
+<disp-formula id="pone.0165171.e008">
+<alternatives>
+<graphic id="pone.0165171.e008g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e008" xlink:type="simple"/>
+<mml:math display="block" id="M8">
+<mml:mtable columnalign="left"><mml:mtr><mml:mtd><mml:msubsup><mml:mrow><mml:mi>D</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow><mml:mrow><mml:mi>*</mml:mi></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:mstyle displaystyle="false"><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msubsup></mml:mstyle><mml:mrow><mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:msubsup><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi>*</mml:mi></mml:mrow></mml:msubsup></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mrow></mml:msqrt></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>J</mml:mi><mml:mo>.</mml:mo></mml:mtd></mml:mtr></mml:mtable>
+</mml:math>
+</alternatives>
+<label>(6)</label>
+</disp-formula></p>
+<p>Similarly, the separation from the negative ideal solution is given as
+<disp-formula id="pone.0165171.e009">
+<alternatives>
+<graphic id="pone.0165171.e009g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e009" xlink:type="simple"/>
+<mml:math display="block" id="M9">
+<mml:mtable columnalign="left"><mml:mtr><mml:mtd><mml:msubsup><mml:mrow><mml:mi>D</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:mstyle displaystyle="false"><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msubsup></mml:mstyle><mml:mrow><mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:msubsup><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo></mml:mrow></mml:msubsup></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mrow></mml:msqrt></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>J</mml:mi><mml:mo>.</mml:mo></mml:mtd></mml:mtr></mml:mtable>
+</mml:math>
+</alternatives>
+<label>(7)</label>
+</disp-formula></p></list-item>
+<list-item><p>Calculate the relative closeness to the ideal solution. The relative closeness of the alternative <italic>a</italic><sub><italic>j</italic></sub> with respect to <italic>A</italic><sup><italic>*</italic></sup> is defined as
+<disp-formula id="pone.0165171.e010">
+<alternatives>
+<graphic id="pone.0165171.e010g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e010" xlink:type="simple"/>
+<mml:math display="block" id="M10">
+<mml:mtable columnalign="left"><mml:mtr><mml:mtd><mml:msubsup><mml:mrow><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow><mml:mrow><mml:mi>*</mml:mi></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:msubsup><mml:mrow><mml:mi>D</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo></mml:mrow></mml:msubsup><mml:mo>/</mml:mo><mml:mo>(</mml:mo><mml:msubsup><mml:mrow><mml:mi>D</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow><mml:mrow><mml:mi>*</mml:mi></mml:mrow></mml:msubsup><mml:mo>+</mml:mo><mml:msubsup><mml:mrow><mml:mi>D</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo></mml:mrow></mml:msubsup><mml:mo>)</mml:mo></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>J</mml:mi><mml:mo>.</mml:mo></mml:mtd></mml:mtr></mml:mtable>
+</mml:math>
+</alternatives>
+<label>(8)</label>
+</disp-formula></p></list-item>
+<list-item><p>Rank the preference order.</p></list-item>
+</list>
+<p>As is apparent from the first and second step, the TOPSIS method uses a normalization procedure, which is necessary for the comparison of different measures of units tied to single criteria. There are several usable normalization methods, e.g., distributive or ideal normalization. Weighted normalized scores are used for comparing and determining ideal and negative solutions.</p>
+</sec>
+<sec id="sec008">
+<title>Vise Kriterijumska Optimiyacija I Kompromisno Resenje (VIKOR)</title>
+<p>According to Chang [<xref ref-type="bibr" rid="pone.0165171.ref045">45</xref>], the compromise-ranking method VIKOR is an utilizable technique for multi-criteria analysis. The method was developed for application in complex systems. The VIKOR method is grounded in ranking and selecting from the alternatives with conflicting criteria [<xref ref-type="bibr" rid="pone.0165171.ref046">46</xref>]. Based on the assumption that each alternative is assessed according to multiple criterion functions, the compromise ranking is conducted by comparing the measure of closeness to the ideal alternative [<xref ref-type="bibr" rid="pone.0165171.ref047">47</xref>], [<xref ref-type="bibr" rid="pone.0165171.ref048">48</xref>], [<xref ref-type="bibr" rid="pone.0165171.ref049">49</xref>]. There are five main steps that need to be performed in the compromise-ranking algorithm of the traditional VIKOR (procedure overtaken from [<xref ref-type="bibr" rid="pone.0165171.ref045">45</xref>]):</p>
+<list list-type="alpha-lower">
+<list-item><p>The various alternatives are denoted as <italic>x</italic><sup><italic>1</italic></sup>, <italic>x</italic><sup><italic>2</italic></sup>, <italic>…</italic>, <italic>x</italic><sub><italic>m</italic></sub>. For an alternative <italic>x</italic><sub><italic>j</italic></sub>, the merit of the i-th aspect is denoted by <italic>f</italic><sub><italic>ij</italic></sub>, i.e., <italic>f</italic><sub><italic>ij</italic></sub> is the value of the i-th criterion function for the alternative <italic>x</italic><sub><italic>j</italic></sub>. Additionally, <italic>m</italic> is the number of alternatives, and <italic>n</italic> is the number of criteria.</p></list-item>
+<list-item><p>Determine the maximum <italic>f</italic><sub><italic>i</italic></sub><sup><italic>*</italic></sup> and minimum <italic>f</italic><sub><italic>i</italic></sub><sup>-</sup> values of all criterion functions, <italic>i = 1</italic>, <italic>…</italic>, <italic>n</italic>.</p></list-item>
+</list>
+<disp-formula id="pone.0165171.e011">
+<alternatives>
+<graphic id="pone.0165171.e011g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e011" xlink:type="simple"/>
+<mml:math display="block" id="M11">
+<mml:msubsup><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi>*</mml:mi></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:mi>j</mml:mi><mml:mspace width="0.15em"/><mml:mrow><mml:mrow><mml:mi mathvariant="normal">max</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mrow><mml:mi mathvariant="normal">max</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>|</mml:mo></mml:mrow></mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>m</mml:mi><mml:mo>]</mml:mo></mml:mrow></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(9)</label>
+</disp-formula>
+<disp-formula id="pone.0165171.e012">
+<alternatives>
+<graphic id="pone.0165171.e012g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e012" xlink:type="simple"/>
+<mml:math display="block" id="M12">
+<mml:msubsup><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi>*</mml:mi><mml:mo>−</mml:mo></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:mi>j</mml:mi><mml:mspace width="0.15em"/><mml:mrow><mml:mrow><mml:mi mathvariant="normal">min</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mrow><mml:mi mathvariant="normal">min</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>|</mml:mo></mml:mrow></mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>m</mml:mi><mml:mo>]</mml:mo></mml:mrow></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(10)</label>
+</disp-formula>
+<list list-type="alpha-lower">
+<list-item><p>Compute the values <italic>S</italic><sub><italic>j</italic></sub> and <italic>R</italic><sub><italic>j</italic></sub>, <italic>j = 1</italic>, <italic>…</italic>, <italic>m</italic>.</p></list-item>
+</list>
+<disp-formula id="pone.0165171.e013">
+<alternatives>
+<graphic id="pone.0165171.e013g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e013" xlink:type="simple"/>
+<mml:math display="block" id="M13">
+<mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mstyle displaystyle="false"><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msubsup></mml:mstyle><mml:mrow><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:msubsup><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">*</mml:mi></mml:mrow></mml:msubsup></mml:mrow></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>)</mml:mo><mml:mo>/</mml:mo><mml:mo>(</mml:mo><mml:msubsup><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">*</mml:mi></mml:mrow></mml:msubsup><mml:mo>−</mml:mo><mml:msubsup><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo></mml:mrow></mml:msubsup><mml:mo>)</mml:mo>
+</mml:math>
+</alternatives>
+<label>(11)</label>
+</disp-formula>
+<disp-formula id="pone.0165171.e014">
+<alternatives>
+<graphic id="pone.0165171.e014g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e014" xlink:type="simple"/>
+<mml:math display="block" id="M14">
+<mml:msub><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>i</mml:mi><mml:mspace width="0.15em"/><mml:mrow><mml:mrow><mml:mi mathvariant="normal">max</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mo stretchy="false">[</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:mrow><mml:msubsup><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">*</mml:mi></mml:mrow></mml:msubsup><mml:mo>−</mml:mo><mml:msub><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo><mml:mo>/</mml:mo><mml:mo>(</mml:mo><mml:msubsup><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">*</mml:mi></mml:mrow></mml:msubsup><mml:mo>−</mml:mo><mml:msubsup><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo></mml:mrow></mml:msubsup><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mspace width="0.25em"/><mml:mo>|</mml:mo><mml:mspace width="0.25em"/><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>n</mml:mi><mml:mo stretchy="false">]</mml:mo>
+</mml:math>
+</alternatives>
+<label>(12)</label>
+</disp-formula>
+<p><italic>S</italic><sub><italic>j</italic></sub> denotes utility measure for the alternative <italic>x</italic><sub><italic>j</italic></sub>,</p>
+<p><italic>R</italic><sub><italic>j</italic></sub> denotes regret measure for the alternative <italic>x</italic><sub><italic>j</italic></sub>,</p>
+<p><italic>w</italic><sub><italic>i</italic></sub> denotes weight of i-th criterion, which represents the relative importance of the criterion.</p>
+<list list-type="alpha-lower">
+<list-item><p>Compute the values <italic>Q</italic><sub><italic>j</italic></sub>, <italic>j = 1</italic>, <italic>…</italic>, <italic>m</italic>.</p></list-item>
+</list>
+<disp-formula id="pone.0165171.e015">
+<alternatives>
+<graphic id="pone.0165171.e015g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e015" xlink:type="simple"/>
+<mml:math display="block" id="M15">
+<mml:msub><mml:mrow><mml:mi>Q</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mi>v</mml:mi><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:msup><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">*</mml:mi></mml:mrow></mml:msup></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msup><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo></mml:mrow></mml:msup><mml:mo>−</mml:mo><mml:msup><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">*</mml:mi></mml:mrow></mml:msup></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mfrac><mml:mo>+</mml:mo><mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>v</mml:mi></mml:mrow><mml:mo>)</mml:mo><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:msup><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">*</mml:mi></mml:mrow></mml:msup></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo></mml:mrow></mml:msup><mml:mo>−</mml:mo><mml:msup><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">*</mml:mi></mml:mrow></mml:msup><mml:mo>)</mml:mo></mml:mrow></mml:mfrac>
+</mml:math>
+</alternatives>
+<label>(13)</label>
+</disp-formula>
+<disp-formula id="pone.0165171.e016">
+<alternatives>
+<graphic id="pone.0165171.e016g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e016" xlink:type="simple"/>
+<mml:math display="block" id="M16">
+<mml:msup><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mi>*</mml:mi></mml:mrow></mml:msup><mml:mo>=</mml:mo><mml:mi>j</mml:mi><mml:mspace width="0.25em"/><mml:mi>m</mml:mi><mml:mi>i</mml:mi><mml:mi>n</mml:mi><mml:mspace width="0.25em"/><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mrow><mml:mi mathvariant="normal">min</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>|</mml:mo></mml:mrow></mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>m</mml:mi><mml:mo>]</mml:mo>
+</mml:math>
+</alternatives>
+<label>(14)</label>
+</disp-formula>
+<disp-formula id="pone.0165171.e017">
+<alternatives>
+<graphic id="pone.0165171.e017g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e017" xlink:type="simple"/>
+<mml:math display="block" id="M17">
+<mml:msup><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo></mml:mrow></mml:msup><mml:mo>=</mml:mo><mml:mi>j</mml:mi><mml:mspace width="0.25em"/><mml:mi>m</mml:mi><mml:mi>a</mml:mi><mml:mi>x</mml:mi><mml:mspace width="0.25em"/><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mrow><mml:mi mathvariant="normal">max</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>|</mml:mo></mml:mrow></mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>m</mml:mi><mml:mo>]</mml:mo>
+</mml:math>
+</alternatives>
+<label>(15)</label>
+</disp-formula>
+<disp-formula id="pone.0165171.e018">
+<alternatives>
+<graphic id="pone.0165171.e018g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e018" xlink:type="simple"/>
+<mml:math display="block" id="M18">
+<mml:msup><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mi>*</mml:mi></mml:mrow></mml:msup><mml:mo>=</mml:mo><mml:mi>j</mml:mi><mml:mspace width="0.25em"/><mml:mi>m</mml:mi><mml:mi>i</mml:mi><mml:mi>n</mml:mi><mml:mspace width="0.25em"/><mml:msub><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mrow><mml:mi mathvariant="normal">min</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>|</mml:mo></mml:mrow></mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>m</mml:mi><mml:mo>]</mml:mo>
+</mml:math>
+</alternatives>
+<label>(16)</label>
+</disp-formula>
+<disp-formula id="pone.0165171.e019">
+<alternatives>
+<graphic id="pone.0165171.e019g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e019" xlink:type="simple"/>
+<mml:math display="block" id="M19">
+<mml:msup><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo></mml:mrow></mml:msup><mml:mo>=</mml:mo><mml:mi>j</mml:mi><mml:mspace width="0.25em"/><mml:mi>m</mml:mi><mml:mi>a</mml:mi><mml:mi>x</mml:mi><mml:mspace width="0.25em"/><mml:msub><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mrow><mml:mi mathvariant="normal">max</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mo>[</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>|</mml:mo></mml:mrow></mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mo>…</mml:mo><mml:mo>,</mml:mo><mml:mi>m</mml:mi><mml:mo>]</mml:mo>
+</mml:math>
+</alternatives>
+<label>(17)</label>
+</disp-formula>
+<p specific-use="continuation">where <italic>v</italic> is the weight for the strategy of maximum group utility, and <italic>1-v</italic> is the weight of the individual regret, according to Kackar [<xref ref-type="bibr" rid="pone.0165171.ref050">50</xref>] and Opricovic [<xref ref-type="bibr" rid="pone.0165171.ref049">49</xref>].</p>
+<list list-type="alpha-lower">
+<list-item><p>Rank the alternatives by <italic>Q</italic><sub><italic>j</italic></sub>. The lower the value of <italic>Q</italic><sub><italic>j</italic></sub> is, the better a decision is the alternative [<xref ref-type="bibr" rid="pone.0165171.ref045">45</xref>].</p></list-item>
+</list>
+<p>Chang [<xref ref-type="bibr" rid="pone.0165171.ref045">45</xref>], in the first step of the sequence, already expects normalized values of the (f<sub>i, j</sub>) decision matrix. Yazdani and Payam [<xref ref-type="bibr" rid="pone.0165171.ref051">51</xref>] and Tong et al. [<xref ref-type="bibr" rid="pone.0165171.ref052">52</xref>] mention the normalization of values in the first step. However, they work with vector normalization, corresponding to the distributive normalization of the TOPSIS method. This method is in contrast to Opricovic and Tzeng [<xref ref-type="bibr" rid="pone.0165171.ref049">49</xref>], who use linear normalization (below), which eliminates the influence of units of measure and is included in the first step of the procedure:
+<disp-formula id="pone.0165171.e020">
+<alternatives>
+<graphic id="pone.0165171.e020g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0165171.e020" xlink:type="simple"/>
+<mml:math display="block" id="M20">
+<mml:msub><mml:mrow><mml:mi>d</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msubsup><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi>*</mml:mi></mml:mrow></mml:msubsup><mml:mo>−</mml:mo><mml:msub><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:msubsup><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mi>*</mml:mi></mml:mrow></mml:msubsup><mml:mo>−</mml:mo><mml:msubsup><mml:mrow><mml:mi>f</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mo>−</mml:mo></mml:mrow></mml:msubsup></mml:mrow></mml:mfrac>
+</mml:math>
+</alternatives>
+<label>(18)</label>
+</disp-formula></p>
+</sec>
+<sec id="sec009">
+<title>Preference Ranking Organization Method for Enrichment Evaluation (PROMETHEE)</title>
+<p>One of the options for evaluating a decision-making problem is the method called Preference Ranking Organization Method for Enrichment Evaluation (PROMETHEE). Currently, this method has been extended to encompass six ranking formats: PROMETHEE-I (partial ranking), PROMETHEE-II (complete ranking), PROMETHEE-III (ranking based on intervals), PROMETHEE-IV (continuous case), PROMETHEE-V (net flows and integer linear programming), and PROMETHEE-VI (representation of human brain) (see [<xref ref-type="bibr" rid="pone.0165171.ref053">53</xref>]).</p>
+<p>In this experiment, PROMETHEE-II is applied; thus, the ranking of the alternatives is based on positive and negative flows. According to Ishizaka and Nemery [<xref ref-type="bibr" rid="pone.0165171.ref020">20</xref>], there are four possible outcomes:</p>
+<list list-type="order">
+<list-item><p>Alternative A is better than B, if the total positive and negative flows are simultaneously better;</p></list-item>
+<list-item><p>alternative A has a worse evaluation than alternative B if the total positive and negative flows are worse;</p></list-item>
+<list-item><p>alternatives A and B are incomparable when one of alternatives has a better positive score but a worse negative score, and vice versa (i.e., worse positive and better negative score), and</p></list-item>
+<list-item><p>two alternatives are equal in the case of matching positive and negative total flows.</p></list-item>
+</list>
+<p>PROMETHEE-II uses a ranking system based only on total net flows. This results in complete alternative evaluation, in contrast to PROMETHEE-I, which does not include a situation in which two alternatives are incomparable [<xref ref-type="bibr" rid="pone.0165171.ref020">20</xref>]. The methods works with the indifference and preference thresholds. While the indifference threshold for a given criterion represents the largest deviation that is considered as negligible in the comparison of two actions, the preference threshold for a given criterion corresponds to the smallest definition that a decision-maker considers as definitely important when he/she compares to actions. A thorough formal description of the first two variants of the PROMETHEE methods, namely PROMETHEE-I and PROMETHEE-II, is provided by Mateo [<xref ref-type="bibr" rid="pone.0165171.ref053">53</xref>]. Due to the extent of the formal description of this methods, it is left up to the reader to examine the details in the provided reference. However, implementation of the method can be found in the Supplemental file (<xref ref-type="supplementary-material" rid="pone.0165171.s003">S1 File</xref>).</p>
+</sec>
+</sec>
+</sec>
+<sec id="sec010" sec-type="conclusions">
+<title>Results and Discussion</title>
+<p><xref ref-type="table" rid="pone.0165171.t002">Table 2</xref> presents the mean runtimes associated with particular methods and test iterations conducted on all four HWs. Although median can be generally considered as more appropriate indicator due to possible outliers contained in the dataset, these are mostly associated with the initialization process in each iteration. Since this limitation was removed based on the methodology provided by Georges et al.[<xref ref-type="bibr" rid="pone.0165171.ref021">21</xref>]–see section 2.2, the means are used for evaluation. Furthermore, all statistical methods applied during the verification phase are based on usage of means. A graphical representation of the acquired results is depicted in <xref ref-type="fig" rid="pone.0165171.g001">Fig 1</xref>.</p>
+<fig id="pone.0165171.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Summary of experimental results.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.g001" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0165171.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.t002</object-id>
+<label>Table 2</label> <caption><title>Mean runtimes (in sec).</title></caption>
+<alternatives>
+<graphic id="pone.0165171.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.t002" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" colspan="2" rowspan="2"/>
+<th align="center" colspan="4">Mean runtimes (without -server parameter)</th>
+<th align="center" colspan="4">Mean runtimes (with -server parameter)</th>
+</tr>
+<tr>
+<th align="center">Topsis</th>
+<th align="center">Vikor</th>
+<th align="center">Promethee</th>
+<th align="center">Wpm</th>
+<th align="center">Topsis</th>
+<th align="center">Vikor</th>
+<th align="center">Promethee</th>
+<th align="center">Wpm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" rowspan="4">PC1</td>
+<td align="center">Test1</td>
+<td align="right">0.56693</td>
+<td align="right">0.53329</td>
+<td align="right">0.7101</td>
+<td align="right">0.7368</td>
+<td align="right">0.52863</td>
+<td align="right">0.51362</td>
+<td align="right">0.67828</td>
+<td align="right">0.6982</td>
+</tr>
+<tr>
+<td align="center">Test2</td>
+<td align="right">0.56419</td>
+<td align="right">0.52506</td>
+<td align="right">0.69134</td>
+<td align="right">0.72104</td>
+<td align="right">0.5323</td>
+<td align="right">0.51814</td>
+<td align="right">0.67589</td>
+<td align="right">0.70523</td>
+</tr>
+<tr>
+<td align="center">Test3</td>
+<td align="right">0.55898</td>
+<td align="right">0.52747</td>
+<td align="right">0.70226</td>
+<td align="right">0.72099</td>
+<td align="right">0.53576</td>
+<td align="right">0.52078</td>
+<td align="right">0.6819</td>
+<td align="right">0.70879</td>
+</tr>
+<tr>
+<td align="center">Test4</td>
+<td align="right">0.56041</td>
+<td align="right">0.53024</td>
+<td align="right">0.70406</td>
+<td align="right">0.72725</td>
+<td align="right">0.53848</td>
+<td align="right">0.52347</td>
+<td align="right">0.68371</td>
+<td align="right">0.70927</td>
+</tr>
+<tr>
+<td align="center" rowspan="4">PC2</td>
+<td align="center">Test1</td>
+<td align="right">1.07534</td>
+<td align="right">1.05316</td>
+<td align="right">1.32147</td>
+<td align="right">1.09817</td>
+<td align="right">1.00734</td>
+<td align="right">0.96539</td>
+<td align="right">1.27582</td>
+<td align="right">1.06349</td>
+</tr>
+<tr>
+<td align="center">Test2</td>
+<td align="right">1.08163</td>
+<td align="right">1.04857</td>
+<td align="right">1.30821</td>
+<td align="right">1.09005</td>
+<td align="right">0.99988</td>
+<td align="right">0.96533</td>
+<td align="right">1.2504</td>
+<td align="right">1.06065</td>
+</tr>
+<tr>
+<td align="center">Test3</td>
+<td align="right">1.1044</td>
+<td align="right">1.06458</td>
+<td align="right">1.31443</td>
+<td align="right">1.09801</td>
+<td align="right">1.02453</td>
+<td align="right">0.98377</td>
+<td align="right">1.26714</td>
+<td align="right">1.07566</td>
+</tr>
+<tr>
+<td align="center">Test4</td>
+<td align="right">1.08128</td>
+<td align="right">1.05671</td>
+<td align="right">1.30211</td>
+<td align="right">1.09913</td>
+<td align="right">1.04008</td>
+<td align="right">0.99672</td>
+<td align="right">1.27648</td>
+<td align="right">1.0797</td>
+</tr>
+<tr>
+<td align="center" rowspan="4">NTB</td>
+<td align="center">Test1</td>
+<td align="right">1.14361</td>
+<td align="right">1.09963</td>
+<td align="right">1.40032</td>
+<td align="right">1.13385</td>
+<td align="right">1.03314</td>
+<td align="right">0.99598</td>
+<td align="right">1.26507</td>
+<td align="right">1.0771</td>
+</tr>
+<tr>
+<td align="center">Test2</td>
+<td align="right">1.20804</td>
+<td align="right">1.19566</td>
+<td align="right">1.44445</td>
+<td align="right">1.16943</td>
+<td align="right">1.00108</td>
+<td align="right">0.95034</td>
+<td align="right">1.26215</td>
+<td align="right">1.07288</td>
+</tr>
+<tr>
+<td align="center">Test3</td>
+<td align="right">1.20745</td>
+<td align="right">1.19318</td>
+<td align="right">1.45507</td>
+<td align="right">1.17328</td>
+<td align="right">1.02908</td>
+<td align="right">0.98992</td>
+<td align="right">1.28114</td>
+<td align="right">1.08632</td>
+</tr>
+<tr>
+<td align="center">Test4</td>
+<td align="right">1.24595</td>
+<td align="right">1.21836</td>
+<td align="right">1.49382</td>
+<td align="right">1.19336</td>
+<td align="right">1.05236</td>
+<td align="right">1.01607</td>
+<td align="right">1.30297</td>
+<td align="right">1.09537</td>
+</tr>
+<tr>
+<td align="center" rowspan="4">PC-J19</td>
+<td align="center">Test1</td>
+<td align="right">0.9124</td>
+<td align="right">0.90076</td>
+<td align="right">1.11006</td>
+<td align="right">1.58886</td>
+<td align="right">0.88751</td>
+<td align="right">0.83444</td>
+<td align="right">1.10516</td>
+<td align="right">1.56151</td>
+</tr>
+<tr>
+<td align="center">Test2</td>
+<td align="right">0.92191</td>
+<td align="right">0.89709</td>
+<td align="right">1.10144</td>
+<td align="right">1.6011</td>
+<td align="right">0.88697</td>
+<td align="right">0.83474</td>
+<td align="right">1.10244</td>
+<td align="right">1.56327</td>
+</tr>
+<tr>
+<td align="center">Test3</td>
+<td align="right">0.92364</td>
+<td align="right">0.90514</td>
+<td align="right">1.12481</td>
+<td align="right">1.60738</td>
+<td align="right">0.90316</td>
+<td align="right">0.83406</td>
+<td align="right">1.12001</td>
+<td align="right">1.56809</td>
+</tr>
+<tr>
+<td align="center">Test4</td>
+<td align="right">0.93713</td>
+<td align="right">0.91317</td>
+<td align="right">1.1171</td>
+<td align="right">1.61319</td>
+<td align="right">0.90797</td>
+<td align="right">0.83943</td>
+<td align="right">1.12516</td>
+<td align="right">1.57128</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>A cursory examination of the results indicates that there may be differences in terms of mean runtimes among all methods. While mean runtimes achieved by Vikor and Topsis methods seem promising, runtimes associated with Wpm and Promethee methods look inappropriate for decision-making in agent-based models. However, since some test iterations contain significant variance in runtimes, while others do not, this needs be verified. Therefore, additional statistical verification is conducted. To find out if the obtained results are influenced by certain factors, the main analyzed question is formulated as “What is the impact of Test, HW setting (only Setting hereinafter) and Method on Runtime?”. The tested hypothesis is formulated as follows “the means of runtimes are equal across groups defined by Test, Setting and Method”. Hypothesis is tested with the help of the GLM Repeated Measures model with additional post-hoc tests are applied with the help of the SPSS v23 statistical package. Firstly, the mixed model ANOVA with Test and Setting as with-in subject factors and Methods as between subject factor has been conducted. There have been four levels in each factor Test (Test1, Test2, Test3, and Test4).</p>
+<p>The multivariate test revealed that there are significant interactions Setting * Method, and Setting * Test, Wilks' Lambda = 0.003, F (9, 394) = 1042.712, p = 0.000, and Wilks’ Lambda = 0.638, F(9, 394) = 24.512, p = 0.000 respectively. The interaction points that there were significant differences in methods across different HW settings, and in tests across different HW settings. This interaction could be explained by different hardware configuration of each computer, difference in computational effectiveness of methods and the independence of each test. The same results are acquired from Tests of Within-Subjects Effects. The interaction Setting * Test * Method is at the border line of significance. Since it is statistically difficult to interpret threefold type of interaction, it will be excluded from the analysis. The only insignificant interaction Test * Method, Wilks’ Lambda = 0.977, F (9, 394) = 1.030, p = 0.413, confirms consistency of tests, because results of tests do not differ in single methods (see <xref ref-type="table" rid="pone.0165171.t003">Table 3</xref>). The profile plot in <xref ref-type="fig" rid="pone.0165171.g002">Fig 2</xref> indicates that the interaction is connected with the Promethee and Wpm methods. Vikor and Topsis methods seem to have significant interaction with particular tests. Therefore, further examinations are conducted.</p>
+<fig id="pone.0165171.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Interaction between Method and Test (without–server parameter).</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.g002" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0165171.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.t003</object-id>
+<label>Table 3</label> <caption><title>Multivariate Tests.</title></caption>
+<alternatives>
+<graphic id="pone.0165171.t003g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.t003" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" colspan="2">Effect</th>
+<th align="center">Value</th>
+<th align="center">F</th>
+<th align="center">Hypothesis df</th>
+<th align="center">Error df</th>
+<th align="center">Sig.</th>
+<th align="center">Partial Eta Squared</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="4">Setting</td>
+<td align="left">Pillai's Trace</td>
+<td align="right">.999</td>
+<td align="right">119912.784<xref ref-type="table-fn" rid="t003fn002"><sup>a</sup></xref></td>
+<td align="right">3.000</td>
+<td align="right">394.000</td>
+<td align="right">0.000</td>
+<td align="right">.999</td>
+</tr>
+<tr>
+<td align="left">Wilks' Lambda</td>
+<td align="right">.001</td>
+<td align="right">119912.784<xref ref-type="table-fn" rid="t003fn002"><sup>a</sup></xref></td>
+<td align="right">3.000</td>
+<td align="right">394.000</td>
+<td align="right">0.000</td>
+<td align="right">.999</td>
+</tr>
+<tr>
+<td align="left">Hotelling's Trace</td>
+<td align="right">913.042</td>
+<td align="right">119912.784<xref ref-type="table-fn" rid="t003fn002"><sup>a</sup></xref></td>
+<td align="right">3.000</td>
+<td align="right">394.000</td>
+<td align="right">0.000</td>
+<td align="right">.999</td>
+</tr>
+<tr>
+<td align="left">Roy's Largest Root</td>
+<td align="right">913.042</td>
+<td align="right">119912.784<xref ref-type="table-fn" rid="t003fn002"><sup>a</sup></xref></td>
+<td align="right">3.000</td>
+<td align="right">394.000</td>
+<td align="right">0.000</td>
+<td align="right">.999</td>
+</tr>
+<tr>
+<td align="left" rowspan="4">Setting * Method</td>
+<td align="left">Pillai's Trace</td>
+<td align="right">1.515</td>
+<td align="right">134.597</td>
+<td align="right">9.000</td>
+<td align="right">1188.000</td>
+<td align="right">.000</td>
+<td align="right">.505</td>
+</tr>
+<tr>
+<td align="left">Wilks' Lambda</td>
+<td align="right">.003</td>
+<td align="right">1042.712</td>
+<td align="right">9.000</td>
+<td align="right">959.043</td>
+<td align="right">0.000</td>
+<td align="right">.855</td>
+</tr>
+<tr>
+<td align="left">Hotelling's Trace</td>
+<td align="right">156.461</td>
+<td align="right">6826.330</td>
+<td align="right">9.000</td>
+<td align="right">1178.000</td>
+<td align="right">0.000</td>
+<td align="right">.981</td>
+</tr>
+<tr>
+<td align="left">Roy's Largest Root</td>
+<td align="right">155.375</td>
+<td align="right">20509.451<xref ref-type="table-fn" rid="t003fn003"><sup>b</sup></xref></td>
+<td align="right">3.000</td>
+<td align="right">396.000</td>
+<td align="right">0.000</td>
+<td align="right">.994</td>
+</tr>
+<tr>
+<td align="left" rowspan="4">Test</td>
+<td align="left">Pillai's Trace</td>
+<td align="right">.208</td>
+<td align="right">34.434<xref ref-type="table-fn" rid="t003fn002"><sup>a</sup></xref></td>
+<td align="right">3.000</td>
+<td align="right">394.000</td>
+<td align="right">.000</td>
+<td align="right">.208</td>
+</tr>
+<tr>
+<td align="left">Wilks' Lambda</td>
+<td align="right">.792</td>
+<td align="right">34.434<xref ref-type="table-fn" rid="t003fn002"><sup>a</sup></xref></td>
+<td align="right">3.000</td>
+<td align="right">394.000</td>
+<td align="right">.000</td>
+<td align="right">.208</td>
+</tr>
+<tr>
+<td align="left">Hotelling's Trace</td>
+<td align="right">.262</td>
+<td align="right">34.434<xref ref-type="table-fn" rid="t003fn002"><sup>a</sup></xref></td>
+<td align="right">3.000</td>
+<td align="right">394.000</td>
+<td align="right">.000</td>
+<td align="right">.208</td>
+</tr>
+<tr>
+<td align="left">Roy's Largest Root</td>
+<td align="right">.262</td>
+<td align="right">34.434<xref ref-type="table-fn" rid="t003fn002"><sup>a</sup></xref></td>
+<td align="right">3.000</td>
+<td align="right">394.000</td>
+<td align="right">.000</td>
+<td align="right">.208</td>
+</tr>
+<tr>
+<td align="left" rowspan="4">Test * Method</td>
+<td align="left">Pillai's Trace</td>
+<td align="right">.023</td>
+<td align="right">1.029</td>
+<td align="right">9.000</td>
+<td align="right">1188.000</td>
+<td align="right">.415</td>
+<td align="right">.008</td>
+</tr>
+<tr>
+<td align="left">Wilks' Lambda</td>
+<td align="right">.977</td>
+<td align="right">1.030</td>
+<td align="right">9.000</td>
+<td align="right">959.043</td>
+<td align="right">.413</td>
+<td align="right">.008</td>
+</tr>
+<tr>
+<td align="left">Hotelling's Trace</td>
+<td align="right">.024</td>
+<td align="right">1.032</td>
+<td align="right">9.000</td>
+<td align="right">1178.000</td>
+<td align="right">.412</td>
+<td align="right">.008</td>
+</tr>
+<tr>
+<td align="left">Roy's Largest Root</td>
+<td align="right">.021</td>
+<td align="right">2.802<xref ref-type="table-fn" rid="t003fn003"><sup>b</sup></xref></td>
+<td align="right">3.000</td>
+<td align="right">396.000</td>
+<td align="right">.040</td>
+<td align="right">.021</td>
+</tr>
+<tr>
+<td align="left" rowspan="4">Setting * Test</td>
+<td align="left">Pillai's Trace</td>
+<td align="right">.362</td>
+<td align="right">24.512<xref ref-type="table-fn" rid="t003fn002"><sup>a</sup></xref></td>
+<td align="right">9.000</td>
+<td align="right">388.000</td>
+<td align="right">.000</td>
+<td align="right">.362</td>
+</tr>
+<tr>
+<td align="left">Wilks' Lambda</td>
+<td align="right">.638</td>
+<td align="right">24.512<xref ref-type="table-fn" rid="t003fn002"><sup>a</sup></xref></td>
+<td align="right">9.000</td>
+<td align="right">388.000</td>
+<td align="right">.000</td>
+<td align="right">.362</td>
+</tr>
+<tr>
+<td align="left">Hotelling's Trace</td>
+<td align="right">.569</td>
+<td align="right">24.512<xref ref-type="table-fn" rid="t003fn002"><sup>a</sup></xref></td>
+<td align="right">9.000</td>
+<td align="right">388.000</td>
+<td align="right">.000</td>
+<td align="right">.362</td>
+</tr>
+<tr>
+<td align="left">Roy's Largest Root</td>
+<td align="right">.569</td>
+<td align="right">24.512<xref ref-type="table-fn" rid="t003fn002"><sup>a</sup></xref></td>
+<td align="right">9.000</td>
+<td align="right">388.000</td>
+<td align="right">.000</td>
+<td align="right">.362</td>
+</tr>
+<tr>
+<td align="left" rowspan="4">Setting * Test * Method</td>
+<td align="left">Pillai's Trace</td>
+<td align="right">.099</td>
+<td align="right">1.476</td>
+<td align="right">27.000</td>
+<td align="right">1170.000</td>
+<td align="right">.056</td>
+<td align="right">.033</td>
+</tr>
+<tr>
+<td align="left">Wilks' Lambda</td>
+<td align="right">.904</td>
+<td align="right">1.477</td>
+<td align="right">27.000</td>
+<td align="right">1133.802</td>
+<td align="right">.056</td>
+<td align="right">.033</td>
+</tr>
+<tr>
+<td align="left">Hotelling's Trace</td>
+<td align="right">.103</td>
+<td align="right">1.477</td>
+<td align="right">27.000</td>
+<td align="right">1160.000</td>
+<td align="right">.055</td>
+<td align="right">.033</td>
+</tr>
+<tr>
+<td align="left">Roy's Largest Root</td>
+<td align="right">.051</td>
+<td align="right">2.210<xref ref-type="table-fn" rid="t003fn003"><sup>b</sup></xref></td>
+<td align="right">9.000</td>
+<td align="right">390.000</td>
+<td align="right">.021</td>
+<td align="right">.049</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t003fn001"><p>Design: Intercept + Platform Within Subjects Design: Setting + Test + Setting * Test</p></fn>
+<fn id="t003fn002"><p><sup>a</sup>. Exact statistic</p></fn>
+<fn id="t003fn003"><p><sup>b</sup>. The statistic is an upper bound on F that yields a lower bound on the significance level.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>Test of Between-Subject Effects reveals that influence of Methods is significant and thus methods differ from each other, F(3, 400) = 3345.173; p&lt;0.05; Partial Eta Squared = 0.962 (see <xref ref-type="table" rid="pone.0165171.t004">Table 4</xref>). The Post Hoc tests show that Vikor is significantly faster than the other methods. Consequently, pairwise comparisons of single methods are conducted. Results are presented in <xref ref-type="table" rid="pone.0165171.t005">Table 5</xref>. This analysis confirms previously indicated result that there is a similarity of results acquired by Promethee and Wpm methods. Other pairs of methods, when mutually compared, differ from each other.</p>
+<table-wrap id="pone.0165171.t004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.t004</object-id>
+<label>Table 4</label> <caption><title>Between-Subject Effects.</title></caption>
+<alternatives>
+<graphic id="pone.0165171.t004g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.t004" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">Source</th>
+<th align="center">Type III Sum of Squares</th>
+<th align="center">df</th>
+<th align="center">Mean Square</th>
+<th align="center">F</th>
+<th align="center">Sig.</th>
+<th align="center">Partial Eta Squared</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Intercept</td>
+<td align="right">6894.874</td>
+<td align="right">1</td>
+<td align="right">6894.874</td>
+<td align="right">918913.096</td>
+<td align="right">0.000</td>
+<td align="right">1.000</td>
+</tr>
+<tr>
+<td align="left">Method</td>
+<td align="right">75.367</td>
+<td align="right">3</td>
+<td align="right">25.122</td>
+<td align="right">3348.173</td>
+<td align="right">.000</td>
+<td align="right">.962</td>
+</tr>
+<tr>
+<td align="left">Error</td>
+<td align="right">2.971</td>
+<td align="right">396</td>
+<td align="right">.008</td>
+<td align="left"> </td>
+<td align="left"> </td>
+<td align="left"> </td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<table-wrap id="pone.0165171.t005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.t005</object-id>
+<label>Table 5</label> <caption><title>Pairwise comparisons of methods (without–server parameter).</title></caption>
+<alternatives>
+<graphic id="pone.0165171.t005g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.t005" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" colspan="2" rowspan="2">Method</th>
+<th align="center" rowspan="2">Mean Difference (I-J)</th>
+<th align="center" rowspan="2">Std. Error</th>
+<th align="center" rowspan="2">Sig.<xref ref-type="table-fn" rid="t005fn003"><sup>b</sup></xref></th>
+<th align="center" colspan="2">95% Confidence Interval for Difference<xref ref-type="table-fn" rid="t005fn003"><sup>b</sup></xref></th>
+</tr>
+<tr>
+<th align="center">Lower Bound</th>
+<th align="center">Upper Bound</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="3">Promethee</td>
+<td align="left">Topsis</td>
+<td align="right">.200<xref ref-type="table-fn" rid="t005fn002">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">.192</td>
+<td align="right">.209</td>
+</tr>
+<tr>
+<td align="left">Vikor</td>
+<td align="right">.227<xref ref-type="table-fn" rid="t005fn002">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">.219</td>
+<td align="right">.236</td>
+</tr>
+<tr>
+<td align="left">Wpm</td>
+<td align="right">-.004</td>
+<td align="right">.003</td>
+<td align="right">.894</td>
+<td align="right">-.013</td>
+<td align="right">.004</td>
+</tr>
+<tr>
+<td align="left" rowspan="3">Topsis</td>
+<td align="left">Promethee</td>
+<td align="right">-.200<xref ref-type="table-fn" rid="t005fn002">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">-.209</td>
+<td align="right">-.192</td>
+</tr>
+<tr>
+<td align="left">Vikor</td>
+<td align="right">.027*</td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">.019</td>
+<td align="right">.035</td>
+</tr>
+<tr>
+<td align="left">Wpm</td>
+<td align="right">-.205<xref ref-type="table-fn" rid="t005fn002">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">-.213</td>
+<td align="right">-.197</td>
+</tr>
+<tr>
+<td align="left" rowspan="3">Vikor</td>
+<td align="left">Promethee</td>
+<td align="right">-.227<xref ref-type="table-fn" rid="t005fn002">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">-.236</td>
+<td align="right">-.219</td>
+</tr>
+<tr>
+<td align="left">Topsis</td>
+<td align="right">-.027<xref ref-type="table-fn" rid="t005fn002">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">-.035</td>
+<td align="right">-.019</td>
+</tr>
+<tr>
+<td align="left">Wpm</td>
+<td align="right">-.232<xref ref-type="table-fn" rid="t005fn002">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">-.240</td>
+<td align="right">-.224</td>
+</tr>
+<tr>
+<td align="left" rowspan="3">Wpm</td>
+<td align="left">Promethee</td>
+<td align="right">.004</td>
+<td align="right">.003</td>
+<td align="right">.894</td>
+<td align="right">-.004</td>
+<td align="right">.013</td>
+</tr>
+<tr>
+<td align="left">Topsis</td>
+<td align="right">.205<xref ref-type="table-fn" rid="t005fn002">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">.197</td>
+<td align="right">.213</td>
+</tr>
+<tr>
+<td align="left">Vikor</td>
+<td align="right">.232<xref ref-type="table-fn" rid="t005fn002">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">.224</td>
+<td align="right">.240</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t005fn001"><p>Based on estimated marginal means</p></fn>
+<fn id="t005fn002"><p>*. The mean difference is significant at the .05 level.</p></fn>
+<fn id="t005fn003"><p><sup>b</sup>. Adjustment for multiple comparisons: Bonferroni.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>Together with the aforementioned analysis several post-tests are conducted. Since Levene’s test does not confirm the null hypothesis that the error variance of the dependent variable is equal across groups, the Tukey HSD test which is commonly used cannot be applied. Therefore, the Games Howell test is used instead. This test confirms results acquired from the previous analysis (see <xref ref-type="table" rid="pone.0165171.t006">Table 6</xref>).</p>
+<table-wrap id="pone.0165171.t006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.t006</object-id>
+<label>Table 6</label> <caption><title>Games-Howell post-hoc test (without–server parameter).</title></caption>
+<alternatives>
+<graphic id="pone.0165171.t006g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.t006" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" colspan="2" rowspan="2"/>
+<th align="center" rowspan="2">Mean Difference (I-J)</th>
+<th align="center" rowspan="2">Std. Error</th>
+<th align="center" rowspan="2">Sig.</th>
+<th align="center" colspan="2">95% Confidence Interval</th>
+</tr>
+<tr>
+<th align="center">Lower Bound</th>
+<th align="center">Upper Bound</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="3">Promethee</td>
+<td align="left">Topsis</td>
+<td align="right">.20049<xref ref-type="table-fn" rid="t006fn001">*</xref></td>
+<td align="right">.003262</td>
+<td align="right">.000</td>
+<td align="right">.19203</td>
+<td align="right">.20894</td>
+</tr>
+<tr>
+<td align="left">Vikor</td>
+<td align="right">.22744<xref ref-type="table-fn" rid="t006fn001">*</xref></td>
+<td align="right">.003250</td>
+<td align="right">.000</td>
+<td align="right">.21901</td>
+<td align="right">.23586</td>
+</tr>
+<tr>
+<td align="left">Wpm</td>
+<td align="right">-.00443</td>
+<td align="right">.002274</td>
+<td align="right">.213</td>
+<td align="right">-.01033</td>
+<td align="right">.00147</td>
+</tr>
+<tr>
+<td align="left" rowspan="3">Topsis</td>
+<td align="left">Promethee</td>
+<td align="right">-.20049<xref ref-type="table-fn" rid="t006fn001">*</xref></td>
+<td align="right">.003262</td>
+<td align="right">.000</td>
+<td align="right">-.20894</td>
+<td align="right">-.19203</td>
+</tr>
+<tr>
+<td align="left">Vikor</td>
+<td align="right">.02695<xref ref-type="table-fn" rid="t006fn001">*</xref></td>
+<td align="right">.003686</td>
+<td align="right">.000</td>
+<td align="right">.01740</td>
+<td align="right">.03650</td>
+</tr>
+<tr>
+<td align="left">Wpm</td>
+<td align="right">-.20491<xref ref-type="table-fn" rid="t006fn001">*</xref></td>
+<td align="right">.002862</td>
+<td align="right">.000</td>
+<td align="right">-.21236</td>
+<td align="right">-.19747</td>
+</tr>
+<tr>
+<td align="left" rowspan="3">Vikor</td>
+<td align="left">Promethee</td>
+<td align="right">-.22744<xref ref-type="table-fn" rid="t006fn001">*</xref></td>
+<td align="right">.003250</td>
+<td align="right">.000</td>
+<td align="right">-.23586</td>
+<td align="right">-.21901</td>
+</tr>
+<tr>
+<td align="left">Topsis</td>
+<td align="right">-.02695<xref ref-type="table-fn" rid="t006fn001">*</xref></td>
+<td align="right">.003686</td>
+<td align="right">.000</td>
+<td align="right">-.03650</td>
+<td align="right">-.01740</td>
+</tr>
+<tr>
+<td align="left">Wpm</td>
+<td align="right">-.23186<xref ref-type="table-fn" rid="t006fn001">*</xref></td>
+<td align="right">.002849</td>
+<td align="right">.000</td>
+<td align="right">-.23927</td>
+<td align="right">-.22445</td>
+</tr>
+<tr>
+<td align="left" rowspan="3">Wpm</td>
+<td align="left">Promethee</td>
+<td align="right">.00443</td>
+<td align="right">.002274</td>
+<td align="right">.213</td>
+<td align="right">-.00147</td>
+<td align="right">.01033</td>
+</tr>
+<tr>
+<td align="left">Topsis</td>
+<td align="right">.20491<xref ref-type="table-fn" rid="t006fn001">*</xref></td>
+<td align="right">.002862</td>
+<td align="right">.000</td>
+<td align="right">.19747</td>
+<td align="right">.21236</td>
+</tr>
+<tr>
+<td align="left">Vikor</td>
+<td align="right">.23186<xref ref-type="table-fn" rid="t006fn001">*</xref></td>
+<td align="right">.002849</td>
+<td align="right">.000</td>
+<td align="right">.22445</td>
+<td align="right">.23927</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t006fn001"><p>*. The mean difference is significant at the .05 level.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>As already stated, the same analysis is performed with dataset obtained during experiments with the -server parameter applied. Three out of four indicators (namely Pillai’s Trace, Wilks’ Lambda and Hotelling’s Trace) indicate insignificant interaction between Test and Method in Multivariate tests again. This is also confirmed by Test of Within-Subjects Effects. Test of Between-Subject Effects again reveals that influence of Methods is significant when the–server parameter is used and thus methods differ from each other, F(3, 400) = 8504.825; p = 0.000; Partial Eta Squared = 0.985. In opposite to previous analysis, the pairwise comparisons of methods reveal that all four methods mutually differ from each other. This is also confirmed by particular profile plot depicted in <xref ref-type="fig" rid="pone.0165171.g003">Fig 3</xref>. Similarly to the previous analysis, the Levene’s test indicates violation of an assumption of homogeneity of variances. Games Howell’s post-hoc test confirms difference with p&lt;0.05 for every combination of methods.</p>
+<fig id="pone.0165171.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Interaction between Method and Test (with–server parameter).</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.g003" xlink:type="simple"/>
+</fig>
+<p>Next part of the statistical analysis is focused on influence of the–server parameter on acquired results. Pairwise comparisons of all methods on both–server parameter states is conducted. Results are presented in <xref ref-type="table" rid="pone.0165171.t007">Table 7</xref>. Profile plots confirm that the Vikor method represents significantly faster method for decision-making agents in agent-based simulations across all Settings and Tests. <xref ref-type="fig" rid="pone.0165171.g004">Fig 4</xref> reveals that the–server parameter influences mean runtimes with significant effect.</p>
+<fig id="pone.0165171.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Interactions among Server * Method * Setting.</title>
+<p>(<italic>1</italic>): PC1; (<italic>2</italic>): PC2; (<italic>3</italic>): NTB; (<italic>4</italic>): PC-J19 (“1” stands for “without–server parameter”; “2” stands for “with–server parameter”).</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.g004" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0165171.t007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.t007</object-id>
+<label>Table 7</label> <caption><title>Server interactions.</title></caption>
+<alternatives>
+<graphic id="pone.0165171.t007g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.t007" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" colspan="3" rowspan="2">Platform</th>
+<th align="center" rowspan="2">Mean Difference (I-J)</th>
+<th align="center" rowspan="2">Std. Error</th>
+<th align="center" rowspan="2">Sig.<xref ref-type="table-fn" rid="t007fn004"><sup>b</sup></xref></th>
+<th align="center" colspan="2">95% Confidence Interval for Difference<xref ref-type="table-fn" rid="t007fn004"><sup>b</sup></xref></th>
+</tr>
+<tr>
+<th align="center">Lower Bound</th>
+<th align="center">Upper Bound</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="2">Promethee</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="right">.059<xref ref-type="table-fn" rid="t007fn003">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">.054</td>
+<td align="right">.064</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="right">-.059<xref ref-type="table-fn" rid="t007fn003">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">-.064</td>
+<td align="right">-.054</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">Topsis</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="right">.074<xref ref-type="table-fn" rid="t007fn003">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">.069</td>
+<td align="right">.079</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="right">-.074<xref ref-type="table-fn" rid="t007fn003">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">-.079</td>
+<td align="right">-.069</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">Vikor</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="right">.086<xref ref-type="table-fn" rid="t007fn003">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">.081</td>
+<td align="right">.091</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="right">-.086<xref ref-type="table-fn" rid="t007fn003">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">-.091</td>
+<td align="right">-.081</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">Wpm</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="right">.042<xref ref-type="table-fn" rid="t007fn003">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">.037</td>
+<td align="right">.047</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="right">-.042<xref ref-type="table-fn" rid="t007fn003">*</xref></td>
+<td align="right">.003</td>
+<td align="right">.000</td>
+<td align="right">-.047</td>
+<td align="right">-.037</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t007fn001"><p>Based on estimated marginal means</p></fn>
+<fn id="t007fn002"><p>“1” stands for “without–server parameter”; “2” stands for “with–server parameter”</p></fn>
+<fn id="t007fn003"><p>*. The mean difference is significant at the, 05 level.</p></fn>
+<fn id="t007fn004"><p><sup>b</sup>. Adjustment for multiple comparisons: Least Significant Difference (equivalent to no adjustments).</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>Evaluation of suitability can be summarized in <xref ref-type="fig" rid="pone.0165171.g005">Fig 5</xref> in which all available data points were analyzed. It is apparent that the Vikor method surpasses all other methods in terms of mean runtimes at all Settings. Although the order of method suitability may change when experiments are conducted on different Settings, this variation is mostly related to Premethee and Wpm methods. The tested hypothesis thus cannot be accepted.</p>
+<fig id="pone.0165171.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Results of interaction among Test * Method * Setting.</title>
+<p>(<italic>1</italic>): PC1; (<italic>2</italic>): PC2; (<italic>3</italic>): NTB; (<italic>4</italic>): PC-J19.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.g005" xlink:type="simple"/>
+</fig>
+<p>In order to prove that results are valid also for different sizes of population, we conducted additional experiments with 10^3, 10^4, 10^5 and 10^6 decision-making agents. This test was performed on PC with the following technical parameters: CPU: i5 4690 (3.5 GHz); RAM: 16 GB; OS: Win 10 Pro; Java: 1.8; JVM–server parameter applied; Anylogic: 7.3.4; Heap size: 512 MB (and 4GB in case of simulation with 10^6 agents–all related data are included in the Supplemental file <xref ref-type="supplementary-material" rid="pone.0165171.s002">S2 Dataset</xref>). Although the visual evaluation of line chart with experimental results indicate more or less equal growth of mean times related to all methods (no intersection is recorded), the quantitative evaluation is required. The verification is based on ANOVA test with post-hoc confirmation. Results of the ANOVA test reveal that the same order of suitability of particular methods is achieved when 10^3, 10^4, 10^5 and 10^6 decision-making agents are included in the model (F(3,396) = 229.4917, p&lt;0.05; F(3, 396) = 13752.72, p&lt;0.05; F(3,396) = 28883.66, p&lt;0.05; and F(3,76) = 5774. 278, p&lt;0.05, respectively). Sheffé’s post hoc test confirms that all means differ from each other at the alpha level 0.05 and critical value from the Fisher-Snedecor distribution in all model sizes. Hence, it is proved that achieved results are not influenced by and are valid for various agent dimensions. Results also indicate that growing number of agents results only in growing means of runtimes associated with single methods (see <xref ref-type="table" rid="pone.0165171.t008">Table 8</xref> with means of various model sizes). The order of methods in terms of suitability evaluated by mean runtimes remains unchanged.</p>
+<table-wrap id="pone.0165171.t008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0165171.t008</object-id>
+<label>Table 8</label> <caption><title>Mean times associated with various model sizes.</title></caption>
+<alternatives>
+<graphic id="pone.0165171.t008g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.t008" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"/>
+<th align="left"/>
+<th align="center">Method</th>
+<th align="left"/>
+<th align="left"/>
+</tr>
+<tr>
+<th align="left">Number of agents</th>
+<th align="left">Topsis</th>
+<th align="left">Vikor</th>
+<th align="left">Promethee</th>
+<th align="left">Wpm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">10^3</td>
+<td align="left">0.27612</td>
+<td align="left">0.24031</td>
+<td align="left">0.34997</td>
+<td align="left">0.37641</td>
+</tr>
+<tr>
+<td align="left">10^4</td>
+<td align="left">2.5142</td>
+<td align="left">2.29611</td>
+<td align="left">3.36272</td>
+<td align="left">3.59197</td>
+</tr>
+<tr>
+<td align="left">10^5</td>
+<td align="left">25.55533</td>
+<td align="left">23.14144</td>
+<td align="left">34.48853</td>
+<td align="left">36.59565</td>
+</tr>
+<tr>
+<td align="left">10^6</td>
+<td align="left">256.5378</td>
+<td align="left">241.4143</td>
+<td align="left">347.8664</td>
+<td align="left">357.0923</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>Acquired results can be compared to other similar studies, which focus on comparison of various MCDM methods in different settings. For instance, in addition to studies mentioned earlier in section Calculations, Anojkumar et al. [<xref ref-type="bibr" rid="pone.0165171.ref054">54</xref>] provide a thorough comparative analysis of MCDM methods for industrial applications, namely FAHP-TOPSIS, FAHP-VIKOR, FAHP-ELECTRE, and FAHP-PROMETHEE. Authors conclude that “<italic>application of VIKOR method provides valuable assistance for material selection decision-making</italic> … <italic>The MCDM techniques are producing significant results and also a bridge for material selection problem</italic>”. Related research was also conducted by Mulliner et al. [<xref ref-type="bibr" rid="pone.0165171.ref055">55</xref>], using the WPM, WSM, AHP, TOPSIS, and COPRAS methods for comparable housing affordability decision-making problems. Mulliner and his team conclude that “<italic>the ‘best’ (and second best) alternative obtained by all examined methods was equal but the overall ranking of all alternatives varied between methods</italic>.” Because the comparative analysis also demonstrates that”<italic>none of the MCDM methods are to be considered perfect</italic>”, authors recommend the application of more than one method wherever possible.</p>
+<p>While complex comparative analyses are quite scarce, there are however many applications using various combinations of MCDM methods, such as [<xref ref-type="bibr" rid="pone.0165171.ref056">56</xref>], [<xref ref-type="bibr" rid="pone.0165171.ref057">57</xref>], [<xref ref-type="bibr" rid="pone.0165171.ref058">58</xref>], [<xref ref-type="bibr" rid="pone.0165171.ref035">35</xref>] and [<xref ref-type="bibr" rid="pone.0165171.ref044">44</xref>]. It seems from a review of the literature that the actual trend in the borderline research lies in using hybrid solutions that combine two or more MCDM methods. For such applications, the results of our testing may prove to be useful, especially if the computational requirements are carefully considered.</p>
+<p>Despite the acquired results, all methods can be used in practice. Statistically significant differences do not have to be significant in practice. The selection of the most appropriate MCDM method from among WPM, PROMETHEE, TOPSIS and VIKOR is therefore, to a large extent, matter of preference according to the given problem. However, only more important decisions should be made using MCDM methods in the case of large-scale model applications, where a large number of participating subjects are involved (in this case agents). Although simpler methods of decision-making may be less precise, the computational load associated with more sophisticated methods could in many cases outweigh any possible gain. Therefore, the strategic level of decision-making can be considered as the most suitable for MCDM application.</p>
+<sec id="sec011">
+<title>Limitations and Further Research Directions</title>
+<p>Conducted experiment is associated with some limitations that need to be explicitly stated. First, the research question is closely tied to two assumption which validity is based on the review conducted by authors. Nevertheless, it would be valuable to conduct extensive quantitative research focused on usage of platforms (software) and simulation environments (hardware) in agent-based modelling to support creation of more relevant and representative studies. Second, according to Hobbs et al. [<xref ref-type="bibr" rid="pone.0165171.ref059">59</xref>] a good experiment should satisfy the following conditions: (a) compare methods that are widely used, represent divergent philosophies of decision making or claimed to represent important methodological improvements, (b) address the question of appropriateness, ease of use and validity, (c) controlled, uses large samples and is replicable, (d) compares methods across a variety of problems, and (e) problems involved are realistic. Our simulation experiment satisfies all conditions except the fourth one. Thus, various models can be used in future research to confirm acquired results or further specify their validity. Third, there is an important aspect of distributed computation (using supercomputers, computational grids, high-performance networks) that is often related to large-scale models. Diverse issues related to such an implementation of the virtual environment can have a significant impact on the effectiveness of decision-making algorithms. However, there are many related problems that need to be solved, such as the fact that some of the input data used in decision-making may be necessary to share, or sub-optimal implementation may create communication bottlenecks resulting in slower data exchange. Moreover, this research direction is quite topical with many unsolved issues [<xref ref-type="bibr" rid="pone.0165171.ref060">60</xref>] and thus goes beyond the research question investigated in this manuscript. Nevertheless, it represents an interesting direction for further testing and future work. Finally, although unlikely, the results might be solely tied to the specific virtual environment used in the experiment. The comparison of similar experiments in different platforms and verification of the results would be very helpful and valuable.</p>
+<p>This study has several implications. For example, the difference between small-scale models and large-scale models from the perspective of application in practice is significantly reduced. This result contributes to the development of agent-based modelling and simulation in the same way as the increase of computational power or advances in computer graphics. Based on the outcomes of this study, prospective modelers and designers might make a more qualified and intelligible choice of decision-making mechanisms for their models.</p>
+</sec>
+</sec>
+<sec id="sec012" sec-type="conclusions">
+<title>Conclusions</title>
+<p>Multi-criteria decision-making is formally realized with the help of various methods or algorithms. These methods might be successfully implemented in the specific subset of economic systems, i.e., agent-based computational economics in general, and in large-scale (agent-oriented) models in particular. This study conducted several experiments on four different HWs and compared four MCDM methods, WPM, TOPSIS, VIKOR, and PROMETHEE. The working hypothesis, which stated that one of the selected methods exceeds the rest in terms of computational effectiveness, is confirmed, as the acquired data demonstrated significant differences in suitability of the selected methods. Therefore, VIKOR can be recommended as the most suitable method for implementation in practice because it achieves the best results. Nevertheless, further testing under different conditions would be useful to more powerfully validate this result.</p>
+</sec>
+<sec id="sec013">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0165171.s001" mimetype="application/x-spss-sav" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.s001" xlink:type="simple">
+<label>S1 Dataset</label>
+<caption>
+<title>Raw data.</title>
+<p>(SAV)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165171.s002" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.s002" xlink:type="simple">
+<label>S2 Dataset</label>
+<caption>
+<title>Model sizes data.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0165171.s003" mimetype="application/zip" position="float" xlink:href="info:doi/10.1371/journal.pone.0165171.s003" xlink:type="simple">
+<label>S1 File</label>
+<caption>
+<title>Code, readme file and auxiliary xlsx file included.</title>
+<p>(ZIP)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>The support of the internal FIM UHK Excellence project "MAS Applications in Modeling of Complex Socioeconomic Systems and Intelligent Environments” is gratefully acknowledged. The authors would also like to thank associate professor Jaroslava Mikulecká, PhD and assistant professor Pavel Čech, PhD for their assistance with the statistical data processing, and Tomáš Licek, MSc and Tomáš Nacházel, MSc for data preparation.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0165171.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bureš</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Tučník</surname> <given-names>P</given-names></name>. <article-title>Complex Agent-based Models: Application of a Constructivism in the Economic Research</article-title>. <source>E&amp;M Economics and Management</source>. <year>2014</year>;<volume>17</volume>(<issue>3</issue>):<fpage>17</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.15240/tul/001/2014-3-012" xlink:type="simple">10.15240/tul/001/2014-3-012</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Saeed</surname> <given-names>K</given-names></name>. <article-title>Jay Forrester's operational approach to economics</article-title>. <source>System Dynamics Review</source>. <year>2014</year>;<volume>30</volume>(<issue>4</issue>):<fpage>233</fpage>–<lpage>61</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/sdr.1525" xlink:type="simple">10.1002/sdr.1525</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kantamneni</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Brown</surname> <given-names>LE</given-names></name>, <name name-style="western"><surname>Parker</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Weaver</surname> <given-names>WW</given-names></name>. <article-title>Survey of multi-agent systems for microgrid control</article-title>. <source>Engineering Applications of Artificial Intelligence</source>. <year>2015</year>;<volume>45</volume>:<fpage>192</fpage>–<lpage>203</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.engappai.2015.07.005" xlink:type="simple">http://dx.doi.org/10.1016/j.engappai.2015.07.005</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref004"><label>4</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Weinberg</surname> <given-names>GM</given-names></name>. <chapter-title>An introduction to general systems thinking / Gerald M. Weinberg</chapter-title>. Silver anniversary ed. <publisher-loc>New York</publisher-loc>: <publisher-name>Dorset House</publisher-name>; <year>2001</year>. xxi, 279 p. p.</mixed-citation></ref>
+<ref id="pone.0165171.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yu</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Xu</surname> <given-names>Z</given-names></name>. <article-title>Graph-based multi-agent decision making</article-title>. <source>International Journal of Approximate Reasoning</source>. <year>2012</year>;<volume>53</volume>(<issue>4</issue>):<fpage>502</fpage>–<lpage>12</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.ijar.2011.12.002" xlink:type="simple">http://dx.doi.org/10.1016/j.ijar.2011.12.002</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref006"><label>6</label><mixed-citation publication-type="other" xlink:type="simple">Nguyen VGN, Huynh HX, Drogoul A. Modelling Multi-Criteria Decision Making Ability of Agents in Agent-Based Rice Pest Risk Assessment Model. In: Huang R, Ghorbani AA, Pasi G, Yamaguchi T, Yen NY, Jin B, editors. Active Media Technology: 8th International Conference, AMT 2012, Macau, China, December 4–7, 2012 Proceedings. Berlin, Heidelberg: Springer Berlin Heidelberg; 2012. p. 134–44.</mixed-citation></ref>
+<ref id="pone.0165171.ref007"><label>7</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Triantaphyllou</surname> <given-names>E</given-names></name>. <source>Multi-criteria decision making methods. Multi-criteria Decision Making Methods: A Comparative Study</source>: <publisher-name>Springer</publisher-name>; <year>2000</year>. p. <fpage>5</fpage>–<lpage>21</lpage>.</mixed-citation></ref>
+<ref id="pone.0165171.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Peng</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Kou</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Shi</surname> <given-names>Y</given-names></name>. <article-title>FAMCDM: A fusion approach of MCDM methods to rank multiclass classification algorithms</article-title>. <source>Omega</source>. <year>2011</year>;<volume>39</volume>(<issue>6</issue>):<fpage>677</fpage>–<lpage>89</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.omega.2011.01.009" xlink:type="simple">http://dx.doi.org/10.1016/j.omega.2011.01.009</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref009"><label>9</label><mixed-citation publication-type="other" xlink:type="simple">Cordasco G, De Chiara R, Mancuso A, Mazzeo D, Scarano V, Spagnuolo C. A Framework for Distributing Agent-Based Simulations. In: Alexander M, D’Ambra P, Belloum A, Bosilca G, Cannataro M, Danelutto M, et al., editors. Euro-Par 2011: Parallel Processing Workshops: CCPI, CGWS, HeteroPar, HiBB, HPCVirt, HPPC, HPSS, MDGS, ProPer, Resilience, UCHPC, VHPC, Bordeaux, France, August 29 –September 2, 2011, Revised Selected Papers, Part I. Berlin, Heidelberg: Springer Berlin Heidelberg; 2012. p. 460–70.</mixed-citation></ref>
+<ref id="pone.0165171.ref010"><label>10</label><mixed-citation publication-type="other" xlink:type="simple">Kiran M, Richmond P, Holcombe M, Chin LS, Worth D, Greenough C, editors. FLAME: simulating large populations of agents on parallel hardware architectures. Proceedings of the 9th International Conference on Autonomous Agents and Multiagent Systems: volume 1-Volume 1; 2010: International Foundation for Autonomous Agents and Multiagent Systems.</mixed-citation></ref>
+<ref id="pone.0165171.ref011"><label>11</label><mixed-citation publication-type="other" xlink:type="simple">Voss A, You J-Y, Yen E, Chen H-Y, Lin S, Turner A, et al., editors. Scalable social simulation: investigating population-scale phenomena using commodity computing. e-Science (e-Science), 2010 IEEE Sixth International Conference on; 2010: IEEE.</mixed-citation></ref>
+<ref id="pone.0165171.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nikolai</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Madey</surname> <given-names>G</given-names></name>. <article-title>Tools of the trade: A survey of various agent based modeling platforms</article-title>. <source>Journal of Artificial Societies and Social Simulation</source>. <year>2009</year>;<volume>12</volume>(<issue>2</issue>):<fpage>2</fpage>.</mixed-citation></ref>
+<ref id="pone.0165171.ref013"><label>13</label><mixed-citation publication-type="other" xlink:type="simple">Hmida FB, Seguy A, Dupas R. MultiAgent Systems for Production Planning and Control in Supply Chains. In: Omatu S, De Paz Santana FJ, González RS, Molina MJ, Bernardos MA, Rodríguez CJM, editors. Distributed Computing and Artificial Intelligence: 9th International Conference. Berlin, Heidelberg: Springer Berlin Heidelberg; 2012. p. 205–12.</mixed-citation></ref>
+<ref id="pone.0165171.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wang</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Wan</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>C</given-names></name>. <article-title>Towards smart factory for Industry 4.0: A self-organized multi-agent system with big data based feedback and coordination</article-title>. <source>Computer Networks</source>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.comnet.2015.12.017" xlink:type="simple">http://dx.doi.org/10.1016/j.comnet.2015.12.017</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref015"><label>15</label><mixed-citation publication-type="other" xlink:type="simple">Kagermann H, Helbig J, Hellinger A, Wahlster W. Recommendations for Implementing the Strategic Initiative INDUSTRIE 4.0: Securing the Future of German Manufacturing Industry; Final Report of the Industrie 4.0 Working Group: Forschungsunion; 2013.</mixed-citation></ref>
+<ref id="pone.0165171.ref016"><label>16</label><mixed-citation publication-type="other" xlink:type="simple">Klügl F. “Engineering” Agent-Based Simulation Models? In: Müller JP, Cossentino M, editors. Agent-Oriented Software Engineering XIII: 13th International Workshop, AOSE 2012, Valencia, Spain, June 4, 2012, Revised Selected Papers. Berlin, Heidelberg: Springer Berlin Heidelberg; 2013. p. 179–96.</mixed-citation></ref>
+<ref id="pone.0165171.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kumari</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Singh</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Mishra</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Garza-Reyes</surname> <given-names>JA</given-names></name>. <article-title>A multi-agent architecture for outsourcing SMEs manufacturing supply chain</article-title>. <source>Robotics and Computer-Integrated Manufacturing</source>. <year>2015</year>;<volume>36</volume>:<fpage>36</fpage>–<lpage>44</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.rcim.2014.12.009" xlink:type="simple">http://dx.doi.org/10.1016/j.rcim.2014.12.009</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref018"><label>18</label><mixed-citation publication-type="other" xlink:type="simple">Premm M, Kirn S. A Multiagent Systems Perspective on Industry 4.0 Supply Networks. In: Müller PJ, Ketter W, Kaminka G, Wagner G, Bulling N, editors. Multiagent System Technologies: 13th German Conference, MATES 2015, Cottbus, Germany, September 28–30, 2015, Revised Selected Papers. Cham: Springer International Publishing; 2015. p. 101–18.</mixed-citation></ref>
+<ref id="pone.0165171.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tesfatsion</surname> <given-names>L</given-names></name>. <article-title>Agent-based computational economics: Growing economies from the bottom up</article-title>. <source>Artificial life</source>. <year>2002</year>;<volume>8</volume>(<issue>1</issue>):<fpage>55</fpage>–<lpage>82</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1162/106454602753694765" xlink:type="simple">10.1162/106454602753694765</ext-link></comment> <object-id pub-id-type="pmid">12020421</object-id></mixed-citation></ref>
+<ref id="pone.0165171.ref020"><label>20</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Ishizaka</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Nemery</surname> <given-names>P</given-names></name>. <chapter-title>Multi-criteria decision analysis: methods and software</chapter-title>: <publisher-name>John Wiley &amp; Sons</publisher-name>; <year>2013</year>.</mixed-citation></ref>
+<ref id="pone.0165171.ref021"><label>21</label><mixed-citation publication-type="other" xlink:type="simple">Georges A, Buytaert D, Eeckhout L, editors. Statistically rigorous java performance evaluation. Proceedings of the 22nd annual ACM SIGPLAN conference on Object-oriented programming systems and applications; 2007; Montreal, Quebec, Canada: ACM.</mixed-citation></ref>
+<ref id="pone.0165171.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mulliner</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Malys</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Maliene</surname> <given-names>V</given-names></name>. <article-title>Comparative analysis of MCDM methods for the assessment of sustainable housing affordability</article-title>. <source>Omega</source>. <year>2016</year>;<volume>59</volume>, <issue>Part B</issue>:<fpage>146</fpage>–<lpage>56</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.omega.2015.05.013" xlink:type="simple">http://dx.doi.org/10.1016/j.omega.2015.05.013</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zopounidis</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Galariotis</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Doumpos</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Sarri</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Andriosopoulos</surname> <given-names>K</given-names></name>. <article-title>Multiple criteria decision aiding for finance: An updated bibliographic survey</article-title>. <source>European Journal of Operational Research</source>. <year>2015</year>;<volume>247</volume>(<issue>2</issue>):<fpage>339</fpage>–<lpage>48</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.ejor.2015.05.032" xlink:type="simple">http://dx.doi.org/10.1016/j.ejor.2015.05.032</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sabaei</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Erkoyuncu</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Roy</surname> <given-names>R</given-names></name>. <article-title>A Review of Multi-criteria Decision Making Methods for Enhanced Maintenance Delivery</article-title>. <source>Procedia CIRP</source>. <year>2015</year>;<volume>37</volume>:<fpage>30</fpage>–<lpage>5</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.procir.2015.08.086" xlink:type="simple">http://dx.doi.org/10.1016/j.procir.2015.08.086</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Scott</surname> <given-names>JA</given-names></name>, <name name-style="western"><surname>Ho</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Dey</surname> <given-names>PK</given-names></name>. <article-title>A review of multi-criteria decision-making methods for bioenergy systems</article-title>. <source>Energy</source>. <year>2012</year>;<volume>42</volume>(<issue>1</issue>):<fpage>146</fpage>–<lpage>56</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.energy.2012.03.074" xlink:type="simple">http://dx.doi.org/10.1016/j.energy.2012.03.074</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Celik</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Gul</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Aydin</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Gumus</surname> <given-names>AT</given-names></name>, <name name-style="western"><surname>Guneri</surname> <given-names>AF</given-names></name>. <article-title>A comprehensive review of multi criteria decision making approaches based on interval type-2 fuzzy sets</article-title>. <source>Knowledge-Based Systems</source>. <year>2015</year>;<volume>85</volume>:<fpage>329</fpage>–<lpage>41</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.knosys.2015.06.004" xlink:type="simple">http://dx.doi.org/10.1016/j.knosys.2015.06.004</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alicia</surname> <given-names>HdD</given-names></name>, <name name-style="western"><surname>Mónica</surname> <given-names>MGM</given-names></name>, <name name-style="western"><surname>Jorge</surname> <given-names>JAM</given-names></name>. <article-title>Application of Multi-Criteria Decision Methods (MCDM) for the development of functional food products in Venezuela</article-title>. <source>Procedia Food Science</source>. <year>2011</year>;<volume>1</volume>:<fpage>1560</fpage>–<lpage>7</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.profoo.2011.09.231" xlink:type="simple">http://dx.doi.org/10.1016/j.profoo.2011.09.231</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pekkaya</surname> <given-names>M</given-names></name>. <article-title>Career Preference of University Students: An Application of MCDM Methods</article-title>. <source>Procedia Economics and Finance</source>. <year>2015</year>;<volume>23</volume>:<fpage>249</fpage>–<lpage>55</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/S2212-5671(15)00486-4" xlink:type="simple">http://dx.doi.org/10.1016/S2212-5671(15)00486-4</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Thor</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Ding</surname> <given-names>S-H</given-names></name>, <name name-style="western"><surname>Kamaruddin</surname> <given-names>S</given-names></name>. <article-title>Comparison of multi criteria decision making methods from the maintenance alternative selection perspective</article-title>. <source>The International Journal of Engineering and Science</source>. <year>2013</year>;<volume>2</volume>(<issue>6</issue>):<fpage>27</fpage>–<lpage>34</lpage>.</mixed-citation></ref>
+<ref id="pone.0165171.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Peniwati</surname> <given-names>K</given-names></name>. <article-title>Criteria for evaluating group decision-making methods</article-title>. <source>Mathematical and Computer Modelling</source>. <year>2007</year>;<volume>46</volume>(<issue>7–8</issue>):<fpage>935</fpage>–<lpage>47</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.mcm.2007.03.005" xlink:type="simple">http://dx.doi.org/10.1016/j.mcm.2007.03.005</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref031"><label>31</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tan</surname> <given-names>PS</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>SSG</given-names></name>, <name name-style="western"><surname>Goh</surname> <given-names>AES</given-names></name>. <article-title>Multi-criteria decision techniques for context-aware B2B collaboration in supply chains</article-title>. <source>Decision Support Systems</source>. <year>2012</year>;<volume>52</volume>(<issue>4</issue>):<fpage>779</fpage>–<lpage>89</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.dss.2011.11.013" xlink:type="simple">http://dx.doi.org/10.1016/j.dss.2011.11.013</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rezaei</surname> <given-names>J</given-names></name>. <article-title>A Systematic Review of Multi-criteria Decision-making Applications in Reverse Logistics</article-title>. <source>Transportation Research Procedia</source>. <year>2015</year>;<volume>10</volume>:<fpage>766</fpage>–<lpage>76</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.trpro.2015.09.030" xlink:type="simple">http://dx.doi.org/10.1016/j.trpro.2015.09.030</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref033"><label>33</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chiu</surname> <given-names>W-Y</given-names></name>, <name name-style="western"><surname>Tzeng</surname> <given-names>G-H</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>H-L</given-names></name>. <article-title>A new hybrid MCDM model combining DANP with VIKOR to improve e-store business</article-title>. <source>Knowledge-Based Systems</source>. <year>2013</year>;<volume>37</volume>:<fpage>48</fpage>–<lpage>61</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.knosys.2012.06.017" xlink:type="simple">http://dx.doi.org/10.1016/j.knosys.2012.06.017</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wang</surname> <given-names>Y-L</given-names></name>, <name name-style="western"><surname>Tzeng</surname> <given-names>G-H</given-names></name>. <article-title>Brand marketing for creating brand value based on a MCDM model combining DEMATEL with ANP and VIKOR methods</article-title>. <source>Expert Systems with Applications</source>. <year>2012</year>;<volume>39</volume>(<issue>5</issue>):<fpage>5600</fpage>–<lpage>15</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.eswa.2011.11.057" xlink:type="simple">http://dx.doi.org/10.1016/j.eswa.2011.11.057</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref035"><label>35</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Liu</surname> <given-names>C-H</given-names></name>, <name name-style="western"><surname>Tzeng</surname> <given-names>G-H</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>M-H</given-names></name>. <article-title>Improving tourism policy implementation–The use of hybrid MCDM models</article-title>. <source>Tourism Management</source>. <year>2012</year>;<volume>33</volume>(<issue>2</issue>):<fpage>413</fpage>–<lpage>26</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.tourman.2011.05.002" xlink:type="simple">http://dx.doi.org/10.1016/j.tourman.2011.05.002</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref036"><label>36</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lee</surname> <given-names>W-S</given-names></name>, <name name-style="western"><surname>Tu</surname> <given-names>W-S</given-names></name>. <article-title>Combined MCDM techniques for exploring company value based on Modigliani–Miller theorem</article-title>. <source>Expert Systems with Applications</source>. <year>2011</year>;<volume>38</volume>(<issue>7</issue>):<fpage>8037</fpage>–<lpage>44</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.eswa.2010.12.138" xlink:type="simple">http://dx.doi.org/10.1016/j.eswa.2010.12.138</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref037"><label>37</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Behzadian</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Khanmohammadi Otaghsara</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Yazdani</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ignatius</surname> <given-names>J</given-names></name>. <article-title>A state-of the-art survey of TOPSIS applications</article-title>. <source>Expert Systems with Applications</source>. <year>2012</year>;<volume>39</volume>(<issue>17</issue>):<fpage>13051</fpage>–<lpage>69</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.eswa.2012.05.056" xlink:type="simple">http://dx.doi.org/10.1016/j.eswa.2012.05.056</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref038"><label>38</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Johnson</surname> <given-names>DDP</given-names></name>, <name name-style="western"><surname>Blumstein</surname> <given-names>DT</given-names></name>, <name name-style="western"><surname>Fowler</surname> <given-names>JH</given-names></name>, <name name-style="western"><surname>Haselton</surname> <given-names>MG</given-names></name>. <article-title>The evolution of error: error management, cognitive constraints, and adaptive decision-making biases</article-title>. <source>Trends in Ecology &amp; Evolution</source>. <year>2013</year>;<volume>28</volume>(<issue>8</issue>):<fpage>474</fpage>–<lpage>81</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.tree.2013.05.014" xlink:type="simple">http://dx.doi.org/10.1016/j.tree.2013.05.014</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref039"><label>39</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fishburn</surname> <given-names>PC</given-names></name>. <article-title>Letter to the editor—additive utilities with incomplete product sets: application to priorities and assignments</article-title>. <source>Operations Research</source>. <year>1967</year>;<volume>15</volume>(<issue>3</issue>):<fpage>537</fpage>–<lpage>42</lpage>.</mixed-citation></ref>
+<ref id="pone.0165171.ref040"><label>40</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Triantaphyllou</surname> <given-names>E</given-names></name>. <chapter-title>Multi-criteria decision making methods: a comparative study</chapter-title>. <publisher-loc>Dordrecht; Boston, Mass.</publisher-loc>: <publisher-name>Kluwer Academic Publishers</publisher-name>; <year>2000</year>. xxviii, 288 p. p.</mixed-citation></ref>
+<ref id="pone.0165171.ref041"><label>41</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Bridgman</surname> <given-names>PW</given-names></name>. <chapter-title>Dimensional analysis</chapter-title>: <publisher-name>Yale University Press</publisher-name>; <year>1922</year>.</mixed-citation></ref>
+<ref id="pone.0165171.ref042"><label>42</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Miller</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Starr</surname> <given-names>M</given-names></name>. <chapter-title>Executive decisions and operations research</chapter-title>. Englewood Cliffs, <year>1969</year>. <publisher-name>Prentice-Hall, Inc</publisher-name>: <publisher-loc>NJ</publisher-loc>.</mixed-citation></ref>
+<ref id="pone.0165171.ref043"><label>43</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Ching-Lai</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Yoon</surname> <given-names>K</given-names></name>. <chapter-title>Multiple attribute decision making: Methods and applications</chapter-title>: <publisher-name>Springer-Verlag</publisher-name>; <year>1981</year>.</mixed-citation></ref>
+<ref id="pone.0165171.ref044"><label>44</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Rao</surname> <given-names>RV</given-names></name>. <chapter-title>Applications of Improved MADM Methods to the Decision Making Problems of Manufacturing Environment</chapter-title>. <source>Decision Making in Manufacturing Environment Using Graph Theory and Fuzzy Multiple Attribute Decision Making Methods</source>. <series>Springer Series in Advanced Manufacturing</series>: <publisher-name>Springer London</publisher-name>; <year>2013</year>. p. <fpage>41</fpage>–<lpage>135</lpage>.</mixed-citation></ref>
+<ref id="pone.0165171.ref045"><label>45</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chang</surname> <given-names>C-L</given-names></name>. <article-title>A modified VIKOR method for multiple criteria analysis</article-title>. <source>Environ Monit Assess</source>. <year>2010</year>;<volume>168</volume>(<issue>1–4</issue>):<fpage>339</fpage>–<lpage>44</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s10661-009-1117-0" xlink:type="simple">10.1007/s10661-009-1117-0</ext-link></comment> <object-id pub-id-type="pmid">19672684</object-id></mixed-citation></ref>
+<ref id="pone.0165171.ref046"><label>46</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tzeng</surname> <given-names>G-H</given-names></name>, <name name-style="western"><surname>Lin</surname> <given-names>C-W</given-names></name>, <name name-style="western"><surname>Opricovic</surname> <given-names>S</given-names></name>. <article-title>Multi-criteria analysis of alternative-fuel buses for public transportation</article-title>. <source>Energy Policy</source>. <year>2005</year>;<volume>33</volume>(<issue>11</issue>):<fpage>1373</fpage>–<lpage>83</lpage>.</mixed-citation></ref>
+<ref id="pone.0165171.ref047"><label>47</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Opricovic</surname> <given-names>S</given-names></name>. <article-title>Multi-criteria Optimization of Civil Engineering Systems, Faculty of Civil Engineering, Belgrade</article-title>. <source>Table II The performance matrix</source>. <year>1998</year>.</mixed-citation></ref>
+<ref id="pone.0165171.ref048"><label>48</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tzeng</surname> <given-names>G-H</given-names></name>, <name name-style="western"><surname>Teng</surname> <given-names>M-H</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>J-J</given-names></name>, <name name-style="western"><surname>Opricovic</surname> <given-names>S</given-names></name>. <article-title>Multicriteria selection for a restaurant location in Taipei</article-title>. <source>International Journal of Hospitality Management</source>. <year>2002</year>;<volume>21</volume>(<issue>2</issue>):<fpage>171</fpage>–<lpage>87</lpage>.</mixed-citation></ref>
+<ref id="pone.0165171.ref049"><label>49</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Opricovic</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Tzeng</surname> <given-names>G-H</given-names></name>. <article-title>Compromise solution by MCDM methods: A comparative analysis of VIKOR and TOPSIS</article-title>. <source>European Journal of Operational Research</source>. <year>2004</year>;<volume>156</volume>(<issue>2</issue>):<fpage>445</fpage>–<lpage>55</lpage>.</mixed-citation></ref>
+<ref id="pone.0165171.ref050"><label>50</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kackar</surname> <given-names>R</given-names></name>. <article-title>Off-line Quality-Control, Parameter Design, and the Taguchi Method-Response</article-title>. <source>Journal of Quality Technology</source>. <year>1985</year>;<volume>17</volume>(<issue>4</issue>):<fpage>207</fpage>–<lpage>9</lpage>.</mixed-citation></ref>
+<ref id="pone.0165171.ref051"><label>51</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yazdani</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Payam</surname> <given-names>AF</given-names></name>. <article-title>A comparative study on material selection of microelectromechanical systems electrostatic actuators using Ashby, VIKOR and TOPSIS</article-title>. <source>Materials &amp; Design</source>. <year>2015</year>;<volume>65</volume>(<issue>0</issue>):<fpage>328</fpage>–<lpage>34</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.matdes.2014.09.004" xlink:type="simple">http://dx.doi.org/10.1016/j.matdes.2014.09.004</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref052"><label>52</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tong</surname> <given-names>L-I</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>C-C</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>C-H</given-names></name>. <article-title>Optimization of multi-response processes using the VIKOR method</article-title>. <source>Int J Adv Manuf Technol</source>. <year>2007</year>;<volume>31</volume>(<issue>11–12</issue>):<fpage>1049</fpage>–<lpage>57</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s00170-005-0284-6" xlink:type="simple">10.1007/s00170-005-0284-6</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref053"><label>53</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Mateo</surname> <given-names>J</given-names></name>. <source>PROMETHEE. Multi Criteria Analysis in the Renewable Energy Industry. Green Energy and Technology</source>: <publisher-name>Springer</publisher-name> <publisher-loc>London</publisher-loc>; <year>2012</year>. p. <fpage>23</fpage>–<lpage>32</lpage>.</mixed-citation></ref>
+<ref id="pone.0165171.ref054"><label>54</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Anojkumar</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Ilangkumaran</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Sasirekha</surname> <given-names>V</given-names></name>. <article-title>Comparative analysis of MCDM methods for pipe material selection in sugar industry</article-title>. <source>Expert Systems with Applications</source>. <year>2014</year>;<volume>41</volume>(<issue>6</issue>):<fpage>2964</fpage>–<lpage>80</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.eswa.2013.10.028" xlink:type="simple">http://dx.doi.org/10.1016/j.eswa.2013.10.028</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref055"><label>55</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mulliner</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Malys</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Maliene</surname> <given-names>V</given-names></name>. <article-title>Comparative analysis of MCDM methods for the assessment of sustainable housing affordability</article-title>. <source>Omega</source>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.omega.2015.05.013" xlink:type="simple">http://dx.doi.org/10.1016/j.omega.2015.05.013</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref056"><label>56</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sánchez-Lozano</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Teruel-Solano</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Soto-Elvira</surname> <given-names>PL</given-names></name>, <name name-style="western"><surname>Socorro García-Cascales</surname> <given-names>M</given-names></name>. <article-title>Geographical Information Systems (GIS) and Multi-Criteria Decision Making (MCDM) methods for the evaluation of solar farms locations: Case study in south-eastern Spain</article-title>. <source>Renewable and Sustainable Energy Reviews</source>. <year>2013</year>;<volume>24</volume>:<fpage>544</fpage>–<lpage>56</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.rser.2013.03.019" xlink:type="simple">http://dx.doi.org/10.1016/j.rser.2013.03.019</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref057"><label>57</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fierek</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Zak</surname> <given-names>J</given-names></name>. <article-title>Planning of an Integrated Urban Transportation System based on Macro–Simulation and MCDM/A Methods</article-title>. <source>Procedia—Social and Behavioral Sciences</source>. <year>2012</year>;<volume>54</volume>:<fpage>567</fpage>–<lpage>79</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.sbspro.2012.09.774" xlink:type="simple">http://dx.doi.org/10.1016/j.sbspro.2012.09.774</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref058"><label>58</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Jin</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>J</given-names></name>. <article-title>A new MCDM method combining QFD with TOPSIS for knowledge management system selection from the user's perspective in intuitionistic fuzzy environment</article-title>. <source>Applied Soft Computing</source>. <year>2014</year>;<volume>21</volume>:<fpage>28</fpage>–<lpage>37</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.asoc.2014.03.008" xlink:type="simple">http://dx.doi.org/10.1016/j.asoc.2014.03.008</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0165171.ref059"><label>59</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hobbs</surname> <given-names>BF</given-names></name>, <name name-style="western"><surname>Chankong</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Hamadeh</surname> <given-names>W</given-names></name>. <article-title>An Experiment in Water Resources Planning</article-title>. <source>Water Resources Research</source>. <year>1992</year>;<volume>28</volume>(<issue>7</issue>):<fpage>1767</fpage>–<lpage>79</lpage>.</mixed-citation></ref>
+<ref id="pone.0165171.ref060"><label>60</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Collier</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>North</surname> <given-names>M</given-names></name>. <article-title>Parallel agent-based simulation with Repast for High Performance Computing</article-title>. <source>Simulation</source>. <year>2012</year>:0037549712462620.</mixed-citation></ref>
+</ref-list>
+</back>
+</article>

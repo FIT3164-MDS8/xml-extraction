@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article article-type="research-article" dtd-version="1.1d3" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-18-19309</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0206166</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Mathematical and statistical techniques</subject><subj-group><subject>Statistical methods</subject><subj-group><subject>Monte Carlo method</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Statistics</subject><subj-group><subject>Statistical methods</subject><subj-group><subject>Monte Carlo method</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Simulation and modeling</subject><subj-group><subject>Agent-based modeling</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Computer and information sciences</subject><subj-group><subject>Systems science</subject><subj-group><subject>Agent-based modeling</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Systems science</subject><subj-group><subject>Agent-based modeling</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Psychology</subject><subj-group><subject>Social psychology</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Psychology</subject><subj-group><subject>Social psychology</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Simulation and modeling</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Psychology</subject><subj-group><subject>Social psychology</subject><subj-group><subject>Social influence</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Psychology</subject><subj-group><subject>Social psychology</subject><subj-group><subject>Social influence</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Approximation methods</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Evolutionary biology</subject><subj-group><subject>Evolutionary processes</subject><subj-group><subject>Evolutionary rate</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Sociology</subject><subj-group><subject>Social theory</subject></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Think then act or act then think?</article-title>
+<alt-title alt-title-type="running-head">Think then act or act then think?</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0002-7965-2014</contrib-id>
+<name name-style="western">
+<surname>Jędrzejewski</surname> <given-names>Arkadiusz</given-names></name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Formal analysis</role>
+<role content-type="http://credit.casrai.org/">Funding acquisition</role>
+<role content-type="http://credit.casrai.org/">Investigation</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<role content-type="http://credit.casrai.org/">Validation</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Marcjasz</surname> <given-names>Grzegorz</given-names></name>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Investigation</role>
+<role content-type="http://credit.casrai.org/">Software</role>
+<role content-type="http://credit.casrai.org/">Validation</role>
+<role content-type="http://credit.casrai.org/">Visualization</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Nail</surname> <given-names>Paul R.</given-names></name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Validation</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0002-1851-8508</contrib-id>
+<name name-style="western">
+<surname>Sznajd-Weron</surname> <given-names>Katarzyna</given-names></name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Funding acquisition</role>
+<role content-type="http://credit.casrai.org/">Project administration</role>
+<role content-type="http://credit.casrai.org/">Supervision</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001">
+<label>1</label>
+<addr-line>Faculty of Fundamental Problems of Technology, Wrocław University of Science and Technology, Wrocław, Poland</addr-line>
+</aff>
+<aff id="aff002">
+<label>2</label>
+<addr-line>Faculty of Pure and Applied Mathematics, Wrocław University of Science and Technology, Wrocław, Poland</addr-line>
+</aff>
+<aff id="aff003">
+<label>3</label>
+<addr-line>Faculty of Psychology and Counseling, University of Central Arkansas, Conway, Arkansas, United States of America</addr-line>
+</aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Gonçalves</surname> <given-names>Sebastián</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1">
+<addr-line>Universidade Federal do Rio Grande do Sul, BRAZIL</addr-line>
+</aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">katarzyna.weron@pwr.edu.pl</email></corresp>
+</author-notes>
+<pub-date pub-type="collection">
+<year>2018</year>
+</pub-date>
+<pub-date pub-type="epub">
+<day>14</day>
+<month>11</month>
+<year>2018</year>
+</pub-date>
+<volume>13</volume>
+<issue>11</issue>
+<elocation-id>e0206166</elocation-id>
+<history>
+<date date-type="received">
+<day>29</day>
+<month>6</month>
+<year>2018</year>
+</date>
+<date date-type="accepted">
+<day>8</day>
+<month>10</month>
+<year>2018</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2018</copyright-year>
+<copyright-holder>Jędrzejewski et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0206166"/>
+<abstract>
+<p>We introduce a new agent-based model of opinion dynamics in which binary opinions of each agent can be measured and described regarding both pre- and post-influence at both of two levels, public and private, vis-à-vis the influence source. The model combines ideas introduced within the <italic>q</italic>-voter model with noise, proposed by physicists, with the descriptive, four-dimensional model of social response, formulated by social psychologists. We investigate two versions of the same model that differ only by the updating order: an opinion on the public level is updated before an opinion on the private level or vice versa. We show how the results on the macroscopic scale depend on this order. The main finding of this paper is that both models produce the same outcome if one looks only at such a macroscopic variable as the total number of the individuals with positive opinions. However, if also the level of internal harmony (viz., dissonance) is measured, then significant, qualitative differences are seen between these two versions of the model. All results were obtained simultaneously within Monte Carlo simulations and analytical calculations. We discuss the importance of our studies and findings from three points of view: the theory of phase transitions, agent-based modeling of social systems, and social psychology.</p>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100004281</institution-id>
+<institution>Narodowe Centrum Nauki</institution>
+</institution-wrap>
+</funding-source>
+<award-id>2016/21/B/HS6/01256</award-id>
+<principal-award-recipient>
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0002-1851-8508</contrib-id>
+<name name-style="western">
+<surname>Sznajd-Weron</surname> <given-names>Katarzyna</given-names></name>
+</principal-award-recipient>
+</award-group>
+<award-group id="award002">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100004281</institution-id>
+<institution>Narodowe Centrum Nauki</institution>
+</institution-wrap>
+</funding-source>
+<award-id>2016/23/N/ST2/00729</award-id>
+<principal-award-recipient>
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0002-7965-2014</contrib-id>
+<name name-style="western">
+<surname>Jedrzejewski</surname> <given-names>Arkadiusz</given-names></name>
+</principal-award-recipient>
+</award-group>
+<funding-statement>This work was partially supported by the National Science Center (NCN, Poland) through grants no. 2016/21/B/HS6/01256 and no. 2016/23/N/ST2/00729. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="5"/>
+<table-count count="1"/>
+<page-count count="19"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>Data are available via Research Gate with the doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.13140/RG.2.2.11957.12000" xlink:type="simple">10.13140/RG.2.2.11957.12000</ext-link>. Direct link to our data: (<ext-link ext-link-type="uri" xlink:href="https://www.researchgate.net/profile/Grzegorz_Marcjasz/publication/328278711_Think_Then_Act_or_Act_Then_Think/data/5bc3d0ee92851c88fd6a199b/Think-Then-Act-or-Act-Then-Think.zip" xlink:type="simple">https://www.researchgate.net/profile/Grzegorz_Marcjasz/publication/328278711_Think_Then_Act_or_Act_Then_Think/data/5bc3d0ee92851c88fd6a199b/Think-Then-Act-or-Act-Then-Think.zip</ext-link>).</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>There is a common belief, verbalized by Ralph Waldo Emerson in his Essays from 1841, that “The ancestor of every action is a thought”. On the other hand, as noted by social psychologist David Myers [<xref ref-type="bibr" rid="pone.0206166.ref001">1</xref>]: “If social psychology has taught us anything during the last 25 years, it is that we are likely not only to think ourselves into a way of acting but also to act ourselves into a way of thinking.”. Indeed, it has been shown in many social experiments that attitudes are frequently poor predictors of behaviors, and it is often that behaviors determine attitudes [<xref ref-type="bibr" rid="pone.0206166.ref001">1</xref>]. This startling conclusion inspired us to build a microscopic model with private and public opinions that combines the idea introduced within the <italic>q</italic>-voter model with independence [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>], an agent-based model (ABM) of opinion formation, with the descriptive, four-dimensional model of social response [<xref ref-type="bibr" rid="pone.0206166.ref003">3</xref>].</p>
+<p>According to the latter model, the position or opinion of each individual can be measured and described regarding both pre- and post-influence at both of two levels, public and private, vis-à-vis the influence source. The introduction of these variables allowed for the distinction between the majority of the influence types that are generally recognized as theoretically significant and conceptually distinct. For example, they provide for the distinction between two widely recognized types of conformity: conversion (conformity at both public and private levels) and compliance (public conformity without private acceptance). Moreover, it allows for the description of a particularly interesting type of social response, so-called disinhibitory contagion, which is similar to conformity in that, in both cases, an individual changes his or her public behavior toward that of an external influence source. However, the reason that disinhibitory contagion is very different than conformity is that the former begins with an influencee’s internal intra-psychic conflict before even being exposed to the influence source.</p>
+<p>To understand the essence of disinhibitory contagion, imagine the following situation. You and your date are at a dance, but no one is dancing. You and your partner are inhibited from dancing because you would be embarrassed to be the only couple on the floor. This is the “force” that prevents you from doing what you would like to do. At this point, however, one couple starts dancing (viz., the initiators or triggers), then another and another. You and your date join in, and the dance floor quickly fills. Note that the influence of the initiators is contagious, as the influence spreads, and the situation progresses from your initial internal conflict over dancing → through influence → to your ultimate internal harmony, happy that you are dancing. In this case, it is only your and the other agents’ public behavior that changes, not private opinions. Another example of disinhibitory contagion may be the situation in which Poland initiated the democratic reforms in defiance of the historic domination of the Soviet Union that swept across Eastern Europe in 1989.</p>
+<p>In the field of sociophysics, various models of binary opinion dynamics have been proposed [<xref ref-type="bibr" rid="pone.0206166.ref004">4</xref>–<xref ref-type="bibr" rid="pone.0206166.ref014">14</xref>], but only a few of them take into account the distinction between private (PRIV) opinions (or attitudes) and public (PUB) behaviors. Probably such a two-level description was introduced for the first time within the Continuous Opinions and Discrete Actions (CODA) model [<xref ref-type="bibr" rid="pone.0206166.ref015">15</xref>]. The model was later developed and modified in various directions [<xref ref-type="bibr" rid="pone.0206166.ref016">16</xref>, <xref ref-type="bibr" rid="pone.0206166.ref017">17</xref>]. However, in all its versions discrete public choices are resulting from the private continuous opinions in such a way that the inner continuous opinion is used to measure how certain each agent is about its decision on which of two options it prefers. This means that the CODA model describes only rational individuals that act in accordance with their own convictions, which as we know from social psychology, is not always true. Another model that differentiate between public and private opinions has been proposed very recently under the name concealed voter model (CVM) [<xref ref-type="bibr" rid="pone.0206166.ref018">18</xref>]. It is built upon the linear voter model [<xref ref-type="bibr" rid="pone.0206166.ref019">19</xref>] by adding a concealed, private, layer of opinions to the public layer present in the original model. In the concealed voter model, both opinions are binary, and in the case of disparity between them, one opinion can be embraced by the other with certain rates. On the complete graph of a finite size, agents within CVM must reach a consensus, although the consensus time is longer than for the basic voter model [<xref ref-type="bibr" rid="pone.0206166.ref019">19</xref>].</p>
+<p>The model introduced here, on the other hand, covers more possibilities of behaviors allowing for not only various “rational” but also “irrational” ones in comparison to the CODA model, and it also takes into account the role of the group influence in the opinion making process in contrast to the concealed voter model. Moreover, it has strong foundations in social psychology. In fact, the model is directly derived from one of the most sophisticated descriptive models of social response. However, introducing yet another agent-based model of opinion dynamics is not the aim of this paper. Rather, herein we ask two questions, and we hope that the answers will be important not only for social agent-based modeling but also for social psychology.</p>
+<p>Keeping in mind that a basic goal of theorists and researchers in the field of descriptive models of social response is to identify the minimum number of variables that are needed to adequately distinguish between as many of the important types of social influence as possible, we can ask if two levels (private and public) of description are really necessary. Of course, the question formulated in this way is very imprecise. However, we can ask this question rigorously within a specific ABM, here the <italic>q</italic>-voter model, in the following way: Will the <italic>q</italic>-voter model with private and public opinions give qualitatively different results than the original <italic>q</italic>-voter model with only public opinion?</p>
+<p>Another question that can be asked has been already posed in the title of this paper and is closely related to the first sentences of the Introduction. What comes first—thinking or acting? Social psychologists try to answer the following questions [<xref ref-type="bibr" rid="pone.0206166.ref001">1</xref>]: “How do our inner attitudes relate to our external behavior?”, “Why does our behavior affect our attitudes?”, etc. Here, we will ask another question inspired by the above but more closely related to the agent-based modeling procedure. While building an ABM, it is necessary not only to define precisely agents, as well as a network in which they exist and interact with each other. It is also necessary to give a precise algorithm that describes how the system evolves over time. This means that we have to decide, for example, about the order of updating. Usually, when building a social ABM, we rely on a social theory and experiments. In this case, however, social psychology tells us that there is no simple answer to the question: What should be updated first—a public or a private opinion? Therefore, we investigate herein two versions of the model. One in which we update (a) the private opinion first and then the public one, and the second version in which the opposite updating scheme occurs (b) the public opinion is updated first and then the private one. Because often a public opinion can be identified with the way of acting and a private opinion with the way of thinking, we call these two variants of the model: (a) think then act (TA) versus (b) act then think (AT). Now, we are ready to formalize the precise question, which is the focal point of this work: To what extent will the TA and AT models give different results at the macroscopic level?</p>
+</sec>
+<sec id="sec002">
+<title>Model</title>
+<p>The ABM we introduce here is based on a descriptive model of social influence, the so-called four-dimensional (4D) model [<xref ref-type="bibr" rid="pone.0206166.ref003">3</xref>]. Its roots are from the Willis +/− scheme for symbolizing responses to social influence [<xref ref-type="bibr" rid="pone.0206166.ref020">20</xref>]. Within the scheme, we describe the response to social influence in a single set of interactions (a single social influence trial) by a series of 3 signs: the first sign (+ or −) represents the target’s initial position (the pre-influence opinion), the second (+ or −) the position advocated by the potential influence source, and the third (+ or −) the target’s response to the source (the post-influence opinion). This means that in total we have 2<sup>3</sup> = 8 combinations, which can be grouped into four basic response patterns:
+<disp-formula id="pone.0206166.e001"><alternatives><graphic id="pone.0206166.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e001" xlink:type="simple"/><mml:math display="block" id="M1"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mtext>C</mml:mtext> <mml:mo>:</mml:mo></mml:mrow></mml:mtd> <mml:mtd><mml:mrow><mml:mo>+</mml:mo> <mml:mo>-</mml:mo> <mml:mo>-</mml:mo> <mml:mspace width="5.69046pt"/><mml:mtext>or</mml:mtext> <mml:mspace width="5.69046pt"/><mml:mo>-</mml:mo> <mml:mo>+</mml:mo> <mml:mo>+</mml:mo> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mtext>I</mml:mtext> <mml:mo>:</mml:mo></mml:mrow></mml:mtd> <mml:mtd><mml:mrow><mml:mo>+</mml:mo> <mml:mo>-</mml:mo> <mml:mo>+</mml:mo> <mml:mspace width="5.69046pt"/><mml:mtext>or</mml:mtext> <mml:mspace width="5.69046pt"/><mml:mo>-</mml:mo> <mml:mo>+</mml:mo> <mml:mo>-</mml:mo> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mtext>A</mml:mtext> <mml:mo>:</mml:mo></mml:mrow></mml:mtd> <mml:mtd><mml:mrow><mml:mo>+</mml:mo> <mml:mo>+</mml:mo> <mml:mo>-</mml:mo> <mml:mspace width="5.69046pt"/><mml:mtext>or</mml:mtext> <mml:mspace width="5.69046pt"/><mml:mo>-</mml:mo> <mml:mo>-</mml:mo> <mml:mo>+</mml:mo> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mtext>U</mml:mtext> <mml:mo>:</mml:mo></mml:mrow></mml:mtd> <mml:mtd><mml:mrow><mml:mo>+</mml:mo> <mml:mo>+</mml:mo> <mml:mo>+</mml:mo> <mml:mspace width="5.69046pt"/><mml:mtext>or</mml:mtext> <mml:mspace width="5.69046pt"/><mml:mo>-</mml:mo> <mml:mo>-</mml:mo> <mml:mo>-</mml:mo> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula>
+where <italic>C</italic>, <italic>I</italic>, <italic>A</italic>, and <italic>U</italic> stand for conformity, independence, anticonformity, and uniformity respectively. Now, if we assume that these pre- and post-influence opinions can occur independently at both private and public levels, as in the 4D model [<xref ref-type="bibr" rid="pone.0206166.ref003">3</xref>], we obtain 32 combinations. However, the consideration of symmetry allows these combinations to be reduced to 16 different response patterns of the four-dimensional model [<xref ref-type="bibr" rid="pone.0206166.ref003">3</xref>] (see <xref ref-type="table" rid="pone.0206166.t001">Table 1</xref>).</p>
+<table-wrap id="pone.0206166.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0206166.t001</object-id>
+<label>Table 1</label>
+<caption>
+<title>The 16 possible response patterns introduced within the four-dimensional model of social response [<xref ref-type="bibr" rid="pone.0206166.ref003">3</xref>].</title>
+</caption>
+<alternatives>
+<graphic id="pone.0206166.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0206166.t001" xlink:type="simple"/>
+<table border="0" frame="box" rules="all">
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<tbody>
+<tr>
+<td align="left" rowspan="2">#1</td>
+<td align="left" rowspan="2">Congruence</td>
+<td align="left">PUB</td>
+<td align="left">+ + +</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">− − −</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">+ + +</td>
+<td align="left">− − −</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#2</td>
+<td align="left" rowspan="2">Paradoxical Compliance</td>
+<td align="left">PUB</td>
+<td align="left">+ + +</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">− − −</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">+ + −</td>
+<td align="left">− − +</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#3</td>
+<td align="left" rowspan="2">Anticompliance</td>
+<td align="left">PUB</td>
+<td align="left">+ + −</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">− − +</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">+ + +</td>
+<td align="left">− − −</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#4</td>
+<td align="left" rowspan="2">Anticonversion</td>
+<td align="left">PUB</td>
+<td align="left">+ + −</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">− − +</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">+ + −</td>
+<td align="left">− − +</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#5</td>
+<td align="left" rowspan="2">Compliance/Conversion</td>
+<td align="left">PUB</td>
+<td align="left">+ + +</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">− − −</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">− + +</td>
+<td align="left">+ − −</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#6</td>
+<td align="left" rowspan="2">Continued Compliance</td>
+<td align="left">PUB</td>
+<td align="left">+ + +</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">− − −</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">− + −</td>
+<td align="left">+ − +</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#7</td>
+<td align="left" rowspan="2">Reversed Anticompliance</td>
+<td align="left">PUB</td>
+<td align="left">+ + −</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">− − +</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">− + +</td>
+<td align="left">+ − −</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#8</td>
+<td align="left" rowspan="2">Disinhibitory Anticonversion</td>
+<td align="left">PUB</td>
+<td align="left">+ + −</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">− − +</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">− + −</td>
+<td align="left">+ − +</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#9</td>
+<td align="left" rowspan="2">Disinhibitory Contagion</td>
+<td align="left">PUB</td>
+<td align="left">− + +</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">+ − −</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">+ + +</td>
+<td align="left">− − −</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#10</td>
+<td align="left" rowspan="2">Reversed Compliance</td>
+<td align="left">PUB</td>
+<td align="left">− + +</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">+ − −</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">+ + −</td>
+<td align="left">− − +</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#11</td>
+<td align="left" rowspan="2">Inhibitory Independence</td>
+<td align="left">PUB</td>
+<td align="left">− + −</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">+ − +</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">+ + +</td>
+<td align="left">− − −</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#12</td>
+<td align="left" rowspan="2">Anticontagion</td>
+<td align="left">PUB</td>
+<td align="left">− + −</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">+ − +</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">+ + −</td>
+<td align="left">− − +</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#13</td>
+<td align="left" rowspan="2">Conversion</td>
+<td align="left">PUB</td>
+<td align="left">− + +</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">+ − −</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">− + +</td>
+<td align="left">+ − −</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#14</td>
+<td align="left" rowspan="2">Compliance</td>
+<td align="left">PUB</td>
+<td align="left">− + +</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">+ − −</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">− + −</td>
+<td align="left">+ − +</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#15</td>
+<td align="left" rowspan="2">Paradoxical Anticompliance</td>
+<td align="left">PUB</td>
+<td align="left">− + −</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">+ − +</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">− + +</td>
+<td align="left">+ − −</td>
+</tr>
+<tr>
+<td align="left" rowspan="2">#16</td>
+<td align="left" rowspan="2">Independence</td>
+<td align="left">PUB</td>
+<td align="left">− + −</td>
+<td align="left" rowspan="2">or</td>
+<td align="left">+ − +</td>
+</tr>
+<tr>
+<td align="left">PRIV</td>
+<td align="left">− + −</td>
+<td align="left">+ − +</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>Let us explain here two issues because we realize that they may not be clear to some readers. First of all, one should note that in <xref ref-type="table" rid="pone.0206166.t001">Table 1</xref> we use convention in which the private opinion of the source of influence is the same as its opinion on the public level. Of course, in general this is not necessarily true that the source of influence has the same opinion on both levels. However, it does not matter what opinion the source has at the private level because this level is not seen by the target. In fact, we could use another convention to describe the private level using, e.g., question mark in the place of ‘+’ or ‘−’ for the private opinion of the source of influence. Within such a convention, e.g., disinhibitory contagion would be defined as (PUB + − −, PRIV −?−), instead of (PUB + − −, PRIV − − −). For the order, we decided to stay with the original notation, introduced in [<xref ref-type="bibr" rid="pone.0206166.ref003">3</xref>]. Second issue to be explained concerns the name of the model: “Why is it called four-dimensional?”. Notice that according to this model 4 variables (dimensions) have to be measured in order to identify the type of social response of the individual: pre-influence public opinion, pre-influence private opinion, post-influence public opinion, and post-influence private opinion. Measuring these 4 variables we can identify 16 different response patterns, as described above.</p>
+<p>Of course, the probabilities of these 16 responses and factors influencing a given type of response are different. Let us go back to the example with dancing given in the Introduction and denote dancing by + and not dancing by −. In this example, the influence of the initiators is contagious, as the influence spreads, and the situation progresses from internal conflict → influence → internal harmony. Note that it is the agents’ public behavior that changes, not their private opinion. This type of influence is dubbed disinhibitory contagion (PUB − + +, PRIV + + +) in the four-dimensional model [<xref ref-type="bibr" rid="pone.0206166.ref003">3</xref>]. Because this type of influence is contagious the source of influence can consist of even only one person to effectively change the public opinion of the target, which is the same as assumed in the linear voter model [<xref ref-type="bibr" rid="pone.0206166.ref014">14</xref>]. However, for other types of social response it may not be true, i.e., more people are needed to influence the target.</p>
+<p>To clarify this statement, let us once again use an example with dancing, but this time regarding conformity, specifically the four-dimensional model’s #14 compliance conformity: You are at a dance even though you do not like to dance and are not very good at it. At some point, you are pressured to dance by peers and end up being herded onto the dance floor. Using Willis’s symbols, compliance conformity is represented by PUB − + + and PRIV − + −. Here, the situation progresses from initial internal harmony → through influence → to ultimate internal conflict. This type of conformity was the subject of research in the famous experiment with lines conducted for the first time by Asch and then repeated by many others [<xref ref-type="bibr" rid="pone.0206166.ref021">21</xref>, <xref ref-type="bibr" rid="pone.0206166.ref022">22</xref>]. In such a case, the influence only from one person may not be sufficient, and unanimity of opinions in the group of influence is critical. This observation was implemented in the original <italic>q</italic>-voter model [<xref ref-type="bibr" rid="pone.0206166.ref023">23</xref>] and later on in its modified version with noise [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>].</p>
+<p>In the original <italic>q</italic>-voter model, a target agent responds to the source of influence that consists of <italic>q</italic> agents randomly chosen from the target’s neighbors only if all <italic>q</italic> agents have the same opinion [<xref ref-type="bibr" rid="pone.0206166.ref023">23</xref>]. Therefore, the original formulation of the <italic>q</italic>-voter dynamics captures only one type of social response, that is, conformity, i.e., changing to the position of the source of influence. Subsequently, two other types of response, two types of nonconformity, were introduced: anticonformity and independence. The model with anticonformity will not be considered in this paper, and therefore, we will not discuss it here. We are aware that by excluding anticonformity from the model as a driving interaction we may loose some generality. However, until now the <italic>q</italic>-voter model with one level of opinion (public) has been investigated with only one type of nonconformity: either anticonformity or independence, but not with both simultaneously. Moreover, the <italic>q</italic>-voter model with independence has shown much richer and interesting behavior than the <italic>q</italic>-voter model with anticonformity [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>, <xref ref-type="bibr" rid="pone.0206166.ref024">24</xref>]. Therefore, to check if the second level of opinion introduces any new quality on the macroscopic level, i.e., to compare it with the one-level, public-only version, we limit our study to only one type of nonconformity, namely independence.</p>
+<p>Independence in social psychology means an absence of influence, and indeed, it means the same in the <italic>q</italic>-voter model, i.e., a voter does not change under the influence of others [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>]. However, independence does not mean that the agent must stay with its original opinion. We have assumed that the agent can randomly change its opinion to the opposite one, independently of the neighborhood. In [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>] the probability of such a change was <italic>f</italic> = 1/2, which is quite high and maybe not very realistic. However, as shown analytically and numerically, the parameter <italic>f</italic> only rescaled the results, and therefore, we can choose an arbitrary value as long as <italic>f</italic> &gt; 0 [<xref ref-type="bibr" rid="pone.0206166.ref025">25</xref>]. The introduction of a noise in the form of this independent behavior prevents the complete consensus, which makes the model more realistic. Moreover, the <italic>q</italic>-voter model with noise occurred to be very interesting from the physical point of view, displaying tricriticality, that is to say, a change in phase transition type, and surprising behavior on multi-layer networks [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>, <xref ref-type="bibr" rid="pone.0206166.ref026">26</xref>]. For all of the above reasons, we have chosen the <italic>q</italic>-voter model with independence as the starting point for a more complex model based on the 4D model.</p>
+<p>Having in mind the role of internal harmony/disharmony, we propose the following model. We consider a network of <italic>N</italic> nodes, each occupied by exactly one agent characterized by two variables: opinion described both on a public level (<italic>S</italic><sub><italic>i</italic></sub> = ±1) and on a private level (<italic>σ</italic><sub><italic>i</italic></sub> = ±1). In short, we will call them public and private opinions. Opinions <italic>S</italic><sub><italic>i</italic></sub> and <italic>σ</italic><sub><italic>i</italic></sub> of <italic>i</italic>-th agent are dynamic variables, which means that both of them consecutively can change in time under social influence or noise in the form of independence. We analyze and compare both updating order possibilities. In one, we first update the public opinion, and then the private one (AT model); in the other, the updating is the opposite (TA model).</p>
+<p>The influence of independence and conformity relies on the type of opinion level they affect, and it is different for public or private one. Independence substitutes the value of the public opinion for the value of the private one, and it changes the private opinion to the opposite one with probability 1/2, which corresponds to the noise introduced in the original <italic>q</italic>-voter model [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>]. So on the public level, independence prompts us to express our private opinion publicly while on the private level, it makes us reconsider changing our private opinion independently of the neighbors. On the other hand, in the case of conformity, first we choose randomly <italic>q</italic> neighbors of the agent who is exposed to the influence. The group is called <italic>q</italic>-panel, and it tries to exert social pressure on the chosen agent. Now, when we try to change the public opinion, and the chosen agent is in the internal conflict, <italic>S</italic><sub><italic>i</italic></sub> ≠ <italic>σ</italic><sub><italic>i</italic></sub>, then we do not require unanimity of the agent’s peers, and we substitute the value of <italic>S</italic><sub><italic>i</italic></sub> for the value of <italic>σ</italic><sub><italic>i</italic></sub> if at least one of all <italic>q</italic> neighbors supports publicly our private opinion, i.e., has the same public opinion as the private opinion of the agent <italic>i</italic>. Otherwise, when the agent is in the internal harmony, <italic>S</italic><sub><italic>i</italic></sub> = <italic>σ</italic><sub><italic>i</italic></sub>, we assume that it is harder to convince the target, and the social influence must be stronger in order to change the agent’s public opinion since then its state goes over to the internal conflict. That is why the group of influence is successful and exerts social pressure only if it is unanimous, i.e., all members of the panel have the same public opinion. Then, the considered agent changes its public opinion to the public opinion shared by the group members. We deal with the similar situation in the case of conformity on the private level, but now we do not differentiate between the situations with internal conflict and harmony. In both scenarios, we require a unanimous group of influence to change the private opinion of the chosen agent since we assume that it is harder to change our believes than behaviors. So, the target agent changes its private opinion to the public opinion shared only by the members of the unanimous group.</p>
+<p>Furthermore, the level of independence <italic>p</italic>, which is assumed to be a static parameter of the model, determines the probability that an agent acts independently. With complementary probability 1 − <italic>p</italic>, conformity occurs. Note that within this approach, each agent can be either conformist or independent in different time steps, so the way of agents’ acting may change during simulation. This corresponds to the so-called situation-oriented approach in which the social response of agents is determined by situational factors and is not connected with their personal traits [<xref ref-type="bibr" rid="pone.0206166.ref027">27</xref>–<xref ref-type="bibr" rid="pone.0206166.ref029">29</xref>]. Another, competitive approach called person-oriented, which will not be considered here, assumes that it is our personality that dominates over the situation. Therefore, at the beginning of simulations, each agent is determined whether it is conformist or independent with the same probabilities as in the case of the situation approach, but now the agents’ way of acting does not change in time. At first glance, these approaches may seem to give the same results since in both the probability of choosing an agent from the system that will act independently is the same and equals to <italic>p</italic>. Nevertheless, they may give, in fact, qualitatively different outcomes depending on the type of social response that is considered, as it is in the case of the <italic>q</italic>-voter model with independence but not with anticonformity [<xref ref-type="bibr" rid="pone.0206166.ref028">28</xref>]. From this point of view, it would be interesting to analyze the model introduced here in the person-oriented approach in a future study, as well.</p>
+<p>In order to better comprehend the model, below we present the precise algorithm for the AT model in which we first update the public opinion:</p>
+<list list-type="order">
+<list-item>
+<p>At a given time step <italic>t</italic>, choose one voter at random, located at site <italic>i</italic>.</p>
+</list-item>
+<list-item>
+<p>Update the public opinion <italic>S</italic><sub><italic>i</italic></sub>:
+<list list-type="alpha-lower"><list-item><p>With probability <italic>p</italic>, the agent acts independently, i.e., replace public opinion by the private one <italic>S</italic><sub><italic>i</italic></sub> → <italic>σ</italic><sub><italic>i</italic></sub>.</p></list-item> <list-item><p>With complementary probability 1 − <italic>p</italic>, the agent is influenced by the public opinions of its <italic>q</italic> randomly picked neighbors without repetition. If voter’s public opinion is different than the private one, <italic>S</italic><sub><italic>i</italic></sub> ≠ <italic>σ</italic><sub><italic>i</italic></sub>, then it changes its public opinion to the private <italic>S</italic><sub><italic>i</italic></sub> → <italic>σ</italic><sub><italic>i</italic></sub> if at least one of <italic>q</italic> neighbors has the same public opinion as the private opinion of the agent <italic>i</italic>. Otherwise, i.e., if voter’s public opinion is already the same as the private one, <italic>S</italic><sub><italic>i</italic></sub> = <italic>σ</italic><sub><italic>i</italic></sub>, the influence occurs only if all <italic>q</italic> neighbors have the same public opinion. Then the agent <italic>i</italic> adopts their opinion, i.e., <italic>S</italic><sub><italic>i</italic></sub> → <italic>S</italic><sub><italic>j</italic></sub>, where <italic>S</italic><sub><italic>j</italic></sub> is the public opinion of one among <italic>q</italic> neighbors.</p></list-item></list></p>
+</list-item>
+<list-item>
+<p>Update the private opinion <italic>σ</italic><sub><italic>i</italic></sub>:
+<list list-type="alpha-lower"><list-item><p>With probability <italic>p</italic>, the agent acts independently, i.e., it randomly changes its private opinion <italic>σ</italic><sub><italic>i</italic></sub> → − <italic>σ</italic><sub><italic>i</italic></sub> with probability 1/2.</p></list-item> <list-item><p>With complementary probability 1 − <italic>p</italic>, the agent is influenced by its <italic>q</italic> randomly picked neighbors without repetition, but only by their public opinions. If all <italic>q</italic> neighbors have the same public opinion then the agent <italic>i</italic> adopts their opinion, i.e., <italic>σ</italic><sub><italic>i</italic></sub> → <italic>S</italic><sub><italic>j</italic></sub>.</p></list-item></list></p>
+</list-item>
+<list-item>
+<p>Time is updated <italic>t</italic> → <italic>t</italic> + 1/<italic>N</italic>.</p>
+</list-item>
+</list>
+<p specific-use="continuation">The TA model differs from AT only in the way we switch the order of points 2 and 3 in the above algorithm, i.e., first we update the private and then the public opinion. Note that both versions of the model use the current, most recent value of the private opinion to update the state of the opinion at the public level in the case of independent behavior of an agent, look at the second step in the above algorithm. But since the public opinion is updated first in AT model, thus if time is included explicitly in the notation then we should write <italic>S</italic><sub><italic>i</italic></sub>(<italic>t</italic> + 1/<italic>N</italic>) = <italic>σ</italic><sub><italic>i</italic></sub>(<italic>t</italic>) whereas in TA model, we have <italic>S</italic><sub><italic>i</italic></sub>(<italic>t</italic> + 1/<italic>N</italic>) = <italic>σ</italic><sub><italic>i</italic></sub>(<italic>t</italic> + 1/<italic>N</italic>) because the private opinion has been already updated.</p>
+<p>Let us now define quantities that we are interested in. The number of individuals with the positive opinion at the public level is denoted by <italic>N</italic><sub><italic>S</italic></sub>(<italic>t</italic>). Analogously, <italic>N</italic><sub><italic>σ</italic></sub>(<italic>t</italic>) denotes the number of individuals with the positive opinion at the private level. Using Monte Carlo simulations, we measure 3 aggregated quantities:</p>
+<list list-type="bullet">
+<list-item>
+<p>the fraction of individuals with the positive public opinion:
+<disp-formula id="pone.0206166.e002"><alternatives><graphic id="pone.0206166.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e002" xlink:type="simple"/><mml:math display="block" id="M2"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mfrac><mml:mrow><mml:msub><mml:mi>N</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow> <mml:mi>N</mml:mi></mml:mfrac> <mml:mo>=</mml:mo> <mml:mfrac><mml:mn>1</mml:mn> <mml:mrow><mml:mn>2</mml:mn> <mml:mi>N</mml:mi></mml:mrow></mml:mfrac> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>i</mml:mi> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>N</mml:mi></mml:munderover> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>+</mml:mo> <mml:msub><mml:mi>S</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(1)</label></disp-formula></p>
+</list-item>
+<list-item>
+<p>the fraction of individuals with the positive private opinion:
+<disp-formula id="pone.0206166.e003"><alternatives><graphic id="pone.0206166.e003g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e003" xlink:type="simple"/><mml:math display="block" id="M3"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mfrac><mml:mrow><mml:msub><mml:mi>N</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow></mml:mrow> <mml:mi>N</mml:mi></mml:mfrac> <mml:mo>=</mml:mo> <mml:mfrac><mml:mn>1</mml:mn> <mml:mrow><mml:mn>2</mml:mn> <mml:mi>N</mml:mi></mml:mrow></mml:mfrac> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>i</mml:mi> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>N</mml:mi></mml:munderover> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>+</mml:mo> <mml:msub><mml:mi>σ</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(2)</label></disp-formula></p>
+</list-item>
+<list-item>
+<p>the level of dissonance defined as a fraction of individuals that have different public and private opinions:
+<disp-formula id="pone.0206166.e004"><alternatives><graphic id="pone.0206166.e004g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e004" xlink:type="simple"/><mml:math display="block" id="M4"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>d</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>=</mml:mo> <mml:mfrac><mml:mn>1</mml:mn> <mml:mrow><mml:mn>2</mml:mn> <mml:mi>N</mml:mi></mml:mrow></mml:mfrac> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>i</mml:mi> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>N</mml:mi></mml:munderover> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>σ</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:msub><mml:mi>S</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>t</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>.</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(3)</label></disp-formula></p>
+</list-item>
+</list>
+<p>We assume that initially nobody is in the internal disharmony, i.e., <italic>S</italic><sub><italic>i</italic></sub>(0) = <italic>σ</italic><sub><italic>i</italic></sub>(0) for <italic>i</italic> = 1, 2, …, <italic>N</italic>, so at the beginning of all simulations the level of dissonance equals to zero <italic>d</italic>(0) = 0. Furthermore, most of the results presented in this paper have been obtained from ordered initial conditions <italic>S</italic><sub><italic>i</italic></sub>(0) = <italic>σ</italic><sub><italic>i</italic></sub>(0) = 1. However, other initial conditions have been also investigated, and some of results will be also presented here. The reason why we checked different initial conditions is that they might have an impact on the model behavior and its final state. For instance, in the original <italic>q</italic>-voter model with independence, there is a continuous phase transition for <italic>q</italic> &lt; 6. This means that there is no hysteresis, so the final state of a system is independent of initial conditions [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>]. However, for <italic>q</italic> ≥ 6, there is a discontinuous phase transition. The hysteresis appears, and hence, initial conditions start to play important role in the ultimate state reached by the system.</p>
+</sec>
+<sec id="sec003">
+<title>Methods and results</title>
+<p>One of the most popular methods for analyzing microscopic models of interacting many-particle systems—or in another language ABMs—is Monte Carlo computer simulation. Such simulations allow one to obtain an estimation of the expected values of measured quantities based on averaging over samples (ensemble average) or over time. In our research, we used the ensemble average. Although an arbitrary graph can be used as the underlying network for our model, and Monte Carlo simulations will deal with that, we consider only large (10<sup>5</sup> − 10<sup>6</sup> nodes) complete graphs since then we are able to carry out analytical calculations in the spirit of the mean-field approximation (MFA). Moreover, these calculations become strict in the limit <italic>N</italic> → ∞ for such networks. This allow us to compare our analytical predictions with the simulations. A comprehensive description of the mean-field approximation together with its application to the less complicated, original <italic>q</italic>-voter model with noise can be found in [<xref ref-type="bibr" rid="pone.0206166.ref024">24</xref>].</p>
+<p>First, let us derive formulas for the time evolution of both concentrations: the public <italic>c</italic><sub><italic>S</italic></sub> and the private <italic>c</italic><sub><italic>σ</italic></sub>. In the model, a random sequential updating scheme is used, so at each elementary time step only a single agent can make an action. Therefore, its behavior may lead into three situations. The agent can change its opinion, and then the concentrations may increase or decrease by 1/<italic>N</italic>, but it can preserve its old opinion as well, and in such a case the concentrations do not change. Introducing the following transition rates:
+<disp-formula id="pone.0206166.e005"><alternatives><graphic id="pone.0206166.e005g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e005" xlink:type="simple"/><mml:math display="block" id="M5"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>S</mml:mi> <mml:mo>+</mml:mo></mml:msubsup></mml:mtd> <mml:mtd><mml:mrow><mml:mo>=</mml:mo> <mml:mtext>P</mml:mtext> <mml:mo>(</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mo>→</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mo>+</mml:mo> <mml:mfrac><mml:mn>1</mml:mn> <mml:mi>N</mml:mi></mml:mfrac> <mml:mo>)</mml:mo> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(4)</label></disp-formula> <disp-formula id="pone.0206166.e006"><alternatives><graphic id="pone.0206166.e006g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e006" xlink:type="simple"/><mml:math display="block" id="M6"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>S</mml:mi> <mml:mo>-</mml:mo></mml:msubsup></mml:mtd> <mml:mtd><mml:mrow><mml:mo>=</mml:mo> <mml:mtext>P</mml:mtext> <mml:mo>(</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mo>→</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mo>-</mml:mo> <mml:mfrac><mml:mn>1</mml:mn> <mml:mi>N</mml:mi></mml:mfrac> <mml:mo>)</mml:mo> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(5)</label></disp-formula>
+for the public concentration, and the analogous formulas, <inline-formula id="pone.0206166.e007"><alternatives><graphic id="pone.0206166.e007g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e007" xlink:type="simple"/><mml:math display="inline" id="M7"><mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>σ</mml:mi> <mml:mo>+</mml:mo></mml:msubsup></mml:math></alternatives></inline-formula> and <inline-formula id="pone.0206166.e008"><alternatives><graphic id="pone.0206166.e008g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e008" xlink:type="simple"/><mml:math display="inline" id="M8"><mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>σ</mml:mi> <mml:mo>-</mml:mo></mml:msubsup></mml:math></alternatives></inline-formula>, for the private one, we can write down two rate equations, which set the time evolution of the system. In the limit of <italic>N</italic> → ∞, they have the following differential form
+<disp-formula id="pone.0206166.e009"><alternatives><graphic id="pone.0206166.e009g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e009" xlink:type="simple"/><mml:math display="block" id="M9"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mfrac><mml:mrow><mml:mi>d</mml:mi> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub></mml:mrow> <mml:mrow><mml:mi>d</mml:mi> <mml:mi>t</mml:mi></mml:mrow></mml:mfrac> <mml:mo>=</mml:mo> <mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>S</mml:mi> <mml:mo>+</mml:mo></mml:msubsup> <mml:mo>-</mml:mo> <mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>S</mml:mi> <mml:mo>-</mml:mo></mml:msubsup> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(6)</label></disp-formula>
+where time is measured as usual in Monte Carlo steps (MCS), and one such step corresponds to <italic>N</italic> elementary time steps, so that <italic>N</italic> randomly picked agents have an opportunity to reconsider their opinions. For the private opinion, the subscript in the above equation changes to <italic>σ</italic>. The explicit forms of transition rates are derived based on the model description and the mean-filed approximation, which neglects all fluctuations in the system. Additionally at this point, we assume that the states of public and private opinions are independent. Doing so, we ease the calculations, but on the other hand, we lose the mathematical exactness, and the transition rates for both models AT and TA become identical. Therefore, it seems that the mean-field analysis with this simplification is not able to capture the differences between our models even if they do exist. But anyway, let us proceed with the calculations and check if the results match the Monte Carlo simulations. Coming back to our transition rates for the public case, we have
+<disp-formula id="pone.0206166.e010"><alternatives><graphic id="pone.0206166.e010g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e010" xlink:type="simple"/><mml:math display="block" id="M10"><mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>S</mml:mi> <mml:mo>+</mml:mo></mml:msubsup><mml:mrow><mml:mo>=</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>{</mml:mo> <mml:mi>p</mml:mi> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mo>+</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:mi>p</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>[</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msup><mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mi>q</mml:mi></mml:msup> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>+</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:msubsup><mml:mi>c</mml:mi> <mml:mi>S</mml:mi> <mml:mi>q</mml:mi></mml:msubsup> <mml:mo>]</mml:mo> <mml:mo>}</mml:mo> <mml:mo>,</mml:mo></mml:mrow></mml:math></alternatives> <label>(7)</label></disp-formula> <disp-formula id="pone.0206166.e011"><alternatives><graphic id="pone.0206166.e011g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e011" xlink:type="simple"/><mml:math display="block" id="M11"><mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>S</mml:mi> <mml:mo>-</mml:mo></mml:msubsup><mml:mrow><mml:mo>=</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mo>{</mml:mo> <mml:mi>p</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>+</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:mi>p</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>[</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:msup><mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mi>q</mml:mi></mml:msup> <mml:mo>+</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msubsup><mml:mi>c</mml:mi> <mml:mi>S</mml:mi> <mml:mi>q</mml:mi></mml:msubsup> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>]</mml:mo> <mml:mo>}</mml:mo> <mml:mo>,</mml:mo></mml:mrow></mml:math></alternatives> <label>(8)</label></disp-formula>
+whereas for the private case, the formulas are as follows
+<disp-formula id="pone.0206166.e012"><alternatives><graphic id="pone.0206166.e012g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e012" xlink:type="simple"/><mml:math display="block" id="M12"><mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>σ</mml:mi> <mml:mo>+</mml:mo></mml:msubsup><mml:mrow><mml:mo>=</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>[</mml:mo> <mml:mi>p</mml:mi> <mml:mo>/</mml:mo> <mml:mn>2</mml:mn> <mml:mo>+</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:mi>p</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:msubsup><mml:mi>c</mml:mi> <mml:mi>S</mml:mi> <mml:mi>q</mml:mi></mml:msubsup> <mml:mo>]</mml:mo> <mml:mo>,</mml:mo></mml:mrow></mml:math></alternatives> <label>(9)</label></disp-formula> <disp-formula id="pone.0206166.e013"><alternatives><graphic id="pone.0206166.e013g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e013" xlink:type="simple"/><mml:math display="block" id="M13"><mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>σ</mml:mi> <mml:mo>-</mml:mo></mml:msubsup><mml:mrow><mml:mo>=</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mo>[</mml:mo> <mml:mi>p</mml:mi> <mml:mo>/</mml:mo> <mml:mn>2</mml:mn> <mml:mo>+</mml:mo> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:mi>p</mml:mi> <mml:mo>)</mml:mo></mml:mrow> <mml:msup><mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mi>q</mml:mi></mml:msup> <mml:mo>]</mml:mo> <mml:mo>.</mml:mo></mml:mrow></mml:math></alternatives> <label>(10)</label></disp-formula>
+In our analysis, we are mostly interested in the final state of the system for which both concentrations have already settled at certain levels, and they do not change over time anymore. Such a state is called the stationary one. Although the stationary concentration values are time-independent, they might depend on the external parameters of the model like the level of independence <italic>p</italic> or the influence group size <italic>q</italic>. These dependencies can be obtained just by solving simultaneously two equations <inline-formula id="pone.0206166.e014"><alternatives><graphic id="pone.0206166.e014g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e014" xlink:type="simple"/><mml:math display="inline" id="M14"><mml:mrow><mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>S</mml:mi> <mml:mo>+</mml:mo></mml:msubsup> <mml:mo>=</mml:mo> <mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>S</mml:mi> <mml:mo>-</mml:mo></mml:msubsup></mml:mrow></mml:math></alternatives></inline-formula> and <inline-formula id="pone.0206166.e015"><alternatives><graphic id="pone.0206166.e015g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e015" xlink:type="simple"/><mml:math display="inline" id="M15"><mml:mrow><mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>σ</mml:mi> <mml:mo>+</mml:mo></mml:msubsup> <mml:mo>=</mml:mo> <mml:msubsup><mml:mi>γ</mml:mi> <mml:mi>σ</mml:mi> <mml:mo>-</mml:mo></mml:msubsup></mml:mrow></mml:math></alternatives></inline-formula> because then, the time derivatives of both concentrations (see <xref ref-type="disp-formula" rid="pone.0206166.e009">Eq (6)</xref>) vanish, check as well <xref ref-type="supplementary-material" rid="pone.0206166.s001">S1 Appendix</xref> for more detailed mathematical guidance. Since the obtained formulas for the stationary values of the concentrations are rather complicated, we visualize them for 3 <italic>q</italic>-panel sizes in <xref ref-type="fig" rid="pone.0206166.g001">Fig 1</xref>. In the same plot, we can also find corresponding results of Monte Carlo simulations indicated by symbols. Surprisingly, we see that the agreement between results coming from these two approaches is significant despite our assumption about independent states of public and private opinions, and indeed, both models AT and TA produce the same final outcome, at least for the stationary values of concentrations. Moreover, similarly as for the original <italic>q</italic>-voter model with independence, there are phase transitions between the low-independence phase in which one opinion is dominating, a positive or a negative one, at both levels (i.e., <italic>c</italic><sub><italic>S</italic></sub> ≠ 1/2 and <italic>c</italic><sub><italic>σ</italic></sub> ≠ 1/2), and the high-independence phase in which both, positive and negative, opinions are equally popular (i.e., <italic>c</italic><sub><italic>S</italic></sub> = 1/2 and <italic>c</italic><sub><italic>σ</italic></sub> = 1/2). Note that these transitions occur at the same point on both, public and private, levels; compare plots in the same columns in <xref ref-type="fig" rid="pone.0206166.g001">Fig 1</xref>. In the case of continuous phase transitions, which happen for <italic>q</italic> ≤ 4, the critical point that separates these low- and high-independence phases can be calculated as
+<disp-formula id="pone.0206166.e016"><alternatives><graphic id="pone.0206166.e016g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e016" xlink:type="simple"/><mml:math display="block" id="M16"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msup><mml:mi>p</mml:mi> <mml:mo>*</mml:mo></mml:msup> <mml:mo>=</mml:mo> <mml:mfrac><mml:mrow><mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msup><mml:mn>2</mml:mn> <mml:mrow><mml:mi>q</mml:mi> <mml:mo>-</mml:mo> <mml:mn>1</mml:mn></mml:mrow></mml:msup> <mml:mo>+</mml:mo> <mml:msqrt><mml:mrow><mml:msup><mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msup><mml:mn>2</mml:mn> <mml:mrow><mml:mi>q</mml:mi> <mml:mo>-</mml:mo> <mml:mn>1</mml:mn></mml:mrow></mml:msup> <mml:mo>)</mml:mo></mml:mrow> <mml:mn>2</mml:mn></mml:msup> <mml:mo>+</mml:mo> <mml:mn>4</mml:mn> <mml:mi>q</mml:mi> <mml:mrow><mml:mo>(</mml:mo> <mml:mi>q</mml:mi> <mml:mo>-</mml:mo> <mml:mn>1</mml:mn> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:msqrt></mml:mrow> <mml:mrow><mml:mn>2</mml:mn> <mml:mi>q</mml:mi></mml:mrow></mml:mfrac> <mml:mo>.</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(11)</label></disp-formula>
+Therefore, as we stated before, for <italic>p</italic> &lt; <italic>p</italic>* the system is ordered since one opinion wins over the other, and above the critical point, that is <italic>p</italic> &gt; <italic>p</italic>*, the system is disordered because both opinions coexist equally likely. More investigative reader can find the derivation of the above formula in <xref ref-type="supplementary-material" rid="pone.0206166.s001">S1 Appendix</xref>. This critical point is also known for the original <italic>q</italic>-voter model with independence [<xref ref-type="bibr" rid="pone.0206166.ref024">24</xref>]. It turns out that it is shifted towards smaller values of independence in comparison to our modified version with two levels of opinions. However, this difference in critical values of independence decreases as the number of <italic>q</italic>-panel members increases.</p>
+<fig id="pone.0206166.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0206166.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Stationary concentrations of opinions as a function of independence probability <italic>p</italic>.</title>
+<p>Concentrations of positive public opinions are presented in upper panels (a)-(c), whereas concentrations of positive private opinions are presented in bottom panels (d)-(f). Different columns correspond to different <italic>q</italic>-panel sizes: (a) and (d) <italic>q</italic> = 4, (b) and (e) <italic>q</italic> = 5, and (c) and (f) <italic>q</italic> = 6. Analytical results are represented by lines, solid for stable states and dotted for unstable ones: gray lines stand for AT and TA models, whereas black lines, which do not overlap symbols, stand for the original <italic>q</italic>-voter model with independence [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>]. In general, transition points for the original <italic>q</italic>-voter model are located in the area of smaller values of independence than in the case of AT and TA models. Symbols represent results of Monte Carlo simulations with ordered initial conditions (<italic>S</italic><sub><italic>i</italic></sub>(0) = <italic>σ</italic><sub><italic>i</italic></sub>(0) = 1 for all agents): △ for TA (think then act) and • for AT (act then think) models. It is seen that TA and AT models give exactly the same outcomes. Moreover, for <italic>q</italic> ≥ 5, the metastable region, where both order and disordered phases are stable, and they coexist, shows up. Results from Monte Carlo simulations have been obtained for the system of the size <italic>N</italic> = 10<sup>5</sup> averaged over 100 samples after 10<sup>5</sup> MCS.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0206166.g001" xlink:type="simple"/>
+</fig>
+<p>Furthermore, our model exhibits also discontinuous phase transitions for <italic>q</italic> ≥ 5, so the phase transition type depends on the influence group size <italic>q</italic>. A similar behavior is displayed by the <italic>q</italic>-voter model with independence as well, however, in that model continuous phase transitions become discontinuous for <italic>q</italic> = 6 [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>, <xref ref-type="bibr" rid="pone.0206166.ref024">24</xref>], see also <xref ref-type="fig" rid="pone.0206166.g001">Fig 1</xref> for the comparison between the models.</p>
+<p>Note that for discontinuous phase transitions, the formula for <italic>p</italic>* corresponds to the lower bound of a metastable region where the final, stationary state of the system depends on the initial conditions, and as a result, the hysteresis is observed; check the middle and the right columns of <xref ref-type="fig" rid="pone.0206166.g001">Fig 1</xref>. Looking at the same figure, one can spot that the <italic>q</italic>-voter model resemble in the shapes of concentrations more our modified model at the private level than at the public one. It may be surprising at first glance because we are used to think about the original <italic>q</italic>-voter model as a model with only a public level of opinion. However, this phenomenon can be understood if we look at the algorithms: in the case of independence a private opinion changes in exactly the same way as an opinion in the <italic>q</italic>-voter model, i.e., randomly, whereas a public opinion is replaced by a private one.</p>
+<p>So far, it seems that the order of agents’ actions does not play an important role and does not influence the final outcome of the system. However, when the level of dissonance in the society <italic>d</italic> is measured as well, these two updating schemes produce very different results and become distinguishable on a macroscopic level, see <xref ref-type="fig" rid="pone.0206166.g002">Fig 2</xref>. Moreover, we see that states of private and public opinions are not completely independent as we assumed before in our calculations. If they were independent, the level of dissonance would be expressed in the simple form
+<disp-formula id="pone.0206166.e017"><alternatives><graphic id="pone.0206166.e017g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e017" xlink:type="simple"/><mml:math display="block" id="M17"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi>d</mml:mi> <mml:mo>=</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>+</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(12)</label></disp-formula>
+and all simulation results, from both models, will lie on the black curves that correspond to the above formula in <xref ref-type="fig" rid="pone.0206166.g002">Fig 2</xref>. Evidently, this is the case for small values of the independence level <italic>p</italic>. However, it seems that the results from AT model follow <xref ref-type="disp-formula" rid="pone.0206166.e017">Eq (12)</xref> in a wider range of independence variability, so that the states of private and public opinions stay independent for bigger values of <italic>p</italic> than in the case of the TA model. Moreover, we can infer that in general these public and private opinion states are more strongly correlated in TA model since the simulated points related to this updating order lie further away from <xref ref-type="disp-formula" rid="pone.0206166.e017">Eq (12)</xref> than the points from the AT model.</p>
+<fig id="pone.0206166.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0206166.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Stationary value of the dissonance level as a function of independence.</title>
+<p>Results for different <italic>q</italic>-panel sizes are presented: (a) <italic>q</italic> = 4, (b) <italic>q</italic> = 5 and (c) <italic>q</italic> = 6. Analytical results are marked by lines: black lines, which do not overlap symbols, are obtained under the assumption that private and public opinions are independent, i.e., by <xref ref-type="disp-formula" rid="pone.0206166.e017">Eq (12)</xref>, whereas lines that overlap symbols are obtained from the exact analytical approach. Symbols illustrate outcomes from Monte Carlo simulations: △ for the TA (think then act) and • for the AT (act then think) models. The initial state of the system is the ordered one. As seen, the level of dissonance for the AT model is higher that for the TA model. Results from Monte Carlo simulations have been obtained for the system of the size <italic>N</italic> = 10<sup>5</sup> averaged over 100 samples after 10<sup>5</sup> MCS.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0206166.g002" xlink:type="simple"/>
+</fig>
+<p>Since we already know that states of our opinions on private and public levels are coupled and are not fully independent of each other, we can repeat our mean-field analysis; however, this time without our false assumption. This will make our calculations strict for an infinite complete graph, and as a result, will allow us to obtain accurate predictions about the dissonance levels in both models. In order to capture the fact that states of private and public opinions may depend on each other, we have to describe the system more rigorously. Therefore, we split our two concentrations, <italic>c</italic><sub><italic>S</italic></sub> and <italic>c</italic><sub><italic>σ</italic></sub>, into four: <italic>c</italic><sub>↑↑</sub>, <italic>c</italic><sub>↑↓</sub>, <italic>c</italic><sub>↓↓</sub>, and <italic>c</italic><sub>↓↑</sub>—one for each state combination of public and private opinions, where the first subscript refers to the public opinion, and the second to the private one. Two arrow directions, ↑ and ↓, correspond to two different opinion states, 1 and −1. In such a notation we have
+<disp-formula id="pone.0206166.e018"><alternatives><graphic id="pone.0206166.e018g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e018" xlink:type="simple"/><mml:math display="block" id="M18"><mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub><mml:mrow><mml:mo>=</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mrow><mml:mo>↑</mml:mo> <mml:mo>↑</mml:mo></mml:mrow></mml:msub> <mml:mo>+</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mrow><mml:mo>↑</mml:mo> <mml:mo>↓</mml:mo></mml:mrow></mml:msub> <mml:mo>,</mml:mo></mml:mrow></mml:math></alternatives> <label>(13)</label></disp-formula> <disp-formula id="pone.0206166.e019"><alternatives><graphic id="pone.0206166.e019g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e019" xlink:type="simple"/><mml:math display="block" id="M19"><mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub><mml:mrow><mml:mo>=</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mrow><mml:mo>↑</mml:mo> <mml:mo>↑</mml:mo></mml:mrow></mml:msub> <mml:mo>+</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mrow><mml:mo>↓</mml:mo> <mml:mo>↑</mml:mo></mml:mrow></mml:msub> <mml:mo>,</mml:mo></mml:mrow></mml:math></alternatives> <label>(14)</label></disp-formula> <disp-formula id="pone.0206166.e020"><alternatives><graphic id="pone.0206166.e020g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e020" xlink:type="simple"/><mml:math display="block" id="M20"><mml:mi>d</mml:mi><mml:mrow><mml:mo>=</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mrow><mml:mo>↑</mml:mo> <mml:mo>↓</mml:mo></mml:mrow></mml:msub> <mml:mo>+</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mrow><mml:mo>↓</mml:mo> <mml:mo>↑</mml:mo></mml:mrow></mml:msub> <mml:mo>,</mml:mo></mml:mrow></mml:math></alternatives> <label>(15)</label></disp-formula>
+note, however, that this is only another way of representing <italic>c</italic><sub><italic>S</italic></sub>, <italic>c</italic><sub><italic>σ</italic></sub>, and <italic>d</italic>, and the initial definitions of these quantities Eqs <xref ref-type="disp-formula" rid="pone.0206166.e002">(1)</xref>–<xref ref-type="disp-formula" rid="pone.0206166.e004">(3)</xref> are still valid. Additionally, we know that <italic>c</italic><sub>↑↑</sub>+ <italic>c</italic><sub>↑↓</sub>+ <italic>c</italic><sub>↓↓</sub>+ <italic>c</italic><sub>↓↑</sub> = 1 since these four combinations of opinions exhaust all the possibilities. Further steps are analogical to the previous ones—we write down transition rates for all concentrations separately and solve the system of equations for the stationary states. However, this time, formulas for the transition rates are more complicated, so we omit their presentation herein. All readers interested in the precise forms of them are referred to <xref ref-type="supplementary-material" rid="pone.0206166.s002">S2 Appendix</xref>. The results of the above, exact, analytical approach are also presented in <xref ref-type="fig" rid="pone.0206166.g002">Fig 2</xref> along with the previous outcomes from the simplified method and Monte Carlo simulations. Now, our calculations correctly predict the behavior of the dissonance levels for both models in the whole domain of the independence values <italic>p</italic>. This approach also produces the same stationary values of the concentrations as the simplified method, which does not surprise since we have known that the simulated stationary concentrations were already in agreement with our previous calculations. Additionally, at this stage, we can say a bit more about correlations between public and private opinion states and compute the Pearson correlation coefficient <italic>ρ</italic><sub><italic>S</italic>,<italic>σ</italic></sub> for these variables analytically:
+<disp-formula id="pone.0206166.e021"><alternatives><graphic id="pone.0206166.e021g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0206166.e021" xlink:type="simple"/><mml:math display="block" id="M21"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>ρ</mml:mi> <mml:mrow><mml:mi>S</mml:mi> <mml:mo>,</mml:mo> <mml:mi>σ</mml:mi></mml:mrow></mml:msub> <mml:mo>=</mml:mo> <mml:mfrac><mml:mrow><mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>+</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mo>-</mml:mo> <mml:mi>d</mml:mi></mml:mrow> <mml:mrow><mml:mn>2</mml:mn> <mml:msqrt><mml:mrow><mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>S</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow> <mml:mrow><mml:mo>(</mml:mo> <mml:mn>1</mml:mn> <mml:mo>-</mml:mo> <mml:msub><mml:mi>c</mml:mi> <mml:mi>σ</mml:mi></mml:msub> <mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:msqrt></mml:mrow></mml:mfrac> <mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(16)</label></disp-formula>
+a full derivation is presented in <xref ref-type="supplementary-material" rid="pone.0206166.s003">S3 Appendix</xref>. Based on the above formula, two remarks can be made right away. The first is that the correlations between public and private opinions should be smaller for AT model. This is because the level of dissonance <italic>d</italic>, which appears with the minus sign in the above equation, is higher for this updating order and at the same time the stationary concentrations in both models are the same. Furthermore, if the states of public and private opinions are independent then formula <xref ref-type="disp-formula" rid="pone.0206166.e017">(12)</xref> is correct, which leads to <italic>ρ</italic><sub><italic>S</italic>,<italic>σ</italic></sub> = 0. <xref ref-type="fig" rid="pone.0206166.g003">Fig 3</xref> illustrates the dependency between this correlation coefficient calculated in the stationary state and the level of independence <italic>p</italic> for the systems composed of <italic>N</italic> = 10<sup>6</sup> agents with different sizes of the <italic>q</italic>-panel. Indeed, the states of public and private opinions are stronger associated with each other in the TA model. Moreover, we see that the correlation coefficient is a non-decreasing function of <italic>p</italic> only in the case of TA model.</p>
+<fig id="pone.0206166.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0206166.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Pearson correlation coefficient between public and private opinions.</title>
+<p>Results for different <italic>q</italic>-panel sizes are presented: (a) <italic>q</italic> = 4, (b) <italic>q</italic> = 5 and (c) <italic>q</italic> = 6. Analytical results are marked by lines. Symbols illustrate outcomes from Monte Carlo simulations: △ for the TA (think then act) and • for the AT (act then think) models. The system starts its evolution from the ordered state for all cases. We can see that the states of opinions on public and private levels are more strongly correlated in the TA model. On the other hand, for small values of the independence level, the correlation coefficient stays close to zero in a wider range of independence variability for the AT model. Note that in the high-independence phase, our measure of association increases to 1 for the TA model whereas it decreases to 0 in the case of the AT model. Results from Monte Carlo simulations have been obtained for the system of the size <italic>N</italic> = 10<sup>6</sup> after 10<sup>3</sup> MCS.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0206166.g003" xlink:type="simple"/>
+</fig>
+<p>It is not so difficult to understand why the correlations between public and private opinions are higher and simultaneously dissonance is lower for TA than for AT model if we look once again at algorithms. This situation is due to independence that acts differently on opinions on public and private levels. Within AT model, the private opinion is updated last, and then it can randomly change its state with probability <italic>p</italic>. Hence, independence may destroy the agreement between private and public opinions at the end of a time step increasing the dissonance. It is easy to see that for the extreme case when <italic>p</italic> = 1. Then in the last step independence occurs, and the private opinion takes value 1 or -1 with equal chances according to the algorithm. However, these are also the only acceptable states for the public opinion, hence, with probability 1/2 our opinions anti-align resulting in the dissonance value <italic>d</italic> = 1/2. On the other hand, within TA model, it is the public opinion that is updated last, and then with probability <italic>p</italic> the value of the private opinion is copied to the public one. Therefore, in this case independence helps to align the states of both opinions lowering the dissonance. Again it is easy to see that for <italic>p</italic> = 1 since then at the end of each time step the value of the private opinion is passed to the public one. Hence, both opinion are always in agreement, and there is no dissonance in the system <italic>d</italic> = 0.</p>
+<p>More intriguing is the fact that in spite of significant correlations between public and private opinions, the simple mean-field approach, which assumes independence between both opinions, thus, neglects these correlations, gives correct values of the stationary concentrations. Additionally, these concentrations are identical for TA and AT models, which is also confirmed by Monte Carlo simulations. Moreover, as we have already written, our second method, which takes into account these correlations, leads exactly to the same result as the naive MFA. The question is why the model at the level of stationary opinions reduces to the simple mean-field-like model. Unfortunately, we do not have any straightforward answer to this question. Our only intuition is that this result is not universal and may be valid solely on a complete graph. If the intuition is correct, we should observe differences in the stationary concentrations between AT and TA models on other graphs, and therefore, the model examination on alternative networks is the task for the future.</p>
+<p>In addition to the stationary concentrations, we can derive the whole time evolution of <italic>c</italic><sub><italic>S</italic></sub>, <italic>c</italic><sub><italic>σ</italic></sub>, and <italic>d</italic> just by solving the rate equations within the new approach. Of course, such an evolution can be also easily obtained from Monte Carlo simulations. In <xref ref-type="fig" rid="pone.0206166.g004">Fig 4</xref>, we present several trajectories of the system comprised of <italic>N</italic> = 10<sup>6</sup> agents averaged over 100 samples. The parameters were chosen in such a way that the considered model is in a metastable region where the dependence between initial and final states of the system is observed. Note that time trajectories of the concentrations are only slightly different for TA and TA models, and eventually they reach the same final state independently of the model. Thus, only the dissonance levels differentiate between these two updating orders in the stationary state. For the chosen set of parameters, the analytical paths accord significantly with the average sample trajectories. However, one should remember that our calculation were done in the limit of an infinite network size, so for smaller system sizes more discrepancies may originate. Small systems also induce larger fluctuations in the concentrations and the dissonance level, thus, obtaining so accurate and smooth averaged trajectories may require bigger samples. Moreover, these fluctuations present only in finite systems cause sometimes spontaneous transitions between stationary states that might also produce some divergence in results. In order to show how trajectories from the same initial conditions may vary, we calculate empirical percentiles for the system of the size <italic>N</italic> = 10<sup>6</sup> based on 10<sup>3</sup> simulated paths, the outcomes are presented in <xref ref-type="fig" rid="pone.0206166.g005">Fig 5</xref>. As seen, the variability of the trajectories might be substantial, and it is seemingly bigger for the AT model, at least for this set of parameters. Moreover, for this setup, both models support a long period of time without substantial changes in the concentrations. This can lead to the false conclusion that the system has already reached its final state despite the fact that the big turnover has yet to appear.</p>
+<fig id="pone.0206166.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0206166.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Average trajectories of the dissonance and concentration of positive opinions.</title>
+<p>Results for the dissonance are presented in top panels, whereas results for public and private opinions in the middle and bottom panels respectively. Analytical results are marked by solid lines. Symbols illustrate outcomes from Monte Carlo simulations: △ for the TA (think then act) and • for the AT (act then think) models. The system is comprised of <italic>N</italic> = 10<sup>6</sup> agents with the independence level <italic>p</italic> = 0.2 and <italic>q</italic> = 6 in all cases. Note that these parameters correspond to the metastable region where order (<italic>c</italic> ≠ 1/2) and disorder phases (<italic>c</italic> = 1/2) coexist, so that the hysteresis appears, see <xref ref-type="fig" rid="pone.0206166.g001">Fig 1</xref>. These two different phases and the dependence between initial and final states of the system is clearly seen in the figures. The trajectories are averaged over 100 samples.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0206166.g004" xlink:type="simple"/>
+</fig>
+<fig id="pone.0206166.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0206166.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Empirical quantiles of sample trajectories of public and private opinions.</title>
+<p>Results for public opinions are presented on the left panels (a) and (c), whereas results for private opinions on the right panels (b) and (d). Top panels (a)-(b) correspond to TA and bottom panels (c)-(d) to the AT updating schemes. Marked with colors are the intervals containing <italic>α</italic> realizations closest to the median (for example, when <italic>α</italic> = 80% the lower bound of the marked area is the 10-th percentile, and the upper bound is the 90-th percentile). The quantiles were calculated for each time point separately. Black curves are the average trajectories based on an analytical description of the system. The simulation results were obtained using 10<sup>3</sup> independent trajectories for the system of <italic>N</italic> = 10<sup>6</sup> nodes, parameter <italic>q</italic> = 5 and <italic>p</italic> = 0.2664. The initial state of the system is <italic>S</italic><sub><italic>i</italic></sub>(0) = <italic>σ</italic><sub><italic>i</italic></sub>(0) = 1 for all agents.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0206166.g005" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec004" sec-type="conclusions">
+<title>Discussion</title>
+<p>We have proposed a new model of opinion dynamics that combines (a) ideas introduced within the <italic>q</italic>-voter model with noise, which is an ABM and belongs to the world of sociophysics [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>], with (b) the descriptive, four-dimensional model of social response formulated by social psychologists [<xref ref-type="bibr" rid="pone.0206166.ref003">3</xref>]. In our model, agents’ opinions are described by binary, dynamical variables that can be measured at two different levels, a public and a private one. The source of influence is formed by the unanimous group of <italic>q</italic> individuals, like in the original <italic>q</italic>-voter model [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>, <xref ref-type="bibr" rid="pone.0206166.ref023">23</xref>]. Not having found a clear answer to the question “What comes first—acting or thinking?” in social experiments, we considered two versions of the same model that differ only by the updating sequence of opinions just to check whether this order is important from the point of view of agent-based modeling. In our analysis, two independent methods have been used: Monte Carlo simulations and analytical calculations within the mean-field approximation. Having at least two autonomous approaches is especially important from the perspective of rigorous agent-based modeling since it allows for the precise verification of the implemented model [<xref ref-type="bibr" rid="pone.0206166.ref030">30</xref>]. The results obtained from both of our methods support each other well. This is not very surprising because we have considered the model on a complete graph, which corresponds to the mean field approach. Agreement between simulation results and analytical approach is in our opinion the best method of verification if the model was implemented correctly. Therefore, the complete graph should be highly recommended as a first step in agent-based modeling. Nevertheless, we are aware that investigating the model on different, complex networks will be a desired task for the future, as discussed below.</p>
+<p>It has been shown that the stationary values of the concentrations on the public and private levels are the same for both updating orders, i.e., for TA and AT models. Thus, both models exhibit the same order-disorder phase transitions, compare plots in <xref ref-type="fig" rid="pone.0206166.g001">Fig 1</xref>. Their type depends on the number of individuals that exert social pressure, namely, on the <italic>q</italic>-panel size. For <italic>q</italic> ≤ 4, phase transitions are continuous, and we know the analytical formula for the critical point that separates low- and high-independence phases, see <xref ref-type="disp-formula" rid="pone.0206166.e016">Eq (11)</xref>. On the other hand, for <italic>q</italic> ≥ 5, phase transitions become discontinuous, and a metastable region appears where ordered and disordered phases coexist, and final states of the system depend on initial conditions. In this case, <xref ref-type="disp-formula" rid="pone.0206166.e016">Eq (11)</xref> corresponds to the lower bound of this metastable region. A similar change of a phase transition type is also exhibited by the original <italic>q</italic>-voter model with independence, which incorporates only one opinion [<xref ref-type="bibr" rid="pone.0206166.ref002">2</xref>]. However, in that case, continuous phase transition become discontinuous for <italic>q</italic> = 6. So, it seems like adding to the original model another opinion level coupled with the old one lowers the point of the transition type change. Interestingly, introducing another layer of a network drives this point down as well when we consider the <italic>q</italic>-voter model on multiplex networks [<xref ref-type="bibr" rid="pone.0206166.ref026">26</xref>].</p>
+<p>Since AT and TA updating schemes give the same stationary concentrations, we are not able to differentiate between models on a macroscopic scale only by measuring a fraction of individuals with a positive opinion on one or the other level in the final state. This may lead to the false conclusion that the updating order does not play an important role, and although the models differ on a microscopic scale, these differences are so subtle that the same collective behavior is produced in both cases. However, the dissonance level is significantly different for both updating schemes. For instance, the final level of dissonance is higher in the case of AT model. Nevertheless, the differences are not only quantitative. In the high-independence phase, the dissonance increases with the independence probability <italic>p</italic> for the AT model whereas it decreases to zero in the case of the TA model, look at <xref ref-type="fig" rid="pone.0206166.g002">Fig 2</xref>. Finally, we found out that the states of public and private opinions are in general less correlated in the AT model, and for small values of <italic>p</italic>, they stay independent in a wider range of this parameter variability, analyze Figs <xref ref-type="fig" rid="pone.0206166.g002">2</xref> and <xref ref-type="fig" rid="pone.0206166.g003">3</xref>.</p>
+<p>Based on our study, we can state that, indeed, the updating order of public and private opinions matters and changes the general behavior of the system. However, some model features remain unchanged, like the stationary values of the concentrations. From the perspective of our model, thinking then acting is more profitable in the sense that it leads to smaller dissonance in the society, and it makes public and private opinions more strongly correlated. One could also conclude that our results indicate that TA model is more correct than AT because it seems logical that in the case of high independence, i.e., low social pressure, people should behave in a way they think so the dissonance should be low and correlation between public and private opinion high, which is exactly the case of TA model.</p>
+<p>Nevertheless, these are the results for a specific, relatively simple, model with several assumptions that not always have to reflect the reality. Therefore, taking into account other factors may lead to different conclusions. Luckily, agent-based modeling allows us to tune the conditions of simulations and make the system more realistic by changing agent attributes and rules of behaviors, introducing different system space or adding external environment influence [<xref ref-type="bibr" rid="pone.0206166.ref031">31</xref>].</p>
+<p>So, let us point out a few such assumptions that could be investigated in future research. First of all, we have done our analysis on complete graphs. Although these structures mimic well relationships in small communities where all members know each other, they are inappropriate to model large societies, which are said to belong to the class of co called complex networks [<xref ref-type="bibr" rid="pone.0206166.ref032">32</xref>]. Additional analysis on such structures could reveal more differences between the updating schemes. However, obtaining analytical results in that case might require more sophisticated methods that are specially dedicated to network problems like heterogeneous mean-field or pair approximations [<xref ref-type="bibr" rid="pone.0206166.ref033">33</xref>–<xref ref-type="bibr" rid="pone.0206166.ref035">35</xref>]. The original <italic>q</italic>-voter model with independence has been already studied on complex structure [<xref ref-type="bibr" rid="pone.0206166.ref035">35</xref>], and it turned out that the average node degree plays an important role in the model behavior. Another issue has been already mentioned in the model description and concerns the way we decide about the behavior of agents. Herein, we considered only the situation-oriented approach in which each agent could be either conformist or independent at different times. The person-oriented approach, where the agents’ way of acting does not change across time and settings, has not been investigated as yet. Still, it could drastically modify the model behavior, just as it did in the case of the <italic>q</italic>-voter model [<xref ref-type="bibr" rid="pone.0206166.ref028">28</xref>].</p>
+<p>Finally, we assumed that the size of the influence group <italic>q</italic> is the same for all agents and does not change during one simulation. This makes our population homogeneous whereas in the reality <italic>q</italic> may vary [<xref ref-type="bibr" rid="pone.0206166.ref013">13</xref>, <xref ref-type="bibr" rid="pone.0206166.ref036">36</xref>], thus, it would be interesting to introduce more heterogeneous agents to the system. Another more realistic modification of the model, also connected with the influence group, is to resign from requiring the unanimity of the <italic>q</italic>-panel. Instead, one could allow agents to follow the group when a minimal number of its members with the same opinion is crossed, like in the threshold <italic>q</italic>-voter model [<xref ref-type="bibr" rid="pone.0206166.ref024">24</xref>, <xref ref-type="bibr" rid="pone.0206166.ref037">37</xref>].</p>
+<p>From all the above, we see that there are still many important additional factors that are particularly relevant to social agent-based modeling. These factors should be considered in future analyses.</p>
+</sec>
+<sec id="sec005">
+<title>Supporting information</title>
+<supplementary-material id="pone.0206166.s001" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pone.0206166.s001" xlink:type="simple">
+<label>S1 Appendix</label>
+<caption>
+<title>Derivation of formulas for the critical points and stationary states.</title>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0206166.s002" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pone.0206166.s002" xlink:type="simple">
+<label>S2 Appendix</label>
+<caption>
+<title>Transition rates in the exact mathematical formulations of the models.</title>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0206166.s003" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pone.0206166.s003" xlink:type="simple">
+<label>S3 Appendix</label>
+<caption>
+<title>Pearson correlation coefficient derivation.</title>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ref-list>
+<title>References</title>
+<ref id="pone.0206166.ref001">
+<label>1</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Myers</surname> <given-names>DG</given-names></name>. <source>Social Psychology</source>, <edition>10th Edition</edition>. <publisher-name>McGraw-Hill</publisher-name>; <year>2013</year>.</mixed-citation>
+</ref>
+<ref id="pone.0206166.ref002">
+<label>2</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Nyczka</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Sznajd-Weron</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Cisło</surname> <given-names>J</given-names></name>. <article-title>Phase transitions in the <italic>q</italic>-voter model with two types of stochastic driving</article-title>. <source>Phys Rev E</source>. <year>2012</year>;<volume>86</volume>(<issue>1</issue>):<fpage>011105</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/PhysRevE.86.011105" xlink:type="simple">10.1103/PhysRevE.86.011105</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref003">
+<label>3</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Nail</surname> <given-names>PR</given-names></name>, <name name-style="western"><surname>MacDonald</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Levy</surname> <given-names>DA</given-names></name>. <article-title>Proposal of a four-dimensional model of social response</article-title>. <source>Psychol Bull</source>. <year>2000</year>;<volume>126</volume>(<issue>3</issue>):<fpage>454</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1037/0033-2909.126.3.454" xlink:type="simple">10.1037/0033-2909.126.3.454</ext-link></comment> <object-id pub-id-type="pmid">10825785</object-id></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref004">
+<label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Castellano</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Fortunato</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Loreto</surname> <given-names>V</given-names></name>. <article-title>Statistical physics of social dynamics</article-title>. <source>Reviews of modern physics</source>. <year>2009</year>;<volume>81</volume>(<issue>2</issue>):<fpage>591</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/RevModPhys.81.591" xlink:type="simple">10.1103/RevModPhys.81.591</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref005">
+<label>5</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Galam</surname> <given-names>S</given-names></name>. <source>Sociophysics: a physicist’s modeling of psycho-political phenomena</source>. <publisher-name>Springer</publisher-name>; <year>2012</year>.</mixed-citation>
+</ref>
+<ref id="pone.0206166.ref006">
+<label>6</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Sen</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Chakrabarti</surname> <given-names>BK</given-names></name>. <source>Sociophysics: An Introduction</source>. <publisher-loc>Oxford</publisher-loc>: <publisher-name>Oxford University Press</publisher-name>; <year>2013</year>.</mixed-citation>
+</ref>
+<ref id="pone.0206166.ref007">
+<label>7</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Sîrbu</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Loreto</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Servedio</surname> <given-names>VDP</given-names></name>, <name name-style="western"><surname>Tria</surname> <given-names>F</given-names></name>. <chapter-title>Opinion dynamics: models, extensions and external effects</chapter-title>. In: <source>Participatory Sensing, Opinions and Collective Awareness</source>. <publisher-name>Springer</publisher-name>, <publisher-loc>Cham</publisher-loc>; <year>2017</year>. p. <fpage>363</fpage>–<lpage>401</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0206166.ref008">
+<label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Lewenstein</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Nowak</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Latané</surname> <given-names>B</given-names></name>. <article-title>Statistical mechanics of social impact</article-title>. <source>Phys Rev A</source>. <year>1992</year>;<volume>45</volume>(<issue>2</issue>):<fpage>763</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/PhysRevA.45.763" xlink:type="simple">10.1103/PhysRevA.45.763</ext-link></comment> <object-id pub-id-type="pmid">9907042</object-id></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref009">
+<label>9</label>
+<mixed-citation publication-type="other" xlink:type="simple">Hołyst JA, Kacperski K, Schweitzer F. Social impact models of opinion dynamics. In: Annual Reviews Of Computational Physics IX. World Scientific; 2001. p. 253–273.</mixed-citation>
+</ref>
+<ref id="pone.0206166.ref010">
+<label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Galam</surname> <given-names>S</given-names></name>. <article-title>Social paradoxes of majority rule voting and renormalization group</article-title>. <source>J Stat Phys</source>. <year>1990</year>;<volume>61</volume>(<issue>3-4</issue>):<fpage>943</fpage>–<lpage>951</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/BF01027314" xlink:type="simple">10.1007/BF01027314</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref011">
+<label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Watts</surname> <given-names>DJ</given-names></name>. <article-title>A simple model of global cascades on random networks</article-title>. <source>PNAS</source>. <year>2002</year>;<volume>99</volume>(<issue>9</issue>):<fpage>5766</fpage>–<lpage>5771</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.082090499" xlink:type="simple">10.1073/pnas.082090499</ext-link></comment> <object-id pub-id-type="pmid">16578874</object-id></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref012">
+<label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Krapivsky</surname> <given-names>PL</given-names></name>, <name name-style="western"><surname>Redner</surname> <given-names>S</given-names></name>. <article-title>Dynamics of majority rule in two-state interacting spin systems</article-title>. <source>Phys Rev Lett</source>. <year>2003</year>;<volume>90</volume>(<issue>23</issue>):<fpage>238701</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/PhysRevLett.90.238701" xlink:type="simple">10.1103/PhysRevLett.90.238701</ext-link></comment> <object-id pub-id-type="pmid">12857298</object-id></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref013">
+<label>13</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Mellor</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Mobilia</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Zia</surname> <given-names>RKP</given-names></name>. <article-title>Heterogeneous out-of-equilibrium nonlinear q-voter model with zealotry</article-title>. <source>Phys Rev E</source>. <year>2017</year>;<volume>95</volume>(<issue>1</issue>):<fpage>012104</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/PhysRevE.95.012104" xlink:type="simple">10.1103/PhysRevE.95.012104</ext-link></comment> <object-id pub-id-type="pmid">28208330</object-id></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref014">
+<label>14</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Fernández-Gracia</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Suchecki</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Ramasco</surname> <given-names>JJ</given-names></name>, <name name-style="western"><surname>San Miguel</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Eguíluz</surname> <given-names>VM</given-names></name>. <article-title>Is the voter model a model for voters?</article-title> <source>Phys Rev Lett</source>. <year>2014</year>;<volume>112</volume>(<issue>15</issue>):<fpage>158701</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/PhysRevLett.112.158701" xlink:type="simple">10.1103/PhysRevLett.112.158701</ext-link></comment> <object-id pub-id-type="pmid">24785078</object-id></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref015">
+<label>15</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Martins</surname> <given-names>ACR</given-names></name>. <article-title>Continuous opinions and discrete actions in opinion dynamics problems</article-title>. <source>J Modern Phys C</source>. <year>2008</year>;<volume>19</volume>(<issue>4</issue>):<fpage>617</fpage>–<lpage>624</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1142/S0129183108012339" xlink:type="simple">10.1142/S0129183108012339</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref016">
+<label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Martins</surname> <given-names>ACR</given-names></name>, <name name-style="western"><surname>Galam</surname> <given-names>S</given-names></name>. <article-title>Building up of individual inflexibility in opinion dynamics</article-title>. <source>Phys Rev E</source>. <year>2013</year>;<volume>87</volume>(<issue>4</issue>):<fpage>042807</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/PhysRevE.87.042807" xlink:type="simple">10.1103/PhysRevE.87.042807</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref017">
+<label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Martins</surname> <given-names>ACR</given-names></name>. <article-title>Discrete opinion models as a limit case of the CODA model</article-title>. <source>Physica A</source>. <year>2014</year>;<volume>395</volume>:<fpage>352</fpage>–<lpage>357</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.physa.2013.10.009" xlink:type="simple">10.1016/j.physa.2013.10.009</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref018">
+<label>18</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Gastner</surname> <given-names>MT</given-names></name>, <name name-style="western"><surname>Oborny</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Gulyás</surname> <given-names>M</given-names></name>. <article-title>Consensus time in a voter model with concealed and publicly expressed opinions</article-title>. <source>J Stat Mech Theory Exp</source>. <year>2018</year>;<volume>2018</volume>(<issue>6</issue>):<fpage>063401</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1088/1742-5468/aac14a" xlink:type="simple">10.1088/1742-5468/aac14a</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref019">
+<label>19</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Clifford</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Sudbury</surname> <given-names>A</given-names></name>. <article-title>A model for spatial conflict</article-title>. <source>Biometrika</source>. <year>1973</year>;<volume>60</volume>(<issue>3</issue>):<fpage>581</fpage>–<lpage>588</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/biomet/60.3.581" xlink:type="simple">10.1093/biomet/60.3.581</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref020">
+<label>20</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Willis</surname> <given-names>RH</given-names></name>. <chapter-title>Two dimensions of conformity-nonconformity</chapter-title>. <source>Sociometry</source>. <year>1963</year>; p. <fpage>499</fpage>–<lpage>513</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0206166.ref021">
+<label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Asch</surname> <given-names>SE</given-names></name>. <article-title>Studies of independence and conformity: I. A minority of one against a unanimous majority</article-title>. <source>Psychological Monographs</source>. <year>1956</year>;<volume>70</volume>(<issue>9</issue>):<fpage>1</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1037/h0093718" xlink:type="simple">10.1037/h0093718</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref022">
+<label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Bond</surname> <given-names>R</given-names></name>. <article-title>Group size and conformity</article-title>. <source>Group processes &amp; intergroup relations</source>. <year>2005</year>;<volume>8</volume>(<issue>4</issue>):<fpage>331</fpage>–<lpage>354</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1177/1368430205056464" xlink:type="simple">10.1177/1368430205056464</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref023">
+<label>23</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Castellano</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Muñoz</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Pastor-Satorras</surname> <given-names>R</given-names></name>. <article-title>Nonlinear <italic>q</italic>-voter model</article-title>. <source>Phys Rev E</source>. <year>2009</year>;<volume>80</volume>(<issue>4</issue>):<fpage>041129</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/PhysRevE.80.041129" xlink:type="simple">10.1103/PhysRevE.80.041129</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref024">
+<label>24</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Nyczka</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Sznajd-Weron</surname> <given-names>K</given-names></name>. <article-title>Anticonformity or independence?—insights from statistical physics</article-title>. <source>J Stat Phys</source>. <year>2013</year>;<volume>151</volume>(<issue>1-2</issue>):<fpage>174</fpage>–<lpage>202</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s10955-013-0701-4" xlink:type="simple">10.1007/s10955-013-0701-4</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref025">
+<label>25</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Sznajd-Weron</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Tabiszewski</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Timpanaro</surname> <given-names>AM</given-names></name>. <article-title>Phase transition in the Sznajd model with independence</article-title>. <source>EPL</source>. <year>2011</year>;<volume>96</volume>(<issue>4</issue>):<fpage>48002</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1209/0295-5075/96/48002" xlink:type="simple">10.1209/0295-5075/96/48002</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref026">
+<label>26</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Chmiel</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Sznajd-Weron</surname> <given-names>K</given-names></name>. <article-title>Phase transitions in the <italic>q</italic>-voter model with noise on a duplex clique</article-title>. <source>Phys Rev E</source>. <year>2015</year>;<volume>92</volume>(<issue>5</issue>):<fpage>052812</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/PhysRevE.92.052812" xlink:type="simple">10.1103/PhysRevE.92.052812</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref027">
+<label>27</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Sznajd-Weron</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Szwabiński</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Weron</surname> <given-names>R</given-names></name>. <article-title>Is the person-situation debate important for agent-based modeling and vice-versa?</article-title> <source>PloS one</source>. <year>2014</year>;<volume>9</volume>(<issue>11</issue>):<fpage>e112203</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pone.0112203" xlink:type="simple">10.1371/journal.pone.0112203</ext-link></comment> <object-id pub-id-type="pmid">25369531</object-id></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref028">
+<label>28</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Jędrzejewski</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Sznajd-Weron</surname> <given-names>K</given-names></name>. <article-title>Person-Situation Debate Revisited: Phase Transitions with Quenched and Annealed Disorders</article-title>. <source>Entropy</source>. <year>2017</year>;<volume>19</volume>(<issue>8</issue>):<fpage>415</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3390/e19080415" xlink:type="simple">10.3390/e19080415</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref029">
+<label>29</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Krueger</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Szwabiński</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Weron</surname> <given-names>T</given-names></name>. <article-title>Conformity, anticonformity and polarization of opinions: insights from a mathematical model of opinion dynamics</article-title>. <source>Entropy</source>. <year>2017</year>;<volume>19</volume>(<issue>7</issue>):<fpage>371</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3390/e19070371" xlink:type="simple">10.3390/e19070371</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref030">
+<label>30</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Rand</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Rust</surname> <given-names>RT</given-names></name>. <article-title>Agent-based modeling in marketing: Guidelines for rigor</article-title>. <source>Int J Res Mark</source>. <year>2011</year>;<volume>28</volume>(<issue>3</issue>):<fpage>181</fpage>–<lpage>193</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.ijresmar.2011.04.002" xlink:type="simple">10.1016/j.ijresmar.2011.04.002</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref031">
+<label>31</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Quang</surname> <given-names>LA</given-names></name>, <name name-style="western"><surname>Jung</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Cho</surname> <given-names>ES</given-names></name>, <name name-style="western"><surname>Choi</surname> <given-names>JH</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>JW</given-names></name>. <article-title>Agent-Based Models in Social Physics</article-title>. <source>J Korean Phys Soc</source>. <year>2018</year>;<volume>72</volume>(<issue>11</issue>):<fpage>1272</fpage>–<lpage>1280</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3938/jkps.72.1272" xlink:type="simple">10.3938/jkps.72.1272</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref032">
+<label>32</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Boccaletti</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Latora</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Moreno</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Chavez</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Hwang</surname> <given-names>DU</given-names></name>. <article-title>Complex networks: Structure and dynamics</article-title>. <source>Phys Rep</source>. <year>2006</year>;<volume>424</volume>(<issue>4-5</issue>):<fpage>175</fpage>–<lpage>308</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.physrep.2005.10.009" xlink:type="simple">10.1016/j.physrep.2005.10.009</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref033">
+<label>33</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Moretti</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Castellano</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Pastor-Satorras</surname> <given-names>R</given-names></name>. <article-title>Mean-field analysis of the <italic>q</italic>-voter model on networks</article-title>. <source>J Stat Phys</source>. <year>2013</year>;<volume>151</volume>(<issue>1-2</issue>):<fpage>113</fpage>–<lpage>130</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s10955-013-0704-1" xlink:type="simple">10.1007/s10955-013-0704-1</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref034">
+<label>34</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Pugliese</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Castellano</surname> <given-names>C</given-names></name>. <article-title>Heterogeneous pair approximation for voter models on networks</article-title>. <source>EPL</source>. <year>2009</year>;<volume>88</volume>(<issue>5</issue>):<fpage>58004</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1209/0295-5075/88/58004" xlink:type="simple">10.1209/0295-5075/88/58004</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref035">
+<label>35</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Jędrzejewski</surname> <given-names>A</given-names></name>. <article-title>Pair approximation for the <italic>q</italic>-voter model with independence on complex networks</article-title>. <source>Phys Rev E</source>. <year>2017</year>;<volume>95</volume>(<issue>1</issue>):<fpage>012307</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/PhysRevE.95.012307" xlink:type="simple">10.1103/PhysRevE.95.012307</ext-link></comment> <object-id pub-id-type="pmid">28208483</object-id></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref036">
+<label>36</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Radosz</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Mielnik-Pyszczorski</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Brzezińska</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Sznajd-Weron</surname> <given-names>K</given-names></name>. <article-title><italic>Q</italic>-voter model with nonconformity in freely forming groups: Does the size distribution matter?</article-title> <source>Phys Rev E</source>. <year>2017</year>;<volume>95</volume>(<issue>6</issue>):<fpage>062302</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/PhysRevE.95.062302" xlink:type="simple">10.1103/PhysRevE.95.062302</ext-link></comment> <object-id pub-id-type="pmid">28709181</object-id></mixed-citation>
+</ref>
+<ref id="pone.0206166.ref037">
+<label>37</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Vieira</surname> <given-names>AR</given-names></name>, <name name-style="western"><surname>Anteneodo</surname> <given-names>C</given-names></name>. <article-title>Threshold <italic>q</italic>-voter model</article-title>. <source>Phys Rev E</source>. <year>2018</year>;<volume>97</volume>(<issue>5</issue>):<fpage>052106</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/PhysRevE.97.052106" xlink:type="simple">10.1103/PhysRevE.97.052106</ext-link></comment> <object-id pub-id-type="pmid">29906869</object-id></mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

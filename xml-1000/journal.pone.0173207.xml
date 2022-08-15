@@ -1,0 +1,859 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1d3" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0173207</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-16-25377</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Evolutionary biology</subject><subj-group><subject>Evolutionary systematics</subject><subj-group><subject>Phylogenetics</subject><subj-group><subject>Phylogenetic analysis</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Taxonomy</subject><subj-group><subject>Evolutionary systematics</subject><subj-group><subject>Phylogenetics</subject><subj-group><subject>Phylogenetic analysis</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Computer and information sciences</subject><subj-group><subject>Data management</subject><subj-group><subject>Taxonomy</subject><subj-group><subject>Evolutionary systematics</subject><subj-group><subject>Phylogenetics</subject><subj-group><subject>Phylogenetic analysis</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Organisms</subject><subj-group><subject>Animals</subject><subj-group><subject>Invertebrates</subject><subj-group><subject>Arthropoda</subject><subj-group><subject>Insects</subject><subj-group><subject>Diptera</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Computational biology</subject><subj-group><subject>Genome analysis</subject><subj-group><subject>Transcriptome analysis</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Genomics</subject><subj-group><subject>Genome analysis</subject><subj-group><subject>Transcriptome analysis</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Evolutionary biology</subject><subj-group><subject>Evolutionary systematics</subject><subj-group><subject>Phylogenetics</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Taxonomy</subject><subj-group><subject>Evolutionary systematics</subject><subj-group><subject>Phylogenetics</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Computer and information sciences</subject><subj-group><subject>Data management</subject><subj-group><subject>Taxonomy</subject><subj-group><subject>Evolutionary systematics</subject><subj-group><subject>Phylogenetics</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Database and informatics methods</subject><subj-group><subject>Biological databases</subject><subj-group><subject>Sequence databases</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Database and informatics methods</subject><subj-group><subject>Bioinformatics</subject><subj-group><subject>Sequence analysis</subject><subj-group><subject>Sequence databases</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Database and informatics methods</subject><subj-group><subject>Bioinformatics</subject><subj-group><subject>Sequence analysis</subject><subj-group><subject>Amino acid sequence analysis</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Evolutionary biology</subject><subj-group><subject>Evolutionary systematics</subject><subj-group><subject>Phylogenetics</subject><subj-group><subject>Animal phylogenetics</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Taxonomy</subject><subj-group><subject>Evolutionary systematics</subject><subj-group><subject>Phylogenetics</subject><subj-group><subject>Animal phylogenetics</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Computer and information sciences</subject><subj-group><subject>Data management</subject><subj-group><subject>Taxonomy</subject><subj-group><subject>Evolutionary systematics</subject><subj-group><subject>Phylogenetics</subject><subj-group><subject>Animal phylogenetics</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Zoology</subject><subj-group><subject>Animal phylogenetics</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Molecular biology</subject><subj-group><subject>Molecular biology techniques</subject><subj-group><subject>Sequencing techniques</subject><subj-group><subject>RNA sequencing</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Molecular biology techniques</subject><subj-group><subject>Sequencing techniques</subject><subj-group><subject>RNA sequencing</subject></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Transcriptomes of three species of Tipuloidea (Diptera, Tipulomorpha) and implications for phylogeny of Tipulomorpha</article-title>
+<alt-title alt-title-type="running-head">Transcriptomes of Tipuloidea and transcriptome-based phylogeny of the Tipulomorpha</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Kang</surname>
+<given-names>Zehui</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Zhang</surname>
+<given-names>Xiao</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Ding</surname>
+<given-names>Shuangmei</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Tang</surname>
+<given-names>Chufei</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Wang</surname>
+<given-names>Yuyu</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Jong</surname>
+<given-names>Herman de</given-names>
+</name>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Cameron</surname>
+<given-names>Stephen L.</given-names>
+</name>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Wang</surname>
+<given-names>Mengqing</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Yang</surname>
+<given-names>Ding</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Department of Entomology, China Agricultural University, Beijing, China</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Naturalis Biodiversity Center, Darwinweg, CR Leiden, the Netherlands</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>Department of Entomology, Purdue University, West Lafayette, Indiana, United States of America</addr-line></aff>
+<aff id="aff004"><label>4</label> <addr-line>Institute of Plant Protection, Chinese Academy of Agricultural Sciences, Beijing, China</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Xiao</surname>
+<given-names>Jingfa</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Beijing Institute of Genomics Chinese Academy of Sciences, CHINA</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con">
+<p><list list-type="simple"> <list-item><p><bold>Conceptualization:</bold> ZK XZ DY.</p></list-item> <list-item><p><bold>Data curation:</bold> ZK XZ.</p></list-item> <list-item><p><bold>Formal analysis:</bold> ZK XZ.</p></list-item> <list-item><p><bold>Funding acquisition:</bold> DY.</p></list-item> <list-item><p><bold>Investigation:</bold> ZK XZ.</p></list-item> <list-item><p><bold>Methodology:</bold> ZK XZ.</p></list-item> <list-item><p><bold>Project administration:</bold> DY.</p></list-item> <list-item><p><bold>Resources:</bold> XZ.</p></list-item> <list-item><p><bold>Software:</bold> ZK XZ YW.</p></list-item> <list-item><p><bold>Supervision:</bold> SD CT YW HJ SLC MW.</p></list-item> <list-item><p><bold>Validation:</bold> YW SLC.</p></list-item> <list-item><p><bold>Visualization:</bold> ZK XZ.</p></list-item> <list-item><p><bold>Writing – original draft:</bold> ZK XZ.</p></list-item> <list-item><p><bold>Writing – review &amp; editing:</bold> SD CT YW HJ SLC.</p></list-item></list>
+</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">mengqingsw@163.com</email> (MW); <email xlink:type="simple">dyangcau@126.com</email> (DY)</corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>6</day>
+<month>3</month>
+<year>2017</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2017</year>
+</pub-date>
+<volume>12</volume>
+<issue>3</issue>
+<elocation-id>e0173207</elocation-id>
+<history>
+<date date-type="received">
+<day>24</day>
+<month>6</month>
+<year>2016</year>
+</date>
+<date date-type="accepted">
+<day>16</day>
+<month>2</month>
+<year>2017</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2017</copyright-year>
+<copyright-holder>Kang et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0173207"/>
+<abstract>
+<p>Tipulomorpha has long been a problematic taxon in terms of familial composition, phylogenetic relationships among families and position relative to other ‘lower’ Diptera. Whole-transcriptome shotgun sequencing provides a powerful basis for phylogenetic studies. We performed <italic>de novo</italic> transcriptome sequencing to produce the first transcriptome datasets representing the families Pediciidae, Limoniidae and Cylindrotomidae using high-throughput sequencing technologies. We assembled cDNA libraries for <italic>Pedicia vetusta</italic> (Alexander) (Pediciidae), <italic>Rhipidia sejuga</italic> Zhang, Li and Yang (Limoniidae) and <italic>Liogma simplicicornis</italic> Alexander (Cylindrotomidae). Using the Illumina RNA-Seq method, we obtained 28,252, 44,152 and 44,281 unigenes, from the three respective species. Based on sequence similarity searches, 12,475 (44.16%), 20,334 (46.05%) and 17,478 (39.47%) genes were identified. Analysis of genes highly conserved at the amino acid sequence level revealed there were 1,709 single-copy orthologs genes across the analyzed species. Phylogenetic trees constructed using maximum likelihood (ML) based on the 1,709 single-copy orthologs genes indicated that the relationship between the four major infraorders of lower Diptera was: Culicomorpha + (Tipulomorpha + (Psychodomorpha + (Bibionomorpha + Brachycera))). Trichoceridae belongs within Tipulomorpha as the sister-group of Tipuloidea. Highly supported relationships within the Tipuloidea are Pediciidae + (Limoniidae + (Cylindrotomidae + Tipulidae)). Four-cluster likelihood mapping was used to study potential incongruent signals supporting other topologies, however, results were congruent with the ML tree.</p>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100001809</institution-id>
+<institution>National Natural Science Foundation of China</institution>
+</institution-wrap>
+</funding-source>
+<award-id>31320103902</award-id>
+<principal-award-recipient>
+<name name-style="western">
+<surname>Yang</surname>
+<given-names>Ding</given-names>
+</name>
+</principal-award-recipient>
+</award-group>
+<award-group id="award002">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100001809</institution-id>
+<institution>National Natural Science Foundation of China</institution>
+</institution-wrap>
+</funding-source>
+<award-id>31272354</award-id>
+<principal-award-recipient>
+<name name-style="western">
+<surname>Yang</surname>
+<given-names>Ding</given-names>
+</name>
+</principal-award-recipient>
+</award-group>
+<funding-statement>This work was supported by the National Natural Science Foundation of China (No. 31320103902 and 31272354). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="9"/>
+<table-count count="3"/>
+<page-count count="20"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All data are available from the Genbank database(accession numbers SRR3452301, SRR3452300, SRR3441821, GEMI00000000, GEMJ00000000 and GEMK00000000).</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>The infraorder Tipulomorpha is one of the most speciose groups of flies [<xref ref-type="bibr" rid="pone.0173207.ref001">1</xref>–<xref ref-type="bibr" rid="pone.0173207.ref002">2</xref>]. According to Hennig, this infraorder included four families, Trichoceridae, Tipulidae, Cylindrotomidae and Limoniidae, of which Trichoceridae was considered the sister-group of the remaining Tipulomorpha [<xref ref-type="bibr" rid="pone.0173207.ref003">3</xref>–<xref ref-type="bibr" rid="pone.0173207.ref005">5</xref>]. This arrangement of Tipulomorpha, containing both Trichoceridae and Tipuloidea (= Tipulidae <italic>sensu lato</italic>, or Cylindrotomidae, Limoniidae, Pediciidae, and Tipulidae sensu stricto) was accepted by Dahl [<xref ref-type="bibr" rid="pone.0173207.ref006">6</xref>], Griffiths [<xref ref-type="bibr" rid="pone.0173207.ref007">7</xref>], Starý [<xref ref-type="bibr" rid="pone.0173207.ref008">8</xref>], Oosterbroek &amp; Courtney [<xref ref-type="bibr" rid="pone.0173207.ref009">9</xref>] and Bertone <italic>et al</italic>. [<xref ref-type="bibr" rid="pone.0173207.ref010">10</xref>]. Hennig further hypothesized that Tipulomorpha was the sister-group of all remaining Diptera, a classification accepted by Krzeminski [<xref ref-type="bibr" rid="pone.0173207.ref011">11</xref>], Michelsen [<xref ref-type="bibr" rid="pone.0173207.ref012">12</xref>] and Blagoderov <italic>et al</italic>. [<xref ref-type="bibr" rid="pone.0173207.ref013">13</xref>], and partly accepted by Wood &amp; Borkent [<xref ref-type="bibr" rid="pone.0173207.ref014">14</xref>]. Based on larval characters, Wood &amp; Borkent considered that the concept of Tipulomorpha was restricted to just Tipuloidea, and the infraorder was sister-group to all other Diptera, while Trichoceridae was assigned to the Psychodomorpha [<xref ref-type="bibr" rid="pone.0173207.ref014">14</xref>]. This shift of Trichoceridae from the Tipulomorpha to nested within Psychodomorpha was also suggested by Friedrich &amp; Tautz [<xref ref-type="bibr" rid="pone.0173207.ref015">15</xref>]. Although Oosterbroek &amp; Courtney supported the sister-group relationship between Trichoceridae and Tipuloidea, they considered that Tipulomorpha was the sister-group of the clade Anisopodidae + Brachycera, and as such were a group of ‘higher’ Nematocera [<xref ref-type="bibr" rid="pone.0173207.ref009">9</xref>], a much more derived position than conceived by Hennig and followers [<xref ref-type="bibr" rid="pone.0173207.ref003">3</xref>–<xref ref-type="bibr" rid="pone.0173207.ref005">5</xref>]. More recent molecular and morphological studies have examined the higher classification of Diptera [<xref ref-type="bibr" rid="pone.0173207.ref010">10</xref>,<xref ref-type="bibr" rid="pone.0173207.ref016">16</xref>–<xref ref-type="bibr" rid="pone.0173207.ref018">18</xref>], however, there is still no widely accepted hypothesis of the relationships among lower dipteran families, including the relationship among the four major nematoceran infraorders (Bibionomorpha, Culicomorpha, Psychodomorpha and Tipulomorpha). Tipulomorpha was found as the earliest branching of the four major infraorders of lower Diptera by Wiegmann <italic>et al</italic>. [<xref ref-type="bibr" rid="pone.0173207.ref016">16</xref>] and Beckenbach [<xref ref-type="bibr" rid="pone.0173207.ref017">17</xref>], while Lambkin <italic>et al</italic>. suggested Culicomorpha as the earliest branching infraorder [<xref ref-type="bibr" rid="pone.0173207.ref018">18</xref>]. Both the views were supported by Bertone <italic>et al</italic>. when using different analysis methods [<xref ref-type="bibr" rid="pone.0173207.ref010">10</xref>] (<xref ref-type="fig" rid="pone.0173207.g001">Fig 1</xref>).</p>
+<fig id="pone.0173207.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0173207.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Phylogenetic hypotheses of lower Diptera relationships from previous analyses.</title>
+<p><bold>(A)</bold> Hennig [<xref ref-type="bibr" rid="pone.0173207.ref004">4</xref>]. Phylogenetic hypothesis of lower Diptera relationships based primarily on imaginal characters. <bold>(B)</bold> Wood &amp; Borkent [<xref ref-type="bibr" rid="pone.0173207.ref014">14</xref>]. Cladogram showing relationships between the families of the Nematocera. <bold>(C)</bold> Oosterbroek &amp; Courtney [<xref ref-type="bibr" rid="pone.0173207.ref009">9</xref>]. Cladogram of the families of nematocerous Diptera. <bold>(D)</bold> Bertone <italic>et al</italic>. [<xref ref-type="bibr" rid="pone.0173207.ref010">10</xref>]. 1) Parsimony analysis of combined nuclear ribosomal (28S) and protein-coding (CAD, PGD and TPI) genes (bootstrap values (BV) shown above branches). 2) Majority rule consensus of Bayesian Markov chain Monte Carlo (posterior probabilities (PP) shown above branches and bootstrap values shown below branches). <bold>(E)</bold> Wiegmann <italic>et al</italic>. [<xref ref-type="bibr" rid="pone.0173207.ref016">16</xref>]. Combined molecular phylogenetic tree for Diptera (BV shown above branches shown above or below branches). <bold>(F)</bold> Beckenbach [<xref ref-type="bibr" rid="pone.0173207.ref017">17</xref>]. 1) Mitochondrial phylogenetic tree of major groups of Diptera derived from a Bayesian analysis of all major mitochondrial protein coding genes (PP shown above branches). 2) Bayesian mitochondrial tree using codon positions 1 and 2 for cox1–3, cytb, and atp6 genes, and all alignable sites for the ribosomal genes (PP shown above branches). <bold>(G)</bold> Lambkin <italic>et al</italic>. [<xref ref-type="bibr" rid="pone.0173207.ref018">18</xref>]. The Bayes combined majority rule consensus tree (PP shown above branches).</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.g001" xlink:type="simple"/>
+</fig>
+<p>Interfamilial relationships in the Tipuloidea are also unresolved. Tipuloidea was treated as a single family by Alexander [<xref ref-type="bibr" rid="pone.0173207.ref019">19</xref>–<xref ref-type="bibr" rid="pone.0173207.ref020">20</xref>], Savchenko [<xref ref-type="bibr" rid="pone.0173207.ref021">21</xref>–<xref ref-type="bibr" rid="pone.0173207.ref023">23</xref>] and Brodo [<xref ref-type="bibr" rid="pone.0173207.ref024">24</xref>]. The alternative classification as Tipuloidea with four families was used and supported by Hennig [<xref ref-type="bibr" rid="pone.0173207.ref004">4</xref>], Oosterbroek &amp; Theowald [<xref ref-type="bibr" rid="pone.0173207.ref025">25</xref>] and Oosterbroek [<xref ref-type="bibr" rid="pone.0173207.ref026">26</xref>]. However, in both classification schemes, Pediciidae was recovered as nested within Limoniidae by both sets of studies. Alexander [<xref ref-type="bibr" rid="pone.0173207.ref019">19</xref>–<xref ref-type="bibr" rid="pone.0173207.ref020">20</xref>] and Savchenko [<xref ref-type="bibr" rid="pone.0173207.ref021">21</xref>–<xref ref-type="bibr" rid="pone.0173207.ref023">23</xref>] presented the earliest evolutionary hypotheses of Tipuloidea, which were qualitative and recovered relationships based on unstated criteria. Both of them considered Tipulidae as the sister-group of the remaining Tipuloidea. Starý raised the subfamily Pediciinae to full family rank and constructed a phylogenetic tree for Tipulomorpha, finding a monophyletic Limoniidae to be the sister-group to a clade containing Pediciidae + (Cylindrotomidae + Tipulidae) [<xref ref-type="bibr" rid="pone.0173207.ref008">8</xref>]. Recent studies revealed new insights into the higher-level classification of Tipuloidea and have suggested that, rather than Limoniidae, Pediciidae was the sister-group to the remaining Tipuloidea [<xref ref-type="bibr" rid="pone.0173207.ref027">27</xref>–<xref ref-type="bibr" rid="pone.0173207.ref028">28</xref>].</p>
+<p>Whole-transcriptome shotgun sequencing provides a powerful basis for phylogenetic studies, and provides a means to overcome the limitations of multi-locus PCR based molecular phylogenetics [<xref ref-type="bibr" rid="pone.0173207.ref029">29</xref>–<xref ref-type="bibr" rid="pone.0173207.ref030">30</xref>]. In this study, we sequenced the cDNA from three species, <italic>P</italic>. <italic>vetusta</italic>, <italic>R</italic>. <italic>sejuga</italic> and <italic>L</italic>. <italic>simplicicornis</italic>, belonging respectively to the Pediciidae, Limoniidae and Cylindrotomidae. Additionally, we analyzed published transcriptome sequence data and annotated gene sets from publically available draft genome sequences. Based on data from representatives of the Trichoceridae, four families of Tipuloidea and the other three infraorders, we constructed a phylogenetic tree using maximum likelihood (ML). In addition, we applied Four-cluster Likelihood Mapping (FcLM) to study potential incongruent signal, which might not be revealed by traditional phylogenetic methods.</p>
+</sec>
+<sec id="sec002" sec-type="materials|methods">
+<title>Materials and methods</title>
+<sec id="sec003">
+<title>Ethics statement</title>
+<p>No specific permits were required for the specimens collected for this study. The specimens were common in China and the field studies did not involve endangered or protected species. The species were not included in the “List of Protected Animals in China”.</p>
+</sec>
+<sec id="sec004">
+<title>Specimen collection, preservation and RNA extraction</title>
+<p>The specimens used for the RNA extraction and sequencing transcriptome were collected from several different regions of China. Specimens were immersed alive in RNAlater and crushed with sterile forceps immediately upon wild collection. Then they were stored at -80°C until further processing. The number of specimens, stage, sex details, preserved information and collection data are listed in <xref ref-type="supplementary-material" rid="pone.0173207.s001">S1 Table</xref>.</p>
+<p>For each species, total RNA was extracted using the Trizol reagent according to the manufacturer’s instructions (Invitrogen, CA, USA). RNA contamination and degradation was monitored on 1% agarose gels. Other quality parameters, such as purity, concentration and integrity, were examined using the NanoPhotometer® spectrophotometer (IMPLEN, CA, USA), the Qubit® RNA Assay Kit run on the Qubit®2.0 Flurometer (Life Technologies, CA, USA), and the RNA Nano 6000 Assay Kit run on the Agilent Bioanalyzer 2100 system (Agilent Technologies, CA, USA).</p>
+</sec>
+<sec id="sec005">
+<title>Library preparation and transcriptome sequencing</title>
+<p>Three cDNA libraries were prepared employing NEBNext®Ultra™ RNA Library Prep Kit for Illumina® (NEB, USA), in each case using 3μg of total RNA. Messenger RNA was isolated by Poly-T oligo-attached magnetic beads and fragmented in fragmentation buffer under elevated temperature. After the first strand cDNA was synthesized, the second-strand cDNA synthesis was performed using DNA Polymerase I and RNase H. Libraries were then size-selected for cDNA target fragments of 150–200 bp with 3 μl of USER Enzyme (NEB, USA); this was followed by PCR amplification using Phusion High-Fidelity DNA polymerase, Universal PCR primers and Index (X) Primer. PCR products were purified using the AMPure XP system. The library preparations were sequenced using the Illumina HiSeqTM 2000 system.</p>
+</sec>
+<sec id="sec006">
+<title>Transcriptome assembly</title>
+<p>Raw data were filtered to remove low quality reads, and reads containing adapter or Poly-N sequences. Quality parameters of clean data, such as Q20, Q30, GC-content and sequence duplication level, were calculated. Transcriptome assembly was accomplished using Trinity [<xref ref-type="bibr" rid="pone.0173207.ref031">31</xref>] with min_kmer_cov set to 2 and all other parameters set default based on the left.fq and right.fq pooled by the left files (read1 files) and right files (read2 files) for each library. The assembly process implemented in Trinity can be divided into three main steps. Firstly, all reads were broken into defined K-mers. Subsequently, these k-mers were merged to form edges, which were reported as contigs and then the contigs were clustered into components for construction of de Bruijn graphs. Lastly, real reads were used to resolve ties in the de Bruijn graphs and generate transcript sequences.</p>
+</sec>
+<sec id="sec007">
+<title>Published data and orthology assignment</title>
+<p>Nucleotide sequence assemblies of published transcriptome data were obtained from the NCBI's Transcriptome Sequences Database (TSA) and other various web sources (<xref ref-type="supplementary-material" rid="pone.0173207.s002">S2 Table</xref>). We predicted the CDS and amino acid sequences using TransDecoder v1.0.0 (available on Github <ext-link ext-link-type="uri" xlink:href="https://github.com/TransDecoder/TransDecoder" xlink:type="simple">https://github.com/TransDecoder/TransDecoder</ext-link>).</p>
+<p>The ortholog reference set for orthology assignment was selected on the basis of the database OrthoDB7 (<ext-link ext-link-type="uri" xlink:href="http://cegg.unige.ch/orthodb7" xlink:type="simple">http://cegg.unige.ch/orthodb7</ext-link> and <ext-link ext-link-type="uri" xlink:href="http://cegg.unige.ch/orthodb/browse" xlink:type="simple">http://cegg.unige.ch/orthodb/browse</ext-link>). We compiled a set of genes that are single-copy orthologs among Diptera and occur in the genomes of each of the following eight reference species: <italic>Aedes aegypti</italic>, <italic>Anopheles gambiae</italic>, <italic>Culex quinquefasciatus</italic>, <italic>Lutzomyia longipalpis</italic>, <italic>Phlebotomus papatasi</italic>, <italic>Mayetiola destructor</italic>, <italic>Drosophila melanogaster</italic> and <italic>Drosophila persimilis</italic>. OrthoDB 7 specified 1,709 single-copy protein-coding genes (<xref ref-type="supplementary-material" rid="pone.0173207.s003">S3 Table</xref>). We downloaded the amino acid sequences that are associated with each of the 1,709 single-copy ortholog groups (OGs) along with their available gene description (<xref ref-type="supplementary-material" rid="pone.0173207.s004">S4 Table</xref>). We aligned the amino acid sequences for each OG with MAFFT v7.205 [<xref ref-type="bibr" rid="pone.0173207.ref032">32</xref>–<xref ref-type="bibr" rid="pone.0173207.ref033">33</xref>] using the L-INS-i alignment algorithm and then build pHMMs with the program hmmbuild from the HMMER 3.0 software package [<xref ref-type="bibr" rid="pone.0173207.ref034">34</xref>] on the basis of the resulting multiple amino acid sequence alignments.</p>
+<p>Orthology assignment of the transcriptomes was assessed by HaMStR v13.2.4 [<xref ref-type="bibr" rid="pone.0173207.ref035">35</xref>]. We ran HaMStR with the following settings: (i) the E-value cut-off for the pHMM search was 1e-5, (ii) the reciprocity criterion was considered fulfilled if the candidate OG was found as best hit in at least one of the 8 reference species during the reciprocal best hit search (RBH) (relaxed option), (iii) in case of multiple transcripts being assigned to a given OG, the best set of non-overlapping transcripts was chosen while non- overlapping transcripts are automatically concatenated (representative option). We searched and removed all multiple-assigned transcripts since it was possible that a given transcript was assigned to more than one OG.</p>
+</sec>
+<sec id="sec008">
+<title>Phylogenetic and FcLM analysis</title>
+<p>Phylogenetic analysis was conducted on the alignments obtained using MAFFT v7.205 [<xref ref-type="bibr" rid="pone.0173207.ref032">32</xref>–<xref ref-type="bibr" rid="pone.0173207.ref033">33</xref>]. Spurious sequences or poorly aligned regions were removed from the multiple sequence alignment using trimAl v1.2 (automated1 option). ML analyses were constructed using PhyML v 3.0 with the default choice JTT [<xref ref-type="bibr" rid="pone.0173207.ref036">36</xref>]. The tree searching algorithm used the SPR options provided by PhyML. In order to analyze single phylogenetic splits, FcLM analyses were completed using the program TreePuzzle v5.3 [<xref ref-type="bibr" rid="pone.0173207.ref037">37</xref>–<xref ref-type="bibr" rid="pone.0173207.ref038">38</xref>]. We selected the following two phylogenetic hypotheses concerning the Tipulomorpha for FcLM testing: 1) which infraorder is the sister-group of the remaining Diptera, Culicomorpha or Tipulomorpha; 2) is Trichoceridae part of Tipulomorpha, or Psychodomorpha as suggested by Wood &amp; Borkent [<xref ref-type="bibr" rid="pone.0173207.ref014">14</xref>]. For each hypothesis, all species in the decisive dataset were grouped into four clusters representing alternative resolutions of the phylogenetic question of interest.</p>
+</sec>
+<sec id="sec009">
+<title>Data deposition</title>
+<p>The transcriptome sequencing data have been deposited in the NCBI Sequence Read Archive (SRA) database under the following accession numbers: SRR3452301 (<italic>P</italic>. <italic>vetusta</italic>), SRR3452300 (<italic>R</italic>. <italic>sejuga</italic>) and SRR3441821 (<italic>L</italic>. <italic>simplicicornis</italic>). The assembled transcriptomes have been deposited in the NCBI Transcriptome Shotgun Assembly (TSA) database under the accession numbers GEMI00000000, GEMJ00000000 and GEMK00000000 respectively.</p>
+</sec>
+</sec>
+<sec id="sec010" sec-type="results">
+<title>Results</title>
+<sec id="sec011">
+<title>Transcriptome sequencing and assembly</title>
+<p>In this study, the transcriptomes were sequenced using the Illumina sequencing method. In total, 23,026,828 (Q30 96.69%), 24,843,179 (Q30 96.66%)and 28,349,912 (Q30 93.10%) clean reads were generated for <italic>P</italic>. <italic>vetusta</italic>, <italic>R</italic>. <italic>sejuga</italic> and <italic>L</italic>. <italic>simplicicornis</italic> respectively. We obtained 1,003,377, 2,110,937 and 2,964,958 contigs from the three species. A total of 41,870, 60,530 and 71,569 transcripts were confirmed. In <italic>P</italic>. <italic>vetusta</italic>, 28,252 unigenes were detected with a total length of 23,378,916 bp. The N50 and average length was 1,458 bp and 828 bp, respectively. In <italic>R</italic>. <italic>sejuga</italic>, 44,152 unigenes were obtained with an average length of 770 bp and a N50 length of 1,403 bp. Those unigenes comprised 34,004,882 bp totally. In <italic>L</italic>. <italic>simplicicornis</italic>, we found 44,281 unigenes. Those unigenes comprised 33,946,199 bp totally, with an average length of 767 bp and a N50 length of 1602 bp (<xref ref-type="table" rid="pone.0173207.t001">Table 1</xref>). The sequence length distributions of unigenes for the three species are indicated in <xref ref-type="fig" rid="pone.0173207.g002">Fig 2</xref>.</p>
+<fig id="pone.0173207.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0173207.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Sequence-length distribution of unigenes.</title>
+<p>The X-axis represents the length range bins; the Y-axis is the amount of transcripts present.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.g002" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0173207.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0173207.t001</object-id>
+<label>Table 1</label> <caption><title>Length distribution of the contigs, transcripts and unigenes clustered from the <italic>De novo</italic> assembly.</title></caption>
+<alternatives>
+<graphic id="pone.0173207.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.t001" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">Species</th>
+<th align="left">Length Range</th>
+<th align="left">Contig</th>
+<th align="left">Transcript</th>
+<th align="left">Unigene</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><italic>P</italic>. <italic>vetusta</italic></td>
+<td align="left">200–300</td>
+<td align="left">982,473 (97.92%)</td>
+<td align="left">9,711 (23.19%)</td>
+<td align="left">8,736 (30.92%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">300–500</td>
+<td align="left">7,594 (0.76%)</td>
+<td align="left">8,607 (20.56%)</td>
+<td align="left">7,014 (24.83%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">500–1,000</td>
+<td align="left">6,009 (0.60%)</td>
+<td align="left">8,213 (19.62%)</td>
+<td align="left">5,608 (19.85%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">1,000–2,000</td>
+<td align="left">4,517 (0.45%)</td>
+<td align="left">7,888 (18.84%)</td>
+<td align="left">4,240 (15.01%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">2,000 +</td>
+<td align="left">2,784 (0.28%)</td>
+<td align="left">7,451 (17.80%)</td>
+<td align="left">2,654 (9.39%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Total Number</td>
+<td align="left">1,003,377</td>
+<td align="left">41,870</td>
+<td align="left">28,252</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Total Length</td>
+<td align="left">65,247,903</td>
+<td align="left">50,313,936</td>
+<td align="left">23,378,916</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">N50 Length</td>
+<td align="left">78</td>
+<td align="left">2,234</td>
+<td align="left">1,458</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Average Length</td>
+<td align="left">65</td>
+<td align="left">1,202</td>
+<td align="left">828</td>
+</tr>
+<tr>
+<td align="left"><italic>R</italic>. <italic>sejuga</italic></td>
+<td align="left">200–300</td>
+<td align="left">2,081,076 (98.59%)</td>
+<td align="left">18,266 (30.18%)</td>
+<td align="left">15,925 (36.07%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">300–500</td>
+<td align="left">11,758 (0.56%)</td>
+<td align="left">13,463 (22.24%)</td>
+<td align="left">10,771 (24.40%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">500–1,000</td>
+<td align="left">8,412 (0.40%)</td>
+<td align="left">11,348 (18.75%)</td>
+<td align="left">7,933 (17.97%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">1,000–2,000</td>
+<td align="left">5,912 (0.28%)</td>
+<td align="left">9,744 (16.10%)</td>
+<td align="left">5,721 (12.96%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">2,000 +</td>
+<td align="left">3,779 (0.18%)</td>
+<td align="left">7,709 (12.74%)</td>
+<td align="left">3,802 (8.61%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Total Number</td>
+<td align="left">2,110,937</td>
+<td align="left">60,530</td>
+<td align="left">44,152</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Total Length</td>
+<td align="left">127,371,529</td>
+<td align="left">59,895,908</td>
+<td align="left">34,004,882</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">N50 Length</td>
+<td align="left">52</td>
+<td align="left">1,876</td>
+<td align="left">1,403</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Average Length</td>
+<td align="left">60</td>
+<td align="left">990</td>
+<td align="left">770</td>
+</tr>
+<tr>
+<td align="left"><italic>L</italic>. <italic>simplicicornis</italic></td>
+<td align="left">200–300</td>
+<td align="left">2,937,000 (99.06%)</td>
+<td align="left">23,604 (32.98%)</td>
+<td align="left">19,399 (43.81%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">300–500</td>
+<td align="left">11,153 (0.38%)</td>
+<td align="left">13,655 (19.08%)</td>
+<td align="left">9,448 (21.34%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">500–1,000</td>
+<td align="left">7,417 (0.25%)</td>
+<td align="left">11,909 (16,64%)</td>
+<td align="left">6,468 (14.61%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">1,000–2,000</td>
+<td align="left">5,132 (0.17%)</td>
+<td align="left">10,694 (14.94%)</td>
+<td align="left">4,858 (10.97%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">2,000 +</td>
+<td align="left">4,256 (0.14%)</td>
+<td align="left">11,707 (16.36%)</td>
+<td align="left">4,108 (9.28%)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Total Number</td>
+<td align="left">2,964,958</td>
+<td align="left">71,569</td>
+<td align="left">44,281</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Total Length</td>
+<td align="left">161,642,392</td>
+<td align="left">78,482,160</td>
+<td align="left">33,946,199</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">N50 Length</td>
+<td align="left">49</td>
+<td align="left">2,290</td>
+<td align="left">1,602</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Average Length</td>
+<td align="left">55</td>
+<td align="left">1,097</td>
+<td align="left">767</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+<sec id="sec012">
+<title>Functional annotation</title>
+<p>The unigenes of the three species were annotated by searching against the NR [<xref ref-type="bibr" rid="pone.0173207.ref039">39</xref>], GO [<xref ref-type="bibr" rid="pone.0173207.ref040">40</xref>], COG [<xref ref-type="bibr" rid="pone.0173207.ref041">41</xref>], KOG, KEGG [<xref ref-type="bibr" rid="pone.0173207.ref042">42</xref>], Pfam [<xref ref-type="bibr" rid="pone.0173207.ref043">43</xref>], and Swiss-Prot databases (<xref ref-type="table" rid="pone.0173207.t002">Table 2</xref>).</p>
+<table-wrap id="pone.0173207.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0173207.t002</object-id>
+<label>Table 2</label> <caption><title>The numbers and distribution rate of unigenes in the databases of NR, GO, COG, KOG, KEGG, Pfam and Swiss-Prot.</title></caption>
+<alternatives>
+<graphic id="pone.0173207.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.t002" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="2">Database</th>
+<th align="center" colspan="3">Number (Percentage) of annotated unigenes</th>
+</tr>
+<tr>
+<th align="left"><italic>P</italic>. <italic>vetusta</italic></th>
+<th align="left"><italic>R</italic>. <italic>sejuga</italic></th>
+<th align="left"><italic>L</italic>. <italic>simplicicornis</italic></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">NR</td>
+<td align="left">11,989 (42.44%)</td>
+<td align="left">19,345 (43.81%)</td>
+<td align="left">16,928 (38.23%)</td>
+</tr>
+<tr>
+<td align="left">GO</td>
+<td align="left">7,900 (27.96%)</td>
+<td align="left">11,005 (24.93%)</td>
+<td align="left">9,415 (21.26%)</td>
+</tr>
+<tr>
+<td align="left">COG</td>
+<td align="left">3,398 (12.03%)</td>
+<td align="left">7,170 (16.24%)</td>
+<td align="left">4,978 (11.24%)</td>
+</tr>
+<tr>
+<td align="left">KOG</td>
+<td align="left">8,993 (31.83%)</td>
+<td align="left">13,754 (31.15%)</td>
+<td align="left">10,973 (24.78%)</td>
+</tr>
+<tr>
+<td align="left">KEGG</td>
+<td align="left">6,091 (21.56%)</td>
+<td align="left">9,419 (21.33%)</td>
+<td align="left">5,999 (13.55%)</td>
+</tr>
+<tr>
+<td align="left">Pfam</td>
+<td align="left">9,094 (32.19%)</td>
+<td align="left">14,762 (33.43%)</td>
+<td align="left">11,441 (25.84%)</td>
+</tr>
+<tr>
+<td align="left">Swiss-Prot</td>
+<td align="left">7,396 (26.18%)</td>
+<td align="left">11,501 (26.05%)</td>
+<td align="left">9,369 (21.16%)</td>
+</tr>
+<tr>
+<td align="left">All</td>
+<td align="left">12,475 (44.16%)</td>
+<td align="left">20,334 (46.05%)</td>
+<td align="left">17,478 (39.47%)</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>Of the <italic>P</italic>. <italic>vetusta</italic> unigenes, 12,475 (44.16%) were found in at least one of the seven public databases,11989 (42.44%) had significant matches in the NR database, 7,900 (27.96%) in GO, 3,398 (12.03%) in COG, 8,993 (31.83%) in KOG, 6,091 (21.56%) in KEGG, 9,094 (32.19%) in Pfam and 7,396 (26.18%) in Swiss-Prot.</p>
+<p>There were 20,334 unigenes (46.05%) from <italic>R</italic>. <italic>sejuga</italic> found in at least one database, 19,345 (43.81%) in NR, 11,005 (24.93%) in GO, 7,170 (16.24%) in COG, 13,754 (31.15%) in KOG, 9,419 (21.33%) in KEGG, 14,762 (33.43%) in Pfam and 11,501 (26.05%) in Swiss-Prot.</p>
+<p>For <italic>L</italic>. <italic>simplicicornis</italic> 17,478 unigenes (39.47%) were found in at least one database, 16,928 (38.23%) in NR, 9,415 (21.26%) in GO, 4,978 (11.24%) in COG, 10,973 (24.78%) in KOG, 5,999 (13.55%) in KEGG, 11,441 (25.84%) in Pfam and 9,369 (21.16%) in Swiss-Prot.</p>
+<p>After searching against the NR database, we obtained the sequence-homology distributions for each species (<xref ref-type="fig" rid="pone.0173207.g003">Fig 3</xref>). The majority of matches were with known genes from <italic>Aedes aegypti</italic>, followed by <italic>Culex quinquefasciatus</italic>, <italic>Anopheles gambiae</italic>, <italic>Anopheles sinensis</italic> and <italic>Anopheles darlingi</italic>.</p>
+<fig id="pone.0173207.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0173207.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Results summary for sequence-homology search against NCBI NR database.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.g003" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec013">
+<title>Classification of unigenes</title>
+<p>For GO analysis, unigenes of each species were divided into three categories: cellular component (CC), molecular functions (MF) and biological processes (BP) [<xref ref-type="bibr" rid="pone.0173207.ref044">44</xref>] (<xref ref-type="fig" rid="pone.0173207.g004">Fig 4</xref>). In the CC category, the most abundant terms annotated to the unigenes in both <italic>P</italic>. <italic>vetusta</italic> and <italic>R</italic>. <italic>sejuga</italic> were ‘cell part’ (3,786 and 4,515), ‘macromolecular complex’ (1,692 and 2,125) and ‘organelle’ (1,641 and 1,936), whereas in <italic>L</italic>. <italic>simplicicornis</italic>, the most abundant terms were ‘cell’ (3,778), ‘cell part’ (3,778) and ‘organelle’ (2,680). The MF category mainly comprised proteins involved in ‘binding’ (4,037, 5,410 and 4,886), ‘catalytic activity’ (3,396, 5,571 and 4,431) and ‘transporter activity’ (709, 841 and 833) for all three species. For the BP category, the mostly highly represented terms in all three species were ‘cellular process’ (4,555, 5,699 and 5,474), ‘single-organism process’ (4,286, 4,942 and 5,005) and ‘metabolic process’ (3,132, 4,472 and 5,630). A summary of GO term assignment is presented in <xref ref-type="supplementary-material" rid="pone.0173207.s005">S5 Table</xref>.</p>
+<fig id="pone.0173207.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0173207.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Gene ontology (GO) assignments for the three species.</title>
+<p>Results are summarized under three main GO categories: biological process, cellular component and molecular function. The left Y-axis represents the percentage of a specific category of genes in each main category. The right Y-axis represents the number of genes in the same category.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.g004" xlink:type="simple"/>
+</fig>
+<p>Unigenes of each species were assigned to COG (<xref ref-type="fig" rid="pone.0173207.g005">Fig 5</xref>) and KOG (<xref ref-type="fig" rid="pone.0173207.g006">Fig 6</xref>) classification and divided into 25 specific categories. For COG analysis, the largest two groups were the ‘general functional prediction only’ (1,166, 1,972 and 1,618) and ‘replication, recombination and repair’ (409, 949 and 721). The next largest groups in <italic>P</italic>. <italic>vetusta</italic> were ‘transcription’ (381), ‘signal transduction mechanisms’ (325), ‘posttranslational modification, protein turnover and chaperones’ (321) and ‘translation, ribosomal structure and biogenesis’ (313), whereas in <italic>R</italic>. <italic>sejuga</italic>, these groups were also the next most common groups but in a different order: ‘translation, ribosomal structure and biogenesis’ (847), ‘transcription’ (831), ‘posttranslational modification, protein turnover and chaperones’ (689) and ‘signal transduction mechanisms’ (580). Differing from the two species, the third through sixth most abundant groups in <italic>L</italic>. <italic>simplicicornis</italic> were ‘amino acid transport and metabolism’ (442), ‘carbohydrate transport and metabolism’ (429), ‘translation, ribosomal structure and biogenesis’ (428) and ‘transcription’ (395). For KOG analysis, the largest two groups were the ‘general functional prediction only’ (1,712, 2,656 and 3,266) and ‘signal transduction mechanisms’ (1,533, 1,790 and 1,401). However, the middle frequency functional groups were quite different between the three species. For both COG and KOG analysis, only a few unigenes in each species were assigned to ‘cell motility’ and ‘nuclear structure’. A summary of COG and KOG functional classifications is presented in <xref ref-type="supplementary-material" rid="pone.0173207.s006">S6</xref> and <xref ref-type="supplementary-material" rid="pone.0173207.s007">S7</xref> Tables.</p>
+<fig id="pone.0173207.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0173207.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>COG functional classification for the three species.</title>
+<p>Unigenes of each species with significant homologies in the COG database were classified into 25 COG categories.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.g005" xlink:type="simple"/>
+</fig>
+<fig id="pone.0173207.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0173207.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>KOG functional classification for the three species.</title>
+<p>Unigenes of each species with significant homologies in the KOG database were classified into 25 KOG categories.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.g006" xlink:type="simple"/>
+</fig>
+<p>We also mapped the unigenes from each species onto the KEGG database to identify biochemical pathways [<xref ref-type="bibr" rid="pone.0173207.ref045">45</xref>]. In total, for <italic>P</italic>. <italic>vetusta</italic>, <italic>R</italic>. <italic>sejuga</italic> and <italic>L</italic>. <italic>simplicicornis</italic> respectively 6,091, 9,419 and 5,999 unigenes were assigned to 258, 261 and 208 KEGG pathways. A summary of the KEGG pathways annotated is presented in <xref ref-type="supplementary-material" rid="pone.0173207.s008">S8</xref>–<xref ref-type="supplementary-material" rid="pone.0173207.s010">S10</xref> Tables. The largest categories of biochemical-related unigenes in <italic>P</italic>. <italic>vetusta</italic> were those associated with purine metabolism (151; 2.48%), followed by unigenes that were involved in the PI3K-Akt signaling pathway (137; 2.25%), rap1 signaling pathway (135; 2.22%), focal adhesion (135; 2.22%), MAPK signaling pathway (131; 2.15%), and protein processing in endoplasmic reticulum (131; 2.15%), whereas in <italic>R</italic>. <italic>sejuga</italic>, the largest categories were those associated with ribosome (308; 3.27%), followed by unigenes that were involved in purine metabolism (295; 3.13%), spliceosome (292; 3.10%), RNA transport (262; 2.78%), protein processing in endoplasmic reticulum (247; 2.62%), and pyrimidine metabolism (199; 2.11%) and for <italic>L</italic>. <italic>simplicicornis</italic>, the largest categories were those associated with ribosome (188; 3.13%), followed by unigenes that were involved in protein processing in endoplasmic reticulum (139; 2.32%), purine metabolism (133; 2.22%), RNA transport (126; 2.10%), carbon metabolism (124; 2.07%), and spliceosome (108; 1.80%).</p>
+</sec>
+<sec id="sec014">
+<title>Phylogenetic analysis</title>
+<p>A phylogenetic tree, which included representatives of all tipulomorph families plus representatives of other lower dipteran families, was constructed based on the 1,709 single-copy orthologs genes using the ML method (<xref ref-type="fig" rid="pone.0173207.g007">Fig 7</xref>). In addition, according to the annotations of these single-copy orthologous genes, the following four groups of genes were also selected to construct ML trees (<xref ref-type="fig" rid="pone.0173207.g008">Fig 8</xref>) to make comparisons and provide insights into the phylogenetic importance of the groups of genes: 73 genes involved in ATP binding, 13 genes with receptor activity, 43 genes from the ‘biological process associated with wing’ group and 7 genes from the ‘biological process associated with olfaction’ group (<xref ref-type="supplementary-material" rid="pone.0173207.s011">S11 Table</xref>). In the tree based on all 1709 single-copy genes (<xref ref-type="fig" rid="pone.0173207.g007">Fig 7</xref>), the monophyly of each infraorder was strongly supported. This result was also strongly supported in three of the four analyses based on GO term group; the exception was the ‘receptor activity’ analyses in which Psychodomorpha is the only monophyletic infraorder (<xref ref-type="fig" rid="pone.0173207.g008">Fig 8B</xref>). ‘Nematocera’, or the ‘lower’ Diptera, was, as expected, paraphyletic. Relationships among the four major infraorders of lower Diptera in the 1709-gene analysis was Culicomorpha + (Tipulomorpha + (Psychodomorpha + (Bibionomorpha + Brachycera))). Of the GO group trees, the ‘biological process associated with wing’ analysis (<xref ref-type="fig" rid="pone.0173207.g008">Fig 8C</xref>) had the same infraorder topology as the 1709-gene tree, ‘ATP binding’ analysis (<xref ref-type="fig" rid="pone.0173207.g008">Fig 8A</xref>) supported a sister group relationship between Tipulomorpha and Psychodomorpha, and the ‘biological process associated with olfaction’ analysis (<xref ref-type="fig" rid="pone.0173207.g008">Fig 8D</xref>) supported nematoceran monophyly, with Tipulomorpha as sister to Bibionomorpha. Infraordinal relationships could not be inferred from the ‘receptor activity’ analysis, as the monophyly of 3 of the 4 infraorders was not supported. The 1709-gene analysis (<xref ref-type="fig" rid="pone.0173207.g007">Fig 7</xref>) and one of the four GO-group (<xref ref-type="fig" rid="pone.0173207.g008">Fig 8D</xref>) supported the traditional concept of Tipulomorpha as containing Trichoceridae separate from Tipuloidea; in two of the other GO-group analyses Trichoceridae was nested within Tipuloidea (<xref ref-type="fig" rid="pone.0173207.g008">Fig 8A and 8C</xref>). As to the interfamilial relationships in Tipuloidea, Pediciidae was sister-group to a clade containing Limoniidae + (Cylindrotomidae + Tipulidae) in both the 1709-gene analysis and one of the GO-group analyses, whereas Pediciidae + Trichoceridae was sister to the remaining tipuloid families in the other two GO-group analyses (<xref ref-type="fig" rid="pone.0173207.g008">Fig 8A and 8C</xref>). Nodal support was uniformly strong across the analyses.</p>
+<fig id="pone.0173207.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0173207.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>Phylogenetic tree.</title>
+<p>The tree was inferred through a maximum-likelihood analysis of amino acid sequence data of 1,709 single-cope orthologs genes. Branch lengths correspond to the number of changes on that branch. Numbers adjacent to each node are BV.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.g007" xlink:type="simple"/>
+</fig>
+<fig id="pone.0173207.g008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0173207.g008</object-id>
+<label>Fig 8</label>
+<caption>
+<title>Phylogenetic tree.</title>
+<p>The tree was inferred through a maximum-likelihood analysis of amino acid sequence data of <bold>(A)</bold> 73 genes involved in ATP binding. <bold>(B)</bold> 13 genes involved in receptor activity. <bold>(C)</bold> 43 genes involved in the biological process associated with wing. <bold>(D)</bold> 7 genes involved in the biological process associated with olfactory. Branch lengths correspond to the number of changes on that branch. Numbers adjacent to each node are BV.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.g008" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec015">
+<title>FcLM analysis</title>
+<p>To evaluate signal for alternative resolutions of the Diptera tree we used Four Cluster Likelihood Mapping (FcLM) [<xref ref-type="bibr" rid="pone.0173207.ref037">37</xref>] to compare support for two major questions: (1) which infraorder is placed basally as sister to all remaining Diptera in our study? And (2) does our data support Trichoceridae placed in the Tipulomorpha (<xref ref-type="table" rid="pone.0173207.t003">Table 3</xref>)? FcLM analysis favored Culicomorpha (51.4%) over either Tipulomorpha (32.0%) or a clade comprising of Culicomorpha + Tipulomorpha (16.6%) (<xref ref-type="fig" rid="pone.0173207.g009">Fig 9A</xref>). Quartet mapping also showed strong support for Trichoceridae + Tipuloidea (Tipulomorpha monophyly) (87.5%) over either a sister grouping between Trichoceridae and Psychodidae (12.5%) or Trichoceridae outside of Tipuloidea + Psychodidae (0.0%) (<xref ref-type="fig" rid="pone.0173207.g009">Fig 9B</xref>). Both the results are compatible with the results of the ML tree based on all 1709 single-copy genes.</p>
+<fig id="pone.0173207.g009" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0173207.g009</object-id>
+<label>Fig 9</label>
+<caption>
+<title>Results of Four-cluster Likelihood Mapping as 2D simplex graphs.</title>
+<p>(A) Question 1. (B) Question 2.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.g009" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0173207.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0173207.t003</object-id>
+<label>Table 3</label> <caption><title>The three datasets designed to address three phylogenetic questions.</title></caption>
+<alternatives>
+<graphic id="pone.0173207.t003g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.t003" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">Phylogenetic question</th>
+<th align="left">Groups</th>
+<th align="left">Included insect families (if more than one)</th>
+<th align="left">Number of species</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1. Which infraorder is the sister-group of the remaining Diptera?</td>
+<td align="left">G1: Outgroup</td>
+<td align="left">Boreidae, Ceratophyllidae</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">G2: Culicomorpha</td>
+<td align="left">Culicidae, Chironomidae, Ceratopogonidae, Corethrellidae</td>
+<td align="left">7</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">G3: Tipulomorpha</td>
+<td align="left">Trichoceridae, Pediciidae, Limoniidae, Cylindrotominae, Tipulidae</td>
+<td align="left">5</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">G4: remaining lower dipterans</td>
+<td align="left">Psychodidae, Bibionidae, Cecidomyiidae</td>
+<td align="left">5</td>
+</tr>
+<tr>
+<td align="left">2. Is Trichoceridae part of Tipulomorpha?</td>
+<td align="left">G1: Trichoceridae</td>
+<td align="left"/>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">G2: Tipuloidea</td>
+<td align="left">Pediciidae, Limoniidae, Cylindrotominae, Tipulidae</td>
+<td align="left">4</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">G3: Psychodidae</td>
+<td align="left"/>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">G4: Outgroup</td>
+<td align="left">Boreidae, Ceratophyllidae</td>
+<td align="left">2</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+</sec>
+<sec id="sec016" sec-type="conclusions">
+<title>Discussion</title>
+<p>Recent studies have demonstrated that whole transcriptomes can accurately resolve the phylogenetic relationships at various levels within insects [<xref ref-type="bibr" rid="pone.0173207.ref029">29</xref>–<xref ref-type="bibr" rid="pone.0173207.ref030">30</xref>]. A robust phylogeny of Tipulomorpha was obtained using three newly sequenced tipuloidean transcriptomes as well as some published transcriptome data. Strong support values were recovered for both traditionally recognized dipteran phylogenetic relationships as well as some recent novel findings (<xref ref-type="fig" rid="pone.0173207.g007">Fig 7</xref>). Several long standing issues in tipulomorph phylogeny are resolved, especially regarding its monophyly and placement with respect to other lower dipteran groups. As for the four major infraorders of lower Diptera, Culicomorpha was the basal branch in our analysis, which was consistent with former molecular [<xref ref-type="bibr" rid="pone.0173207.ref010">10</xref>] and morphological analysis [<xref ref-type="bibr" rid="pone.0173207.ref018">18</xref>]. The placement of Tipulomorpha towards the middle of the nematoceran grade was recovered, with Culicomorpha + (Tipulomorpha + (Psychodomorpha + (Bibionomorpha + Brachycera))). This is consistent with the result using Bayesian analysis from Bertone <italic>et al</italic>. [<xref ref-type="bibr" rid="pone.0173207.ref010">10</xref>].</p>
+<p>The monophyly of Tipulomorpha as well as the sister-group relationship between Trichoceridae and Tipuloidea are confirmed. Several morphological characters of both larvae and adults support this sister group relationship, i.e. vein R<sub>2</sub> ending in R<sub>1</sub>, vein A<sub>2</sub> reaching the wing margin, reduction of male cerci, development of male terminalia from both imaginal discs and pupal ectoderm, and female cerci with a single article [<xref ref-type="bibr" rid="pone.0173207.ref004">4</xref>–<xref ref-type="bibr" rid="pone.0173207.ref009">9</xref>]. Despite differing in their resolution of the infraorders, both of Bertone <italic>et al</italic>. analyses supported a sister-group relationship between Trichoceridae and Tipuloidea based on multiple nuclear genes [<xref ref-type="bibr" rid="pone.0173207.ref010">10</xref>]. Analysis of whole mitochondrial genome data by Beckenbach did not support a monophyletic Tipulomorpha as Trichoceridae was sister to all other Diptera, however the exclusion of higher variability major genes and codon positions did support a sister-group relationship between Trichoceridae and Tipuloidea [<xref ref-type="bibr" rid="pone.0173207.ref017">17</xref>].</p>
+<p>The superfamily Tipuloidea, which has a large number of species, are difficult to identify and really know. Therefore, the choice of taxa could influence the tree due to unpredictable rate dynamics (causing homoplasy or phylogenetic error). However, the family Tipulidae was the sole representative of Tipuloidea included in some previous studies (e.g. [<xref ref-type="bibr" rid="pone.0173207.ref017">17</xref>–<xref ref-type="bibr" rid="pone.0173207.ref018">18</xref>]) potentially biasing those phylogenetic findings. Limited taxon sampling could explain the conflicting results found in most previous studies for the placement and composition of Tipulomorpha. Our use of a very large gene sample may overcome the unpredictable rate effects that can come from insufficient taxon coverage, but additional studies with much broader taxon coverage would be required to fully explore this issue.</p>
+<p>Regarding interfamilial relationships in Tipuloidea, our results corroborated Pediciidae as the sister-group to the remaining Tipuloidea, which was consistent with the results proposed by Ribeiro based on an analysis of 88 morphological characters [<xref ref-type="bibr" rid="pone.0173207.ref027">27</xref>] and Petersen <italic>et al</italic>. based on both morphological characters (adult, larvae and pupae) and nuclear sequence data (28S rDNA and CAD) [<xref ref-type="bibr" rid="pone.0173207.ref028">28</xref>]. Petersen <italic>et al</italic>. also showed a sister-grouping of Cylindrotomidae and Tipulidae, however, their placement within the Tipuloidea was less certain as there was no support for the monophyly of Limoniidae [<xref ref-type="bibr" rid="pone.0173207.ref028">28</xref>]. Although Limoniidae was found to be the sister-group of Cylindrotomidae + Tipulidae in the present study, due to the limited number of exemplars sequenced (one per family) we can't rule out the possibility of a paraphyletic Limoniidae as found by Petersen <italic>et al</italic>. [<xref ref-type="bibr" rid="pone.0173207.ref028">28</xref>] with only some members of the family making up the sister-group of Cylindrotomidae + Tipulidae. More research into the higher-level classification of the Limoniidae based on a larger range of representative taxa should be used for phylogenetic analysis in the future.</p>
+<p>Analysis of smaller numbers of genes corresponding to specific functional classes were less effective at resolving expected relationships among Tipulomorphan clades. GO clasess are broadly defined and specific aspects of molecular evolutionary rate and both identification or identity as an ortholog would affect both the use of the gene as phylogenetic marker and its ability to resolve a specific question. In general, it seems that larger gene samples that include multiple classes of genes and genes of differing phylogenetic utility are preferable for resolving relationships among the oldest and most diverse fly groups.</p>
+</sec>
+<sec id="sec017">
+<title>Supporting information</title>
+<supplementary-material id="pone.0173207.s001" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.s001" xlink:type="simple">
+<label>S1 Table</label>
+<caption>
+<title>Species for which new transcriptome data were generated, with collecting and preservation information.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0173207.s002" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.s002" xlink:type="simple">
+<label>S2 Table</label>
+<caption>
+<title>All species included in this study, including previously published data.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0173207.s003" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.s003" xlink:type="simple">
+<label>S3 Table</label>
+<caption>
+<title>List of 1,709 ortholog groups included in the ortholog reference set.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0173207.s004" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.s004" xlink:type="simple">
+<label>S4 Table</label>
+<caption>
+<title>Reference species used in the orthology reference set.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0173207.s005" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.s005" xlink:type="simple">
+<label>S5 Table</label>
+<caption>
+<title>Summary of GO term assignment for unigenes of <italic>P</italic>. <italic>vetusta</italic>, <italic>R</italic>. <italic>sejuga</italic> and <italic>L</italic>. <italic>simplicicornis</italic>.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0173207.s006" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.s006" xlink:type="simple">
+<label>S6 Table</label>
+<caption>
+<title>Summary of COG functional classification for unigenes of <italic>P</italic>. <italic>vetusta</italic>, <italic>R</italic>. <italic>sejuga</italic> and <italic>L</italic>. <italic>simplicicornis</italic>.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0173207.s007" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.s007" xlink:type="simple">
+<label>S7 Table</label>
+<caption>
+<title>Summary of KOG functional classification for unigenes of <italic>P</italic>. <italic>vetusta</italic>, <italic>R</italic>. <italic>sejuga</italic> and <italic>L</italic>. <italic>simplicicornis</italic>.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0173207.s008" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.s008" xlink:type="simple">
+<label>S8 Table</label>
+<caption>
+<title>Summary of the KEGG pathways for unigenes of <italic>P</italic>. <italic>vetusta</italic>.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0173207.s009" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.s009" xlink:type="simple">
+<label>S9 Table</label>
+<caption>
+<title>Summary of the KEGG pathways for unigenes of <italic>R</italic>. <italic>sejuga</italic>.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0173207.s010" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.s010" xlink:type="simple">
+<label>S10 Table</label>
+<caption>
+<title>Summary of the KEGG pathways for unigenes of <italic>L</italic>. <italic>simplicicornis</italic>.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0173207.s011" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0173207.s011" xlink:type="simple">
+<label>S11 Table</label>
+<caption>
+<title>List of the four groups of genes selected to construct ML trees.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>We express our sincere thanks to Dr. Jianyun Wang (Beijing), Ms. Jinying Yang (Beijing), Ms. Lihua Wang (Beijing) and Ms. Lan Ye (Hangzhou) for providing help in collecting the specimens, and Ms. Lu Yue (Beijing), Dr. Feng Zhou (Beijing) and Dr. Fan Song (Beijing) for providing useful suggestions about the phylogenetic analysis.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0173207.ref001"><label>1</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Yeates</surname> <given-names>DK</given-names></name>, <name name-style="western"><surname>Wiegmann</surname> <given-names>BM</given-names></name>. (eds.) <source>The Evolutionary Biology of Flies</source>. <publisher-name>Columbia University Press</publisher-name>, <publisher-loc>New York</publisher-loc>; <year>2005</year>.</mixed-citation></ref>
+<ref id="pone.0173207.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jong</surname> <given-names>HD</given-names></name>, <name name-style="western"><surname>Oosterbroek</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Gelhaus</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Reusch</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>Y</given-names></name>. <article-title>Global diversity of craneflies (insecta, diptera: tipulidea or tipulidae sensu lato) in freshwater</article-title>. <source>Hydrobiologia</source>. <year>2007</year>; <volume>595</volume>(<issue>1</issue>): <fpage>457</fpage>–<lpage>467</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hennig</surname> <given-names>W</given-names></name>. <article-title>Flügelgeäder und system der Dipteren</article-title>. <source>Beitr Entomol</source>. <year>1954</year>; <volume>4</volume>: <fpage>245</fpage>–<lpage>388</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hennig</surname> <given-names>W</given-names></name>. <article-title>Diptera (Zweiflügler)</article-title>. <source>Handbuch der Zoologie (Berlin)</source>. <year>1973</year>; <volume>4</volume>:<fpage>1</fpage>–<lpage>200</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref005"><label>5</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Hennig</surname> <given-names>W</given-names></name>. <source>Insect phylogeny</source>. <publisher-loc>New York</publisher-loc>: <publisher-name>J. Wiley &amp; Sons</publisher-name>; <year>1981</year>.</mixed-citation></ref>
+<ref id="pone.0173207.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dahl</surname> <given-names>C</given-names></name>. <article-title>Comparison of postembryonic organization of the genital segments Trichoceridae, Tipulidae, and Anisopodidae (Diptera, Nematocera)</article-title>. <source>Zoologica Scripta</source>. <year>1980</year>; <volume>9</volume>: <fpage>165</fpage>–<lpage>185</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Griffiths</surname> <given-names>GCD</given-names></name>. <article-title>Book review: Manual of Nearctic Diptera Volume 3</article-title>. <source>Quaestiones Entomologicae</source>. <year>1990</year>; <volume>26</volume>: <fpage>117</fpage>–<lpage>130</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Starý</surname> <given-names>J</given-names></name>. <article-title>Phylogeny and classification of Tipulomorpha, with special emphasis on the family Limoniidae</article-title>. <source>Acta Zoologica Cracoviensia</source>. <year>1992</year>; <volume>35</volume>: <fpage>11</fpage>–<lpage>36</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Oosterbroek</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Courtney</surname> <given-names>GW</given-names></name>. <article-title>Phylogeny of the Nematocerous families of Diptera (Insecta)</article-title>. <source>Zoological Journal of the Linnean Society</source>. <year>1995</year>; <volume>11</volume>: <fpage>267</fpage>–<lpage>311</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bertone</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Courtney</surname> <given-names>GW</given-names></name>, <name name-style="western"><surname>Wiegmann</surname> <given-names>BM</given-names></name>. <article-title>Phylogenetics and temporal diversification of the earliest true flies (Insecta: Diptera) based on multiple nuclear genes</article-title>. <source>Systematic Entomology</source>. <year>2008</year>; <volume>33</volume>: <fpage>668</fpage>–<lpage>687</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Krzemiński</surname> <given-names>W</given-names></name>. <article-title>Triassic and Lower Jurassic stage of Diptera evolution</article-title>. <source>Mitteilungen der schweizerischen entomologischen Gesellschaft</source>. <year>1992</year>; <volume>65</volume>: <fpage>39</fpage>–<lpage>59</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Michelsen</surname> <given-names>V</given-names></name>. <article-title>Neodiptera: New insights into the adult morphology and higher level phylogeny of Diptera (Insecta)</article-title>. <source>Zoological Journal of the Linnean Society</source>. <year>1996</year>; <volume>117</volume>: <fpage>71</fpage>–<lpage>102</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Blagoderov</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Grimaldi</surname> <given-names>DA</given-names></name>, <name name-style="western"><surname>Fraser</surname> <given-names>NC</given-names></name>. <article-title>How time flies for flies, Diverse Diptera from the triassic of Virginia and Early Radiation of the Order</article-title>. <source>American Museum Novitates</source> <volume>3572</volume>; <year>2007</year>. 39 pp.</mixed-citation></ref>
+<ref id="pone.0173207.ref014"><label>14</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Wood</surname> <given-names>DM</given-names></name>, <name name-style="western"><surname>Borkent</surname> <given-names>A</given-names></name>. <chapter-title>Phylogeny and classification of the Nematocera</chapter-title>. In <name name-style="western"><surname>McAlpine</surname> <given-names>J.F.</given-names></name> and <name name-style="western"><surname>Wood</surname> <given-names>D.M.</given-names></name>, eds., <source>Manual of Nearctic Diptera</source> Volume <volume>3</volume>. <publisher-loc>Ottawa</publisher-loc>: <publisher-name>Research Branch Agriculture Canada</publisher-name>; <year>1989</year>. pp. <fpage>1333</fpage>–<lpage>1370</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Friedrich</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Tautz</surname> <given-names>D</given-names></name>. <article-title>An episodic change of rDNA nucleotide substitution rate has occurred during the emergence of the insect order Diptera</article-title>. <source>Molecular Biology and Evolution</source>. <year>1997</year>; <volume>14</volume>: <fpage>644</fpage>–<lpage>653</lpage>. <object-id pub-id-type="pmid">9190066</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wiegmann</surname> <given-names>BM</given-names></name>, <name name-style="western"><surname>Trautwein</surname> <given-names>MD</given-names></name>, <name name-style="western"><surname>Winkler</surname> <given-names>IS</given-names></name>, <name name-style="western"><surname>Barr</surname> <given-names>NB</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>JW</given-names></name>, <name name-style="western"><surname>Lambkin</surname> <given-names>C</given-names></name>, <etal>et al</etal>. <article-title>Episodic radiations in the fly tree of life</article-title>. <source>Proceedings of the National Academy of Sciences of the United States of America</source>. <year>2011</year>; <volume>108</volume>(<issue>14</issue>): <fpage>5690</fpage>–<lpage>5</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.1012675108" xlink:type="simple">10.1073/pnas.1012675108</ext-link></comment> <object-id pub-id-type="pmid">21402926</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Beckenbach</surname> <given-names>AT</given-names></name>. <article-title>Mitochondrial genome sequences of Nematocera (Lower Diptera): evidence of rearrangement following a complete genome duplication in a winter crane fly genome</article-title>. <source>Genome Biology &amp; Evolution</source>. <year>2012</year>; <volume>4</volume>(<issue>2</issue>): <fpage>89</fpage>–<lpage>101</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lambkin</surname> <given-names>CL</given-names></name>, <name name-style="western"><surname>Sinclair</surname> <given-names>BJ</given-names></name>, <name name-style="western"><surname>Pape</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Courtney</surname> <given-names>GW</given-names></name>, <name name-style="western"><surname>Skevington</surname> <given-names>JH</given-names></name>, <name name-style="western"><surname>Meier</surname> <given-names>R</given-names></name>, <etal>et al</etal>. <article-title>The phylogenetic relationships among infraorders and superfamilies of diptera based on morphological evidence</article-title>. <source>Systematic Entomology</source>. <year>2013</year>; <volume>38</volume>(<issue>1</issue>), <fpage>164</fpage>–<lpage>179</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alexander</surname> <given-names>CP</given-names></name>. <article-title>The crane-flies of New York. Part I. Distribution and taxonomy of the adult flies</article-title>. <source>Memoirs, Cornell University Agricultural Experiment Station</source>. <year>1919</year>; <volume>25</volume>: <fpage>767</fpage>–<lpage>993</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Alexander</surname> <given-names>CP</given-names></name>. <article-title>The crane-flies of New York. Part II. Biology and phylogeny</article-title>. <source>Memoirs, Cornell University Agricultural Experiment Station</source>. <year>1920</year>; <volume>38</volume>: <fpage>691</fpage>–<lpage>1133</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Savchenko</surname> <given-names>EN</given-names></name>. <article-title>Tipulidae</article-title>. <source>Fauna Ukrainy</source>. <year>1966</year>; <volume>14</volume>: <fpage>1</fpage>–<lpage>551</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Savchenko</surname> <given-names>EN</given-names></name>. <article-title>Phylogenie und Systematik der Tipulidae. Translated and revised by Br. Theowald and G. Theischinger</article-title>. <source>Tijdschrift voor Entomologie</source>. <year>1979</year>; <volume>122</volume>: <fpage>91</fpage>–<lpage>126</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Savchenko</surname> <given-names>EN</given-names></name>. <article-title>Crane-flies (Fam. Tipulidae), Introduction, Subfamily Dolichopezinae</article-title>. <source>Tipulinae. Fauna USSR, Diptera</source>. <year>1983</year>; <volume>127</volume>: <fpage>1</fpage>–<lpage>585</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref024"><label>24</label><mixed-citation publication-type="other" xlink:type="simple">Brodo, F. A revision of the genus Prionocera and the phylogeny of the family Tipulidae (Diptera). PhD Dissertation, Carleton University, Ottawa, Ontario. 1984.</mixed-citation></ref>
+<ref id="pone.0173207.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Oosterbroek</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Theowald</surname> <given-names>B</given-names></name>. <article-title>Phylogeny of the Tipuloidea based on characters of larvae and pupae (Diptera, Nematocera) with an index to the literature except Tipulidae</article-title>. <source>Tijdshcrift voor Entomologie</source>. <year>1991</year>; <volume>134</volume>: <fpage>211</fpage>–<lpage>267</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref026"><label>26</label><mixed-citation publication-type="other" xlink:type="simple">Oosterbroek, P. Catalogue of the Craneflies of the World. Available: <ext-link ext-link-type="uri" xlink:href="http://ccw.naturalis.nl/" xlink:type="simple">http://ccw.naturalis.nl/</ext-link>. Accessed 11 March 2016.</mixed-citation></ref>
+<ref id="pone.0173207.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ribeiro</surname> <given-names>GC</given-names></name>. <article-title>Phylogeny of the Limnophilinae (Limoniidae) and early evolution of the Tipulomorpha (Diptera)</article-title>. <source>Invertebrate Systematics</source>. <year>2008</year>; <volume>22</volume>: <fpage>627</fpage>–<lpage>694</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Petersen</surname> <given-names>M J</given-names></name>, <name name-style="western"><surname>Bertone</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Wiegmann</surname> <given-names>BM</given-names></name>, <name name-style="western"><surname>Courtney</surname> <given-names>GW</given-names></name>. <article-title>Phylogenetic synthesis of morphological and molecular data reveals new insights into the higher‐level classification of Tipuloidea (Diptera)</article-title>. <source>Systematic Entomology</source>. <year>2010</year>; <volume>35</volume>(<issue>3</issue>): <fpage>526</fpage>–<lpage>545</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Peters</surname> <given-names>RS</given-names></name>, <name name-style="western"><surname>Karen</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Malte</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Christoph</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Jeanne</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Tanja</surname> <given-names>Z</given-names></name>, <etal>et al</etal>. <article-title>The evolutionary history of holometabolous insects inferred from transcriptome-based phylogeny and comprehensive morphological data</article-title>. <source>Bmc Evolutionary Biology</source>. <year>2014</year>; <volume>14</volume>(<issue>1</issue>): <fpage>380</fpage>–<lpage>393</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Misof</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Meusemann</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Peters</surname> <given-names>RS</given-names></name>, <name name-style="western"><surname>Donath</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Mayer</surname> <given-names>C</given-names></name>, <etal>et al</etal>. <article-title>Phylogenomics resolves the timing and pattern of insect evolution</article-title>. <source>Science</source>. <year>2014</year>; <volume>346</volume>(<issue>6210</issue>): <fpage>763</fpage>–<lpage>767</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1126/science.1257570" xlink:type="simple">10.1126/science.1257570</ext-link></comment> <object-id pub-id-type="pmid">25378627</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref031"><label>31</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Grabherr</surname> <given-names>MG</given-names></name>, <name name-style="western"><surname>Haas</surname> <given-names>BJ</given-names></name>, <name name-style="western"><surname>Yassour</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Levin</surname> <given-names>JZ</given-names></name>, <name name-style="western"><surname>Thompson</surname> <given-names>DA</given-names></name>, <name name-style="western"><surname>Amit</surname> <given-names>I</given-names></name>, <etal>et al</etal>. <article-title>Full-length transcriptome assembly from rna-seq data without a reference genome</article-title>. <source>Nature Biotechnology</source>. <year>2011</year>; <volume>29</volume>(<issue>7</issue>): <fpage>644</fpage>–<lpage>652</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nbt.1883" xlink:type="simple">10.1038/nbt.1883</ext-link></comment> <object-id pub-id-type="pmid">21572440</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Katoh</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Misawa</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Kuma</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Miyata</surname> <given-names>T</given-names></name>. <article-title>MAFFT: a novel method for rapid multiple sequence alignment based on fast Fourier transform</article-title>. <source>Nucleic Acids Research</source>. <year>2002</year>; <volume>30</volume>: <fpage>3059</fpage>–<lpage>3066</lpage>. <object-id pub-id-type="pmid">12136088</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref033"><label>33</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Katoh</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Toh</surname> <given-names>H</given-names></name>. <article-title>Improved accuracy of multiple ncRNA alignment by incorporating structural information into a MAFFT-based framework</article-title>. <source>Bmc Bioinformatics</source>. <year>2008</year>; <volume>9</volume>: <fpage>212</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1471-2105-9-212" xlink:type="simple">10.1186/1471-2105-9-212</ext-link></comment> <object-id pub-id-type="pmid">18439255</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Eddy</surname> <given-names>SR</given-names></name>. <article-title>Accelerated profile HMM searches</article-title>. <source>Plos Computational Biology</source>. <year>2011</year>; <volume>7</volume>: <fpage>e1002195</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pcbi.1002195" xlink:type="simple">10.1371/journal.pcbi.1002195</ext-link></comment> <object-id pub-id-type="pmid">22039361</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref035"><label>35</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ebersberger</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Strauss</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Von</surname> <given-names>HA</given-names></name>. <article-title>HaMStR: profile hidden Markov model based search for orthologys in ESTs</article-title>. <source>Bmc Evolutionary Biology</source>. <year>2009</year>; <volume>9</volume>: <fpage>157</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/1471-2148-9-157" xlink:type="simple">10.1186/1471-2148-9-157</ext-link></comment> <object-id pub-id-type="pmid">19586527</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref036"><label>36</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Jones</surname> <given-names>DT</given-names></name>, <name name-style="western"><surname>Taylor</surname> <given-names>WR</given-names></name>, <name name-style="western"><surname>Thornton</surname> <given-names>JM</given-names></name>. <article-title>The rapid generation of mutation data matrices from protein sequences</article-title>. <source>Computer Applications in the Biosciences Cabios</source>. <year>1992</year>; <volume>8</volume>: <fpage>275</fpage>–<lpage>282</lpage> <object-id pub-id-type="pmid">1633570</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref037"><label>37</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Strimmer</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Von</surname> <given-names>HA</given-names></name>. <article-title>Likelihood-mapping: A simple method to visualize phylogenetic content of a sequence alignment</article-title>. <source>Proc. Natl. Acad. Sci. U.S.A.</source> <year>1997</year>; <volume>94</volume>: <fpage>6815</fpage>–<lpage>6819</lpage>. <object-id pub-id-type="pmid">9192648</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref038"><label>38</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schmidt</surname> <given-names>HA</given-names></name>, <name name-style="western"><surname>Strimmer</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Vingron</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Von</surname> <given-names>HA</given-names></name>. <article-title>TREE-PUZZLE: maximum likelihood phylogenetic analysis using quartets and parallel computing</article-title>. <source>Bioinformatics</source>. <year>2002</year>; <volume>18</volume>: <fpage>502</fpage>–<lpage>504</lpage>. <object-id pub-id-type="pmid">11934758</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref039"><label>39</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pruitt</surname> <given-names>KD</given-names></name>, <name name-style="western"><surname>Tatusova</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Maglott</surname> <given-names>DR</given-names></name>. <article-title>NCBI reference sequences (RefSeq): a curated non-redundant sequence database of genomes, transcripts and proteins</article-title>. <source>Nucleic Acids Research</source>. <year>2007</year>; <volume>35</volume>: <fpage>61</fpage>–<lpage>65</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref040"><label>40</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ashburner</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ball</surname> <given-names>CA</given-names></name>, <name name-style="western"><surname>Blake</surname> <given-names>JA</given-names></name>, <name name-style="western"><surname>Botstein</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Butler</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Cherry</surname> <given-names>JM</given-names></name>, <etal>et al</etal>. <article-title>Gene ontology: tool for the unification of biology</article-title>. <source>Nature Genetics</source>. <year>2000</year>; <volume>25</volume>(<issue>1</issue>): <fpage>25</fpage>–<lpage>29</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/75556" xlink:type="simple">10.1038/75556</ext-link></comment> <object-id pub-id-type="pmid">10802651</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref041"><label>41</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tatusov</surname> <given-names>RL</given-names></name>, <name name-style="western"><surname>Galperin</surname> <given-names>MY</given-names></name>, <name name-style="western"><surname>Natale</surname> <given-names>DA</given-names></name>, <name name-style="western"><surname>Koonin</surname> <given-names>EV</given-names></name>. <article-title>The cog database: a tool for genome-scale analysis of protein functions and evolution</article-title>. <source>Nucleic Acids Research</source>. <year>2000</year>; <volume>28</volume>(<issue>1</issue>): <fpage>33</fpage>–<lpage>36</lpage>. <object-id pub-id-type="pmid">10592175</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref042"><label>42</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kanehisa</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Araki</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Goto</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Hattori</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Hirakawa</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Itoh</surname> <given-names>M</given-names></name>., <etal>et al</etal>. <article-title>Kegg for linking genomes to life and the environment</article-title>. <source>Nucleic Acids Research</source>. <year>2008</year>; <volume>36</volume>(Database issue): <fpage>480</fpage>–<lpage>484</lpage>.</mixed-citation></ref>
+<ref id="pone.0173207.ref043"><label>43</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Finn</surname> <given-names>RD</given-names></name>, <name name-style="western"><surname>Tate</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Mistry</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Coggill</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Sammut</surname> <given-names>SJ</given-names></name>, <name name-style="western"><surname>Hotz</surname> <given-names>HR</given-names></name>, <etal>et al</etal>. <article-title>The Pfam protein families database</article-title>. <source>Nucleic Acids Research</source>. <year>2008</year>; <volume>36</volume>: <fpage>D281</fpage>–<lpage>D288</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/nar/gkm960" xlink:type="simple">10.1093/nar/gkm960</ext-link></comment> <object-id pub-id-type="pmid">18039703</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref044"><label>44</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Young</surname> <given-names>MD</given-names></name>, <name name-style="western"><surname>Wakefield</surname> <given-names>MJ</given-names></name>, <name name-style="western"><surname>Smyth</surname> <given-names>GK</given-names></name>, <name name-style="western"><surname>Oshlack</surname> <given-names>A</given-names></name>. <article-title>Gene ontology analysis for rna-seq: accounting for selection bias</article-title>. <source>Genome Biology</source>. <year>2010</year>; <volume>11</volume>(<issue>2</issue>): <fpage>R14</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/gb-2010-11-2-r14" xlink:type="simple">10.1186/gb-2010-11-2-r14</ext-link></comment> <object-id pub-id-type="pmid">20132535</object-id></mixed-citation></ref>
+<ref id="pone.0173207.ref045"><label>45</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mao</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Cai</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Olyarchuk</surname> <given-names>JG</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>L</given-names></name>. <article-title>Automated genome annotation and pathway identification using the kegg orthology (ko) as a controlled vocabulary</article-title>. <source>Bioinformatics</source>. <year>2005</year>; <volume>21</volume>(<issue>19</issue>): <fpage>3787</fpage>–<lpage>3793</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/bioinformatics/bti430" xlink:type="simple">10.1093/bioinformatics/bti430</ext-link></comment> <object-id pub-id-type="pmid">15817693</object-id></mixed-citation></ref>
+</ref-list>
+</back>
+</article>

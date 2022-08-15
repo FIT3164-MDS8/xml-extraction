@@ -1,0 +1,2574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article article-type="research-article" dtd-version="1.1d3" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0211935</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-18-17406</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Biochemical simulations</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Computational biology</subject><subj-group><subject>Biochemical simulations</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Chemistry</subject><subj-group><subject>Physical chemistry</subject><subj-group><subject>Chemical bonding</subject><subj-group><subject>Hydrogen bonding</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Mental health and psychiatry</subject><subj-group><subject>Dementia</subject><subj-group><subject>Alzheimer's disease</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Neurology</subject><subj-group><subject>Dementia</subject><subj-group><subject>Alzheimer's disease</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Neurology</subject><subj-group><subject>Neurodegenerative diseases</subject><subj-group><subject>Alzheimer's disease</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Chemistry</subject><subj-group><subject>Computational chemistry</subject><subj-group><subject>Molecular dynamics</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>Thermodynamics</subject><subj-group><subject>Free energy</subject><subj-group><subject>Gibbs free energy</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Chemical characterization</subject><subj-group><subject>Binding analysis</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Pharmacology</subject><subj-group><subject>Pharmacokinetics</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>Electromagnetism</subject><subj-group><subject>Dipole moments</subject></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Metal based donepezil analogues designed to inhibit human acetylcholinesterase for Alzheimer’s disease</article-title>
+<alt-title alt-title-type="running-head">Metal based donepezil analogues designed for Alzheimer's disease</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0003-3588-4937</contrib-id>
+<name name-style="western">
+<surname>Junaid</surname>
+<given-names>Md.</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Investigation</role>
+<role content-type="http://credit.casrai.org/">Methodology</role>
+<role content-type="http://credit.casrai.org/">Validation</role>
+<role content-type="http://credit.casrai.org/">Visualization</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Islam</surname>
+<given-names>Nazrul</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Formal analysis</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Hossain</surname>
+<given-names>Md. Kamal</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Supervision</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Ullah</surname>
+<given-names>M. Obayed</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Project administration</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0002-1698-7044</contrib-id>
+<name name-style="western">
+<surname>Halim</surname>
+<given-names>Mohammad A.</given-names>
+</name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Project administration</role>
+<role content-type="http://credit.casrai.org/">Supervision</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Department of Pharmaceutical Sciences, North South University, Dhaka, Bangladesh</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Department of Chemistry, Jahangirnagar University, Savar, Dhaka, Bangladesh</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>Division of Computer-Aided Drug Design, The Red-Green Research Centre, Dhaka, Bangladesh</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Silman</surname>
+<given-names>Israel</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Weizmann Institute of Science, ISRAEL</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">obayed.ullah@northsouth.edu</email> (MOU); <email xlink:type="simple">mahalim@grc-bd.org</email> (MAH)</corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>20</day>
+<month>2</month>
+<year>2019</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2019</year>
+</pub-date>
+<volume>14</volume>
+<issue>2</issue>
+<elocation-id>e0211935</elocation-id>
+<history>
+<date date-type="received">
+<day>10</day>
+<month>6</month>
+<year>2018</year>
+</date>
+<date date-type="accepted">
+<day>24</day>
+<month>1</month>
+<year>2019</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2019</copyright-year>
+<copyright-holder>Junaid et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0211935"/>
+<abstract>
+<p>Among neurodegenerative disorders, Alzheimer’s disease (AD) is one of the most common disorders showing slow progressive cognitive decline. Targeting acetylcholinesterase (AChE) is one of the major strategies for AD therapeutics, as cholinergic pathways in the cerebral cortex and basal forebrain are compromised. Herein, we report the design of some copper and other metal based donepezil derivatives, employing density functional theory (DFT). All designed compounds are optimized at the B3LYP/SDD level of theory. Dipole moments, electronic energie, enthalpies, Gibbs free energies, and HOMO-LUMO gaps of these modified compounds are also investigated in the subsequent analysis. The molecules were then subjected to molecular docking analysis with AChE to study the molecular interactions broadly. Ensemble based docking and molecular dynamics (MD) simulations of the best candidates were also performed. Docking and MD simulation reveal that modified drugs are more potent than unmodified donepezil, where Trp86, Tyr337, Phe330 residues play some important roles in drug-receptor interactions. According to ensemble based docking, D9 shows greater binding affinity compared to the parent in most conformations obtained from protein data bank and MD simulation. In addition, it is observed that the π- π stacking with the residues of Trp86, Tyr337, Tyr341, Tyr124 and Trp286 may be required for strong ligand binding. Moreover, ADME/T analysis suggests that modified derivatives are less toxic and have improved pharmacokinetic properties than those of the parent drug. These results further confirm the ability of metal-directed drugs to bind simultaneously to the active sites of AChE and support them as potential candidates for the future treatment of Alzheimer’s disease.</p>
+</abstract>
+<funding-group>
+<funding-statement>The author(s) received no specific funding for this work.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="10"/>
+<table-count count="7"/>
+<page-count count="24"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its Supporting Information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>In recent decades, Acetylcholinesterase (AChE) has become a major interest in Alzheimer’s disease (AD) research. AD, a neural degenerative disorder, is characterized by accumulation of extracellular and vascular amyloid in the brain [<xref ref-type="bibr" rid="pone.0211935.ref001">1</xref>–<xref ref-type="bibr" rid="pone.0211935.ref003">3</xref>]. In brief, inhibitors of AChE enhance the acetylcholine (ACh) level and also sustain the duration of neurotransmitter action. AChE is also proposed to play an important role in Aβ-aggregation during plaque formation [<xref ref-type="bibr" rid="pone.0211935.ref004">4</xref>]. Research from the last decades explain the pathology of AD; in which, one strategy suggested that a decrease in AChE production at synaptic junction highly correlated with the onset of AD progression [<xref ref-type="bibr" rid="pone.0211935.ref005">5</xref>–<xref ref-type="bibr" rid="pone.0211935.ref007">7</xref>]. Estimations regarding AD showed that there are 35.6 million people with dementia worldwide as of 2010, and every 20 years this number is projected to double reaching 65.7 million in 2030 and 115.4 million in 2050 [<xref ref-type="bibr" rid="pone.0211935.ref008">8</xref>]. Several AChE inhibitors such as galantamine, donepezil, tacrine and rivastigmine are available for AD therapy, known to inhibit AChE, however, they are effective to treat mild to moderate AD only [<xref ref-type="bibr" rid="pone.0211935.ref009">9</xref>]. These drugs showed a non-selective profile along with limited efficacy, adverse cholinergic side effects in the periphery, poor bioavailability, and hepatotoxicity, though around 40–70% patients benefit from AChE inhibitors [<xref ref-type="bibr" rid="pone.0211935.ref010">10</xref>].</p>
+<p>The crystal structure of AChE resolved by X-ray crystallographic technique contains two main binding sites, including the catalytic active site (CAS), which is formed by serine, histidine and glutamate, and the peripheral anionic site (PAS) connected by a deep, hydrophobic gorge [<xref ref-type="bibr" rid="pone.0211935.ref011">11</xref>]. Among the drugs targeting AChE, donepezil and other bifunctional inhibitors also may span the AChE gorge [<xref ref-type="bibr" rid="pone.0211935.ref012">12</xref>]. The detailed interactions analysis suggested that this drug has an exclusive orientation, extending from the CAS (bottom near Trp86) to the PAS (top near Trp286), along the active-site gorge. These studies established a structural baseline for improved inhibitor design of next-generation derivatives [<xref ref-type="bibr" rid="pone.0211935.ref013">13</xref>–<xref ref-type="bibr" rid="pone.0211935.ref015">15</xref>].</p>
+<p>The use of metals in drug design has recently gained interest by the success of the anticancer drug, cisplatin [<xref ref-type="bibr" rid="pone.0211935.ref016">16</xref>,<xref ref-type="bibr" rid="pone.0211935.ref017">17</xref>]. Recently, drugs based on metal complexes are used as therapeutic agents (<italic>e</italic>.<italic>g</italic>., Pt, Au, and Ru) in the treatment of malignant diseases, including several types of cancers [<xref ref-type="bibr" rid="pone.0211935.ref018">18</xref>,<xref ref-type="bibr" rid="pone.0211935.ref019">19</xref>]. Therefore, in this study, a main focus was to design metal based analogues of donepezil by adding Cu<sup>2+</sup> as a metal to improve its activity and efficacy. Theoretical work is conducted and validated using density functional theory (DFT), molecular docking, and molecular dynamics (MD) simulation studies. Moreover, some other metals (such as Fe, Co, Zn and Ni) are also incorporated with donepezil similar to the best copper based derivative.</p>
+</sec>
+<sec id="sec002" sec-type="materials|methods">
+<title>Methods</title>
+<sec id="sec003">
+<title>Designing and optimization of ligands</title>
+<p>The molecules were drawn on the BIOVIA Drawer. 3D structures were then generated by fully optimizing with DFT, employing Becke’s exchange functional combining Lee, Yang, and Parr’s (LYP) correlation functional [<xref ref-type="bibr" rid="pone.0211935.ref020">20</xref>,<xref ref-type="bibr" rid="pone.0211935.ref021">21</xref>]. As all designed compounds were modified with metal atoms, the SDD (Stuttgart/Dresden) basis set was used [<xref ref-type="bibr" rid="pone.0211935.ref022">22</xref>]. After optimization, subsequent vibrational frequency calculations were performed to confirm that the stationary points corresponded to minima on the potential energy surface. Electronic energies, enthalpies, Gibbs free energies, dipole moments, and partial charge analysis of each compound were also investigated. Hardness and softness of all compounds were determined from the energies (ε) of frontier HOMOs and LUMOs. Considering the Parr and Pearson interpretation [<xref ref-type="bibr" rid="pone.0211935.ref023">23</xref>] of DFT and Koopmans theorem [<xref ref-type="bibr" rid="pone.0211935.ref024">24</xref>], hardness (η), and softness (S) of the drugs were calculated according to the following equation.</p>
+<disp-formula id="pone.0211935.e001">
+<alternatives>
+<graphic id="pone.0211935.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0211935.e001" xlink:type="simple"/>
+<mml:math display="block" id="M1">
+<mml:mi mathvariant="normal">η</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:msub><mml:mrow><mml:mi>ε</mml:mi></mml:mrow><mml:mrow><mml:mi>H</mml:mi><mml:mi>O</mml:mi><mml:mi>M</mml:mi><mml:mi>O</mml:mi></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mrow><mml:mi>ε</mml:mi></mml:mrow><mml:mrow><mml:mi>L</mml:mi><mml:mi>U</mml:mi><mml:mi>M</mml:mi><mml:mi>O</mml:mi></mml:mrow></mml:msub><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:mfrac>
+</mml:math>
+</alternatives>
+</disp-formula>
+<disp-formula id="pone.0211935.e002">
+<alternatives>
+<graphic id="pone.0211935.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0211935.e002" xlink:type="simple"/>
+<mml:math display="block" id="M2">
+<mml:mi mathvariant="normal">s</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn mathvariant="bold">1</mml:mn></mml:mrow><mml:mrow><mml:mi mathvariant="normal">η</mml:mi></mml:mrow></mml:mfrac>
+</mml:math>
+</alternatives>
+</disp-formula>
+</sec>
+<sec id="sec004">
+<title>Molecular docking analysis</title>
+<p>The three-dimensional crystal structure of recombinant human AChE (PDB ID: <bold>4ey7</bold>) was retrieved in pdb format from the protein data bank [<xref ref-type="bibr" rid="pone.0211935.ref025">25</xref>]. The model was then subjected to energy minimization using the steepest descent and conjugate gradient technique to eliminate bad contacts of protein atoms. Computations were carried out <italic>in vacuo</italic> with the GROMOS 96 43B1 parameters set, with implementation using the Swiss-PDB Viewer. For docking analysis, AutodockVina was employed and AutoDock Tools (ADT) of the MGL software package was used to convert pdb into a pdbqt format to input protein and ligands. The size of grid box in AutoDockVina was kept at 58.81735, 61.2066, and 72.8273 respectively for X, Y, Z. AutodockVina was implemented through the shell script provided by AutoDockVina developers. The binding affinity of ligand was observed by kcal/mole as a unit for a negative score [<xref ref-type="bibr" rid="pone.0211935.ref026">26</xref>].</p>
+</sec>
+<sec id="sec005">
+<title>Molecular dynamics simulation</title>
+<p>To validate the predictions from docking studies, MD simulation was performed using the NAMD [<xref ref-type="bibr" rid="pone.0211935.ref027">27</xref>] software, version 2.9. In this study, the CHARMM force field [<xref ref-type="bibr" rid="pone.0211935.ref028">28</xref>] was utilized, as it is widely applied to describe the macromolecular system. The Transferable Intermolecular Potential3 Points (TIP3P) water model was used by adding Cl<sup>-</sup> and/or Na<sup>+</sup> ions, where the total solvent molecules, 20109, have a density of 1.012 gm/cm<sup>3</sup>. A periodic boundary condition was employed to perform the simulation, where the box size used was 82.4×85.0×98.8Å<sup>3</sup>. Following the steepest descent energy minimization, equilibration of 100 steps was performed by NPT ensemble. Using Langevin Dynamics for constant temperature, full-system periodic electrostatics were maintained using the Particle Mesh Ewald (PME)[<xref ref-type="bibr" rid="pone.0211935.ref029">29</xref>]. Consistently Nose-Hoover Langevin piston [<xref ref-type="bibr" rid="pone.0211935.ref030">30</xref>,<xref ref-type="bibr" rid="pone.0211935.ref031">31</xref>] was used for constant pressure dynamics and SHAKE was used to keep all bonds involving hydrogen atoms at their equilibrium values. Finally, the full system was subjected to MD production run at 300 K for 25 ns in the NVT ensemble. The MD trajectories were saved every 50 ps for analysis.</p>
+</sec>
+<sec id="sec006">
+<title>Ensemble based molecular docking</title>
+<p>To further clarify the results of docking predictions, we used an ensemble based docking method, where two different approaches were employed to obtain different conformations from AChE. In the first approach, different crystallographic conformations of AChE were retrieved from protein data bank, PDB IDs: 1b41, 1f8u, 1vzj, 2x8b, 3lii, 4bdt, 4ey6, 4ey8, 4moe, 4pqe, 5foq, 5fpq, 5hf5, 5hf6, 5hf8, 5hf9, 5hfa. In the second approach, conformers were taken from the 25 ns MD simulation (PDB ID: <bold>4ey7</bold>) at every 1 ns of the 25 ns MD simulation. Against these conformers, the compounds donepezil, D8, D9 and D10 were subjected for docking using the same protocol discussed above in the methods section.</p>
+</sec>
+<sec id="sec007">
+<title>Pharmacokinetic parameters study</title>
+<p>To check the pharmacokinetic parameters and toxicity of the modified compounds and parent compound, the admetSAR server was utilized. We have utilized the admetSAR online database to evaluate the pharmacokinetics parameters related to drug absorption, metabolism and toxicity of the parent drug and its designed analogues [<xref ref-type="bibr" rid="pone.0211935.ref032">32</xref>]. Using structure similarity search methods, admetSAR predicts the latest and most comprehensive manually curated data for diverse chemicals associated with known ADME/T profiles.</p>
+<p>For ADMET analysis, the admetSAR program was used in which 96,000 unique compounds with 45 kinds of ADMET-associated properties, proteins, species, or organisms have been carefully curated from a large number of diverse literatures. Although it is quite difficult to verify all of these compounds and to know whether this program included metal-based drugs or not, we used well known Pt-based cisplatin and carboplatin as well as metal-based drugs approved in the FDA and in clinical trials as test candidates to verify our metal-based donepezil drugs.</p>
+</sec>
+</sec>
+<sec id="sec008" sec-type="conclusions">
+<title>Results and discussions</title>
+<sec id="sec009">
+<title>Strategies and optimization of designed analogue</title>
+<p>The new analogues of donepezil used in this study were designed according to the structural properties of the active site of AChE. As described above, among the two binding sites of AChE, the peripheral anionic site plays a significant role in ligand reorganization and allosteric activators [<xref ref-type="bibr" rid="pone.0211935.ref033">33</xref>,<xref ref-type="bibr" rid="pone.0211935.ref034">34</xref>]. The stabilization of the substrates binding on this site is largely π-cation interaction, while choline ester substrate specificity is mediated partly by Phe295 and Phe297 [<xref ref-type="bibr" rid="pone.0211935.ref035">35</xref>]. From detailed analysis of enzyme-inhibitor complexes, it appeared that the indole ring of Trp286 was involved in direct interaction with several inhibitors, showing a number of interaction modes including stacking, aromatic-aromatic, and π-cation, according to the nature of the ligands [<xref ref-type="bibr" rid="pone.0211935.ref036">36</xref>–<xref ref-type="bibr" rid="pone.0211935.ref038">38</xref>]. Furthermore, the active site of AChE forms electrostatic interactions with the substrates, as all of the amino acids were distributed with a large dipole moment. Information from the above studies, therefore, motivated us to design new analogues of donepezil, by increasing their electronegativity and the non-covalent interaction capacity between the aromatic rings.</p>
+<p>As shown in <bold><xref ref-type="fig" rid="pone.0211935.g001">Fig 1</xref></bold>, ten analogues (D1-D10) were designed by modifying donepezil (D), which may react with [CuCl<sub>2</sub>(H<sub>2</sub>O)<sub>2</sub>] affording the probable mononuclear copper complexes [Cu(D)n(H<sub>2</sub>O)<sub>2</sub>]. There were also several additional modifications in D2-D10. D2-D5 were modified by the addition of F (D2), Cl (D3), Br (D4), and I (D5) atoms in the 2,3-dihydroindene ring portion, respectively. In contrast, D6 was designed by corresponding with D5 while modifications occurred only in the attached benzene ring, <italic>i</italic>.<italic>e</italic>., benzene ring with CF<sub>3</sub> group. In D7 and D8, attached benzene ring of the parent structure was replaced by naphthalene and anthracene rings, respectively, with no halogen modification; however, replacement of H with F and Cl atoms at the 2,3-dihydroindene ring portion of D8 results new analogues D9 and D10, respectively.</p>
+<fig id="pone.0211935.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>The design of new analogues based on the potent, first generation molecule, donepezil.</title>
+<p>Here, D1 was designed from donepezil, while others (D2 to D10) are based on the basic structure of D1.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.g001" xlink:type="simple"/>
+</fig>
+<p>As the conformational features of a molecule critically influences its physical and chemical properties, all of designed compounds along with parent compound, donepezil, were subjected to full geometry optimization using DFT. <xref ref-type="table" rid="pone.0211935.t001">Table 1</xref> illustrates the stoichiometry, electronic energy, enthalpy, Gibbs free energy and dipole moment of the compounds and the optimized structures are depicted in <bold><xref ref-type="fig" rid="pone.0211935.g002">Fig 2</xref></bold>.</p>
+<fig id="pone.0211935.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Most stable optimized structures of all designed analogues along with their parent molecule, donepezil.</title>
+<p>All analogues were optimized in the gas phase at B3LYP/SDD level in Gaussian 09.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.g002" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0211935.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.t001</object-id>
+<label>Table 1</label> <caption><title>The stoichiometry, electronic energy, enthalpy, Gibbs free energy (in Hartree), and dipole moment (Debye) of donepezil and its designed analogues.</title></caption>
+<alternatives>
+<graphic id="pone.0211935.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.t001" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="justify">Stoichiometry</th>
+<th align="justify">Electronic Energy</th>
+<th align="justify">Enthalpy</th>
+<th align="justify">Gibbs Free Energy</th>
+<th align="justify">Dipole Moment<break/>(Debye)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="justify">Donepezil</td>
+<td align="justify">C<sub>24</sub>H<sub>29</sub>NO<sub>3</sub></td>
+<td align="justify">-1204.88</td>
+<td align="justify">-1204.88</td>
+<td align="justify">-1204.97</td>
+<td align="justify">2.575</td>
+</tr>
+<tr>
+<td align="justify">D1</td>
+<td align="justify">C<sub>22</sub>H<sub>27</sub>CuNO<sub>5</sub>(2)</td>
+<td align="justify">-1482.22</td>
+<td align="justify">-1482.22</td>
+<td align="justify">-1482.31</td>
+<td align="justify">11.349</td>
+</tr>
+<tr>
+<td align="justify">D2</td>
+<td align="justify">C<sub>22</sub>H<sub>26</sub>CuFNO<sub>5</sub>(2)</td>
+<td align="justify">-1581.48</td>
+<td align="justify">-1581.48</td>
+<td align="justify">-1581.57</td>
+<td align="justify">13.547</td>
+</tr>
+<tr>
+<td align="justify">D3</td>
+<td align="justify">C<sub>22</sub>H<sub>26</sub>ClCuNO<sub>5</sub>(2)</td>
+<td align="justify">-1941.80</td>
+<td align="justify">-1941.80</td>
+<td align="justify">-1941.90</td>
+<td align="justify">13.328</td>
+</tr>
+<tr>
+<td align="justify">D4</td>
+<td align="justify">C<sub>22</sub>H<sub>26</sub>BrCuNO<sub>5</sub>(2)</td>
+<td align="justify">-1495.00</td>
+<td align="justify">-1495.00</td>
+<td align="justify">-1495.10</td>
+<td align="justify">13.299</td>
+</tr>
+<tr>
+<td align="justify">D5</td>
+<td align="justify">C<sub>22</sub>H<sub>26</sub>CuINO<sub>5</sub>(2)</td>
+<td align="justify">-1493.04</td>
+<td align="justify">-1493.03</td>
+<td align="justify">-1493.13</td>
+<td align="justify">13.070</td>
+</tr>
+<tr>
+<td align="justify">D6</td>
+<td align="justify">C<sub>23</sub>H<sub>25</sub>CuF<sub>3</sub>INO<sub>5</sub>(2)</td>
+<td align="justify">-1830.08</td>
+<td align="justify">-1830.08</td>
+<td align="justify">-1830.19</td>
+<td align="justify">12.787</td>
+</tr>
+<tr>
+<td align="justify">D7</td>
+<td align="justify">C<sub>26</sub>H<sub>29</sub>CuNO<sub>5</sub>(2)</td>
+<td align="justify">-1635.79</td>
+<td align="justify">-1635.79</td>
+<td align="justify">-1635.89</td>
+<td align="justify">11.360</td>
+</tr>
+<tr>
+<td align="justify">D8</td>
+<td align="justify">C<sub>30</sub>H<sub>31</sub>CuNO<sub>5</sub>(2)</td>
+<td align="justify">-1789.35</td>
+<td align="justify">-1789.35</td>
+<td align="justify">-1789.45</td>
+<td align="justify">11.821</td>
+</tr>
+<tr>
+<td align="justify">D9</td>
+<td align="justify">C<sub>30</sub>H<sub>30</sub>CuFNO<sub>5</sub>(2)</td>
+<td align="justify">-1888.61</td>
+<td align="justify">-1888.61</td>
+<td align="justify">-1888.71</td>
+<td align="justify">13.596</td>
+</tr>
+<tr>
+<td align="justify">D10</td>
+<td align="justify">C<sub>30</sub>H<sub>30</sub>ClCuNO<sub>5</sub>(2)</td>
+<td align="justify">-2248.93</td>
+<td align="justify">-2248.93</td>
+<td align="justify">-2249.04</td>
+<td align="justify">13.346</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>According to the <bold><xref ref-type="table" rid="pone.0211935.t001">Table 1</xref></bold>, it is clear that modifications on donepezil significantly influenced the structural properties of the compounds in terms of energy, partial charge distribution, and dipole moment. The highest energy, enthalpy, and Gibbs free energy was observed for D10, while D9 showed the highest dipole moment of 13.596 Debye, representing high polarity in nature. It is important to note that incorporation of the–CF<sub>3</sub> group in D5 significantly reduced the dipole moment, as can be seen in D6; however, D1, D7, D8 showed low dipole moments of 13.596 Debye due to the lack of halogens.</p>
+</sec>
+<sec id="sec010">
+<title>Analysis of frontier molecular orbitals</title>
+<p>The frontier molecular orbitals are the most important orbitals in a molecule and they are considered to characterize the chemical reactivity and kinetic stability. These frontier molecular orbitals are known as the highest occupied molecular orbital (HOMO) and the lowest unoccupied molecular orbital (LUMO). <bold><xref ref-type="table" rid="pone.0211935.t002">Table 2</xref></bold> represents the values of orbital energies, along with the two global chemical descriptors, hardness and softness, which are also calculated for all compounds. The highest softness was observed for D8. D8 also showed the lowest HOMO-LUMO gap and hardness, indicating that the molecule is more reactive than other compounds, according to Pearson <italic>et al</italic>. [<xref ref-type="bibr" rid="pone.0211935.ref039">39</xref>,<xref ref-type="bibr" rid="pone.0211935.ref040">40</xref>]. In <bold><xref ref-type="fig" rid="pone.0211935.g003">Fig 3</xref></bold>, the HOMO plot of compound D9 showed that the electrons were localized on the upper part of the piperidine ring, while the LUMO plot showed that the electrons were localized at modified Cu regions only.</p>
+<fig id="pone.0211935.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Molecular orbital distribution plots of HOMO and LUMO in the ground state of D9 analogue and donepezil at DFT/SDD level of theory in the gas phase.</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.g003" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0211935.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.t002</object-id>
+<label>Table 2</label> <caption><title>Energy of HOMOs, LUMO, gap, hardness and softness (all units are in Hartree) of the donepezil and its designed analogues.</title></caption>
+<alternatives>
+<graphic id="pone.0211935.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.t002" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">Molecules</th>
+<th align="center"><italic>ε</italic><sub><italic>HOMO-1</italic></sub></th>
+<th align="center"><italic>ε</italic><sub><italic>HOMO</italic></sub></th>
+<th align="center"><italic>ε</italic><sub><italic>LUMO</italic></sub></th>
+<th align="center"><italic>Gap</italic></th>
+<th align="center"><italic>η</italic> (Hardness)</th>
+<th align="center"><italic>S</italic><break/>(Softness)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Donepezil</td>
+<td align="center">-0.23073</td>
+<td align="center">-0.21374</td>
+<td align="center">-0.04412</td>
+<td align="center">0.16962</td>
+<td align="center">0.08481</td>
+<td align="center">11.7911</td>
+</tr>
+<tr>
+<td align="center">D1</td>
+<td align="center">-0.19606</td>
+<td align="center">-0.18662</td>
+<td align="center">-0.05973</td>
+<td align="center">0.12689</td>
+<td align="center">0.063445</td>
+<td align="center">15.7617</td>
+</tr>
+<tr>
+<td align="center">D2</td>
+<td align="center">-0.19405</td>
+<td align="center">-0.19230</td>
+<td align="center">-0.06407</td>
+<td align="center">0.12823</td>
+<td align="center">0.064115</td>
+<td align="center">15.5970</td>
+</tr>
+<tr>
+<td align="center">D3</td>
+<td align="center">-0.19398</td>
+<td align="center">-0.19335</td>
+<td align="center">-0.06368</td>
+<td align="center">0.12967</td>
+<td align="center">0.064835</td>
+<td align="center">15.4238</td>
+</tr>
+<tr>
+<td align="center">D4</td>
+<td align="center">-0.19498</td>
+<td align="center">-0.19336</td>
+<td align="center">-0.06365</td>
+<td align="center">0.12971</td>
+<td align="center">0.064855</td>
+<td align="center">15.4190</td>
+</tr>
+<tr>
+<td align="center">D5</td>
+<td align="center">-0.19536</td>
+<td align="center">-0.19256</td>
+<td align="center">-0.06432</td>
+<td align="center">0.12824</td>
+<td align="center">0.06412</td>
+<td align="center">15.5958</td>
+</tr>
+<tr>
+<td align="center">D6</td>
+<td align="center">-0.20900</td>
+<td align="center">-0.19490</td>
+<td align="center">-0.06797</td>
+<td align="center">0.12693</td>
+<td align="center">0.063465</td>
+<td align="center">15.7567</td>
+</tr>
+<tr>
+<td align="center">D7</td>
+<td align="center">-0.19577</td>
+<td align="center">-0.18635</td>
+<td align="center">-0.05953</td>
+<td align="center">0.12682</td>
+<td align="center">0.06341</td>
+<td align="center">15.7703</td>
+</tr>
+<tr>
+<td align="center">D8</td>
+<td align="center">-0.19064</td>
+<td align="center">-0.18695</td>
+<td align="center">-0.06296</td>
+<td align="center">0.12399</td>
+<td align="center">0.061995</td>
+<td align="center">16.1303</td>
+</tr>
+<tr>
+<td align="center">D9</td>
+<td align="center">-0.19382</td>
+<td align="center">-019036</td>
+<td align="center">-0.06383</td>
+<td align="center">0.12653</td>
+<td align="center">0.063265</td>
+<td align="center">15.8065</td>
+</tr>
+<tr>
+<td align="center">D10</td>
+<td align="center">-0.19344</td>
+<td align="center">-0.19093</td>
+<td align="center">-0.06358</td>
+<td align="center">0.12735</td>
+<td align="center">0.063675</td>
+<td align="center">15.70475</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+</sec>
+<sec id="sec011">
+<title>Molecular docking analysis</title>
+<p>In order to check the binding modes of modified compounds, molecular docking simulations by Autodock Vina were performed. Molecular docking is one of the most common methods used in structure based drug design to analyze the interaction between a small molecule and a protein at the atomic level. Prior to docking, the crystal pose of donepezil was re-docked into the binding site of AChE with specific docking parameters and scoring functions, to check whether the docking software is reliable for the system. The conformation having the lowest negative score was then compared with the crystal pose. The value of the root mean square deviation (RMSD) of the docked conformation with respect to experimental conformation was 1.9659 Å (<bold><xref ref-type="fig" rid="pone.0211935.g004">Fig 4</xref></bold>), signifying the reliability of the docking protocol, as the threshold of reliability is 2.0 Å for a good docking protocol.</p>
+<fig id="pone.0211935.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Predicted pose from molecular docking by Autodock Vina.</title>
+<p>Here, the stick representations of ligands denote the superimposed view of docked (pink) and co-crystallized ligand (green).</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.g004" xlink:type="simple"/>
+</fig>
+<p>Afterward, all designed analogues were docked into the same binding site pocket of AChE, using similar optimized docking conditions. The outcomes of the docking analysis showed that all compounds, along with the parent compound, obtain binding affinities ranging from -10.2 to -14.9 kcal/mol. As shown in <bold><xref ref-type="table" rid="pone.0211935.t003">Table 3</xref></bold>, D4, D5, D6 showed low binding affinities compared to parent compound, donepezil, while D1 exhibited high binding affinity. These results indicated that modification of Cu along with a water molecule increased the binding affinity, while addition of halogen groups like Br, I, and CF<sub>3</sub> made some fluctuations in binding affinities; however, modification with naphthalene and anthracene rings increased the binding affinity. As shown with D7 and D8, obtained docking affinities of -13.9 and -14.8 kcal/mol were determined, respectively. The highest binding affinity was observed for the D9 compound. According to the post docking analysis, it was revealed that all compounds, except D6, showed π-alkyl interactions with Tyr337 and Phe338 residues of the PAS in the active site of the enzyme. D6 is positioned to form stabilizing π-alkyl interactions with Trp286, Tyr337, Tyr341 residues. Furthermore, it was also observed that modifications of donepezil increased the π-π interactions with the residues of the active site, while increasing their polarity resulted in the formation of hydrogen bonding interactions. The highest H-bonds were obtained for the D10 compound, forming with Gln291, Ser293, Phe295, Arg296 residues. In contrast, D7, D8, and D9 formed three H-bonds with Tyr72 and Phe295 residues. D8 and D9 showed similar binding conformations, despite having different bonding distances. Along with Trp286, D8, D9, and D10 displayed the maximum π- π interactions with the Trp86 residue denoting the tight binding with the activesite. Reports suggest that Trp286 is considered as the principal component of the PAS, responsible for the accessibility of small molecules to the active site and also in the allosterism, while aromatic interactions with the Trp286 residue modulates the inhibition constants for some AChE inhibitors [<xref ref-type="bibr" rid="pone.0211935.ref041">41</xref>,<xref ref-type="bibr" rid="pone.0211935.ref042">42</xref>]. As the D9 compound showed the highest binding affinity (<bold><xref ref-type="fig" rid="pone.0211935.g005">Fig 5</xref></bold>), it was subjected for subsequent MD, along with donepezil, to investigate the dynamic stability of the AChE-inhibitor complex, and also, to ensure the rationality of the sampling strategy.</p>
+<fig id="pone.0211935.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Predicted pose from the docking analysis showed the binding orientation map of important amino acids for analogue D9, showing hydrogen bond interaction (green color), including π–π stacking (pink color).</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.g005" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0211935.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.t003</object-id>
+<label>Table 3</label> <caption><title>Binding affinity (kcal/mol) and nonbonding interactions of donepezil and its designed analogues.</title></caption>
+<alternatives>
+<graphic id="pone.0211935.t003g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.t003" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="3">Compound</th>
+<th align="center" rowspan="3">Binding Affinity<break/>(kcal/mol)</th>
+<th align="center" colspan="4">Hydrophobic</th>
+<th align="center" colspan="4">Hydrogen Bond</th>
+</tr>
+<tr>
+<th align="center" rowspan="2">Bonding Type</th>
+<th align="center">Protein</th>
+<th align="center">Ligand</th>
+<th align="center" rowspan="2">Distance (Å)</th>
+<th align="center" rowspan="2">Bonding<break/>Type</th>
+<th align="center">Protein</th>
+<th align="center">Ligand</th>
+<th align="center" rowspan="2">Distance (Å)</th>
+</tr>
+<tr>
+<th align="center">Interacting Amino Acids</th>
+<th align="center">Interacting Atoms or Rings</th>
+<th align="center">Interacting Amino Acids</th>
+<th align="center">Interacting Atoms or Rings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" rowspan="8">Donepezil</td>
+<td align="center" rowspan="8">-11.9</td>
+<td align="center" rowspan="3">Pi-Alkyl</td>
+<td align="center">TYR337</td>
+<td align="center">X</td>
+<td align="center">5.344</td>
+<td align="center" rowspan="8"/>
+<td align="center" rowspan="8"/>
+<td align="center" rowspan="8"/>
+<td align="center" rowspan="8"/>
+</tr>
+<tr>
+<td align="center">PHE338</td>
+<td align="center">X</td>
+<td align="center">4.865</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X</td>
+<td align="center">5.342</td>
+</tr>
+<tr>
+<td align="center" rowspan="5">Pi-Pi Stacked</td>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.175</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X1</td>
+<td align="center">5.303</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">3.732</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">4.373</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.466</td>
+</tr>
+<tr>
+<td align="center" rowspan="8">D1</td>
+<td align="center" rowspan="8">-12.3</td>
+<td align="center" rowspan="3">Pi-Alky</td>
+<td align="center">TYR337</td>
+<td align="center">X</td>
+<td align="center">5.084</td>
+<td align="center" rowspan="8">Conventional</td>
+<td align="center" rowspan="8">PHE295</td>
+<td align="center" rowspan="8">H…O</td>
+<td align="center" rowspan="8">1.917</td>
+</tr>
+<tr>
+<td align="center">PHE338</td>
+<td align="center">X</td>
+<td align="center">5.194</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X</td>
+<td align="center">4.847</td>
+</tr>
+<tr>
+<td align="center" rowspan="5">Pi-Pi Stacked</td>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.039</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X1</td>
+<td align="center">5.124</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">3.731</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">4.367</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.213</td>
+</tr>
+<tr>
+<td align="center" rowspan="10">D2</td>
+<td align="center" rowspan="10">-12.7</td>
+<td align="center" rowspan="3">Pi-Alkyl</td>
+<td align="center">TYR337</td>
+<td align="center">X</td>
+<td align="center">4.703</td>
+<td align="center" rowspan="10">Conventional</td>
+<td align="center" rowspan="10">TYR124</td>
+<td align="center" rowspan="10">H…O</td>
+<td align="center" rowspan="10">2.739</td>
+</tr>
+<tr>
+<td align="center">PHE338</td>
+<td align="center">X</td>
+<td align="center">5.171</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X</td>
+<td align="center">4.613</td>
+</tr>
+<tr>
+<td align="center" rowspan="6">Pi-Pi Stacked</td>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.068</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X1</td>
+<td align="center">5.302</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">4.025</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">4.430</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.355</td>
+</tr>
+<tr>
+<td align="center">HIS447</td>
+<td align="center">X</td>
+<td align="center">5.353</td>
+</tr>
+<tr>
+<td align="center">Pi-Sigma</td>
+<td align="center">TYR341</td>
+<td align="center">H…X</td>
+<td align="center">2.589</td>
+</tr>
+<tr>
+<td align="center" rowspan="9">D3</td>
+<td align="center" rowspan="9">-12.4</td>
+<td align="center" rowspan="3">Pi-Alkyl</td>
+<td align="center">TYR337</td>
+<td align="center">X</td>
+<td align="center">4.770</td>
+<td align="center" rowspan="9">Conventional</td>
+<td align="center" rowspan="9">PHE295</td>
+<td align="center" rowspan="9">H…O</td>
+<td align="center" rowspan="9">1.944</td>
+</tr>
+<tr>
+<td align="center">PHE338</td>
+<td align="center">X</td>
+<td align="center">5.276</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X</td>
+<td align="center">4.497</td>
+</tr>
+<tr>
+<td align="center" rowspan="6">Pi-Pi Stacked</td>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.017</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X1</td>
+<td align="center">5.387</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">3.954</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">4.301</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.244</td>
+</tr>
+<tr>
+<td align="center">HIS447</td>
+<td align="center">X</td>
+<td align="center">5.369</td>
+</tr>
+<tr>
+<td align="center" rowspan="9">D4</td>
+<td align="center" rowspan="9">-11.2</td>
+<td align="center" rowspan="3">Pi-Alkyl</td>
+<td align="center">TYR337</td>
+<td align="center">X</td>
+<td align="center">4.457</td>
+<td align="center" rowspan="9">Conventional</td>
+<td align="center" rowspan="9">PHE295</td>
+<td align="center" rowspan="9">H…O</td>
+<td align="center" rowspan="9">1.905</td>
+</tr>
+<tr>
+<td align="center">PHE338</td>
+<td align="center">X</td>
+<td align="center">5.025</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X</td>
+<td align="center">4.665</td>
+</tr>
+<tr>
+<td align="center" rowspan="6">Pi-Pi Stacked</td>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.202</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X1</td>
+<td align="center">5.099</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">3.751</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">4.341</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.541</td>
+</tr>
+<tr>
+<td align="center">HIS447</td>
+<td align="center">X</td>
+<td align="center">5.864</td>
+</tr>
+<tr>
+<td align="center" rowspan="7">D5</td>
+<td align="center" rowspan="7">-10.2</td>
+<td align="center" rowspan="3">Pi-Alkyl</td>
+<td align="center">TYR337</td>
+<td align="center">X</td>
+<td align="center">4.301</td>
+<td align="center" rowspan="7">Conventional</td>
+<td align="center" rowspan="7">PHE295</td>
+<td align="center" rowspan="7">H…O</td>
+<td align="center" rowspan="7">2.021</td>
+</tr>
+<tr>
+<td align="center">PHE338</td>
+<td align="center">X</td>
+<td align="center">4.988</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X</td>
+<td align="center">4.797</td>
+</tr>
+<tr>
+<td align="center" rowspan="4">Pi-Pi Stacked</td>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.367</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X1</td>
+<td align="center">5.015</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">3.782</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">4.410</td>
+</tr>
+<tr>
+<td align="center" rowspan="5">D6</td>
+<td align="center" rowspan="5">-10.8</td>
+<td align="center" rowspan="3">Pi-Alkyl</td>
+<td align="center">TRP286</td>
+<td align="center">X</td>
+<td align="center">4.113</td>
+<td align="center" rowspan="5">Conventional</td>
+<td align="center" rowspan="5">LEU289</td>
+<td align="center" rowspan="5">H…O</td>
+<td align="center" rowspan="5">1.922</td>
+</tr>
+<tr>
+<td align="center">TYR337</td>
+<td align="center">X</td>
+<td align="center">4.138</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X</td>
+<td align="center">4.894</td>
+</tr>
+<tr>
+<td align="center" rowspan="2">Pi-Pi T-Shaped</td>
+<td align="center">TYR337</td>
+<td align="center">X</td>
+<td align="center">5.922</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X</td>
+<td align="center">4.780</td>
+</tr>
+<tr>
+<td align="center" rowspan="11">D7</td>
+<td align="center" rowspan="11">-13.9</td>
+<td align="center" rowspan="4">Pi-Alkyl</td>
+<td align="center">TYR337</td>
+<td align="center">X2</td>
+<td align="center">5.408</td>
+<td align="center" rowspan="11">Conventional</td>
+<td align="center" rowspan="2">TYR72</td>
+<td align="center" rowspan="2">C–H…O</td>
+<td align="center" rowspan="2">2.717</td>
+</tr>
+<tr>
+<td align="center" rowspan="3">PHE338</td>
+<td align="center" rowspan="3">X2</td>
+<td align="center" rowspan="3">4.826</td>
+</tr>
+<tr>
+<td align="center">TYR72</td>
+<td align="center">C–H…O</td>
+<td align="center">2.745</td>
+</tr>
+<tr>
+<td align="center" rowspan="8">PHE295</td>
+<td align="center" rowspan="8">C–H…O</td>
+<td align="center" rowspan="8">2.497</td>
+</tr>
+<tr>
+<td align="center" rowspan="6">Pi-Pi Stacked</td>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.071</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.142</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">3.830</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.453</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.363</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.951</td>
+</tr>
+<tr>
+<td align="center">Pi-Sigma</td>
+<td align="center">TYR341</td>
+<td align="center">H…X2</td>
+<td align="center">2.735</td>
+</tr>
+<tr>
+<td align="center" rowspan="13">D8</td>
+<td align="center" rowspan="13">-14.8</td>
+<td align="center" rowspan="2">Pi-Alkyl</td>
+<td align="center">TYR337</td>
+<td align="center">X3</td>
+<td align="center">5.452</td>
+<td align="center" rowspan="13">Conventional</td>
+<td align="center" rowspan="4">TYR72</td>
+<td align="center" rowspan="4">H…O</td>
+<td align="center" rowspan="4">2.285</td>
+</tr>
+<tr>
+<td align="center">PHE338</td>
+<td align="center">X3</td>
+<td align="center">4.739</td>
+</tr>
+<tr>
+<td align="center" rowspan="9">Pi-Pi Stacked</td>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.119</td>
+</tr>
+<tr>
+<td align="center" rowspan="3">TRP86</td>
+<td align="center" rowspan="3">X3</td>
+<td align="center" rowspan="3">4.501</td>
+</tr>
+<tr>
+<td align="center">TYR72</td>
+<td align="center">H…O</td>
+<td align="center">2.731</td>
+</tr>
+<tr>
+<td align="center" rowspan="8">PHE295</td>
+<td align="center" rowspan="8">H…O</td>
+<td align="center" rowspan="8">2.486</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">3.884</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">4.154</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">4.683</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">4.977</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.003</td>
+</tr>
+<tr>
+<td align="center">Pi-Pi T-Shaped</td>
+<td align="center">TYR124</td>
+<td align="center">X3</td>
+<td align="center">5.784</td>
+</tr>
+<tr>
+<td align="center">Pi-Sigma</td>
+<td align="center">TYR341</td>
+<td align="center">H…X3</td>
+<td align="center">2.62</td>
+</tr>
+<tr>
+<td align="center" rowspan="13">D9</td>
+<td align="center" rowspan="13">-14.9</td>
+<td align="center" rowspan="4">Pi-Alkyl</td>
+<td align="center" rowspan="3">TYR337</td>
+<td align="center" rowspan="3">X3</td>
+<td align="center" rowspan="3">5.367</td>
+<td align="center" rowspan="13">Conventional</td>
+<td align="center">TYR72</td>
+<td align="center">H…O</td>
+<td align="center">3.069</td>
+</tr>
+<tr>
+<td align="center">TYR72</td>
+<td align="center">H…O</td>
+<td align="center">2.741</td>
+</tr>
+<tr>
+<td align="center" rowspan="11">PHE295</td>
+<td align="center" rowspan="11">H…O</td>
+<td align="center" rowspan="11">2.755</td>
+</tr>
+<tr>
+<td align="center">PHE338</td>
+<td align="center">X3</td>
+<td align="center">4.850</td>
+</tr>
+<tr>
+<td align="center" rowspan="7">Pi-Pi Stacked</td>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.097</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">4.454</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">3.880</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">4.144</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">4.724</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">4.926</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.888</td>
+</tr>
+<tr>
+<td align="center">Pi-Pi T-Shaped</td>
+<td align="center">TYR124</td>
+<td align="center">X3</td>
+<td align="center">5.809</td>
+</tr>
+<tr>
+<td align="center">Pi-Sigma</td>
+<td align="center">TYR341</td>
+<td align="center">H…X3</td>
+<td align="center">2.48</td>
+</tr>
+<tr>
+<td align="center" rowspan="12">D10</td>
+<td align="center" rowspan="12">-14.7</td>
+<td align="center" rowspan="4">Pi-Alkyl</td>
+<td align="center">TYR337</td>
+<td align="center">X3</td>
+<td align="center">5.292</td>
+<td align="center" rowspan="12">Conventional</td>
+<td align="center" rowspan="3">GLN291</td>
+<td align="center" rowspan="3">H…O</td>
+<td align="center" rowspan="3">2.412</td>
+</tr>
+<tr>
+<td align="center">PHE338</td>
+<td align="center">X3</td>
+<td align="center">5.289</td>
+</tr>
+<tr>
+<td align="center" rowspan="2">TYR341</td>
+<td align="center" rowspan="2">X3</td>
+<td align="center" rowspan="2">3.914</td>
+</tr>
+<tr>
+<td align="center">SER293</td>
+<td align="center">H…O</td>
+<td align="center">2.380</td>
+</tr>
+<tr>
+<td align="center" rowspan="8">Pi-Pi Stacked</td>
+<td align="center" rowspan="2">TRP286</td>
+<td align="center" rowspan="2">X1</td>
+<td align="center" rowspan="2">4.282</td>
+<td align="center">PHE295</td>
+<td align="center">H…O</td>
+<td align="center">1.667</td>
+</tr>
+<tr>
+<td align="center" rowspan="7">ARG296</td>
+<td align="center" rowspan="7">H…O</td>
+<td align="center" rowspan="7">2.851</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">4.576</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">3.842</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">3.921</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">4.109</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X3</td>
+<td align="center">5.104</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.705</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t003fn001"><p>Here X, X1, X2, X3 indicates that, X = Benzyl-4-piperidyl, X1 = 2,3-dihydro-1H-inden-1-one, X2 = Naphthalen-1-ylmethyl-4-piperidyl, X3 = Anthracen-9-ylmethyl-4-piperidyl</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>Furthermore, to understand how D9 showed its binding modes with different metals, different metal atoms such as Fe, Co, Zn and Ni were inserted to the same position of D9 where Cu is present and they are renamed as D9-Fe, D9-Co, D9-Zn and D9-Ni, respectively (<bold><xref ref-type="supplementary-material" rid="pone.0211935.s005">S1 Fig</xref></bold>). These analogues were optimized by DFT and the subsequent molecular docking was performed by the same protocol discussed above in the methods section. Afterward, obtained results were represented in <bold><xref ref-type="supplementary-material" rid="pone.0211935.s001">S1 Table</xref></bold>. As shown in <bold><xref ref-type="supplementary-material" rid="pone.0211935.s001">S1 Table</xref></bold>, D9-Fe, D9-Co, D9-Zn, D9-Ni showed low binding affinities compared to D9. As per the post docking analysis, it is shown that D9-Fe, D9-Co, D9-Zn showed the π-alkyl interactions with Tyr337 and Phe338 residues of the PAS of the active site of the enzyme, like D9, respectively, while the Val294 residue only formed π-alkyl interaction with D9-Ni. In addition, it was revealed that all of the modified D9 compounds, except D9-Ni, showed maximum π-π interactions with Trp286 and Trp86. D9-Ni formed major π-π interaction with Trp286 along with the Tyr341 residue, which was also observed in D9-Co and D9-Zn. Furthermore, D9-Co and D9-Zn formed a hydrogen bond with the Phe295 residue while D9-Fe forms H-bonding with both Phe295 and Tyr72 residue, as like the D9 compound (illustrated in <bold><xref ref-type="supplementary-material" rid="pone.0211935.s006">S2 Fig</xref></bold>). From the different metal based study of D9, analysis finally revealed that D9-Cu performs better binding than other candidates.</p>
+</sec>
+<sec id="sec012">
+<title>Molecular dynamics simulations</title>
+<p>In order to understand the binding mechanism, structural behavior, and flexibility of compound D9, we performed MD simulations for 25 ns. The complex of donepezil-protein was also subjected to MD simulation as a reference compound. The atomic RMSDs of the Cα atoms for both protein and the ligand of each complex were calculated and plotted in a time dependent manner (<bold><xref ref-type="fig" rid="pone.0211935.g006">Fig 6</xref>)</bold>. <bold><xref ref-type="fig" rid="pone.0211935.g006">Fig 6A</xref></bold> demonstrats the behavior of the protein during the simulation; in which, both complexes were observed to achieve equilibrium after 5 ns and fluctuated around 0.5 Å. However, after 20 ns, D9 complex showed lower RMSD and remained afterward. Similar results were also obtained for ligands of each complex, as shown in <bold><xref ref-type="fig" rid="pone.0211935.g006">Fig 6B</xref></bold>. As can be seen in the plot, high fluctuation in RMSDs was observed for donepezil, where the high magnitudes were observed at 16 ns to 18 ns. The RMSD results from both protein and ligand indicated that the complexes were stable, suggesting higher stability of D9 in comparison with donepezil.</p>
+<fig id="pone.0211935.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title/>
+<p>The time series of the RMSD of backbone atoms (C, Cα, and N) for a) protein and b) ligand for each docked complex. Here, red and blue lines denote donepezil and D9 complex respectively.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.g006" xlink:type="simple"/>
+</fig>
+<p>For better understanding on how D9 and donepezil influence the binding mode with AChE, the structural changes of two complexes were examined by means of root mean square fluctuation (RMSF), radius of gyration, and solvent accessible surface area (SASA) of the protein (<bold><xref ref-type="fig" rid="pone.0211935.g007">Fig 7</xref></bold>). <bold><xref ref-type="fig" rid="pone.0211935.g007">Fig 7A</xref></bold> represents the total SASA of each protein, in which the D9 compound showed decreased SASA after 15 ns of simulation, demonstrating lower compactness of the protein structure. In contrast, the results from the radius of gyration analysis (<bold><xref ref-type="fig" rid="pone.0211935.g007">Fig 7B</xref>)</bold> described that D9 comparatively produced a higher radius of gyration value than donepezil, denoting loose packing of the protein structure, which eventfully supported the results from the SASA analysis. RMSF values were also calculated from the trajectories, which reflect the flexibility of each residue in the protein[<xref ref-type="bibr" rid="pone.0211935.ref043">43</xref>][<xref ref-type="bibr" rid="pone.0211935.ref043">43</xref>][<xref ref-type="bibr" rid="pone.0211935.ref043">43</xref>][<xref ref-type="bibr" rid="pone.0211935.ref043">43</xref>][<xref ref-type="bibr" rid="pone.0211935.ref043">43</xref>][<xref ref-type="bibr" rid="pone.0211935.ref043">43</xref>][<xref ref-type="bibr" rid="pone.0211935.ref043">43</xref>][<xref ref-type="bibr" rid="pone.0211935.ref043">43</xref>][<xref ref-type="bibr" rid="pone.0211935.ref043">43</xref>][<xref ref-type="bibr" rid="pone.0211935.ref042">42</xref>][<xref ref-type="bibr" rid="pone.0211935.ref041">41</xref>][<xref ref-type="bibr" rid="pone.0211935.ref040">40</xref>][<xref ref-type="bibr" rid="pone.0211935.ref040">40</xref>][<xref ref-type="bibr" rid="pone.0211935.ref040">40</xref>][<xref ref-type="bibr" rid="pone.0211935.ref040">40</xref>][<xref ref-type="bibr" rid="pone.0211935.ref040">40</xref>][<xref ref-type="bibr" rid="pone.0211935.ref039">39</xref>]. According to <bold><xref ref-type="fig" rid="pone.0211935.g007">Fig 7C</xref></bold>, it was observed that D9 induced flexibility to some residues in the protein. Highest fluctuations were observed in several regions, ranging from 116–125, 280–290, 310–320, 361–370, and 505–515. Finally, the information of hydrogen bonding interactions formed within the protein, and also between the protein and ligand at the catalytic domain, was collected from the trajectories and represented in <bold><xref ref-type="fig" rid="pone.0211935.g008">Fig 8A</xref></bold>. Here, the D9 complex showed maximum intramolecular hydrogen bonds in the donepezil complex, demonstrating the stability of the complex. The intermolecular hydrogen bond analysis between the protein and ligand displayed that donepezil and D9 formed hydrogen bonds with the residues of the catalytic domain (<bold><xref ref-type="fig" rid="pone.0211935.g008">Fig 8B</xref></bold>). At the initial step, D9 did not show much interaction; however, after 11 ns, it showed several H-bond contacts. Consequently, donepezil revealed no hydrogen bonding in the docking pose, although it detected several contacts during the simulations. As a corollary, all analyses from the MD simulations suggested that D9 is more stable than donepezil and caused little conformational changes of the protein by undergoing little movement during the MD simulations <bold>(<xref ref-type="fig" rid="pone.0211935.g009">Fig 9</xref>)</bold>.</p>
+<fig id="pone.0211935.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title/>
+<p>The structural changes of protein by means of a) solvent accessible surface area (SASA), b) radius of gyration, and c) root means square fluctuations (RMSF) analysis. Here, red and blue lines denote donepezil and D9 complex, respectively.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.g007" xlink:type="simple"/>
+</fig>
+<fig id="pone.0211935.g008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.g008</object-id>
+<label>Fig 8</label>
+<caption>
+<title/>
+<p>Total number of hydrogen bonds formed a) within the protein and b) between the protein and ligand in complex state during the simulation. Here, red and blue lines denote donepezil and D9 complex, respectively.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.g008" xlink:type="simple"/>
+</fig>
+<fig id="pone.0211935.g009" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.g009</object-id>
+<label>Fig 9</label>
+<caption>
+<title>Conformational changes of the D9-AChE complex.</title>
+<p>Here, the stick model of the ligand in blue color represents the starting conformation of the complex, while the green color represents the conformation of last step in the 25 ns long MD simulation.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.g009" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec013">
+<title>Ensemble based docking</title>
+<p>Usually, proteins are flexible macromolecules in nature. However, this property significantly influences ligand binding, especially in molecular reorganization and interactions [<xref ref-type="bibr" rid="pone.0211935.ref044">44</xref>]. Compared to the other program, AutoDock Vina is the most popular docking program to determine the binding pose of the ligand, yet suffers from backbone flexibility in receptors. Therefore, ensemble based molecular docking by AutoDock Vina has been introduced in this study to overcome this limitation. The results obtained are represented in <bold><xref ref-type="table" rid="pone.0211935.t004">Table 4</xref> and <xref ref-type="table" rid="pone.0211935.t005">Table 5</xref></bold>. <bold><xref ref-type="table" rid="pone.0211935.t004">Table 4</xref></bold> and <bold><xref ref-type="fig" rid="pone.0211935.g010">Fig 10A</xref></bold> describe the binding affinity of all ligands with different crystallographic conformations of the AChE enzyme. Interestingly, designed compounds showed better results than the standard drug, donepezil. Among these crystal conformers, designed compounds and donepezil produced best docking scores against the 5foq conformer (<bold><xref ref-type="fig" rid="pone.0211935.g010">Fig 10A</xref>)</bold>, and therefore, detailed molecular interactions of this conformer have been investigated and illustrated in <bold><xref ref-type="table" rid="pone.0211935.t006">Table 6</xref></bold>. As can be seen in <bold><xref ref-type="table" rid="pone.0211935.t006">Table 6</xref></bold>, the D9 compound formed two additional hydrophobic interactions with Tyr341 and Trp286 residues followed by π-alkyl and π-π stacked bonds, and also obtained the highest docking score. In case of D8 compound, additional hydrogen bonds were observed with Ser293 and Trp286 residues, while the polar interactions with Tyr72 and Phe295 were seen to disappear. Similarly, loss of hydrogen bonds was also observed for Gln291, Phe295, and Arg296 residues. All ligands showed better binding affinities against the conformer obtained from MD simulation at 17 ns, as shown in <bold><xref ref-type="table" rid="pone.0211935.t005">Table 5</xref></bold> and <bold><xref ref-type="fig" rid="pone.0211935.g010">Fig 10B</xref></bold>. Detailed molecular interactions were illustrated in <bold><xref ref-type="table" rid="pone.0211935.t006">Table 6</xref></bold> which represents the breakdown of π-alkyl interactions of Tyr341, Tyr337, and Tyr124 residues. Instead, they formed π-π stacking with the ligands. Also, D9 and D10 compounds showed an additional salt bridge with the Asp74 residue followed by π-cation interactions. It is noteworthy to state that the flexibility of AChE is the major determinant of the binding affinity of the ligands, as evident from ensemble-based docking. π-π stacking with the residues of Trp86, Tyr337, Tyr341, Tyr124, and Trp286 showed a major contribution for strong drug binding and activity. Our study suggested that protein flexibility can give rise to differences in binding affinity and binding interaction of a drug with its target protein.</p>
+<fig id="pone.0211935.g010" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.g010</object-id>
+<label>Fig 10</label>
+<caption>
+<title>Binding affinities of designed ligands and standard inhibitor, obtained from ensemble based docking analysis.</title>
+<p>Here, binding affinities of D8, D9, D10, and donepezil against multiple AChE conformers from a) protein data bank and b) 25 ns MD simulation.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.g010" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0211935.t004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.t004</object-id>
+<label>Table 4</label> <caption><title>Ensemble based docking against all crystal structures of AChE.</title></caption>
+<alternatives>
+<graphic id="pone.0211935.t004g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.t004" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">PDB ID</th>
+<th align="center">Resolution (Å)</th>
+<th align="center">Sequence<break/>Positions</th>
+<th align="center">Donepezil</th>
+<th align="center">D8</th>
+<th align="center">D9</th>
+<th align="center">D10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1b41</td>
+<td align="center">2.76</td>
+<td align="center">36–574</td>
+<td align="center">-8.6</td>
+<td align="center">-11.2</td>
+<td align="center">-11.6</td>
+<td align="center">-11.6</td>
+</tr>
+<tr>
+<td align="center">1f8u</td>
+<td align="center">2.90</td>
+<td align="center">32–614</td>
+<td align="center">-8.8</td>
+<td align="center">-11.3</td>
+<td align="center">-11.6</td>
+<td align="center">-11.7</td>
+</tr>
+<tr>
+<td align="center">1vzj</td>
+<td align="center">2.35</td>
+<td align="center">575–614</td>
+<td align="center">-6</td>
+<td align="center">-7.3</td>
+<td align="center">-7.5</td>
+<td align="center">-7.5</td>
+</tr>
+<tr>
+<td align="center">2x8b</td>
+<td align="center">2.95</td>
+<td align="center">32–614</td>
+<td align="center">-9</td>
+<td align="center">-11.2</td>
+<td align="center">-11.6</td>
+<td align="center">-11.4</td>
+</tr>
+<tr>
+<td align="center">3lii</td>
+<td align="center">3.20</td>
+<td align="center">35–574</td>
+<td align="center">-9.1</td>
+<td align="center">-12</td>
+<td align="center">-11.9</td>
+<td align="center">-11.8</td>
+</tr>
+<tr>
+<td align="center">4bdt</td>
+<td align="center">3.10</td>
+<td align="center">32–614</td>
+<td align="center">-8.5</td>
+<td align="center">-11</td>
+<td align="center">-11.2</td>
+<td align="center">-11.3</td>
+</tr>
+<tr>
+<td align="center">4ey6</td>
+<td align="center">2.40</td>
+<td align="center">33–574</td>
+<td align="center">-8.3</td>
+<td align="center">-11.7</td>
+<td align="center">-12</td>
+<td align="center">-11.6</td>
+</tr>
+<tr>
+<td align="center">4ey8</td>
+<td align="center">2.60</td>
+<td align="center">33–574</td>
+<td align="center">-8.8</td>
+<td align="center">-11</td>
+<td align="center">-10.7</td>
+<td align="center">-11.2</td>
+</tr>
+<tr>
+<td align="center">4moe</td>
+<td align="center">2.00</td>
+<td align="center">33–574</td>
+<td align="center">-8.6</td>
+<td align="center">-10.6</td>
+<td align="center">-10.8</td>
+<td align="center">-10.5</td>
+</tr>
+<tr>
+<td align="center">4pqe</td>
+<td align="center">2.90</td>
+<td align="center">32–574</td>
+<td align="center">-8.3</td>
+<td align="center">-11.1</td>
+<td align="center">-11.1</td>
+<td align="center">-10.7</td>
+</tr>
+<tr>
+<td align="center">5foq</td>
+<td align="center">2.30</td>
+<td align="center">32–576</td>
+<td align="center">-12.2</td>
+<td align="center">-14.5</td>
+<td align="center">-14.7</td>
+<td align="center">-13.8</td>
+</tr>
+<tr>
+<td align="center">5fpq</td>
+<td align="center">2.40</td>
+<td align="center">33–574</td>
+<td align="center">-9.1</td>
+<td align="center">-11</td>
+<td align="center">-11.2</td>
+<td align="center">-11.4</td>
+</tr>
+<tr>
+<td align="center">5hf5</td>
+<td align="center">2.15</td>
+<td align="center">33–574</td>
+<td align="center">-8.8</td>
+<td align="center">-10</td>
+<td align="center">-10.2</td>
+<td align="center">-10.4</td>
+</tr>
+<tr>
+<td align="center">5hf6</td>
+<td align="center">2.30</td>
+<td align="center">33–574</td>
+<td align="center">-8.9</td>
+<td align="center">-10.8</td>
+<td align="center">-10.3</td>
+<td align="center">-11</td>
+</tr>
+<tr>
+<td align="center">5hf8</td>
+<td align="center">2.80</td>
+<td align="center">33–574</td>
+<td align="center">-9.2</td>
+<td align="center">-11.1</td>
+<td align="center">-11.5</td>
+<td align="center">-8.9</td>
+</tr>
+<tr>
+<td align="center">5hf9</td>
+<td align="center">2.20</td>
+<td align="center">33–574</td>
+<td align="center">-7.9</td>
+<td align="center">-12.6</td>
+<td align="center">-9.9</td>
+<td align="center">-12.3</td>
+</tr>
+<tr>
+<td align="center">5hfa</td>
+<td align="center">2.20</td>
+<td align="center">33–574</td>
+<td align="center">-7.2</td>
+<td align="center">-9.2</td>
+<td align="center">-9</td>
+<td align="center">-9</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<table-wrap id="pone.0211935.t005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.t005</object-id>
+<label>Table 5</label> <caption><title>Binding affinity values of donepezil, D8, D9, and D10 docked against multiple AChE conformers generated by 25 ns MD simulation.</title></caption>
+<alternatives>
+<graphic id="pone.0211935.t005g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.t005" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">MD Conformers</th>
+<th align="left">Donepezil</th>
+<th align="left">D8</th>
+<th align="left">D9</th>
+<th align="left">D10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1ns</td>
+<td align="center">-10.5</td>
+<td align="center">-13.0</td>
+<td align="center">-14.5</td>
+<td align="center">-14.0</td>
+</tr>
+<tr>
+<td align="center">2ns</td>
+<td align="center">-10.6</td>
+<td align="center">-14.3</td>
+<td align="center">-14.2</td>
+<td align="center">-14.7</td>
+</tr>
+<tr>
+<td align="center">3ns</td>
+<td align="center">-11.4</td>
+<td align="center">-12.4</td>
+<td align="center">-14.6</td>
+<td align="center">-11.6</td>
+</tr>
+<tr>
+<td align="center">4ns</td>
+<td align="center">-10.1</td>
+<td align="center">-13</td>
+<td align="center">-14.3</td>
+<td align="center">-13.7</td>
+</tr>
+<tr>
+<td align="center">5ns</td>
+<td align="center">-10.5</td>
+<td align="center">-13.9</td>
+<td align="center">-14.7</td>
+<td align="center">-10.8</td>
+</tr>
+<tr>
+<td align="center">6ns</td>
+<td align="center">-10.8</td>
+<td align="center">-13.9</td>
+<td align="center">-14.0</td>
+<td align="center">-14.6</td>
+</tr>
+<tr>
+<td align="center">7ns</td>
+<td align="center">-10.0</td>
+<td align="center">-13.6</td>
+<td align="center">-14.8</td>
+<td align="center">-13.8</td>
+</tr>
+<tr>
+<td align="center">8ns</td>
+<td align="center">-10.5</td>
+<td align="center">-14.3</td>
+<td align="center">-14.9</td>
+<td align="center">-14.2</td>
+</tr>
+<tr>
+<td align="center">9ns</td>
+<td align="center">-10.7</td>
+<td align="center">-14.1</td>
+<td align="center">-14.3</td>
+<td align="center">-14.5</td>
+</tr>
+<tr>
+<td align="center">10ns</td>
+<td align="center">-10.8</td>
+<td align="center">-14.5</td>
+<td align="center">-14.1</td>
+<td align="center">-12.0</td>
+</tr>
+<tr>
+<td align="center">11ns</td>
+<td align="center">-10.5</td>
+<td align="center">-13.8</td>
+<td align="center">-14.1</td>
+<td align="center">-10.6</td>
+</tr>
+<tr>
+<td align="center">12ns</td>
+<td align="center">-10.2</td>
+<td align="center">-13.9</td>
+<td align="center">-14.0</td>
+<td align="center">-14.2</td>
+</tr>
+<tr>
+<td align="center">13ns</td>
+<td align="center">-10.2</td>
+<td align="center">-13.0</td>
+<td align="center">-14.2</td>
+<td align="center">-13.5</td>
+</tr>
+<tr>
+<td align="center">14ns</td>
+<td align="center">-10.4</td>
+<td align="center">-13.4</td>
+<td align="center">-14.4</td>
+<td align="center">-11.3</td>
+</tr>
+<tr>
+<td align="center">15ns</td>
+<td align="center">-10.2</td>
+<td align="center">-10.8</td>
+<td align="center">-14.9</td>
+<td align="center">-11.1</td>
+</tr>
+<tr>
+<td align="center">16ns</td>
+<td align="center">-10.6</td>
+<td align="center">-10.7</td>
+<td align="center">-14.3</td>
+<td align="center">-10.1</td>
+</tr>
+<tr>
+<td align="center">17ns</td>
+<td align="center">-10.9</td>
+<td align="center">-15.1</td>
+<td align="center">-15.2</td>
+<td align="center">-15.2</td>
+</tr>
+<tr>
+<td align="center">18ns</td>
+<td align="center">-10.4</td>
+<td align="center">-14.2</td>
+<td align="center">-14.1</td>
+<td align="center">-14.2</td>
+</tr>
+<tr>
+<td align="center">19ns</td>
+<td align="center">-10.4</td>
+<td align="center">-13.4</td>
+<td align="center">-14.5</td>
+<td align="center">-10.8</td>
+</tr>
+<tr>
+<td align="center">20ns</td>
+<td align="center">-9.8</td>
+<td align="center">-13.3</td>
+<td align="center">-14.1</td>
+<td align="center">-13.5</td>
+</tr>
+<tr>
+<td align="center">21ns</td>
+<td align="center">-10.0</td>
+<td align="center">-13.1</td>
+<td align="center">-14.2</td>
+<td align="center">-13.4</td>
+</tr>
+<tr>
+<td align="center">22ns</td>
+<td align="center">-10.5</td>
+<td align="center">-11.4</td>
+<td align="center">-14.9</td>
+<td align="center">-11.1</td>
+</tr>
+<tr>
+<td align="center">23ns</td>
+<td align="center">-10.5</td>
+<td align="center">-13.6</td>
+<td align="center">-14.3</td>
+<td align="center">-10.8</td>
+</tr>
+<tr>
+<td align="center">24ns</td>
+<td align="center">-10.4</td>
+<td align="center">-13.4</td>
+<td align="center">-14.1</td>
+<td align="center">-14.0</td>
+</tr>
+<tr>
+<td align="center">25ns</td>
+<td align="center">-10.5</td>
+<td align="center">-13.6</td>
+<td align="center">-14</td>
+<td align="center">-14.1</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<table-wrap id="pone.0211935.t006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.t006</object-id>
+<label>Table 6</label> <caption><title>Nonbonding interactions of the best docked complexes obtained from ensemble based docking analysis.</title></caption>
+<alternatives>
+<graphic id="pone.0211935.t006g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.t006" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center" rowspan="3">Conformers<break/></th>
+<th align="center" rowspan="3">Compounds</th>
+<th align="center" colspan="4">Hydrophobic</th>
+<th align="center" colspan="4">Hydrogen Bond</th>
+<th align="center" colspan="4">Electrostatic</th>
+</tr>
+<tr>
+<th align="left" rowspan="2">Bonding Type</th>
+<th align="center">Protein</th>
+<th align="center">Ligand</th>
+<th align="center" rowspan="2">Dista<break/>nce (Å)</th>
+<th align="center" rowspan="2">Bonding Type</th>
+<th align="center">Protein</th>
+<th align="center">Ligand</th>
+<th align="center" rowspan="2">Distan<break/>ce (Å)</th>
+<th align="center" rowspan="2">Bondi<break/>ng Type</th>
+<th align="center">Protein</th>
+<th align="center">Ligand</th>
+<th align="center" rowspan="2">Distance (Å)</th>
+</tr>
+<tr>
+<th align="center">Interacting Amino Acids</th>
+<th align="center">Interacting Atoms or Rings</th>
+<th align="center">Interacting Amino Acids</th>
+<th align="center">Interacting Atoms or Rings</th>
+<th align="center">Interacting Amino Acids</th>
+<th align="center">Interacting Atoms or Rings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" rowspan="41">5foq</td>
+<td align="center" rowspan="9">Donepezil</td>
+<td align="center" rowspan="2">Pi-Alkyl</td>
+<td align="center">TYR337</td>
+<td align="center">X</td>
+<td align="center">5.074</td>
+<td align="center" rowspan="7">Conventional</td>
+<td align="center" rowspan="7">PHE295</td>
+<td align="center" rowspan="7">H…O</td>
+<td align="center" rowspan="7">1.944</td>
+<td align="center" rowspan="9"/>
+<td align="center" rowspan="9"/>
+<td align="center" rowspan="9"/>
+<td align="center" rowspan="9"/>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X</td>
+<td align="center">4.964</td>
+</tr>
+<tr>
+<td align="center" rowspan="5">Pi-Pi Stacked</td>
+<td align="center">TRP86</td>
+<td align="center">X1</td>
+<td align="center">3.844</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X1</td>
+<td align="center">3.851</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X</td>
+<td align="center">5.086</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X</td>
+<td align="center">3.890</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X1</td>
+<td align="center">5.605</td>
+</tr>
+<tr>
+<td align="center">Pi-Pi T-Shaped</td>
+<td align="center">TYR337</td>
+<td align="center">X</td>
+<td align="center">5.314</td>
+<td align="center" rowspan="2"/>
+<td align="center" rowspan="2"/>
+<td align="center" rowspan="2"/>
+<td align="center" rowspan="2"/>
+</tr>
+<tr>
+<td align="center">Pi-Sigma</td>
+<td align="center">TRP286</td>
+<td align="center">H…X</td>
+<td align="center">3.689</td>
+</tr>
+<tr>
+<td align="center" rowspan="11">D8</td>
+<td align="center" rowspan="3">Pi-Alkyl</td>
+<td align="center">TYR337</td>
+<td align="center">X2</td>
+<td align="center">5.338</td>
+<td align="center" rowspan="3">Conventional</td>
+<td align="center" rowspan="3">SER293</td>
+<td align="center" rowspan="3">H…O</td>
+<td align="center" rowspan="3">3.362</td>
+<td align="center" rowspan="11"/>
+<td align="center" rowspan="11"/>
+<td align="center" rowspan="11"/>
+<td align="center" rowspan="11"/>
+</tr>
+<tr>
+<td align="center">PHE338</td>
+<td align="center">X2</td>
+<td align="center">5.069</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X2</td>
+<td align="center">5.108</td>
+</tr>
+<tr>
+<td align="center" rowspan="7">Pi-Pi Stacked</td>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.661</td>
+<td align="center" rowspan="8">Pi-Donor</td>
+<td align="center" rowspan="8">TRP286</td>
+<td align="center" rowspan="8">H… π</td>
+<td align="center" rowspan="8">4.121</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">5.402</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.397</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.055</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.884</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.227</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.048</td>
+</tr>
+<tr>
+<td align="center">Pi-Pi T-Shaped</td>
+<td align="center">TYR337</td>
+<td align="center">X2</td>
+<td align="center">5.314</td>
+</tr>
+<tr>
+<td align="center" rowspan="10">D9</td>
+<td align="center" rowspan="3">Pi-Alkyl</td>
+<td align="center">TYR337</td>
+<td align="center">X2</td>
+<td align="center">5.421</td>
+<td align="center" rowspan="3">Conventional</td>
+<td align="center" rowspan="3">TYR124</td>
+<td align="center" rowspan="3">H…O</td>
+<td align="center" rowspan="3">2.989</td>
+<td align="center" rowspan="10"/>
+<td align="center" rowspan="10"/>
+<td align="center" rowspan="10"/>
+<td align="center" rowspan="10"/>
+</tr>
+<tr>
+<td align="center">PHE338</td>
+<td align="center">X2</td>
+<td align="center">5.032</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X2</td>
+<td align="center">5.224</td>
+</tr>
+<tr>
+<td align="center" rowspan="7">Pi-Pi Stacked</td>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.651</td>
+<td align="center" rowspan="7"/>
+<td align="center" rowspan="7"/>
+<td align="center" rowspan="7"/>
+<td align="center" rowspan="7"/>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">5.426</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.405</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.041</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.885</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.233</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">3.987</td>
+</tr>
+<tr>
+<td align="center" rowspan="11">D10</td>
+<td align="center" rowspan="4">Pi-Alkyl</td>
+<td align="center">TYR337</td>
+<td align="center">X2</td>
+<td align="center">5.486</td>
+<td align="center" rowspan="11">Conventional</td>
+<td align="center" rowspan="2">TYR124</td>
+<td align="center" rowspan="2">H…O</td>
+<td align="center" rowspan="2">3.086</td>
+<td align="center" rowspan="11"/>
+<td align="center" rowspan="11"/>
+<td align="center" rowspan="11"/>
+<td align="center" rowspan="11"/>
+</tr>
+<tr>
+<td align="center" rowspan="2">PHE338</td>
+<td align="center" rowspan="2">X2</td>
+<td align="center" rowspan="2">4.986</td>
+</tr>
+<tr>
+<td align="center" rowspan="9">SER293</td>
+<td align="center" rowspan="9">H…O</td>
+<td align="center" rowspan="9">3.375</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X2</td>
+<td align="center">5.311</td>
+</tr>
+<tr>
+<td align="center" rowspan="7">Pi-Pi Stacked</td>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.663</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">5.419</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.409</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.052</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.888</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.260</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">3.951</td>
+</tr>
+<tr>
+<td align="center" rowspan="47">17ns</td>
+<td align="center" rowspan="7">Donepezil</td>
+<td align="center">Pi-Alkyl</td>
+<td align="center">PHE338</td>
+<td align="center">X</td>
+<td align="center">4.624</td>
+<td align="center">Conventional</td>
+<td align="center">TYR124</td>
+<td align="center">H…O</td>
+<td align="center">2.332</td>
+<td align="center" rowspan="7"/>
+<td align="center" rowspan="7"/>
+<td align="center" rowspan="7"/>
+<td align="center" rowspan="7"/>
+</tr>
+<tr>
+<td align="center" rowspan="6">Pi-Pi Stacked</td>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">5.655</td>
+<td align="center" rowspan="6"/>
+<td align="center" rowspan="6"/>
+<td align="center" rowspan="6"/>
+<td align="center" rowspan="6"/>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X</td>
+<td align="center">5.717</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.690</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.545</td>
+</tr>
+<tr>
+<td align="center">TYR337</td>
+<td align="center">X</td>
+<td align="center">4.055</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X1</td>
+<td align="center">4.479</td>
+</tr>
+<tr>
+<td align="center" rowspan="14">D8</td>
+<td align="center" rowspan="3">Pi-Alkyl</td>
+<td align="center" rowspan="3">PHE338</td>
+<td align="center" rowspan="3">X2</td>
+<td align="center" rowspan="3">4.992</td>
+<td align="center" rowspan="3">Conventional</td>
+<td align="center">TYR124</td>
+<td align="center">H…O</td>
+<td align="center">2.251</td>
+<td align="center" rowspan="14">Pi-Anion</td>
+<td align="center" rowspan="14">ASP74</td>
+<td align="center" rowspan="14">O…X2</td>
+<td align="center" rowspan="14">4.64</td>
+</tr>
+<tr>
+<td align="center">TYR72</td>
+<td align="center">H…O</td>
+<td align="center">2.026</td>
+</tr>
+<tr>
+<td align="center">TYR72</td>
+<td align="center">H…O</td>
+<td align="center">3.065</td>
+</tr>
+<tr>
+<td align="center" rowspan="11">Pi-Pi T-Shaped</td>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">3.738</td>
+<td align="center" rowspan="11">Pi-Donor</td>
+<td align="center" rowspan="11">TRP286</td>
+<td align="center" rowspan="11">H…π</td>
+<td align="center" rowspan="11">3.879</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">5.618</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.092</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.524</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">5.860</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.608</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.163</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.244</td>
+</tr>
+<tr>
+<td align="center">TYR337</td>
+<td align="center">X2</td>
+<td align="center">3.981</td>
+</tr>
+<tr>
+<td align="center">TYR337</td>
+<td align="center">X2</td>
+<td align="center">5.075</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X1</td>
+<td align="center">4.700</td>
+</tr>
+<tr>
+<td align="center" rowspan="13">D9</td>
+<td align="center" rowspan="2">Pi-Alkyl</td>
+<td align="center">TYR124</td>
+<td align="center">X2</td>
+<td align="center">5.476</td>
+<td align="center" rowspan="13">Conventional</td>
+<td align="center" rowspan="13">TYR124</td>
+<td align="center" rowspan="13">H…O</td>
+<td align="center" rowspan="13">2.539</td>
+<td align="center" rowspan="13">Pi-Anion</td>
+<td align="center" rowspan="13">ASP74</td>
+<td align="center" rowspan="13">O…X2</td>
+<td align="center" rowspan="13">4.467</td>
+</tr>
+<tr>
+<td align="center">PHE338</td>
+<td align="center">X2</td>
+<td align="center">5.257</td>
+</tr>
+<tr>
+<td align="center" rowspan="11">Pi-Pi Stacked</td>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">3.713</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">5.660</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.109</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.343</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">5.805</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.484</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">5.144</td>
+</tr>
+<tr>
+<td align="center">TRP286</td>
+<td align="center">X1</td>
+<td align="center">4.408</td>
+</tr>
+<tr>
+<td align="center">TYR337</td>
+<td align="center">X2</td>
+<td align="center">3.991</td>
+</tr>
+<tr>
+<td align="center">TYR337</td>
+<td align="center">X2</td>
+<td align="center">5.086</td>
+</tr>
+<tr>
+<td align="center">TYR341</td>
+<td align="center">X1</td>
+<td align="center">4.591</td>
+</tr>
+<tr>
+<td align="center" rowspan="13">D10</td>
+<td align="center" rowspan="4">Pi-Alkyl</td>
+<td align="center" rowspan="3">PHE338</td>
+<td align="center" rowspan="3">X2</td>
+<td align="center" rowspan="3">5.208</td>
+<td align="center" rowspan="13">Conventional</td>
+<td align="center">PHE295</td>
+<td align="center">C–H…O</td>
+<td align="center">2.882</td>
+<td align="center" rowspan="13">Pi-Anion</td>
+<td align="center" rowspan="13">ASP74</td>
+<td align="center" rowspan="13">O…X2</td>
+<td align="center" rowspan="13">4.500</td>
+</tr>
+<tr>
+<td align="center">SER293</td>
+<td align="center">C–H…O</td>
+<td align="center">2.839</td>
+</tr>
+<tr>
+<td align="center" rowspan="11">SER293</td>
+<td align="center" rowspan="11">C–H…O</td>
+<td align="center" rowspan="11">3.323</td>
+</tr>
+<tr>
+<td align="center">VAL294</td>
+<td align="center">X2</td>
+<td align="center">5.317</td>
+</tr>
+<tr>
+<td align="center" rowspan="8">Pi-Pi Stacked</td>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">3.869</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">5.260</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">3.912</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.645</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">5.466</td>
+</tr>
+<tr>
+<td align="center">TRP86</td>
+<td align="center">X2</td>
+<td align="center">4.424</td>
+</tr>
+<tr>
+<td align="center">TYR337</td>
+<td align="center">X1</td>
+<td align="center">4.165</td>
+</tr>
+<tr>
+<td align="center">TYR337</td>
+<td align="center">X1</td>
+<td align="center">5.382</td>
+</tr>
+<tr>
+<td align="center">Pi-Sigma</td>
+<td align="center">TYR124</td>
+<td align="center">H…X2</td>
+<td align="center">3.391</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t006fn001"><p>Here X, X1, X2 indicates that, X = Benzyl-4-piperidyl, X1 = 2,3-dihydro-1H-inden-1-one, X2 = Anthracen-9-ylmethyl-4-piperidyl</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec014">
+<title>ADME/T analysis</title>
+<p>In order to analyze whether the modified compounds produce any toxicity or altered pharmacokinetic profile, the admetSAR server was utilized. Different pharmacokinetic and pharmacodynamic parameters such as human intestinal absorption, [<xref ref-type="bibr" rid="pone.0211935.ref045">45</xref>] blood–brain barrier penetration, cytochrome P450 inhibition, [<xref ref-type="bibr" rid="pone.0211935.ref046">46</xref>] human ether-a-go-go-related genes inhibition, acute oral Toxicity, and rat acute toxicity were considered. The results are summarized in <bold><xref ref-type="table" rid="pone.0211935.t007">Table 7</xref></bold>. As shown in <bold><xref ref-type="table" rid="pone.0211935.t007">Table 7</xref></bold>, all compounds revealed a positive value (value above the prescribed threshold suggesting good permeability) with high probabilities, in case of blood-brain barrier and human intestinal absorption. Furthermore, modifications of donepezil resulted in a non–inhibitor of P-glycoprotein. The analysis displayed that D2, D4, D5, D6 and D9 were potential compounds of the human ether-a-go-go-related gene. All compounds showed a similar oral toxicity profile, while D9 and D2 indicated the highest LD<sub>50</sub> value in rat acute toxicity, demonstrating non-toxic with respect to parent donepezil.</p>
+<table-wrap id="pone.0211935.t007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0211935.t007</object-id>
+<label>Table 7</label> <caption><title>Selected pharmacokinetic parameters of donepezil and its designed analogues.</title></caption>
+<alternatives>
+<graphic id="pone.0211935.t007g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.t007" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="center">Parameters</th>
+<th align="center">Donepezil</th>
+<th align="center">D1</th>
+<th align="center">D2</th>
+<th align="center">D3</th>
+<th align="center">D4</th>
+<th align="center">D5</th>
+<th align="center">D6</th>
+<th align="center">D7</th>
+<th align="center">D8</th>
+<th align="center">D9</th>
+<th align="center">D10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" rowspan="2">Blood-Brain Barrier</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+</tr>
+<tr>
+<td align="center">(0.99)</td>
+<td align="center">(0.93)</td>
+<td align="center">(0.93)</td>
+<td align="center">(0.90)</td>
+<td align="center">(0.90)</td>
+<td align="center">(0.89)</td>
+<td align="center">(0.91)</td>
+<td align="center">(0.93)</td>
+<td align="center">(0.93)</td>
+<td align="center">(0.93)</td>
+<td align="center">(0.90)</td>
+</tr>
+<tr>
+<td align="center" rowspan="2">Human Intestinal Absorption</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+</tr>
+<tr>
+<td align="center">(0.99)</td>
+<td align="center">(0.66)</td>
+<td align="center">(0.79)</td>
+<td align="center">(0.79)</td>
+<td align="center">(0.72)</td>
+<td align="center">(0.58)</td>
+<td align="center">(0.60)</td>
+<td align="center">(0.66)</td>
+<td align="center">(0.66)</td>
+<td align="center">(0.79)</td>
+<td align="center">(0.79)</td>
+</tr>
+<tr>
+<td align="center" rowspan="2">P-glycoprotein Inhibitor</td>
+<td align="center">I</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+</tr>
+<tr>
+<td align="center">(0.69)</td>
+<td align="center">(0.90)</td>
+<td align="center">(0.83)</td>
+<td align="center">(0.82)</td>
+<td align="center">(0.76)</td>
+<td align="center">(0.84)</td>
+<td align="center">(0.85)</td>
+<td align="center">(0.90)</td>
+<td align="center">(0.90)</td>
+<td align="center">(0.83)</td>
+<td align="center">(0.82)</td>
+</tr>
+<tr>
+<td align="center" rowspan="2">CYP450 2C9 Inhibitor</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+</tr>
+<tr>
+<td align="center">(0.88)</td>
+<td align="center">(0.83)</td>
+<td align="center">(0.80)</td>
+<td align="center">(0.80)</td>
+<td align="center">(0.79)</td>
+<td align="center">(0.79)</td>
+<td align="center">(0.78)</td>
+<td align="center">(0.83)</td>
+<td align="center">(0.83)</td>
+<td align="center">(0.80)</td>
+<td align="center">(0.80)</td>
+</tr>
+<tr>
+<td align="center" rowspan="2">Human Ether-a-go-go-Related Gene</td>
+<td align="center">I</td>
+<td align="center">NI</td>
+<td align="center">I</td>
+<td align="center">NI</td>
+<td align="center">I</td>
+<td align="center">I</td>
+<td align="center">I</td>
+<td align="center">NI</td>
+<td align="center">NI</td>
+<td align="center">I</td>
+<td align="center">NI</td>
+</tr>
+<tr>
+<td align="center">(0.68)</td>
+<td align="center">(0.61)</td>
+<td align="center">(0.58)</td>
+<td align="center">(0.50)</td>
+<td align="center">(0.51)</td>
+<td align="center">(0.50)</td>
+<td align="center">(0.56)</td>
+<td align="center">(0.61)</td>
+<td align="center">(0.61)</td>
+<td align="center">(0.58)</td>
+<td align="center">(0.50)</td>
+</tr>
+<tr>
+<td align="center" rowspan="2">Acute Oral Toxicity</td>
+<td align="center">III</td>
+<td align="center">III</td>
+<td align="center">III</td>
+<td align="center">III</td>
+<td align="center">III</td>
+<td align="center">III</td>
+<td align="center">III</td>
+<td align="center">III</td>
+<td align="center">III</td>
+<td align="center">III</td>
+<td align="center">III</td>
+</tr>
+<tr>
+<td align="center">(0.56)</td>
+<td align="center">(0.55)</td>
+<td align="center">(0.55)</td>
+<td align="center">(0.54)</td>
+<td align="center">(0.54)</td>
+<td align="center">(0.54)</td>
+<td align="center">(0.55)</td>
+<td align="center">(0.55)</td>
+<td align="center">(0.55)</td>
+<td align="center">(0.55)</td>
+<td align="center">(0.54)</td>
+</tr>
+<tr>
+<td align="center">Rat Acute Toxicity (LD50, mol/kg)</td>
+<td align="center">2.70</td>
+<td align="center">2.59</td>
+<td align="center">2.72</td>
+<td align="center">2.71</td>
+<td align="center">2.69</td>
+<td align="center">2.69</td>
+<td align="center">2.71</td>
+<td align="center">2.59</td>
+<td align="center">2.59</td>
+<td align="center">2.72</td>
+<td align="center">2.71</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t007fn001"><p>+ = Positive, I = Inhibitor, NI = Non-Inhibitor, III = Category III includes compounds with LD50 values greater than 500mg/kg but less than 5000mg/kg.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>In addition, ADME/T prediction of D9-Fe, D9-Co, D9-Zn, and D9-Ni was performed and compared with the D9-Cu analogue. D9 with different metals revealed the same values as D9-Cu. An exception, D9-Zn, showed a negative value in human oral absorption. These results have been summarized in <xref ref-type="supplementary-material" rid="pone.0211935.s002">S2 Table</xref>. A published review by Mjos <italic>et al</italic>. 2014 [<xref ref-type="bibr" rid="pone.0211935.ref047">47</xref>] discussed the importance of metal based drugs in the diagnosis of disease and enlisted a number of metal-based drug names which are already approved by the FDA and which have undergone clinical trials (shown in <bold><xref ref-type="supplementary-material" rid="pone.0211935.s003">S3 Table</xref></bold>). From <bold><xref ref-type="supplementary-material" rid="pone.0211935.s003">S3 Table</xref>,</bold> we also predicted the pharmacokinetic parameters and toxicity of some drugs (data is shown in <bold><xref ref-type="supplementary-material" rid="pone.0211935.s004">S4 Table</xref></bold>).</p>
+</sec>
+</sec>
+<sec id="sec015" sec-type="conclusions">
+<title>Conclusion</title>
+<p>In summary, the present study revealed some novel metal directed AChE inhibitors, developed by modifying a known inhibitor, donepezil. Modification with Cu, along with substitution using aromatic rings and halogens increased the dipole moment and π-π interaction capacity of the designed compounds. Furthermore, these modified compounds were more reactive than donepezil, as they showed lower HOMO‒LUMO gaps. Molecular interaction analyses of docking simulations revealed similar binding conformations of all compounds at the active site and suggested D9 as a potent inhibitor, which can equally interact with both the CAS (Trp86) and PAS sites (Trp286) of AChE. The structural analysis with subsequent MD simulations demonstrated that D9 formed a stable conformation by creating hydrophobic and aromatic interactions with the active site residues such as Tyr337, Phe295, Tyr72, and Phe338. In addition, π-π stacking interactions with the residues of Trp86, Tyr337, Tyr341, Tyr124, and Trp286 may play a major role for strong drug binding and activity, according to ensemble based docking. Moreover, ADME/T analyses suggested that modified analogues were less toxic and have improved pharmacokinetic profiles than the parent drug. These results further confirmed the ability of Cu and other metal-directed analogues to bind simultaneously to the active sites of AChE and support them as potential candidates for the future treatment of Alzheimer’s disease.</p>
+</sec>
+<sec id="sec016">
+<title>Supporting information</title>
+<supplementary-material id="pone.0211935.s001" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.s001" xlink:type="simple">
+<label>S1 Table</label>
+<caption>
+<title>Binding affinity and nonbonding interaction of D9 including different metal form.</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0211935.s002" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.s002" xlink:type="simple">
+<label>S2 Table</label>
+<caption>
+<title>Selected pharmacokinetic parameter of D9-Fe, D9-Co, D9-Zn &amp; D9 Ni.</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0211935.s003" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.s003" xlink:type="simple">
+<label>S3 Table</label>
+<caption>
+<title>List of important and promising metal drugs (Chem. Rev. 2014, <italic>114 (8)</italic>, 4540–4563).</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0211935.s004" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.s004" xlink:type="simple">
+<label>S4 Table</label>
+<caption>
+<title>Selected pharmacokinetic parameter of some metal based FDA approved, clinical trials and promising drugs.</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0211935.s005" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.s005" xlink:type="simple">
+<label>S1 Fig</label>
+<caption>
+<title>Most stable optimized structures of D9-Fe, D9-Co, D9-Zn and D9-Ni along with D9.</title>
+<p>(TIF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pone.0211935.s006" mimetype="image/tiff" position="float" xlink:href="info:doi/10.1371/journal.pone.0211935.s006" xlink:type="simple">
+<label>S2 Fig</label>
+<caption>
+<title/>
+<p>Predicted pose from docking analysis showed the binding orientation map of important amino acids for <bold>a) D9-Fe, b) D9-Co, c) D9-Zn and d) D9-Ni</bold>, showing hydrogen bond interaction (green color), including π–π stacking (pink color).</p>
+<p>(TIF)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>We are grateful to our donors who supported to build a computational platform in Bangladesh <ext-link ext-link-type="uri" xlink:href="http://grc-bd.org/donate/" xlink:type="simple">http://grc-bd.org/donate/</ext-link>. Authors like to thank Dr. Logan Plath, Pittsburgh Plate Glass Company, for editing the English language of the manuscript.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0211935.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bartus</surname> <given-names>RT</given-names></name>, <name name-style="western"><surname>Dean</surname> <given-names>Rr</given-names></name>, <name name-style="western"><surname>Beer</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Lippa</surname> <given-names>AS</given-names></name> (<year>1982</year>) <article-title>The cholinergic hypothesis of geriatric memory dysfunction</article-title>. <source>Science</source> <volume>217</volume>: <fpage>408</fpage>–<lpage>414</lpage>. <object-id pub-id-type="pmid">7046051</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lahiri</surname> <given-names>DK</given-names></name>, <name name-style="western"><surname>Farlow</surname> <given-names>MR</given-names></name>, <name name-style="western"><surname>Sambamurti</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Greig</surname> <given-names>NH</given-names></name>, <name name-style="western"><surname>Giacobini</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Schneider</surname> <given-names>LS</given-names></name> (<year>2003</year>) <article-title>A critical analysis of new molecular targets and strategies for drug developments in Alzheimer's disease</article-title>. <source>Current drug targets</source> <volume>4</volume>: <fpage>97</fpage>–<lpage>112</lpage>. <object-id pub-id-type="pmid">12558063</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Huijbregts</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>De Sonneville</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Van Spronsen</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Berends</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Licht</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Verkerk</surname> <given-names>P</given-names></name>, <etal>et al</etal>. (<year>2003</year>) <article-title>Motor function under lower and higher controlled processing demands in early and continuously treated phenylketonuria</article-title>. <source>Neuropsychology</source> <volume>17</volume>: <fpage>369</fpage>. <object-id pub-id-type="pmid">12959503</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Greig</surname> <given-names>NH</given-names></name>, <name name-style="western"><surname>Utsuki</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Yu</surname> <given-names>Q-s</given-names></name>, <name name-style="western"><surname>Zhu</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Holloway</surname> <given-names>HW</given-names></name>, <name name-style="western"><surname>Perry</surname> <given-names>T</given-names></name>, <etal>et al</etal>. (<year>2001</year>) <article-title>A new therapeutic target in Alzheimer's disease treatment: attention to butyrylcholinesterase</article-title>. <source>Current medical research and opinion</source> <volume>17</volume>: <fpage>159</fpage>–<lpage>165</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1185/0300799039117057" xlink:type="simple">10.1185/0300799039117057</ext-link></comment> <object-id pub-id-type="pmid">11900310</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fisher</surname> <given-names>A</given-names></name> (<year>2012</year>) <article-title>Cholinergic modulation of amyloid precursor protein processing with emphasis on M1 muscarinic receptor: perspectives and challenges in treatment of Alzheimer’s disease</article-title>. <source>Journal of neurochemistry</source> <volume>120</volume>: <fpage>22</fpage>–<lpage>33</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1111/j.1471-4159.2011.07507.x" xlink:type="simple">10.1111/j.1471-4159.2011.07507.x</ext-link></comment> <object-id pub-id-type="pmid">22122190</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Colombres</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Sagal</surname> <given-names>JP</given-names></name>, <name name-style="western"><surname>Inestrosa</surname> <given-names>NC</given-names></name> (<year>2004</year>) <article-title>An overview of the current and novel drugs for Alzheimer's disease with particular reference to anti-cholinesterase compounds</article-title>. <source>Current pharmaceutical design</source> <volume>10</volume>: <fpage>3121</fpage>–<lpage>3130</lpage>. <object-id pub-id-type="pmid">15544502</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Flood</surname> <given-names>DG</given-names></name>, <name name-style="western"><surname>Marek</surname> <given-names>GJ</given-names></name>, <name name-style="western"><surname>Williams</surname> <given-names>M</given-names></name> (<year>2011</year>) <article-title>Developing predictive CSF biomarkers—A challenge critical to success in Alzheimer's disease and neuropsychiatric translational medicine</article-title>. <source>Biochemical pharmacology</source> <volume>81</volume>: <fpage>1422</fpage>–<lpage>1434</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.bcp.2011.01.021" xlink:type="simple">10.1016/j.bcp.2011.01.021</ext-link></comment> <object-id pub-id-type="pmid">21295552</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chan</surname> <given-names>KY</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>JJ</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Theodoratou</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Car</surname> <given-names>J</given-names></name>, <etal>et al</etal>. (<year>2013</year>) <article-title>Epidemiology of Alzheimer's disease and other forms of dementia in China, 1990–2010: a systematic review and analysis</article-title>. <source>The Lancet</source> <volume>381</volume>: <fpage>2016</fpage>–<lpage>2023</lpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Anand</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Singh</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Singh</surname> <given-names>N</given-names></name> (<year>2012</year>) <article-title>A review on coumarins as acetylcholinesterase inhibitors for Alzheimer’s disease</article-title>. <source>Bioorganic &amp; medicinal chemistry</source> <volume>20</volume>: <fpage>1175</fpage>–<lpage>1180</lpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Somani</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Kulkarni</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Shinde</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Shelke</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Laddha</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Sathaye</surname> <given-names>S</given-names></name> (<year>2015</year>) <article-title>In vitro acetylcholinesterase inhibition by psoralen using molecular docking and enzymatic studies</article-title>. <source>Journal of pharmacy &amp; bioallied sciences</source> <volume>7</volume>: <fpage>32</fpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bourne</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Grassi</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Bougis</surname> <given-names>PE</given-names></name>, <name name-style="western"><surname>Marchot</surname> <given-names>P</given-names></name> (<year>1999</year>) <article-title>Conformational flexibility of the acetylcholinesterase tetramer suggested by x-ray crystallography</article-title>. <source>Journal of Biological Chemistry</source> <volume>274</volume>: <fpage>30370</fpage>–<lpage>30376</lpage>. <object-id pub-id-type="pmid">10521413</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cheung</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Rudolph</surname> <given-names>MJ</given-names></name>, <name name-style="western"><surname>Burshteyn</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Cassidy</surname> <given-names>MS</given-names></name>, <name name-style="western"><surname>Gary</surname> <given-names>EN</given-names></name>, <name name-style="western"><surname>Love</surname> <given-names>J</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <article-title>Structures of human acetylcholinesterase in complex with pharmacologically important ligands</article-title>. <source>Journal of medicinal chemistry</source> <volume>55</volume>: <fpage>10282</fpage>–<lpage>10286</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1021/jm300871x" xlink:type="simple">10.1021/jm300871x</ext-link></comment> <object-id pub-id-type="pmid">23035744</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fang</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Yang</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Gao</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>D</given-names></name>, <etal>et al</etal>. (<year>2014</year>) <article-title>Inhibition of acetylcholinesterase by two genistein derivatives: kinetic analysis, molecular docking and molecular dynamics simulation</article-title>. <source>Acta Pharmaceutica Sinica B</source> <volume>4</volume>: <fpage>430</fpage>–<lpage>437</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.apsb.2014.10.002" xlink:type="simple">10.1016/j.apsb.2014.10.002</ext-link></comment> <object-id pub-id-type="pmid">26579414</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Silman</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Sussman</surname> <given-names>JL</given-names></name> (<year>2008</year>) <article-title>Acetylcholinesterase: How is structure related to function?</article-title> <source>Chemico-biological interactions</source> <volume>175</volume>: <fpage>3</fpage>–<lpage>10</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.cbi.2008.05.035" xlink:type="simple">10.1016/j.cbi.2008.05.035</ext-link></comment> <object-id pub-id-type="pmid">18586019</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Huang</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Shi</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>He</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>X</given-names></name> (<year>2010</year>) <article-title>Synthesis, biological evaluation, and molecular modeling of berberine derivatives as potent acetylcholinesterase inhibitors</article-title>. <source>Bioorganic &amp; medicinal chemistry</source> <volume>18</volume>: <fpage>1244</fpage>–<lpage>1251</lpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hartinger</surname> <given-names>CG</given-names></name>, <name name-style="western"><surname>Nazarov</surname> <given-names>AA</given-names></name>, <name name-style="western"><surname>Ashraf</surname> <given-names>SM</given-names></name>, <name name-style="western"><surname>Dyson</surname> <given-names>PJ</given-names></name>, <name name-style="western"><surname>Keppler</surname> <given-names>BK</given-names></name> (<year>2008</year>) <article-title>Carbohydrate-metal complexes and their potential as anticancer agents</article-title>. <source>Current Medicinal Chemistry</source> <volume>15</volume>: <fpage>2574</fpage>–<lpage>2591</lpage>. <object-id pub-id-type="pmid">18855680</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Frezza</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Hindo</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Davenport</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Schmitt</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Tomco</surname> <given-names>D</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>Novel metals and metal complexes as platforms for cancer therapy</article-title>. <source>Current pharmaceutical design</source> <volume>16</volume>: <fpage>1813</fpage>–<lpage>1825</lpage>. <object-id pub-id-type="pmid">20337575</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ying</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Jen-Fu</surname> <given-names>C</given-names></name> (<year>2008</year>) <article-title>Proteomic approaches in understanding action mechanisms of metal-based anticancer drugs</article-title>. <source>Metal-based drugs</source> 2008.</mixed-citation></ref>
+<ref id="pone.0211935.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Thompson</surname> <given-names>KH</given-names></name>, <name name-style="western"><surname>Orvig</surname> <given-names>C</given-names></name> (<year>2006</year>) <article-title>Metal complexes in medicinal chemistry: new vistas and challenges in drug design</article-title>. <source>Dalton Transactions</source>: <fpage>761</fpage>–<lpage>764</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1039/b513476e" xlink:type="simple">10.1039/b513476e</ext-link></comment> <object-id pub-id-type="pmid">16437168</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lee</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Yang</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Parr</surname> <given-names>RG</given-names></name> (<year>1988</year>) <article-title>Development of the Colle-Salvetti correlation-energy formula into a functional of the electron density</article-title>. <source>Physical review B</source> <volume>37</volume>: <fpage>785</fpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Becke</surname> <given-names>AD</given-names></name> (<year>1988</year>) <article-title>Density-functional exchange-energy approximation with correct asymptotic behavior</article-title>. <source>Physical review A</source> <volume>38</volume>: <fpage>3098</fpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bergner</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Dolg</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Küchle</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Stoll</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Preuß</surname> <given-names>H</given-names></name> (<year>1993</year>) <article-title>Ab initio energy-adjusted pseudopotentials for elements of groups 13–17</article-title>. <source>Molecular Physics</source> <volume>80</volume>: <fpage>1431</fpage>–<lpage>1441</lpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref023"><label>23</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Parr</surname> <given-names>RG</given-names></name>, <name name-style="western"><surname>Yang</surname> <given-names>W</given-names></name> (<year>1989</year>) <chapter-title>Density-functional theory of atoms and molecules</chapter-title>: <publisher-name>Oxford university press</publisher-name>.</mixed-citation></ref>
+<ref id="pone.0211935.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pearson</surname> <given-names>RG</given-names></name> (<year>1986</year>) <article-title>Absolute electronegativity and hardness correlated with molecular orbital theory</article-title>. <source>Proceedings of the National Academy of Sciences</source> <volume>83</volume>: <fpage>8440</fpage>–<lpage>8441</lpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Berman</surname> <given-names>HM</given-names></name>, <name name-style="western"><surname>Westbrook</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Feng</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Gilliland</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Bhat</surname> <given-names>TN</given-names></name>, <name name-style="western"><surname>Weissig</surname> <given-names>H</given-names></name>, <etal>et al</etal>. (<year>2000</year>) <article-title>The Protein Data Bank</article-title>. <source>Nucleic Acids Res</source> <volume>28</volume>: <fpage>235</fpage>–<lpage>242</lpage>. <object-id pub-id-type="pmid">10592235</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Trott</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Olson</surname> <given-names>AJ</given-names></name> (<year>2010</year>) <article-title>AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading</article-title>. <source>J Comput Chem</source> <volume>31</volume>: <fpage>455</fpage>–<lpage>461</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/jcc.21334" xlink:type="simple">10.1002/jcc.21334</ext-link></comment> <object-id pub-id-type="pmid">19499576</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Phillips</surname> <given-names>JC</given-names></name>, <name name-style="western"><surname>Braun</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Gumbart</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Tajkhorshid</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Villa</surname> <given-names>E</given-names></name>, <etal>et al</etal>. (<year>2005</year>) <article-title>Scalable Molecular Dynamics with NAMD</article-title>. <source>Journal of computational chemistry</source> <volume>26</volume>: <fpage>1781</fpage>–<lpage>1802</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/jcc.20289" xlink:type="simple">10.1002/jcc.20289</ext-link></comment> <object-id pub-id-type="pmid">16222654</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vanommeslaeghe</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Hatcher</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Acharya</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Kundu</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Zhong</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Shim</surname> <given-names>J</given-names></name>, <etal>et al</etal>. (<year>2010</year>) <article-title>CHARMM General Force Field (CGenFF): A force field for drug-like molecules compatible with the CHARMM all-atom additive biological force fields</article-title>. <source>Journal of computational chemistry</source> <volume>31</volume>: <fpage>671</fpage>–<lpage>690</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/jcc.21367" xlink:type="simple">10.1002/jcc.21367</ext-link></comment> <object-id pub-id-type="pmid">19575467</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Darden</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>York</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Pedersen</surname> <given-names>L</given-names></name> (<year>1993</year>) <article-title>Particle mesh Ewald: An N⋅log(N) method for Ewald sums in large systems</article-title>. <source>The Journal of Chemical Physics</source> <volume>98</volume>: <fpage>10089</fpage>–<lpage>10092</lpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Feller</surname> <given-names>SE</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Pastor</surname> <given-names>RW</given-names></name>, <name name-style="western"><surname>Brooks</surname> <given-names>BR</given-names></name> (<year>1995</year>) <article-title>Constant pressure molecular dynamics simulation: The Langevin piston method</article-title>. <source>The Journal of Chemical Physics</source> <volume>103</volume>: <fpage>4613</fpage>–<lpage>4621</lpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref031"><label>31</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Martyna</surname> <given-names>GJ</given-names></name>, <name name-style="western"><surname>Tobias</surname> <given-names>DJ</given-names></name>, <name name-style="western"><surname>Klein</surname> <given-names>ML</given-names></name> (<year>1994</year>) <article-title>Constant pressure molecular dynamics algorithms</article-title>. <source>The Journal of Chemical Physics</source> <volume>101</volume>: <fpage>4177</fpage>–<lpage>4189</lpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref032"><label>32</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Cheng</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Zhou</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Shen</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>G</given-names></name>, <etal>et al</etal>. (<year>2012</year>) <chapter-title>admetSAR: a comprehensive source and free tool for assessment of chemical ADMET properties</chapter-title>. <publisher-name>ACS Publications</publisher-name>.</mixed-citation></ref>
+<ref id="pone.0211935.ref033"><label>33</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Johnson</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Moore</surname> <given-names>S</given-names></name> (<year>2006</year>) <article-title>The peripheral anionic site of acetylcholinesterase: structure, functions and potential role in rational drug design</article-title>. <source>Current pharmaceutical design</source> <volume>12</volume>: <fpage>217</fpage>–<lpage>225</lpage>. <object-id pub-id-type="pmid">16454738</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Faerman</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Ripoll</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Bon</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Le Feuvre</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Morel</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Massoulié</surname> <given-names>J</given-names></name>, <etal>et al</etal>. (<year>1996</year>) <article-title>Site-directed mutants designed to test back-door hypotheses of acetylcholinesterase function</article-title>. <source>FEBS letters</source> <volume>386</volume>: <fpage>65</fpage>–<lpage>71</lpage>. <object-id pub-id-type="pmid">8635606</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref035"><label>35</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ordentlich</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Barak</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Kronman</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Ariel</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Segall</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Velan</surname> <given-names>B</given-names></name>, <etal>et al</etal>. (<year>1998</year>) <article-title>Functional characteristics of the oxyanion hole in human acetylcholinesterase</article-title>. <source>Journal of Biological Chemistry</source> <volume>273</volume>: <fpage>19509</fpage>–<lpage>19517</lpage>. <object-id pub-id-type="pmid">9677373</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref036"><label>36</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bourne</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Kolb</surname> <given-names>HC</given-names></name>, <name name-style="western"><surname>Radić</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Sharpless</surname> <given-names>KB</given-names></name>, <name name-style="western"><surname>Taylor</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Marchot</surname> <given-names>P</given-names></name> (<year>2004</year>) <article-title>Freeze-frame inhibitor captures acetylcholinesterase in a unique conformation</article-title>. <source>Proceedings of the National Academy of Sciences of the United States of America</source> <volume>101</volume>: <fpage>1449</fpage>–<lpage>1454</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.0308206100" xlink:type="simple">10.1073/pnas.0308206100</ext-link></comment> <object-id pub-id-type="pmid">14757816</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref037"><label>37</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bourne</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Taylor</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Marchot</surname> <given-names>P</given-names></name> (<year>1995</year>) <article-title>Acetylcholinesterase inhibition by fasciculin: crystal structure of the complex</article-title>. <source>Cell</source> <volume>83</volume>: <fpage>503</fpage>–<lpage>512</lpage>. <object-id pub-id-type="pmid">8521480</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref038"><label>38</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rahman</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Ali</surname> <given-names>MT</given-names></name>, <name name-style="western"><surname>Shawan</surname> <given-names>MMAK</given-names></name>, <name name-style="western"><surname>Sarwar</surname> <given-names>MG</given-names></name>, <name name-style="western"><surname>Khan</surname> <given-names>MAK</given-names></name>, <name name-style="western"><surname>Halim</surname> <given-names>MA</given-names></name> (<year>2016</year>) <article-title>Halogen-directed drug design for Alzheimer’s disease: a combined density functional and molecular docking study</article-title>. <source>SpringerPlus</source> <volume>5</volume>: <fpage>1346</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1186/s40064-016-2996-5" xlink:type="simple">10.1186/s40064-016-2996-5</ext-link></comment> <object-id pub-id-type="pmid">27588239</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref039"><label>39</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hoque</surname> <given-names>MM</given-names></name>, <name name-style="western"><surname>Halim</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Sarwar</surname> <given-names>MG</given-names></name>, <name name-style="western"><surname>Khan</surname> <given-names>M</given-names></name> (<year>2015</year>) <article-title>Palladium‐catalyzed cyclization of 2‐alkynyl‐N‐ethanoyl anilines to indoles: synthesis, structural, spectroscopic, and mechanistic study</article-title>. <source>Journal of Physical Organic Chemistry</source> <volume>28</volume>: <fpage>732</fpage>–<lpage>742</lpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref040"><label>40</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Parr</surname> <given-names>RG</given-names></name>, <name name-style="western"><surname>Zhou</surname> <given-names>Z</given-names></name> (<year>1993</year>) <article-title>Absolute hardness: unifying concept for identifying shells and subshells in nuclei, atoms, molecules, and metallic clusters</article-title>. <source>Accounts of chemical research</source> <volume>26</volume>: <fpage>256</fpage>–<lpage>258</lpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref041"><label>41</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sussman</surname> <given-names>JL</given-names></name>, <name name-style="western"><surname>Harel</surname> <given-names>M</given-names></name> (<year>1991</year>) <article-title>Atomic structure of acetylcholinesterase from Torpedo californica: a prototypic acetylcholine-binding protein</article-title>. <source>Science</source> <volume>253</volume>: <fpage>872</fpage>. <object-id pub-id-type="pmid">1678899</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref042"><label>42</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Grubič</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Štalc</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Šentjurc</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Pečar</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Gentry</surname> <given-names>MK</given-names></name>, <name name-style="western"><surname>Doctor</surname> <given-names>BP</given-names></name> (<year>1995</year>) <article-title>Different effects of two peripheral anionic site-binding ligands on acetylcholinesterase active-site gorge topography revealed by electron paramagnetic resonance</article-title>. <source>Biochimica et Biophysica Acta (BBA)-Protein Structure and Molecular Enzymology</source> <volume>1249</volume>: <fpage>155</fpage>–<lpage>160</lpage>.</mixed-citation></ref>
+<ref id="pone.0211935.ref043"><label>43</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dash</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Das</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Junaid</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Akash</surname> <given-names>MFC</given-names></name>, <name name-style="western"><surname>Islam</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Hosen</surname> <given-names>SZ</given-names></name> (<year>2017</year>) <article-title>In silico-based vaccine design against Ebola virus glycoprotein. Advances and applications in bioinformatics and chemistry</article-title>: <source>AABC</source> <volume>10</volume>: <fpage>11</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2147/AABC.S115859" xlink:type="simple">10.2147/AABC.S115859</ext-link></comment> <object-id pub-id-type="pmid">28356762</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref044"><label>44</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Khan</surname> <given-names>AM</given-names></name>, <name name-style="western"><surname>Shawon</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Halim</surname> <given-names>MA</given-names></name> (<year>2017</year>) <article-title>Multiple receptor conformers based molecular docking study of fluorine enhanced ethionamide with mycobacterium enoyl ACP reductase (InhA)</article-title>. <source>Journal of Molecular Graphics and Modelling</source> <volume>77</volume>: <fpage>386</fpage>–<lpage>398</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.jmgm.2017.09.010" xlink:type="simple">10.1016/j.jmgm.2017.09.010</ext-link></comment> <object-id pub-id-type="pmid">28957755</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref045"><label>45</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Egan</surname> <given-names>WJ</given-names></name>, <name name-style="western"><surname>Merz</surname> <given-names>KM</given-names></name>, <name name-style="western"><surname>Baldwin</surname> <given-names>JJ</given-names></name> (<year>2000</year>) <article-title>Prediction of drug absorption using multivariate statistics</article-title>. <source>Journal of medicinal chemistry</source> <volume>43</volume>: <fpage>3867</fpage>–<lpage>3877</lpage>. <object-id pub-id-type="pmid">11052792</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref046"><label>46</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Susnow</surname> <given-names>RG</given-names></name>, <name name-style="western"><surname>Dixon</surname> <given-names>SL</given-names></name> (<year>2003</year>) <article-title>Use of robust classification techniques for the prediction of human cytochrome P450 2D6 inhibition</article-title>. <source>Journal of chemical information and computer sciences</source> <volume>43</volume>: <fpage>1308</fpage>–<lpage>1315</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1021/ci030283p" xlink:type="simple">10.1021/ci030283p</ext-link></comment> <object-id pub-id-type="pmid">12870924</object-id></mixed-citation></ref>
+<ref id="pone.0211935.ref047"><label>47</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mjos</surname> <given-names>KD</given-names></name>, <name name-style="western"><surname>Orvig</surname> <given-names>C</given-names></name> (<year>2014</year>) <article-title>Metallodrugs in Medicinal Inorganic Chemistry</article-title>. <source>Chemical Reviews</source> <volume>114</volume>: <fpage>4540</fpage>–<lpage>4563</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1021/cr400460s" xlink:type="simple">10.1021/cr400460s</ext-link></comment> <object-id pub-id-type="pmid">24456146</object-id></mixed-citation></ref>
+</ref-list>
+</back>
+</article>

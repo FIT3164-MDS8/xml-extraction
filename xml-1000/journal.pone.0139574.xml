@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0139574</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-15-29293</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+</article-categories>
+<title-group>
+<article-title>Modeling the Role of the Glymphatic Pathway and Cerebral Blood Vessel Properties in Alzheimer’s Disease Pathogenesis</article-title>
+<alt-title alt-title-type="running-head">Modeling Alzheimer's Disease Pathogenesis</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Kyrtsos</surname>
+<given-names>Christina Rose</given-names>
+</name>
+<xref rid="aff001" ref-type="aff"><sup>1</sup></xref>
+<xref rid="aff002" ref-type="aff"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Baras</surname>
+<given-names>John S.</given-names>
+</name>
+<xref rid="aff002" ref-type="aff"><sup>2</sup></xref>
+<xref rid="aff003" ref-type="aff"><sup>3</sup></xref>
+<xref rid="cor001" ref-type="corresp">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>University of Pittsburgh Medical Center, Department of Neurology, Pittsburgh, Pennsylvania, United States of America</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Institute for Systems Research, University of Maryland, College Park, Maryland, United States of America</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>Department of Electrical and Computer Engineering, University of Maryland, College Park, Maryland, United States of America</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Arai</surname>
+<given-names>Ken</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Massachusetts General Hospital/Harvard Medical School, UNITED STATES</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: CRK JSB. Performed the experiments: CRK JSB. Analyzed the data: CRK JSB. Contributed reagents/materials/analysis tools: CRK JSB. Wrote the paper: CRK JSB. Wrote Matlab code: CRK.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">baras@umd.edu</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>8</day>
+<month>10</month>
+<year>2015</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2015</year>
+</pub-date>
+<volume>10</volume>
+<issue>10</issue>
+<elocation-id>e0139574</elocation-id>
+<history>
+<date date-type="received">
+<day>3</day>
+<month>7</month>
+<year>2015</year>
+</date>
+<date date-type="accepted">
+<day>15</day>
+<month>9</month>
+<year>2015</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2015</copyright-year>
+<copyright-holder>Kyrtsos, Baras</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0139574" xlink:type="simple"/>
+<abstract>
+<p>Alzheimer’s disease (AD) is the most common cause of dementia in the elderly, affecting over 10% population over the age of 65 years. Clinically, AD is described by the symptom set of short term memory loss and cognitive decline, changes in mentation and behavior, and eventually long-term memory deficit as the disease progresses. On imaging studies, significant atrophy with subsequent increase in ventricular volume have been observed. Pathology on post-mortem brain specimens demonstrates the classic findings of increased beta amyloid (Aβ) deposition and the presence of neurofibrillary tangles (NFTs) within affected neurons. Neuroinflammation, dysregulation of blood-brain barrier transport and clearance, deposition of Aβ in cerebral blood vessels, vascular risk factors such as atherosclerosis and diabetes, and the presence of the apolipoprotein E4 allele have all been identified as playing possible roles in AD pathogenesis. Recent research has demonstrated the importance of the glymphatic system in the clearance of Aβ from the brain via the perivascular space surrounding cerebral blood vessels. Given the variety of hypotheses that have been proposed for AD pathogenesis, an interconnected, multilayer model offers a unique opportunity to combine these ideas into a single unifying model. Results of this model demonstrate the importance of vessel stiffness and heart rate in maintaining adequate clearance of Aβ from the brain.</p>
+</abstract>
+<funding-group>
+<funding-statement>CRK and JBS were funded by (1) Institute for Systems Research, University of Maryland. <ext-link ext-link-type="uri" xlink:href="http://www.isr.umd.edu" xlink:type="simple">www.isr.umd.edu</ext-link>; and (2) University of Maryland Foundation, <ext-link ext-link-type="uri" xlink:href="http://www.umd.edu" xlink:type="simple">www.umd.edu</ext-link> (no grant #). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="8"/>
+<table-count count="3"/>
+<page-count count="20"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability" xlink:type="simple">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper. Copies of the Matlab files are publicly available at <ext-link ext-link-type="uri" xlink:href="https://github.com/crkyrtso/Code-for-PLOS-ONE-/blob/master/Code" xlink:type="simple">https://github.com/crkyrtso/Code-for-PLOS-ONE-/blob/master/Code</ext-link>.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>Alzheimer’s disease (AD) is a multi-faceted, progressive neurodegenerative disease. It is the most common cause of dementia in the elderly, affecting nearly 1 in 8 individuals over the age of 65 in the United States [<xref rid="pone.0139574.ref001" ref-type="bibr">1</xref>]. AD has been clinically described by the symptoms of short-term memory deficits, cognitive decline and eventual long-term memory deficit. These deficits lead to a decreased quality of life, often eventually requiring assistance with activities of daily living (ADLs) in a long term care setting [<xref rid="pone.0139574.ref001" ref-type="bibr">1</xref>–<xref rid="pone.0139574.ref002" ref-type="bibr">2</xref>]. There is a tremendous burden for the cost of care even though no preventative or curative treatments are available. Given the increasing number of the elderly affected by AD and the lack of any viable treatment options, there is a pressing need to develop a better understanding of the disease process as well as effective treatment modalities.</p>
+<p>Beta amyloid levels within the brain, particularly the oligomeric form, are linked to the loss of neurons, stimulation of neuroinflammation, abnormal mitochondrial function and increase in tau levels [<xref rid="pone.0139574.ref003" ref-type="bibr">3</xref>–<xref rid="pone.0139574.ref010" ref-type="bibr">10</xref>]. Decreased clearance of Aβ from the brain via the glymphatic system and the low-density lipoprotein-related receptor 1 (LRP-1) have been implicated in the pathogenesis of AD, and have been known to occur in normal aging as well [<xref rid="pone.0139574.ref011" ref-type="bibr">11</xref>–<xref rid="pone.0139574.ref012" ref-type="bibr">12</xref>]. The glymphatic system (located in the perivascular space) is believed to drain approximately 60% of the brain Aβ to cervical lymph nodes using convective flow generated by arterial pulsations [<xref rid="pone.0139574.ref013" ref-type="bibr">13</xref>–<xref rid="pone.0139574.ref016" ref-type="bibr">16</xref>]. Increased vessel stiffness causing decreased flow of brain interstitial fluid (ISF) is believed to lead to decreased Aβ clearance with aging [<xref rid="pone.0139574.ref014" ref-type="bibr">14</xref>, <xref rid="pone.0139574.ref017" ref-type="bibr">17</xref>]. As Aβ concentration builds within the perivascular space, deposition occurs slowly, eventually leading to the breakdown of the blood-brain barrier secondary to degeneration of smooth muscle cells and brain endothelial cells [<xref rid="pone.0139574.ref014" ref-type="bibr">14</xref>]. Beta amyloid deposition in blood vessels has also been shown to inhibit angiogenesis, impair vascular tone and decrease local cerebral perfusion [<xref rid="pone.0139574.ref014" ref-type="bibr">14</xref>, <xref rid="pone.0139574.ref018" ref-type="bibr">18</xref>]. Clearance of Aβ by LRP-1 has also been shown to decrease by nearly 55% during aging and is believed to be secondary to loss of brain endothelial cells [<xref rid="pone.0139574.ref019" ref-type="bibr">19</xref>].</p>
+<p>Given the complex nature of cellular and molecular interactions, mathematical modeling offers a unique opportunity to further understand the pathogenesis of AD. Several other mathematical models of AD have been proposed, with the majority focusing on Aβ fibril nucleation and growth of Aβ plaques [<xref rid="pone.0139574.ref020" ref-type="bibr">20</xref>–<xref rid="pone.0139574.ref021" ref-type="bibr">21</xref>]. Puri and Li developed a network model to study the interactions between neurons, astrocytes and microglia, while Luca et al presented a model on microglia chemotaxis towards Aβ [<xref rid="pone.0139574.ref022" ref-type="bibr">22</xref>–<xref rid="pone.0139574.ref023" ref-type="bibr">23</xref>]. However, there has been no model developed to study the transport of Aβ from generation at the neuron to clearance at the blood-brain barrier or via the glymphatic (eg. perivascular) pathway.</p>
+<p>The model presented in this paper studies how Aβ levels change within the brain parenchyma and vasculature during normal aging while incorporating the role of the glymphatic system. Conservation of mass equations are used to model Aβ levels. Neurons, microglia and brain endothelial cells interacted dynamically and responded to both parameters determined by aging process, as well as with the Aβ levels. The role of increased vessel stiffness secondary to aging, prolonged hypertension and cerebrovasculature deposition of Aβ, as well as alterations in heart rate, were also studied given the correlation between cardiovascular risk factors and AD. The results of this model demonstrate the importance of maintaining healthy cardiovascular function and offer insight into possible preventive or treatment options in the future.</p>
+</sec>
+<sec id="sec002" sec-type="materials|methods">
+<title>Methods</title>
+<sec id="sec003">
+<title>Model Assumptions</title>
+<p>This model describes the flow of several key chemical species within a 1 mm<sup>3</sup> volume of CA1 hippocampal tissue (volume of CA1 in healthy patients is approximately 640 mm<sup>3</sup>, total hippocampal volume in healthy patients is around 2100 mm<sup>3</sup>)[<xref rid="pone.0139574.ref024" ref-type="bibr">24</xref>]. The system is divided into three compartments: the blood within the nearby cerebral capillaries; the blood-brain barrier (BBB) and associated perivascular space; and the brain parenchyma, respectively. Capillaries are aligned in parallel with a separation distance of 40 μm [<xref rid="pone.0139574.ref025" ref-type="bibr">25</xref>] and assumed to be have a linear segment length of 1 mm. Neurons and microglia reside within the brain parenchyma between the capillaries and are assumed to have a uniform density. <xref rid="pone.0139574.g001" ref-type="fig">Fig 1</xref> demonstrates the overall layout of the system being modeled.</p>
+<fig id="pone.0139574.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139574.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Three compartment model used for modeling.</title>
+<p>The brain was divided into the brain parenchyma, containing the neurons (N) and astrocytes (A); the perivascular space (PVS, blue strip) in the area between the astrocytic foot processes and the brain endothelial cells; and the cerebral blood vessels (B). Interstitial (ISF) flow is unidirectional and laminar in the regions lined by capillaries; its rate is dependent on heart rate (eg. the rate of arterial pulsations) as well as the stiffness of the vessels, which is a function of the presence of atherosclerosis, cerebral amyloid angiopathy (deposition of beta amyloid within the brain vessels) and stiffening secondary to prolonged elevations in systemic blood pressure.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.g001" position="float" xlink:type="simple"/>
+</fig>
+<p>Each compartment is assumed to be well-mixed with uniform spatial distribution. From recent studies, it has been demonstrated that Aβ is quickly transported from the site of generation via a combination of diffusion (diffusion coefficient, D, range of 1.6–6.23x10<sup>−7</sup>cm<sup>2</sup>/s for monomers to 4x10<sup>−9</sup> cm<sup>2</sup>/s for oligomers) and convective flow via the bulk brain ISF (0.1–0.3μm/min/g brain tissue [<xref rid="pone.0139574.ref026" ref-type="bibr">26</xref>–<xref rid="pone.0139574.ref028" ref-type="bibr">28</xref>]. Spatial variation of chemical species such as Aβ does occur, however, the time course of this variation given the relatively small intercapillary distance (40 μm [<xref rid="pone.0139574.ref025" ref-type="bibr">25</xref>]) is negligible compared to the time scale used in the simulation.</p>
+<p>Beta amyloid is generated by neurons within the brain parenchyma, rapidly mix with brain ISF, and Aβ is transported towards the blood-brain barrier for further transport or clearance [<xref rid="pone.0139574.ref015" ref-type="bibr">15</xref>, <xref rid="pone.0139574.ref029" ref-type="bibr">29</xref>]. Brain ISF flows along the basement membrane of capillaries and arterioles, to the walls of cortical and leptomeningeal arteries, to the base of the skull before exiting the brain for the cervical lymph nodes [<xref rid="pone.0139574.ref014" ref-type="bibr">14</xref>]. It is not known whether significant levels of transported substances build-up at the cervical lymph nodes. ISF flow is assumed to be unidirectional, well-mixed, and originating from the pulsations of arterial vessels in response to the cardiac cycle (<xref rid="pone.0139574.g002" ref-type="fig">Fig 2</xref>). There is some debate in the literature as to whether glymphatic flow is in the same or opposite direction as cerebral blood flow; this model assumes that flow is in the same direction [<xref rid="pone.0139574.ref013" ref-type="bibr">13</xref>, <xref rid="pone.0139574.ref016" ref-type="bibr">16</xref>]. ISF flow rate is dependent on the heart rate, the ability of the vessel wall to transmit pulsations (eg. the compliance of the arterial wall). Arterial wall compliance can be estimated by wall stiffness (S), which increases with age, hyalinosis secondary to prolonged hypertension, atherosclerosis and vasculitis [<xref rid="pone.0139574.ref014" ref-type="bibr">14</xref>–<xref rid="pone.0139574.ref015" ref-type="bibr">15</xref>]. It is important to note that although brain ISF is generated by brain endothelial cells at the capillary and other vessels, only the arteries and arterioles possess the smooth muscle cells necessary to produce the pulsations to cause ISF flow [<xref rid="pone.0139574.ref030" ref-type="bibr">30</xref>–<xref rid="pone.0139574.ref031" ref-type="bibr">31</xref>].</p>
+<fig id="pone.0139574.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139574.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title>Flow of brain interstitial fluid in response to pulsations of cerebral arteries and arterioles.</title>
+<p>Interstitial fluid is generated at the brain endothelium by an unclear process [<xref rid="pone.0139574.ref030" ref-type="bibr">30</xref>] and surrounds neurons, microglia astrocytes and other cells located within the brain parenchyma, bringing nutrition to the cells and removing wastes. Although its chemical composition is similar to cerebrospinal fluid (CSF), the two fluids serve separate purposes. CSF gives the brain buoyancy and buffers against forces applied to the head; CSF is generated by ependymal cells within the choroid plexus [<xref rid="pone.0139574.ref030" ref-type="bibr">30</xref>]. Brain ISF transports waste from the brain parenchyma via a combination of convection and diffusion towards the perivascular space. At the perivascular space, molecules such as Aβ, are either transported by receptors at the blood-brain barrier, or are transported along the glymphatic pathway. A small percentage of molecules transported in the perivascular space are transported into the cerebrospinal fluid at the arachnoid granulations and are cleared from the brain via CSF drainage pathways. The majority (~60%) of Aβ is transported along the glymphatic system to the cervical lymph nodes [<xref rid="pone.0139574.ref013" ref-type="bibr">13</xref>].</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.g002" position="float" xlink:type="simple"/>
+</fig>
+<p>Once transported to the blood, molecules are rapidly cleared away at a rate of once per second (assuming a heart rate of 60 beats per minute). The blood has also been assumed to be well-mixed and serves as a relative sink for Aβ. Although viscosity of blood can change during aging and disease (eg. diabetes, dehydration), we have not modeled these changes here and assumed that the viscosity and physical properties of blood remain constant throughout the simulation.</p>
+</sec>
+<sec id="sec004">
+<title>Model Derivation</title>
+<sec id="sec005">
+<title>Cell numbers</title>
+<p>The volume of the hippocampus has been estimated by both neuropathology and magnetic resonance imaging (MRI) in healthy controls, as well as in patients with mild cognitive impairment (MCI) and AD [<xref rid="pone.0139574.ref024" ref-type="bibr">24</xref>, <xref rid="pone.0139574.ref032" ref-type="bibr">32</xref>]. Follow-up MRI imaging demonstrated a significant increase in the rate of volume loss in patients with AD or MCI of nearly 5 and 3 times, respectively, the rate of volume loss in healthy controls (<xref rid="pone.0139574.t001" ref-type="table">table 1</xref>) [<xref rid="pone.0139574.ref024" ref-type="bibr">24</xref>]. The total neurons loss in the CA1 region during an average course of AD (15–20 years) has been estimated at 50–60%, much faster than that observed with normal loss during aging (1%, or a 50% loss over 69 years), and demonstrating the impact that the faster loss rate has on the AD-afflicted brain.</p>
+<table-wrap id="pone.0139574.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139574.t001</object-id>
+<label>Table 1</label> <caption><title>Volume of the human hippocampus as determined by MRI.</title></caption>
+<alternatives>
+<graphic id="pone.0139574.t001g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.t001" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Patient</th>
+<th align="left" rowspan="1" colspan="1">Healthy</th>
+<th align="left" rowspan="1" colspan="1">MCI</th>
+<th align="left" rowspan="1" colspan="1">AD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Baseline volume (mm</bold><sup><bold>3</bold></sup><bold>)</bold></td>
+<td align="left" rowspan="1" colspan="1">2133 (25)</td>
+<td align="left" rowspan="1" colspan="1">1846 (23)</td>
+<td align="left" rowspan="1" colspan="1">1631 (34)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>Rate of loss/year (mm</bold><sup><bold>3</bold></sup><bold>/yr)</bold></td>
+<td align="left" rowspan="1" colspan="1">-17.3 (10.5)</td>
+<td align="left" rowspan="1" colspan="1">-47.5 (6.5)</td>
+<td align="left" rowspan="1" colspan="1">-72.0 (9)</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>% loss/year (%/yr)</bold></td>
+<td align="left" rowspan="1" colspan="1">-0.8 (0.5)</td>
+<td align="left" rowspan="1" colspan="1">-2.6 (0.3)</td>
+<td align="left" rowspan="1" colspan="1">-4.4 (0.6)</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t001fn001"><p>MCI, mild cognitive impairment; AD, Alzheimer’s disease. Volume loss was approximately 1% in healthy controls, 2.5% in MCI and 4.5% in AD patients. The rate of loss in AD patients was noted to increase by 1.4%/year (total rate of 5.8%.year) in patients with AD carrying the ApoE4 allele. Values are given as the mean with standard deviation in parentheses.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>The number of neurons located in the CA1 region of the hippocampus was estimated from the works of Harding and Zarow [<xref rid="pone.0139574.ref033" ref-type="bibr">33</xref>–<xref rid="pone.0139574.ref034" ref-type="bibr">34</xref>]. Zarow et al described the changes in neuron number with respect to the Braak staging, and found that patients with a Braak stage of 0 (essentially healthy, no presence of neurofibrillary tangles) had approximately 3.25x10<sup>6</sup> CA1 neurons, while those with a Braak score of 6 (severe AD pathology) had only 1.5x10<sup>6</sup> CA1 neurons [<xref rid="pone.0139574.ref034" ref-type="bibr">34</xref>]. The maximum number of CA1 neurons reported [<xref rid="pone.0139574.ref033" ref-type="bibr">33</xref>] was 6.14x10<sup>6</sup>. Total volume of the CA1 was estimated to be 641 ± 153 mm<sup>3</sup> in healthy normal patients, decreasing to 377.5 ± 132 mm<sup>3</sup> in patients with AD [<xref rid="pone.0139574.ref032" ref-type="bibr">32</xref>]. From this, we derived the density of neurons in the CA1 region to be 5275/mm<sup>3</sup> (4050-6500/mm<sup>3</sup>) in healthy controls and 4500/mm<sup>3</sup> (range 3000–6000) in AD [<xref rid="pone.0139574.ref017" ref-type="bibr">17</xref>, <xref rid="pone.0139574.ref035" ref-type="bibr">35</xref>–<xref rid="pone.0139574.ref037" ref-type="bibr">37</xref>]. The change in neuron number over time can thus be described by:
+<disp-formula id="pone.0139574.e001">
+<alternatives>
+<graphic id="pone.0139574.e001g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.e001" xlink:type="simple"/>
+<mml:math display="block" id="M1" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mi>k</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mo>+</mml:mo><mml:mi>d</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi>N</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(1)</label>
+</disp-formula>
+where d is the natural rate of neuron loss in the healthy control, k<sub>1</sub> is the additional neuron loss due to increased beta amyloid levels seen in AD or the presence of the ApoE4 allele, and N is the number of neurons within the control volume.</p>
+<p>The density of microglia within several brain regions has been estimated via neuropathology. Tetreault et al found that the average density microglial density in the neocortex is approximately 5951 microglia/mm<sup>3</sup> [<xref rid="pone.0139574.ref038" ref-type="bibr">38</xref>]. The total number of microglia has been found to vary depending on gender, with women only having 1.9x10<sup>9</sup> and men having 2x10<sup>9</sup> microglia [<xref rid="pone.0139574.ref039" ref-type="bibr">39</xref>]. Calculating the microglial density from these values, also noting the slightly lower average brain volume for women, we find that microglial density in women is about 3080 microglia/mm<sup>3</sup> and 3420 microglia/mm<sup>3</sup> in men [<xref rid="pone.0139574.ref039" ref-type="bibr">39</xref>]. The number of microglia were also found to decrease over time secondary to dystrophy at a conversion rate of about 80% by 65 years old [<xref rid="pone.0139574.ref040" ref-type="bibr">40</xref>]. Given this range, the microglia density was set at 4500 microglia/mm<sup>3</sup> with a conversion to dystrophy rate of 7.3x10<sup>−5</sup>/day. The equation for microglia number is given by:
+<disp-formula id="pone.0139574.e002">
+<alternatives>
+<graphic id="pone.0139574.e002g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.e002" xlink:type="simple"/>
+<mml:math display="block" id="M2" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:mi>M</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:msub><mml:mn>1</mml:mn><mml:mn>2</mml:mn></mml:msub></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi>M</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(2)</label>
+</disp-formula>
+where k<sub>12</sub> is the conversion to dystrophy rate and M is the number of microglia within the modeled volume.</p>
+<p>Brain endothelial cells (ECs) line cerebral capillaries and work with astrocytes to form the blood-brain barrier (BBB). Between the astrocyte foot processes and the endothelial cells is the perivascular space (PVS), a narrow space (50–100 nm) composed of the basement membrane that allows movement of brain ISF from the capillaries towards the arteries [<xref rid="pone.0139574.ref012" ref-type="bibr">12</xref>, <xref rid="pone.0139574.ref014" ref-type="bibr">14</xref>, <xref rid="pone.0139574.ref041" ref-type="bibr">41</xref>]. Endothelial cells in low-flow vessels (such as capillaries) have been found to take on a hexagonal or polygonal shape, with only a single endothelial cell wrapping end-to-end to form the capillary wall. Given that the average capillary wall is approximately 8 μm in diameter, the circumference of the “wrapped” brain capillary endothelial cells can be estimated as 25 μm. Polygonal endothelial cells with this length have been estimated to be between 10–20 μm in width [<xref rid="pone.0139574.ref042" ref-type="bibr">42</xref>–<xref rid="pone.0139574.ref044" ref-type="bibr">44</xref>]. For modeling purposes, we have assumed the final dimensions to be 25 by 20 μm, or approximately 5 endothelial cells per 100 μm capillary length.</p>
+<p>Brain ECs have a natural replacement rate of 0.1% per day [<xref rid="pone.0139574.ref045" ref-type="bibr">45</xref>–<xref rid="pone.0139574.ref046" ref-type="bibr">46</xref>], increasing to 1–10% per day if ECs are being exposed to high blood pressure or turbulent flow [<xref rid="pone.0139574.ref045" ref-type="bibr">45</xref>]. During mitosis and EC replacement, some cells are abnormally created leading to EC senescence. This is a process where endothelial cells divide to replace damaged cells and maintain the capillary wall, however, there is local breakdown of the BBB as tight junctions fail to form correctly [<xref rid="pone.0139574.ref047" ref-type="bibr">47</xref>–<xref rid="pone.0139574.ref048" ref-type="bibr">48</xref>]. Denuded spots and disruption of capillary laminar flow have been hypothesized to occur with senescence [<xref rid="pone.0139574.ref047" ref-type="bibr">47</xref>–<xref rid="pone.0139574.ref048" ref-type="bibr">48</xref>]. Approximately 3–7% of ECs are senescent in a 65 year old exposed to normal stressors; this rate increases to 41–93% senescence when ECs are exposed to only twice the level of stressors [<xref rid="pone.0139574.ref047" ref-type="bibr">47</xref>]. Assuming the higher rates of senescence, this translates to a senescence rate of 0.1% per year under normal conditions and 1.4% per year under increased stressors. The equation for the number of brain ECs is then given by:
+<disp-formula id="pone.0139574.e003">
+<alternatives>
+<graphic id="pone.0139574.e003g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.e003" xlink:type="simple"/>
+<mml:math display="block" id="M3" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:mi>E</mml:mi><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi>E</mml:mi><mml:mi>C</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(3)</label>
+</disp-formula>
+where k<sub>2</sub> is the rate of ECs entering senescence and EC is the number of brain endothelial cells lining the capillaries in the model volume.</p>
+</sec>
+</sec>
+<sec id="sec006">
+<title>Chemical Species</title>
+<sec id="sec007">
+<title>Beta amyloid</title>
+<p>Beta amyloid is generated by neurons after the sequential processing of the 0amyloid precursor protein (APP) by β- and γ-secretase and is found deposited in both the brain parenchyma as well as the cerebral vasculature. The generation rate has been estimated as 3x10<sup>−4</sup> pg per neuron per day, or the equivalent order of 10<sup>4</sup> molecules per neuron per day [<xref rid="pone.0139574.ref002" ref-type="bibr">2</xref>]. The ratio of Aβ<sub>42</sub> to Aβ<sub>40</sub> generation has been found to be approximately 1:5 [<xref rid="pone.0139574.ref049" ref-type="bibr">49</xref>]. From this data, the generation rate for Aβ<sub>40</sub> was set at 1.6x10<sup>4</sup> and Aβ<sub>42</sub> was set at 3x10<sup>3</sup>. The average concentration of Aβ within brain parenchyma has been estimated using both mice and human brains. Marklund et al used microdialysis probes placed into the brains of patients following traumatic brain injury and noted average Aβ<sub>40</sub> levels of 436 pg/mL (range 281.3–971.3 pg/mL) and Aβ<sub>42</sub> levels of 60 pg/mL (range 46–90 pg/mL; values measured in patients with focal brain injury away from the site of injury) [<xref rid="pone.0139574.ref005" ref-type="bibr">5</xref>]. Studies using human brain homogenates have shown similar results (73 pg/mL for Aβ<sub>42</sub> and 440 pg/mL for Aβ<sub>40</sub>) [<xref rid="pone.0139574.ref035" ref-type="bibr">35</xref>]. Using this range, the initial concentrations for Aβ<sub>40</sub> and Aβ<sub>42</sub> are 450 pg/mL and 70 pg/mL, respectively. The general conservation of mass equation can be used to define the change of Aβ within the brain parenchyma as:
+<disp-formula id="pone.0139574.e004">
+<alternatives>
+<graphic id="pone.0139574.e004g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.e004" xlink:type="simple"/>
+<mml:math display="block" id="M4" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mo>∂</mml:mo><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mo>∂</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:mo> </mml:mo><mml:mo>−</mml:mo><mml:mo>∇</mml:mo><mml:mi>N</mml:mi><mml:mo>+</mml:mo><mml:mi>R</mml:mi><mml:mo>,</mml:mo><mml:mo> </mml:mo><mml:mi>w</mml:mi><mml:mi>h</mml:mi><mml:mi>e</mml:mi><mml:mi>r</mml:mi><mml:mi>e</mml:mi><mml:mo> </mml:mo><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:mo> </mml:mo><mml:mi>D</mml:mi><mml:mo>∇</mml:mo><mml:mi>C</mml:mi><mml:mo>+</mml:mo><mml:mi>v</mml:mi><mml:mi>C</mml:mi></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(4)</label>
+</disp-formula>
+where N is the molar flux, D is the diffusion coefficient of Aβ, C is the volume concentration of Aβ, v is the fully developed velocity of the ISF, and R is the volumetric rate of chemical reactions taking place within the control volume given by the rate of Aβ transport by LRP-1 at the BBB. Given the assumptions that flow is unidirectional, fully developed and laminar (given the small length scales modeled) in the region modeled, this equation can be further simplified as:
+<disp-formula id="pone.0139574.e005">
+<alternatives>
+<graphic id="pone.0139574.e005g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.e005" xlink:type="simple"/>
+<mml:math display="block" id="M5" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:mo> </mml:mo><mml:mo>−</mml:mo><mml:mi>v</mml:mi><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>x</mml:mi></mml:mrow></mml:mfrac><mml:mo>−</mml:mo><mml:mi>R</mml:mi></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(5)</label>
+</disp-formula>
+where R represents the generation of Aβ (k<sub>3</sub>, k<sub>4</sub>), the rate of uptake by microglia (k<sub>5</sub>), and the rate of deposition within the brain parenchyma (k<sub>7a</sub>). Degradation of Aβ by extracellular enzymes such as neprilysn have been shown to be negligible <italic>in vivo</italic> [<xref rid="pone.0139574.ref019" ref-type="bibr">19</xref>, <xref rid="pone.0139574.ref050" ref-type="bibr">50</xref>]. The final equation for Aβ within the brain parenchyma is given by:
+<disp-formula id="pone.0139574.e006">
+<alternatives>
+<graphic id="pone.0139574.e006g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.e006" xlink:type="simple"/>
+<mml:math display="block" id="M6" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:mo> </mml:mo><mml:mo>−</mml:mo><mml:mi>v</mml:mi><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>x</mml:mi></mml:mrow></mml:mfrac><mml:mo>+</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mn>3</mml:mn></mml:msub><mml:msub><mml:mi>k</mml:mi><mml:mn>4</mml:mn></mml:msub><mml:mi>N</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mn>5</mml:mn></mml:msub><mml:mi>M</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:msub><mml:mn>7</mml:mn><mml:mi>a</mml:mi></mml:msub></mml:mrow></mml:msub><mml:msub><mml:mi>C</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(6)</label>
+</disp-formula></p>
+<p>The concentration of Aβ in the perivascular space (C<sub>2</sub> for Aβ40 and C<sub>5</sub> for Aβ42) is derived using a similar simplification of <xref rid="pone.0139574.e005" ref-type="disp-formula">Eq (5)</xref> where the concentration differential is still between the brain ISF and the perivascular space. The velocity of the bulk ISF flow was assumed to be approximately double that in an older person and was accounted for in the model. The reaction term is described by the transport rate of Aβ by LRP-1 at the BBB (k<sub>6</sub>) and the rate of deposition in the perivascular space (k<sub>7</sub>):
+<disp-formula id="pone.0139574.e007">
+<alternatives>
+<graphic id="pone.0139574.e007g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.e007" xlink:type="simple"/>
+<mml:math display="block" id="M7" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:mi>v</mml:mi><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>x</mml:mi></mml:mrow></mml:mfrac><mml:mo>−</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mn>6</mml:mn></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mfrac><mml:mrow><mml:mi>L</mml:mi><mml:mi>R</mml:mi><mml:mi>P</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mi>L</mml:mi><mml:mi>R</mml:mi><mml:msub><mml:mi>P</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:mfrac></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:msub><mml:mi>C</mml:mi><mml:mn>2</mml:mn></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mn>7</mml:mn></mml:msub><mml:msub><mml:mi>C</mml:mi><mml:mn>2</mml:mn></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(7)</label>
+</disp-formula>
+where LRP<sub>0</sub> is the initial concentration of LRP-1 receptors on the brain endothelial cells. A similar equation is used to calculate the Aβ<sub>42</sub> concentration in the perivascular space (C<sub>4</sub>) with rate constant k<sub>7</sub> replaced with k<sub>9a</sub>. A term for ApoE was not directly included in <xref rid="pone.0139574.e007" ref-type="disp-formula">Eq (7)</xref> given the recent evidence that ApoE may not play a significant role in Aβ clearance by LRP-1 and may actually, in fact, be a competitive inhibitor of Aβ transport since both bind to the LRP-1 receptor [<xref rid="pone.0139574.ref015" ref-type="bibr">15</xref>, <xref rid="pone.0139574.ref051" ref-type="bibr">51</xref>–<xref rid="pone.0139574.ref052" ref-type="bibr">52</xref>]. Further evidence for this possibility was shown by Shibata et al who noted that there was minimal difference in transport rates in wild-type mice versus ApoE knockout mice [<xref rid="pone.0139574.ref019" ref-type="bibr">19</xref>]. Bell et al confirmed this in their studies of Aβ clearance by LRP-1 and demonstrated that the clearance rate of Aβ bound to ApoE was only about 10% the transport rate of Aβ alone [<xref rid="pone.0139574.ref053" ref-type="bibr">53</xref>]. There is an effect of the ApoE allele, however, on the amount of Aβ transported by LRP-1, as it is believed that ApoE4 may actually bind to LRP-1 longer, thus, increasing potential inhibition of the LRP-1 receptor and slowing clearance of Aβ from the brain [<xref rid="pone.0139574.ref052" ref-type="bibr">52</xref>]. Bachmeier et al demonstrated that clearance of LRP-1 decreased by approximately 2.5 times when the ApoE4 allele was compared to the ApoE3 allele [<xref rid="pone.0139574.ref054" ref-type="bibr">54</xref>].</p>
+<p>Review of the literature demonstrated a wide range of transport rates for LRP-1, ranging from 0.015/min to 0.03/min of the fraction of Aβ<sub>40</sub> injected [<xref rid="pone.0139574.ref019" ref-type="bibr">19</xref>, <xref rid="pone.0139574.ref055" ref-type="bibr">55</xref>–<xref rid="pone.0139574.ref056" ref-type="bibr">56</xref>]. Bell et al measured the transport rate constant in pmol/min/gram of ISF and found the rate to be 0.211 for Aβ<sub>40</sub> and 0.111 for Aβ<sub>42</sub> [<xref rid="pone.0139574.ref053" ref-type="bibr">53</xref>]. Using the conversion for density of brain tissue of 0.99g/cm<sup>3</sup> [<xref rid="pone.0139574.ref057" ref-type="bibr">57</xref>], this would be equivalent to 12x10<sup>7</sup> molecules/min/mm<sup>3</sup> brain, which is more than a magnitude of order elevated beyond the steady state concentration that has been measured <italic>in vivo</italic>. Given the disparity and incongruency in the LRP-1 rate constants in the literature, we used the assumption that 40% of Aβ is cleared by LRP, while the remaining Aβ is cleared by the perivascular pathway or is deposited [<xref rid="pone.0139574.ref011" ref-type="bibr">11</xref>]. This rate of clearance decreased with aging as the density of LRP-1 receptors decreased in response to declining numbers of functioning brain endothelial cells.</p>
+<p>Deposition of Aβ within the brain parenchyma (C9) occurred at a constant rate over time dependent on the concentration of Aβ:
+<disp-formula id="pone.0139574.e008">
+<alternatives>
+<graphic id="pone.0139574.e008g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.e008" xlink:type="simple"/>
+<mml:math display="block" id="M8" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mn>9</mml:mn></mml:msub></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:msub><mml:mn>7</mml:mn><mml:mi>a</mml:mi></mml:msub></mml:mrow></mml:msub><mml:msub><mml:mi>C</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo> </mml:mo><mml:mi>f</mml:mi><mml:mi>o</mml:mi><mml:mi>r</mml:mi><mml:mo> </mml:mo><mml:mtext>A</mml:mtext><mml:msub><mml:mi>β</mml:mi><mml:mrow><mml:msub><mml:mn>4</mml:mn><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:msub><mml:mo>;</mml:mo><mml:mtext> </mml:mtext><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mrow><mml:msub><mml:mn>1</mml:mn><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mn>9</mml:mn></mml:msub><mml:msub><mml:mi>C</mml:mi><mml:mn>4</mml:mn></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo> </mml:mo><mml:mo> </mml:mo><mml:mo> </mml:mo><mml:mi>f</mml:mi><mml:mi>o</mml:mi><mml:mi>r</mml:mi><mml:mo> </mml:mo><mml:mtext>A</mml:mtext><mml:msub><mml:mi>β</mml:mi><mml:mrow><mml:msub><mml:mn>4</mml:mn><mml:mn>2</mml:mn></mml:msub></mml:mrow></mml:msub></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(8)</label>
+</disp-formula>
+where C<sub>1</sub> is the concentration of Aβ<sub>40</sub> within the brain parenchyma and C<sub>4</sub> is the concentration of Aβ<sub>42</sub> in brain ISF. Deposition of Aβ within the cerebral vessel similarly occurred at a constant rate related to the Aβ concentration within the perivascular space:
+<disp-formula id="pone.0139574.e009">
+<alternatives>
+<graphic id="pone.0139574.e009g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.e009" xlink:type="simple"/>
+<mml:math display="block" id="M9" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mn>7</mml:mn></mml:msub><mml:msub><mml:mi>C</mml:mi><mml:mn>2</mml:mn></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo> </mml:mo><mml:mi>f</mml:mi><mml:mi>o</mml:mi><mml:mi>r</mml:mi><mml:mo> </mml:mo><mml:mtext>A</mml:mtext><mml:msub><mml:mi>β</mml:mi><mml:mrow><mml:msub><mml:mn>4</mml:mn><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:msub><mml:mo>;</mml:mo><mml:mtext> </mml:mtext><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:msub><mml:mi>C</mml:mi><mml:mn>6</mml:mn></mml:msub></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mn>9</mml:mn></mml:msub><mml:msub><mml:mi>C</mml:mi><mml:mn>5</mml:mn></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo> </mml:mo><mml:mo> </mml:mo><mml:mi>f</mml:mi><mml:mi>o</mml:mi><mml:mi>r</mml:mi><mml:mo> </mml:mo><mml:mtext>A</mml:mtext><mml:msub><mml:mi>β</mml:mi><mml:mrow><mml:msub><mml:mn>4</mml:mn><mml:mn>2</mml:mn></mml:msub></mml:mrow></mml:msub></mml:mrow>
+</mml:math></alternatives>
+<label>(9)</label>
+</disp-formula></p>
+</sec>
+<sec id="sec008">
+<title>LRP density</title>
+<p>The density of the LRP-1 receptor on brain endothelial cells was determined experimentally by Hvidberg et al to be approximately 31 fmol/mm<sup>3</sup> [<xref rid="pone.0139574.ref058" ref-type="bibr">58</xref>]. In the model, a 1mm2 area would contain an array of 21 by 21 capillaries. The depth of this array would contain 50 brain ECs, thus, the total density of LRP-1 receptors in the model volume (1mm<sup>3</sup>) would be 9.3x10<sup>11</sup>. During normal aging, the total number of LRP-1 receptors in a given volume decreases by about 55% [<xref rid="pone.0139574.ref019" ref-type="bibr">19</xref>]. Assuming that this loss occurs secondary to the loss of brain endothelial cells with, the rate of LRP-1 loss (k<sub>10</sub>) is equal to the rate of loss of endothelial cells (k<sub>2</sub>):
+<disp-formula id="pone.0139574.e010">
+<alternatives>
+<graphic id="pone.0139574.e010g" position="anchor" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.e010" xlink:type="simple"/>
+<mml:math display="block" id="M10" overflow="scroll">
+<mml:mrow><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:mi>L</mml:mi><mml:mi>R</mml:mi><mml:mi>P</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:msub><mml:mn>1</mml:mn><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi>L</mml:mi><mml:mi>R</mml:mi><mml:mi>P</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow>
+</mml:math>
+</alternatives>
+<label>(10)</label>
+</disp-formula></p>
+<p>The values for each of the rate constants are given in <xref rid="pone.0139574.t002" ref-type="table">Table 2</xref>.</p>
+<table-wrap id="pone.0139574.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139574.t002</object-id>
+<label>Table 2</label> <caption><title>Rate constants and initial conditions used in modeling.</title></caption>
+<alternatives>
+<graphic id="pone.0139574.t002g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.t002" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Variable</th>
+<th align="left" rowspan="1" colspan="1">Represents</th>
+<th align="left" rowspan="1" colspan="1">Units</th>
+<th align="left" rowspan="1" colspan="1">Value</th>
+<th align="left" rowspan="1" colspan="1">Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>N</bold></td>
+<td align="left" rowspan="1" colspan="1"># of neurons</td>
+<td align="left" rowspan="1" colspan="1">#/volume</td>
+<td align="left" rowspan="1" colspan="1">5275 (4050–6500)</td>
+<td align="left" rowspan="1" colspan="1">5, 7–8, 11, 20</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>M</bold></td>
+<td align="left" rowspan="1" colspan="1"># of microglia</td>
+<td align="left" rowspan="1" colspan="1">#/volume</td>
+<td align="left" rowspan="1" colspan="1">4500 (3000–6000)</td>
+<td align="left" rowspan="1" colspan="1">23–24</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>EC</bold></td>
+<td align="left" rowspan="1" colspan="1"># of brain ECs</td>
+<td align="left" rowspan="1" colspan="1">#/length</td>
+<td align="left" rowspan="1" colspan="1">5 per 100μm (capillaries)</td>
+<td align="left" rowspan="1" colspan="1">9, 12, 18, 26</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>C</bold><sub><bold>1</bold></sub><bold>/C</bold><sub><bold>4</bold></sub></td>
+<td align="left" rowspan="1" colspan="1">Initial Aβ conc. in brain ISF</td>
+<td align="left" rowspan="1" colspan="1">pg/ml</td>
+<td align="left" rowspan="1" colspan="1">Aβ40: 450 (240–770) Aβ42: 70 (40–100)</td>
+<td align="left" rowspan="1" colspan="1">5, 8, 17</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>C</bold><sub><bold>2</bold></sub><bold>/C</bold><sub><bold>5</bold></sub></td>
+<td align="left" rowspan="1" colspan="1">Initial Aβ conc. in PVS</td>
+<td align="left" rowspan="1" colspan="1">mass/vol</td>
+<td align="left" rowspan="1" colspan="1">10% C<sub>1i</sub>/C<sub>4i</sub></td>
+<td align="left" rowspan="1" colspan="1">Model assumption</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>C</bold><sub><bold>3</bold></sub><bold>/C</bold><sub><bold>6</bold></sub></td>
+<td align="left" rowspan="1" colspan="1">Concentration of Aβ in vessels</td>
+<td align="left" rowspan="1" colspan="1">mass/vol</td>
+<td align="left" rowspan="1" colspan="1">0 (initially)</td>
+<td align="left" rowspan="1" colspan="1">Model assumption</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>C</bold><sub><bold>9</bold></sub><bold>/C</bold><sub><bold>10</bold></sub></td>
+<td align="left" rowspan="1" colspan="1">Conc. of Aβ deposited in brain</td>
+<td align="left" rowspan="1" colspan="1">mass/vol</td>
+<td align="left" rowspan="1" colspan="1">0 (initially)</td>
+<td align="left" rowspan="1" colspan="1">Model assumption</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>k</bold><sub><bold>1</bold></sub></td>
+<td align="left" rowspan="1" colspan="1">Loss of neurons when stimulated</td>
+<td align="left" rowspan="1" colspan="1">%/time</td>
+<td align="left" rowspan="1" colspan="1">3.4%/yr</td>
+<td align="left" rowspan="1" colspan="1">7–8</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>d</bold></td>
+<td align="left" rowspan="1" colspan="1">Natural rate of neuron loss</td>
+<td align="left" rowspan="1" colspan="1">%/time</td>
+<td align="left" rowspan="1" colspan="1">1%/yr</td>
+<td align="left" rowspan="1" colspan="1">7–8</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>k</bold><sub><bold>2</bold></sub></td>
+<td align="left" rowspan="1" colspan="1">Loss of ECs</td>
+<td align="left" rowspan="1" colspan="1">%/time</td>
+<td align="left" rowspan="1" colspan="1">0.1%/yr (no stim)<break/>1.7%/yr (stim)</td>
+<td align="left" rowspan="1" colspan="1">16, 19</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>k</bold><sub><bold>3</bold></sub><bold>/k</bold><sub><bold>8</bold></sub></td>
+<td align="left" rowspan="1" colspan="1">Aβ<sub>40/42</sub> generation rate</td>
+<td align="left" rowspan="1" colspan="1">#/neuron/ time</td>
+<td align="left" rowspan="1" colspan="1">Aβ<sub>40</sub>: 16000<break/>Aβ<sub>42</sub>: 3000</td>
+<td align="left" rowspan="1" colspan="1">15</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>k</bold><sub><bold>4</bold></sub></td>
+<td align="left" rowspan="1" colspan="1">Stimulated Aβ generation rate</td>
+<td align="left" rowspan="1" colspan="1">%/time</td>
+<td align="left" rowspan="1" colspan="1">1.5</td>
+<td align="left" rowspan="1" colspan="1">Estimate</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>k</bold><sub><bold>5</bold></sub><bold>/k</bold><sub><bold>11</bold></sub></td>
+<td align="left" rowspan="1" colspan="1">Microglia uptake rate</td>
+<td align="left" rowspan="1" colspan="1">#/microglia/ time</td>
+<td align="left" rowspan="1" colspan="1">Aβ40: 1400<break/>Aβ42: 200</td>
+<td align="left" rowspan="1" colspan="1">Estimated from 3–4</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>k</bold><sub><bold>6</bold></sub></td>
+<td align="left" rowspan="1" colspan="1">Aβ transport rate constant for LRP</td>
+<td align="left" rowspan="1" colspan="1">1/time</td>
+<td align="left" rowspan="1" colspan="1">ApoE2/3: 0.4<break/>ApoE4: 0.12</td>
+<td align="left" rowspan="1" colspan="1">2, 21</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>k</bold><sub><bold>7</bold></sub><bold>/k</bold><sub><bold>9a</bold></sub></td>
+<td align="left" rowspan="1" colspan="1">Aβ deposition rate in vessels</td>
+<td align="left" rowspan="1" colspan="1">fraction/day</td>
+<td align="left" rowspan="1" colspan="1">Aβ40: 0.004<break/>Aβ42: 0.002</td>
+<td align="left" rowspan="1" colspan="1">6, 21</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1"><bold>k</bold><sub><bold>9</bold></sub><bold>/k</bold><sub><bold>7a</bold></sub></td>
+<td align="left" rowspan="1" colspan="1">Aβ deposition rate in brain</td>
+<td align="left" rowspan="1" colspan="1">fraction/day</td>
+<td align="left" rowspan="1" colspan="1">Aβ40: 0.001<break/>Aβ42: 0.001</td>
+<td align="left" rowspan="1" colspan="1">6, 21</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t002fn001"><p>Values were derived from experimental studies or estimated given available data. We assumed that there was no Aβ deposited in the brain parenchyma or cerebral vessels at the beginning of the simulation.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec009">
+<title>Simulation conditions</title>
+<p>The model was simulated using Matlab. Initial conditions assumed that the model described a 30 year old and was run for a total of 50 years. The timestep used was a single day. Thus, a total of 18,250 data points were determined. Sensitivity analysis was completed for rate constants that were estimated (initial concentration in perivascular space, increased generation of Aβ when a stimulus is present).</p>
+</sec>
+</sec>
+</sec>
+<sec id="sec010" sec-type="results">
+<title>Results</title>
+<p>The objective for the model was to study the role that aging has on the clearance of Aβ via the perivascular pathway and transport at the blood-brain barrier by LRP-1. Normal aging causes a slow, steady decrease in the number of neurons in the brain with minor accumulation of Aβ within brain parenchyma and cerebral vessels in the majority of individuals. This was demonstrated clearly in our simulation of normal aging (<xref rid="pone.0139574.g003" ref-type="fig">Fig 3</xref>).</p>
+<fig id="pone.0139574.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139574.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title>Simulation demonstrating effects of normal aging on Aβ levels within the brain parenchyma and local cerebral vessels.</title>
+<p>(A) Deposition of Aβ40 occurred much more rapidly than that of Aβ42 with approximately 6 times the amount of Aβ40 deposited within cerebral vessels. This ratio agrees with what has been observed experimentally. The rate of Aβ increase started to decrease over the simulation as the number of neurons declined with aging and from elevations in the Aβ concentration. (B) The number of endothelial cells (blue) decreased slowly as they entered senescence. Microglia (green) decreased about 80% from their initial values, correlating with conversion to dystrophy. Neurons (red) also decreased secondary to natural loss as well as loss from elevated Aβ levels. (C) The total number of LRP-1 receptors decreased to approximately 60% of the initial value in accordance with the loss of brain endothelial cells.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.g003" position="float" xlink:type="simple"/>
+</fig>
+<p>Heart rate leading to arterial pulsations is important for maintaining the clearance provided by the perivascular glymphatic pathway. During aging, it is common for patients to develop heart rate abnormalities, either too slow of a heart rate (bradycardia), too fast (tachycardia) or an abnormal rate (atrial fibrillation). We hypothesized prior to running simulations that having bradycardia would lead to a decreased Aβ clearance rate and thus, lead to an elevation in Aβ deposition. Conversely, we postulated that an elevated heart rate (for example, from exercising daily) would help to increase the clearance rate and thus decrease the amount of Aβ available for deposition. This was in fact what was seen (<xref rid="pone.0139574.g004" ref-type="fig">Fig 4</xref>), with the amount of Aβ deposition in the brain parenchyma increasing by about 20% while deposition within cerebral vessels was minimal (about 5%). Additionally, an elevated heart provided slightly better survival for neuron number.</p>
+<fig id="pone.0139574.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139574.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title>Effect of heart rate on Aβ clearance and deposition.</title>
+<p>(A, B) Decreasing the heart rate by only 10 beats per minute (60 to 50) led to nearly a 20% increase in the Aβ deposition in the brain parenchyma and a 5% increase in the cerebral vasculature. (C, D) Increasing heart rate by 30 beats per minute (60 to 90) led to the converse, with Aβ deposition levels in brain parenchyma decreasing about 30% and in the cerebral vessels decreasing about 10%.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.g004" position="float" xlink:type="simple"/>
+</fig>
+<p>The stiffness of blood vessels is known to increase over time with aging. Vessel stiffness can also increase significantly in diseases such as atherosclerosis and cerebral amyloid angiopathy, two diseases that increase the risk of transitioning to AD in older age. Increasing the stiffness of vessels by a factor of 2 over the course of the simulation via an exponential rise, surprisingly, led to a significant increase in Aβ deposition within brain parenchyma with Aβ<sub>40</sub> increasing nearly 100x and Aβ<sub>42</sub> increasing greater than a factor of 10<sup>3</sup>, a level often seen in the brains of those with AD (<xref rid="pone.0139574.g005" ref-type="fig">Fig 5</xref>). Beta amyloid deposited within cerebral vessels actually decreased, most likely secondary to less Aβ reaching the perivascular space by convection alone. There was also increased neuronal cell death given the high Aβ levels, with neuron number decreasing to about ½ of the normal age-matched simulation.</p>
+<fig id="pone.0139574.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139574.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title>Effect of vessel stiffness on Aβ clearance and deposition.</title>
+<p>(A) Increasing the stiffness slowly by a factor of 2 during aging led to a significant increase in the amount of Aβ deposited within the brain parenchyma, with a decrease in the amount reaching and thus depositing in cerebral vessels. (B) The high Aβ levels in the brain parenchyma led to accelerated neuronal loss with no change observed in microglia or brain endothelial cell number.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.g005" position="float" xlink:type="simple"/>
+</fig>
+<p>The ApoE4 allele is a well-known risk factor for having late-onset AD and is found in 65–80% of all AD cases [<xref rid="pone.0139574.ref059" ref-type="bibr">59</xref>]. Approximately 15–20% of the population is a carrier for ApoE4 (either homozygote or heterozygote), and thus, have an increased risk of AD. The other two alleles (ApoE2 and ApoE3) are not known to contribute to AD risk and are carried by 5–10% and 65–70% of the population, respectively [<xref rid="pone.0139574.ref059" ref-type="bibr">59</xref>]. It is believed that the ApoE4 allele may contribute to elevated Aβ levels by either competitively inhibiting Aβ binding to LRP-1, or by causing inefficient binding of the ApoE*Aβ complex to LRP-1 [<xref rid="pone.0139574.ref051" ref-type="bibr">51</xref>, <xref rid="pone.0139574.ref059" ref-type="bibr">59</xref>]. Decreasing the transport rate of Aβ by LRP-1 by 2.5 times over the course of the simulation led to approximately a two-fold increase in Aβ<sub>40</sub> deposition and a 67% increase in Aβ<sub>42</sub> deposition in cerebral vessels. There was no additional accumulation of Aβ within the brain parenchyma or changes in cell number (<xref rid="pone.0139574.g006" ref-type="fig">Fig 6</xref>).</p>
+<fig id="pone.0139574.g006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139574.g006</object-id>
+<label>Fig 6</label>
+<caption>
+<title>Effect of ApoE allele on Aβ clearance and deposition.</title>
+<p>(A) Levels of Aβ40 deposition in cerebral vessels increased nearly two-fold with only a 67% increase in Aβ42 deposition there. No changes from baseline simulations were noted in Aβ levels in the brain parenchyma. (B) No changes in cell number were observed compared to baseline values for aging.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.g006" position="float" xlink:type="simple"/>
+</fig>
+<p>The final simulations studied the effect of multiple risk factors on changes in Aβ levels. Of the risk factors studied, heart rate and vessel stiffness were the two that could be somewhat modifiable. In <xref rid="pone.0139574.g007" ref-type="fig">Fig 7a</xref>, we show that the combination of the ApoE4 allele with bradycardia led to an increase in all Aβ parameters measured, with the most significant increase in Aβ<sub>40</sub> in cerebral vessels. There was a minimal decrease of less than 10% in the number of neurons. In <xref rid="pone.0139574.g007" ref-type="fig">Fig 7b</xref>, we studied the effect of having both the ApoE4 allele as well as a two-fold increase in vessel stiffness. This combination led to a significant increase in Aβ deposition within the brain parenchyma of both forms (Aβ<sub>42</sub>&gt; Aβ<sub>40</sub>). Beta amyloid deposition within the cerebral vessels was decreased compared to normal aging, however, this decrease was not as severe as that seen in with only increased stiffness. This suggests that ApoE has more of an effect on the deposition of Aβ within the cerebral vessels rather than the brain parenchyma. There was significant neuronal loss in this simulation, with no changes noted in the microglia or endothelial cell number. <xref rid="pone.0139574.g007" ref-type="fig">Fig 7c</xref> shows the effect of increased vessel stiffness with bradycardia. The results of this simulation were nearly identical to those of increased stiffness alone, suggesting that the effect of bradycardia when there is underlying cardiovascular dysfunction (increased vessel stiffness) is minimal. A summary of the results for each simulation are included in <xref rid="pone.0139574.t003" ref-type="table">Table 3</xref>.</p>
+<fig id="pone.0139574.g007" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139574.g007</object-id>
+<label>Fig 7</label>
+<caption>
+<title>Combination effect of bradycardia, ApoE4 allele and increased vessel stiffness.</title>
+<p>(A) Having both bradycardia and the ApoE4 allele led to elevated levels of Aβ40 deposition in both the brain parenchyma and the cerebral vessels, with nearly a two-fold increase in Aβ40 in the cerebral vessels. There was a small decrease in the number of neurons at the final simulation endpoint (&lt;10%). (B) In the case where the simulated patient was supposed to have cardiovascular disease (represented by increased vessel stiffness) and carry the ApoE4 allele, Aβ deposition was significantly elevated within the brain parenchyma (100x and 1000x for Aβ40 and Aβ42, respectively). The decreased levels of Aβ within the cerebrovasculature was not quite as significant as with increased vessel stiffness alone, suggesting that the ApoE allele plays an important role in determining deposition and Aβ concentration within the space near cerebral vessels. The significantly elevated Aβ levels led to a decrease in the neuronal cell number secondary to increased neuronal death rate seen at high Aβ levels. (C) The results of increased vessel stiffness in the presence of bradycardia led to results that were similar to those seen with increased vessel stiffness alone.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.g007" position="float" xlink:type="simple"/>
+</fig>
+<table-wrap id="pone.0139574.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139574.t003</object-id>
+<label>Table 3</label> <caption><title>Summary of simulation results.</title></caption>
+<alternatives>
+<graphic id="pone.0139574.t003g" position="float" mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.t003" xlink:type="simple"/>
+<table>
+<colgroup span="1">
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+<col align="left" valign="middle" span="1"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="1" colspan="1">Aβ in:</th>
+<th align="left" rowspan="1" colspan="1">Brain parenchyma</th>
+<th align="left" rowspan="1" colspan="1">Cerebral Vessel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2" align="left" colspan="1">Normal aging</td>
+<td align="left" rowspan="1" colspan="1">5.929x10<sup>9</sup></td>
+<td align="left" rowspan="1" colspan="1">6.8575x10<sup>9</sup></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">1.187x10<sup>9</sup></td>
+<td align="left" rowspan="1" colspan="1">1.0685x10<sup>9</sup></td>
+</tr>
+<tr>
+<td rowspan="2" align="left" colspan="1">Bradycardia (HR = 50)</td>
+<td align="left" rowspan="1" colspan="1">1.20</td>
+<td align="left" rowspan="1" colspan="1">1.05</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">1.19</td>
+<td align="left" rowspan="1" colspan="1">1.07</td>
+</tr>
+<tr>
+<td rowspan="2" align="left" colspan="1">Elevated HR (HR = 90)</td>
+<td align="left" rowspan="1" colspan="1">68.5</td>
+<td align="left" rowspan="1" colspan="1">90.7</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">69.2</td>
+<td align="left" rowspan="1" colspan="1">85.1</td>
+</tr>
+<tr>
+<td rowspan="2" align="left" colspan="1">Elevated vessel stiffness (2x)</td>
+<td align="left" rowspan="1" colspan="1">144.92</td>
+<td align="left" rowspan="1" colspan="1">9.04x10<sup>−6</sup></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">1741.45</td>
+<td align="left" rowspan="1" colspan="1">9.07x10<sup>−6</sup></td>
+</tr>
+<tr>
+<td rowspan="2" align="left" colspan="1">ApoE4 allele</td>
+<td align="left" rowspan="1" colspan="1">No change</td>
+<td align="left" rowspan="1" colspan="1">1.96</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">No change</td>
+<td align="left" rowspan="1" colspan="1">1.62</td>
+</tr>
+<tr>
+<td rowspan="2" align="left" colspan="1">ApoE4 allele &amp; bradycardia (HR = 50)</td>
+<td align="left" rowspan="1" colspan="1">1.20</td>
+<td align="left" rowspan="1" colspan="1">2.16</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">1.19</td>
+<td align="left" rowspan="1" colspan="1">1.83</td>
+</tr>
+<tr>
+<td rowspan="2" align="left" colspan="1">ApoE4 allele &amp; increased vessel stiffness</td>
+<td align="left" rowspan="1" colspan="1">144.92</td>
+<td align="left" rowspan="1" colspan="1">2.9x10<sup>−5</sup></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">1741.45</td>
+<td align="left" rowspan="1" colspan="1">2.98x10<sup>−4</sup></td>
+</tr>
+<tr>
+<td rowspan="2" align="left" colspan="1">Bradycardia &amp; increased vessel stiffness</td>
+<td align="left" rowspan="1" colspan="1">144.92</td>
+<td align="left" rowspan="1" colspan="1">9.04x10<sup>−6</sup></td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">1741.45</td>
+<td align="left" rowspan="1" colspan="1">9.07x10<sup>−6</sup></td>
+</tr>
+<tr>
+<td rowspan="2" align="left" colspan="1">Increased beta amyloid generation (2x)</td>
+<td align="left" rowspan="1" colspan="1">1.31</td>
+<td align="left" rowspan="1" colspan="1">1.29</td>
+</tr>
+<tr>
+<td align="left" rowspan="1" colspan="1">1.30</td>
+<td align="left" rowspan="1" colspan="1">1.30</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t003fn001"><p>Under normal aging, Aβ<sub>40</sub> within the brain parenchyma was found to be 5.929x10<sup>9</sup>, while Aβ<sub>42</sub> in the brain parenchyma was 1.187x10<sup>9</sup>. Within the cerebral vessel, Aβ<sub>40</sub> was 6.8575x10<sup>9</sup> and Aβ<sub>42</sub> was 1.068x10<sup>9</sup>. The final endpoint value for each simulation was determined and then normalized to the corresponding value obtained for the normal aging simulation to determine the normalized ratio. The normalized ratios for Aβ<sub>40</sub> are listed first in each row, followed by the value for Aβ<sub>42</sub>. The results here show the dramatic increase in beta amyloid within the brain parenchyma when vessel stiffness increases slowly during aging to a maximum two-fold increase. There is also a corresponding decrease in the amount of Aβ at the cerebral vessel. The only simulation condition that showed a decrease in Aβ was the elevated heart rate to 90 beats per minute. This simulation was trying to model the effect of daily exercise on Aβ clearance and demonstrated the efficacy of exercise in helping to increase Aβ clearance. The final row describes the Aβ normalized ratio when Aβ generation is increased two-fold as part of the sensitivity analysis. This simulation demonstrated that increasing Aβ generation rate had an effect similar to bradycardia in the overall levels of Aβ within the brain parenchyma, but led to further elevations in Aβ within the cerebral vasculature with respect to the bradycardia and normal aging simulations. These results suggests that increased Aβ generation alone is not responsible for the elevated levels of Aβ seen in the brains of patients with AD, though the role of vessel stiffness may play a very important role.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>A sensitivity analysis was performed on the parameters that were estimated instead of derived from the literature (<xref rid="pone.0139574.g008" ref-type="fig">Fig 8</xref>). Changes in the initial concentration of beta amyloid within the perivascular space (C<sub>2</sub>/C<sub>5</sub>) were studied from a range of ½ normal to 2 times normal with no changes in the simulation results observed, suggesting that the model is stable for changes in this value. Analysis on the stability of the k<sub>4</sub> rate constant (the increase in beta amyloid generation in response to stimuli such as elevated levels of Aβ) demonstrated a narrow range of stability. Increasing k<sub>4</sub> to 2 from 1.5 led to almost a 30% increase in Aβ levels in all compartments modeled. Further increases in k<sub>4</sub> (not shown) continued to show a similar trend.</p>
+<fig id="pone.0139574.g008" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0139574.g008</object-id>
+<label>Fig 8</label>
+<caption>
+<title>Sensitivity analysis of the model.</title>
+<p>(A)The sensitivity of the model to values that were estimated was studied to determine the range over which the model produced stable simulation results. Changing the initial concentration of Aβ from ½ x to 2x led to no changes in simulation result and demonstrating stability of this rate constant. (B) Changing the amount that Aβ generation would increase in response to a stimulus (k<sub>4</sub>) showed that this parameter had a relatively narrow range of stability.</p>
+</caption>
+<graphic mimetype="image" xlink:href="info:doi/10.1371/journal.pone.0139574.g008" position="float" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec011" sec-type="conclusions">
+<title>Discussion</title>
+<p>The mathematical model developed in this paper studies the role that clearance by the glymphatic system and LRP-1 at the blood-brain barrier plays in pathogenesis of AD. Altered clearance levels have been implicated as causal factors in the development of AD [<xref rid="pone.0139574.ref060" ref-type="bibr">60</xref>–<xref rid="pone.0139574.ref064" ref-type="bibr">64</xref>]. Results of the model for normal aging demonstrated a gradual increase in Aβ deposition in both the brain parenchyma and the cerebral vessels which correlates well to experimental results [<xref rid="pone.0139574.ref005" ref-type="bibr">5</xref>, <xref rid="pone.0139574.ref035" ref-type="bibr">35</xref>, <xref rid="pone.0139574.ref049" ref-type="bibr">49</xref>]. Monitoring neuron, microglia and brain endothelial cell numbers allowed us to track the steady decline in functional cells of each type that occurs normally with aging. One of the limitations of this model is that transport of Aβ by diffusion down its concentration gradient from neurons to the BBB was not incorporated as little experimental data is available at this time. Given what is known of transport properties in the brain, diffusion has been theorized to be an important contributor to movement of chemical species in the brain ISF when species are traveling short distances in the grey matter (few-tens of microns), however, it is believed that convective flow dominates in white matter tracts [<xref rid="pone.0139574.ref026" ref-type="bibr">26</xref>, <xref rid="pone.0139574.ref065" ref-type="bibr">65</xref>]. Future experimental work will help to better elucidate this mechanism and allow for more accurate modeling.</p>
+<p>Cardiovascular risk factors such as the ApoE4 allele, prolonged hypertension leading to re-modeling of vessels and hyperlipidemia have also been recognized as risk factors for AD. In this model, we found that increasing the vessel stiffness by a factor of just 2 from baseline led to a significant increase in the deposition of Aβ in the brain parenchyma most likely secondary to decreased transfer of arterial pulsations and thus, decreased bulk ISF flow. These simulations clearly demonstrated the importance that changes in vessel structure can have in the clearance of Aβ from the brain and offer insight into the disease process, as well as a possible modifiable risk factor. Further research looking at the effect of better blood pressure management and prevention of vessel re-modeling and its effect on AD pathogenesis would provide the necessary evidence to determine if this is a viable AD prevention strategy.</p>
+<p>Increasing vessel stiffness in combination with having the ApoE4 allele led to a 10-fold increase in Aβ within the cerebral vasculature compared to the value for increased stiffness only. A similar trend for increased cerebrovasculature deposition of Aβ was seen in other simulations where the ApoE4 allele was included, suggesting the importance that ApoE4 plays in deposition of Aβ in the vasculature. Although ApoE4 is not a modifiable risk factor for AD, this model suggests that being a carrier for it may increase ones risk of having cerebrovasculature deposits of Aβ otherwise known as cerebral amyloid angiopathy (CAA). Further study is still needed to better understand the role that ApoE may play in competitive inhibition of Aβ transport at the blood-brain barrier and its possible role in CAA.</p>
+<p>Studying the effect of elevated heart rate on Aβ clearance demonstrated that raising heart rate (90 beats per minute) as can happen during exercise, is beneficial for removing Aβ from the brain. Though this effect was modest, it still demonstrated the positive benefit that exercise can have, especially for the elderly [<xref rid="pone.0139574.ref066" ref-type="bibr">66</xref>–<xref rid="pone.0139574.ref068" ref-type="bibr">68</xref>].</p>
+<p>This model represents an attempt to study multi-level interactions between cells within the brain, Aβ levels, LRP-1 levels and the ApoE allele. Future models should look at the interaction between this system and the role that inflammation and cholesterol processing may play in AD pathogenesis. Sleep is also known to be a major determinant of beta amyloid clearance via the glymphatic system, however, experimental rate constants in humans on how shortened lengths of sleep may affect clearance requires further investigation but would be an important parameter to include in future models [<xref rid="pone.0139574.ref069" ref-type="bibr">69</xref>]. Also, as further <italic>in vivo</italic> research that accurately measures parameters for diffusion and convection in the brain become available, including the role of the aquaporin-4 receptor in the glymphatic clearance pathway, the model can be refined to include these newer parameters to more accurately model the system and increase our understanding of divergence of AD progression from normal aging [<xref rid="pone.0139574.ref011" ref-type="bibr">11</xref>, <xref rid="pone.0139574.ref070" ref-type="bibr">70</xref>].</p>
+</sec>
+</body>
+<back>
+<ack>
+<p>CRK would like to thank the library services at the Pennsylvania State University College of Medicine for their help and resources while preparing this manuscript.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0139574.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Querfurth</surname> <given-names>HW</given-names></name>, <name name-style="western"><surname>LaFerla</surname> <given-names>FM</given-names></name>. <article-title>Alzheimer's Disease</article-title>, <source>N Engl J Med</source> <year>2010</year>; <volume>362</volume> (<issue>4</issue>): <fpage>329</fpage>–<lpage>44</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1056/NEJMra0909142" xlink:type="simple">10.1056/NEJMra0909142</ext-link></comment> <object-id pub-id-type="pmid">20107219</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Karran</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Mercken</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>De Strooper</surname> <given-names>B</given-names></name>. <article-title>The amyloid cascade hypothesis for Alzheimer's disease: an appraisal for the development of therapeutics</article-title>. <source>Nature reviews</source>. <year>2011</year> <month>Sept</month>;<volume>10</volume>(<issue>9</issue>):<fpage>698</fpage>–<lpage>712</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/nrd3505" xlink:type="simple">10.1038/nrd3505</ext-link></comment> <object-id pub-id-type="pmid">21852788</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kanekiyo</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Xu</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Bu</surname> <given-names>G</given-names></name>. <article-title>ApoE and Abeta in Alzheimer's disease: accidental encounters or partners?</article-title> <source>Neuron</source>. <year>2013</year> <month>Feb</month> <day>19</day>;<volume>81</volume>(<issue>4</issue>):<fpage>740</fpage>–<lpage>754</lpage>.</mixed-citation></ref>
+<ref id="pone.0139574.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cirrito</surname> <given-names>JR</given-names></name>, <name name-style="western"><surname>May</surname> <given-names>PC</given-names></name>, <name name-style="western"><surname>O'Dell</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Taylor</surname> <given-names>JW</given-names></name>, <name name-style="western"><surname>Parsadanian</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Cramer</surname> <given-names>JW</given-names></name>, <etal>et al</etal>. <article-title>In vivo assessment of brain interstitial fluid with microdialysis reveals plaque-associated changes in amyloid-beta metabolism and half-life</article-title>. <source>J Neurosci</source>. <year>2003</year> <month>Oct</month> <day>1</day>;<volume>23</volume>(<issue>26</issue>):<fpage>8844</fpage>–<lpage>8853</lpage>. <object-id pub-id-type="pmid">14523085</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Marklund</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Blennow</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Zetterberg</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Ronne-Engstrom</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Enblad</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Hillered</surname> <given-names>L</given-names></name>. <article-title>Monitoring of brain interstitial total tau and beta amyloid proteins by microdialysis in patients with traumatic brain injury</article-title>. <source>Journal of neurosurgery</source>. <year>2009</year> <month>Jun</month>;<volume>110</volume>(<issue>6</issue>):<fpage>1227</fpage>–<lpage>1237</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.3171/2008.9.JNS08584" xlink:type="simple">10.3171/2008.9.JNS08584</ext-link></comment> <object-id pub-id-type="pmid">19216653</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mura</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Lanni</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Preda</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Pistoia</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Sara</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Racchi</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>Beta-amyloid: a disease target or a synaptic regulator affecting age-related neurotransmitter changes?</article-title> <source>Current pharmaceutical design</source>.<year>2010</year>;<volume>16</volume>(<issue>6</issue>):<fpage>672</fpage>–<lpage>683</lpage>. <object-id pub-id-type="pmid">20388077</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rodrigue</surname> <given-names>KM</given-names></name>, <name name-style="western"><surname>Kennedy</surname> <given-names>KM</given-names></name>, <name name-style="western"><surname>Park</surname> <given-names>DC</given-names></name>. <article-title>Beta-amyloid deposition and the aging brain</article-title>, <source>Neuropsychol Rev</source>, <year>2009</year>; <volume>19</volume>: <fpage>436</fpage>–<lpage>450</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s11065-009-9118-x" xlink:type="simple">10.1007/s11065-009-9118-x</ext-link></comment> <object-id pub-id-type="pmid">19908146</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Watt</surname> <given-names>AD</given-names></name>, <name name-style="western"><surname>Perez</surname> <given-names>KA</given-names></name>, <name name-style="western"><surname>Rembach</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Sherrat</surname> <given-names>NA</given-names></name>, <name name-style="western"><surname>Hung</surname> <given-names>LW</given-names></name>, <name name-style="western"><surname>Johanssen</surname> <given-names>T</given-names></name>, <etal>et al</etal>. <article-title>Oligomers, fact or artefact? SDS-PAGE induces dimerization of beta-amyloid in human brain samples</article-title>, <source>Acta Neuropathol</source>, <year>2013</year>; <volume>125</volume>:<fpage>549</fpage>–<lpage>564</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s00401-013-1083-z" xlink:type="simple">10.1007/s00401-013-1083-z</ext-link></comment> <object-id pub-id-type="pmid">23354835</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Haass</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Selkoe</surname> <given-names>DJ</given-names></name>. <article-title>Soluble protein oligomers in neurodegeneration: lessons from the Alzheimer's amyloid beta-peptide</article-title>. <source>Nat Rev Mol Cell Biol</source>. <year>2007</year> <month>Feb</month>;<volume>8</volume>(<issue>2</issue>):<fpage>101</fpage>–<lpage>112</lpage>. <object-id pub-id-type="pmid">17245412</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wyss-Coray</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Rogers</surname> <given-names>J</given-names></name>, <article-title>Inflammation in Alzheimer Disease- A Brief Review of the Basic Science and Clinical Literature</article-title>, <source>Cold Spring Harb Perspect Med</source>, <year>2012</year>; <volume>2</volume>: <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1101/cshperspect.a006346" xlink:type="simple">10.1101/cshperspect.a006346</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0139574.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Iliff</surname> <given-names>JJ</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Liao</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Plogg</surname> <given-names>BA</given-names></name>, <name name-style="western"><surname>Peng</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Gundersen</surname> <given-names>GA</given-names></name>, <etal>et al</etal>. <article-title>A paravascular pathway facilitates CSF flow through the brain parenchyma and the clearance of interstitial solutes, including amyloid beta</article-title>, <source>Sci Transl Med</source> <year>2012</year>; <volume>4</volume>(<issue>147</issue>): <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1126/scitranslmed.3003748" xlink:type="simple">10.1126/scitranslmed.3003748</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0139574.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Weller</surname> <given-names>RO</given-names></name>, <name name-style="western"><surname>Preston</surname> <given-names>SD</given-names></name>, <name name-style="western"><surname>Subash</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Carare</surname> <given-names>RO</given-names></name>. <article-title>Cerebral amyloid angiopathy in the aetiology and immunotherapy of Alzheimer disease</article-title>, <source>Alzheimers Res Ther</source>, 1 <year>2009</year>; <volume>1</volume>(<issue>2</issue>): <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/alzrt6" xlink:type="simple">10.1186/alzrt6</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0139574.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Iliff</surname> <given-names>JJ</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Zeppenfeld</surname> <given-names>DM</given-names></name>, <name name-style="western"><surname>Venkataraman</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Plog</surname> <given-names>BA</given-names></name>, <name name-style="western"><surname>Liao</surname></name> <etal>et al</etal>., <article-title>Cerebral arterial pulsation drives paravascular CSF-interstitial fluid exchange in the murine brain</article-title>, <source>J Neurosci</source><year>2013</year>; <volume>33</volume>(<issue>46</issue>):<fpage>18190</fpage>–<lpage>18199</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1523/JNEUROSCI.1592-13.2013" xlink:type="simple">10.1523/JNEUROSCI.1592-13.2013</ext-link></comment> <object-id pub-id-type="pmid">24227727</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hawkes</surname> <given-names>CA</given-names></name>, <name name-style="western"><surname>Sullivan</surname> <given-names>PM</given-names></name>, <name name-style="western"><surname>Hands</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Weller</surname> <given-names>RO</given-names></name>, <name name-style="western"><surname>Nicoll</surname> <given-names>JAR</given-names></name>, <name name-style="western"><surname>Carare</surname> <given-names>RO</given-names></name>, <article-title>Disruption of Arterial Perivascular Drainage of Amyloid-β from the Brains of Mice Expressing the Human APOE ε4 Allele</article-title>. <source>PLoS ONE</source><year>2012</year>; <volume>7</volume>: <fpage>e41636</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pone.0041636" xlink:type="simple">10.1371/journal.pone.0041636</ext-link></comment> <object-id pub-id-type="pmid">22848551</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Grimmer</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Goldhardt</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Guo</surname> <given-names>LH</given-names></name>, <name name-style="western"><surname>Yousefi</surname> <given-names>BH</given-names></name>, <name name-style="western"><surname>Forster</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Drzezga</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>LRP-1 polymorphism is associated with global and regional amyloid load in Alzheimer's disease in humans in-vivo</article-title>, <source>Neuroimage Clin</source>,<year>2014</year>; <volume>4</volume>: <fpage>411</fpage>–<lpage>416</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.nicl.2014.01.016" xlink:type="simple">10.1016/j.nicl.2014.01.016</ext-link></comment> <object-id pub-id-type="pmid">24596678</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Morris</surname> <given-names>AW</given-names></name>, <name name-style="western"><surname>Carare</surname> <given-names>RO</given-names></name>, <name name-style="western"><surname>Schreiber</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Hawkes</surname> <given-names>CA</given-names></name>. <article-title>The Cerebrovascular Basement Membrane: Role in the Clearance of beta-amyloid and Cerebral Amyloid Angiopathy</article-title>, <source>Front Aging Neurosci</source>, <year>2014</year>; <volume>6</volume>: <fpage>251</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.3389/fnagi.2014.00251" xlink:type="simple">10.3389/fnagi.2014.00251</ext-link></comment> <object-id pub-id-type="pmid">25285078</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cirrito</surname> <given-names>JR</given-names></name>, <name name-style="western"><surname>May</surname> <given-names>PC</given-names></name>, <name name-style="western"><surname>O'Dell</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Taylor</surname> <given-names>JW</given-names></name>, <name name-style="western"><surname>Parsadanian</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Cramer</surname> <given-names>JW</given-names></name>, <etal>et al</etal>. <article-title>In vivo assessment of brain interstitial fluid with microdialysis reveals plaque-associated changes in amyloid-beta metabolism and half-life</article-title>, <source>J Neurosci</source><year>2003</year>;<volume>23</volume>:<fpage>8844</fpage>–<lpage>8853</lpage>. <object-id pub-id-type="pmid">14523085</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gomis</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Sobrino</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Ois</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Millan</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Rodriguez-Campello</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Perez de la Ossa</surname> <given-names>N</given-names></name>, <etal>et al</etal>. <article-title>Plasma beta-amyloid 1–40 is associated with the diffuse small vessel disease subtype</article-title>, <source>Stroke</source> <year>2009</year>; <volume>40</volume>: <fpage>3197</fpage>–<lpage>3201</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1161/STROKEAHA.109.559641" xlink:type="simple">10.1161/STROKEAHA.109.559641</ext-link></comment> <object-id pub-id-type="pmid">19696416</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Shibata</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Yamada</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Kumar</surname> <given-names>SR</given-names></name>, <name name-style="western"><surname>Calero</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Bading</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Frangione</surname> <given-names>B</given-names></name>, <etal>et al</etal>. <article-title>Clearance of Alzheimer's amyloid-ss(1–40) peptide from brain by LDL receptor-related protein-1 at the blood-brain barrier</article-title>, <source>J Clin Invest</source> <year>2000</year>; <volume>106</volume>: <fpage>1489</fpage>–<lpage>1499</lpage>. <object-id pub-id-type="pmid">11120756</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lomakin</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Chung</surname> <given-names>DS</given-names></name>, <name name-style="western"><surname>Benedek</surname> <given-names>GB</given-names></name>, <name name-style="western"><surname>Kirschner</surname> <given-names>DA</given-names></name>, <name name-style="western"><surname>Teplow</surname> <given-names>DB</given-names></name>. <article-title>On the nucleation and growth of amyloid beta-protein fibrils: detection of nuclei and quantitation of rate constants</article-title>, <source>Proc Natl Acad Sci</source> <year>1996</year>; <volume>23</volume>: <fpage>1125</fpage>–<lpage>1129</lpage>.</mixed-citation></ref>
+<ref id="pone.0139574.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pallito</surname> <given-names>MM</given-names></name>, <name name-style="western"><surname>Murphy</surname> <given-names>RM</given-names></name>. <article-title>A mathematical model of the kinetics of beta-amyloid fibril growth from the denatured state</article-title>, <source>Biophys J</source> <year>2001</year>; <volume>81</volume>: <fpage>1805</fpage>–<lpage>1822</lpage>. <object-id pub-id-type="pmid">11509390</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Puri</surname> <given-names>IK</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>L</given-names></name>. <article-title>Mathematical Modeling for the Pathogenesis of Alzheimer's Disease</article-title>, <source>PLoS ONE</source> <year>2010</year>; <volume>5</volume>: <fpage>e. 15176</fpage>.</mixed-citation></ref>
+<ref id="pone.0139574.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Luca</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Chavez-Ross</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Edelstein-Keshet</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Mogilner</surname> <given-names>A</given-names></name>. <article-title>Chemotactic signaling, microglia, and Alzheimer's disease senile plaques: is there a connection?</article-title>, <source>Bull Math Biol</source> <year>2003</year>; <volume>65</volume>: <fpage>693</fpage>–<lpage>730</lpage>. <object-id pub-id-type="pmid">12875339</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schuff</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Woerner</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Boreta</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Kornfield</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Shaw</surname> <given-names>LM</given-names></name>, <name name-style="western"><surname>Trojanowski</surname> <given-names>JQ</given-names></name>, <etal>et al</etal>. <article-title>MRI of hippocampal volume loss in early Alzheimer's disease in relation to ApoE genotype and biomarkers</article-title>, <source>Brain</source> <year>2009</year>; <volume>132</volume>: <fpage>1067</fpage>–<lpage>77</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/brain/awp007" xlink:type="simple">10.1093/brain/awp007</ext-link></comment> <object-id pub-id-type="pmid">19251758</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wong</surname> <given-names>AD</given-names></name>, <name name-style="western"><surname>Ye</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Levy</surname> <given-names>AF</given-names></name>, <name name-style="western"><surname>Rothstein</surname> <given-names>JD</given-names></name>, <name name-style="western"><surname>Bergles</surname> <given-names>DE</given-names></name>, <name name-style="western"><surname>Searson</surname> <given-names>PC</given-names></name>. <article-title>The blood-brain barrier: an engineering perspective</article-title>, <source>Front Neuroeng</source> <year>2013</year>; <volume>6</volume>: <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.3389/fneng.2013.00007" xlink:type="simple">10.3389/fneng.2013.00007</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0139574.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Abbott</surname> <given-names>N</given-names></name>. <article-title>Evidence for bulk flow of brain interstitial fluid: significance for physiology and pathology</article-title>, <source>Neurochem Int</source> <year>2004</year>; <volume>40</volume>: <fpage>545</fpage>–<lpage>552</lpage>.</mixed-citation></ref>
+<ref id="pone.0139574.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kusumoto</surname> <given-names>Y</given-names></name>,<name name-style="western"><surname>Lomakin</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Teplow</surname> <given-names>DB</given-names></name>, <name name-style="western"><surname>Benedek</surname> <given-names>GB</given-names></name>. <article-title>Temperature dependence of amyloid beta-protein fibrillization</article-title>, <source>Proc Natl Acad Sci</source> <year>1998</year>; <volume>95</volume>: <fpage>12277</fpage>–<lpage>12282</lpage>. <object-id pub-id-type="pmid">9770477</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Filippov</surname> <given-names>AV</given-names></name>, <name name-style="western"><surname>Grobner</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Antzutkin</surname> <given-names>ON</given-names></name>. <article-title>Aggregation of amyloid Abeta (1–40) peptide in perdeuterated 2,2,2-trifluoroethanol caused by ultrasound sonication</article-title>, <source>Magn Reson Chem</source> <year>2010</year>; <volume>48</volume>:<fpage>427</fpage>–<lpage>434</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/mrc.2596" xlink:type="simple">10.1002/mrc.2596</ext-link></comment> <object-id pub-id-type="pmid">20474020</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dorr</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Sahota</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Chinta</surname> <given-names>LV</given-names></name>, <name name-style="western"><surname>Brown</surname> <given-names>ME</given-names></name>, <name name-style="western"><surname>Lai</surname> <given-names>AY</given-names></name>, <name name-style="western"><surname>Ma</surname> <given-names>K</given-names></name>, <etal>et al</etal>. <article-title>Amyloid-beta-dependent compromise of microvascular structure and function in a model of Alzheimer's disease</article-title>, <source>Brain</source> <year>2012</year>; <volume>135</volume>: <fpage>3039</fpage>–<lpage>3050</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/brain/aws243" xlink:type="simple">10.1093/brain/aws243</ext-link></comment> <object-id pub-id-type="pmid">23065792</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref030"><label>30</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Flanagan</surname> <given-names>TRJ</given-names></name>, <name name-style="western"><surname>Emerich</surname> <given-names>DF</given-names></name>, <name name-style="western"><surname>Winn</surname> <given-names>SR</given-names></name>. <source>Providing pharmacological access to the brain: alternate approaches</source>. <publisher-loc>San Diego, Ca.</publisher-loc>: <publisher-name>Academic Press</publisher-name> <year>1994</year>.</mixed-citation></ref>
+<ref id="pone.0139574.ref031"><label>31</label><mixed-citation publication-type="book" xlink:type="simple"><name name-style="western"><surname>Ottesen</surname> <given-names>JT</given-names></name>, <name name-style="western"><surname>Olufsen</surname> <given-names>MS</given-names></name>, <name name-style="western"><surname>Larsen</surname> <given-names>JK</given-names></name>. <source>Applied Mathematical Models in Human Physiology</source>, <publisher-name>SIAM</publisher-name> <year>2004</year>: <fpage>18</fpage>–<lpage>24</lpage>.</mixed-citation></ref>
+<ref id="pone.0139574.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Simic</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Kostovic</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Winblad</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Bogdanovic</surname> <given-names>N</given-names></name>. <article-title>Volume and number of neurons of the human hippocampal formation in normal aging and Alzheimer's disease</article-title>, <source>J Comp Neurol</source> <year>1997</year>; <volume>379</volume>: <fpage>482</fpage>–<lpage>494</lpage>. <object-id pub-id-type="pmid">9067838</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref033"><label>33</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Harding</surname> <given-names>AJ</given-names></name>, <name name-style="western"><surname>Halliday</surname> <given-names>GM</given-names></name>, <name name-style="western"><surname>Kril</surname> <given-names>JJ</given-names></name>. <article-title>Variation in hippocampal neuron number with age and brain volume</article-title>, <source>Cereb Cortex</source> <year>1998</year>; <volume>8</volume>: <fpage>710</fpage>–<lpage>718</lpage>. <object-id pub-id-type="pmid">9863698</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zarow</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Vinters</surname> <given-names>HV</given-names></name>, <name name-style="western"><surname>Ellis</surname> <given-names>WG</given-names></name>, <name name-style="western"><surname>Weiner</surname> <given-names>MW</given-names></name>, <name name-style="western"><surname>Mungas</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>White</surname> <given-names>L</given-names></name>, <etal>et al</etal>. <article-title>Correlates of hippocampal neuron number in Alzheimer's disease and ischemic vascular dementia</article-title>, <source>Ann Neurol</source> <year>2005</year>; <volume>57</volume>: <fpage>896</fpage>–<lpage>903</lpage>. <object-id pub-id-type="pmid">15929035</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref035"><label>35</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fritschi</surname> <given-names>SK</given-names></name>, <name name-style="western"><surname>Langer</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Kaeser</surname> <given-names>SA</given-names></name>, <name name-style="western"><surname>Maia</surname> <given-names>LF</given-names></name>, <name name-style="western"><surname>Portelius</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Pinotsi</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Highly potent soluble amyloid-beta seeds in human Alzheimer brain but not cerebrospinal fluid</article-title>, <source>Brain</source> <year>2014</year>; <volume>137</volume>: <fpage>2909</fpage>–<lpage>2915</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/brain/awu255" xlink:type="simple">10.1093/brain/awu255</ext-link></comment> <object-id pub-id-type="pmid">25212850</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref036"><label>36</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dorr</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Sahota</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Chinta</surname> <given-names>LV</given-names></name>, <name name-style="western"><surname>Brown</surname> <given-names>ME</given-names></name>, <name name-style="western"><surname>Lai</surname> <given-names>AY</given-names></name>, <name name-style="western"><surname>Ma</surname> <given-names>K</given-names></name>, <etal>et al</etal>. <article-title>Amyloid-beta-dependent compromise of microvascular structure and function in a model of Alzheimer's disease</article-title>. <source>Brain</source>. <year>2012</year>; <volume>135</volume>:<fpage>3039</fpage>–<lpage>3050</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1093/brain/aws243" xlink:type="simple">10.1093/brain/aws243</ext-link></comment> <object-id pub-id-type="pmid">23065792</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref037"><label>37</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mura</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Lanni</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Preda</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Pistoia</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Sara</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Racchi</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>Beta-amyloid: a disease target or a synaptic regulator affecting age-related neurotransmitter changes?</article-title> <source>Current pharmaceutical design</source> <year>2010</year>; <volume>16</volume>:<fpage>672</fpage>–<lpage>683</lpage>. <object-id pub-id-type="pmid">20388077</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref038"><label>38</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tetreault</surname> <given-names>NA</given-names></name>, <name name-style="western"><surname>Hakeem</surname> <given-names>AY</given-names></name>, <name name-style="western"><surname>Jiang</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Williams</surname> <given-names>BA</given-names></name>, <name name-style="western"><surname>Allman</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Wold</surname> <given-names>BJ</given-names></name>, <etal>et al</etal>. <article-title>Microglia in the cerebral cortex in autism</article-title>, <source>J Autism Dev Disord</source> <year>2012</year>; <volume>42</volume>(<issue>12</issue>): <fpage>2569</fpage>–<lpage>2584</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s10803-012-1513-0" xlink:type="simple">10.1007/s10803-012-1513-0</ext-link></comment> <object-id pub-id-type="pmid">22466688</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref039"><label>39</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pelvig</surname> <given-names>DP</given-names></name>, <name name-style="western"><surname>Pakkenberg</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Stark</surname> <given-names>AK</given-names></name>, <name name-style="western"><surname>Pakkenberg</surname> <given-names>B</given-names></name>. <article-title>Neocortical glial cell numbers in human brains</article-title>, <source>Neurobiol Aging</source> <year>2008</year>; <volume>29</volume>: <fpage>1754</fpage>–<lpage>1762</lpage>. <object-id pub-id-type="pmid">17544173</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref040"><label>40</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Streit</surname> <given-names>WJ</given-names></name>, <name name-style="western"><surname>Sammons</surname> <given-names>NW</given-names></name>, <name name-style="western"><surname>Kuhns</surname> <given-names>AJ</given-names></name>, <name name-style="western"><surname>Sparks</surname> <given-names>DL</given-names></name>. <article-title>Dystrophic microglia in the aging human brain</article-title>, <source>Glia</source> <year>2004</year>; <volume>45</volume>: <fpage>208</fpage>–<lpage>212</lpage>. <object-id pub-id-type="pmid">14730714</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref041"><label>41</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Pardridge</surname> <given-names>WM</given-names></name>. <article-title>Blood-brain barrier biology and methodology</article-title>. <source>Journal of neurovirology</source> <year>1999</year> <month>Dec</month>;<volume>5</volume>(<issue>6</issue>):<fpage>556</fpage>–<lpage>569</lpage>. <object-id pub-id-type="pmid">10602397</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref042"><label>42</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Garipcan</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Maenz</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Pham</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Settmacher</surname> <given-names>U</given-names></name>, <name name-style="western"><surname>Jandt</surname> <given-names>KD</given-names></name>, <name name-style="western"><surname>Zanow</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Image Analysis of Endothelial Microstructure and Endothelial Cell Dimensions of Human Arteries- A Preliminary Study</article-title>, <source>Advanced Engineering Materials</source> <year>2011</year>; <volume>13</volume>: <fpage>B54</fpage>–<lpage>B57</lpage>.</mixed-citation></ref>
+<ref id="pone.0139574.ref043"><label>43</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Helliwell</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Smith</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Heath</surname> <given-names>D</given-names></name>. <article-title>Endothelial pavement patterns in human arteries</article-title>, <source>J Pathol</source> <year>1982</year>; <volume>136</volume>: <fpage>227</fpage>–<lpage>240</lpage>. <object-id pub-id-type="pmid">6175739</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref044"><label>44</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ye</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Sanchez</surname> <given-names>HM</given-names></name>, <name name-style="western"><surname>Hultz</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Yang</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Bogorad</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Wong</surname> <given-names>AD</given-names></name>, <etal>et al</etal>. <article-title>Brain microvascular endothelial cells resist elongation due to curvature and shear stress</article-title>, <source>Sci Rep</source> <year>2014</year> <month>Apr</month> <day>15</day>; <volume>4</volume>: <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/srep04681" xlink:type="simple">10.1038/srep04681</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0139574.ref045"><label>45</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cines</surname> <given-names>DB</given-names></name>, <name name-style="western"><surname>Pollak</surname> <given-names>ES</given-names></name>, <name name-style="western"><surname>Buck</surname> <given-names>CA</given-names></name>, <name name-style="western"><surname>Loscalzo</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Zimmerman</surname> <given-names>GA</given-names></name>, <name name-style="western"><surname>McEver</surname> <given-names>RP</given-names></name>, <etal>et al</etal>. <article-title>Endothelial Cells in Physiology and in the Pathophysiology of Vascular Disorders</article-title>, <source>Blood</source> <year>1998</year>; <volume>91</volume>: <fpage>3527</fpage>–<lpage>3561</lpage>. <object-id pub-id-type="pmid">9572988</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref046"><label>46</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sane</surname> <given-names>D</given-names></name>. <article-title>The endothelial life insurance plan</article-title>, <source>Blood</source> <year>2004</year>; <volume>104</volume>: <fpage>2615</fpage>–<lpage>2616</lpage>.</mixed-citation></ref>
+<ref id="pone.0139574.ref047"><label>47</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Op den Buijs</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Musters</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Verrips</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Post</surname> <given-names>JA</given-names></name>, <name name-style="western"><surname>Braam</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>van Riel</surname> <given-names>N</given-names></name>, <article-title>Mathematical modeling of vascular endothelial layer maintenance: the role of endothelial cell division, progenitor cell homing, and telomere shortening</article-title>, <source>Am J Physiol Heart Circ Physiol</source> <year>2004</year>; <volume>287</volume>: <fpage>H2651</fpage>–<lpage>8</lpage>. <object-id pub-id-type="pmid">15284068</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref048"><label>48</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Krouwer</surname> <given-names>VJ</given-names></name>, <name name-style="western"><surname>Hekking</surname> <given-names>LH</given-names></name>, <name name-style="western"><surname>Langelaar-Makkinje</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Regan-Klapisz</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Post</surname> <given-names>JA</given-names></name>. <article-title>Endothelial cell senescence is associated with disrupted cell-cell junctions and increased monolayer permeability</article-title>, <source>Vasc Cell</source> <year>2012</year>; <volume>4</volume>: <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/2045-824X-4-12" xlink:type="simple">10.1186/2045-824X-4-12</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0139574.ref049"><label>49</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dang</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Huang</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>He</surname> <given-names>W</given-names></name>, <etal>et al</etal>. <article-title>Cleavage of amyloid precursor protein by an archaeal presenilin homologue PSH</article-title>, <source>Proc Natl Acad Sci U S A</source> <year>2015</year> <month>Mar</month> <day>15</day>; <volume>112</volume>(<issue>11</issue>): <fpage>3344</fpage>–<lpage>3349</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.1502150112" xlink:type="simple">10.1073/pnas.1502150112</ext-link></comment> <object-id pub-id-type="pmid">25733893</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref050"><label>50</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Deane</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Sagare</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Zlokovic</surname> <given-names>BV</given-names></name>. <article-title>The role of the cell surface LRP and soluble LRP in blood-brain barrier Abeta clearance in Alzheimer's disease</article-title>, <source>Curr Pharm Des</source> <year>2008</year>; <volume>14</volume>: <fpage>1601</fpage>–<lpage>1605</lpage>. <object-id pub-id-type="pmid">18673201</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref051"><label>51</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Verghese</surname> <given-names>PB</given-names></name>, <name name-style="western"><surname>Castellano</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Garai</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Jiang</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Shah</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>ApoE influences amyloid-beta (Abeta) clearance despite minimal apoE/Abeta association in physiological conditions</article-title>, <source>Proc Natl Acad Sci U S A</source> <year>2013</year> <month>May</month> <day>7</day>; <volume>110</volume>(<issue>19</issue>): <fpage>E1807</fpage>–<lpage>16</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1073/pnas.1220484110" xlink:type="simple">10.1073/pnas.1220484110</ext-link></comment> <object-id pub-id-type="pmid">23620513</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref052"><label>52</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wildsmith</surname> <given-names>KR</given-names></name>, <name name-style="western"><surname>Holley</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Savage</surname> <given-names>JC</given-names></name>, <name name-style="western"><surname>Skerrett</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Landreth</surname> <given-names>GE</given-names></name>. <article-title>Evidence for impaired amyloid beta clearance in Alzheimer's disease</article-title>, <source>Alzheimers Res Ther</source> <year>2013</year> <month>July</month> <day>12</day>; <volume>5</volume>: <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/alzrt187" xlink:type="simple">10.1186/alzrt187</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0139574.ref053"><label>53</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bell</surname> <given-names>RD</given-names></name>, <name name-style="western"><surname>Sagare</surname> <given-names>AP</given-names></name>, <name name-style="western"><surname>Friedman</surname> <given-names>AE</given-names></name>, <name name-style="western"><surname>Bedi</surname> <given-names>GS</given-names></name>, <name name-style="western"><surname>Holtzman</surname> <given-names>DM</given-names></name>, <name name-style="western"><surname>Deane</surname> <given-names>R</given-names></name>, <etal>et al</etal>. <article-title>Transport pathways for clearance of human Alzheimer's amyloid beta-peptide and apolipoproteins E and J in the mouse central nervous system</article-title>, <source>J Cereb Blood Flow Metab</source> <year>2007</year>; <volume>27</volume>: <fpage>909</fpage>–<lpage>918</lpage>. <object-id pub-id-type="pmid">17077814</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref054"><label>54</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bachmeier</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Paris</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Beaulieu-Abdelahad</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Mouzon</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Mullan</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Crawford</surname> <given-names>F</given-names></name>. <article-title>A multifaceted role for apoE in the clearance of beta-amyloid across the blood-brain barrier</article-title>, <source>Neurodegener Dis</source> <year>2013</year>; <volume>11</volume>(<issue>1</issue>): <fpage>13</fpage>–<lpage>21</lpage>. <object-id pub-id-type="pmid">22572854</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref055"><label>55</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ito</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Matsumiya</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Ohtsuki</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Kamiie</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Terasaki</surname> <given-names>T</given-names></name>. <article-title>Contributions of degradation and brain-to-blood elimination across the blood-brain barrier to cerebral clearance of human amyloid-beta peptide(1–40) in mouse brain</article-title>, <source>J Cereb Blood Flow Metab</source> <year>2013</year> <month>Nov</month>; <volume>33</volume>(<issue>11</issue>): <fpage>1770</fpage>–<lpage>1777</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/jcbfm.2013.125" xlink:type="simple">10.1038/jcbfm.2013.125</ext-link></comment> <object-id pub-id-type="pmid">23963369</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref056"><label>56</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Castellano</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Stewart</surname> <given-names>FR</given-names></name>, <name name-style="western"><surname>Jiang</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>DeMattos</surname> <given-names>RB</given-names></name>, <name name-style="western"><surname>Patterson</surname> <given-names>BW</given-names></name>, <etal>et al</etal>, <article-title>Human apoE isoforms differentially regulate brain amyloid-beta peptide clearance</article-title>, <source>Sci Transl Med</source> <year>2011</year> <month>June</month>; <volume>3</volume>(<issue>89</issue>): <fpage>89ra57</fpage>, <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1126/scitranslmed.3002156" xlink:type="simple">10.1126/scitranslmed.3002156</ext-link></comment> <object-id pub-id-type="pmid">21715678</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref057"><label>57</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lind</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Linsmeier</surname> <given-names>CE</given-names></name>, <name name-style="western"><surname>Schouenborg</surname> <given-names>J</given-names></name>. <article-title>The density difference between tissue and neural probes is a key factor for glial scarring</article-title>, <source>Sci Rep</source> <year>2013</year>; <volume>3</volume>, <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1038/srep02942" xlink:type="simple">10.1038/srep02942</ext-link></comment></mixed-citation></ref>
+<ref id="pone.0139574.ref058"><label>58</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>HvidbergV</surname> <given-names>Maniecki MB</given-names></name>, <name name-style="western"><surname>Jacobsen</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Hojrup</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Moller</surname> <given-names>HJ</given-names></name>, <name name-style="western"><surname>Moestrup</surname> <given-names>SK</given-names></name>. <article-title>Identification of the receptor scavenging hemopexin-heme complexes</article-title>, <source>Blood</source> <year>2005</year>; <volume>106</volume>: <fpage>2572</fpage>–<lpage>2579</lpage>. <object-id pub-id-type="pmid">15947085</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref059"><label>59</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mahley</surname> <given-names>RW</given-names></name>, <name name-style="western"><surname>Weisgraber</surname> <given-names>KH</given-names></name>, <name name-style="western"><surname>Huang</surname> <given-names>Y</given-names></name>. <article-title>Apolipoprotein E: structure determines function, from atherosclerosis to Alzheimer's disease to AIDS</article-title>, <source>J Lipid Res</source> <year>2009</year>; <volume>50</volume>: <fpage>S183</fpage>–<lpage>188</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1194/jlr.R800069-JLR200" xlink:type="simple">10.1194/jlr.R800069-JLR200</ext-link></comment> <object-id pub-id-type="pmid">19106071</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref060"><label>60</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vasilevko</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Passos</surname> <given-names>GF</given-names></name>, <name name-style="western"><surname>Quiring</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Head</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>RC</given-names></name>, <name name-style="western"><surname>Fisher</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>Aging and cerebrovascular dysfunction: contribution of hypertension, cerebral amyloid angiopathy, and immunotherapy</article-title>, <source>Ann N Y Acad Sci</source> <year>2010</year> <month>Oct</month>; <volume>1207</volume>: <fpage>58</fpage>–<lpage>70</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1111/j.1749-6632.2010.05786.x" xlink:type="simple">10.1111/j.1749-6632.2010.05786.x</ext-link></comment> <object-id pub-id-type="pmid">20955427</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref061"><label>61</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yoon</surname> <given-names>SS</given-names></name>, <name name-style="western"><surname>Jo</surname> <given-names>SA</given-names></name>. <article-title>Mechanisms of Amyloid-beta Peptide Clearance: Potential Therapeutic Targets for Alzheimer's Disease</article-title>, <source>Biomol Ther (Seoul)</source> <year>2012</year> <month>May</month>; <volume>20</volume>(<issue>3</issue>): <fpage>245</fpage>–<lpage>255</lpage>.</mixed-citation></ref>
+<ref id="pone.0139574.ref062"><label>62</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Castellano</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Deane</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Gottesdiener</surname> <given-names>AJ</given-names></name>, <name name-style="western"><surname>Verghese</surname> <given-names>PB</given-names></name>, <name name-style="western"><surname>Stewart</surname> <given-names>FR</given-names></name>, <name name-style="western"><surname>West</surname> <given-names>T</given-names></name>, <etal>et al</etal>. <article-title>Low-density lipoprotein receptor overexpression enhances the rate of brain-to-blood Abeta clearance in a mouse model of beta-amyloidosis</article-title>, <source>Proc Natl Acad Sci U S A</source> <year>2012</year> <month>Sept</month>; <volume>109</volume>(<issue>38</issue>): <fpage>15502</fpage>–<lpage>15507</lpage>. <object-id pub-id-type="pmid">22927427</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref063"><label>63</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Elahy</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Jackaman</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Mamo</surname> <given-names>JC</given-names></name>, <name name-style="western"><surname>Lam</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Dhaliwal</surname> <given-names>SS</given-names></name>, <name name-style="western"><surname>Giles</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Nelson</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Takechi</surname> <given-names>R</given-names></name>. <article-title>Blood-brain barrier dysfunction developed during normal aging is associated with inflammation and loss of tight junctions but not with leukocyte recruitment</article-title>, <source>Immun Ageing</source> <year>2015</year>; <volume>12</volume>: <fpage>2</fpage>, <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/s12979-015-0029-9" xlink:type="simple">10.1186/s12979-015-0029-9</ext-link></comment> <object-id pub-id-type="pmid">25784952</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref064"><label>64</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kress</surname> <given-names>BT</given-names></name>, <name name-style="western"><surname>Iliff</surname> <given-names>JJ</given-names></name>, <name name-style="western"><surname>Xia</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>HS</given-names></name>, <name name-style="western"><surname>Zeppenfeld</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Impairment of paravascular clearance pathways in the aging brain</article-title>. <source>Annals of neurology</source> <year>2014</year> <month>Dec</month>; <volume>76</volume>(<issue>6</issue>): <fpage>845</fpage>–<lpage>861</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1002/ana.24271" xlink:type="simple">10.1002/ana.24271</ext-link></comment> <object-id pub-id-type="pmid">25204284</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref065"><label>65</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Brinker</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Stopa</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Morrison</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Klinge</surname> <given-names>P</given-names></name>. <article-title>A new look at cerebrospinal fluid circulation</article-title>, <source>Fluids Barriers CNS</source> <year>2014</year> <month>May</month>; <volume>11</volume>: <fpage>10</fpage>, <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/2045-8118-11-10" xlink:type="simple">10.1186/2045-8118-11-10</ext-link></comment> <object-id pub-id-type="pmid">24817998</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref066"><label>66</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lange-Asschenfeldt</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Kojda</surname> <given-names>G</given-names></name>. <article-title>Alzheimer's disease, cerebrovascular dysfunction and the benefits of exercise: From vessels to neurons</article-title>, <source>Exp Gerontol</source> <year>2008</year>; <volume>43</volume>: <fpage>499</fpage>–<lpage>504</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1016/j.exger.2008.04.002" xlink:type="simple">10.1016/j.exger.2008.04.002</ext-link></comment> <object-id pub-id-type="pmid">18474414</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref067"><label>67</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Adlard</surname> <given-names>PA</given-names></name>, <name name-style="western"><surname>Perreau</surname> <given-names>VM</given-names></name>, <name name-style="western"><surname>Pop</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Cotman</surname> <given-names>CW</given-names></name>. <article-title>Voluntary Exercise Decreases Amyloid Load in a Transgenic Mouse Model of Alzheimer's Disease</article-title>, <source>J Neurosci</source> <year>2005</year>;<volume>25</volume>: <fpage>4217</fpage>–<lpage>4221</lpage>. <object-id pub-id-type="pmid">15858047</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref068"><label>68</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cotman</surname> <given-names>CW</given-names></name>, <name name-style="western"><surname>Berchtold</surname> <given-names>NC</given-names></name>. <article-title>Exercise: a behavioral intervention to enhance brain health and plasticity</article-title>, <source>Trends Neurosci</source> <year>2002</year>; <volume>25</volume>: <fpage>295</fpage>–<lpage>301</lpage>. <object-id pub-id-type="pmid">12086747</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref069"><label>69</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Xie</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Kang</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Xu</surname> <given-names>Q</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>MJ</given-names></name>, <name name-style="western"><surname>Liao</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Thiyagarajan</surname> <given-names>M</given-names></name> <etal>et al</etal>. <article-title>Sleep Drives Metabolite Clearance from the Adult Brain</article-title>, <source>Science</source> <year>2013</year>; <volume>342</volume>: <fpage>373</fpage>–<lpage>377</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1126/science.1241224" xlink:type="simple">10.1126/science.1241224</ext-link></comment> <object-id pub-id-type="pmid">24136970</object-id></mixed-citation></ref>
+<ref id="pone.0139574.ref070"><label>70</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nedergaard</surname> <given-names>M</given-names></name>. <article-title>Garbage Truck of the Brain</article-title>, <source>Science</source> <year>2013</year>; <volume>340</volume>: <fpage>1529</fpage>–<lpage>1530</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1126/science.1240514" xlink:type="simple">10.1126/science.1240514</ext-link></comment> <object-id pub-id-type="pmid">23812703</object-id></mixed-citation></ref>
+</ref-list>
+</back>
+</article>

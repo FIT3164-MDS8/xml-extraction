@@ -1,0 +1,1755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article article-type="research-article" dtd-version="1.1d3" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">PONE-D-18-10280</article-id>
+<article-id pub-id-type="doi">10.1371/journal.pone.0209323</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Economics</subject><subj-group><subject>Finance</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Linguistics</subject><subj-group><subject>Languages</subject><subj-group><subject>Natural language</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Cognitive science</subject><subj-group><subject>Cognitive psychology</subject><subj-group><subject>Decision making</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Psychology</subject><subj-group><subject>Cognitive psychology</subject><subj-group><subject>Decision making</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Psychology</subject><subj-group><subject>Cognitive psychology</subject><subj-group><subject>Decision making</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Cognitive science</subject><subj-group><subject>Cognition</subject><subj-group><subject>Decision making</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Linguistics</subject><subj-group><subject>Semantics</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Psychology</subject><subj-group><subject>Behavior</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Psychology</subject><subj-group><subject>Behavior</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Linguistics</subject><subj-group><subject>Psycholinguistics</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Social sciences</subject><subj-group><subject>Economics</subject><subj-group><subject>Financial markets</subject><subj-group><subject>Capital markets</subject><subj-group><subject>Stock markets</subject></subj-group></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Statistical inferences for polarity identification in natural language</article-title>
+<alt-title alt-title-type="running-head">Statistical inferences from natural language</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0002-1835-7302</contrib-id>
+<name name-style="western">
+<surname>Pröllochs</surname> <given-names>Nicolas</given-names></name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Formal analysis</role>
+<role content-type="http://credit.casrai.org/">Visualization</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0001-7856-8729</contrib-id>
+<name name-style="western">
+<surname>Feuerriegel</surname> <given-names>Stefan</given-names></name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Data curation</role>
+<role content-type="http://credit.casrai.org/">Formal analysis</role>
+<role content-type="http://credit.casrai.org/">Visualization</role>
+<role content-type="http://credit.casrai.org/">Writing – original draft</role>
+<role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Neumann</surname> <given-names>Dirk</given-names></name>
+<role content-type="http://credit.casrai.org/">Conceptualization</role>
+<role content-type="http://credit.casrai.org/">Resources</role>
+<role content-type="http://credit.casrai.org/">Supervision</role>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+</contrib-group>
+<aff id="aff001">
+<label>1</label>
+<addr-line>Department of Engineering Science, University of Oxford, Oxford, United Kingdom</addr-line>
+</aff>
+<aff id="aff002">
+<label>2</label>
+<addr-line>Chair of Management Information Systems, ETH Zurich, Zurich, Switzerland</addr-line>
+</aff>
+<aff id="aff003">
+<label>3</label>
+<addr-line>Chair for Information Systems Research, University of Freiburg, Freiburg, Germany</addr-line>
+</aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Wichmann</surname> <given-names>Søren</given-names></name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1">
+<addr-line>Leiden University, NETHERLANDS</addr-line>
+</aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">nicolas.prollochs@eng.ox.ac.uk</email></corresp>
+</author-notes>
+<pub-date pub-type="collection">
+<year>2018</year>
+</pub-date>
+<pub-date pub-type="epub">
+<day>21</day>
+<month>12</month>
+<year>2018</year>
+</pub-date>
+<volume>13</volume>
+<issue>12</issue>
+<elocation-id>e0209323</elocation-id>
+<history>
+<date date-type="received">
+<day>5</day>
+<month>4</month>
+<year>2018</year>
+</date>
+<date date-type="accepted">
+<day>4</day>
+<month>12</month>
+<year>2018</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2018</copyright-year>
+<copyright-holder>Pröllochs et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0209323"/>
+<abstract>
+<p>Information forms the basis for all human behavior, including the ubiquitous decision-making that people constantly perform in their every day lives. It is thus the mission of researchers to understand how humans process information to reach decisions. In order to facilitate this task, this work proposes LASSO regularization as a statistical tool to extract decisive words from textual content in order to study the reception of granular expressions in natural language. This differs from the usual use of the LASSO as a predictive model and, instead, yields highly interpretable statistical inferences between the occurrences of words and an outcome variable. Accordingly, the method suggests direct implications for the social sciences: it serves as a statistical procedure for generating domain-specific dictionaries as opposed to frequently employed heuristics. In addition, researchers can now identify text segments and word choices that are statistically decisive to authors or readers and, based on this knowledge, test hypotheses from behavioral research.</p>
+</abstract>
+<funding-group>
+<funding-statement>The authors received no specific funding for this work.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="0"/>
+<table-count count="6"/>
+<page-count count="21"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data is available from GitHub (<ext-link ext-link-type="uri" xlink:href="https://github.com/nproellochs/SentimentDictionaries" xlink:type="simple">https://github.com/nproellochs/SentimentDictionaries</ext-link>).</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>Introduction</title>
+<p>The power of word choice and linguistic style is undisputed in the social sciences. For instance, linguistic style provides a means for deception [<xref ref-type="bibr" rid="pone.0209323.ref001">1</xref>, <xref ref-type="bibr" rid="pone.0209323.ref002">2</xref>]. Likewise, marketing professionals have long understood the value of choosing the right terms when advertising products. For example, the use of technical terms facilitates the success of print advertisements [<xref ref-type="bibr" rid="pone.0209323.ref003">3</xref>]. Similarly, the valence of messages helps to explain consumer behavior. Here, the use of more positive expressions in user- and marketer-generated content in social media has a clear impact on purchase decisions [<xref ref-type="bibr" rid="pone.0209323.ref004">4</xref>]. The subtleties of language also receive increasing attention in the financial domain. In a recent study, [<xref ref-type="bibr" rid="pone.0209323.ref005">5</xref>] manipulate the tone of corporate news in a randomized controlled experiment and find that subjects expect a higher future return from a given firm when reading an article skewed towards positive language.</p>
+<p>Psychological research has found that negative terms, especially, are vital in forming impressions, perceptions and attributions [<xref ref-type="bibr" rid="pone.0209323.ref006">6</xref>]. For instance, subjects use more positive-emotion words in self-disclosures; yet negative-emotion words have a significantly greater impact on formed impressions [<xref ref-type="bibr" rid="pone.0209323.ref007">7</xref>]. Further works by Pennebaker and his colleagues shed light on the use of linguistic terms as psychological markers of personality and personal states [<xref ref-type="bibr" rid="pone.0209323.ref008">8</xref>]. As an illustrative example, linguistic style serves as a predictor of age, gender, mood, emotion and mental health. This and other findings stem from the calculation of the occurrences of certain, aggregated word categories (e. g. cognitive words, past tense, pronouns). However, though not all of the words are likely to be relevant, there is a scarcity of resources that identify the decisive entries within these categories.</p>
+<p>While the above applications demonstrate the great importance and need for profound language understanding, the reception of individual words and their effects on human behavior remain subject to research [<xref ref-type="bibr" rid="pone.0209323.ref008">8</xref>, <xref ref-type="bibr" rid="pone.0209323.ref009">9</xref>, <xref ref-type="bibr" rid="pone.0209323.ref010">10</xref>]. When studying the reception of natural language, researchers commonly utilize a document-level score that measures the overall perception of natural language, including negative wording, tone, sentiment, moods and emotions (e. g. [<xref ref-type="bibr" rid="pone.0209323.ref011">11</xref>, <xref ref-type="bibr" rid="pone.0209323.ref012">12</xref>, <xref ref-type="bibr" rid="pone.0209323.ref013">13</xref>]). However, this does not allow for a granular understanding of how individual pieces of information are perceived within narratives. In fact, understanding word choice, the perception of wording and the corresponding human responses present open questions for research, and especially in terms of rigorous statistical inferences [<xref ref-type="bibr" rid="pone.0209323.ref014">14</xref>].</p>
+<p>Related research in the area of social sciences commonly relies on manually selected dictionaries (e. g. [<xref ref-type="bibr" rid="pone.0209323.ref015">15</xref>, <xref ref-type="bibr" rid="pone.0209323.ref016">16</xref>, <xref ref-type="bibr" rid="pone.0209323.ref017">17</xref>]). Prevalent examples are the Harvard IV psychological dictionary from the General Inquirer software or Linguistic Inquiry and Word Count (LIWC). These contain lists of words that classify terms as either positive or negative based on human judgments, which makes them prone to severe drawbacks. Foremost, the word lists are selected <italic>ex ante</italic> based on subjective opinions of their authors. They thus can be neither comprehensive nor as precise as statistical rigor. Furthermore among these is the fact that the labor-intensive process of their construction prevents dictionaries from being tailored to arbitrary domain-specific applications. Moreover, dictionaries rarely discriminate between different levels of positivity (or negativity), since the underlying words are merely grouped into two classes of positive and negative expressions without further weighting.</p>
+<p>To overcome the previous shortcomings, this paper proposes a novel approach that utilizes LASSO regularization to extract words that are statistically decisive based on an outcome variable. Examples include ordinal ratings on review portals, which summarize the connotation of user-generated comments, or the stock market reaction, which assesses investors’ perceptions of financial materials. Our approach specifically builds upon these response variables as they mirror narrative content in an accurate and objective manner. Here we extend our previous work [<xref ref-type="bibr" rid="pone.0209323.ref018">18</xref>, <xref ref-type="bibr" rid="pone.0209323.ref019">19</xref>] and introduce statistical inferences to identify cues that convey a positive or negative polarity. At the same time, the analysis can be replicated for the prose of arbitrary applications in order to adapt to the domain-specific particularities.</p>
+<p>This work immediately reveals manifold implications for social sciences and behavioral research: first, our approach offers a tailored means by which to study the perception of language and word choice through the eyes of readers and authors with statistical rigor. The results are highly interpretable and serve as an input to further hypothesis tests. After all, this contributes to behavioral research by addressing the crucial question of how textual information impacts individual behavior and decision-making.</p>
+<p>The remainder of this paper is organized as follows. Section 2 provides background literature concerning the reception of natural language, which necessitates a statistical approach to measure the response to word choice. As a remedy, we present our LASSO-based methodology in Section 3. Subsequently, Section 4 demonstrates the value of this approach with examples from recommender systems and finance. Section 5 then provides thorough comparisons, followed by Section 6 with implications for behavioral hypothesis testing. Section 7 discusses the advantages and limitations of our method and provides detailed implications for both theory and practice.</p>
+</sec>
+<sec id="sec002">
+<title>Backgrounds</title>
+<p>This section posits that extracting statistically relevant terms based on a decision variable is both an innovative and relevant research question to the social sciences. Therefore, we review previous works and methods concerned with measuring the reaction to word choice. We also outline how our approach differs from opinion mining, which gives a lever to measure subjective information in narrative content.</p>
+<sec id="sec003">
+<title>Relationship to opinion mining</title>
+<p>Drawing inferences regarding how wording relates to a decision variable is closely related to the concept known as sentiment analysis or opinion mining. It refers to the use of natural language processing as a way to extract subjective information from narrative content. The underlying methods aim at measuring the semantic orientation (i. e. the positivity and negativity) of the overall text, or with respect to a particular topic or aspect [<xref ref-type="bibr" rid="pone.0209323.ref020">20</xref>]. The result is then either a continuous sentiment score or else a classification as positive or negative. The surveys in [<xref ref-type="bibr" rid="pone.0209323.ref012">12</xref>] and [<xref ref-type="bibr" rid="pone.0209323.ref021">21</xref>] provide a comprehensive, domain-independent overview of common methodological choices. These techniques can primarily be grouped into two categories, namely, approaches utilizing pre-defined dictionaries or machine learning.</p>
+<p>The former, dictionary-based approaches, mainly serve explanatory purposes, especially when a response variable is not present. They extract subjective information from the occurrences of pre-defined polarity words, which are selected ex ante based on the intuition of experts. This creates an approach that is not only straightforward, but also produces reliable and interpretable results in various applications (e. g. [<xref ref-type="bibr" rid="pone.0209323.ref022">22</xref>, <xref ref-type="bibr" rid="pone.0209323.ref023">23</xref>]). Previous research has devised several variants with different scopes and objectives (cf. next section for an overview). These dictionaries can be combined with linguistic rules that specifically account for linguistic modifiers that signal, for instance, uncertainty or activation [<xref ref-type="bibr" rid="pone.0209323.ref010">10</xref>].</p>
+<p>Machine learning methodologies utilize a baseline variable to train a predictive model, which is later applied to unseen documents where it should predict the semantic orientation. Previous research has tested various models, including support vector machines and artificial neural networks, that typically take (transformed) word frequencies as input (e. g. [<xref ref-type="bibr" rid="pone.0209323.ref021">21</xref>, <xref ref-type="bibr" rid="pone.0209323.ref024">24</xref>]). As a result, machine learning often achieves a high predictive accuracy but might suffer from overfitting. In addition, it remains a black-box with low interpretability and hardly any insights into its reasoning.</p>
+<p>The above approaches target applications in which whole texts are classified according to their semantic orientation. Thereby, sentiment analysis either serves explanatory or predictive purposes, which have both become prevalent in behavioral research. These methods work at document level (or aspect level); however, they cannot draw statistical inferences at word level, which is the goal of research aimed at understanding the reception of word choice at a granular level.</p>
+</sec>
+<sec id="sec004">
+<title>Overview of common dictionaries</title>
+<p>Gaining insights into the subtle differences between word choice requires methods that analyze narrative content at a granular level. Therefore, a common strategy is to build upon manually selected dictionaries from previous research. In this vein, humans label terms as either positive and negative or, alternatively, according to other semantic, syntactic or psychological categories. <xref ref-type="table" rid="pone.0209323.t001">Table 1</xref> provides an overview of prevalent dictionaries in behavioral research. For example, the Harvard IV dictionary from the General Inquirer software comprises various psychological categories beyond positive and negative valence: e. g. emotions, strength, or overstatement. LIWC was designed to identify emotion-laden writing but also measures linguistic style based on expressions that were individually assigned to over 70 linguistic dimensions by independent judges. Other dictionaries are devoted to domain-specific applications, such as the Loughran-McDonald dictionary, which consists of polarity terms found in earnings reports. With the exception of SentiStrength, SentiWordNet and QDAP, the dictionaries usually cannot differentiate between different degrees of polarity among words.</p>
+<table-wrap id="pone.0209323.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0209323.t001</object-id>
+<label>Table 1</label>
+<caption>
+<title>Common dictionaries in behavioral research.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0209323.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0209323.t001" xlink:type="simple"/>
+<table border="0" frame="box" rules="all">
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">Dictionary</th>
+<th align="center">Size</th>
+<th align="left">Categories</th>
+<th align="left">Domain</th>
+<th align="left">Selection Process</th>
+<th align="left">Polarity Levels</th>
+<th align="left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Diction</td>
+<td align="center">10,000</td>
+<td align="left">35 linguistic categories (e. g. optimism, satisfaction, praise, blame, denial)</td>
+<td align="left">Politics</td>
+<td align="left">Expert judgment</td>
+<td align="left">Binary</td>
+<td align="left">Accessible for purchase via the Diction software for text analysis</td>
+</tr>
+<tr>
+<td align="left">Harvard IV</td>
+<td align="center">4206</td>
+<td align="left">15 linguistic categories (e. g. polarity, motivation, pleasure, pain, cognitive orientation)</td>
+<td align="left">Psychology</td>
+<td align="left">Expert judgment</td>
+<td align="left">Binary</td>
+<td align="left">Shipped in General Inquirer</td>
+</tr>
+<tr>
+<td align="left">LIWC</td>
+<td align="center">4500</td>
+<td align="left">64 linguistic dimensions (e. g. polarity, part-of-speech, cognitive and psychological words)</td>
+<td align="left">Psychology</td>
+<td align="left">Independent judges</td>
+<td align="left">Binary</td>
+<td align="left">Accessible for purchase from the LIWC text analysis software</td>
+</tr>
+<tr>
+<td align="left">Loughran-McDonald</td>
+<td align="center">2709</td>
+<td align="left">Polarity (positive, negative)</td>
+<td align="left">Finance</td>
+<td align="left">Manual selection procedure</td>
+<td align="left">Binary</td>
+<td align="left">Based on 2of12inf dictionary</td>
+</tr>
+<tr>
+<td align="left">QDAP</td>
+<td align="center">6789</td>
+<td align="left">Polarity (positive, negative)</td>
+<td align="left">General</td>
+<td align="left">Heuristic based on co-occurences to positive/negative seed words</td>
+<td align="left">Binary</td>
+<td align="left">Synset of WordNet</td>
+</tr>
+<tr>
+<td align="left">SentiStrength</td>
+<td align="center">763</td>
+<td align="left">Positivity, negativity</td>
+<td align="left">Social media</td>
+<td align="left">Human judgment</td>
+<td align="left">Continuous rating</td>
+<td align="left">Derived from LIWC</td>
+</tr>
+<tr>
+<td align="left">SentiWordNet 3.0</td>
+<td align="center">28,431</td>
+<td align="left">Positivity, negativity, neutrality</td>
+<td align="left">General</td>
+<td align="left">Heuristic based on co-occurrences to positive/negative seed words</td>
+<td align="left">Continuous rating</td>
+<td align="left">Based on 86,994 terms from WordNet</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+</table-wrap>
+<p>In order to computerize the construction of dictionaries, researchers have devised various rule-based approaches and heuristics, which are frequently refereed to as dictionary generation or lexicon creation. On the one hand, several algorithms follow a semi-supervised approach that considers word embeddings, similarity or co-occurrences between terms. For instance, SentiWordNet, as well as QDAP, starts with a small set of seed words labeled as positive or negative, based on which neighboring terms are classified [<xref ref-type="bibr" rid="pone.0209323.ref025">25</xref>]. On the other hand, some algorithms base their classifications on a response variable (the gold standard). This sounds similar to our statistical procedure, but they then propose the use of heuristics to label words depending on their appearances in documents rated with a high or low gold standard. The underlying heuristics adapt concepts from information retrieval, such as information gain, pointwise mutual information and <italic>χ</italic><sup>2</sup>-based selection (e. g. [<xref ref-type="bibr" rid="pone.0209323.ref026">26</xref>]). The heuristics aim at differentiating varying degrees of sentiment strength; however, they lack statistical justification, which impairs the possibility of drawing any reliable inferences.</p>
+<p>In addition to the above shortcomings, only a small portion of the content of the dictionaries in <xref ref-type="table" rid="pone.0209323.t001">Table 1</xref> overlaps and some even contain contradictory entries. As a result, choosing the most suitable dictionary to facilitate an understanding of written information is challenging and any choice is likely to be imperfect. This is particularly relevant, since words often feature a highly domain-specific meaning. The above elaborations immediately reveal that there is no one “right” dictionary, and authors of [<xref ref-type="bibr" rid="pone.0209323.ref027">27</xref>] argue that the state-of-the-art methods for polarity scoring are subpar, which affects sentiment-related analysis and conclusions drawn from it.</p>
+</sec>
+<sec id="sec005">
+<title>Statistical approaches for dictionary generation</title>
+<p>The objective of this work is to come up with a statistical procedure that deduces the true perception of explicit and implicit polarity terms. The few existing approaches entail several statistical deficiencies. [<xref ref-type="bibr" rid="pone.0209323.ref028">28</xref>] count frequencies (tf-idf) of selected words and then insert them into an ordinary least squares estimation with a gold standard. However, this approach is subject to multicollinearity and, hence, the authors decided to restrict their analysis specifically to words that appear in the Loughran-McDonald finance-specific dictionary. [<xref ref-type="bibr" rid="pone.0209323.ref029">29</xref>] and [<xref ref-type="bibr" rid="pone.0209323.ref030">30</xref>] develop variants of multinomial regressions that can handle high-dimensional count data. However, both are limited to categorical outcome variables, which makes them infeasible in our setting. Furthermore, the multinomial regressions only work with absolute term frequencies, instead of using common weighting schemes from information retrieval (e. g. tf-idf), which are often regarded as more efficient. Lastly, the underlying dimension reductions return loadings in the reduced-space, which allows for the ranking of word polarities, but lacks direct statistical interpretation (e. g. standard errors).</p>
+<p>We later draw upon the LASSO as a procedure for extracting decisive variables. This method has been applied to textual input, but merely in predictive settings, where it serves either as tool for weighting the salience of predictive features (e. g. [<xref ref-type="bibr" rid="pone.0209323.ref031">31</xref>]) or black-box forecasts (e. g. [<xref ref-type="bibr" rid="pone.0209323.ref032">32</xref>]). However, we adapt it for explaining outcomes <italic>ex post</italic>. To the best of our knowledge, it has not been combined with statistical confidence estimates or proposed as technique for measuring the reception of language. Beyond an earlier draft [<xref ref-type="bibr" rid="pone.0209323.ref018">18</xref>], the use of the LASSO has, in particular, been neither propagated as a tool for generating domain-specific dictionaries nor experimentally evaluated against manual dictionary annotations.</p>
+</sec>
+<sec id="sec006">
+<title>Research gap</title>
+<p>Altogether, we see that the above research neglects to draw rigorous statistical inferences from a comparison between word choice and the regressands. As a remedy, we develop a regularization technique to select granular polarity expressions from documents that <italic>statistically</italic> elicit a positive or negative response. It even extracts terms that convey valence implicitly, helps to discriminate between subtle differences in polarity strength, and adapts to domain-specific particularities—all in order to enable an in-depth analysis of the relationship between language and decisions. This ultimately contributes a better understanding of human text processing.</p>
+<p>Previous literature has pointed out the need for understanding the reception of natural language. Related works predominantly draw on manual and labor-intensive procedures in which human judgments are assumed to reflect the ground truth. The outcome of this process usually results in a set of positive and a set of negative cues, which one refers to collectively as a dictionary. However, there is no doubt that such a setup is error-prone as perceptions of individuals and experts are eminently subjective and thus biased. These dictionaries also entail further shortcomings. First, they usually struggle to capture domain-specific characteristics. For instance, a finance-specific dictionary cannot distinguish between language describing developments in the real estate market in comparison to the linguistic style of technology firms. In addition, most dictionaries also presuppose an equal importance across all words in the same polarity group and thus do not exhaust a continuous bandwidth of sentiment levels.</p>
+</sec>
+</sec>
+<sec id="sec007">
+<title>Method development</title>
+<p>This section proposes a novel methodology by which to investigate the granular perception of natural language and to examine the textual cues that trigger decision-making. Our methodology comprises two stages, of which the first step performs several preprocessing operations to transform running text into a document-term matrix. The second step performs a variable selection to extract only the relevant terms. This essentially utilizes a LASSO regression, treating each document as an observation, while we use all words as explanatory factors explaining an exogenous response variable. We have released our method publicly in the form of an R package. The package <italic>SentimentAnalysis</italic> is available for download via CRAN: <ext-link ext-link-type="uri" xlink:href="https://cran.r-project.org/package=SentimentAnalysis" xlink:type="simple">https://cran.r-project.org/package=SentimentAnalysis</ext-link>.</p>
+<sec id="sec008">
+<title>Preprocessing of natural language</title>
+<p>The preprocessing phase transforms the running text into a structured format that allows for further calculations. This includes a myriad of standard routines from natural language processing (cf. online appendix for details). For instance, we remove stop words without a deeper meaning and truncate inflected words to their stems [<xref ref-type="bibr" rid="pone.0209323.ref024">24</xref>].</p>
+<p>We then obtain frequencies <italic>x</italic><sub><italic>d</italic>,<italic>t</italic></sub> of how often term <italic>t</italic> occurs in document <italic>d</italic>. In order to focus only on the characteristic terms in a document, we transform the frequencies <italic>x</italic><sub><italic>d</italic>,<italic>t</italic></sub> by using a common weighting scheme from information retrieval, namely, the term frequency-inverse document frequency or tf-idf for short [<xref ref-type="bibr" rid="pone.0209323.ref024">24</xref>]. Thereby, the raw frequency <italic>x</italic><sub><italic>d</italic>,<italic>t</italic></sub> is weighted by the ratio of the total number of documents divided by the number of documents that contain the term <italic>t</italic>, i. e.
+<disp-formula id="pone.0209323.e001"><alternatives><graphic id="pone.0209323.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0209323.e001" xlink:type="simple"/><mml:math display="block" id="M1"><mml:mrow><mml:mtable><mml:mtr><mml:mtd><mml:mrow><mml:msub><mml:mover accent="true"><mml:mi>x</mml:mi><mml:mo>^</mml:mo></mml:mover><mml:mrow><mml:mi>d</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>t</mml:mi><mml:mi>f</mml:mi><mml:mo>-</mml:mo><mml:mi>i</mml:mi><mml:mi>d</mml:mi><mml:mi>f</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>,</mml:mo><mml:mi>d</mml:mi><mml:mo>,</mml:mo><mml:mi>D</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>t</mml:mi><mml:mi>f</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>,</mml:mo><mml:mi>d</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mspace width="2pt"/><mml:mi>i</mml:mi><mml:mi>d</mml:mi><mml:mi>f</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>,</mml:mo><mml:mi>D</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:msub><mml:mi>x</mml:mi><mml:mrow><mml:mi>d</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mtext>log</mml:mtext><mml:mfrac><mml:mrow><mml:mrow><mml:mo>|</mml:mo> <mml:mi>D</mml:mi> <mml:mo>|</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mrow><mml:mo>|</mml:mo> <mml:mrow><mml:mrow><mml:mo>{</mml:mo> <mml:mrow><mml:mi>d</mml:mi><mml:mo>∈</mml:mo><mml:mi>D</mml:mi><mml:mo>∣</mml:mo><mml:mi>t</mml:mi><mml:mo>∈</mml:mo><mml:mi>d</mml:mi></mml:mrow> <mml:mo>}</mml:mo></mml:mrow></mml:mrow> <mml:mo>|</mml:mo></mml:mrow></mml:mrow></mml:mfrac><mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:mrow></mml:math></alternatives> <label>(1)</label></disp-formula>
+given a corpus, <italic>D</italic>, of documents. We have also tested different variants of using the raw term frequencies as part of our robustness checks; however, these result in a slightly lower goodness-of-fit and thus yield inferior prediction performance in both datasets.</p>
+</sec>
+<sec id="sec009">
+<title>Model specification</title>
+<p>Let <bold><italic>y</italic></bold> denote the gold standard that measures our response variable of interest. We now construct a linear model where the number of occurrences of individual words explains the response variable. That is, we specify a linear model
+<disp-formula id="pone.0209323.e002"><alternatives><graphic id="pone.0209323.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0209323.e002" xlink:type="simple"/><mml:math display="block" id="M2"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:mi mathvariant="bold-italic">y</mml:mi> <mml:mo>=</mml:mo> <mml:msub><mml:mi>β</mml:mi> <mml:mn>0</mml:mn></mml:msub> <mml:mo>+</mml:mo> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>t</mml:mi> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>n</mml:mi></mml:munderover> <mml:mrow><mml:msub><mml:mi>β</mml:mi> <mml:mi>t</mml:mi></mml:msub> <mml:msub><mml:mover accent="true"><mml:mi mathvariant="bold-italic">x</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mi>t</mml:mi></mml:msub></mml:mrow> <mml:mo>+</mml:mo> <mml:mi mathvariant="bold-italic">ε</mml:mi></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(2)</label></disp-formula>
+to quantify the effect of words <inline-formula id="pone.0209323.e003"><alternatives><graphic id="pone.0209323.e003g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0209323.e003" xlink:type="simple"/><mml:math display="inline" id="M3"><mml:mrow><mml:msub><mml:mover accent="true"><mml:mi mathvariant="bold-italic">x</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mi>t</mml:mi></mml:msub> <mml:mo>=</mml:mo> <mml:msup><mml:mrow><mml:mo>[</mml:mo> <mml:msub><mml:mover accent="true"><mml:mi>x</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mrow><mml:mn>1</mml:mn> <mml:mo>,</mml:mo> <mml:mi>t</mml:mi></mml:mrow></mml:msub> <mml:mo>,</mml:mo> <mml:mo>…</mml:mo> <mml:mo>,</mml:mo> <mml:msub><mml:mover accent="true"><mml:mi>x</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mrow><mml:mo>|</mml:mo> <mml:mi>D</mml:mi> <mml:mo>|</mml:mo> <mml:mo>,</mml:mo> <mml:mi>t</mml:mi></mml:mrow></mml:msub> <mml:mo>]</mml:mo></mml:mrow> <mml:mi>T</mml:mi></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> for <italic>t</italic> = 1, …, <italic>n</italic> on the dependent variable <bold><italic>y</italic></bold> with error term <bold><italic>ε</italic></bold>. In addition, we standardize the word variables <inline-formula id="pone.0209323.e004"><alternatives><graphic id="pone.0209323.e004g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0209323.e004" xlink:type="simple"/><mml:math display="inline" id="M4"><mml:msub><mml:mover accent="true"><mml:mi mathvariant="bold-italic">x</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mi>t</mml:mi></mml:msub></mml:math></alternatives></inline-formula> in order to facilitate comparison between coefficients. The estimated coefficients <italic>β</italic><sub>0</sub>, …, <italic>β</italic><sub><italic>n</italic></sub> then gauge the effect of words on that gold standard.</p>
+<p>Estimating the above model is not trivial, since the appearance of words is likely to be highly correlated, i. e. <inline-formula id="pone.0209323.e005"><alternatives><graphic id="pone.0209323.e005g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0209323.e005" xlink:type="simple"/><mml:math display="inline" id="M5"><mml:mrow><mml:mo>|</mml:mo> <mml:mtext>cor</mml:mtext> <mml:mo>(</mml:mo> <mml:msub><mml:mover accent="true"><mml:mi mathvariant="bold-italic">x</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mi>i</mml:mi></mml:msub> <mml:mo>,</mml:mo> <mml:msub><mml:mover accent="true"><mml:mi mathvariant="bold-italic">x</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mi>j</mml:mi></mml:msub> <mml:mo>)</mml:mo> <mml:mo>|</mml:mo> <mml:mo>≫</mml:mo> <mml:mn>0</mml:mn></mml:mrow></mml:math></alternatives></inline-formula> for <italic>i</italic> ≠ <italic>j</italic>. This raises serious issues of multicollinearity and, consequently, the ordinary least squares (OLS) estimator can be misleading. Moreover, it also results in low predictive power [<xref ref-type="bibr" rid="pone.0209323.ref033">33</xref>] and entails limited interpretability when facing a large number of variables [<xref ref-type="bibr" rid="pone.0209323.ref034">34</xref>].</p>
+<p>In order to overcome these statistical challenges, we perform regularization via the least absolute shrinkage operator (LASSO). Regularization can serve as a viable alternative to OLS when the number of regressors is large and highly correlated. As our main contribution to the existing body of literature on this topic, we propagate the application of this regularization approach to word frequencies in order to infer decisive words and interpret them statistically. Alternative estimators entails disadvantages, since, for instance, ridge regression and elastic net perform no variable selection and can thus not benefit from parsimonious models.</p>
+</sec>
+<sec id="sec010">
+<title>Reasoning behind regularization</title>
+<p>Theory from natural language builds upon Zipf’s law according to which word counts follow a power law distribution [<xref ref-type="bibr" rid="pone.0209323.ref024">24</xref>]. It further suggests that certain words have a potentially large impact, while a high number elicit only a marginal response [<xref ref-type="bibr" rid="pone.0209323.ref035">35</xref>]. To conduct an analysis focusing on those relevant words, we need a mathematical mechanism that extracts terms deemed important. To this end, regularization is a common tool for implicit variable selection and has recently gained considerable traction in data science [<xref ref-type="bibr" rid="pone.0209323.ref036">36</xref>]. A common choice is the LASSO [<xref ref-type="bibr" rid="pone.0209323.ref033">33</xref>, <xref ref-type="bibr" rid="pone.0209323.ref034">34</xref>, <xref ref-type="bibr" rid="pone.0209323.ref037">37</xref>], since it identifies covariates that fit the data best, while simultaneously shrinking some coefficients to zero.</p>
+<p>The LASSO entails several properties that makes its use beneficial for estimating our model. First of all, the LASSO automatically identifies decisive variables in a linear model. It thus chooses a subset of variables and filters out non-informative model terms. In our setting, this allows us to discard words that are statistically not relevant with respect to the exogenous variable. This property of variable selection leads to parsimonious and more interpretable models. At the same time, the LASSO mitigates the issue of multicollinearity, which is present when estimating the model via ordinary least squares. Additionally, by finding a reasonable trade-off between bias and variance, it solves the problem of overfitting, which occurs if the model complexity is too high [<xref ref-type="bibr" rid="pone.0209323.ref033">33</xref>, <xref ref-type="bibr" rid="pone.0209323.ref034">34</xref>, <xref ref-type="bibr" rid="pone.0209323.ref037">37</xref>].</p>
+<p>The LASSO can be identically formalized both as an OLS estimator with an additional regularization parameter or as Bayesian model with a specific prior distribution. The LASSO has recently been extended by significance tests [<xref ref-type="bibr" rid="pone.0209323.ref038">38</xref>]. Alternatively, one can utilize standard errors from the Post-LASSO procedure [<xref ref-type="bibr" rid="pone.0209323.ref039">39</xref>].</p>
+<p>On the whole, the LASSO specifically enables us to treat each distinct word from a corpus as a potential regressor. Its use, together with the standard errors, thereby introduces statistical inferences to natural language on a word-by-word level.</p>
+</sec>
+<sec id="sec011">
+<title>Statistical inferences from word choice</title>
+<p>The LASSO incorporates an additional regularization term that penalizes non-zero coefficients [<xref ref-type="bibr" rid="pone.0209323.ref033">33</xref>, <xref ref-type="bibr" rid="pone.0209323.ref034">34</xref>, <xref ref-type="bibr" rid="pone.0209323.ref037">37</xref>], given by a minimization problem 
+<disp-formula id="pone.0209323.e006"><alternatives><graphic id="pone.0209323.e006g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0209323.e006" xlink:type="simple"/><mml:math display="block" id="M6"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi mathvariant="bold-italic">β</mml:mi> <mml:mtext>LASSO</mml:mtext></mml:msub> <mml:mo>=</mml:mo> <mml:munder><mml:mrow><mml:mo form="prefix">arg</mml:mo> <mml:mo form="prefix" movablelimits="true">min</mml:mo></mml:mrow> <mml:mrow><mml:msub><mml:mi>β</mml:mi> <mml:mn>0</mml:mn></mml:msub> <mml:mo>,</mml:mo> <mml:mo>…</mml:mo> <mml:mo>,</mml:mo> <mml:msub><mml:mi>β</mml:mi> <mml:mi>n</mml:mi></mml:msub></mml:mrow></mml:munder> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>i</mml:mi> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mrow><mml:mo>|</mml:mo> <mml:mi>D</mml:mi> <mml:mo>|</mml:mo></mml:mrow></mml:munderover> <mml:msup><mml:mrow><mml:mo>[</mml:mo> <mml:msub><mml:mi>y</mml:mi> <mml:mi>i</mml:mi></mml:msub> <mml:mo>-</mml:mo> <mml:msub><mml:mi>β</mml:mi> <mml:mn>0</mml:mn></mml:msub> <mml:mo>-</mml:mo> <mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>t</mml:mi> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>n</mml:mi></mml:munderover> <mml:mrow><mml:msub><mml:mi>β</mml:mi> <mml:mi>t</mml:mi></mml:msub> <mml:msub><mml:mover accent="true"><mml:mi>x</mml:mi> <mml:mo>^</mml:mo></mml:mover> <mml:mrow><mml:mi>d</mml:mi> <mml:mo>,</mml:mo> <mml:mi>t</mml:mi></mml:mrow></mml:msub></mml:mrow> <mml:mo>]</mml:mo></mml:mrow> <mml:mn>2</mml:mn></mml:msup> <mml:mspace width="4.pt"/><mml:mtext>s.</mml:mtext> <mml:mspace width="0.166667em"/><mml:mtext>t.</mml:mtext> <mml:mspace width="4.pt"/><mml:munderover><mml:mo>∑</mml:mo> <mml:mrow><mml:mi>t</mml:mi> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn></mml:mrow> <mml:mi>n</mml:mi></mml:munderover> <mml:mo>|</mml:mo> <mml:msub><mml:mi>β</mml:mi> <mml:mi>t</mml:mi></mml:msub> <mml:mo>|</mml:mo> <mml:mo>≤</mml:mo> <mml:mo>λ</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives> <label>(3)</label></disp-formula>
+with a suitable tuning parameter λ. The magnitude of the regression coefficients measures the perception of individual words statistically.</p>
+<p>Because of the <italic>L</italic><sub>1</sub>-penalty, the LASSO typically produces estimates in which some of the coefficients are set exactly to zero and, thereby, performs an implicit feature selection. In practice, the parameter λ is selected using cross-validation to find a value that minimizes the error on the hold-out set. Afterwards, we re-fit the model with that specific λ using all the observations in order to determine its coefficients. Our standard errors stem from the Post-LASSO, and allow us to make statistical tests that correspond to the use of specific words.</p>
+<p>As a result, our procedure identifies statistically relevant words, while the corresponding coefficients measure their polarity. One major benefit of our approach is that it overcomes the problem of ex ante selected words. Hence, we no longer run the risk of labeling words for subjective reasons or on the basis of erroneous knowledge, since all outcomes measure the influence of words on the dependent variable with statistical validation.</p>
+</sec>
+</sec>
+<sec id="sec012">
+<title>Empirical results</title>
+<p>This section evaluates our method with two studies from different domains: (I) we investigate the role of word choice in recommender systems by extracting opinionated terms from user-generated reviews. (II) We further study the impact on stock markets of the wording in financial disclosures. Subsequently, we compare the resulting word lists to the manually-selected dictionaries from previous research and show how our method can be used with higher-order word combinations to incorporate context. For all websites exploited for the collection of data, we complied with the terms of service.</p>
+<sec id="sec013">
+<title>Study I: Opinionated terms in user-generated reviews</title>
+<sec id="sec014">
+<title>Corpus with reviews</title>
+<p>The first study demonstrates the added value of our approach in the domain of recommender systems, where we automatically infer terms that convey opinions. Professionals from marketing can exploit these expressions to gain insights into how people judge products or services. In related research, movie reviews represent a popular choice when it comes to studying opinion mining (e. g. [<xref ref-type="bibr" rid="pone.0209323.ref040">40</xref>]). Among the reasons is that movie reviews pose a particularly difficult challenge, since they often contain a mixture of feedback, critique and summaries of movie scenes. For example, positive reviews still refer to some unpleasant scenes and negative reviews to pleasant ones. We utilize a free and publicly available corpus of 5006 movie reviews from the Internet Movie Database (IMDb), each annotated with an overall rating. The scaled dataset is available from <ext-link ext-link-type="uri" xlink:href="http://www.cs.cornell.edu/people/pabo/movie-review-data/" xlink:type="simple">http://www.cs.cornell.edu/people/pabo/movie-review-data/</ext-link>. All reviews are written by four different authors and preprocessed, e. g. by removing explicit rating indicators [<xref ref-type="bibr" rid="pone.0209323.ref040">40</xref>].</p>
+</sec>
+<sec id="sec015">
+<title>Statistical inferences for polarity word scoring</title>
+<p>We now extract opinionated terms from the movie reviews. The corpus contains a total number of 1195 word stems after preprocessing. Our methodology results in a final model with 549 (47.21%) statistically relevant terms. Out of these, 294 terms feature a positive and 255 a negative connotation. Unsurprisingly, the coefficients are generally small as a single word does not flip the whole meaning of the document but merely of a sentence. We report the top 15 expressions with the highest and lowest coefficients in <xref ref-type="table" rid="pone.0209323.t002">Table 2</xref>. The table lists stems instead of complete words due to stemming being part of the preprocessing. We additionally calculate standard errors via the Post-LASSO [<xref ref-type="bibr" rid="pone.0209323.ref039">39</xref>].</p>
+<table-wrap id="pone.0209323.t002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0209323.t002</object-id>
+<label>Table 2</label>
+<caption>
+<title>Empirical results of top 15 opinionated terms in movie reviews.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0209323.t002g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0209323.t002" xlink:type="simple"/>
+<table border="0" frame="box" rules="all">
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">Word Stem</th>
+<th align="center">Coef.</th>
+<th align="center">Stand. Error<break/>(Post-LASSO)</th>
+<th align="center">Relative<break/>Freq. (%)</th>
+<th align="center">Positive<break/>Doc. (%)</th>
+<th align="center">Negative<break/>Doc. (%)</th>
+<th align="center">Harvard<break/>IV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" colspan="7">P<sc>ositive</sc> T<sc>erms</sc> (T<sc>op</sc> 15)</td>
+</tr>
+<tr>
+<td align="left">great</td>
+<td align="char" char=".">0.0709</td>
+<td align="char" char=".">0.0098</td>
+<td align="char" char=".">31.58</td>
+<td align="char" char=".">66.29</td>
+<td align="char" char=".">33.71</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">perfect</td>
+<td align="char" char=".">0.0707</td>
+<td align="char" char=".">0.0096</td>
+<td align="char" char=".">19.18</td>
+<td align="char" char=".">74.17</td>
+<td align="char" char=".">25.83</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">excel</td>
+<td align="char" char=".">0.0572</td>
+<td align="char" char=".">0.0156</td>
+<td align="char" char=".">19.68</td>
+<td align="char" char=".">64.57</td>
+<td align="char" char=".">35.43</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">best</td>
+<td align="char" char=".">0.0571</td>
+<td align="char" char=".">0.0098</td>
+<td align="char" char=".">47.16</td>
+<td align="char" char=".">64.59</td>
+<td align="char" char=".">35.41</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">life</td>
+<td align="char" char=".">0.0551</td>
+<td align="char" char=".">0.0102</td>
+<td align="char" char=".">49.82</td>
+<td align="char" char=".">63.79</td>
+<td align="char" char=".">36.21</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">delight</td>
+<td align="char" char=".">0.0515</td>
+<td align="char" char=".">0.0098</td>
+<td align="char" char=".">10.69</td>
+<td align="char" char=".">76.82</td>
+<td align="char" char=".">23.18</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">brilliant</td>
+<td align="char" char=".">0.0480</td>
+<td align="char" char=".">0.0095</td>
+<td align="char" char=".">7.19</td>
+<td align="char" char=".">73.06</td>
+<td align="char" char=".">26.94</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">intens</td>
+<td align="char" char=".">0.0469</td>
+<td align="char" char=".">0.0097</td>
+<td align="char" char=".">9.27</td>
+<td align="char" char=".">74.35</td>
+<td align="char" char=".">25.65</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">uniqu</td>
+<td align="char" char=".">0.0416</td>
+<td align="char" char=".">0.0098</td>
+<td align="char" char=".">8.39</td>
+<td align="char" char=".">73.81</td>
+<td align="char" char=".">26.19</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">recommend</td>
+<td align="char" char=".">0.0393</td>
+<td align="char" char=".">0.0138</td>
+<td align="char" char=".">18.57</td>
+<td align="char" char=".">59.78</td>
+<td align="char" char=".">40.22</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">marvel</td>
+<td align="char" char=".">0.0390</td>
+<td align="char" char=".">0.0096</td>
+<td align="char" char=".">5.19</td>
+<td align="char" char=".">79.62</td>
+<td align="char" char=".">20.38</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">hilari</td>
+<td align="char" char=".">0.0373</td>
+<td align="char" char=".">0.0096</td>
+<td align="char" char=".">6.97</td>
+<td align="char" char=".">75.64</td>
+<td align="char" char=".">24.36</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">easi</td>
+<td align="char" char=".">0.0353</td>
+<td align="char" char=".">0.0095</td>
+<td align="char" char=".">15.46</td>
+<td align="char" char=".">70.67</td>
+<td align="char" char=".">29.33</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">matur</td>
+<td align="char" char=".">0.0347</td>
+<td align="char" char=".">0.0102</td>
+<td align="char" char=".">10.49</td>
+<td align="char" char=".">74.67</td>
+<td align="char" char=".">25.33</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">fascin</td>
+<td align="char" char=".">0.0346</td>
+<td align="char" char=".">0.0099</td>
+<td align="char" char=".">10.59</td>
+<td align="char" char=".">77.74</td>
+<td align="char" char=".">22.26</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="center" colspan="7">N<sc>egative</sc> T<sc>erms</sc> (B<sc>ottom</sc> 15)</td>
+</tr>
+<tr>
+<td align="left">bad</td>
+<td align="char" char=".">-0.1124</td>
+<td align="char" char=".">0.0103</td>
+<td align="char" char=".">34.50</td>
+<td align="char" char=".">47.60</td>
+<td align="char" char=".">52.40</td>
+<td align="center">⊝</td>
+</tr>
+<tr>
+<td align="left">worst</td>
+<td align="char" char=".">-0.1011</td>
+<td align="char" char=".">0.0132</td>
+<td align="char" char=".">16.26</td>
+<td align="char" char=".">52.21</td>
+<td align="char" char=".">47.79</td>
+<td align="center">⊝</td>
+</tr>
+<tr>
+<td align="left">wast</td>
+<td align="char" char=".">-0.0762</td>
+<td align="char" char=".">0.0144</td>
+<td align="char" char=".">19.28</td>
+<td align="char" char=".">52.54</td>
+<td align="char" char=".">47.46</td>
+<td align="center">⊝</td>
+</tr>
+<tr>
+<td align="left">review</td>
+<td align="char" char=".">-0.0741</td>
+<td align="char" char=".">0.0169</td>
+<td align="char" char=".">53.28</td>
+<td align="char" char=".">51.48</td>
+<td align="char" char=".">48.52</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">suppos</td>
+<td align="char" char=".">-0.0699</td>
+<td align="char" char=".">0.0097</td>
+<td align="char" char=".">15.66</td>
+<td align="char" char=".">41.07</td>
+<td align="char" char=".">58.93</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">least</td>
+<td align="char" char=".">-0.0672</td>
+<td align="char" char=".">0.0097</td>
+<td align="char" char=".">22.67</td>
+<td align="char" char=".">47.58</td>
+<td align="char" char=".">52.42</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">movi</td>
+<td align="char" char=".">-0.0671</td>
+<td align="char" char=".">0.0130</td>
+<td align="char" char=".">84.66</td>
+<td align="char" char=".">56.06</td>
+<td align="char" char=".">43.94</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">cinematograph</td>
+<td align="char" char=".">-0.0538</td>
+<td align="char" char=".">0.0151</td>
+<td align="char" char=".">21.17</td>
+<td align="char" char=".">44.81</td>
+<td align="char" char=".">55.19</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">flat</td>
+<td align="char" char=".">-0.0526</td>
+<td align="char" char=".">0.0096</td>
+<td align="char" char=".">6.31</td>
+<td align="char" char=".">35.44</td>
+<td align="char" char=".">64.56</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">unfortun</td>
+<td align="char" char=".">-0.0512</td>
+<td align="char" char=".">0.0102</td>
+<td align="char" char=".">14.12</td>
+<td align="char" char=".">43.42</td>
+<td align="char" char=".">56.58</td>
+<td align="center">⊝</td>
+</tr>
+<tr>
+<td align="left">dull</td>
+<td align="char" char=".">-0.0483</td>
+<td align="char" char=".">0.0096</td>
+<td align="char" char=".">5.43</td>
+<td align="char" char=".">32.72</td>
+<td align="char" char=".">67.28</td>
+<td align="center">⊝</td>
+</tr>
+<tr>
+<td align="left">bore</td>
+<td align="char" char=".">-0.0483</td>
+<td align="char" char=".">0.0097</td>
+<td align="char" char=".">8.21</td>
+<td align="char" char=".">37.23</td>
+<td align="char" char=".">62.77</td>
+<td align="center">⊝</td>
+</tr>
+<tr>
+<td align="left">denni</td>
+<td align="char" char=".">-0.0468</td>
+<td align="char" char=".">0.0236</td>
+<td align="char" char=".">23.33</td>
+<td align="char" char=".">42.21</td>
+<td align="char" char=".">57.79</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">lack</td>
+<td align="char" char=".">-0.0450</td>
+<td align="char" char=".">0.0097</td>
+<td align="char" char=".">16.48</td>
+<td align="char" char=".">48.61</td>
+<td align="char" char=".">51.39</td>
+<td align="center">⊝</td>
+</tr>
+<tr>
+<td align="left">wors</td>
+<td align="char" char=".">-0.0442</td>
+<td align="char" char=".">0.0097</td>
+<td align="char" char=".">7.11</td>
+<td align="char" char=".">38.48</td>
+<td align="char" char=".">61.52</td>
+<td align="center">⊝</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t002fn001">
+<p><italic>Notes:</italic> This table reports the extracted terms that convey a particularly positive or negative sentiment in movie reviews. Top: the 15 most positive word stems, together with their estimated coefficient. Standard errors are calculated via the Post-LASSO [<xref ref-type="bibr" rid="pone.0209323.ref039">39</xref>]. Bottom: the 15 most negative word stems. In addition, we provide the relative frequency within the corpus, as well as the ratio of positive and negative documents that contain each word. The last column show the overlap with the Harvard IV psychological dictionary. The symbol “⊕” indicates terms that appear in the positive word list and “⊝” in the negative word list of this dictionary. The complete list with all 549 stems is given in the supplementary materials.</p>
+</fn>
+</table-wrap-foot>
+</table-wrap>
+<p><xref ref-type="table" rid="pone.0209323.t002">Table 2</xref> renders it possible to precisely discriminate different levels of positive and negative polarity strength. Many of the listed terms seem plausible and might be used independent of the context of a movie review, such as <italic>perfect</italic> or <italic>bad</italic>. These words frequently appear in sentences, such as “<italic>the story is perfect</italic>” or “<italic>this is just a bad film</italic>”. In addition, we observe a large number of words that are specific to the domain of motion pictures. This includes terms, such as <italic>recommend</italic> and <italic>long</italic>, that, for instance, occur in sentences such as “<italic>the movie was too long</italic>”. However, other terms, such as <italic>war</italic> (coefficient of 0.0041) or <italic>crime</italic> (coefficient of 0.0004) appear unexpected at first glance. A potential reason is that these words are often related to certain actions and scenes that appeal to the audience and are—on average—more positively perceived than other parts in the plot.</p>
+<p>Furthermore, <xref ref-type="table" rid="pone.0209323.t002">Table 2</xref> states, in percentage, how often each word occurs in reviews with positive or negative ratings. For instance, the term <italic>best</italic> appears in 65% of all positive reviews and <italic>brilliant</italic> in 73% of the cases. Yet the pure number of appearances is misleading: the term <italic>best</italic> amounts to a much higher coefficient of 0.0571 compared to 0.0480, thereby indicating that it expresses a more positive sentiment. We note here again that both the response variables, as well as our regressors, are standardized for easier comparisons.</p>
+<p>Our model features a relatively high explanatory power with an adjusted <italic>R</italic><sup>2</sup> amounting to 0.5668. We also see clear indications of multicollinearity in the model prior to performing variable selection, since 18 (1.51%) out of all the variance inflation factors exceed the critical threshold of 4, hence, making regularization a vital ingredient of our procedure.</p>
+<p>
+<xref ref-type="table" rid="pone.0209323.t002">Table 2</xref> also compares the inferred polarity score to expert judgments. Evidently, there is a considerable number of opinionated terms that are not covered by dictionary word lists. Among the 15 most positive words, for example, only 12 have found their way in the Harvard IV psychological dictionary, whereas this is true for only 8 of the 15 most negative terms. We later detail the overlap for the complete list of terms in Section 5, finding only a minor consensus of 40.44%. This stems from the fact that authors commonly utilize implicit polarity words to express their opinions, which are not included in psychological dictionaries. This highlights the shortcomings of human dictionaries and provides strong evidence that authors convey their message by utilizing different and highly domain-specific wording to communicate their opinion.</p>
+</sec>
+</sec>
+<sec id="sec016">
+<title>Study II: Impact of wording on financial markets</title>
+<sec id="sec017">
+<title>Financial corpus</title>
+<p>Our second study demonstrates the reception of language in regulatory Form 8-K filings from the United States. These inform investors about important corporate events, such as management changes, the departure of directors, bankruptcy, layoffs, and other events deemed significant. Form 8-K filings are publicly accessible and quality-checked by the Securities and Exchange Commission (SEC) to ensure that the content meets formal requirements. These reports are of high relevance for the stock market and communicate very informative material [<xref ref-type="bibr" rid="pone.0209323.ref041">41</xref>]; this suggests a strong relationship between their content and market responses.</p>
+<p>Our filings (including amendments) span the years 2004 to 2013, originating from the EDGAR website of the SEC. The complete sample consists of 901,133 filings, which then undergo several filtering steps. First, we select only filings from firms whose stocks were publicly traded on the New York Stock Exchange (NYSE). Second, in order to gain information about the stock market reaction, we remove filings for which we are not able to match the SEC CIK numbers to Thomson Reuters Datastream (from which all financial data is retrieved). Consistent with prior research, we exclude filings that contain fewer that 200 words and penny stocks below $5 per share [<xref ref-type="bibr" rid="pone.0209323.ref042">42</xref>]. These filtering steps then result in a final corpus of 76,717 filings.</p>
+<p>We measure the stock market reaction subsequent to a disclosure by the abnormal return of the corresponding company, since it corrects the nominal return for concurrent market movements. In short, we implement a market model that assumes a stable linear relation between market return and normal return. We model the market return using a stock market index, namely, the NYSE Composite Index, along with an event window of 10 trading days prior to the disclosure. The supplementary materials provide a thorough explanation of this approach.</p>
+</sec>
+<sec id="sec018">
+<title>Statistical inferences for word reception</title>
+<p>We now report the cues that are relevant for the decision-making of investors when reading financial materials. Our approach selects a total of 172 statistically relevant terms, out of 1724 entries in the preprocessed corpus, i. e. 9.98%. Out of this subset, 82 entries are linked to a positive stock market response, 90 word stems to a decreasing firm valuation. Such a relatively small subset of decisive terms is in line with the suggestion from Zipf’s law [<xref ref-type="bibr" rid="pone.0209323.ref024">24</xref>, <xref ref-type="bibr" rid="pone.0209323.ref035">35</xref>]. We observe generally smaller coefficients as compared to our first study with movie reviews. This is not an unexpected result, since the average length of financial filings (3473 words) is higher than that of reviews (1066 words). Hence, the proportional influence of a single word as measured by the magnitude of its coefficient is smaller. <xref ref-type="table" rid="pone.0209323.t003">Table 3</xref> reports the 15 words with the highest and lowest coefficients based on our procedure, for which we again provide only stemmed words due to our preprocessing. As before, we additionally calculate standard errors via the Post-LASSO. The complete list is provided in the supplements.</p>
+<table-wrap id="pone.0209323.t003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0209323.t003</object-id>
+<label>Table 3</label>
+<caption>
+<title>Empirical results of top 15 polarity expressions in financial filings.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0209323.t003g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0209323.t003" xlink:type="simple"/>
+<table border="0" frame="box" rules="all">
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">Word Stem</th>
+<th align="center">Coef.</th>
+<th align="center">Stand. Error<break/>(Post-LASSO)</th>
+<th align="center">Relative<break/>Freq. (%)</th>
+<th align="center">Positive<break/>Doc. (%)</th>
+<th align="center">Negative<break/>Doc. (%)</th>
+<th align="center">Harvard<break/>IV</th>
+<th align="center">Loughran-<break/>McDonald</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" colspan="8">P<sc>ositive</sc> T<sc>erms</sc> (T<sc>op</sc> 15)</td>
+</tr>
+<tr>
+<td align="left">improv</td>
+<td align="char" char=".">0.0325</td>
+<td align="char" char=".">0.0045</td>
+<td align="char" char=".">37.27</td>
+<td align="char" char=".">49.70</td>
+<td align="char" char=".">50.30</td>
+<td align="center">⊕</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">rais</td>
+<td align="char" char=".">0.0160</td>
+<td align="char" char=".">0.0038</td>
+<td align="char" char=".">11.06</td>
+<td align="char" char=".">51.17</td>
+<td align="char" char=".">48.83</td>
+<td align="center">⊝</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">strong</td>
+<td align="char" char=".">0.0144</td>
+<td align="char" char=".">0.0045</td>
+<td align="char" char=".">28.41</td>
+<td align="char" char=".">50.32</td>
+<td align="char" char=".">49.68</td>
+<td align="center"/>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">increas</td>
+<td align="char" char=".">0.0113</td>
+<td align="char" char=".">0.0051</td>
+<td align="char" char=".">60.51</td>
+<td align="char" char=".">49.16</td>
+<td align="char" char=".">50.84</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">facil</td>
+<td align="char" char=".">0.0106</td>
+<td align="char" char=".">0.0039</td>
+<td align="char" char=".">35.28</td>
+<td align="char" char=".">49.29</td>
+<td align="char" char=".">50.71</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">waiver</td>
+<td align="char" char=".">0.0095</td>
+<td align="char" char=".">0.0039</td>
+<td align="char" char=".">15.33</td>
+<td align="char" char=".">48.33</td>
+<td align="char" char=".">51.67</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">stronger</td>
+<td align="char" char=".">0.0080</td>
+<td align="char" char=".">0.0039</td>
+<td align="char" char=".">5.44</td>
+<td align="char" char=".">50.58</td>
+<td align="char" char=".">49.42</td>
+<td align="center"/>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">vacat</td>
+<td align="char" char=".">0.0076</td>
+<td align="char" char=".">0.0037</td>
+<td align="char" char=".">5.58</td>
+<td align="char" char=".">49.72</td>
+<td align="char" char=".">50.28</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">repurchas</td>
+<td align="char" char=".">0.0074</td>
+<td align="char" char=".">0.0039</td>
+<td align="char" char=".">22.97</td>
+<td align="char" char=".">50.03</td>
+<td align="char" char=".">49.97</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">favor</td>
+<td align="char" char=".">0.0073</td>
+<td align="char" char=".">0.0040</td>
+<td align="char" char=".">25.45</td>
+<td align="char" char=".">49.71</td>
+<td align="char" char=".">50.29</td>
+<td align="center">⊕</td>
+<td align="center">⊕</td>
+</tr>
+<tr>
+<td align="left">consumm</td>
+<td align="char" char=".">0.0067</td>
+<td align="char" char=".">0.0040</td>
+<td align="char" char=".">15.13</td>
+<td align="char" char=".">48.43</td>
+<td align="char" char=".">51.57</td>
+<td align="center">⊕</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">annum</td>
+<td align="char" char=".">0.0056</td>
+<td align="char" char=".">0.0039</td>
+<td align="char" char=".">9.2707</td>
+<td align="char" char=".">48.00</td>
+<td align="char" char=".">52.00</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">avoid</td>
+<td align="char" char=".">0.0051</td>
+<td align="char" char=".">0.0037</td>
+<td align="char" char=".">11.55</td>
+<td align="char" char=".">48.82</td>
+<td align="char" char=".">51.18</td>
+<td align="center">⊝</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">payrol</td>
+<td align="char" char=".">0.0049</td>
+<td align="char" char=".">0.0037</td>
+<td align="char" char=".">6.69</td>
+<td align="char" char=".">49.32</td>
+<td align="char" char=".">50.68</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">middl</td>
+<td align="char" char=".">0.0046</td>
+<td align="char" char=".">0.0037</td>
+<td align="char" char=".">5.16</td>
+<td align="char" char=".">49.15</td>
+<td align="char" char=".">50.85</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="center" colspan="8">N<sc>egative</sc> T<sc>erms</sc> (B<sc>ottom</sc> 15)</td>
+</tr>
+<tr>
+<td align="left">declin</td>
+<td align="char" char=".">-0.0204</td>
+<td align="char" char=".">0.0045</td>
+<td align="char" char=".">23.59</td>
+<td align="char" char=".">48.65</td>
+<td align="char" char=".">51.35</td>
+<td align="center">⊝</td>
+<td align="center">⊝</td>
+</tr>
+<tr>
+<td align="left">negat</td>
+<td align="char" char=".">-0.0162</td>
+<td align="char" char=".">0.0040</td>
+<td align="char" char=".">20.03</td>
+<td align="char" char=".">47.85</td>
+<td align="char" char=".">52.15</td>
+<td align="center">⊝</td>
+<td align="center">⊝</td>
+</tr>
+<tr>
+<td align="left">lower</td>
+<td align="char" char=".">-0.0138</td>
+<td align="char" char=".">0.0047</td>
+<td align="char" char=".">27.27</td>
+<td align="char" char=".">48.72</td>
+<td align="char" char=".">51.28</td>
+<td align="center">⊝</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">experienc</td>
+<td align="char" char=".">-0.0117</td>
+<td align="char" char=".">0.0038</td>
+<td align="char" char=".">12.17</td>
+<td align="char" char=".">47.93</td>
+<td align="char" char=".">52.07</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">delay</td>
+<td align="char" char=".">-0.0091</td>
+<td align="char" char=".">0.0038</td>
+<td align="char" char=".">18.72</td>
+<td align="char" char=".">47.65</td>
+<td align="char" char=".">52.35</td>
+<td align="center">⊝</td>
+<td align="center">⊝</td>
+</tr>
+<tr>
+<td align="left">broad</td>
+<td align="char" char=".">-0.0063</td>
+<td align="char" char=".">0.0038</td>
+<td align="char" char=".">11.46</td>
+<td align="char" char=".">48.22</td>
+<td align="char" char=".">51.78</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">advertis</td>
+<td align="char" char=".">-0.0056</td>
+<td align="char" char=".">0.0042</td>
+<td align="char" char=".">8.86</td>
+<td align="char" char=".">48.35</td>
+<td align="char" char=".">51.65</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">project</td>
+<td align="char" char=".">-0.0055</td>
+<td align="char" char=".">0.0041</td>
+<td align="char" char=".">36.88</td>
+<td align="char" char=".">48.84</td>
+<td align="char" char=".">51.16</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">pressur</td>
+<td align="char" char=".">-0.0055</td>
+<td align="char" char=".">0.0038</td>
+<td align="char" char=".">9.42</td>
+<td align="char" char=".">48.96</td>
+<td align="char" char=".">51.04</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">now</td>
+<td align="char" char=".">-0.0054</td>
+<td align="char" char=".">0.0040</td>
+<td align="char" char=".">27.14</td>
+<td align="char" char=".">48.80</td>
+<td align="char" char=".">51.20</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">challeng</td>
+<td align="char" char=".">-0.0054</td>
+<td align="char" char=".">0.0039</td>
+<td align="char" char=".">15.58</td>
+<td align="char" char=".">48.41</td>
+<td align="char" char=".">51.59</td>
+<td align="center">⊝</td>
+<td align="center">⊝</td>
+</tr>
+<tr>
+<td align="left">offer</td>
+<td align="char" char=".">-0.0052</td>
+<td align="char" char=".">0.0045</td>
+<td align="char" char=".">40.33</td>
+<td align="char" char=".">48.76</td>
+<td align="char" char=".">51.24</td>
+<td align="center">⊕</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">depreci</td>
+<td align="char" char=".">-0.0051</td>
+<td align="char" char=".">0.0052</td>
+<td align="char" char=".">23.11</td>
+<td align="char" char=".">48.59</td>
+<td align="char" char=".">51.41</td>
+<td align="center">⊝</td>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">impact</td>
+<td align="char" char=".">-0.0041</td>
+<td align="char" char=".">0.0046</td>
+<td align="char" char=".">39.79</td>
+<td align="char" char=".">48.62</td>
+<td align="char" char=".">51.38</td>
+<td align="center"/>
+<td align="center"/>
+</tr>
+<tr>
+<td align="left">weak</td>
+<td align="char" char=".">-0.0039</td>
+<td align="char" char=".">0.0038</td>
+<td align="char" char=".">8.5841</td>
+<td align="char" char=".">48.35</td>
+<td align="char" char=".">51.65</td>
+<td align="center">⊝</td>
+<td align="center">⊝</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t003fn001">
+<p><italic>Notes:</italic> This table reports verbal expressions that convey positive and negative information in financial disclosures (Form 8-K filings). Top: 15 most positive word stems, together with their estimated coefficient. Standard errors are calculated via the Post-LASSO [<xref ref-type="bibr" rid="pone.0209323.ref039">39</xref>]. Bottom: the 15 most negative word stems. In addition, we provide the relative frequency in financial filings, as well as the ratio of documents with a positive or negative market response. The last columns shows the agreement between our statistical inferences and two common dictionaries based on human annotations, namely, the Harvard IV psychological and Loughran-McDonald finance-specific dictionary. The symbol “⊕” indicates terms that appear in the respective positive word list, “⊝” in the negative one. The complete table with all 172 entries is given in the supplements.</p>
+</fn>
+</table-wrap-foot>
+</table-wrap>
+<p>Similarly to the previous corpus, we observe several terms that are specific to the given domain of financial reporting, e. g. <italic>improv</italic>, <italic>strong payrol</italic> and <italic>lower</italic>. These words crop up, for instance, in sentences such as “<italic>the strong business development was sustainably confirmed</italic>”. In contrast, we also find unexpected outcomes, which appear predominantly in the negative list. Examples include <italic>although</italic> (standardized coefficient of -0.0036) and <italic>however</italic> (standardized coefficient of -0.0015). Most likely, these cues convey uncertainty, attenuate other statements or overturn earlier expectations.</p>
+<p>Overall, the current model features a lower explanatory power when compared to the previous model based on user-generated reviews. We expected such an outcome, since previous work has found that very few variables can predict stock returns in efficient markets [<xref ref-type="bibr" rid="pone.0209323.ref023">23</xref>]. In addition, we see again strong evidence of multicollinearity, since 24 (1.39%) of the variance inflation factors in the full model before variable selection exceed the critical threshold of 4. This stresses once more the need for regularization in our approach.</p>
+<p>In addition, <xref ref-type="table" rid="pone.0209323.t003">Table 3</xref> compares the inferred polarity scores to the classifications from psychological and finance-specific dictionaries. As suggested by [<xref ref-type="bibr" rid="pone.0209323.ref035">35</xref>], we observe that dictionary labels deviate extensively from the true perception of stock market investors. From the 15 most positive words, only 5 words are also contained in the Harvard IV psychological dictionary, whereas this is true for 8 of the negative terms. Similarly, the Loughran-McDonald dictionary contains only 4 out of the 15 most positive words and 5 out of the 15 most negative words. A detailed comparison with other dictionaries is provided as part of our robustness checks in Section 5. Overall, this indicates that the human experts do not accurately judge the true reception of natural language in the financial domain.</p>
+</sec>
+</sec>
+<sec id="sec019">
+<title>Comparison to dictionaries from human selection</title>
+<p>We now compare the results of our statistical inferences to the manually selected dictionaries from previous research. For this purpose, <xref ref-type="table" rid="pone.0209323.t004">Table 4</xref> details the number of overlapping terms and compares to what extent classifications agree. In addition, we present the inter-rater reliability (i. e. the concordance with our statistical inferences) in terms of Krippendorff’s alpha coefficient [<xref ref-type="bibr" rid="pone.0209323.ref043">43</xref>]. Here, a reliability value of 1 indicates a perfect overlap between the classifications in positive and negative groups, whereas a value of 0 denotes that human dictionaries and our statistical inferences are statistically unrelated.</p>
+<table-wrap id="pone.0209323.t004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0209323.t004</object-id>
+<label>Table 4</label>
+<caption>
+<title>Comparison of human classifications to statistical inferences.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0209323.t004g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0209323.t004" xlink:type="simple"/>
+<table border="0" frame="box" rules="all">
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="2"/>
+<th align="center" rowspan="2">Size</th>
+<th align="center" colspan="2">Overlapping Terms</th>
+<th align="center" colspan="2">Consensus Classification</th>
+<th align="center" rowspan="2">Correlation</th>
+<th align="center" rowspan="2">Reliability</th>
+</tr>
+<tr>
+<th align="left">Count</th>
+<th align="center">Share</th>
+<th align="left">Count</th>
+<th align="center">Share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" colspan="8">S<sc>tudy</sc> I: M<sc>ovie</sc> R<sc>eviews</sc></td>
+</tr>
+<tr>
+<td align="left">Harvard IV</td>
+<td align="right">4206</td>
+<td align="right">222</td>
+<td align="char" char=".">0.4044</td>
+<td align="right">138</td>
+<td align="char" char=".">0.6216</td>
+<td align="char" char=".">0.3236 ***</td>
+<td align="char" char=".">0.2246</td>
+</tr>
+<tr>
+<td align="left">Henry</td>
+<td align="right">190</td>
+<td align="right">26</td>
+<td align="char" char=".">0.0474</td>
+<td align="right">20</td>
+<td align="char" char=".">0.7692</td>
+<td align="char" char=".">0.5593 **</td>
+<td align="char" char=".">0.5446</td>
+</tr>
+<tr>
+<td align="left">Loughran-McDonald</td>
+<td align="right">2709</td>
+<td align="right">73</td>
+<td align="char" char=".">0.1330</td>
+<td align="right">45</td>
+<td align="char" char=".">0.6164</td>
+<td align="char" char=".">0.4303 ***</td>
+<td align="char" char=".">0.2311</td>
+</tr>
+<tr>
+<td align="left">SentiWordNet</td>
+<td align="right">28431</td>
+<td align="right">440</td>
+<td align="char" char=".">0.8015</td>
+<td align="right">246</td>
+<td align="char" char=".">0.5591</td>
+<td align="char" char=".">0.2649 ***</td>
+<td align="char" char=".">0.1001</td>
+</tr>
+<tr>
+<td align="left">QDAP</td>
+<td align="right">6789</td>
+<td align="right">176</td>
+<td align="char" char=".">0.3206</td>
+<td align="right">114</td>
+<td align="char" char=".">0.6477</td>
+<td align="char" char=".">0.3638 ***</td>
+<td align="char" char=".">0.2863</td>
+</tr>
+<tr>
+<td align="center" colspan="8">S<sc>tudy</sc> II: F<sc>inancial</sc> F<sc>ilings</sc></td>
+</tr>
+<tr>
+<td align="left">Harvard IV</td>
+<td align="right">4206</td>
+<td align="right">55</td>
+<td align="char" char=".">0.3198</td>
+<td align="right">34</td>
+<td align="char" char=".">0.6182</td>
+<td align="char" char=".">0.2742 *</td>
+<td align="char" char=".">0.2270</td>
+</tr>
+<tr>
+<td align="left">Henry</td>
+<td align="right">190</td>
+<td align="right">21</td>
+<td align="char" char=".">0.1221</td>
+<td align="right">19</td>
+<td align="char" char=".">0.9048</td>
+<td align="char" char=".">0.6333 **</td>
+<td align="char" char=".">0.8102</td>
+</tr>
+<tr>
+<td align="left">Loughran-McDonald</td>
+<td align="right">2709</td>
+<td align="right">20</td>
+<td align="char" char=".">0.1163</td>
+<td align="right">18</td>
+<td align="char" char=".">0.9000</td>
+<td align="char" char=".">0.6433 **</td>
+<td align="char" char=".">0.8030</td>
+</tr>
+<tr>
+<td align="left">SentiWordNet</td>
+<td align="right">28431</td>
+<td align="right">118</td>
+<td align="char" char=".">0.6860</td>
+<td align="right">69</td>
+<td align="char" char=".">0.5847</td>
+<td align="char" char=".">0.2089 *</td>
+<td align="char" char=".">0.1715</td>
+</tr>
+<tr>
+<td align="left">QDAP</td>
+<td align="right">6789</td>
+<td align="right">40</td>
+<td align="char" char=".">0.2326</td>
+<td align="right">28</td>
+<td align="char" char=".">0.7000</td>
+<td align="char" char=".">0.4524 **</td>
+<td align="char" char=".">0.3939</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t004fn001">
+<p><italic>Notes:</italic> This table compares common, human-generated word lists to extracted terms based on our statistical inferences. We omitted LIWC and Diction, since these are commercial products with proprietary dictionaries. When computing correlation coefficients and reliability scores, we exclude non-overlapping terms and count binary dictionary entries with a negative label as -1 and positive ones as 1. Statistical significance levels are ***0.001, **0.01, *0.05. Reliability (i. e. the concordance with our statistical inferences) is measured in terms of Krippendorff’s alpha coefficient [<xref ref-type="bibr" rid="pone.0209323.ref043">43</xref>].</p>
+</fn>
+</table-wrap-foot>
+</table-wrap>
+<p>The results demonstrate that the ex ante selected dictionaries show only a small overlap with the word lists from our statistical procedure. In the case of movie reviews, only 222 out of 549 (i. e. 40.44%) extracted words have found their way into the Harvard IV dictionary that is frequently utilized in IS and behavioral research. Out of these, only 62.16% actually exhibit the same polarity direction. This is in line with our in-depth investigations, since many negative expressions from this dictionary feature a positive connotation in the context of movie evaluations. Psychological dictionaries classify words, such as such as <italic>crime</italic>, <italic>force</italic> or <italic>war</italic>, in the negative list, while, in film reviews, these often refer in a positive sense to the suspense in certain scenes. Unsurprisingly, we find the highest number of overlapping terms in the dictionary that includes the most entries, i. e. the SentiWordNet. However, this dictionary shows the lowest reliability (0.10) and correlation (0.26) with our statistical inferences. In contrast, the highest reliability (0.54) and correlation (0.56) is achieved by the Henry dictionary which, however, consists of a mere 190 entries, resulting in a minor overlap of 26 words.</p>
+<p>We observe similar results for our financial disclosures, where 55 out of 172 extracted words (i. e. 31.98%) also appear in the Harvard IV dictionary. Out of these, 61.82% feature the same direction. Overall, we find a correlation of 0.27 between the estimated coefficients and the binary Harvard IV dictionary (encoded as ±1). Even the dictionaries that were specifically designed for financial reports reveal large deviations from the statistical inferences. We observe only a total number of 21 overlapping terms for the Henry dictionary, and 20 for the Loughran-McDonald dictionary. Nonetheless, compared to psychological dictionaries, we see that the finance-specific dictionaries are indeed more accurate in measuring the reception of words in financial disclosures. For example, the Loughran-McDonald dictionary shows a consensus classification of 90.48% and a correlation of 0.64 with our statistical inferences. Moreover, finance-specific dictionaries also yield the highest reliability. For example, the Henry dictionary shows a Krippendorff’s alpha coefficient of 0.8102 (compared to e. g. 0.2270 for the Harvard IV).</p>
+<p><xref ref-type="table" rid="pone.0209323.t004">Table 4</xref> identifies a consistent disagreement between human classification and statistical selection. Although most ex ante dictionaries feature a large volume of words, many statistically relevant terms are not included. In addition, overlapping terms show a relatively low correlation that is, in some cases, only significant at the 5% level. As a consequence, misclassification and the erroneous exclusion of words limit the suitability of ex ante dictionaries.</p>
+<p>The aforementioned dictionaries have frequently been utilized also in predictive settings and we thus also compare the out-of-sample performance of the above dictionaries with our method. We briefly outline the results here, while we provide further statistics and elaboration in our supplementary materials. In short, our method outperforms all of the investigated dictionaries for both movie reviews and financial disclosures. In the case of movie reviews, the best performing dictionary (Harvard IV) results in a 90.66% higher mean squared error compared to the LASSO. We observe a similar pattern for financial disclosures. These results thus reinforce our previous finding that manually selected dictionaries deviate from true perception.</p>
+</sec>
+<sec id="sec020">
+<title>Statistical inferences with word phrases</title>
+<p>Human-generated dictionaries commonly categorize only isolated words without incorporating any contextual information. However, the position of a word in a sentence is likely to contribute to the meaning and the overall interpretation. Consequently, related research attempts to work with higher-order word combinations, i. e. so-called <italic>n</italic>-grams. However, findings indicate mixed results regarding the extent to which their inclusion improves performance. Expert dictionaries refrain from labeling word pairs, since it requires considerable manual labor. Similarly, heuristics for dictionary creation are also rarely designed to process <italic>n</italic>-grams. This is in contrast to our statistical procedure, which works effortlessly with <italic>n</italic>-grams as the corresponding frequencies are simply inserted in the variable selection procedure. These benefits become particularly evident when considering the sheer number of input variables (2971 bigrams for financial filings and 1059 bigrams for movie reviews). Such large numbers of highly correlated predictors would imply serious overfitting issues for almost any type of statistical model without variable selection.</p>
+<p><xref ref-type="table" rid="pone.0209323.t005">Table 5</xref> compares the results from using <italic>n</italic>-grams. First of all, we observe fewer relevant bigrams than unigrams. In the case of unigrams, our method extracts 549 relevant terms from the movie reviews and 172 from the financial corpus, while using bigrams results in a total number of 442 terms for movie reviews and 51 for financial filings. We provide the complete lists of extracted phrases in the supplementary materials due to space limitations, but summarize a few intriguing insights here. For instance, the bigram with the highest positive coefficient in the review corpus is <italic>best film</italic>, while the most negative bigrams are <italic>bad movie</italic> and <italic>waste time</italic>.</p>
+<table-wrap id="pone.0209323.t005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0209323.t005</object-id>
+<label>Table 5</label>
+<caption>
+<title>Summary statistics of statistical inferences with word tuples.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0209323.t005g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0209323.t005" xlink:type="simple"/>
+<table border="0" frame="box" rules="all">
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"/>
+<th align="center">S<sc>tudy</sc> I:<break/>M<sc>ovie</sc> R<sc>eviews</sc></th>
+<th align="center">S<sc>tudy</sc> II:<break/>F<sc>inancial</sc> F<sc>ilings</sc></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" colspan="3"><underline>Bigrams</underline></td>
+</tr>
+<tr>
+<td align="left">Regressors before regularization</td>
+<td align="center">1059</td>
+<td align="center">2971</td>
+</tr>
+<tr>
+<td align="left">Extracted terms</td>
+<td align="center">442.0000</td>
+<td align="center">47.0000</td>
+</tr>
+<tr>
+<td align="left">Ratio of extracted terms</td>
+<td align="center">41.7400%</td>
+<td align="center">1.5800%</td>
+</tr>
+<tr>
+<td align="left">Positive terms</td>
+<td align="center">234</td>
+<td align="center">19</td>
+</tr>
+<tr>
+<td align="left">Negative terms</td>
+<td align="center">208</td>
+<td align="center">28</td>
+</tr>
+<tr>
+<td align="left">Ratio positive terms</td>
+<td align="center">52.9400%</td>
+<td align="center">40.4300%</td>
+</tr>
+<tr>
+<td align="left">Ratio negative terms</td>
+<td align="center">47.0600%</td>
+<td align="center">59.5800%</td>
+</tr>
+<tr>
+<td align="left">Adjusted <italic>R</italic><sup>2</sup></td>
+<td align="center">0.3184</td>
+<td align="center">0.0036</td>
+</tr>
+<tr>
+<td align="left">Correlation between model estimate and gold standard</td>
+<td align="center">0.6300</td>
+<td align="center">0.0800</td>
+</tr>
+<tr>
+<td align="left" colspan="3"><underline>Bigrams &amp; unigrams</underline></td>
+</tr>
+<tr>
+<td align="left">Regressors before regularization</td>
+<td align="center">2254</td>
+<td align="center">4695</td>
+</tr>
+<tr>
+<td align="left">Extracted terms</td>
+<td align="center">798</td>
+<td align="center">132</td>
+</tr>
+<tr>
+<td align="left">Ratio of extracted terms</td>
+<td align="center">35.4000%</td>
+<td align="center">2.8110%</td>
+</tr>
+<tr>
+<td align="left">Positive terms</td>
+<td align="center">394</td>
+<td align="center">62</td>
+</tr>
+<tr>
+<td align="left">Negative terms</td>
+<td align="center">404</td>
+<td align="center">70</td>
+</tr>
+<tr>
+<td align="left">Ratio positive terms</td>
+<td align="center">49.3700%</td>
+<td align="center">46.9700%</td>
+</tr>
+<tr>
+<td align="left">Ratio negative terms</td>
+<td align="center">50.6300%</td>
+<td align="center">53.0300%</td>
+</tr>
+<tr>
+<td align="left">Adjusted <italic>R</italic><sup>2</sup></td>
+<td align="center">0.6126</td>
+<td align="center">0.0072</td>
+</tr>
+<tr>
+<td align="left">Correlation between model estimate and gold standard</td>
+<td align="center">0.8300</td>
+<td align="center">0.1100</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t005fn001">
+<p><italic>Notes:</italic> The table compares our statistical inferences for different inputs, consisting of bigrams and the combination of unigrams and bigrams. These are evaluated in terms of goodness-of-fit and by comparing the number of selected entries. The complete lists of extracted variables and their coefficients are given in the supplements.</p>
+</fn>
+</table-wrap-foot>
+</table-wrap>
+<p>According to <xref ref-type="table" rid="pone.0209323.t005">Table 5</xref>, we also observe a drop in the adjusted <italic>R</italic><sup>2</sup> for both corpora. In the case of movie reviews, the adjusted <italic>R</italic><sup>2</sup> declines from 0.5668 for unigrams to 0.3184 for bigrams due to its penalty on the degrees-of-freedom. We observe a similar pattern for our financial corpus. Here, the adjusted <italic>R</italic><sup>2</sup> decreases from 0.0079 for unigrams to 0.0036 for bigrams. Finally, we also tested a configuration that incorporates both unigrams and bigrams. While this approach yields the highest fit for the review corpus, we observe a slightly inferior goodness-of-fit for the financial corpus. Altogether, this shows that our method is not limited to single terms, but also serves as an appropriate tool to study the influence of higher-order word combinations, and even phrases, on a response variable.</p>
+</sec>
+</sec>
+<sec id="sec021">
+<title>Implications for hypothesis testing using natural language</title>
+<p>Our method presents also a valuable tool for analyzing behavioral research questions. This section demonstrates two applications that allow for the testing of hypotheses with focus on word choice.</p>
+<sec id="sec022">
+<title>Placement of negative information in movie reviews</title>
+<p>We utilize our method to test where authors place negative statements in their reviews. Writers might start with negative thoughts, as suggested by the law of primacy in persuasion. On the other hand, one might be inclined to instead utilize the regency effect, according to which arguments presented last garner more attention. Given the overall movie rating, we can evaluate where authors place negative information when composing movie reviews, i. e. do they generally introduce negative aspects at the beginning or rather at the end?</p>
+<p>H<sc>ypothesis</sc>: <italic>Negative information is more likely to be placed at the end than at the beginning of a review.</italic></p>
+<p>In order to test this hypothesis, we compute the sentiment of the first and second half of each review by summing over products of coefficient and weighted term frequency. We refer to them as <italic>μ</italic><sub>1</sub> and <italic>μ</italic><sub>2</sub> respectively. Summary statistics of <italic>μ</italic><sub>1</sub>, <italic>μ</italic><sub>2</sub> and the document sentiment <italic>μ</italic> are shown in the first panel of <xref ref-type="table" rid="pone.0209323.t006">Table 6</xref>. In addition, we present the same statistics for reviews that are filtered for a positive (Panel II) or negative (Panel III) gold standard only. We then test the null hypotheses
+<disp-formula id="pone.0209323.e007"><alternatives><graphic id="pone.0209323.e007g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0209323.e007" xlink:type="simple"/><mml:math display="block" id="M7"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>H</mml:mi> <mml:mn>0</mml:mn></mml:msub> <mml:mo>:</mml:mo></mml:mrow></mml:mtd> <mml:mtd><mml:mrow><mml:mspace width="1.em"/><mml:msub><mml:mi>μ</mml:mi> <mml:mn>1</mml:mn></mml:msub> <mml:mo>&lt;</mml:mo> <mml:msub><mml:mi>μ</mml:mi> <mml:mn>2</mml:mn></mml:msub></mml:mrow></mml:mtd> <mml:mtd/><mml:mtd columnalign="left"><mml:mrow><mml:mo>(</mml:mo><mml:mtext>law</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>of</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>primacy</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>applied</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>to</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>negative</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>content</mml:mtext><mml:mo>)</mml:mo> <mml:mo>,</mml:mo> <mml:mspace width="4.pt"/><mml:mtext>and</mml:mtext></mml:mrow></mml:mtd></mml:mtr> <mml:mtr><mml:mtd columnalign="right"><mml:mrow><mml:msub><mml:mi>H</mml:mi> <mml:mn>0</mml:mn></mml:msub> <mml:mo>:</mml:mo></mml:mrow></mml:mtd> <mml:mtd><mml:mrow><mml:mspace width="1.em"/><mml:msub><mml:mi>μ</mml:mi> <mml:mn>1</mml:mn></mml:msub> <mml:mo>&gt;</mml:mo> <mml:msub><mml:mi>μ</mml:mi> <mml:mn>2</mml:mn></mml:msub></mml:mrow></mml:mtd> <mml:mtd/><mml:mtd columnalign="left"><mml:mrow><mml:mo>(</mml:mo><mml:mtext>regency</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>effect</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>for</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>negative</mml:mtext> <mml:mspace width="4.pt"/><mml:mtext>content</mml:mtext><mml:mo>)</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula>
+respectively.</p>
+<table-wrap id="pone.0209323.t006" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0209323.t006</object-id>
+<label>Table 6</label>
+<caption>
+<title>Summary statistics for hypothesis testing with movie reviews.</title>
+</caption>
+<alternatives>
+<graphic id="pone.0209323.t006g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0209323.t006" xlink:type="simple"/>
+<table border="0" frame="box" rules="all">
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left" rowspan="2"/>
+<th align="center" colspan="3">P<sc>anel</sc> I:<break/>A<sc>ll</sc> R<sc>eviews</sc></th>
+<th align="center" colspan="3">P<sc>anel</sc> II:<break/>P<sc>ositive</sc> R<sc>ating</sc></th>
+<th align="center" colspan="3">P<sc>anel</sc> III:<break/>N<sc>egative</sc> R<sc>ating</sc></th>
+</tr>
+<tr>
+<th align="center"><italic>μ</italic><sub>1</sub></th>
+<th align="center"><italic>μ</italic><sub>2</sub></th>
+<th align="center"><italic>μ</italic></th>
+<th align="center"><italic>μ</italic><sub>1</sub></th>
+<th align="center"><italic>μ</italic><sub>2</sub></th>
+<th align="center"><italic>μ</italic></th>
+<th align="center"><italic>μ</italic><sub>1</sub></th>
+<th align="center"><italic>μ</italic><sub>2</sub></th>
+<th align="center"><italic>μ</italic></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Mean</td>
+<td align="char" char=".">0.1025</td>
+<td align="char" char=".">0.0578</td>
+<td align="char" char=".">0.1604</td>
+<td align="char" char=".">0.1626</td>
+<td align="char" char=".">0.1402</td>
+<td align="char" char=".">0.3027</td>
+<td align="char" char=".">-0.0098</td>
+<td align="char" char=".">-0.0930</td>
+<td align="char" char=".">-0.1028</td>
+</tr>
+<tr>
+<td align="left">Min.</td>
+<td align="char" char=".">-0.4159</td>
+<td align="char" char=".">-0.5922</td>
+<td align="char" char=".">-0.8903</td>
+<td align="char" char=".">-0.2020</td>
+<td align="char" char=".">-0.3977</td>
+<td align="char" char=".">-0.2947</td>
+<td align="char" char=".">-0.4159</td>
+<td align="char" char=".">-0.5922</td>
+<td align="char" char=".">-0.8903</td>
+</tr>
+<tr>
+<td align="left">25% Quantile</td>
+<td align="char" char=".">0.0159</td>
+<td align="char" char=".">-0.0517</td>
+<td align="char" char=".">-0.0173</td>
+<td align="char" char=".">0.0825</td>
+<td align="char" char=".">0.0507</td>
+<td align="char" char=".">0.1539</td>
+<td align="char" char=".">-0.0729</td>
+<td align="char" char=".">-0.1639</td>
+<td align="char" char=".">-0.2028</td>
+</tr>
+<tr>
+<td align="left">Median</td>
+<td align="char" char=".">0.0996</td>
+<td align="char" char=".">0.0528</td>
+<td align="char" char=".">0.1476</td>
+<td align="char" char=".">0.1557</td>
+<td align="char" char=".">0.1342</td>
+<td align="char" char=".">0.2896</td>
+<td align="char" char=".">-0.0021</td>
+<td align="char" char=".">-0.0849</td>
+<td align="char" char=".">-0.0947</td>
+</tr>
+<tr>
+<td align="left">75% Quantile</td>
+<td align="char" char=".">0.1853</td>
+<td align="char" char=".">0.1646</td>
+<td align="char" char=".">0.3331</td>
+<td align="char" char=".">0.2325</td>
+<td align="char" char=".">0.2251</td>
+<td align="char" char=".">0.4302</td>
+<td align="char" char=".">0.0587</td>
+<td align="char" char=".">-0.0178</td>
+<td align="char" char=".">-0.0014</td>
+</tr>
+<tr>
+<td align="left">Max.</td>
+<td align="char" char=".">0.7336</td>
+<td align="char" char=".">0.7655</td>
+<td align="char" char=".">1.3848</td>
+<td align="char" char=".">0.7336</td>
+<td align="char" char=".">0.7655</td>
+<td align="char" char=".">1.3848</td>
+<td align="char" char=".">0.3624</td>
+<td align="char" char=".">0.3322</td>
+<td align="char" char=".">0.3687</td>
+</tr>
+<tr>
+<td align="left">Std. Dev.</td>
+<td align="char" char=".">0.1340</td>
+<td align="char" char=".">0.1615</td>
+<td align="char" char=".">0.2569</td>
+<td align="char" char=".">0.1175</td>
+<td align="char" char=".">0.1357</td>
+<td align="char" char=".">0.2066</td>
+<td align="char" char=".">0.1060</td>
+<td align="char" char=".">0.1123</td>
+<td align="char" char=".">0.1604</td>
+</tr>
+<tr>
+<td align="left">Skewness</td>
+<td align="char" char=".">0.1717</td>
+<td align="char" char=".">0.1535</td>
+<td align="char" char=".">0.2202</td>
+<td align="char" char=".">0.4439</td>
+<td align="char" char=".">0.3028</td>
+<td align="char" char=".">0.5058</td>
+<td align="char" char=".">-0.2684</td>
+<td align="char" char=".">-0.3898</td>
+<td align="char" char=".">-0.3062</td>
+</tr>
+<tr>
+<td align="left">Kurtosis</td>
+<td align="char" char=".">0.6052</td>
+<td align="char" char=".">0.2682</td>
+<td align="char" char=".">0.2204</td>
+<td align="char" char=".">0.6407</td>
+<td align="char" char=".">0.5611</td>
+<td align="char" char=".">0.6167</td>
+<td align="char" char=".">0.5321</td>
+<td align="char" char=".">0.7152</td>
+<td align="char" char=".">0.6622</td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t006fn001">
+<p><italic>Notes:</italic> Panel I compares the sentiment of the first (<italic>μ</italic><sub>1</sub>) and second half (<italic>μ</italic><sub>2</sub>) of movie reviews, as well as the overall sentiment <italic>μ</italic>. The additional panels present the same statistics for reviews with positive (Panel II) or negative (Panel III) gold standard only.</p>
+</fn>
+</table-wrap-foot>
+</table-wrap>
+<p>According to our results, the second half of movie reviews generally conveys a more negative tone than the first half. The mean sentiment in the first half amounts to <italic>μ</italic><sub>1</sub> = 0.1025, whereas it is <italic>μ</italic><sub>2</sub> = 0.0578 for the remainder part. The corresponding difference <italic>μ</italic><sub>1</sub> − <italic>μ</italic><sub>2</sub> between both sentiment values is statistically significant at the 0.1% significance level when performing a two-sided Welch <italic>t</italic>-test (test statistic of 15.06). The results in Panel II and III follow a similar picture. For instance, Panel III shows that the first half of negatively rated movie reviews yields a negative sentiment of <italic>μ</italic><sub>1</sub> = −0.0098 on average, while the second half results in an even more negative sentiment of <italic>μ</italic><sub>2</sub> = −0.0930. This difference is also significant at the 0.1% significance level with a <italic>t</italic>-value of 19.26. In Panel II, we observe a similar pattern for reviews with positive ratings (<italic>t</italic>-value of 6.70). We thus accept our hypothesis regarding the presence of a regency effect. This result also coincides with psychological research according to which senders of information are more likely to place negative content at the end [<xref ref-type="bibr" rid="pone.0209323.ref044">44</xref>], but, in contrast, our evidence is collected outside of an artificial laboratory setting, as it stemms from actual human communication.</p>
+</sec>
+<sec id="sec023">
+<title>Response of financial markets to non-informative wording</title>
+<p>In our second application of hypothesis testing, we examine to what extent financial markets trade upon non-informative wording. Previous works have established a robust market response to fact-related information encoded in written materials, which is primarily measured by using the positive and negative word lists from Loughran-McDonald or Harvard IV. Yet it is unclear how the remaining words—which are not deemed as either positive or negative from a external standpoint and which we refer to as non-informative—are processed by markets. Consistent with classical economic theory, we expect that investors ignore these terms and, instead, solely focus on essential, fact-related information, i. e. clearly positive and negative cues.</p>
+<p>H<sc>ypothesis</sc>: <italic>Financial markets are not distracted by the wording in corporate communication that falls outside the clearly delineated categories of positive and negative.</italic></p>
+<p>Interestingly, we present empirical results in the following section which reject the above hypothesis and suggest the opposite. The extracted words from <xref ref-type="table" rid="pone.0209323.t003">Table 3</xref> list the polarity terms that are statistically relevant for the investment decisions of traders. However, most of them are not necessarily classified as positive or negative according to the Harvard IV psychological or Loughran-McDonald finance-specific dictionary. We thus test our hypothesis by grouping all words into two categories according to the previous dictionaries: one group contains all words that are labeled as either positive or negative. This group represents all terms that feature an explicit, fact-based statement. The remaining entries form a group that can be characterized as non-informative wording. For instance, the latter contains entries such as <italic>although</italic> and <italic>however</italic>. We find that the perception of investors depends on many terms that feature no explicit positive or negative statement polarity. According to the Harvard IV dictionary, only 31.97% of the extracted words can be associated with a fact-based meaning, whereas 68.03% of the extracted words are expected not to contribute to the informative content. The Loughran-McDonald dictionary presents a similar picture. Here, the fact-based group contains 11.63% of all extracted words, while the remaining 88.37% can be regarded as non-informative wording.</p>
+<p>Finally, we perform an <italic>F</italic>-test to validate whether the subset of words that are neither labeled as positive nor negative has a combined effect on stock returns. In the case of the Harvard IV dictionary, this results in an <italic>F</italic>-statistic of 5.37, which is statistically significant at the 0.1% level. Similarly, the <italic>F</italic>-statistic for the Loughran-McDonald dictionary numbers to 5.48, which is also significant the 0.1% level. We must thus reject our hypothesis and provide evidence that expressions deemed as non-informative wording by previous research have a statistically significant effect on financial markets.</p>
+</sec>
+</sec>
+<sec id="sec024" sec-type="conclusions">
+<title>Discussion</title>
+<p>In the following, we discuss the implications of our research method as it not only improves understanding of natural language but also enables intriguing inferences in behavioral sciences. Furthermore, our research is highly relevant for practitioners seeking to operationalize natural language in Information Systems.</p>
+<sec id="sec025">
+<title>Implications for behavioral sciences</title>
+<p>Understanding decision-making and providing decision support both increasingly rely upon computerized natural language processing. In contrast to many black-box methods from the domain of machine learning, our methodology provides a vehicle for content analysis and opinion mining that is fully comprehensible for deep insights. Specifically, it allows one to maintain high interpretability as it explains an effect in terms of the presence of individual words. It thus allows researchers to dissect the relationship between natural language and a given outcome variable. In addition, our approach goes beyond pre-defined dictionaries that classify words into groups of positive and negative words as we assign individual word weights to each word, thereby accounting for differences in the valence levels of words of the same polarity class.</p>
+<p>Our results indicate that common, manually selected dictionaries from the literature, such as the Harvard IV psychological dictionary, are neither complete nor adequate for arbitrary domains. For instance, in the area of finance, they classify words as positive that are not necessarily interpreted positively by investors. To overcome these previous limitations, our methodology provides a means by which to automate the process of dictionary generation. Altogether, our study thus provides evidence that applications of dictionary-based sentiment analysis can be significantly improved when adapting the dictionaries to the corresponding domain.</p>
+</sec>
+<sec id="sec026">
+<title>Applications</title>
+<p>Analyzing the perceptions of word choice and understanding the response to natural language on a granular level can yield new insights in a large number of use cases. In the following points, we illustrate prominent applications in the areas of both practice and research:</p>
+<list list-type="bullet">
+<list-item>
+<p><bold>Recommender systems.</bold> Recommender systems support users by predicting their rating or preference towards products or services, and, similarly, product reviews on web platforms guide individuals considering purchases. Yet it is unclear which expressions actually convey an opinion, even though this would allow for a better understanding of how judgments are formed. Our statistical inferences aid enterprises in identifying success factors of products, while they present researchers new opportunities to study behavioral theories at word level.</p>
+</list-item>
+<list-item>
+<p><bold>Social and behavioral sciences.</bold> In the context of social interactions, it is highly relevant to understand how humans express and perceive information in natural language. Our methodology helps to answer various questions, such as which wording drives word-of-mouth. Moreover, it enables the identification of word choices that convey information regarding personality and psychology or linguistic cues that are linked to deception in human communication.</p>
+</list-item>
+<list-item>
+<p><bold>Finance.</bold> Before exercising ownership in stocks, investors often consult financial disclosures and pay especially close attention to their soft content, such as linguistic style. To analyze the language in financial materials, researchers, investors and automated traders utilize the simple categorization of terms as either positive or negative. However, working with black-box approaches or inferring the overall valence of a disclosure merely from term frequencies is prone to error, since companies often frame negative news using positive words. Our statistical procedure remedies this issue as it labels words based on their actual interpretation in financial materials. On the other hand, regulators can utilize our mechanism to put in place effective warning mechanisms for disclosures whose content can provoke critical market developments.</p>
+</list-item>
+<list-item>
+<p><bold>Marketing.</bold> Practitioners in the field of marketing strive to understand how people perceive language in advertisements and press releases. Here, a granular understanding on a word-by-word basis would enable them to carefully consider phrasing in order to enhance sales. In addition, marketing teams could utilize our inference technique to make early predictions regarding the success of ad campaigns, product launches or the popularity of product attributes. In this vein, our method can identify words that influence customers in a positive or negative direction.</p>
+</list-item>
+</list>
+<p specific-use="continuation">These examples highlight several prominent applications that benefit from a granular understanding of language at word level.</p>
+<p>Ultimately, it is hoped that the contributions and advantages presented in this paper—such as quantifying the reception of language—will become an important tool in future research papers. Application of this method can yield novel insights into behavioral research questions regarding the information processing of natural language. This should help those in the field of social sciences to add to the growing body of knowledge on the role of behavior in individual decisions and population-wide outcomes, such as voting, consumer demand, information sharing, product evaluation and opinion aggregation. As demonstrated in this paper, our methodology has the potential to enable unprecedented opportunities in terms of validating behavioral research outside of existing laboratory setups. Yet it also fuels innovations in the theoretical advancement and formalization of theories as its high interpretive power facilitates new discoveries.</p>
+</sec>
+<sec id="sec027">
+<title>Limitations and opportunities for future research</title>
+<p>Our approach gauges the domain-specific effects of words or <italic>n</italic>-grams based on a decision variable. A sufficient number of labeled training data is thus a necessary prerequisite to extract statistically relevant terms from documents. However, at the same time, this presents also the strength of our approach as we explain the variation in the dependent variable through word use.</p>
+<p>This work is targeted at the vast number of users of dictionary-based approaches. The objective behind dictionaries is that they obtain polarity scores that are context-independent. For instance, each term has the same polarity independent of whether it is a main-/sub-clause, the beginning/end of a text or used in metaphor. These are known issues in computer science, since an exact understanding of language remains a daunting undertaking. As a remedy, we suggest the following extension to our framework: if desired, one could extend the LASSO-based approach with a hierarchical formulation, such that terms are associated with context-specific polarity score; however, the resulting caveats are a larger corpora, the challenges from a context-dependent interpretation and the mismatch with the majority of dictionary-based use cases.</p>
+<p>We implemented our statistical inferences as a L1-norm-based optimization problem with confidence intervals from the Post-LASSO. This framework comes with the following limitations, for which we also name straightforward remedies. One the one hand, dependent variables with other distributional assumptions can be easily handled by fitting the framework with a fully Bayesian approach that relies upon Markov chain Monte Carlo (MCMC) sampling. On the other hand, the Post-LASSO makes mathematical assumptions regarding the derivation of the confidence intervals. As an alternative, one can either revert to the significance test from [<xref ref-type="bibr" rid="pone.0209323.ref038">38</xref>] or again utilize a MCMC-based estimation. The latter is especially prone to co-occurrence patterns of words when computing confidence intervals. Notably, the two aforementioned adaptations do not change the overall model specification but merely exchange the underlying estimation technique.</p>
+</sec>
+<sec id="sec028">
+<title>Summary</title>
+<p>Understanding the decision-making of individuals, enterprises and organizations presents a fundamental pillar of behavioral research. However, the challenges associated with processing natural language have been largely associated with simple decision models featuring predominantly structured data. Yet an unparalleled source of information is encoded in unstructured formats, and especially textual materials. The reasons behind this are multifaceted, including the recent advent of the big data era and the increasing availability of data through the World Wide Web, which has made a vast number of written documents—such as user-generated content and news—available to the public.</p>
+<p>Past research has laid the groundwork for inferring the polarity of written contents, albeit in a manner that is usually limited to a few psychological dictionaries that classify single terms. Such approaches work almost out-of-the-box and thus seem promising at first, but entail inevitable and major shortcomings. The elements of these word lists are selected <italic>ex ante</italic> by manual inspection and subjective judgment. As such, our paper exposes the weaknesses of common dictionary methods: they only allow one to assess the overall polarity of documents and not of individual expressions, thereby leaving any deeper insights in the underlying text processing untapped. In addition, they often prove insufficient in adequately reflecting the domain-specific perception of a given audience.</p>
+<p>As a remedy, this paper proposes the use of LASSO regularization as a form of variable selection to extract relevant words that statistically impact decisions. Social science researchers can greatly benefit from such a procedure, as it infers <italic>ex post</italic> relevant terms based on the outcome of a decision. It can therefore efficiently adapt to domain-specific peculiarities of narratives and discriminate between subtle polarity levels across words.</p>
+</sec>
+</sec>
+<sec id="sec029">
+<title>Supporting information</title>
+<supplementary-material id="pone.0209323.s001" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pone.0209323.s001" xlink:type="simple">
+<label>S1 Supplementary Materials</label>
+<caption>
+<title>This document contains additional analyses and methodological details.</title>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ack>
+<p>The valuable contributions of Ryan Grabowski are gratefully acknowledged.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pone.0209323.ref001">
+<label>1</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Fuller</surname> <given-names>CM</given-names></name>, <name name-style="western"><surname>Biros</surname> <given-names>DP</given-names></name>, <name name-style="western"><surname>Burgoon</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Nunamaker</surname> <given-names>J</given-names></name>. <article-title>An Examination and Validation of Linguistic Constructs for Studying High-Stakes Deception</article-title>. <source>Group Decision and Negotiation</source>. <year>2013</year>;<volume>22</volume>(<issue>1</issue>):<fpage>117</fpage>–<lpage>134</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s10726-012-9300-z" xlink:type="simple">10.1007/s10726-012-9300-z</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref002">
+<label>2</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Jensen</surname> <given-names>ML</given-names></name>, <name name-style="western"><surname>Averbeck</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Wright</surname> <given-names>KB</given-names></name>. <article-title>Credibility of Anonymous Online Product Reviews: A Language Expectancy Perspective</article-title>. <source>Journal of Management Information Systems</source>. <year>2013</year>;<volume>30</volume>(<issue>1</issue>):<fpage>293</fpage>–<lpage>324</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2753/MIS0742-1222300109" xlink:type="simple">10.2753/MIS0742-1222300109</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref003">
+<label>3</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Anderson</surname> <given-names>RE</given-names></name>, <name name-style="western"><surname>Jolson</surname> <given-names>MA</given-names></name>. <article-title>Technical Wording in Advertising: Implications for Market Segmentation</article-title>. <source>Journal of Marketing</source>. <year>1980</year>;<volume>44</volume>(<issue>1</issue>):<fpage>57</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2307/1250035" xlink:type="simple">10.2307/1250035</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref004">
+<label>4</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Goh</surname> <given-names>KY</given-names></name>, <name name-style="western"><surname>Heng</surname> <given-names>CS</given-names></name>, <name name-style="western"><surname>Lin</surname> <given-names>Z</given-names></name>. <article-title>Social Media Brand Community and Consumer Behavior: Quantifying the Relative Impact of User- and Marketer-Generated Content</article-title>. <source>Information Systems Research</source>. <year>2013</year>;<volume>24</volume>(<issue>1</issue>):<fpage>88</fpage>–<lpage>107</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1287/isre.1120.0469" xlink:type="simple">10.1287/isre.1120.0469</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref005">
+<label>5</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Bosman</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Kräussl</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Mirgorodskaya</surname> <given-names>E</given-names></name>. <article-title>The “Tone Effect” of News on Investor Beliefs: An Experimental Approach</article-title>. <source>CFS Working Paper Series</source>. <year>2015</year>;<volume>522</volume>(<issue>1</issue>):<fpage>1</fpage>–<lpage>76</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref006">
+<label>6</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Baumeister</surname> <given-names>RF</given-names></name>, <name name-style="western"><surname>Bratslavsky</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Finkenauer</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Vohs</surname> <given-names>KD</given-names></name>. <article-title>Bad Is Stronger Than Good</article-title>. <source>Review of General Psychology</source>. <year>2001</year>;<volume>5</volume>(<issue>4</issue>):<fpage>323</fpage>–<lpage>370</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref007">
+<label>7</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Berry</surname> <given-names>DS</given-names></name>, <name name-style="western"><surname>Hiller</surname> <given-names>WS</given-names></name>, <name name-style="western"><surname>Mueller</surname> <given-names>JS</given-names></name>, <name name-style="western"><surname>Pennebaker</surname> <given-names>JW</given-names></name>. <article-title>Linguistic Bases of Social Perception</article-title>. <source>Personality &amp; Social Psychology Bulletin</source>. <year>1997</year>;<volume>23</volume>(<issue>5</issue>):<fpage>526</fpage>–<lpage>548</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1177/0146167297235008" xlink:type="simple">10.1177/0146167297235008</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref008">
+<label>8</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Pennebaker</surname> <given-names>JW</given-names></name>, <name name-style="western"><surname>Mehl</surname> <given-names>MR</given-names></name>, <name name-style="western"><surname>Niederhoffer</surname> <given-names>KG</given-names></name>. <article-title>Psychological Aspects of Natural Language Use: Our Words, Our Selves</article-title>. <source>Annual Review of Psychology</source>. <year>2003</year>;<volume>54</volume>:<fpage>547</fpage>–<lpage>577</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1146/annurev.psych.54.101601.145041" xlink:type="simple">10.1146/annurev.psych.54.101601.145041</ext-link></comment> <object-id pub-id-type="pmid">12185209</object-id></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref009">
+<label>9</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Agarwal</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Dhar</surname> <given-names>V</given-names></name>. <article-title>Big Data, Data Science, and Analytics: The Opportunity and Challenge for IS Research</article-title>. <source>Information Systems Research</source>. <year>2014</year>;<volume>25</volume>(<issue>3</issue>):<fpage>443</fpage>–<lpage>448</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1287/isre.2014.0546" xlink:type="simple">10.1287/isre.2014.0546</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref010">
+<label>10</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Villarroel</surname> <given-names>OF</given-names></name>, <name name-style="western"><surname>Ludwig</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>de Ruyter</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Grewal</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Wetzels</surname> <given-names>M</given-names></name>. <article-title>Unveiling What Is Written in the Stars: Analyzing Explicit, Implicit, and Discourse Patterns of Sentiment in Social Media</article-title>. <source>Journal of Consumer Research</source>. <year>2017</year>;<volume>43</volume>(<issue>6</issue>):<fpage>875</fpage>–<lpage>894</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref011">
+<label>11</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Bollen</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Mao</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Zeng</surname> <given-names>X</given-names></name>. <article-title>Twitter Mood Predicts the Stock Market</article-title>. <source>Journal of Computational Science</source>. <year>2011</year>;<volume>2</volume>(<issue>1</issue>):<fpage>1</fpage>–<lpage>8</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.jocs.2010.12.007" xlink:type="simple">10.1016/j.jocs.2010.12.007</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref012">
+<label>12</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Pang</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>L</given-names></name>. <article-title>Opinion Mining and Sentiment Analysis</article-title>. <source>Foundations and Trends in Information Retrieval</source>. <year>2008</year>;<volume>2</volume>(<issue>1</issue>):<fpage>1</fpage>–<lpage>135</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1561/1500000011" xlink:type="simple">10.1561/1500000011</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref013">
+<label>13</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Tetlock</surname> <given-names>PC</given-names></name>. <article-title>Giving Content to Investor Sentiment: The Role of Media in the Stock Market</article-title>. <source>Journal of Finance</source>. <year>2007</year>;<volume>62</volume>(<issue>3</issue>):<fpage>1139</fpage>–<lpage>1168</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1111/j.1540-6261.2007.01232.x" xlink:type="simple">10.1111/j.1540-6261.2007.01232.x</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref014">
+<label>14</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Lim</surname> <given-names>EP</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>G</given-names></name>. <article-title>Business Intelligence and Analytics</article-title>. <source>ACM Transactions on Management Information Systems</source>. <year>2013</year>;<volume>3</volume>(<issue>4</issue>):<fpage>1</fpage>–<lpage>10</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1145/2407740.2407741" xlink:type="simple">10.1145/2407740.2407741</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref015">
+<label>15</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Shen</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Hu</surname> <given-names>YJ</given-names></name>, <name name-style="western"><surname>Rees</surname> <given-names>J</given-names></name>. <article-title>Competing for Attention: An Empirical Study of Online Reviewers’ Strategic Behaviors</article-title>. <source>MIS Quarterly</source>. <year>2015</year>;<volume>39</volume>(<issue>3</issue>):<fpage>683</fpage>–<lpage>696</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.25300/MISQ/2015/39.3.08" xlink:type="simple">10.25300/MISQ/2015/39.3.08</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref016">
+<label>16</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Stieglitz</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Dang-Xuan</surname> <given-names>L</given-names></name>. <article-title>Emotions and Information Diffusion in Social Media: Sentiment of Microblogs and Sharing Behavior</article-title>. <source>Journal of Management Information Systems</source>. <year>2013</year>;<volume>29</volume>(<issue>4</issue>):<fpage>217</fpage>–<lpage>248</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2753/MIS0742-1222290408" xlink:type="simple">10.2753/MIS0742-1222290408</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref017">
+<label>17</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Xu</surname> <given-names>SX</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>XM</given-names></name>. <article-title>Impact of Wikipedia on Market Information Environment: Evidence on Management Disclosure and Investor Reaction</article-title>. <source>MIS Quarterly</source>. <year>2013</year>;<volume>37</volume>(<issue>4</issue>):<fpage>1043</fpage>–<lpage>1068</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.25300/MISQ/2013/37.4.03" xlink:type="simple">10.25300/MISQ/2013/37.4.03</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref018">
+<label>18</label>
+<mixed-citation publication-type="other" xlink:type="simple">Pröllochs N, Feuerriegel S, Neumann D. Generating Domain-Specific Dictionaries Using Bayesian Learning. In: 23rd European Conference on Information Systems (ECIS). Münster, Germany; 2015.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref019">
+<label>19</label>
+<mixed-citation publication-type="other" xlink:type="simple">Pröllochs N, Feuerriegel S, Neumann D. When Words Matter Most: Tailoring Domain-Specific Dictionaries with Decision Analytics. In: Conference on Information Systems and Technology (CIST 2015). Philadelphia, PA, USA; 2015.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref020">
+<label>20</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Thet</surname> <given-names>TT</given-names></name>, <name name-style="western"><surname>Na</surname> <given-names>JC</given-names></name>, <name name-style="western"><surname>Khoo</surname> <given-names>CSG</given-names></name>. <article-title>Aspect-Based Sentiment Analysis of Movie Reviews on Discussion Boards</article-title>. <source>Journal of Information Science</source>. <year>2010</year>;<volume>36</volume>(<issue>6</issue>):<fpage>823</fpage>–<lpage>848</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1177/0165551510388123" xlink:type="simple">10.1177/0165551510388123</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref021">
+<label>21</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Ravi</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Ravi</surname> <given-names>V</given-names></name>. <article-title>A Survey on Opinion Mining and Sentiment Analysis: Tasks, Approaches and Applications</article-title>. <source>Knowledge-Based Systems</source>. <year>2015</year>;<volume>89</volume>:<fpage>14</fpage>–<lpage>46</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.knosys.2015.06.015" xlink:type="simple">10.1016/j.knosys.2015.06.015</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref022">
+<label>22</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Henry</surname> <given-names>E</given-names></name>. <article-title>Are Investors Influenced by How Earnings Press Releases are Written?</article-title> <source>Journal of Business Communication</source>. <year>2008</year>;<volume>45</volume>(<issue>4</issue>):<fpage>363</fpage>–<lpage>407</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1177/0021943608319388" xlink:type="simple">10.1177/0021943608319388</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref023">
+<label>23</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Tetlock</surname> <given-names>PC</given-names></name>, <name name-style="western"><surname>Saar-Tsechansky</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Macskassy</surname> <given-names>S</given-names></name>. <article-title>More Than Words: Quantifying Language to Measure Firms’ Fundamentals</article-title>. <source>Journal of Finance</source>. <year>2008</year>;<volume>63</volume>(<issue>3</issue>):<fpage>1437</fpage>–<lpage>1467</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1111/j.1540-6261.2008.01362.x" xlink:type="simple">10.1111/j.1540-6261.2008.01362.x</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref024">
+<label>24</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Manning</surname> <given-names>CD</given-names></name>, <name name-style="western"><surname>Schütze</surname> <given-names>H</given-names></name>. <source>Foundations of Statistical Natural Language Processing</source>. <publisher-loc>Cambridge, MA</publisher-loc>: <publisher-name>MIT Press</publisher-name>; <year>1999</year>.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref025">
+<label>25</label>
+<mixed-citation publication-type="other" xlink:type="simple">Baccianella S, Esuli A, Sebastiani F. SentiWordNet 3.0: An Enhanced Lexical Resource for Sentiment Analysis and Opinion Mining. In: LREC 2010 Proceedings; 2010. p. 2200–2204.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref026">
+<label>26</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Oliveira</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Cortez</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Areal</surname> <given-names>N</given-names></name>. <article-title>Stock Market Sentiment Lexicon Acquisition Using Microblogging Data and Statistical Measures</article-title>. <source>Decision Support Systems</source>. <year>2016</year>;<volume>85</volume>(<issue>5</issue>):<fpage>62</fpage>–<lpage>73</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.dss.2016.02.013" xlink:type="simple">10.1016/j.dss.2016.02.013</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref027">
+<label>27</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Abbasi</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Sarker</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Chiang</surname> <given-names>RH</given-names></name>. <article-title>Big Data Research in Information Systems: Toward an Inclusive Research Agenda</article-title>. <source>Journal of the Association for Information Systems</source>. <year>2016</year>;<volume>17</volume>(<issue>2</issue>):<fpage>3</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.17705/1jais.00423" xlink:type="simple">10.17705/1jais.00423</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref028">
+<label>28</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Jegadeesh</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>D</given-names></name>. <article-title>Word Power: A New Approach For Content Analysis</article-title>. <source>Journal of Financial Economics</source>. <year>2013</year>;<volume>110</volume>(<issue>3</issue>):<fpage>712</fpage>–<lpage>729</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.jfineco.2013.08.018" xlink:type="simple">10.1016/j.jfineco.2013.08.018</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref029">
+<label>29</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Taddy</surname> <given-names>M</given-names></name>. <article-title>Multinomial Inverse Regression for Text Analysis</article-title>. <source>Journal of the American Statistical Association</source>. <year>2013</year>;<volume>108</volume>(<issue>503</issue>):<fpage>755</fpage>–<lpage>770</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1080/01621459.2012.734168" xlink:type="simple">10.1080/01621459.2012.734168</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref030">
+<label>30</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Taddy</surname> <given-names>M</given-names></name>. <article-title>Distributed Multinomial Regression</article-title>. <source>The Annals of Applied Statistics</source>. <year>2015</year>;<volume>9</volume>(<issue>3</issue>):<fpage>1394</fpage>–<lpage>1414</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1214/15-AOAS831" xlink:type="simple">10.1214/15-AOAS831</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref031">
+<label>31</label>
+<mixed-citation publication-type="other" xlink:type="simple">Joshi M, Das D, Gimpel K, Smith NA. Movie Reviews and Revenues: An Experiment in Text Regression. In: The 2010 Annual Conference of the North American Chapter of the Association for Computational Linguistics; 2010. p. 293–296.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref032">
+<label>32</label>
+<mixed-citation publication-type="other" xlink:type="simple">Schwartz HA, Giorgi S, Sap M, Crutchley P, Ungar L, Eichstaedt J. DLATK: Differential Language Analysis ToolKit. In: Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing: System Demonstrations; 2017. p. 55–60.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref033">
+<label>33</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Tibshirani</surname> <given-names>R</given-names></name>. <article-title>Regression Shrinkage and Selection via the Lasso</article-title>. <source>Journal of the Royal Statistical Society</source>. <year>1996</year>;<volume>58</volume>(<issue>1</issue>):<fpage>267</fpage>–<lpage>288</lpage>.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref034">
+<label>34</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Hastie</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Tibshirani</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Friedman</surname> <given-names>JH</given-names></name>. <chapter-title>The Elements of Statistical Learning: Data Mining, Inference, and Prediction</chapter-title>. <edition>2nd ed</edition>. <source>Springer Series in Statistics</source>. <publisher-loc>New York</publisher-loc>: <publisher-name>Springer</publisher-name>; <year>2009</year>.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref035">
+<label>35</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Loughran</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>McDonald</surname> <given-names>B</given-names></name>. <article-title>Textual Analysis in Accounting and Finance: A Survey</article-title>. <source>Journal of Accounting Research</source>. <year>2016</year>;<volume>54</volume>(<issue>4</issue>):<fpage>1187</fpage>–<lpage>1230</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1111/1475-679X.12123" xlink:type="simple">10.1111/1475-679X.12123</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref036">
+<label>36</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Varian</surname> <given-names>HR</given-names></name>. <article-title>Big Data: New Tricks for Econometrics</article-title>. <source>Journal of Economic Perspectives</source>. <year>2014</year>;<volume>28</volume>(<issue>2</issue>):<fpage>3</fpage>–<lpage>27</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1257/jep.28.2.3" xlink:type="simple">10.1257/jep.28.2.3</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref037">
+<label>37</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Hastie</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Tibshirani</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Wainwright</surname> <given-names>M</given-names></name>. <chapter-title>Statistical Learning with Sparsity: The Lasso and Generalizations</chapter-title>. <source>vol. 143 of Monographs on Statistics and Applied Probability</source>. <publisher-loc>Boca Raton, FL</publisher-loc>: <publisher-name>CRC press</publisher-name>; <year>2015</year>.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref038">
+<label>38</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Lockhart</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Taylor</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Tibshirani</surname> <given-names>RJ</given-names></name>, <name name-style="western"><surname>Tibshirani</surname> <given-names>R</given-names></name>. <article-title>A Significance Test for the LASSO</article-title>. <source>The Annals of Statistics</source>. <year>2014</year>;<volume>42</volume>(<issue>2</issue>):<fpage>413</fpage>–<lpage>468</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1214/13-AOS1175" xlink:type="simple">10.1214/13-AOS1175</ext-link></comment> <object-id pub-id-type="pmid">25574062</object-id></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref039">
+<label>39</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Belloni</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Chernozhukov</surname> <given-names>V</given-names></name>. <article-title>Least Squares After Model Selection in High-Dimensional Sparse Models</article-title>. <source>Bernoulli</source>. <year>2013</year>;<volume>19</volume>(<issue>2</issue>):<fpage>521</fpage>–<lpage>547</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3150/11-BEJ410" xlink:type="simple">10.3150/11-BEJ410</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref040">
+<label>40</label>
+<mixed-citation publication-type="other" xlink:type="simple">Pang B, Lee L. Seeing Stars: Exploiting Class Relationships for Sentiment Categorization with Respect to Rating Scales. In: Proceedings of the 43rd Annual Meeting on Association for Computational Linguistics (ACL’05); 2005. p. 115–124.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref041">
+<label>41</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Carter</surname> <given-names>ME</given-names></name>, <name name-style="western"><surname>Soo</surname> <given-names>BS</given-names></name>. <article-title>The Relevance of Form 8-K Reports</article-title>. <source>Journal of Accounting Research</source>. <year>1999</year>;<volume>37</volume>(<issue>1</issue>):<fpage>119</fpage>–<lpage>132</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2307/2491399" xlink:type="simple">10.2307/2491399</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref042">
+<label>42</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Loughran</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>McDonald</surname> <given-names>B</given-names></name>. <article-title>When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and 10-Ks</article-title>. <source>Journal of Finance</source>. <year>2011</year>;<volume>66</volume>(<issue>1</issue>):<fpage>35</fpage>–<lpage>65</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1111/j.1540-6261.2010.01625.x" xlink:type="simple">10.1111/j.1540-6261.2010.01625.x</ext-link></comment></mixed-citation>
+</ref>
+<ref id="pone.0209323.ref043">
+<label>43</label>
+<mixed-citation publication-type="book" xlink:type="simple">
+<name name-style="western"><surname>Krippendorff</surname> <given-names>K</given-names></name>. <source>Content Analysis: An Introduction to Its Methodology</source>. <edition>3rd ed</edition>. <publisher-loc>Thousand Oaks, CA</publisher-loc>: <publisher-name>SAGE Publications</publisher-name>; <year>2013</year>.</mixed-citation>
+</ref>
+<ref id="pone.0209323.ref044">
+<label>44</label>
+<mixed-citation publication-type="journal" xlink:type="simple">
+<name name-style="western"><surname>Legg</surname> <given-names>AM</given-names></name>, <name name-style="western"><surname>Sweeny</surname> <given-names>K</given-names></name>. <article-title>Do You Want the Good News or the Bad News First? The Nature and Consequences of News Order Preferences</article-title>. <source>Personality and Social Psychology Bulletin</source>. <year>2014</year>;<volume>40</volume>(<issue>3</issue>):<fpage>279</fpage>–<lpage>288</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1177/0146167213509113" xlink:type="simple">10.1177/0146167213509113</ext-link></comment> <object-id pub-id-type="pmid">24177520</object-id></mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>
