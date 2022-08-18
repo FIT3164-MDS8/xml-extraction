@@ -17,17 +17,17 @@
 ---
 
 ## Guide
-### To run the program, please do run the **setup.py** at least once before **main.py**
-### There is no need for running **setup.py** if the models are all download
+To run the program, please do run the **setup.py** at least once before **main.py**
+There is no need for running **setup.py** if the models are all download
 
 ---
 
 ## Features
 
-### Import multiple xml files in the directory named 'xml-100' and output a csv file
+Import multiple xml files in the directory named 'xml-100' and output a csv file
 
 ---
 
 ## Documentation
-### All function in main.py are documented in proper docstring format.
+All function in main.py are documented in proper docstring format.
 
