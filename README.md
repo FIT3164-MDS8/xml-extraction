@@ -17,8 +17,8 @@
 ---
 
 ## Guide
-To run the program, please do run the **setup.py** at least once before **main.py**
-There is no need for running **setup.py** if the models are all download
+To run the program, please do run the ***setup.py*** at least once before ***main.py***
+There is no need for running ***setup.py*** if the models are all download
 
 ---
 
