@@ -25,7 +25,7 @@ There is no need for running ***setup.py*** if the models are all download
 
 ## Features
 
-Import multiple xml files in the directory named 'xml-100' and output a csv file
+Import multiple xml files in the directory named 'xml-1000' and output a csv file
 
 ---
 
